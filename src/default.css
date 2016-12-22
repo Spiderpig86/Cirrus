@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Nunito Sans for the fint */
 body {
   line-height: 1.5em;
@@ -12,4 +13,7 @@ body {
   font-weight: 300;
   font-family: "Nunito Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.01em;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
