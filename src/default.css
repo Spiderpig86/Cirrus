@@ -1,12 +1,15 @@
+/* BASE STYLING FOR CIRRUS*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+/* Nunito Sans for the fint */
 body {
   line-height: 1.5em;
   font-size: 1.5em;
   font-weight: 300;
   font-family: "Nunito Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.01em;
 }
