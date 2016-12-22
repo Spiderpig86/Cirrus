@@ -1,1 +1,64 @@
 /* Utility classes to help solve some very annoying issues */
+
+.this-inline {
+  display: inline;
+}
+
+.this-inline-block {
+  display: inline;
+}
+
+.this-inline-flex {
+  display: -webkit-inline-bpx;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/*
+   When using floats, clearfix allows the container to automatically resize so that
+   other elements are not blocked by children.
+*/
+
+.this-clearfix:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+/* This is mainly to keep elements from overlapping when using floats */
+.this-clear-left {
+  clear: left;
+}
+
+.this-clear-right {
+  clear: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Center element */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+}
+
+.horizontal-center {
+  display: flex;
+  align-items: center;
+}
