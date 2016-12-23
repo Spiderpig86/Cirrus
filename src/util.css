@@ -5,7 +5,7 @@
 }
 
 .this-inline-block {
-  display: inline;
+  display: inline-block;
 }
 
 .this-inline-flex {
@@ -61,4 +61,56 @@
 .horizontal-center {
   display: flex;
   align-items: center;
+}
+
+.this-overlay {
+  bottom:0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.hide-overflow {
+  overflow: hidden !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hide {
+  display: none !important;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.box {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  display: block;
+  padding: 20px;
+}
+
+.box:not(:last-child) {
+  margin-bottom: 20px;
 }

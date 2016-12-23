@@ -1,0 +1,15 @@
+/* STYLING FOR LINKS */
+
+a {
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    color: #149fac;
+    text-decoration: none;
+}
+
+a:hover {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
