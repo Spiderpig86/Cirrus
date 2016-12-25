@@ -1,0 +1,38 @@
+/* Button styling */
+
+/* Un-themed */
+.btn, button, [type=submit] {
+
+}
+
+.btn:hover, button:hover, [type=submit]:hover {
+
+}
+
+.btn:active, button:active, [type=submit]:active {
+
+}
+
+.btn:focus, button:focus, [type=submit]:focus {
+
+}
+
+.btn:disabled, button:disabled, [type=submit]:disabled {
+
+}
+
+/* Different styles */
+
+/* Filled */
+.btn {
+
+}
+
+/* Outline */
+.outline {
+
+}
+
+/* Inverted outline */
+
+/* Transparent Background */

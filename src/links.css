@@ -12,4 +12,36 @@ a:hover {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
+  -webkit-backface-visibility:hidden;
+         backface-visibility:hidden;
+}
+
+/* Animated links */
+
+/* Underline */
+
+.u-LR { /* Left to Right */
+
+}
+
+.u-RL { /* Right to Left */
+
+}
+
+.u-C { /* Center Outwards */
+
+}
+
+/* Underline top and bottom */
+
+.utb-LR {
+
+}
+
+.utb-RL {
+
+}
+
+.utb-C {
+  
 }
