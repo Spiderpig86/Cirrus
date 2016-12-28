@@ -19,3 +19,24 @@
    left:0;
    height: 100vh;
 }
+
+/* This works well with panel */
+section {
+    display: block;
+}
+
+.panel {
+  background: #fff;
+    padding: 2.5rem 0;
+}
+
+/* This works well with spans and maybe even hr */
+.divider {
+  display: block;
+  height: 3px;
+  background: -webkit-linear-gradient(left, #f99814, #ee5b2f);
+  background: linear-gradient(to right, #f99814, #ee5b2f);
+  position: relative;
+  border-top: none;
+  margin: 2rem auto;
+}

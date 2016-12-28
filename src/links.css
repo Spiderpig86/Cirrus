@@ -1,19 +1,31 @@
 /* STYLING FOR LINKS */
 
 a {
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    transition: all .3s;
-    color: #149fac;
-    text-decoration: none;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  color: #149fac;
+  text-decoration: none;
+  font-weight: 600;
+      padding: 2px;
+      -webkit-backface-visibility: hidden;
+backface-visibility: hidden;
 }
 
 a:hover {
+  color: #037d88;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
   -webkit-backface-visibility:hidden;
          backface-visibility:hidden;
+}
+
+a,a:visited,a:hover,a:active{
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+	position:relative;
+	text-decoration:none;
 }
 
 /* Animated links */
@@ -22,6 +34,25 @@ a:hover {
 
 .u-LR { /* Left to Right */
 
+}
+
+.u-LR:after {
+  content: "";
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: absolute;
+      height: 0.1rem;
+      width: 0;
+      background: #d73444;
+      bottom: -0.25em;
+      left: 0;
+}
+
+.u-LR:hover:after {
+  width: 100%;
 }
 
 .u-RL { /* Right to Left */
@@ -43,5 +74,5 @@ a:hover {
 }
 
 .utb-C {
-  
+
 }
