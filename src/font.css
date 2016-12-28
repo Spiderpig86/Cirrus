@@ -1,1 +1,89 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4rem; /* 64px */
+  letter-spacing: .05rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    color: #363636;
+    line-height: 1.125;
+    margin: 1rem 0;
+}
+
+.content h1:not(:first-child),
+.content h2:not(:first-child),
+.content h3:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.title:not(:last-child), .subtitle:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7rem;
+      margin: 2rem 0;
+}
+
+/* Weights */
+.font-thin {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}

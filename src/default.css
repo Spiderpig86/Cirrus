@@ -7,20 +7,20 @@
   -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
         box-sizing: border-box;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
 }
 
 /* Nunito Sans for the font */
 body {
   line-height: 1.5em;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 300;
-  font-family: "Nunito Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, "Segoe UI", "Ubuntu", Arial, sans-serif;
+  font-family: "Nunito Sans", "Segoe UI", "HelveticaNeue", "Helvetica Neue", Helvetica, "Ubuntu", Arial, sans-serif;
   letter-spacing: 0.01em;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #333;
+  color: #4a4a4a;
 }
 
 /* Remove bullets from unordered lists */

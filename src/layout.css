@@ -1,0 +1,21 @@
+/* LAYOUT STYLING */
+
+.content {
+  max-width: 60rem;
+  margin: 0 auto 1.5rem;
+  width: 80%;
+}
+
+.content blockquote {
+  background-color: #f5f5f5;
+  border-left: 5px solid #dbdbdb;
+  padding: 1.5rem;
+}
+
+.fullscreen {
+   top:0;
+   right:0;
+   bottom:0;
+   left:0;
+   height: 100vh;
+}

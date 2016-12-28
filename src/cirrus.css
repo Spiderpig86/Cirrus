@@ -1,1 +1,294 @@
 /* The main file for all the CSS styles */
+
+/* -------- DEFAULT -------- */
+* {
+  margin: 0;
+  padding: 0;
+  /* Prevent setting borders from increasing the size of an element */
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+}
+
+/* Nunito Sans for the font */
+body {
+  line-height: 1.5em;
+  font-size: 1em;
+  font-weight: 300;
+  font-family: "Nunito Sans", "Segoe UI", "HelveticaNeue", "Helvetica Neue", Helvetica, "Ubuntu", Arial, sans-serif;
+  letter-spacing: 0.01em;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  color: #4a4a4a;
+}
+
+/* Remove bullets from unordered lists */
+ul {
+  list-style: none;
+}
+
+/* Setting up embedded content */
+img,
+embed,
+object,
+audio,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove iframe borders */
+iframe {
+  border: 0;
+  outline: 0;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+/* -------- ANIMATIONS -------- */
+
+/* -------- BUTTONS -------- */
+
+/* -------- FONT -------- */
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4rem; /* 64px */
+  letter-spacing: .05rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    color: #363636;
+    line-height: 1.125;
+    margin: 1rem 0;
+}
+
+.content h1:not(:first-child),
+.content h2:not(:first-child),
+.content h3:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.title:not(:last-child), .subtitle:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7rem;
+      margin: 2rem 0;
+}
+
+/* Weights */
+.font-thin {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+
+
+/* -------- LAYOUT -------- */
+
+.content {
+  max-width: 60rem;
+  margin: 0 auto 1.5rem;
+  width: 80%;
+}
+
+.content blockquote {
+  background-color: #f5f5f5;
+  border-left: 5px solid #dbdbdb;
+  padding: 1.5rem;
+}
+
+.fullscreen {
+   top:0;
+   right:0;
+   bottom:0;
+   left:0;
+   height: 100vh;
+}
+
+/* -------- LINKS -------- */
+
+/* -------- UTIL -------- */
+
+.this-inline {
+  display: inline;
+}
+
+.this-inline-block {
+  display: inline-block;
+}
+
+.this-inline-flex {
+  display: -webkit-inline-bpx;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+/*
+   When using floats, clearfix allows the container to automatically resize so that
+   other elements are not blocked by children.
+*/
+
+.this-clearfix:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+/* This is mainly to keep elements from overlapping when using floats */
+.this-clear-left {
+  clear: left;
+}
+
+.this-clear-right {
+  clear: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Center element */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+}
+
+.horizontal-center {
+  display: flex;
+  align-items: center;
+}
+
+.this-overlay {
+  bottom:0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.hide-overflow {
+  overflow: hidden !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hide {
+  display: none !important;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.box {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  display: block;
+  padding: 20px;
+}
+
+.box:not(:last-child) {
+  margin-bottom: 20px;
+}
