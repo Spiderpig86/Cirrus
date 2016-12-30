@@ -2,7 +2,7 @@ a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
-  color: #149fac;
+  color: #1888bf;
   text-decoration: none;
   font-weight: 600;
       padding: 2px;
@@ -11,7 +11,7 @@ backface-visibility: hidden;
 }
 
 a:hover {
-  color: #037d88;
+  color: #146992;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
@@ -40,7 +40,7 @@ a,a:visited,a:hover,a:active{
       position: absolute;
       height: 0.1rem;
       width: 0;
-      background: #d73444;
+      background: #FF4081;
       bottom: -0.25em;
 }
 
@@ -77,7 +77,7 @@ a,a:visited,a:hover,a:active{
       position: absolute;
       height: 0.1rem;
       width: 0;
-      background: #d73444;
+      background: #FF4081;
 }
 
 .utb:before {
@@ -104,4 +104,90 @@ a,a:visited,a:hover,a:active{
   left:50%;
   -webkit-transform:translateX(-50%);
           transform:translateX(-50%);
+}
+
+/* Opposite start */
+.utb-OLR:before { /* Suffix denotes border transition direction for the top border (left to right). Bottom border will be the opposite direction */
+  left: 0;
+}
+
+.utb-OLR:after {
+  right: 0;
+}
+
+.utb-ORL:before {
+  right: 0;
+}
+
+.utb-ORL:after {
+  left: 0;
+}
+
+/* Links with square borders */
+
+/* Please note that usquare is the parent span (not div) which would create the left and right borders. The link (.utb-OLR) gets nested within this */
+
+.usquare{
+  box-sizing:border-box; /* keeps the border from resizing the link */
+  margin-left: 0.4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.usquare a{
+  position: static;
+  padding: 0.2rem 0.4rem;
+}
+
+.usquare:before, .usquare:after{
+  content: "";
+  box-sizing: border-box;
+  transition: 0.25s all ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  width: 2px;
+  width: 0.1 rem;
+  height: 0;
+  background: #FF4081;
+}
+
+.usquare:before{
+  left: 0;
+  bottom: -0.2rem;
+}
+
+.usquare.delay:before{
+  transition-delay: 0.6s;
+}
+
+.usquare:after{
+  right: 0;
+  top: -0.2rem;
+}
+
+.usquare.delay:after{
+  transition-delay: 0.2s;
+}
+
+.usquare a:before {
+  left:0;
+  transition: 0.25s all ease;
+}
+
+.usquare a:after {
+  right:0;
+  transition: 0.25s all ease;
+}
+
+.usquare.delay a:after {
+  transition: 0.25s all ease 0.4s;
+}
+
+.usquare:hover:before, .usquare:hover:after{
+  height:calc(100% + 0.4rem); /* Makes the left and right borders */
+}
+
+.usquare:hover a:before, .usquare:hover a:after{
+  width:100%;
 }
