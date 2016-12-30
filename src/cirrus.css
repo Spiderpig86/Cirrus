@@ -195,7 +195,6 @@ section {
 }
 
 /* -------- LINKS -------- */
-
 a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
@@ -228,11 +227,7 @@ a,a:visited,a:hover,a:active{
 
 /* Underline */
 
-.u-LR { /* Left to Right */
-
-}
-
-.u-LR:after {
+.u:after {
   content: "";
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
@@ -244,19 +239,28 @@ a,a:visited,a:hover,a:active{
       width: 0;
       background: #d73444;
       bottom: -0.25em;
+}
+
+.u:hover:after {
+  width: 100%
+}
+
+.u-LR:after { /* Left to Right */
       left: 0;
 }
 
-.u-LR:hover:after {
+.u-RL:after { /* Right to Left */
+  right: 0;
+}
+
+.u-RL:hover:after {
   width: 100%;
 }
 
-.u-RL { /* Right to Left */
-
-}
-
-.u-C { /* Center Outwards */
-
+.u-C:after { /* Center Outwards */
+  left:50%;
+  -webkit-transform:translateX(-50%);
+          transform:translateX(-50%);
 }
 
 /* Underline top and bottom */
@@ -272,6 +276,26 @@ a,a:visited,a:hover,a:active{
 .utb-C {
 
 }
+
+
+/* -------- LISTS -------- */
+ul {
+  list-style: disc inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+dl {
+
+}
+
+li {
+   margin: 1rem 0;
+}
+
+
 
 /* -------- UTIL -------- */
 
