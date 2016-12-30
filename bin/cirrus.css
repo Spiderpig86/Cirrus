@@ -195,6 +195,39 @@ section {
 }
 
 /* -------- LINKS -------- */
+
+a {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  color: #149fac;
+  text-decoration: none;
+  font-weight: 600;
+      padding: 2px;
+      -webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+
+a:hover {
+  color: #037d88;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+  -webkit-backface-visibility:hidden;
+         backface-visibility:hidden;
+}
+
+a,a:visited,a:hover,a:active{
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+	position:relative;
+	text-decoration:none;
+}
+
+/* Animated links */
+
+/* Underline */
+
 a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
@@ -246,7 +279,7 @@ a,a:visited,a:hover,a:active{
 }
 
 .u-LR:after { /* Left to Right */
-      left: 0;
+  left: 0;
 }
 
 .u-RL:after { /* Right to Left */
@@ -264,17 +297,43 @@ a,a:visited,a:hover,a:active{
 }
 
 /* Underline top and bottom */
-
-.utb-LR {
-
+.utb:before, .utb:after {
+  content: "";
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: absolute;
+      height: 0.1rem;
+      width: 0;
+      background: #d73444;
 }
 
-.utb-RL {
-
+.utb:before {
+  top: -0.25em;
 }
 
-.utb-C {
+.utb:after {
+  bottom: -0.25em;
+}
 
+.utb:hover:before, .utb:hover:after {
+  width: 100%;
+}
+
+.utb-LR:before, .utb-LR:after {
+  left: 0;
+}
+
+.utb-RL:before, .utb-RL:after {
+  right: 0;
+}
+
+.utb-C:before, .utb-C:after {
+  left:50%;
+  -webkit-transform:translateX(-50%);
+          transform:translateX(-50%);
 }
 
 
@@ -292,10 +351,12 @@ dl {
 }
 
 li {
-   margin: 1rem 0;
+  margin: 1rem 0;
 }
 
-
+li:last-child {
+  margin-bottom: 1rem;
+}
 
 /* -------- UTIL -------- */
 

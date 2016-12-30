@@ -1,5 +1,3 @@
-/* STYLING FOR LINKS */
-
 a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
@@ -51,7 +49,7 @@ a,a:visited,a:hover,a:active{
 }
 
 .u-LR:after { /* Left to Right */
-      left: 0;
+  left: 0;
 }
 
 .u-RL:after { /* Right to Left */
@@ -69,15 +67,41 @@ a,a:visited,a:hover,a:active{
 }
 
 /* Underline top and bottom */
-
-.utb-LR {
-
+.utb:before, .utb:after {
+  content: "";
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      position: absolute;
+      height: 0.1rem;
+      width: 0;
+      background: #d73444;
 }
 
-.utb-RL {
-
+.utb:before {
+  top: -0.25em;
 }
 
-.utb-C {
+.utb:after {
+  bottom: -0.25em;
+}
 
+.utb:hover:before, .utb:hover:after {
+  width: 100%;
+}
+
+.utb-LR:before, .utb-LR:after {
+  left: 0;
+}
+
+.utb-RL:before, .utb-RL:after {
+  right: 0;
+}
+
+.utb-C:before, .utb-C:after {
+  left:50%;
+  -webkit-transform:translateX(-50%);
+          transform:translateX(-50%);
 }
