@@ -34,9 +34,26 @@ section {
 .divider {
   display: block;
   height: 3px;
-  background: -webkit-linear-gradient(left, #f99814, #ee5b2f);
-  background: linear-gradient(to right, #f99814, #ee5b2f);
   position: relative;
   border-top: none;
   margin: 2rem auto;
+  background: #eee;
+}
+
+.divider-short {
+  max-width: 15rem;
+}
+
+.divider-orange {
+  background: -webkit-linear-gradient(left, #f99814, #ee5b2f);
+  background: linear-gradient(to right, #f99814, #ee5b2f);
+}
+
+/* Hero image div */
+.hero {
+  /* Specify the backgroud image yourself */
+  background-size: cover;
+width: 100%;
+height: 100%;
+position: absolute;
 }

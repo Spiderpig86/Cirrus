@@ -79,6 +79,71 @@ section {
 }
 
 /* -------- BUTTONS -------- */
+/* Un-themed */
+.btn, button, [type=submit] {
+  display: block;
+line-height: 2.5rem;
+overflow: hidden;
+padding: 0 1.5rem;
+width: auto;
+max-width: 300px;
+border: 1px solid transparent;
+border-radius: .25rem;
+cursor: pointer;
+text-align: center;
+-webkit-transition: all .3s;
+transition: all .3s;
+-moz-transition: all .3s;
+background-color: #fefefe;
+border-color: #d9d9d9;
+color: #737373;
+font-size: .95rem;
+letter-spacing: .03rem;
+margin: .4rem;
+}
+
+.btn:hover, button:hover, [type=submit]:hover {
+  -webkit-transition: all .3s;
+transition: all .3s;
+-moz-transition: all .3s;
+background: #eee;
+ -webkit-transform: scale(1.1);
+         transform: scale(1.1);
+}
+
+.btn:active, button:active, [type=submit]:active {
+  -webkit-transition: all .3s;
+transition: all .3s;
+-moz-transition: all .3s;
+background: #ccc;
+   -webkit-transform: scale(0.97);
+           transform: scale(0.97);
+}
+
+.btn:focus, button:focus, [type=submit]:focus {
+  outline: none;
+}
+
+.btn:disabled, button:disabled, [type=submit]:disabled {
+  opacity: 0.8;
+cursor: not-allowed;
+}
+
+/* Different styles */
+
+/* Filled */
+.btn {
+
+}
+
+/* Outline */
+.outline {
+
+}
+
+/* Inverted outline */
+
+/* Transparent Background */
 
 /* -------- FONT -------- */
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700');
@@ -208,12 +273,30 @@ section {
 .divider {
   display: block;
   height: 3px;
-  background: -webkit-linear-gradient(left, #f99814, #ee5b2f);
-  background: linear-gradient(to right, #f99814, #ee5b2f);
   position: relative;
   border-top: none;
   margin: 2rem auto;
+  background: #eee;
 }
+
+.divider-short {
+  max-width: 15rem;
+}
+
+.divider-orange {
+  background: -webkit-linear-gradient(left, #f99814, #ee5b2f);
+  background: linear-gradient(to right, #f99814, #ee5b2f);
+}
+
+/* Hero image div */
+.hero {
+  /* Specify the backgroud image yourself */
+  background-size: cover;
+width: 100%;
+height: 100%;
+position: absolute;
+}
+
 
 /* -------- LINKS -------- */
 
