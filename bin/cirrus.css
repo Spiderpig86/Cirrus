@@ -4,7 +4,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* Prevent setting borders from increasing the size of an element */
+  /* Prevent setting borders from increasing the size of an elrement */
   -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -15,16 +15,17 @@
 
 /* Nunito Sans for the font */
 body {
-  line-height: 1.5em;
-  font-size: 1em;
+  letter-spacing: 0.01rem;
+    line-height: 1.6;
+    font-size: 1rem;
   font-weight: 300;
   font-family: "Nunito Sans", "Segoe UI", "HelveticaNeue", "Helvetica Neue", Helvetica, "Ubuntu", Arial, sans-serif;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.01rem;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   color: #4a4a4a;
 }
 
-/* Remove bullets from unordered lists */
+/* remove bullets from unordered lists */
 ul {
   list-style: none;
 }
@@ -39,7 +40,7 @@ video {
   height: auto;
 }
 
-/* Remove iframe borders */
+/* remove iframe borders */
 iframe {
   border: 0;
   outline: 0;
@@ -79,6 +80,7 @@ section {
 }
 
 /* -------- BUTTONS -------- */
+/* Button styling */
 /* Un-themed */
 .btn, button, [type=submit] {
   display: block;
@@ -134,19 +136,40 @@ cursor: not-allowed;
 
 /* Different styles */
 
-/* Filled */
-.btn {
-
+/* Outline (white) */
+.btn-outline {
+    color: #fff;
+    background: transparent;
+    transition: all .3s;
+    border: 1px solid #fff;
 }
 
-/* Outline */
-.outline {
-
+.btn-outline:hover,
+.btn-outline:active {
+  background: #fff;
+  color: #222;
+  transition: all .3s;
 }
 
-/* Inverted outline */
+/* Inverted outline (dark) */
+.btn-outline-inverted {
+  border: 1px solid #222;
+  color: #222;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.btn-outline-inverted:hover,
+.btn-outline-inverted:active {
+  color: #fff;
+  background: #222;
+}
 
 /* Transparent Background */
+.btn-transparent {
+  background: transparent;
+  color: #999;
+}
 
 /* -------- FONT -------- */
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700');
@@ -163,28 +186,28 @@ h6 {
 }
 
 h1 {
-  font-size: 4em; /* 64px */
-  letter-spacing: .05em;
+  font-size: 4rem; /* 64px */
+  letter-spacing: .05rem;
 }
 
 h2 {
-  font-size: 3.5em;
+  font-size: 3.5rem;
 }
 
 h3 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h4 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 h5 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h6 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .content h1,
@@ -205,11 +228,11 @@ h6 {
 }
 
 .title:not(:last-child), .subtitle:not(:last-child) {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 p {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.7em;
       margin: 2rem 0;
 }
@@ -223,7 +246,7 @@ p {
   font-weight: 300;
 }
 
-.font-semibold {
+.font-sremibold {
   font-weight: 600;
 }
 
@@ -241,9 +264,10 @@ p {
 
 
 /* -------- LAYOUT -------- */
+
 .content {
-  max-width: 60rem;
-  margin: 0 auto 1.5rem;
+  max-width: 60em;
+  margin: 0 auto 1.5em;
   width: 80%;
 }
 
@@ -268,7 +292,7 @@ section {
 
 .panel {
   background: #fff;
-    padding: 2.5rem 0;
+    padding: 2.5em 0;
 }
 
 /* This works well with spans and maybe even hr */
@@ -297,6 +321,12 @@ section {
 width: 100%;
 height: 100%;
 position: absolute;
+}
+
+space {
+  display: block;
+  width: 100%;
+  height: 1em;
 }
 
 /* -------- LINKS -------- */
@@ -344,7 +374,7 @@ a,a:visited,a:hover,a:active{
       height: 0.1rem;
       width: 0;
       background: #FF4081;
-      bottom: -0.25em;
+      bottom: -0.25rem;
 }
 
 .u:hover:after {
@@ -384,11 +414,11 @@ a,a:visited,a:hover,a:active{
 }
 
 .utb:before {
-  top: -0.25em;
+  top: -0.25rem;
 }
 
 .utb:after {
-  bottom: -0.25em;
+  bottom: -0.25rem;
 }
 
 .utb:hover:before, .utb:hover:after {
@@ -509,7 +539,7 @@ dl {
 }
 
 li {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 li:last-child {
@@ -517,7 +547,6 @@ li:last-child {
 }
 
 /* -------- UTIL -------- */
-
 
 .this-inline {
   display: inline;
@@ -574,6 +603,14 @@ li:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
+      margin: 0 auto;
+}
+
+.center-alt { /* If flexbox method fails, this works for elements with unknown dimensions */
+  position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
 }
 
 .vertical-center {

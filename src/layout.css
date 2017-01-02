@@ -1,8 +1,8 @@
 /* LAYOUT STYLING */
 
 .content {
-  max-width: 60rem;
-  margin: 0 auto 1.5rem;
+  max-width: 60em;
+  margin: 0 auto 1.5em;
   width: 80%;
 }
 
@@ -27,7 +27,7 @@ section {
 
 .panel {
   background: #fff;
-    padding: 2.5rem 0;
+    padding: 2.5em 0;
 }
 
 /* This works well with spans and maybe even hr */
@@ -56,4 +56,10 @@ section {
 width: 100%;
 height: 100%;
 position: absolute;
+}
+
+space {
+  display: block;
+  width: 100%;
+  height: 1em;
 }

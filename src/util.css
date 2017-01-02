@@ -55,6 +55,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+      margin: 0 auto;
+}
+
+.center-alt, .center-alt:hover, .center-alt:active { /* If flexbox method fails, this works for elements with unknown dimensions */
+  position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
 }
 
 .vertical-center {

@@ -40,7 +40,7 @@ transition: all .3s;
 -moz-transition: all .3s;
 background: #ccc;
    -webkit-transform: scale(0.97);
-           transform: scale(0.97);
+           transform: inherit, scale(0.97);
 }
 
 .btn:focus, button:focus, [type=submit]:focus {
@@ -54,16 +54,37 @@ cursor: not-allowed;
 
 /* Different styles */
 
-/* Filled */
-.btn {
-
+/* Outline (white) */
+.btn-outline {
+    color: #fff;
+    background: transparent;
+    transition: all .3s;
+    border: 1px solid #fff;
 }
 
-/* Outline */
-.outline {
-
+.btn-outline:hover,
+.btn-outline:active {
+  background: #fff;
+  color: #222;
+  transition: all .3s;
 }
 
-/* Inverted outline */
+/* Inverted outline (dark) */
+.btn-outline-inverted {
+  border: 1px solid #222;
+  color: #222;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.btn-outline-inverted:hover,
+.btn-outline-inverted:active {
+  color: #fff;
+  background: #222;
+}
 
 /* Transparent Background */
+.btn-transparent {
+  background: transparent;
+  color: #999;
+}

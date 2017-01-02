@@ -12,28 +12,28 @@ h6 {
 }
 
 h1 {
-  font-size: 4em; /* 64px */
-  letter-spacing: .05em;
+  font-size: 4rem; /* 64px */
+  letter-spacing: .05rem;
 }
 
 h2 {
-  font-size: 3.5em;
+  font-size: 3.5rem;
 }
 
 h3 {
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h4 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 h5 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 h6 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .content h1,
@@ -54,12 +54,12 @@ h6 {
 }
 
 .title:not(:last-child), .subtitle:not(:last-child) {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 p {
-  font-size: 1em;
-  line-height: 1.7em;
+  font-size: 1rem;
+  line-height: 1.7rem;
       margin: 2rem 0;
 }
 
@@ -72,7 +72,7 @@ p {
   font-weight: 300;
 }
 
-.font-semibold {
+.font-sremibold {
   font-weight: 600;
 }
 
