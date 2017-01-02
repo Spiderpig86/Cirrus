@@ -2,24 +2,27 @@
 /* Un-themed */
 .btn, button, [type=submit] {
   display: block;
-line-height: 2.5rem;
-overflow: hidden;
-padding: 0 1.5rem;
-width: auto;
-max-width: 300px;
-border: 1px solid transparent;
-border-radius: .25rem;
-cursor: pointer;
-text-align: center;
--webkit-transition: all .3s;
-transition: all .3s;
--moz-transition: all .3s;
-background-color: #fefefe;
-border-color: #d9d9d9;
-color: #737373;
-font-size: .95rem;
-letter-spacing: .03rem;
-margin: .4rem;
+  line-height: 2.5rem;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  width: auto;
+  max-width: 300px;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -moz-transition: all .3s;
+  background-color: #fefefe;
+  border-color: #d9d9d9;
+  color: #737373;
+  font-size: .75em;
+  letter-spacing: .03rem;
+  margin: .4rem;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-weight: 400;
 }
 
 .btn:hover, button:hover, [type=submit]:hover {

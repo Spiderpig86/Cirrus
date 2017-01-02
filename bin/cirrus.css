@@ -82,24 +82,27 @@ section {
 /* Un-themed */
 .btn, button, [type=submit] {
   display: block;
-line-height: 2.5rem;
-overflow: hidden;
-padding: 0 1.5rem;
-width: auto;
-max-width: 300px;
-border: 1px solid transparent;
-border-radius: .25rem;
-cursor: pointer;
-text-align: center;
--webkit-transition: all .3s;
-transition: all .3s;
--moz-transition: all .3s;
-background-color: #fefefe;
-border-color: #d9d9d9;
-color: #737373;
-font-size: .95rem;
-letter-spacing: .03rem;
-margin: .4rem;
+  line-height: 2.5rem;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  width: auto;
+  max-width: 300px;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -moz-transition: all .3s;
+  background-color: #fefefe;
+  border-color: #d9d9d9;
+  color: #737373;
+  font-size: .75em;
+  letter-spacing: .03rem;
+  margin: .4rem;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-weight: 400;
 }
 
 .btn:hover, button:hover, [type=submit]:hover {
@@ -160,28 +163,28 @@ h6 {
 }
 
 h1 {
-  font-size: 4rem; /* 64px */
-  letter-spacing: .05rem;
+  font-size: 4em; /* 64px */
+  letter-spacing: .05em;
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 3.5em;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 3em;
 }
 
 h4 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
 }
 
 h5 {
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 h6 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 
 .content h1,
@@ -202,12 +205,12 @@ h6 {
 }
 
 .title:not(:last-child), .subtitle:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 
 p {
-  font-size: 1rem;
-  line-height: 1.7rem;
+  font-size: 1em;
+  line-height: 1.7em;
       margin: 2rem 0;
 }
 
@@ -235,7 +238,6 @@ p {
 .lowercase {
   text-transform: lowercase;
 }
-
 
 
 /* -------- LAYOUT -------- */
@@ -296,7 +298,6 @@ width: 100%;
 height: 100%;
 position: absolute;
 }
-
 
 /* -------- LINKS -------- */
 
@@ -508,7 +509,7 @@ dl {
 }
 
 li {
-  margin: 1rem 0;
+  margin: 1em 0;
 }
 
 li:last-child {
@@ -516,6 +517,7 @@ li:last-child {
 }
 
 /* -------- UTIL -------- */
+
 
 .this-inline {
   display: inline;
@@ -536,19 +538,23 @@ li:last-child {
    other elements are not blocked by children.
 */
 
-.this-clearfix:after {
+.clearfix:after {
   clear: both;
   content: " ";
   display: table;
 }
 
 /* This is mainly to keep elements from overlapping when using floats */
-.this-clear-left {
+.clear-left {
   clear: left;
 }
 
-.this-clear-right {
+.clear-right {
   clear: right;
+}
+
+.clear-both {
+  clear: both;
 }
 
 .pull-left {

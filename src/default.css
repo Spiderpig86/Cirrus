@@ -12,6 +12,10 @@
         -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  font-size: 16px;
+}
+
 /* Nunito Sans for the font */
 body {
   line-height: 1.5em;

@@ -19,19 +19,23 @@
    other elements are not blocked by children.
 */
 
-.this-clearfix:after {
+.clearfix:after {
   clear: both;
   content: " ";
   display: table;
 }
 
 /* This is mainly to keep elements from overlapping when using floats */
-.this-clear-left {
+.clear-left {
   clear: left;
 }
 
-.this-clear-right {
+.clear-right {
   clear: right;
+}
+
+.clear-both {
+  clear: both;
 }
 
 .pull-left {
