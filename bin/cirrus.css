@@ -1,28 +1,28 @@
 /* The main file for all the CSS styles */
-
 /* -------- DEFAULT -------- */
-* {
-  margin: 0;
-  padding: 0;
-  /* Prevent setting borders from increasing the size of an elrement */
-  -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    /* Prevent setting borders from increasing the size of an elrement */
+    -
+    webkit - box - sizing: border - box; -
+    moz - box - sizing: border - box;
+    box - sizing: border - box;
+    text - rendering: optimizeLegibility; -
+    webkit - font - smoothing: antialiased; -
+    moz - osx - font - smoothing: grayscale;
 }
 
 /* Nunito Sans for the font */
 body {
-  letter-spacing: 0.01rem;
-    line-height: 1.6;
-    font-size: 1rem;
-  font-weight: 400;
-  font-family: "Nunito Sans", "Segoe UI", "HelveticaNeue", "Helvetica Neue", Helvetica, "Ubuntu", Arial, sans-serif;
-  letter-spacing: 0.01rem;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  color: #4a4a4a;
+    letter - spacing: 0.01 rem;
+    line - height: 1.6;
+    font - size: 1 rem;
+    font - weight: 400;
+    font - family: "Nunito Sans", "Segoe UI", "HelveticaNeue", "Helvetica Neue", Helvetica, "Ubuntu", Arial, sans - serif;
+    letter - spacing: 0.01 rem;
+    text - shadow: 1 px 1 px 1 px rgba(0, 0, 0, 0.004);
+    color: #4a4a4a;
 }
 
 /* remove bullets from unordered lists */
@@ -91,23 +91,23 @@ section {
 /* -------- BUTTONS -------- */
 /* Button styling */
 /* Un-themed */
-.btn, button, [type=submit] {
-  display: block;
-  line-height: 2.5rem;
-  overflow: hidden;
-  padding: 0 1.5rem;
-  width: auto;
-  max-width: 300px;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  cursor: pointer;
-  text-align: center;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  -moz-transition: all .3s;
-  background-color: #fefefe;
-  border-color: #d9d9d9;
-  color: #737373;
+.btn, button, [type= submit] {
+    display: block;
+    line - height: 2.5 rem;
+    overflow: hidden;
+    padding: 0 1.5 rem;
+    width: auto;
+    max - width: 300 px;
+    border: 1 px solid transparent;
+    border - radius: .25 rem;
+    cursor: pointer;
+    text - align: center; -
+    webkit - transition: all .3 s;
+    transition: all .3 s; -
+    moz - transition: all .3 s;
+    background - color: #fefefe;
+    border - color: #d9d9d9;
+    color: #737373;
   font-size: .75em;
   letter-spacing: .03rem;
   margin: .4rem;
@@ -116,69 +116,69 @@ section {
   font-weight: 400;
 }
 
-.btn:hover, button:hover, [type=submit]:hover {
-  -webkit-transition: all .3s;
-transition: all .3s;
--moz-transition: all .3s;
-background: #eee;
- -webkit-transform: scale(1.1);
-         transform: scale(1.1);
+.btn:hover, button:hover, [type= submit]: hover {
+    -webkit - transition: all .3 s;
+    transition: all .3 s; -
+    moz - transition: all .3 s;
+    background: #eee; -
+    webkit - transform: scale(1.1);
+    transform: scale(1.1);
 }
 
-.btn:active, button:active, [type=submit]:active {
-  -webkit-transition: all .3s;
-transition: all .3s;
--moz-transition: all .3s;
-background: #ccc;
-   -webkit-transform: scale(0.97);
-           transform: scale(0.97);
-}
+.btn: active, button: active, [type = submit]: active {
+        -webkit - transition: all .3 s;
+        transition: all .3 s; -
+        moz - transition: all .3 s;
+        background: #ccc; -
+        webkit - transform: scale(0.97);
+        transform: scale(0.97);
+    }
 
-.btn:focus, button:focus, [type=submit]:focus {
-  outline: none;
-}
+    .btn: focus, button: focus, [type = submit]: focus {
+        outline: none;
+    }
 
-.btn:disabled, button:disabled, [type=submit]:disabled {
-  opacity: 0.8;
-cursor: not-allowed;
-}
+    .btn: disabled, button: disabled, [type = submit]: disabled {
+        opacity: 0.8;
+        cursor: not - allowed;
+    }
 
-/* Different styles */
+    /* Different styles */
 
-/* Outline (white) */
-.btn-outline {
-    color: #fff;
-    background: transparent;
-    transition: all .3s;
-    border: 1px solid #fff;
-}
+    /* Outline (white) */
+    .btn - outline {
+        color: #fff;
+        background: transparent;
+        transition: all .3 s;
+        border: 1 px solid# fff;
+    }
 
-.btn-outline:hover,
-.btn-outline:active {
-  background: #fff;
-  color: #222;
+    .btn - outline: hover,
+    .btn - outline: active {
+        background: #fff;
+        color: #222;
   transition: all .3s;
 }
 
 /* Inverted outline (dark) */
 .btn-outline-inverted {
-  border: 1px solid #222;
-  color: #222;
+  border: 1px solid # 222;
+        color: #222;
   background: transparent;
   transition: all 0.3s;
 }
 
 .btn-outline-inverted:hover,
 .btn-outline-inverted:active {
-  color: #fff;
-  background: #222;
+  color: # fff;
+        background: #222;
 }
 
 /* Transparent Background */
 .btn-transparent {
   background: transparent;
-  color: #999;
-}
+  color: # 999;
+    }
 
 /* -------- FONT -------- */
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700');
@@ -190,33 +190,33 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+    font - family: "Montserrat", sans - serif;
+    font - weight: 700;
 }
 
 h1 {
-  font-size: 4rem; /* 64px */
-  letter-spacing: .05rem;
+    font - size: 4 rem; /* 64px */
+    letter - spacing: .05 rem;
 }
 
 h2 {
-  font-size: 3.5rem;
+    font - size: 3.5 rem;
 }
 
 h3 {
-  font-size: 3rem;
+    font - size: 3 rem;
 }
 
 h4 {
-  font-size: 2.5rem;
+    font - size: 2.5 rem;
 }
 
 h5 {
-  font-size: 2rem;
+    font - size: 2 rem;
 }
 
 h6 {
-  font-size: 1.5rem;
+    font - size: 1.5 rem;
 }
 
 .content h1,
@@ -271,27 +271,48 @@ p, article, blockquote {
   text-transform: lowercase;
 }
 
-/* -------- LAYOUT -------- */
-
-.content {
-  max-width: 60em;
-  margin: 0 auto 1.5em;
-  width: 80%;
+/* -------- FORMS -------- */
+input[type= text], input[type = password], input[type = email], input[type = search], select {
+        width: 100 % ;
+        border: 1 px solid# ddd;
+        padding: .8 rem;
+        box - shadow: inset 0 px 1 px 2 px rgba(0, 0, 0, 0.05);
+        border - radius: 3 px;
+        color: #5a5a5a;
+  font-family: 'Nunito Sans';
+  font-size: .85rem;
+  letter-spacing: .02rem;
+  box-sizing: border-box;
+  transition: all .3s;
+  outline: none;
 }
 
-.content blockquote {
-  background-color: #f5f5f5;
-  border-left: 5px solid #dbdbdb;
-  padding: 1.5rem;
-}
+input[type= text]: focus, input[type = password]: focus, input[type = email]: focus, input[type = search]: focus, select: focus {
+        box - shadow: inset 0 px 1 px 8 px rgba(0, 0, 0, 0.1);
+    }
 
-.fullscreen {
-   top:0;
-   right:0;
-   bottom:0;
-   left:0;
-   height: 100vh;
-}
+
+    /* -------- LAYOUT -------- */
+
+    .content {
+        max - width: 60e m;
+        margin: 0 auto 1.5e m;
+        width: 80 % ;
+    }
+
+    .content blockquote {
+        background - color: #f5f5f5;
+        border - left: 5 px solid# dbdbdb;
+        padding: 1.5 rem;
+    }
+
+    .fullscreen {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100 vh;
+    }
 
 /* This works well with panel */
 section {
@@ -299,50 +320,50 @@ section {
 }
 
 .panel {
-  background: #fff;
-    padding: 2.5em 0;
+    background: #fff;
+    padding: 2.5e m 0;
 }
 
 /* This works well with spans and maybe even hr */
 .divider {
-  display: block;
-  height: 3px;
-  position: relative;
-  border-top: none;
-  margin: 2rem auto;
-  background: #eee;
+    display: block;
+    height: 3 px;
+    position: relative;
+    border - top: none;
+    margin: 2 rem auto;
+    background: #eee;
 }
 
-.divider-short {
-  max-width: 15rem;
-}
+.divider - short {
+        max - width: 15 rem;
+    }
 
-.divider-orange {
-  background: -webkit-linear-gradient(left, #f99814, #ee5b2f);
-  background: linear-gradient(to right, #f99814, #ee5b2f);
-}
+    .divider - orange {
+        background: -webkit - linear - gradient(left, #f99814, #ee5b2f);
+        background: linear - gradient(to right, #f99814, #ee5b2f);
+    }
 
-/* Hero image div */
-.hero {
-  /* Specify the backgroud image yourself */
-  background-size: cover;
-width: 100%;
-height: 100%;
-position: absolute;
-}
+    /* Hero image div */
+    .hero {
+        /* Specify the backgroud image yourself */
+        background - size: cover;
+        width: 100 % ;
+        height: 100 % ;
+        position: absolute;
+    }
 
 space {
-  display: block;
-  width: 100%;
-  height: 1em;
+    display: block;
+    width: 100 % ;
+    height: 1e m;
 }
 
 /* -------- LINKS -------- */
 a {
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  transition: all .3s;
-  color: #4D565F;
+    -webkit - transition: all .3 s; -
+    moz - transition: all .3 s;
+    transition: all .3 s;
+    color: #4D565F;
   text-decoration: none;
   font-weight: 600;
       padding: 2px;
@@ -351,36 +372,36 @@ backface-visibility: hidden;
 }
 
 a:hover {
-  color: #7C8B9A;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  transition: all .3s;
-  -webkit-backface-visibility:hidden;
-         backface-visibility:hidden;
+  color: # 7 C8B9A; -
+    webkit - transition: all .3 s; -
+    moz - transition: all .3 s;
+    transition: all .3 s; -
+    webkit - backface - visibility: hidden;
+    backface - visibility: hidden;
 }
 
-a,a:visited,a:hover,a:active{
-  -webkit-backface-visibility:hidden;
-          backface-visibility:hidden;
-	position:relative;
-	text-decoration:none;
-}
+a, a: visited, a: hover, a: active {
+        -webkit - backface - visibility: hidden;
+        backface - visibility: hidden;
+        position: relative;
+        text - decoration: none;
+    }
 
-/* Animated links */
+    /* Animated links */
 
-/* Underline */
+    /* Underline */
 
-.u:after {
-  content: "";
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  transition: all .3s;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      position: absolute;
-      height: 0.1rem;
-      width: 0;
-      background: #7C8B9A;
+    .u: after {
+        content: ""; -
+        webkit - transition: all .3 s; -
+        moz - transition: all .3 s;
+        transition: all .3 s; -
+        webkit - backface - visibility: hidden;
+        backface - visibility: hidden;
+        position: absolute;
+        height: 0.1 rem;
+        width: 0;
+        background: #7C8B9A;
       bottom: -0.25em;
 }
 
@@ -417,79 +438,79 @@ a,a:visited,a:hover,a:active{
       position: absolute;
       height: 0.1rem;
       width: 0;
-      background: #7C8B9A;
-}
+      background: # 7 C8B9A;
+    }
 
-.utb:before {
-  top: -0.25em;
-}
+    .utb: before {
+        top: -0.25e m;
+    }
 
-.utb:after {
-  bottom: -0.25em;
-}
+    .utb: after {
+        bottom: -0.25e m;
+    }
 
-.utb:hover:before, .utb:hover:after {
-  width: 100%;
-}
+    .utb: hover: before, .utb: hover: after {
+        width: 100 % ;
+    }
 
-.utb-LR:before, .utb-LR:after {
-  left: 0;
-}
+    .utb - LR: before, .utb - LR: after {
+        left: 0;
+    }
 
-.utb-RL:before, .utb-RL:after {
-  right: 0;
-}
+    .utb - RL: before, .utb - RL: after {
+        right: 0;
+    }
 
-.utb-C:before, .utb-C:after {
-  left:50%;
-  -webkit-transform:translateX(-50%);
-          transform:translateX(-50%);
-}
+    .utb - C: before, .utb - C: after {
+        left: 50 % ; -
+        webkit - transform: translateX(-50 % );
+        transform: translateX(-50 % );
+    }
 
-/* Opposite start */
-.utb-OLR:before { /* Suffix denotes border transition direction for the top border (left to right). Bottom border will be the opposite direction */
-  left: 0;
-}
+    /* Opposite start */
+    .utb - OLR: before { /* Suffix denotes border transition direction for the top border (left to right). Bottom border will be the opposite direction */
+        left: 0;
+    }
 
-.utb-OLR:after {
-  right: 0;
-}
+    .utb - OLR: after {
+        right: 0;
+    }
 
-.utb-ORL:before {
-  right: 0;
-}
+    .utb - ORL: before {
+        right: 0;
+    }
 
-.utb-ORL:after {
-  left: 0;
-}
+    .utb - ORL: after {
+        left: 0;
+    }
 
-/* Links with square borders */
+    /* Links with square borders */
 
-/* Please note that usquare is the parent span (not div) which would create the left and right borders. The link (.utb-OLR) gets nested within this */
+    /* Please note that usquare is the parent span (not div) which would create the left and right borders. The link (.utb-OLR) gets nested within this */
 
-.usquare{
-  box-sizing:border-box; /* keeps the border from resizing the link */
-  margin-left: 0.4rem;
-  position: relative;
-  overflow: hidden;
-}
+    .usquare {
+        box - sizing: border - box; /* keeps the border from resizing the link */
+        margin - left: 0.4 rem;
+        position: relative;
+        overflow: hidden;
+    }
 
-.usquare a{
-  position: static;
-  padding: 0.2rem 0.4rem;
-}
+    .usquare a {
+        position: static;
+        padding: 0.2 rem 0.4 rem;
+    }
 
-.usquare:before, .usquare:after{
-  content: "";
-  box-sizing: border-box;
-  transition: 0.25s all ease;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  position: absolute;
-  width: 2px;
-  width: 0.1 rem;
-  height: 0;
-  background: #7C8B9A;
+    .usquare: before, .usquare: after {
+        content: "";
+        box - sizing: border - box;
+        transition: 0.25 s all ease; -
+        webkit - backface - visibility: hidden;
+        backface - visibility: hidden;
+        position: absolute;
+        width: 2 px;
+        width: 0.1 rem;
+        height: 0;
+        background: #7C8B9A;
 }
 
 .usquare:before{
