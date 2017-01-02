@@ -43,7 +43,7 @@ h6 {
 .content h5,
 .content h6 {
     color: #363636;
-    line-height: 1.125;
+    line-height: 1.125em;
     margin: 1rem 0;
 }
 
@@ -57,9 +57,9 @@ h6 {
     margin-bottom: 1rem;
 }
 
-p {
+p, article, blockquote {
   font-size: 1rem;
-  line-height: 1.7rem;
+  line-height: 2rem;
       margin: 2rem 0;
 }
 
@@ -72,7 +72,7 @@ p {
   font-weight: 300;
 }
 
-.font-sremibold {
+.font-semibold {
   font-weight: 600;
 }
 

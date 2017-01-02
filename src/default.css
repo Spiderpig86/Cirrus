@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* Prevent setting borders from increasing the size of an element */
+  /* Prevent setting borders from increasing the size of an elrement */
   -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -12,23 +12,24 @@
         -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  font-size: 12px;
-}
-
 /* Nunito Sans for the font */
 body {
   letter-spacing: 0.01rem;
     line-height: 1.6;
     font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   font-family: "Nunito Sans", "Segoe UI", "HelveticaNeue", "Helvetica Neue", Helvetica, "Ubuntu", Arial, sans-serif;
   letter-spacing: 0.01rem;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   color: #4a4a4a;
 }
 
-/* Setting up rembedded content */
+/* remove bullets from unordered lists */
+ul {
+  list-style: none;
+}
+
+/* Setting up embedded content */
 img,
 embed,
 object,
@@ -38,7 +39,7 @@ video {
   height: auto;
 }
 
-/* Rremove iframe borders */
+/* remove iframe borders */
 iframe {
   border: 0;
   outline: 0;
@@ -52,4 +53,13 @@ header,
 hgroup,
 section {
   display: block;
+}
+
+/* Selection Color */
+::-moz-selection { /* Code for Firefox */
+    background: yellow;
+}
+
+::selection {
+    background: yellow;
 }

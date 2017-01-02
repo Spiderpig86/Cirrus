@@ -18,7 +18,7 @@ body {
   letter-spacing: 0.01rem;
     line-height: 1.6;
     font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   font-family: "Nunito Sans", "Segoe UI", "HelveticaNeue", "Helvetica Neue", Helvetica, "Ubuntu", Arial, sans-serif;
   letter-spacing: 0.01rem;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
@@ -54,6 +54,15 @@ header,
 hgroup,
 section {
   display: block;
+}
+
+/* Selection Color */
+::-moz-selection { /* Code for Firefox */
+    background: rgba(0, 161, 255, 0.2);
+}
+
+::selection {
+    background: rgba(0, 161, 255, 0.2);
 }
 
 /* -------- ANIMATIONS -------- */
@@ -217,7 +226,7 @@ h6 {
 .content h5,
 .content h6 {
     color: #363636;
-    line-height: 1.125;
+    line-height: 1.125em;
     margin: 1rem 0;
 }
 
@@ -231,9 +240,9 @@ h6 {
     margin-bottom: 1rem;
 }
 
-p {
+p, article, blockquote {
   font-size: 1rem;
-  line-height: 1.7em;
+  line-height: 2rem;
       margin: 2rem 0;
 }
 
@@ -246,7 +255,7 @@ p {
   font-weight: 300;
 }
 
-.font-sremibold {
+.font-semibold {
   font-weight: 600;
 }
 
@@ -261,7 +270,6 @@ p {
 .lowercase {
   text-transform: lowercase;
 }
-
 
 /* -------- LAYOUT -------- */
 
@@ -330,12 +338,11 @@ space {
 }
 
 /* -------- LINKS -------- */
-
 a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
-  color: #1888bf;
+  color: #4D565F;
   text-decoration: none;
   font-weight: 600;
       padding: 2px;
@@ -344,7 +351,7 @@ backface-visibility: hidden;
 }
 
 a:hover {
-  color: #146992;
+  color: #7C8B9A;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
@@ -373,8 +380,8 @@ a,a:visited,a:hover,a:active{
       position: absolute;
       height: 0.1rem;
       width: 0;
-      background: #FF4081;
-      bottom: -0.25rem;
+      background: #7C8B9A;
+      bottom: -0.25em;
 }
 
 .u:hover:after {
@@ -410,15 +417,15 @@ a,a:visited,a:hover,a:active{
       position: absolute;
       height: 0.1rem;
       width: 0;
-      background: #FF4081;
+      background: #7C8B9A;
 }
 
 .utb:before {
-  top: -0.25rem;
+  top: -0.25em;
 }
 
 .utb:after {
-  bottom: -0.25rem;
+  bottom: -0.25em;
 }
 
 .utb:hover:before, .utb:hover:after {
@@ -482,7 +489,7 @@ a,a:visited,a:hover,a:active{
   width: 2px;
   width: 0.1 rem;
   height: 0;
-  background: #FF4081;
+  background: #7C8B9A;
 }
 
 .usquare:before{
@@ -524,6 +531,7 @@ a,a:visited,a:hover,a:active{
 .usquare:hover a:before, .usquare:hover a:after{
   width:100%;
 }
+
 
 /* -------- LISTS -------- */
 ul {

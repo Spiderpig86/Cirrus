@@ -88,3 +88,17 @@ cursor: not-allowed;
   background: transparent;
   color: #999;
 }
+
+.btn-transparent:hover {
+  background: rgba(0, 0, 0, .3);
+  color: #999;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.btn-transparent:active {
+  background: rgba(0, 0, 0, .5);
+  color: #999;
+  -webkit-transform: none;
+          transform: none;
+}

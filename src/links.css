@@ -2,7 +2,7 @@ a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
-  color: #1888bf;
+  color: #4D565F;
   text-decoration: none;
   font-weight: 600;
       padding: 2px;
@@ -11,7 +11,7 @@ backface-visibility: hidden;
 }
 
 a:hover {
-  color: #146992;
+  color: #7C8B9A;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
@@ -40,7 +40,7 @@ a,a:visited,a:hover,a:active{
       position: absolute;
       height: 0.1rem;
       width: 0;
-      background: #FF4081;
+      background: #7C8B9A;
       bottom: -0.25em;
 }
 
@@ -77,7 +77,7 @@ a,a:visited,a:hover,a:active{
       position: absolute;
       height: 0.1rem;
       width: 0;
-      background: #FF4081;
+      background: #7C8B9A;
 }
 
 .utb:before {
@@ -149,7 +149,7 @@ a,a:visited,a:hover,a:active{
   width: 2px;
   width: 0.1 rem;
   height: 0;
-  background: #FF4081;
+  background: #7C8B9A;
 }
 
 .usquare:before{
