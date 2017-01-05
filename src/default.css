@@ -55,6 +55,12 @@ section {
   display: block;
 }
 
+.accent {
+  background: -webkit-linear-gradient(top, #f99814, #ee5b2f);
+  background: linear-gradient(to bottom, #f99814, #ee5b2f);
+  color: #fff;
+}
+
 /* Selection Color */
 ::-moz-selection { /* Code for Firefox */
     background: yellow;

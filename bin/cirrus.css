@@ -1,6 +1,7 @@
 /* The main file for all the CSS styles */
 
 /* -------- DEFAULT -------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -56,14 +57,21 @@ section {
   display: block;
 }
 
+.accent {
+  background: -webkit-linear-gradient(top, #f99814, #ee5b2f);
+  background: linear-gradient(to bottom, #f99814, #ee5b2f);
+  color: #fff;
+}
+
 /* Selection Color */
 ::-moz-selection { /* Code for Firefox */
-    background: rgba(0, 161, 255, 0.2);
+    background: yellow;
 }
 
 ::selection {
-    background: rgba(0, 161, 255, 0.2);
+    background: yellow;
 }
+
 
 /* -------- ANIMATIONS -------- */
 /* Spinning loading animation */
@@ -240,6 +248,14 @@ h6 {
     margin-bottom: 1rem;
 }
 
+.accent .subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.title + .subtitle { /* Make the subtitlte closer to the title */
+    margin-top: -1.25rem;
+}
+
 p, article, blockquote {
   font-size: 1rem;
   line-height: 2rem;
@@ -270,6 +286,11 @@ p, article, blockquote {
 .lowercase {
   text-transform: lowercase;
 }
+
+.white {
+  color: #fff !important;
+}
+
 
 /* -------- FORMS -------- */
 input[type=text], input[type=password], input[type=email], input[type=search], select {
@@ -304,6 +325,7 @@ textarea, textarea[type=text] {
   outline: none;
   margin: .5rem 0;
    padding: 1rem 1.3rem;
+       min-height: 8rem;
 }
 
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=search]:focus, select:focus, textarea:focus, textarea[type=text]:focus {
@@ -326,6 +348,11 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
   padding: 1.5rem;
 }
 
+.content-fluid {
+  width: 100%;
+  margin: 1.3rem;
+}
+
 .fullscreen {
    top:0;
    right:0;
@@ -339,6 +366,8 @@ section {
     display: block;
 }
 
+.section-small
+
 .panel {
   background: #fff;
     padding: 2.5em 0;
@@ -350,12 +379,15 @@ section {
   height: 3px;
   position: relative;
   border-top: none;
-  margin: 2rem auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   background: #eee;
+      width: 100%;
 }
 
 .divider-short {
   max-width: 15rem;
+  width: 100%;
 }
 
 .divider-orange {
@@ -364,7 +396,7 @@ section {
 }
 
 /* Hero image div */
-.hero {
+.hero-img {
   /* Specify the backgroud image yourself */
   background-size: cover;
 width: 100%;
@@ -372,10 +404,114 @@ height: 100%;
 position: absolute;
 }
 
+.hero { /* Parent of hero-body */
+  -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Important to stretch height of hero-body */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.hero-body {
+      -    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1; /* Tells the hero-body to take up the entire space */
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 3rem 1.5rem;
+    -webkit-box-align: center;
+-ms-flex-align: center;
+align-items: center;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+}
+
 space {
   display: block;
   width: 100%;
   height: 1em;
+}
+
+/* Use for spacing out elements vertically */
+.row {
+  margin-top: 1.8833%;
+  padding: 0 1.04165%; /* Space out top and sides */
+}
+
+.row:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+/* GRID */
+.row .col-1 {
+  width: 6.42291%;
+}
+
+.row .col-2 {
+  width: 14.930208%;
+}
+
+.row .col-3 {
+  width: 23.4375%;
+}
+
+.row .col-4 {
+  width: 31.94375%;
+}
+
+.row .col-5 {
+  width: 40.25%;
+}
+
+.row .col-6 {
+  width: 48.958333%;
+}
+
+.row .col-7 {
+  width: 57.464583%;
+}
+
+.row .col-8 {
+  width: 65.970833%;
+}
+
+.row .col-9 {
+  width: 74.404166%;
+}
+
+.row .col-10 {
+  width: 82.9833%;
+}
+
+.row .col-11 {
+  width: 91.489583%;
+}
+
+.row .col-12 {
+  width: 100%;
+}
+
+/* Some offset values */
+.row [class^='col-'], .row [class*=" col-"] {
+  float: left;
+  min-height: 50px;
+  margin-left: 2.083333%;
+}
+
+.row [class^='col-']:first-child, .row [class*=" col-"]:first-child{
+  margin-left: 0;
 }
 
 /* -------- LINKS -------- */
@@ -597,6 +733,7 @@ li:last-child {
 }
 
 /* -------- UTIL -------- */
+/* Utility classes to help solve some very annoying issues */
 
 .this-inline {
   display: inline;
@@ -656,7 +793,7 @@ li:last-child {
       margin: 0 auto;
 }
 
-.center-alt { /* If flexbox method fails, this works for elements with unknown dimensions */
+.center-alt, .center-alt:hover, .center-alt:active { /* If flexbox method fails, this works for elements with unknown dimensions */
   position: absolute;
  top: 50%;
  left: 50%;
@@ -723,4 +860,64 @@ li:last-child {
 
 .box:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.level {
+  -webkit-box-align: center;
+-ms-flex-align: center;
+-ms-grid-row-align: center;
+align-items: center;
+-webkit-box-pack: justify;
+-ms-flex-pack: justify;
+justify-content: space-between;
+}
+
+.level-left {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; /* Start for left */
+}
+
+.level-right {
+    -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; /* End for right */
+}
+
+.level-item { /* Centers items */
+      -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* Do the actual balancing only on larger screens */
+@media screen and (min-width: 769px) {
+.level, .level-left, .level-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+
 }

@@ -36,7 +36,16 @@
             For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
         </blockquote>
 
+        <article>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </article>
+
         <section class="panel">
+          <h3>Links in Lists</h3>
+          <div class="row">
+          <div class="divider pull-left"></div>
+        </div>
+        <div class="row">
             <ol>
                 <li>
                     <a href="#">This is some link</a>
@@ -69,6 +78,7 @@
                     <a class="utb utb-ORL" href="#">Opposite right to left</a>
                 </li>
             </ul>
+          </div>
             <span class="usquare">
           <a class="utb utb-OLR" href="#">Square</a>
         </span>
@@ -112,9 +122,9 @@
 <p>Below is an actual form.</p>
         <form>
                       <div class="row">
-                          <div class="col-6"><input type="text" placeholder="Your Name"></div>
+                          <div class="col-6"><input type="text" placeholder="Your Name" clas="select"></div>
                           <div class="col-6">
-                              <select placeholder="Select One">
+                              <select class="select" placeholder="Select One">
                                 <option value="I love this">I love this</option>
                                 <option value="I still love this">I still love this</option>
                               </select>
@@ -123,10 +133,31 @@
                       <div class="row">
                           <div class="col-12"><textarea type="text" placeholder="Your Message"></textarea></div>
                       </div>
-
-                      <input type="submit">
+                        <div class="row">
+                            <input type="submit" class="pull-right">
+                        </div>
                   </form>
     </div>
+
+<div class="content">
+    <h3 class="text-center">Anchoring</h3>
+  </div>
+
+    <section class="hero fullscreen accent">
+        <!-- Top -->
+        <div class="content">
+            <div class="row">
+              <p class="text-center">Top (content > row > text-center)</p>
+            </div>
+        </div>
+
+        <div class="hero-body">
+            <div class="content text-center">
+                <h3 class="white">Center of the div</h3>
+                <h5 class=subtitle>(hero-body > content center)</h5>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

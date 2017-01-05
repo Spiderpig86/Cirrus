@@ -57,6 +57,14 @@ h6 {
     margin-bottom: 1rem;
 }
 
+.accent .subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.title + .subtitle { /* Make the subtitlte closer to the title */
+    margin-top: -1.25rem;
+}
+
 p, article, blockquote {
   font-size: 1rem;
   line-height: 2rem;
@@ -86,4 +94,8 @@ p, article, blockquote {
 
 .lowercase {
   text-transform: lowercase;
+}
+
+.white {
+  color: #fff !important;
 }
