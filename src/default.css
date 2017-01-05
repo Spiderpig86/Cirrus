@@ -63,9 +63,9 @@ section {
 
 /* Selection Color */
 ::-moz-selection { /* Code for Firefox */
-    background: yellow;
+    background: rgba(0, 161, 255, 0.2);
 }
 
 ::selection {
-    background: yellow;
+    background: rgba(0, 161, 255, 0.2);
 }
