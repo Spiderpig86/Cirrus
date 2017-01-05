@@ -11,8 +11,28 @@ input[type=text], input[type=password], input[type=email], input[type=search], s
   box-sizing: border-box;
   transition: all .3s;
   outline: none;
+  margin: .5rem 0;
+   padding: .85rem 1.1rem;
 }
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=search]:focus, select:focus {
+textarea, textarea[type=text] {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: .8rem;
+  box-shadow: inset 0px 1px 2px rgba(0,0,0,0.05);
+  border-radius: 3px;
+  color: #5a5a5a;
+  font-family: 'Nunito Sans';
+  font-size: .85rem;
+  letter-spacing: .02rem;
+  box-sizing: border-box;
+  transition: all .3s;
+  outline: none;
+  margin: .5rem 0;
+   padding: 1rem 1.3rem;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=search]:focus, select:focus, textarea:focus, textarea[type=text]:focus {
     box-shadow: inset 0px 1px 8px rgba(0,0,0,0.1);
+    border-color: rgba(0, 102, 255, 0.5);
 }
