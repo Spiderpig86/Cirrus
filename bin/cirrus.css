@@ -2,6 +2,8 @@
 
 /* -------- DEFAULT -------- */
 
+/* BASE STYLING FOR CIRRUS*/
+
 * {
   margin: 0;
   padding: 0;
@@ -58,20 +60,24 @@ section {
 }
 
 .accent {
-  background: -webkit-linear-gradient(top, #f99814, #ee5b2f);
-  background: linear-gradient(to bottom, #f99814, #ee5b2f);
+  background: -webkit-linear-gradient(bottom, #FF5F6D, #FFC371);
+  background: linear-gradient(to top, #FF5F6D, #FFC371);
   color: #fff;
+}
+
+.accent-horiz {
+  background: -webkit-linear-gradient(left, #FF5F6D, #FFC371) !important;
+  background: linear-gradient(to right, #FF5F6D, #FFC371) !important;
 }
 
 /* Selection Color */
 ::-moz-selection { /* Code for Firefox */
-    background: yellow;
+    background: rgba(0, 161, 255, 0.2);
 }
 
 ::selection {
-    background: yellow;
+    background: rgba(0, 161, 255, 0.2);
 }
-
 
 /* -------- ANIMATIONS -------- */
 /* Spinning loading animation */
@@ -139,7 +145,7 @@ transition: all .3s;
 -moz-transition: all .3s;
 background: #ccc;
    -webkit-transform: scale(0.97);
-           transform: scale(0.97);
+           transform: inherit, scale(0.97);
 }
 
 .btn:focus, button:focus, [type=submit]:focus {
@@ -187,6 +193,25 @@ cursor: not-allowed;
   background: transparent;
   color: #999;
 }
+
+.btn-transparent:hover {
+  background: rgba(0, 0, 0, .3);
+  color: #999;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.btn-transparent:active {
+  background: rgba(0, 0, 0, .5);
+  color: #999;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.btn-container { /* Make floated buttons respond to margins */
+    overflow: hidden;
+}
+
 
 /* -------- FONT -------- */
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700');
@@ -388,11 +413,6 @@ section {
 .divider-short {
   max-width: 15rem;
   width: 100%;
-}
-
-.divider-orange {
-  background: -webkit-linear-gradient(left, #f99814, #ee5b2f);
-  background: linear-gradient(to right, #f99814, #ee5b2f);
 }
 
 /* Hero image div */

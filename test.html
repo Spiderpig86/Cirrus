@@ -42,9 +42,7 @@
 
         <section class="panel">
           <h3>Links in Lists</h3>
-          <div class="row">
-          <div class="divider pull-left"></div>
-        </div>
+          <div class="divider"></div>
         <div class="row">
             <ol>
                 <li>
@@ -91,13 +89,22 @@
 
         <section>
             <h3 class="center">Buttons!</h3>
-            <div class="divider divider-short divider-orange"></div>
+            <div class="center">
+              <div class="divider divider-short accent-horiz"></div>
+            </div>
             <p class="clear-right">Lorem ipsum dolor sit amet, imperdiet duis dapibus donec, massa quis mi sollicitudin commodo eu, vel ut mollis, sed lectus maecenas nulla elit. Sollicitudin ligula posuere lectus ut nec nulla, nunc neque metus ut, ut penatibus cras mattis justo, consectetuer condimentum urna. Tempus placerat metus est in amet massa, aenean phasellus veniam, in non ullamcorper et maecenas, at orci non fusce id wisi, etiam vulputate mus. Ultricies erat sed aliquam pellentesque accumsan curabitur, elit massa parturient morbi tellus amet nulla, arcu augue, in nullam turpis. Aliquam nulla ut cursus cras, mollis mauris nisl litora, justo aliquam metus libero sapien nascetur arcu, id ut mauris vestibulum enim eu. Sit gravida tellus iaculis, justo vitae, non ligula faucibus, urna orci elit, eget metus aliquam.</p>
-            <button class="pull-right">Click Me!</button>
+
+            <div class="btn-container">
+              <button class="pull-right">Click Me!</button>
+            </div>
+
             <p class="clear-right">The next button is disabled :( Click donate to help out. Your small donation will make its life much easier.</p>
 
+
+          <div class="btn-container">
             <button disabled class="pull-right">Disabled</button>
             <button class="hackedbtn pull-right">Donate</button>
+          </div>
 
         </section>
         <space></space>
@@ -105,7 +112,8 @@
     </div>
     <!-- Content -->
 
-    <section style="background: #222; clear:both; width:100%; padding: 6rem 0; margin:3rem 0;">
+    <section style="background-color: rgb(67, 67, 67);
+    background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(67, 67, 67)); clear:both; width:100%; padding: 6rem 0; margin:3rem 0;">
         <div class="center">
             <button class="btn-outline">Spooky</button>
         </div>
@@ -142,6 +150,7 @@
 <div class="content">
     <h3 class="text-center">Anchoring</h3>
   </div>
+  <space></space>
 
     <section class="hero fullscreen accent">
         <!-- Top -->
@@ -156,6 +165,12 @@
                 <h3 class="white">Center of the div</h3>
                 <h5 class=subtitle>(hero-body > content center)</h5>
             </div>
+        </div>
+
+        <div class="content">
+          <div class="row">
+            <p class="text-center">Bottom (content > row > text-center)</p>
+          </div>
         </div>
     </section>
 </body>

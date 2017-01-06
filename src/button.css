@@ -102,3 +102,7 @@ cursor: not-allowed;
   -webkit-transform: none;
           transform: none;
 }
+
+.btn-container { /* Make floated buttons respond to margins */
+    overflow: hidden;
+}

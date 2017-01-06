@@ -56,9 +56,14 @@ section {
 }
 
 .accent {
-  background: -webkit-linear-gradient(top, #f99814, #ee5b2f);
-  background: linear-gradient(to bottom, #f99814, #ee5b2f);
+  background: -webkit-linear-gradient(top, #FF5F6D, #FFC371);
+  background: linear-gradient(to bottom, #FF5F6D, #FFC371);
   color: #fff;
+}
+
+.accent-horiz {
+  background: -webkit-linear-gradient(left, #FF5F6D, #FFC371);
+  background: linear-gradient(to right, #FF5F6D, #FFC371);
 }
 
 /* Selection Color */
