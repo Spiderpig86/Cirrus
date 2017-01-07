@@ -57,7 +57,10 @@ section {
   background-size: cover;
 width: 100%;
 height: 100%;
-position: absolute;
+}
+
+.parallax-img {
+  background-attachment: fixed;
 }
 
 .hero { /* Parent of hero-body */
@@ -168,4 +171,18 @@ space {
 
 .row [class^='col-']:first-child, .row [class*=" col-"]:first-child{
   margin-left: 0;
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+  .row {
+    margin-top: 0;
+  }
+
+  .row [class^='col-'], .row [class*=" col-"] { /* Remove the grid structure for smaller screens */
+    width: 100%;
+    margin-top: 2.0833%;
+    margin-left: 0;
+  }
 }

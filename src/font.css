@@ -47,12 +47,6 @@ h6 {
     margin: 1rem 0;
 }
 
-.content h1:not(:first-child),
-.content h2:not(:first-child),
-.content h3:not(:first-child) {
-  margin-top: 2rem;
-}
-
 .title:not(:last-child), .subtitle:not(:last-child) {
     margin-bottom: 1rem;
 }
@@ -96,6 +90,37 @@ p, article, blockquote {
   text-transform: lowercase;
 }
 
+.rtl {
+  direction: rtl;
+}
+
 .white {
   color: #fff !important;
+}
+
+.faded {
+  opacity: 0.75;
+}
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.75rem;
+  }
 }
