@@ -318,6 +318,41 @@ p, article, blockquote {
   opacity: 0.75;
 }
 
+/* Font Awesome */
+.icon { /* Usually used in spans */
+  display: inline-block;
+font-size: 21px; /* Best font sizes are multiples of 7 */
+height: 1.5rem;
+line-height: 1.5rem;
+text-align: center;
+vertical-align: top;
+width: 1.5rem;
+}
+
+.icon .fa {
+    font-size: inherit;
+    line-height: inherit;
+}
+.fa {
+    font-size: 21px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.info {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
+
+.info.success {
+  color: #4CAF50;
+}
+
+.info.error {
+  color: #F44336;
+}
+
 /* MOBILE */
 
 @media (max-width: 550px) {
@@ -341,8 +376,15 @@ p, article, blockquote {
   }
 }
 
+
 /* -------- FORMS -------- */
-input[type=text], input[type=password], input[type=email], input[type=search], select {
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"], select {
   width: 100%;
   border: 1px solid #ddd;
   padding: .8rem;
@@ -377,9 +419,32 @@ textarea, textarea[type=text] {
        min-height: 8rem;
 }
 
-input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=search]:focus, select:focus, textarea:focus, textarea[type=text]:focus {
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:focus {
     box-shadow: inset 0px 1px 8px rgba(0,0,0,0.1);
     border-color: rgba(0, 102, 255, 0.5);
+}
+
+.label:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+.label {
+    color: #4a4a4a;
+    display: block;
+    font-weight: bold;
+}
+
+.text-success {
+    border-color: #4CAF50 !important;
+}
+
+.text-error {
+    border-color: #F44336 !important;
 }
 
 

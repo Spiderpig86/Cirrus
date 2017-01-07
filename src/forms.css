@@ -49,3 +49,20 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
     box-shadow: inset 0px 1px 8px rgba(0,0,0,0.1);
     border-color: rgba(0, 102, 255, 0.5);
 }
+
+.label:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+.label {
+    color: #4a4a4a;
+    display: block;
+    font-weight: bold;
+}
+
+.text-success {
+    border-color: #4CAF50 !important;
+}
+
+.text-error {
+    border-color: #F44336 !important;
+}
