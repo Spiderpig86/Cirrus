@@ -22,6 +22,7 @@
    bottom:0;
    left:0;
    height: 100vh;
+   margin-bottom: 1rem;
 }
 
 /* This works well with panel */
@@ -29,10 +30,7 @@ section {
     display: block;
 }
 
-.section-small
-
 .panel {
-  background: #fff;
     padding: 2.5em 0;
 }
 
@@ -163,7 +161,7 @@ space {
 
 /* Some offset values */
 .row [class^='col-'], .row [class*=" col-"] {
-  float: left;
+  float: left; /* Keeps the elements in 1 row */
   min-height: 50px;
   margin-left: 2.083333%;
 }

@@ -384,6 +384,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, inp
    bottom:0;
    left:0;
    height: 100vh;
+   margin-bottom: 1rem;
 }
 
 /* This works well with panel */
@@ -391,10 +392,7 @@ section {
     display: block;
 }
 
-.section-small
-
 .panel {
-  background: #fff;
     padding: 2.5em 0;
 }
 
@@ -521,6 +519,18 @@ space {
 
 .row .col-12 {
   width: 100%;
+}
+
+.row .col-fluid {
+    display: block;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  padding: 0.75rem;
 }
 
 /* Some offset values */
