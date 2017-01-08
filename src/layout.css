@@ -60,7 +60,7 @@ height: 100%;
 }
 
 .parallax-img {
-  background-attachment: fixed;
+  background-attachment: fixed !important;
 }
 
 .hero { /* Parent of hero-body */
@@ -81,7 +81,7 @@ height: 100%;
 }
 
 .hero-body {
-      -    -webkit-box-flex: 1;
+    -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1; /* Tells the hero-body to take up the entire space */
     -ms-flex-negative: 0;
