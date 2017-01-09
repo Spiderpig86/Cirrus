@@ -6,7 +6,7 @@
 # Cirrus
 >tl;dr: A CSS framework.
 
-[![Version] (https://img.shields.io/badge/version-v0.3.5-orange.svg "v.0.3.5")]
+![Version] (https://img.shields.io/badge/version-v0.3.5-orange.svg "v.0.3.5")
 
 A fully responsive CSS and UI framework with custom design controls and simplistic structure. A components are customizable and work with your CSS.
 
@@ -24,7 +24,7 @@ A fully responsive CSS and UI framework with custom design controls and simplist
 * [Font](https://github.com/Spiderpig86/Cirrus/blob/master/src/font.css "Font")
   * All text styles for this framework for headers, articles, blockquotes, and paragraphs.
 * [Forms](https://github.com/Spiderpig86/Cirrus/blob/master/src/forms.css "Forms")
-..* Form styles for textboxes, textfields, selects, and layout.
+  * Form styles for textboxes, textfields, selects, and layout.
 * [Layout](https://github.com/Spiderpig86/Cirrus/blob/master/src/layout.css "Layout")
   * Rules for grids, item alignment, and layout borders.
 * [Links](https://github.com/Spiderpig86/Cirrus/blob/master/src/links.css "Links")

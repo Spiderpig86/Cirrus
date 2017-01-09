@@ -8,9 +8,7 @@
   margin: 0;
   padding: 0;
   /* Prevent setting borders from increasing the size of an elrement */
-  -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-        box-sizing: border-box;
+  box-sizing: border-box;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -163,6 +161,7 @@ cursor: not-allowed;
 .btn-outline {
     color: #fff;
     background: transparent;
+    -webkit-transition: all .3s;
     transition: all .3s;
     border: 1px solid #fff;
 }
@@ -171,6 +170,7 @@ cursor: not-allowed;
 .btn-outline:active {
   background: #fff;
   color: #222;
+  -webkit-transition: all .3s;
   transition: all .3s;
 }
 
@@ -179,6 +179,7 @@ cursor: not-allowed;
   border: 1px solid #222;
   color: #222;
   background: transparent;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -212,6 +213,105 @@ cursor: not-allowed;
     overflow: hidden;
 }
 
+/* -------- CARD -------- */
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1), 0 0 12px 2px rgba(10, 10, 10, 0.1);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.card:hover .card-image:after {
+  opacity: 0;
+}
+
+.card-image {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-image:after {
+  content: "";
+display: block;
+position: absolute;
+background-color: rgba(0, 0, 0, 0.1);
+top: 0;
+left: 0;
+right: 0;
+-webkit-transition: all 500ms;
+transition: all 500ms;
+bottom: 0;
+}
+
+.card-container {
+  display: block;
+position: relative;
+  height: 30%;
+}
+
+.card .title, .card .subtitle {
+  color: #fff;
+  margin: 1rem auto;
+}
+
+.card .title {
+  font-weight: 300;
+  font-size: 1.5rem;
+      margin-bottom: .3rem !important;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  }
+
+.card .title-container {
+  position: absolute;
+bottom: 1rem;
+width: 100%;
+  padding: 0 1rem;
+}
+
+.card .action-bar {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0 .5rem;
+    border-top: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card button, .card .btn {
+  display: inline-block;
+  display: inline-block;
+border-color: transparent;
+}
+
+.card button:hover, .card .btn:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.card button:focus, .card .btn:focus {
+  -webkit-transform: none;
+          transform: none;
+}
+
+
 /* -------- CODE -------- */
 code {
   white-space: nowrap;
@@ -243,7 +343,6 @@ pre > code {
   -o-tab-size: 4;
   tab-size: 4;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
@@ -434,6 +533,7 @@ input[type="password"], select {
   font-size: .85rem;
   letter-spacing: .02rem;
   box-sizing: border-box;
+  -webkit-transition: all .3s;
   transition: all .3s;
   outline: none;
   margin: .5rem 0;
@@ -451,6 +551,7 @@ textarea, textarea[type=text] {
   font-size: .85rem;
   letter-spacing: .02rem;
   box-sizing: border-box;
+  -webkit-transition: all .3s;
   transition: all .3s;
   outline: none;
   margin: .5rem 0;
@@ -587,7 +688,7 @@ display: flex;
 space {
   display: block;
   width: 100%;
-  height: 18em;
+  height: 1rem;
 }
 
 /* Use for spacing out elements vertically */
@@ -653,6 +754,8 @@ space {
 
 /* Use in parent div of fluid col */
 .fluid-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -718,7 +821,6 @@ space {
 /* -------- LINKS -------- */
 a {
   -webkit-transition: all .3s;
-  -moz-transition: all .3s;
   transition: all .3s;
   color: #4D565F;
   text-decoration: none;
@@ -731,7 +833,6 @@ backface-visibility: hidden;
 a:hover {
   color: #7C8B9A;
   -webkit-transition: all .3s;
-  -moz-transition: all .3s;
   transition: all .3s;
   -webkit-backface-visibility:hidden;
          backface-visibility:hidden;
@@ -751,7 +852,6 @@ a,a:visited,a:hover,a:active{
 .u:after {
   content: "";
   -webkit-transition: all .3s;
-  -moz-transition: all .3s;
   transition: all .3s;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
@@ -788,7 +888,6 @@ a,a:visited,a:hover,a:active{
 .utb:before, .utb:after {
   content: "";
   -webkit-transition: all .3s;
-  -moz-transition: all .3s;
   transition: all .3s;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
@@ -860,6 +959,7 @@ a,a:visited,a:hover,a:active{
 .usquare:before, .usquare:after{
   content: "";
   box-sizing: border-box;
+  -webkit-transition: 0.25s all ease;
   transition: 0.25s all ease;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -876,7 +976,8 @@ a,a:visited,a:hover,a:active{
 }
 
 .usquare.delay:before{
-  transition-delay: 0.6s;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
 }
 
 .usquare:after{
@@ -885,20 +986,24 @@ a,a:visited,a:hover,a:active{
 }
 
 .usquare.delay:after{
-  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 .usquare a:before {
   left:0;
+  -webkit-transition: 0.25s all ease;
   transition: 0.25s all ease;
 }
 
 .usquare a:after {
   right:0;
+  -webkit-transition: 0.25s all ease;
   transition: 0.25s all ease;
 }
 
 .usquare.delay a:after {
+  -webkit-transition: 0.25s all ease 0.4s;
   transition: 0.25s all ease 0.4s;
 }
 
@@ -947,6 +1052,7 @@ li:last-child {
 .this-inline-flex {
   display: -webkit-inline-bpx;
   display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
   display: inline-flex;
 }
 
@@ -988,9 +1094,15 @@ li:last-child {
 
 /* Center element */
 .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
       margin: 0 auto;
 }
 
@@ -998,17 +1110,26 @@ li:last-child {
   position: absolute;
  top: 50%;
  left: 50%;
- transform: translate(-50%, -50%);
+ -webkit-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
 }
 
 .vertical-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .horizontal-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .this-overlay {

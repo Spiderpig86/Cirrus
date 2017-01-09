@@ -3,5 +3,94 @@
     border-radius: 5px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     display: block;
-    padding: 1.25rem;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1), 0 0 12px 2px rgba(10, 10, 10, 0.1);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.card:hover .card-image:after {
+  opacity: 0;
+}
+
+.card-image {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-image:after {
+  content: "";
+display: block;
+position: absolute;
+background-color: rgba(0, 0, 0, 0.1);
+top: 0;
+left: 0;
+right: 0;
+-webkit-transition: all 500ms;
+transition: all 500ms;
+bottom: 0;
+}
+
+.card-container {
+  display: block;
+position: relative;
+  height: 30%;
+}
+
+.card .title, .card .subtitle {
+  color: #fff;
+  margin: 1rem auto;
+}
+
+.card .title {
+  font-weight: 300;
+  font-size: 1.5rem;
+      margin-bottom: .3rem !important;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  }
+
+.card .title-container {
+  position: absolute;
+bottom: 1rem;
+width: 100%;
+  padding: 0 1rem;
+}
+
+.card .action-bar {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0 .5rem;
+    border-top: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card button, .card .btn {
+  display: inline-block;
+  display: inline-block;
+border-color: transparent;
+}
+
+.card button:hover, .card .btn:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.card button:focus, .card .btn:focus {
+  -webkit-transform: none;
+          transform: none;
 }
