@@ -6,7 +6,7 @@
 # Cirrus
 >tl;dr: A CSS framework.
 
-[![Version] (https://img.shields.io/badge/version-v0.3.5-orange.svg "v.0.3.5")]
+![Version] (https://img.shields.io/badge/version-v0.3.5-orange.svg "v.0.3.5")
 
 A fully responsive CSS and UI framework with custom design controls and simplistic structure. A components are customizable and work with your CSS.
 
