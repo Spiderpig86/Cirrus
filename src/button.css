@@ -106,3 +106,8 @@ cursor: not-allowed;
 .btn-container { /* Make floated buttons respond to margins */
     overflow: hidden;
 }
+
+/* Right of input */
+.has-controls.input:not([class*="left action"])>button:last-child, .has-controls.input:not([class*="left action"])>.btn:last-child>.btn {
+    border-radius: 0 .28571429rem .28571429rem 0;
+}
