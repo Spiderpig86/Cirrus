@@ -298,6 +298,10 @@ h6 {
     margin: 1rem 0;
 }
 
+.title {
+  font-weight: bolder;
+}
+
 .title:not(:last-child), .subtitle:not(:last-child) {
     margin-bottom: 1rem;
 }
@@ -649,13 +653,18 @@ space {
 
 /* Use in parent div of fluid col */
 .fluid-container {
-  display: table;
-  width: 100%;
+  display: flex;
 }
 
 .row .col-fluid {
-  display:table-cell;
-      float: none !important;
+  display: block;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
 }
 
 /* Some offset values */
@@ -680,10 +689,14 @@ space {
 }
 
 /* Divider for multiple elements in a div */
-.divided >.column:not(.row), .divided >.row [class^='col-'] {
+.divided >.fluid-container:not(.row), .divided >.row [class^='col-'] {
     box-shadow: -1px 0 0 0 rgba(34,36,38,.15);
 }
 
+/* Remove border in first child */
+.divided >.row [class^='col-']:first-child, .divided >.row [class^='col-']:first-child {
+    box-shadow: none;
+}
 
 /* MOBILE */
 @media screen and (max-width: 768px) {
@@ -691,14 +704,16 @@ space {
     margin-top: 0;
   }
 
-  .row [class^='col-']:not(.col-fluid), .row [class*=" col-"]:not(.col-fluid) { /* Remove the grid structure for smaller screens */
+  .row [class^='col-'], .row [class*=" col-"] { /* Remove the grid structure for smaller screens */
     width: 100%;
     margin-top: 2.0833%;
     margin-left: 0;
   }
+
+  .fluid-container {
+    display: inherit;
+  }
 }
-
-
 
 /* -------- LINKS -------- */
 a {

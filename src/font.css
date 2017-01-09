@@ -47,6 +47,10 @@ h6 {
     margin: 1rem 0;
 }
 
+.title {
+  font-weight: bolder;
+}
+
 .title:not(:last-child), .subtitle:not(:last-child) {
     margin-bottom: 1rem;
 }
