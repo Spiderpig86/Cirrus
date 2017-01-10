@@ -215,7 +215,7 @@ space {
     margin-top: 0;
   }
 
-  .row [class^='col-'], .row [class*=" col-"] { /* Remove the grid structure for smaller screens */
+  .row [class^='col-']:not(.ignore-screen), .row [class*=" col-"]:not(.ignore-screen) { /* Remove the grid structure for smaller screens */
     width: 100%;
     margin-top: 2.0833%;
     margin-left: 0;
