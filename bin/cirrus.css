@@ -100,6 +100,11 @@ section {
   }
 }
 
+.hover-grow:hover {
+      transform: scale(1.1);
+    transition-duration: .08s;
+}
+
 /* -------- BUTTONS -------- */
 /* Button styling */
 /* Un-themed */
@@ -390,12 +395,11 @@ margin: .5rem;
 /* -------- CODE -------- */
 code {
   white-space: nowrap;
-  border-radius: 4px;
   padding: 1em;
 margin: .5em 0;
 overflow: auto;
-border-radius: 0.3em;
-    background: #272822;
+     background: #f4f5f6;
+      
 }
 
 pre > code {
@@ -406,8 +410,7 @@ pre > code {
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  color: #f8f8f2;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  color: #4a4a4a;
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
   direction: ltr;
   text-align: left;
@@ -418,9 +421,13 @@ pre > code {
   -o-tab-size: 4;
   tab-size: 4;
   -webkit-hyphens: none;
+  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+ border-left: .3rem solid #f03d4d;
 }
+
+
 
 /* -------- FONT -------- */
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700');
@@ -663,8 +670,66 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
     border-color: #F44336 !important;
 }
 
+/* -------- HEADER -------- */
+
+.header {
+        -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch; /* Make items fill up all available space regardless of width https://drafts.csswg.org/css-align/ */
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 3.5rem;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+/* These styles can also be used on menus in the body */
+.head-left, .head-right {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-items: stretch;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+/* Align items to the left */
+.head-left {
+        display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Align items to the right */
+.head-right {
+       display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
 
 /* -------- LAYOUT -------- */
+
 
 .content {
   max-width: 60em;
@@ -764,7 +829,7 @@ display: flex;
 space {
   display: block;
   width: 100%;
-  height: 1rem;
+  height: 1em;
 }
 
 /* Use for spacing out elements vertically */
@@ -830,8 +895,6 @@ space {
 
 /* Use in parent div of fluid col */
 .fluid-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -877,6 +940,56 @@ space {
     box-shadow: none;
 }
 
+.level {
+  -webkit-box-align: center;
+-ms-flex-align: center;
+-ms-grid-row-align: center;
+align-items: center;
+-webkit-box-pack: justify;
+-ms-flex-pack: justify;
+justify-content: space-between;
+}
+
+.level-left {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; /* Start for left */
+}
+
+.level-right {
+    -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; /* End for right */
+}
+
+.level-item { /* Centers items */
+      -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+
 /* MOBILE */
 @media screen and (max-width: 768px) {
   .row {
@@ -889,10 +1002,16 @@ space {
     margin-left: 0;
   }
 
+/* Increase space with cards */
+  .fluid-container  [class^='col-']:not(.ignore-screen), .row [class*=" col-"]:not(.ignore-screen) {
+    margin-top: 1rem;
+  }
+
   .fluid-container {
     display: inherit;
   }
 }
+
 
 /* -------- LINKS -------- */
 a {
@@ -1128,7 +1247,6 @@ li:last-child {
 .this-inline-flex {
   display: -webkit-inline-bpx;
   display: -ms-inline-flexbox;
-  display: -webkit-inline-box;
   display: inline-flex;
 }
 
@@ -1170,15 +1288,9 @@ li:last-child {
 
 /* Center element */
 .center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
       margin: 0 auto;
 }
 
@@ -1186,26 +1298,17 @@ li:last-child {
   position: absolute;
  top: 50%;
  left: 50%;
- -webkit-transform: translate(-50%, -50%);
-         transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
 }
 
 .vertical-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .horizontal-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .this-overlay {
@@ -1260,53 +1363,10 @@ li:last-child {
   margin-bottom: 20px;
 }
 
-.level {
-  -webkit-box-align: center;
--ms-flex-align: center;
--ms-grid-row-align: center;
-align-items: center;
--webkit-box-pack: justify;
--ms-flex-pack: justify;
-justify-content: space-between;
-}
-
-.level-left {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -ms-grid-row-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; /* Start for left */
-}
-
-.level-right {
-    -webkit-box-align: center;
-  -ms-flex-align: center;
-  -ms-grid-row-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; /* End for right */
-}
-
-.level-item { /* Centers items */
-      -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+/* Avatar */
+.avatar {
+  border-radius: 50%;
+    position: relative;
 }
 
 /* Do the actual balancing only on larger screens */

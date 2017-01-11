@@ -19,3 +19,8 @@
             transform: rotate(359deg);
   }
 }
+
+.hover-grow:hover {
+      transform: scale(1.1);
+    transition-duration: .08s;
+}

@@ -1,11 +1,10 @@
 code {
   white-space: nowrap;
-  border-radius: 4px;
   padding: 1em;
 margin: .5em 0;
 overflow: auto;
-border-radius: 0.3em;
-    background: #272822;
+     background: #f4f5f6;
+      
 }
 
 pre > code {
@@ -16,8 +15,7 @@ pre > code {
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  color: #f8f8f2;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  color: #4a4a4a;
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
   direction: ltr;
   text-align: left;
@@ -31,4 +29,5 @@ pre > code {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+ border-left: .3rem solid #f03d4d;
 }

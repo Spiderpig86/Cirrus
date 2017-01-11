@@ -1,0 +1,60 @@
+.header {
+        -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch; /* Make items fill up all available space regardless of width https://drafts.csswg.org/css-align/ */
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 3.5rem;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+}
+
+/* These styles can also be used on menus in the body */
+.header-left, .header-right {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-items: stretch;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+/* Align items to the left */
+.header-left {
+        display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Align items to the right */
+.header-right {
+       display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Static header at the top of the screen */
+.header-fixed {
+    position: fixed;
+}
