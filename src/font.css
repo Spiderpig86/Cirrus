@@ -107,6 +107,10 @@ p, article, blockquote {
   opacity: 0.75;
 }
 
+.italics {
+  font-style: italic;
+}
+
 /* Font Awesome */
 .icon { /* Usually used in spans */
   display: inline-block;
@@ -140,6 +144,18 @@ width: 1.5rem;
 
 .info.error {
   color: #F44336;
+}
+
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
 }
 
 /* MOBILE */
