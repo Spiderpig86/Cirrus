@@ -36,6 +36,15 @@ h6 {
   font-size: 1.5rem;
 }
 
+strong {
+  font-weight: 700;
+}
+
+.light {
+  font-weight: 200;
+  font-family: 'Nunito Sans';
+}
+
 .content h1,
 .content h2,
 .content h3,

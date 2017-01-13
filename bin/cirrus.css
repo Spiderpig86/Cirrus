@@ -110,7 +110,7 @@ section {
 /* Un-themed */
 .btn, button, [type=submit] {
   display: block;
-  line-height: 2.5rem;
+  line-height: 3rem;
   overflow: hidden;
   padding: 0 1.5rem;
   width: auto;
@@ -166,7 +166,6 @@ cursor: not-allowed;
 .btn-outline {
     color: #fff;
     background: transparent;
-    -webkit-transition: all .3s;
     transition: all .3s;
     border: 1px solid #fff;
 }
@@ -175,7 +174,6 @@ cursor: not-allowed;
 .btn-outline:active {
   background: #fff;
   color: #222;
-  -webkit-transition: all .3s;
   transition: all .3s;
 }
 
@@ -184,7 +182,6 @@ cursor: not-allowed;
   border: 1px solid #222;
   color: #222;
   background: transparent;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -217,6 +214,12 @@ cursor: not-allowed;
 .btn-container { /* Make floated buttons respond to margins */
     overflow: hidden;
 }
+
+/* Right of input */
+.has-controls.input:not([class*="left action"])>button:last-child, .has-controls.input:not([class*="left action"])>.btn:last-child>.btn {
+    border-radius: 0 .28571429rem .28571429rem 0;
+}
+
 
 /* -------- CARD -------- */
 .card {
@@ -468,6 +471,15 @@ h6 {
   font-size: 1.5rem;
 }
 
+strong {
+  font-weight: 700;
+}
+
+.light {
+  font-weight: 200;
+  font-family: 'Nunito Sans';
+}
+
 .content h1,
 .content h2,
 .content h3,
@@ -612,6 +624,7 @@ width: 1.5rem;
     font-size: 0.75rem;
   }
 }
+
 
 /* -------- FORMS -------- */
 input[type="email"],
