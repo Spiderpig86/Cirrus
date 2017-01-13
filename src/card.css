@@ -7,12 +7,17 @@
     overflow: hidden;
     -webkit-transition: all .3s;
     transition: all .3s;
+    backface-visibility: hidden;
 }
 
 .card:hover {
     box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1), 0 0 12px 2px rgba(10, 10, 10, 0.1);
     -webkit-transition: all .3s;
     transition: all .3s;
+}
+
+.card:hover .card-image {
+   transform: translateY(-40px);
 }
 
 .card:hover .card-image:after {
@@ -113,6 +118,7 @@ border-color: transparent;
   transition: all .3s ease-in-out;
   width: 100%;
       padding: .5rem 1rem;
+      backface-visibility: hidden;
 }
 
 .mobile-title .title, .mobile-title .subtitle {
