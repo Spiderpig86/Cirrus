@@ -98,6 +98,7 @@ video {
             transform: rotate(359deg);
   }
 }
+
 @keyframes spinAround {
   from {
     -webkit-transform: rotate(0deg);
@@ -112,6 +113,18 @@ video {
 .hover-grow:hover {
       transform: scale(1.1);
     transition-duration: .08s;
+}
+
+/* Heart animation */
+@-webkit-keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
 }
 
 /* -------- BUTTONS -------- */
@@ -161,7 +174,7 @@ transition: all .3s;
 background: #ccc;
 }
 
-.animated:focus {
+.animated:active {
    -webkit-transform: scale(0.97);
            transform: inherit, scale(0.97);
 }
@@ -641,6 +654,39 @@ width: 1.5rem;
   }
 }
 
+/* -------- FOOTER -------- */
+footer {
+    width: 100%;
+    padding: 30px 0;
+    background: #111;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+footer a {
+    font-weight: bolder;
+    color: #fff;
+}
+
+footer p {
+    color: #848484;
+}
+
+footer h6 {
+    text-align: center;
+    letter-spacing: 6px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* The heart (you can set a custom id if you want) */
+footer p .fa {
+        color: #E90606;
+    margin: 0 3px;
+    animation: pound 0.35s infinite alternate;
+    -webkit-animation: pound 0.35s infinite alternate;
+        vertical-align: baseline;
+}
 
 /* -------- FORMS -------- */
 input[type="email"],
@@ -978,7 +1024,6 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
 
 /* -------- LAYOUT -------- */
 
-
 .content {
   max-width: 60em;
   margin: 0 auto 1.5em;
@@ -1246,11 +1291,11 @@ justify-content: space-between;
 
   .row [class^='col-']:not(.ignore-screen), .row [class*=" col-"]:not(.ignore-screen) { /* Remove the grid structure for smaller screens */
     width: 100%;
-    margin-top: 2.0833%;
+    margin-top: 1rem;
     margin-left: 0;
   }
 
-/* Increase space with cards */
+  /* Increase space with cards */
   .fluid-container  [class^='col-']:not(.ignore-screen), .row [class*=" col-"]:not(.ignore-screen) {
     margin-top: 1rem;
   }
@@ -1258,8 +1303,12 @@ justify-content: space-between;
   .fluid-container {
     display: inherit;
   }
-}
 
+  /* Dividers for mobile layout */
+  .divided >.fluid-container:not(.row), .divided >.row [class^='col-'] {
+    box-shadow: 0 -1px 0 0 rgba(34,36,38,.15);
+}
+}
 
 /* -------- LINKS -------- */
 a {

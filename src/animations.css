@@ -9,6 +9,7 @@
             transform: rotate(359deg);
   }
 }
+
 @keyframes spinAround {
   from {
     -webkit-transform: rotate(0deg);
@@ -23,4 +24,16 @@
 .hover-grow:hover {
       transform: scale(1.1);
     transition-duration: .08s;
+}
+
+/* Heart animation */
+@-webkit-keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
 }

@@ -1,0 +1,32 @@
+footer {
+    width: 100%;
+    padding: 30px 0;
+    background: #111;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+footer a {
+    font-weight: bolder;
+    color: #fff;
+}
+
+footer p {
+    color: #848484;
+}
+
+footer h6 {
+    text-align: center;
+    letter-spacing: 6px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* The heart (you can set a custom id if you want) */
+footer p .fa {
+        color: #E90606;
+    margin: 0 3px;
+    animation: pound 0.35s infinite alternate;
+    -webkit-animation: pound 0.35s infinite alternate;
+        vertical-align: baseline;
+}
