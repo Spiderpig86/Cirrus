@@ -50,7 +50,7 @@
   text-align: center;
 }
 
-/* Center element */
+/* Center element - best used for hero bodies or text */
 .center {
   display: flex;
   align-items: center;
@@ -133,6 +133,10 @@
     position: relative;
         display: block;
     margin: auto;
+}
+
+.fill-width {
+  width: 100%
 }
 
 /* Do the actual balancing only on larger screens */

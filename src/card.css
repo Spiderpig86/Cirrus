@@ -171,3 +171,7 @@ overflow: hidden;
     width: 70px;
 margin: .5rem;
 }
+
+/*
+    NOTE: To have cards with the same height, place the card class with col-x classes and have the parent have fluid-container.
+*/
