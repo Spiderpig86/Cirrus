@@ -170,3 +170,23 @@
 .dropdown-menu > li:last-child {
     margin-bottom: 0;
 }
+
+.header-btn {
+    cursor: pointer;
+    display: block;
+    height: 3.5rem;
+    position: relative;
+    width: 3.5rem;
+}
+
+@media screen and (min-width: 769px) {
+    .header-right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .header-btn {
+    display: none;
+}
+}

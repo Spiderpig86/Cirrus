@@ -131,6 +131,8 @@
 .avatar {
   border-radius: 50%;
     position: relative;
+        display: block;
+    margin: auto;
 }
 
 /* Do the actual balancing only on larger screens */

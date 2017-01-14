@@ -30,7 +30,10 @@
 transition: all .3s;
 -moz-transition: all .3s;
 background: #eee;
- -webkit-transform: scale(1.1);
+}
+
+.animated:hover {
+   -webkit-transform: scale(1.1);
          transform: scale(1.1);
 }
 
@@ -39,6 +42,9 @@ background: #eee;
 transition: all .3s;
 -moz-transition: all .3s;
 background: #ccc;
+}
+
+.animated:focus {
    -webkit-transform: scale(0.97);
            transform: inherit, scale(0.97);
 }

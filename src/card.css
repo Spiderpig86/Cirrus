@@ -16,7 +16,7 @@
     transition: all .3s;
 }
 
-.card:hover .card-image {
+.slide-up:hover .card-image {
    transform: translateY(-40px);
 }
 

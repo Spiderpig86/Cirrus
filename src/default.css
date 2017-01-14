@@ -74,3 +74,10 @@ section {
 ::selection {
     background: rgba(0, 161, 255, 0.2);
 }
+
+video {
+    position: absolute;
+        height: 100vh;
+        object-fit: fill;
+        width: 100%;
+}
