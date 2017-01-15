@@ -30,6 +30,7 @@
   position: absolute;
   right: 0;
   top: 0;
+      border-radius: 5px 5px 0 0;
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-transition: all .3s ease-in-out;
