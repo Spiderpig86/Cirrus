@@ -1,0 +1,24 @@
+.table {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border-collapse: collapse; /* Allows us to set 0 margin in table cells */
+}
+
+.table td {
+        border: 1px solid #dbdbdb;
+    border-width: 0 0 1px;
+    padding: 0.5em 0.75em;
+    vertical-align: top;
+    text-align: center;
+    margin: 0;
+}
+
+.table tr {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+
+}
+
+.table tr:hover {
+    background-color: #fafafa;
+}
