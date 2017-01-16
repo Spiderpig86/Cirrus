@@ -1539,6 +1539,7 @@ li:last-child {
     margin-bottom: 1.5rem;
     width: 100%;
     border-collapse: collapse; /* Allows us to set 0 margin in table cells */
+    border-spacing: 0;
 }
 
 .table td, .table th {
@@ -1597,6 +1598,23 @@ li:last-child {
 /* Decrease padding */
 .table.small td, .table.small th {
     padding: 0.25rem 0.75rem;
+}
+
+/* Fixed title table */
+.table.fixed-head thead {
+      position: relative;
+    display: block;
+}
+
+.table.fixed-head tbody {
+      height: 200px; /* Set the height you want */
+    display: block; /* Needed */
+    overflow: auto; /* Shows scrollbars */
+}
+
+.table.fixed-head tr {
+  display: table;
+    width: 100%; /* Forces row to span container */
 }
 
 /* -------- UTIL -------- */

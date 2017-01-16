@@ -6,7 +6,7 @@
 # Cirrus
 >tl;dr: A CSS framework.
 
-![Version] (https://img.shields.io/badge/version-v0.3.5-orange.svg "v.0.3.5")
+![Version] (https://img.shields.io/badge/version-v0.4.0-orange.svg "v.0.4.0")
 
 A fully responsive CSS and UI framework with custom design controls and simplistic structure. A components are customizable and work with your CSS.
 
@@ -33,6 +33,8 @@ A fully responsive CSS and UI framework with custom design controls and simplist
   * Link styles with different effects.
 * [Lists](https://github.com/Spiderpig86/Cirrus/blob/master/src/lists.css "Lists")
   * A simple stylesheet to simplify list UI.
+* [Tables](https://github.com/Spiderpig86/Cirrus/blob/master/src/table.css "Tables")
+  * Clean designs for tables.
 * [Util](https://github.com/Spiderpig86/Cirrus/blob/master/src/util.css "Utils")
   * Designed to solve many common headaches with CSS.
 

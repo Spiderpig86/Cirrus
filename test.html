@@ -646,7 +646,7 @@
                 </table>
 
                 <div class="divider"></div>
-
+                <p>Table with smaller padding. <code>&lt;table class=&quot;table small&quot;&gt;</code></p>
                 <table class="table small">
                     <!-- Set the table header and footer -->
                     <thead>
@@ -682,7 +682,7 @@
                 </table>
 
                 <div class="divider"></div>
-
+                <p>Table with stripes. <code>&lt;table class=&quot;table striped&quot;&gt;</code></p>
                 <table class="table striped">
                     <!-- Set the table header and footer -->
                     <thead>
@@ -718,6 +718,49 @@
                 </table>
 
                 <div class="divider"></div>
+                 <div class="row">
+                    <div class="col-6"> <p>Table with fixed header. <code>&lt;table class=&quot;table fixed-head&quot;&gt;</code></p>
+                    <p>Remember to set the height of the table.</p></div>
+                    <div class="col-6">
+                        <pre>
+                            <code>.table.fixed-head tbody {
+    height: your-height;
+}</code>
+                        </pre>
+                    </div>
+                <table class="table fixed-head">
+                    <!-- Set the table header and footer -->
+                    <thead>
+                        <tr>
+                            <th><abbr title="Title1">T1</abbr></th>
+                            <th><abbr title="Title2">T2</abbr></th>
+                            <th><abbr title="Title3">T3</abbr></th>
+                            <th><abbr title="Title4">T4</abbr></th>
+                            <th><abbr title="Title5">T5</abbr></th>
+                            <th><abbr title="Short">S</abbr></th>
+                            <th>Notes</th>
+                        </tr>
+                        </thead>
+                        <!-- Optional -->
+                        <tfoot>
+                        <tr>
+                            <th><abbr title="Title1">T1</abbr></th>
+                            <th><abbr title="Title2">T2</abbr></th>
+                            <th><abbr title="Title3">T3</abbr></th>
+                            <th><abbr title="Title4">T4</abbr></th>
+                            <th><abbr title="Title5">T5</abbr></th>
+                            <th><abbr title="Short">S</abbr></th>
+                            <th>Notes</th>
+                        </tr>
+                        </tfoot>
+                
+                    <tr><th>1</th><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>S</td><td>Row:1 Cell:5</td></tr>
+                    <tr><th>2</th><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>S</td><td>Row:2 Cell:5</td></tr>
+                    <tr><th>3</th><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>S</td><td>Row:3 Cell:5</td></tr>
+                    <tr><th>4</th><td>Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>S</td><td>Row:4 Cell:5</td></tr>
+                    <tr><th>5</th><td>Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>S</td><td>Row:5 Cell:5</td></tr>
+                    <tr><th>6</th><td>Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>S</td><td>Row:6 Cell:5</td></tr>
+                </table>
             </div>
         </section>
 
