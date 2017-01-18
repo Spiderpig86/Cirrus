@@ -66,12 +66,14 @@ cursor: not-allowed;
     background: transparent;
     transition: all .3s;
     border: 1px solid #fff;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
 }
 
 .btn-outline:hover,
 .btn-outline:active {
-  background: #fff;
-  color: #222;
+      background: rgba(255, 255, 255, 0.35);
+    color: #fff;
   transition: all .3s;
 }
 

@@ -196,12 +196,14 @@ cursor: not-allowed;
     background: transparent;
     transition: all .3s;
     border: 1px solid #fff;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
 }
 
 .btn-outline:hover,
 .btn-outline:active {
-  background: #fff;
-  color: #222;
+      background: rgba(255, 255, 255, 0.35);
+    color: #fff;
   transition: all .3s;
 }
 
@@ -247,7 +249,6 @@ cursor: not-allowed;
 .has-controls.input:not([class*="left action"])>button:last-child, .has-controls.input:not([class*="left action"])>.btn:last-child>.btn {
     border-radius: 0 .28571429rem .28571429rem 0;
 }
-
 
 /* -------- CARD -------- */
 .card {

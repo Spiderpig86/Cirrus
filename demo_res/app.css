@@ -1,0 +1,23 @@
+.header {
+    background: transparent;
+    box-shadow: none;
+    padding: 2rem 1rem;
+}
+
+.header a {
+    color: #fff;
+}
+
+.hero-body {
+    position: relative;
+}
+
+#logo {
+    max-width: 200px;
+}
+
+#version {
+    background-color: rgba(255, 255, 255, 0.3);
+    max-width: 200px;
+    margin: 2rem auto;
+}

@@ -1,24 +1,86 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Cirrus CSS</title>
+    <title>Cirrus</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="description" content="A responsive and lightweight CSS framework.">
     <meta charset="UTF-8">
 
        <link href="bin/cirrus.css" type="text/css" rel="stylesheet"/>
+          <link href="demo_res/app.css" type="text/css" rel="stylesheet"/>
+
        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-<script src="https://use.fontawesome.com/a696b91557.js"></script>
+     
   </head>
 
   <body>
-      <div class="content fullscreen center">
-          <h1>Test</h1>
-      </div>
+         <div id="header" class="header header-fixed unselectable">
+        <div class="header-left">
+            <div class="header-item no-hover">
+                <a href="#landing" class="smoothScroll"> <h5 class="title">Cirrus</h5></a>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="header-item">
+                <a href="https://github.com/Spiderpig86/Cirrus">
+                    <span class="icon">
+                        <i class="fa fa-github"></i>
+                    </span>
+                </a>
+            </div>
+                <div class="header-item">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-slack"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="header-item">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-twitter"></i>
+                        </span>
+                    </a>
+                </div>
+        </div>
+        <div class="header-item header-btn" id="header-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        
+        <div class="header-right header-menu" id="header-menu">
+                <div class="header-item">
+                    <a href="#about" class="smoothScroll">About</a>
+                </div>
+                 <div class="header-item">
+                    <a href="#bottomsign" class="smoothScroll">Docs</a>
+                </div>
+        </div>
+    </div>
+
+        <section id="landing" class="hero fullscreen">
+            <video preload="auto" autoplay="" loop="" class="fillWidth fadeIn" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Sky-High.jpg">
+            <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Sky-High.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="https://s3-us-west-2.amazonaws.com/coverr/webm/Sky-High.webm" type="video/webm">Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+            <div class="hero-body">
+                <div class="content text-center">
+                    <img id="logo" src="https://camo.githubusercontent.com/1ad8f6cfa61958d86898daa2ecfe6e96428c1031/687474703a2f2f756c74696d61746570657374636f6e74726f6c6e792e636f6d2f636f6d696e67736f6f6e2e706e67" alt="logo"/>
+                    <h1 class="white light title">Cirrus</h1>
+                    <h6 class="white light">A lightweight and responsive CSS framework.</h6>
+                    <p id="version" class="white card text-center">0.4.0</p>
+                    <button class="btn-outline center animated">Getting Started</button>
+                </div>
+            </div>
+        </section>
+
+        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script src="https://use.fontawesome.com/a696b91557.js"></script>
   </body>
 </html>
