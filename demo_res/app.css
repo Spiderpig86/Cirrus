@@ -1,7 +1,36 @@
 .header {
-    background: transparent;
-    box-shadow: none;
+        -webkit-transition: background 0.4s ease, height 0.4s ease;
+        transition: background 0.4s ease, height 0.4s ease;
+    -webkit-transition-property: background, height;
+    transition-property: background, height;
+    -webkit-transition-duration: 0.4s, 0.4s;
+            transition-duration: 0.4s, 0.4s;
+    -webkit-transition-timing-function: ease, ease;
+            transition-timing-function: ease, ease;
+    -webkit-transition-delay: initial, initial;
+            transition-delay: initial, initial;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    background-color: transparent;
     padding: 2rem 1rem;
+    box-shadow: none;
+}
+
+.header-fill {
+    background-color: rgba(0, 0, 0, 0.87);
+    padding: 0 2rem;
+         -webkit-transition: background 0.4s ease, height 0.4s ease;
+         transition: background 0.4s ease, height 0.4s ease;
+    -webkit-transition-property: background, height;
+    transition-property: background, height;
+    -webkit-transition-duration: 0.4s, 0.4s;
+            transition-duration: 0.4s, 0.4s;
+    -webkit-transition-timing-function: ease, ease;
+            transition-timing-function: ease, ease;
+    -webkit-transition-delay: initial, initial;
+            transition-delay: initial, initial;
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
 
 .header a {
@@ -37,6 +66,6 @@
 /* MOBILE */
 @media screen and (max-width: 768px) {
     .padtop {
-        margin: 3rem 0;
+        margin: 4rem 0;
     }
 }
