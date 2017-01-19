@@ -8,6 +8,10 @@
     color: #fff;
 }
 
+.header-btn span {
+    background-color: #fff;
+}
+
 .hero-body {
     position: relative;
 }
@@ -20,4 +24,19 @@
     background-color: rgba(255, 255, 255, 0.3);
     max-width: 200px;
     margin: 2rem auto;
+}
+
+.padtop {
+    margin: 6rem 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    .padtop {
+        margin: 3rem 0;
+    }
 }
