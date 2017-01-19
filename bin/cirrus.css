@@ -250,6 +250,20 @@ cursor: not-allowed;
     border-radius: 0 .28571429rem .28571429rem 0;
 }
 
+/* Small button */
+.btn-small {
+      line-height: 2.5rem;
+    padding: 0 1rem;
+    font-size: 70%;
+}
+
+/* Big button */
+.btn-big {
+     line-height: 3.5rem;
+    padding: 0 1.5rem;
+    font-size: 90%;
+}
+
 /* -------- CARD -------- */
 .card {
     background-color: white;
