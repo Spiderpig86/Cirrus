@@ -1,5 +1,5 @@
 /* Spinning loading animation */
-@-webkit-keyframes spinAround {
+@-webkit-keyframes loading {
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -10,7 +10,7 @@
   }
 }
 
-@keyframes spinAround {
+@keyframes loading {
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);

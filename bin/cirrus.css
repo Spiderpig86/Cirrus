@@ -88,7 +88,7 @@ video {
 
 /* -------- ANIMATIONS -------- */
 /* Spinning loading animation */
-@-webkit-keyframes spinAround {
+@-webkit-keyframes loading {
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -99,7 +99,7 @@ video {
   }
 }
 
-@keyframes spinAround {
+@keyframes loading {
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -262,6 +262,32 @@ cursor: not-allowed;
      line-height: 3.5rem;
     padding: 0 1.5rem;
     font-size: 90%;
+}
+
+/* Loading button */
+.loading {
+    color: transparent !important;
+    position: relative;
+}
+
+.loading:after {
+    border: 2px solid #eee;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: 1rem;
+    position: relative;
+    width: 1rem;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    position: absolute !important;
+      -webkit-animation: loading 500ms infinite linear;
+    animation: loading 500ms infinite linear;
 }
 
 /* -------- CARD -------- */
@@ -625,25 +651,25 @@ width: 1.5rem;
     vertical-align: top;
 }
 
-.fa.x-small {
+.icon.x-small {
   font-size: 7px;
 }
 
-.fa.small {
+.icon.small {
   font-size: 14px;
 }
 
-.fa.large {
+.icon.large {
   font-size: 28px;
   padding: 0.5rem 0;
 }
 
-.fa.x-large {
+.icon.x-large {
   font-size: 35px;
   padding: 1rem 0;
 }
 
-.fa.xx-large {
+.icon.xx-large {
   font-size: 42px;
     padding: 2rem 0;
 }
