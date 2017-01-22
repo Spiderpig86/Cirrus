@@ -618,10 +618,34 @@ width: 1.5rem;
     font-size: inherit;
     line-height: inherit;
 }
+
 .fa {
-    font-size: 21px;
+    font-size: 21px; /* Font sizes in multiple of 7s since they render the best */
     text-align: center;
     vertical-align: top;
+}
+
+.fa.x-small {
+  font-size: 7px;
+}
+
+.fa.small {
+  font-size: 14px;
+}
+
+.fa.large {
+  font-size: 28px;
+  padding: 0.5rem 0;
+}
+
+.fa.x-large {
+  font-size: 35px;
+  padding: 1rem 0;
+}
+
+.fa.xx-large {
+  font-size: 42px;
+    padding: 2rem 0;
 }
 
 .info {
@@ -645,7 +669,6 @@ width: 1.5rem;
     margin-left: 2px;
     vertical-align: middle;
     border-top: 4px dashed;
-    border-top: 4px solid\9;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
 }
@@ -672,6 +695,7 @@ width: 1.5rem;
     font-size: 0.75rem;
   }
 }
+
 
 /* -------- FOOTER -------- */
 footer {
