@@ -88,6 +88,14 @@ span.title {
     background-color: #e67e22;
 }
 
+.col-fluid.content {
+    width: 65%;
+}
+
+#grid a {
+    position: inherit;
+}
+
 /* MOBILE */
 @media screen and (max-width: 768px) {
     .padtop {

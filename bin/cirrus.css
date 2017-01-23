@@ -110,7 +110,11 @@ video {
   }
 }
 
-.hover-grow:hover {
+.hover-grow { /* Mouse leave */
+  transition-duration: .32s;
+}
+
+.hover-grow:hover { /* Mouse enter */
       transform: scale(1.1);
     transition-duration: .08s;
 }
@@ -1191,6 +1195,14 @@ space {
   display: block;
   width: 100%;
   height: 1em;
+}
+
+space.large {
+  padding: 1rem 0;
+}
+
+space.x-large {
+  padding: 2rem 0;
 }
 
 /* Use for spacing out elements vertically */

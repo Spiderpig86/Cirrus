@@ -21,7 +21,11 @@
   }
 }
 
-.hover-grow:hover {
+.hover-grow { /* Mouse leave */
+  transition-duration: .32s;
+}
+
+.hover-grow:hover { /* Mouse enter */
       transform: scale(1.1);
     transition-duration: .08s;
 }
