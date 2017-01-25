@@ -159,3 +159,16 @@ cursor: not-allowed;
       -webkit-animation: loading 500ms infinite linear;
     animation: loading 500ms infinite linear;
 }
+
+/* Override default behavior of aligning font awesome icons to the top */
+button .fa, .btn .fa, [type=submit] .fa {
+    vertical-align: baseline;
+}
+
+button .fa.pad-right, .btn .fa.pad-right, [type=submit] .fa.pad-right {
+    margin-right: .4rem;
+}
+
+button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
+    margin-left: .4rem;
+}
