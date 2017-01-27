@@ -1407,6 +1407,7 @@ justify-content: space-between;
 /* -------- LINKS -------- */
 a {
   -webkit-transition: all .3s;
+  -moz-transition: all .3s;
   transition: all .3s;
   color: #4D565F;
   text-decoration: none;
@@ -1419,6 +1420,7 @@ backface-visibility: hidden;
 a:hover {
   color: #7C8B9A;
   -webkit-transition: all .3s;
+  -moz-transition: all .3s;
   transition: all .3s;
   -webkit-backface-visibility:hidden;
          backface-visibility:hidden;
@@ -1427,7 +1429,6 @@ a:hover {
 a,a:visited,a:hover,a:active{
   -webkit-backface-visibility:hidden;
           backface-visibility:hidden;
-	position:relative;
 	text-decoration:none;
 }
 
@@ -1438,6 +1439,7 @@ a,a:visited,a:hover,a:active{
 .u:after {
   content: "";
   -webkit-transition: all .3s;
+  -moz-transition: all .3s;
   transition: all .3s;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
@@ -1474,6 +1476,7 @@ a,a:visited,a:hover,a:active{
 .utb:before, .utb:after {
   content: "";
   -webkit-transition: all .3s;
+  -moz-transition: all .3s;
   transition: all .3s;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
@@ -1545,7 +1548,6 @@ a,a:visited,a:hover,a:active{
 .usquare:before, .usquare:after{
   content: "";
   box-sizing: border-box;
-  -webkit-transition: 0.25s all ease;
   transition: 0.25s all ease;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -1562,8 +1564,7 @@ a,a:visited,a:hover,a:active{
 }
 
 .usquare.delay:before{
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
+  transition-delay: 0.6s;
 }
 
 .usquare:after{
@@ -1572,24 +1573,20 @@ a,a:visited,a:hover,a:active{
 }
 
 .usquare.delay:after{
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .usquare a:before {
   left:0;
-  -webkit-transition: 0.25s all ease;
   transition: 0.25s all ease;
 }
 
 .usquare a:after {
   right:0;
-  -webkit-transition: 0.25s all ease;
   transition: 0.25s all ease;
 }
 
 .usquare.delay a:after {
-  -webkit-transition: 0.25s all ease 0.4s;
   transition: 0.25s all ease 0.4s;
 }
 
@@ -1600,7 +1597,6 @@ a,a:visited,a:hover,a:active{
 .usquare:hover a:before, .usquare:hover a:after{
   width:100%;
 }
-
 
 
 /* -------- LISTS -------- */
