@@ -96,6 +96,12 @@ span.title {
     position: inherit;
 }
 
+.desc {
+    vertical-align: bottom;
+    font-size: 11px;
+    font-family: 'Nunito Sans';
+}
+
 /* MOBILE */
 @media screen and (max-width: 768px) {
     .padtop {
