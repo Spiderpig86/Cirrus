@@ -34,7 +34,7 @@
 }
 
 .header-item a {
-    color: #333;
+    color: #fff;
 }
 
 .header-btn span {
@@ -100,6 +100,10 @@ span.title {
     vertical-align: bottom;
     font-size: 11px;
     font-family: 'Nunito Sans';
+}
+
+.header-menu {
+    background-color: rgba(76, 76, 76, 0.4);
 }
 
 /* MOBILE */
