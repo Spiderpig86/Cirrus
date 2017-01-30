@@ -15,7 +15,7 @@ $(document).ready(function() {
     });
 });
 
-// Show dropdown when clicked
+/*// Show dropdown when clicked
 $('#header-btn').on('click', function(e) {
     $('#header-menu').toggleClass('is-active');
 })
@@ -31,4 +31,4 @@ $('section').not('#header-btn').on('click', function(e) { // Hide when clicking 
      $('.dropdown-menu').hide(); // Hide other menus clicking on window
     $('.shown').removeClass('shown');
     $('#header-menu').removeClass('is-active');
-});
+});*/

@@ -250,6 +250,61 @@ cursor: not-allowed;
     overflow: hidden;
 }
 
+/* White */
+.btn-white {
+  background: #fff;
+}
+
+.btn-white:hover {
+  background: #f5f5f5;
+}
+
+.btn-white:active {
+  background: #f0f0f0;
+}
+
+/* Light gray */
+.btn-light {
+  background: #eee;
+  color: #333;
+}
+
+.btn-light:hover {
+  background: #e0e0e0;
+}
+
+.btn-light:active {
+   background: #dbdbdb;
+}
+
+/* Dark Gray */
+.btn-dark {
+  background: #444;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #3a3a3a;
+}
+
+.btn-dark:active {
+  background: #303030;
+}
+
+/* Black */
+.btn-black {
+  background: #000;
+  color: #fff;
+}
+
+.btn-black:hover {
+  background: #000;
+}
+
+.btn-black:active {
+  background: #000;
+}
+
 /* Right of input */
 .has-controls.input:not([class*="left action"])>button:last-child, .has-controls.input:not([class*="left action"])>.btn:last-child>.btn {
     border-radius: 0 .28571429rem .28571429rem 0;
