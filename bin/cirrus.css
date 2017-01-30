@@ -310,6 +310,13 @@ cursor: not-allowed;
     border-radius: 0 .28571429rem .28571429rem 0;
 }
 
+/* Tiny button */
+.btn-tiny {
+  line-height: 1.5rem;
+  padding: 0 .5rem;
+  font-size: 50%;
+}
+
 /* Small button */
 .btn-small {
       line-height: 2.5rem;
@@ -318,10 +325,16 @@ cursor: not-allowed;
 }
 
 /* Big button */
-.btn-big {
+.btn-large {
      line-height: 3.5rem;
     padding: 0 1.5rem;
     font-size: 90%;
+}
+
+.btn-xlarge {
+  line-height: 4.5rem;
+  padding: 0 2rem;
+  font-size: 110%;
 }
 
 /* Loading button */
@@ -724,28 +737,28 @@ width: 1.5rem;
     vertical-align: top;
 }
 
-.icon.x-small {
+/*.fa.x-small {
   font-size: 7px;
 }
 
-.icon.small {
+.fa.small {
   font-size: 14px;
 }
 
-.icon.large {
+.fa.large {
   font-size: 28px;
   padding: 0.5rem 0;
 }
 
-.icon.x-large {
+.fa.x-large {
   font-size: 35px;
   padding: 1rem 0;
 }
 
-.icon.xx-large {
+.fa.xx-large {
   font-size: 42px;
     padding: 2rem 0;
-}
+}*/
 
 .info {
     display: block;
@@ -768,6 +781,7 @@ width: 1.5rem;
     margin-left: 2px;
     vertical-align: middle;
     border-top: 4px dashed;
+    border-top: 4px solid\9;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
 }

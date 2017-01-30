@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div id="header" class="header unselectable header-fill">
+    <div id="header" class="header unselectable header-fill level">
         <div class="header-left">
             <div class="header-item no-hover">
                 <a href="#landing" class="smoothScroll">
@@ -35,14 +35,14 @@
             </div>
             <div class="header-item">
                 <a href="#">
-                    <span class="icon">
+                    <span class="icon white">
                             <i class="fa fa-slack"></i>
                         </span>
                 </a>
             </div>
             <div class="header-item">
                 <a href="#">
-                    <span class="icon">
+                    <span class="icon white">
                             <i class="fa fa-twitter"></i>
                         </span>
                 </a>
@@ -86,7 +86,7 @@
                     <div class="col-fluid">
                         <div class="btn animated">test</div>
                         <button class="animated">Regular Button</button>
-                        <input type="submit" class="animated" />
+                        <input type="submit" class="animated"/>
                     </div>
                     <div class="col-fluid">
                     <pre><code>&lt;div class=&quot;btn animated&quot;&gt;test&lt;/div&gt;
@@ -96,8 +96,8 @@
                 </div>
 
             <space class="large"></space>
-
-            <h6>Disabled buttons.</h6>
+            <h6 class="uppercase">States</h6>
+            <p class="title">Disabled buttons.</p>
             <p>Please note that using <code>&lt;div class=&quot;btn&quot;&gt;test&lt;/div&gt</code> is not supported.
                 <div class="row fluid-container">
                     <div class="col-fluid">
@@ -224,8 +224,27 @@
 
 
                   <space class="large"></space>
+                <h6 class="uppercase">Sizes</h6>
+                <p class="title">Tiny</p>
 
-                <h6>Different Button sizes.</h6>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="btn btn-tiny">test</div>
+                            <button class="btn-tiny">Tiny Button</button>
+                            <input type="submit" class="btn-tiny"/>
+                        </div>
+                        
+                    </div>
+                    <div class="col-6">
+                         <div class="row">
+            <pre><code>&lt;div class=&quot;btn btn-small&quot;&gt;test&lt;/div&gt;
+&lt;button class=&quot;btn-small&quot;&gt;Small Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn-small&quot;/&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-6">
                         <div class="row">
@@ -237,19 +256,20 @@
                     </div>
                     <div class="col-6">
                          <div class="row">
-                            <div class="btn btn-large">test</div>
-                            <button class="btn-large">Large Button</button>
-                            <input type="submit" class="btn-large"/>
+            <pre><code>&lt;div class=&quot;btn btn-small&quot;&gt;test&lt;/div&gt;
+&lt;button class=&quot;btn-small&quot;&gt;Small Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn-small&quot;/&gt;</code></pre>
                         </div>
                     </div>
                 </div>
 
+                <p class="title">Large</p>
                 <div class="row">
                     <div class="col-6">
                         <div class="row">
-            <pre><code>&lt;div class=&quot;btn btn-small&quot;&gt;test&lt;/div&gt;
-&lt;button class=&quot;btn-small&quot;&gt;Small Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot; class=&quot;btn-small&quot;/&gt;</code></pre>
+                            <div class="btn btn-large">test</div>
+                            <button class="btn-large">Large Button</button>
+                            <input type="submit" class="btn-large"/>
                         </div>
                     </div>
 
@@ -260,9 +280,82 @@
 &lt;input type=&quot;submit&quot; class=&quot;btn-large&quot;/&gt;</code></pre></div>
                     </div>
                 </div>
+
+                <p class="title">Extra Large</p>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="btn btn-xlarge">test</div>
+                            <button class="btn-xlarge">Extra Large Button</button>
+                            <input type="submit" class="btn-xlarge"/>
+                        </div>
+                        
+                    </div>
+                    <div class="col-6">
+                         <div class="row">
+            <pre><code>&lt;div class=&quot;btn btn-small&quot;&gt;test&lt;/div&gt;
+&lt;button class=&quot;btn-small&quot;&gt;Small Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn-small&quot;/&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <space class="x-large"></space>
+                <h6>Font Awesome</h6>
+                <p>Font awesome integration is extremly easy with Cirrus without additional CSS.</p>
+                <space></space>
+
+                <p class="title">Glyph on the right.</p>
+                <div class="row">
+                    <div class="col-6">
+                        <a href=""><button>See More<i class="fa fa-chevron-right pad-left"></i></button></a>
+                    </div>
+                    <div class="col-6">
+                        <pre><code>&lt;div class=&quot;btn btn-large&quot;&gt;test&lt;/div&gt;
+&lt;button class=&quot;btn-large&quot;&gt;Large Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn-large&quot;/&gt;</code></pre>
+                    </div>
+                </div>
+
+                <space></space>
+
+                <p class="title">Glyph on the left.</p>
+                <div class="row">
+                    <div class="col-6">
+                        <a href=""><button><i class="fa fa-chevron-left pad-right"></i>See More</button></a>
+                    </div>
+                    <div class="col-6">
+                        <pre><code>&lt;div class=&quot;btn btn-large&quot;&gt;test&lt;/div&gt;
+&lt;button class=&quot;btn-large&quot;&gt;Large Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn-large&quot;/&gt;</code></pre>
+                    </div>
+                </div>
+
+                <space></space>
+
+                <p class="title">Different glyph sizes.</p>
+                <div class="row">
+                    <div class="col-6">
+                        <a href=""><button class="btn-tiny">Tiny<i class="fa fa-chevron-right pad-left x-small"></i></button></a>
+                        <a href=""><button class="btn-small">Small<i class="fa fa-chevron-right pad-left small"></i></button></a>
+                        <a href=""><button>Normal<i class="fa fa-chevron-right pad-left"></i></button></a>
+                        <a href=""><button class="btn-large">Large<i class="fa fa-chevron-right pad-left x-large"></i></button></a>
+                        <a href=""><button class="btn-xlarge">Extra Large<i class="fa fa-chevron-right pad-left xx-large"></i></button></a>
+                        <a href=""><button class="btn-xlarge">Extra Extra Large<i class="fa fa-chevron-right pad-left xx-large"></i></button></a>
+                    </div>
+                    <div class="col-6">
+                        <pre><code>&lt;div class=&quot;btn btn-large&quot;&gt;test&lt;/div&gt;
+&lt;button class=&quot;btn-large&quot;&gt;Large Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn-large&quot;/&gt;</code></pre>
+                    </div>
+                </div>
         </div>
     </section>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
+    <script src="https://use.fontawesome.com/a696b91557.js"></script>
 </body>
 
 </html>
