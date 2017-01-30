@@ -102,13 +102,13 @@ span.title {
     font-family: 'Nunito Sans';
 }
 
-.header-menu {
-    background-color: rgba(76, 76, 76, 0.4);
-}
-
 /* MOBILE */
 @media screen and (max-width: 768px) {
     .padtop {
         margin: 4rem 0;
     }
+
+    .header-menu {
+    background-color: rgba(76, 76, 76, 0.4);
+}
 }
