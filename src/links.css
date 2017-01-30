@@ -26,7 +26,7 @@ a,a:visited,a:hover,a:active{
 }
 
 /* Animated links */
-.u {
+.u, .utb {
   position: relative; /* So the psuedo-elements are positioned correctly */
 }
 
