@@ -78,6 +78,6 @@ section {
 video {
     position: absolute;
         height: 100vh;
-        object-fit: fill;
+        object-fit: cover;
         width: 100%;
 }

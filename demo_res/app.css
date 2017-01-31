@@ -100,6 +100,24 @@ span.title {
     vertical-align: bottom;
     font-size: 11px;
     font-family: 'Nunito Sans';
+        margin-left: 10px;
+}
+
+.desc code {
+      margin-right: 5px;
+}
+
+#grids .col, #grids [class^='col-'], #grids [class*=" col-"] {
+    background: #eee;
+    text-align: center;
+    border-radius: 5px;
+    font-size: .7rem;
+    text-transform: uppercase;
+    min-height: 30px !important;
+    line-height: 30px;
+    margin-bottom: .75rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
 }
 
 /* MOBILE */

@@ -2,6 +2,7 @@
 
 /* -------- DEFAULT -------- */
 /* BASE STYLING FOR CIRRUS*/
+/* BASE STYLING FOR CIRRUS*/
 
 * {
   margin: 0;
@@ -81,10 +82,9 @@ section {
 video {
     position: absolute;
         height: 100vh;
-        object-fit: fill;
+        object-fit: cover;
         width: 100%;
 }
-
 
 /* -------- ANIMATIONS -------- */
 /* Spinning loading animation */
@@ -802,10 +802,10 @@ width: 1.5rem;
     font-size: 1.5rem;
   }
   h5 {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   h6 {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 }
 
