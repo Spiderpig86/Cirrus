@@ -80,4 +80,5 @@ video {
         height: 100vh;
         object-fit: cover;
         width: 100%;
+            z-index: -1;
 }

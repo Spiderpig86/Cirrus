@@ -2,7 +2,6 @@
 
 /* -------- DEFAULT -------- */
 /* BASE STYLING FOR CIRRUS*/
-/* BASE STYLING FOR CIRRUS*/
 
 * {
   margin: 0;
@@ -84,52 +83,9 @@ video {
         height: 100vh;
         object-fit: cover;
         width: 100%;
+            z-index: -1;
 }
 
-/* -------- ANIMATIONS -------- */
-/* Spinning loading animation */
-@-webkit-keyframes loading {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-@keyframes loading {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-.hover-grow { /* Mouse leave */
-  transition-duration: .32s;
-}
-
-.hover-grow:hover { /* Mouse enter */
-      transform: scale(1.1);
-    transition-duration: .08s;
-}
-
-/* Heart animation */
-@-webkit-keyframes pound {
-  to {
-    transform: scale(1.1);
-  }
-}
-@keyframes pound {
-  to {
-    transform: scale(1.1);
-  }
-}
 
 /* -------- BUTTONS -------- */
 /* Button styling */
