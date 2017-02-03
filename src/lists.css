@@ -6,8 +6,10 @@ ol {
   list-style: decimal inside;
 }
 
-dl {
+/* Description lists */
 
+dl, dd {
+     margin-bottom: 1em;
 }
 
 li {

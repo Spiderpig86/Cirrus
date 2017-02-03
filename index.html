@@ -476,8 +476,12 @@
                     <div class="row">
                         <div class="col-12"><textarea type="text" placeholder="Your Message"></textarea></div>
                     </div>
+                    <div class="pull-right">
+                        <input type="checkbox" id="check">
+                         <label class="label-inline" for="check">Check me!</label>
+                    </div>
                     <div class="row">
-                        <input type="submit" class="pull-right">
+                        <input type="submit" class="btn-accent">
                     </div>
                 </form>
 
@@ -553,15 +557,91 @@
             <div class="content">
                 <h3>Links</h3>
                 <div class="divider"></div>
-
+                <p>With Cirrus, links do not have to be plain. Choose from all the different styles that Cirrus offers to make your website stand out.</p>
+                <div class="row">
+                    <div class="text-center">
+                        <div class="row">
+                                <a href="#">I am just an ordinary link</a>
+                        </div>
+                            <div class="row">
+                                <a href="#" class="u u-LR">Hover me</a>
+                            </div>
+                            <div class="row">
+                                <span class="usquare">
+                                    <a href="#" class="utb utb-OLR">I am a square</a>
+                                </span>
+                            </div>
+                    </div>
+                </div> 
+                 <div class="row">
+                        <pre>
+<code>&lt;div class=&quot;row&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;I am just an ordinary link&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;u u-LR&quot;&gt;Hover me&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;span class=&quot;usquare&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;utb utb-OLR&quot;&gt;I am a square&lt;/a&gt;
+    &lt;/span&gt;
+&lt;/div&gt;</code>
+                        </pre>
+                    </div>
             </div>
+
         </section>
 
          <section id="lists" class="padtop">
             <div class="content">
                 <h3>Lists</h3>
                 <div class="divider"></div>
+                <p>Lists are a common way to organize and present data on webpages. You can easily create elegant unordered lists with <code>ul</code>, ordered lists with <code>ol</code>, and description lists with <code>dl</code>. <code>ul</code> will show bullets, <code>ol</code> will show numbers for ordering, and <code>dl</code> will indent itself if the list item is a sub item.</p>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <ol>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                        </ol>
+                    </div>
+                    <div class="col-4">
+                        <dl>
+                            <dt>Main description</dt>
+                            <dd>Sub item description</dd>
+                        </dl>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <pre>
+    <code>&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-4&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-4&quot;&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-4&quot;&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;Main description&lt;/dt&gt;
+        &lt;dd&gt;Sub item description&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code>
+                    </pre>
             </div>
         </section>
 

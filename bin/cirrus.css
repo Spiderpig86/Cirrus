@@ -376,6 +376,21 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
     margin-left: .4rem;
 }
 
+/* Button with accent */
+.btn-accent {
+  background-color: #f03d4d;
+  color: #fff;
+  border-color: #c21b2b;
+}
+
+.btn-accent:hover {
+  background-color: #d62939;
+}
+
+.btn-accent:active {
+  background-color: #c21b2b;
+}
+
 /* -------- CARD -------- */
 .card {
     background-color: white;
@@ -1680,17 +1695,20 @@ ol {
   list-style: decimal inside;
 }
 
-dl {
+/* Description lists */
 
+dl, dd {
+     margin: 1em;
 }
 
 li {
-  margin: 1rem 0;
+  margin: 1em 0;
 }
 
 li:last-child {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
+
 
 /* -------- TABLE -------- */
 

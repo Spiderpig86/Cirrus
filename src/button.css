@@ -241,3 +241,18 @@ button .fa.pad-right, .btn .fa.pad-right, [type=submit] .fa.pad-right {
 button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
     margin-left: .4rem;
 }
+
+/* Button with accent */
+.btn-accent {
+  background-color: #f03d4d;
+  color: #fff;
+  border-color: #c21b2b;
+}
+
+.btn-accent:hover {
+  background-color: #d62939;
+}
+
+.btn-accent:active {
+  background-color: #c21b2b;
+}
