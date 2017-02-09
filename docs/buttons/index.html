@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div id="header" class="header unselectable header-fill level">
+    <div id="header" class="header unselectable header-fixed header-fill level">
         <div class="header-left">
             <div class="header-item no-hover">
                 <a href="#landing" class="smoothScroll">
@@ -62,6 +62,8 @@
         </div>
     </div>
 
+    <space class="x-large"></space>
+
     <section id="started" class="padtop">
         <div class="content">
              <h6 class="uppercase">Basic options</h6>
@@ -70,12 +72,12 @@
                     <div class="col-fluid">
                         <div class="btn">test</div>
                         <button>Regular Button</button>
-                        <input type="submit" />
+                        <input type="submit" value="Submit"/>
                     </div>
                     <div class="col-fluid">
                     <pre><code>&lt;div class=&quot;btn&quot;&gt;test&lt;/div&gt
 &lt;button&gt;Regular Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot;/&gt;</code></pre>
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;/&gt;</code></pre>
                     </div>
                 </div>
 
@@ -86,12 +88,12 @@
                     <div class="col-fluid">
                         <div class="btn animated">test</div>
                         <button class="animated">Regular Button</button>
-                        <input type="submit" class="animated"/>
+                        <input type="submit" class="animated" value="Submit"/>
                     </div>
                     <div class="col-fluid">
                     <pre><code>&lt;div class=&quot;btn animated&quot;&gt;test&lt;/div&gt;
 &lt;button class=&quot;animated&quot;&gt;Regular Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot; class=&quot;animated&quot;/&gt;</code></pre>
+&lt;input type=&quot;submit&quot; class=&quot;animated&quot; value=&quot;Submit&quot;/&gt;</code></pre>
                     </div>
                 </div>
 
@@ -102,7 +104,7 @@
                 <div class="row fluid-container">
                     <div class="col-fluid">
                         <button disabled class="animated">Regular Button</button>
-                        <input disabled type="submit" class="animated" />
+                        <input type="submit" class="animated" value="Submit"/>
                     </div>
                     <div class="col-fluid">
 <pre><code>&lt;button disabled class=&quot;animated&quot;&gt;Regular Button&lt;/button&gt;
@@ -113,17 +115,34 @@
                 <space class="large"></space>
 
                 <h6 class="uppercase">Styles</h6>
+
+                <p class="title">Accent</p>
+                <div class="row fluid-container">
+                    <div class="col-fluid">
+                        <div class="btn btn-accent">test</div>
+                        <button class="btn-accent">Regular Button</button>
+                        <input type="submit" class="btn-accent" value="Submit"/>
+                    </div>
+                    <div class="col-fluid">
+<pre><code>&lt;div class=&quot;btn btn-accent&quot;&gt;test&lt;/div&gt;
+&lt;button class=&quot;btn-accent&quot;&gt;Regular Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn-accent&quot; value=&quot;Submit&quot;/&gt;</code></pre>
+                    </div>
+                </div>
+
+                <space class="large"></space>
+
                 <p class="title">Outline</p>
                 <div class="row fluid-container level" style="background: #c7c7c7">
                     <div class="col-fluid">
                         <div class="btn btn-outline">test</div>
                         <button class="btn-outline">Regular Button</button>
-                        <input type="submit" class="btn-outline"/>
+                        <input type="submit" class="btn-outline" value="Submit"/>
                     </div>
                     <div class="col-fluid">
-<pre><code>&lt;div class=&quot;btn btn-outline&quot;&gt;test&lt;/div&gt;
+<pre><code> &lt;div class=&quot;btn btn-outline&quot;&gt;test&lt;/div&gt;
 &lt;button class=&quot;btn-outline&quot;&gt;Regular Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot; class=&quot;btn-outline&quot;/&gt;</code></pre>
+&lt;input type=&quot;submit&quot; class=&quot;btn-outline&quot; value=&quot;Submit&quot;/&gt;</code></pre>
                     </div>
                 </div>
 
@@ -134,12 +153,12 @@
                     <div class="col-fluid">
                         <div class="btn btn-outline-inverted">test</div>
                         <button class="btn-outline-inverted">Regular Button</button>
-                        <input type="submit" class="btn-outline-inverted"/>
+                        <input type="submit" class="btn-outline-inverted" value="Submit"/>
                     </div>
                     <div class="col-fluid">
 <pre><code>&lt;div class=&quot;btn btn-outline-inverted&quot;&gt;test&lt;/div&gt;
 &lt;button class=&quot;btn-outline-inverted&quot;&gt;Regular Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot; class=&quot;btn-outline-inverted&quot;/&gt;</code></pre>
+&lt;input type=&quot;submit&quot; class=&quot;btn-outline-inverted&quot; value=&quot;Submit&quot;/&gt;</code></pre>
                     </div>
                 </div>
 
@@ -150,12 +169,12 @@
                     <div class="col-fluid">
                         <div class="btn btn-transparent">test</div>
                         <button class="btn-transparent">Regular Button</button>
-                        <input type="submit" class="btn-transparent"/>
+                        <input type="submit" class="btn-transparent" value="Submit"/>
                     </div>
                     <div class="col-fluid">
-<pre><code>&lt;div class=&quot;btn btn-transparent&quot;&gt;test&lt;/div&gt;
+<pre><code> &lt;div class=&quot;btn btn-transparent&quot;&gt;test&lt;/div&gt;
 &lt;button class=&quot;btn-transparent&quot;&gt;Regular Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot; class=&quot;btn-transparent&quot;/&gt;</code></pre>
+&lt;input type=&quot;submit&quot; class=&quot;btn-transparent&quot; value=&quot;Submit&quot;/&gt;</code></pre>
                     </div>
                 </div>
 
@@ -165,12 +184,12 @@
                     <div class="col-fluid">
                         <div class="btn btn-white">test</div>
                         <button class="btn-white">Regular Button</button>
-                        <input type="submit" class="btn-white"/>
+                        <input type="submit" class="btn-white" value="Submit"/>
                     </div>
                     <div class="col-fluid">
-<pre><code>&lt;div class=&quot;btn btn-white&quot;&gt;test&lt;/div&gt;
+<pre><code>  &lt;div class=&quot;btn btn-white&quot;&gt;test&lt;/div&gt;
 &lt;button class=&quot;btn-white&quot;&gt;Regular Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot; class=&quot;btn-white&quot;/&gt;</code></pre>
+&lt;input type=&quot;submit&quot; class=&quot;btn-white&quot; value=&quot;Submit&quot;/&gt;</code></pre>
                     </div>
                 </div>
 
@@ -181,7 +200,7 @@
                     <div class="col-fluid">
                         <div class="btn btn-light">test</div>
                         <button class="btn-light">Regular Button</button>
-                        <input type="submit" class="btn-light"/>
+                        <input type="submit" class="btn-light" value="Submit"/>
                     </div>
                     <div class="col-fluid">
 <pre><code>&lt;div class=&quot;btn btn-light&quot;&gt;test&lt;/div&gt;
@@ -197,7 +216,7 @@
                     <div class="col-fluid">
                         <div class="btn btn-dark">test</div>
                         <button class="btn-dark">Regular Button</button>
-                        <input type="submit" class="btn-dark"/>
+                        <input type="submit" class="btn-dark" value="Submit"/>
                     </div>
                     <div class="col-fluid">
 <pre><code>&lt;div class=&quot;btn btn-dark&quot;&gt;test&lt;/div&gt;
@@ -213,12 +232,12 @@
                     <div class="col-fluid">
                         <div class="btn btn-black">test</div>
                         <button class="btn-black">Regular Button</button>
-                        <input type="submit" class="btn-black"/>
+                        <input type="submit" class="btn-black" value="Submit"/>
                     </div>
                     <div class="col-fluid">
-                        <pre><code>&lt;div class=&quot;btn&quot;&gt;test&lt;/div&gt
-&lt;button&gt;Regular Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot;/&gt;</code></pre>
+<pre><code> &lt;div class=&quot;btn btn-black&quot;&gt;test&lt;/div&gt;
+&lt;button class=&quot;btn-black&quot;&gt;Regular Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn-black&quot; value=&quot;Submit&quot;/&gt;</code></pre>
                     </div>
                 </div>
 
@@ -232,15 +251,15 @@
                         <div class="row">
                             <div class="btn btn-tiny">test</div>
                             <button class="btn-tiny">Tiny Button</button>
-                            <input type="submit" class="btn-tiny"/>
+                            <input type="submit" class="btn-tiny" value="Submit"/>
                         </div>
                         
                     </div>
                     <div class="col-6">
                          <div class="row">
-            <pre><code>&lt;div class=&quot;btn btn-small&quot;&gt;test&lt;/div&gt;
-&lt;button class=&quot;btn-small&quot;&gt;Small Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot; class=&quot;btn-small&quot;/&gt;</code></pre>
+<pre><code> &lt;div class=&quot;btn btn-tiny&quot;&gt;test&lt;/div&gt;
+&lt;button class=&quot;btn-tiny&quot;&gt;Tiny Button&lt;/button&gt;
+&lt;input type=&quot;submit&quot; class=&quot;btn-tiny&quot; value=&quot;Submit&quot;/&gt;</code></pre>
                         </div>
                     </div>
                 </div>
@@ -250,7 +269,7 @@
                         <div class="row">
                             <div class="btn btn-small">test</div>
                             <button class="btn-small">Small Button</button>
-                            <input type="submit" class="btn-small"/>
+                            <input type="submit" class="btn-small" value="Submit"/>
                         </div>
                         
                     </div>
@@ -258,7 +277,7 @@
                          <div class="row">
             <pre><code>&lt;div class=&quot;btn btn-small&quot;&gt;test&lt;/div&gt;
 &lt;button class=&quot;btn-small&quot;&gt;Small Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot; class=&quot;btn-small&quot;/&gt;</code></pre>
+&lt;input type=&quot;submit&quot; class=&quot;btn-small&quot; value=&quot;Submit&quot;/&gt;</code></pre>
                         </div>
                     </div>
                 </div>
@@ -269,7 +288,7 @@
                         <div class="row">
                             <div class="btn btn-large">test</div>
                             <button class="btn-large">Large Button</button>
-                            <input type="submit" class="btn-large"/>
+                            <input type="submit" class="btn-large" value="Submit"/>
                         </div>
                     </div>
 
@@ -277,7 +296,7 @@
                                                 <div class="row">
 <pre><code>&lt;div class=&quot;btn btn-large&quot;&gt;test&lt;/div&gt;
 &lt;button class=&quot;btn-large&quot;&gt;Large Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot; class=&quot;btn-large&quot;/&gt;</code></pre></div>
+&lt;input type=&quot;submit&quot; class=&quot;btn-large&quot; value=&quot;Submit&quot;/&gt;</code></pre></div>
                     </div>
                 </div>
 
@@ -288,7 +307,7 @@
                         <div class="row">
                             <div class="btn btn-xlarge">test</div>
                             <button class="btn-xlarge">Extra Large Button</button>
-                            <input type="submit" class="btn-xlarge"/>
+                            <input type="submit" class="btn-xlarge" value="Submit"/>
                         </div>
                         
                     </div>
@@ -296,7 +315,7 @@
                          <div class="row">
             <pre><code>&lt;div class=&quot;btn btn-small&quot;&gt;test&lt;/div&gt;
 &lt;button class=&quot;btn-small&quot;&gt;Small Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot; class=&quot;btn-small&quot;/&gt;</code></pre>
+&lt;input type=&quot;submit&quot; class=&quot;btn-small&quot; value=&quot;Submit&quot;/&gt;</code></pre>
                         </div>
                     </div>
                 </div>
@@ -314,7 +333,7 @@
                     <div class="col-6">
                         <pre><code>&lt;div class=&quot;btn btn-large&quot;&gt;test&lt;/div&gt;
 &lt;button class=&quot;btn-large&quot;&gt;Large Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot; class=&quot;btn-large&quot;/&gt;</code></pre>
+&lt;input type=&quot;submit&quot; class=&quot;btn-large&quot; value=&quot;Submit&quot;/&gt;</code></pre>
                     </div>
                 </div>
 
@@ -328,7 +347,7 @@
                     <div class="col-6">
                         <pre><code>&lt;div class=&quot;btn btn-large&quot;&gt;test&lt;/div&gt;
 &lt;button class=&quot;btn-large&quot;&gt;Large Button&lt;/button&gt;
-&lt;input type=&quot;submit&quot; class=&quot;btn-large&quot;/&gt;</code></pre>
+&lt;input type=&quot;submit&quot; class=&quot;btn-large&quot; value=&quot;Submit&quot;/&gt;</code></pre>
                     </div>
                 </div>
 
