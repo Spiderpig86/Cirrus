@@ -56,3 +56,8 @@ Link coming soon
 * Safari
 * Edge (Untested)
 * Internet Explorer (Untested)
+
+## TODO
+* Add profile card.
+* Triangle text for images.
+* Modal dialogs.
