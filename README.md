@@ -1,4 +1,4 @@
-<img src="http://ultimatepestcontrolny.com/comingsoon.png" width="400">
+<img src="http://i.imgur.com/jpowijz.png" width="400">
 
 
 *Logo is being worked on*
