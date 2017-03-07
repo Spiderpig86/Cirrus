@@ -1292,7 +1292,7 @@ display: flex;
 space {
   display: block;
   width: 100%;
-  height: 1em;
+  height: 1rem;
 }
 
 space.large {
@@ -1391,6 +1391,41 @@ space.x-large {
   margin-left: 0;
 }
 
+/* Best used with col-12 */
+.row.split-1 [class^='col-']:nth-child(n+1) { 
+  margin-left: 0;
+}
+
+/* Used to prevent extra margin on column layouts when not needed */
+/* Best used with col-6 */
+.row.split-2 [class^='col-']:nth-child(2n+1) { /* Reset margin every other element */
+  margin-left: 0;
+}
+
+/* Reset every fourth element */
+/* Best used with col-4 */
+.row.split-3 [class^='col-']:nth-child(3n+1) {
+  margin-left:0;
+}
+
+/* Reset every fifth element */
+/* Best used with col-3 */
+.row.split-4 [class^='col-']:nth-child(4n+1) {
+  margin-left: 0;
+}
+
+/* Reset every seventh element */
+/* Best used with col-2 */
+.row.split-6 [class^='col-']:nth-child(6n+1) {
+  margin-left: 0;
+}
+
+/* Reset every thirteenth element */
+/* Best used with col-1 */
+.row.split-12 [class^='col-']:nth-child(12n+1) {
+  margin-left: 0;
+}
+ 
 /* Used for aligning contrls next to each other */
 .row.has-controls {
       display: -webkit-box;
@@ -1487,6 +1522,7 @@ justify-content: space-between;
     box-shadow: 0 -1px 0 0 rgba(34,36,38,.15);
 }
 }
+
 
 /* -------- LINKS -------- */
 a {
