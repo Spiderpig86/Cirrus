@@ -122,6 +122,22 @@ span.title {
     letter-spacing: .1rem;
 }
 
+/* FOOTER */
+footer ul a {
+    display: block;
+}
+
+footer ul a li {
+    margin: 0.5rem !important;
+    color: #888;
+    transition: all .3s;
+}
+
+footer ul a li:hover {
+    color: #fff;
+    transition: all .3s;
+}
+
 /* MOBILE */
 @media screen and (max-width: 768px) {
     .padtop {

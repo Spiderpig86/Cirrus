@@ -1745,6 +1745,11 @@ li:last-child {
   margin-bottom: 1em;
 }
 
+/* MISC */
+ul.no-bullets {
+  list-style: none;
+}
+
 
 /* -------- TABLE -------- */
 
