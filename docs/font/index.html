@@ -56,16 +56,30 @@
 
     <space class="large"></space>
 
-<section id="started" class="padtop">
+<section class="padtop">
         <div class="content">
             <h3>Font</h3>
-                <div class="divider"></div>
-                <p><b>Cirrus</b> incorporates beautiful typography to make your website stand out from the rest. Nunito Sans, by <a href="http://sansoxygen.com/" class="u u-LR"><b>Vernon Adams</b></a> is chosen for the default typography for most elements such as <code>paragraphs</code>, <code>articles</code>, <code>blockquotes</code>, and more while Montserrat adds a bold but elegant touch to titles. The <code>font-size</code> have been converted to rems which is independent of the font sizes of the parent elements. The default is set to 1rem (16px) where each interval of rem is 16 pixels.
+            <div class="divider"></div>
+            <p><b>Cirrus</b> incorporates beautiful typography to make your website stand out from the rest. Nunito Sans, by <a href="http://sansoxygen.com/" class="u u-LR"><b>Vernon Adams</b></a> is chosen for the default typography for most elements such as <code>paragraphs</code>, <code>articles</code>, <code>blockquotes</code>, and more while Montserrat adds a bold but elegant touch to titles. The <code>font-size</code> have been converted to rems which is independent of the font sizes of the parent elements. The default is set to 1rem (16px) where each interval of rem is 16 pixels.
+
+            <h6>Sample paragraph with title, subtitle, and text:</h6>
+            <div class="row level">
+                <div class="col-6">
+                    <p class="title">This is a title.</p>
+                    <p class="subtitle">This is a subtitle.</p>
+                    <p>This is some text to go along with the titles above.</p>
+                </div>
+                <div class="col-6">
+                    <pre><code>&lt;p class=&quot;title&quot;&gt;This is a title.&lt;/p&gt;
+&lt;p class=&quot;subtitle&quot;&gt;This is a subtitle.&lt;/p&gt;
+&lt;p&gt;This is some text to go along with the titles above.&lt;/p&gt;</code></pre>
+                </div>
+            </div>
         </div>
 
 </section>
 
-<section>
+<section class="padtop">
     <div class="content">
         <h3>Headings</h3>
         <div class="divider"></div>
@@ -126,7 +140,87 @@
     </div>
 </section>
 
+<section class="padtop">
+    <div class="content">
+        <h3>Blockquotes</h3>
+        <div class="divider"></div>
+        <p>Blockquotes are beatifully designed to help you cite from other sources.</p>
+        <div class="row level">
+            <div class="col-6">
+                <blockquote>
+                    <p>You know, I think Cirrus is a pretty good CSS framework. - <em>Marc Andreessen</em>
+                </blockquote>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;blockquote&gt;
+    &lt;p&gt;You know, I think Cirrus is a pretty good CSS framework. - &lt;em&gt;Marc Andreessen&lt;/em&gt;
+&lt;/blockquote&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="padtop">
+    <div class="content">
+        <h3>Text Transformations</h3>
+        <p>Cirrus comes with a ton of ways to customize your text ranging from changing font weights to changing font styles.</p>
+        <h6>Font weights:</h6>
+
+        <div class="row level">
+            <div class="col-6">
+                <p class="title">Thin</p>
+                <p class="subtitle font-thin">The quick brown fox jumps over the lazy dog.</p>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;p class=&quot;font-thin&quot;&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row level">
+            <div class="col-6">
+                <p class="title">Light</p>
+                <p class="subtitle font-light">The quick brown fox jumps over the lazy dog.</p>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;p class=&quot;font-light&quot;&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row level">
+            <div class="col-6">
+                <p class="title">Regular</p>
+                <p class="subtitle">The quick brown fox jumps over the lazy dog.</p>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;p class=&quot;&quot;&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row level">
+            <div class="col-6">
+                <p class="title">Semibold</p>
+                <p class="subtitle font-semibold">The quick brown fox jumps over the lazy dog.</p>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;p class=&quot;font-semibold&quot;&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row level">
+            <div class="col-6">
+                <p class="title">Bold</p>
+                <p class="subtitle font-bold">The quick brown fox jumps over the lazy dog.</p>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;p class=&quot;font-bold&quot;&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="padtop">
+
+</section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script async src="demo_res/app.js"></script>
