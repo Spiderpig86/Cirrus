@@ -130,6 +130,7 @@ overflow: hidden;
 }
 
 .card:hover .mobile-title {
+      padding-top: 10px;
   margin-top: -80px;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
@@ -170,6 +171,10 @@ overflow: hidden;
     transition: all .3s;
     width: 70px;
 margin: .5rem;
+}
+
+.card p {
+  margin-top: 1rem;
 }
 
 /*

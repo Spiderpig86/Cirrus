@@ -8,6 +8,7 @@ overflow: auto;
 }
 
 pre > code {
+  font-size: 75%;
   display: block;
   padding: 1rem 1.5rem;
   white-space: pre-wrap;       /* css-3 */

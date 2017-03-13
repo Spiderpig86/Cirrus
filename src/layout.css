@@ -340,4 +340,10 @@ justify-content: space-between;
   .divided >.fluid-container:not(.row), .divided >.row [class^='col-'] {
     box-shadow: 0 -1px 0 0 rgba(34,36,38,.15);
 }
+
+.level.ignore-screen, .level-left.ignore-screen, .level-right.ignore-screen {
+      display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
 }

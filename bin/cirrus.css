@@ -524,6 +524,7 @@ overflow: hidden;
 }
 
 .card:hover .mobile-title {
+      padding-top: 10px;
   margin-top: -80px;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
@@ -566,6 +567,10 @@ overflow: hidden;
 margin: .5rem;
 }
 
+.card p {
+  margin-top: 1rem;
+}
+
 /*
     NOTE: To have cards with the same height, place the card class with col-x classes and have the parent have fluid-container.
 */
@@ -577,10 +582,10 @@ code {
 margin: .5em 0;
 overflow: auto;
      background: #f4f5f6;
-      
 }
 
 pre > code {
+  font-size: 75%;
   display: block;
   padding: 1rem 1.5rem;
   white-space: pre-wrap;       /* css-3 */
@@ -858,6 +863,7 @@ footer .footer-list-title {
     font-size: 75%;
     text-transform: uppercase;
     font-weight: bolder;
+    color: #ddd;
 }
 
 footer .footer-list-title:after {
@@ -1562,6 +1568,11 @@ justify-content: space-between;
   /* Dividers for mobile layout */
   .divided >.fluid-container:not(.row), .divided >.row [class^='col-'] {
     box-shadow: 0 -1px 0 0 rgba(34,36,38,.15);
+}
+.level.ignore-screen, .level-left.ignore-screen, .level-right.ignore-screen {
+      display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 }
 
