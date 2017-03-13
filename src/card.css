@@ -131,7 +131,7 @@ overflow: hidden;
 
 .card:hover .mobile-title {
       padding-top: 10px;
-  margin-top: -80px;
+          margin-top: -7rem;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
@@ -174,7 +174,7 @@ margin: .5rem;
 }
 
 .card p {
-  margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 /*
