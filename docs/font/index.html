@@ -13,6 +13,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+        .icon {
+            display: inline;
+        }
+    </style>
 </head>
 
 <body>
@@ -163,12 +168,13 @@
 <section class="padtop">
     <div class="content">
         <h3>Text Transformations</h3>
+        <div class="divider"></div>
         <p>Cirrus comes with a ton of ways to customize your text ranging from changing font weights to changing font styles.</p>
         <h6>Font weights:</h6>
 
         <div class="row level">
             <div class="col-6">
-                <p class="title">Thin</p>
+                <p class="title">Thin (200)</p>
                 <p class="subtitle font-thin">The quick brown fox jumps over the lazy dog.</p>
             </div>
             <div class="col-6">
@@ -178,7 +184,7 @@
 
         <div class="row level">
             <div class="col-6">
-                <p class="title">Light</p>
+                <p class="title">Light (300)</p>
                 <p class="subtitle font-light">The quick brown fox jumps over the lazy dog.</p>
             </div>
             <div class="col-6">
@@ -188,7 +194,7 @@
 
         <div class="row level">
             <div class="col-6">
-                <p class="title">Regular</p>
+                <p class="title">Regular (400)</p>
                 <p class="subtitle">The quick brown fox jumps over the lazy dog.</p>
             </div>
             <div class="col-6">
@@ -198,7 +204,7 @@
 
         <div class="row level">
             <div class="col-6">
-                <p class="title">Semibold</p>
+                <p class="title">Semibold (600)</p>
                 <p class="subtitle font-semibold">The quick brown fox jumps over the lazy dog.</p>
             </div>
             <div class="col-6">
@@ -208,7 +214,7 @@
 
         <div class="row level">
             <div class="col-6">
-                <p class="title">Bold</p>
+                <p class="title">Bold (700)</p>
                 <p class="subtitle font-bold">The quick brown fox jumps over the lazy dog.</p>
             </div>
             <div class="col-6">
@@ -219,7 +225,89 @@
 </section>
 
 <section class="padtop">
+    <div class="content">
+        <h3>Font Awesome</h3>
+        <div class="divider"></div>
+        <p>Using Font Awesome? Cirrus's got you covered with a bunch of font-sizes to help your glyphs fit within any component. Cirrus makes sure that each glyph is rendered correctly by setting the font sizes to base 7 since those glyphs preserve aspect ratios at those font sizes.</p>
+        <div class="row level">
+            <div class="col-6">
+                <p class="title">X-Small (7px)</p>
+                <span class="icon subtitle">
+                    <i class="fa x-small fa-github"></i>
+                </span>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;span class=&quot;icon&quot;&gt;
+    &lt;i class=&quot;fa x-small fa-github&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;</code></pre>
+            </div>
+        </div>
 
+        <div class="row level">
+            <div class="col-6">
+                <p class="title">Small/Default (14px)</p>
+                <span class="icon subtitle">
+                    <i class="fa small fa-github"></i>
+                </span>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;span class=&quot;icon&quot;&gt;
+    &lt;i class=&quot;fa small fa-github&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row level">
+            <div class="col-6">
+                <p class="title">Large (28px)</p>
+                <span class="icon subtitle">
+                    <i class="fa large fa-github"></i>
+                </span>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;span class=&quot;icon&quot;&gt;
+    &lt;i class=&quot;fa large fa-github&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row level">
+            <div class="col-6">
+                <p class="title">X-Large (35px)</p>
+                <span class="icon subtitle">
+                    <i class="fa x-large fa-github"></i>
+                </span>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;span class=&quot;icon&quot;&gt;
+    &lt;i class=&quot;fa x-large fa-github&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row level">
+            <div class="col-6">
+                <p class="title">XX-Large (42px)</p>
+                <span class="icon subtitle">
+                    <i class="fa xx-large fa-github"></i>
+                </span>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;span class=&quot;icon&quot;&gt;
+    &lt;i class=&quot;fa xx-large fa-github&quot;&gt;&lt;/i&gt;
+&lt;/span&gt;</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="padtop">
+    <div class="content">
+        <h3>Misc.</h3>
+        <div class="divider"></div>
+        <p>Cirrus comes with a ton of ways to customize your text ranging from changing font weights to changing font styles.</p>
+
+    </div>
 </section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
