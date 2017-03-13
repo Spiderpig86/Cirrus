@@ -1,0 +1,178 @@
+<html>
+
+<head>
+    <title>Cirrus - Cards</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="A responsive and lightweight CSS framework.">
+    <meta charset="UTF-8">
+
+    <link href="../../bin/cirrus.css" type="text/css" rel="stylesheet" />
+    <link href="../../demo_res/app.css" type="text/css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header" class="header unselectable header-fixed header-fill level">
+        <div class="header-left hide-overflow">
+            <div class="header-item no-hover">
+                <a href="../../">
+                    <h5 class="title">Cirrus</h5>
+                </a>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="header-item">
+                <a href="https://github.com/Spiderpig86/Cirrus">
+                    <span class="icon">
+                        <i class="fa fa-github"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="header-item">
+                <a href="#">
+                    <span class="icon white">
+                            <i class="fa fa-twitter"></i>
+                        </span>
+                </a>
+            </div>
+        </div>
+        <div class="header-item header-btn" id="header-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <div class="header-right header-menu" id="header-menu">
+            <div class="header-item">
+                <a href="../../index.html">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <space class="large"></space>
+
+<section id="started" class="padtop">
+        <div class="content">
+            <h3>Font</h3>
+                <div class="divider"></div>
+                <p><b>Cirrus</b> incorporates beautiful typography to make your website stand out from the rest. Nunito Sans, by <a href="http://sansoxygen.com/" class="u u-LR"><b>Vernon Adams</b></a> is chosen for the default typography for most elements such as <code>paragraphs</code>, <code>articles</code>, <code>blockquotes</code>, and more while Montserrat adds a bold but elegant touch to titles. The <code>font-size</code> have been converted to rems which is independent of the font sizes of the parent elements. The default is set to 1rem (16px) where each interval of rem is 16 pixels.
+        </div>
+
+</section>
+
+<section>
+    <div class="content">
+        <h3>Headings</h3>
+        <div class="divider"></div>
+        <p>Cirrus styles the standard header tags <code>h1, h2, h3, h4, h5, h6</code> with font sizes ranging from <code>4rem</code> to <code>1rem</code> where each <code>rem</code> is <code>16px</code>. Cirrus allows you to choose between two fonts: <code>Montserrat</code> and <code>Nunito Sans</code> by specifying the font weight of the headers. Simply add the <code>light</code> class to your headings to use <code>Nunito Sans</code> and leave it as is to use <code>Montserrat</code>.</p>
+         <div class="row">
+                <div class="col-6">
+                    <h6 class="uppercase">Standard headings:</h6>
+                    <h1 class="uppercase">this is h1<span class="desc"><code>h1</code>4rem (48px)</span></h1>
+                    <h2 class="uppercase">this is h2<span class="desc"><code>h2</code>3.5rem (40px)</span></h1></h2>
+                    <h3 class="uppercase">this is h3<span class="desc"><code>h3</code>3rem (32px)</span></h1></h3>
+                    <h4 class="uppercase">this is h4<span class="desc"><code>h4</code>2.5rem (24px)</span></h1></h4>
+                    <h5 class="uppercase">this is h5<span class="desc"><code>h5</code>2rem (16px)</span></h1></h5>
+                    <h6 class="uppercase">this is h6<span class="desc"><code>h6</code>1rem (12px)</span></h1></h6>
+                </div>
+
+                <div class="col-6">
+                    <h6 class="uppercase">Light headings:</h6>
+                    <h1 class="light uppercase">this is h1<span class="desc"><code>h1</code>4rem (48px)</span></h1>
+                    <h2 class="light uppercase">this is h2<span class="desc"><code>h2</code>3.5rem (40px)</span></h1></h2>
+                    <h3 class="light uppercase">this is h3<span class="desc"><code>h3</code>3rem (32px)</span></h1></h3>
+                    <h4 class="light uppercase">this is h4<span class="desc"><code>h4</code>2.5rem (24px)</span></h1></h4>
+                    <h5 class="light uppercase">this is h5<span class="desc"><code>h5</code>2rem (16px)</span></h1></h5>
+                    <h6 class="light uppercase">this is h6<span class="desc"><code>h6</code>1rem (12px)</span></h1></h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+<pre><code>&lt;h1 class=&quot;uppercase&quot;&gt;this is h1&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h1&lt;/code&gt;4rem (48px)&lt;/span&gt;&lt;/h1&gt;
+
+&lt;h2 class=&quot;uppercase&quot;&gt;this is h2&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h2&lt;/code&gt;3.5rem (40px)&lt;/span&gt;&lt;/h1&gt;&lt;/h2&gt;
+
+&lt;h3 class=&quot;uppercase&quot;&gt;this is h3&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h3&lt;/code&gt;3rem (32px)&lt;/span&gt;&lt;/h1&gt;&lt;/h3&gt;
+
+&lt;h4 class=&quot;uppercase&quot;&gt;this is h4&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h4&lt;/code&gt;2.5rem (24px)&lt;/span&gt;&lt;/h1&gt;&lt;/h4&gt;
+
+&lt;h5 class=&quot;uppercase&quot;&gt;this is h5&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h5&lt;/code&gt;2rem (16px)&lt;/span&gt;&lt;/h1&gt;&lt;/h5&gt;
+
+&lt;h6 class=&quot;uppercase&quot;&gt;this is h6&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h6&lt;/code&gt;1rem (12px)&lt;/span&gt;&lt;/h1&gt;&lt;/h6&gt;
+                        </code></pre>
+                </div>
+                <div class="col-6">
+                    <pre><code>&lt;h1 class=&quot;light uppercase&quot;&gt;this is h1&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h1&lt;/code&gt;4rem (48px)&lt;/span&gt;&lt;/h1&gt;
+
+&lt;h2 class=&quot;light uppercase&quot;&gt;this is h2&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h2&lt;/code&gt;3.5rem (40px)&lt;/span&gt;&lt;/h1&gt;&lt;/h2&gt;
+
+&lt;h3 class=&quot;light uppercase&quot;&gt;this is h3&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h3&lt;/code&gt;3rem (32px)&lt;/span&gt;&lt;/h1&gt;&lt;/h3&gt;
+
+&lt;h4 class=&quot;light uppercase&quot;&gt;this is h4&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h4&lt;/code&gt;2.5rem (24px)&lt;/span&gt;&lt;/h1&gt;&lt;/h4&gt;
+
+&lt;h5 class=&quot;light uppercase&quot;&gt;this is h5&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h5&lt;/code&gt;2rem (16px)&lt;/span&gt;&lt;/h1&gt;&lt;/h5&gt;
+
+&lt;h6 class=&quot;light uppercase&quot;&gt;this is h6&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h6&lt;/code&gt;1rem (12px)&lt;/span&gt;&lt;/h1&gt;&lt;/h6&gt;
+
+                    </code></pre>
+                </div>
+            </div>
+    </div>
+</section>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script async src="demo_res/app.js"></script>
+<script async src="demo_res/smoothscroll.js"></script>
+
+<script src="https://use.fontawesome.com/a696b91557.js"></script>
+  </body>
+
+<footer>
+        <h6 class="white uppercase">Cirrus</h6>
+        <div class="content">
+            <div class="divider"></div>
+            <!--<li class="no-bullets footer-list-title">Docs</li>-->
+            <div class="row">
+                <div class="col-3">
+                    <ul class="no-bullets">
+                        <a href="#"><li class="list-item">Animations</li></a>
+                        <a href="#"><li class="list-item">Buttons</li></a>
+                        <a href="#"><li class="list-item">Cards</li></a>
+                    <ul>
+                </div>
+                 <div class="col-3">
+                    <ul class="no-bullets">
+                        <a href="#"><li class="list-item">Font</li></a>
+                        <a href="#"><li class="list-item">Footer</li></a>
+                        <a href="#"><li class="list-item">Forms</li></a>
+                    <ul>
+                </div>
+                <div class="col-3">
+                    <ul class="no-bullets">
+                        <a href="#"><li class="list-item">Header</li></a>
+                        <a href="#"><li class="list-item">Layout</li></a>
+                        <a href="#"><li class="list-item">Links</li></a>
+                    <ul>
+                </div>
+                <div class="col-3">
+                    <ul class="no-bullets">
+                        <a href="#"><li class="list-item">Lists</li></a>
+                        <a href="#"><li class="list-item">Table</li></a>
+                        <a href="#"><li class="list-item">Util</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+          <p class="subtitle">The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+        <p>Made with <i class="fa fa-heart pulse" aria-hidden="true"></i> by <a href="http://stanleylim.me" target="_blank">Stanley Lim</a>
+</p>
+  </footer>
+</html>
