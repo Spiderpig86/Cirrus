@@ -195,12 +195,12 @@ space.x-large {
   margin-left: 0;
 }
 
-/* Used to prevent extra margin on column layouts when not needed */
 /* Best used with col-12 */
 .row.split-1 [class^='col-']:nth-child(n+1) { 
   margin-left: 0;
 }
 
+/* Used to prevent extra margin on column layouts when not needed */
 /* Best used with col-6 */
 .row.split-2 [class^='col-']:nth-child(2n+1) { /* Reset margin every other element */
   margin-left: 0;
@@ -268,6 +268,7 @@ justify-content: space-between;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start; /* Start for left */
+  margin-right: 1rem;
 }
 
 .level-right {
@@ -278,6 +279,7 @@ justify-content: space-between;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; /* End for right */
+  margin-left: 1rem;
 }
 
 .level-item { /* Centers items */
@@ -297,6 +299,19 @@ justify-content: space-between;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+/* Used to stretch the contents of div in level to fill */
+.level-content {
+  -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    text-align: left;
+    width: 100%;
 }
 
 

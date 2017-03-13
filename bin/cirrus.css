@@ -602,7 +602,8 @@ pre > code {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
- border-left: .3rem solid #f03d4d;
+  border-left: .3rem solid #f03d4d;
+  margin: 0;
 }
 
 
@@ -822,6 +823,9 @@ width: 1.5rem;
   h6 {
     font-size: 1rem;
   }
+  p, article, blockquote {
+      margin: 1rem 0;
+  }
 }
 
 
@@ -848,6 +852,29 @@ footer h6 {
     letter-spacing: 6px;
     position: relative;
     padding-bottom: 10px;
+}
+
+footer .footer-list-title {
+    font-size: 75%;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+footer .footer-list-title:after {
+    content: "";
+    display: block;
+    width: 10%;
+    margin: auto;
+    border-bottom: 2px solid;
+    border-color: #343b49;
+}
+
+footer ul a .list-item {
+      margin: 0.1rem;
+    color: #888;
+    transition: all .3s;
+    font-size: 75%;
+    text-transform: uppercase;
 }
 
 /* The heart (you can set a custom id if you want) */
@@ -1464,6 +1491,7 @@ justify-content: space-between;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start; /* Start for left */
+  margin-right: 1rem;
 }
 
 .level-right {
@@ -1474,6 +1502,7 @@ justify-content: space-between;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; /* End for right */
+  margin-left: 1rem;
 }
 
 .level-item { /* Centers items */
@@ -1493,6 +1522,19 @@ justify-content: space-between;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+
+/* Used to stretch the contents of div in level to fill */
+.level-content {
+  -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    text-align: left;
+    width: 100%;
 }
 
 
@@ -1923,6 +1965,8 @@ ul.no-bullets {
 
 .hide-overflow {
   overflow: hidden !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .text-center {

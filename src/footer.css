@@ -22,6 +22,29 @@ footer h6 {
     padding-bottom: 10px;
 }
 
+footer .footer-list-title {
+    font-size: 75%;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+footer .footer-list-title:after {
+    content: "";
+    display: block;
+    width: 10%;
+    margin: auto;
+    border-bottom: 2px solid;
+    border-color: #343b49;
+}
+
+footer ul a .list-item {
+      margin: 0.1rem;
+    color: #888;
+    transition: all .3s;
+    font-size: 75%;
+    text-transform: uppercase;
+}
+
 /* The heart (you can set a custom id if you want) */
 footer p .fa {
         color: #E90606;

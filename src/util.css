@@ -85,6 +85,8 @@
 
 .hide-overflow {
   overflow: hidden !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .text-center {

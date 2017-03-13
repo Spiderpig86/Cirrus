@@ -127,15 +127,14 @@ footer ul a {
     display: block;
 }
 
-footer ul a li {
-    margin: 0.5rem !important;
-    color: #888;
-    transition: all .3s;
-}
-
 footer ul a li:hover {
     color: #fff;
     transition: all .3s;
+}
+
+footer .divider {
+    background: rgba(238, 238, 238, 0.2);
+    height: 1px;
 }
 
 /* MOBILE */

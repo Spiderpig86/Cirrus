@@ -193,7 +193,7 @@ width: 1.5rem;
 
 /* MOBILE */
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   h1 {
     font-size: 3rem;
   }
@@ -211,5 +211,8 @@ width: 1.5rem;
   }
   h6 {
     font-size: 1rem;
+  }
+  p, article, blockquote {
+      margin: 1rem 0;
   }
 }
