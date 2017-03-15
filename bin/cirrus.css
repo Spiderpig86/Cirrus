@@ -968,21 +968,39 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
 }
 
 /* Input Field Sizes */
-input[type].input-xsmall {
-    font-size: 0.5rem;
+input[type].input-xsmall, select.input-xsmall {
+    font-size: 0.65rem;
 }
 
-input[type].input-small {
+input[type].input-small, select.input-small {
     font-size: 0.75rem;
 }
 
-input[type].input-large {
+input[type].input-large, select.input-large {
     font-size: 1.5rem;
 }
 
-input[type].input-xlarge {
+input[type].input-xlarge, select.input-xlarge {
     font-size: 2rem;
 }
+
+/* Select sizes */
+select.input-xsmall {
+    padding: .65rem 0.9rem;
+}
+
+select.input-small {
+    padding: .75rem 1rem;
+}
+
+select.input-large {
+    padding: .95rem 1.2rem;
+}
+
+select.input-xlarge {
+    padding: 1.05rem 1.3rem;
+}
+
 
 /* -------- HEADER -------- */
 .header {

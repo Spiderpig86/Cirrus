@@ -89,20 +89,37 @@
         <div class="content">
             <h3>Input Fields (Textboxes)</h3>
             <div class="divider"></div>
-            <p>Input fields in Cirrus are all designed with extra padding, different sizes, and other variations.</p>
+            <p>Input fields in Cirrus are all designed with extra padding, different sizes, and other variations. This section covers input fields for <code>emails, passwords, search, text, tel, and select</code> (dropdown menus).</p>
 
             <h6>Sizes</h6>
             <div class="row">
                 <div class="col-6">
-                    <input type="text" class="input-xsmall" placeholder="Extra small (0.5rem)">
+                    <input type="text" class="input-xsmall" placeholder="Extra small (0.65rem)">
                     <input type="text" class="input-small" placeholder="Small (0.75rem)">
                     <input type="text" placeholder="Normal (0.85rem)">
                     <input type="text" class="input-large" placeholder="Large (1.5rem)">
                     <input type="text" class="input-xlarge" placeholder="Extra large (2rem)">
                 </div>
                 <div class="col-6">
+                    <pre><code>&lt;input type=&quot;text&quot; class=&quot;input-xsmall&quot; placeholder=&quot;Extra small (0.65rem)&quot;&gt;
 
+&lt;input type=&quot;text&quot; class=&quot;input-small&quot; placeholder=&quot;Small (0.75rem)&quot;&gt;
+
+&lt;input type=&quot;text&quot; placeholder=&quot;Normal (0.85rem)&quot;&gt;
+
+&lt;input type=&quot;text&quot; class=&quot;input-large&quot; placeholder=&quot;Large (1.5rem)&quot;&gt;
+
+&lt;input type=&quot;text&quot; class=&quot;input-xlarge&quot; placeholder=&quot;Extra large (2rem)&quot;&gt;</code></pre>
                 </div>
+            </div>
+            <space></space>
+            <p>The same sizing principle also applies to select controls. Select also uses the classes <code>input-xsmall, input-small, input-large, and input-xlarge</code>.</p>
+            <div class="row">
+                <select class="select input-xsmall" placeholder="Dropdown Xsmall"><option value="1">Dropdown Xsmall</option><option value="2">2</option></select>
+                <select class="select input-small" placeholder="Dropdown Small"><option value="1">Dropdown Small</option><option value="2">2</option></select>
+                <select class="select" placeholder="Dropdown normal"><option value="1">Dropdown normal</option><option value="2">2</option></select>
+                <select class="select input-large" placeholder="Dropdown Large"><option value="1">Dropdown Large</option><option value="2">2</option></select>
+                <select class="select input-xlarge" placeholder="Dropdown Xlarge"><option value="1">Dropdown Xlarge</option><option value="2">2</option></select>
             </div>
         </div>
     </section>
