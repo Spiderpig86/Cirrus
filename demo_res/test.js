@@ -3,7 +3,7 @@
 $('.has-sub').on('click', function(e) { // Find all with ID
     $('.dropdown-menu').not(this).hide(); // Hide other menus
     //$('.shown').removeClass('shown');
-    $(this).find('.dropdown-menu').toggle().toggleClass('shown');
+    $(this).find('.dropdown-menu').toggle().toggleClass('dropdown-shown');
 });
 
 $('section').not('#header-btn').on('click', function(e) { // Hide when clicking section (will modify later)

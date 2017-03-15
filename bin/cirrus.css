@@ -988,12 +988,6 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
     transition: all .3s;
 }
 
-/* For those who want an animated drop down menu, display will be block by default and only height will change */
-.header-menu.nav-animated {
-    display: block;
-    height: 0;
-}
-
 /* These styles can also be used on menus in the body */
 .header-left, .header-right {
     -webkit-box-align: stretch;
@@ -1033,6 +1027,12 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
     overflow: hidden;
     overflow-x: auto;
     white-space: nowrap;
+}
+
+/* Allow the user to scroll through navbar items if it exceeds nav-left, nav-center, or nav-right widths */
+.header-overflow-x {
+    justify-content: inherit;
+    overflow-x: scroll;
 }
 
 /* Centering items */
@@ -1101,7 +1101,6 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
 .header-item .dropdown-menu {
         margin-top: -5px;
     background-color: #fff;
-    border-radius: 2px;
         position: absolute;
     top: 95%;
     z-index: 1000;
@@ -1116,12 +1115,19 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0 0 4px 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.1);
     box-shadow: 0 6px 12px rgba(0,0,0,.1);
 }
 
-.dropdown-menu.shown{
+/* Dark dropdown menu theme */
+.header-item .dropdown-menu.dropdown-dark {
+    background-color: rgba(0, 0, 0, 0.87);
+    border: 1px solid #333;
+    color: #fff;
+}
+
+.dropdown-menu.dropdown-shown{
     display: block !important;
 }
 
@@ -1175,6 +1181,12 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
       display: block;
   }
 
+  /* For those who want an animated drop down menu, display will be block by default and only height will change */
+.header-menu.nav-animated {
+    display: block;
+    height: 0;
+}
+
   /* Slide down effect */
   .header-menu.nav-animated.is-active {
     height: 100vh;
@@ -1191,7 +1203,7 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
     position: absolute;
   }
 
-  .dropdown-menu.shown {
+  .dropdown-menu.dropdown-shown {
     margin-top: 0;
     position: relative;
     float: left;
@@ -1202,6 +1214,12 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
     box-shadow: none;
   }
 
+    .header-item .dropdown-menu.dropdown-dark {
+    background-color: rgba(0, 0, 0, 0.17);
+    border: 0;
+    color: #fff;
+}
+
   /* Make the menu items larger in the dropdown menu */
   .header-menu .header-item {
     padding: 1rem 0;
@@ -1210,6 +1228,7 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
   /* Get rid of extra spaces */
   .header-menu .header-item > a {
     padding: 0;
+    width: 100%; /* Stretch the link to span the entire list item */
   }
 
   /* Hamburger button */

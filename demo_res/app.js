@@ -24,7 +24,7 @@ $('#header-btn').on('click', function(e) {
 $('.has-sub').on('click', function(e) { // Find all with ID
     $('.dropdown-menu').not(this).hide(); // Hide other menus
     //$('.shown').removeClass('shown');
-    $(this).find('.dropdown-menu').toggle().toggleClass('shown');
+    $(this).find('.dropdown-menu').toggle().toggleClass('dropdown-shown');
 });
 
 $('section').not('#header-btn').on('click', function(e) { // Hide when clicking section (will modify later)
@@ -32,3 +32,9 @@ $('section').not('#header-btn').on('click', function(e) { // Hide when clicking 
     $('.shown').removeClass('shown');
     $('#header-menu').removeClass('is-active');
 });
+
+// Hide menu after clicking a menu item
+// $('.header-menu').not($('.header-item .has-sub')).on('click', function(e) {
+//     //$('.shown').removeClass('shown');
+//     $('#header-menu').removeClass('is-active');
+// });
