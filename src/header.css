@@ -16,6 +16,18 @@
     top: 0;
 }
 
+/* Styles for header menu (aka the nav bar) */
+.header-menu {
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+/* For those who want an animated drop down menu, display will be block by default and only height will change */
+.header-menu.nav-animated {
+    display: block;
+    height: 0;
+}
+
 /* These styles can also be used on menus in the body */
 .header-left, .header-right {
     -webkit-box-align: stretch;
@@ -195,6 +207,11 @@
 @media screen and (max-width: 768px) {
   .header-menu.is-active {
       display: block;
+  }
+
+  /* Slide down effect */
+  .header-menu.nav-animated.is-active {
+    height: 100vh;
   }
 
 /* Dropdown menu for smaller screen sizes */

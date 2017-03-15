@@ -61,3 +61,6 @@ Link coming soon
 * Add profile card.
 * Triangle text for images.
 * Modal dialogs.
+
+## Examples the use Cirrus
+* [Polarity 9](http://polarity.x10.mx/browser "Polarity 9 Promo Page")
