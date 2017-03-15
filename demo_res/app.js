@@ -27,10 +27,16 @@ $('.has-sub').on('click', function(e) { // Find all with ID
     $(this).find('.dropdown-menu').toggle().toggleClass('dropdown-shown');
 });
 
-$('section').not('#header-btn').on('click', function(e) { // Hide when clicking section (will modify later)
+$(document).on('click', function(e) { // Hide when clicking section (will modify later)
      $('.dropdown-menu').hide(); // Hide other menus clicking on window
-    $('.shown').removeClass('shown');
+    $('.dropdown-shown').removeClass('dropdown-shown');
     $('#header-menu').removeClass('is-active');
+});
+
+/* Clicks within the dropdown won't make
+   it past the dropdown itself */
+$("#header").click(function(e){
+  e.stopPropagation();
 });
 
 // Hide menu after clicking a menu item

@@ -66,3 +66,20 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
 .text-error {
     border-color: #F44336 !important;
 }
+
+/* Input Field Sizes */
+input[type].input-xsmall {
+    font-size: 0.5rem;
+}
+
+input[type].input-small {
+    font-size: 0.75rem;
+}
+
+input[type].input-large {
+    font-size: 1.5rem;
+}
+
+input[type].input-xlarge {
+    font-size: 2rem;
+}
