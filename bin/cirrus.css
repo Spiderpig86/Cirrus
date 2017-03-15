@@ -1190,6 +1190,7 @@ input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:
   /* Slide down effect */
   .header-menu.nav-animated.is-active {
     height: 100vh;
+    overflow: scroll; /* For when the number of dropdown items exceeds screen height */
   }
 
 /* Dropdown menu for smaller screen sizes */
