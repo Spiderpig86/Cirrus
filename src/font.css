@@ -195,6 +195,23 @@ width: 1.5rem;
     border-left: 4px solid transparent;
 }
 
+/* Other text elements */
+abbr[title] {
+    border-bottom: .1rem dotted;
+    cursor: help;
+    text-decoration: none;
+}
+
+kbd {
+    background: #394558;
+    border-radius: .2rem;
+    color: #fff;
+    display: inline-block;
+    line-height: 1;
+    padding: 0.5rem;
+    vertical-align: baseline;
+}
+
 /* MOBILE */
 
 @media (max-width: 650px) {

@@ -256,3 +256,14 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 .btn-accent:active {
   background-color: #c21b2b;
 }
+
+/* Success Button */
+.btn-success {
+    color: #fff;
+    background-color: #00cb52;
+    border-color: #00ad46;
+}
+
+.btn-success:hover {
+    background-color: #00b147;
+}

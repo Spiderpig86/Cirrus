@@ -179,10 +179,25 @@
 
         <space></space>
         <h6>Integrate with Font Awesome</h6>
+        <p>Currently a beta feature, this allows you to place Font Awesome glyphs right at the beginning of input fields. This only works for normal sized input fields and normal/small sized glyphs.</p>
+        <div class="row">
         <div class="col-6">
             <div class="input-control">
-                <input type="text" class="input-contains-icon" placeholder="Normal state"><span class="icon"><i class="fa fa-envelope small"></i></span></input>
+                <input type="email" class="input-contains-icon" placeholder="Email"><span class="icon"><i class="fa fa-envelope small"></i></span></input>
             </div>
+            <div class="input-control">
+                <input type="password" class="input-contains-icon" placeholder="Password"><span class="icon"><i class="fa fa-lock small"></i></span></input>
+            </div>
+            <button class="animated btn-success pull-right">Log In</button>
+        </div>
+
+        <div class="col-6">
+            <pre><code>&lt;div class=&quot;input-control&quot;&gt;
+    &lt;input type=&quot;email&quot; class=&quot;input-contains-icon&quot; placeholder=&quot;Email&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-envelope small&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/input&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;input type=&quot;password&quot; class=&quot;input-contains-icon&quot; placeholder=&quot;Password&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-lock small&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/input&gt;
+&lt;/div&gt;</code></pre>
         </div>
 
     </div>
