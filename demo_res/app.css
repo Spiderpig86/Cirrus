@@ -122,6 +122,10 @@ span.title {
     letter-spacing: .1rem;
 }
 
+#textele code {
+    margin-left: .5rem;
+}
+
 /* FOOTER */
 footer ul a {
     display: block;

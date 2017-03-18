@@ -828,13 +828,22 @@ abbr[title] {
 }
 
 kbd {
-    background: #394558;
-    border-radius: .2rem;
-    color: #fff;
-    display: inline-block;
-    line-height: 1;
-    padding: 0.5rem;
-    vertical-align: baseline;
+  background: #394558;
+  border-radius: .2rem;
+  color: #fff;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.5rem;
+  vertical-align: baseline;
+}
+
+mark {
+  background: #ffe9b3;
+  border-radius: .2rem;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.5rem;
+  vertical-align: baseline;
 }
 
 /* MOBILE */
