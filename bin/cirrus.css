@@ -945,10 +945,18 @@ input[type="search"]:focus,
 input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="url"]:focus,
-input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:focus, .input-focused {
+input[type="password"]:focus, select:focus, textarea:focus, textarea[type=text]:focus,
+input[type="text"].input-focused,
+.input-focused { 
     box-shadow: inset 0px 1px 8px rgba(0,0,0,0.1);
     border-color: rgba(0, 102, 255, 0.5);
 }
+
+select:disabled {
+    background: rgb(235, 235, 228);
+    color: #a9a9a9;
+}
+
 
 .label:not(:last-child) {
     margin-bottom: 0.5em;
@@ -999,6 +1007,28 @@ select.input-large {
 
 select.input-xlarge {
     padding: 1.05rem 1.3rem;
+}
+
+/* Used for when the input controls have another control adjacent to it but we want to position it inside the input field like font-awesome glyphs */
+.input-control {
+  position: relative;
+}
+
+/* Hold Font Awesome glyphs inside input fields */
+/* Nomral input only */
+/* More sizes coming soon */
+input[type].input-contains-icon {
+    padding-left: 2.75rem;
+}
+
+.input-contains-icon + .icon { /* Nomral input only */
+    position: absolute;
+    left: 0;
+    height: 2rem;
+    top: 0;
+    width: 2rem;
+    margin: 1.15rem 0 0 0.5rem;
+    vertical-align: baseline;
 }
 
 

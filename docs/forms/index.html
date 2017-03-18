@@ -139,12 +139,52 @@
         <div class="row">
             <div class="col-6">
                 <input type="text" placeholder="Normal state">
-                <select class="select input-small" placeholder="Dropdown Small"><option value="1">Normal state</option></select>
+                <select class="select" placeholder="Dropdown"><option value="1">Normal state</option></select>
             </div>
             <div class="col-6">
-                
+                <pre><code>&lt;input type=&quot;text&quot; placeholder=&quot;Normal state&quot;&gt;
+&lt;select class=&quot;select&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Normal state&lt;/option&gt;&lt;/select&gt;</code></pre>
             </div>
         </div>
+
+        <p class="title">Focused</p>
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="input-focused" placeholder="Focused state">
+                <select class="select input-focused" placeholder="Dropdown"><option value="1">Focused state</option></select>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;input type=&quot;text&quot; placeholder=&quot;Focused state&quot;&gt;
+&lt;select class=&quot;select&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Focused state&lt;/option&gt;&lt;/select&gt;</code></pre>
+            </div>
+        </div>
+
+        <p class="title">Disabled</p>
+        <div class="row">
+            <div class="col-6">
+                <input disabled type="text" placeholder="Disabled state">
+                <select disabled class="select" placeholder="Dropdown"><option value="1">Disabled state</option></select>
+                <input disabled type="checkbox">Check this</input>
+                <input disabled type="radio">I'm a radio button.</input>
+                <input disabled type="submit" class="animated" />
+            </div>
+            <div class="col-6">
+                <pre><code> &lt;input disabled type=&quot;text&quot; placeholder=&quot;Disabled state&quot;&gt;
+&lt;select disabled class=&quot;select&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Disabled state&lt;/option&gt;&lt;/select&gt;
+&lt;input disabled type=&quot;checkbox&quot;&gt;Check this&lt;/input&gt;
+&lt;input disabled type=&quot;radio&quot;&gt;I'm a radio button.&lt;/input&gt;
+&lt;input disabled type=&quot;submit&quot; class=&quot;animated&quot; /&gt;</code></pre>
+            </div>
+        </div>
+
+        <space></space>
+        <h6>Integrate with Font Awesome</h6>
+        <div class="col-6">
+            <div class="input-control">
+                <input type="text" class="input-contains-icon" placeholder="Normal state"><span class="icon"><i class="fa fa-envelope small"></i></span></input>
+            </div>
+        </div>
+
     </div>
 </section>
 
