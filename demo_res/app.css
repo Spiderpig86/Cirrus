@@ -126,6 +126,10 @@ span.title {
     margin-left: .5rem;
 }
 
+#input-type-container p {
+    margin: 0;
+}
+
 /* FOOTER */
 footer ul a {
     display: block;
