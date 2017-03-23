@@ -974,8 +974,9 @@ textarea, textarea[type=text] {
   transition: all .3s;
   outline: none;
   margin: .5rem 0;
-   padding: 1rem 1.3rem;
-       min-height: 8rem;
+  padding: 1rem 1.3rem;
+  min-height: 8rem;
+  line-height: 1.5rem;
 }
 
 input[type="color"] {
