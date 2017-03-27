@@ -18,10 +18,10 @@
 /* Nunito Sans for the font */
 body {
   letter-spacing: 0.01rem;
-    line-height: 1.6;
-    font-size: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
   font-weight: 400;
-  font-family: "Nunito Sans", "Segoe UI", "HelveticaNeue", "Helvetica Neue", Helvetica, "Ubuntu", Arial, sans-serif;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   letter-spacing: 0.01rem;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   color: #4a4a4a;
@@ -2217,6 +2217,17 @@ ul.no-bullets {
     display: -ms-flexbox;
     display: flex;
   }
+}
 
+/* Hide elements based on screen size */
+@media screen and (max-width: 400px) {
+  .hidden-phone {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .hidden-tablet {
+    display: none;
+  }
 }

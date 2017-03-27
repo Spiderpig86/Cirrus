@@ -156,6 +156,17 @@
     display: -ms-flexbox;
     display: flex;
   }
+}
 
+/* Hide elements based on screen size */
+@media screen and (max-width: 400px) {
+  .hidden-phone {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .hidden-tablet {
+    display: none;
+  }
 }
