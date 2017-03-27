@@ -3,6 +3,8 @@
 * Stanley Lim, Copyright 2017
 * https://spiderpig86.github.io/Cirrus
 */
+/* ANIMATIONS */
+
 /* Spinning loading animation */
 @-webkit-keyframes loading {
   from {
@@ -46,6 +48,8 @@
     transform: scale(1.1);
   }
 }
+/* BUTTONS */
+
 /* Button styling */
 /* Un-themed */
 .btn, button, [type=submit] {
@@ -315,6 +319,8 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 .btn-success:hover {
     background-color: #00b147;
 }
+/* CARDS */
+
 .card {
     background-color: white;
     border-radius: 5px;
@@ -496,6 +502,8 @@ margin: .5rem;
 /*
     NOTE: To have cards with the same height, place the card class with col-x classes and have the parent have fluid-container.
 */
+/* CODE */
+
 code {
   padding: .3rem;
   margin: .5em 0;
@@ -614,6 +622,8 @@ video {
         width: 100%;
             z-index: -1;
 }
+
+/* FONT */
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
@@ -855,6 +865,8 @@ kbd {
   }
 }
 
+/* FOOTER */
+
 footer {
     width: 100%;
     padding: 50px 0 10px;
@@ -911,6 +923,8 @@ footer p .fa {
     -webkit-animation: pound 0.35s infinite alternate;
         vertical-align: baseline;
 }
+/* FORMS */
+
 input[type="name"],
 input[type="email"],
 input[type="number"],
@@ -1064,6 +1078,8 @@ input[type].input-contains-icon {
     margin: 1.15rem 0 0 0.5rem;
     vertical-align: baseline;
 }
+
+/* HEADER */
 
 .header {
         -webkit-box-align: stretch;
@@ -1365,6 +1381,7 @@ input[type].input-contains-icon {
   }
 }
 
+/* HEADER */
 
 .content {
   max-width: 60em;
@@ -1715,6 +1732,8 @@ justify-content: space-between;
 }
 }
 
+/* LINKS */
+
 a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
@@ -1915,6 +1934,8 @@ a,a:visited,a:hover,a:active{
   width:100%;
 }
 
+/* LISTS */
+
 ul {
   list-style: disc inside;
 }
@@ -1941,6 +1962,8 @@ li:last-child {
 ul.no-bullets {
   list-style: none;
 }
+/* TABLE */
+
 .table {
     margin-bottom: 1.5rem;
     width: 100%;
@@ -2022,6 +2045,7 @@ ul.no-bullets {
   display: table;
     width: 100%; /* Forces row to span container */
 }
+/* UTILS */
 /* Utility classes to help solve some very annoying issues */
 
 .this-inline {
