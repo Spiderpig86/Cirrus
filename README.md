@@ -58,9 +58,9 @@ Link coming soon
 * Internet Explorer (Untested)
 
 ## TODO
-* Add profile card.
 * Triangle text for images.
 * Modal dialogs.
+* Add figure and figures that display more info on hover
 
 ## Examples the use Cirrus
 * [Polarity 9](http://polarity.x10.mx/browser "Polarity 9 Promo Page")
