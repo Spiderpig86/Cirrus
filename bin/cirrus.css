@@ -1,91 +1,8 @@
-/* The main file for all the CSS styles */
-
-/* -------- DEFAULT -------- */
-/* BASE STYLING FOR CIRRUS*/
-
-* {
-  margin: 0;
-  padding: 0;
-  /* Prevent setting borders from increasing the size of an elrement */
-  -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-}
-
-/* Nunito Sans for the font */
-body {
-  letter-spacing: 0.01rem;
-  line-height: 1.6;
-  font-size: 1rem;
-  font-weight: 400;
-  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  letter-spacing: 0.01rem;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  color: #4a4a4a;
-}
-
-/* remove bullets from unordered lists */
-ul {
-  list-style: none;
-}
-
-/* Setting up embedded content */
-img,
-embed,
-object,
-audio,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* remove iframe borders */
-iframe {
-  border: 0;
-  outline: 0;
-}
-
-article,
-aside,
-figure,
-footer,
-header,
-hgroup,
-section {
-  display: block;
-}
-
-.accent {
-  background: -webkit-linear-gradient(top, #FF5F6D, #FFC371);
-  background: linear-gradient(to bottom, #FF5F6D, #FFC371);
-  color: #fff;
-}
-
-.accent-horiz {
-  background: -webkit-linear-gradient(left, #FF5F6D, #FFC371);
-  background: linear-gradient(to right, #FF5F6D, #FFC371);
-}
-
-/* Selection Color */
-::-moz-selection { /* Code for Firefox */
-    background: rgba(0, 161, 255, 0.2);
-}
-
-::selection {
-    background: rgba(0, 161, 255, 0.2);
-}
-
-video {
-    position: absolute;
-        height: 100vh;
-        object-fit: cover;
-        width: 100%;
-            z-index: -1;
-}
-
+/*
+* Cirrus 0.4.5
+* Stanley Lim, Copyright 2017
+* https://spiderpig86.github.io/Cirrus
+*/
 /* Spinning loading animation */
 @-webkit-keyframes loading {
   from {
@@ -129,9 +46,6 @@ video {
     transform: scale(1.1);
   }
 }
-
-
-/* -------- BUTTONS -------- */
 /* Button styling */
 /* Un-themed */
 .btn, button, [type=submit] {
@@ -155,7 +69,7 @@ video {
   letter-spacing: .03rem;
   margin: .4rem;
   text-transform: uppercase;
-  font-family: 'Montserrat';
+  font-family: Montserrat;
   font-weight: 400;
 }
 
@@ -401,8 +315,6 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 .btn-success:hover {
     background-color: #00b147;
 }
-
-/* -------- CARD -------- */
 .card {
     background-color: white;
     border-radius: 5px;
@@ -584,13 +496,11 @@ margin: .5rem;
 /*
     NOTE: To have cards with the same height, place the card class with col-x classes and have the parent have fluid-container.
 */
-
-/* -------- CODE -------- */
 code {
-      padding: .3rem;
-      margin: .5em 0;
-      overflow: auto;
-     background: #f4f5f6;
+  padding: .3rem;
+  margin: .5em 0;
+  overflow: auto;
+  background: #f4f5f6;
 }
 
 pre > code {
@@ -616,13 +526,95 @@ pre > code {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  border-left: .3rem solid #f03d4d;
-  margin: 0;
+ border-left: .3rem solid #f03d4d;
+ margin: 0;
 }
 
+/* BASE STYLING FOR CIRRUS*/
 
+* {
+  margin: 0;
+  padding: 0;
+  /* Prevent setting borders from increasing the size of an elrement */
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+}
 
-/* -------- FONT -------- */
+/* Nunito Sans for the font */
+body {
+  letter-spacing: 0.01rem;
+    line-height: 1.6;
+    font-size: 1rem;
+  font-weight: 400;
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.01rem;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  color: #4a4a4a;
+}
+
+/* remove bullets from unordered lists */
+ul {
+  list-style: none;
+}
+
+/* Setting up embedded content */
+img,
+embed,
+object,
+audio,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* remove iframe borders */
+iframe {
+  border: 0;
+  outline: 0;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+.accent {
+  background: -webkit-linear-gradient(top, #FF5F6D, #FFC371);
+  background: linear-gradient(to bottom, #FF5F6D, #FFC371);
+  color: #fff;
+}
+
+.accent-horiz {
+  background: -webkit-linear-gradient(left, #FF5F6D, #FFC371);
+  background: linear-gradient(to right, #FF5F6D, #FFC371);
+}
+
+/* Selection Color */
+::-moz-selection { /* Code for Firefox */
+    background: rgba(0, 161, 255, 0.2);
+}
+
+::selection {
+    background: rgba(0, 161, 255, 0.2);
+}
+
+video {
+    position: absolute;
+        height: 100vh;
+        object-fit: cover;
+        width: 100%;
+            z-index: -1;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
@@ -822,33 +814,24 @@ width: 1.5rem;
 
 /* Other text elements */
 abbr[title] {
-    border-bottom: .1rem dashed;
-    cursor: alias;
+    border-bottom: .1rem dotted;
+    cursor: help;
     text-decoration: none;
 }
 
 kbd {
-  background: #394558;
-  border-radius: .2rem;
-  color: #fff;
-  display: inline-block;
-  line-height: 1;
-  padding: 0.5rem;
-  vertical-align: baseline;
-}
-
-mark {
-  background: #ffe9b3;
-  border-radius: .2rem;
-  display: inline-block;
-  line-height: 1;
-  padding: 0.5rem;
-  vertical-align: baseline;
+    background: #394558;
+    border-radius: .2rem;
+    color: #fff;
+    display: inline-block;
+    line-height: 1;
+    padding: 0.5rem;
+    vertical-align: baseline;
 }
 
 /* MOBILE */
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   h1 {
     font-size: 3rem;
   }
@@ -872,8 +855,6 @@ mark {
   }
 }
 
-
-/* -------- FOOTER -------- */
 footer {
     width: 100%;
     padding: 50px 0 10px;
@@ -930,8 +911,6 @@ footer p .fa {
     -webkit-animation: pound 0.35s infinite alternate;
         vertical-align: baseline;
 }
-
-/* -------- FORMS -------- */
 input[type="name"],
 input[type="email"],
 input[type="number"],
@@ -952,7 +931,6 @@ input[type="file"], select {
   font-size: .85rem;
   letter-spacing: .02rem;
   box-sizing: border-box;
-  -webkit-transition: all .3s;
   transition: all .3s;
   outline: none;
   margin: .5rem 0;
@@ -970,13 +948,12 @@ textarea, textarea[type=text] {
   font-size: .85rem;
   letter-spacing: .02rem;
   box-sizing: border-box;
-  -webkit-transition: all .3s;
   transition: all .3s;
   outline: none;
   margin: .5rem 0;
-  padding: 1rem 1.3rem;
-  min-height: 8rem;
-  line-height: 1.5rem;
+   padding: 1rem 1.3rem;
+    min-height: 8rem;
+    line-height: 1.5rem;
 }
 
 input[type="color"] {
@@ -1010,12 +987,10 @@ input[type="text"].input-focused,
     border-color: rgba(0, 102, 255, 0.5);
 }
 
-
 select:disabled {
     background: rgb(235, 235, 228);
     color: #a9a9a9;
 }
-
 
 .label:not(:last-child) {
     margin-bottom: 0.5em;
@@ -1090,8 +1065,6 @@ input[type].input-contains-icon {
     vertical-align: baseline;
 }
 
-
-/* -------- HEADER -------- */
 .header {
         -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -1310,10 +1283,10 @@ input[type].input-contains-icon {
   }
 
   /* For those who want an animated drop down menu, display will be block by default and only height will change */
-.header-menu.nav-animated {
-    display: block;
-    height: 0;
-}
+    .header-menu.nav-animated {
+        display: block;
+        height: 0;
+    }
 
   /* Slide down effect */
   .header-menu.nav-animated.is-active {
@@ -1323,7 +1296,7 @@ input[type].input-contains-icon {
 
 /* Dropdown menu for smaller screen sizes */
   .header-menu {
-        background-color: white;
+    background-color: white;
     box-shadow: 0 4px 7px rgba(10, 10, 10, 0.1);
     left: 0;
     display: none;
@@ -1343,7 +1316,7 @@ input[type].input-contains-icon {
     box-shadow: none;
   }
 
-    .header-item .dropdown-menu.dropdown-dark {
+  .header-item .dropdown-menu.dropdown-dark {
     background-color: rgba(0, 0, 0, 0.17);
     border: 0;
     color: #fff;
@@ -1392,7 +1365,6 @@ input[type].input-contains-icon {
   }
 }
 
-/* -------- LAYOUT -------- */
 
 .content {
   max-width: 60em;
@@ -1735,6 +1707,7 @@ justify-content: space-between;
   .divided >.fluid-container:not(.row), .divided >.row [class^='col-'] {
     box-shadow: 0 -1px 0 0 rgba(34,36,38,.15);
 }
+
 .level.ignore-screen, .level-left.ignore-screen, .level-right.ignore-screen {
       display: -webkit-box;
     display: -ms-flexbox;
@@ -1742,8 +1715,6 @@ justify-content: space-between;
 }
 }
 
-
-/* -------- LINKS -------- */
 a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
@@ -1944,8 +1915,6 @@ a,a:visited,a:hover,a:active{
   width:100%;
 }
 
-
-/* -------- LISTS -------- */
 ul {
   list-style: disc inside;
 }
@@ -1957,7 +1926,7 @@ ol {
 /* Description lists */
 
 dl, dd {
-     margin: 1em;
+     margin-bottom: 1em;
 }
 
 li {
@@ -1972,10 +1941,6 @@ li:last-child {
 ul.no-bullets {
   list-style: none;
 }
-
-
-/* -------- TABLE -------- */
-
 .table {
     margin-bottom: 1.5rem;
     width: 100%;
@@ -2057,8 +2022,6 @@ ul.no-bullets {
   display: table;
     width: 100%; /* Forces row to span container */
 }
-
-/* -------- UTIL -------- */
 /* Utility classes to help solve some very annoying issues */
 
 .this-inline {
