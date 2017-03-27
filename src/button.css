@@ -178,6 +178,10 @@ cursor: not-allowed;
     border-radius: 0 .28571429rem .28571429rem 0;
 }
 
+.has-controls.input:not([class*="right action"])>button:last-child, .has-controls.input:not([class*="right action"])>.btn:last-child>.btn {
+    border-radius: .28571429rem 0 0 .28571429rem ;
+}
+
 /* Tiny button */
 .btn-tiny {
   line-height: 1.5rem;
