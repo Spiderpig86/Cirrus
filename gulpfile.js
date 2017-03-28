@@ -26,11 +26,11 @@ gulp.task('compile', function() {
         .pipe($.concat('cirrus.css'))
         .pipe($.header(head))
         .pipe($.size())
-        .pipe(gulp.dest('./bin/'));
+        .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('minify', ['compile'], function() {
-    return gulp.src(['./bin/cirrus.css'])
+    return gulp.src(['./dist/cirrus.css'])
         .pipe(minify())
         .pipe($.header(head))
         .pipe($.size())
