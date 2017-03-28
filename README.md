@@ -6,7 +6,7 @@
 # Cirrus
 >tl;dr: A CSS framework.
 
-![Version](https://img.shields.io/badge/version-v0.4.0-orange.svg "v.0.4.0")
+![Version](https://img.shields.io/badge/version-v0.4.6-orange.svg "v.0.4.6")
 
 A fully responsive CSS and UI framework with custom design controls and simplistic structure. A components are customizable and work with your CSS.
 
@@ -46,7 +46,7 @@ Even with a multitude of CSS frameworks, some are either too basic to develop mo
 ## Getting Started
 ### Link
 ```html
-Link coming soon
+https://unpkg.com/cirrus-ui@0.4.6/dist/cirrus.min.css
 ```
 
 ## Supported Browsers

@@ -35,5 +35,5 @@ gulp.task('minify', ['compile'], function() {
         .pipe($.header(head))
         .pipe($.size())
         .pipe($.concat('cirrus.min.css'))
-        .pipe(gulp.dest('./bin/'));
+        .pipe(gulp.dest('./dist/'));
 });
