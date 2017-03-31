@@ -46,7 +46,7 @@ Even with a multitude of CSS frameworks, some are either too basic to develop mo
 ## Getting Started
 ### Install with npm
 ```
-  npm install cirrus-ui
+npm install cirrus-ui
 ```
 ### Link
 ```html
