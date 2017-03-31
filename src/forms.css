@@ -99,20 +99,21 @@ input[type="search"], input.search {
 }
 
 .label:not(:last-child) {
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
 }
 
 .label {
     color: #4a4a4a;
     display: inline-block; /* changed from block */
     font-weight: bold;
+    margin-top: .8rem;
 }
 
-.text-success {
+.text-success, .input-success {
     border-color: #4CAF50 !important;
 }
 
-.text-error {
+.text-error, .input-error {
     border-color: #F44336 !important;
 }
 

@@ -261,11 +261,35 @@
                 <input disabled type="submit" class="animated" />
             </div>
             <div class="col-6">
-                <pre><code> &lt;input disabled type=&quot;text&quot; placeholder=&quot;Disabled state&quot;&gt;
+                <pre><code>&lt;input disabled type=&quot;text&quot; placeholder=&quot;Disabled state&quot;&gt;
 &lt;select disabled class=&quot;select&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Disabled state&lt;/option&gt;&lt;/select&gt;
 &lt;input disabled type=&quot;checkbox&quot;&gt;Check this&lt;/input&gt;
 &lt;input disabled type=&quot;radio&quot;&gt;I'm a radio button.&lt;/input&gt;
 &lt;input disabled type=&quot;submit&quot; class=&quot;animated&quot; /&gt;</code></pre>
+            </div>
+        </div>
+
+        <p class="title">Success</p>
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="input-success" placeholder="Success state">
+                <select class="select input-success" placeholder="Dropdown"><option value="1">Success state</option></select>
+            </div>
+            <div class="col-6">
+                <pre><code>
+                    </code></pre>
+            </div>
+        </div>
+
+        <p class="title">Error</p>
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="input-error" placeholder="Success state">
+                <select class="select input-error" placeholder="Dropdown"><option value="1">Error state</option></select>
+            </div>
+            <div class="col-6">
+                <pre><code>
+                    </code></pre>
             </div>
         </div>
 
@@ -290,6 +314,21 @@
 &lt;div class=&quot;input-control&quot;&gt;
     &lt;input type=&quot;password&quot; class=&quot;input-contains-icon&quot; placeholder=&quot;Password&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-lock small&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/input&gt;
 &lt;/div&gt;</code></pre>
+        </div>
+        </div>
+
+        <p>You can also create labels to go along with the textfield to give more detail to the user.</p>
+        <div class="row">
+            <div class="col-6">
+                <label class="font-normal">E-mail</label>
+                <input type="email" placeholder="john.doe@cirrus.io"/>
+                <span class="info text-center">We promose we won't spam!</span>
+            </div>
+            <div class="col-6">
+                <pre><code>&lt;label class=&quot;font-normal&quot;&gt;E-mail&lt;/label&gt;
+&lt;input type=&quot;email&quot; placeholder=&quot;john.doe@cirrus.io&quot;/&gt;
+&lt;span class=&quot;info text-center&quot;&gt;We promose we won't spam!&lt;/span&gt;</code></pre>
+            </div>
         </div>
 
     </div>
@@ -339,7 +378,6 @@
             <div class="divider"></div>
             <p>Here are a couple of sample forms for you to work with:</p>
             <div class="row">
-                <p class="title">Basic Form</p>
                 <div class="col-6">
                     <form method="post" action="#" class="form" autocomplete="off">
                         <p class="label">Email:</p>
@@ -354,11 +392,22 @@
                             <button class="animated pull-left">Clear</button>
                         </div>
                     </form>
-                <div class="col-6">
-                    <pre><code>
-                        </code></pre>
-                </div>
             </div>
+             <div class="col-6">
+                    <pre><code>&lt;form method=&quot;post&quot; action=&quot;#&quot; class=&quot;form&quot; autocomplete=&quot;off&quot;&gt;
+    &lt;p class=&quot;label&quot;&gt;Email:&lt;/p&gt;
+    &lt;input type=&quot;email&quot;/&gt;
+    &lt;p class=&quot;label&quot;&gt;Choose your favorite color&lt;/p&gt;
+    &lt;input type=&quot;color&quot; value=&quot;#f03d4d&quot;/&gt;
+    &lt;label class=&quot;&quot;&gt;&lt;input type=&quot;checkbox&quot;/&gt;  Checkbox&lt;/label&gt;
+    &lt;label class=&quot;&quot;&gt;&lt;input type=&quot;radio&quot;/&gt;  Radiobutton&lt;/label&gt;
+    &lt;textarea placeholder=&quot;Tell us about yourself...&quot;&gt;&lt;/textarea&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;input type=&quot;submit&quot; class=&quot;animated btn-accent pull-left&quot;/&gt;
+        &lt;button class=&quot;animated pull-left&quot;&gt;Clear&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </div>
         </div>
     </section>
 

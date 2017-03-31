@@ -21,6 +21,11 @@ a:hover {
          backface-visibility:hidden;
 }
 
+:focus {
+    box-shadow: 0 0 0.1rem 0.15rem rgba(51, 51, 51, 0.15)
+    outline: none;
+}
+
 a,a:visited,a:hover,a:active{
   -webkit-backface-visibility:hidden;
           backface-visibility:hidden;

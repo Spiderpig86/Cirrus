@@ -828,7 +828,7 @@ width: 1.5rem;
 .info {
     display: block;
     font-size: 0.75rem;
-    margin-top: 5px;
+    color: #979797;
 }
 
 .info.success {
@@ -1035,20 +1035,39 @@ select:disabled {
     color: #a9a9a9;
 }
 
-.label:not(:last-child) {
-    margin-bottom: 0.5em;
+/* Search field */
+input[type="search"], input.search {
+    background-repeat: no-repeat;
+    background-position: 8px 53%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" ….39ZM6.316,2.418a3.9,3.9,0,1,0,3.9,3.9A3.9,3.9,0,0,0,6.316,2.418Z"/></svg>');
+    padding-left: 32px;
 }
+
+/* Required asterisk */
+.required { /* Use this in a span or a div */
+    position: relative;
+    top: 1px;
+    font-weight: bold;
+    color: #f03c69;
+    font-size: 110%;
+}
+
+.label:not(:last-child) {
+    margin-bottom: 0;
+}
+
 .label {
     color: #4a4a4a;
     display: inline-block; /* changed from block */
     font-weight: bold;
+    margin-top: .8rem;
 }
 
-.text-success {
+.text-success, .input-success {
     border-color: #4CAF50 !important;
 }
 
-.text-error {
+.text-error, .input-error {
     border-color: #F44336 !important;
 }
 
@@ -1772,6 +1791,46 @@ justify-content: space-between;
   -o-transition: all .3s;
 }
 
+/* Width CSS */
+.w-10 {
+  width: 10%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-100 {
+  width: 100%;
+}
 
 /* MOBILE */
 @media screen and (max-width: 768px) {
@@ -1827,6 +1886,11 @@ a:hover {
   transition: all .3s;
   -webkit-backface-visibility:hidden;
          backface-visibility:hidden;
+}
+
+:focus {
+    box-shadow: 0 0 0.1rem 0.15rem rgba(51, 51, 51, 0.15)
+    outline: none;
 }
 
 a,a:visited,a:hover,a:active{
