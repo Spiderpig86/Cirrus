@@ -130,7 +130,7 @@ span.title {
     margin: 0;
 }
 
-h6 {
+h6:not(.title) {
     padding-top: 4rem;
 }
 
