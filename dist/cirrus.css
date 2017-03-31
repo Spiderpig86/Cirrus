@@ -1,5 +1,5 @@
 /*
-* Cirrus 0.4.5
+* Cirrus 0.4.6
 * Stanley Lim, Copyright 2017
 * https://spiderpig86.github.io/Cirrus
 */
@@ -1040,7 +1040,7 @@ select:disabled {
 }
 .label {
     color: #4a4a4a;
-    display: block;
+    display: inline-block; /* changed from block */
     font-weight: bold;
 }
 

@@ -81,12 +81,30 @@ select:disabled {
     color: #a9a9a9;
 }
 
+/* Search field */
+input[type="search"], input.search {
+    background-repeat: no-repeat;
+    background-position: 8px 53%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" ….39ZM6.316,2.418a3.9,3.9,0,1,0,3.9,3.9A3.9,3.9,0,0,0,6.316,2.418Z"/></svg>');
+    padding-left: 32px;
+}
+
+/* Required asterisk */
+.required { /* Use this in a span or a div */
+    position: relative;
+    top: 1px;
+    font-weight: bold;
+    color: #f03c69;
+    font-size: 110%;
+}
+
 .label:not(:last-child) {
     margin-bottom: 0.5em;
 }
+
 .label {
     color: #4a4a4a;
-    display: block;
+    display: inline-block; /* changed from block */
     font-weight: bold;
 }
 
