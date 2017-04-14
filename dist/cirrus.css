@@ -323,6 +323,57 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 .btn-success:hover {
     background-color: #00b147;
 }
+
+/* Button tooltip on hover */
+.btn-tooltip {
+  position: relative; /* let's the pseudoelement that we are displaying relative to the button. */
+  overflow: visible; /* Allows the pseudoelement to be shown */
+}
+
+/* This is the psuedoelement that creates the tooltip */
+.btn-tooltip:after {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  color: #fff;
+  font-size: .6rem;
+  background: rgba(69, 77, 93, .9);
+  content: attr(data-tooltip); /* Retrieves the data specified in this element property and displays it as text */
+  display: block;
+  line-height: 1rem;
+  text-transform: none;
+  overflow: hidden;
+  padding: .4rem .8rem;
+  opacity: 0; /* Hide the element */
+  text-overflow: ellipsis;
+  max-width: 15rem;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  transition: all .2s ease;
+      -webkit-transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      -ms-transition: all .2s ease;
+      -o-transition: all .2s ease;
+  z-index: 200;
+  pointer-events: none;
+  bottom: 100%; /* Pushes the tooltip above the button */
+  left: 50%; /* Horizontally center it */
+  border-radius: .2rem;
+}
+
+/* Handles the on hover event of the button and then modifies the associated tooltip accordingly. */
+.btn-tooltip:focus::after, .btn-tooltip:hover::after {
+      opacity: 1;
+      -webkit-transform: translate(-50%, -.5rem);
+      -ms-transform: translate(-50%, -.5rem);
+      transform: translate(-50%, -.5rem);
+      transition: all .2s ease;
+      -webkit-transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      -ms-transition: all .2s ease;
+      -o-transition: all .2s ease;
+}
 /* CARDS */
 
 .card {
