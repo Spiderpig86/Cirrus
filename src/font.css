@@ -177,6 +177,11 @@ width: 1.5rem;
     color: #979797;
 }
 
+.info.inline { /* Keeps the extra info inline */
+    display: inline-block;
+    margin-left: .5rem;
+}
+
 .info.success {
   color: #4CAF50;
 }
