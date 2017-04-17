@@ -380,6 +380,7 @@
             <h3>Button Tooltips</h3>
             <div class="divider"></div>
             <p>Cirrus adds a whole new dimension to buttons with tooltips. Specifying tooltip text requires no extra div but rather just 1 extra property within the buttons themselves allowing for easy customization physically or dynamically with JavaScript.</p>
+            <p>The way this works is that the contents of the tooltip are specified by the <code>data-tooltip</code> attribute where the CSS would retrieve the data to be displayed.
             <div class="row">
                 <div class="col-6 center">
                     <button class="btn-accent btn-tooltip" data-tooltip="Tooltip 1">Button 1</button>
@@ -387,7 +388,13 @@
                     <button class="btn-accent btn-tooltip" data-tooltip="Tooltip 3">Button 3</button>
                 </div>
                 <div class="col-6">
-
+                    <pre><code>
+&lt;div class=&quot;col-6 center&quot;&gt;
+    &lt;button class=&quot;btn-accent btn-tooltip&quot; data-tooltip=&quot;Tooltip 1&quot;&gt;Button 1&lt;/button&gt;
+    &lt;button class=&quot;btn-accent btn-tooltip&quot; data-tooltip=&quot;Tooltip 2&quot;&gt;Button 2&lt;/button&gt;
+    &lt;button class=&quot;btn-accent btn-tooltip&quot; data-tooltip=&quot;Tooltip 3&quot;&gt;Button 3&lt;/button&gt;
+&lt;/div&gt;
+                        </code></pre>
                 </div>
             </div>
         </div>

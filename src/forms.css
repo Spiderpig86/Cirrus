@@ -76,6 +76,13 @@ input[type="text"].input-focused,
     border-color: rgba(0, 102, 255, 0.5);
 }
 
+select {
+    -webkit-appearance: none;
+    background-image: url(data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" h…4.134,12.01l0.732-.726Zm7.555,0L9.01,7.9,4.866,12.01l-0.732-.726Z"/></svg>); /* Add the up/down arrows for the multiselect */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+}
+
 select:disabled {
     background: rgb(235, 235, 228);
     color: #a9a9a9;
