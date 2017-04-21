@@ -324,3 +324,29 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
       -ms-transition: all .2s ease;
       -o-transition: all .2s ease;
 }
+
+/* BUTTON GROUPS */
+/* Will group buttons with components in a single looking component */
+
+.btn-group {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; /* Wrap contents to next row on overflow */
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+}
+
+.btn-group .btn {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto; /* Make the buttons fill the available width and proportion themselves */
+}
+
+.btn-group .btn:first-child:not(:last-child) { /* Style the first child in group > 1 buttons */
+
+}
+
+.btn-group .btn:last-child:not(:first-child) { /* Style the last child in group > 1 buttons */
+
+}
