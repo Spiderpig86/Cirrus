@@ -48,6 +48,145 @@
     transform: scale(1.1);
   }
 }
+
+/* Bounce animations */
+@-webkit-keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); /* Ease-out based on power of four */
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); /* Ease-out based on power of four */
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+.animated.bounce {
+  animation-name: bounce;
+  -webkit-animation-name: bounce;
+  transform-origin: center bottom;
+  -webkit-transform-origin: center bottom;
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    transform: scale3d(.9, .9, .9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.animated.bounceIn {
+  animation-name: bounceIn;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animated.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
 /* BUTTONS */
 
 /* Button styling */
@@ -374,6 +513,46 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
       -ms-transition: all .2s ease;
       -o-transition: all .2s ease;
 }
+
+/* BUTTON GROUPS */
+/* Will group buttons with components in a single looking component */
+
+.btn-group {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; /* Wrap contents to next row on overflow */
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+}
+
+.btn-group.btn-group-fill { /* Makes the button group fill the width and proportion the buttons to fill the space */
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
+.btn-group .btn {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto; /* Make the buttons fill the available width and proportion themselves */
+}
+
+.btn-group .btn:first-child:not(:last-child) { /* Style the first child in group > 1 buttons */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group .btn:last-child:not(:first-child) { /* Style the last child in group > 1 buttons */
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1rem;
+}
+
+.btn-group .btn:not(:first-child):not(:last-child) { /* Style button in middle of group */
+  border-radius: 0; /* Remove roundness from center buttons */
+  margin-left: -1rem;
+}
 /* CARDS */
 
 .card {
@@ -589,6 +768,7 @@ code {
   margin: .5em 0;
   overflow: auto;
   background: #f4f5f6;
+  border-radius: 3px;
 }
 
 pre > code {
@@ -600,7 +780,7 @@ pre > code {
   white-space: -pre-wrap;      /* Opera 4-6 */
   white-space: -o-pre-wrap;    /* Opera 7 */
   word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  color: #4a4a4a;
+  color: #626262;
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
   direction: ltr;
   text-align: left;
@@ -641,7 +821,7 @@ body {
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   letter-spacing: 0.01rem;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  color: #4a4a4a;
+  color: #374054;
 }
 
 /* remove bullets from unordered lists */
@@ -703,6 +883,11 @@ video {
             z-index: -1;
 }
 
+/* When focusing any element */
+:focus {
+    box-shadow: 0 0 0 0.2rem rgba(172, 0, 57, 0.15)
+    outline: none;
+}
 /* FONT */
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700');
@@ -1101,9 +1286,21 @@ select:disabled {
 /* Search field */
 input[type="search"], input.search {
     background-repeat: no-repeat;
-    background-position: left 0.5rem center;
+    background-position: left 0.6rem center;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#000" fill-opacity="0.4" d="M14.891,14.39l-0.5.5a0.355,0.355,0,0,1-.5,0L9.526,10.529a5.3,5.3,0,1,1,2.106-4.212,5.268,5.268,0,0,1-1.1,3.21l4.362,4.362A0.354,0.354,0,0,1,14.891,14.39ZM6.316,2.418a3.9,3.9,0,1,0,3.9,3.9A3.9,3.9,0,0,0,6.316,2.418Z"/></svg>'); /* NEEDS FIXING */
     padding-left: 32px;
+}
+
+label:first-child:not(:last-child) {
+    margin-right: 0.1rem;
+}
+
+label:not(:first-child):not(:last-child) {
+    margin: 0 0.1rem;
+}
+
+label:last-child:not(:first-child) {
+    margin-right: 0.1rem;
 }
 
 /* Required asterisk */
@@ -1128,10 +1325,12 @@ input[type="search"], input.search {
 
 .text-success, .input-success {
     border-color: #4CAF50 !important;
+    background-color: rgba(0, 224, 0, 0.05);
 }
 
 .text-error, .input-error {
     border-color: #F44336 !important;
+    background-color: rgba(244, 67, 54, 0.05);
 }
 
 /* Input Field Sizes */
@@ -1188,6 +1387,33 @@ input[type].input-contains-icon {
     width: 2rem;
     margin: 1.15rem 0 0 0.5rem;
     vertical-align: baseline;
+}
+
+/* Form groups that group inputs with other controls. */
+.form-group {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex; /* Using flexbox for form group */
+}
+
+/* This is just an extended portion of an input which is just like a label and is read only */
+/* This will style the controls if they are the leftmost control in the form group for labels, inputs, and buttons. */
+.form-group .form-group-label:first-child:not(:last-child), .form-group .form-group-input:first-child:not(:last-child), .form-group .form-group-btn:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Style the middle controls */
+.form-group .form-group-label:not(first-child):not(:last-child), .form-group .form-group-input:first-child:not(:last-child), .form-group .form-group-btn:first-child:not(:last-child) {
+    border-radius: 0;
+    margin-left: -.1rem;
+}
+
+/* Handles right most control in form group */
+.form-group .form-group-label:first-child:not(:last-child), .form-group .form-group-input:first-child:not(:last-child), .form-group .form-group-btn:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-left: -.1rem;
 }
 
 /* Change place holder color */

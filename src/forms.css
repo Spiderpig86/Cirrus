@@ -96,6 +96,18 @@ input[type="search"], input.search {
     padding-left: 32px;
 }
 
+label:first-child:not(:last-child) {
+    margin-right: 0.1rem;
+}
+
+label:not(:first-child):not(:last-child) {
+    margin: 0 0.1rem;
+}
+
+label:last-child:not(:first-child) {
+    margin-right: 0.1rem;
+}
+
 /* Required asterisk */
 .required { /* Use this in a span or a div */
     position: relative;
@@ -118,10 +130,12 @@ input[type="search"], input.search {
 
 .text-success, .input-success {
     border-color: #4CAF50 !important;
+    background-color: rgba(0, 224, 0, 0.05);
 }
 
 .text-error, .input-error {
     border-color: #F44336 !important;
+    background-color: rgba(244, 67, 54, 0.05);
 }
 
 /* Input Field Sizes */
@@ -178,6 +192,33 @@ input[type].input-contains-icon {
     width: 2rem;
     margin: 1.15rem 0 0 0.5rem;
     vertical-align: baseline;
+}
+
+/* Form groups that group inputs with other controls. */
+.form-group {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex; /* Using flexbox for form group */
+}
+
+/* This is just an extended portion of an input which is just like a label and is read only */
+/* This will style the controls if they are the leftmost control in the form group for labels, inputs, and buttons. */
+.form-group .form-group-label:first-child:not(:last-child), .form-group .form-group-input:first-child:not(:last-child), .form-group .form-group-btn:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Style the middle controls */
+.form-group .form-group-label:not(first-child):not(:last-child), .form-group .form-group-input:first-child:not(:last-child), .form-group .form-group-btn:first-child:not(:last-child) {
+    border-radius: 0;
+    margin-left: -.1rem;
+}
+
+/* Handles right most control in form group */
+.form-group .form-group-label:first-child:not(:last-child), .form-group .form-group-input:first-child:not(:last-child), .form-group .form-group-btn:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-left: -.1rem;
 }
 
 /* Change place holder color */

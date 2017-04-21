@@ -256,8 +256,10 @@
             <div class="col-6">
                 <input disabled type="text" placeholder="Disabled state">
                 <select disabled class="select" placeholder="Dropdown"><option value="1">Disabled state</option></select>
-                <input disabled type="checkbox">Check this</input>
-                <input disabled type="radio">I'm a radio button.</input>
+                <div class="row">
+                    <input disabled type="checkbox">Check this</input>
+                    <input disabled type="radio">I'm a radio button.</input>
+                </div>
                 <input disabled type="submit" class="animated" />
             </div>
             <div class="col-6">
@@ -322,17 +324,17 @@
             <div class="col-6">
                 <label class="font-normal">E-mail</label>
                 <input type="email" placeholder="john.doe@cirrus.io"/>
-                <span class="info text-center">We promose we won't spam!</span>
+                <span class="info text-center">We promise we won't spam!</span>
             </div>
             <div class="col-6">
                 <pre><code>&lt;label class=&quot;font-normal&quot;&gt;E-mail&lt;/label&gt;
 &lt;input type=&quot;email&quot; placeholder=&quot;john.doe@cirrus.io&quot;/&gt;
-&lt;span class=&quot;info text-center&quot;&gt;We promose we won't spam!&lt;/span&gt;</code></pre>
+&lt;span class=&quot;info text-center&quot;&gt;We promise we won't spam!&lt;/span&gt;</code></pre>
             </div>
         </div>
 
         <p>If more info is needed to be displayed, you can easily add <code>&lt;span class=&quot;info&quot;&gt;More info&lt;/span&gt;</code> and <code>&lt;span&gt; class=&quot;info inline&quot;&gt;More info inline&lt;/span&gt;</code> (for inline displays).
-        <div class="row">
+        <div class="row level">
             <div class="col-6">
                 <label class="font-normal">Phone Number<span class="info">Just for verification purposes</span></label>
                 <input type="tel" placeholder="1-800-HOTLINEBLING"/>
@@ -397,8 +399,10 @@
                         <input type="email"/>
                         <label class="font-normal">Choose your favorite color</label>
                         <input type="color" value="#f03d4d"/>
-                        <label class=""><input type="checkbox"/>  Checkbox</label>
-                        <label class=""><input type="radio"/>  Radiobutton</label>
+                        <div class="row">
+                            <label class=""><input type="checkbox"/>  Checkbox</label>
+                            <label class=""><input type="radio"/>  Radiobutton</label>
+                        </div>
                         <textarea placeholder="Tell us about yourself..."></textarea>
                         <div class="row">
                             <input type="submit" class="animated btn-accent pull-left"/>

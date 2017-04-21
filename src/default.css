@@ -21,7 +21,7 @@ body {
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   letter-spacing: 0.01rem;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  color: #4a4a4a;
+  color: #374054;
 }
 
 /* remove bullets from unordered lists */
@@ -81,4 +81,10 @@ video {
         object-fit: cover;
         width: 100%;
             z-index: -1;
+}
+
+/* When focusing any element */
+:focus {
+    box-shadow: 0 0 0 0.2rem rgba(172, 0, 57, 0.15)
+    outline: none;
 }
