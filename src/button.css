@@ -337,6 +337,12 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
   display: -webkit-inline-flex;
 }
 
+.btn-group.btn-group-fill { /* Makes the button group fill the width and proportion the buttons to fill the space */
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
 .btn-group .btn {
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
@@ -344,9 +350,17 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 }
 
 .btn-group .btn:first-child:not(:last-child) { /* Style the first child in group > 1 buttons */
-
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .btn-group .btn:last-child:not(:first-child) { /* Style the last child in group > 1 buttons */
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -1rem;
+}
 
+.btn-group .btn:not(:first-child):not(:last-child) { /* Style button in middle of group */
+  border-radius: 0; /* Remove roundness from center buttons */
+  margin-left: -1rem;
 }
