@@ -109,6 +109,11 @@ span.title {
       margin-right: 5px;
 }
 
+pre > code {
+    padding: 1rem 1.5rem !important;
+    background: #f6f8fa !important;
+}
+
 #grids .col, #grids [class^='col-'], #grids [class*=" col-"] {
     background: #eee;
     text-align: center;

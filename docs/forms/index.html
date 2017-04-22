@@ -8,11 +8,14 @@
     <meta charset="UTF-8">
 
     <link href="../../dist/cirrus.css" type="text/css" rel="stylesheet" />
-    <link href="../../demo_res/app.css" type="text/css" rel="stylesheet" />
+    <link href="../../demo_res/css/app.css" type="text/css" rel="stylesheet" />
+         <!-- Syntax highlight code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github-gist.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -132,7 +135,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <pre><code>&lt;div class=&quot;row ignore-screen level&quot;&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row ignore-screen level&quot;&gt;
     &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Name:&lt;/span&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;&lt;input type=&quot;name&quot; value=&quot;John Doe&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -193,7 +196,7 @@
                     <input type="text" class="input-xlarge" placeholder="Extra large (2rem)">
                 </div>
                 <div class="col-6">
-                    <pre><code>&lt;input type=&quot;text&quot; class=&quot;input-xsmall&quot; placeholder=&quot;Extra small (0.65rem)&quot;&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; class=&quot;input-xsmall&quot; placeholder=&quot;Extra small (0.65rem)&quot;&gt;
 
 &lt;input type=&quot;text&quot; class=&quot;input-small&quot; placeholder=&quot;Small (0.75rem)&quot;&gt;
 
@@ -214,7 +217,7 @@
                 <select class="select input-xlarge" placeholder="Dropdown Xlarge"><option value="1">Dropdown Xlarge</option><option value="2">2</option></select>
             </div>
             <div class="row">
-                <pre><code>&lt;select class=&quot;select input-xsmall&quot; placeholder=&quot;Dropdown Xsmall&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Xsmall&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
+                <pre><code class="html" data-lang="HTML">&lt;select class=&quot;select input-xsmall&quot; placeholder=&quot;Dropdown Xsmall&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Xsmall&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
 
 &lt;select class=&quot;select input-small&quot; placeholder=&quot;Dropdown Small&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Small&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
 
@@ -234,7 +237,7 @@
                 <select class="select" placeholder="Dropdown"><option value="1">Normal state</option></select>
             </div>
             <div class="col-6">
-                <pre><code>&lt;input type=&quot;text&quot; placeholder=&quot;Normal state&quot;&gt;
+                <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; placeholder=&quot;Normal state&quot;&gt;
 &lt;select class=&quot;select&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Normal state&lt;/option&gt;&lt;/select&gt;</code></pre>
             </div>
         </div>
@@ -246,7 +249,7 @@
                 <select class="select input-focused" placeholder="Dropdown"><option value="1">Focused state</option></select>
             </div>
             <div class="col-6">
-                <pre><code>&lt;input type=&quot;text&quot; placeholder=&quot;Focused state&quot;&gt;
+                <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; placeholder=&quot;Focused state&quot;&gt;
 &lt;select class=&quot;select&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Focused state&lt;/option&gt;&lt;/select&gt;</code></pre>
             </div>
         </div>
@@ -263,7 +266,7 @@
                 <input disabled type="submit" class="animated" />
             </div>
             <div class="col-6">
-                <pre><code>&lt;input disabled type=&quot;text&quot; placeholder=&quot;Disabled state&quot;&gt;
+                <pre><code class="html" data-lang="HTML">&lt;input disabled type=&quot;text&quot; placeholder=&quot;Disabled state&quot;&gt;
 &lt;select disabled class=&quot;select&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Disabled state&lt;/option&gt;&lt;/select&gt;
 &lt;input disabled type=&quot;checkbox&quot;&gt;Check this&lt;/input&gt;
 &lt;input disabled type=&quot;radio&quot;&gt;I'm a radio button.&lt;/input&gt;
@@ -278,7 +281,7 @@
                 <select class="select input-success" placeholder="Dropdown"><option value="1">Success state</option></select>
             </div>
             <div class="col-6">
-                <pre><code>&lt;input type=&quot;text&quot; class=&quot;input-success&quot; placeholder=&quot;Success state&quot;&gt;
+                <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; class=&quot;input-success&quot; placeholder=&quot;Success state&quot;&gt;
 &lt;select class=&quot;select input-success&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Success state&lt;/option&gt;&lt;/select&gt;</code></pre>
             </div>
         </div>
@@ -290,7 +293,7 @@
                 <select class="select input-error" placeholder="Dropdown"><option value="1">Error state</option></select>
             </div>
             <div class="col-6">
-                <pre><code>&lt;input type=&quot;text&quot; class=&quot;input-error&quot; placeholder=&quot;Success state&quot;&gt;
+                <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; class=&quot;input-error&quot; placeholder=&quot;Success state&quot;&gt;
 &lt;select class=&quot;select input-error&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Error state&lt;/option&gt;&lt;/select&gt;</code></pre>
             </div>
         </div>
@@ -310,7 +313,7 @@
         </div>
 
         <div class="col-6">
-            <pre><code>&lt;div class=&quot;input-control&quot;&gt;
+            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;input-control&quot;&gt;
     &lt;input type=&quot;email&quot; class=&quot;input-contains-icon&quot; placeholder=&quot;Email&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-envelope small&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/input&gt;
 &lt;/div&gt;
 &lt;div class=&quot;input-control&quot;&gt;
@@ -327,7 +330,7 @@
                 <span class="info text-center">We promise we won't spam!</span>
             </div>
             <div class="col-6">
-                <pre><code>&lt;label class=&quot;font-normal&quot;&gt;E-mail&lt;/label&gt;
+                <pre><code class="html" data-lang="HTML">&lt;label class=&quot;font-normal&quot;&gt;E-mail&lt;/label&gt;
 &lt;input type=&quot;email&quot; placeholder=&quot;john.doe@cirrus.io&quot;/&gt;
 &lt;span class=&quot;info text-center&quot;&gt;We promise we won't spam!&lt;/span&gt;</code></pre>
             </div>
@@ -338,12 +341,12 @@
             <div class="col-6">
                 <label class="font-normal">Phone Number<span class="info">Just for verification purposes</span></label>
                 <input type="tel" placeholder="1-800-HOTLINEBLING"/>
-                <span class="info text-center">We promose we won't spam!</span>
+                <span class="info text-center">We promise we won't spam!</span>
             </div>
             <div class="col-6">
                 <label class="font-normal">City<span class="info inline">wya boi</span></label>
                 <input type="text" placeholder="Send me your location."/>
-                <span class="info text-center">We promose we won't spam!</span>
+                <span class="info text-center">We promise we won't spam!</span>
             </div>
         </div>
     </div>
@@ -366,7 +369,7 @@
                     <input type="submit" class="btn-accent pull-right">
                 </div>
                 <div class="col-6">
-                    <pre><code>&lt;textarea&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/textarea&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;textarea&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/textarea&gt;
 &lt;input type=&quot;submit&quot; class=&quot;btn-accent pull-right&quot;&gt;</code></pre>
                 </div>
             </div>
@@ -380,7 +383,7 @@
                     </form>
                 </div>
                 <div class="col-6">
-                    <pre><code>&lt;textarea disabled&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/textarea&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;textarea disabled&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.&lt;/textarea&gt;
 &lt;input disabled type=&quot;submit&quot; class=&quot;btn-accent pull-right&quot;&gt;</code></pre>
                 </div>
             </div>
@@ -411,7 +414,7 @@
                     </form>
             </div>
              <div class="col-6">
-                    <pre><code>&lt;form method=&quot;post&quot; action=&quot;#&quot; class=&quot;form&quot; autocomplete=&quot;off&quot;&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;form method=&quot;post&quot; action=&quot;#&quot; class=&quot;form&quot; autocomplete=&quot;off&quot;&gt;
     &lt;p class=&quot;label&quot;&gt;Email:&lt;/p&gt;
     &lt;input type=&quot;email&quot;/&gt;
     &lt;p class=&quot;label&quot;&gt;Choose your favorite color&lt;/p&gt;
@@ -445,7 +448,7 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <pre><code>&lt;div class=&quot;form-group&quot;&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;form-group&quot;&gt;
     &lt;input type=&quot;search&quot; class=&quot;form-group-input&quot; placeholder=&quot;Search&quot;&gt;&lt;/input&gt;
     &lt;button class=&quot;form-group-btn&quot;&gt;Go&lt;/button&gt;
 &lt;/div&gt;
@@ -484,7 +487,7 @@
                 </div>
             </div>
             <div class="row">
-                <pre><code data-lang="HTML">&lt;div class=&quot;form-group&quot;&gt;
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;form-group&quot;&gt;
     &lt;label class=&quot;form-group-label label-xsmall&quot;&gt;github.com/&lt;/label&gt;
     &lt;input type=&quot;text&quot; class=&quot;form-group-input input-xsmall&quot; placeholder=&quot;Extra Small&quot;&gt;&lt;/input&gt;
     &lt;button class=&quot;form-group-btn btn-tiny&quot;&gt;Go&lt;/button&gt;
@@ -513,8 +516,11 @@
         </div>
     </section>
 
-    <script async src="../../demo_res/smoothscroll.js"></script>
-    <script async src="../../demo_res/app.js"></script>
+    <script async src="../../demo_res/js/smoothscroll.js"></script>
+    <script async src="../../demo_res/js/app.js"></script>
+     <!-- Syntax highlight code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
 <script src="https://use.fontawesome.com/a696b91557.js"></script>
   </body>

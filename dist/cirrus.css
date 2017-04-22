@@ -767,7 +767,7 @@ code {
   padding: .3rem;
   margin: .5em 0;
   overflow: auto;
-  background: #f9fcff;
+  background: #f6f8fa;
   border-radius: 3px;
 }
 
@@ -1349,7 +1349,7 @@ input[type].input-xsmall, select.input-xsmall {
 }
 
 input[type].input-xsmall {
-    height: 2.5rem;
+    height: 2.6rem;
 }
 
 input[type].input-small, select.input-small {
