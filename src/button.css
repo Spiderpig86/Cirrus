@@ -21,7 +21,7 @@
   color: #737373;
   font-size: .75em;
   letter-spacing: .03rem;
-  margin: .4rem;
+  margin: .5rem;
   text-transform: uppercase;
   font-family: Montserrat;
   font-weight: 400;
@@ -191,7 +191,7 @@ cursor: not-allowed;
 
 /* Small button */
 .btn-small {
-      line-height: 2.5rem;
+    line-height: 2.4rem;
     padding: 0 1rem;
     font-size: 70%;
 }

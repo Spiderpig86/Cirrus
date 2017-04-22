@@ -4,8 +4,17 @@ code {
   padding: .3rem;
   margin: .5em 0;
   overflow: auto;
-  background: #f4f5f6;
+  background: #f9fcff;
   border-radius: 3px;
+}
+
+code:before {
+    color: #acb3c2;
+    content: attr(data-lang);
+    font-size: .9rem;
+    position: absolute;
+    right: 1rem;
+    top: .7rem;
 }
 
 pre > code {
@@ -33,4 +42,5 @@ pre > code {
   hyphens: none;
  border-left: .3rem solid #f03d4d;
  margin: 0;
+     position: relative;
 }
