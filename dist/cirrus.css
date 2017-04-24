@@ -1333,13 +1333,19 @@ label:last-child:not(:first-child):not(.form-group-label) {
     margin-top: .8rem;
 }
 
-.text-success, .input-success {
+.text-success {
     border-color: #4CAF50 !important;
+}
+
+.input-success {
     background-color: rgba(0, 224, 0, 0.05);
 }
 
-.text-error, .input-error {
+.text-error {
     border-color: #F44336 !important;
+}
+
+.input-error {
     background-color: rgba(244, 67, 54, 0.05);
 }
 
@@ -1348,16 +1354,8 @@ input[type].input-xsmall, select.input-xsmall {
     font-size: 0.65rem;
 }
 
-input[type].input-xsmall {
-    height: 2.6rem;
-}
-
 input[type].input-small, select.input-small {
     font-size: 0.75rem;
-}
-
-input[type].input-small {
-    height: 2.5rem;
 }
 
 input[type].input-large, select.input-large {
@@ -1460,7 +1458,7 @@ input[type].input-contains-icon {
     font-size: 2rem;
 }
 
-/* Keep inputs in form group above other components */
+/* Keeps inputs in form group above other components */
 .form-group-input {
     z-index: 1;
 }

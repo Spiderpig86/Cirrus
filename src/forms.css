@@ -96,15 +96,15 @@ input[type="search"], input.search {
     padding-left: 32px;
 }
 
-label:first-child:not(:last-child) {
+label:first-child:not(:last-child):not(.form-group-label) {
     margin-right: 0.1rem;
 }
 
-label:not(:first-child):not(:last-child) {
+label:not(:first-child):not(:last-child):not(.form-group-label) {
     margin: 0 0.1rem;
 }
 
-label:last-child:not(:first-child) {
+label:last-child:not(:first-child):not(.form-group-label) {
     margin-right: 0.1rem;
 }
 
@@ -215,16 +215,47 @@ input[type].input-contains-icon {
 }
 
 /* Style the middle controls */
-.form-group .form-group-label:not(first-child):not(:last-child), .form-group .form-group-input:first-child:not(:last-child), .form-group .form-group-btn:first-child:not(:last-child) {
+.form-group .form-group-label:not(:first-child):not(:last-child), .form-group .form-group-input:not(:first-child):not(:last-child), .form-group .form-group-btn:not(:first-child):not(:last-child) {
     border-radius: 0;
     margin-left: -.1rem;
 }
 
 /* Handles right most control in form group */
-.form-group .form-group-label:first-child:not(:last-child), .form-group .form-group-input:first-child:not(:last-child), .form-group .form-group-btn:first-child:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+.form-group .form-group-label:last-child:not(:first-child), .form-group .form-group-input:last-child:not(:first-child), .form-group .form-group-btn:last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     margin-left: -.1rem;
+}
+
+/* Form group controls */
+.form-group-label {
+    border-radius: .2rem;
+    padding: .6rem .8rem;
+    background: #f8f9fa;
+    border: .1rem solid #dddddd;
+    color: #909090;
+    margin: .5rem 0;
+}
+
+.form-group-label.label-xsmall {
+    font-size: 0.55rem;
+}
+
+.form-group-label.label-small {
+    font-size: 0.75rem;
+}
+
+.form-group-label.label-large {
+    font-size: 1.5rem;
+}
+
+.form-group-label.label-xlarge {
+    font-size: 2rem;
+}
+
+/* Keeps inputs in form group above other components */
+.form-group-input {
+    z-index: 1;
 }
 
 /* Change place holder color */
