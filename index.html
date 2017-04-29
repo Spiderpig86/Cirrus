@@ -11,7 +11,9 @@
            <link href="demo_res/css/app.css" type="text/css" rel="stylesheet" />
 
        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
-           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <!-- Syntax highlight code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github-gist.min.css">
      <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -210,7 +212,7 @@
                     <p class="title">Setting Up</p>
                     <p class="subtitle">Setting up Cirrus for any project is very simple and will only require a couple of lines on each file.</p>
 
-                    <pre><code>&lt;!-- Google Fonts --&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;!-- Google Fonts --&gt;
 &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&quot; rel=&quot;stylesheet&quot;&gt;
 &lt;link href=&quot;https://fonts.googleapis.com/css?family=Montserrat:400,700&quot; rel=&quot;stylesheet&quot;&gt;
 
@@ -252,7 +254,7 @@
                     <space></space>
 
                     <div class="row">
-                        <pre><code>&lt;div class=&quot;col-fluid&quot;&gt;
+                        <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col-fluid&quot;&gt;
     &lt;button class=&quot;loading center&quot; id=&quot;btn1&quot;&gt;1&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-fluid&quot;&gt;
@@ -330,7 +332,7 @@
                     </div>
 
                     <div class="row">
-                        <pre><code>&lt;div class=&quot;col-fluid content&quot;&gt;
+                        <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col-fluid content&quot;&gt;
     &lt;img src=&quot;demo_res/img/autodesk_autocad.png&quot; class=&quot;hover-grow&quot;/&gt;
     &lt;p&gt;Autodesk&lt;/p&gt;
 &lt;/div&gt; </code></pre>
@@ -356,7 +358,7 @@
                       <input type="submit" value="Submit"/>
                     </div>
                     <div class="col-fluid">
-                        <pre><code>&lt;div class=&quot;btn&quot;&gt;test&lt;/div&gt
+                        <pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn&quot;&gt;test&lt;/div&gt
 &lt;button&gt;Regular Button&lt;/button&gt;
 &lt;input type=&quot;submit&quot;/&gt;</code></pre>
                     </div>
@@ -439,7 +441,7 @@
                 </div>
                 <div class="col-6">
                     <pre>
-            <code>&lt;ul&gt;
+            <code class="html" data-lang="HTML">&lt;ul&gt;
     &lt;li&gt;Item 1&lt;/li&gt;
     &lt;li&gt;Item 2&lt;/li&gt;
     &lt;li&gt;Item 3&lt;/li&gt;
@@ -452,7 +454,7 @@
             <div class="row">
                 <div class="col-6">
                     <pre>
-<code>&lt;pre&gt;
+<code class="html" data-lang="HTML">&lt;pre&gt;
     &lt;code&gt;
         Code
     &lt;/code&gt;
@@ -611,7 +613,7 @@
                 </div> 
                  <div class="row">
                         <pre>
-<code>&lt;div class=&quot;row&quot;&gt;
+<code class="html" data-lang="HTML">&lt;div class=&quot;row&quot;&gt;
     &lt;a href=&quot;#&quot;&gt;I am just an ordinary link&lt;/a&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row&quot;&gt;
@@ -657,7 +659,7 @@
 
                 <div class="row">
                     <pre>
-    <code>&lt;div class=&quot;row&quot;&gt;
+    <code class="html" data-lang="HTML">&lt;div class=&quot;row&quot;&gt;
 &lt;div class=&quot;col-4&quot;&gt;
     &lt;ul&gt;
         &lt;li&gt;Item 1&lt;/li&gt;
@@ -748,6 +750,8 @@
 <script async src="demo_res/js/smoothscroll.js"></script>
 
 <script src="https://use.fontawesome.com/a696b91557.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 
 <footer>

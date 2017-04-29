@@ -1288,17 +1288,18 @@ select {
     background-position: right 1rem center;
 }
 
-select:disabled {
-    background: rgb(235, 235, 228);
-    color: #a9a9a9;
-}
-
 /* Search field */
 input[type="search"], input.search {
     background-repeat: no-repeat;
     background-position: left 0.6rem center;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#000" fill-opacity="0.4" d="M14.891,14.39l-0.5.5a0.355,0.355,0,0,1-.5,0L9.526,10.529a5.3,5.3,0,1,1,2.106-4.212,5.268,5.268,0,0,1-1.1,3.21l4.362,4.362A0.354,0.354,0,0,1,14.891,14.39ZM6.316,2.418a3.9,3.9,0,1,0,3.9,3.9A3.9,3.9,0,0,0,6.316,2.418Z"/></svg>'); /* NEEDS FIXING */
     padding-left: 32px;
+}
+
+input:disabled, input:disabled:hover, select:disabled, textarea:disabled {
+    background-color: #f3f3f6;
+    cursor: not-allowed;
+    border: 1px solid #f3f3f6;
 }
 
 label:first-child:not(:last-child):not(.form-group-label) {
@@ -1320,6 +1321,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
     font-weight: bold;
     color: #f03c69;
     font-size: 110%;
+    padding-left: .1rem;
 }
 
 .label:not(:last-child) {
@@ -1405,11 +1407,23 @@ input[type].input-contains-icon {
     vertical-align: baseline;
 }
 
+/* Form section just adds extra spacing between form elements tiled vertically */
+.form-section:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
 /* Form groups that group inputs with other controls. */
 .form-group {
     display: flex;
     display: -ms-flexbox;
     display: -webkit-flex; /* Using flexbox for form group */
+}
+
+/* Fixes the text width being cut off */
+.form-group .form-group-btn {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
 }
 
 /* This is just an extended portion of an input which is just like a label and is read only */
@@ -1437,9 +1451,10 @@ input[type].input-contains-icon {
     border-radius: .2rem;
     padding: .6rem .8rem;
     background: #f8f9fa;
-    border: .1rem solid #dddddd;
+    border: 1px solid #ddd;
     color: #909090;
     margin: .5rem 0;
+    user-select: none;
 }
 
 .form-group-label.label-xsmall {
