@@ -2142,9 +2142,16 @@ justify-content: space-between;
   margin: 0;
 }
 
-.pagination .pagination-item:hover {
+/* Not good but CSS does not have heading selectors. Need to move to SASS */
+.pagination .pagination-item:hover p,
+.pagination .pagination-item:hover h1,
+.pagination .pagination-item:hover h2,
+.pagination .pagination-item:hover h3,
+.pagination .pagination-item:hover h4,
+.pagination .pagination-item:hover h5,
+.pagination .pagination-item:hover h6 {
   transition: all .3s;
-  color: #f04353;
+  color: #f03d4d;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -ms-transition: all .3s;
@@ -2256,6 +2263,10 @@ a,a:visited,a:hover,a:active{
 
 .subtitle a {
   padding: 0; /* Removes weird offset in subtitle links */
+}
+
+a.display-block {
+  display: block;
 }
 
 /* Animated links */

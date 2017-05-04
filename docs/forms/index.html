@@ -298,7 +298,7 @@
             </div>
         </div>
 
-        <space></space>
+        <space class="large"></space>
         <h6>Integrate with Font Awesome</h6>
         <p>Currently a beta feature, this allows you to place Font Awesome glyphs right at the beginning of input fields. This only works for normal sized input fields and normal/small sized glyphs.</p>
         <div class="row">
@@ -322,6 +322,7 @@
         </div>
         </div>
 
+        <space class="large"></space>
         <p>You can also create labels to go along with the textfield to give more detail to the user.</p>
         <div class="row">
             <div class="col-6">
@@ -336,6 +337,7 @@
             </div>
         </div>
 
+        <space class="large"></space>
         <p>If more info is needed to be displayed, you can easily add <code>&lt;span class=&quot;info&quot;&gt;More info&lt;/span&gt;</code> and <code>&lt;span&gt; class=&quot;info inline&quot;&gt;More info inline&lt;/span&gt;</code> (for inline displays).
         <div class="row level">
             <div class="col-6">
@@ -346,7 +348,7 @@
             <div class="col-6">
                 <label class="font-normal">City<span class="info inline">wya boi</span></label>
                 <input type="text" placeholder="Send me your location."/>
-                <span class="info text-center">We promise we won't spam!</span>
+                <span class="info text-center">Not used for tracking purposes*</span>
             </div>
         </div>
     </div>
@@ -462,6 +464,21 @@
 &lt;/div&gt;</code></pre>
                 </div>
             </div>
+            <p>To display controls like buttons and labels on the right side, just place that component last.</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <input type="number" class="form-group-input" placeholder="How about now?"/>
+                        <label class="form-group-label">$</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre><code class="HTML" data-lang="HTML">
+
+                        </code></pre>
+                </div>
+            </div>
+            <space class="large"></space>
             <p>And of course, more controls can be combined with each other with different sizes.</p>
             <div class="row">
                 <div class="form-group">
@@ -517,6 +534,27 @@
     &lt;button class=&quot;form-group-btn btn-xlarge&quot;&gt;Go&lt;/button&gt;
 &lt;/div&gt;</code></pre>
             </div>
+        </div>
+    </section>
+
+            <!-- Pagination -->
+    <section class="padtop">
+        <div class="content">
+            <div class="divider"></div>
+            <ul class="pagination no-bullets">
+                <li class="pagination-item pagination-prev">
+                    <a href="../footer" class="display-block">
+                        <p class="pagination-item-subtitle">Previous</p>
+                        <h5 class="light no-margin">Footer</h5>
+                    </a>
+                </li>
+                <li class="pagination-item pagination-next">
+                    <a href="../layout" class="display-block">
+                        <p class="pagination-item-subtitle">Next</p>
+                        <h5 class="light no-margin">Layout</h5>
+                    </a>
+                </li>
+            </ul>
         </div>
     </section>
 

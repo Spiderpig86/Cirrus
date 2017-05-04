@@ -31,6 +31,10 @@ a,a:visited,a:hover,a:active{
   padding: 0; /* Removes weird offset in subtitle links */
 }
 
+a.display-block {
+  display: block;
+}
+
 /* Animated links */
 .u, .utb {
   position: relative; /* So the psuedo-elements are positioned correctly */
