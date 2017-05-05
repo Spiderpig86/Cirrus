@@ -49,6 +49,12 @@
   }
 }
 
+.animations.pulse {
+    animation: pound 0.35s infinite alternate;
+    -webkit-animation: pound 0.35s infinite alternate;
+    vertical-align: baseline;
+}
+
 /* Bounce animations */
 @-webkit-keyframes bounce {
   from,
@@ -187,6 +193,10 @@
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+
+.animated.paused {
+  
+}
 /* BUTTONS */
 
 /* Button styling */
@@ -223,7 +233,7 @@ transition: all .3s;
 background: #eee;
 }
 
-.animated:hover {
+button.animated:hover, [type=submit].animated:hover, .btn.animated:hover {
    -webkit-transform: scale(1.1);
          transform: scale(1.1);
 }
@@ -235,7 +245,7 @@ transition: all .3s;
 background: #ccc;
 }
 
-.animated:active {
+button.animated:active, [type=submit].animated:active, .btn.animated:active {
    -webkit-transform: scale(0.97);
            transform: inherit, scale(0.97);
 }
