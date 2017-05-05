@@ -49,7 +49,7 @@
   }
 }
 
-.animations.pulse {
+.animated.pulse {
     animation: pound 0.35s infinite alternate;
     -webkit-animation: pound 0.35s infinite alternate;
     vertical-align: baseline;
@@ -195,7 +195,8 @@
 }
 
 .animated.paused {
-  
+  -webkit-animation-play-state: paused !important; /* Safari 4.0 - 8.0 */
+    animation-play-state: paused !important;
 }
 /* BUTTONS */
 
@@ -247,7 +248,7 @@ background: #ccc;
 
 button.animated:active, [type=submit].animated:active, .btn.animated:active {
    -webkit-transform: scale(0.97);
-           transform: inherit, scale(0.97);
+    transform: inherit, scale(0.97); 
 }
 
 .btn:focus, button:focus, [type=submit]:focus {
@@ -905,7 +906,7 @@ video {
 
 /* When focusing any element */
 :focus {
-    box-shadow: 0 0 0.1rem 0.15rem rgba(51, 51, 51, 0.15);
+    box-shadow: 0 0 0.1rem 0.15rem rgba(51, 51, 51, 0.07);
     outline: none;
 }
 /* FONT */

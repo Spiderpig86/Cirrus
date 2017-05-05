@@ -44,7 +44,7 @@
   }
 }
 
-.animations.pulse {
+.animated.pulse {
     animation: pound 0.35s infinite alternate;
     -webkit-animation: pound 0.35s infinite alternate;
     vertical-align: baseline;
@@ -190,5 +190,6 @@
 }
 
 .animated.paused {
-  
+  -webkit-animation-play-state: paused !important; /* Safari 4.0 - 8.0 */
+    animation-play-state: paused !important;
 }

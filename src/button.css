@@ -48,7 +48,7 @@ background: #ccc;
 
 button.animated:active, [type=submit].animated:active, .btn.animated:active {
    -webkit-transform: scale(0.97);
-           transform: inherit, scale(0.97);
+    transform: inherit, scale(0.97); 
 }
 
 .btn:focus, button:focus, [type=submit]:focus {
