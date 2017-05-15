@@ -5,7 +5,7 @@ let pulseBtn = $('#toggle-pulse-btn');
 
 // Bounce animation
 let bounceHeartBtn = $('#toggle-bounce-heart');
-let bounceDivBtn = $('#toggle-bounce-divs');
+let bounceDivBtn = $('#toggle-bounce-div');
 let bounceBtn = $('#toggle-bounce-btn');
 
 // Add event handlers
