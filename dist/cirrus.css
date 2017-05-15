@@ -697,7 +697,6 @@ overflow: hidden;
 }
 
 .card:hover .mobile-title {
-      padding-top: 10px;
           margin-top: -7rem;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
@@ -1808,15 +1807,22 @@ input[type].input-contains-icon {
   width: 80%;
 }
 
+.content-no-padding { /* Content without the extra margin at the bottom */
+  max-width: 60em;
+  margin: 0 auto;
+  width: 80%;
+}
+
 .content blockquote {
   background-color: #f5f5f5;
   border-left: 5px solid #dbdbdb;
   padding: 0.5rem 1rem;
 }
 
+/* Content that centers in parent and fills parent div */
 .content-fluid {
   width: 100%;
-  margin: 1.3rem;
+  margin: 0 auto;
 }
 
 .fullscreen {

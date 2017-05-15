@@ -176,8 +176,6 @@
 &lt;/div&gt; </code></pre>
                     </div>
                 </div>
-                <space></space>
-                <a href="docs/animations"><button class="pull-right">See More<i class="fa fa-chevron-right pad-left"></i></button></a>
             </div>
     </section>
 
@@ -238,10 +236,15 @@
         <div class="content">
             <h5>Bounce</h5>
             <div class="divider"></div>
-            <div class="row">
-                <h6 class="light">Bouncing animation with Font Awesome</h6>
-                <div class="col-6">
 
+            <h6 class="light">Bouncing animation with Font Awesome</h6>
+            <div class="row">
+                
+                <div class="col-6">
+                    <div class="text-center">
+                        <i class="fa fa-heart animated bounce large" id="bounce-heart" aria-hidden="true"></i>
+                    </div>
+                    <button class="animated docs-btn-play" id="toggle-bounce-heart"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
                 </div>
                 <div class="col-6">
                     <pre><code>
@@ -250,29 +253,28 @@
                 </div>
             </div>
 
+            <h6 class="light">Bouncing animation with a div</h6>
             <div class="row">
-                <h6 class="light">Bouncing animation with a div</h6>
+                
                 <div class="col-6">
-                    <div class="text-center">
-                        <div class="content text-center animated bounce " id="pulse-div" style="background: blue; color: white">
+                        <div class="content text-center animated bounce" id="bounce-div" style="background: blue; color: white">
                             <p>This is a div!</p>
                         </div>
-                        <button class="animated docs-btn-play" id="toggle-bounce-btn"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
+                        <button class="animated docs-btn-play" id="toggle-bounce-div"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
                 </div>
                 <div class="col-6">
                     <pre><code>
 
                         </code></pre>
                 </div>
-            </div>
         </div>
 
+        <h6 class="light">Bouncing animation with a button</h6>
         <div class="row">
-            <h6 class="light">Bouncing animation with a button</h6>
+    
                 <div class="col-6">
                     <div class="text-center">
-                        <div class="content text-center animated bounce " id="pulse-div" style="background: blue; color: white">
-                            <p>This is a div!</p>
+                            <button class="btn-accent animated bounce" id="bounce-btn">Click me!</button>
                         </div>
                         <button class="animated docs-btn-play" id="toggle-bounce-btn"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
                 </div>
