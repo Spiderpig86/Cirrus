@@ -416,7 +416,7 @@ cursor: not-allowed;
 }
 
 .loading:after {
-    border: 2px solid #eee;
+    border: 2px solid #ccc;
     border-radius: 50%;
     border-right-color: transparent;
     border-top-color: transparent;
@@ -433,6 +433,12 @@ cursor: not-allowed;
     position: absolute !important;
       -webkit-animation: loading 500ms infinite linear;
     animation: loading 500ms infinite linear;
+}
+
+.loading.btn-accent:after {
+    border: 2px solid #fff;
+      border-right-color: transparent;
+    border-top-color: transparent;
 }
 
 /* Override default behavior of aligning font awesome icons to the top */

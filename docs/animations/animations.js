@@ -8,6 +8,11 @@ let bounceHeartBtn = $('#toggle-bounce-heart');
 let bounceDivBtn = $('#toggle-bounce-div');
 let bounceBtn = $('#toggle-bounce-btn');
 
+// Bounce in animation
+let bounceInHeartBtn = $('#toggle-bounceIn-heart');
+let bounceInDivBtn = $('#toggle-bounceIn-div');
+let bounceInBtn = $('#toggle-bounceIn-btn');
+
 // Add event handlers
 pulseHeartBtn.click(() => {
     $('#pulse-heart').toggleClass('paused');
@@ -40,5 +45,27 @@ bounceBtn.click(() => {
     $('#bounce-btn').removeClass('bounce');
     setTimeout(() => {
         $('#bounce-btn').addClass('bounce');
+    }, 100);
+});
+
+// Event handlers for bounce in animation
+bounceInHeartBtn.click(() => {
+    $('#bounceIn-heart').removeClass('bounceIn');
+    setTimeout(() => {
+        $('#bounceIn-heart').addClass('bounceIn');
+    }, 100);
+});
+
+bounceInDivBtn.click(() => {
+    $('#bounceIn-div').removeClass('bounceIn');
+    setTimeout(() => {
+        $('#bounceIn-div').addClass('bounceIn');
+    }, 100);
+});
+
+bounceInBtn.click(() => {
+    $('#bounceIn-btn').removeClass('bounceIn');
+    setTimeout(() => {
+        $('#bounceIn-btn').addClass('bounceIn');
     }, 100);
 });
