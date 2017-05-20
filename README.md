@@ -48,6 +48,10 @@ Even with a multitude of CSS frameworks, some are either too basic to develop mo
 ```
 npm install cirrus-ui
 ```
+## Install with Yarn
+```
+yarn add cirrus-ui
+```
 ### Link
 ```html
 https://unpkg.com/cirrus-ui@0.4.6/dist/cirrus.min.css
