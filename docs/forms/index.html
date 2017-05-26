@@ -260,8 +260,8 @@
                 <input disabled type="text" placeholder="Disabled state">
                 <select disabled class="select" placeholder="Dropdown"><option value="1">Disabled state</option></select>
                 <div class="row">
-                    <input disabled type="checkbox">Check this</input>
-                    <input disabled type="radio">I'm a radio button.</input>
+                    <input disabled type="checkbox">   Check this</input>
+                    <input disabled type="radio">   I'm a radio button.</input>
                 </div>
                 <input disabled type="submit" class="animated" />
             </div>
@@ -323,7 +323,21 @@
         </div>
 
         <space class="large"></space>
-        <p>You can also create labels to go along with the textfield to give more detail to the user.</p>
+        <p>You can also create labels to go along with the textfield to give more detail to the user. There are a couple of different labels you can use in forms to help add context, namely <code>label</code> elements and the <code>info</code> class.</p>
+        <div class="row">
+            <div class="col-6">
+                <h6>Regular Label</h6>
+                <label class="font-normal">Just an ordinary label.</label>
+                <input type="text" placeholder="The label above is a regular label."/>
+            </div>
+            <div class="col-6">
+                <h6>Information Label</h6>
+                <span class="info text-center">Here's some more info.</span>
+                 <input type="text" placeholder="The label above me displays additional info."/>
+            </div>
+        </div>
+        <space></space>
+        <h6>Some Examples</h6>
         <div class="row">
             <div class="col-6">
                 <label class="font-normal">E-mail</label>
