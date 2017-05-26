@@ -403,7 +403,7 @@ cursor: not-allowed;
 /* Big button */
 .btn-large {
      line-height: 3.5rem;
-    padding: 0 1.5rem;
+    padding: 0 1.7rem;
     font-size: 90%;
 }
 
@@ -488,6 +488,7 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 .btn-tooltip {
   position: relative; /* let's the pseudoelement that we are displaying relative to the button. */
   overflow: visible; /* Allows the pseudoelement to be shown */
+  white-space: nowrap; /* Keeps the button text from wrapping and getting too large */
 }
 
 /* This is the psuedoelement that creates the tooltip */
@@ -1374,10 +1375,12 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Input Field Sizes */
 input[type].input-xsmall, select.input-xsmall {
     font-size: 0.65rem;
+    padding: .35rem .9rem;
 }
 
 input[type].input-small, select.input-small {
     font-size: 0.75rem;
+    padding: .55rem 1rem;
 }
 
 input[type].input-large, select.input-large {
@@ -1469,7 +1472,7 @@ input[type].input-contains-icon {
 /* Form group controls */
 .form-group-label {
     border-radius: .2rem;
-    padding: .9rem .8rem;
+    padding: .8rem;
     background: #f8f9fa;
     border: 1px solid #ddd;
     color: #909090;
@@ -1479,10 +1482,12 @@ input[type].input-contains-icon {
 
 .form-group-label.label-xsmall {
     font-size: 0.55rem;
+    padding: .35rem .9rem;
 }
 
 .form-group-label.label-small {
     font-size: 0.75rem;
+    padding: .55rem 1rem;
 }
 
 .form-group-label.label-large {
@@ -1735,7 +1740,7 @@ input[type].input-contains-icon {
   /* Slide down effect */
   .header-menu.nav-animated.is-active {
     height: 100vh;
-    overflow: scroll; /* For when the number of dropdown items exceeds screen height */
+    overflow: auto; /* Only show scrollbar when needed */
   }
 
 /* Dropdown menu for smaller screen sizes */

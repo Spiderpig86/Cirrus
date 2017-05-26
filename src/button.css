@@ -199,7 +199,7 @@ cursor: not-allowed;
 /* Big button */
 .btn-large {
      line-height: 3.5rem;
-    padding: 0 1.5rem;
+    padding: 0 1.7rem;
     font-size: 90%;
 }
 
@@ -284,6 +284,7 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 .btn-tooltip {
   position: relative; /* let's the pseudoelement that we are displaying relative to the button. */
   overflow: visible; /* Allows the pseudoelement to be shown */
+  white-space: nowrap; /* Keeps the button text from wrapping and getting too large */
 }
 
 /* This is the psuedoelement that creates the tooltip */

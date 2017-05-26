@@ -149,10 +149,12 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Input Field Sizes */
 input[type].input-xsmall, select.input-xsmall {
     font-size: 0.65rem;
+    padding: .35rem .9rem;
 }
 
 input[type].input-small, select.input-small {
     font-size: 0.75rem;
+    padding: .55rem 1rem;
 }
 
 input[type].input-large, select.input-large {
@@ -244,7 +246,7 @@ input[type].input-contains-icon {
 /* Form group controls */
 .form-group-label {
     border-radius: .2rem;
-    padding: .9rem .8rem;
+    padding: .8rem;
     background: #f8f9fa;
     border: 1px solid #ddd;
     color: #909090;
@@ -254,10 +256,12 @@ input[type].input-contains-icon {
 
 .form-group-label.label-xsmall {
     font-size: 0.55rem;
+    padding: .35rem .9rem;
 }
 
 .form-group-label.label-small {
     font-size: 0.75rem;
+    padding: .55rem 1rem;
 }
 
 .form-group-label.label-large {

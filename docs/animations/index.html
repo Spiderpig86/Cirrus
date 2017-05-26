@@ -113,7 +113,7 @@
 
                 <div class="row">
                     <h5>Hover Grow</h5>
-                    <p>Zoom in various elements to make the stand out from the rest.</p>
+                    <p>Zoom in various elements to make the stand out from the rest. Just add <code>hover-grow</code> to your control.</p>
 
                     <div class="row fluid-container text-center content" id="grid">
                         <a href="#">
@@ -410,7 +410,7 @@
             <p>Below is an example using the fade in animation.</p>
             <div class="row">
                 <div class="col-6">
-                    <button class="btn-accent animated fadeIn infinite">Alternating Fading</button>
+                    <button class="btn-accent animated fadeIn infinite">Infinitely Fading</button>
                 </div>
 
                 <div class="col-6">
@@ -422,7 +422,20 @@
             <p>Now this animation seems to cut off at the end of the cycle. To make it alternate, just add the <code>alternate</code> class to make the animation more fluid.</p>
             <div class="row">
                 <div class="col-6">
-                    <button class="btn-accent animated fadeIn infinite alternate">Infinitely Fading</button>
+                    <button class="btn-accent animated fadeIn infinite alternate">Alternating Fading</button>
+                </div>
+
+                <div class="col-6">
+                    <pre><code>
+                        </code></pre>
+                </div>
+            </div>
+
+            <h6>Pausing Animations</h6>
+            <p>This is great with testing your animations and works well with JavaScript calls also. All you need to do is add a class to the animated component called <code>paused</code>.</p>
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn-accent animated bounce infinite alternate paused">Paused</button>
                 </div>
 
                 <div class="col-6">
