@@ -1,5 +1,5 @@
 /*
-* Cirrus 0.4.6
+* Cirrus 0.5.0
 * Stanley Lim, Copyright 2017
 * https://spiderpig86.github.io/Cirrus
 */
@@ -192,6 +192,10 @@
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+}
+
+.animated.infinite.alternate {
+  animation-direction: alternate;
 }
 
 .animated.paused {

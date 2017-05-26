@@ -189,6 +189,10 @@
   animation-iteration-count: infinite;
 }
 
+.animated.infinite.alternate {
+  animation-direction: alternate;
+}
+
 .animated.paused {
   -webkit-animation-play-state: paused !important; /* Safari 4.0 - 8.0 */
     animation-play-state: paused !important;

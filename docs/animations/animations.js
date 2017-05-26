@@ -13,6 +13,11 @@ let bounceInHeartBtn = $('#toggle-bounceIn-heart');
 let bounceInDivBtn = $('#toggle-bounceIn-div');
 let bounceInBtn = $('#toggle-bounceIn-btn');
 
+// Fade in animation
+let fadeInHeartBtn = $('#toggle-fadeIn-heart');
+let fadeInDivBtn = $('#toggle-fadeIn-div');
+let fadeInBtn = $('#toggle-fadeIn-btn');
+
 // Add event handlers
 pulseHeartBtn.click(() => {
     $('#pulse-heart').toggleClass('paused');
@@ -67,5 +72,27 @@ bounceInBtn.click(() => {
     $('#bounceIn-btn').removeClass('bounceIn');
     setTimeout(() => {
         $('#bounceIn-btn').addClass('bounceIn');
+    }, 100);
+});
+
+// Event handlers for fade in animation
+fadeInHeartBtn.click(() => {
+    $('#fadeIn-heart').removeClass('fadeIn');
+    setTimeout(() => {
+        $('#fadeIn-heart').addClass('fadeIn');
+    }, 100);
+});
+
+fadeInDivBtn.click(() => {
+    $('#fadeIn-div').removeClass('fadeIn');
+    setTimeout(() => {
+        $('#fadeIn-div').addClass('fadeIn');
+    }, 100);
+});
+
+fadeInBtn.click(() => {
+    $('#fadeIn-btn').removeClass('fadeIn');
+    setTimeout(() => {
+        $('#fadeIn-btn').addClass('fadeIn');
     }, 100);
 });

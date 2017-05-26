@@ -234,59 +234,6 @@
         </div>
     </section>
 
-    <section class="padtop">
-        <div class="content">
-            <h5>Infinite Bounce</h5>
-
-            <h6 class="light">Bouncing animation with Font Awesome</h6>
-            <div class="row">
-                
-                <div class="col-6">
-                    <div class="text-center">
-                        <i class="fa fa-heart animated bounce large" id="bounce-heart" aria-hidden="true"></i>
-                    </div>
-                    <button class="animated docs-btn-play" id="toggle-bounce-heart"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
-                </div>
-                <div class="col-6">
-                    <pre><code>
-
-                        </code></pre>
-                </div>
-            </div>
-
-            <h6 class="light">Bouncing animation with a div</h6>
-            <div class="row">
-                
-                <div class="col-6">
-                        <div class="content text-center animated bounce" id="bounce-div" style="background: blue; color: white">
-                            <p>This is a div!</p>
-                        </div>
-                        <button class="animated docs-btn-play" id="toggle-bounce-div"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
-                </div>
-                <div class="col-6">
-                    <pre><code>
-
-                        </code></pre>
-                </div>
-        </div>
-
-        <h6 class="light">Bouncing animation with a button</h6>
-        <div class="row">
-    
-                <div class="col-6">
-                    <div class="text-center">
-                            <button class="btn-accent animated bounce" id="bounce-btn">Click me!</button>
-                        </div>
-                        <button class="animated docs-btn-play" id="toggle-bounce-btn"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
-                </div>
-                <div class="col-6">
-                    <pre><code>
-
-                        </code></pre>
-                </div>
-        </div>
-    </section>
-
     
     <section class="padtop">
         <div class="content">
@@ -402,14 +349,14 @@
             <h5>Fade In</h5>
             <div class="divider"></div>
 
-            <h6 class="light">Bouncing animation with Font Awesome</h6>
+            <h6 class="light">Fade in animation with Font Awesome</h6>
             <div class="row">
                 
                 <div class="col-6">
                     <div class="text-center">
-                        <i class="fa fa-heart animated fadeIn large" id="bounceIn-heart" aria-hidden="true"></i>
+                        <i class="fa fa-heart animated fadeIn large" id="fadeIn-heart" aria-hidden="true"></i>
                     </div>
-                    <button class="animated docs-btn-play" id="toggle-bounceIn-heart"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
+                    <button class="animated docs-btn-play" id="toggle-fadeIn-heart"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
                 </div>
                 <div class="col-6">
                     <pre><code>
@@ -418,14 +365,14 @@
                 </div>
             </div>
 
-            <h6 class="light">Bouncing animation with a div</h6>
+            <h6 class="light">Fade in animation with a div</h6>
             <div class="row">
                 
                 <div class="col-6">
-                        <div class="content text-center animated fadeIn" id="bounceIn-div" style="background: blue; color: white">
+                        <div class="content text-center animated fadeIn" id="fadeIn-div" style="background: blue; color: white">
                             <p>This is a div!</p>
                         </div>
-                        <button class="animated docs-btn-play" id="toggle-bounceIn-div"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
+                        <button class="animated docs-btn-play" id="toggle-fadeIn-div"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
                 </div>
                 <div class="col-6">
                     <pre><code>
@@ -434,20 +381,56 @@
                 </div>
         </div>
 
-        <h6 class="light">Bouncing animation with a button</h6>
+        <h6 class="light">Fade in animation with a button</h6>
         <div class="row">
     
                 <div class="col-6">
                     <div class="text-center">
-                            <button class="btn-accent animated fadeIn" id="bounceIn-btn">Click me!</button>
+                            <button class="btn-accent animated fadeIn" id="fadeIn-btn">Click me!</button>
                         </div>
-                        <button class="animated docs-btn-play" id="toggle-bounceIn-btn"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
+                        <button class="animated docs-btn-play" id="toggle-fadeIn-btn"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
                 </div>
                 <div class="col-6">
                     <pre><code>
 
                         </code></pre>
                 </div>
+        </div>
+    </section>
+
+    <!-- Animation Utils -->
+    <section>
+        <div class="content">
+            <h3>Animation Utils</h3>
+            <div class="divider"></div>
+            <p>Cirrus comes with a couple of tools you can use to help test or modify animation behavior.</p>
+
+            <h6>Infinite Animation</h6>
+            <p>This will sustain an animation when the user is on the page. This even works for animations not designed to be infinitely looped. The only change needed is the addition of the <code>infinite</code> class to the component.</p>
+            <p>Below is an example using the fade in animation.</p>
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn-accent animated fadeIn infinite">Alternating Fading</button>
+                </div>
+
+                <div class="col-6">
+                    <pre><code>
+                        </code></pre>
+                </div>
+            </div>
+
+            <p>Now this animation seems to cut off at the end of the cycle. To make it alternate, just add the <code>alternate</code> class to make the animation more fluid.</p>
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn-accent animated fadeIn infinite alternate">Infinitely Fading</button>
+                </div>
+
+                <div class="col-6">
+                    <pre><code>
+                        </code></pre>
+                </div>
+            </div>
+
         </div>
     </section>
 
