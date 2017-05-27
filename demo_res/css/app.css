@@ -47,6 +47,11 @@
     position: relative;
 }
 
+#splash-img {
+  background:url("https://images.unsplash.com/photo-1465414829459-d228b58caf6e?ifit=crop&amp;fm=jpg&amp;q=100&amp;h=1440&amp;w=2560");
+  background-size: cover;
+}
+
 #logo {
     max-width: 200px;
 }

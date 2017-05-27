@@ -214,6 +214,7 @@
                     <div class="col-10"><div class="uppercase">col-10</div></div>
                 </div>
             </div>
+            <br>
             <pre><code>
                 </code></pre>
         </div>
@@ -236,7 +237,7 @@
     </section>
 
     <!-- Columns that automatically adjust the width to each element to the number that are in the row -->
-    <section id="col-fluid">
+    <section id="col_fluid">
         <div class="content">
             <h6>Fluid Columns</h6>
             <p>Fluid columns will automatically adjust the width of every single element inside <code>row fluid-container</code> to all have the same width inside the parent div.</p>
@@ -254,6 +255,18 @@
         </div>
     </section>
 
+    <!-- 10-grid-system -->
+    <section id="ten_grid_system">
+        <div class="content">
+            <h6>10-grid Layout</h6>
+            <p>Hate the 12-grid layout? Cirrus also comes with a 10-grid layout system out of the box. <i>Note: Embedding 10-grid columns inside <code>row</code> divs is optional.</i></p>
+            <div id="grids">
+            <div class="row">
+
+            </div>
+        </div>
+    </section>
+
     <!-- Page Structure -->
     <section id="page_structure" class="padtop">
         <div class="content">
@@ -267,6 +280,49 @@
             <p class="subtitle">Just like <code>.content</code> but without the extra padding at the bottom.</p>
             <p class="title">.content-fluid</p>
             <p class="subtitle">A div that is centered and fills the width of the parent.</p>
+            <p class="title">section</p>
+            <p class="subtitle">A block element to encompass other divs and is usually adjacent to other <code>section</code> elements.</p>
+            <p class="title">.panel</p>
+            <p class="subtitle">Works great as a sub-element of <code>section</code> which provides <code>2.5rem</code> rem padding to the top and bottom.</p>
+            <p class="title">.divider</p>
+            <p class="subtitle">A simple gray divider with padding at the top and bottom.</p>
+            <div class="row">
+                <div class="divider"></div>
+            </div>
+            <p class="title">.divider .divider-short</p>
+            <p class="subtitle">A shorter variant of the regular divider at <code>15rem</code> wide.</p>
+            <div class="row">
+                <div class="divider divider-short"></div>
+            </div>
+            <p class="title">space, space.large, space.x-large</p>
+            <p class="subtitle">A <code>div</code> alternative to <code>br</code> that is more flexible starting at 1rem to 5rem.</p>
+            <p class="title">.row</p>
+            <p class="subtitle">The basic container for column.</p>
+            <p class="title">.row .flex</p>
+            <p class="subtitle">A variant of the orignal row with flexbox.</p>
+        </div>
+    </section>
+
+    <!-- Full Screen -->
+    <section id="full_screen" class="padtop">
+        <div class="content">
+            <h3>Splash Screen</h3>
+            <div class="divider"></div>
+            <p>Creating an eye caching splash screen is incredibly easy with Cirrus which includes customizations to the content within and the layout.</p>
+            <p>You can design your splash screen however you'd like. Below is an example that takes advantage of all the classes which includes <code>hero</code>, <code>fullscreen</code>, <code>hero-img</code>, <code>parallax-img</code>, and <code>hero-body</code> (for the div immediately underneath).</p>
+        </div>
+        <div id="splash-img" class="hero fullscreen hero-img parallax-img">
+            <div class="hero-body">
+                <div class="content text-center">
+                    <h3 class="uppercase white title">Easily create beautiful splash screens</h3>
+                    <h5 class="uppercase white sub-title faded">Only 6 lines needed and no additional CSS</h5>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="content">
+            <pre><code>
+                </code></pre>
         </div>
     </section>
 
