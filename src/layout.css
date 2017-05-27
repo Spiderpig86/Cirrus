@@ -94,11 +94,11 @@ height: 100%;
     flex-shrink: 0;
     padding: 3rem 1.5rem;
     -webkit-box-align: center;
--ms-flex-align: center;
-align-items: center;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 space {
@@ -224,6 +224,13 @@ space.x-large {
     overflow-x: auto; /* Can be disabled to remove scroll bar */
 }
 
+/* Only for divs with .expand so they can go past the parent div width */
+.row.expand [class^='col-'], .row.expand [class*=" col-"] {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
 /* Known to cause spacing issues in columns */
 /*.row [class^='col-']:first-child, .row [class*=" col-"]:first-child{
   margin-left: 0;
@@ -250,13 +257,13 @@ space.x-large {
 }
 
 .level {
-  -webkit-box-align: center;
--ms-flex-align: center;
--ms-grid-row-align: center;
-align-items: center;
--webkit-box-pack: justify;
--ms-flex-pack: justify;
-justify-content: space-between;
+    -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .level-left {
@@ -408,33 +415,33 @@ justify-content: space-between;
 
 /* MOBILE */
 @media screen and (max-width: 768px) {
-  .row {
-    margin-top: 0;
+    .row {
+      margin-top: 0;
+    }
+
+    .row [class^='col-']:not(.ignore-screen), .row [class*=" col-"]:not(.ignore-screen) { /* Remove the grid structure for smaller screens */
+      width: 100%;
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+
+    /* Increase space with cards */
+    .fluid-container  [class^='col-']:not(.ignore-screen), .row [class*=" col-"]:not(.ignore-screen) {
+      margin-top: 1rem;
+    }
+
+    .fluid-container {
+      display: inherit;
+    }
+
+    /* Dividers for mobile layout */
+    .divided >.fluid-container:not(.row), .divided >.row [class^='col-'] {
+      box-shadow: 0 -1px 0 0 rgba(34,36,38,.15);
   }
 
-  .row [class^='col-']:not(.ignore-screen), .row [class*=" col-"]:not(.ignore-screen) { /* Remove the grid structure for smaller screens */
-    width: 100%;
-    margin-top: 1rem;
-    margin-left: 0;
-  }
-
-  /* Increase space with cards */
-  .fluid-container  [class^='col-']:not(.ignore-screen), .row [class*=" col-"]:not(.ignore-screen) {
-    margin-top: 1rem;
-  }
-
-  .fluid-container {
-    display: inherit;
-  }
-
-  /* Dividers for mobile layout */
-  .divided >.fluid-container:not(.row), .divided >.row [class^='col-'] {
-    box-shadow: 0 -1px 0 0 rgba(34,36,38,.15);
-}
-
-.level.ignore-screen, .level-left.ignore-screen, .level-right.ignore-screen {
+  .level.ignore-screen, .level-left.ignore-screen, .level-right.ignore-screen {
       display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
+      display: -ms-flexbox;
+      display: flex;
+  }
 }
