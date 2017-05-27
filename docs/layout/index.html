@@ -166,6 +166,53 @@
         </div>
     </section>
 
+    <!-- Columns no gaps -->
+    <section id="no_gaps">
+        <div class="content">
+            <h6>Columns with no spaces.</h6>
+            <p>You can easily remove spaces in the columns by adding the <code>no-space</code> class to the column elements.</p>
+            <div id="grids">
+                <div class="row">
+                    <div class="col-6 no-space">
+                        <div class="uppercase">Col-6</div>
+                    </div>
+                    <div class="col-6 no-space">
+                        <div class="uppercase">Col-6</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid line spacing -->
+    <section id="line_spacing">
+        <div class="content">
+            <h6>Grid vertical line spacing.</h6>
+            <p>By default, the grid system in Cirrus will automatically shift columns that do not fit in one row horizontally down to the next line. For example:</p>
+            <div id="grids">
+                <div class="row">
+                    <div class="col-6"><div class="uppercase">col-6</div></div>
+                    <div class="col-6"><div class="uppercase">col-6</div></div>
+                    <div class="col-6"><div class="uppercase">col-6</div></div>
+                    <div class="col-6"><div class="uppercase">col-6</div></div>
+                </div>
+                <div class="row">
+                    <div class="col-9"><div class="uppercase">col-9</div></div>
+                    <div class="col-9"><div class="uppercase">col-9</div></div>
+                    <div class="col-9"><div class="uppercase">col-9</div></div>
+                </div>
+            </div>
+            <p>However, you can override that behavior with the <code>flex</code> and <code>expand</code> classes to the row div to keep the columns in one line.</p>
+            <div id="grids">
+                <div class="row flex expand">
+                    <div class="col-10"><div class="uppercase">col-10</div></div>
+                    <div class="col-10"><div class="uppercase">col-10</div></div>
+                    <div class="col-10"><div class="uppercase">col-10</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pagination -->
     <section class="padtop">
         <div class="content">
@@ -188,7 +235,7 @@
     </section>
 
     <script async src="../../demo_res/js/smoothscroll.js"></script>
-    <script async src="../../demo_res/js/app.js"></script>
+    <script async src="c../../demo_res/js/app.js"></script>
 
     <script src="https://use.fontawesome.com/a696b91557.js"></script>
 

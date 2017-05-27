@@ -124,6 +124,15 @@ space.x-large {
     padding: .5rem;
 }
 
+.row.flex {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
 .row:after {
   content: '';
   clear: both;
@@ -184,8 +193,9 @@ space.x-large {
   display: flex;
 }
 
+/* Resizes elements in a row equally given the number of elements located in it */
 .row .col-fluid {
-  display: block;
+    display: block;
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
     -webkit-box-flex: 1;
@@ -201,49 +211,27 @@ space.x-large {
   padding: 0 .5rem;
 }
 
+/* Columns without the spacing */
+.row [class^='col-'].no-space, .row [class*=" col-"].no-space {
+  padding: 0;
+}
+
+/* Ignore overflow in columns */
+.row.expand {
+    -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default */
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Can be disabled to remove scroll bar */
+}
+
 /* Known to cause spacing issues in columns */
 /*.row [class^='col-']:first-child, .row [class*=" col-"]:first-child{
   margin-left: 0;
 }*/
-
-/* Best used with col-12 */
-.row.split-1 [class^='col-']:nth-child(n+1) { 
-  margin-left: 0;
-}
-
-/* Used to prevent extra margin on column layouts when not needed */
-/* Best used with col-6 */
-.row.split-2 [class^='col-']:nth-child(2n+1) { /* Reset margin every other element */
-  margin-left: 0;
-}
-
-/* Reset every fourth element */
-/* Best used with col-4 */
-.row.split-3 [class^='col-']:nth-child(3n+1) {
-  margin-left:0;
-}
-
-/* Reset every fifth element */
-/* Best used with col-3 */
-.row.split-4 [class^='col-']:nth-child(4n+1) {
-  margin-left: 0;
-}
-
-/* Reset every seventh element */
-/* Best used with col-2 */
-.row.split-6 [class^='col-']:nth-child(6n+1) {
-  margin-left: 0;
-}
-
-/* Reset every thirteenth element */
-/* Best used with col-1 */
-.row.split-12 [class^='col-']:nth-child(12n+1) {
-  margin-left: 0;
-}
  
-/* Used for aligning contrls next to each other */
+/* Used for aligning controls next to each other */
 .row.has-controls {
-      display: -webkit-box;
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
