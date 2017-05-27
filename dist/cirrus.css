@@ -212,7 +212,6 @@
   overflow: hidden;
   padding: 0 1.5rem;
   width: auto;
-  max-width: 300px;
   border: 1px solid transparent;
   border-radius: .25rem;
   cursor: pointer;
@@ -573,7 +572,7 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
   display: -webkit-flex;
 }
 
-.btn-group .btn {
+.btn-group.btn-group-fill .btn, .btn-group.btn-group-fill button, .btn-group.btn-group-fill [type=submit] {
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto; /* Make the buttons fill the available width and proportion themselves */
@@ -1929,11 +1928,11 @@ height: 100%;
     flex-shrink: 0;
     padding: 3rem 1.5rem;
     -webkit-box-align: center;
--ms-flex-align: center;
-align-items: center;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 space {

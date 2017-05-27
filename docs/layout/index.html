@@ -235,12 +235,38 @@
         </div>
     </section>
 
+    <!-- Columns that automatically adjust the width to each element to the number that are in the row -->
+    <section id="col-fluid">
+        <div class="content">
+            <h6>Fluid Columns</h6>
+            <p>Fluid columns will automatically adjust the width of every single element inside <code>row fluid-container</code> to all have the same width inside the parent div.</p>
+            <div id="grids">
+                <div class="row fluid-container" id="fluidContainerTest">
+                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
+                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
+                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
+                </div>
+                <div class="btn-group btn-group-fill">
+                    <button class="btn-accent" id="fluid-container-add">Add Column</button>
+                    <button class="btn-accent" id="fluid-container-delete">Delete Column</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Page Structure -->
     <section id="page_structure" class="padtop">
         <div class="content">
             <h3>Page Structure</h3>
             <div class="divider"></div>
             <p>Cirrus provides styles that enable you to design pages that are spacious and elegant with ease.</p>
+            <h6>Basic Classes</h6>
+            <p class="title">.content</p>
+            <p class="subtitle">Adds padding from the sides and the bottom to push content to the middle of the screen.</p>
+            <p class="title">.content-no-padding</p>
+            <p class="subtitle">Just like <code>.content</code> but without the extra padding at the bottom.</p>
+            <p class="title">.content-fluid</p>
+            <p class="subtitle">A div that is centered and fills the width of the parent.</p>
         </div>
     </section>
 
@@ -266,7 +292,8 @@
     </section>
 
     <script async src="../../demo_res/js/smoothscroll.js"></script>
-    <script async src="c../../demo_res/js/app.js"></script>
+    <script async src="../../demo_res/js/app.js"></script>
+    <script async src="./app.js"></script>
 
     <script src="https://use.fontawesome.com/a696b91557.js"></script>
 
