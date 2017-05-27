@@ -67,90 +67,106 @@
             <h3>Layout</h3>
             <div class="divider"></div>
             <p>Perhaps the most annoying part of designing a website is ensuring that column widths are consistent throughout the website. Cirrus aims to solve this issue with a simple 12-column grid system powered by <b>Flexbox</b> to provide an easy to maintain and scalable framework. If 12 columns are not enough, there is a flexible column that will automatically adjust according to the browser's width and its neighboring columns.</p>
-            <div class="row" id="grids">
+            <div id="grids">
                 <div class="row">
-                    <div class="col-12 uppercase">Col-12</div>
+                    <div class="col-12 uppercase">
+                        <div class="uppercase">Col-12</div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-11 uppercase">Col-11</div>
-                    <div class="col-1 uppercase">Col-1</div>
+                    <div class="col-11 uppercase">
+                        <div class="uppercase">Col-11</div>
+                    </div>
+                    <div class="col-1 uppercase">
+                        <div class="uppercase">Col-1</div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-10 uppercase">Col-10</div>
-                    <div class="col-2 uppercase">Col-2</div>
+                    <div class="col-10 uppercase">
+                        <div class="uppercase">Col-10</div>
+                    </div>
+                    <div class="col-2 uppercase">
+                        <div class="uppercase">Col-2</div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-9 uppercase">Col-9</div>
-                    <div class="col-3 uppercase">Col-3</div>
+                    <div class="col-9 uppercase">
+                        <div class="uppercase">Col-9</div>
+                    </div>
+                    <div class="col-3 uppercase">
+                        <div class="uppercase">Col-3</div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-8 uppercase">Col-8</div>
-                    <div class="col-4 uppercase">Col-4</div>
+                    <div class="col-8 uppercase">
+                        <div class="uppercase">Col-8</div>
+                    </div>
+                    <div class="col-4 uppercase">
+                        <div class="uppercase">Col-4</div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-7 uppercase">Col-7</div>
-                    <div class="col-5 uppercase">Col-5</div>
+                    <div class="col-7 uppercase">
+                        <div class="uppercase">Col-7</div>
+                    </div>
+                    <div class="col-5 uppercase">
+                        <div class="uppercase">Col-5</div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-6 uppercase">Col-6</div>
-                    <div class="col-6 uppercase">Col-6</div>
+                    <div class="col-6 uppercase">
+                        <div class="uppercase">Col-6</div>
+                    </div>
+                    <div class="col-6 uppercase">
+                        <div class="uppercase">Col-6</div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-5 uppercase">Col-5</div>
-                    <div class="col-7 uppercase">Col-7</div>
+                    <div class="col-5 uppercase">
+                        <div class="uppercase">Col-5</div>
+                    </div>
+                    <div class="col-7 uppercase">
+                        <div class="uppercase">Col-7</div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-4 uppercase">Col-4</div>
-                    <div class="col-8 uppercase">Col-8</div>
+                    <div class="col-4 uppercase">
+                        <div class="uppercase">Col-4</div>
+                    </div>
+                    <div class="col-8 uppercase">
+                        <div class="uppercase">Col-8</div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-3 uppercase">Col-3</div>
-                    <div class="col-9 uppercase">Col-9</div>
+                    <div class="col-3 uppercase">
+                        <div class="uppercase">Col-3</div>
+                    </div>
+                    <div class="col-9 uppercase">
+                        <div class="uppercase">Col-9</div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 uppercase">Col-2</div>
-                    <div class="col-10 uppercase">Col-10</div>
+                    <div class="col-2 uppercase">
+                        <div class="uppercase">Col-2</div>
+                    </div>
+                    <div class="col-10 uppercase">
+                        <div class="uppercase">Col-10</div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-1 uppercase">Col-1</div>
-                    <div class="col-11 uppercase">Col-11</div>
+                    <div class="col-1 uppercase">
+                        <div class="uppercase">Col-1</div>
+                    </div>
+                    <div class="col-11 uppercase">
+                        <div class="uppercase">Col-11</div>
+                    </div>
                 </div>
             </div>
             <p>On smaller devices, Cirrus automatically sets the column widths to span the device width. You can remove this behavior by adding <code>ignore-screen</code> to the classes in the <code>row</code> div.</p>
         </div>
     </section>
 
-    <section class="padtop">
-        <div class="content">
-            <h3>n-Columns in a div</h3>
-            <div class="divider"></div>
-            <p>When constructing web apps that scrape data and display them, there are often issues with displaying a lot of columns with fixed widths within a <code>row</code> container. Cirrus's <code>split-*</code> class removes the excess margins from displaying fixed with columns to make all the elements align.</p>
-            <p class="title">Use <code>split-1</code> to display multiple <code>col-12</code> columns in a row.</p>
-            <div class="row split-1 " id="grids">
-                <div class="col-12 uppercase">Col-12</div>
-                <div class="col-12 uppercase">Col-12</div>
-                <div class="col-12 uppercase">Col-12</div>
-            </div>
-
-            <p class="title">Use <code>split-2</code> to display multiple <code>col-6</code> columns in a row.</p>
-            <div class="row split-2" id="grids">
-                <div class="col-6 uppercase">Col-6</div>
-                <div class="col-6 uppercase">Col-6</div>
-                <div class="col-6 uppercase">Col-6</div>
-                <div class="col-6 uppercase">Col-6</div>
-            </div>
-
-            <p class="title">Use <code>split-2</code> to display multiple <code>col-6</code> columns in a row.</p>
-            <div class="row split-2" id="grids">
-                <div class="col-6 uppercase">Col-6</div>
-                <div class="col-6 uppercase">Col-6</div>
-                <div class="col-6 uppercase">Col-6</div>
-                <div class="col-6 uppercase">Col-6</div>
-            </div>
-        </div>
-    </section>
-
-            <!-- Pagination -->
+    <!-- Pagination -->
     <section class="padtop">
         <div class="content">
             <div class="divider"></div>

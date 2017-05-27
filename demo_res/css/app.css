@@ -109,12 +109,16 @@ span.title {
       margin-right: 5px;
 }
 
+code {
+    background: #ffdadd;
+}
+
 pre > code {
     padding: 1rem 1.5rem !important;
     background: #f6f8fa !important;
 }
 
-#grids .col, #grids [class^='col-'], #grids [class*=" col-"] {
+#grids .col > div, #grids [class^='col-'] > div, #grids [class*=" col-"] > div {
     background: #eee;
     text-align: center;
     border-radius: 5px;
@@ -122,7 +126,7 @@ pre > code {
     text-transform: uppercase;
     min-height: 30px !important;
     line-height: 30px;
-    margin-bottom: .75rem;
+    /*margin-bottom: .75rem;*/
     font-weight: bold;
     letter-spacing: .1rem;
 }

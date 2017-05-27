@@ -245,9 +245,9 @@ button.animated:hover, [type=submit].animated:hover, .btn.animated:hover {
 
 .btn:active, button:active, [type=submit]:active {
   -webkit-transition: all .3s;
-transition: all .3s;
--moz-transition: all .3s;
-background: #ccc;
+  transition: all .3s;
+  -moz-transition: all .3s;
+  background: #ccc;
 }
 
 button.animated:active, [type=submit].animated:active, .btn.animated:active {
@@ -260,8 +260,27 @@ button.animated:active, [type=submit].animated:active, .btn.animated:active {
 }
 
 .btn:disabled, button:disabled, [type=submit]:disabled {
-  opacity: 0.8;
-cursor: not-allowed;
+  cursor: not-allowed;
+  background-color: #d7d7da; /* Make it darker than the other input colors */
+  color: #fff;
+}
+
+.btn:disabled:hover, button:disabled:hover, [type=submit]:disabled:hover {
+  background-color: #d7d7da; /* Make it darker than the other input colors */
+}
+
+/* Accent button disabled */
+.btn-accent:disabled {
+    background-color: #f03d4d;
+    color: #fff;
+    border-color: #c21b2b;
+    opacity: .6;
+}
+
+.btn-accent:disabled:hover {
+    background-color: #f03d4d;
+    color: #fff;
+    border-color: #c21b2b;
 }
 
 /* Different styles */
@@ -788,7 +807,7 @@ code {
   padding: .3rem;
   margin: .5em 0;
   overflow: auto;
-  background: #f6f8fa;
+  background: #ececec;
   border-radius: 3px;
 }
 
@@ -1933,8 +1952,11 @@ space.x-large {
 
 /* Use for spacing out elements vertically */
 .row {
-  margin-top: 2.2833%;
-  padding: 0 1.04165%; /* Space out top and sides */
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 100%;
+    padding: .5rem;
 }
 
 .row:after {
@@ -1945,47 +1967,47 @@ space.x-large {
 
 /* GRID */
 .row .col-1 {
-  width: 6.42291%;
+  width: 8.33333333%;
 }
 
 .row .col-2 {
-  width: 14.930208%;
+  width: 16.66666667%;
 }
 
 .row .col-3 {
-  width: 23.4375%;
+  width: 25%;
 }
 
 .row .col-4 {
-  width: 31.94375%;
+  width: 33.33333333%;
 }
 
 .row .col-5 {
-  width: 40.25%;
+  width: 41.66666667%;
 }
 
 .row .col-6 {
-  width: 48.958333%;
+  width: 50%;
 }
 
 .row .col-7 {
-  width: 57.464583%;
+  width: 58.33333333%;
 }
 
 .row .col-8 {
-  width: 65.970833%;
+  width: 66.66666667%;
 }
 
 .row .col-9 {
-  width: 74.404166%;
+  width: 75%;
 }
 
 .row .col-10 {
-  width: 82.9833%;
+  width: 83.33333333%;
 }
 
 .row .col-11 {
-  width: 91.489583%;
+  width: 91.66666667%;
 }
 
 .row .col-12 {
@@ -2011,13 +2033,13 @@ space.x-large {
 /* Some offset values */
 .row [class^='col-'], .row [class*=" col-"] {
   float: left; /* Keeps the elements in 1 row */
-  min-height: 50px;
-  margin-left: 2.083333%;
+  padding: 0 .5rem;
 }
 
-.row [class^='col-']:first-child, .row [class*=" col-"]:first-child{
+/* Known to cause spacing issues in columns */
+/*.row [class^='col-']:first-child, .row [class*=" col-"]:first-child{
   margin-left: 0;
-}
+}*/
 
 /* Best used with col-12 */
 .row.split-1 [class^='col-']:nth-child(n+1) { 

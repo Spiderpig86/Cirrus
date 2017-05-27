@@ -41,9 +41,9 @@ button.animated:hover, [type=submit].animated:hover, .btn.animated:hover {
 
 .btn:active, button:active, [type=submit]:active {
   -webkit-transition: all .3s;
-transition: all .3s;
--moz-transition: all .3s;
-background: #ccc;
+  transition: all .3s;
+  -moz-transition: all .3s;
+  background: #ccc;
 }
 
 button.animated:active, [type=submit].animated:active, .btn.animated:active {
@@ -56,8 +56,27 @@ button.animated:active, [type=submit].animated:active, .btn.animated:active {
 }
 
 .btn:disabled, button:disabled, [type=submit]:disabled {
-  opacity: 0.8;
-cursor: not-allowed;
+  cursor: not-allowed;
+  background-color: #d7d7da; /* Make it darker than the other input colors */
+  color: #fff;
+}
+
+.btn:disabled:hover, button:disabled:hover, [type=submit]:disabled:hover {
+  background-color: #d7d7da; /* Make it darker than the other input colors */
+}
+
+/* Accent button disabled */
+.btn-accent:disabled {
+    background-color: #f03d4d;
+    color: #fff;
+    border-color: #c21b2b;
+    opacity: .6;
+}
+
+.btn-accent:disabled:hover {
+    background-color: #f03d4d;
+    color: #fff;
+    border-color: #c21b2b;
 }
 
 /* Different styles */
