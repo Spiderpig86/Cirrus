@@ -1530,6 +1530,22 @@ input[type].input-contains-icon {
     color: #a9a9a9; /* Lighter than the default */
 }
 
+/* Separate CSS file, but same part as Layout */
+
+/* The base container that is similar in structure to a card but more flexible */
+.frame {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
 /* HEADER */
 
 .header {

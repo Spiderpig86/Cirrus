@@ -16,6 +16,7 @@ gulp.task('compile', function() {
         './src/font.css',
         './src/footer.css',
         './src/forms.css',
+        './src/frames.css',
         './src/header.css',
         './src/layout.css',
         './src/links.css',
