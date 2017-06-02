@@ -225,11 +225,11 @@
         <div class="content">
             <h6>Preserve column widths.</h6>
             <p>The <code>ignore-screen</code> class allows you preserve column widths even in small screen sizes replacing the default behavior of stretching 100%.</p>
-            <div id="grids">
+            <div id="grids" class="content">
                 <p class="title">Before</p>
-                <iframe src="./width-ignore-before.html" width="500"></iframe>
+                <iframe src="./width-ignore-before.html" style="max-width:500px;width:100%"></iframe>
                 <p class="title">After</p>
-                <iframe src="./width-ignore-after.html" width="500"></iframe>
+                <iframe src="./width-ignore-after.html" style="max-width:500px;width:100%"></iframe>
             </div>
             <pre><code>
                 </code></pre>
@@ -340,7 +340,61 @@
         <div class="content">
             <h3>Leveling Content</h3>
             <div class="divider"></div>
-            
+            <p>With Cirrus, you can easily vertically center your divs with the <code>level</code> class in the parent container and the <code>level-item</code> class for the children to align the items. The <code>level-content</code> class is used with the <code>level</code> class to make the content fill the width of the parent div.</p>
+            <div class="row">
+                <div class="level" style="background:#eee; width:100%;">
+                    <div class="level-item" style="background: #ddd; padding: 1rem;">
+                        <div class="text-center">
+                            <p>.level-item<br>width: 200px<br>height: 200px</p>
+                        </div>
+                    </div>
+                    <div class="level-item" style="background: #ddd; padding: 1rem;">
+                        <div class="text-center">
+                            <p>.level-item<br>width: 200px<br>height: 200px</p>
+                        </div>
+                    </div>
+                    <div class="level-item" style="background: #ddd; padding: 1rem;">
+                        <div class="text-center">
+                            <p>.level-item<br>width: 200px<br>height: 200px</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>Above is an example that uses the <code>level</code> class as the container and then the <code>level-item</code> class to space out the children.</p>
+            <div class="row">
+                <div class="level">
+                    <div class="level-left">
+                        <h6 class="level-item uppercase">Brand</h6>
+                        <a href="#" class="level-item uppercase btn-link">Item 1</a>
+                        <a href="#" class="level-item uppercase btn-link">Item 2</a>
+                    </div>
+                    <div>
+                        <p class="level-item">Center</p>
+                    </div>
+                    <div class="level-right">
+                        <div class="form-group">
+                            <input type="search" class="form-group-input" placeholder="Search">
+                            <button class="form-group-btn">Go</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>You can also create your very own navbar with the level class and specify the content displayed on the left and right side with the <code>level-left</code> and <code> level-right</code> classes respectively. This differs from the header class in the sense that divs have more padding with the same color along with a slight adjustment to the divs.</p>
+            <div class="row">
+                 <div class="level" style="background:#ddd;">
+                    <div class="level-left level-content" style="background:#eee;">
+                        <p class="level-item">.level-left<br>.level-item<br>.level-content</p>
+                    </div>
+                    <div class="level-item level-content" style="background:#eee;">
+                        <p>.level-content<br>.level-item<br>&nbsp;</p>
+                    </div>
+                    <div class="level-right level-content" style="background:#eee;">
+                        <p class="level-item">.level-right<br>.level-item<br>.level-content</p>
+                    </div>
+                </div>
+            </div>
+            <p>In the example above, the contents of <code>level-left</code>, the <code>level-item</code> in the center, and <code>level-right</code> will expand as more content is added into the divs.</p>
+            <blockquote>Tl;dr: For navbars, check out the header menu documentation.</blockquote>
         </div>
     </section>
 

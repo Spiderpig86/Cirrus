@@ -2026,6 +2026,7 @@ space.x-large {
 /* Use in parent div of fluid col */
 .fluid-container {
   display: flex;
+  overflow: auto;
 }
 
 /* Resizes elements in a row equally given the number of elements located in it */
@@ -2487,6 +2488,10 @@ a.display-block {
   width:100%;
 }
 
+/* Makes the regular link have slightly more padding */
+.btn-link {
+  padding: 0.5rem;
+}
 /* LISTS */
 
 ul {

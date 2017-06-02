@@ -192,6 +192,7 @@ space.x-large {
 /* Use in parent div of fluid col */
 .fluid-container {
   display: flex;
+  overflow: auto;
 }
 
 /* Resizes elements in a row equally given the number of elements located in it */

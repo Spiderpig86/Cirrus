@@ -203,3 +203,8 @@ a.display-block {
 .usquare:hover a:before, .usquare:hover a:after{
   width:100%;
 }
+
+/* Makes the regular link have slightly more padding */
+.btn-link {
+  padding: 0.5rem;
+}
