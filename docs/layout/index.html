@@ -163,7 +163,7 @@
                 </div>
             </div>
             <p>On smaller devices, Cirrus automatically sets the column widths to span the device width. You can remove this behavior by adding <code>ignore-screen</code> to the classes in the <code>row</code> div.</p>
-            <pre><code>
+            <pre><code class="html" data-lang="HTML">
                 </code></pre>
         </div>
     </section>
@@ -183,7 +183,7 @@
                     </div>
                 </div>
             </div>
-            <pre><code>
+            <pre><code class="html" data-lang="HTML">
                 </code></pre>
         </div>
     </section>
@@ -215,7 +215,7 @@
                 </div>
             </div>
             <br>
-            <pre><code>
+            <pre><code class="html" data-lang="HTML">
                 </code></pre>
         </div>
     </section>
@@ -231,7 +231,7 @@
                 <p class="title">After</p>
                 <iframe src="./width-ignore-after.html" style="max-width:500px;width:100%"></iframe>
             </div>
-            <pre><code>
+            <pre><code class="html" data-lang="HTML">
                 </code></pre>
         </div>
     </section>
@@ -331,7 +331,7 @@
         </div>
         <br>
         <div class="content">
-            <pre><code>
+            <pre><code class="html" data-lang="HTML">
                 </code></pre>
         </div>
     </section>
@@ -402,7 +402,74 @@
         <div class="content">
             <h3>Pagination</h3>
             <div class="divider"></div>
-            
+            <p>Cirrus comes with easy to style pagination menus that allow for easy navigation between pages in websites and forums. All you need to do is add the <code>pagination</code> class to the parent container and the <code>pagination-item</code> class to the children. To display numerous small pagination items, add the <code>short</code> class.</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="pagination">
+                        <div class="pagination-item short">
+                            <a href="#" class="btn-link">Prev</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="btn-link">1</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a>...</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="btn-link">3</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="btn-link">4</a>
+                        </div>
+                        <div class="pagination-item short selected">
+                            <a href="#" class="btn-link">5</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a>...</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="btn-link">23</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="btn-link">Next</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="pagination">
+                        <div class="pagination-item short">
+                            <a disabled href="#" class="btn-link">Prev</a>
+                        </div>
+                        <div class="pagination-item short selected">
+                            <a href="#" class="btn-link">1</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="btn-link">2</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="btn-link">3</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="btn-link">4</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a>...</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="btn-link">13</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="btn-link">Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">
+                    </code></pre>
+            </div>
+            <p>Paginations are also designed to provide easy access to different pages once the user reaches the bottom of a page. Just simply add the <code>pagination</code> class to the parent container and add the <code>pagination-item</code> class to 2 children (3 or more may take up more width than the parent container).</p>
         </div>
     </section>
 
@@ -411,7 +478,32 @@
         <div class="content">
             <h3>Frames</h3>
             <div class="divider"></div>
-            
+            <p>Frames are designed similar to cards, but provide more flexibility to the developer to align items in a structured layout. The <b>frame</b> is designed to auto-expand with more content.</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="frame" style="background: #fff; padding: 1rem;">
+                        <div class="frame-header" style="background: #eee; padding: 1rem; margin: 1rem;">
+                            <div class="frame-title text-center">Frame Title</div>
+                            <div class="frame-subtitle text-center">Frame Subtitle</div>
+                            <div class="frame-subtitle text-center">This is the frame header.</div>
+                        </div>
+                        <div class="frame-body" style="background: #eee; padding: 1rem; margin: 1rem;">
+                            <div class="frame-title text-center">Frame Body</div>
+                            <div class="frame-subtitle text-center">Insert any component here, including a frame navigation menu using <code>frame-nav</code>.</div>
+                            <blockquote class="text-center">The lighter gray is the frame itself while the grey are the components of the frame. Please note that the margins are just an example.</blockquote>
+                        </div>
+                        <div class="frame-footer" style="background: #eee; padding: 1rem; margin: 1rem;">
+                            <div class="frame-title text-center">Frame Footer</div>
+                            <div class="frame-subtitle text-center">Takes up the bottom of the frame.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre><code class="html" data-lang="HTML">
+                        </code></pre>
+                </div>
+            </div>
+            <p>Below is an example of a frame with a tab control menu.</p>
         </div>
     </section>
 
