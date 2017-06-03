@@ -208,9 +208,9 @@
 /* Un-themed */
 .btn, button, [type=submit] {
   display: block;
-  line-height: 3rem;
+  line-height: 2rem;
   overflow: hidden;
-  padding: 0 1.5rem;
+  padding: .5rem 1.5rem;
   width: auto;
   border: 1px solid transparent;
   border-radius: .25rem;
