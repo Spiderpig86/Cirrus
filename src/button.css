@@ -28,9 +28,9 @@
 
 .btn:hover, button:hover, [type=submit]:hover {
   -webkit-transition: all .3s;
-transition: all .3s;
--moz-transition: all .3s;
-background: #eee;
+  transition: all .3s;
+  -moz-transition: all .3s;
+  background: #eee;
 }
 
 button.animated:hover, [type=submit].animated:hover, .btn.animated:hover {
@@ -43,6 +43,17 @@ button.animated:hover, [type=submit].animated:hover, .btn.animated:hover {
   transition: all .3s;
   -moz-transition: all .3s;
   background: #ccc;
+}
+
+/* Make the loading circle, if present, white when button is active */
+.btn.loading:active:after, button.loading:active:after, [type=submit].loading:active:after {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -moz-transition: all .3s;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
 }
 
 button.animated:active, [type=submit].animated:active, .btn.animated:active {
@@ -295,6 +306,10 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 }
 
 .btn-success:hover {
+    background-color: #00b147;
+}
+
+.btn-success:active {
     background-color: #00b147;
 }
 
