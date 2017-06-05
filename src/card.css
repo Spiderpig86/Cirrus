@@ -131,7 +131,7 @@ overflow: hidden;
 }
 
 .card:hover .mobile-title {
-          margin-top: -7rem;
+  margin-top: -7rem;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
@@ -204,4 +204,31 @@ margin: .5rem;
     flex-grow: 1;
     font-weight: 700;
     padding: 0 1rem;
+}
+
+/* CARD TILES */
+/* More flexible layout for cards using flexbox */
+
+.card-tile {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  align-content: space-between; /* Ensure space between child elements of card tile */
+  -webkit-align-content: space-between;
+  align-items: flex-start; /* Push elements to the top of container instead of center/bottom */
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  -ms-flex-line-pack: justify; /* Evenly distribute lines */
+}
+
+.card-tile .tile-icon, .card-tile .tile-buttons {
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+}
+
+.card-tile .tile-content {
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
 }
