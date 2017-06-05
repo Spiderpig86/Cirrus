@@ -654,15 +654,15 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 
 .card-image:after {
   content: "";
-display: block;
-position: absolute;
-background-color: rgba(0, 0, 0, 0.1);
-top: 0;
-left: 0;
-right: 0;
--webkit-transition: all 500ms;
-transition: all 500ms;
-bottom: 0;
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  bottom: 0;
 }
 
 .card-container {
@@ -741,7 +741,7 @@ overflow: hidden;
 }
 
 .card:hover .mobile-title {
-          margin-top: -7rem;
+  margin-top: -7rem;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
@@ -814,6 +814,72 @@ margin: .5rem;
     flex-grow: 1;
     font-weight: 700;
     padding: 0 1rem;
+}
+
+/* CARD TILES */
+/* More flexible layout for cards using flexbox */
+
+.card-tile {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  align-content: space-between; /* Ensure space between child elements of card tile */
+  -webkit-align-content: space-between;
+  align-items: flex-start; /* Push elements to the top of container instead of center/bottom */
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  -ms-flex-line-pack: justify; /* Evenly distribute lines */
+}
+
+.card-tile .tile-icon, .card-tile .tile-buttons {
+  flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+}
+
+.card-tile .tile-content {
+  flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+}
+
+/* Add spacing between the elements in between */
+.card-tile .tile-content:not(:first-child) {
+  padding-left: 1rem;
+}
+
+.card-tile .tile-content:not(:last-child) {
+  padding-right: 1rem;
+}
+
+.card-tile .tile-title {
+  line-height: 2rem;
+  font-weight: bolder;
+}
+
+.card-tile .tile-subtitle {
+  line-height: 2rem;
+  opacity: .7;
+}
+
+/* Force elements to align at the center vertical height */
+.card-tile.tile-center {
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+}
+
+.card-tile.tile-center .tile-content {
+  overflow: hidden;
+}
+
+/* Keep the text from overflowing */
+.card-tile.tile-center .tile-title,
+.card-tile.tile-center .tile-subtitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 0;
 }
 /* CODE */
 

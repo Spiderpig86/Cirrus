@@ -44,15 +44,15 @@
 
 .card-image:after {
   content: "";
-display: block;
-position: absolute;
-background-color: rgba(0, 0, 0, 0.1);
-top: 0;
-left: 0;
-right: 0;
--webkit-transition: all 500ms;
-transition: all 500ms;
-bottom: 0;
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  bottom: 0;
 }
 
 .card-container {
@@ -231,4 +231,43 @@ margin: .5rem;
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
+}
+
+/* Add spacing between the elements in between */
+.card-tile .tile-content:not(:first-child) {
+  padding-left: 1rem;
+}
+
+.card-tile .tile-content:not(:last-child) {
+  padding-right: 1rem;
+}
+
+.card-tile .tile-title {
+  line-height: 2rem;
+  font-weight: bolder;
+}
+
+.card-tile .tile-subtitle {
+  line-height: 2rem;
+  opacity: .7;
+}
+
+/* Force elements to align at the center vertical height */
+.card-tile.tile-center {
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+}
+
+.card-tile.tile-center .tile-content {
+  overflow: hidden;
+}
+
+/* Keep the text from overflowing */
+.card-tile.tile-center .tile-title,
+.card-tile.tile-center .tile-subtitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 0;
 }
