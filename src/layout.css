@@ -19,7 +19,7 @@
   border-radius: 3px;
 }
 
-/* Content that centers in parent and fills parent div */
+/* Content that centers in parent and fills parent div without the extra vertical margin */
 .content-fluid {
   width: 100%;
   margin: 0 auto;

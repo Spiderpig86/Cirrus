@@ -108,10 +108,30 @@
                 </div>
 
             </div>
-            <p>Below is a simple breakdown of how a card is structured.</p>
+            <p>Below is a simple breakdown of how a standard card is structured. The <code>card-image</code> is wrapped inside the <code>card-container</code> with the <code>title</code> and <code>subtitle</code> nested inside the <code>title-container</code>.</p>
             <div class="row">
                 <div class="col-6">
-
+                    <div class="card" style="background:#fff">
+                        <div class="card-container">
+                            <div class="card-image" style="background:#eee;"></div>
+                            <div class="title-container">
+                                <p class="title">Title</p>
+                                <span class="subtitle">Subtitle</span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p>Text and other content is embedded in the content div here. Embed the <code>card-image</code> in the <code>card-container</code> above.</p>
+                        </div>
+                        <div class="action-bar center">
+                            <button class="uppercase">Buttons</button>
+                            <button class="uppercase">Go here</button>
+                        </div>
+                        <div class="card-footer content-fluid">
+                            <div class="text-center">
+                                <span>This is additional footer text in <code>card-footer</code>.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-6">
                     <pre><code>
@@ -125,7 +145,7 @@
         <div class="content">
             <h3>Animated Card</h3>
             <div class="divider"></div>
-            <p>Cirrus also comes with different components that can interact differently such as this card design with a hover animation.</p>
+            <p>Cirrus also comes with different components that can interact differently such as this card design with a hover animation. Compared to the card above, <code>title</code> and <code>subtitle</code> are nested in the <code>mobile-title</code> class rather than the <code>card-title</code> class.</p>
             <div class="row">
                 <div class="col-4">
                     <div class="card slide-up">

@@ -678,17 +678,17 @@ position: relative;
 
 .card .title-container {
   position: absolute;
-bottom: 1rem;
-width: 100%;
+  bottom: 1rem;
+  width: 100%;
   padding: 0 1rem;
 }
 
 .card .title-container .title {
   font-weight: 300;
   font-size: 1.5rem;
-      margin-bottom: .3rem !important;
+  margin-bottom: .3rem;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-  }
+}
 
 .card .action-bar {
     -webkit-user-select: none;
@@ -700,6 +700,11 @@ width: 100%;
     box-sizing: border-box;
     -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card .action-bar + .card-footer {
+  padding: 1rem 0;
+  border-top: 1px solid #E0E0E0;
 }
 
 .card button, .card .btn {
@@ -1985,7 +1990,7 @@ input[type].input-contains-icon {
   border-radius: 3px;
 }
 
-/* Content that centers in parent and fills parent div */
+/* Content that centers in parent and fills parent div without the extra vertical margin */
 .content-fluid {
   width: 100%;
   margin: 0 auto;
