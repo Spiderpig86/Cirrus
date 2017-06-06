@@ -226,24 +226,28 @@ margin: .5rem;
   -ms-flex-line-pack: justify; /* Evenly distribute lines */
 }
 
+.card-tile p {
+  font-size: .8rem;
+}
+
 .card-tile .tile-icon, .card-tile .tile-buttons {
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
 }
 
-.card-tile .tile-content {
+.card-tile .tile-container {
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
 }
 
 /* Add spacing between the elements in between */
-.card-tile .tile-content:not(:first-child) {
+.card-tile .tile-container:not(:first-child) {
   padding-left: 1rem;
 }
 
-.card-tile .tile-content:not(:last-child) {
+.card-tile .tile-container:not(:last-child) {
   padding-right: 1rem;
 }
 
@@ -264,7 +268,7 @@ margin: .5rem;
   -ms-flex-align: center;
 }
 
-.card-tile.tile-center .tile-content {
+.card-tile.tile-center .tile-container { /* Shrink the text to fit inside the card-tile */
   overflow: hidden;
 }
 
