@@ -194,6 +194,22 @@ input[type].input-contains-icon {
     padding-left: 2.75rem;
 }
 
+input[type].input-contains-icon.input-xsmall {
+    padding-left: 2rem;
+}
+
+input[type].input-contains-icon.input-xsmall + .icon {
+    margin: .55rem 0 0 0.1rem;
+}
+
+input[type].input-contains-icon.input-small {
+    padding-left: 2.5rem;
+}
+
+input[type].input-contains-icon.input-small + .icon {
+    margin: .95rem 0 0 0.3rem;
+}
+
 .input-contains-icon + .icon { /* Nomral input only */
     position: absolute;
     left: 0;
@@ -202,6 +218,7 @@ input[type].input-contains-icon {
     width: 2rem;
     margin: 1.15rem 0 0 0.5rem;
     vertical-align: baseline;
+    z-index: 2;
 }
 
 /* Form section just adds extra spacing between form elements tiled vertically */

@@ -77,8 +77,14 @@ strong {
 p, article, blockquote {
   font-size: 1rem;
   line-height: 2rem;
-      margin: 2rem 0;
-      word-wrap: break-word;
+  margin: 2rem 0;
+  word-wrap: break-word;
+}
+
+/* Use default line-height for these texts and when line-height-inherit is specified */
+.card-tile p, .card-tile article, .card-tile blockquote,
+p.line-height-inherit, article.line-height-inherit, blockquote.line-height-inherit {
+  line-height: inherit !important;
 }
 
 cite {
@@ -129,17 +135,25 @@ cite {
 /* Font Awesome */
 .icon { /* Usually used in spans */
   display: inline-block;
-font-size: 21px; /* Best font sizes are multiples of 7 */
-height: 1.5rem;
-line-height: 1.5rem;
-text-align: center;
-vertical-align: top;
-width: 1.5rem;
+  font-size: 21px; /* Best font sizes are multiples of 7 */
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  vertical-align: top;
+  width: 1.5rem;
 }
 
 .icon .fa {
     font-size: inherit;
     line-height: inherit;
+}
+
+.icon.x-small {
+  margin: .55rem 0 0 0.1rem;
+}
+
+.icon.small {
+  margin: .55rem 0 0 0.1rem;
 }
 
 .fa {

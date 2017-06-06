@@ -846,6 +846,14 @@ margin: .5rem;
   -ms-flex: 0 0 auto;
 }
 
+/* Override the default behavior where buttons display as blocks */
+.card-tile .tile-buttons button,
+.card-tile .tile-buttons .btn,
+.card-tile .tile-buttons [type=submit] {
+  display: inline-block;
+  margin: .1rem; /* Reduce space used by buttons, default .5rem */
+}
+
 .card-tile .tile-container {
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
@@ -1106,8 +1114,14 @@ strong {
 p, article, blockquote {
   font-size: 1rem;
   line-height: 2rem;
-      margin: 2rem 0;
-      word-wrap: break-word;
+  margin: 2rem 0;
+  word-wrap: break-word;
+}
+
+/* Use default line-height for these texts and when line-height-inherit is specified */
+.card-tile p, .card-tile article, .card-tile blockquote,
+p.line-height-inherit, article.line-height-inherit, blockquote.line-height-inherit {
+  line-height: inherit !important;
 }
 
 cite {
@@ -1158,17 +1172,25 @@ cite {
 /* Font Awesome */
 .icon { /* Usually used in spans */
   display: inline-block;
-font-size: 21px; /* Best font sizes are multiples of 7 */
-height: 1.5rem;
-line-height: 1.5rem;
-text-align: center;
-vertical-align: top;
-width: 1.5rem;
+  font-size: 21px; /* Best font sizes are multiples of 7 */
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  vertical-align: top;
+  width: 1.5rem;
 }
 
 .icon .fa {
     font-size: inherit;
     line-height: inherit;
+}
+
+.icon.x-small {
+  margin: .55rem 0 0 0.1rem;
+}
+
+.icon.small {
+  margin: .55rem 0 0 0.1rem;
 }
 
 .fa {
@@ -1528,6 +1550,22 @@ input[type].input-contains-icon {
     padding-left: 2.75rem;
 }
 
+input[type].input-contains-icon.input-xsmall {
+    padding-left: 2rem;
+}
+
+input[type].input-contains-icon.input-xsmall + .icon {
+    margin: .55rem 0 0 0.1rem;
+}
+
+input[type].input-contains-icon.input-small {
+    padding-left: 2.5rem;
+}
+
+input[type].input-contains-icon.input-small + .icon {
+    margin: .95rem 0 0 0.3rem;
+}
+
 .input-contains-icon + .icon { /* Nomral input only */
     position: absolute;
     left: 0;
@@ -1536,6 +1574,7 @@ input[type].input-contains-icon {
     width: 2rem;
     margin: 1.15rem 0 0 0.5rem;
     vertical-align: baseline;
+    z-index: 2;
 }
 
 /* Form section just adds extra spacing between form elements tiled vertically */

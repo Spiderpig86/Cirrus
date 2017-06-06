@@ -236,6 +236,14 @@ margin: .5rem;
   -ms-flex: 0 0 auto;
 }
 
+/* Override the default behavior where buttons display as blocks */
+.card-tile .tile-buttons button,
+.card-tile .tile-buttons .btn,
+.card-tile .tile-buttons [type=submit] {
+  display: inline-block;
+  margin: .1rem; /* Reduce space used by buttons, default .5rem */
+}
+
 .card-tile .tile-container {
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
