@@ -75,14 +75,6 @@ section {
     background: rgba(0, 161, 255, 0.2);
 }
 
-video {
-    position: absolute;
-        height: 100vh;
-        object-fit: cover;
-        width: 100%;
-            z-index: -1;
-}
-
 /* When focusing any element */
 :focus {
     box-shadow: 0 0 0.1rem 0.15rem rgba(51, 51, 51, 0.07);

@@ -180,6 +180,7 @@ margin: .5rem;
 
 .card p {
     margin: 1rem 0;
+    max-height: 8rem; /* Prevents ridiculously looking cards */
 }
 
 /*
@@ -282,7 +283,7 @@ margin: .5rem;
 
 /* Keep the text from overflowing */
 .card-tile.tile-center .tile-title,
-.card-tile.tile-center .tile-subtitle {
+.card-tile.tile-center .tile-subtitle.no-wrap {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

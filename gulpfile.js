@@ -21,6 +21,7 @@ gulp.task('compile', function() {
         './src/layout.css',
         './src/links.css',
         './src/lists.css',
+        './src/media.css',
         './src/table.css',
         './src/util.css'
     ])
