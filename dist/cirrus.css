@@ -419,21 +419,21 @@ button.animated:active, [type=submit].animated:active, .btn.animated:active {
 /* Tiny button */
 .btn-tiny {
   line-height: 1.5rem;
-  padding: 0 .5rem;
+  padding: 0 .25rem;
   font-size: 50%;
 }
 
 /* Small button */
 .btn-small {
     line-height: 2.4rem;
-    padding: 0 1rem;
+    padding: 0 .5rem;
     font-size: 70%;
 }
 
 /* Big button */
 .btn-large {
      line-height: 3.5rem;
-    padding: 0 1.7rem;
+    padding: 0 1.5rem;
     font-size: 90%;
 }
 
@@ -674,14 +674,14 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 .btn-group [type="submit"]:last-child:not(:first-child) { /* Style the last child in group > 1 buttons */
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  margin-left: -.05rem;
+  margin-left: -.1rem;
 }
 
 .btn-group .btn:not(:first-child):not(:last-child),
 .btn-group button:not(:first-child):not(:last-child) ,
 .btn-group [type="submit"]:not(:first-child):not(:last-child) { /* Style button in middle of group */
   border-radius: 0; /* Remove roundness from center buttons */
-  margin-left: -.05rem;
+  margin-left: -.1rem;
 }
 /* CARDS */
 
@@ -2141,7 +2141,7 @@ section {
 /* This works well with spans and maybe even hr */
 .divider {
   display: block;
-  height: 3px;
+  height: 2px;
   position: relative;
   border-top: none;
   margin-top: 2rem;
@@ -2955,6 +2955,10 @@ video.video-fullscreen {
     font-size: 2.6rem;
     height: 6.4rem;
     width: 6.4rem;
+}
+
+.avatar.padded {
+    padding: .5rem;
 }
 /* TABLE */
 

@@ -550,6 +550,21 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;card-tile tile-center&quot;&gt;
+    &lt;div class=&quot;tile-icon&quot;&gt;
+        &lt;img class=&quot;avatar&quot; src=&quot;https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png&quot; style=&quot;width:50px&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;tile-container&quot;&gt;
+        &lt;p class=&quot;tile-title no-margin&quot;&gt;Robert Downey Jr. shared a post from &lt;b&gt;Stark Industries&lt;/b&gt;.&lt;/p&gt;
+        &lt;p class=&quot;tile-subtitle no-margin&quot;&gt;Robert shared: 'Stark Industries is proud to announce its brand new suit.'&lt;/p&gt;
+        &lt;span class=&quot;info&quot;&gt;23 minutes ago&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tile-buttons&quot;&gt;
+        &lt;button class=&quot;btn-accent btn-small uppercase&quot;&gt;View&lt;/button&gt;
+        &lt;button class=&quot;btn-small uppercase&quot;&gt;Dismiss&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
             <p>In the two examples above, the first one is your standard tile with the <code>card-tile</code> parent container and <code>tile-container</code> for other elements images, text, buttons, etc. The <code>tile-buttons</code> class could be used also to display buttons horizontally. The card tile at the bottom vertically aligns all elements to be vertically centered giving a more balanced appearance.</p>
             <div class="row">
                 <div class="col-4">
@@ -571,7 +586,7 @@
                 <div class="col-4">
                     <div class="card-tile tile-center">
                         <div class="tile-icon">
-                            <img class="avatar" src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" style="width:50px"> <!-- Replace with file icon -->
+                            <img class="avatar padded" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABZUlEQVR4Xu2aUQ7DIAxDyU3Xk203ZeKvVNMsywRB6/3OtOERGyoR5eG/ePj8iwG4Ax5OwBZgG6DWWtkxgv6IiI8wHg6lO2AygDaBVAg7AEiFsAuANAgygIign/HPmMBiw+1AF38tcDKA4Z2wI4ChEHYAcJRS3j9sM8QOywNoFqu1vrIgbAGgrX4WhG0AZEHYCkAGhOUBwMN8L6CD8W4ACnsuMQCyxVoad5/DLHH0PvVrk61nuQ5AgK7/qwtiALOJs+9DeneAmEm2AGqx0aHDvg/pbQFbQDuXOAOQx5wBFwJq6LDAkV6txxZAhG0BW6AnoHqO7TikV+txBiDCzgBngDOgI6CGDms5pFfrcQgiwg5Bh6BD0CF4JqCmLps5SK/W410AEfYu4F3Au4B3Ae8CJwLqBQY2dFn99AsSbIHZegMgb6/LB6HsFWWfn94BbEGr6+kOWH1CbH0GwBK7m94dcLcVZefzBVVinlD6CDHWAAAAAElFTkSuQmCC" style="width:50px"> <!-- Replace with file icon -->
                         </div>
                         <div class="tile-container">
                             <p class="tile-title no-margin">Polarity.exe</p>
@@ -582,7 +597,24 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-4">
+                    <div class="card-tile tile-center">
+                        <div class="tile-icon">
+                            <img class="avatar padded" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAD5ElEQVR4Xu1ai20VMRDcrQA6ACogqYBQAVABpALSAaQCoAKSCkgHhAqACkgqACpYNGhPchz71mv73j3dsyUkxPk3s7Mf74PpwAcfOH4aBAwFHDgDwwVaBCAiL4joJRE9JqKHRHQU7HdNRD/wh5kvW85Zcq1bASICoB8UOP5eMv4Q0RURnTPzTcmCXc1xESAi74joTK1de8f3zHxeu7j3uiIC1OpfI4m33AWu8ZyZoYxVh0mAiMCvv6ifx5e9VWnD32+YGcBI1yAunKirPEqghCu8mtasxcIsAWr57wnwAA4pX5RcXETeYD4RxUSAhOM1lWARAPBhZAdeRPQz76WVTBCGzBEOZIlji0gRkXAOM5vqtfbE9+wmIgKLIeiF45KZYc3qISIg4XW0AbIDzsuOnRKg1voVRftZ8J4LighSYqyEalLnFlpKSSogYSX4/NGc7J0EoH5AwEwFx65E1BLwO7L+qRXwPARopoArfe6KNrGZmwARQWmLtDeNW2ZGSpsdXgKUBGSBRVVQQ0AcpD4xM6q/JQj4SERvg42zwbCU4NJ505n3YoCIoKh5FlwKxQqC1hIExGr7xswonu6NUmCl8+YIiHM/CpX/Fd7c8B6sLoAaA+dNA9XkE+usnvdIKaCq4KghQEmoOi9Hgvcee0dAi/VTa2uC4B2LaK0+6wJa699JadbBGRfojZ+sezQHwRR4oLAOVgLiILgXBMSpKZsGc+CJyCyclID4rL0gIK7QkpFZRFAc4b0QjyLwSgDWh0VWUcpdNAvoxdCpeRAclASVUIAHfEx0UcVpSaQ5CygBcTWYbVwEJHjA4zEUN1rMJ7EFviat5l6DKXlfMPNp6hJwB0+3V0Tw1kAAnMZfuIK3yZK5i6uu8DZEsiSUWEcthHQZN1W6WL+bAiYwIoL8/zQCh3cB5O7q6GqTBeBDy2PrbP1fSmo4r0sMCAiAr8L/w4CIz/g3NEWLfvEREbTA0PKKn9Vmo8VLQlcCVFJ4sMDqudY2vuEFiSgetsUxf2qLp/oJP6EGT+woIaM7AUoClACQsTuU3Ck1B+BPUm5kAWj9Hl/G1VrOdIq9JMwGvFaA1vomAlJRthA90hzKXmSR2R9HLQCt35cgAD90wtfh51OcQHADUMQEuM51adZoBWit705AyauvUCVdpg0CnD+huYJgTaXVxayOTYYC1laAZYG1vy8eBNcGaJ0/CIgY6B4ELQus/X1xBTgC9iJTLYIHAUu7wCJmdWw6FLDrOsBhnFWmWm+V5iywCirHoYMA4/8TDgU41LTJqW4FbI2FQcDWLOrFMxTgZWxr84cCtmZRL56hAC9jW5v/D+5oj19OlNgvAAAAAElFTkSuQmCC" style="width:50px"> <!-- Replace with file icon -->
+                        </div>
+                        <div class="tile-container">
+                            <p class="tile-title no-margin">Meeting Scheduled</p>
+                            <p class="tile-subtitle no-margin">You have a scheduled meeting in 1 hour.</p>
+                        </div>
+                        <div class="tile-buttons">
+                            <button class="btn-accent btn-link"><span class="icon"><i class="fa small fa-check" aria-hidden="true"></i></span></button>
+                            <button class="btn-link"><span class="icon"><i class="fa small fa-times" aria-hidden="true"></i></span></button>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <p>If you require some extra padding around your avatar image, add the <code>padded</code> class to the <code>avatar</code> image.</p>
         </div>
     </section>
 
