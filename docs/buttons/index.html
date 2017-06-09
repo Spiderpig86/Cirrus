@@ -395,7 +395,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="tooltips">
         <div class="content">
             <h3>Button Tooltips</h3>
             <div class="divider"></div>
@@ -417,6 +417,75 @@
                 </div>
             </div>
             <p>The way this works is that the contents of the tooltip are specified by the <code>data-tooltip</code> attribute where the CSS would retrieve the data to be displayed.</p>
+
+            <h6>Tooltip Direction</h6>
+            <p>You can also add additional classes to specify which direction the tooltip should display. There are 4 different tooltip directions for now, including <code>tooltip-bottom</code>, <code>tooltip-left</code>, <code>tooltip-right</code>, and the default direction which displays the tooltip at the top. Other secondary directions will be added in  a future update.</p>
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn-tooltip" data-tooltip="Tooltip Top (Default)">Tooltip Top</button>
+                    <button class="btn-tooltip tooltip-bottom" data-tooltip="Tooltip Bottom">Tooltip Bottom</button>
+                    <button class="btn-tooltip tooltip-left" data-tooltip="Tooltip Left">Tooltip Left</button>
+                    <button class="btn-tooltip tooltip-right" data-tooltip="Tooltip Right">Tooltip Right</button>
+                </div>
+                <div class="col-6">
+                    <pre><code>
+                        </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="groups">
+        <div class="content">
+            <h3>Button Groups</h3>
+            <div class="divider"></div>
+            <p>Button groups are designed to group buttons of similar actions or properties together in a seemless fashion. Buttons are placed adjacent to each other and buttons at each of the ends are rounded off respectively.</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="btn-group">
+                        <button class="btn-accent">First Button</button>
+                        <button class="btn-accent">Second Button</button>
+                        <button class="btn-accent">Third Button</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre><code>
+                        </code></pre>
+                </div>
+            </div>
+            <p>Just nest the buttons you want to be in a group inside a <code>btn-group</code> container and Cirrus will handle the rest.</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="btn-group">
+                        <button class="">First Button</button>
+                        <button class="">Second Button</button>
+                        <button class="">Third Button</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre><code>
+                        </code></pre>
+                </div>
+            </div>
+            <p>If you want the buttons to flex to fill the width of the container, just add the <code>btn-group-fill</code> class to the <code>btn-group</code> container.</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="btn-group btn-group-fill">
+                        <button class="btn-dark">Look</button>
+                        <button class="btn-dark">At</button>
+                        <button class="btn-dark">Me</button>
+                        <button class="btn-dark">Flex</button>
+                    </div>
+                    <div class="btn-group btn-group-fill">
+                        <button class="">First Button</button>
+                        <button class="">Second Button</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre><code>
+                        </code></pre>
+                </div>
+            </div>
         </div>
     </section>
 

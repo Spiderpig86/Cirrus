@@ -178,6 +178,7 @@ button.animated:active, [type=submit].animated:active, .btn.animated:active {
 .btn-dark {
   background: #444;
   color: #fff;
+  border: 0;
 }
 
 .btn-dark:hover {
@@ -365,6 +366,67 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
       -o-transition: all .2s ease;
 }
 
+/* Tooltip bottom */
+.btn-tooltip.tooltip-bottom::after {
+  top: 100%;
+  transform: translate(-50%, -1rem); /* Moves tooltip to the center horizontally and shifts tooltip down */
+  -webkit-transform: translate(-50%, -1rem);
+  -moz-transform: translate(-50%, -1rem);
+  -ms-transform: translate(-50%, -1rem);
+  -o-transform: translate(-50%, -1rem);
+  bottom: auto;
+}
+
+.btn-tooltip.tooltip-bottom:hover::after,
+.btn-tooltip.tooltip-bottom:focus::after {
+  transform: translate(-50%, .5rem);
+  -webkit-transform: translate(-50%, .5rem);
+  -moz-transform: translate(-50%, .5rem);
+  -ms-transform: translate(-50%, .5rem);
+  -o-transform: translate(-50%, .5rem);
+}
+
+/* Tooltip right */
+.btn-tooltip.tooltip-right::after {
+  left: 100%;
+  bottom: 50%;
+  transform: translate(-1rem, 50%);
+  -webkit-transform: translate(-1rem, 50%);
+  -moz-transform: translate(-1rem, 50%);
+  -ms-transform: translate(-1rem, 50%);
+  -o-transform: translate(-1rem, 50%);
+}
+
+.btn-tooltip.tooltip-right:hover::after,
+.btn-tooltip.tooltip-right:focus::after {
+  transform: translate(.5rem, 50%);
+  -webkit-transform: translate(.5rem, 50%);
+  -moz-transform: translate(.5rem, 50%);
+  -ms-transform: translate(.5rem, 50%);
+  -o-transform: translate(.5rem, 50%);
+}
+
+/* Tooltip Left */
+.btn-tooltip.tooltip-left::after {
+  right: 100%;
+  bottom: 50%;
+  left: auto; /* Needed to work */
+  transform: translate(1rem, 50%);
+  -webkit-transform: translate(1rem, 50%);
+  -moz-transform: translate(1rem, 50%);
+  -ms-transform: translate(1rem, 50%);
+  -o-transform: translate(1rem, 50%);
+}
+
+.btn-tooltip.tooltip-left:hover::after,
+.btn-tooltip.tooltip-left:focus::after {
+  transform: translate(-.5rem, 50%);
+  -webkit-transform: translate(-.5rem, 50%);
+  -moz-transform: translate(-.5rem, 50%);
+  -ms-transform: translate(-.5rem, 50%);
+  -o-transform: translate(-.5rem, 50%);
+}
+
 /* BUTTON GROUPS */
 /* Will group buttons with components in a single looking component */
 
@@ -383,24 +445,37 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
   display: -webkit-flex;
 }
 
-.btn-group.btn-group-fill .btn, .btn-group.btn-group-fill button, .btn-group.btn-group-fill [type=submit] {
+.btn-group .btn, .btn-group button, .btn-group [type=submit] {
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
-  flex: 1 0 auto; /* Make the buttons fill the available width and proportion themselves */
+  flex: 1 0 auto;
+  margin: 0;
 }
 
-.btn-group .btn:first-child:not(:last-child) { /* Style the first child in group > 1 buttons */
+.btn-group.btn-group-fill .btn, .btn-group.btn-group-fill button, .btn-group.btn-group-fill [type=submit] {
+  -webkit-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0; /* Make the buttons fill the available width and proportion themselves */
+}
+
+.btn-group .btn:first-child:not(:last-child),
+.btn-group button:first-child:not(:last-child) ,
+.btn-group [type="submit"]:first-child:not(:last-child) { /* Style the first child in group > 1 buttons */
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.btn-group .btn:last-child:not(:first-child) { /* Style the last child in group > 1 buttons */
+.btn-group .btn:last-child:not(:first-child),
+.btn-group button:last-child:not(:first-child),
+.btn-group [type="submit"]:last-child:not(:first-child) { /* Style the last child in group > 1 buttons */
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  margin-left: -1rem;
+  margin-left: -.05rem;
 }
 
-.btn-group .btn:not(:first-child):not(:last-child) { /* Style button in middle of group */
+.btn-group .btn:not(:first-child):not(:last-child),
+.btn-group button:not(:first-child):not(:last-child) ,
+.btn-group [type="submit"]:not(:first-child):not(:last-child) { /* Style button in middle of group */
   border-radius: 0; /* Remove roundness from center buttons */
-  margin-left: -1rem;
+  margin-left: -.05rem;
 }
