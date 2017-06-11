@@ -8,8 +8,8 @@ fluidContainerAddBtn.click(() => {
     let p = document.createElement('div');
     p.className = 'uppercase';
     p.innerText = 'col-fluid';
-    col.append(p);
-    fluidContainerTest.append(col);
+    $(col).append(p);
+    $(fluidContainerTest).append(col);
 });
 
 fluidContainerDeleteBtn.click(() => {
