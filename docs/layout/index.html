@@ -513,7 +513,7 @@
         <div class="content">
             <h3>Pagination</h3>
             <div class="divider"></div>
-            <p>Cirrus comes with easy to style pagination menus that allow for easy navigation between pages in websites and forums. All you need to do is add the <code>pagination</code> class to the parent container and the <code>pagination-item</code> class to the children. To display numerous small pagination items, add the <code>short</code> class.</p>
+            <p>Cirrus comes with easy to style pagination menus that allow for easy navigation between pages in websites and forums. All you need to do is add the <code>pagination</code> class to the parent container and the <code>pagination-item</code> class to the children. To display numerous small pagination items, add the <code>short</code> class. In the small pagination menu shown below, to indicate that a page is selected, add the <code>selected</code> class to the page item.</p>
             <div class="row">
                 <div class="col-6">
                     <div class="pagination">
@@ -577,8 +577,68 @@
                 </div>
             </div>
             <div class="row">
-                <pre><code class="html" data-lang="HTML">
-                    </code></pre>
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-6&quot;&gt;
+    &lt;div class=&quot;pagination&quot;&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;Prev&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;1&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a&gt;...&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;3&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;4&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short selected&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;5&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a&gt;...&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;23&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;Next&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;col-6&quot;&gt;
+    &lt;div class=&quot;pagination&quot;&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a disabled href=&quot;#&quot; class=&quot;btn-link&quot;&gt;Prev&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short selected&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;1&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;2&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;3&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;4&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a&gt;...&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;13&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;Next&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
             </div>
             <p>Paginations are also designed to provide easy access to different pages once the user reaches the bottom of a page. Just simply add the <code>pagination</code> class to the parent container and add the <code>pagination-item</code> class to 2 children (3 or more may take up more width than the parent container).</p>
 
@@ -597,9 +657,20 @@
                         </a>
                     </li>
                 </ul>
-                <pre><code class="html" data-lang="HTML">
-
-                    </code></pre>
+                <pre><code class="html" data-lang="HTML">&lt;ul class=&quot;pagination no-bullets&quot;&gt;
+    &lt;li class=&quot;pagination-item pagination-prev&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;display-block&quot;&gt;
+            &lt;p class=&quot;pagination-item-subtitle&quot;&gt;Previous&lt;/p&gt;
+            &lt;h5 class=&quot;light no-margin&quot;&gt;Choose Items&lt;/h5&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;pagination-item pagination-next&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;display-block&quot;&gt;
+            &lt;p class=&quot;pagination-item-subtitle&quot;&gt;Next&lt;/p&gt;
+            &lt;h5 class=&quot;light no-margin&quot;&gt;Order&lt;/h5&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
             </div>
         </div>
     </section>
@@ -630,8 +701,22 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">
-                        </code></pre>
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot; style=&quot;background: #fff; padding: 1rem;&quot;&gt;
+    &lt;div class=&quot;frame-header&quot; style=&quot;background: #eee; padding: 1rem; margin: 1rem;&quot;&gt;
+        &lt;div class=&quot;frame-title text-center&quot;&gt;Frame Title&lt;/div&gt;
+        &lt;div class=&quot;frame-subtitle text-center&quot;&gt;Frame Subtitle&lt;/div&gt;
+        &lt;div class=&quot;frame-subtitle text-center&quot;&gt;This is the frame header.&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;frame-body&quot; style=&quot;background: #eee; padding: 1rem; margin: 1rem;&quot;&gt;
+        &lt;div class=&quot;frame-title text-center&quot;&gt;Frame Body&lt;/div&gt;
+        &lt;div class=&quot;frame-subtitle text-center&quot;&gt;Insert any component here, including a frame navigation menu using &lt;code&gt;frame-nav&lt;/code&gt;. The frame will auto-expand and if a specific height is set, a scrollbar will appear to take care of overflow.&lt;/div&gt;
+        &lt;blockquote class=&quot;text-center&quot;&gt;The lighter gray is the frame itself while the grey are the components of the frame. Please note that the margins are just to serve as an example.&lt;/blockquote&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;frame-footer&quot; style=&quot;background: #eee; padding: 1rem; margin: 1rem;&quot;&gt;
+        &lt;div class=&quot;frame-title text-center&quot;&gt;Frame Footer&lt;/div&gt;
+        &lt;div class=&quot;frame-subtitle text-center&quot;&gt;Takes up the bottom of the frame.&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                 </div>
             </div>
             <p>Below is a simple example using a frame.</p>
@@ -649,10 +734,10 @@
                                 <div class="frame-subtitle">Freelance Photographer</div>
                             </div>
                             <div class="row fluid-container">
-                                <a class="col-fluid" href="#"><i class="fa fa-facebook"></i></a>
-                                <a class="col-fluid" href="#"><i class="fa fa-twitter"></i></a>
-                                <a class="col-fluid" href="#"><i class="fa fa-instagram"></i></a>
-                                <a class="col-fluid" href="#"><i class="fa fa-medium"></i></a>
+                                <a class="col-fluid" href="#"><i class="fa fa-facebook link-btn"></i></a>
+                                <a class="col-fluid" href="#"><i class="fa fa-twitter link-btn"></i></a>
+                                <a class="col-fluid" href="#"><i class="fa fa-instagram link-btn"></i></a>
+                                <a class="col-fluid" href="#"><i class="fa fa-medium link-btn"></i></a>
                             </div>
                         </div>
                         <div class="content-no-padding"><div class="divider no-margin"></div></div>
@@ -668,9 +753,35 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">
-
-                        </code></pre>
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot;&gt;
+    &lt;div class=&quot;frame-header text-center&quot;&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;figure class=&quot;avatar&quot;&gt;
+                &lt;img src=&quot;http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg&quot;&gt;
+            &lt;/figure&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;frame-title&quot;&gt;John Doe&lt;/div&gt;
+            &lt;div class=&quot;frame-subtitle&quot;&gt;Freelance Photographer&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row fluid-container&quot;&gt;
+            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-facebook link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-twitter link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-instagram link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-medium link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-no-padding&quot;&gt;&lt;div class=&quot;divider no-margin&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;frame-body&quot;&gt;
+        &lt;div class=&quot;content text-center&quot;&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-no-padding&quot;&gt;&lt;div class=&quot;divider no-margin&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;frame-footer&quot;&gt;
+        &lt;div class=&quot;frame-subtitle text-center&quot;&gt;&lt;i&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/i&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                 </div>
             </div>
             <p>Below are other examples of using frames. The one on the left demonstrates overflow on the y-axis with <a href="../cards#card-tiles" class="u u-LR">card tiles</a> and the right uses different components inside the frame. Both frames are set to 30rem.</p>

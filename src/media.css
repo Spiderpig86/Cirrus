@@ -91,14 +91,7 @@ video.video-fullscreen {
     width: 3.2rem;
     height: 3.2rem;
     background-color: #f03d4d;
-}
-
-.avatar img {
-    border-radius: 50%;;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    overflow: hidden;
 }
 
 /* Draw text on image just like in Gmail */

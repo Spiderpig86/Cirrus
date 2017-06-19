@@ -23,7 +23,11 @@ input[type="file"], select {
   transition: all .3s;
   outline: none;
   margin: .5rem 0;
-   padding: .85rem 1.1rem;
+    padding: .85rem 1.1rem;
+}
+
+input[type="search"] {
+    -webkit-appearance: none; /* Fix Safari issue */
 }
 
 textarea, textarea[type=text] {
