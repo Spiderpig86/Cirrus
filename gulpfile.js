@@ -23,6 +23,7 @@ gulp.task('compile', function() {
         './src/lists.css',
         './src/media.css',
         './src/table.css',
+        './src/toast.css',
         './src/util.css'
     ])
         .pipe($.concat('cirrus.css'))

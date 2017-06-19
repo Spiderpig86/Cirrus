@@ -357,6 +357,15 @@
                     <button class="btn-accent" id="fluid-container-delete">Delete Column</button>
                 </div>
             </div>
+            <p>Adding the <code>wrap</code> class to the <code>fluid-container</code> will make new columns wrap to the next line when an overflow occurs instead of showing a scrollbar.</p>
+            <p>To remove flex from the <code>col-fluid</code> element, just add the <code>no-flex</code> class. This would make the elements have their original widths rather than trying to fill up its parent container.</p>
+            <div id="grids">
+                <div class="row fluid-container">
+                    <div class="col-fluid no-flex"><div class="uppercase">col-fluid</div></div>
+                    <div class="col-fluid no-flex"><div class="uppercase">col-fluid</div></div>
+                    <div class="col-fluid no-flex"><div class="uppercase">col-fluid</div></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -701,20 +710,17 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot; style=&quot;background: #fff; padding: 1rem;&quot;&gt;
-    &lt;div class=&quot;frame-header&quot; style=&quot;background: #eee; padding: 1rem; margin: 1rem;&quot;&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot;&gt;
+    &lt;div class=&quot;frame-header&quot;&gt;
         &lt;div class=&quot;frame-title text-center&quot;&gt;Frame Title&lt;/div&gt;
         &lt;div class=&quot;frame-subtitle text-center&quot;&gt;Frame Subtitle&lt;/div&gt;
         &lt;div class=&quot;frame-subtitle text-center&quot;&gt;This is the frame header.&lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;frame-body&quot; style=&quot;background: #eee; padding: 1rem; margin: 1rem;&quot;&gt;
-        &lt;div class=&quot;frame-title text-center&quot;&gt;Frame Body&lt;/div&gt;
-        &lt;div class=&quot;frame-subtitle text-center&quot;&gt;Insert any component here, including a frame navigation menu using &lt;code&gt;frame-nav&lt;/code&gt;. The frame will auto-expand and if a specific height is set, a scrollbar will appear to take care of overflow.&lt;/div&gt;
-        &lt;blockquote class=&quot;text-center&quot;&gt;The lighter gray is the frame itself while the grey are the components of the frame. Please note that the margins are just to serve as an example.&lt;/blockquote&gt;
+    &lt;div class=&quot;frame-body&quot;&gt;
+        &lt;!-- Insert other controls here --&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;frame-footer&quot; style=&quot;background: #eee; padding: 1rem; margin: 1rem;&quot;&gt;
-        &lt;div class=&quot;frame-title text-center&quot;&gt;Frame Footer&lt;/div&gt;
-        &lt;div class=&quot;frame-subtitle text-center&quot;&gt;Takes up the bottom of the frame.&lt;/div&gt;
+    &lt;div class=&quot;frame-footer&quot;&gt;
+        &lt;!-- Insert some controls here --&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 </div>
@@ -810,17 +816,15 @@
                                         <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
                                     </figure>
                                     <div class="tile-container">
-                                        <p class="tile-title no-margin">Elk</p>
+                                        <p class="tile-title no-margin">Robert</p>
                                         <p class="tile-subtitle no-margin">What's up?</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="card-tile">
-                                    <div class="tile-icon">
-                                        <figure class="avatar img-small">
-                                            <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
-                                        </figure>
+                                     <div class="tile-icon">
+                                        <figure class="avatar img-small" data-text="El"></figure>
                                     </div>
                                     <div class="tile-container">
                                         <p class="tile-title no-margin">Elk</p>
@@ -836,17 +840,15 @@
                                         </figure>
                                     </div>
                                     <div class="tile-container">
-                                        <p class="tile-title no-margin line-height-inherit">Elk</p>
+                                        <p class="tile-title no-margin line-height-inherit">Robert</p>
                                         <p class="tile-subtitle no-margin line-height-inherit">Check out Cirrus. <a href="https://spiderpig86.github.io/Cirrus">https://spiderpig86.github.io/Cirrus</a></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="card-tile">
-                                    <div class="tile-icon">
-                                        <figure class="avatar img-small">
-                                            <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
-                                        </figure>
+                                     <div class="tile-icon">
+                                        <figure class="avatar img-small" data-text="El"></figure>
                                     </div>
                                     <div class="tile-container">
                                         <p class="tile-title no-margin line-height-inherit">Elk</p>

@@ -1,0 +1,80 @@
+/* The base of the modal dialog, which is an overlay of the webpage */
+.modal {
+    position: fixed; /* Scrolls with the user */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0; /* Initially hidden */
+    padding: 1rem;
+    display: none; /* Doesn't block the elements underneath */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; /* Vertical centering */
+}
+
+/* When the modal dialog is visible */
+.modal:target, .modal.shown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+    z-index: 999;
+}
+
+/* The div in the modal dialpog used to create the translucent background */
+.modal:target .modal-overlay,
+.modal.shown .modal-overlay {
+    position: absolute; /* Absolute inside of the modal container */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(54, 59, 68, 0.5);
+}
+
+/* The modal dialog body with the text itself */
+.modal-content {
+    background: #fff;
+    padding: 0;
+    display: block;
+    border-radius: 3px;
+    box-shadow: 0 .4rem 1rem rgba(54, 59, 68, .3);
+}
+
+.modal:target .modal-container,
+.modal.shown .modal-container {
+  -webkit-animation: slide-down .2s ease 1;
+  animation: slide-down .2s ease 1;
+  max-width: 64rem;
+  z-index: 1;
+}
+
+/* Restrict width  */
+.modal-content.small {
+    max-width: 32rem;
+}
+
+.modal-content .modal-header {
+    padding: 1rem;
+}
+
+.modal-content .modal-header .modal-title {
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.modal-content .modal-body {
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 50vh; /* Max height is 50% of viewport height which prevents dialog from extetnding past screen */
+    position: relative;
+}
+
+.modal-content .modal-footer {
+    padding: 1rem;
+}

@@ -854,16 +854,9 @@ overflow: hidden;
     color: #9FA5A8;
 }
 
-/* Card avatar */
-.card .avatar {
-    position: relative;
-    transition: all .3s;
-margin: .5rem;
-}
-
 .card p {
     margin: 1rem 0;
-    max-height: 8rem; /* Prevents ridiculously looking cards */
+    /*max-height: 8rem; /* Prevents ridiculously looking cards */
 }
 
 /*
@@ -1026,11 +1019,12 @@ pre > code {
   padding: 0;
   /* Prevent setting borders from increasing the size of an elrement */
   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        text-rendering: optimizeLegibility;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: transparent;
 }
 
 /* Nunito Sans for the font */
@@ -1181,7 +1175,6 @@ p, article, blockquote {
   font-size: 1rem;
   line-height: 2rem;
   margin: 2rem 0;
-  word-wrap: break-word;
 }
 
 /* Use default line-height for these texts and when line-height-inherit is specified */
@@ -1798,7 +1791,7 @@ input[type].input-contains-icon.input-xlarge + .icon {
 
 .frame .frame-subtitle {
     color: rgba(55, 64, 84, 0.6);
-    font-size: .9rem;
+    font-size: .85rem;
 }
 /* HEADER */
 
@@ -2299,6 +2292,19 @@ space.x-large {
   overflow: auto;
 }
 
+/* Wrap controls instead on overflow */
+.fluid-container.wrap {
+  -webkit-align-items: center;
+    align-items: center;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-flex-align: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
 /* Resizes elements in a row equally given the number of elements located in it */
 .row .col-fluid {
     display: block;
@@ -2309,6 +2315,14 @@ space.x-large {
     flex-grow: 1;
     -ms-flex-negative: 1;
     flex-shrink: 1;
+}
+
+.row .col-fluid.no-flex {
+    flex-grow: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    -ms-flex-negative: 0;
 }
 
 /* Some offset values */
@@ -2914,7 +2928,7 @@ video.video-fullscreen {
     font-size: 1rem;
     font-weight: lighter;
     width: 3.2rem;
-    height: 3.2rem;
+    /*height: 3.2rem;*/
     background-color: #f03d4d;
     overflow: hidden;
 }
@@ -3045,6 +3059,54 @@ video.video-fullscreen {
   display: table;
     width: 100%; /* Forces row to span container */
 }
+.toast {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(49, 59, 80, 0.9);
+    border: 1px solid #313b50;
+    border-radius: 2px;
+}
+
+.toast.translucent {
+    opacity: .5;
+}
+
+/* TOAST TYPES */
+.toast.primary {
+    background: rgba(240, 61, 77, 0.9);
+    border-color: #f03d4d;
+}
+
+.toast.confirm {
+    background: rgba(76, 217, 100, 0.9);
+    border-color: #4cd964;
+}
+
+.toast.warning {
+    background: rgba(255, 204, 0, 0.9);
+    border-color: #ffcc00;
+}
+
+.toast.error {
+    background: rgba(255, 59, 48, 0.9);
+    border-color: #ff3b30;
+}
+
+/* Add the rest later */
+
+.toast a {
+    color: #fff;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.toast a:hover {
+    opacity: .8;
+    transition: all .3s;
+}
+
+
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
 

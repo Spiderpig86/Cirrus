@@ -169,16 +169,9 @@ overflow: hidden;
     color: #9FA5A8;
 }
 
-/* Card avatar */
-.card .avatar {
-    position: relative;
-    transition: all .3s;
-margin: .5rem;
-}
-
 .card p {
     margin: 1rem 0;
-    max-height: 8rem; /* Prevents ridiculously looking cards */
+    /*max-height: 8rem; /* Prevents ridiculously looking cards */
 }
 
 /*
