@@ -133,6 +133,7 @@ video.video-fullscreen {
     width: 6.4rem;
 }
 
-.avatar.padded {
+.avatar img.padded {
     padding: .5rem;
+    width: 100%;
 }
