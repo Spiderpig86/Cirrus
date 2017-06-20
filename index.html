@@ -178,16 +178,16 @@
 
                 <div class="row">
                     <p class="title">Structure</p>
-                    <p class="subtitle"> The file tree for the install looks like this:</p>
+                    <p class="subtitle">The file tree for the install looks like this:</p>
 
                     <pre><code>├───dist
 │   ├───cirrus.css
-│   ├───cirrus.min.css
+│   └───cirrus.min.css
 ├───demo_res
-│   ├───app.css
-│   ├───app.js
-│   ├───test.css
-│   ├───test.js
+│   └───resources_for_documentation
+├───demo_res
+│   ├───demo.html
+│   └───other_documentation_files
 ├───src
 │   ├───animations.css
 │   ├───button.css
@@ -197,14 +197,17 @@
 │   ├───font.css
 │   ├───footer.css
 │   ├───forms.css
+│   ├───frames.css
 │   ├───header.css
 │   ├───layout.css
 │   ├───links.css
 │   ├───lists.css
+│   ├───media.css
+│   ├───modal.css
 │   ├───table.css
-│   ├───util.css
+│   ├───toast.css
+│   └───util.css
 ├───README.md
-├───demo.html
 └───index.html</code> </pre>
                 </div>
 
@@ -618,7 +621,7 @@
             <div class="content">
                 <h3>Layout</h3>
                 <div class="divider"></div>
-                <p>Perhaps the most annoying part of designing a website is ensuring that column widths are consistent throughout the website. Cirrus aims to solve this issue with a simple 12-column grid system powered by <b>Flexbox</b> to provide an easy to maintain and scalable framework. In addition to the column system, there are a bunch of different components to make prototyping webpages a breeze.</p>
+                <p>Perhaps the most annoying part of designing a website is ensuring that column widths are consistent throughout the website. Cirrus aims to solve this issue with a simple 12-column grid system powered by <b>Flexbox</b> to provide an easy to maintain and scalable framework. In addition to the column system, there are a bunch of different components such as splashes, frames, and additional page styles to make prototyping webpages a breeze.</p>
 
                 <div id="grids" class="row">
                     <div class="row">
@@ -730,18 +733,16 @@
                 <div class="divider"></div>
                 <p>With Cirrus, links do not have to be plain. Choose from all the different styles that Cirrus offers to make your website stand out.</p>
                 <div class="row">
-                    <div class="text-center">
-                        <div class="row">
-                                <a href="#">I am just an ordinary link</a>
-                        </div>
-                            <div class="row">
-                                <a href="#" class="u u-LR">Hover me</a>
-                            </div>
-                            <div class="row">
-                                <span class="usquare">
-                                    <a href="#" class="utb utb-OLR">I am a square</a>
-                                </span>
-                            </div>
+                    <div class="row">
+                            <a href="#">I am just an ordinary link</a>
+                    </div>
+                    <div class="row">
+                        <a href="#" class="u u-LR">Hover me</a>
+                    </div>
+                    <div class="row">
+                        <span class="usquare">
+                            <a href="#" class="utb utb-OLR">I am a square</a>
+                        </span>
                     </div>
                 </div> 
                  <div class="row">
@@ -759,7 +760,7 @@
 &lt;/div&gt;</code></pre>
                 </div>
                 <space></space>
-                <a href="#"><button class="pull-right" disabled>Coming Soon<i class="fa fa-chevron-right pad-left"></i></button></a>
+                <a href="docs/links"><button class="pull-right">See More<i class="fa fa-chevron-right pad-left"></i></button></a>
             </div>
         </section>
 
