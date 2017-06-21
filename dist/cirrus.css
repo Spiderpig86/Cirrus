@@ -2636,6 +2636,10 @@ a.display-block {
   display: block;
 }
 
+a.underline {
+  text-decoration: underline;
+}
+
 /* Animated links */
 .u, .utb {
   position: relative; /* So the psuedo-elements are positioned correctly */

@@ -35,6 +35,10 @@ a.display-block {
   display: block;
 }
 
+a.underline {
+  text-decoration: underline;
+}
+
 /* Animated links */
 .u, .utb {
   position: relative; /* So the psuedo-elements are positioned correctly */
@@ -113,7 +117,7 @@ a.display-block {
 }
 
 .utb-C:before, .utb-C:after {
-  left:50%;
+  left: 50%;
   -webkit-transform:translateX(-50%);
           transform:translateX(-50%);
 }
