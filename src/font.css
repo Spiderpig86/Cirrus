@@ -72,6 +72,7 @@ strong {
 
 .title + .subtitle { /* Make the subtitlte closer to the title */
     margin-top: -1.25rem;
+    font-size: 90%;
 }
 
 p, article, blockquote {

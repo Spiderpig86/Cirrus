@@ -19,7 +19,7 @@ dd {
 }
 
 li {
-  margin: 1em 0;
+  margin: 0.5rem 0;
 }
 
 li:last-child {
@@ -36,8 +36,9 @@ ul.no-bullets {
   font-size: 1rem;
 }
 
-.menu ul {
+ul.menu {
   list-style: none;
+  margin: .5rem 0;
 }
 
 /* Style headers to have even space distribution. */
@@ -50,18 +51,19 @@ ul.no-bullets {
 }
 
 /* Style menu items */
-.menu li a {
+.menu .menu-item a {
   border-radius: 2px;
   color: #555;
   display: block;
   padding: 0.5em 0.75em;
   -webkit-transition: all .2s;
   transition: all .2s;
-
+  font-size: 0.85rem;
+  border-radius: 3px;
 }
 
 .menu .menu-item a:hover {
-  color: #333;
+  color: #fff;
   background: rgba(240, 61, 77, 0.5);
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -71,6 +73,22 @@ ul.no-bullets {
 .menu .menu-item a.selected {
   color: #fff;
   background: #f03d4d;
+}
+
+.menu .menu-item .menu-addon {
+  padding: 0.35rem;
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  cursor: hand;
+  float: left;
+  margin-right: .1rem;
+}
+
+.menu .menu-item .menu-addon.right {
+  float: right;
+  margin-right: 0;
+  margin-left: .1rem
 }
 
 /* Style sub menus inside a menu */
@@ -91,10 +109,11 @@ ul.no-bullets {
 .menu .divider:after {
   content: attr(data-label); /* Text that will be displayed */
   background: #fff;
-  color: #eee;
+  color: #b7b7b7;
   display: inline-block;
   padding: 0 .7rem;
   margin: .5rem;
+  font-size: .7rem;
   -webkit-transform: translateY(-1.1rem);
     -ms-transform: translateY(-1.1rem);
     transform: translateY(-1.1rem);

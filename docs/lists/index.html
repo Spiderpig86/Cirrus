@@ -127,13 +127,198 @@
                     </ul>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">
-                        </code></pre>
+                    <pre><code class="html" data-lang="HTML">&lt;ul&gt;
+    &lt;li&gt;Apple&lt;/li&gt;
+    &lt;li&gt;Google&lt;/li&gt;
+    &lt;li&gt;Facebook&lt;/li&gt;
+    &lt;li&gt;Microsoft&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
                 </div>
             </div>
 
+            <p class="title">Numbered</p>
+            <p class="subtitle">An ordered list with numbers for each item.</p>
+            <div class="row">
+                <div class="col-6">
+                    <ol>
+                        <li>Apple</li>
+                        <li>Google</li>
+                        <li>Facebook</li>
+                        <li>Microsoft</li>
+                    </ol>
+                </div>
+                <div class="col-6">
+                    <pre><code class="html" data-lang="HTML">&lt;ol&gt;
+    &lt;li&gt;Apple&lt;/li&gt;
+    &lt;li&gt;Google&lt;/li&gt;
+    &lt;li&gt;Facebook&lt;/li&gt;
+    &lt;li&gt;Microsoft&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                </div>
             </div>
-        </section>
+
+            <p class="title">Plain</p>
+            <p class="subtitle">An list with no item decorations.</p>
+            <div class="row">
+                <div class="col-6">
+                    <ul class="no-bullets">
+                        <li>Apple</li>
+                        <li>Google</li>
+                        <li>Facebook</li>
+                        <li>Microsoft</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <pre><code class="html" data-lang="HTML">&lt;ul class=&quot;no-bullets&quot;&gt;
+    &lt;li&gt;Apple&lt;/li&gt;
+    &lt;li&gt;Google&lt;/li&gt;
+    &lt;li&gt;Facebook&lt;/li&gt;
+    &lt;li&gt;Microsoft&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </div>
+            </div>
+
+            <p class="title">Details</p>
+            <p class="subtitle">A list designed for detailed descriptions.</p>
+            <div class="row">
+                <div class="col-6">
+                    <dl>
+                        <dt>Apple</dt>
+                        <dd>Apple Inc. is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, ...</dd>
+                    </dl>
+                </div>
+                <div class="col-6">
+                    <pre><code class="html" data-lang="HTML">&lt;dl&gt;
+    &lt;dt&gt;Apple&lt;/dt&gt;
+    &lt;dd&gt;Apple Inc. is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, ...&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menulists">
+        <div class="content">
+            <h3>Menu Lists</h3>
+            <div class="divider"></div>
+            <p>The list styles in Cirrus can easily be extended to handle more complex menu structures for websites and web apps.</p>
+            <space></space>
+            <h6>Standard Menus</h6>
+            <p>Below are some examples of how menu lists can be used in websites as a list of links.</p>
+            <div class="row">
+                <div class="col-4">
+                    <div class="frame">
+                        <div class="frame-header">
+                            <div class="card-tile">
+                                <div class="tile-icon">
+                                    <figure class="avatar">
+                                        <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/005/069/06b/2a8cd67.jpg"/>
+                                    </figure>
+                                </div>
+                                <div class="tile-container">
+                                    <p class="tile-title no-margin">Richard Hendricks</b>.</p>
+                                    <p class="tile-subtitle no-margin">Founder and CEO of Pied Piper.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="frame-body">
+                            <ul class="menu">
+                                <li class="divider"></li>
+                                <li class="menu-item">
+                                    <div class="menu-addon right">
+                                        <span class="icon">
+                                            <i class="fa fa-ellipsis-h small" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                    <a href="#" class="selected">News Feed</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Messenger</a>
+                                </li>
+                                <p class="menu-title uppercase">Shortcuts</p>
+                                <li class="menu-item">
+                                    <a href="#">Some App</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-container">
+                            <div class="card-image" style="background-image: url(https://source.unsplash.com/random/640x480)">
+                            </div>
+
+                            <div class="title-container">
+                                <p class="title">Unsplash Viewer</p><span class="subtitle">Rate this photo.</span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <p>Did you like the photo?</p>
+                            <ul class="menu">
+                                <li class="menu-item">
+                                    <a href="#"><span class="icon"><i class="fa fa-check small"></i></span>
+                                    Yes</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#"><span class="icon"><i class="fa fa-times small"></i></span>
+                                    No</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="frame">
+                        <div class="frame-header">
+                            <p class="title no-margin">Bookmarks</p>
+                        </div>
+                        <div class="frame-body">
+                            <ul class="menu">
+                                <li class="divider" data-label="TECH"></li>
+                                <li class="menu-item">
+                                    <a href="#">Github</a>
+                                </li>
+                                <li class="menu-item">
+                                    <div class="menu-addon">
+                                        <span class="icon">
+                                            <i class="fa fa-folder small"></i>
+                                        </span>
+                                    </div>
+                                    <a href="#" class="selected">Tech News</a>
+                                    <ul class="menu">
+                                        <li class="menu-item">
+                                            <a href="#">Hacker News</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">Lobste.rs</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="menu">
+                                <li class="divider" data-label="PROCRASTINATION"></li>
+                                <li class="menu-item">
+                                    <a href="#">Facebook</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Twitter</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Instagram</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="frame-footer">
+                            <!-- Insert some controls here -->
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- row -->
+            <p>In these examples, almost all of the functionality of lists in Cirrus is demonstrated. On the left most card, a <code>frame</code> was used as the container along with a menu <code>divider</code>, list items with the <code>menu-item</code> class with a <code>menu-addon</code>, and the <code>menu-title</code>. The center example used a <code>card</code> with <code>menu-item</code> list items as the choices. The rightmost example uses dividers with a label and nested lists.</p>
+        </div>
+    </section>
 
 
     <!-- Pagination -->
@@ -150,7 +335,7 @@
                 <li class="pagination-item pagination-next">
                     <a href="../forms" class="display-block">
                         <p class="pagination-item-subtitle">Next</p>
-                        <h5 class="light no-margin">Lists</h5>
+                        <h5 class="light no-margin">Media</h5>
                     </a>
                 </li>
             </ul>
