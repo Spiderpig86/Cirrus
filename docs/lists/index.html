@@ -23,7 +23,7 @@
         <div class="header-left hide-overflow">
             <div class="header-item no-hover">
                 <a href="../../">
-                    <h5 class="title">Cirrus</h5>
+                    <h6 class="title">Cirrus</h6>
                 </a>
             </div>
         </div>
@@ -317,6 +317,118 @@
                 </div>
             </div> <!-- row -->
             <p>In these examples, almost all of the functionality of lists in Cirrus is demonstrated. On the left most card, a <code>frame</code> was used as the container along with a menu <code>divider</code>, list items with the <code>menu-item</code> class with a <code>menu-addon</code>, and the <code>menu-title</code>. The center example used a <code>card</code> with <code>menu-item</code> list items as the choices. The rightmost example uses dividers with a label and nested lists.</p>
+            <div class="row">
+                <div class="col-4">
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot;&gt;
+    &lt;div class=&quot;frame-header&quot;&gt;
+        &lt;div class=&quot;card-tile&quot;&gt;
+            &lt;div class=&quot;tile-icon&quot;&gt;
+                &lt;figure class=&quot;avatar&quot;&gt;
+                    &lt;img src=&quot;https://image.com&quot;/&gt;
+                &lt;/figure&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;tile-container&quot;&gt;
+                &lt;p class=&quot;tile-title no-margin&quot;&gt;Richard Hendricks&lt;/b&gt;.&lt;/p&gt;
+                &lt;p class=&quot;tile-subtitle no-margin&quot;&gt;Founder and CEO of Pied Piper.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;frame-body&quot;&gt;
+        &lt;ul class=&quot;menu&quot;&gt;
+            &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;div class=&quot;menu-addon right&quot;&gt;
+                    &lt;span class=&quot;icon&quot;&gt;
+                        &lt;i class=&quot;fa fa-ellipsis-h small&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;a href=&quot;#&quot; class=&quot;selected&quot;&gt;News Feed&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Messenger&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;p class=&quot;menu-title uppercase&quot;&gt;Shortcuts&lt;/p&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Some App&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="col-4">
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-container&quot;&gt;
+        &lt;div class=&quot;card-image&quot; style=&quot;background-image: url(https://source.unsplash.com/random/640x480)&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;title-container&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;Unsplash Viewer&lt;/p&gt;&lt;span class=&quot;subtitle&quot;&gt;Rate this photo.&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        &lt;p&gt;Did you like the photo?&lt;/p&gt;
+        &lt;ul class=&quot;menu&quot;&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-check small&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                Yes&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-times small&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                No&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div class="col-4">
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot;&gt;
+&lt;div class=&quot;frame-header&quot;&gt;
+    &lt;p class=&quot;title no-margin&quot;&gt;Bookmarks&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;frame-body&quot;&gt;
+    &lt;ul class=&quot;menu&quot;&gt;
+        &lt;li class=&quot;divider&quot; data-label=&quot;TECH&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;menu-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Github&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menu-item&quot;&gt;
+            &lt;div class=&quot;menu-addon&quot;&gt;
+                &lt;span class=&quot;icon&quot;&gt;
+                    &lt;i class=&quot;fa fa-folder small&quot;&gt;&lt;/i&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;a href=&quot;#&quot; class=&quot;selected&quot;&gt;Tech News&lt;/a&gt;
+            &lt;ul class=&quot;menu&quot;&gt;
+                &lt;li class=&quot;menu-item&quot;&gt;
+                    &lt;a href=&quot;#&quot;&gt;Hacker News&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;menu-item&quot;&gt;
+                    &lt;a href=&quot;#&quot;&gt;Lobste.rs&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;menu&quot;&gt;
+        &lt;li class=&quot;divider&quot; data-label=&quot;PROCRASTINATION&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;menu-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Facebook&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menu-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Twitter&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menu-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Instagram&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;frame-footer&quot;&gt;
+    &lt;!-- Insert some controls here --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
         </div>
     </section>
 

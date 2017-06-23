@@ -189,6 +189,55 @@ space.x-large {
   width: 100%;
 }
 
+/* Column offsets on the left side */
+.row .offset-1 {
+  margin-left: 8.33333333%;
+}
+
+.row .offset-2 {
+  margin-left: 16.66666667%;
+}
+
+.row .offset-3 {
+  margin-left: 25%;
+}
+
+.row .offset-4 {
+  margin-left: 33.33333333%;
+}
+
+.row .offset-5 {
+  margin-left: 41.66666667%;
+}
+
+.row .offset-6 {
+  margin-left: 50%;
+}
+
+.row .offset-7 {
+  margin-left: 58.33333333%;
+}
+
+.row .offset-8 {
+  margin-left: 66.66666667%;
+}
+
+.row .offset-9 {
+  margin-left: 75%;
+}
+
+.row .offset-10 {
+  margin-left: 83.33333333%;
+}
+
+.row .offset-11 {
+  margin-left: 91.66666667%;
+}
+
+.row .offset-12 {
+  margin-left: 100%;
+}
+
 /* Use in parent div of fluid col */
 .fluid-container {
   display: flex;

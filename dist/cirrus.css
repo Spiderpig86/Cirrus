@@ -1092,7 +1092,8 @@ section {
 
 /* When focusing any element */
 :focus {
-    box-shadow: 0 0 0.1rem 0.15rem rgba(51, 51, 51, 0.07);
+    /* box-shadow: 0 0 0.1rem 0.15rem rgba(51, 51, 51, 0.07); */
+    box-shadow: 0 0 0.1rem 0.15rem rgba(240, 61, 77, .07);
     outline: none;
 }
 /* FONT */
@@ -2879,8 +2880,7 @@ ul.menu {
 }
 
 .menu .menu-item a:hover {
-  color: #fff;
-  background: rgba(240, 61, 77, 0.5);
+  background: rgba(208, 208, 208, 0.5);
   -webkit-transition: all .2s;
   transition: all .2s;
   

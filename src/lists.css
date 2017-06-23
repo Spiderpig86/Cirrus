@@ -63,8 +63,7 @@ ul.menu {
 }
 
 .menu .menu-item a:hover {
-  color: #fff;
-  background: rgba(240, 61, 77, 0.5);
+  background: rgba(208, 208, 208, 0.5);
   -webkit-transition: all .2s;
   transition: all .2s;
   
