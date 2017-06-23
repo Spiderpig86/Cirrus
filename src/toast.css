@@ -11,6 +11,10 @@
     opacity: .5;
 }
 
+.toast.translucnet:hover {
+    opacity: 1;
+}
+
 /* TOAST TYPES */
 .toast.primary {
     background: rgba(240, 61, 77, 0.9);

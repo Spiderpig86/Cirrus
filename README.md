@@ -54,7 +54,7 @@ yarn add cirrus-ui
 ```
 ### Link
 ```html
-https://unpkg.com/cirrus-ui@0.5.1/dist/cirrus.min.css
+https://unpkg.com/cirrus-ui@0.5.2/dist/cirrus.min.css
 ```
 
 ## Supported Browsers
