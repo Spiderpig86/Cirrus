@@ -1,0 +1,29 @@
+/* TABS AND TAB CONTAINER */
+.tab-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    overflow: hidden;
+    overflow-x: auto; /* Allow scrollbar to be visible if the width of the tabs exeeds container */
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    white-space: nowarp;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+}
+
+/* Tabs are embedded inside an unordered list */
+.tabs ul {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: flex-start; /* Move tab items to left side  */
+    display: -webkit-box; /* Flow the elements */
+    border-bottom: 1px solid #eee; /* Bottom border of tabs */
+}
