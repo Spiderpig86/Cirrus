@@ -59,6 +59,7 @@
   display: block;
 position: relative;
   height: 40%;
+  min-height: 332px; /* So it appears in html5 standards mode */
 }
 
 .card .title-container .title, .card .title-container .subtitle {

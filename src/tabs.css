@@ -20,10 +20,28 @@
 
 /* Tabs are embedded inside an unordered list */
 .tabs ul {
+    display: -ms-flexbox;
     display: flex;
-    flex-grow: 1;
-    flex-shrink: 0;
-    justify-content: flex-start; /* Move tab items to left side  */
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; /* Move tab items to left side  */
     display: -webkit-box; /* Flow the elements */
     border-bottom: 1px solid #eee; /* Bottom border of tabs */
+}
+
+.tabs li {
+    display: block; /* Keep the tabs from extending too far */
+}
+
+.tabs li a {
+
+}
+
+.tabs li a.selected {
+    
 }

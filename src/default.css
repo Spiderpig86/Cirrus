@@ -13,6 +13,13 @@
       -webkit-tap-highlight-color: transparent;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 100%;
+}
+
 /* Nunito Sans for the font */
 body {
   letter-spacing: 0.01rem;
