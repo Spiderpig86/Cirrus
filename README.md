@@ -48,7 +48,7 @@ Even with a multitude of CSS frameworks, some are either too basic to develop mo
 ```
 npm install cirrus-ui
 ```
-## Install with Yarn
+### Install with Yarn
 ```
 yarn add cirrus-ui
 ```

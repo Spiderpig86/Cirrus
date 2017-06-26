@@ -22,7 +22,9 @@ gulp.task('compile', function() {
         './src/links.css',
         './src/lists.css',
         './src/media.css',
+        './src/modal.css',
         './src/table.css',
+        './src/tabs.css',
         './src/toast.css',
         './src/util.css'
     ])

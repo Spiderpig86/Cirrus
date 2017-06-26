@@ -3134,6 +3134,86 @@ video.video-fullscreen {
     padding: .5rem;
     width: 100%;
 }
+/* The base of the modal dialog, which is an overlay of the webpage */
+.modal {
+    position: fixed; /* Scrolls with the user */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0; /* Initially hidden */
+    padding: 1rem;
+    display: none; /* Doesn't block the elements underneath */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; /* Vertical centering */
+}
+
+/* When the modal dialog is visible */
+.modal:target, .modal.shown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+    z-index: 999;
+}
+
+/* The div in the modal dialpog used to create the translucent background */
+.modal:target .modal-overlay,
+.modal.shown .modal-overlay {
+    position: absolute; /* Absolute inside of the modal container */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(54, 59, 68, 0.5);
+}
+
+/* The modal dialog body with the text itself */
+.modal-content {
+    background: #fff;
+    padding: 0;
+    display: block;
+    border-radius: 3px;
+    box-shadow: 0 .4rem 1rem rgba(54, 59, 68, .3);
+}
+
+.modal:target .modal-container,
+.modal.shown .modal-container {
+  -webkit-animation: slide-down .2s ease 1;
+  animation: slide-down .2s ease 1;
+  max-width: 64rem;
+  z-index: 1;
+}
+
+/* Restrict width  */
+.modal-content.small {
+    max-width: 32rem;
+}
+
+.modal-content .modal-header {
+    padding: 1rem;
+}
+
+.modal-content .modal-header .modal-title {
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.modal-content .modal-body {
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 50vh; /* Max height is 50% of viewport height which prevents dialog from extetnding past screen */
+    position: relative;
+}
+
+.modal-content .modal-footer {
+    padding: 1rem;
+}
 /* TABLE */
 
 .table {
@@ -3217,6 +3297,121 @@ video.video-fullscreen {
   display: table;
     width: 100%; /* Forces row to span container */
 }
+/* TABS AND TAB CONTAINER */
+.tab-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    overflow: hidden;
+    overflow-x: auto; /* Allow scrollbar to be visible if the width of the tabs exeeds container */
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    white-space: nowarp;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+}
+
+/* Tabs are embedded inside an unordered list */
+.tab-container ul {
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; /* Move tab items to left side  */
+    display: -webkit-box; /* Flow the elements */
+    /*border-bottom: 1px solid #eee; /* Bottom border of tabs */
+    -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+    list-style: none;
+}
+
+.tab-container li {
+    display: block; /* Keep the tabs from extending too far */
+}
+
+.tab-container li a {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0.5rem 1rem;
+    transition: all .3s;
+    color: #222;
+}
+
+.tab-container li.selected a {
+    border-bottom-color: #f03d4d;
+    border-width: 2px;
+    transition: all .3s;
+}
+
+/* Shift tabs to the center */
+.tab-container.tabs-center ul {
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+}
+
+/* Shift tabs to the right */
+.tab-container.tabs-right ul {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+/* Classic tab styles */
+.tab-container.tabs-classic li {
+    border: 0;
+    border-radius: 3px 3px 0 0; /* Only round the top left and right corners */
+    transition: all .3s;
+}
+
+.tab-container.tabs-classic li:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.tab-container.tabs-classic li.selected a {
+    color: #f03d4d;
+    border-color: #eee;
+    border-bottom-color: transparent;
+}
+
+/* Tabs that fill the width */
+.tab-container.tabs-fill {
+    flex-grow: 1;
+    flex-shrink: 0; /* Disable shrinking to original width */
+}
+
+/* Different tab sizes */
+.tab-container.tabs-xsmall {
+    font-size: 0.5rem;
+}
+
+.tab-container.tabs-small {
+    font-size: 0.75rem;
+}
+
+.tab-container.tabs-large {
+    font-size: 1.25rem;
+}
+
+.tab-container.tabs-xlarge {
+    font-size: 1.5rem;
+}
+
+/* IN PROGERSS */
 .toast {
     display: block;
     width: 100%;
