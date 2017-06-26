@@ -209,7 +209,7 @@
                 <div class="col-4">
                     <div class="frame">
                         <div class="frame-header">
-                            <div class="card-tile">
+                            <div class="card-tile level">
                                 <div class="tile-icon">
                                     <figure class="avatar">
                                         <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/005/069/06b/2a8cd67.jpg"/>
@@ -225,13 +225,13 @@
                         <div class="frame-body">
                             <ul class="menu">
                                 <li class="divider"></li>
-                                <li class="menu-item">
+                                <li class="menu-item selected">
                                     <div class="menu-addon right">
                                         <span class="icon">
                                             <i class="fa fa-ellipsis-h small" aria-hidden="true"></i>
                                         </span>
                                     </div>
-                                    <a href="#" class="selected">News Feed</a>
+                                    <a href="#">News Feed</a>
                                 </li>
                                 <li class="menu-item">
                                     <a href="#">Messenger</a>
@@ -280,13 +280,13 @@
                                 <li class="menu-item">
                                     <a href="#">Github</a>
                                 </li>
-                                <li class="menu-item">
+                                <li class="menu-item selected">
                                     <div class="menu-addon">
                                         <span class="icon">
                                             <i class="fa fa-folder small"></i>
                                         </span>
                                     </div>
-                                    <a href="#" class="selected">Tech News</a>
+                                    <a href="#">Tech News</a>
                                     <ul class="menu">
                                         <li class="menu-item">
                                             <a href="#">Hacker News</a>
@@ -316,15 +316,16 @@
                     </div>
                 </div>
             </div> <!-- row -->
-            <p>In these examples, almost all of the functionality of lists in Cirrus is demonstrated. On the left most card, a <code>frame</code> was used as the container along with a menu <code>divider</code>, list items with the <code>menu-item</code> class with a <code>menu-addon</code>, and the <code>menu-title</code>. The center example used a <code>card</code> with <code>menu-item</code> list items as the choices. The rightmost example uses dividers with a label and nested lists.</p>
+            <p>In these examples, almost all of the functionality of lists in Cirrus is demonstrated. On the left most card, a <code>frame</code> was used as the container along with a menu <code>divider</code>, list items with the <code>menu-item</code> class with a <code>menu-addon</code>, and the <code>menu-title</code>. The center example used a <code>card</code> with <code>menu-item</code> list items as the choices. The rightmost example uses dividers with a label and nested lists. The menu items with the accent color have the <code>selected</code> class attached to the list item.</p>
             <div class="row">
                 <div class="col-4">
-                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot;&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col-4&quot;&gt;
+&lt;div class=&quot;frame&quot;&gt;
     &lt;div class=&quot;frame-header&quot;&gt;
-        &lt;div class=&quot;card-tile&quot;&gt;
+        &lt;div class=&quot;card-tile level&quot;&gt;
             &lt;div class=&quot;tile-icon&quot;&gt;
                 &lt;figure class=&quot;avatar&quot;&gt;
-                    &lt;img src=&quot;https://image.com&quot;/&gt;
+                    &lt;img src=&quot;https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/005/069/06b/2a8cd67.jpg&quot;/&gt;
                 &lt;/figure&gt;
             &lt;/div&gt;
             &lt;div class=&quot;tile-container&quot;&gt;
@@ -337,13 +338,13 @@
     &lt;div class=&quot;frame-body&quot;&gt;
         &lt;ul class=&quot;menu&quot;&gt;
             &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
-            &lt;li class=&quot;menu-item&quot;&gt;
+            &lt;li class=&quot;menu-item selected&quot;&gt;
                 &lt;div class=&quot;menu-addon right&quot;&gt;
                     &lt;span class=&quot;icon&quot;&gt;
                         &lt;i class=&quot;fa fa-ellipsis-h small&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
                     &lt;/span&gt;
                 &lt;/div&gt;
-                &lt;a href=&quot;#&quot; class=&quot;selected&quot;&gt;News Feed&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;News Feed&lt;/a&gt;
             &lt;/li&gt;
             &lt;li class=&quot;menu-item&quot;&gt;
                 &lt;a href=&quot;#&quot;&gt;Messenger&lt;/a&gt;
@@ -383,55 +384,138 @@
                 </div>
                 <div class="col-4">
                     <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot;&gt;
-&lt;div class=&quot;frame-header&quot;&gt;
-    &lt;p class=&quot;title no-margin&quot;&gt;Bookmarks&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;frame-body&quot;&gt;
-    &lt;ul class=&quot;menu&quot;&gt;
-        &lt;li class=&quot;divider&quot; data-label=&quot;TECH&quot;&gt;&lt;/li&gt;
-        &lt;li class=&quot;menu-item&quot;&gt;
-            &lt;a href=&quot;#&quot;&gt;Github&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;menu-item&quot;&gt;
-            &lt;div class=&quot;menu-addon&quot;&gt;
-                &lt;span class=&quot;icon&quot;&gt;
-                    &lt;i class=&quot;fa fa-folder small&quot;&gt;&lt;/i&gt;
-                &lt;/span&gt;
-            &lt;/div&gt;
-            &lt;a href=&quot;#&quot; class=&quot;selected&quot;&gt;Tech News&lt;/a&gt;
-            &lt;ul class=&quot;menu&quot;&gt;
-                &lt;li class=&quot;menu-item&quot;&gt;
-                    &lt;a href=&quot;#&quot;&gt;Hacker News&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li class=&quot;menu-item&quot;&gt;
-                    &lt;a href=&quot;#&quot;&gt;Lobste.rs&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;ul class=&quot;menu&quot;&gt;
-        &lt;li class=&quot;divider&quot; data-label=&quot;PROCRASTINATION&quot;&gt;&lt;/li&gt;
-        &lt;li class=&quot;menu-item&quot;&gt;
-            &lt;a href=&quot;#&quot;&gt;Facebook&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;menu-item&quot;&gt;
-            &lt;a href=&quot;#&quot;&gt;Twitter&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;menu-item&quot;&gt;
-            &lt;a href=&quot;#&quot;&gt;Instagram&lt;/a&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&quot;frame-footer&quot;&gt;
-    &lt;!-- Insert some controls here --&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+    &lt;div class=&quot;frame-header&quot;&gt;
+        &lt;p class=&quot;title no-margin&quot;&gt;Bookmarks&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;frame-body&quot;&gt;
+        &lt;ul class=&quot;menu&quot;&gt;
+            &lt;li class=&quot;divider&quot; data-label=&quot;TECH&quot;&gt;&lt;/li&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Github&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu-item selected&quot;&gt;
+                &lt;div class=&quot;menu-addon&quot;&gt;
+                    &lt;span class=&quot;icon&quot;&gt;
+                        &lt;i class=&quot;fa fa-folder small&quot;&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;a href=&quot;#&quot;&gt;Tech News&lt;/a&gt;
+                &lt;ul class=&quot;menu&quot;&gt;
+                    &lt;li class=&quot;menu-item&quot;&gt;
+                        &lt;a href=&quot;#&quot;&gt;Hacker News&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=&quot;menu-item&quot;&gt;
+                        &lt;a href=&quot;#&quot;&gt;Lobste.rs&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class=&quot;menu&quot;&gt;
+            &lt;li class=&quot;divider&quot; data-label=&quot;PROCRASTINATION&quot;&gt;&lt;/li&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Facebook&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Twitter&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Instagram&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;frame-footer&quot;&gt;
+        &lt;!-- Insert some controls here --&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 </div>
             </div>
         </div>
     </section>
 
+    <section id="sideMenus" class="padtop">
+        <div class="content">
+            <h6>Navigation Menus</h6>
+            <p>Creating navigation menus using lists is also a piece of cake with support for list nesting in a clean design.</p>
+            <div class="row">
+                <div class="col-4">
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <div class="menu-addon">
+                                <span class="icon"><i class="fa fa-clock-o"></i></span>
+                            </div>
+                            <a href="#">Real-Time</a>
+                        </li>
+                        <li class="menu-item selected">
+                            <div class="menu-addon">
+                                <span class="icon"><i class="fa fa-user"></i></span>
+                            </div>
+                            <a href="#">Audience</a>
+                            <ul class="menu">
+                                <li class="menu-item">
+                                    <a href="#">Overview</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Active Users</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Lifetime Value <sup>BETA</sup></a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Cohort Analytics <sup>BETA</sup></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <div class="menu-addon">
+                                <span class="icon">
+                                    <i class="fa fa-share-alt"></i>
+                                </span>
+                            </div>
+                            <a href="#">Acquisition</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-8">
+                    <pre><code class="html" data-lang="HTML">&lt;ul class=&quot;menu&quot;&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;
+        &lt;div class=&quot;menu-addon&quot;&gt;
+            &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;a href=&quot;#&quot;&gt;Real-Time&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;menu-item selected&quot;&gt;
+        &lt;div class=&quot;menu-addon&quot;&gt;
+            &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-user&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;a href=&quot;#&quot;&gt;Audience&lt;/a&gt;
+        &lt;ul class=&quot;menu&quot;&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Overview&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Active Users&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Lifetime Value &lt;sup&gt;BETA&lt;/sup&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Cohort Analytics &lt;sup&gt;BETA&lt;/sup&gt;&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;menu-item&quot;&gt;
+        &lt;div class=&quot;menu-addon&quot;&gt;
+            &lt;span class=&quot;icon&quot;&gt;
+                &lt;i class=&quot;fa fa-share-alt&quot;&gt;&lt;/i&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;a href=&quot;#&quot;&gt;Acquisition&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Pagination -->
     <section class="padtop">
@@ -439,13 +523,13 @@
             <div class="divider"></div>
             <ul class="pagination no-bullets">
                 <li class="pagination-item pagination-prev">
-                    <a href="../font" class="display-block">
+                    <a href="../links" class="display-block">
                         <p class="pagination-item-subtitle">Previous</p>
                         <h5 class="light no-margin">Links</h5>
                     </a>
                 </li>
                 <li class="pagination-item pagination-next">
-                    <a href="../forms" class="display-block">
+                    <a href="../media" class="display-block">
                         <p class="pagination-item-subtitle">Next</p>
                         <h5 class="light no-margin">Media</h5>
                     </a>

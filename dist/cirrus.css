@@ -2936,14 +2936,14 @@ ul.menu {
   border-radius: 3px;
 }
 
-.menu .menu-item a:hover {
+.menu .menu-item:hover > a {
   background: rgba(208, 208, 208, 0.5);
   -webkit-transition: all .2s;
   transition: all .2s;
   
 }
 
-.menu .menu-item a.selected {
+.menu .menu-item.selected > a {
   color: #fff;
   background: #f03d4d;
 }
@@ -2952,7 +2952,7 @@ ul.menu {
   padding: 0.35rem;
   z-index: 1;
   position: relative;
-  color: #fff;
+  color: #374054;
   cursor: hand;
   float: left;
   margin-right: .1rem;
@@ -2962,6 +2962,10 @@ ul.menu {
   float: right;
   margin-right: 0;
   margin-left: .1rem
+}
+
+.menu .menu-item.selected .menu-addon {
+  color: #fff;
 }
 
 /* Style sub menus inside a menu */
