@@ -19,7 +19,7 @@
 }
 
 /* Tabs are embedded inside an unordered list */
-.tabs ul {
+.tab-container ul {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
@@ -31,17 +31,79 @@
         -ms-flex-pack: start;
             justify-content: flex-start; /* Move tab items to left side  */
     display: -webkit-box; /* Flow the elements */
-    border-bottom: 1px solid #eee; /* Bottom border of tabs */
+    /*border-bottom: 1px solid #eee; /* Bottom border of tabs */
+    -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
 }
 
-.tabs li {
+.tab-container li {
     display: block; /* Keep the tabs from extending too far */
 }
 
-.tabs li a {
-
+.tab-container li a {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0.5rem 1rem;
+    transition: all .3s;
+    color: #222;
 }
 
-.tabs li a.selected {
-    
+.tab-container li.selected a {
+    border-bottom: #f03d4d;
+    border-width: 2px;
+    transition: all .3s;
+}
+
+/* Shift tabs to the center */
+.tab-container ul.tabs-center {
+    flex: none;
+    justify-content: center;
+}
+
+/* Shift tabs to the right */
+.tab-container ul.tabs-right {
+    justify-content: flex-end;
+}
+
+/* Classic tab styles */
+.tab-container.tabs-classic li {
+    border: 0;
+    border-radius: 3px 3px 0 0; /* Only round the top left and right corners */
+    transition: all .3s;
+}
+
+.tab-container.tabs-classic li:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.tab-container.tabs-classic li.selected a {
+    color: #f03d4d;
+    border-color: #eee;
+    border-bottom-color: transparent;
+}
+
+/* Tabs that fill the width */
+.tab-container.tabs-fill {
+    flex-grow: 1;
+    flex-shrink: 0; /* Disable shrinking to original width */
+}
+
+/* Different tab sizes */
+.tab-container.tabs-xsmall {
+    font-size: 0.5rem;
+}
+
+.tab-container.tabs-small {
+    font-size: 0.75rem;
+}
+
+.tab-container.tabs-large {
+    font-size: 1.25rem;
+}
+
+.tab-container.tabs-xlarge {
+    font-size: 1.5rem;
 }
