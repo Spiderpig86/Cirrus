@@ -141,6 +141,7 @@ cite {
   text-align: center;
   vertical-align: top;
   width: 1.5rem;
+  vertical-align: baseline; /* Experiment */
 }
 
 .icon .fa {
