@@ -521,7 +521,7 @@
     <section id="dropdownMenu" class="padtop">
         <div class="content">
             <h6>Dropdown Menus</h6>
-            <p>Drop down menus are easy to configure in Cirrus using lists.</p>
+            <p>Drop down menus are easy to configure in Cirrus using lists. Simply wrap the button and the menu in a <code>menu-dropdown</code> container and Cirrus will automatically style all the components for the dropdown menu. To display the menu on the right side, just add the <code>menu-right</code> class to the <code>menu-dropdown</code> container.</p>
             <div class="row level">
                 <div class="menu-dropdown">
                     <div class="btn-group">
@@ -539,12 +539,88 @@
                         </ul>
                     </div>
                 </div>
-                <button class="btn-accent btn-dropdown">
-                    Dropdown </span class="icon"><i class="fa fa-caret-down"></i><span>
-                </button>
-                <button class="btn-transparent btn-dropdown">
-                    Dropdown </span class="icon"><i class="fa fa-caret-down"></i><span>
-                </button>
+                <div class="menu-dropdown dropdown-right">
+                    <button class="btn-accent btn-dropdown">
+                        Dropdown </span class="icon"><i class="fa fa-caret-down"></i><span>
+                    </button>
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="#">Google Chrome</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Firefox</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Polarity</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-dropdown">
+                    <button class="btn-transparent btn-dropdown">
+                        Dropdown </span class="icon"><i class="fa fa-caret-down"></i><span>
+                    </button>
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="#">Google Chrome</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Firefox</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Polarity</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;menu-dropdown&quot;&gt;
+    &lt;div class=&quot;btn-group&quot;&gt;
+        &lt;button class=&quot;btn-accent&quot;&gt;Dropdown&lt;/button&gt;&lt;button class=&quot;btn-accent btn-small btn-dropdown&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-caret-down small&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;ul class=&quot;menu&quot;&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Google Chrome&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Firefox&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;menu-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Polarity&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;menu-dropdown dropdown-right&quot;&gt;
+    &lt;button class=&quot;btn-accent btn-dropdown&quot;&gt;
+        Dropdown &lt;/span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;menu&quot;&gt;
+        &lt;li class=&quot;menu-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Google Chrome&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menu-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Firefox&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menu-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Polarity&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;menu-dropdown&quot;&gt;
+    &lt;button class=&quot;btn-transparent btn-dropdown&quot;&gt;
+        Dropdown &lt;/span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-caret-down&quot;&gt;&lt;/i&gt;&lt;span&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;menu&quot;&gt;
+        &lt;li class=&quot;menu-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Google Chrome&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menu-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Firefox&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;menu-item&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Polarity&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
     </section>
