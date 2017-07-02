@@ -3331,29 +3331,50 @@ video.video-fullscreen {
             justify-content: flex-start; /* Move tab items to left side  */
     display: -webkit-box; /* Flow the elements */
     /*border-bottom: 1px solid #eee; /* Bottom border of tabs */
-    -webkit-box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
     list-style: none;
 }
 
 .tab-container li {
     display: block; /* Keep the tabs from extending too far */
+    cursor: hand;
 }
 
 .tab-container li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-bottom: 1px solid #eee;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     vertical-align: top;
     padding: 0.5rem 1rem;
+    -webkit-transition: all .3s;
     transition: all .3s;
-    color: #222;
+    color: #374054;
+}
+
+.tab-container li a {
+    border-bottom-color: rgba(197, 197, 197, 0.63);
+    border-width: 2px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.tab-container li:hover a {
+    border-bottom-color: rgba(240, 61, 77, 0.6);
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
 
 .tab-container li.selected a {
     border-bottom-color: #f03d4d;
     border-width: 2px;
+    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -3375,6 +3396,7 @@ video.video-fullscreen {
 .tab-container.tabs-classic li {
     border: 0;
     border-radius: 3px 3px 0 0; /* Only round the top left and right corners */
+    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -3390,8 +3412,11 @@ video.video-fullscreen {
 
 /* Tabs that fill the width */
 .tab-container.tabs-fill {
-    flex-grow: 1;
-    flex-shrink: 0; /* Disable shrinking to original width */
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; /* Disable shrinking to original width */
 }
 
 /* Different tab sizes */

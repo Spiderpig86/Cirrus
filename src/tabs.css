@@ -56,12 +56,18 @@
     padding: 0.5rem 1rem;
     -webkit-transition: all .3s;
     transition: all .3s;
-    color: #222;
+    color: #374054;
 }
 
 .tab-container li a {
-    border-bottom-color: rgba(240, 61, 77, 0.6);
+    border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.tab-container li:hover a {
+    border-bottom-color: rgba(240, 61, 77, 0.6);
     -webkit-transition: all .3s;
     transition: all .3s;
 }
