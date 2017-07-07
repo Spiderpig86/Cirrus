@@ -38,7 +38,7 @@
 
 .tab-container li {
     display: block; /* Keep the tabs from extending too far */
-    cursor: hand;
+    cursor: pointer;
 }
 
 .tab-container li a {
