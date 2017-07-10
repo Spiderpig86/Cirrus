@@ -43,9 +43,11 @@
 .frame .frame-title {
     color: #374054;
     font-size: 1rem;
+    margin: 0.5rem auto;
 }
 
 .frame .frame-subtitle {
     color: rgba(55, 64, 84, 0.6);
     font-size: .85rem;
+    margin: 0.25rem auto;
 }

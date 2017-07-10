@@ -23,6 +23,7 @@ gulp.task('compile', function() {
         './src/lists.css',
         './src/media.css',
         './src/modal.css',
+        './src/placeholder.css',
         './src/table.css',
         './src/tabs.css',
         './src/toast.css',

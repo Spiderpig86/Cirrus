@@ -16,6 +16,7 @@
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+    flex-wrap: wrap;
 }
 
 /* Tabs are embedded inside an unordered list */
@@ -39,6 +40,11 @@
 .tab-container li {
     display: block; /* Keep the tabs from extending too far */
     cursor: pointer;
+    margin: 0;
+    -webkit-flex: 1 0 0;
+    -ms-flex: 1 0 0;
+    flex: 1 0 0;
+    text-align: center;
 }
 
 .tab-container li a {
@@ -57,11 +63,13 @@
     -webkit-transition: all .3s;
     transition: all .3s;
     color: #374054;
+    display: block;
 }
 
 .tab-container li a {
     border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
+    font-size: .85rem;
     -webkit-transition: all .3s;
     transition: all .3s;
 }
@@ -112,12 +120,17 @@
 }
 
 /* Tabs that fill the width */
-.tab-container.tabs-fill {
+.tab-container.tabs-fill li {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
     -ms-flex-negative: 0;
         flex-shrink: 0; /* Disable shrinking to original width */
+}
+
+/* Override the -webkit-box display that sizes tab items based on text */
+.tab-container.tabs-fill ul {
+    display: flex; /* Equal size tabs */
 }
 
 /* Different tab sizes */
