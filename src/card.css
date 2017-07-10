@@ -255,11 +255,13 @@ overflow: hidden;
 .card-tile .tile-title {
   line-height: 2rem;
   font-weight: bolder;
+  margin: 0.1rem auto;
 }
 
 .card-tile .tile-subtitle {
   line-height: 2rem;
   opacity: .7;
+  margin: 0.1rem auto;
 }
 
 /* Force elements to align at the center vertical height */

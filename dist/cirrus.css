@@ -940,11 +940,13 @@ overflow: hidden;
 .card-tile .tile-title {
   line-height: 2rem;
   font-weight: bolder;
+  margin: 0.1rem auto;
 }
 
 .card-tile .tile-subtitle {
   line-height: 2rem;
   opacity: .7;
+  margin: 0.1rem auto;
 }
 
 /* Force elements to align at the center vertical height */
@@ -3147,8 +3149,8 @@ video.video-fullscreen {
 /* Draw text on image just like in Gmail */
 .avatar:before {
     content: attr(data-text);
-    z-index: 1;
     color: #fff;
+    /* Removed z-index: 1, makes text blurry */
     left: 50%;
     top: 50%;
     position: absolute;

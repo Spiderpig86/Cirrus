@@ -159,6 +159,10 @@ footer .divider {
     height: 1px;
 }
 
+.card-tile {
+    margin: 1.5rem 0;
+}
+
 /* MOBILE */
 @media screen and (max-width: 768px) {
     .padtop {
