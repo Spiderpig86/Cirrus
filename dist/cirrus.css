@@ -2905,6 +2905,22 @@ li:last-child {
   margin-bottom: 1em;
 }
 
+/* Nesting Lists */
+.content ul {
+  list-style: disc outside;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+.content ul ul {
+  list-style-type: circle;
+  margin-top: 0.5em;
+}
+
+.content ul ul ul {
+  list-style-type: square;
+}
+
 /* MISC */
 ul.no-bullets {
   list-style: none;
@@ -3380,6 +3396,11 @@ video.video-fullscreen {
 .table.fixed-head tr {
   display: table;
     width: 100%; /* Forces row to span container */
+}
+
+.table tr.selected { /* Style a selected row */
+    background: #f03d4d;
+    color: #fff;
 }
 /* TABS AND TAB CONTAINER */
 .tab-container {

@@ -81,3 +81,8 @@
   display: table;
     width: 100%; /* Forces row to span container */
 }
+
+.table tr.selected { /* Style a selected row */
+    background: #f03d4d;
+    color: #fff;
+}

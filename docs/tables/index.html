@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Cirrus - Footer</title>
+    <title>Cirrus - Tables</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="description" content="A responsive and lightweight CSS framework.">
@@ -63,8 +63,89 @@
 
     <space class="large"></space>
 
+    <section class="padtop">
+        <div class="content">
+            <h3>Tables</h3>
+            <div class="divider"></div>
+            <p>Styling tables can be a major pain. Luckily, Cirrus has that covered by providing sleek, modern table designs straight out of the box. The base styling is minimal and can be customized if needed.</p>
+            <h6>Table Outline</h6>
+            <div class="row">
+                <div class="col-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th><abbr title="Title1">T1</abbr></th>
+                                <th><abbr title="Title2">T2</abbr></th>
+                                <th><abbr title="Title3">T3</abbr></th>
+                                <th>Notes</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <th><abbr title="Title1">T1</abbr></th>
+                                <th><abbr title="Title2">T2</abbr></th>
+                                <th><abbr title="Title3">T3</abbr></th>
+                                <th>Notes</th>
+                            </tr>
+                            </tfoot>
 
-            <!-- Pagination -->
+                        <tr><th>1</th><td>Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td></tr>
+                        <tr><th>2</th><td>Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td></tr>
+                        <tr><th>3</th><td>Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td></tr>
+                    </table>
+                </div>
+                <div class="col-6">
+                    <p>The tree view of a standard table in Cirrus is:</p>
+                    <div class="nested-list">
+                        <ul>
+                            <li><code>table</code>
+                                <ul>
+                                    <li><code>thead</code></li>
+                                    <li><code>tfoot</code></li>
+                                    <li><code>tbody</code>
+                                        <ul>
+                                            <li><code>tr</code></li>
+                                            <ul>
+                                                <li><code>th</code></li>
+                                                <li><code>td</code></li>
+                                            </ul>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;table class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;abbr title=&quot;Title1&quot;&gt;T1&lt;/abbr&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;abbr title=&quot;Title2&quot;&gt;T2&lt;/abbr&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;abbr title=&quot;Title3&quot;&gt;T3&lt;/abbr&gt;&lt;/th&gt;
+            &lt;th&gt;Notes&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;abbr title=&quot;Title1&quot;&gt;T1&lt;/abbr&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;abbr title=&quot;Title2&quot;&gt;T2&lt;/abbr&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;abbr title=&quot;Title3&quot;&gt;T3&lt;/abbr&gt;&lt;/th&gt;
+            &lt;th&gt;Notes&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/tfoot&gt;
+
+    &lt;tr&gt;&lt;th&gt;1&lt;/th&gt;&lt;td&gt;Row:1 Cell:1&lt;/td&gt;&lt;td&gt;Row:1 Cell:2&lt;/td&gt;&lt;td&gt;Row:1 Cell:3&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;2&lt;/th&gt;&lt;td&gt;Row:2 Cell:1&lt;/td&gt;&lt;td&gt;Row:2 Cell:2&lt;/td&gt;&lt;td&gt;Row:2 Cell:3&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;3&lt;/th&gt;&lt;td&gt;Row:3 Cell:1&lt;/td&gt;&lt;td&gt;Row:3 Cell:2&lt;/td&gt;&lt;td&gt;Row:3 Cell:3&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pagination -->
     <section class="padtop">
         <div class="content">
             <div class="divider"></div>
