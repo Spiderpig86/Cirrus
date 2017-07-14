@@ -2906,18 +2906,18 @@ li:last-child {
 }
 
 /* Nesting Lists */
-.content ul {
+.nested-list ul {
   list-style: disc outside;
   margin-left: 2em;
   margin-top: 1em;
 }
 
-.content ul ul {
+.nested-list ul ul {
   list-style-type: circle;
   margin-top: 0.5em;
 }
 
-.content ul ul ul {
+.nested-list ul ul ul {
   list-style-type: square;
 }
 
