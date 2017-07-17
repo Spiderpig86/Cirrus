@@ -1974,7 +1974,7 @@ input[type].input-contains-icon.input-xlarge + .icon {
     color: #fff;
 }
 
-.dropdown-menu.dropdown-shown{
+.dropdown-menu.dropdown-shown {
     opacity: 1;
     -webkit-transition: all .2s;
     transition: all .2s;
@@ -2031,7 +2031,8 @@ input[type].input-contains-icon.input-xlarge + .icon {
         pointer-events: none; /* Make cursor not respond to menu links when not displayed */
     }
 
-    .header-item .dropdown-menu.dropdown-shown {
+    .header-item .dropdown-menu.dropdown-shown,
+    .header-item.toggle-hover:hover .dropdown-menu {
         opacity: 1;
         -webkit-transform: none; /* Used for transitional drop down effect */
         transform: none;

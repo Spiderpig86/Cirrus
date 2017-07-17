@@ -221,7 +221,8 @@
         pointer-events: none; /* Make cursor not respond to menu links when not displayed */
     }
 
-    .header-item .dropdown-menu.dropdown-shown {
+    .header-item .dropdown-menu.dropdown-shown,
+    .header-item.toggle-hover:hover .dropdown-menu {
         opacity: 1;
         -webkit-transform: none; /* Used for transitional drop down effect */
         transform: none;
