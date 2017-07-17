@@ -5,6 +5,7 @@
     width: 100%;
     border-collapse: collapse; /* Allows us to set 0 margin in table cells */
     border-spacing: 0;
+    text-align: center; /* Text center by default */
 }
 
 .table td, .table th {
@@ -12,7 +13,7 @@
     border-width: 0 0 1px;
     padding: 0.75rem;
     vertical-align: top;
-    text-align: center;
+    text-align: inherit;
     margin: 0;
 }
 

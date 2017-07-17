@@ -3338,6 +3338,7 @@ video.video-fullscreen {
     width: 100%;
     border-collapse: collapse; /* Allows us to set 0 margin in table cells */
     border-spacing: 0;
+    text-align: center; /* Text center by default */
 }
 
 .table td, .table th {
@@ -3345,7 +3346,7 @@ video.video-fullscreen {
     border-width: 0 0 1px;
     padding: 0.75rem;
     vertical-align: top;
-    text-align: center;
+    text-align: inherit;
     margin: 0;
 }
 
@@ -3702,6 +3703,7 @@ video.video-fullscreen {
 .vertical-center {
   display: flex;
   justify-content: center;
+  vertical-align: middle;
 }
 
 .horizontal-center {
@@ -3753,14 +3755,14 @@ video.video-fullscreen {
 
 .box {
   background-color: white;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   display: block;
-  padding: 20px;
+  padding: 1rem;
 }
 
 .box:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .fill-width {
