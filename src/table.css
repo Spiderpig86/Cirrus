@@ -86,3 +86,10 @@
     background: #f03d4d;
     color: #fff;
 }
+
+/* Borderless Table (for inner cells) */
+.table.borderless thead th,
+.table.borderless th,
+.table.borderless td {
+    border: none;
+}
