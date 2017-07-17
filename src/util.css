@@ -69,6 +69,7 @@
 .vertical-center {
   display: flex;
   justify-content: center;
+  vertical-align: middle;
 }
 
 .horizontal-center {

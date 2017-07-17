@@ -48,11 +48,12 @@ $('.header-item').not($('.has-sub')).not($('.header-btn')).on('click', function(
 
 // $('.dropdown-menu > li').on('click', function(e) {
 //     //$('.shown').removeClass('shown');
-//     $('#header-menu').removeClass('is-active');
+   
 //     $('.dropdown-menu').removeClass('dropdown-shown');
 // });
 
 // Hide menu after clicking menu item
 $('.dropdown-menu li').on('click', function(e) {
     $(this).removeClass('dropdown-shown');
+     $('#header-menu').removeClass('is-active');
 });
