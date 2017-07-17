@@ -19,4 +19,5 @@ $('#header-btn').on('click', function(e) {
 // Hide menu after clicking menu item
 $('.dropdown-menu li').on('click', function(e) {
     $(this).removeClass('dropdown-shown');
+     $('#header-menu').removeClass('is-active');
 });
