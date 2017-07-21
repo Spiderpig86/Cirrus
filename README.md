@@ -6,7 +6,7 @@
 # Cirrus
 >tl;dr: A CSS framework.
 
-![Version](https://img.shields.io/badge/version-v0.5.2-orange.svg "v.0.5.2")
+![Version](https://img.shields.io/badge/version-v0.5.2-orange.svg "v.0.5.2") ![License](https://img.shields.io/github/license/Spiderpig86/Cirrus.svg) 
 
 A fully responsive CSS and UI framework with custom design controls and simplistic structure. A components are customizable and work with your CSS.
 
@@ -23,6 +23,8 @@ Check it out: https://spiderpig86.github.io/Cirrus (WIP)
   * Style for code markup blocks.
 * [Default (Base)](https://github.com/Spiderpig86/Cirrus/blob/master/src/default.css "Default")
   * The core of this framework.
+* [Frames](https://github.com/Spiderpig86/Cirrus/blob/master/src/frames.css "Frames")
+  * A more flexible version of a Card with a basic structure system. This is shown in the Layout documentation.
 * [Font](https://github.com/Spiderpig86/Cirrus/blob/master/src/font.css "Font")
   * All text styles for this framework for headers, articles, blockquotes, and paragraphs.
 * [Forms](https://github.com/Spiderpig86/Cirrus/blob/master/src/forms.css "Forms")
@@ -35,8 +37,16 @@ Check it out: https://spiderpig86.github.io/Cirrus (WIP)
   * Link styles with different effects.
 * [Lists](https://github.com/Spiderpig86/Cirrus/blob/master/src/lists.css "Lists")
   * A simple stylesheet to simplify list UI.
+* [Media](https://github.com/Spiderpig86/Cirrus/blob/master/src/media.css "Media")
+  * Rules for styling images, videos, figures, avatars, and other media components.
+* [Modal](https://github.com/Spiderpig86/Cirrus/blob/master/src/modal.css "Modal")
+  * Styles for a pop up modal dialog.
+* [Placeholder](https://github.com/Spiderpig86/Cirrus/blob/master/src/placeholder.css "Placeholder")
+  * A padded generic container to display additional information.
 * [Tables](https://github.com/Spiderpig86/Cirrus/blob/master/src/table.css "Tables")
   * Clean designs for tables.
+* [Toast](https://github.com/Spiderpig86/Cirrus/blob/master/src/toast.css "Toast")
+  * A small overaly notification for websites.
 * [Util](https://github.com/Spiderpig86/Cirrus/blob/master/src/util.css "Utils")
   * Designed to solve many common headaches with CSS.
 
