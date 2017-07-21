@@ -89,7 +89,7 @@
                 <div class="content text-center">
                     <img id="logo" src="http://i.imgur.com/jpowijz.png" alt="logo"/>
                     <h1 class="white light title">Cirrus</h1>
-                    <h6 class="white light">A lightweight and responsive CSS framework.</h6>
+                    <h6 class="white light">The CSS framework for the modern web.</h6>
                     <p id="version" class="white card text-center">0.5.2</p>
                     <a href="#started" class="smoothScroll"><button class="btn-outline center animated">Getting Started</button>
                     </a>
@@ -110,7 +110,7 @@
                                 <span><h3 class="white">11</h3></span><span class="title">KB</span></div>
                                 <p class="uppercase font-bold no-margin">Gzipped</p>
                                 <p class="title no-margin">Lightweight</p>
-                                <p class="no-margin">A powerful framework at a fraction of the cost.</p>
+                                <p class="subtitle no-margin">A powerful framework at a fraction of the cost.</p>
                             </div>
                     </div>
                     <div class="col-fluid">
@@ -161,14 +161,14 @@
 
                 <div class="row">
                     <p class="title">Install with npm</p>
-                    <p class="subtitle">You can use npm to install Cirrus.</p>
-                    <pre><code>npm install cirrus-ui</code> </pre>
+                    <p class="no-margin">You can use npm to install Cirrus.</p>
+                    <pre><code class="shell">$ npm install cirrus-ui</code> </pre>
                 </div>
 
                 <div class="row">
-                    <p class="title">Install with Bower</p>
-                    <p class="subtitle">You can use Bower to install Cirrus.</p>
-                    <pre><code>Coming soon</code> </pre>
+                    <p class="title">Install with Yarn</p>
+                    <p class="no-margin">You can use Yarn to install Cirrus.</p>
+                    <pre><code class="shell">$ yarn add cirrus-ui</code> </pre>
                 </div>
 
                 <div class="row">
@@ -178,7 +178,7 @@
 
                 <div class="row">
                     <p class="title">Structure</p>
-                    <p class="subtitle">The file tree for the install looks like this:</p>
+                    <p class="no-margin">The file tree for the install looks like this:</p>
 
                     <pre><code>├───dist
 │   ├───cirrus.css
@@ -204,6 +204,7 @@
 │   ├───lists.css
 │   ├───media.css
 │   ├───modal.css
+│   ├───placeholder.css
 │   ├───table.css
 │   ├───toast.css
 │   └───util.css
@@ -213,7 +214,7 @@
 
                 <div class="row">
                     <p class="title">Setting Up</p>
-                    <p class="subtitle">Setting up Cirrus for any project is very simple and will only require a couple of lines on each file.</p>
+                    <p class="no-margin">Setting up Cirrus for any project is very simple and will only require a couple of lines on each file.</p>
 
                     <pre><code class="html" data-lang="HTML">&lt;!-- Google Fonts --&gt;
 &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&quot; rel=&quot;stylesheet&quot;&gt;
@@ -223,7 +224,22 @@
 &lt;link rel=&quot;stylesheet&quot; href=&quot;../css/cirrus.min.css&quot;&gt;
 
 &lt;!-- Import your other dependencies --&gt;</code></pre>
-                                </div>
+                </div>
+
+                <space></space>
+                <div class="row">
+                    <h6>Customize Your Build</h6>
+                    <p>Cirrus can be modified to include only components that you will need. Since it is processed with <a href="http://gulpjs.com/">Gulp</a> swapping different components in and out of your distribution build is very simple.</p>
+                    <p>Just follow the following steps:</p>
+                    <div class="nested-list">
+                        <ol>
+                            <li>Open the root directory in your terminal.</li>
+                            <li>Remember to run <code>npm install</code> to get all the necessary dependencies.</li>
+                            <li>Modify <code>gulpfile.js</code> to add or remove components and then run <code>gulp minify</code> to build the regular and minified versions.</li>
+                            <li>These build files should appear in the <code>/dist</code> directory.</li>
+                        </ol>
+                    </div>
+                </div>                     
         </section>
 
         <section id="animations" class="padtop">

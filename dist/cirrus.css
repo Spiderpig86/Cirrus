@@ -2923,15 +2923,24 @@ li:last-child {
 }
 
 /* Nesting Lists */
+.nested-list ol,
 .nested-list ul {
-  list-style: disc outside;
   margin-left: 2em;
   margin-top: 1em;
 }
 
+.nested-list ol ol,
+.nested-list ul ul {
+  margin-top: 0.5em;
+}
+
+.nested-list ul {
+  list-style: disc outside;
+  
+}
+
 .nested-list ul ul {
   list-style-type: circle;
-  margin-top: 0.5em;
 }
 
 .nested-list ul ul ul {
