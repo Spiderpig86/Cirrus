@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp minify"
   },
   "repository": "git+https://github.com/Spiderpig86/Cirrus.git",
   "keywords": [
@@ -21,7 +22,16 @@
   "bugs": {
     "url": "https://github.com/Spiderpig86/Cirrus/issues"
   },
-  "homepage": "https://github.com/Spiderpig86/Cirrus#readme",
+  "homepage": "https://github.com/Spiderpig86/Cirrus",
+  "autoupdate": {
+    "source": "git",
+    "target": "git://github.com/Spiderpig86/Cirrus.git",
+    "basePath": "dist",
+    "files": [
+      "cirrus.min.css",
+      "cirrus.css"
+    ]
+  },
   "devDependencies": {
     "global": "^4.3.1",
     "gulp": "^3.9.1",

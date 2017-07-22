@@ -6,7 +6,7 @@
 # Cirrus
 >tl;dr: A CSS framework.
 
-![Version](https://img.shields.io/badge/version-v0.5.2-orange.svg "v.0.5.2") ![License](https://img.shields.io/github/license/Spiderpig86/Cirrus.svg) ![Build Status](https://travis-ci.org/Spiderpig86/Cirrus.svg?branch=master)(https://travis-ci.org/Spiderpig86/Cirrus)
+![Version](https://img.shields.io/badge/version-v0.5.2-orange.svg "v.0.5.2") ![License](https://img.shields.io/github/license/Spiderpig86/Cirrus.svg) ![Build Status](https://travis-ci.org/Spiderpig86/Cirrus.svg?branch=master)
 
 A fully responsive CSS and UI framework with custom design controls and simplistic structure. A components are customizable and work with your CSS.
 
