@@ -451,7 +451,7 @@
         </div>
 
         <space class="large"></space>
-        <p>If more info is needed to be displayed, you can easily add <code>&lt;span class=&quot;info&quot;&gt;More info&lt;/span&gt;</code> and <code>&lt;span&gt; class=&quot;info inline&quot;&gt;More info inline&lt;/span&gt;</code> (for inline displays).
+        <p>If more info is needed to be displayed, you can easily add <code>&lt;span class=&quot;info&quot;&gt;More info&lt;/span&gt;</code> and <code>&lt;span class=&quot;info inline&quot;&gt;More info&lt;/span&gt;</code> (for inline displays).
         <div class="row level">
             <div class="col-6">
                 <label class="font-normal">Phone Number</label><span class="info">Just for verification purposes</span>
@@ -657,19 +657,58 @@
             <space></space>
             <h6>Integrating Them All Together</h6>
             <p>The form below utilizes most of the different components in <code>forms.css</code>.</p>
-            <div class="row">
-                <div class="form-section section-inline">
-                    <label>Contact</label>
-                    <div class="section-body">
-                        <div class="row">
-                            <div class="col-6">
-                                <input type="text" placeholder="Name" />
-                            </div>
-                            <div class="col-6">
-                                <input type="text" placeholder="Email" />
-                            </div>
+            <div class="row no-padding">
+                <div class="form-section">
+                    <label class="font-bold">Contact</label>
+                    <div class="section-body row no-padding">
+                        <div class="col-6 input-control">
+                            <input class="input-contains-icon-left input-small" type="text" placeholder="Name" />
+                            <span class="icon icon-left"><i class="fa fa-user small"></i></span>
                         </div>
-                        
+                        <div class="col-6 input-control">
+                            <input class="input-contains-icon-left input-contains-icon-right text-success input-success input-small" type="text" placeholder="Email" value="somebodyoncetoldme@gmail.com" />
+                            <span class="icon icon-left"><i class="fa fa-envelope small"></i></span>
+                            <span class="icon icon-right"><i class="fa fa-check small"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label class="font-bold">Phone <span class="info inline font-light">We are not telemarketers.</span></label>
+                    <div class="section-body row">
+                        <div class="form-group">
+                            <label class="form-group-label label-small">+1</label>
+                            <input type="text" class="form-group-input input-small" placeholder="Enter your phone number" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-padding">
+                    <div class="form-section col-6">
+                        <label class="font-bold label-small">Choose One</label>
+                        <select class="select input-small" placeholder="Choose one">
+                            <option>Shibe</option>
+                            <option>Doggo</option>
+                            <option>Pupper</option>
+                        </select>
+                    </div>
+                    <div class="form-section col-6">
+                        <label class="font-bold label-small">Select One <span class="required">*</span></label>
+                        <div class="section-body">
+                                    <label class="radio">
+                                    <input type="radio" name="member">
+                                    Yes
+                                    </label>
+                                    <label class="radio">
+                                    <input type="radio" name="member">
+                                    No
+                                    </label>
+                        </div>
+                        <span class="required info">This section is required.</span>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label class="font-bold label-small">Message</label>
+                    <div class="row">
+                        <textarea placeholder="Enter your message"></textarea>
                     </div>
                 </div>
             </div>

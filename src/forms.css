@@ -106,15 +106,15 @@ input:disabled, input:disabled:hover, select:disabled, textarea:disabled {
 }
 
 label:first-child:not(:last-child):not(.form-group-label) {
-    margin-right: 0.1rem;
+    margin-right: 0.5rem;
 }
 
 label:not(:first-child):not(:last-child):not(.form-group-label) {
-    margin: 0 0.1rem;
+    margin: 0 0.5rem;
 }
 
 label:last-child:not(:first-child):not(.form-group-label) {
-    margin-right: 0.1rem;
+    margin-right: 0.5rem;
 }
 
 /* Required asterisk */
@@ -123,7 +123,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
     top: 1px;
     font-weight: bold;
     color: #f03c69;
-    font-size: 110%;
     padding-left: .1rem;
 }
 
@@ -211,7 +210,8 @@ input[type].input-contains-icon-right.input-xsmall {
     padding-left: 2rem;
 }
 
-input[type].input-contains-icon.input-xsmall ~ .icon {
+input[type].input-contains-icon.input-xsmall ~ .icon,
+input[type].input-contains-icon-left.input-xsmall ~ .icon {
     margin: .55rem 0 0 0.1rem;
 }
 
@@ -224,7 +224,8 @@ input[type].input-contains-icon-right.input-small {
     padding-left: 2.5rem;
 }
 
-input[type].input-contains-icon.input-small ~ .icon {
+input[type].input-contains-icon.input-small ~ .icon,
+input[type].input-contains-icon-left.input-small ~ .icon {
     margin: 0.85rem 0 0 0.3rem;
 }
 
@@ -238,7 +239,8 @@ input[type].input-contains-icon-right.input-large {
     padding-left: 3rem;
 }
 
-input[type].input-contains-icon.input-large ~ .icon {
+input[type].input-contains-icon.input-large ~ .icon,
+input[type].input-contains-icon-left.input-large ~ .icon {
     margin: 1.1rem 0 0 0.7rem;
 }
 
@@ -252,7 +254,8 @@ input[type].input-contains-icon-right.input-xlarge {
     padding-left: 3.5rem;
 }
 
-input[type].input-contains-icon.input-xlarge ~ .icon {
+input[type].input-contains-icon.input-xlarge ~ .icon,
+input[type].input-contains-icon-left.input-xlarge ~ .icon {
     margin: .85rem 0 0 0.8rem;
 }
 
@@ -286,7 +289,7 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
 
 /* Form section just adds extra spacing between form elements tiled vertically */
 .form-section:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
 }
 
 /* A flexbox version of form-section for inline forms */
@@ -294,10 +297,12 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
     display: flex;
 }
 
-.form-section.section-inline label,
+.form-section.section-inline label:not(.form-group-label),
 .form-section.section-inline button {
     align-items: center;
     flex-grow: 0; /* Keep it from taking up extra space */
+    display: flex;
+    flex-shrink: 0;
 }
 
 .form-section.section-inline input,
