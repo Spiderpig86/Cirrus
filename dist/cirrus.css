@@ -1256,6 +1256,7 @@ cite {
 .icon .fa {
     font-size: inherit;
     line-height: inherit;
+    vertical-align: middle;
 }
 
 .icon.x-small {
@@ -1451,7 +1452,6 @@ input[type="file"], select {
   box-sizing: border-box;
   transition: all .3s;
   outline: none;
-  margin: .5rem 0;
     padding: .85rem 1.1rem;
 }
 
@@ -1486,7 +1486,6 @@ input[type="color"] {
     -webkit-transition: all .3s;
     transition: all .3s;
     outline: none;
-    margin: .5rem 0;
     padding: .55rem 0.8rem;
     position: relative;
     background: #fff;
@@ -1618,9 +1617,10 @@ select.input-xlarge {
     padding: 1.05rem 1.3rem;
 }
 
-/* Used for when the input controls have another control adjacent to it but we want to position it inside the input field like font-awesome glyphs */
+/* Used for when the input controls have another control adjacent to it but we want to position it inside the input field like font-awesome glyphs. As of 0.5.2, it is the default container for input fields. */
 .input-control {
   position: relative;
+    margin: 0.5rem 0;
 }
 
 /* Hold Font Awesome glyphs inside input fields */
@@ -1640,12 +1640,11 @@ input[type].input-contains-icon-right.input-xsmall {
 }
 
 input[type].input-contains-icon.input-xsmall ~ .icon,
-input[type].input-contains-icon-left.input-xsmall ~ .icon {
-    margin: .55rem 0 0 0.1rem;
-}
-
+input[type].input-contains-icon-left.input-xsmall ~ .icon,
 input[type].input-contains-icon-right.input-xsmall ~ .icon.icon-right {
-    margin: .65rem 0.1rem 0 0;
+    line-height: 1.75rem;
+    width: 1.75rem;
+    font-size: 7px;
 }
 
 input[type].input-contains-icon.input-small,
@@ -1654,13 +1653,11 @@ input[type].input-contains-icon-right.input-small {
 }
 
 input[type].input-contains-icon.input-small ~ .icon,
-input[type].input-contains-icon-left.input-small ~ .icon {
-    margin: 0.85rem 0 0 0.3rem;
-}
-
-
+input[type].input-contains-icon-left.input-small ~ .icon,
 input[type].input-contains-icon-right.input-small ~ .icon.icon-right {
-    margin: .95rem 0.3rem 0 0;
+    line-height: 2rem;
+    width: 2.5rem;
+    font-size: 14px;
 }
 
 input[type].input-contains-icon.input-large,
@@ -1669,13 +1666,11 @@ input[type].input-contains-icon-right.input-large {
 }
 
 input[type].input-contains-icon.input-large ~ .icon,
-input[type].input-contains-icon-left.input-large ~ .icon {
-    margin: 1.1rem 0 0 0.7rem;
-}
-
-
+input[type].input-contains-icon-left.input-large ~ .icon,
 input[type].input-contains-icon-right.input-large ~ .icon.icon-right {
-    margin: 1.2rem 0.7rem 0 0;
+    line-height: 2.5rem;
+    width: 3.5rem;
+    font-size: 28px;
 }
 
 input[type].input-contains-icon.input-xlarge,
@@ -1684,35 +1679,32 @@ input[type].input-contains-icon-right.input-xlarge {
 }
 
 input[type].input-contains-icon.input-xlarge ~ .icon,
-input[type].input-contains-icon-left.input-xlarge ~ .icon {
-    margin: .85rem 0 0 0.8rem;
-}
-
+input[type].input-contains-icon-left.input-xlarge ~ .icon,
 input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
-    margin: .95rem 0.8rem 0 0;
+    line-height: 2.5rem;
+    width: 3.75rem;
+    font-size: 35px;
 }
 
 .input-contains-icon ~ .icon:not(.icon-right),
 .input-contains-icon-left ~ .icon.icon-left { /* Nomral input only */
     position: absolute;
     left: 0;
-    height: 2rem;
     top: 0;
-    width: 2rem;
-    margin: 1.15rem 0 0 0.5rem;
+    width: 3rem;
+    line-height: 2.75rem;
     vertical-align: baseline;
     z-index: 1;
 }
 
 .input-contains-icon-right ~ .icon.icon-right {
     position: absolute;
-    height: 2rem;
     pointer-events: none;
-    margin: 1.25rem 0.5rem 0 0;
+    line-height: 2.75rem;
     vertical-align: baseline;
     top: 0;
     right: 0;
-    width: 2rem;
+    width: 3rem;
     z-index: 1;
 }
 
@@ -1782,7 +1774,6 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
     background: #f8f9fa;
     border: 1px solid #ddd;
     color: #909090;
-    margin: .5rem 0;
     user-select: none;
 }
 
