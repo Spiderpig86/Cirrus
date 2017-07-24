@@ -60,6 +60,7 @@ input[type="color"] {
     position: relative;
     background: #fff;
     height: 3rem;
+    border-radius: 3px;
 }
 
 input[type="name"]:focus,
@@ -307,6 +308,7 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
     display: flex;
     display: -ms-flexbox;
     display: -webkit-flex; /* Using flexbox for form group */
+    margin: 0.5rem 0; /* Add margin to the container since they have been removed from children */
 }
 
 /* Fixes the text width being cut off */

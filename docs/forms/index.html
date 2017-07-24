@@ -136,7 +136,7 @@
                     </div>
                     <div cass="row ignore-screen level">
                         <div class="col-3 ignore-screen level-item"><p>Select:</p></div>
-                        <div class="col-9 ignore-screen level-item">
+                        <div class="col-9 ignore-screen level-item input-control">
                             <select class="select" placeholder="Choose one">
                                 <option>Shibe</option>
                                 <option>Doggo</option>
@@ -146,7 +146,7 @@
                     </div>
                     <div cass="row ignore-screen level">
                         <div class="col-3 ignore-screen level-item"><p>Select (Multiple):</p></div>
-                        <div class="col-9 ignore-screen level-item">
+                        <div class="col-9 ignore-screen level-item input-control">
                             <select class="select" multiple>
                                 <option>Shibe</option>
                                 <option>Doggo</option>
@@ -226,16 +226,26 @@
         <div class="content">
             <h3>Input Fields (Textboxes)</h3>
             <div class="divider"></div>
-            <p>Input fields in Cirrus are all designed with extra padding, different sizes, and other variations. This section covers input fields for <code>emails, passwords, search, text, tel, and select</code> (dropdown menus).</p>
+            <p>Input fields in Cirrus are all designed with extra padding, different sizes, and other variations. This section covers input fields for <code>emails, passwords, search, text, tel, and select</code> (dropdown menus). To add margins between adjacent inputs, it is best to wrap them around the <code>input-control</code> class.</p>
 
             <h6>Sizes</h6>
             <div class="row">
                 <div class="col-6">
-                    <input type="text" class="input-xsmall" placeholder="Extra small (0.65rem)">
-                    <input type="text" class="input-small" placeholder="Small (0.75rem)">
-                    <input type="text" placeholder="Normal (0.85rem)">
-                    <input type="text" class="input-large" placeholder="Large (1.5rem)">
-                    <input type="text" class="input-xlarge" placeholder="Extra large (2rem)">
+                    <div class="input-control">
+                        <input type="text" class="input-xsmall" placeholder="Extra small (0.65rem)">
+                    </div>
+                    <div class="input-control">
+                        <input type="text" class="input-small" placeholder="Small (0.75rem)">
+                    </div>
+                    <div class="input-control">
+                        <input type="text" placeholder="Normal (0.85rem)">
+                    </div>
+                    <div class="input-control">
+                        <input type="text" class="input-large" placeholder="Large (1.5rem)">
+                    </div>
+                    <div class="input-control">
+                        <input type="text" class="input-xlarge" placeholder="Extra large (2rem)">
+                    </div>
                 </div>
                 <div class="col-6">
                     <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; class=&quot;input-xsmall&quot; placeholder=&quot;Extra small (0.65rem)&quot;&gt;
@@ -252,11 +262,21 @@
             <space></space>
             <p>The same sizing principle also applies to select controls. Select also uses the classes <code>input-xsmall, input-small, input-large, and input-xlarge</code>.</p>
             <div class="row">
-                <select class="select input-xsmall" placeholder="Dropdown Xsmall"><option value="1">Dropdown Xsmall</option><option value="2">2</option></select>
-                <select class="select input-small" placeholder="Dropdown Small"><option value="1">Dropdown Small</option><option value="2">2</option></select>
-                <select class="select" placeholder="Dropdown Normal"><option value="1">Dropdown normal</option><option value="2">2</option></select>
-                <select class="select input-large" placeholder="Dropdown Large"><option value="1">Dropdown Large</option><option value="2">2</option></select>
-                <select class="select input-xlarge" placeholder="Dropdown Xlarge"><option value="1">Dropdown Xlarge</option><option value="2">2</option></select>
+                <div class="input-control">
+                    <select class="select input-xsmall" placeholder="Dropdown Xsmall"><option value="1">Dropdown Xsmall</option><option value="2">2</option></select>
+                </div>
+                <div class="input-control">
+                    <select class="select input-small" placeholder="Dropdown Small"><option value="1">Dropdown Small</option><option value="2">2</option></select>
+                </div>
+                <div class="input-control">
+                    <select class="select" placeholder="Dropdown Normal"><option value="1">Dropdown normal</option><option value="2">2</option></select>
+                </div>
+                <div class="input-control">
+                    <select class="select input-large" placeholder="Dropdown Large"><option value="1">Dropdown Large</option><option value="2">2</option></select>
+                </div>
+                <div class="input-control">
+                    <select class="select input-xlarge" placeholder="Dropdown Xlarge"><option value="1">Dropdown Xlarge</option><option value="2">2</option></select>
+                </div>
             </div>
             <div class="row">
                 <pre><code class="html" data-lang="HTML">&lt;select class=&quot;select input-xsmall&quot; placeholder=&quot;Dropdown Xsmall&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Xsmall&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
@@ -275,8 +295,12 @@
         <p class="title">Normal</p>
         <div class="row">
             <div class="col-6">
-                <input type="text" placeholder="Normal state">
-                <select class="select" placeholder="Dropdown"><option value="1">Normal state</option></select>
+                <div class="input-control">
+                    <input type="text" placeholder="Normal state">
+                </div>
+                <div class="input-control">
+                    <select class="select" placeholder="Dropdown"><option value="1">Normal state</option></select>
+                </div>
             </div>
             <div class="col-6">
                 <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; placeholder=&quot;Normal state&quot;&gt;
@@ -287,8 +311,12 @@
         <p class="title">Focused</p>
         <div class="row">
             <div class="col-6">
-                <input type="text" class="input-focused" placeholder="Focused state">
-                <select class="select input-focused" placeholder="Dropdown"><option value="1">Focused state</option></select>
+                <div class="input-control">
+                    <input type="text" class="input-focused" placeholder="Focused state">
+                </div>
+                <div class="input-control">
+                    <select class="select input-focused" placeholder="Dropdown"><option value="1">Focused state</option></select>
+                </div>
             </div>
             <div class="col-6">
                 <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; placeholder=&quot;Focused state&quot;&gt;
@@ -299,8 +327,12 @@
         <p class="title">Disabled</p>
         <div class="row">
             <div class="col-6">
-                <input disabled type="text" placeholder="Disabled state">
-                <select disabled class="select" placeholder="Dropdown"><option value="1">Disabled state</option></select>
+                <div class="input-control">
+                    <input disabled type="text" placeholder="Disabled state">
+                </div>
+                <div class="input-control">
+                    <select disabled class="select" placeholder="Dropdown"><option value="1">Disabled state</option></select>
+                </div>
                 <div class="row">
                     <input disabled type="checkbox">   Check this</input>
                     <input disabled type="radio">   I'm a radio button.</input>
@@ -319,8 +351,12 @@
         <p class="title">Success</p>
         <div class="row">
             <div class="col-6">
-                <input type="text" class="text-success input-success" placeholder="Success state">
-                <select class="select text-success input-success" placeholder="Dropdown"><option value="1">Success state</option></select>
+                <div class="input-control">
+                    <input type="text" class="text-success input-success" placeholder="Success state">
+                </div>
+                <div class="input-control">
+                    <select class="select text-success input-success" placeholder="Dropdown"><option value="1">Success state</option></select>
+                </div>
             </div>
             <div class="col-6">
                 <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; class=&quot;text-success input-success&quot; placeholder=&quot;Success state&quot;&gt;
@@ -331,8 +367,12 @@
         <p class="title">Error</p>
         <div class="row">
             <div class="col-6">
-                <input type="text" class="text-error input-error" placeholder="Success state">
-                <select class="select text-error input-error" placeholder="Dropdown"><option value="1">Error state</option></select>
+                <div class="input-control">
+                    <input type="text" class="text-error input-error" placeholder="Success state">
+                </div>
+                <div class="input-control">
+                    <select class="select text-error input-error" placeholder="Dropdown"><option value="1">Error state</option></select>
+                </div>
             </div>
             <div class="col-6">
                 <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; class=&quot;text-error input-error&quot; placeholder=&quot;Success state&quot;&gt;
@@ -667,10 +707,12 @@
                                 <span class="icon icon-left"><i class="fa fa-user small"></i></span>
                             </div>
                         </div>
-                        <div class="col-6 input-control">
-                            <input class="input-contains-icon-left input-contains-icon-right text-success input-success input-small" type="text" placeholder="Email" value="somebodyoncetoldme@gmail.com" />
-                            <span class="icon icon-left"><i class="fa fa-envelope small"></i></span>
-                            <span class="icon icon-right"><i class="fa fa-check small"></i></span>
+                        <div class="col-6">
+                            <div class="input-control">
+                                <input class="input-contains-icon-left input-contains-icon-right text-success input-success input-small" type="text" placeholder="Email" value="somebodyoncetoldme@gmail.com" />
+                                <span class="icon icon-left"><i class="fa fa-envelope small"></i></span>
+                                <span class="icon icon-right"><i class="fa fa-check small"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
