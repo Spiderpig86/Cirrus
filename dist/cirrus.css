@@ -1625,45 +1625,72 @@ select.input-xlarge {
 }
 
 /* Hold Font Awesome glyphs inside input fields */
-/* Nomral input only */
 /* More sizes coming soon */
-input[type].input-contains-icon {
+input[type].input-contains-icon,
+input[type].input-contains-icon-left { /* input[type].input-contains-icon supported for legacy 0.5.2 and below */
     padding-left: 2.75rem;
 }
 
-input[type].input-contains-icon.input-xsmall {
+input[type].input-contains-icon-right {
+    padding-right: 2.75rem;
+}
+
+input[type].input-contains-icon.input-xsmall,
+input[type].input-contains-icon-right.input-xsmall {
     padding-left: 2rem;
 }
 
-input[type].input-contains-icon.input-xsmall + .icon {
+input[type].input-contains-icon.input-xsmall ~ .icon {
     margin: .55rem 0 0 0.1rem;
 }
 
-input[type].input-contains-icon.input-small {
+input[type].input-contains-icon-right.input-xsmall ~ .icon.icon-right {
+    margin: .65rem 0.1rem 0 0;
+}
+
+input[type].input-contains-icon.input-small,
+input[type].input-contains-icon-right.input-small {
     padding-left: 2.5rem;
 }
 
-input[type].input-contains-icon.input-small + .icon {
-    margin: .95rem 0 0 0.3rem;
+input[type].input-contains-icon.input-small ~ .icon {
+    margin: 0.85rem 0 0 0.3rem;
 }
 
-input[type].input-contains-icon.input-large {
+
+input[type].input-contains-icon-right.input-small ~ .icon.icon-right {
+    margin: .95rem 0.3rem 0 0;
+}
+
+input[type].input-contains-icon.input-large,
+input[type].input-contains-icon-right.input-large {
     padding-left: 3rem;
 }
 
-input[type].input-contains-icon.input-large + .icon {
+input[type].input-contains-icon.input-large ~ .icon {
     margin: 1.1rem 0 0 0.7rem;
 }
 
-input[type].input-contains-icon.input-xlarge {
+
+input[type].input-contains-icon-right.input-large ~ .icon.icon-right {
+    margin: 1.2rem 0.7rem 0 0;
+}
+
+input[type].input-contains-icon.input-xlarge,
+input[type].input-contains-icon-right.input-xlarge {
     padding-left: 3.5rem;
 }
 
-input[type].input-contains-icon.input-xlarge + .icon {
+input[type].input-contains-icon.input-xlarge ~ .icon {
     margin: .85rem 0 0 0.8rem;
 }
 
-.input-contains-icon + .icon { /* Nomral input only */
+input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
+    margin: .95rem 0.8rem 0 0;
+}
+
+.input-contains-icon ~ .icon:not(.icon-right),
+.input-contains-icon-left ~ .icon.icon-left { /* Nomral input only */
     position: absolute;
     left: 0;
     height: 2rem;
@@ -1671,6 +1698,18 @@ input[type].input-contains-icon.input-xlarge + .icon {
     width: 2rem;
     margin: 1.15rem 0 0 0.5rem;
     vertical-align: baseline;
+    z-index: 1;
+}
+
+.input-contains-icon-right ~ .icon.icon-right {
+    position: absolute;
+    height: 2rem;
+    pointer-events: none;
+    margin: 1.25rem 0.5rem 0 0;
+    vertical-align: baseline;
+    top: 0;
+    right: 0;
+    width: 2rem;
     z-index: 1;
 }
 
