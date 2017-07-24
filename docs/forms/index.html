@@ -363,7 +363,9 @@
 &lt;/div&gt;</code></pre>
             </div>
         </div>
-        <p>Below are some examples of how Font Awesome glyphs look with different textfield sizes.</p>
+        <h6>Multi-sized Glyphs</h6>
+        <p>Below are some examples of how Font Awesome glyphs look with different textfield sizes. To add a glyph on the left side, add <code>input-contains-icon-left</code> to the input box inside <code>input-control</code> and a span sibling with classes <code>icon icon-left</code>. The process is the same for glyphs on the right, but the <code>left</code> is changed to <code>right</code>.</p>
+        <p>Remember to add sizes to the glyph themselves which include <code>x-small</code>, <code>small</code>, <code>large</code>, <code>x-large</code>, and nothing for default.</p>
         <div class="row">
             <div class="input-control">
                 <input type="email" class="input-contains-icon input-contains-icon-right input-xsmall" placeholder="Extra Small"/>
@@ -393,19 +395,29 @@
         </div>
         <div class="row">
             <pre><code class="html" data-lang="HTML">&lt;div class=&quot;input-control&quot;&gt;
-    &lt;input type=&quot;email&quot; class=&quot;input-contains-icon input-xsmall&quot; placeholder=&quot;Extra Small&quot;/&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-envelope x-small&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;input type=&quot;email&quot; class=&quot;input-contains-icon input-contains-icon-right input-xsmall&quot; placeholder=&quot;Extra Small&quot;/&gt;
+    &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-envelope x-small&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;icon icon-right&quot;&gt;&lt;i class=&quot;fa fa-chevron-right x-small&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;div class=&quot;input-control&quot;&gt;
-    &lt;input type=&quot;email&quot; class=&quot;input-contains-icon input-small&quot; placeholder=&quot;Small&quot;/&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-envelope small&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;input type=&quot;email&quot; class=&quot;input-contains-icon input-contains-icon-right input-small&quot; placeholder=&quot;Small&quot;/&gt;
+    &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-envelope small&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;icon icon-right&quot;&gt;&lt;i class=&quot;fa fa-chevron-right small&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;div class=&quot;input-control&quot;&gt;
-    &lt;input type=&quot;email&quot; class=&quot;input-contains-icon&quot; placeholder=&quot;Normal&quot;/&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;input type=&quot;email&quot; class=&quot;input-contains-icon input-contains-icon-right&quot; placeholder=&quot;Normal&quot;/&gt;
+    &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;icon icon-right&quot;&gt;&lt;i class=&quot;fa fa-chevron-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;div class=&quot;input-control&quot;&gt;
-    &lt;input type=&quot;email&quot; class=&quot;input-contains-icon input-large&quot; placeholder=&quot;Large&quot;/&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-envelope large&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;input type=&quot;email&quot; class=&quot;input-contains-icon input-contains-icon-right input-large&quot; placeholder=&quot;Large&quot;/&gt;
+    &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-envelope large&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;icon icon-right&quot;&gt;&lt;i class=&quot;fa fa-chevron-right large&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;div class=&quot;input-control&quot;&gt;
-    &lt;input type=&quot;email&quot; class=&quot;input-contains-icon input-xlarge&quot; placeholder=&quot;Extra Large&quot;/&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-envelope x-large&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;input type=&quot;email&quot; class=&quot;input-contains-icon input-contains-icon-right input-xlarge&quot; placeholder=&quot;Extra Large&quot;/&gt;
+    &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-envelope x-large&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;span class=&quot;icon icon-right&quot;&gt;&lt;i class=&quot;fa fa-chevron-right x-large&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
         </div>
         
@@ -522,14 +534,20 @@
             </div>
              <div class="col-6">
                     <pre><code class="html" data-lang="HTML">&lt;form method=&quot;post&quot; action=&quot;#&quot; class=&quot;form&quot; autocomplete=&quot;off&quot;&gt;
-    &lt;p class=&quot;label&quot;&gt;Email:&lt;/p&gt;
-    &lt;input type=&quot;email&quot;/&gt;
-    &lt;p class=&quot;label&quot;&gt;Choose your favorite color&lt;/p&gt;
-    &lt;input type=&quot;color&quot; value=&quot;#f03d4d&quot;/&gt;
-    &lt;label class=&quot;&quot;&gt;&lt;input type=&quot;checkbox&quot;/&gt;  Checkbox&lt;/label&gt;
-    &lt;label class=&quot;&quot;&gt;&lt;input type=&quot;radio&quot;/&gt;  Radiobutton&lt;/label&gt;
+    &lt;div class=&quot;form-section&quot;&gt;
+        &lt;label class=&quot;font-normal&quot;&gt;Email:&lt;span class=&quot;required&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+        &lt;input type=&quot;email&quot; placeholder=&quot;This is a generic form-section.&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-section section-inline&quot;&gt;
+        &lt;label class=&quot;font-normal&quot;&gt;Choose your favorite color:&lt;/label&gt;
+        &lt;input type=&quot;color&quot; value=&quot;#f03d4d&quot;/&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-section&quot;&gt;
+        &lt;label class=&quot;&quot;&gt;&lt;input type=&quot;checkbox&quot;/&gt;  Checkbox&lt;/label&gt;
+        &lt;label class=&quot;&quot;&gt;&lt;input type=&quot;radio&quot;/&gt;  Radiobutton&lt;/label&gt;
+    &lt;/div&gt;
     &lt;textarea placeholder=&quot;Tell us about yourself...&quot;&gt;&lt;/textarea&gt;
-    &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;form-section&quot;&gt;
         &lt;input type=&quot;submit&quot; class=&quot;animated btn-accent pull-left&quot;/&gt;
         &lt;button class=&quot;animated pull-left&quot;&gt;Clear&lt;/button&gt;
     &lt;/div&gt;
@@ -635,6 +653,25 @@
     &lt;input type=&quot;text&quot; class=&quot;form-group-input input-xlarge&quot; placeholder=&quot;Extra Large&quot;&gt;&lt;/input&gt;
     &lt;button class=&quot;form-group-btn btn-xlarge&quot;&gt;Go&lt;/button&gt;
 &lt;/div&gt;</code></pre>
+            </div>
+            <space></space>
+            <h6>Integrating Them All Together</h6>
+            <p>The form below utilizes most of the different components in <code>forms.css</code>.</p>
+            <div class="row">
+                <div class="form-section section-inline">
+                    <label>Contact</label>
+                    <div class="section-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="text" placeholder="Name" />
+                            </div>
+                            <div class="col-6">
+                                <input type="text" placeholder="Email" />
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </section>
