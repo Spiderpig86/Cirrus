@@ -89,6 +89,11 @@ button.animated:active, [type=submit].animated:active, .btn.animated:active {
     border-color: #c21b2b;
 }
 
+/* Adds small margin around buttons */
+.btn-container {
+  margin: 0.5rem;
+}
+
 /* Different styles */
 
 /* Outline (white) */
@@ -228,8 +233,8 @@ button.animated:active, [type=submit].animated:active, .btn.animated:active {
 
 /* Big button */
 .btn-large {
-     line-height: 3.5rem;
-    padding: 0 1.5rem;
+    line-height: 3.5rem;
+    padding: 0 2rem;
     font-size: 90%;
 }
 
@@ -237,6 +242,12 @@ button.animated:active, [type=submit].animated:active, .btn.animated:active {
   line-height: 4.5rem;
   padding: 0 2rem;
   font-size: 110%;
+}
+
+.btn-xxlarge {
+  line-height: 4.5rem;
+  padding: 0 2rem;
+  font-size: 120%;
 }
 
 /* Loading button */
