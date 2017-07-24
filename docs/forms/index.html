@@ -485,18 +485,18 @@
 
     <section id="sampleforms" class="padtop">
         <div class="content">
-            <h3>Sample Forms</h3>
+            <h3>Form Sections</h3>
             <div class="divider"></div>
-            <p>Here are a couple of sample forms for you to work with:</p>
+            <p>The <code>form-section</code> class provides a generic container for form controls such as grouping labels and inputs together. Unlike <code>form-group</code>, <code>form-section</code> does not override default styling of labels and inputs. To display labels and inputs inline, add the <code>section-inline</code> class to the <code>form-section</code> container.</p>
             <div class="row">
                 <div class="col-6">
                     <form method="post" action="#" class="form" autocomplete="off">
                         <div class="form-section">
                             <label class="font-normal">Email:<span class="required">*</span></label>
-                            <input type="email"/>
+                            <input type="email" placeholder="This is a generic form-section."/>
                         </div>
-                        <div class="form-section">
-                            <label class="font-normal">Choose your favorite color</label>
+                        <div class="form-section section-inline">
+                            <label class="font-normal">Choose your favorite color:</label>
                             <input type="color" value="#f03d4d"/>
                         </div>
                         <div class="form-section">
@@ -530,9 +530,9 @@
 
     <section>
         <div class="content">
-            <h3>Forms with Controls</h3>
+            <h3>Forms Groups</h3>
             <div class="divider"></div>
-            <p>Cirrus allows you to bundle input fields in form groups with other components such as buttons, dropdown menus, or labels.</p>
+            <p>Cirrus allows you to bundle input fields in form groups with other components such as buttons, dropdown menus, or labels using the <code>form-group</code> class. This adds some unique styling to the elements creating a unified design when combining these components together.</p>
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">

@@ -24,6 +24,7 @@
   text-transform: uppercase;
   font-family: Montserrat;
   font-weight: 400;
+  min-width: 2rem;
 }
 
 .btn:hover, button:hover, [type=submit]:hover {

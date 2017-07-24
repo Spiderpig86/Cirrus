@@ -250,6 +250,22 @@ input[type].input-contains-icon.input-xlarge + .icon {
     margin-bottom: 1rem;
 }
 
+/* A flexbox version of form-section for inline forms */
+.form-section.section-inline {
+    display: flex;
+}
+
+.form-section.section-inline label,
+.form-section.section-inline button {
+    align-items: center;
+    flex-grow: 0; /* Keep it from taking up extra space */
+}
+
+.form-section.section-inline input {
+    align-items: center;
+    flex-grow: 1;
+}
+
 /* Form groups that group inputs with other controls. */
 .form-group {
     display: flex;
@@ -275,6 +291,7 @@ input[type].input-contains-icon.input-xlarge + .icon {
 .form-group .form-group-label:not(:first-child):not(:last-child), .form-group .form-group-input:not(:first-child):not(:last-child), .form-group .form-group-btn:not(:first-child):not(:last-child) {
     border-radius: 0;
     margin-left: -.1rem;
+    margin-right: -.1rem; /* Remove spacing in middle controls */
 }
 
 /* Handles right most control in form group */
