@@ -195,6 +195,53 @@
 &lt;/dl&gt;</code></pre>
                 </div>
             </div>
+            
+            <h6>Nested Lists</h6>
+            <p>Cirrus will automatically style and pad nested lists so you don't have to. Just add the <code>nested-list</code> class to the div containing the list.</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="nested-list">
+                        <ul>
+                            <li>A</li>
+                            <li>B</li>
+                            <li>C
+                                <ul>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3
+                                        <ul>
+                                            <li>a</li>
+                                            <li>b</li>
+                                            <li>c</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;nested-list&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;A&lt;/li&gt;
+        &lt;li&gt;B&lt;/li&gt;
+        &lt;li&gt;C
+            &lt;ul&gt;
+                &lt;li&gt;1&lt;/li&gt;
+                &lt;li&gt;2&lt;/li&gt;
+                &lt;li&gt;3
+                    &lt;ul&gt;
+                        &lt;li&gt;a&lt;/li&gt;
+                        &lt;li&gt;b&lt;/li&gt;
+                        &lt;li&gt;c&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+</div>
+            </div>
         </div>
     </section>
 

@@ -63,7 +63,7 @@
 }
 
 .padtop {
-    margin: 6rem 0;
+    padding: 3rem 0;
 }
 
 .no-margin {
@@ -166,10 +166,10 @@ footer .divider {
 /* MOBILE */
 @media screen and (max-width: 768px) {
     .padtop {
-        margin: 4rem 0;
+        padding: 1.5rem 0;
     }
 
     .header-menu {
-    background-color: rgba(76, 76, 76, 0.7);
-}
+        background-color: rgba(76, 76, 76, 0.7);
+    }
 }

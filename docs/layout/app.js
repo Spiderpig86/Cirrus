@@ -1,11 +1,11 @@
-let fluidContainerAddBtn = $('#fluid-container-add');
-let fluidContainerDeleteBtn = $('#fluid-container-delete');
-let fluidContainerTest = $('#fluidContainerTest');
+var fluidContainerAddBtn = $('#fluid-container-add');
+var fluidContainerDeleteBtn = $('#fluid-container-delete');
+var fluidContainerTest = $('#fluidContainerTest');
 
 fluidContainerAddBtn.click(() => {
-    let col = document.createElement('div');
+    var col = document.createElement('div');
     col.className = 'col-fluid';
-    let p = document.createElement('div');
+    var p = document.createElement('div');
     p.className = 'uppercase';
     p.innerText = 'col-fluid';
     $(col).append(p);

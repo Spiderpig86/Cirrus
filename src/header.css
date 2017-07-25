@@ -141,7 +141,7 @@
     background-color: #fff;
         position: absolute;
     top: 95%;
-    right: 0;
+    /*right: 0; /* Unable to solve problem when we have multiple drop down menus */
     z-index: 1000;
     float: left;
     min-width: 160px;
