@@ -92,6 +92,7 @@ button.animated:active, [type=submit].animated:active, .btn.animated:active {
 /* Adds small margin around buttons */
 .btn-container {
   margin: 0.5rem;
+  overflow: visible;
 }
 
 /* Different styles */
@@ -146,10 +147,6 @@ button.animated:active, [type=submit].animated:active, .btn.animated:active {
   color: #f5f5f5;
   -webkit-transform: none;
           transform: none;
-}
-
-.btn-container { /* Make floated buttons respond to margins */
-    overflow: hidden;
 }
 
 /* White */

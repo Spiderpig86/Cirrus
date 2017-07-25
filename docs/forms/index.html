@@ -197,24 +197,23 @@
     &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;&lt;input type=&quot;file&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div cass=&quot;row ignore-screen level&quot;&gt;
-        &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Select:&lt;/p&gt;&lt;/div&gt;
-        &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;
-            &lt;select class=&quot;select&quot; placeholder=&quot;Choose one&quot;&gt;
-                &lt;option&gt;Shibe&lt;/option&gt;
-                &lt;option&gt;Doggo&lt;/option&gt;
-                &lt;option&gt;Pupper&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Select:&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-9 ignore-screen level-item input-control&quot;&gt;
+        &lt;select class=&quot;select&quot; placeholder=&quot;Choose one&quot;&gt;
+            &lt;option&gt;Shibe&lt;/option&gt;
+            &lt;option&gt;Doggo&lt;/option&gt;
+            &lt;option&gt;Pupper&lt;/option&gt;
+        &lt;/select&gt;
     &lt;/div&gt;
-    &lt;div cass=&quot;row ignore-screen level&quot;&gt;
-        &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Select (Multiple):&lt;/p&gt;&lt;/div&gt;
-        &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;
-            &lt;select class=&quot;select&quot; multiple&gt;
-                &lt;option&gt;Shibe&lt;/option&gt;
-                &lt;option&gt;Doggo&lt;/option&gt;
-                &lt;option&gt;Pupper&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
+&lt;/div&gt;
+&lt;div cass=&quot;row ignore-screen level&quot;&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Select (Multiple):&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-9 ignore-screen level-item input-control&quot;&gt;
+        &lt;select class=&quot;select&quot; multiple&gt;
+            &lt;option&gt;Shibe&lt;/option&gt;
+            &lt;option&gt;Doggo&lt;/option&gt;
+            &lt;option&gt;Pupper&lt;/option&gt;
+        &lt;/select&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 </div>
@@ -248,15 +247,21 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; class=&quot;input-xsmall&quot; placeholder=&quot;Extra small (0.65rem)&quot;&gt;
-
-&lt;input type=&quot;text&quot; class=&quot;input-small&quot; placeholder=&quot;Small (0.75rem)&quot;&gt;
-
-&lt;input type=&quot;text&quot; placeholder=&quot;Normal (0.85rem)&quot;&gt;
-
-&lt;input type=&quot;text&quot; class=&quot;input-large&quot; placeholder=&quot;Large (1.5rem)&quot;&gt;
-
-&lt;input type=&quot;text&quot; class=&quot;input-xlarge&quot; placeholder=&quot;Extra large (2rem)&quot;&gt;</code></pre>
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;input-control&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;input-xsmall&quot; placeholder=&quot;Extra small (0.65rem)&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;input-small&quot; placeholder=&quot;Small (0.75rem)&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Normal (0.85rem)&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;input-large&quot; placeholder=&quot;Large (1.5rem)&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;input-xlarge&quot; placeholder=&quot;Extra large (2rem)&quot;&gt;
+&lt;/div&gt;</code></pre>
                 </div>
             </div>
             <space></space>
@@ -279,15 +284,21 @@
                 </div>
             </div>
             <div class="row">
-                <pre><code class="html" data-lang="HTML">&lt;select class=&quot;select input-xsmall&quot; placeholder=&quot;Dropdown Xsmall&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Xsmall&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
-
-&lt;select class=&quot;select input-small&quot; placeholder=&quot;Dropdown Small&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Small&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
-
-&lt;select class=&quot;select&quot; placeholder=&quot;Dropdown normal&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown normal&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
-
-&lt;select class=&quot;select input-large&quot; placeholder=&quot;Dropdown Large&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Large&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
-
-&lt;select class=&quot;select input-xlarge&quot; placeholder=&quot;Dropdown Xlarge&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Xlarge&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;</code></pre>
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;input-control&quot;&gt;
+    &lt;select class=&quot;select input-xsmall&quot; placeholder=&quot;Dropdown Xsmall&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Xsmall&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;select class=&quot;select input-small&quot; placeholder=&quot;Dropdown Small&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Small&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;select class=&quot;select&quot; placeholder=&quot;Dropdown Normal&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown normal&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;select class=&quot;select input-large&quot; placeholder=&quot;Dropdown Large&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Large&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;select class=&quot;select input-xlarge&quot; placeholder=&quot;Dropdown Xlarge&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Xlarge&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
+&lt;/div&gt;</code></pre>
             </div>
         <space></space>
         <h6>States</h6>
@@ -303,8 +314,12 @@
                 </div>
             </div>
             <div class="col-6">
-                <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; placeholder=&quot;Normal state&quot;&gt;
-&lt;select class=&quot;select&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Normal state&lt;/option&gt;&lt;/select&gt;</code></pre>
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;input-control&quot;&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Normal state&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;select class=&quot;select&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Normal state&lt;/option&gt;&lt;/select&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
 
@@ -319,8 +334,12 @@
                 </div>
             </div>
             <div class="col-6">
-                <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; placeholder=&quot;Focused state&quot;&gt;
-&lt;select class=&quot;select&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Focused state&lt;/option&gt;&lt;/select&gt;</code></pre>
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;input-control&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;input-focused&quot; placeholder=&quot;Focused state&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;select class=&quot;select input-focused&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Focused state&lt;/option&gt;&lt;/select&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
 
@@ -340,10 +359,16 @@
                 <input disabled type="submit" class="animated" />
             </div>
             <div class="col-6">
-                <pre><code class="html" data-lang="HTML">&lt;input disabled type=&quot;text&quot; placeholder=&quot;Disabled state&quot;&gt;
-&lt;select disabled class=&quot;select&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Disabled state&lt;/option&gt;&lt;/select&gt;
-&lt;input disabled type=&quot;checkbox&quot;&gt;Check this&lt;/input&gt;
-&lt;input disabled type=&quot;radio&quot;&gt;I'm a radio button.&lt;/input&gt;
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;input-control&quot;&gt;
+    &lt;input disabled type=&quot;text&quot; placeholder=&quot;Disabled state&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;select disabled class=&quot;select&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Disabled state&lt;/option&gt;&lt;/select&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+    &lt;input disabled type=&quot;checkbox&quot;&gt;   Check this&lt;/input&gt;
+    &lt;input disabled type=&quot;radio&quot;&gt;   I'm a radio button.&lt;/input&gt;
+&lt;/div&gt;
 &lt;input disabled type=&quot;submit&quot; class=&quot;animated&quot; /&gt;</code></pre>
             </div>
         </div>
@@ -359,8 +384,12 @@
                 </div>
             </div>
             <div class="col-6">
-                <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; class=&quot;text-success input-success&quot; placeholder=&quot;Success state&quot;&gt;
-&lt;select class=&quot;select text-success input-success&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Success state&lt;/option&gt;&lt;/select&gt;</code></pre>
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;input-control&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;text-success input-success&quot; placeholder=&quot;Success state&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;select class=&quot;select text-success input-success&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Success state&lt;/option&gt;&lt;/select&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
 
@@ -375,8 +404,12 @@
                 </div>
             </div>
             <div class="col-6">
-                <pre><code class="html" data-lang="HTML">&lt;input type=&quot;text&quot; class=&quot;text-error input-error&quot; placeholder=&quot;Success state&quot;&gt;
-&lt;select class=&quot;select text-error input-error&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Error state&lt;/option&gt;&lt;/select&gt;</code></pre>
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;input-control&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;text-error input-error&quot; placeholder=&quot;Success state&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;input-control&quot;&gt;
+    &lt;select class=&quot;select text-error input-error&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Error state&lt;/option&gt;&lt;/select&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
 
@@ -755,6 +788,67 @@
                         <textarea placeholder="Enter your message"></textarea>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row no-padding&quot;&gt;
+    &lt;div class=&quot;form-section&quot;&gt;
+        &lt;label class=&quot;font-bold&quot;&gt;Contact&lt;/label&gt;
+        &lt;div class=&quot;section-body row no-padding&quot;&gt;
+            &lt;div class=&quot;col-6&quot;&gt;
+                &lt;div class=&quot;input-control&quot;&gt;
+                    &lt;input class=&quot;input-contains-icon-left input-small&quot; type=&quot;text&quot; placeholder=&quot;Name&quot; /&gt;
+                    &lt;span class=&quot;icon icon-left&quot;&gt;&lt;i class=&quot;fa fa-user small&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;col-6&quot;&gt;
+                &lt;div class=&quot;input-control&quot;&gt;
+                    &lt;input class=&quot;input-contains-icon-left input-contains-icon-right text-success input-success input-small&quot; type=&quot;text&quot; placeholder=&quot;Email&quot; value=&quot;somebodyoncetoldme@gmail.com&quot; /&gt;
+                    &lt;span class=&quot;icon icon-left&quot;&gt;&lt;i class=&quot;fa fa-envelope small&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class=&quot;icon icon-right&quot;&gt;&lt;i class=&quot;fa fa-check small&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-section&quot;&gt;
+        &lt;label class=&quot;font-bold&quot;&gt;Phone &lt;span class=&quot;info inline font-light&quot;&gt;We are not telemarketers.&lt;/span&gt;&lt;/label&gt;
+        &lt;div class=&quot;section-body row&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;label class=&quot;form-group-label label-small&quot;&gt;+1&lt;/label&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-group-input input-small&quot; placeholder=&quot;Enter your phone number&quot; /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row no-padding&quot;&gt;
+        &lt;div class=&quot;form-section col-6&quot;&gt;
+            &lt;label class=&quot;font-bold label-small&quot;&gt;Choose One&lt;/label&gt;
+            &lt;select class=&quot;select input-small&quot; placeholder=&quot;Choose one&quot;&gt;
+                &lt;option&gt;Shibe&lt;/option&gt;
+                &lt;option&gt;Doggo&lt;/option&gt;
+                &lt;option&gt;Pupper&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-section col-6&quot;&gt;
+            &lt;label class=&quot;font-bold label-small&quot;&gt;Select One &lt;span class=&quot;required&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+            &lt;div class=&quot;section-body&quot;&gt;
+                        &lt;label class=&quot;radio&quot;&gt;
+                        &lt;input type=&quot;radio&quot; name=&quot;member&quot;&gt;
+                        Yes
+                        &lt;/label&gt;
+                        &lt;label class=&quot;radio&quot;&gt;
+                        &lt;input type=&quot;radio&quot; name=&quot;member&quot;&gt;
+                        No
+                        &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;span class=&quot;required info&quot;&gt;This section is required.&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-section&quot;&gt;
+        &lt;label class=&quot;font-bold label-small&quot;&gt;Message&lt;/label&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;textarea placeholder=&quot;Enter your message&quot;&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
     </section>
