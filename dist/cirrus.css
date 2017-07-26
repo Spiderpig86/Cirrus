@@ -2020,6 +2020,7 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
     background-color: #fff;
         position: absolute;
     top: 95%;
+    /*right: 0; /* Unable to solve problem when we have multiple drop down menus */
     z-index: 1000;
     float: left;
     min-width: 160px;
@@ -3316,6 +3317,12 @@ video.video-fullscreen {
     justify-content: center; /* Vertical centering */
 }
 
+/* Add animation when showing modal */
+.modal.modal-animated {
+    -webkit-animation: slide-down .2s ease 1;
+    animation: slide-down .2s ease 1;
+}
+
 /* When the modal dialog is visible */
 .modal:target, .modal.shown {
     display: -webkit-box;
@@ -3344,6 +3351,18 @@ video.video-fullscreen {
     display: block;
     border-radius: 3px;
     box-shadow: 0 .4rem 1rem rgba(54, 59, 68, .3);
+    z-index: 1;
+    color: #374054;
+    max-width: 64rem;
+}
+
+.modal-content h1,
+.modal-content h2,
+.modal-content h3,
+.modal-content h4,
+.modal-content h5,
+.modal-content h6 {
+    color: #374054;
 }
 
 .modal:target .modal-container,
