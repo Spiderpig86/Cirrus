@@ -12,7 +12,12 @@
 .this-inline-flex {
   display: -webkit-inline-bpx;
   display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
   display: inline-flex;
+}
+
+.this-block {
+  display: block;
 }
 
 /*
@@ -53,9 +58,15 @@
 
 /* Center element - best used for hero bodies or text */
 .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
       margin: 0 auto;
 }
 
@@ -63,18 +74,27 @@
   position: absolute;
  top: 50%;
  left: 50%;
- transform: translate(-50%, -50%);
+ -webkit-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
 }
 
 .vertical-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   vertical-align: middle;
 }
 
 .horizontal-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .this-overlay {

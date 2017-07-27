@@ -113,7 +113,7 @@ label:not(:first-child):not(:last-child):not(.form-group-label) {
 }
 
 label:last-child:not(:first-child):not(.form-group-label) {
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 /* Required asterisk */
@@ -239,7 +239,7 @@ input[type].input-contains-icon-right.input-large {
 input[type].input-contains-icon.input-large ~ .icon,
 input[type].input-contains-icon-left.input-large ~ .icon,
 input[type].input-contains-icon-right.input-large ~ .icon.icon-right {
-    line-height: 2.5rem;
+    line-height: 3.5rem;
     width: 3.5rem;
     font-size: 28px;
 }
@@ -281,7 +281,7 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
 
 /* Form section just adds extra spacing between form elements tiled vertically */
 .form-section:not(:last-child) {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
 }
 
 /* A flexbox version of form-section for inline forms */

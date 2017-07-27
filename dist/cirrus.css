@@ -1252,8 +1252,8 @@ cite {
 .icon { /* Usually used in spans */
   display: inline-block;
   font-size: 21px; /* Best font sizes are multiples of 7 */
-  height: 1.5rem;
-  line-height: 1.5rem;
+  height: 100%;
+  /*line-height: 1.5rem;*/
   text-align: center;
   vertical-align: top;
   width: 1.5rem;
@@ -1262,7 +1262,6 @@ cite {
 
 .icon .fa {
     font-size: inherit;
-    line-height: inherit;
     vertical-align: middle;
 }
 
@@ -1550,7 +1549,7 @@ label:not(:first-child):not(:last-child):not(.form-group-label) {
 }
 
 label:last-child:not(:first-child):not(.form-group-label) {
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 /* Required asterisk */
@@ -1676,7 +1675,7 @@ input[type].input-contains-icon-right.input-large {
 input[type].input-contains-icon.input-large ~ .icon,
 input[type].input-contains-icon-left.input-large ~ .icon,
 input[type].input-contains-icon-right.input-large ~ .icon.icon-right {
-    line-height: 2.5rem;
+    line-height: 3.5rem;
     width: 3.5rem;
     font-size: 28px;
 }
@@ -1718,7 +1717,7 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
 
 /* Form section just adds extra spacing between form elements tiled vertically */
 .form-section:not(:last-child) {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
 }
 
 /* A flexbox version of form-section for inline forms */
@@ -3741,7 +3740,12 @@ video.video-fullscreen {
 .this-inline-flex {
   display: -webkit-inline-bpx;
   display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
   display: inline-flex;
+}
+
+.this-block {
+  display: block;
 }
 
 /*
@@ -3782,9 +3786,15 @@ video.video-fullscreen {
 
 /* Center element - best used for hero bodies or text */
 .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
       margin: 0 auto;
 }
 
@@ -3792,18 +3802,27 @@ video.video-fullscreen {
   position: absolute;
  top: 50%;
  left: 50%;
- transform: translate(-50%, -50%);
+ -webkit-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
 }
 
 .vertical-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   vertical-align: middle;
 }
 
 .horizontal-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .this-overlay {
