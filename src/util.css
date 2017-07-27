@@ -163,6 +163,8 @@
   padding: 0 !important;
 }
 
+/* Responsiveness and Element Hiding */
+
 /* Do the actual balancing only on larger screens */
 @media screen and (min-width: 769px) {
 .level, .level-left, .level-right {
@@ -173,14 +175,20 @@
 }
 
 /* Hide elements based on screen size */
-@media screen and (max-width: 400px) {
-  .hidden-phone {
-    display: none;
+@media screen and (max-width: 450px) {
+  .hide-mobile {
+    display: none !important;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .hidden-tablet {
-    display: none;
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 768px) {
+  .hide-tablet-only {
+    display: none !important;
   }
 }
