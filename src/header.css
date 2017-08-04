@@ -277,7 +277,7 @@
     position: absolute;
   }
 
-  .dropdown-menu.dropdown-shown {
+  .header-item.has-sub .dropdown-menu.dropdown-shown {
     margin-top: 0;
     position: relative;
     float: left;
@@ -285,13 +285,19 @@
     border: none;
     border-radius: 0;
     box-shadow: none;
+    display: block;
   }
 
-  .header-item .dropdown-menu.dropdown-dark {
+  .header-item.has-sub .dropdown-menu.dropdown-dark {
     background-color: rgba(0, 0, 0, 0.17);
     border: 0;
     color: #fff;
 }
+
+    /* Hide the menu by default in mobile view (overflow on header-right can expose it) */
+    .header-item.has-sub .dropdown-menu {
+        display: none;
+    }
 
   /* Make the menu items larger in the dropdown menu */
   .header-menu .header-item {
