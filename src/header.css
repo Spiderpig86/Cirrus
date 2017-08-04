@@ -277,15 +277,21 @@
     position: absolute;
   }
 
+  /* Allow for the dropdown menus to tile in a column if dropdown menu present */
+  .header-item.has-sub {
+    flex-direction: column;
+  }
+
   .header-item.has-sub .dropdown-menu.dropdown-shown {
     margin-top: 0;
     position: relative;
-    float: left;
-    margin-left: 20px;
     border: none;
     border-radius: 0;
     box-shadow: none;
     display: block;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    width: 100%;
   }
 
   .header-item.has-sub .dropdown-menu.dropdown-dark {
