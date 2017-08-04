@@ -37,7 +37,7 @@
     flex-grow: 1;
     -ms-flex-negative: 0;
     flex-shrink: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 /* Align items to the left */
@@ -48,8 +48,8 @@
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    overflow: hidden;
-    overflow-x: auto;
+    /*overflow: hidden;
+    overflow-x: auto;*/
     white-space: nowrap;
 }
 
@@ -60,8 +60,8 @@
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    overflow: hidden;
-    overflow-x: auto;
+    /*overflow: hidden;
+    overflow-x: auto;*/
     white-space: nowrap;
 }
 
@@ -117,7 +117,7 @@
     -webkit-transition: all .3s;
     transition: all .3s;
     padding: 0 .3rem;
-    cursor: hand;
+    cursor: pointer;
 }
 
 .header-item a {
@@ -137,9 +137,9 @@
 
 /* HEADER DROP DOWN MENU */
 .header-item .dropdown-menu {
-        margin-top: -5px;
+    margin-top: -5px;
     background-color: #fff;
-        position: absolute;
+    position: absolute;
     top: 95%;
     /*right: 0; /* Unable to solve problem when we have multiple drop down menus */
     z-index: 1000;
@@ -157,6 +157,8 @@
     -webkit-transition: all .2s;
     transition: all .2s;
 }
+
+/* Dropdown menu location adjustment located below for sizes above phones
 
 /* Dark dropdown menu theme */
 .header-item .dropdown-menu.dropdown-dark {
@@ -215,6 +217,10 @@
         display: none;
     }
 
+    .header-item {
+        position: relative; /* Include for helping dropdown menu positioning */
+    }
+
     .header-item .dropdown-menu {
         opacity: 0;
         -webkit-transform: translateY(-5px); /* Used for transitional drop down effect */
@@ -228,6 +234,18 @@
         -webkit-transform: none; /* Used for transitional drop down effect */
         transform: none;
         pointer-events: auto;
+    }
+
+    /* Align dropdown menu to the left side of the parent header-item for header-left */
+    .header-left .has-sub .dropdown-menu {
+        left: 0;
+        right: auto;
+    }
+
+    /* Align dropdown menu to the right side of the parent header-item for header-right */
+    .header-right .has-sub .dropdown-menu {
+        left: auto;
+        right: 0;
     }
 }
 
@@ -315,5 +333,10 @@
 
   .header-btn span:nth-child(3) {
     margin-top: 4px;
+  }
+
+  /* Hide drop down menu items */
+  .header-left, .header-center, .header-right {
+      overflow: hidden;
   }
 }
