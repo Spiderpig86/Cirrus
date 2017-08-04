@@ -1,4 +1,21 @@
 .header {
+    padding: 2rem 1rem;
+    box-shadow: none;
+            -webkit-transition: background 0.4s ease, height 0.4s ease;
+        transition: background 0.4s ease, height 0.4s ease;
+    -webkit-transition-property: background, height;
+    transition-property: background, height;
+    -webkit-transition-duration: 0.4s, 0.4s;
+            transition-duration: 0.4s, 0.4s;
+    -webkit-transition-timing-function: ease, ease;
+            transition-timing-function: ease, ease;
+    -webkit-transition-delay: initial, initial;
+            transition-delay: initial, initial;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.header-nav {
         -webkit-transition: background 0.4s ease, height 0.4s ease;
         transition: background 0.4s ease, height 0.4s ease;
     -webkit-transition-property: background, height;
@@ -12,10 +29,8 @@
     -webkit-transition: all .3s;
     transition: all .3s;
     background-color: transparent;
-    padding: 2rem 1rem;
     box-shadow: none;
     top: 0;
-    margin-bottom: 20px;
 }
 
 .header-fill {
@@ -35,11 +50,11 @@
     transition: all .3s;
 }
 
-.header-item a, .header-item {
+.nav-item a, .nav-item {
     color: #fff;
 }
 
-.header-btn span {
+.nav-btn span {
     background-color: #fff;
 }
 
@@ -178,7 +193,7 @@ footer p .fa.fa-heart {
         padding: 1.5rem 0;
     }
 
-    .header-menu {
+    /*.header-menu {
         background-color: rgba(76, 76, 76, 0.7);
-    }
+    }*/
 }
