@@ -182,6 +182,7 @@
 }
 
 @media screen and (max-width: 768px) {
+  /* Hide on devices that are tablets or smaller */
   .hide-tablet {
     display: none !important;
   }
@@ -189,6 +190,13 @@
 
 @media screen and (min-width: 451px) and (max-width: 768px) {
   .hide-tablet-only {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  /* Hide element on laptops, desktops, etc */
+  .hide-desktop {
     display: none !important;
   }
 }

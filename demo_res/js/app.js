@@ -17,7 +17,8 @@ $(document).ready(function() {
 
 // Show dropdown when clicked
 $('#header-btn').on('click', function(e) {
-    $('#header-menu').toggleClass('is-active');
+    $('#header-menu').toggleClass('active');
+    $('.nav-btn').toggleClass('active');
 })
 
 // Show / Hide menu when clicked
@@ -30,7 +31,7 @@ $('.has-sub').on('click', function(e) { // Find all with ID
 $(document).on('click', function(e) { // Hide when clicking section (will modify later)
     $('.dropdown-menu').removeClass('dropdown-shown'); // Hide other menus clicking on window
     //$('.dropdown-shown').removeClass('dropdown-shown');
-    $('#header-menu').removeClass('is-active');
+    $('#header-menu').removeClass('active');
 });
 
 /* Clicks within the dropdown won't make
@@ -44,6 +45,7 @@ $('.header-item').not($('.has-sub')).not($('.header-btn')).on('click', function(
     //$('.shown').removeClass('shown');
     $('#header-menu').removeClass('is-active');
     $('.dropdown-menu').removeClass('dropdown-shown');
+    $('.nav-btn').removeClass('active');
 });
 
 // $('.dropdown-menu > li').on('click', function(e) {
@@ -55,5 +57,6 @@ $('.header-item').not($('.has-sub')).not($('.header-btn')).on('click', function(
 // Hide menu after clicking menu item
 $('.dropdown-menu li').on('click', function(e) {
     $(this).removeClass('dropdown-shown');
-     $('#header-menu').removeClass('is-active');
+    $('#header-menu').removeClass('active');
+    $('.nav-btn').removeClass('active');
 });

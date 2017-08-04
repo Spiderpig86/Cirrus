@@ -13,6 +13,7 @@
             transition-delay: initial, initial;
     -webkit-transition: all .3s;
     transition: all .3s;
+    background: transparent;
 }
 
 .header-nav {

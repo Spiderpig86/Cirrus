@@ -1048,7 +1048,7 @@ html, body {
 /* Nunito Sans for the font */
 body {
   letter-spacing: 0.01rem;
-    line-height: 1.6;
+    line-height: 1.8; /* Globally adjust line height */
     font-size: 1rem;
   font-weight: 400;
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -1878,7 +1878,25 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
     width: 100vw;
     z-index: 100;
     margin-bottom: 20px; 
-    box-shadow: 0 3px 15px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 15px rgba(57, 63, 72, 0.1);
+    padding: 0 2rem;
+    background: #fff;
+}
+
+/* Add transition to nav menu when it drops down */
+.header.header-animated .header-nav {
+    -webkit-transition: background 0.4s ease, height 0.4s ease;
+    transition: background 0.4s ease, height 0.4s ease;
+    -webkit-transition-property: background, height;
+    transition-property: background, height;
+    -webkit-transition-duration: 0.4s, 0.4s;
+    transition-duration: 0.4s, 0.4s;
+    -webkit-transition-timing-function: ease, ease;
+    transition-timing-function: ease, ease;
+    -webkit-transition-delay: initial, initial;
+    transition-delay: initial, initial;
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
 
 .header-brand {
@@ -1946,7 +1964,7 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
 }
 
 .nav-item a {
-    padding: 0.5rem 0.75rem;
+    width: 100%;
 }
 
 /* Hover effect for header elements when appropriate */
@@ -2143,6 +2161,11 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
         position: relative; /* Include for helping dropdown menu positioning */
     }
 
+    /* Expand link area for desktop views o it is easier to click */
+    .nav-item a {
+        padding: 0.5rem 0.75rem;
+    }
+
     .nav-item .dropdown-menu {
         opacity: 0;
         -webkit-transform: translateY(-5px); /* Used for transitional drop down effect */
@@ -2179,36 +2202,9 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
     }
 
     /* Show the dropdown */
-    .header-nav.is-active {
+    .header-nav.active {
         height: calc(100vh - 52px);
     }
-
-    .nav-menu.is-active {
-        display: block;
-    }
-
-  /* For those who want an animated drop down menu, display will be block by default and only height will change */
-    .nav-menu.nav-animated {
-        display: block;
-        height: 0;
-    }
-
-  /* Slide down effect */
-  .nav-menu.nav-animated.is-active {
-    height: 100vh;
-    overflow: auto; /* Only show scrollbar when needed */
-  }
-
-/* Dropdown menu for smaller screen sizes */
-  /*.nav-menu {
-    background-color: white;
-    box-shadow: 0 4px 7px rgba(10, 10, 10, 0.1);
-    left: 0;
-    display: none;
-    right: 0;
-    top: 100%;
-    position: absolute;
-  }*/
 
   /* Remove flex for mobile devices */
     .nav-item.has-sub {
@@ -2222,6 +2218,8 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
     position: relative;
     top: 1rem;
     float: none;
+    border: none;
+    background: transparent;
   }
 
   .nav-item.has-sub .dropdown-menu.dropdown-dark {
@@ -2236,12 +2234,12 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
     }
 
   /* Make the menu items larger in the dropdown menu */
-  .nav-menu .nav-item {
+  .header-nav .nav-item {
     padding: 1rem;
   }
 
   /* Get rid of extra spaces */
-  .nav-menu .nav-item > a {
+  .header-nav .nav-item > a {
     padding: 0;
     width: 100%; /* Stretch the link to span the entire list item */
   }
@@ -2283,6 +2281,23 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
   .nav-btn span:nth-child(3) {
     margin-top: 4px;
   }
+  
+  /* Hamburger button on active */
+    .nav-btn.active span:nth-child(1) {
+        margin-left: -5px;
+        transform: rotate(45deg);
+        transform-origin: left top;
+    }
+
+    .nav-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-btn.active span:nth-child(3) {
+        margin-left: -5px;
+        transform: rotate(-45deg);
+        transform-origin: left bottom;
+    }
 
   /* Hide drop down menu items */
   .nav-left, .nav-center, .nav-right {
@@ -4004,6 +4019,7 @@ video.video-fullscreen {
 }
 
 @media screen and (max-width: 768px) {
+  /* Hide on devices that are tablets or smaller */
   .hide-tablet {
     display: none !important;
   }
@@ -4011,6 +4027,13 @@ video.video-fullscreen {
 
 @media screen and (min-width: 451px) and (max-width: 768px) {
   .hide-tablet-only {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  /* Hide element on laptops, desktops, etc */
+  .hide-desktop {
     display: none !important;
   }
 }

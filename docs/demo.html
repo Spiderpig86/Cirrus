@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -11,73 +12,74 @@
 </head>
 
 <body>
-    <div class="header header-fixed unselectable">
-        <div class="header-left">
-            <div class="header-item no-hover">
+    <div class="header header-fixed unselectable header-animated level">
+        <div class="header-brand">
+            <div class="nav-item no-hover">
                 <h6 class="title">Logo</h6>
             </div>
-        </div>
-        <div class="header-center">
-            <div class="header-item">
-                <a href="#">
-                    <span class="icon">
-                        <i class="fa fa-github"></i>
-                    </span>
-                </a>
-            </div>
-            <div class="header-item">
-                <a href="#">
-                    <span class="icon">
-                        <i class="fa fa-slack"></i>
-                    </span>
-                </a>
-            </div>
-            <div class="header-item">
-                <a href="#">
-                    <span class="icon">
-                        <i class="fa fa-twitter"></i>
-                    </span>
-                </a>
+            <div class="nav-item nav-btn" id="header-btn">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-        <div class="header-item header-btn" id="header-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="header-right header-menu" id="header-menu">
-            <div class="header-item selected">
-                <a href="#">Home</a>
+        <div class="header-nav" id="header-menu">
+            <div class="nav-left">
+                <div class="nav-item text-center">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-github"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-item text-center">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-slack"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-item text-center">
+                    <a href="#">
+                        <span class="icon">
+                            <i class="fa fa-twitter"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="nav-item has-sub toggle-hover" id="dropdown">
+                    <a class="nav-dropdown-link">DropDown</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="menu-item"><a href="#">First Item</a></li>
+                        <li role="menu-item"><a href="#">Second Item</a></li>
+                        <li role="menu-item"><a href="#">Third Item</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="header-item">
-                <a href="#">Link 1</a>
-            </div>
-             <div class="header-item has-sub toggle-hover" id="dropdown">
-                Dropdown
-                <span class="caret"></span>
-                <ul class="dropdown-menu" role="menu">
-                    <li role="menu-item"><a href="#">First Item</a></li>
-                    <li role="menu-item"><a href="#">Second Item</a></li>
-                    <li role="menu-item"><a href="#">Third Item</a></li>
-                </ul>
-            </div>
-             <div class="header-item has-sub toggle-hover" id="dropdown">
-                Dropdown
-                <span class="caret"></span>
-                <ul class="dropdown-menu" role="menu">
-                    <li role="menu-item"><a href="#">First Item</a></li>
-                    <li role="menu-item"><a href="#">Second Item</a></li>
-                    <li role="menu-item"><a href="#">Third Item</a></li>
-                </ul>
-            </div>
-             <div class="header-item has-sub" id="dropdown">
-                Dropdown
-                <span class="caret"></span>
-                <ul class="dropdown-menu" role="menu">
-                    <li role="menu-item"><a href="#">First Item</a></li>
-                    <li role="menu-item"><a href="#">Second Item</a></li>
-                    <li role="menu-item"><a href="#">Third Item</a></li>
-                </ul>
+            
+            <div class="nav-right">
+                <div class="nav-item selected">
+                    <a href="#">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#">Link 1</a>
+                </div>
+                
+                <div class="nav-item has-sub toggle-hover" id="dropdown">
+                    <a class="nav-dropdown-link">DropDown</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="menu-item"><a href="#">First Item</a></li>
+                        <li role="menu-item"><a href="#">Second Item</a></li>
+                        <li role="menu-item"><a href="#">Third Item</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item has-sub" id="dropdown">
+                    <a class="nav-dropdown-link">DropDown</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="menu-item"><a href="#">First Item</a></li>
+                        <li role="menu-item"><a href="#">Second Item</a></li>
+                        <li role="menu-item"><a href="#">Third Item</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
