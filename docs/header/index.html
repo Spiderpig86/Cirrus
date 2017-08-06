@@ -70,14 +70,48 @@
             <h3>Header</h3>
             <div class="divider"></div>
             <p>Cirrus makes designing the perfect header extremely simple. It is designed to be as flexible and responsive as a header menu could be with automatic element hiding for different screen sizes as well as support for dropdown menus. The basic outline for the header menu can be seen below.</p>
+            <div class="row">
+                <iframe src="./demo-head.html" width="100%" height="300"></iframe>
+            </div>
             
+            <h6>Header Outline</h6>
             <div class="row">
                 <div class="nested-list">
                     <ul>
                         <li><code>header</code> will serve as the parent container for the header component.
                             <ul>
-                                <li><code>header-brand</code> is the left most container of the header with the website logo <b>always showing</b>. Extra links can be added here if needed.</li>
-                                <li><code>header-nav</code> is designed for adding links, dropdown menus, and other components. The components are <b>hidden</b> for tablets and phones and are rendered in a main dropdown menu that can be accessed by the hamburger button.</li>
+                                <li>
+                                    <code>header-brand</code> is the left most container of the <code>header</code> with the website logo <b>always showing</b>. Extra links can be added here if needed.
+                                </li>
+                                <li>
+                                    <code>header-nav</code> is designed for adding links, dropdown menus, and other components. The components are <b>hidden</b> for tablets and phones and are rendered in a main dropdown menu that can be accessed by the hamburger button.
+                                    <ul>
+                                        <li>
+                                            <code>nav-left</code> is the left most container of the <code>header-nav</code> that will display components like links, buttons, etc on the left side of the screen and the top part of the menu on touch enabled devices.
+                                            <ul>
+                                                <li>
+                                                    <code>nav-item</code> serves as the main container for all components of any <code>nav-*</code> container. Slight padding is added into the control. Adding the <code>has-sub</code> class indicates that the item has a dropdown menu.
+
+                                                    <ul>
+                                                        <li>
+                                                            <code>nav-dropdown-link</code> specifies that the link inside the <code>nav-item</code> is associated to an adjacent <code>dropdown-menu</code>.
+                                                        </li>
+                                                        <li>
+                                                            <code>dropdown-menu</code> is the dropdown menu (<code>ul</code>) itself that can contain <code>li</code> or any other elements.
+
+                                                            <ul>
+                                                                <li>
+                                                                    <code>dropdown-menu-divider</code> is a divider used to separate <code>dropdown-menu</code> components.
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
                             </ul>
                         </li>     
                     </ul>

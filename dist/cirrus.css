@@ -1996,7 +1996,8 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
     background-clip: padding-box;
     border: 1px solid #ccc;
     border-radius: 0 0 4px 4px;
-    box-shadow: 0 6px 12px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
     -webkit-transition: all .2s;
     transition: all .2s;
 }
