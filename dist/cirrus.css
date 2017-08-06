@@ -1994,7 +1994,7 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
     text-align: left;
     list-style: none;
     background-clip: padding-box;
-    border: 1px solid #ccc;
+    border: 1px solid #eee;
     border-radius: 0 0 4px 4px;
     -webkit-box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
     box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
@@ -2063,6 +2063,13 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
 
 .dropdown-menu > li:last-child {
     margin-bottom: 0;
+}
+
+.dropdown-menu .dropdown-menu-divider {
+    border: none;
+    background-color: #eee;
+    height: 1px;
+    margin: 0.5rem 0;
 }
 
 .nav-btn {
