@@ -12,6 +12,11 @@
     background: #fff;
 }
 
+/* Hader dar theme */
+.header-dark {
+    background-color: rgba(0, 0, 0, 0.87);
+}
+
 /* Add transition to nav menu when it drops down */
 .header.header-animated .header-nav {
     -webkit-transition: background 0.4s ease, height 0.4s ease;
@@ -109,7 +114,6 @@
 
 /* HEADER DROP DOWN MENU */
 .nav-item .dropdown-menu {
-    margin-top: -5px;
     background-color: #fff;
     position: absolute;
     top: 95%;
@@ -127,6 +131,10 @@
     border-radius: 0 0 4px 4px;
     -webkit-box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
     box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
+}
+
+/* Just add a transition in general */
+.nav-item .dropdown-menu.dropdown-animated {
     -webkit-transition: all .2s;
     transition: all .2s;
 }
@@ -166,8 +174,6 @@
 
 .dropdown-menu.dropdown-shown {
     opacity: 1;
-    -webkit-transition: all .2s;
-    transition: all .2s;
 }
 
 .dropdown-menu > li > a {
@@ -305,13 +311,18 @@
 
     .nav-item .dropdown-menu {
         opacity: 0;
-        -webkit-transform: translateY(-5px); /* Used for transitional drop down effect */
-        transform: translateY(-5px);
         pointer-events: none; /* Make cursor not respond to menu links when not displayed */
     }
 
+    .nav-item .dropdown-menu.dropdown-animated {
+        -webkit-transform: translateY(-5px); /* Used for transitional drop down effect */
+        transform: translateY(-5px);
+    }
+
     .nav-item .dropdown-menu.dropdown-shown,
-    .nav-item.toggle-hover:hover .dropdown-menu {
+    .nav-item.toggle-hover:hover .dropdown-menu,
+    .nav-item .dropdown-menu.dropdown-animated.dropdown-shown,
+    .nav-item.toggle-hover:hover .dropdown-animated.dropdown-menu  {
         opacity: 1;
         -webkit-transform: none; /* Used for transitional drop down effect */
         transform: none;

@@ -22,7 +22,7 @@ $('#header-btn').on('click', function(e) {
 })
 
 // Show / Hide menu when clicked
-$('.has-sub').on('click', function(e) { // Find all with ID
+$('.has-sub').not('.toggle-hover').on('click', function(e) { // Find all with ID
     $('.dropdown-menu').not($(this).children('.dropdown-menu')).removeClass('dropdown-shown'); // Hide other menus
     //$('.shown').removeClass('shown');
     $(this).children('.dropdown-menu').toggleClass('dropdown-shown');
@@ -41,7 +41,7 @@ $("#header").click(function(e){
 });
 
 // Hide menu after clicking a menu item
-$('.header-item').not($('.has-sub')).not($('.header-btn')).on('click', function(e) {
+$('.nav-item').not($('.has-sub')).not($('.header-btn')).on('click', function(e) {
     //$('.shown').removeClass('shown');
     $('#header-menu').removeClass('is-active');
     $('.dropdown-menu').removeClass('dropdown-shown');

@@ -1,6 +1,6 @@
 
 // Show / Hide menu when clicked
-$('.has-sub').on('click', function(e) { // Find all with ID
+$('.has-sub').not('.toggle-hover').on('click', function(e) { // Find all with ID
     $('.dropdown-menu').not($(this).children('.dropdown-menu')).removeClass('dropdown-shown'); // Hide other menus
     //$('.shown').removeClass('shown');
     $(this).children('.dropdown-menu').toggleClass('dropdown-shown');
