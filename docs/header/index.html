@@ -17,6 +17,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <style>
+    iframe {
+        border: 2px solid #eee;
+    }
+    </style>
 </head>
 
 <body>
@@ -134,7 +140,7 @@
             </div>
 
             <p>The <code>header-brand</code> can also contain other controls other than just your website name. For instance, it can hold buttons, links, textviews, and other controls.
-            <span class="info">The area outlined by <code>header-brand</code> is indicated in light pink.</span></p>
+            <span class="info">The area used by <code>header-brand</code> is indicated in light pink.</span></p>
             
             <div class="row">
                 <iframe src="./demo-header-brand.html" width="100%" height="200"></iframe>
@@ -147,9 +153,29 @@
         <div class="content">
             <h3>Header Button</h3>
             <div class="divider"></div>
-            <p>The <code>header-btn</code> is used to style a <code>div</code> or <code>button</code> as a hamburger button that will show a dropdown menu when clicked. This only appears for touch enabled devices </p>
+            <p>The <code>header-btn</code> is used to style a <code>div</code> or <code>button</code> as a hamburger button that will show a dropdown menu when clicked. This only appears for touch enabled devices <code>(&lt;= 768px)</code> and is automatically hidden for larger scree sizes.
+            <span class="info">The area used by <code>header-btn</code> is indicated in light pink.</span></p></p>
+            <div class="row">
+                <div class="row">
+                    <iframe src="./demo-header-btn.html" width="100%" height="200"></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;header-brand&quot;&gt;
+    &lt;div class=&quot;nav-item nav-btn&quot; style=&quot;background-color: #ffdadd; cursor: pointer; display: block; position: relative; margin-left: auto;&quot;&gt;
+        &lt;span&gt;&lt;/span&gt;
+        &lt;span&gt;&lt;/span&gt;
+        &lt;span&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <p>To set the <code>header-btn</code> to the close state (when the dropdown menu is present, simply add the <code>active</code> class to the button.</p>
+            <div class="row">
+                <iframe src="./demo-header-btn-close.html" width="100%" height="200"></iframe>
+            </div>
         </div>
     </section>
+
 
 
     <!-- Pagination -->
