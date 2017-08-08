@@ -463,7 +463,7 @@
         <div class="content">
             <h3>Leveling Content</h3>
             <div class="divider"></div>
-            <p>With Cirrus, you can easily vertically center your divs with the <code>level</code> class in the parent container and the <code>level-item</code> class for the children to align the items. The <code>level-content</code> class is used with the <code>level</code> class to make the content fill the width of the parent div.</p>
+            <p>With Cirrus, you can easily vertically center your divs with the <code>level</code> class in the parent container and the <code>level-item</code> class for the children to align the items. The <code>level-content</code> class is used with the <code>level-item</code> class to make the content of the item stretch the width of the parent div relative to other divs.</p>
             <div class="row">
                 <div class="level" style="background:#eee; width:100%;">
                     <div class="level-item" style="background: #ddd; padding: 1rem;">
@@ -518,6 +518,22 @@
             </div>
             <p>In the example above, the contents of <code>level-left</code>, the <code>level-item</code> in the center, and <code>level-right</code> will expand as more content is added into the divs.</p>
             <blockquote>Tl;dr: For navbars, check out the header menu documentation.</blockquote>
+
+            <h6>Fill Height</h6>
+            <p>Looking at the previous examples, you may be wondering how to force the <code>level-items</code> to fill the height of its parent container. This is easily done by adding the <code>fill-height</code> class to the <code>level</code> div.</p>
+            <div class="row">
+                 <div class="level" style="background:#ddd;">
+                    <div class="level-left level-content" style="background:#eee;">
+                        <p class="level-item content-no-padding padtop">Totally</p>
+                    </div>
+                    <div class="level-item level-content" style="background:#eee;">
+                        <p class="content-no-padding text-center padtop">Equal</p>
+                    </div>
+                    <div class="level-right level-content" style="background:#eee;">
+                        <p class="level-item content-no-padding padtop">Heights</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

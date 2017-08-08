@@ -114,6 +114,11 @@ span.title {
     width: 65%;
 }
 
+.content blockquote:not(.example) {
+    background-color: #ffdadd;
+    border-left: 5px solid #f03d4d;
+}
+
 #grid a {
     position: inherit;
 }
