@@ -216,6 +216,14 @@
 }
 
 @media screen and (min-width: 769px) {
+    .header {
+        -webkit-box-align: stretch; /* Box Align and align items to stretch to make nav-items fill up parent height */
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        display: -webkit-box; 
+        display: -ms-flexbox;
+    }
+    
     .header-nav {
         -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -306,7 +314,7 @@
 
     /* Expand link area for desktop views o it is easier to click */
     .nav-item a {
-        padding: 0.5rem 0.75rem;
+        padding: 0.25rem 0.75rem;
     }
 
     .nav-item .dropdown-menu {
