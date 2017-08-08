@@ -124,7 +124,7 @@
         <div class="content">
             <h3>Header Brand</h3>
             <div class="divider"></div>
-            <p>The <code>header-brand</code> serves as the part of the header menu that showcases your website brand, logo, etc. It is positioned in the left most part of the <code>header</code> and is <b>always</b> visible on any screen size.</p>
+            <p>The <code>header-brand</code> serves as the part of the header menu that showcases your website brand, logo, etc. It is positioned in the left most part of the <code>header</code> and is <b>always</b> visible on any screen size. However, the <code>header-nav</code> will fill the width of the parent container for touch enabled devices <code>(&lt;= 768px)</code> but will only take up the space it needs for larger devices <code>(&gt; 769px)</code>.</p>
             <div class="row">
                 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;header&quot;&gt;
     &lt;div class=&quot;header-brand&quot;&gt;
@@ -133,11 +133,21 @@
 &lt;/div&gt;</code></pre>
             </div>
 
-            <p>The <code>header-brand</code> can also contain other controls other than just your website name. For instance, it can hold buttons, links, textviews, and other controls.</p>
+            <p>The <code>header-brand</code> can also contain other controls other than just your website name. For instance, it can hold buttons, links, textviews, and other controls.
+            <span class="info">The area outlined by <code>header-brand</code> is indicated in light pink.</span></p>
+            
             <div class="row">
-                <iframe src="./demo-header-brand.html" width="100%" height="300"></iframe>
+                <iframe src="./demo-header-brand.html" width="100%" height="200"></iframe>
             </div>
             <p>Note that the <code>header-brand</code> should always have the <code>nav-btn</code> as a way for touch enabled devices to access the <code>header-nav</code>.</p>
+        </div>
+    </section>
+
+    <section id="headerBtn" class="padtop">
+        <div class="content">
+            <h3>Header Button</h3>
+            <div class="divider"></div>
+            <p>The <code>header-btn</code> is used to style a <code>div</code> or <code>button</code> as a hamburger button that will show a dropdown menu when clicked. This only appears for touch enabled devices </p>
         </div>
     </section>
 
