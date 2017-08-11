@@ -11,6 +11,7 @@ $('section').not('#header-btn').on('click', function(e) { // Hide when clicking 
     $('#header-menu').removeClass('active');
 });
 
+// TOGGLE HEADER-NAV
 // Show dropdown when clicked
 $('#header-btn').on('click', function(e) {
     $('#header-menu').toggleClass('active');
@@ -19,7 +20,6 @@ $('#header-btn').on('click', function(e) {
 
 // Hide menu after clicking menu item
 $('.dropdown-menu li').on('click', function(e) {
-    $(this).removeClass('dropdown-shown');
      $('#header-menu').removeClass('active');
      $('.nav-btn').removeClass('active');
 });

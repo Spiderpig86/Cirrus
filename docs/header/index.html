@@ -284,7 +284,40 @@
 &lt;/div&gt;</code></pre>
             </div>
 
-            <p>Since that <code>header-nav</code> fills up the rest of the space for devices with widths larger than <code>768px</code>, Cirrus provides different layouts to place elements within the container itself that will float in the left, center, or the right.</p>
+            <p>Since that <code>header-nav</code> fills up the rest of the space for devices with widths larger than <code>768px</code>, Cirrus provides different layouts to place elements within the container itself using <code>nav-left</code>, <code>nav-center</code>, and <code>nav-right</code> directly as children.</p>
+
+            <space></space>
+            <h5>JavaScript Toggle</h6>
+            <p>Keep in mind that the script used to toggle the menus is not included in Cirrus and it is best to develop a custom one that fits your site. Below is a sample of what can fit in any site running Cirrus.</p>
+
+            <h6>Plain JavaScript</h6>
+            <pre><code class="javascript" data-lang="JS">// Get all the nav-btns in the page
+let navBtns = document.querySelectorAll('.nav-btn');
+
+// Add an event handler for all nav-btns to enable the dropdown functionality
+navBtns.forEach(function (ele) {
+    ele.addEventListener('click', function() {
+        // Get the dropdown-menu associated with this nav button (insert the id of your menu)
+        let dropDownMenu = document.getElementById('MENU_ID_HERE');
+
+        // Toggle the nav-btn and the dropdown menu
+        ele.classList.toggle('active');
+        dropDownMenu.classList.toggle('active');
+    });
+});</code></pre>
+        <space></space>
+        <h6>JQuery</h6>
+        <pre><code class="javascript" data-lang="JS">// Show dropdown when clicked
+$('#header-btn').on('click', function(e) {
+    $('#MENU_ID_HERE').toggleClass('active');
+    $('.nav-btn').toggleClass('active');
+});
+
+// Hide menu after clicking menu item
+$('.dropdown-menu li').on('click', function(e) {
+     $('#MENU_ID_HERE').removeClass('active');
+     $('.nav-btn').removeClass('active');
+});</code></pre>
         </div>
     </section>
 

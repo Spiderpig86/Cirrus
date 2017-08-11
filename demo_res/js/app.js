@@ -19,7 +19,8 @@ $(document).ready(function() {
 $('#header-btn').on('click', function(e) {
     $('#header-menu').toggleClass('active');
     $('.nav-btn').toggleClass('active');
-})
+    $('#header').toggleClass('translucent');
+});
 
 // Show / Hide menu when clicked
 $('.has-sub').not('.toggle-hover').on('click', function(e) { // Find all with ID
@@ -43,9 +44,8 @@ $("#header").click(function(e){
 // Hide menu after clicking a menu item
 $('.nav-item').not($('.has-sub')).not($('.header-btn')).on('click', function(e) {
     //$('.shown').removeClass('shown');
-    $('#header-menu').removeClass('is-active');
     $('.dropdown-menu').removeClass('dropdown-shown');
-    $('.nav-btn').removeClass('active');
+    $('.nav-btn').not(this).removeClass('active');
 });
 
 // $('.dropdown-menu > li').on('click', function(e) {
