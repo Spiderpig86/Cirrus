@@ -79,6 +79,79 @@
             <div class="row">
                 <iframe src="./demo-head.html" width="100%" height="300"></iframe>
             </div>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;header header-fixed unselectable header-animated&quot;&gt;
+    &lt;div class=&quot;header-brand&quot;&gt;
+        &lt;div class=&quot;nav-item no-hover&quot;&gt;
+            &lt;h6 class=&quot;title&quot;&gt;Logo&lt;/h6&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;nav-item nav-btn&quot; id=&quot;header-btn&quot;&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+            &lt;span&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;header-nav&quot; id=&quot;header-menu&quot;&gt;
+        &lt;div class=&quot;nav-left&quot;&gt;
+            &lt;div class=&quot;nav-item text-center&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;icon&quot;&gt;
+                        &lt;i class=&quot;fa fa-github&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nav-item text-center&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;icon&quot;&gt;
+                        &lt;i class=&quot;fa fa-slack&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nav-item text-center&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;icon&quot;&gt;
+                        &lt;i class=&quot;fa fa-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nav-item has-sub toggle-hover&quot; id=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;nav-dropdown-link&quot;&gt;DropDown&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;First Item&lt;/a&gt;&lt;/li&gt;
+                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Second Item&lt;/a&gt;&lt;/li&gt;
+                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Third Item&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-right&quot;&gt;
+            &lt;div class=&quot;nav-item selected&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Selected&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nav-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Link 1&lt;/a&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;nav-item has-sub toggle-hover&quot; id=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;nav-dropdown-link&quot;&gt;Animated&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu dropdown-animated&quot; role=&quot;menu&quot;&gt;
+                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;First Item&lt;/a&gt;&lt;/li&gt;
+                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Second Item&lt;/a&gt;&lt;/li&gt;
+                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Third Item&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nav-item has-sub&quot; id=&quot;dropdown&quot;&gt;
+                &lt;a class=&quot;nav-dropdown-link&quot;&gt;Click Me&lt;/a&gt;
+                &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;First Item&lt;/a&gt;&lt;/li&gt;
+                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Second Item&lt;/a&gt;&lt;/li&gt;
+                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Third Item&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
             
             <h6>Header Outline</h6>
             <div class="row">
@@ -146,6 +219,7 @@
                 <iframe src="./demo-header-brand.html" width="100%" height="200"></iframe>
             </div>
             <p>Note that the <code>header-brand</code> should always have the <code>nav-btn</code> as a way for touch enabled devices to access the <code>header-nav</code>.</p>
+            <p>Another thing to note is that the <code>first-child</code> of the <code>header-brand</code> will have an extra padding of <code>1rem</code> in the left and right designed especially for logo placement.</p>
         </div>
     </section>
 
@@ -205,10 +279,12 @@
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;header-nav&quot;&gt;
-        &lt;!-- Other nav categories, controls, nav-items, etc --&gt;
+        &lt;!-- Other nav categories, controls, nav-items, etc. This is hidden on touch enabled devices --&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
+
+            <p>Since that <code>header-nav</code> fills up the rest of the space for devices with widths larger than <code>768px</code>, Cirrus provides different layouts to place elements within the container itself that will float in the left, center, or the right.</p>
         </div>
     </section>
 

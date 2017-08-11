@@ -8,7 +8,6 @@
     z-index: 100;
     margin-bottom: 20px; 
     box-shadow: 0 3px 15px rgba(57, 63, 72, 0.1);
-    padding: 0 2rem;
     background: #fff;
 }
 
@@ -222,6 +221,7 @@
         align-items: stretch;
         display: -webkit-box; 
         display: -ms-flexbox;
+        padding: 0 2rem;
     }
     
     .header-nav {
@@ -312,9 +312,9 @@
         position: relative; /* Include for helping dropdown menu positioning */
     }
 
-    /* Expand link area for desktop views o it is easier to click */
+    /* Expand link area for desktop views so it is easier to click */
     .nav-item a {
-        padding: 0.25rem 0.75rem;
+        padding: 0.5rem 1rem;
     }
 
     .nav-item .dropdown-menu {
@@ -351,6 +351,10 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    .header-brand .nav-item:first-child {
+        padding: 0 1rem; /* Add padding to the first child, usually the logo */
+    }
 
     /* Hide dropdon menu on mobile */
     .header-nav {
