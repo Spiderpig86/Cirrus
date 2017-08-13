@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <div id="header" class="header header-fill unselectable header-fixed level no-transition">
+    <div id="header" class="header header-fill unselectable header-fixed fill-height no-transition">
         <div class="header-brand">
             <div class="nav-item">
                 <a href="../../">
@@ -321,10 +321,15 @@ $('.dropdown-menu li').on('click', function(e) {
         </div>
     </section>
 
-    <section id="navLocation" class="padtop">
+    <section id="navRegion" class="padtop">
         <div class="content">
-            <h3>Nav Locations</h3>
+            <h3>Nav Regions</h3>
             <div class="divider"></div>
+            <p>The nav regions or the <code>nav-left</code>, <code>nav-center</code>, and <code>nav-right</code> classes denote the different regions in the nav-bar. The children of these classes will align based on their class suffix (elements in <code>nav-left</code> will be left aligned and items in <code>nav-right</code> will be right aligned). The containers by themselves will take up all the remaining space in the <code>header-nav</code>, but will space out evenly with the addition of more regions.</p>
+            <div class="row">
+                <p>Only 1 region present (<code>nav-left</code>).</p>
+            </div>
+
 
             <h6>Nav Left</h6>
 
