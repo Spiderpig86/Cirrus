@@ -365,6 +365,45 @@ $('.dropdown-menu li').on('click', function(e) {
         <div class="content">
             <h3>Nav Item</h3>
             <div class="divider"></div>
+            <p>The <code>nav-item</code> class is the fundamental component that serves as the parent container to all the other elements in the <code>header-nav</code> and <code>header-nav</code>. Elements such as links, paragraphs, inputs, and other controls can be placed inside. Below are some examples in code.</p>
+            <p>A <code>header-brand</code> <b>logo</b>.</p>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;nav-item&quot;&gt;
+    &lt;img src=&quot;./logo.png&quot; /&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <p>A <b>link</b>.</p>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;nav-item&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <p>The <b>dropdown menu toggle</b>.</p>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;nav-item has-sub&quot; id=&quot;dropdown&quot;&gt;
+    &lt;a class=&quot;nav-dropdown-link&quot;&gt;
+        &lt;span class=&quot;icon&quot;&gt;
+            &lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt; 
+        Docs
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <p>Or any other <b>elements</b> or <b>containers</b> like <code>row</code>.</p>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;nav-item has-sub&quot;&gt;
+    &lt;input type=&quot;text&quot; /&gt;
+    &lt;button class=&quot;btn-accent&quot;&gt;Hello&lt;/button&gt;
+    &lt;button class=&quot;btn-accent&quot;&gt;World&lt;/button&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Click&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;Me&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
         </div>
     </section>
 

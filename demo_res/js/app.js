@@ -15,6 +15,11 @@ $(document).ready(function() {
     });
 });
 
+// Hide when clicking nav-item
+$('.nav-item').not('.has-sub').not('.nav-btn').on('click', function(e) {
+    $('#header-menu').removeClass('active');
+});
+
 // Show dropdown when clicked
 $('#header-btn').on('click', function(e) {
     $('#header-menu').toggleClass('active');
@@ -23,7 +28,7 @@ $('#header-btn').on('click', function(e) {
 });
 
 // Show / Hide menu when clicked
-$('.has-sub').not('.toggle-hover').on('click', function(e) { // Find all with ID
+$('.has-sub').on('click', function(e) { // Find all with ID
     $('.dropdown-menu').not($(this).children('.dropdown-menu')).removeClass('dropdown-shown'); // Hide other menus
     //$('.shown').removeClass('shown');
     $(this).children('.dropdown-menu').toggleClass('dropdown-shown');

@@ -1887,7 +1887,7 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
     -ms-flex-positive: 1;
     flex-grow: 1;
     -ms-flex-negative: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 100;
     margin-bottom: 20px; 
     box-shadow: 0 3px 15px rgba(57, 63, 72, 0.1);
