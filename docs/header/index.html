@@ -203,7 +203,7 @@
         <div class="content">
             <h3>Header Brand</h3>
             <div class="divider"></div>
-            <p>The <code>header-brand</code> serves as the part of the header menu that showcases your website brand, logo, etc. It is positioned in the left most part of the <code>header</code> and is <b>always</b> visible on any screen size. However, the <code>header-nav</code> will fill the width of the parent container for touch enabled devices <code>(&lt;= 768px)</code> but will only take up the space it needs for larger devices <code>(&gt; 769px)</code>.</p>
+            <p>The <code>header-brand</code> serves as the part of the header menu that showcases your website brand, logo, etc. It is positioned in the left most part of the <code>header</code> and is <b>always</b> visible on any screen size. However, the <code>header-nav</code> will fill the width of the parent container for touch enabled devices <code>(&lt;= 768px)</code> but will only take up the space it needs for larger devices <code>(&gt; 768px)</code>.</p>
             <div class="row">
                 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;header&quot;&gt;
     &lt;div class=&quot;header-brand&quot;&gt;
@@ -326,24 +326,32 @@ $('.dropdown-menu li').on('click', function(e) {
             <h3>Nav Regions</h3>
             <div class="divider"></div>
             <p>The nav regions or the <code>nav-left</code>, <code>nav-center</code>, and <code>nav-right</code> classes denote the different regions in the nav-bar. The children of these classes will align based on their class suffix (elements in <code>nav-left</code> will be left aligned and items in <code>nav-right</code> will be right aligned). The containers by themselves will take up all the remaining space in the <code>header-nav</code>, but will space out evenly with the addition of more regions.</p>
+            <p>Note that this only shows for <code>&gt; 768px</code>.</p>
             <div class="row">
                 <p class="info text-center no-margin">Only 1 region present (<code>nav-left</code>).</p>
-                <iframe src="./demo-head-dist-1.html" width="100%" height="100"></iframe>
+                <iframe src="./demo-head-dist-1.html" width="100%" height="200"></iframe>
             </div>
             <div class="row">
                 <p class="info text-center no-margin">Only 2 regions present (<code>nav-left</code> and <code>nav-right</code>).</p>
-                <iframe src="./demo-head-dist-2.html" width="100%" height="100"></iframe>
+                <iframe src="./demo-head-dist-2.html" width="100%" height="200"></iframe>
             </div>
             <div class="row">
                 <p class="info text-center no-margin">All regions present (<code>nav-left</code>, <code>nav-center</code> and <code>nav-right</code>).</p>
-                <iframe src="./demo-head-dist-3.html" width="100%" height="100"></iframe>
+                <iframe src="./demo-head-dist-3.html" width="100%" height="200"></iframe>
             </div>
 
             <h6>Nav Left</h6>
+            <p>This will display contents on the <b>left</b> side of the <code>header-nav</code> and items are left aligned.</p>
+            <div class="row">
+                <iframe src="./demo-head-left.html" width="100%" height="200"></iframe>
+            </div>
 
             <h6>Nav Center</h6>
+            <p>This will display contents on the <b>center</b> of the <code>header-nav</code> and items are centered.<br />
+            <span class="info">Note that this will not appear directly in the center if the <code>header-brand</code> has elements.</span></p>
 
             <h6>Nav Right</h6>
+            <p>This will display contents on the <b>right</b> side of the <code>header-nav</code> and items are right aligned.</p>
         </div>
     </section>
 
