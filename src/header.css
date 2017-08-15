@@ -107,7 +107,7 @@
       background-color: rgba(0, 0, 0, 0.05);
 }
 
-.nav-item.selected {
+.nav-item.active {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -171,7 +171,8 @@
     color: #fff;
 }
 
-.dropdown-menu.dropdown-shown {
+.dropdown-menu.dropdown-shown,
+.nav-item.active {
     opacity: 1;
 }
 
@@ -221,7 +222,6 @@
         align-items: stretch;
         display: -webkit-box; 
         display: -ms-flexbox;
-        padding: 0 2rem;
     }
     
     .header-nav {
@@ -463,4 +463,10 @@
   .nav-left, .nav-center, .nav-right {
       overflow: hidden;
   }
+}
+
+@media screen and (min-width: 1003px) {
+    .header {
+        padding: 0 2rem;
+    }
 }
