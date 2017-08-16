@@ -326,7 +326,8 @@ $('.dropdown-menu li').on('click', function(e) {
             <h3>Nav Regions</h3>
             <div class="divider"></div>
             <p>The nav regions or the <code>nav-left</code>, <code>nav-center</code>, and <code>nav-right</code> classes denote the different regions in the nav-bar. The children of these classes will align based on their class suffix (elements in <code>nav-left</code> will be left aligned and items in <code>nav-right</code> will be right aligned). The containers by themselves will take up all the remaining space in the <code>header-nav</code>, but will space out evenly with the addition of more regions.</p>
-            <p>Note that this only shows for <code>&gt; 768px</code>.</p>
+            <p>Note that this only shows for <code>&gt; 768px</code>.
+            </p>
             <div class="row">
                 <p class="info text-center no-margin">Only 1 region present (<code>nav-left</code>).</p>
                 <iframe src="./demo-head-dist-1.html" width="100%" height="200"></iframe>
@@ -365,7 +366,13 @@ $('.dropdown-menu li').on('click', function(e) {
         <div class="content">
             <h3>Nav Item</h3>
             <div class="divider"></div>
-            <p>The <code>nav-item</code> class is the fundamental component that serves as the parent container to all the other elements in the <code>header-nav</code> and <code>header-nav</code>. Elements such as links, paragraphs, inputs, and other controls can be placed inside. Below are some examples in code.</p>
+            <p>The <code>nav-item</code> class is the fundamental component that serves as the parent container to all the other elements inside these components:
+                <li><code>header-brand</code> </li>
+                <li><code>header-nav</code> </li>
+                <li><code>dropdown-menu</code></li>
+                <li><code>nav-left</code></li>
+                <li><code>nav-right</code></li>
+                Elements such as links, paragraphs, inputs, and other controls can be placed inside. Below are some examples in code.</p>
             <p>A <code>header-brand</code> <b>logo</b>.</p>
             <div class="row">
                 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;nav-item&quot;&gt;
@@ -404,6 +411,7 @@ $('.dropdown-menu li').on('click', function(e) {
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
+            <p>Cirrus provides flexibility for which type of elements you can use for your <code>nav-item</code> elements which can be declared as either <code>&lt;div&gt;</code> or <code>&lt;a&gt;</code>.</p>
         </div>
     </section>
 
@@ -411,6 +419,10 @@ $('.dropdown-menu li').on('click', function(e) {
         <div class="content">
             <h3>Nav Dropdown</h3>
             <div class="divider"></div>
+            <p>The <code>dropdown-menu</code> allows you to display a drpdown menu from a <code>nav-item</code> that displays additional options. The whole implementation is really broken down into two parts:</p>
+
+            <h6>1) The Dropdown Toggle</h6>
+            <p>This is simply a <code>nav-item</code> that has an <code>has-sub</code> class attached to it to indicate that this contains a dropdown menu with additional options. The user clicks this toggle and the <code>dropdown-menu</code> will appear based on its previous state.</p>
         </div>
     </section>
 

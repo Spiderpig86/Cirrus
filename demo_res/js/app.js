@@ -52,8 +52,8 @@ $("#header").click(function(e){
 $('.nav-item').not($('.has-sub')).not($('.header-btn')).on('click', function(e) {
     //$('.shown').removeClass('shown');
     $('.dropdown-menu').removeClass('dropdown-shown');
-    $('.nav-btn').not(this).removeClass('active');
-    $(this).removeClass('active');
+    $('.nav-btn').not($(this)).removeClass('active');
+    //$(this).removeClass('active');
 });
 
 // $('.dropdown-menu > li').on('click', function(e) {

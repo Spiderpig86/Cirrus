@@ -3648,7 +3648,7 @@ video.video-fullscreen {
 
 /* Striped table */
 .table.striped tbody tr:nth-child(even) {
-    background-color: #fafafa;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 
