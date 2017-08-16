@@ -419,10 +419,68 @@ $('.dropdown-menu li').on('click', function(e) {
         <div class="content">
             <h3>Nav Dropdown</h3>
             <div class="divider"></div>
-            <p>The <code>dropdown-menu</code> allows you to display a drpdown menu from a <code>nav-item</code> that displays additional options. The whole implementation is really broken down into two parts:</p>
-
+            <p>The <code>dropdown-menu</code> allows you to display a drpdown menu from a <code>nav-item</code> that displays additional options. This is simply a <code>nav-item</code> that has an <code>has-sub</code> class attached to it to indicate that this contains a dropdown menu with additional options. The user clicks this toggle and the <code>dropdown-menu</code> will appear based on its previous state. The whole implementation is really broken down into two parts:</p>
+            
+            <space></space>
             <h6>1) The Dropdown Toggle</h6>
-            <p>This is simply a <code>nav-item</code> that has an <code>has-sub</code> class attached to it to indicate that this contains a dropdown menu with additional options. The user clicks this toggle and the <code>dropdown-menu</code> will appear based on its previous state.</p>
+            <p>Inside the <code>nav-item has-sub</code> element, the main toggle of the component will be handled by an anchor tag with the <code>nav-dropdown-link</code> class. Inside this control, icons and text can be added to specify the contents of the menu. When the dropdown menu is shown, the <code>active</code> class will be added to the <code>nav-item has-sub</code> element (the parent).</p>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;nav-item has-sub&quot;&gt;
+    &lt;a class=&quot;nav-dropdown-link&quot;&gt;
+        &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-book&quot;&gt;&lt;/i&gt;&lt;/span&gt; 
+    Docs&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            
+            <space></space>
+            <h6>2) The Menu Itself</h6>
+            <p>The menu itself will be <b>adjacent</b> to the <code>nav-dropdown-link</code> and is a <code>ul</code> with the <code>dropdown-menu</code> class. Addition modifers include:
+            <ul>
+                <li><code>dropdown-animated</code> - adds animation when the menu is shown and hidden.</li>
+                <li><code>dropdown-dark</code> - adds a dark theme to the dropdown menu.</li>
+                <li><code>dropdown-shown</code> - shows the dropdown menu.</li>
+            </ul>
+            Embedded inside the dropdown-menu <code>ul</code>, <code>li</code> is used to denote the list items. Within the list items, any component can also be added.
+            </p>
+
+            <p>Putting the two elements together, we can get a dropdown menu structure that looks something like this:</p>
+            <div class="row">
+                <iframe src="./demo-dropdown.html" width="100%" height=300></iframe>
+            </div>
+            <div class="row">
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;nav-item has-sub&quot;&gt;
+    &lt;a class=&quot;nav-dropdown-link&quot;&gt;
+        Me
+    &lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-animated&quot; role=&quot;menu&quot;&gt;
+        &lt;li role=&quot;menu-item&quot;&gt;&lt;a&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;menu-item&quot;&gt;&lt;a&gt;Achievements&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;menu-item&quot;&gt;&lt;a&gt;Likes&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <space></space>
+            <h6>JavaScript</h6>
+            <p>Coming Soon</p>
+
+            <h6>CSS-only Toggle</h6>
+            <p>If <b>JavaScript</b> is not an option in showing the menu, Cirrus now provides a hover toggle to show and hide the <code>dropdown-menu</code> with only CSS. To do so, the <code>toggle-hover</code> class needs to be added to the <code>nav-item has-sub</code> element. <b>That is all.</b></p>
+            <div class="row">
+                <iframe src="./demo-dropdown-hover.html" width="100%" height=300></iframe>
+            </div>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;nav-item has-sub toggle-hover&quot;&gt;
+    &lt;a class=&quot;nav-dropdown-link&quot;&gt;
+        Menu
+    &lt;/a&gt;
+    &lt;ul class=&quot;dropdown-menu dropdown-animated&quot; role=&quot;menu&quot;&gt;
+        &lt;li role=&quot;menu-item&quot;&gt;&lt;a&gt;Profile&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;menu-item&quot;&gt;&lt;a&gt;Messages&lt;/a&gt;&lt;/li&gt;
+        &lt;li role=&quot;menu-item&quot;&gt;&lt;a&gt;Log Out&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+            </div>
         </div>
     </section>
 
