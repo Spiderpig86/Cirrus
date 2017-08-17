@@ -9,6 +9,7 @@
     margin-bottom: 20px; 
     box-shadow: 0 3px 15px rgba(57, 63, 72, 0.1);
     background: #fff;
+    max-height: 100vh;
 }
 
 /* Hader dar theme */
@@ -359,6 +360,12 @@
 
 @media screen and (max-width: 768px) {
 
+    /* Add scrolling support in header */
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+
     .header-brand .nav-item:first-child {
         padding: 0 1rem; /* Add padding to the first child, usually the logo */
     }
@@ -370,7 +377,7 @@
 
     /* Show the dropdown */
     .header-nav.active {
-        height: calc(100vh - 52px);
+        height: 100vh;
     }
 
   /* Remove flex for mobile devices */
