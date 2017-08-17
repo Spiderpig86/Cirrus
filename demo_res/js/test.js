@@ -1,4 +1,5 @@
 
+// TOGGLE DROPDOWN MENU
 // Show / Hide menu when clicked
 $('.has-sub').on('click', function(e) { // Find all with ID
     $('.dropdown-menu').not($(this).children('.dropdown-menu')).removeClass('dropdown-shown'); // Hide other menus
@@ -12,6 +13,7 @@ $('section').not('#header-btn').on('click', function(e) { // Hide when clicking 
     $('#header-menu').removeClass('active');
     $('.nav-item').removeClass('active');
 });
+
 
 // TOGGLE HEADER-NAV
 // Show dropdown when clicked

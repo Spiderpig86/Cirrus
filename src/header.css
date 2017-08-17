@@ -101,7 +101,8 @@
 }
 
 /* Hover effect for header elements when appropriate */
-.nav-item:not(.no-hover):hover {
+.nav-item:not(.no-hover):hover,
+.nav-item:not(.no-hover).hovered {
      -webkit-transition: all .3s;
      transition: all .3s;
       background-color: rgba(0, 0, 0, 0.05);

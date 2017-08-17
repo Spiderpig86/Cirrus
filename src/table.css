@@ -24,7 +24,7 @@
 }
 
 .table tr:hover, .table.striped tbody tr:nth-child(even):hover {
-    background: #eee;
+    background: rgba(0, 0, 0, 0.10);
 }
 
 /* Thicker border for table header */

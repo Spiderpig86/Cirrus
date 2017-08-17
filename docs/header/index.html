@@ -412,6 +412,10 @@ $('.dropdown-menu li').on('click', function(e) {
 &lt;/div&gt;</code></pre>
             </div>
             <p>Cirrus provides flexibility for which type of elements you can use for your <code>nav-item</code> elements which can be declared as either <code>&lt;div&gt;</code> or <code>&lt;a&gt;</code>.</p>
+
+            <h6>States</h6>
+            <p><code>nav-items</code> have 3 basic states: <code>normal</code> (no selector), <code>:hover</code>, and <code>active</code>. To disable any hover effect, just add <code>no-hover</code> to the <code>nav-item</code>.</p>
+            <iframe src="./demo-navitem-states.html" width="100%" height="100"></iframe>
         </div>
     </section>
 
@@ -430,7 +434,6 @@ $('.dropdown-menu li').on('click', function(e) {
         &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-book&quot;&gt;&lt;/i&gt;&lt;/span&gt; 
     Docs&lt;/a&gt;
 &lt;/div&gt;</code></pre>
-            </div>
             
             <space></space>
             <h6>2) The Menu Itself</h6>
@@ -461,8 +464,16 @@ $('.dropdown-menu li').on('click', function(e) {
             </div>
 
             <space></space>
-            <h6>JavaScript</h6>
-            <p>Coming Soon</p>
+            <h6>JavaScript (jQuery)</h6>
+            <p>With JavaScript, the cleanest solution relies on jQuery. Below is a snippet that should work for general implementations of the <code>dropdown-menu</code>, but may require slight modification depending on the design of the website.</p>
+            <div class="row">
+                <pre><code class="javascript" data-lang="JS">$('.has-sub').on('click', function(e) { // Get all dropdown menu toggles
+    $('.dropdown-menu').not($(this).children('.dropdown-menu')).removeClass('dropdown-shown'); // Hide all other dropdown menus
+    $('.has-sub').not($(this)).removeClass('active'); // Remove the active selector from the other dropdown toggles
+    $(this).children('.dropdown-menu').toggleClass('dropdown-shown'); // Show/hide the dropdown menu associated with the toggle being clicked
+    $(this).toggleClass('active'); // Toggle the active selector on the nav-item
+});</code></pre>
+            </div>
 
             <h6>CSS-only Toggle</h6>
             <p>If <b>JavaScript</b> is not an option in showing the menu, Cirrus now provides a hover toggle to show and hide the <code>dropdown-menu</code> with only CSS. To do so, the <code>toggle-hover</code> class needs to be added to the <code>nav-item has-sub</code> element. <b>That is all.</b></p>

@@ -1984,7 +1984,8 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
 }
 
 /* Hover effect for header elements when appropriate */
-.nav-item:not(.no-hover):hover {
+.nav-item:not(.no-hover):hover,
+.nav-item:not(.no-hover).hovered {
      -webkit-transition: all .3s;
      transition: all .3s;
       background-color: rgba(0, 0, 0, 0.05);
@@ -3615,7 +3616,7 @@ video.video-fullscreen {
 }
 
 .table tr:hover, .table.striped tbody tr:nth-child(even):hover {
-    background: #eee;
+    background: rgba(0, 0, 0, 0.10);
 }
 
 /* Thicker border for table header */
