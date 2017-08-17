@@ -2080,13 +2080,19 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
       background-color: rgba(0, 0, 0, 0.05);
 }
 
+.dropdown-menu > li:active {
+    -webkit-transition: all .3s;
+     transition: all .3s;
+      background-color: rgba(0, 0, 0, 0.1);
+}
+
 .dropdown-menu > li:last-child {
     margin-bottom: 0;
 }
 
 .dropdown-menu .dropdown-menu-divider {
     border: none;
-    background-color: #eee;
+    background-color: rgba(0, 0, 0, 0.05);
     height: 1px;
     margin: 0.5rem 0;
 }

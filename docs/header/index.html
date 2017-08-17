@@ -423,7 +423,7 @@ $('.dropdown-menu li').on('click', function(e) {
         <div class="content">
             <h3>Nav Dropdown</h3>
             <div class="divider"></div>
-            <p>The <code>dropdown-menu</code> allows you to display a drpdown menu from a <code>nav-item</code> that displays additional options. This is simply a <code>nav-item</code> that has an <code>has-sub</code> class attached to it to indicate that this contains a dropdown menu with additional options. The user clicks this toggle and the <code>dropdown-menu</code> will appear based on its previous state. The whole implementation is really broken down into two parts:</p>
+            <p>The <code>dropdown-menu</code> allows you to display a drpdown menu from a <code>nav-item</code> that displays additional options. This is simply a <code>nav-item</code> that has an <code>has-sub</code> class attached to it to indicate that this contains a dropdown menu with additional options. On desktops <code>&gt; 768px</code>, the dropdown menu appears as a regular menu item and the menu portion displays below the <code>nav-item</code>. On mobile devices, it just expands the <code>nav-item</code> it is in. The user clicks this toggle and the <code>dropdown-menu</code> will appear based on its previous state. The whole implementation is really broken down into two parts:</p>
             
             <space></space>
             <h6>1) The Dropdown Toggle</h6>
@@ -492,7 +492,21 @@ $('.dropdown-menu li').on('click', function(e) {
     &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
             </div>
+
+            <h6>Positioning</h6>
+            <p>Customizing the positioning of the <code>dropdown-menu</code> is very simple. By default, Cirrus will automatically align and position them depending if it is inside a <code>nav-left</code>, <code>nav-center</code>, or <code>nav-right</code>. Menus in the left navigation menu are left aligned, menus in the center are centered, and menus on the right are right aligned. This ensures that the menus do not go past the screens.</p>
+            <div class="row">
+                <iframe src="./demo-dropdown-align.html" width="100%" height="200"></iframe>
+            </div>
         </div>
+
+        <h6>Dropdown Divider</h6>
+    </section>
+
+    <section id="themes" class="padtop">
+        <h3>Header Themes</h3>
+        <div class="divider"></div>
+        <p>Coming Soon</p>
     </section>
 
     <!-- Pagination -->
