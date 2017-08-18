@@ -109,7 +109,8 @@
       background-color: rgba(0, 0, 0, 0.05);
 }
 
-.nav-item.active {
+.nav-item.active, /* active:hover removes the transition effect when hoveirng over the dropdown menu */ 
+.nav-item.active:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 

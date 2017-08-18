@@ -1,5 +1,3 @@
-<!-- Demo to show how regions are allocated depending how many are present -->
-
 <!DOCTYPE html>
 <html>
     <header>
@@ -17,6 +15,7 @@
                 <div class="nav-item no-hover">
                     <a><h6 class="title">Logo</h6></a>
                 </div>
+                
                 <div class="nav-item nav-btn" id="header-btn">
                     <span></span>
                     <span></span>
@@ -25,21 +24,16 @@
             </div>
             <div class="header-nav" id="header-menu">
                 <div class="nav-right">
-                    <div class="nav-item">
-                        <a>
-                            <span class="icon">
-                                <i class="fa fa-github"></i>
-                            </span>
-                        </a>
-                    </div>
-                    <div class="nav-item has-sub" style="background-color: #ffdadd;">
+                    <div class="nav-item has-sub active">
                         <a class="nav-dropdown-link">
-                            Me
+                            Right
                         </a>
-                        <ul class="dropdown-menu dropdown-animated" role="menu">
-                            <li role="menu-item"><a>About</a></li>
-                            <li role="menu-item"><a>Achievements</a></li>
+                        <ul class="dropdown-menu dropdown-shown" role="menu">
+                            <li role="menu-item"><a>Profile</a></li>
+                            <li role="menu-item"><a>Activities</a></li>
                             <li role="menu-item"><a>Likes</a></li>
+                            <li class="dropdown-menu-divider"></li>
+                            <li role="menu-item"><a>Log Out</a></li>
                         </ul>
                     </div>
                 </div>
