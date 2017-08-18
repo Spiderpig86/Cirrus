@@ -1989,12 +1989,12 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
 .nav-item:not(.no-hover).hovered {
      -webkit-transition: all .3s;
      transition: all .3s;
-      background-color: rgba(0, 0, 0, 0.05);
+      background-color: rgba(144, 144, 144, 0.15);
 }
 
 .nav-item.active, /* active:hover removes the transition effect when hoveirng over the dropdown menu */ 
 .nav-item.active:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(144, 144, 144, 0.25);
 }
 
 /* HEADER DROP DOWN MENU */
@@ -2051,7 +2051,8 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
 }
 
 /* Dark dropdown menu theme */
-.nav-item .dropdown-menu.dropdown-dark {
+.nav-item .dropdown-menu.dropdown-dark,
+.header-dark .dropdown-menu{
     background-color: rgba(0, 0, 0, 0.87);
     border: 1px solid #333;
     color: #fff;
@@ -2070,6 +2071,12 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
     white-space: nowrap;
 }
 
+/* Theme for dark menu */
+.header-dark .nav-item a,
+.header-dark .dropdown-menu > li > a {
+    color: #fff;
+}
+
 .dropdown-menu > li {
   margin: 0;
     -webkit-transition: all .3s;
@@ -2079,13 +2086,13 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
 .dropdown-menu > li:hover {
     -webkit-transition: all .3s;
      transition: all .3s;
-      background-color: rgba(0, 0, 0, 0.05);
+      background-color: rgba(144, 144, 144, 0.15);
 }
 
 .dropdown-menu > li:active {
     -webkit-transition: all .3s;
      transition: all .3s;
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(144, 144, 144, 0.25);
 }
 
 .dropdown-menu > li:last-child {
@@ -2094,7 +2101,7 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
 
 .dropdown-menu .dropdown-menu-divider {
     border: none;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(144, 144, 144, 0.15);
     height: 1px;
     margin: 0.5rem 0;
 }
