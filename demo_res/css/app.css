@@ -1,4 +1,4 @@
-/* .header {
+.header {
     padding: 2rem 1rem;
     box-shadow: none;
             -webkit-transition: background 0.4s ease, height 0.4s ease;
@@ -14,7 +14,7 @@
     -webkit-transition: all .3s;
     transition: all .3s;
     background: transparent;
-} */
+}
 
 .translucent {
     background: rgba(0, 0, 0, 0.4);
@@ -38,7 +38,7 @@
     top: 0;
 }
 
-/* .header-fill {
+.header-fill {
     background-color: rgba(0, 0, 0, 0.87);
     padding: 0 2rem;
          -webkit-transition: background 0.4s ease, height 0.4s ease;
@@ -53,7 +53,7 @@
             transition-delay: initial, initial;
     -webkit-transition: all .3s;
     transition: all .3s;
-} */
+}
 
 .nav-item a, .nav-item {
     color: #fff;
