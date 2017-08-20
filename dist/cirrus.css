@@ -238,22 +238,22 @@
 }
 
 button.animated:hover, [type=submit].animated:hover, .btn.animated:hover {
-   -webkit-transform: scale(1.1);
-         transform: scale(1.1);
+   -webkit-transform: scale(1.05);
+         transform: scale(1.05);
 }
 
 .btn:active, button:active, [type=submit]:active {
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  -moz-transition: all .3s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -moz-transition: all .2s;
   background: #ccc;
 }
 
 /* Make the loading circle, if present, white when button is active */
 .btn.loading:active:after, button.loading:active:after, [type=submit].loading:active:after {
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  -moz-transition: all .3s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -moz-transition: all .2s;
   border: 2px solid #fff;
   border-radius: 50%;
   border-right-color: transparent;
@@ -261,8 +261,8 @@ button.animated:hover, [type=submit].animated:hover, .btn.animated:hover {
 }
 
 button.animated:active, [type=submit].animated:active, .btn.animated:active {
-   -webkit-transform: scale(0.97);
-    transform: inherit, scale(0.97); 
+   -webkit-transform: scale(0.99);
+    transform: inherit, scale(0.99); 
 }
 
 .btn:focus, button:focus, [type=submit]:focus {
