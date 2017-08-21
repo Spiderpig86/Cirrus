@@ -8,47 +8,60 @@ ol {
   list-style: decimal inside;
 }
 
+/* Handle nesting */
+ul ul, ol ul, ul ol, ol ol {
+  margin: 1rem 0 1rem 1rem;
+}
+
 /* Description lists */
 
-dl, dd {
-    margin-bottom: 1rem;
+dl {
+  margin: 1rem 0;
+}
+
+/* Detail title */
+dt {
+  font-weight: bold;
 }
 
 dd {
-  margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 li {
-  margin: 0.5rem 0;
+  margin: 0.25rem 0;
 }
 
 li:last-child {
   margin-bottom: 1em;
 }
 
-/* Nesting Lists */
-.nested-list ol,
-.nested-list ul {
-  margin-left: 2em;
-  margin-top: 1em;
-}
-
-.nested-list ol ol,
-.nested-list ul ul {
-  margin-top: 0.5em;
-}
-
-.nested-list ul {
+/* Nested ul bullets */
+ul {
   list-style: disc outside;
-  
+  margin: 0.5rem 0;
 }
 
-.nested-list ul ul {
+ul ul {
   list-style-type: circle;
 }
 
-.nested-list ul ul ul {
+ul ul ul {
   list-style-type: square;
+}
+
+/* Nested ol bullets */
+ol {
+  list-style: decimal;
+  margin: 0.5rem 0;
+}
+
+ol ol {
+  list-style: lower-alpha;
+}
+
+ol ol ol {
+  list-style: upper-roman;
 }
 
 /* MISC */

@@ -201,48 +201,84 @@
             <h6>Nested Lists</h6>
             <p>Cirrus will automatically style and pad nested lists so you don't have to. Just add the <code>nested-list</code> class to the div containing the list.</p>
             <div class="row">
-                <div class="col-6">
-                    <div class="nested-list">
-                        <ul>
-                            <li>A</li>
-                            <li>B</li>
-                            <li>C
-                                <ul>
-                                    <li>1</li>
-                                    <li>2</li>
-                                    <li>3
-                                        <ul>
-                                            <li>a</li>
-                                            <li>b</li>
-                                            <li>c</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col-4">
+                    <ul>
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3
+                            <ul>
+                                <li>List Item 3.a</li>
+                                <li>List Item 3.b</li>
+                                <li>List Item 3.c
+                                    <ul>
+                                        <li>List Item 3.c.i</li>
+                                        <li>List Item 3.c.ii</li>
+                                        <li>List Item 3.c.iii</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;nested-list&quot;&gt;
-    &lt;ul&gt;
-        &lt;li&gt;A&lt;/li&gt;
-        &lt;li&gt;B&lt;/li&gt;
-        &lt;li&gt;C
-            &lt;ul&gt;
-                &lt;li&gt;1&lt;/li&gt;
-                &lt;li&gt;2&lt;/li&gt;
-                &lt;li&gt;3
-                    &lt;ul&gt;
-                        &lt;li&gt;a&lt;/li&gt;
-                        &lt;li&gt;b&lt;/li&gt;
-                        &lt;li&gt;c&lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;</code></pre>
-</div>
+                <div class="col-4">
+                    <ol>
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3
+                            <ol>
+                                <li>List Item 3.a</li>
+                                <li>List Item 3.b</li>
+                                <li>List Item 3.c
+                                    <ol>
+                                        <li>List Item 3.c.i</li>
+                                        <li>List Item 3.c.ii</li>
+                                        <li>List Item 3.c.iii</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-4">
+                    <ul>
+                        <li>List Item 1</li>
+                        <li>List Item 2</li>
+                        <li>List Item 3
+                            <ol>
+                                <li>List Item 3.a</li>
+                                <li>List Item 3.b</li>
+                                <li>List Item 3.c
+                                    <ul>
+                                        <li>List Item 3.c.i</li>
+                                        <li>List Item 3.c.ii</li>
+                                        <li>List Item 3.c.iii</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;!-- Unordered List --&gt;
+&lt;ul&gt;
+    &lt;li&gt;List Item 1&lt;/li&gt;
+    &lt;li&gt;List Item 2&lt;/li&gt;
+    &lt;li&gt;List Item 3
+        &lt;ul&gt;
+            &lt;li&gt;List Item 3.a&lt;/li&gt;
+            &lt;li&gt;List Item 3.b&lt;/li&gt;
+            &lt;li&gt;List Item 3.c
+                &lt;ul&gt;
+                    &lt;li&gt;List Item 3.c.i&lt;/li&gt;
+                    &lt;li&gt;List Item 3.c.ii&lt;/li&gt;
+                    &lt;li&gt;List Item 3.c.iii&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
             </div>
         </div>
     </section>
@@ -258,7 +294,8 @@
             <div class="row">
                 <div class="col-6">
                     <div class="frame">
-                        <div class="frame-header">
+
+                        <div class="frame-body">
                             <div class="card-tile level">
                                 <div class="tile-icon">
                                     <figure class="avatar">
@@ -270,9 +307,6 @@
                                     <p class="tile-subtitle no-margin">Founder and CEO of Pied Piper.</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="frame-body">
                             <ul class="menu">
                                 <li class="divider"></li>
                                 <li class="menu-item selected">
