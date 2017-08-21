@@ -62,16 +62,30 @@
     animation: loading 500ms infinite linear;
 }
 
+.animated.loading.loading-white:after {
+    border-left-color: #fff;
+    border-bottom-color: #fff;
+}
+
 /* Align spinner left */
 .animated.loading.loading-left:after {
   left: 2rem;
   right: auto;
 }
 
+.animated.loading.loading-left {
+  padding-left: 4rem;
+}
+
 /* Align spinner right */
 .animated.loading.loading-right:after {
   left: auto;
   right: 2rem;
+  
+}
+
+.animated.loading.loading-right {
+  padding-right: 4rem;
 }
 
 /* Hide text in loading button */
@@ -279,7 +293,7 @@
   background: #eee;
 }
 
-button.animated:hover, [type=submit].animated:hover, .btn.animated:hover {
+button.btn-animated:hover, [type=submit].btn-animated:hover, .btn.btn-animated:hover {
    -webkit-transform: scale(1.05);
          transform: scale(1.05);
 }
@@ -302,7 +316,7 @@ button.animated:hover, [type=submit].animated:hover, .btn.animated:hover {
   border-top-color: transparent;
 }
 
-button.animated:active, [type=submit].animated:active, .btn.animated:active {
+button.btn-animated:active, [type=submit].btn-animated:active, .btn.btn-animated:active {
    -webkit-transform: scale(0.99);
     transform: inherit, scale(0.99); 
 }

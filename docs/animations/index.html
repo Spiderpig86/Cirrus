@@ -73,27 +73,45 @@
             <p>Animations are an essential part crafting beautiful websites that aren't just stunning, but are also alive. Cirrus comes bundled with a couple of animations to help you get started.</p>
                 <space></space>
                 <h5>Loading Spinner</h5>
-                <p>The loading spinner serves as an elegant indicator for progress in webpages. Just add the <code>animated loading</code> selectors to the element and Cirrus will handle the rest. By default, the spinner will be horizontally centered and it will override any text. To hide the text, just add the <code>hide-text</code> class.</p>
-                <div class="row flex center">
-                    <div class="animated loading" style="padding: 1rem;">Shown</div>
-                    <div class="animated loading hide-text" style="padding: 1rem;">Hidden</div>
+                <p>The loading spinner serves as an elegant indicator for progress in webpages. Just add the <code>animated loading</code> selectors to the element and Cirrus will handle the rest. By default, the spinner will be horizontally centered and it will override any text. To hide the text, just add the <code>hide-text</code> class. Below are some modifiers of the loading spinner.</p>
+                <ul class="menu-list">
+                    <li><code>hide-text</code> - hides the text. Best used for when the loader covers underlying text.</li>
+                    <li><code>loading-white</code> - sets the loading spinner's color to white.</li>
+                </ul>
+
+                <p>To make the <code>loading</code> spinner align either left or right, add the <code>loading-left</code> or <code>loading-right</code> classes respectively.</p>
+                <div class="row center">
+                    <div class="col-4">
+                        <div class="card" style="background: -webkit-linear-gradient(to right, #00c9ff, #92fe9d); background: linear-gradient(to right, #00c9ff, #92fe9d);">
+                            <div class="animated loading loading-left loading-white white">
+                                <p>loading-left</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card" style="background: #833ab4; background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);">
+                            <div class="animated loading loading-right loading-white white text-right">
+                                <p>loading-right</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <space></space>
+                <space class="x-large"></space>
                 <h5>Loading Button</h5>
-                <p>These buttons are designed to tell users that a function is in progress. This is simply created by adding the <code>loading</code> class to the button and it will automatically 
+                <p>These buttons are designed to tell users that a function is in progress. This is simply created by adding the <code>animated loading</code> classes to the button and it will automatically 
                 <div class="row fluid-container">
                     <div class="col-fluid">
                         <button class="animated loading center hide-text">1</button>
                     </div>
                     <div class="col-fluid">
-                        <button class="animated loading center hide-text btn-accent">2</button>
+                        <button class="animated loading center loading-left btn-accent">Loading</button>
                     </div>
                     <div class="col-fluid">
-                        <button class="animated loading center hide-text" id="btn3">3</button>
+                        <button class="animated loading center loading-white hide-text" id="btn3">3</button>
                     </div>
                     <div class="col-fluid">
-                        <button class="animated loading center hide-text" id="btn4">4</button>
+                        <button class="animated loading center loading-right loading-white white" id="btn4">Loading</button>
                     </div>
                     <div class="col-fluid">
                         <button class="animated loading center hide-text" id="btn5">5</button>
@@ -104,19 +122,19 @@
 
                     <div class="row">
                         <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col-fluid&quot;&gt;
-    &lt;button class=&quot;loading center&quot; id=&quot;btn1&quot;&gt;1&lt;/button&gt;
+    &lt;button class=&quot;animated loading center hide-text&quot;&gt;1&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-fluid&quot;&gt;
-    &lt;button class=&quot;loading center&quot; id=&quot;btn2&quot;&gt;2&lt;/button&gt;
+    &lt;button class=&quot;animated loading center loading-left btn-accent&quot;&gt;Loading&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-fluid&quot;&gt;
-    &lt;button class=&quot;loading center&quot; id=&quot;btn3&quot;&gt;3&lt;/button&gt;
+    &lt;button class=&quot;animated loading center loading-white hide-text&quot; id=&quot;btn3&quot;&gt;3&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-fluid&quot;&gt;
-    &lt;button class=&quot;loading center&quot; id=&quot;btn4&quot;&gt;4&lt;/button&gt;
+    &lt;button class=&quot;animated loading center loading-right loading-white white&quot; id=&quot;btn4&quot;&gt;Loading&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;col-fluid&quot;&gt;
-    &lt;button class=&quot;loading center&quot; id=&quot;btn5&quot;&gt;5&lt;/button&gt;
+    &lt;button class=&quot;animated loading center hide-text&quot; id=&quot;btn5&quot;&gt;5&lt;/button&gt;
 &lt;/div&gt;</code></pre>
                     </div>
 

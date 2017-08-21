@@ -57,16 +57,30 @@
     animation: loading 500ms infinite linear;
 }
 
+.animated.loading.loading-white:after {
+    border-left-color: #fff;
+    border-bottom-color: #fff;
+}
+
 /* Align spinner left */
 .animated.loading.loading-left:after {
   left: 2rem;
   right: auto;
 }
 
+.animated.loading.loading-left {
+  padding-left: 4rem;
+}
+
 /* Align spinner right */
 .animated.loading.loading-right:after {
   left: auto;
   right: 2rem;
+  
+}
+
+.animated.loading.loading-right {
+  padding-right: 4rem;
 }
 
 /* Hide text in loading button */

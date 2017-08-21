@@ -33,7 +33,7 @@
   background: #eee;
 }
 
-button.animated:hover, [type=submit].animated:hover, .btn.animated:hover {
+button.btn-animated:hover, [type=submit].btn-animated:hover, .btn.btn-animated:hover {
    -webkit-transform: scale(1.05);
          transform: scale(1.05);
 }
@@ -56,7 +56,7 @@ button.animated:hover, [type=submit].animated:hover, .btn.animated:hover {
   border-top-color: transparent;
 }
 
-button.animated:active, [type=submit].animated:active, .btn.animated:active {
+button.btn-animated:active, [type=submit].btn-animated:active, .btn.btn-animated:active {
    -webkit-transform: scale(0.99);
     transform: inherit, scale(0.99); 
 }
