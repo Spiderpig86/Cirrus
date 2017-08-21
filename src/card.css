@@ -97,7 +97,7 @@ position: relative;
 .card .action-bar button,
 .card .action-bar .btn,
 .card .action-bar [type=submit] {
-  margin: .5rem;
+  margin: 0 .5rem;
 }
 
 .card .action-bar + .card-footer {
