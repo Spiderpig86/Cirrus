@@ -72,27 +72,35 @@
 
             <p>Animations are an essential part crafting beautiful websites that aren't just stunning, but are also alive. Cirrus comes bundled with a couple of animations to help you get started.</p>
                 <space></space>
-                    <h5>Loading Button</h5>
-                    <p>These buttons are designed to tell users that a function is in progress.
-                    <div class="row fluid-container">
-                        <div class="col-fluid">
-                            <button class="loading center">1</button>
-                        </div>
-                        <div class="col-fluid">
-                            <button class="loading center btn-accent">2</button>
-                        </div>
-                        <div class="col-fluid">
-                            <button class="loading center" id="btn3">3</button>
-                        </div>
-                        <div class="col-fluid">
-                            <button class="loading center" id="btn4">4</button>
-                        </div>
-                        <div class="col-fluid">
-                            <button class="loading center" id="btn5">5</button>
-                        </div>
-                    </div>
+                <h5>Loading Spinner</h5>
+                <p>The loading spinner serves as an elegant indicator for progress in webpages. Just add the <code>animated loading</code> selectors to the element and Cirrus will handle the rest. By default, the spinner will be horizontally centered and it will override any text. To hide the text, just add the <code>hide-text</code> class.</p>
+                <div class="row flex center">
+                    <div class="animated loading" style="padding: 1rem;">Shown</div>
+                    <div class="animated loading hide-text" style="padding: 1rem;">Hidden</div>
+                </div>
 
-                    <space></space>
+                <space></space>
+                <h5>Loading Button</h5>
+                <p>These buttons are designed to tell users that a function is in progress. This is simply created by adding the <code>loading</code> class to the button and it will automatically 
+                <div class="row fluid-container">
+                    <div class="col-fluid">
+                        <button class="animated loading center hide-text">1</button>
+                    </div>
+                    <div class="col-fluid">
+                        <button class="animated loading center hide-text btn-accent">2</button>
+                    </div>
+                    <div class="col-fluid">
+                        <button class="animated loading center hide-text" id="btn3">3</button>
+                    </div>
+                    <div class="col-fluid">
+                        <button class="animated loading center hide-text" id="btn4">4</button>
+                    </div>
+                    <div class="col-fluid">
+                        <button class="animated loading center hide-text" id="btn5">5</button>
+                    </div>
+                </div>
+
+                <space></space>
 
                     <div class="row">
                         <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col-fluid&quot;&gt;

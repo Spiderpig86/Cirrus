@@ -247,32 +247,7 @@ button.animated:active, [type=submit].animated:active, .btn.animated:active {
   font-size: 120%;
 }
 
-/* Loading button */
-.loading {
-    color: transparent !important;
-    position: relative;
-}
-
-.loading:after {
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-top-color: transparent;
-    content: "";
-    display: block;
-    height: 1rem;
-    position: relative;
-    width: 1rem;
-    left: 50%;
-    margin-left: -10px;
-    margin-top: -10px;
-    position: absolute;
-    top: 50%;
-    position: absolute !important;
-      -webkit-animation: loading 500ms infinite linear;
-    animation: loading 500ms infinite linear;
-}
-
+/* Make the loader white so it is visible */
 .loading.btn-accent:after {
     border: 2px solid #fff;
       border-right-color: transparent;

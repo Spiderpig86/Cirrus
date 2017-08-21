@@ -163,6 +163,16 @@
   padding: 0 !important;
 }
 
+/* Round the corners of the element */
+.round {
+  border-radius: .1rem;
+}
+
+/* Turns element into a circle */
+.circle {
+  border-radius: 50%;
+}
+
 /* Responsiveness and Element Hiding */
 
 /* Do the actual balancing only on larger screens */

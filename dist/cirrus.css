@@ -28,6 +28,7 @@
   }
 }
 
+/* Hover animation */
 .hover-grow { /* Mouse leave */
   transition-duration: .32s;
 }
@@ -35,6 +36,47 @@
 .hover-grow:hover { /* Mouse enter */
       transform: scale(1.1);
     transition-duration: .08s;
+}
+
+/* Loading button position relatively for loading spinner location */
+.animated.loading {
+  position: relative;
+}
+
+/* Loading Spinner, align center by default */
+.animated.loading:after {
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    margin-left: -10px;
+    margin-top: -10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+      -webkit-animation: loading 500ms infinite linear;
+    animation: loading 500ms infinite linear;
+}
+
+/* Align spinner left */
+.animated.loading.loading-left:after {
+  left: 2rem;
+  right: auto;
+}
+
+/* Align spinner right */
+.animated.loading.loading-right:after {
+  left: auto;
+  right: 2rem;
+}
+
+/* Hide text in loading button */
+.animated.loading.hide-text {
+    color: transparent !important;
 }
 
 /* Heart animation */
@@ -451,32 +493,7 @@ button.animated:active, [type=submit].animated:active, .btn.animated:active {
   font-size: 120%;
 }
 
-/* Loading button */
-.loading {
-    color: transparent !important;
-    position: relative;
-}
-
-.loading:after {
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-top-color: transparent;
-    content: "";
-    display: block;
-    height: 1rem;
-    position: relative;
-    width: 1rem;
-    left: 50%;
-    margin-left: -10px;
-    margin-top: -10px;
-    position: absolute;
-    top: 50%;
-    position: absolute !important;
-      -webkit-animation: loading 500ms infinite linear;
-    animation: loading 500ms infinite linear;
-}
-
+/* Make the loader white so it is visible */
 .loading.btn-accent:after {
     border: 2px solid #fff;
       border-right-color: transparent;
@@ -4085,6 +4102,16 @@ video.video-fullscreen {
 
 .no-padding {
   padding: 0 !important;
+}
+
+/* Round the corners of the element */
+.round {
+  border-radius: .1rem;
+}
+
+/* Turns element into a circle */
+.circle {
+  border-radius: 50%;
 }
 
 /* Responsiveness and Element Hiding */

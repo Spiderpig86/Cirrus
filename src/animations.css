@@ -23,6 +23,7 @@
   }
 }
 
+/* Hover animation */
 .hover-grow { /* Mouse leave */
   transition-duration: .32s;
 }
@@ -30,6 +31,47 @@
 .hover-grow:hover { /* Mouse enter */
       transform: scale(1.1);
     transition-duration: .08s;
+}
+
+/* Loading button position relatively for loading spinner location */
+.animated.loading {
+  position: relative;
+}
+
+/* Loading Spinner, align center by default */
+.animated.loading:after {
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    margin-left: -10px;
+    margin-top: -10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+      -webkit-animation: loading 500ms infinite linear;
+    animation: loading 500ms infinite linear;
+}
+
+/* Align spinner left */
+.animated.loading.loading-left:after {
+  left: 2rem;
+  right: auto;
+}
+
+/* Align spinner right */
+.animated.loading.loading-right:after {
+  left: auto;
+  right: 2rem;
+}
+
+/* Hide text in loading button */
+.animated.loading.hide-text {
+    color: transparent !important;
 }
 
 /* Heart animation */
