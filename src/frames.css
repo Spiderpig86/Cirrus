@@ -13,7 +13,8 @@
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-    border: .1rem solid #ececec;
+    /* border: .1rem solid #ececec; */
+    box-shadow: 0 0.05rem 0.2rem rgba(69, 77, 93, .3);
 }
 
 /* For the frame header and footer, use flex display */

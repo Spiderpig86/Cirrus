@@ -166,25 +166,25 @@ ul.menu {
 }
 
 .menu-dropdown .menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-animation: slide-down .2s ease 1;
-    animation: slide-down .2s ease 1;
-    background: #fff;
-    border-radius: .2rem;
-    box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
-    margin: 0;
-    opacity: 0;
-    min-width: 12rem;
-    padding: 0.5rem 1rem;
-    -webkit-transform: translateY(.5rem);
-    transform: translateY(.5rem);
-    height: 0;
-    z-index: -1;
-    overflow: hidden;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+  position: absolute;
+  top: 75%;
+  left: 0;
+  -webkit-animation: slide-down .2s ease 1;
+  animation: slide-down .1s ease 1;
+  background: #fff;
+  border-radius: .2rem;
+  box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
+  margin: 0;
+  opacity: 0;
+  min-width: 12rem;
+  padding: 0.5rem 1rem;
+  -webkit-transform: translateY(.5rem);
+  transform: translateY(.5rem);
+  z-index: 10;
+  pointer-events: none; /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
+  overflow: hidden;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .menu-dropdown.dropdown-right .menu {
@@ -196,13 +196,14 @@ ul.menu {
 .menu-dropdown.shown .menu,
 .menu-dropdown .btn-dropdown:focus + .menu,
 .menu-dropdown .menu:hover {
-    display: block;
-    opacity: 1;
-    top: 100%;
-    z-index: 100;
-    height: inherit;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+  display: block;
+  opacity: 1;
+  top: 100%;
+  z-index: 100;
+  pointer-events: auto; /* Restore pointer events */
+  height: auto;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .menu-dropdown .btn-group .btn-dropdown:nth-last-child(2) {
