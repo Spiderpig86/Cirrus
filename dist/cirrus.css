@@ -3670,7 +3670,7 @@ video.video-fullscreen {
 }
 
 .table td, .table th {
-        border: 1px solid #dbdbdb;
+        border: 1px solid rgba(219, 219, 219, 0.50);
     border-width: 0 0 1px;
     padding: 0.75rem;
     vertical-align: top;
@@ -3690,11 +3690,11 @@ video.video-fullscreen {
 
 /* Thicker border for table header */
 .table thead th, .table thead {
-    border-bottom: 2px solid #dbdbdb;
+    border-bottom: 2px solid rgba(219, 219, 219, 0.49);
 }
 
 .table.bordered thead th, .table.bordered thead {
-    border-bottom: 1px solid #dbdbdb;
+    border-bottom: 1px solid rgba(219, 219, 219, 0.50);
 }
 
 .table thead th, .table tfoot th {
@@ -3702,14 +3702,14 @@ video.video-fullscreen {
 }
 
 .table tfoot th {
-  border-top: 2px solid #dbdbdb;
+  border-top: 2px solid rgba(219, 219, 219, 0.50);
   border-bottom: none;
 }
 
 /* CUSTOM STYLES */
 /* All borders */
 .table.bordered td, .table.bordered th {
-  border: 1px solid #dbdbdb;
+  border: 1px solid rgba(219, 219, 219, 0.50);
 }
 
 .table.bordered thead td, .table.borderd thead {
