@@ -1148,8 +1148,7 @@ section {
 
 /* When focusing any element */
 :focus {
-    /* box-shadow: 0 0 0.1rem 0.15rem rgba(51, 51, 51, 0.07); */
-    box-shadow: 0 0 0.1rem 0.15rem rgba(240, 61, 77, .07);
+    box-shadow: 0 0 0.1rem 0.15rem rgba(240, 61, 77, .13);
     outline: none;
 }
 /* FONT */
@@ -3227,7 +3226,7 @@ dd {
 }
 
 li {
-  margin: 0.25rem 0;
+  margin: 0.35rem 0;
 }
 
 li:last-child {
@@ -3288,18 +3287,18 @@ ul.menu {
 
 /* Style menu items */
 .menu .menu-item a {
-  border-radius: 2px;
   color: #555;
   display: block;
   padding: 0.5em 0.75em;
+  border-radius: 3px;
   -webkit-transition: all .2s;
   transition: all .2s;
   font-size: 0.85rem;
-  border-radius: 3px;
 }
 
 .menu .menu-item:hover > a {
-  background: rgba(208, 208, 208, 0.5);
+  background: rgba(208, 208, 208, 0.3);
+  color: #d43644;
   -webkit-transition: all .2s;
   transition: all .2s;
   
@@ -3311,13 +3310,22 @@ ul.menu {
 }
 
 .menu .menu-item .menu-addon {
-  padding: 0.35rem;
+  padding: 0.3rem;
   z-index: 1;
   position: relative;
   color: #374054;
   cursor: pointer;
   float: left;
   margin-right: .1rem;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+/* Darken on hover to differentiate from menu-item */
+.menu .menu-item .menu-addon:hover {
+  background-color: rgba(60, 60, 60, 0.25);
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 
 .menu .menu-item .menu-addon.right {
@@ -3371,7 +3379,8 @@ ul.menu {
   animation: slide-down .1s ease 1;
   background: #fff;
   border-radius: .2rem;
-  box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
+  -webkit-box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
+          box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
   margin: 0;
   opacity: 0;
   min-width: 12rem;
@@ -3407,6 +3416,43 @@ ul.menu {
 .menu-dropdown .btn-group .btn-dropdown:nth-last-child(2) {
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
+}
+
+/* Tree Navigation Menu */
+.tree {
+  margin: 0;
+}
+
+/* The title of the tree menu */
+.tree .tree-item .tree-header {
+  display: block;
+  padding: .25rem .5rem;
+}
+
+/* The dropdown glyph of the tree menu */
+.tree .tree-item .tree-header .icon {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+/* Expand the tree-body (has menu-items) */
+.tree .tree-item input:checked ~ .tree-body {
+  max-height: 100vh;
+}
+
+/* Rotate the dropdown glyph */
+.tree .tree-item input:checked ~ .tree-body .icon {
+  -webkit-transform: roate(90deg);
+          transform: roate(90deg);
+}
+
+/* Container for the menu-items of the tree menu */
+.tree .tree-item .tree-body {
+  max-height: 0; /* Hidden at first */
+  margin-bottom: .5rem;
+  overflow: hidden;
+  -webkit-transition: all .2s;
+  transition: all .2s;
 }
 /* MEDIA CSS */
 /* Handles images, videos, figures, etc */
