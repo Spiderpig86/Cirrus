@@ -2,15 +2,34 @@
 
 ul {
   list-style: disc inside;
+  margin: 0.5rem 0 0.5rem 0.5rem;
 }
 
 ol {
   list-style: decimal inside;
+  margin: 0.5rem 0 0.5rem 0.5rem;
 }
 
 /* Handle nesting */
 ul ul, ol ul, ul ol, ol ol {
   margin: 1rem 0 1rem 1rem;
+}
+
+/* Nested list bullet types */
+ul ul {
+  list-style-type: circle;
+}
+
+ul ul ul {
+  list-style-type: square;
+}
+
+ol ol {
+  list-style: lower-alpha;
+}
+
+ol ol ol {
+  list-style: upper-roman;
 }
 
 /* Description lists */
@@ -34,34 +53,6 @@ li {
 
 li:last-child {
   margin-bottom: 1em;
-}
-
-/* Nested ul bullets */
-ul {
-  list-style: disc outside;
-  margin: 0.5rem 0;
-}
-
-ul ul {
-  list-style-type: circle;
-}
-
-ul ul ul {
-  list-style-type: square;
-}
-
-/* Nested ol bullets */
-ol {
-  list-style: decimal;
-  margin: 0.5rem 0;
-}
-
-ol ol {
-  list-style: lower-alpha;
-}
-
-ol ol ol {
-  list-style: upper-roman;
 }
 
 /* MISC */

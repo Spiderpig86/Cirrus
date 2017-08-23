@@ -227,15 +227,19 @@
                 <div class="row">
                     <h6>Customize Your Build</h6>
                     <p>Cirrus can be modified to include only components that you will need. Since it is processed with <a href="http://gulpjs.com/">Gulp</a> swapping different components in and out of your distribution build is very simple.</p>
-                    <p>Just follow the following steps:</p>
-                    <div class="nested-list">
-                        <ol>
-                            <li>Open the root directory in your terminal.</li>
-                            <li>Remember to run <code>npm install</code> to get all the necessary dependencies.</li>
-                            <li>Modify <code>gulpfile.js</code> to add or remove components and then run <code>gulp minify</code> to build the regular and minified versions.</li>
-                            <li>These build files should appear in the <code>/dist</code> directory.</li>
-                        </ol>
-                    </div>
+                    <p class="no-margin">Just follow the following steps:</p>
+                    <ol>
+                        <li>Open the root directory in your terminal.</li>
+                        <li>Remember to run <code>npm install</code> to get all the necessary dependencies.</li>
+                        <li>Modify <code>gulpfile.js</code> to add or remove components and then run <code>gulp minify</code> to build the regular and minified versions.</li>
+                        <li>These build files should appear in the <code>/dist</code> directory.</li>
+                    </ol>
+                    <p class="no-margin"><b>Gulp Commands</b></p>
+                    <ul>
+                        <li><code>gulp compile</code> - just compile the CSS without minification.</li>
+                        <li><code>gulp minify</code> - compile the CSS with <a href="https://github.com/jakubpawlowicz/clean-css#level-2-optimizations">level 2 minification</a>.</li>
+                        <li><code>gulp watch</code> - automate compiling and minication.</li>
+                    </ul>
                 </div>                     
         </section>
 
@@ -247,7 +251,7 @@
                     <p>Cirrus introduces some animations to help you get started with your project from hover effects to loading indicators. All of these components can easily be modified to achieve any appearance.</p>
                     <space></space>
                     <h5>Loading Button</h5>
-                    <p>These buttons are designed to tell users that a function is in progress.
+                    <p>These buttons are designed to tell users that a function is in progress.</p>
             <div class="row fluid-container">
                     <div class="col-fluid">
                         <button class="animated loading center hide-text">1</button>
@@ -524,7 +528,7 @@
                     </div>
                 </div>
             </div>
-            <a href="docs/cards"><button class="pull-right">See More<i class="fa fa-chevron-right pad-left"></i></button></a>
+            <a href="docs/cards"><div class="btn-container"><button class="pull-right">See More<i class="fa fa-chevron-right pad-left"></i></button></div></a>
         </div>
     </section>
 
@@ -535,7 +539,7 @@
                 <div class="divider"></div>
             <div class="row">
                 <div class="col-6">
-                    <h6 class="title">Embedding Code</h6>
+                    <h6>Embedding Code</h6>
                     <p>It's as simple as pre > code > and then the code you want to mark up.</p>
                 </div>
                 <div class="col-6">
@@ -545,8 +549,7 @@
     &lt;li&gt;Item 2&lt;/li&gt;
     &lt;li&gt;Item 3&lt;/li&gt;
 &lt;/ul&gt;
-</code>
-                          </pre>
+</code></pre>
                 </div>
             </div>
 
@@ -555,15 +558,15 @@
                     <pre>
 <code class="html" data-lang="HTML">&lt;pre&gt;
     &lt;code&gt;
-        Code
+        &lt;!-- insert code --&gt;
     &lt;/code&gt;
 &lt;/pre&gt;</code>
                     </pre>
             </div>
 
             <div class="col-6">
-                <h6 class="title">Literally Just All You Have To Do</h6>
-                <p>Yep.</p>
+                <h6>As simple as that.</h6>
+                <p>If you would like to specify the language of the code, add the <code>data-lang</code> attribute to the <code>&lt;code&gt;</code> element.</p>
         </div>
             </div>
         </section>
