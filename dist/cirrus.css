@@ -3282,9 +3282,10 @@ ul.menu {
   display: block;
   padding: 0.5em 0.75em;
   border-radius: 3px;
+  font-size: 0.85rem;
+  cursor: pointer;
   -webkit-transition: all .2s;
   transition: all .2s;
-  font-size: 0.85rem;
 }
 
 .menu .menu-item:hover > a {
@@ -3415,31 +3416,35 @@ ul.menu {
   margin: 0;
 }
 
+.tree .tree-item input {
+  cursor: pointer;
+}
+
 /* The title of the tree menu */
-.tree .tree-item .tree-header {
+.tree .tree-item .tree-item-header {
   display: block;
   padding: .25rem .5rem;
 }
 
 /* The dropdown glyph of the tree menu */
-.tree .tree-item .tree-header .icon {
+.tree .tree-item .tree-item-header .icon {
   -webkit-transition: all .2s;
   transition: all .2s;
 }
 
-/* Expand the tree-body (has menu-items) */
-.tree .tree-item input:checked ~ .tree-body {
+/* Expand the tree-item-body (has menu-items) */
+.tree .tree-item input:checked ~ .tree-item-body {
   max-height: 100vh;
 }
 
 /* Rotate the dropdown glyph */
-.tree .tree-item input:checked ~ .tree-body .icon {
+.tree .tree-item input:checked ~ .tree-item-body .icon {
   -webkit-transform: roate(90deg);
           transform: roate(90deg);
 }
 
 /* Container for the menu-items of the tree menu */
-.tree .tree-item .tree-body {
+.tree .tree-item .tree-item-body {
   max-height: 0; /* Hidden at first */
   margin-bottom: .5rem;
   overflow: hidden;

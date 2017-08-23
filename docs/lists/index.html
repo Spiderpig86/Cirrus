@@ -717,7 +717,35 @@
         <div class="content">
             <h3>Trees</h3>
             <div class="divider"></div>
-            <p>A <code>tree</code> is a list that lays out <code>menu-items</code> in a vertical menu. A <code>tree</code> has children that are denoted with the <code>tree-item</code> class.</p>
+            <p>A <code>tree</code> is a list that lays out <code>menu-items</code> in a vertical menu with a toggle. A <code>tree</code> has children that are denoted with the <code>tree-item</code> class. The <code>tree-item</code> can then have menu list of <code>menu-items</code> in the <code>tree-item-body</code> with the title above it being a <code>tree-item-header</code>. The toggle is created by a simple <code>input</code> (checkbox or radiobutton depending on the behavior you want) with a check property.</p>
+            <div class="row">
+                <div class="col-4">
+                    <div class="tree">
+                        <div class="tree-item">
+                            <input type="checkbox" id="tree1" class="hide" />
+                            <label class="tree-item-header" for="tree1">
+                                <span class="icon">
+                                    <i class="fa fa-chevron-right"></i>
+                                    Test
+                                </span>
+                            </label>
+                            <div class="tree-item-body">
+                                <ul class="menu">
+                                    <li class="menu-item"><a>1</a></li>
+                                    <li class="menu-item"><a>2</a></li>
+                                    <li class="menu-item"><a>3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    
+                </div>
+                <div class="col-4">
+
+                </div>
+            </div>
         </div>
     </section>
 
