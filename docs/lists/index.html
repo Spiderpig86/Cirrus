@@ -892,6 +892,63 @@
                         </div>
                 </div>
             </div>
+
+            <div class="row">
+                <pre><code class="html" data-lang="HTML">&lt;!-- Normal Tree Behavior --&gt;
+&lt;div class=&quot;tree&quot;&gt;
+    &lt;div class=&quot;tree-item&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;tree1&quot; class=&quot;hide&quot; /&gt; &lt;!-- Allows for multiple trees to be opened or closed --&gt;
+        &lt;label class=&quot;tree-item-header&quot; for=&quot;tree1&quot;&gt; &lt;!-- Title for tree branch, make sure label 'for' matches with input id --&gt;
+            &lt;span class=&quot;icon&quot;&gt;
+                &lt;i class=&quot;fa fa-chevron-right small&quot;&gt;&lt;/i&gt; &lt;!-- Dropdown Icon --&gt;
+            &lt;/span&gt;
+            Trees
+        &lt;/label&gt;
+        &lt;div class=&quot;tree-item-body&quot;&gt; &lt;!-- Contains the dropdown items --&gt;
+            &lt;ul class=&quot;menu&quot;&gt;
+                &lt;!-- Add menu-items... --&gt;
+
+                &lt;li class=&quot;menu-item&quot;&gt; &lt;!-- Nested Tree --&gt;
+                    &lt;div class=&quot;tree&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; id=&quot;tree2&quot; class=&quot;hide&quot; /&gt;
+                        &lt;label class=&quot;tree-item-header&quot; for=&quot;tree2&quot;&gt;
+                            &lt;span class=&quot;icon&quot;&gt;
+                                &lt;i class=&quot;fa fa-chevron-right small&quot;&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                            Evergreens
+                        &lt;/label&gt;
+                        &lt;div class=&quot;tree-item-body&quot;&gt;
+                            &lt;ul class=&quot;menu&quot;&gt;
+                                &lt;!-- Menu items... --&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Add another tree --&gt;
+
+&lt;!-- Mutually exclusive trees use radio buttons as the method of input --&gt;
+&lt;div class=&quot;tree&quot;&gt;
+    &lt;div class=&quot;tree-item&quot;&gt;
+        &lt;input type=&quot;radio&quot; id=&quot;tree3&quot; class=&quot;hide&quot; /&gt; &lt;!-- Note the radio button --&gt;
+        &lt;label class=&quot;tree-item-header&quot; for=&quot;tree3&quot;&gt;
+            &lt;span class=&quot;icon&quot;&gt;
+                &lt;i class=&quot;fa fa-chevron-right small&quot;&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            Fruits
+        &lt;/label&gt;
+        &lt;div class=&quot;tree-item-body&quot;&gt;
+            &lt;ul class=&quot;menu&quot;&gt;
+                &lt;!-- Menu items... --&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Add other trees with radio inputs --&gt;</code></pre>
+            </div>
         </div>
     </section>
 

@@ -1035,7 +1035,7 @@ code:before {
 }
 
 pre > code {
-  font-size: 75%;
+  font-size: .7rem;
   display: block;
   padding: 1rem 1.5rem;
   white-space: pre-wrap;       /* css-3 */
@@ -3422,6 +3422,7 @@ ul.menu {
   padding: .25rem .5rem;
   cursor: pointer;
   font-size: 0.95rem;
+  font-weight: 600; /* Keep styling consistent with menu-items */
 }
 
 /* The dropdown glyph of the tree menu */
