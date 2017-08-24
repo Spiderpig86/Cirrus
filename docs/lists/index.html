@@ -717,7 +717,7 @@
         <div class="content">
             <h3>Trees</h3>
             <div class="divider"></div>
-            <p>A <code>tree</code> is a list that lays out <code>menu-items</code> in a vertical menu with a toggle. A <code>tree</code> has children that are denoted with the <code>tree-item</code> class. The <code>tree-item</code> can then have menu list of <code>menu-items</code> in the <code>tree-item-body</code> with the title above it being a <code>tree-item-header</code>. The toggle is created by a simple <code>input</code> (checkbox or radiobutton depending on the behavior you want) with a check property.</p>
+            <p>A <code>tree</code> is a <b>CSS only</b> list that lays out <code>menu-items</code> in a vertical menu with a toggle. A <code>tree</code> has children that are denoted with the <code>tree-item</code> class. The <code>tree-item</code> can then have menu list of <code>menu-items</code> in the <code>tree-item-body</code> with the title above it being a <code>tree-item-header</code>. The toggle is created by a simple <code>input</code> (checkbox or radiobutton depending on the behavior you want) with a check property.</p>
             <div class="row">
                 <div class="col-4">
                     <div class="tree">
@@ -725,25 +725,171 @@
                             <input type="checkbox" id="tree1" class="hide" />
                             <label class="tree-item-header" for="tree1">
                                 <span class="icon">
-                                    <i class="fa fa-chevron-right"></i>
-                                    Test
+                                    <i class="fa fa-chevron-right small"></i>
                                 </span>
+                                Trees
                             </label>
                             <div class="tree-item-body">
                                 <ul class="menu">
-                                    <li class="menu-item"><a>1</a></li>
-                                    <li class="menu-item"><a>2</a></li>
-                                    <li class="menu-item"><a>3</a></li>
+                                    <li class="menu-item"><a>Oak</a></li>
+                                    <li class="menu-item"><a>Birch</a></li>
+                                    <li class="menu-item">
+                                        <div class="tree">
+                                            <input type="checkbox" id="tree2" class="hide" />
+                                            <label class="tree-item-header" for="tree2">
+                                                <span class="icon">
+                                                    <i class="fa fa-chevron-right small"></i>
+                                                </span>
+                                                Evergreens
+                                            </label>
+                                            <div class="tree-item-body">
+                                                <ul class="menu">
+                                                    <li class="menu-item"><a>Cedar</a></li>
+                                                    <li class="menu-item"><a>Loblolly Pine</a></li>
+                                                    <li class="menu-item"><a>Pitch Pine</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tree">
+                        <div class="tree-item">
+                            <input type="checkbox" id="tree3" class="hide" />
+                            <label class="tree-item-header" for="tree3">
+                                <span class="icon">
+                                    <i class="fa fa-chevron-right small"></i>
+                                </span>
+                                Fruits
+                            </label>
+                            <div class="tree-item-body">
+                                <ul class="menu">
+                                    <li class="menu-item"><a>Mangosteen</a></li>
+                                    <li class="menu-item"><a>Durian</a></li>
+                                    <li class="menu-item"><a>Jabuticaba</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tree">
+                        <div class="tree-item">
+                            <input type="checkbox" id="tree4" class="hide" />
+                            <label class="tree-item-header" for="tree4">
+                                <span class="icon">
+                                    <i class="fa fa-chevron-right small"></i>
+                                </span>
+                                Flowers
+                            </label>
+                            <div class="tree-item-body">
+                                <ul class="menu">
+                                    <li class="menu-item"><a>Jade Vine</a></li>
+                                    <li class="menu-item"><a>Ghost Orchid</a></li>
+                                    <li class="menu-item"><a>Corpse Flower</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="tree">
+                        <div class="tree-item">
+                            <input type="radio" id="tree5" class="hide" name="radioTree" />
+                            <label class="tree-item-header" for="tree5">
+                                <span class="icon">
+                                    <i class="fa fa-chevron-right small"></i>
+                                </span>
+                                Trees
+                            </label>
+                            <div class="tree-item-body">
+                                <ul class="menu">
+                                    <li class="menu-item"><a>Oak</a></li>
+                                    <li class="menu-item"><a>Birch</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tree">
+                        <div class="tree-item">
+                            <input type="radio" id="tree6" class="hide" name="radioTree" />
+                            <label class="tree-item-header" for="tree6">
+                                <span class="icon">
+                                    <i class="fa fa-chevron-right small"></i>
+                                </span>
+                                Fruits
+                            </label>
+                            <div class="tree-item-body">
+                                <ul class="menu">
+                                    <li class="menu-item"><a>Mangosteen</a></li>
+                                    <li class="menu-item"><a>Durian</a></li>
+                                    <li class="menu-item"><a>Jabuticaba</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tree">
+                        <div class="tree-item">
+                            <input type="radio" id="tree7" class="hide" name="radioTree" />
+                            <label class="tree-item-header" for="tree7">
+                                <span class="icon">
+                                    <i class="fa fa-chevron-right small"></i>
+                                </span>
+                                Flowers
+                            </label>
+                            <div class="tree-item-body">
+                                <ul class="menu">
+                                    <li class="menu-item"><a>Jade Vine</a></li>
+                                    <li class="menu-item"><a>Ghost Orchid</a></li>
+                                    <li class="menu-item"><a>Corpse Flower</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
-                    
-                </div>
-                <div class="col-4">
-
+                        <div class="tree">
+                            <div class="tree-item">
+                                <input type="radio" id="mixTree1" class="hide" />
+                                <label class="tree-item-header" for="mixTree1">
+                                    <span class="icon">
+                                        <i class="fa fa-chevron-right small"></i>
+                                    </span>
+                                    (Radio Button)
+                                </label>
+                                <div class="tree-item-body">
+                                    <ul class="menu">
+                                        <li class="menu-item"><a>Menu Item 1</a></li>
+                                        <li class="menu-item">
+                                            <div class="tree">
+                                                <div class="tree-item">
+                                                    <input type="checkbox" id="mixTree2" class="hide" />
+                                                    <a><label class="tree-item-header" for="mixTree2">
+                                                        <span class="icon">
+                                                            <i class="fa fa-chevron-right small"></i>
+                                                        </span>
+                                                        (Checkbox)
+                                                    </label></a>
+                                                    <div class="tree-item-body">
+                                                        <ul class="menu">
+                                                            <li class="menu-item"><a>Menu Item 1.1</a></li>
+                                                            <li class="menu-item"><a>Menu Item 1.2</a></li>
+                                                            <li class="menu-item"><a>Menu Item 1.3</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="menu-item"><a>Menu Item 3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>

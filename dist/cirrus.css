@@ -3416,14 +3416,12 @@ ul.menu {
   margin: 0;
 }
 
-.tree .tree-item input {
-  cursor: pointer;
-}
-
 /* The title of the tree menu */
 .tree .tree-item .tree-item-header {
   display: block;
   padding: .25rem .5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
 }
 
 /* The dropdown glyph of the tree menu */
@@ -3438,15 +3436,15 @@ ul.menu {
 }
 
 /* Rotate the dropdown glyph */
-.tree .tree-item input:checked ~ .tree-item-body .icon {
-  -webkit-transform: roate(90deg);
-          transform: roate(90deg);
+.tree .tree-item input:checked ~ .tree-item-header .icon {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 /* Container for the menu-items of the tree menu */
 .tree .tree-item .tree-item-body {
   max-height: 0; /* Hidden at first */
-  margin-bottom: .5rem;
+  margin-left: 1.5rem;
   overflow: hidden;
   -webkit-transition: all .2s;
   transition: all .2s;
