@@ -51,7 +51,8 @@ li {
   margin: 0.35rem 0;
 }
 
-li:last-child {
+/* Exclude margin in menus */
+li:not(.menu-item):last-child {
   margin-bottom: 1em;
 }
 
@@ -179,7 +180,7 @@ ul.menu {
   margin: 0;
   opacity: 0;
   min-width: 12rem;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.5rem;
   -webkit-transform: translateY(.5rem);
   transform: translateY(.5rem);
   z-index: 10;
