@@ -855,44 +855,44 @@
                     </div>
                 </div>
                 <div class="col-4">
-                        <div class="tree">
-                            <p class="title no-margin">Mixed Tree</p>
-                            <div class="tree-item">
-                                <input type="radio" id="mixTree1" class="hide" />
-                                <label class="tree-item-header" for="mixTree1">
-                                    <span class="icon">
-                                        <i class="fa fa-chevron-right small"></i>
-                                    </span>
-                                    (Radio Button)
-                                </label>
-                                <div class="tree-item-body">
-                                    <ul class="menu">
-                                        <li class="menu-item"><a>Menu Item 1</a></li>
-                                        <li class="menu-item">
-                                            <div class="tree">
-                                                <div class="tree-item">
-                                                    <input type="checkbox" id="mixTree2" class="hide" />
-                                                    <a><label class="tree-item-header" for="mixTree2">
-                                                        <span class="icon">
-                                                            <i class="fa fa-chevron-right small"></i>
-                                                        </span>
-                                                        (Checkbox)
-                                                    </label></a>
-                                                    <div class="tree-item-body">
-                                                        <ul class="menu">
-                                                            <li class="menu-item"><a>Menu Item 1.1</a></li>
-                                                            <li class="menu-item"><a>Menu Item 1.2</a></li>
-                                                            <li class="menu-item"><a>Menu Item 1.3</a></li>
-                                                        </ul>
-                                                    </div>
+                    <div class="tree">
+                        <p class="title no-margin">Mixed Tree</p>
+                        <div class="tree-item">
+                            <input type="radio" id="mixTree1" class="hide" />
+                            <label class="tree-item-header" for="mixTree1">
+                                <span class="icon">
+                                    <i class="fa fa-chevron-right small"></i>
+                                </span>
+                                (Radio Button)
+                            </label>
+                            <div class="tree-item-body">
+                                <ul class="menu">
+                                    <li class="menu-item"><a>Menu Item 1</a></li>
+                                    <li class="menu-item">
+                                        <div class="tree">
+                                            <div class="tree-item">
+                                                <input type="checkbox" id="mixTree2" class="hide" />
+                                                <a><label class="tree-item-header" for="mixTree2">
+                                                    <span class="icon">
+                                                        <i class="fa fa-chevron-right small"></i>
+                                                    </span>
+                                                    (Checkbox)
+                                                </label></a>
+                                                <div class="tree-item-body">
+                                                    <ul class="menu">
+                                                        <li class="menu-item"><a>Menu Item 1.1</a></li>
+                                                        <li class="menu-item"><a>Menu Item 1.2</a></li>
+                                                        <li class="menu-item"><a>Menu Item 1.3</a></li>
+                                                    </ul>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li class="menu-item"><a>Menu Item 3</a></li>
-                                    </ul>
-                                </div>
+                                        </div>
+                                    </li>
+                                    <li class="menu-item"><a>Menu Item 3</a></li>
+                                </ul>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
 
@@ -951,6 +951,69 @@
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;!-- Add other trees with radio inputs --&gt;</code></pre>
+            </div>
+
+            <p>Keep in mind that the icon is still optional, so creating a list without the dropdown indicator is as simple as excluding the <code>icon</code> from the header.</p>
+            <div class="row">
+                <div class="col-4">
+                    <div class="tree">
+                        <div class="tree-item">
+                            <input type="checkbox" id="color1" class="hide" />
+                            <label class="tree-item-header" for="color1">
+                                <p class="title no-margin">Color Palette 1</p>
+                            </label>
+                            <div class="tree-item-body">
+                                <ul class="menu">
+                                    <li class="menu-item">
+                                        <a>#364b60</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a>#169f83</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a>#2dcc71</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a>#e57d1f</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a>#eec10e</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-8">
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;tree&quot;&gt;
+    &lt;div class=&quot;tree-item&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;color1&quot; class=&quot;hide&quot; /&gt;
+        &lt;label class=&quot;tree-item-header&quot; for=&quot;color1&quot;&gt;
+            &lt;p class=&quot;title no-margin&quot;&gt;Color Palette 1&lt;/p&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;tree-item-body&quot;&gt;
+            &lt;ul class=&quot;menu&quot;&gt;
+                &lt;li class=&quot;menu-item&quot;&gt;
+                    &lt;a&gt;#364b60&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;menu-item&quot;&gt;
+                    &lt;a&gt;#169f83&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;menu-item&quot;&gt;
+                    &lt;a&gt;#2dcc71&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;menu-item&quot;&gt;
+                    &lt;a&gt;#e57d1f&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;menu-item&quot;&gt;
+                    &lt;a&gt;#eec10e&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
             </div>
 
             <h6>Tree Outline</h6>
