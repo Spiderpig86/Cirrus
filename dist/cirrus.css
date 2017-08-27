@@ -2857,7 +2857,7 @@ space.x-large {
 
 .pagination-item-subtitle {
   opacity: 0.7;
-  margin: 0;
+  margin: 0 !important; /* Needed to override style after formatting paragraph update */
 }
 
 /* Color the selected pagination item with accent color */
@@ -3460,8 +3460,73 @@ ul.menu {
   transition: all .2s;
 }
 
+/* TODO: Docs */
+/* A fixed menu on the side with a tree component */
 .tree-nav {
-  
+  flex: 0 0 auto;
+  padding: 1rem 0 1rem 1rem;
+  width: 9rem;
+}
+
+/* The container for the tree component to prevent it from overflowing */
+.tree-nav .tree-nav-container {
+  position: fixed;
+  overflow-y: auto;
+  top: 4rem;
+  bottom: 1rem;
+  width: 8rem;
+}
+
+/* Darkened area that will close the navbar when clicked for mobile only */
+.tree-nav .tree-nav-close {
+  display: none; /* Not needed in desktop */
+}
+
+@media screen and (max-width: 768px) {
+  /* Hide the menu to the side by default */
+  .tree-nav {
+    height: 100%;
+    left: 0;
+    overflow-y: auto;
+    padding: 3rem 1.5rem;
+    position: fixed;
+    top: 0;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    transition: transform .2s ease, -webkit-transform .2s ease;
+    transition: transform .2s ease;
+    transition: -webkit-transform .2s ease;
+    z-index: 400;
+  }
+
+  /* Open the menu from the side */
+  /* Use a link and add the id of this element as the url */
+  .tree-nav:target {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    transition: transform .2s ease, -webkit-transform .2s ease;
+    transition: transform .2s ease;
+  }
+
+  /* Create the area to click to close the menu */
+  .tree-nav .tree-nav-close {
+    background: rgba(0, 0, 0, .15);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 300;
+  }
+
+  /* Show the darkened area when the tree nav menu is clicked */
+  .tree-nav:target + .tree-nav-close {
+    display: block;
+  }
 }
 /* MEDIA CSS */
 /* Handles images, videos, figures, etc */
@@ -3704,7 +3769,7 @@ video.video-fullscreen {
 /* Designed to be embedded in any parent container as placeholder when content is absent. */
 
 .placeholder {
-    background: rgba(236, 236, 236, 0.5);
+    background: rgba(231, 234, 241, 0.5);
     border-radius: 3px;
     text-align: center;
     padding: 2rem;
@@ -3717,17 +3782,18 @@ video.video-fullscreen {
     text-align: center;
 }
 
-.placeholder .title,
-.placeholder .subtitle {
+.placeholder .placeholder-title,
+.placeholder .placeholder-subtitle {
     margin: 1rem auto;
 }
 
-.placeholder .subtitle {
+.placeholder .placeholder-subtitle {
     opacity: 0.7;
+    margin: 0 !important;
 }
 
 /* Place buttons here for the placeholder */
-.placeholder .commands {
+.placeholder .placeholder-commands {
     margin-top: 1rem;
 }
 /* TABLE */

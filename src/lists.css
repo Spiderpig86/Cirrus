@@ -296,11 +296,30 @@ ul.menu {
   }
 
   /* Open the menu from the side */
+  /* Use a link and add the id of this element as the url */
   .tree-nav:target {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
     transition: transform .2s ease, -webkit-transform .2s ease;
     transition: transform .2s ease;
+  }
+
+  /* Create the area to click to close the menu */
+  .tree-nav .tree-nav-close {
+    background: rgba(0, 0, 0, .15);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 300;
+  }
+
+  /* Show the darkened area when the tree nav menu is clicked */
+  .tree-nav:target + .tree-nav-close {
+    display: block;
   }
 }
