@@ -254,3 +254,53 @@ ul.menu {
   -webkit-transition: all .2s;
   transition: all .2s;
 }
+
+/* TODO: Docs */
+/* A fixed menu on the side with a tree component */
+.tree-nav {
+  flex: 0 0 auto;
+  padding: 1rem 0 1rem 1rem;
+  width: 9rem;
+}
+
+/* The container for the tree component to prevent it from overflowing */
+.tree-nav .tree-nav-container {
+  position: fixed;
+  overflow-y: auto;
+  top: 4rem;
+  bottom: 1rem;
+  width: 8rem;
+}
+
+/* Darkened area that will close the navbar when clicked for mobile only */
+.tree-nav .tree-nav-close {
+  display: none; /* Not needed in desktop */
+}
+
+@media screen and (max-width: 768px) {
+  /* Hide the menu to the side by default */
+  .tree-nav {
+    height: 100%;
+    left: 0;
+    overflow-y: auto;
+    padding: 3rem 1.5rem;
+    position: fixed;
+    top: 0;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    transition: transform .2s ease, -webkit-transform .2s ease;
+    transition: transform .2s ease;
+    transition: -webkit-transform .2s ease;
+    z-index: 400;
+  }
+
+  /* Open the menu from the side */
+  .tree-nav:target {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    transition: transform .2s ease, -webkit-transform .2s ease;
+    transition: transform .2s ease;
+  }
+}

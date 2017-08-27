@@ -1231,7 +1231,15 @@ strong {
 p, article, blockquote {
   font-size: 1rem;
   line-height: 2rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
+}
+
+.content p:first-of-type {
+  margin-top: 2rem;
+}
+
+.content p:last-of-type {
+  margin-bottom: 2rem;
 }
 
 blockquote {
@@ -3451,6 +3459,10 @@ ul.menu {
   -webkit-transition: all .2s;
   transition: all .2s;
 }
+
+.tree-nav {
+  
+}
 /* MEDIA CSS */
 /* Handles images, videos, figures, etc */
 
@@ -3714,6 +3726,7 @@ video.video-fullscreen {
     opacity: 0.7;
 }
 
+/* Place buttons here for the placeholder */
 .placeholder .commands {
     margin-top: 1rem;
 }
