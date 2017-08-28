@@ -3465,7 +3465,7 @@ ul.menu {
 .tree-nav {
   flex: 0 0 auto;
   padding: 1rem 0 1rem 1rem;
-  width: 9rem;
+  width: 12rem;
 }
 
 /* The container for the tree component to prevent it from overflowing */
@@ -3474,12 +3474,16 @@ ul.menu {
   overflow-y: auto;
   top: 4rem;
   bottom: 1rem;
-  width: 8rem;
 }
 
 /* Darkened area that will close the navbar when clicked for mobile only */
 .tree-nav .tree-nav-close {
   display: none; /* Not needed in desktop */
+}
+
+/* Push document body further right to account for sidebar space */
+.tree-nav + .content {
+
 }
 
 @media screen and (max-width: 768px) {
