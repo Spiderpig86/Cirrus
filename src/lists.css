@@ -278,7 +278,11 @@ ul.menu {
 
 /* Push document body further right to account for sidebar space */
 .tree-nav + .content {
-
+    max-width: calc(100vw - 12rem);
+    padding: 2rem;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
 }
 
 @media screen and (max-width: 768px) {
