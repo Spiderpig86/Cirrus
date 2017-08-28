@@ -3461,12 +3461,25 @@ ul.menu {
 }
 
 /* TODO: Docs */
+/* The body that will encompass the tree-nav and tree-nav-content */
+.tree-nav-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
 /* A fixed menu on the side with a tree component */
 .tree-nav {
-  flex-grow: 0;
-  flex-shrink: 1;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   padding: 2rem 1rem 2rem 2rem;
-  width: 15rem;
+  min-width: 15rem;
   height: 100vh;
   overflow: auto;
 }
@@ -3479,18 +3492,27 @@ ul.menu {
 }
 
 /* Darkened area that will close the navbar when clicked for mobile only */
-.tree-nav .tree-nav-close {
+.tree-nav + .tree-nav-close {
   display: none; /* Not needed in desktop */
 }
 
 /* Push document body further right to account for sidebar space */
-.tree-nav + .content {
+.tree-nav + .tree-nav-content {
+    max-width: 100%;
     padding: 2rem;
-    -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
+    -webkit-box-flex: 1;
+            flex: 1 0 auto;
     overflow: auto;
     margin: 0;
+}
+
+/* The body where all other HTML components are entered if a tree-nav is used */
+.tree-nav-content {
+  width: 100%;
+  overflow: auto;
+  margin: 0;
+  padding: 2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -3503,9 +3525,9 @@ ul.menu {
     position: fixed;
     top: 0;
     -webkit-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
     transform: translateX(-100%);
     transition: transform .2s ease, -webkit-transform .2s ease;
+    -webkit-transition: -webkit-transform .2s ease;
     transition: transform .2s ease;
     transition: -webkit-transform .2s ease;
     z-index: 400;
@@ -3515,9 +3537,10 @@ ul.menu {
   /* Use a link and add the id of this element as the url */
   .tree-nav:target {
     -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
     transform: translateX(0);
     transition: transform .2s ease, -webkit-transform .2s ease;
+    -webkit-transition: -webkit-transform .2s ease;
+    transition: -webkit-transform .2s ease;
     transition: transform .2s ease;
   }
 
