@@ -310,6 +310,11 @@ ul.menu {
   padding: 2rem;
 }
 
+/* Decrease font-weight in tree-nav menu-items */
+.tree-item-body .menu .menu-item a {
+  font-weight: 400;
+}
+
 @media screen and (max-width: 768px) {
   /* Hide the menu to the side by default */
   .tree-nav {
@@ -355,10 +360,18 @@ ul.menu {
   /* Show the darkened area when the tree nav menu is clicked */
   .tree-nav:target + .tree-nav-close {
     display: block;
+    background: rgba(0, 0, 0, .15);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 300;
   }
 
   /* Reset max-width in mobile */
-  .tree-nav + .content {
+  .tree-nav + .tree-nav-body {
     max-width: inherit;
   }
 }
