@@ -374,4 +374,17 @@ ul.menu {
   .tree-nav + .tree-nav-body {
     max-width: inherit;
   }
+
+  /* Header bar for mobile websites with the tree-nav */
+  .tree-nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(248, 249, 250, .8);
+    height: 3.5rem;
+    padding: .75rem .5rem;
+    text-align: center;
+    z-index: 300;
+  }
 }
