@@ -169,6 +169,16 @@ pre > code {
     margin: 0;
 }
 
+.doc-link {
+    font-weight: 300;
+    color: #dc4753;
+    margin-right: .5rem;
+}
+
+.doc-link:hover {
+    color: #FA6571;
+}
+
 /* FOOTER */
 footer ul a {
     display: block;
