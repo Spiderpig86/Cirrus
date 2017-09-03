@@ -137,7 +137,7 @@ border-color: transparent;
 }
 
 .mobile-title .title, .mobile-title .subtitle {
-  margin: .3rem;
+  margin: .3rem 0 !important;
   text-overflow: ellipsis;
 white-space: nowrap;
 overflow: hidden;
