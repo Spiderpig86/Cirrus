@@ -67,7 +67,7 @@
 
     <section id="started" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#started" class="doc-link btn-tooltip" data-tooltip="Click to copy">#</a>Animations</h3>
+            <h3><a href="./index.html#started" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Animations</h3>
             <div class="divider"></div>
 
             <p>Animations are an essential part crafting beautiful websites that aren't just stunning, but are also alive. Cirrus comes bundled with a couple of animations to help you get started.</p>
@@ -82,14 +82,20 @@
                 <p>To make the <code>loading</code> spinner align either left or right, add the <code>loading-left</code> or <code>loading-right</code> classes respectively.</p>
                 <div class="row center">
                     <div class="col-4">
-                        <div class="card" style="background: -webkit-linear-gradient(to right, #00c9ff, #92fe9d); background: linear-gradient(to right, #00c9ff, #92fe9d);">
+                        <div class="card" style="background: #3494E6;
+                        background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
+                        background: linear-gradient(to right, #EC6EAD, #3494E6);
+                        ">
                             <div class="animated loading loading-left loading-white white">
                                 <p>loading-left</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="card" style="background: #833ab4; background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);">
+                        <div class="card" style="background: #f857a6;
+                        background: -webkit-linear-gradient(to right, #ff5858, #f857a6);
+                        background: linear-gradient(to right, #ff5858, #f857a6);
+                        ">
                             <div class="animated loading loading-right loading-white white text-right">
                                 <p>loading-right</p>
                             </div>
@@ -114,7 +120,7 @@
                         <button class="animated loading center loading-right loading-white white" id="btn4">Loading</button>
                     </div>
                     <div class="col-fluid">
-                        <button class="animated loading center hide-text" id="btn5">5</button>
+                        <button class="animated loading center hide-text loading-white" id="btn5">5</button>
                     </div>
                 </div>
 
@@ -233,7 +239,7 @@
                     <h6 class="light">Pulsing animation with a div</h6>
                     <div class="col-6 no-margin">
                         <div class="text-center">
-                            <div class="content text-center animated pulse paused" id="pulse-div" style="background: #00c2ff; color: white">
+                            <div class="content text-center animated pulse paused" id="pulse-div" style="background: #f03d4d; color: white">
                                 <p>This is a div!</p>
                             </div>
                         </div>
@@ -241,7 +247,7 @@
                         <button class="docs-btn-play" id="toggle-pulse-div"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
                     </div>
                     <div class="col-6">
-<pre><code class="HTML" data-lang="HTML"> &lt;div class=&quot;content text-center animated pulse paused&quot; id=&quot;pulse-div&quot; style=&quot;background: #00c2ff; color: white&quot;&gt;
+<pre><code class="HTML" data-lang="HTML"> &lt;div class=&quot;content text-center animated pulse paused&quot; id=&quot;pulse-div&quot; style=&quot;background: #f03d4d; color: white&quot;&gt;
     &lt;p&gt;This is a div!&lt;/p&gt;
 &lt;/div&gt;</code></pre>
                     </div>
@@ -292,13 +298,13 @@
             <div class="row">
                 
                 <div class="col-6">
-                        <div class="content text-center animated bounce" id="bounce-div" style="background: #00c2ff; color: white">
+                        <div class="content text-center animated bounce" id="bounce-div" style="background: #f03d4d; color: white">
                             <p>This is a div!</p>
                         </div>
                         <button class="docs-btn-play" id="toggle-bounce-div"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
                 </div>
                 <div class="col-6">
-<pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;content text-center animated bounce&quot; id=&quot;bounce-div&quot; style=&quot;background: #00c2ff; color: white&quot;&gt;
+<pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;content text-center animated bounce&quot; id=&quot;bounce-div&quot; style=&quot;background: #f03d4d; color: white&quot;&gt;
     &lt;p&gt;This is a div!&lt;/p&gt;
 &lt;/div&gt; </code></pre>
                 </div>
@@ -343,13 +349,13 @@
             <div class="row">
                 
                 <div class="col-6">
-                        <div class="content text-center animated bounceIn" id="bounceIn-div" style="background: #00c2ff; color: white">
+                        <div class="content text-center animated bounceIn" id="bounceIn-div" style="background: #f03d4d; color: white">
                             <p>This is a div!</p>
                         </div>
                         <button class="docs-btn-play" id="toggle-bounceIn-div"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
                 </div>
                 <div class="col-6">
-<pre><code class="HTML" data-lang="HTML"> &lt;div class=&quot;content text-center animated bounceIn&quot; id=&quot;bounceIn-div&quot; style=&quot;background: #00c2ff; color: white&quot;&gt;
+<pre><code class="HTML" data-lang="HTML"> &lt;div class=&quot;content text-center animated bounceIn&quot; id=&quot;bounceIn-div&quot; style=&quot;background: #f03d4d; color: white&quot;&gt;
         &lt;p&gt;This is a div!&lt;/p&gt;
     &lt;/div&gt;</code></pre>
                 </div>
@@ -393,13 +399,13 @@
             <div class="row">
                 
                 <div class="col-6">
-                        <div class="content text-center animated fadeIn" id="fadeIn-div" style="background: #00c2ff; color: white">
+                        <div class="content text-center animated fadeIn" id="fadeIn-div" style="background: #f03d4d; color: white">
                             <p>This is a div!</p>
                         </div>
                         <button class="docs-btn-play" id="toggle-fadeIn-div"><i class="fa fa-play pad-right" aria-hidden="true"></i>Play</button>
                 </div>
                 <div class="col-6">
-                    <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;content text-center animated fadeIn&quot; id=&quot;fadeIn-div&quot; style=&quot;background: #00c2ff; color: white&quot;&gt;
+                    <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;content text-center animated fadeIn&quot; id=&quot;fadeIn-div&quot; style=&quot;background: #f03d4d; color: white&quot;&gt;
     &lt;p&gt;This is a div!&lt;/p&gt;
 &lt;/div&gt;</code></pre>
                 </div>

@@ -42,7 +42,7 @@ button.btn-animated:hover, [type=submit].btn-animated:hover, .btn.btn-animated:h
   -webkit-transition: all .2s;
   transition: all .2s;
   -moz-transition: all .2s;
-  background: #ccc;
+  background: #ddd;
 }
 
 /* Make the loading circle, if present, white when button is active */
@@ -147,19 +147,6 @@ button.btn-animated:active, [type=submit].btn-animated:active, .btn.btn-animated
   color: #f5f5f5;
   -webkit-transform: none;
           transform: none;
-}
-
-/* White */
-.btn-white {
-  background: #fff;
-}
-
-.btn-white:hover {
-  background: #f5f5f5;
-}
-
-.btn-white:active {
-  background: #f0f0f0;
 }
 
 /* Light gray */

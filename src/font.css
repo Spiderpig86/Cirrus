@@ -81,11 +81,11 @@ p, article, blockquote {
   margin: 1rem 0;
 }
 
-.content p:first-of-type {
+.content > p:first-of-type {
   margin-top: 2rem;
 }
 
-.content p:last-of-type {
+.content > p:last-of-type {
   margin-bottom: 2rem;
 }
 

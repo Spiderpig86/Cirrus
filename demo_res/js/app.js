@@ -68,3 +68,10 @@ $('.dropdown-menu li').on('click', function(e) {
     $('#header-menu').removeClass('active');
     $('.nav-btn').removeClass('active');
 });
+
+// Copy doc links
+$('.doc-link').on('click', function(e) {
+    e.stopPropagation();
+
+    return false;
+});
