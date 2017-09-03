@@ -1014,6 +1014,11 @@ overflow: hidden;
   overflow: hidden;
   margin-bottom: 0;
 }
+
+/* Reduce margins for paragraph in card body */
+.card-body p {
+  margin: 1rem 0 !important;
+}
 /* CODE */
 
 code {
