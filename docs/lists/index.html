@@ -1041,17 +1041,34 @@
 
     <section id="tree_nav" class="padtop">
         <div class="content">
-            <h3>Tree Nav</h3>
+            <h3>Tree Nav Layout</h3>
             <div class="divider"></div>
-            <p>A great way to use the <code>tree</code> class is by embedding it inside a <code>tree-nav</code> as a fixed menu on the side of the page.</p>
+            <p>A great way to use the <code>tree</code> class is by embedding it inside a <code>tree-nav</code> as a fixed menu on the side of the page. The best way to use the <code>tree-nav</code> is to embed it inside the <code>tree-nav-body</code>. That will serve as the container for all the child elements with the <code>tree-nav</code> on the left side and a <code>tree-nav-content</code> that will house the rest of the page contents with a scrollable view.</p>
+            <p>For mobile devices <code>(&lt;= 768px)</code>, the <code>tree-nav-header</code> will be visble to show a toggle switch to show the <code>tree-nav</code>.</p>
             <div class="row">
-
-                <div class="placeholder">
-                    <h6 class="placeholder-title">Examples Coming Soon</h6>
-                    <p class="placeholder-subtitle">A work in progress...</p>
-                </div>
-
+                <iframe src="./tree-nav.html" width="100%" height="600"></iframe>
             </div>
+
+            <h6>Outline</h6>
+            <ul>
+                <li><code>tree-nav-body</code> will be the root element in this layout.
+                    <ul>
+                        <li><code>tree-nav-header</code> is the <code>fixed</code> header bar that will appear in touch devices <code>(&lt;=768px)</code>. 
+                        
+                            <ul>
+                                <li>An <code>a</code> tag with an <code>href</code> with the ID of the <code>tree-nav</code> with an <code>icon</code> of your choice for the toggle.</li>
+                            </ul>
+                        </li>
+                        <li><code>tree-nav</code> is the sidebar of the page. At the moment, it is only supported in showing the menu on the left side properly for touch devices and desktops.
+                            
+                            <ul>
+                                <li><code>tree-nav-container</code> will be the container that will house the <code>tree</code> element. For more info on making a tree, you can refer to it in the docs <a href="#tree_list" class="smoothScroll">here</a>.</li>
+                            </ul>
+                        </li>
+                        <li><code>tree-nav-content</code> is the container that would store the other elements of the page such as text, images, etc.</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </section>
 

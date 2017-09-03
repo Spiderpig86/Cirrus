@@ -3262,7 +3262,7 @@ li {
 }
 
 /* Exclude margin in menus */
-li:not(.menu-item):last-child {
+li:not('.dropdown-menu li'):last-child {
   margin-bottom: 1em;
 }
 
@@ -3583,6 +3583,19 @@ ul.menu {
   /* Reset max-width in mobile */
   .tree-nav + .tree-nav-body {
     max-width: inherit;
+  }
+
+  /* Header bar for mobile websites with the tree-nav */
+  .tree-nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(248, 249, 250, .8);
+    height: 3.5rem;
+    padding: .75rem .5rem;
+    text-align: center;
+    z-index: 300;
   }
 }
 /* MEDIA CSS */
