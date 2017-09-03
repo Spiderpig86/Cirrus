@@ -847,13 +847,6 @@ border-color: transparent;
       backface-visibility: hidden;
 }
 
-.mobile-title .title, .mobile-title .subtitle {
-  margin: .3rem 0;
-  text-overflow: ellipsis;
-white-space: nowrap;
-overflow: hidden;
-}
-
 .card:hover .mobile-title {
   margin-top: -7rem;
   -webkit-transition: all .3s ease-in-out;
