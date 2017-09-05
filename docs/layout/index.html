@@ -305,20 +305,30 @@
                     <div class="col-9"><div class="uppercase">col-9</div></div>
                 </div>
             </div>
-            <p>However, you can override that behavior with the <code>flex</code> and <code>expand</code> classes to the row div to keep the columns in one line.</p>
+            <p>However, you can override that behavior with the embedding the columns inside a <code>fluid-container</code> div.</p>
             <div id="grids">
-                <div class="row flex expand">
+                <div class="row fluid-container">
                     <div class="col-10"><div class="uppercase">col-10</div></div>
                     <div class="col-10"><div class="uppercase">col-10</div></div>
                     <div class="col-10"><div class="uppercase">col-10</div></div>
                 </div>
             </div>
-            <br>
-            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row flex expand&quot;&gt;
+            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row fluid-container&quot;&gt;
     &lt;div class=&quot;col-10&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-10&lt;/div&gt;&lt;/div&gt;
     &lt;div class=&quot;col-10&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-10&lt;/div&gt;&lt;/div&gt;
     &lt;div class=&quot;col-10&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-10&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+<br>
+
+            <p>If you still want to use the <code>fluid-container</code> while retaining flex wrapping, add <code>wrap</code> to the <code>fluid-container</code>.</p>
+            <div id="grids">
+                <div class="row fluid-container wrap">
+                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
+                    <div class="col-10"><div class="uppercase">col-10</div></div>
+                    <div class="col-8"><div class="uppercase">col-8</div></div>
+                </div>
+            </div>
+            
         </div>
     </section>
 

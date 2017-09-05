@@ -116,15 +116,6 @@ space.x-large {
     padding: .5rem;
 }
 
-.row.flex {
-    display: flex;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
 .row:after {
   content: '';
   clear: both;
