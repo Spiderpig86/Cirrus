@@ -361,14 +361,26 @@
                 </div>
             </div>
             <p>Adding the <code>wrap</code> class to the <code>fluid-container</code> will make new columns wrap to the next line when an overflow occurs instead of showing a scrollbar.</p>
-            <p>To remove flex from the <code>col-fluid</code> element, just add the <code>no-flex</code> class. This would make the elements have their original widths rather than trying to fill up its parent container.</p>
+
+            <p class="title">Column Autosizing</p>
+            <p>By default, placing <code>col-fluid</code> divs in a <code>row</code> with predefined column classes like <code>col-3</code> will not autoexpand to fill the remaining space.</p>
             <div id="grids">
-                <div class="row fluid-container">
-                    <div class="col-fluid no-flex"><div class="uppercase">col-fluid</div></div>
-                    <div class="col-fluid no-flex"><div class="uppercase">col-fluid</div></div>
-                    <div class="col-fluid no-flex"><div class="uppercase">col-fluid</div></div>
+                <div class="row">
+                    <div class="col-3"><div class="uppercase">col-3</div></div>
+                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
+                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
                 </div>
             </div>
+
+            <p>But by adding the <code>fluid-container</code> class to the <code>row</code>, any <code>col-fluid</code> column will fill up the remaining space dividing up the space equally among the other columns.</p>
+            <div id="grids">
+                <div class="row fluid-container">
+                    <div class="col-3"><div class="uppercase">col-3</div></div>
+                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
+                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
