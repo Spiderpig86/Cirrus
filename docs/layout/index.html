@@ -394,10 +394,55 @@
         </div>
     </section>
 
+    <section id="grid_offset" class="padtop">
+        <div class="content">
+            <h3>Column Offset</h3>
+            <div class="divider"></div>
+            <p>Rather than using empty columns to space columns out, Cirrus provides offsets to make styling much easier. The classes follow the same sizing as the <code>col-n</code> classes. To add the offset, just add the <code>offset-n</code> class to your column and Cirrus will take care of the spacing and calculations.</p>
+            <div id="grids">
+                <div class="row fluid-container wrap">
+                    <div class="col-3 offset-1"><div class="uppercase">offset-1</div></div>
+                    <div class="col-3 offset-3"><div class="uppercase">offset-3</div></div>
+                    <div class="col-3 offset-4"><div class="uppercase">offset-4</div></div>
+                    <div class="col-3 offset-6"><div class="uppercase">offset-6</div></div>
+                    <div class="col-3 offset-9"><div class="uppercase">offset-9</div></div>
+                </div>
+            </div>
+            <p>For less specific spacing, you can use <code>offset-right</code> to push the column to the left, <code>offset-center</code> to push the column to the center, and <code>offset-left</code> to push the column to the right. This works for columns with specific sizes and <code>col-fluid</code> inside a <code>fluid-container</code>. Note that the <code>row</code> must have the <code>fluid-container</code> class.</p>
+            <div id="grids">
+                <div class="row fluid-container wrap">
+                    <div class="col-2"><div class="uppercase">col-2</div></div>
+                    <div class="col-3 offset-center"><div class="uppercase"> col-3 offset-center</div></div>
+                </div>
+                <div class="row fluid-container wrap">
+                    <div class="col-5 offset-1"><div class="uppercase">col-3 offset-1</div></div>
+                    <div class="col-3 offset-left"><div class="uppercase">col-3 offset-left</div></div>
+                </div>
+                <div class="row fluid-container wrap">
+                    <div class="col-5 offset-1"><div class="uppercase">col-3 offset-1</div></div>
+                    <div class="col-4 offset-right"><div class="uppercase">col-4 offset-right</div></div>
+                </div>
+            </div>
+            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row fluid-container wrap&quot;&gt;
+    &lt;div class=&quot;col-2&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-2&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 offset-center&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt; col-3 offset-center&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row fluid-container wrap&quot;&gt;
+    &lt;div class=&quot;col-5 offset-1&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-3 offset-1&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 offset-left&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-3 offset-left&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row fluid-container wrap&quot;&gt;
+    &lt;div class=&quot;col-5 offset-1&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-3 offset-1&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-4 offset-right&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-4 offset-right&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </section>
+
     <!-- 10-grid-system -->
     <section id="ten_grid_system">
         <div class="content">
-            <h6>10-grid Layout</h6>
+            <h3>10-grid Layout</h3>
+            <div class="divider"></div>
             <p>Hate the 12-grid layout? Cirrus also comes with a 10-grid layout system out of the box. <i>Note: Embedding 10-grid columns inside <code>row</code> divs is optional.</i></p>
             <div id="grids">
                 <div class="row">
