@@ -1,5 +1,5 @@
 /*
-* Cirrus 0.5.3
+* Cirrus 0.5.31
 * Stanley Lim, Copyright 2017
 * https://spiderpig86.github.io/Cirrus
 */
@@ -3977,14 +3977,15 @@ video.video-fullscreen {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
     -ms-flex-negative: 0;
-        flex-shrink: 0;
+    flex-shrink: 0;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; /* Move tab items to left side  */
+    -ms-flex-pack: start;
+    justify-content: flex-start; /* Move tab items to left side  */
     display: -webkit-box; /* Flow the elements */
+    margin: 0.5rem; /* Override the behavior for standard ul and add equal padding */
     /*border-bottom: 1px solid #eee; /* Bottom border of tabs */
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
     list-style: none;
