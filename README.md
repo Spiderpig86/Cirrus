@@ -80,7 +80,7 @@ https://unpkg.com/cirrus-ui
 * Modal dialogs.
 * Add figure and figures that display more info on hover
 
-## Examples the use Cirrus
+## Examples that use Cirrus
 * [Polarity 9](http://polarity.x10.mx/browser "Polarity 9 Promo Page")
 
 ## License and Attribution
