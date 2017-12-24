@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/Spiderpig86/Nimbus/blob/master/img/CirrusLogo.png" width="300"></p>
+<p align="center"><img src="https://github.com/Spiderpig86/Cirrus/blob/master/img/CirrusLogo.png" width="300"></p>
 <h1 align="center">Cirrus</h1>
 
 <p align="center">
