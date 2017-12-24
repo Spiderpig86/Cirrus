@@ -1,16 +1,15 @@
-<img src="http://i.imgur.com/jpowijz.png" width="400">
+<p align="center"><img src="https://github.com/Spiderpig86/Nimbus/blob/master/img/CirrusLogo.png" width="300"></p>
+<h1 align="center">Cirrus</h1>
 
+<p align="center">
+  <a href="https://travis-ci.org/Spiderpig86/Cirrus"><img src="https://travis-ci.org/Spiderpig86/Cirrus.svg?branch=master" alt="Build Status"></a>
+  <a href="#"><img src="https://img.shields.io/badge/version-v0.5.3-orange.svg" alt="v.0.5.3"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/Spiderpig86/Cirrus.svg" alt="MIT License"></a>
+</p>
 
-*Logo is being worked on*
-
-# Cirrus
->tl;dr: A CSS framework.
-
-![Version](https://img.shields.io/badge/version-v0.5.3-orange.svg "v.0.5.3") ![License](https://img.shields.io/github/license/Spiderpig86/Cirrus.svg) ![Build Status](https://travis-ci.org/Spiderpig86/Cirrus.svg?branch=master)
-
+<p align="center">
 A fully responsive CSS and UI framework with custom design controls and simplistic structure. A components are customizable and work with your CSS.
-
-Check it out: https://spiderpig86.github.io/Cirrus (WIP)
+</p>
 
 ## Framework Components
 * [Animations](https://github.com/Spiderpig86/Cirrus/blob/master/src/animations.css "Animations")
