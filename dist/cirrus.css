@@ -1992,6 +1992,7 @@ input[type].input-contains-icon-right.input-xlarge ~ .icon.icon-right {
 /* Static header at the top of the screen */
 .header-fixed {
     position: fixed;
+    top: 0; /* Change this if you want to float the header somewhere else */
 }
 
 /* Wrapper to vertically center header items */
