@@ -9,6 +9,12 @@ code {
   border-radius: 3px;
 }
 
+/* Dark theme for code */
+code.dark {
+  background: #242424;
+  color: #fff;
+}
+
 code:before {
     color: #acb3c2;
     content: attr(data-lang);
@@ -19,7 +25,7 @@ code:before {
 }
 
 pre > code {
-  font-size: .65rem;
+  font-size: .67rem;
   display: block;
   padding: 1rem 1.5rem;
   white-space: pre-wrap;       /* css-3 */

@@ -1,6 +1,7 @@
 .header {
     padding: 2rem 1rem;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
             -webkit-transition: background 0.4s ease, height 0.4s ease;
         transition: background 0.4s ease, height 0.4s ease;
     -webkit-transition-property: background, height;
@@ -145,7 +146,43 @@ code {
 
 pre > code {
     padding: 1rem 1.5rem !important;
+    background: #f6f8fa;
+}
+
+pre.get-cirrus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .3rem;
+    background: #242424 !important;
+}
+
+.hljs {
     background: #f6f8fa !important;
+}
+
+code.dark {
+    background: transparent !important;
+}
+
+/* Copy button */
+pre .copy {
+    margin: auto 1rem;
+    color: #f03d4d;
+    padding: 0.25rem 0.75rem;
+    border-radius: .3rem;
+    font-weight: 700;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+pre .copy:hover {
+    background: #f03d4d;
+    color: #fff;
+    transition: all .2s;
 }
 
 #grids .col > div, #grids [class^='col-'] > div, #grids [class*=" col-"] > div, #grids .col > div, #grids [class^='w-'] > div, #grids [class*=" w-"] > div {
@@ -186,6 +223,7 @@ footer ul a {
 
 footer ul a li:hover {
     color: #fff;
+    -webkit-transition: all .3s;
     transition: all .3s;
 }
 

@@ -13,6 +13,9 @@ $(document).ready(function() {
             $('#header').not($('.no-transition')).removeClass('header-fill');
         }
     });
+
+    // Copy button script
+    let clipboard = new Clipboard('.copy'); // It will handle the rest...
 });
 
 // Hide when clicking nav-item
