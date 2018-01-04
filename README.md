@@ -26,6 +26,8 @@ A fully responsive CSS and UI framework with custom design controls and simplist
   * A more flexible version of a Card with a basic structure system. This is shown in the Layout documentation.
 * [Font](https://github.com/Spiderpig86/Cirrus/blob/master/src/font.css "Font")
   * All text styles for this framework for headers, articles, blockquotes, and paragraphs.
+* [Footer](https://github.com/Spiderpig86/Cirrus/blob/master/src/footer.css "Footer")
+  * Basic styles for setting up a page footer.
 * [Forms](https://github.com/Spiderpig86/Cirrus/blob/master/src/forms.css "Forms")
   * Form styles for textboxes, textfields, selects, and layout.
 * [Header](https://github.com/Spiderpig86/Cirrus/blob/master/src/header.css "Header")
