@@ -15,7 +15,8 @@ $(document).ready(function() {
     });
 
     // Copy button script
-    let clipboard = new Clipboard('.copy'); // It will handle the rest...
+    if (document.getElementsByClassName('copy').length !== 0)
+        var clipboard = new Clipboard('.copy'); // It will handle the rest...
 });
 
 // Hide when clicking nav-item
