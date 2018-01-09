@@ -1300,7 +1300,7 @@ cite {
 .icon { /* Usually used in spans */
   display: inline-block;
   font-size: 21px; /* Best font sizes are multiples of 7 */
-  height: 100%;
+  /* height: 100%; */ /* Removed since this caused the glyph to take up too much height */
   line-height: 1.5rem;
   text-align: center;
   vertical-align: top;
@@ -1466,7 +1466,7 @@ footer .footer-list-title:after {
     border-color: #343b49;
 }
 
-footer ul a .list-item {
+footer ul a .list-item, footer .list-item {
       margin: 0.1rem;
     color: #888;
     transition: all .3s;

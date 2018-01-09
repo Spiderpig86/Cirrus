@@ -69,9 +69,9 @@
         <div class="content">
             <h3><a href="./index.html#started" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Forms</h3>
             <div class="divider"></div>
-            <p>Footers in Cirrus can contain any element you wan including extra divs, columns, lists, and more. Below is a recreation of what this page uses as a footer.</p>
+            <p>Footers in Cirrus are responsive and easy to implement in any page. It can contain pretty much any element including extra divs, columns, lists, and more. Below is a recreation of what this page uses as a footer.</p>
             <div class="row">
-                <iframe src="./demo-footer.html" width="100%" height="300"></iframe>
+                <iframe src="./demo-footer.html" width="100%" height="350"></iframe>
             </div>
         </div>
     </section>
@@ -87,9 +87,40 @@
                     <li><code>footer</code> serves as the main base component of the *<i>drum roll...</i>* footer. By default, it comes with equal padding at the top and bottom of <code>6rem</code> and a margin top of <code>5rem</code> to create a separation between the main content and the footer.</li>
                     <ul>
                         <li>At this point, pretty much anything can be placed into the <code>footer</code>, but there are a few footer specific components worth mentioning.</li>
+                        <li><code>footer-list-title</code> is a standard list title in the footer with a bottom border.</li>
+                        <li><code>footer-list-item</code> provides default stylings for list items. These can be used in combination with Cirrus's columns to create a clean site map.</li>
                     </ul>
                 </ul>
             </div>
+        </div>
+    </section>
+
+    <section id="footerTitle" class="padtop">
+        <div class="content">
+            <h3>Footer List Titles</h3>
+            <div class="divider"></div>
+            <p>As stated above, this forms the basis for a footer list title as seen in the 'Bear &amp; Co.', 'About', and other titles with the <code>footer-list-title</code> class. The items below them are styled by the <code>footer-list-item</code> class.</p>
+            <div class="row">
+                <iframe src="./demo-footer-title.html" width="100%" height="350"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="flexible" class="padtop">
+        <div class="content">
+            <h3>Flexible Design</h3>
+            <div class="divider"></div>
+            <p>Tired of dark gray? Easily add or change anything in the footer to your liking.</p>
+            <div class="row">
+                <iframe src="./demo-footer-flexible.html" width="100%" height="350"></iframe>
+            </div>
+            <pre><code data-lang="CSS">footer {
+    width: 100%;
+    background-color: #fff;
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("https://images.unsplash.com/photo-1514227765494-1bbd6ba05916?auto=format&amp;fit=crop&amp;w=1600&amp;q=100") no-repeat;
+    background-size: cover;
+    will-change: transform;
+}</code></pre>
         </div>
     </section>
 

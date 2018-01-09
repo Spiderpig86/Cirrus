@@ -40,7 +40,7 @@ footer .footer-list-title:after {
     border-color: #343b49;
 }
 
-footer ul a .list-item {
+footer ul a .list-item, footer .list-item {
       margin: 0.1rem;
     color: #888;
     transition: all .3s;
