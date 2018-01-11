@@ -4251,6 +4251,7 @@ video.video-fullscreen {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+          align-items: center;
   vertical-align: middle;
 }
 
