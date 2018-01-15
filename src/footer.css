@@ -17,6 +17,10 @@ footer p {
     color: #848484;
 }
 
+footer ul {
+    margin: 0.5rem 0; /* Remove the left margin seen in global style */
+}
+
 footer h6 {
     text-align: center;
     letter-spacing: 6px;
