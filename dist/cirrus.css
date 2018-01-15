@@ -1474,7 +1474,10 @@ footer ul a .list-item, footer .list-item {
     text-transform: uppercase;
 }
 
-
+footer .footer-fixed {
+    bottom: 0;
+    position: fixed;
+}
 /* FORMS */
 
 input[type="name"],
