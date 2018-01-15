@@ -48,7 +48,7 @@ footer ul a .list-item, footer .list-item {
     text-transform: uppercase;
 }
 
-footer .footer-fixed {
+footer.footer-fixed {
     bottom: 0;
     position: fixed;
 }
