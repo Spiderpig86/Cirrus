@@ -224,7 +224,15 @@
     <section id="animated_cards" class="padtop">
         <div class="content">
             <h5><a href="./index.html#animated_cards" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Animated Card</h5>
-            <p>Cirrus also comes with different components that can interact differently such as this card design with a hover animation. Compared to the card above, the display for the avatar, title text, and buttons are all handled by the <code>card-tile</code>.
+            <p>Cirrus also comes with different components that can interact differently such as this card design with a hover animation. Compared to the card above, the display for the avatar, title text, and buttons are all handled by the <code>card-tile</code>.</p>
+            <p>There are a couple of new and different classes to know about before using an animated card:</p> 
+            <ul>
+                <li>An animated card must have the <code>slide-up</code> class along with the <code>card</code> class.</li>
+                <li>To display an image, it is recommended to create a <code>card-image</code> div nested inside a <code>card-container</code> div.</li>
+                <li>Unlike the standard card above, the title and subtitle are placed in the <code>mobile-title</code> div below the <code>card-container</code>.</li>
+                <li>The content or text of the card is then placed inside a standard <code>content</code> div now with the <code>card-body</code> class.</li>
+            </ul>
+            <p>Following the steps above, the resulting card should be similar to the one below.</p>
             <div class="row">
                 <div class="col-4">
                     <div class="card slide-up">
@@ -276,7 +284,7 @@
     <section class="padtop" id="grouping">
         <div class="content">
             <h5><a href="./index.html#grouping" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Grouping Cards</h5>
-            <p>Need to display multiple cards at once? Worried about having to resize each card? With Cirrus's grid system, you can specify how many cards will be used in each row and your cards will automatically adjust and fill each cell.</p>
+            <p>Need to display multiple cards at once? Worried about having to resize each card? With Cirrus's <a href="../layout" target="_blank" class="u u-LR">grid</a> system, you can specify how many cards will be used in each row and your cards will automatically adjust and fill each cell.</p>
             <div class="row">
                 <div class="col-4">
                     <div class="card">
@@ -426,7 +434,7 @@
 
     <section id="twitter">
         <div class="content">
-            <h3><a href="./index.html#twitter" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Did somebody say Twitter?</h3>
+            <h3><a href="./index.html#twitter" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Twitter Cards</h3>
             <div class="divider"></div>
             <p>Below is an example that shows how you can use cards to create any design you want, including tweet cards from Twitter.</p>
             <div class="row">
