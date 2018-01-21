@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Cirrus - Cards</title>
+    <title>Cirrus - Components</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="description" content="A responsive and lightweight CSS framework.">
@@ -57,14 +57,21 @@
                 </div>
 
                 <div class="nav-item has-sub">
-                    <a class="nav-dropdown-link">Cards</a>
+                    <a class="nav-dropdown-link">Components</a>
                     <ul class="dropdown-menu dropdown-animated">
                         <li><a href="#started" class="smoothScroll">Top</a></li>
-                        <li><a href="#basic" class="smoothScroll">Basic Design</a></li>
-                        <li><a href="#animated_cards" class="smoothScroll">Animated</a></li>
-                        <li><a href="#twitter" class="smoothScroll">Twitter</a></li>
+                        <li><a href="#cards" class="smoothScroll">Cards</a></li>
+                        <li><a href="#basic" class="smoothScroll">Card Basics</a></li>
+                        <li><a href="#animated_cards" class="smoothScroll">Animated Card</a></li>
+                        <li><a href="#grouping" class="smoothScroll">Grouping Cards</a></li>
+                        <li><a href="#twitter" class="smoothScroll">Twitter Card</a></li>
                         <li><a href="#card_header" class="smoothScroll">Card Header</a></li>
                         <li><a href="#card_tiles" class="smoothScroll">Card Tiles</a></li>
+                        <li><a href="#card_tiles" class="smoothScroll">Media</a></li>
+                        <li><a href="#card_tiles" class="smoothScroll">Modal Dialogs</a></li>
+                        <li><a href="#card_tiles" class="smoothScroll">Placeholders</a></li>
+                        <li><a href="#card_tiles" class="smoothScroll">Tabs</a></li>
+                        <li><a href="#card_tiles" class="smoothScroll">Toasts</a></li>
                     </ul>
                 </div>
             </div>
@@ -75,7 +82,15 @@
 
     <section id="started" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#started" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Cards</h3>
+            <h3><a href="./index.html#started" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Components</h3>
+            <div class="divider"></div>
+            <p>Cirrus offers an extensive and growing library of components that can be easily integrated into any webpage. Have elegantly designed components ranging from cards to tabs right at your finger tips.</p>
+        </div>
+    </section>
+
+    <section id="cards" class="padtop">
+        <div class="content">
+            <h3><a href="./index.html#cards" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Cards</h3>
             <div class="divider"></div>
             <p>Cards in Cirrus are designed to provide an easy and flexible way for developers to present data in an elegant fashion.</p>
 
@@ -165,16 +180,16 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+                    </div>
                 </div>
             </div>
     </section>
 
     
 
-    <section class="padtop" id="basic">
+    <section id="basic">
             <div class="content">
-                <h3><a href="./index.html#basic" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Basic Design</h3>
-                <div class="divider"></div>
+                <h5><a href="./index.html#basic" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Basic Design</h5>
                 <p>Sometimes the best way to get information across is a minimallistic approach. Cards in Cirrus are adaptable to what you want to show.</p>
                 <div class="row">
                     <div class="col-4">
@@ -206,11 +221,10 @@
             </div>
         </section>
 
-    <section class="padtop" id="animated_cards">
+    <section id="animated_cards" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#animated_cards" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Animated Card</h3>
-            <div class="divider"></div>
-            <p>Cirrus also comes with different components that can interact differently such as this card design with a hover animation. Compared to the card above, the display for the avatar, title text, and buttons are all handled by the <code>card-tile</code>.</p>
+            <h5><a href="./index.html#animated_cards" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Animated Card</h5>
+            <p>Cirrus also comes with different components that can interact differently such as this card design with a hover animation. Compared to the card above, the display for the avatar, title text, and buttons are all handled by the <code>card-tile</code>.
             <div class="row">
                 <div class="col-4">
                     <div class="card slide-up">
@@ -261,8 +275,7 @@
 
     <section class="padtop" id="grouping">
         <div class="content">
-            <h3><a href="./index.html#grouping" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Grouping</h3>
-            <div class="divider"></div>
+            <h5><a href="./index.html#grouping" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Grouping Cards</h5>
             <p>Need to display multiple cards at once? Worried about having to resize each card? With Cirrus's grid system, you can specify how many cards will be used in each row and your cards will automatically adjust and fill each cell.</p>
             <div class="row">
                 <div class="col-4">
@@ -415,7 +428,7 @@
         <div class="content">
             <h3><a href="./index.html#twitter" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Did somebody say Twitter?</h3>
             <div class="divider"></div>
-            <p>Below is an example that shows how you can use cards to create any design you want, include tweet cards from Twitter.</p>
+            <p>Below is an example that shows how you can use cards to create any design you want, including tweet cards from Twitter.</p>
             <div class="row">
                 <div class="col-5">
                     <div class="card">
@@ -609,7 +622,7 @@
             </div>
             <p>In the two examples above, the first one is your standard tile with the <code>card-tile</code> parent container and <code>tile-container</code> for other elements images, text, buttons, etc. The <code>tile-buttons</code> class could be used also to display buttons horizontally. The card tile at the bottom vertically aligns all elements to be vertically centered giving a more balanced appearance.</p>
             <div class="row">
-                <div class="col-4">
+                <div class="col-6">
                     <div class="card-tile tile-center">
                         <div class="tile-icon">
                             <figure class="avatar">
@@ -627,7 +640,7 @@
                     </div>
                 </div>
 
-                <div class="col-4">
+                <div class="col-6">
                     <div class="card-tile tile-center">
                         <div class="tile-icon">
                             <figure class="avatar">
@@ -643,8 +656,9 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-4">
+            </div>
+            <div class="row fluid-container">
+                <div class="col-6 offset-center">
                     <div class="card-tile tile-center">
                         <div class="tile-icon">
                             <figure class="avatar">
