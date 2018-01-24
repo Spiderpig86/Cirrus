@@ -78,7 +78,7 @@
 }
 
 .modal-content .modal-header {
-    padding: 1rem;
+    padding: 1rem 3rem;
 }
 
 .modal-content .modal-header .modal-title {
@@ -87,12 +87,12 @@
 }
 
 .modal-content .modal-body {
-    padding: 1rem;
+    padding: 1rem 3rem;
     overflow-y: auto;
     max-height: 50vh; /* Max height is 50% of viewport height which prevents dialog from extetnding past screen */
     position: relative;
 }
 
 .modal-content .modal-footer {
-    padding: 1rem;
+    padding: 1rem 3remZ;
 }
