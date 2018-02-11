@@ -344,9 +344,9 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 }
 
 .btn-tooltip.tooltip-top-left:hover::after {
-  -webkit-transform: translate(-75%, -.5rem);
-  -ms-transform: translate(-75%, -.5rem);
-  transform: translate(-75%, -.5rem);
+  -webkit-transform: translate(-125%, -.5rem);
+  -ms-transform: translate(-125%, -.5rem);
+  transform: translate(-125%, -.5rem);
 }
 
 /* Tooltip top right */
@@ -392,9 +392,9 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 }
 
 .btn-tooltip.tooltip-bottom-left:hover::after {
-  -webkit-transform: translate(-90%, .5rem);
-  -ms-transform: translate(-90%, .5rem);
-  transform: translate(-90%, .5rem);
+  -webkit-transform: translate(-125%, .5rem);
+  -ms-transform: translate(-125%, .5rem);
+  transform: translate(-125%, .5rem);
 }
 
 /* Tooltip bottom right */
