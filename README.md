@@ -83,6 +83,7 @@ https://unpkg.com/cirrus-ui
 
 ## Examples that use Cirrus
 * [Polarity 9](http://polarity.x10.mx/browser "Polarity 9 Promo Page")
+* [Phraze](https://phrazes.net "Phraze")
 
 ## License and Attribution
 Cirrus is licensed under the [MIT license](https://github.com/Spiderpig86/Cirrus/blob/master/LICENSE "MIT License"). If this frame work has helped you in any way, attribution in the footer of your website would be much appreciated.
