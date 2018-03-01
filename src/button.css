@@ -292,7 +292,7 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 }
 
 /* This is the psuedoelement that creates the tooltip */
-.btn-tooltip:after {
+.btn-tooltip:after, .btn-tooltip.tooltip-top:after {
   -webkit-appearance: none;
   -moz-appearance: none;
   position: absolute;
@@ -336,6 +336,32 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
       -o-transition: all .2s ease;
 }
 
+/* Tooltip top left */
+.btn-tooltip.tooltip-top-left:after {
+  -webkit-transform: translate(-65%, 0);
+  -ms-transform: translate(-65%, 0);
+  transform: translate(-65%, 0);
+}
+
+.btn-tooltip.tooltip-top-left:hover::after {
+  -webkit-transform: translate(-125%, -.5rem);
+  -ms-transform: translate(-125%, -.5rem);
+  transform: translate(-125%, -.5rem);
+}
+
+/* Tooltip top right */
+.btn-tooltip.tooltip-top-right:after {
+  -webkit-transform: translate(15%, 0);
+  -ms-transform: translate(15%, 0);
+  transform: translate(15%, 0);
+}
+
+.btn-tooltip.tooltip-top-right:hover::after {
+  -webkit-transform: translate(25%, -.5rem);
+  -ms-transform: translate(25%, -.5rem);
+  transform: translate(25%, -.5rem);
+}
+
 /* Tooltip bottom */
 .btn-tooltip.tooltip-bottom::after {
   top: 100%;
@@ -354,6 +380,36 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
   -moz-transform: translate(-50%, .5rem);
   -ms-transform: translate(-50%, .5rem);
   -o-transform: translate(-50%, .5rem);
+}
+
+/* Tooltip bottom left */
+.btn-tooltip.tooltip-bottom-left:after {
+  top: 100%;
+  -webkit-transform: translate(-65%, -1rem);
+  -ms-transform: translate(-65%, -1rem);
+  transform: translate(-65%, -1rem);
+  bottom: auto;
+}
+
+.btn-tooltip.tooltip-bottom-left:hover::after {
+  -webkit-transform: translate(-125%, .5rem);
+  -ms-transform: translate(-125%, .5rem);
+  transform: translate(-125%, .5rem);
+}
+
+/* Tooltip bottom right */
+.btn-tooltip.tooltip-bottom-right:after {
+  top: 100%;
+  -webkit-transform: translate(0%, -1rem);
+  -ms-transform: translate(0%, -1rem);
+  transform: translate(0%, -1rem);
+  bottom: auto;
+}
+
+.btn-tooltip.tooltip-bottom-right:hover::after {
+  -webkit-transform: translate(10%, .5rem);
+  -ms-transform: translate(10%, .5rem);
+  transform: translate(10%, .5rem);
 }
 
 /* Tooltip right */
@@ -398,7 +454,7 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 }
 
 /* BUTTON GROUPS */
-/* Will group buttons with components in a single looking component */
+/* Will group buttons with components in a single component */
 
 .btn-group {
   -webkit-flex-wrap: wrap;
