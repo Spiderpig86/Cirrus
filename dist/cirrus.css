@@ -1324,7 +1324,7 @@ cite {
 .fa {
     font-size: 21px; /* Font sizes in multiple of 7s since they render the best */
     text-align: center;
-    vertical-align: top;
+    /* vertical-align: top; */ /* Removed 0.5.4 as it caused alignment issues */
 }
 
 .fa.x-small {
