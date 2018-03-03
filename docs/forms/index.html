@@ -503,16 +503,16 @@
         </div>
         
         <space class="large"></space>
-        <p>You can also create labels to go along with the textfield to give more detail to the user. There are a couple of different labels you can use in forms to help add context, namely <code>label</code> elements and the <code>info</code> class.</p>
+        <p>You can also create labels to go along with the textfield to give more detail to the user. The simplest implementation is to add a <code>title</code> class to your main label and the <code>subtitle</code> class for any sub-labels.</p>
         <div class="row">
             <div class="col-6">
-                <h6>Regular Label</h6>
-                <label class="font-normal">Just an ordinary label.</label>
+                <h6 class="title">Regular Label</h6>
+                <span class="info subtitle">Just an ordinary label.</span>
                 <input type="text" placeholder="The label above is a regular label."/>
             </div>
             <div class="col-6">
-                <h6>Info Label</h6>
-                <span class="info text-center">Here's some more info.</span>
+                <h6 class="title">Info Label</h6>
+                <span class="info subtitle">Here's some more info.</span>
                 <input type="text" placeholder="The label above me displays additional info."/>
             </div>
         </div>
@@ -684,7 +684,7 @@
                 </div>
             </div>
             <space class="large"></space>
-            <p>And of course, more controls can be combined with each other with different sizes.</p>
+            <p>And of course, more controls can be combined with each other with different sizes. To make things easier, Cirrus is designed to make components to fit with other same sized controls. For instance, any <code>*-small</code> class matches with all components that have the <code>small</code> class.</p>
             <div class="row">
                 <div class="form-group">
                     <label class="form-group-label label-xsmall">github.com/</label>
@@ -719,7 +719,7 @@
     &lt;button class=&quot;form-group-btn btn-tiny&quot;&gt;Go&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label class=&quot;form-group-label label-small&quot;&gt;github.com/&lt;/label&gt;
+    &lt;label class=&quot;form-group-label&quot;&gt;github.com/&lt;/label&gt;
     &lt;input type=&quot;text&quot; class=&quot;form-group-input input-small&quot; placeholder=&quot;Small&quot;&gt;&lt;/input&gt;
     &lt;button class=&quot;form-group-btn btn-small&quot;&gt;Go&lt;/button&gt;
 &lt;/div&gt;
@@ -772,7 +772,7 @@
                 </div>
                 <div class="row no-padding">
                     <div class="form-section col-6">
-                        <label class="font-bold label-small">Choose One</label>
+                        <label class="font-bold">Choose One</label>
                         <select class="select input-small" placeholder="Choose one">
                             <option>Shibe</option>
                             <option>Doggo</option>

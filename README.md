@@ -76,11 +76,6 @@ https://unpkg.com/cirrus-ui
 * Edge (Untested)
 * Internet Explorer (Untested)
 
-## TODO
-* Triangle text for images.
-* Modal dialogs.
-* Add figure and figures that display more info on hover
-
 ## Examples that use Cirrus
 * [Polarity 9](http://polarity.x10.mx/browser "Polarity 9 Promo Page")
 * [Phraze](https://phrazes.net "Phraze")
