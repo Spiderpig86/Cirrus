@@ -293,23 +293,22 @@
   background: #eee;
 }
 
-button.btn-animated:hover, [type=submit].btn-animated:hover, .btn.btn-animated:hover {
-   -webkit-transform: scale(1.05);
-         transform: scale(1.05);
-}
+/* Removed 0.5.4 - too blurry and distracting */
+/* button.btn-animated:hover, [type=submit].btn-animated:hover, .btn.btn-animated:hover {
+   -webkit-transform: scale(1.01);
+         transform: scale(1.01);
+} */
 
 .btn:active, button:active, [type=submit]:active {
-  -webkit-transition: all .2s;
-  transition: all .2s;
-  -moz-transition: all .2s;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
   background: #ddd;
 }
 
 /* Make the loading circle, if present, white when button is active */
 .btn.loading:active:after, button.loading:active:after, [type=submit].loading:active:after {
-  -webkit-transition: all .2s;
-  transition: all .2s;
-  -moz-transition: all .2s;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
   border: 2px solid #fff;
   border-radius: 50%;
   border-right-color: transparent;
@@ -361,6 +360,7 @@ button.btn-animated:active, [type=submit].btn-animated:active, .btn.btn-animated
 .btn-outline {
     color: #fff;
     background: transparent;
+    -webkit-transition: all .3s;
     transition: all .3s;
     border: 1px solid #fff;
         -webkit-backface-visibility: hidden;
@@ -371,6 +371,7 @@ button.btn-animated:active, [type=submit].btn-animated:active, .btn.btn-animated
 .btn-outline:active {
       background: rgba(255, 255, 255, 0.35);
     color: #fff;
+  -webkit-transition: all .3s;
   transition: all .3s;
 }
 
@@ -379,6 +380,7 @@ button.btn-animated:active, [type=submit].btn-animated:active, .btn.btn-animated
   border: 1px solid #222;
   color: #222;
   background: transparent;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -569,7 +571,6 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
   text-overflow: ellipsis;
   max-width: 15rem;
   -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   transition: all .2s ease;
       -webkit-transition: all .2s ease;
@@ -587,7 +588,6 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 .btn-tooltip:focus::after, .btn-tooltip:hover::after {
       opacity: 1;
       -webkit-transform: translate(-50%, -.5rem);
-      -ms-transform: translate(-50%, -.5rem);
       transform: translate(-50%, -.5rem);
       transition: all .2s ease;
       -webkit-transition: all .2s ease;
@@ -599,26 +599,22 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 /* Tooltip top left */
 .btn-tooltip.tooltip-top-left:after {
   -webkit-transform: translate(-65%, 0);
-  -ms-transform: translate(-65%, 0);
   transform: translate(-65%, 0);
 }
 
 .btn-tooltip.tooltip-top-left:hover::after {
   -webkit-transform: translate(-125%, -.5rem);
-  -ms-transform: translate(-125%, -.5rem);
   transform: translate(-125%, -.5rem);
 }
 
 /* Tooltip top right */
 .btn-tooltip.tooltip-top-right:after {
   -webkit-transform: translate(15%, 0);
-  -ms-transform: translate(15%, 0);
   transform: translate(15%, 0);
 }
 
 .btn-tooltip.tooltip-top-right:hover::after {
   -webkit-transform: translate(25%, -.5rem);
-  -ms-transform: translate(25%, -.5rem);
   transform: translate(25%, -.5rem);
 }
 
@@ -646,14 +642,12 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 .btn-tooltip.tooltip-bottom-left:after {
   top: 100%;
   -webkit-transform: translate(-65%, -1rem);
-  -ms-transform: translate(-65%, -1rem);
   transform: translate(-65%, -1rem);
   bottom: auto;
 }
 
 .btn-tooltip.tooltip-bottom-left:hover::after {
   -webkit-transform: translate(-125%, .5rem);
-  -ms-transform: translate(-125%, .5rem);
   transform: translate(-125%, .5rem);
 }
 
@@ -661,14 +655,12 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 .btn-tooltip.tooltip-bottom-right:after {
   top: 100%;
   -webkit-transform: translate(0%, -1rem);
-  -ms-transform: translate(0%, -1rem);
   transform: translate(0%, -1rem);
   bottom: auto;
 }
 
 .btn-tooltip.tooltip-bottom-right:hover::after {
   -webkit-transform: translate(10%, .5rem);
-  -ms-transform: translate(10%, .5rem);
   transform: translate(10%, .5rem);
 }
 
@@ -717,31 +709,32 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 /* Will group buttons with components in a single component */
 
 .btn-group {
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; /* Wrap contents to next row on overflow */
+  display: -webkit-inline-box;
   display: inline-flex;
   display: -ms-inline-flexbox;
   display: -webkit-inline-flex;
 }
 
 .btn-group.btn-group-fill { /* Makes the button group fill the width and proportion the buttons to fill the space */
+  display: -webkit-box;
   display: flex;
   display: -ms-flexbox;
   display: -webkit-flex;
 }
 
 .btn-group .btn, .btn-group button, .btn-group [type=submit] {
-  -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  -webkit-box-flex: 1;
+          flex: 1 0 auto;
   margin: 0;
 }
 
 .btn-group.btn-group-fill .btn, .btn-group.btn-group-fill button, .btn-group.btn-group-fill [type=submit] {
-  -webkit-flex: 1 0 0;
   -ms-flex: 1 0 0;
-  flex: 1 0 0; /* Make the buttons fill the available width and proportion themselves */
+  -webkit-box-flex: 1;
+          flex: 1 0 0; /* Make the buttons fill the available width and proportion themselves */
 }
 
 .btn-group .btn:first-child:not(:last-child),
