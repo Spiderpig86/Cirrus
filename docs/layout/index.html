@@ -541,18 +541,18 @@
             <div class="divider"></div>
             <p>With Cirrus, you can easily vertically center your divs with the <code>level</code> class in the parent container and the <code>level-item</code> class for the children to align the items. The <code>level-content</code> class is used with the <code>level-item</code> class to make the content of the item stretch the width of the parent div relative to other divs.</p>
             <div class="row">
-                <div class="level" style="background:#eee; width:100%;">
-                    <div class="level-item" style="background: #ddd; padding: 1rem;">
+                <div class="level" style="background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%); width:100%; border-radius: .3rem; overflow: hidden;">
+                    <div class="level-item" style="background: rgba(255, 255, 255, 0.2); padding: 1rem;">
                         <div class="text-center">
                             <p>.level-item<br>padding: 1rem</p>
                         </div>
                     </div>
-                    <div class="level-item" style="background: #ddd; padding: 2rem 1rem;">
+                    <div class="level-item" style="background: rgba(255, 255, 255, 0.2); padding: 2rem 1rem;">
                         <div class="text-center">
                             <p>.level-item<br>padding: 1.5rem 1rem</p>
                         </div>
                     </div>
-                    <div class="level-item" style="background: #ddd; padding: 1rem;">
+                    <div class="level-item" style="background: rgba(255, 255, 255, 0.2); padding: 1rem;">
                         <div class="text-center">
                             <p>.level-item<br>padding: 1rem</p>
                         </div>
@@ -580,32 +580,34 @@
             </div>
             <p>You can also create your very own navbar with the level class and specify the content displayed on the left and right side with the <code>level-left</code> and <code> level-right</code> classes respectively. This differs from the header class in the sense that divs have more padding with the same color along with a slight adjustment to the divs.</p>
             <div class="row">
-                 <div class="level" style="background:#ddd;">
-                    <div class="level-left level-content" style="background:#eee;">
+                 <div class="level" style="background-image: linear-gradient(to right, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%); border-radius: .3rem; overflow: hidden;">
+                    <div class="level-left level-content" style="background:rgba(255, 255, 255, 0.2);">
                         <p class="level-item content-no-padding">.level-left<br>.level-item<br>.level-content</p>
                     </div>
-                    <div class="level-item level-content" style="background:#eee;">
+                    <div class="level-item level-content" style="background:rgba(255, 255, 255, 0.2);">
                         <p class="content-no-padding text-center">.level-content<br>.level-item</p>
                     </div>
-                    <div class="level-right level-content" style="background:#eee;">
+                    <div class="level-right level-content" style="background:rgba(255, 255, 255, 0.2);">
                         <p class="level-item content-no-padding">.level-right<br>.level-item<br>.level-content</p>
                     </div>
                 </div>
             </div>
             <p>In the example above, the contents of <code>level-left</code>, the <code>level-item</code> in the center, and <code>level-right</code> will expand as more content is added into the divs.</p>
             <blockquote>Tl;dr: For navbars, check out the header menu documentation.</blockquote>
+            
+            <space></space>
 
             <h6>Fill Height</h6>
             <p>Looking at the previous examples, you may be wondering how to force the <code>level-items</code> to fill the height of its parent container. This is easily done by adding the <code>fill-height</code> class to the <code>level</code> div.</p>
             <div class="row">
-                 <div class="level" style="background:#ddd;">
-                    <div class="level-left level-content" style="background:#eee;">
+                 <div class="level" style="background-image: linear-gradient(to right, #fff1eb 0%, #ace0f9 100%); border-radius: .3rem; overflow: hidden;">
+                    <div class="level-left level-content" style="background:rgba(255, 255, 255, 0.2);">
                         <p class="level-item content-no-padding padtop">Totally</p>
                     </div>
-                    <div class="level-item level-content" style="background:#eee;">
+                    <div class="level-item level-content" style="background:rgba(255, 255, 255, 0.2);">
                         <p class="content-no-padding text-center padtop">Equal</p>
                     </div>
-                    <div class="level-right level-content" style="background:#eee;">
+                    <div class="level-right level-content" style="background:rgba(255, 255, 255, 0.2);">
                         <p class="level-item content-no-padding padtop">Heights</p>
                     </div>
                 </div>
