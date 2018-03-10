@@ -585,6 +585,7 @@
         <div class="content" id="card_header">
             <h3><a href="./index.html#card_header" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Card Headers</h3>
             <div class="divider"></div>
+            <p>Add a simple title to your card with the <code>card-head-title</code> class inside the <code>card-head</code>.</p>
             <div class="row">
                 <div class="col-6">
                     <div class="card">
@@ -767,6 +768,9 @@
             </div>
 
             <space></space>
+            <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;row&quot;&gt;
+    &lt;img class=&quot;img-stretch&quot; src=&quot;img/yosemite.png&quot; /&gt;
+&lt;/div&gt;</code></pre>
 
             <p>Having the image cover a parent element or just being contained in it can be achived by using the <code>img-cover</code> and <code>img-contain</code> classes respectively. These are particularly helpful when the image or parent has a <b>fixed height</b> (below is an example with a fixed height of 350px).</p>
             <div class="row">
@@ -787,6 +791,26 @@
                     </figure>
                 </div>
             </div>
+            <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-6&quot;&gt;
+        &lt;figure class=&quot;fig&quot;&gt;
+            &lt;img class=&quot;img-cover&quot; src=&quot;img/yosemite.png&quot; /&gt;
+            &lt;figcaption class=&quot;fig-caption text-center&quot;&gt;
+                Image with &lt;code&gt;img-cover&lt;/code&gt;
+            &lt;/figcaption&gt;
+        &lt;/figure&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-6&quot;&gt; 
+        &lt;figure class=&quot;fig&quot;&gt;
+            &lt;img class=&quot;img-contain&quot; src=&quot;img/yosemite.png&quot; /&gt;
+            &lt;figcaption class=&quot;fig-caption text-center&quot;&gt;
+                Image with &lt;code&gt;img-contain&lt;/code&gt;
+            &lt;/figcaption&gt;
+        &lt;/figure&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <space class="large"></space>
 
             <h6>Figures</h6>
             <p>Figures are simply containers for an images that would be positioned independently from the main flow of the page.</p>
@@ -810,6 +834,13 @@
             </div>
             <p>To add a caption and separate the image from the rest of the page, surround it with a <code>figure</code> tag with the <code>fig</code> class. This allows the image to span a given area while leaving space underneath it for a simple caption.</p>
 
+            <pre><code class="HTML" data-lang="HTML">&lt;figure class=&quot;fig&quot;&gt;
+    &lt;img src=&quot;img/yosemite-falls.png&quot; /&gt;
+    &lt;figcaption class=&quot;fig-caption text-center&quot;&gt;
+        Yosemite Valley, United States
+    &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
             <space class="large"></space>
 
             <h6>Videos</h6>
@@ -832,6 +863,13 @@
                     <p class="text-center">4:3 ratio</p>
                 </div>
             </div>
+            <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;media-stretch rat-1-1&quot;&gt;
+    &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;./...&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+
+            <space class="large"></space>
+
+            <h6>Avatars</h6>
         </div>
     </section>
 
