@@ -77,6 +77,10 @@
     max-width: 200px;
 }
 
+#landing, #landing video {
+    min-height: 650px;
+}
+
 #version {
     background-color: rgba(255, 255, 255, 0.3);
     max-width: 200px;
