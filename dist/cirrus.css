@@ -3805,12 +3805,7 @@ video.video-fullscreen {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; /* Vertical centering */
-}
-
-/* Add animation when showing modal */
-.modal.modal-animated {
-    -webkit-animation: slide-down .2s ease 1;
-    animation: slide-down .2s ease 1;
+    pointer-events: none; /* Prevent any pointer events made to modal while hidden */
 }
 
 /* When the modal dialog is visible */
@@ -3820,6 +3815,7 @@ video.video-fullscreen {
     display: flex;
     opacity: 1;
     z-index: 999;
+    pointer-events: auto; /* Re-enable pointer events */
 }
 
 /* The div in the modal dialpog used to create the translucent background */
@@ -3843,7 +3839,7 @@ video.video-fullscreen {
     box-shadow: 0 .4rem 1rem rgba(54, 59, 68, .3);
     z-index: 1;
     color: #374054;
-    max-width: 64rem;
+    max-width: 45rem;
 }
 
 .modal-content h1,
@@ -3886,6 +3882,33 @@ video.video-fullscreen {
 
 .modal-content .modal-footer {
     padding: 1rem 3rem;
+}
+
+/* MODAL ANIMATIONS */
+.modal.modal-animated--dropdown {
+    -webkit-animation: slide-down .2s ease 1;
+    animation: slide-down .2s ease 1;
+}
+
+/* Visible state */
+.modal.modal-animated--zoom-in, .modal.modal-animated--zoom-out {
+    display: -webkit-box; /* Force dialog to appear in the center */
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    transition: 300ms all ease;
+}
+.modal:target.modal-animated--zoom-in {
+    opacity: 1;
+    transition: 300ms all ease;
+}
+.modal.modal-animated--zoom-in .modal-content {
+    transform: scale(0.8);
+    transition: 300ms all ease;
+}
+.modal:target.modal-animated--zoom-in .modal-content {
+    transform: scale(1);
+    transition: 300ms all ease;
 }
 
 /* Keyframes for slide down animation */
