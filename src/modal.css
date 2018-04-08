@@ -48,7 +48,16 @@
     box-shadow: 0 .4rem 1rem rgba(54, 59, 68, .3);
     z-index: 1;
     color: #374054;
-    max-width: 45rem;
+    max-width: 40rem; /* 640px */
+}
+
+/* Different size modals */
+.modal.modal-small .modal-content {
+    max-width: 20rem; /* 320px */
+}
+
+.modal.modal-large .modal-content {
+    max-width: 60rem; /* 960px */
 }
 
 .modal-content h1,
@@ -64,7 +73,6 @@
 .modal.shown .modal-container {
   -webkit-animation: slide-down .2s ease 1;
   animation: slide-down .2s ease 1;
-  max-width: 64rem;
   z-index: 1;
 }
 
@@ -107,7 +115,7 @@
     opacity: 0;
     transition: 300ms all ease;
 }
-.modal:target.modal-animated--zoom-in {
+.modal:target.modal-animated--zoom-in, .modal:target.modal-animated--zoom-out {
     opacity: 1;
     transition: 300ms all ease;
 }
@@ -115,8 +123,13 @@
     transform: scale(0.8);
     transition: 300ms all ease;
 }
-.modal:target.modal-animated--zoom-in .modal-content {
+.modal:target.modal-animated--zoom-in .modal-content, .modal:target.modal-animated--zoom-out .modal-content {
     transform: scale(1);
+    transition: 300ms all ease;
+}
+
+.modal.modal-animated--zoom-out .modal-content {
+    transform: scale(1.2);
     transition: 300ms all ease;
 }
 
