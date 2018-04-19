@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* BUTTONS */
 
 /* Button styling */
@@ -504,4 +505,505 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
 .btn-group [type="submit"]:not(:first-child):not(:last-child) { /* Style button in middle of group */
   border-radius: 0; /* Remove roundness from center buttons */
   margin-left: -.1rem;
+=======
+/* BUTTONS */
+
+/* Button styling */
+/* Un-themed */
+.btn, button, [type=submit] {
+  display: block;
+  line-height: 2rem;
+  overflow: hidden;
+  padding: .5rem 1.5rem;
+  width: auto;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -moz-transition: all .3s;
+  background-color: #fefefe;
+  border-color: #d9d9d9;
+  color: #737373;
+  font-size: .75em;
+  letter-spacing: .03rem;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-weight: 400;
+  min-width: 2rem;
+}
+
+.btn:hover, button:hover, [type=submit]:hover {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -moz-transition: all .3s;
+  background: #eee;
+}
+
+/* Removed 0.5.4 - too blurry and distracting */
+/* button.btn-animated:hover, [type=submit].btn-animated:hover, .btn.btn-animated:hover {
+   -webkit-transform: scale(1.01);
+         transform: scale(1.01);
+} */
+
+.btn:active, button:active, [type=submit]:active {
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+  background: #ddd;
+}
+
+/* Make the loading circle, if present, white when button is active */
+.btn.loading:active:after, button.loading:active:after, [type=submit].loading:active:after {
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
+button.btn-animated:active, [type=submit].btn-animated:active, .btn.btn-animated:active {
+   -webkit-transform: scale(0.99);
+    transform: inherit, scale(0.99); 
+}
+
+.btn:focus, button:focus, [type=submit]:focus {
+  outline: none;
+}
+
+.btn:disabled, button:disabled, [type=submit]:disabled {
+  cursor: not-allowed;
+  background-color: #d7d7da; /* Make it darker than the other input colors */
+  color: #fff;
+}
+
+.btn:disabled:hover, button:disabled:hover, [type=submit]:disabled:hover {
+  background-color: #d7d7da; /* Make it darker than the other input colors */
+}
+
+/* Accent button disabled */
+.btn-accent:disabled {
+    background-color: #f03d4d;
+    color: #fff;
+    border-color: #c21b2b;
+    opacity: .6;
+}
+
+.btn-accent:disabled:hover {
+    background-color: #f03d4d;
+    color: #fff;
+    border-color: #c21b2b;
+}
+
+/* Adds small margin around buttons */
+.btn-container {
+  margin: 0.5rem;
+  overflow: visible;
+}
+
+/* Different styles */
+
+/* Outline (white) */
+.btn-outline {
+    color: #fff;
+    background: transparent;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    border: 1px solid #fff;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+}
+
+.btn-outline:hover,
+.btn-outline:active {
+      background: rgba(255, 255, 255, 0.35);
+    color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+/* Inverted outline (dark) */
+.btn-outline-inverted {
+  border: 1px solid #222;
+  color: #222;
+  background: transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-outline-inverted:hover,
+.btn-outline-inverted:active {
+  color: #fff;
+  background: #222;
+}
+
+/* Transparent Background */
+.btn-transparent {
+  background: transparent;
+  color: #999;
+  border: 0;
+}
+
+.btn-transparent:hover {
+  background: rgba(0, 0, 0, .1);
+  color: #999;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.btn-transparent:active {
+  background: rgba(0, 0, 0, .3);
+  color: #f5f5f5;
+  -webkit-transform: none;
+          transform: none;
+}
+
+/* Light gray */
+.btn-light {
+  background: #eee;
+  color: #333;
+}
+
+.btn-light:hover {
+  background: #e0e0e0;
+}
+
+.btn-light:active {
+   background: #dbdbdb;
+}
+
+/* Dark Gray */
+.btn-dark {
+  background: #444;
+  color: #fff;
+  border: 0;
+}
+
+.btn-dark:hover {
+  background: #3a3a3a;
+}
+
+.btn-dark:active {
+  background: #303030;
+}
+
+/* Black */
+.btn-black {
+  background: #000;
+  color: #fff;
+}
+
+.btn-black:hover {
+  background: #000;
+}
+
+.btn-black:active {
+  background: #000;
+}
+
+/* Right of input */
+.has-controls.input:not([class*="left action"])>button:last-child, .has-controls.input:not([class*="left action"])>.btn:last-child>.btn {
+    border-radius: 0 .28571429rem .28571429rem 0;
+}
+
+.has-controls.input:not([class*="right action"])>button:last-child, .has-controls.input:not([class*="right action"])>.btn:last-child>.btn {
+    border-radius: .28571429rem 0 0 .28571429rem ;
+}
+
+/* Tiny button */
+.btn-tiny {
+  line-height: 1.5rem;
+  padding: 0 .25rem;
+  font-size: 50%;
+}
+
+/* Small button */
+.btn-small {
+    line-height: 2.4rem;
+    padding: 0 .5rem;
+    font-size: 70%;
+}
+
+/* Big button */
+.btn-large {
+    line-height: 3.5rem;
+    padding: 0 2rem;
+    font-size: 90%;
+}
+
+.btn-xlarge {
+  line-height: 4.5rem;
+  padding: 0 2rem;
+  font-size: 110%;
+}
+
+.btn-xxlarge {
+  line-height: 4.5rem;
+  padding: 0 2rem;
+  font-size: 120%;
+}
+
+/* Make the loader white so it is visible */
+.loading.btn-accent:after {
+    border: 2px solid #fff;
+      border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+/* Override default behavior of aligning font awesome icons to the top */
+button .fa, .btn .fa, [type=submit] .fa {
+    vertical-align: baseline;
+}
+
+button .fa.pad-right, .btn .fa.pad-right, [type=submit] .fa.pad-right {
+    margin-right: .4rem;
+}
+
+button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
+    margin-left: .4rem;
+}
+
+/* Button with accent */
+.btn-accent {
+  background-color: #f03d4d;
+  color: #fff;
+  border-color: #c21b2b;
+}
+
+.btn-accent:hover {
+  background-color: #d62939;
+}
+
+.btn-accent:active {
+  background-color: #c21b2b;
+}
+
+/* Success Button */
+.btn-success {
+    color: #fff;
+    background-color: #00cb52;
+    border-color: #00ad46;
+}
+
+.btn-success:hover {
+    background-color: #00b147;
+}
+
+.btn-success:active {
+    background-color: #00b147;
+}
+
+/* Button tooltip on hover */
+.btn-tooltip {
+  position: relative; /* let's the pseudoelement that we are displaying relative to the button. */
+  overflow: visible; /* Allows the pseudoelement to be shown */
+  white-space: nowrap; /* Keeps the button text from wrapping and getting too large */
+}
+
+/* This is the psuedoelement that creates the tooltip */
+.btn-tooltip:after, .btn-tooltip.tooltip-top:after {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  color: #fff;
+  font-size: .6rem;
+  background: rgba(69, 77, 93, .9);
+  content: attr(data-tooltip); /* Retrieves the data specified in this element property and displays it as text */
+  display: block;
+  line-height: 1rem;
+  text-transform: none;
+  overflow: hidden;
+  padding: .4rem .8rem;
+  opacity: 0; /* Hide the element */
+  text-overflow: ellipsis;
+  max-width: 15rem;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  transition: all .2s ease;
+      -webkit-transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      -ms-transition: all .2s ease;
+      -o-transition: all .2s ease;
+  z-index: 200;
+  pointer-events: none;
+  bottom: 100%; /* Pushes the tooltip above the button */
+  left: 50%; /* Horizontally center it */
+  border-radius: .2rem;
+}
+
+/* Handles the on hover event of the button and then modifies the associated tooltip accordingly. */
+.btn-tooltip:focus::after, .btn-tooltip:hover::after {
+      opacity: 1;
+      -webkit-transform: translate(-50%, -.5rem);
+      transform: translate(-50%, -.5rem);
+      transition: all .2s ease;
+      -webkit-transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      -ms-transition: all .2s ease;
+      -o-transition: all .2s ease;
+}
+
+/* Tooltip top left */
+.btn-tooltip.tooltip-top-left:after {
+  -webkit-transform: translate(-65%, 0);
+  transform: translate(-65%, 0);
+}
+
+.btn-tooltip.tooltip-top-left:hover::after {
+  -webkit-transform: translate(-125%, -.5rem);
+  transform: translate(-125%, -.5rem);
+}
+
+/* Tooltip top right */
+.btn-tooltip.tooltip-top-right:after {
+  -webkit-transform: translate(15%, 0);
+  transform: translate(15%, 0);
+}
+
+.btn-tooltip.tooltip-top-right:hover::after {
+  -webkit-transform: translate(25%, -.5rem);
+  transform: translate(25%, -.5rem);
+}
+
+/* Tooltip bottom */
+.btn-tooltip.tooltip-bottom::after {
+  top: 100%;
+  transform: translate(-50%, -1rem); /* Moves tooltip to the center horizontally and shifts tooltip down */
+  -webkit-transform: translate(-50%, -1rem);
+  -moz-transform: translate(-50%, -1rem);
+  -ms-transform: translate(-50%, -1rem);
+  -o-transform: translate(-50%, -1rem);
+  bottom: auto;
+}
+
+.btn-tooltip.tooltip-bottom:hover::after,
+.btn-tooltip.tooltip-bottom:focus::after {
+  transform: translate(-50%, .5rem);
+  -webkit-transform: translate(-50%, .5rem);
+  -moz-transform: translate(-50%, .5rem);
+  -ms-transform: translate(-50%, .5rem);
+  -o-transform: translate(-50%, .5rem);
+}
+
+/* Tooltip bottom left */
+.btn-tooltip.tooltip-bottom-left:after {
+  top: 100%;
+  -webkit-transform: translate(-65%, -1rem);
+  transform: translate(-65%, -1rem);
+  bottom: auto;
+}
+
+.btn-tooltip.tooltip-bottom-left:hover::after {
+  -webkit-transform: translate(-125%, .5rem);
+  transform: translate(-125%, .5rem);
+}
+
+/* Tooltip bottom right */
+.btn-tooltip.tooltip-bottom-right:after {
+  top: 100%;
+  -webkit-transform: translate(0%, -1rem);
+  transform: translate(0%, -1rem);
+  bottom: auto;
+}
+
+.btn-tooltip.tooltip-bottom-right:hover::after {
+  -webkit-transform: translate(10%, .5rem);
+  transform: translate(10%, .5rem);
+}
+
+/* Tooltip right */
+.btn-tooltip.tooltip-right::after {
+  left: 100%;
+  bottom: 50%;
+  transform: translate(-1rem, 50%);
+  -webkit-transform: translate(-1rem, 50%);
+  -moz-transform: translate(-1rem, 50%);
+  -ms-transform: translate(-1rem, 50%);
+  -o-transform: translate(-1rem, 50%);
+}
+
+.btn-tooltip.tooltip-right:hover::after,
+.btn-tooltip.tooltip-right:focus::after {
+  transform: translate(.5rem, 50%);
+  -webkit-transform: translate(.5rem, 50%);
+  -moz-transform: translate(.5rem, 50%);
+  -ms-transform: translate(.5rem, 50%);
+  -o-transform: translate(.5rem, 50%);
+}
+
+/* Tooltip Left */
+.btn-tooltip.tooltip-left::after {
+  right: 100%;
+  bottom: 50%;
+  left: auto; /* Needed to work */
+  transform: translate(1rem, 50%);
+  -webkit-transform: translate(1rem, 50%);
+  -moz-transform: translate(1rem, 50%);
+  -ms-transform: translate(1rem, 50%);
+  -o-transform: translate(1rem, 50%);
+}
+
+.btn-tooltip.tooltip-left:hover::after,
+.btn-tooltip.tooltip-left:focus::after {
+  transform: translate(-.5rem, 50%);
+  -webkit-transform: translate(-.5rem, 50%);
+  -moz-transform: translate(-.5rem, 50%);
+  -ms-transform: translate(-.5rem, 50%);
+  -o-transform: translate(-.5rem, 50%);
+}
+
+/* BUTTON GROUPS */
+/* Will group buttons with components in a single component */
+
+.btn-group {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; /* Wrap contents to next row on overflow */
+  display: -webkit-inline-box;
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+}
+
+.btn-group.btn-group-fill { /* Makes the button group fill the width and proportion the buttons to fill the space */
+  display: -webkit-box;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
+.btn-group .btn, .btn-group button, .btn-group [type=submit] {
+  -ms-flex: 1 0 auto;
+  -webkit-box-flex: 1;
+          flex: 1 0 auto;
+  margin: 0;
+}
+
+.btn-group.btn-group-fill .btn, .btn-group.btn-group-fill button, .btn-group.btn-group-fill [type=submit] {
+  -ms-flex: 1 0 0;
+  -webkit-box-flex: 1;
+          flex: 1 0 0; /* Make the buttons fill the available width and proportion themselves */
+}
+
+.btn-group .btn:first-child:not(:last-child),
+.btn-group button:first-child:not(:last-child) ,
+.btn-group [type="submit"]:first-child:not(:last-child) { /* Style the first child in group > 1 buttons */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group .btn:last-child:not(:first-child),
+.btn-group button:last-child:not(:first-child),
+.btn-group [type="submit"]:last-child:not(:first-child) { /* Style the last child in group > 1 buttons */
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -.1rem;
+}
+
+.btn-group .btn:not(:first-child):not(:last-child),
+.btn-group button:not(:first-child):not(:last-child) ,
+.btn-group [type="submit"]:not(:first-child):not(:last-child) { /* Style button in middle of group */
+  border-radius: 0; /* Remove roundness from center buttons */
+  margin-left: -.1rem;
+>>>>>>> 9be66e34ebc50bd7acb25d24c2ff1ea663fe75cc
 }
