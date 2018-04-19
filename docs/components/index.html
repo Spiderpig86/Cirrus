@@ -1036,7 +1036,45 @@
         <div class="content">
             <h3><a href="./index.html#modals" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Modals</h3>
             <div class="divider"></div>
-            <p>Coming soon...</p>
+            <p>Modals makes prompts simple for any website or app.</p>
+            <a href="#modal-test">
+                <button class="btn-accent">Show Dialog</button>
+            </a>
+
+            <p>Setting up a modal is quite simple. To start, create a <code>div</code> with the <code>modal</code> class anywhere on the page. The next crucial step is to specify an <code>id</code> that you will use to reference the modal dialog with (from a button for example).</p> 
+            <p>For a close button, you must specify an <code>id</code> to change the closing behavior.</p>
+
+            
+            <ul class="no-bullets">
+                <li class="font-bold">Return to Specific Div</li>
+                <li><pre><code class="html" data-lang="HTML">&lt;a href=&quot;#TAG-OUTSIDE&quot; class=&quot;modal-overlay close-btn&quot; aria-label=&quot;Close&quot;&gt;&lt;/a&gt;</code></pre></li>
+
+                <li class="font-bold">Return to Top</li>
+                <li><pre><code class="html" data-lang="HTML">&lt;a href=&quot;#&quot; class=&quot;modal-overlay close-btn&quot; aria-label=&quot;Close&quot;&gt;&lt;/a&gt;</code></pre></li>
+                
+                <li class="font-bold">Keep Scroll Position</li>
+                <li><pre><code class="html" data-lang="HTML">&lt;a href=&quot;#NON-EXISTANT-DIV&quot; class=&quot;modal-overlay close-btn&quot; aria-label=&quot;Close&quot;&gt;&lt;/a&gt;</code></pre></li>
+            </ul>
+
+            <h6>Outline</h6>
+
+            <space></space>
+
+            <ul>
+                <li><code>modal</code> acts the parent container of all the components
+                <ul>
+                    <li><code>modal-content</code> is similar to the <code>content</code> class itself, where it adds padding on the sides to push the content closer to the center.</li>
+
+                    <ul>
+                        <li><code>modal-header</code> provides a region for the title of the dialog with the <code>modal-title</code> class.</li>
+
+                        <li><code>modal-body</code> holds the main contents of the dialog and can contain other controls within,</li>
+
+                        <li><code>modal-footer</code> serves as the ending of the modal dialog. This typically holds buttons to allow user to make a selection.</li>
+                    </ul>
+                </ul>
+                </li>
+            </ul>
         </div>
     </section>
 
