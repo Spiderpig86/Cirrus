@@ -1074,8 +1074,170 @@
                 </ul>
                 </li>
             </ul>
+
+            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;modal&quot; id=&quot;modal-id&quot;&gt;
+    &lt;a href=&quot;#target&quot; class=&quot;modal-overlay close-btn&quot; aria-label=&quot;Close&quot;&gt;&lt;/a&gt;
+    &lt;div class=&quot;modal-content&quot; role=&quot;document&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt;
+            &lt;a href=&quot;#components&quot; class=&quot;pull-right&quot; aria-label=&quot;Close&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+            &lt;div class=&quot;modal-title&quot;&gt;Modal Dialog&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+            &lt;!-- Modal content --&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-footer&quot;&gt;
+            &lt;!-- Rows, buttons, etc... --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <space></space>
+
+        <h6>Sizes</h6>
+        <p>Modal dialogs come in 3 pre-defined sizes, each corresponding to small, medium, and large viewports using the <code>modal-small</code>, <code>modal</code>, and <code>modal-large</code> class selectors respectively.</p>
+        <div class="row level center">
+            <a href="#modal-small"><button>Small</button></a>
+            <a href="#modal-normal"><button>Normal</button></a>
+            <a href="#modal-large"><button>Large</button></a>
+        </div>
+
+        <space></space>
+
+        <h6>Animations</h6>
+        <p>Spice up your modal dialogs with a couple of animations.</p>
+        <div class="row level center">
+            <a href="#modal-drop"><button>Dropdown</button></a>
+            <a href="#modal-in"><button>Zoom In</button></a>
+            <a href="#modal-out"><button>Zoom Out</button></a>
+        </div>
+
         </div>
     </section>
+
+    <!-- MODAL DIALOGS FOR EXAMPLE -->
+    <div class="modal modal-small modal-animated--zoom-in" id="modal-small">
+        <a href="#target" class="modal-overlay close-btn" aria-label="Close"></a>
+        <div class="modal-content" role="document">
+            <div class="modal-header">
+                <a href="#components" class="pull-right" aria-label="Close"><span class="icon"><i class="fa fa-times"></i></span></a>
+                <div class="modal-title">Small Dialog</div>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content -->
+                <div class="text-center">
+                    <h5>Max-width: 20rem</h5>
+                    <h6>What is Lorem Ipsum?</h6>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    <h6>Ipsum</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <h6>Ipsum II</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet luctus venenatis lectus magna. Facilisis gravida neque convallis a cras semper. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Erat imperdiet sed euismod nisi porta lorem. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-animated--zoom-in" id="modal-normal">
+        <a href="#target" class="modal-overlay close-btn" aria-label="Close"></a>
+        <div class="modal-content" role="document">
+            <div class="modal-header">
+                <a href="#components" class="pull-right" aria-label="Close"><span class="icon"><i class="fa fa-times"></i></span></a>
+                <div class="modal-title">Normal Dialog</div>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content -->
+                <div class="text-center">
+                    <h5>Max-width: 40rem</h5>
+                    <h6>What is Lorem Ipsum?</h6>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    <h6>Ipsum</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <h6>Ipsum II</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet luctus venenatis lectus magna. Facilisis gravida neque convallis a cras semper. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Erat imperdiet sed euismod nisi porta lorem. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-large modal-animated--zoom-in" id="modal-large">
+        <a href="#target" class="modal-overlay close-btn" aria-label="Close"></a>
+        <div class="modal-content" role="document">
+            <div class="modal-header">
+                <a href="#components" class="pull-right" aria-label="Close"><span class="icon"><i class="fa fa-times"></i></span></a>
+                <div class="modal-title">Large Dialog</div>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content -->
+                <div class="text-center">
+                    <h5>Max-width: 60rem</h5>
+                    <h6>What is Lorem Ipsum?</h6>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    <h6>Ipsum</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <h6>Ipsum II</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet luctus venenatis lectus magna. Facilisis gravida neque convallis a cras semper. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Erat imperdiet sed euismod nisi porta lorem. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal modal-animated--dropdown" id="modal-drop">
+        <a href="#target" class="modal-overlay close-btn" aria-label="Close"></a>
+        <div class="modal-content" role="document">
+            <div class="modal-header">
+                <a href="#components" class="pull-right" aria-label="Close"><span class="icon"><i class="fa fa-times"></i></span></a>
+                <div class="modal-title">Dropdown Dialog</div>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content -->
+                <div class="text-center">
+                    <h5>Dropdown</h5>
+                    Modal class: <code>modal-animated--dropdown</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-animated--zoom-in" id="modal-in">
+        <a href="#target" class="modal-overlay close-btn" aria-label="Close"></a>
+        <div class="modal-content" role="document">
+            <div class="modal-header">
+                <a href="#components" class="pull-right" aria-label="Close"><span class="icon"><i class="fa fa-times"></i></span></a>
+                <div class="modal-title">Zoom In Dialog</div>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content -->
+                <div class="text-center">
+                    <h5>Zoom-In</h5>
+                    Modal class: <code>modal-animated--zoom-in</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-animated--zoom-out" id="modal-out">
+        <a href="#target" class="modal-overlay close-btn" aria-label="Close"></a>
+        <div class="modal-content" role="document">
+            <div class="modal-header">
+                <a href="#components" class="pull-right" aria-label="Close"><span class="icon"><i class="fa fa-times"></i></span></a>
+                <div class="modal-title">Zoom Out Dialog</div>
+            </div>
+            <div class="modal-body">
+                <!-- Modal content -->
+                <div class="text-center">
+                    <h5>Zoom-Out</h5>
+                    Modal class: <code>modal-animated--zoom-out</code>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Pagination -->
     <section class="padtop">
