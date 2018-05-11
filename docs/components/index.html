@@ -489,9 +489,10 @@
             </div>
         </div>
 
+        <space></space>
+
         <div class="content">
-            <h6>Twitter Cards</h6>
-            <div class="divider"></div>
+            <h6>Twitter Card</h6>
             <p>Below is an example that shows how you can use cards to create any design you want, including tweet cards from Twitter.</p>
             <div class="row">
                 <div class="col-5">
@@ -1050,24 +1051,27 @@
 
             <space class="large"></space>
 
-            <h6>Outline</h6>
-            <ul>
-                <li><code>modal</code> acts the parent container of all the components
-                <ul>
-                    <li><code>modal-content</code> is similar to the <code>content</code> class itself, where it adds padding on the sides to push the content closer to the center.</li>
-
+            <div class="row">
+                <div class="col-6">
+                    <h6>Outline</h6>
                     <ul>
-                        <li><code>modal-header</code> provides a region for the title of the dialog with the <code>modal-title</code> class.</li>
-
-                        <li><code>modal-body</code> holds the main contents of the dialog and can contain other controls within,</li>
-
-                        <li><code>modal-footer</code> serves as the ending of the modal dialog. This typically holds buttons to allow user to make a selection.</li>
+                        <li><code>modal</code> acts the parent container of all the components
+                        <ul>
+                            <li><code>modal-content</code> is similar to the <code>content</code> class itself, where it adds padding on the sides to push the content closer to the center.</li>
+        
+                            <ul>
+                                <li><code>modal-header</code> provides a region for the title of the dialog with the <code>modal-title</code> class.</li>
+        
+                                <li><code>modal-body</code> holds the main contents of the dialog and can contain other controls within,</li>
+        
+                                <li><code>modal-footer</code> serves as the ending of the modal dialog. This typically holds buttons to allow user to make a selection.</li>
+                            </ul>
+                        </ul>
+                        </li>
                     </ul>
-                </ul>
-                </li>
-            </ul>
-
-            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;modal&quot; id=&quot;modal-id&quot;&gt;
+                </div>
+                <div class="col-6">
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;modal&quot; id=&quot;modal-id&quot;&gt;
     &lt;a href=&quot;#target&quot; class=&quot;modal-overlay close-btn&quot; aria-label=&quot;Close&quot;&gt;&lt;/a&gt;
     &lt;div class=&quot;modal-content&quot; role=&quot;document&quot;&gt;
         &lt;div class=&quot;modal-header&quot;&gt;
@@ -1082,6 +1086,8 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+                </div>
+            </div>            
 
         <space></space>
 
@@ -1106,11 +1112,11 @@
         </div>
     </section>
 
-    <section id="tooltips">
+    <section id="tooltips" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#tooltips" class="doc-link tooltip tooltip-left" data-tooltip="Click to copy">#</a>Button Tooltips</h3>
+            <h3><a href="./index.html#tooltips" class="doc-link tooltip tooltip-left" data-tooltip="Click to copy">#</a>Tooltips</h3>
             <div class="divider"></div>
-            <p>Cirrus adds a whole new dimension to buttons with tooltips. Specifying tooltip text requires no extra div but rather just 1 extra property within the buttons themselves allowing for easy customization physically or dynamically with JavaScript.</p>
+            <p>Provide context and information with tooltips for any component. Specify text in the <code>data-lang</code> attribute.</p>
             <div class="row">
                 <div class="col-6 center">
                     <div class="btn-container">
@@ -1132,10 +1138,9 @@
 &lt;/div&gt;</code></pre>
                 </div>
             </div>
-            <p>The way this works is that the contents of the tooltip are specified by the <code>data-tooltip</code> attribute where the CSS would retrieve the data to be displayed.</p>
 
             <h6>Tooltip Direction</h6>
-            <p>You can also add additional classes to specify which direction the tooltip should display. There are 4 different tooltip directions for now, including <code>tooltip-bottom</code>, <code>tooltip-left</code>, <code>tooltip-right</code>, and the default direction which displays the tooltip at the top. Other secondary directions will be added in  a future update.</p>
+            <p>Show your tooltips in different directions.</p>
             <div class="row">
                 <div class="col-6">
                     <div class="btn-container">
