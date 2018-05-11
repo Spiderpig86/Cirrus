@@ -7,28 +7,7 @@ var $ = require('gulp-load-plugins')();
 var head = '\/*\r\n* Cirrus ' + prop.version + '\r\n* Stanley Lim, Copyright 2017\r\n* https://spiderpig86.github.io/Cirrus\r\n*/\r\n';
 
 gulp.task('compile', function() {
-    return gulp.src([
-        './src/animations.css',
-        './src/button.css',
-        './src/card.css',
-        './src/code.css',
-        './src/default.css',
-        './src/font.css',
-        './src/footer.css',
-        './src/forms.css',
-        './src/frames.css',
-        './src/header.css',
-        './src/layout.css',
-        './src/links.css',
-        './src/lists.css',
-        './src/media.css',
-        './src/modal.css',
-        './src/placeholder.css',
-        './src/table.css',
-        './src/tabs.css',
-        './src/toast.css',
-        './src/util.css'
-    ])
+    return gulp.src('./src/*.css')
         .pipe($.concat('cirrus.css'))
         .pipe($.header(head))
         .pipe($.size())

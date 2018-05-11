@@ -546,165 +546,6 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
     background-color: #00b147;
 }
 
-/* Button tooltip on hover */
-.btn-tooltip {
-  position: relative; /* let's the pseudoelement that we are displaying relative to the button. */
-  overflow: visible; /* Allows the pseudoelement to be shown */
-  white-space: nowrap; /* Keeps the button text from wrapping and getting too large */
-}
-
-/* This is the psuedoelement that creates the tooltip */
-.btn-tooltip:after, .btn-tooltip.tooltip-top:after {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  position: absolute;
-  color: #fff;
-  font-size: .6rem;
-  background: rgba(69, 77, 93, .9);
-  content: attr(data-tooltip); /* Retrieves the data specified in this element property and displays it as text */
-  display: block;
-  line-height: 1rem;
-  text-transform: none;
-  overflow: hidden;
-  padding: .4rem .8rem;
-  opacity: 0; /* Hide the element */
-  text-overflow: ellipsis;
-  max-width: 15rem;
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  transition: all .2s ease;
-      -webkit-transition: all .2s ease;
-      -moz-transition: all .2s ease;
-      -ms-transition: all .2s ease;
-      -o-transition: all .2s ease;
-  z-index: 200;
-  pointer-events: none;
-  bottom: 100%; /* Pushes the tooltip above the button */
-  left: 50%; /* Horizontally center it */
-  border-radius: .2rem;
-}
-
-/* Handles the on hover event of the button and then modifies the associated tooltip accordingly. */
-.btn-tooltip:focus::after, .btn-tooltip:hover::after {
-      opacity: 1;
-      -webkit-transform: translate(-50%, -.5rem);
-      transform: translate(-50%, -.5rem);
-      transition: all .2s ease;
-      -webkit-transition: all .2s ease;
-      -moz-transition: all .2s ease;
-      -ms-transition: all .2s ease;
-      -o-transition: all .2s ease;
-}
-
-/* Tooltip top left */
-.btn-tooltip.tooltip-top-left:after {
-  -webkit-transform: translate(-65%, 0);
-  transform: translate(-65%, 0);
-}
-
-.btn-tooltip.tooltip-top-left:hover::after {
-  -webkit-transform: translate(-125%, -.5rem);
-  transform: translate(-125%, -.5rem);
-}
-
-/* Tooltip top right */
-.btn-tooltip.tooltip-top-right:after {
-  -webkit-transform: translate(15%, 0);
-  transform: translate(15%, 0);
-}
-
-.btn-tooltip.tooltip-top-right:hover::after {
-  -webkit-transform: translate(25%, -.5rem);
-  transform: translate(25%, -.5rem);
-}
-
-/* Tooltip bottom */
-.btn-tooltip.tooltip-bottom::after {
-  top: 100%;
-  transform: translate(-50%, -1rem); /* Moves tooltip to the center horizontally and shifts tooltip down */
-  -webkit-transform: translate(-50%, -1rem);
-  -moz-transform: translate(-50%, -1rem);
-  -ms-transform: translate(-50%, -1rem);
-  -o-transform: translate(-50%, -1rem);
-  bottom: auto;
-}
-
-.btn-tooltip.tooltip-bottom:hover::after,
-.btn-tooltip.tooltip-bottom:focus::after {
-  transform: translate(-50%, .5rem);
-  -webkit-transform: translate(-50%, .5rem);
-  -moz-transform: translate(-50%, .5rem);
-  -ms-transform: translate(-50%, .5rem);
-  -o-transform: translate(-50%, .5rem);
-}
-
-/* Tooltip bottom left */
-.btn-tooltip.tooltip-bottom-left:after {
-  top: 100%;
-  -webkit-transform: translate(-65%, -1rem);
-  transform: translate(-65%, -1rem);
-  bottom: auto;
-}
-
-.btn-tooltip.tooltip-bottom-left:hover::after {
-  -webkit-transform: translate(-125%, .5rem);
-  transform: translate(-125%, .5rem);
-}
-
-/* Tooltip bottom right */
-.btn-tooltip.tooltip-bottom-right:after {
-  top: 100%;
-  -webkit-transform: translate(0%, -1rem);
-  transform: translate(0%, -1rem);
-  bottom: auto;
-}
-
-.btn-tooltip.tooltip-bottom-right:hover::after {
-  -webkit-transform: translate(10%, .5rem);
-  transform: translate(10%, .5rem);
-}
-
-/* Tooltip right */
-.btn-tooltip.tooltip-right::after {
-  left: 100%;
-  bottom: 50%;
-  transform: translate(-1rem, 50%);
-  -webkit-transform: translate(-1rem, 50%);
-  -moz-transform: translate(-1rem, 50%);
-  -ms-transform: translate(-1rem, 50%);
-  -o-transform: translate(-1rem, 50%);
-}
-
-.btn-tooltip.tooltip-right:hover::after,
-.btn-tooltip.tooltip-right:focus::after {
-  transform: translate(.5rem, 50%);
-  -webkit-transform: translate(.5rem, 50%);
-  -moz-transform: translate(.5rem, 50%);
-  -ms-transform: translate(.5rem, 50%);
-  -o-transform: translate(.5rem, 50%);
-}
-
-/* Tooltip Left */
-.btn-tooltip.tooltip-left::after {
-  right: 100%;
-  bottom: 50%;
-  left: auto; /* Needed to work */
-  transform: translate(1rem, 50%);
-  -webkit-transform: translate(1rem, 50%);
-  -moz-transform: translate(1rem, 50%);
-  -ms-transform: translate(1rem, 50%);
-  -o-transform: translate(1rem, 50%);
-}
-
-.btn-tooltip.tooltip-left:hover::after,
-.btn-tooltip.tooltip-left:focus::after {
-  transform: translate(-.5rem, 50%);
-  -webkit-transform: translate(-.5rem, 50%);
-  -moz-transform: translate(-.5rem, 50%);
-  -ms-transform: translate(-.5rem, 50%);
-  -o-transform: translate(-.5rem, 50%);
-}
-
 /* BUTTON GROUPS */
 /* Will group buttons with components in a single component */
 
@@ -1077,7 +918,7 @@ code:before {
 pre > code {
   font-size: 14px;
   display: block;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 1rem;
   white-space: pre-wrap;       /* css-3 */
   white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
   white-space: -pre-wrap;      /* Opera 4-6 */
@@ -1272,10 +1113,6 @@ p, article, blockquote {
   font-size: 1rem;
   line-height: 2rem;
   margin: 1rem 0;
-}
-
-.content > p:first-of-type {
-  margin-top: 2rem;
 }
 
 .content > p:last-of-type {
@@ -4282,6 +4119,165 @@ video.video-fullscreen {
     transition: all .3s;
 }
 
+
+/* TOOLTIPS */
+.tooltip {
+  position: relative; /* let's the pseudoelement that we are displaying relative to the button. */
+  overflow: visible; /* Allows the pseudoelement to be shown */
+  white-space: nowrap; /* Keeps the button text from wrapping and getting too large */
+}
+
+/* This is the psuedoelement that creates the tooltip */
+.tooltip:after, .tooltip.tooltip-top:after {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  color: #fff;
+  font-size: .6rem;
+  background: rgba(69, 77, 93, .9);
+  content: attr(data-tooltip); /* Retrieves the data specified in this element property and displays it as text */
+  display: block;
+  line-height: 1rem;
+  text-transform: none;
+  overflow: hidden;
+  padding: .4rem .8rem;
+  opacity: 0; /* Hide the element */
+  text-overflow: ellipsis;
+  max-width: 15rem;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  transition: all .2s ease;
+      -webkit-transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      -ms-transition: all .2s ease;
+      -o-transition: all .2s ease;
+  z-index: 200;
+  pointer-events: none;
+  bottom: 100%; /* Pushes the tooltip above the button */
+  left: 50%; /* Horizontally center it */
+  border-radius: .2rem;
+}
+
+/* Handles the on hover event of the button and then modifies the associated tooltip accordingly. */
+.tooltip:focus::after, .tooltip:hover::after {
+      opacity: 1;
+      -webkit-transform: translate(-50%, -.5rem);
+      transform: translate(-50%, -.5rem);
+      transition: all .2s ease;
+      -webkit-transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      -ms-transition: all .2s ease;
+      -o-transition: all .2s ease;
+}
+
+/* Tooltip top left */
+.tooltip.tooltip-top-left:after {
+  -webkit-transform: translate(-65%, 0);
+  transform: translate(-65%, 0);
+}
+
+.tooltip.tooltip-top-left:hover::after {
+  -webkit-transform: translate(-125%, -.5rem);
+  transform: translate(-125%, -.5rem);
+}
+
+/* Tooltip top right */
+.tooltip.tooltip-top-right:after {
+  -webkit-transform: translate(15%, 0);
+  transform: translate(15%, 0);
+}
+
+.tooltip.tooltip-top-right:hover::after {
+  -webkit-transform: translate(25%, -.5rem);
+  transform: translate(25%, -.5rem);
+}
+
+/* Tooltip bottom */
+.tooltip.tooltip-bottom::after {
+  top: 100%;
+  transform: translate(-50%, -1rem); /* Moves tooltip to the center horizontally and shifts tooltip down */
+  -webkit-transform: translate(-50%, -1rem);
+  -moz-transform: translate(-50%, -1rem);
+  -ms-transform: translate(-50%, -1rem);
+  -o-transform: translate(-50%, -1rem);
+  bottom: auto;
+}
+
+.tooltip.tooltip-bottom:hover::after,
+.tooltip.tooltip-bottom:focus::after {
+  transform: translate(-50%, .5rem);
+  -webkit-transform: translate(-50%, .5rem);
+  -moz-transform: translate(-50%, .5rem);
+  -ms-transform: translate(-50%, .5rem);
+  -o-transform: translate(-50%, .5rem);
+}
+
+/* Tooltip bottom left */
+.tooltip.tooltip-bottom-left:after {
+  top: 100%;
+  -webkit-transform: translate(-65%, -1rem);
+  transform: translate(-65%, -1rem);
+  bottom: auto;
+}
+
+.tooltip.tooltip-bottom-left:hover::after {
+  -webkit-transform: translate(-125%, .5rem);
+  transform: translate(-125%, .5rem);
+}
+
+/* Tooltip bottom right */
+.tooltip.tooltip-bottom-right:after {
+  top: 100%;
+  -webkit-transform: translate(0%, -1rem);
+  transform: translate(0%, -1rem);
+  bottom: auto;
+}
+
+.tooltip.tooltip-bottom-right:hover::after {
+  -webkit-transform: translate(10%, .5rem);
+  transform: translate(10%, .5rem);
+}
+
+/* Tooltip right */
+.tooltip.tooltip-right::after {
+  left: 100%;
+  bottom: 50%;
+  transform: translate(-1rem, 50%);
+  -webkit-transform: translate(-1rem, 50%);
+  -moz-transform: translate(-1rem, 50%);
+  -ms-transform: translate(-1rem, 50%);
+  -o-transform: translate(-1rem, 50%);
+}
+
+.tooltip.tooltip-right:hover::after,
+.tooltip.tooltip-right:focus::after {
+  transform: translate(.5rem, 50%);
+  -webkit-transform: translate(.5rem, 50%);
+  -moz-transform: translate(.5rem, 50%);
+  -ms-transform: translate(.5rem, 50%);
+  -o-transform: translate(.5rem, 50%);
+}
+
+/* Tooltip Left */
+.tooltip.tooltip-left::after {
+  right: 100%;
+  bottom: 50%;
+  left: auto; /* Needed to work */
+  transform: translate(1rem, 50%);
+  -webkit-transform: translate(1rem, 50%);
+  -moz-transform: translate(1rem, 50%);
+  -ms-transform: translate(1rem, 50%);
+  -o-transform: translate(1rem, 50%);
+}
+
+.tooltip.tooltip-left:hover::after,
+.tooltip.tooltip-left:focus::after {
+  transform: translate(-.5rem, 50%);
+  -webkit-transform: translate(-.5rem, 50%);
+  -moz-transform: translate(-.5rem, 50%);
+  -ms-transform: translate(-.5rem, 50%);
+  -o-transform: translate(-.5rem, 50%);
+}
 
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
