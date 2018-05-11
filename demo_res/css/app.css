@@ -150,6 +150,10 @@ code {
 
 pre > code {
     padding: 1rem 1.5rem !important;
+}
+
+pre:not(.get-cirrus) > code {
+    padding: 2rem 1.5rem !important;
     background: #f6f8fa;
 }
 
@@ -164,6 +168,7 @@ pre.get-cirrus {
 
 .hljs {
     background: #f6f8fa !important;
+    max-height: 500px;
 }
 
 code.dark {
