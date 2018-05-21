@@ -3952,11 +3952,6 @@ video.video-fullscreen {
     list-style: none;
 }
 
-/* Alternate theme for tab container */
-.tab-container.tabs-depth {
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
-}
-
 .tab-container li {
     display: block; /* Keep the tabs from extending too far */
     cursor: pointer;
@@ -3986,6 +3981,7 @@ video.video-fullscreen {
     display: block;
     border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
+    margin-bottom: -1px;
 }
 
 .tab-container li:hover a {
@@ -3996,6 +3992,7 @@ video.video-fullscreen {
 
 .tab-container li.selected a {
     border-bottom-color: #f03d4d;
+    color: #f03d4d;
     border-width: 2px;
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -4015,22 +4012,45 @@ video.video-fullscreen {
     justify-content: flex-end;
 }
 
+/* Depth tab styles */
+.tab-container.tabs-depth ul {
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+    border-bottom: 0;
+}
+
 /* Classic tab styles */
-.tab-container.tabs-classic li {
-    border: 0;
+.tab-container.tabs-classic ul {
+    border-bottom-color: #dbdbdb;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
     border-radius: 3px 3px 0 0; /* Only round the top left and right corners */
     -webkit-transition: all .3s;
     transition: all .3s;
 }
 
+.tab-container.tabs-classic li {
+    background: #fff;
+    margin-bottom: -1px; /* Get rid of any remaining border lines */
+}
+
 .tab-container.tabs-classic li:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.05);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.tab-container.tabs-classic li a {
+    border: 1px solid transparent;
+    border-bottom-color: #dbdbdb;
+    border-radius: 3px 3px 0 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
 }
 
 .tab-container.tabs-classic li.selected a {
     color: #f03d4d;
-    border-color: #eee;
-    border-bottom-color: transparent;
+    border-color: #dbdbdb;
+    border-bottom-color: transparent !important;
 }
 
 /* Tabs that fill the width */
