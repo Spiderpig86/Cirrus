@@ -3932,7 +3932,6 @@ video.video-fullscreen {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
-    flex-wrap: wrap;
 }
 
 /* Tabs are embedded inside an unordered list */
@@ -3949,9 +3948,13 @@ video.video-fullscreen {
     justify-content: flex-start; /* Move tab items to left side  */
     display: -webkit-box; /* Flow the elements */
     margin: 0.5rem; /* Override the behavior for standard ul and add equal padding */
-    /*border-bottom: 1px solid #eee; /* Bottom border of tabs */
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+    border-bottom: 1px solid #eee; /* Bottom border of tabs */
     list-style: none;
+}
+
+/* Alternate theme for tab container */
+.tab-container.tabs-depth {
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
 }
 
 .tab-container li {
@@ -3981,10 +3984,6 @@ video.video-fullscreen {
     transition: all .3s;
     color: #374054;
     display: block;
-}
-
-/* Primary theme for tabs */
-.tab-container.tabs-depth li a {
     border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
 }
