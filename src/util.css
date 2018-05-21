@@ -68,6 +68,7 @@
       -ms-flex-pack: center;
           justify-content: center;
       margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .center-alt, .center-alt:hover, .center-alt:active { /* If flexbox method fails, this works for elements with unknown dimensions */

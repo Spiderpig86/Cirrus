@@ -1202,7 +1202,100 @@
         <div class="content">
             <h3><a href="./index.html#tabs" class="doc-link tooltip tooltip-left" data-tooltip="Click to copy">#</a>Tabs</h3>
             <div class="divider"></div>
-            <p>Coming soon...</p>
+            <p>Simple tab navigation for presenting different views with different styles and add-ons.</p>
+            <div class="row">
+                <div class="tab-container">
+                    <ul>
+                        <li><a>Home</a></li>
+                        <li><a>Group</a></li>
+                        <li><a>Shop</a></li>
+                        <li class="selected"><a>Me</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>Above are tabs with base styling.</p>
+            <div class="row">
+                <div class="col-6">
+                    <h6>Outline</h6>
+                    <ul>
+                        <li><code>tab-container</code> to house all the tabs
+                        
+                        <ul>
+                            <li><code>li</code> for each of the individual tabs
+                            
+                                <ul>
+                                    <li><code>a</code> to embed links and for additional styling</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-6">
+<pre><code class="html" data-lang="HTML">&lt;div class=&quot;tab-container&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;Group&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a&gt;Shop&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;selected&quot;&gt;&lt;a&gt;Me&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+
+            <space></space>
+            <h6>Sizes</h6>
+            <p>Modify the size of the <code>tab-container</code> using the <code>tabs-xsmall</code>, <code>tabs-small</code>, <code>tabs-large</code>, and <code>tabs-xlarge</code> classes.</p>
+
+            <div class="row">
+                <p class="title">X-small</p>
+                <div class="tab-container tabs-xsmall">
+                    <ul>
+                        <li><a>Home</a></li>
+                        <li><a>Group</a></li>
+                        <li><a>Shop</a></li>
+                        <li class="selected"><a>Me</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="title">X-small</p>
+                <div class="tab-container tabs-small">
+                    <ul>
+                        <li><a>Home</a></li>
+                        <li><a>Group</a></li>
+                        <li><a>Shop</a></li>
+                        <li class="selected"><a>Me</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="title">X-small</p>
+                <div class="tab-container tabs-large">
+                    <ul>
+                        <li><a>Home</a></li>
+                        <li><a>Group</a></li>
+                        <li><a>Shop</a></li>
+                        <li class="selected"><a>Me</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="title">X-small</p>
+                <div class="tab-container tabs-xlarge">
+                    <ul>
+                        <li><a>Home</a></li>
+                        <li><a>Group</a></li>
+                        <li><a>Shop</a></li>
+                        <li class="selected"><a>Me</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -1210,7 +1303,7 @@
         <div class="content">
             <h3><a href="./index.html#tooltips" class="doc-link tooltip tooltip-left" data-tooltip="Click to copy">#</a>Tooltips</h3>
             <div class="divider"></div>
-            <p>Provide context and information with tooltips for any component. Specify text in the <code>data-lang</code> attribute.</p>
+            <p>Provide context and information with tooltips for any component. Specify text in the <code>data-tooltip</code> attribute.</p>
             <div class="row">
                 <div class="col-6">
                     <div class="center">

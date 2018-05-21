@@ -3983,12 +3983,10 @@ video.video-fullscreen {
     display: block;
 }
 
-.tab-container li a {
+/* Primary theme for tabs */
+.tab-container.tabs-depth li a {
     border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
-    font-size: .85rem;
-    -webkit-transition: all .3s;
-    transition: all .3s;
 }
 
 .tab-container li:hover a {
@@ -4052,7 +4050,7 @@ video.video-fullscreen {
 
 /* Different tab sizes */
 .tab-container.tabs-xsmall {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
 }
 
 .tab-container.tabs-small {
@@ -4349,6 +4347,7 @@ video.video-fullscreen {
       -ms-flex-pack: center;
           justify-content: center;
       margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .center-alt, .center-alt:hover, .center-alt:active { /* If flexbox method fails, this works for elements with unknown dimensions */

@@ -67,12 +67,10 @@
     display: block;
 }
 
-.tab-container li a {
+/* Primary theme for tabs */
+.tab-container.tabs-depth li a {
     border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
-    font-size: .85rem;
-    -webkit-transition: all .3s;
-    transition: all .3s;
 }
 
 .tab-container li:hover a {
@@ -136,7 +134,7 @@
 
 /* Different tab sizes */
 .tab-container.tabs-xsmall {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
 }
 
 .tab-container.tabs-small {
