@@ -516,6 +516,15 @@ button .fa.pad-left, .btn .fa.pad-left, [type=submit] .fa.pad-left {
     margin-left: .4rem;
 }
 
+/* Alternatives to pad-left and pad-right */
+button span:first-child, .btn span:first-child, [type=submit] span:first-child {
+  margin-right: .2rem;
+}
+
+button span:last-child, .btn span:last-child, [type=submit] span:last-child {
+  margin-left: .2rem;
+}
+
 /* Button with accent */
 .btn-accent {
   background-color: #f03d4d;
