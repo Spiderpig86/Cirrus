@@ -16,6 +16,7 @@
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+    font-size: 0.85rem;
 }
 
 /* Tabs are embedded inside an unordered list */
@@ -57,7 +58,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    vertical-align: top;
     padding: 0.5rem 1rem;
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -65,7 +65,8 @@
     display: block;
     border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
-    margin-bottom: -1px;
+    margin-bottom: -1px; /* Get rid of any remaining border lines */
+    background: #fff;
 }
 
 .tab-container li:hover a {
@@ -112,13 +113,8 @@
     transition: all .3s;
 }
 
-.tab-container.tabs-classic li {
-    background: #fff;
-    margin-bottom: -1px; /* Get rid of any remaining border lines */
-}
-
-.tab-container.tabs-classic li:hover {
-    background: rgba(0, 0, 0, 0.05);
+.tab-container.tabs-classic li:not(.selected) a:hover {
+    background: rgb(240, 240, 240);
     -webkit-transition: all .3s;
     transition: all .3s;
 }
@@ -166,6 +162,15 @@
 
 .tab-container.tabs-xlarge {
     font-size: 1.5rem;
+}
+
+/* Font Awesome Integration */
+.tab-container .icon:first-child { /* Left icon */
+    margin-right: .75rem;
+}
+
+.tab-container .icon:last-child { /* Right icon */
+    margin-left: .75rem;
 }
 
 /* IN PROGERSS */
