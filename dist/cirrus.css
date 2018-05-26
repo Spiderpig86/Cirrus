@@ -814,10 +814,10 @@ border-color: transparent;
     padding: 0 1rem;
 }
 
-/* CARD TILES */
+/* TILES */
 /* More flexible layout for cards using flexbox */
 
-.card-tile {
+.tile {
   display: flex;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -829,65 +829,65 @@ border-color: transparent;
   -ms-flex-line-pack: justify; /* Evenly distribute lines */
 }
 
-.card-tile p {
+.tile p {
   font-size: .9rem;
 }
 
-.card-tile .tile-icon, .card-tile .tile-buttons {
+.tile .tile-icon, .tile .tile-buttons {
   flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
 }
 
 /* Override the default behavior where buttons display as blocks */
-.card-tile .tile-buttons button,
-.card-tile .tile-buttons .btn,
-.card-tile .tile-buttons [type=submit] {
+.tile .tile-buttons button,
+.tile .tile-buttons .btn,
+.tile .tile-buttons [type=submit] {
   display: inline-block;
   margin: .1rem; /* Reduce space used by buttons, default .5rem */
 }
 
-.card-tile .tile-container {
+.tile .tile-container {
   flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
 }
 
 /* Add spacing between the elements in between */
-.card-tile .tile-container:not(:first-child) {
+.tile .tile-container:not(:first-child) {
   padding-left: 1rem;
 }
 
-.card-tile .tile-container:not(:last-child) {
+.tile .tile-container:not(:last-child) {
   padding-right: 1rem;
 }
 
-.card-tile .tile-title {
+.tile .tile-title {
   line-height: 2rem;
   font-weight: bolder;
   margin: 0.1rem auto;
 }
 
-.card-tile .tile-subtitle {
+.tile .tile-subtitle {
   line-height: 2rem;
   opacity: .7;
   margin: 0.1rem auto;
 }
 
 /* Force elements to align at the center vertical height */
-.card-tile.tile-center {
+.tile.tile-center {
   align-items: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
 }
 
-.card-tile.tile-center .tile-container { /* Shrink the text to fit inside the card-tile */
+.tile.tile-center .tile-container { /* Shrink the text to fit inside the tile */
   overflow: hidden;
 }
 
 /* Keep the text from overflowing */
-.card-tile.tile-center .tile-title,
-.card-tile.tile-center .tile-subtitle.no-wrap {
+.tile.tile-center .tile-title,
+.tile.tile-center .tile-subtitle.no-wrap {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -4207,7 +4207,8 @@ video.video-fullscreen {
   transform: translate(-65%, 0);
 }
 
-.tooltip.tooltip-top-left:hover::after {
+.tooltip.tooltip-top-left:hover::after,
+.tooltip.tooltip-top-left:focus::after {
   -webkit-transform: translate(-125%, -.5rem);
   transform: translate(-125%, -.5rem);
 }
@@ -4218,7 +4219,8 @@ video.video-fullscreen {
   transform: translate(15%, 0);
 }
 
-.tooltip.tooltip-top-right:hover::after {
+.tooltip.tooltip-top-right:hover::after,
+.tooltip.tooltip-top-right:focus::after{
   -webkit-transform: translate(25%, -.5rem);
   transform: translate(25%, -.5rem);
 }
@@ -4244,14 +4246,15 @@ video.video-fullscreen {
 }
 
 /* Tooltip bottom left */
-.tooltip.tooltip-bottom-left:after {
+.tooltip.tooltip-bottom-left:after, {
   top: 100%;
   -webkit-transform: translate(-65%, -1rem);
   transform: translate(-65%, -1rem);
   bottom: auto;
 }
 
-.tooltip.tooltip-bottom-left:hover::after {
+.tooltip.tooltip-bottom-left:hover::after,
+.tooltip.tooltip-bottom-left:focus::after {
   -webkit-transform: translate(-125%, .5rem);
   transform: translate(-125%, .5rem);
 }
@@ -4264,7 +4267,8 @@ video.video-fullscreen {
   bottom: auto;
 }
 
-.tooltip.tooltip-bottom-right:hover::after {
+.tooltip.tooltip-bottom-right:hover::after,
+.tooltip.tooltip-bottom-right:focus::after {
   -webkit-transform: translate(10%, .5rem);
   transform: translate(10%, .5rem);
 }

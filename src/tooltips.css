@@ -54,7 +54,8 @@
   transform: translate(-65%, 0);
 }
 
-.tooltip.tooltip-top-left:hover::after {
+.tooltip.tooltip-top-left:hover::after,
+.tooltip.tooltip-top-left:focus::after {
   -webkit-transform: translate(-125%, -.5rem);
   transform: translate(-125%, -.5rem);
 }
@@ -65,7 +66,8 @@
   transform: translate(15%, 0);
 }
 
-.tooltip.tooltip-top-right:hover::after {
+.tooltip.tooltip-top-right:hover::after,
+.tooltip.tooltip-top-right:focus::after{
   -webkit-transform: translate(25%, -.5rem);
   transform: translate(25%, -.5rem);
 }
@@ -91,14 +93,15 @@
 }
 
 /* Tooltip bottom left */
-.tooltip.tooltip-bottom-left:after {
+.tooltip.tooltip-bottom-left:after, {
   top: 100%;
   -webkit-transform: translate(-65%, -1rem);
   transform: translate(-65%, -1rem);
   bottom: auto;
 }
 
-.tooltip.tooltip-bottom-left:hover::after {
+.tooltip.tooltip-bottom-left:hover::after,
+.tooltip.tooltip-bottom-left:focus::after {
   -webkit-transform: translate(-125%, .5rem);
   transform: translate(-125%, .5rem);
 }
@@ -111,7 +114,8 @@
   bottom: auto;
 }
 
-.tooltip.tooltip-bottom-right:hover::after {
+.tooltip.tooltip-bottom-right:hover::after,
+.tooltip.tooltip-bottom-right:focus::after {
   -webkit-transform: translate(10%, .5rem);
   transform: translate(10%, .5rem);
 }

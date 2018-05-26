@@ -284,7 +284,7 @@
     <section id="animated_cards" class="padtop">
         <div class="content">
             <h5>Animated Card</h5>
-            <p>Cirrus also comes with different components that can interact differently such as this card design with a hover animation. Compared to the card above, the display for the avatar, title text, and buttons are all handled by the <code>card-tile</code>.</p>
+            <p>Cirrus also comes with different components that can interact differently such as this card design with a hover animation. Compared to the card above, the display for the avatar, title text, and buttons are all handled by the <code>tile</code>.</p>
             <p>There are a couple of new and different classes to know about before using an animated card:</p> 
             <ul>
                 <li>An animated card must have the <code>slide-up</code> class along with the <code>card</code> class.</li>
@@ -301,7 +301,7 @@
                         </div>
                         <div class="mobile-title">
                             <div class="content">
-                                <div class="card-tile">
+                                <div class="tile">
                                     <div class="tile-container">
                                         <p class="tile-title">Kangaroo Valley Safari</p>
                                         <p class="tile-subtitle">By Mattia Astorino</p>
@@ -416,7 +416,7 @@
                         </div>
                         <div class="mobile-title">
                             <div class="content">
-                                <div class="card-tile">
+                                <div class="tile">
                                     <div class="tile-container">
                                         <p class="tile-title">Kangaroo Valley Safari</p>
                                         <p class="tile-subtitle">By Mattia Astorino</p>
@@ -440,7 +440,7 @@
                         </div>
                         <div class="mobile-title">
                             <div class="content">
-                                <div class="card-tile tile-center">
+                                <div class="tile tile-center">
                                     <div class="tile-icon">
                                         <figure class="avatar">
                                             <img src="http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg" alt="Person">
@@ -470,7 +470,7 @@
                         </div>
                         <div class="mobile-title">
                             <div class="content">
-                                <div class="card-tile">
+                                <div class="tile">
                                     <div class="tile-container">
                                         <p class="tile-title">Kangaroo Valley Safari</p>
                                         <p class="tile-subtitle">By Mattia Astorino</p>
@@ -501,7 +501,7 @@
                             <div class="card-image" style="background-image: url(https://images.unsplash.com/photo-1467952497026-86722ef1916f?dpr=1.25&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=)"></div>
                         </div>
                         <div class="content">
-                            <div class="card-tile tile-center">
+                            <div class="tile tile-center">
                                 <div class="tile-icon">
                                     <figure class="avatar">
                                         <img src="https://organicthemes.com/demo/profile/files/2012/12/profile_img.png" alt="Person">
@@ -539,7 +539,7 @@
         &lt;div class=&quot;card-image&quot; style=&quot;background-image: url(https://images.unsplash.com/photo-1467952497026-86722ef1916f?dpr=1.25&amp;auto=compress,format&amp;fit=crop&amp;w=1199&amp;h=799&amp;q=80&amp;cs=tinysrgb&amp;crop=)&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;content&quot;&gt;
-        &lt;div class=&quot;card-tile tile-center&quot;&gt;
+        &lt;div class=&quot;tile tile-center&quot;&gt;
             &lt;div class=&quot;tile-icon&quot;&gt;
                 &lt;figure class=&quot;avatar&quot;&gt;
                     &lt;img src=&quot;https://organicthemes.com/demo/profile/files/2012/12/profile_img.png&quot; alt=&quot;Person&quot;&gt;
@@ -630,7 +630,7 @@
             <p>Tiles are the flexbox alternative to cards that tile child elements horizontally and more closely resemble horizontal cards in Android. These get displayed in <code>card slide-up</code> to show an avatar, text, or buttons.</p>
             <div class="row">
                 <div class="col-8">
-                    <div class="card-tile">
+                    <div class="tile">
                         <div class="tile-icon">
                             <figure class="avatar">
                                 <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
@@ -650,7 +650,7 @@
             </div>
             <div class="row">
                 <div class="col-8">
-                    <div class="card-tile tile-center">
+                    <div class="tile tile-center">
                         <div class="tile-icon">
                             <figure class="avatar">
                                 <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
@@ -669,7 +669,7 @@
                 </div>
             </div>
             <div class="row">
-                <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;card-tile&quot;&gt;
+                <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;tile&quot;&gt;
     &lt;div class=&quot;tile-icon&quot;&gt;
         &lt;figure class=&quot;avatar&quot;&gt;
             &lt;img src=&quot;https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png&quot;&gt;
@@ -686,10 +686,10 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
-            <p>In the two examples above, the first one is your standard tile with the <code>card-tile</code> parent container and <code>tile-container</code> for other elements images, text, buttons, etc. The <code>tile-buttons</code> class could be used also to display buttons horizontally. The card tile at the bottom vertically aligns all elements to be vertically centered giving a more balanced appearance.</p>
+            <p>In the two examples above, the first one is your standard tile with the <code>tile</code> parent container and <code>tile-container</code> for other elements images, text, buttons, etc. The <code>tile-buttons</code> class could be used also to display buttons horizontally. The card tile at the bottom vertically aligns all elements to be vertically centered giving a more balanced appearance.</p>
             <div class="row">
                 <div class="col-6">
-                    <div class="card-tile tile-center">
+                    <div class="tile tile-center">
                         <div class="tile-icon">
                             <figure class="avatar">
                                 <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
@@ -707,7 +707,7 @@
                 </div>
 
                 <div class="col-6">
-                    <div class="card-tile tile-center">
+                    <div class="tile tile-center">
                         <div class="tile-icon">
                             <figure class="avatar">
                                 <img class="padded" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABZUlEQVR4Xu2aUQ7DIAxDyU3Xk203ZeKvVNMsywRB6/3OtOERGyoR5eG/ePj8iwG4Ax5OwBZgG6DWWtkxgv6IiI8wHg6lO2AygDaBVAg7AEiFsAuANAgygIign/HPmMBiw+1AF38tcDKA4Z2wI4ChEHYAcJRS3j9sM8QOywNoFqu1vrIgbAGgrX4WhG0AZEHYCkAGhOUBwMN8L6CD8W4ACnsuMQCyxVoad5/DLHH0PvVrk61nuQ5AgK7/qwtiALOJs+9DeneAmEm2AGqx0aHDvg/pbQFbQDuXOAOQx5wBFwJq6LDAkV6txxZAhG0BW6AnoHqO7TikV+txBiDCzgBngDOgI6CGDms5pFfrcQgiwg5Bh6BD0CF4JqCmLps5SK/W410AEfYu4F3Au4B3Ae8CJwLqBQY2dFn99AsSbIHZegMgb6/LB6HsFWWfn94BbEGr6+kOWH1CbH0GwBK7m94dcLcVZefzBVVinlD6CDHWAAAAAElFTkSuQmCC"> <!-- Replace with file icon -->
@@ -725,7 +725,7 @@
             </div>
             <div class="row fluid-container">
                 <div class="col-6 offset-center">
-                    <div class="card-tile tile-center">
+                    <div class="tile tile-center">
                         <div class="tile-icon">
                             <figure class="avatar">
                                 <img class="padded" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAD5ElEQVR4Xu1ai20VMRDcrQA6ACogqYBQAVABpALSAaQCoAKSCkgHhAqACkgqACpYNGhPchz71mv73j3dsyUkxPk3s7Mf74PpwAcfOH4aBAwFHDgDwwVaBCAiL4joJRE9JqKHRHQU7HdNRD/wh5kvW85Zcq1bASICoB8UOP5eMv4Q0RURnTPzTcmCXc1xESAi74joTK1de8f3zHxeu7j3uiIC1OpfI4m33AWu8ZyZoYxVh0mAiMCvv6ifx5e9VWnD32+YGcBI1yAunKirPEqghCu8mtasxcIsAWr57wnwAA4pX5RcXETeYD4RxUSAhOM1lWARAPBhZAdeRPQz76WVTBCGzBEOZIlji0gRkXAOM5vqtfbE9+wmIgKLIeiF45KZYc3qISIg4XW0AbIDzsuOnRKg1voVRftZ8J4LighSYqyEalLnFlpKSSogYSX4/NGc7J0EoH5AwEwFx65E1BLwO7L+qRXwPARopoArfe6KNrGZmwARQWmLtDeNW2ZGSpsdXgKUBGSBRVVQQ0AcpD4xM6q/JQj4SERvg42zwbCU4NJ505n3YoCIoKh5FlwKxQqC1hIExGr7xswonu6NUmCl8+YIiHM/CpX/Fd7c8B6sLoAaA+dNA9XkE+usnvdIKaCq4KghQEmoOi9Hgvcee0dAi/VTa2uC4B2LaK0+6wJa699JadbBGRfojZ+sezQHwRR4oLAOVgLiILgXBMSpKZsGc+CJyCyclID4rL0gIK7QkpFZRFAc4b0QjyLwSgDWh0VWUcpdNAvoxdCpeRAclASVUIAHfEx0UcVpSaQ5CygBcTWYbVwEJHjA4zEUN1rMJ7EFviat5l6DKXlfMPNp6hJwB0+3V0Tw1kAAnMZfuIK3yZK5i6uu8DZEsiSUWEcthHQZN1W6WL+bAiYwIoL8/zQCh3cB5O7q6GqTBeBDy2PrbP1fSmo4r0sMCAiAr8L/w4CIz/g3NEWLfvEREbTA0PKKn9Vmo8VLQlcCVFJ4sMDqudY2vuEFiSgetsUxf2qLp/oJP6EGT+woIaM7AUoClACQsTuU3Ck1B+BPUm5kAWj9Hl/G1VrOdIq9JMwGvFaA1vomAlJRthA90hzKXmSR2R9HLQCt35cgAD90wtfh51OcQHADUMQEuM51adZoBWit705AyauvUCVdpg0CnD+huYJgTaXVxayOTYYC1laAZYG1vy8eBNcGaJ0/CIgY6B4ELQus/X1xBTgC9iJTLYIHAUu7wCJmdWw6FLDrOsBhnFWmWm+V5iywCirHoYMA4/8TDgU41LTJqW4FbI2FQcDWLOrFMxTgZWxr84cCtmZRL56hAC9jW5v/D+5oj19OlNgvAAAAAElFTkSuQmCC">
@@ -864,11 +864,11 @@
             <space class="large"></space>
 
             <h6>Avatars</h6>
-            <p>A useful class for styling user profile pictures. This is used within many other components including the <code>card-tile</code>. To provide some flexibility, Cirrus adds a <code>data-text</code> attribute to specify some text in place of an image if it is not available.</p>
+            <p>A useful class for styling user profile pictures. This is used within many other components including the <code>tile</code>. To provide some flexibility, Cirrus adds a <code>data-text</code> attribute to specify some text in place of an image if it is not available.</p>
 
             <div class="row">
                 <div class="col-6">
-                    <div class="card-tile no-margin level">
+                    <div class="tile no-margin level">
                         <div class="tile-icon">
                             <figure class="avatar img-xsmall" data-text="Jz">
                             </figure>
@@ -881,7 +881,7 @@
 
                     <space></space>
 
-                    <div class="card-tile no-margin level">
+                    <div class="tile no-margin level">
                         <div class="tile-icon">
                             <figure class="avatar img-small" data-text="Jz" style="background: #a3d39c">
                             </figure>
@@ -895,7 +895,7 @@
 
                     <space></space>
 
-                    <div class="card-tile no-margin level">
+                    <div class="tile no-margin level">
                         <div class="tile-icon">
                             <figure class="avatar" data-text="Jz" style="background: #7accc8">
                             </figure>
@@ -909,7 +909,7 @@
 
                     <space></space>
 
-                    <div class="card-tile no-margin level">
+                    <div class="tile no-margin level">
                         <div class="tile-icon">
                             <figure class="avatar img-large" data-text="Jz" style="background: #4aaaa5">
                             </figure>
@@ -923,7 +923,7 @@
     
                     <space></space>
 
-                    <div class="card-tile no-margin level">
+                    <div class="tile no-margin level">
                         <div class="tile-icon">
                             <figure class="avatar img-xlarge" data-text="Jz" style="background: #35404f">
                             </figure>
@@ -937,7 +937,7 @@
 
                 </div>
                 <div class="col-6">
-                    <div class="card-tile no-margin level">
+                    <div class="tile no-margin level">
                         <div class="tile-icon">
                             <figure class="avatar img-xsmall">
                                 <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&auto=format&fit=crop&w=64&h=64&q=60&cs=tinysrgb&crop=faces&bg=fff" />
@@ -951,7 +951,7 @@
                     
                     <space></space>
     
-                    <div class="card-tile no-margin level">
+                    <div class="tile no-margin level">
                         <div class="tile-icon">
                             <figure class="avatar img-small">
                                 <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&auto=format&fit=crop&w=64&h=64&q=60&cs=tinysrgb&crop=faces&bg=fff" />
@@ -965,7 +965,7 @@
     
                     <space></space>
     
-                    <div class="card-tile no-margin level">
+                    <div class="tile no-margin level">
                         <div class="tile-icon">
                             <figure class="avatar">
                                 <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&auto=format&fit=crop&w=256&h=256&q=60&cs=tinysrgb&crop=faces&bg=fff" />
@@ -979,7 +979,7 @@
     
                     <space></space>
     
-                    <div class="card-tile no-margin level">
+                    <div class="tile no-margin level">
                         <div class="tile-icon">
                             <figure class="avatar img-large">
                                 <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&auto=format&fit=crop&w=256&h=256&q=60&cs=tinysrgb&crop=faces&bg=fff" />
@@ -993,7 +993,7 @@
     
                     <space></space>
     
-                    <div class="card-tile no-margin level">
+                    <div class="tile no-margin level">
                         <div class="tile-icon">
                             <figure class="avatar img-xlarge">
                                 <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&auto=format&fit=crop&w=256&h=256&q=60&cs=tinysrgb&crop=faces&bg=fff" />
