@@ -11,6 +11,7 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  /* color: #363636; */ /* Removed 0.5.4, creates color inconsistencies */
 }
 
 h1 {
@@ -53,7 +54,6 @@ strong {
 .content h4,
 .content h5,
 .content h6 {
-    color: #363636;
     line-height: 1.125em;
     margin: 1rem 0;
 }

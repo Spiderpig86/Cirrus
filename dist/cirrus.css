@@ -334,6 +334,52 @@ button.btn-animated:active, [type=submit].btn-animated:active, .btn.btn-animated
   background-color: #d7d7da; /* Make it darker than the other input colors */
 }
 
+button.btn-close {
+  background-color: rgba(10,10,10,.2);
+  border: none;
+  border-radius: 290486px;
+  cursor: pointer;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 20px;
+  outline: 0;
+  position: relative;
+  vertical-align: top;
+  width: 20px;
+  padding: 0;
+  min-width: 20px;
+}
+
+button.btn-close:hover {
+  background-color: rgba(10,10,10,.3);
+}
+
+/* Render the x in the close button */
+button.btn-close::before, button.btn-close::after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+button.btn-close::before {
+  height: 2px;
+  width: 50%;
+}
+
+button.btn-close::after {
+  height: 50%;
+  width: 2px;
+}
+
 /* Accent button disabled */
 .btn-accent:disabled {
     background-color: #f03d4d;
@@ -1054,6 +1100,7 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  /* color: #363636; */ /* Removed 0.5.4, creates color inconsistencies */
 }
 
 h1 {
@@ -1096,7 +1143,6 @@ strong {
 .content h4,
 .content h5,
 .content h6 {
-    color: #363636;
     line-height: 1.125em;
     margin: 1rem 0;
 }
@@ -4106,15 +4152,28 @@ video.video-fullscreen {
     background: rgba(49, 59, 80, 0.9);
     border: 1px solid #313b50;
     border-radius: 2px;
+    color: #fff;
+    position: relative;
+    margin: 0.5rem;
+}
+
+.toast p {
+    margin: 0;
 }
 
 .toast.translucent {
     opacity: .5;
 }
 
-.toast.translucnet:hover {
+.toast.translucent:hover {
     opacity: 1;
 }
+
+.toast .btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}       
 
 /* TOAST TYPES */
 .toast.primary {
@@ -4122,9 +4181,9 @@ video.video-fullscreen {
     border-color: #f03d4d;
 }
 
-.toast.confirm {
-    background: rgba(76, 217, 100, 0.9);
-    border-color: #4cd964;
+.toast.success {
+    background: rgba(64, 179, 84, 0.9);
+    border-color: #40b354;
 }
 
 .toast.warning {

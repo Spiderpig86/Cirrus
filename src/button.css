@@ -74,6 +74,52 @@ button.btn-animated:active, [type=submit].btn-animated:active, .btn.btn-animated
   background-color: #d7d7da; /* Make it darker than the other input colors */
 }
 
+button.btn-close {
+  background-color: rgba(10,10,10,.2);
+  border: none;
+  border-radius: 290486px;
+  cursor: pointer;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 20px;
+  outline: 0;
+  position: relative;
+  vertical-align: top;
+  width: 20px;
+  padding: 0;
+  min-width: 20px;
+}
+
+button.btn-close:hover {
+  background-color: rgba(10,10,10,.3);
+}
+
+/* Render the x in the close button */
+button.btn-close::before, button.btn-close::after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+button.btn-close::before {
+  height: 2px;
+  width: 50%;
+}
+
+button.btn-close::after {
+  height: 50%;
+  width: 2px;
+}
+
 /* Accent button disabled */
 .btn-accent:disabled {
     background-color: #f03d4d;

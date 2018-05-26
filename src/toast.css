@@ -5,15 +5,28 @@
     background: rgba(49, 59, 80, 0.9);
     border: 1px solid #313b50;
     border-radius: 2px;
+    color: #fff;
+    position: relative;
+    margin: 0.5rem;
+}
+
+.toast p {
+    margin: 0;
 }
 
 .toast.translucent {
     opacity: .5;
 }
 
-.toast.translucnet:hover {
+.toast.translucent:hover {
     opacity: 1;
 }
+
+.toast .btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}       
 
 /* TOAST TYPES */
 .toast.primary {
@@ -21,9 +34,9 @@
     border-color: #f03d4d;
 }
 
-.toast.confirm {
-    background: rgba(76, 217, 100, 0.9);
-    border-color: #4cd964;
+.toast.success {
+    background: rgba(64, 179, 84, 0.9);
+    border-color: #40b354;
 }
 
 .toast.warning {
