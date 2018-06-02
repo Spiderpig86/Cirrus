@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var prop = require('./package.json');
 var minify = require('gulp-clean-css');
 var $ = require('gulp-load-plugins')();
-var head = '\/*\r\n* Cirrus ' + prop.version + '\r\n* Stanley Lim, Copyright 2017\r\n* https://spiderpig86.github.io/Cirrus\r\n*/\r\n';
+var head = '\/*\r\n* Cirrus ' + prop.version + `\r\n* Stanley Lim, Copyright ${(new Date()).getFullYear()}\r\n* https://spiderpig86.github.io/Cirrus\r\n*/\r\n`;
 
 gulp.task('compile', function() {
     return gulp.src('./src/*.css')
