@@ -1102,6 +1102,7 @@ h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   /* color: #363636; */ /* Removed 0.5.4, creates color inconsistencies */
+  line-height: 1.2;
 }
 
 h1 {
@@ -1162,12 +1163,11 @@ strong {
 
 .title + .subtitle { /* Make the subtitlte closer to the title */
     margin-top: -1.25rem;
-    /* font-size: 90%; */ /* Removed 0.5.4 */
 }
 
 p, article, blockquote {
   font-size: 1rem;
-  line-height: 2rem;
+  /* line-height: 2rem; */ /* Removed 0.5.5 */
   margin: 1rem 0;
 }
 
@@ -1445,7 +1445,6 @@ input[type="file"], select {
   font-family: 'Nunito Sans';
   font-size: .85rem;
   letter-spacing: .02rem;
-  box-sizing: border-box;
   transition: all .3s;
   outline: none;
     padding: .85rem 1.1rem;
@@ -1501,8 +1500,8 @@ input[type="password"]:focus,
 input[type="file"]:focus, select:focus, textarea:focus, textarea[type=text]:focus,
 input[type="text"].input-focused,
 .input-focused { 
-    box-shadow: inset 0px 1px 8px rgba(0,0,0,0.1);
-    border-color: rgba(0, 102, 255, 0.5);
+    border-color: rgba(240, 61, 77, 0.45);
+    box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.25), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 select:not([multiple]) {
@@ -2945,7 +2944,7 @@ a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
-  color: #8292a2;
+  color: #379afd;
   text-decoration: none;
   font-weight: 600;
       padding: 2px;
@@ -2954,7 +2953,7 @@ backface-visibility: hidden;
 }
 
 a:hover {
-  color: #7C8B9A;
+  color: #083d71;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;

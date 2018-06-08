@@ -12,6 +12,7 @@ h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   /* color: #363636; */ /* Removed 0.5.4, creates color inconsistencies */
+  line-height: 1.2;
 }
 
 h1 {
@@ -72,12 +73,11 @@ strong {
 
 .title + .subtitle { /* Make the subtitlte closer to the title */
     margin-top: -1.25rem;
-    /* font-size: 90%; */ /* Removed 0.5.4 */
 }
 
 p, article, blockquote {
   font-size: 1rem;
-  line-height: 2rem;
+  /* line-height: 2rem; */ /* Removed 0.5.5 */
   margin: 1rem 0;
 }
 

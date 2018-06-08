@@ -19,7 +19,6 @@ input[type="file"], select {
   font-family: 'Nunito Sans';
   font-size: .85rem;
   letter-spacing: .02rem;
-  box-sizing: border-box;
   transition: all .3s;
   outline: none;
     padding: .85rem 1.1rem;
@@ -75,8 +74,8 @@ input[type="password"]:focus,
 input[type="file"]:focus, select:focus, textarea:focus, textarea[type=text]:focus,
 input[type="text"].input-focused,
 .input-focused { 
-    box-shadow: inset 0px 1px 8px rgba(0,0,0,0.1);
-    border-color: rgba(0, 102, 255, 0.5);
+    border-color: rgba(240, 61, 77, 0.45);
+    box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.25), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 select:not([multiple]) {
