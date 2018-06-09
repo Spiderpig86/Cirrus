@@ -18,7 +18,7 @@
   background-color: #fefefe;
   border-color: #d9d9d9;
   color: #737373;
-  font-size: .75em;
+  font-size: .75rem;
   letter-spacing: .03rem;
   text-transform: uppercase;
   font-family: Montserrat;
@@ -32,12 +32,6 @@
   -moz-transition: all .3s;
   background: #eee;
 }
-
-/* Removed 0.5.4 - too blurry and distracting */
-/* button.btn-animated:hover, [type=submit].btn-animated:hover, .btn.btn-animated:hover {
-   -webkit-transform: scale(1.01);
-         transform: scale(1.01);
-} */
 
 .btn:active, button:active, [type=submit]:active {
   -webkit-transition: 0.1s ease;
