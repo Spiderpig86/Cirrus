@@ -11,12 +11,21 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  /* color: #363636; */ /* Removed 0.5.4, creates color inconsistencies */
   line-height: 1.2;
 }
 
+/* Silent header */
+h1 .silent,
+h2 .silent,
+h3 .silent, 
+h4 .silent,
+h5 .silent,
+h6 .silent {
+  color: #788196;
+}
+
 h1 {
-  font-size: 4rem; /* 64px */
+  font-size: 4rem;
   letter-spacing: .05rem;
 }
 
@@ -105,6 +114,11 @@ p.line-height-inherit, article.line-height-inherit, blockquote.line-height-inher
 
 cite {
   opacity: 0.7;
+}
+
+mark, .mark {
+  padding: .2em;
+  background-color: #f0e8c4;
 }
 
 /* Weights */

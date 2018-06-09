@@ -20,7 +20,14 @@
 .table tr {
     -webkit-transition: all .3s;
     transition: all .3s;
+}
 
+.table caption {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    color: #6c757d;
+    text-align: left;
+    caption-side: bottom;
 }
 
 .table tr:hover, .table.striped tbody tr:nth-child(even):hover {

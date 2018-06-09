@@ -12,6 +12,14 @@
     max-height: 100vh;
 }
 
+.header a {
+    color: #8292a2;
+}
+
+.header a:hover {
+    color: #697888;
+}
+
 /* Hader dar theme */
 .header-dark {
     background-color: rgba(0, 0, 0, 0.87);
