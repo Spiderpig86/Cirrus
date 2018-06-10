@@ -12,9 +12,7 @@
   border-radius: .25rem;
   cursor: pointer;
   text-align: center;
-  -webkit-transition: all .3s;
   transition: all .3s;
-  -moz-transition: all .3s;
   background-color: #fefefe;
   border-color: #d9d9d9;
   color: #737373;
@@ -22,8 +20,8 @@
   letter-spacing: .03rem;
   text-transform: uppercase;
   font-family: Montserrat;
-  font-weight: 400;
   min-width: 2rem;
+  user-select: none;
 }
 
 .btn:hover, button:hover, [type=submit]:hover {
@@ -56,6 +54,25 @@ button.btn-animated:active, [type=submit].btn-animated:active, .btn.btn-animated
 
 .btn:focus, button:focus, [type=submit]:focus {
   outline: none;
+  border: 1px solid #d9d9d9 !important;
+  box-shadow: 0 0 0 0.2rem rgba(217, 217, 217, .5) !important;
+}
+
+.btn.btn-accent:focus, button.btn-accent:focus, [type=submit].btn-accent:focus {
+  border-color: rgba(240, 61, 77, 0.45) !important;
+  box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.25) !important;
+}
+
+.btn.btn-outline-inverted:focus, button.btn-outline-inverted:focus, [type=submit].btn-outline-inverted:focus,
+.btn.btn-black:focus, button.btn-black:focus, [type=submit].black:focus {
+  outline: none;
+  border: 1px solid #222 !important;
+  box-shadow: 0 0 0 0.2rem rgba(34, 34, 34, 0.25) !important;
+}
+
+.btn.btn-transparent:focus, button.btn-transparent:focus, [type=submit].btn-transparent:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(217, 217, 217, .5) !important;
 }
 
 .btn:disabled, button:disabled, [type=submit]:disabled {
