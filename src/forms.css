@@ -50,15 +50,14 @@ input[type="color"] {
     border-radius: 3px;
 }
 
-input:not([type=checkbox]):not([type=radio]):focus,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):focus,
 select:focus,
 textarea:focus,
 textarea[type=text]:focus,
 input[type=text].input-focused,
 .input-focused {
-    border-color: rgba(240, 61, 77, 0.45);
-    box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.25),
-        inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+    border-color: rgb(61, 171, 240);
+    box-shadow: 0 0 0 0.2rem rgba(61, 171, 240, 0.4), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 select:not([multiple]) {
@@ -131,7 +130,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
     background-color: rgba(0, 224, 0, 0.05);
 }
 
-.input-success:not([type=checkbox]):not([type=radio]):focus, .btn-success:focus {
+.input-success:not([type=checkbox]):not([type=radio]):not([type=submit]):focus, .btn-success:focus {
     box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
@@ -141,6 +140,10 @@ label:last-child:not(:first-child):not(.form-group-label) {
 
 .input-error {
     background-color: rgba(244, 67, 54, 0.05);
+}
+
+.input-error:not([type=checkbox]):not([type=radio]):not([type=submit]):focus, .btn-error:focus {
+    box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 /* Input Field Sizes */
