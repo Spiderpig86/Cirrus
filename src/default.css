@@ -1,41 +1,50 @@
 /* BASE STYLING FOR CIRRUS */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Sans:400,700');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Sans:400,700");
 
-* {
-  margin: 0;
-  padding: 0;
-  /* Prevent setting borders from increasing the size of an elrement */
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-      -webkit-tap-highlight-color: transparent;
+:root {
+    --cirrus-fg: #374054;
+    --cirrus-bg: #fff;
+    --cirrus-accent-bg: #f03d4d;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  border: none;
-  height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    /* Prevent setting borders from increasing the size of an elrement */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 100%;
 }
 
 /* Nunito Sans for the font */
 body {
-  letter-spacing: 0.01rem;
+    letter-spacing: 0.01rem;
     line-height: 1.8; /* Globally adjust line height */
     font-size: 1rem;
-  font-weight: 400;
-  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, Avenir, "Avenir Next", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  letter-spacing: 0.01rem;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  color: #374054;
+    font-weight: 400;
+    font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
+    letter-spacing: 0.01rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    color: #374054;
 }
 
 /* Remove bullets from unordered lists */
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 /* Setting up embedded content */
@@ -44,15 +53,15 @@ embed,
 object,
 audio,
 video {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 iframe {
-  outline: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 article,
@@ -62,22 +71,23 @@ footer,
 header,
 hgroup,
 section {
-  display: block;
+    display: block;
 }
 
 .accent {
-  background: -webkit-linear-gradient(top, #FF5F6D, #FFC371);
-  background: linear-gradient(to bottom, #FF5F6D, #FFC371);
-  color: #fff;
+    background: -webkit-linear-gradient(top, #ff5f6d, #ffc371);
+    background: linear-gradient(to bottom, #ff5f6d, #ffc371);
+    color: #fff;
 }
 
 .accent-horiz {
-  background: -webkit-linear-gradient(left, #FF5F6D, #FFC371);
-  background: linear-gradient(to right, #FF5F6D, #FFC371);
+    background: -webkit-linear-gradient(left, #ff5f6d, #ffc371);
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
 }
 
 /* Selection Color */
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+    /* Code for Firefox */
     background: rgba(0, 161, 255, 0.2);
 }
 
@@ -87,6 +97,6 @@ section {
 
 /* When focusing any element */
 :focus {
-    box-shadow: 0 0 0.1rem 0.15rem rgba(240, 61, 77, .13);
+    box-shadow: 0 0 0.1rem 0.15rem rgba(240, 61, 77, 0.13);
     outline: none;
 }
