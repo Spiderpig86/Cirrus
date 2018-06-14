@@ -74,6 +74,22 @@ section {
     display: block;
 }
 
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+label {
+    display: inline-block;
+    margin: 0.25rem 0;
+}
+
 .accent {
     background: -webkit-linear-gradient(top, #ff5f6d, #ffc371);
     background: linear-gradient(to bottom, #ff5f6d, #ffc371);

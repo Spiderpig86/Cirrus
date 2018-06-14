@@ -33,6 +33,7 @@ textarea[type="text"] {
     padding: 1rem 1.3rem;
     min-height: 8rem;
     line-height: 1.5rem;
+    resize: vertical;
 }
 
 input[type="color"] {

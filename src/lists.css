@@ -2,17 +2,17 @@
 
 ul {
   list-style: disc inside;
-  margin: 0.5rem 0 0.5rem 0.5rem;
+  margin: 1rem 0 1rem 1rem;
 }
 
 ol {
   list-style: decimal inside;
-  margin: 0.5rem 0 0.5rem 0.5rem;
+  margin: 1rem 0 1rem 1rem;
 }
 
 /* Handle nesting */
 ul ul, ol ul, ul ol, ol ol {
-  margin: 1rem 0 1rem 1rem;
+  margin: 0 0 0 1rem;
 }
 
 /* Nested list bullet types */
@@ -40,11 +40,11 @@ dl {
 
 /* Detail title */
 dt {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 dd {
-    margin-left: 1rem;
+    margin-bottom: .5rem;
 }
 
 li {
