@@ -48,8 +48,7 @@
     display: block;
     height: 1rem;
     width: 1rem;
-    margin-left: -10px;
-    margin-top: -10px;
+    transform: translate(-50%,-50%);
     position: absolute;
     left: 50%;
     top: 50%;
