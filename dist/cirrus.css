@@ -4348,36 +4348,6 @@ video.video-fullscreen {
 }
 
 /* IN PROGERSS */
-/* Color scheme for Cirrus */
-:root {
-    --cirrus-fg: #374054;
-    --cirrus-bg: #fff;
-    --cirrus-accent-bg: #f03d4d;
-    --cirrus-accent-hover: #d62939;
-    --cirrus-accent-border: #c21b2b;
-
-    --cirrus-primary: #f03d4d;
-    --cirrus-light: #f8f9fa;
-    --cirrus-dark: #363636;
-    --cirrus-link: #379afd;
-    --cirrus-link-dark: #083d71;
-    --cirrus-info: #17a2b8;
-    --cirrus-success: #28a745;
-    --cirrus-warning: #ffc107;
-    --cirrus-danger: #dc3545;
-
-    --cirrus-code-bg: #ffdadd;
-    --cirrus-code-bg-dark: #242424;
-    --cirrus-code-fg: #dc4753;
-
-    --toast-primary-bg: rgba(240, 61, 77, 0.9);
-    --toast-success-bg: rgba(64, 179, 84, 0.9);
-    --toast-success-border: #40b354;
-    --toast-warning-bg: rgba(255, 204, 0, 0.9);
-    --toast-warning-border: #ffcc00;
-    --toast-error-bg: rgba(255, 59, 48, 0.9);
-    --toast-error-border: #ff3b30;
-}
 .toast {
     display: block;
     width: 100%;

@@ -82,15 +82,8 @@ label {
     margin: 0.25rem 0;
 }
 
-.accent {
-    background: -webkit-linear-gradient(top, #ff5f6d, #ffc371);
-    background: linear-gradient(to bottom, #ff5f6d, #ffc371);
-    color: #fff;
-}
-
-.accent-horiz {
-    background: -webkit-linear-gradient(left, #ff5f6d, #ffc371);
-    background: linear-gradient(to right, #ff5f6d, #ffc371);
+[hidden] {
+    display: none !important;
 }
 
 /* Selection Color */
