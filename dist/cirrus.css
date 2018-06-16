@@ -40,6 +40,7 @@
 
 /* Loading button position relatively for loading spinner location */
 .animated.loading {
+  display: block;
   position: relative;
 }
 
@@ -53,11 +54,10 @@
     display: block;
     height: 1rem;
     width: 1rem;
-    margin-left: -10px;
-    margin-top: -10px;
+    transform: translate(-50%, -50%);
+    left: calc(50% - (1em / 1.75));
+    top: calc(50% - (1em / 1.5));
     position: absolute;
-    left: 50%;
-    top: 50%;
       -webkit-animation: loading 500ms infinite linear;
     animation: loading 500ms infinite linear;
 }
