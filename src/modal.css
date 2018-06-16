@@ -42,13 +42,13 @@
 
 /* The modal dialog body with the text itself */
 .modal-content {
-    background: #fff;
+    background: var(--cirrus-bg);
     padding: 0;
     display: block;
     border-radius: 3px;
     box-shadow: 0 .4rem 1rem rgba(54, 59, 68, .3);
     z-index: 1;
-    color: #374054;
+    color: var(--cirrus-fg);
     max-width: 40rem; /* 640px */
 }
 
@@ -67,7 +67,7 @@
 .modal-content h4,
 .modal-content h5,
 .modal-content h6 {
-    color: #374054;
+    color: var(--cirrus-fg);
 }
 
 .modal:target .modal-container,

@@ -42,7 +42,7 @@
 }
 
 .frame .frame-title {
-    color: #374054;
+    color: var(--cirrus-fg);
     font-size: 1rem;
     margin: 0.5rem auto;
 }

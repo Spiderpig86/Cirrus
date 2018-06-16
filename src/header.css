@@ -8,7 +8,7 @@
     z-index: 100;
     margin-bottom: 20px; 
     box-shadow: 0 3px 15px rgba(57, 63, 72, 0.1);
-    background: #fff;
+    background: var(--cirrus-bg);
     max-height: 100vh;
 }
 
@@ -130,7 +130,7 @@
 
 /* HEADER DROP DOWN MENU */
 .nav-item .dropdown-menu {
-    background-color: #fff;
+    background-color: var(--cirrus-bg);
     position: absolute;
     top: 95%;
     /*right: 0; /* Unable to solve problem when we have multiple drop down menus */
@@ -164,7 +164,7 @@
 
 /* Dropdown menu indicator */
 .nav-item.has-sub .nav-dropdown-link::after {
-    border: 2px solid #f03d4d; /* Must be first to create the triangle shape */
+    border: 2px solid var(--cirrus-accent-bg); /* Must be first to create the triangle shape */
     border-right: 0; /* Create the triangle effect */
     border-top: 0;
     display: block;

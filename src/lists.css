@@ -102,14 +102,14 @@ ul.menu {
 
 .menu .menu-item.selected > a {
   color: #fff;
-  background: #f03d4d;
+  background: var(--cirrus-accent-bg);
 }
 
 .menu .menu-item .menu-addon {
   padding: 0.3rem;
   z-index: 1;
   position: relative;
-  color: #374054;
+  color: var(--cirrus-fg);
   cursor: pointer;
   float: left;
   margin-right: .1rem;
@@ -151,7 +151,7 @@ ul.menu {
 /* Title for the section separated by the divider */
 .menu .divider:after {
   content: attr(data-label); /* Text that will be displayed */
-  background: #fff;
+  background: var(--cirrus-bg);
   color: #b7b7b7;
   display: inline-block;
   padding: 0 .7rem;
@@ -173,7 +173,7 @@ ul.menu {
   left: 0;
   -webkit-animation: slide-down .2s ease 1;
   animation: slide-down .1s ease 1;
-  background: #fff;
+  background: var(--cirrus-bg);
   border-radius: .2rem;
   -webkit-box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
           box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);

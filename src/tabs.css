@@ -61,12 +61,12 @@
     padding: 0.5rem 1rem;
     -webkit-transition: all .3s;
     transition: all .3s;
-    color: #374054;
+    color: var(--cirrus-fg);
     display: block;
     border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
     margin-bottom: -1px; /* Get rid of any remaining border lines */
-    background: #fff;
+    background: var(--cirrus-bg);
 }
 
 .tab-container li:hover a {
@@ -76,8 +76,8 @@
 }
 
 .tab-container li.selected a {
-    border-bottom-color: #f03d4d;
-    color: #f03d4d;
+    border-bottom-color: var(--cirrus-accent-bg);
+    color: var(--cirrus-accent-bg);
     border-width: 2px;
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -128,7 +128,7 @@
 }
 
 .tab-container.tabs-classic li.selected a {
-    color: #f03d4d;
+    color: var(--cirrus-accent-bg);
     border-color: #dbdbdb;
     border-bottom-color: transparent !important;
 }

@@ -33,7 +33,7 @@ body {
         "Segoe UI Emoji", "Segoe UI Symbol";
     letter-spacing: 0.01rem;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-    color: #374054;
+    color: var(--cirrus-fg);
 }
 
 /* Remove bullets from unordered lists */

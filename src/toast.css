@@ -31,22 +31,22 @@
 /* TOAST TYPES */
 .toast.primary {
     background: rgba(240, 61, 77, 0.9);
-    border-color: #f03d4d;
+    border-color: var(--cirrus-accent-bg);
 }
 
 .toast.success {
-    background: rgba(64, 179, 84, 0.9);
-    border-color: #40b354;
+    background: var(--toast-success-bg);
+    border-color: var(--toast-success-border);
 }
 
 .toast.warning {
-    background: rgba(255, 204, 0, 0.9);
-    border-color: #ffcc00;
+    background: var(--toast-warning-bg);
+    border-color: var(--toast-warning-border);
 }
 
 .toast.error {
-    background: rgba(255, 59, 48, 0.9);
-    border-color: #ff3b30;
+    background: var(--toast-error-bg);
+    border-color: var(--toast-error-border);
 }
 
 /* Add the rest later */

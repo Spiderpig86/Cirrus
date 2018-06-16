@@ -137,7 +137,7 @@ button.btn-close:hover {
 /* Render the x in the close button */
 button.btn-close::before,
 button.btn-close::after {
-    background-color: #fff;
+    background-color: var(--cirrus-bg);
     content: "";
     display: block;
     left: 50%;
@@ -161,14 +161,14 @@ button.btn-close::after {
 
 /* Accent button disabled */
 .btn-accent:disabled {
-    background-color: #f03d4d;
+    background-color: var(--cirrus-accent-bg);
     color: #fff;
     border-color: #c21b2b;
     opacity: 0.6;
 }
 
 .btn-accent:disabled:hover {
-    background-color: #f03d4d;
+    background-color: var(--cirrus-accent-bg);
     color: #fff;
     border-color: #c21b2b;
 }
@@ -360,17 +360,17 @@ button span:last-child,
 
 /* Button with accent */
 .btn-accent {
-    background-color: #f03d4d;
+    background-color: var(--cirrus-accent-bg);
     color: #fff;
-    border-color: #c21b2b;
+    border-color: var(--cirrus-accent-border);
 }
 
 .btn-accent:hover {
-    background-color: #d62939;
+    background-color: var(--cirrus-accent-hover);
 }
 
 .btn-accent:active {
-    background-color: #c21b2b;
+    background-color: var(--cirrus-accent-border);
 }
 
 /* Success Button */

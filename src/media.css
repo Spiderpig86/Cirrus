@@ -90,7 +90,7 @@ video.video-fullscreen {
     font-weight: lighter;
     width: 3.2rem;
     height: 3.2rem;
-    background-color: #f03d4d;
+    background-color: var(--cirrus-accent-bg);
     overflow: hidden;
 }
 

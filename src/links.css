@@ -4,7 +4,7 @@ a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
-  color: #379afd;
+  color: var(--cirrus-link);
   text-decoration: none;
   font-weight: 600;
       padding: 2px;

@@ -125,7 +125,7 @@ border-color: transparent;
 .mobile-title {
   position: absolute;
   left: 0;
-  background-color: #FFF;
+  background-color: var(--cirrus-bg);
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;

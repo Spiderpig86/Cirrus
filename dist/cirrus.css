@@ -7,41 +7,39 @@
 
 /* Spinning loading animation */
 @-webkit-keyframes loading {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
 }
 
 @keyframes loading {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
 }
 
 /* Hover animation */
-.hover-grow { /* Mouse leave */
-  transition-duration: .32s;
+.hover-grow {
+    /* Mouse leave */
+    transition-duration: 0.32s;
 }
 
-.hover-grow:hover { /* Mouse enter */
-      transform: scale(1.1);
-    transition-duration: .08s;
+.hover-grow:hover {
+    /* Mouse enter */
+    transform: scale(1.1);
+    transition-duration: 0.08s;
 }
 
 /* Loading button position relatively for loading spinner location */
 .animated.loading {
-  display: block;
-  position: relative;
+    display: block;
+    position: relative;
 }
 
 /* Loading Spinner, align center by default */
@@ -54,11 +52,10 @@
     display: block;
     height: 1rem;
     width: 1rem;
-    transform: translate(-50%, -50%);
-    left: calc(50% - (1em / 1.75));
-    top: calc(50% - (1em / 1.5));
+    left: calc(50% - (1em / 1.25));
+    top: calc(50% - (1em / 1.35));
     position: absolute;
-      -webkit-animation: loading 500ms infinite linear;
+    -webkit-animation: loading 500ms infinite linear;
     animation: loading 500ms infinite linear;
 }
 
@@ -69,23 +66,22 @@
 
 /* Align spinner left */
 .animated.loading.loading-left:after {
-  left: 2rem;
-  right: auto;
+    left: 2rem;
+    right: auto;
 }
 
 .animated.loading.loading-left {
-  padding-left: 4rem;
+    padding-left: 4rem;
 }
 
 /* Align spinner right */
 .animated.loading.loading-right:after {
-  left: auto;
-  right: 2rem;
-  
+    left: auto;
+    right: 2rem;
 }
 
 .animated.loading.loading-right {
-  padding-right: 4rem;
+    padding-right: 4rem;
 }
 
 /* Hide text in loading button */
@@ -95,14 +91,14 @@
 
 /* Heart animation */
 @-webkit-keyframes pound {
-  to {
-    transform: scale(1.1);
-  }
+    to {
+        transform: scale(1.1);
+    }
 }
 @keyframes pound {
-  to {
-    transform: scale(1.1);
-  }
+    to {
+        transform: scale(1.1);
+    }
 }
 
 .animated.pulse {
@@ -113,151 +109,182 @@
 
 /* Bounce animations */
 @-webkit-keyframes bounce {
-  from,
-  20%,
-  53%,
-  80%,
-  to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); /* Ease-out based on power of four */
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  40%,
-  43% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -webkit-transform: translate3d(0, -30px, 0);
-    transform: translate3d(0, -30px, 0);
-  }
-  70% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    -webkit-transform: translate3d(0, -15px, 0);
-    transform: translate3d(0, -15px, 0);
-  }
-  90% {
-    -webkit-transform: translate3d(0, -4px, 0);
-    transform: translate3d(0, -4px, 0);
-  }
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.215,
+            0.61,
+            0.355,
+            1
+        ); /* Ease-out based on power of four */
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.755,
+            0.05,
+            0.855,
+            0.06
+        );
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.755,
+            0.05,
+            0.855,
+            0.06
+        );
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
 }
 
 @keyframes bounce {
-  from,
-  20%,
-  53%,
-  80%,
-  to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); /* Ease-out based on power of four */
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  40%,
-  43% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -webkit-transform: translate3d(0, -30px, 0);
-    transform: translate3d(0, -30px, 0);
-  }
-  70% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    -webkit-transform: translate3d(0, -15px, 0);
-    transform: translate3d(0, -15px, 0);
-  }
-  90% {
-    -webkit-transform: translate3d(0, -4px, 0);
-    transform: translate3d(0, -4px, 0);
-  }
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.215,
+            0.61,
+            0.355,
+            1
+        ); /* Ease-out based on power of four */
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.755,
+            0.05,
+            0.855,
+            0.06
+        );
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.755,
+            0.05,
+            0.855,
+            0.06
+        );
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
 }
 
 .animated.bounce {
-  animation-name: bounce;
-  -webkit-animation-name: bounce;
-  transform-origin: center bottom;
-  -webkit-transform-origin: center bottom;
+    animation-name: bounce;
+    -webkit-animation-name: bounce;
+    transform-origin: center bottom;
+    -webkit-transform-origin: center bottom;
 }
 
 @keyframes bounceIn {
-  from,
-  20%,
-  40%,
-  60%,
-  80%,
-  to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  }
-  0% {
-    opacity: 0;
-    transform: scale3d(.3, .3, .3);
-  }
-  20% {
-    transform: scale3d(1.1, 1.1, 1.1);
-  }
-  40% {
-    transform: scale3d(.9, .9, .9);
-  }
-  60% {
-    opacity: 1;
-    transform: scale3d(1.03, 1.03, 1.03);
-  }
-  80% {
-    transform: scale3d(.97, .97, .97);
-  }
-  to {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
 }
 
 .animated.bounceIn {
-  animation-name: bounceIn;
+    animation-name: bounceIn;
 }
 
 @-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .animated.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
 }
 
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 .animated.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 .animated.infinite.alternate {
-  animation-direction: alternate;
+    animation-direction: alternate;
 }
 
 .animated.paused {
-  -webkit-animation-play-state: paused !important; /* Safari 4.0 - 8.0 */
+    -webkit-animation-play-state: paused !important; /* Safari 4.0 - 8.0 */
     animation-play-state: paused !important;
 }
+
 /* BUTTONS */
 
 /* Button styling */
@@ -397,7 +424,7 @@ button.btn-close:hover {
 /* Render the x in the close button */
 button.btn-close::before,
 button.btn-close::after {
-    background-color: #fff;
+    background-color: var(--cirrus-bg);
     content: "";
     display: block;
     left: 50%;
@@ -421,14 +448,14 @@ button.btn-close::after {
 
 /* Accent button disabled */
 .btn-accent:disabled {
-    background-color: #f03d4d;
+    background-color: var(--cirrus-accent-bg);
     color: #fff;
     border-color: #c21b2b;
     opacity: 0.6;
 }
 
 .btn-accent:disabled:hover {
-    background-color: #f03d4d;
+    background-color: var(--cirrus-accent-bg);
     color: #fff;
     border-color: #c21b2b;
 }
@@ -620,17 +647,17 @@ button span:last-child,
 
 /* Button with accent */
 .btn-accent {
-    background-color: #f03d4d;
+    background-color: var(--cirrus-accent-bg);
     color: #fff;
-    border-color: #c21b2b;
+    border-color: var(--cirrus-accent-border);
 }
 
 .btn-accent:hover {
-    background-color: #d62939;
+    background-color: var(--cirrus-accent-hover);
 }
 
 .btn-accent:active {
-    background-color: #c21b2b;
+    background-color: var(--cirrus-accent-border);
 }
 
 /* Success Button */
@@ -837,7 +864,7 @@ border-color: transparent;
 .mobile-title {
   position: absolute;
   left: 0;
-  background-color: #FFF;
+  background-color: var(--cirrus-bg);
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
@@ -1003,54 +1030,54 @@ border-color: transparent;
 /* CODE */
 
 code {
-  padding: .3rem;
-  margin: .5em 0;
-  overflow: auto;
-  background: #ffdadd;
-  color: #dc4753;
-  border-radius: 3px;
+    padding: 0.3rem;
+    margin: 0.5em 0;
+    overflow: auto;
+    background: var(--cirrus-code-bg);
+    color: var(--cirrus-code-fg);
+    border-radius: 3px;
 }
 
 /* Dark theme for code */
 code.dark {
-  background: #242424;
-  color: #fff;
+    background: var(--cirrus-code-bg-dark);
+    color: #fff;
 }
 
 code:before {
     color: #acb3c2;
     content: attr(data-lang);
-    font-size: .9rem;
+    font-size: 0.9rem;
     position: absolute;
     right: 1rem;
-    top: .7rem;
+    top: 0.7rem;
 }
 
 pre > code {
-  font-size: 14px;
-  display: block;
-  padding: 2rem 1.5rem 1rem;
-  white-space: pre-wrap;       /* css-3 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
-  direction: ltr;
-  text-align: left;
-  word-spacing: normal;
-  word-break: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
- border-left: .3rem solid #f03d4d;
- margin: 0;
-     position: relative;
+    font-size: 14px;
+    display: block;
+    padding: 2rem 1.5rem 1rem;
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+    font-family: Consolas, Monaco, "Andale Mono", monospace;
+    direction: ltr;
+    text-align: left;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    border-left: 0.3rem solid var(--cirrus-accent-bg);
+    margin: 0;
+    position: relative;
 }
 
 /* BASE STYLING FOR CIRRUS */
@@ -1088,7 +1115,7 @@ body {
         "Segoe UI Emoji", "Segoe UI Symbol";
     letter-spacing: 0.01rem;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-    color: #374054;
+    color: var(--cirrus-fg);
 }
 
 /* Remove bullets from unordered lists */
@@ -1988,7 +2015,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 }
 
 .frame .frame-title {
-    color: #374054;
+    color: var(--cirrus-fg);
     font-size: 1rem;
     margin: 0.5rem auto;
 }
@@ -2008,7 +2035,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     z-index: 100;
     margin-bottom: 20px; 
     box-shadow: 0 3px 15px rgba(57, 63, 72, 0.1);
-    background: #fff;
+    background: var(--cirrus-bg);
     max-height: 100vh;
 }
 
@@ -2130,7 +2157,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 /* HEADER DROP DOWN MENU */
 .nav-item .dropdown-menu {
-    background-color: #fff;
+    background-color: var(--cirrus-bg);
     position: absolute;
     top: 95%;
     /*right: 0; /* Unable to solve problem when we have multiple drop down menus */
@@ -2164,7 +2191,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 /* Dropdown menu indicator */
 .nav-item.has-sub .nav-dropdown-link::after {
-    border: 2px solid #f03d4d; /* Must be first to create the triangle shape */
+    border: 2px solid var(--cirrus-accent-bg); /* Must be first to create the triangle shape */
     border-right: 0; /* Create the triangle effect */
     border-top: 0;
     display: block;
@@ -2956,7 +2983,7 @@ space.x-large {
 
 /* Color the selected pagination item with accent color */
 .pagination .pagination-item.short.selected {
-  background-color: #f03d4d;
+  background-color: var(--cirrus-accent-bg);
   color: #fff;
 }
 
@@ -2987,7 +3014,7 @@ space.x-large {
 .pagination .pagination-item:hover h6,
 .pagination .pagination-item:hover *:not([disabled]) {
   transition: all .3s;
-  color: #f03d4d;
+  color: var(--cirrus-accent-bg);
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -ms-transition: all .3s;
@@ -3089,7 +3116,7 @@ a {
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   transition: all .3s;
-  color: #379afd;
+  color: var(--cirrus-link);
   text-decoration: none;
   font-weight: 600;
       padding: 2px;
@@ -3401,14 +3428,14 @@ ul.menu {
 
 .menu .menu-item.selected > a {
   color: #fff;
-  background: #f03d4d;
+  background: var(--cirrus-accent-bg);
 }
 
 .menu .menu-item .menu-addon {
   padding: 0.3rem;
   z-index: 1;
   position: relative;
-  color: #374054;
+  color: var(--cirrus-fg);
   cursor: pointer;
   float: left;
   margin-right: .1rem;
@@ -3450,7 +3477,7 @@ ul.menu {
 /* Title for the section separated by the divider */
 .menu .divider:after {
   content: attr(data-label); /* Text that will be displayed */
-  background: #fff;
+  background: var(--cirrus-bg);
   color: #b7b7b7;
   display: inline-block;
   padding: 0 .7rem;
@@ -3472,7 +3499,7 @@ ul.menu {
   left: 0;
   -webkit-animation: slide-down .2s ease 1;
   animation: slide-down .1s ease 1;
-  background: #fff;
+  background: var(--cirrus-bg);
   border-radius: .2rem;
   -webkit-box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
           box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
@@ -3779,7 +3806,7 @@ video.video-fullscreen {
     font-weight: lighter;
     width: 3.2rem;
     height: 3.2rem;
-    background-color: #f03d4d;
+    background-color: var(--cirrus-accent-bg);
     overflow: hidden;
 }
 
@@ -3870,13 +3897,13 @@ video.video-fullscreen {
 
 /* The modal dialog body with the text itself */
 .modal-content {
-    background: #fff;
+    background: var(--cirrus-bg);
     padding: 0;
     display: block;
     border-radius: 3px;
     box-shadow: 0 .4rem 1rem rgba(54, 59, 68, .3);
     z-index: 1;
-    color: #374054;
+    color: var(--cirrus-fg);
     max-width: 40rem; /* 640px */
 }
 
@@ -3895,7 +3922,7 @@ video.video-fullscreen {
 .modal-content h4,
 .modal-content h5,
 .modal-content h6 {
-    color: #374054;
+    color: var(--cirrus-fg);
 }
 
 .modal:target .modal-container,
@@ -4111,7 +4138,7 @@ video.video-fullscreen {
 }
 
 .table tr.selected { /* Style a selected row */
-    background: #f03d4d;
+    background: var(--cirrus-accent-bg);
     color: #fff;
 }
 
@@ -4184,12 +4211,12 @@ video.video-fullscreen {
     padding: 0.5rem 1rem;
     -webkit-transition: all .3s;
     transition: all .3s;
-    color: #374054;
+    color: var(--cirrus-fg);
     display: block;
     border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
     margin-bottom: -1px; /* Get rid of any remaining border lines */
-    background: #fff;
+    background: var(--cirrus-bg);
 }
 
 .tab-container li:hover a {
@@ -4199,8 +4226,8 @@ video.video-fullscreen {
 }
 
 .tab-container li.selected a {
-    border-bottom-color: #f03d4d;
-    color: #f03d4d;
+    border-bottom-color: var(--cirrus-accent-bg);
+    color: var(--cirrus-accent-bg);
     border-width: 2px;
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -4251,7 +4278,7 @@ video.video-fullscreen {
 }
 
 .tab-container.tabs-classic li.selected a {
-    color: #f03d4d;
+    color: var(--cirrus-accent-bg);
     border-color: #dbdbdb;
     border-bottom-color: transparent !important;
 }
@@ -4297,6 +4324,26 @@ video.video-fullscreen {
 }
 
 /* IN PROGERSS */
+/* Color scheme for Cirrus */
+:root {
+    --cirrus-fg: #374054;
+    --cirrus-bg: #fff;
+    --cirrus-accent-bg: #f03d4d;
+    --cirrus-accent-hover: #d62939;
+    --cirrus-accent-border: #c21b2b;
+
+    --cirrus-code-bg: #ffdadd;
+    --cirrus-code-bg-dark: #242424;
+    --cirrus-code-fg: #dc4753;
+
+    --toast-primary-bg: rgba(240, 61, 77, 0.9);
+    --toast-success-bg: rgba(64, 179, 84, 0.9);
+    --toast-success-border: #40b354;
+    --toast-warning-bg: rgba(255, 204, 0, 0.9);
+    --toast-warning-border: #ffcc00;
+    --toast-error-bg: rgba(255, 59, 48, 0.9);
+    --toast-error-border: #ff3b30;
+}
 .toast {
     display: block;
     width: 100%;
@@ -4330,22 +4377,22 @@ video.video-fullscreen {
 /* TOAST TYPES */
 .toast.primary {
     background: rgba(240, 61, 77, 0.9);
-    border-color: #f03d4d;
+    border-color: var(--cirrus-accent-bg);
 }
 
 .toast.success {
-    background: rgba(64, 179, 84, 0.9);
-    border-color: #40b354;
+    background: var(--toast-success-bg);
+    border-color: var(--toast-success-border);
 }
 
 .toast.warning {
-    background: rgba(255, 204, 0, 0.9);
-    border-color: #ffcc00;
+    background: var(--toast-warning-bg);
+    border-color: var(--toast-warning-border);
 }
 
 .toast.error {
-    background: rgba(255, 59, 48, 0.9);
-    border-color: #ff3b30;
+    background: var(--toast-error-bg);
+    border-color: var(--toast-error-border);
 }
 
 /* Add the rest later */

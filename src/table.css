@@ -91,7 +91,7 @@
 }
 
 .table tr.selected { /* Style a selected row */
-    background: #f03d4d;
+    background: var(--cirrus-accent-bg);
     color: #fff;
 }
 
