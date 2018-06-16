@@ -2,8 +2,8 @@
 
 /* Button styling */
 /* Un-themed */
-.btn,
 button,
+.btn,
 [type="submit"] {
     display: block;
     line-height: 2rem;
@@ -26,8 +26,8 @@ button,
     user-select: none;
 }
 
-.btn:hover,
 button:hover,
+.btn:hover,
 [type="submit"]:hover {
     -webkit-transition: all 0.1s;
     transition: all 0.1s;
