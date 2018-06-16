@@ -112,7 +112,13 @@ article,
 blockquote {
     font-size: 1rem;
     /* line-height: 2rem; */ /* Removed 0.5.5 */
+    /* line-height: 2rem; */ /* Removed 0.5.5 */
     margin: 1rem 0;
+}
+
+blockquote {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
 }
 
 .content > p:last-of-type {

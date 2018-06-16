@@ -347,11 +347,12 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 /* Form group controls */
 .form-group-label {
-    border-radius: 0.2rem;
-    padding: 0.8rem;
     background: #f8f9fa;
     border: 1px solid #ddd;
+    border-radius: 0.2rem;
     color: #909090;
+    margin: 0;
+    padding: 0.8rem;
     user-select: none;
 }
 
