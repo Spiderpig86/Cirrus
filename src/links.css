@@ -157,7 +157,6 @@ a.underline {
 /* Please note that usquare is the parent span (not div) which would create the left and right borders. The link (.utb-OLR) gets nested within this */
 
 .usquare {
-    box-sizing: border-box; /* keeps the border from resizing the link */
     margin-left: 0.4rem;
     position: relative;
     overflow: hidden;
@@ -171,7 +170,6 @@ a.underline {
 .usquare:before,
 .usquare:after {
     content: "";
-    box-sizing: border-box;
     transition: 0.25s all ease;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;

@@ -37,12 +37,12 @@
     right: 0;
     bottom: 0;
     display: block;
-    background: rgba(54, 59, 68, 0.5);
+    background-color: rgba(54, 59, 68, 0.5);
 }
 
 /* The modal dialog body with the text itself */
 .modal-content {
-    background: var(--cirrus-bg);
+    background-color: var(--cirrus-bg);
     padding: 0;
     display: block;
     border-radius: 3px;

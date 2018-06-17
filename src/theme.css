@@ -16,9 +16,14 @@
     --cirrus-warning: #ffc107;
     --cirrus-danger: #dc3545;
 
+    --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+
     --cirrus-code-bg: #ffdadd;
     --cirrus-code-bg-dark: #242424;
     --cirrus-code-fg: #dc4753;
+
+    --cirrus-form-group-bg: #f8f9fa;
+    --cirrus-form-group-fg: #909090;
 
     --toast-primary-bg: rgba(240, 61, 77, 0.9);
     --toast-success-bg: rgba(64, 179, 84, 0.9);
@@ -28,3 +33,14 @@
     --toast-error-bg: rgba(255, 59, 48, 0.9);
     --toast-error-border: #ff3b30;
 }
+
+/* GLOBAL THEME SELECTORS */
+.bg-primary {background-color: var(--cirrus-primary) !important; }
+.bg-success { background-color: var(--cirrus-success) !important; }
+.bg-warning { background-color: var(--cirrus-warning) !important; }
+.bg-danger { background-color: var(--cirrus-danger) !important; }
+.bg-light { background-color: var(--cirrus-light) !important; }
+.bg-dark { background-color: var(--cirrus-dark) !important; }
+.bg-link { background-color: var(--cirrus-link) !important; }
+.bg-link-dark { background-color: var(--cirrus-link-dark) !important; }
+.bg-info { background-color: var(--cirrus-info) !important; }

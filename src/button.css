@@ -250,6 +250,7 @@ button.btn-close::after {
 /* Dark Gray */
 .btn-dark {
     background: #444;
+    border: 1px #444 solid;
     color: #fff;
 }
 

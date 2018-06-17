@@ -5,8 +5,6 @@
     margin: 0;
     padding: 0;
     /* Prevent setting borders from increasing the size of an elrement */
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -82,25 +80,13 @@ label {
     margin: 0.25rem 0;
 }
 
-.accent {
-    background: -webkit-linear-gradient(top, #ff5f6d, #ffc371);
-    background: linear-gradient(to bottom, #ff5f6d, #ffc371);
-    color: #fff;
-}
-
-.accent-horiz {
-    background: -webkit-linear-gradient(left, #ff5f6d, #ffc371);
-    background: linear-gradient(to right, #ff5f6d, #ffc371);
+[hidden] {
+    display: none !important;
 }
 
 /* Selection Color */
-::-moz-selection {
-    /* Code for Firefox */
-    background: rgba(0, 161, 255, 0.2);
-}
-
 ::selection {
-    background: rgba(0, 161, 255, 0.2);
+    background-color: var(--cirrus-select-bg);
 }
 
 /* When focusing any element */

@@ -537,6 +537,7 @@ button.btn-close::after {
 /* Dark Gray */
 .btn-dark {
     background: #444;
+    border: 1px #444 solid;
     color: #fff;
 }
 
@@ -1033,14 +1034,14 @@ code {
     padding: 0.3rem;
     margin: 0.5em 0;
     overflow: auto;
-    background: var(--cirrus-code-bg);
+    background-color: var(--cirrus-code-bg);
     color: var(--cirrus-code-fg);
     border-radius: 3px;
 }
 
 /* Dark theme for code */
 code.dark {
-    background: var(--cirrus-code-bg-dark);
+    background-color: var(--cirrus-code-bg-dark);
     color: #fff;
 }
 
@@ -1087,8 +1088,6 @@ pre > code {
     margin: 0;
     padding: 0;
     /* Prevent setting borders from increasing the size of an elrement */
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -1164,25 +1163,13 @@ label {
     margin: 0.25rem 0;
 }
 
-.accent {
-    background: -webkit-linear-gradient(top, #ff5f6d, #ffc371);
-    background: linear-gradient(to bottom, #ff5f6d, #ffc371);
-    color: #fff;
-}
-
-.accent-horiz {
-    background: -webkit-linear-gradient(left, #ff5f6d, #ffc371);
-    background: linear-gradient(to right, #ff5f6d, #ffc371);
+[hidden] {
+    display: none !important;
 }
 
 /* Selection Color */
-::-moz-selection {
-    /* Code for Firefox */
-    background: rgba(0, 161, 255, 0.2);
-}
-
 ::selection {
-    background: rgba(0, 161, 255, 0.2);
+    background-color: var(--cirrus-select-bg);
 }
 
 /* When focusing any element */
@@ -1304,8 +1291,7 @@ p,
 article,
 blockquote {
     font-size: 1rem;
-    /* line-height: 2rem; */ /* Removed 0.5.5 */
-    /* line-height: 2rem; */ /* Removed 0.5.5 */
+    line-height: 2; /* Removed 0.5.5 */
     margin: 1rem 0;
 }
 
@@ -1486,7 +1472,7 @@ abbr[title] {
 }
 
 kbd {
-    background: #394558;
+    background-color: var(--cirrus-fg);
     border-radius: 0.2rem;
     color: #fff;
     display: inline-block;
@@ -1528,7 +1514,7 @@ kbd {
 footer {
     width: 100%;
     padding: 6rem 0;
-    background: #111;
+    background-color: #111;
     text-align: center;
     margin-top: 5rem;
 }
@@ -1624,12 +1610,10 @@ input[type="color"] {
     border: 1px solid #ddd;
     box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     outline: none;
     padding: 0.55rem 0.8rem;
     position: relative;
-    background: #fff;
     height: 3rem;
     border-radius: 3px;
 }
@@ -1930,10 +1914,10 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 /* Form group controls */
 .form-group-label {
-    background: #f8f9fa;
+    background-color: var(--cirrus-form-group-bg);
     border: 1px solid #ddd;
     border-radius: 0.2rem;
-    color: #909090;
+    color: var(--cirrus-form-group-fg);
     margin: 0;
     padding: 0.8rem;
     user-select: none;
@@ -1989,11 +1973,6 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    /* border: .1rem solid #ececec; */
     box-shadow: 0 0.05rem 0.2rem rgba(69, 77, 93, .3);
 }
 
@@ -2042,7 +2021,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     z-index: 100;
     margin-bottom: 20px; 
     box-shadow: 0 3px 15px rgba(57, 63, 72, 0.1);
-    background: var(--cirrus-bg);
+    background-color: var(--cirrus-bg);
     max-height: 100vh;
 }
 
@@ -2179,7 +2158,6 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     background-clip: padding-box;
     border: 1px solid #eee;
     border-radius: 0 0 4px 4px;
-    -webkit-box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
     box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
 }
 
@@ -2454,7 +2432,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     top: 1rem;
     float: none;
     border: none;
-    background: transparent;
+    background-color: transparent;
     margin-bottom: 1rem;
   }
 
@@ -2489,7 +2467,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
   }
 
   .nav-btn span {
-        background-color: #4D565F;
+    background-color: #4D565F;
     display: block;
     height: 2px;
     left: 50%;
@@ -2503,6 +2481,10 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     transition-property: background, left, opacity, transform;
     transition-property: background, left, opacity, transform, -webkit-transform;
     width: 15px;
+  }
+
+  .header-dark .nav-btn span {
+      background-color: #fff;
   }
 
   /* Line spacing in hamburger button */
@@ -2549,29 +2531,30 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 /* HEADER */
 
 .content {
-  max-width: 60em;
-  margin: 0 auto 1.5em;
-  width: 80%;
+    max-width: 60em;
+    margin: 0 auto 1.5em;
+    width: 80%;
 }
 
-.content-no-padding { /* Content without the extra margin at the bottom */
-  max-width: 60em;
-  margin: 0 auto;
-  width: 80%;
+.content-no-padding {
+    /* Content without the extra margin at the bottom */
+    max-width: 60em;
+    margin: 0 auto;
+    width: 80%;
 }
 
 /* Content that centers in parent and fills parent div without the extra vertical margin */
 .content-fluid {
-  width: 100%;
-  margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .fullscreen {
-   top:0;
-   right:0;
-   bottom:0;
-   left:0;
-   height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
 }
 
 /* This works well with panel */
@@ -2585,33 +2568,33 @@ section {
 
 /* This works well with spans and maybe even hr */
 .divider {
-  display: block;
-  height: 2px;
-  position: relative;
-  border-top: none;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  background: #eee;
-      width: 100%;
+    display: block;
+    height: 2px;
+    position: relative;
+    border-top: none;
+    margin: 1.5rem 0;
+    background-color: #eee;
+    width: 100%;
 }
 
 .divider-short {
-  max-width: 15rem;
-  width: 100%;
+    max-width: 15rem;
+    width: 100%;
 }
 
 /* Hero image div */
 .hero-img {
-  /* Specify the backgroud image yourself */
-  background-size: cover;
+    /* Specify the backgroud image yourself */
+    background-size: cover;
 }
 
 .parallax-img {
-  background-attachment: fixed !important;
+    background-attachment: fixed !important;
 }
 
-.hero { /* Parent of hero-body */
-  -webkit-box-align: stretch;
+.hero {
+    /* Parent of hero-body */
+    -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
     display: -webkit-box;
@@ -2634,25 +2617,25 @@ section {
     flex-shrink: 0;
     padding: 3rem 1.5rem;
     -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 space {
-  display: block;
-  width: 100%;
-  height: 1rem;
+    display: block;
+    width: 100%;
+    height: 1rem;
 }
 
 space.large {
-  padding: 1rem 0;
+    padding: 1rem 0;
 }
 
 space.x-large {
-  padding: 2rem 0;
+    padding: 2rem 0;
 }
 
 /* Use for spacing out elements vertically */
@@ -2661,139 +2644,139 @@ space.x-large {
     -ms-flex: 1;
     flex: 1;
     max-width: 100%;
-    padding: .5rem;
+    padding: 0.5rem;
 }
 
 .row:after {
-  content: '';
-  clear: both;
-  display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 /* GRID */
 .row .col-1 {
-  width: 8.33333333%;
+    width: 8.33333333%;
 }
 
 .row .col-2 {
-  width: 16.66666667%;
+    width: 16.66666667%;
 }
 
 .row .col-3 {
-  width: 25%;
+    width: 25%;
 }
 
 .row .col-4 {
-  width: 33.33333333%;
+    width: 33.33333333%;
 }
 
 .row .col-5 {
-  width: 41.66666667%;
+    width: 41.66666667%;
 }
 
 .row .col-6 {
-  width: 50%;
+    width: 50%;
 }
 
 .row .col-7 {
-  width: 58.33333333%;
+    width: 58.33333333%;
 }
 
 .row .col-8 {
-  width: 66.66666667%;
+    width: 66.66666667%;
 }
 
 .row .col-9 {
-  width: 75%;
+    width: 75%;
 }
 
 .row .col-10 {
-  width: 83.33333333%;
+    width: 83.33333333%;
 }
 
 .row .col-11 {
-  width: 91.66666667%;
+    width: 91.66666667%;
 }
 
 .row .col-12 {
-  width: 100%;
+    width: 100%;
 }
 
 /* Column offsets on the left side */
 .row .offset-1 {
-  margin-left: 8.33333333%;
+    margin-left: 8.33333333%;
 }
 
 .row .offset-2 {
-  margin-left: 16.66666667%;
+    margin-left: 16.66666667%;
 }
 
 .row .offset-3 {
-  margin-left: 25%;
+    margin-left: 25%;
 }
 
 .row .offset-4 {
-  margin-left: 33.33333333%;
+    margin-left: 33.33333333%;
 }
 
 .row .offset-5 {
-  margin-left: 41.66666667%;
+    margin-left: 41.66666667%;
 }
 
 .row .offset-6 {
-  margin-left: 50%;
+    margin-left: 50%;
 }
 
 .row .offset-7 {
-  margin-left: 58.33333333%;
+    margin-left: 58.33333333%;
 }
 
 .row .offset-8 {
-  margin-left: 66.66666667%;
+    margin-left: 66.66666667%;
 }
 
 .row .offset-9 {
-  margin-left: 75%;
+    margin-left: 75%;
 }
 
 .row .offset-10 {
-  margin-left: 83.33333333%;
+    margin-left: 83.33333333%;
 }
 
 .row .offset-11 {
-  margin-left: 91.66666667%;
+    margin-left: 91.66666667%;
 }
 
 .row .offset-12 {
-  margin-left: 100%;
+    margin-left: 100%;
 }
 
 /* Auto align col-n to left in fluid-container */
 .fluid-container .offset-right {
-  margin-left: 0;
-  margin-right: auto;
+    margin-left: 0;
+    margin-right: auto;
 }
 
 /* Auto align col-n to middle in fluid-container */
 .fluid-container .offset-center {
-  margin-left: auto;
-  margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 /* Auto align col-n to right in fluid-container */
 .fluid-container .offset-left {
-  margin-left: auto;
-  margin-right: 0;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 /* Use in parent div of fluid col */
 .fluid-container {
-  display: flex;
-  overflow: auto;
+    display: flex;
+    overflow: auto;
 }
 
 /* Wrap controls instead on overflow */
 .fluid-container.wrap {
-  -webkit-align-items: center;
+    -webkit-align-items: center;
     align-items: center;
     display: flex;
     display: -ms-flexbox;
@@ -2826,14 +2809,16 @@ space.x-large {
 }
 
 /* Some offset values */
-.row [class^='col-'], .row [class*=" col-"] {
-  float: left; /* Keeps the elements in 1 row */
-  padding: 0 .5rem;
+.row [class^="col-"],
+.row [class*=" col-"] {
+    float: left; /* Keeps the elements in 1 row */
+    padding: 0 0.5rem;
 }
 
 /* Columns without the spacing */
-.row [class^='col-'].no-space, .row [class*=" col-"].no-space {
-  padding: 0;
+.row [class^="col-"].no-space,
+.row [class*=" col-"].no-space {
+    padding: 0;
 }
 
 /* Ignore overflow in columns */
@@ -2845,17 +2830,18 @@ space.x-large {
 }
 
 /* Only for divs with .expand so they can go past the parent div width */
-.row.expand [class^='col-'], .row.expand [class*=" col-"] {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
+.row.expand [class^="col-"],
+.row.expand [class*=" col-"] {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
 }
 
 /* Known to cause spacing issues in columns */
 /*.row [class^='col-']:first-child, .row [class*=" col-"]:first-child{
   margin-left: 0;
 }*/
- 
+
 /* Used for aligning controls next to each other */
 .row.has-controls {
     display: -webkit-box;
@@ -2867,48 +2853,51 @@ space.x-large {
 }
 
 /* Divider for multiple elements in a div */
-.divided >.fluid-container:not(.row), .divided >.row [class^='col-'] {
-    box-shadow: -1px 0 0 0 rgba(34,36,38,.15);
+.divided > .fluid-container:not(.row),
+.divided > .row [class^="col-"] {
+    box-shadow: -1px 0 0 0 rgba(34, 36, 38, 0.15);
 }
 
 /* Remove border in first child */
-.divided >.row [class^='col-']:first-child, .divided >.row [class^='col-']:first-child {
+.divided > .row [class^="col-"]:first-child,
+.divided > .row [class^="col-"]:first-child {
     box-shadow: none;
 }
 
 .level {
     -webkit-box-align: center;
-  -ms-flex-align: center;
-  -ms-grid-row-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .level-left {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -ms-grid-row-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; /* Start for left */
-  margin-right: 1rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; /* Start for left */
+    margin-right: 1rem;
 }
 
 .level-right {
     -webkit-box-align: center;
-  -ms-flex-align: center;
-  -ms-grid-row-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; /* End for right */
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; /* End for right */
 }
 
-.level-item { /* Centers items */
-      -webkit-box-align: center;
+.level-item {
+    /* Centers items */
+    -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     display: -webkit-box;
@@ -2928,7 +2917,7 @@ space.x-large {
 
 /* Used to stretch the contents of div in level to fill */
 .level-content {
-  -ms-flex-preferred-size: auto;
+    -ms-flex-preferred-size: auto;
     flex-basis: auto;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
@@ -2942,73 +2931,73 @@ space.x-large {
 /* PAGINATION */
 /* Parent contianer for page navigation */
 .pagination {
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
 }
 
 /* Use for the major pagination meant to display about 2 items */
 .pagination-item {
-  -webkit-flex: 1 0 50%; /* Flex to fill */
-  -ms-flex: 1 0 50%;
-  flex: 1 0 50%;
+    -webkit-flex: 1 0 50%; /* Flex to fill */
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
 }
 
 .pagination a {
-  color: #8292a2;
+    color: #8292a2;
 }
 
 .pagination .pagination-item *[disabled] {
     cursor: pointer;
-    opacity: .5;
+    opacity: 0.5;
     pointer-events: none;
     user-select: none;
     -webkit-user-select: none;
 }
 
 .pagination .pagination-item {
-  margin: 1rem .1rem;
-  transition: all .3s;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -ms-transition: all .3s;
-  -o-transition: all .3s;
+    margin: 1rem 0.1rem;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
 }
 
 .pagination .pagination-item.pagination-next {
-  text-align: right;
+    text-align: right;
 }
 
 .pagination .pagination-item.pagination-prev {
-  text-align: left;
+    text-align: left;
 }
 
 .pagination-item-subtitle {
-  opacity: 0.7;
-  margin: 0 !important; /* Needed to override style after formatting paragraph update */
+    opacity: 0.7;
+    margin: 0 !important; /* Needed to override style after formatting paragraph update */
 }
 
 /* Color the selected pagination item with accent color */
 .pagination .pagination-item.short.selected {
-  background-color: var(--cirrus-accent-bg);
-  color: #fff;
+    background-color: var(--cirrus-accent-bg);
+    color: #fff;
 }
 
 .pagination .pagination-item.short.selected a {
-  color: #fff;  
+    color: #fff;
 }
 
 .pagination .pagination-item.short * {
-  display: inline-block;
+    display: inline-block;
 }
 
 /* Used to display many pagination items */
 .pagination .pagination-item.short {
-  margin: .2rem;
-  border-radius: .1rem;
-  -webkit-flex: 0; /* Flex to fill */
-  -ms-flex: 0;
-  flex: 0;
+    margin: 0.2rem;
+    border-radius: 0.1rem;
+    -webkit-flex: 0; /* Flex to fill */
+    -ms-flex: 0;
+    flex: 0;
 }
 
 /* Not good but CSS does not have heading selectors. Need to move to SASS */
@@ -3020,101 +3009,107 @@ space.x-large {
 .pagination .pagination-item:hover h5,
 .pagination .pagination-item:hover h6,
 .pagination .pagination-item:hover *:not([disabled]) {
-  transition: all .3s;
-  color: var(--cirrus-accent-bg);
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -ms-transition: all .3s;
-  -o-transition: all .3s;
+    transition: all 0.3s;
+    color: var(--cirrus-accent-bg);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
 }
 
 /* Width CSS */
 .w-10 {
-  width: 10%;
+    width: 10%;
 }
 
 .w-20 {
-  width: 20%;
+    width: 20%;
 }
 
 .w-30 {
-  width: 30%;
+    width: 30%;
 }
 
 .w-40 {
-  width: 40%;
+    width: 40%;
 }
 
 .w-50 {
-  width: 50%;
+    width: 50%;
 }
 
 .w-60 {
-  width: 60%;
+    width: 60%;
 }
 
 .w-70 {
-  width: 70%;
+    width: 70%;
 }
 
 .w-80 {
-  width: 80%;
+    width: 80%;
 }
 
 .w-90 {
-  width: 90%;
+    width: 90%;
 }
 
 .w-100 {
-  width: 100%;
+    width: 100%;
 }
 
 @media screen and (min-width: 769px) {
-  .level-right {
-      margin-left: 1rem;
-  }
+    .level-right {
+        margin-left: 1rem;
+    }
 
-  /* Keep all level children the same height */
-  .level.fill-height {
-      -webkit-box-align: stretch; /* Box Align and align items to stretch to make nav-items fill up parent height */
-      -ms-flex-align: stretch;
-      align-items: stretch;
-      display: -webkit-box; 
-      display: -ms-flexbox;
-  }
+    /* Keep all level children the same height */
+    .level.fill-height {
+        -webkit-box-align: stretch; /* Box Align and align items to stretch to make nav-items fill up parent height */
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        display: -webkit-box;
+        display: -ms-flexbox;
+    }
 }
 
 /* MOBILE */
 @media screen and (max-width: 768px) {
     .row {
-      margin-top: 0;
+        margin-top: 0;
     }
 
-    .row [class^='col-']:not(.ignore-screen), .row [class*=" col-"]:not(.ignore-screen) { /* Remove the grid structure for smaller screens */
-      width: 100%;
-      margin-top: 1rem;
-      margin-left: 0;
+    .row [class^="col-"]:not(.ignore-screen),
+    .row [class*=" col-"]:not(.ignore-screen) {
+        /* Remove the grid structure for smaller screens */
+        width: 100%;
+        margin-top: 1rem;
+        margin-left: 0;
     }
 
     /* Increase space with cards */
-    .fluid-container  [class^='col-']:not(.ignore-screen), .row [class*=" col-"]:not(.ignore-screen) {
-      margin-top: 1rem;
+    .fluid-container [class^="col-"]:not(.ignore-screen),
+    .row [class*=" col-"]:not(.ignore-screen) {
+        margin-top: 1rem;
     }
 
     .fluid-container {
-      display: inherit;
+        display: inherit;
     }
 
     /* Dividers for mobile layout */
-    .divided >.fluid-container:not(.row), .divided >.row [class^='col-'] {
-      box-shadow: 0 -1px 0 0 rgba(34,36,38,.15);
-  }
+    .divided > .fluid-container:not(.row),
+    .divided > .row [class^="col-"] {
+        box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
+    }
 
-  .level.ignore-screen, .level-left.ignore-screen, .level-right.ignore-screen {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-  }
+    .level.ignore-screen,
+    .level-left.ignore-screen,
+    .level-right.ignore-screen {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
 }
 
 /* LINKS */
@@ -3276,7 +3271,6 @@ a.underline {
 /* Please note that usquare is the parent span (not div) which would create the left and right borders. The link (.utb-OLR) gets nested within this */
 
 .usquare {
-    box-sizing: border-box; /* keeps the border from resizing the link */
     margin-left: 0.4rem;
     position: relative;
     overflow: hidden;
@@ -3290,7 +3284,6 @@ a.underline {
 .usquare:before,
 .usquare:after {
     content: "";
-    box-sizing: border-box;
     transition: 0.25s all ease;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -3443,7 +3436,7 @@ ul.menu {
 }
 
 .menu .menu-item:hover > a {
-  background: rgba(208, 208, 208, 0.3);
+  background-color: rgba(208, 208, 208, 0.3);
   color: #d43644;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -3452,7 +3445,7 @@ ul.menu {
 
 .menu .menu-item.selected > a {
   color: #fff;
-  background: var(--cirrus-accent-bg);
+  background-color: var(--cirrus-accent-bg);
 }
 
 .menu .menu-item .menu-addon {
@@ -3501,7 +3494,7 @@ ul.menu {
 /* Title for the section separated by the divider */
 .menu .divider:after {
   content: attr(data-label); /* Text that will be displayed */
-  background: var(--cirrus-bg);
+  background-color: var(--cirrus-bg);
   color: #b7b7b7;
   display: inline-block;
   padding: 0 .7rem;
@@ -3523,9 +3516,8 @@ ul.menu {
   left: 0;
   -webkit-animation: slide-down .2s ease 1;
   animation: slide-down .1s ease 1;
-  background: var(--cirrus-bg);
+  background-color: var(--cirrus-bg);
   border-radius: .2rem;
-  -webkit-box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
           box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
   margin: 0;
   opacity: 0;
@@ -3696,7 +3688,7 @@ ul.menu {
 
   /* Create the area to click to close the menu */
   .tree-nav .tree-nav-close {
-    background: rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, .15);
     display: none;
     height: 100%;
     left: 0;
@@ -3710,7 +3702,7 @@ ul.menu {
   /* Show the darkened area when the tree nav menu is clicked */
   .tree-nav:target + .tree-nav-close {
     display: block;
-    background: rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, .15);
     height: 100%;
     left: 0;
     position: fixed;
@@ -3731,7 +3723,7 @@ ul.menu {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(248, 249, 250, .8);
+    background-color: rgba(248, 249, 250, .8);
     height: 3.5rem;
     padding: .75rem .5rem;
     text-align: center;
@@ -3916,12 +3908,12 @@ video.video-fullscreen {
     right: 0;
     bottom: 0;
     display: block;
-    background: rgba(54, 59, 68, 0.5);
+    background-color: rgba(54, 59, 68, 0.5);
 }
 
 /* The modal dialog body with the text itself */
 .modal-content {
-    background: var(--cirrus-bg);
+    background-color: var(--cirrus-bg);
     padding: 0;
     display: block;
     border-radius: 3px;
@@ -4042,7 +4034,7 @@ video.video-fullscreen {
 /* Designed to be embedded in any parent container as placeholder when content is absent. */
 
 .placeholder {
-    background: rgba(231, 234, 241, 0.5);
+    background-color: rgba(231, 234, 241, 0.5);
     border-radius: 3px;
     text-align: center;
     padding: 3rem 2rem;
@@ -4089,7 +4081,6 @@ video.video-fullscreen {
 }
 
 .table tr {
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -4102,7 +4093,7 @@ video.video-fullscreen {
 }
 
 .table tr:hover, .table.striped tbody tr:nth-child(even):hover {
-    background: rgba(216, 216, 216, 0.15);
+    background-color: rgba(216, 216, 216, 0.15);
 }
 
 /* Thicker border for table header */
@@ -4162,7 +4153,7 @@ video.video-fullscreen {
 }
 
 .table tr.selected { /* Style a selected row */
-    background: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-accent-bg);
     color: #fff;
 }
 
@@ -4233,19 +4224,17 @@ video.video-fullscreen {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0.5rem 1rem;
-    -webkit-transition: all .3s;
     transition: all .3s;
     color: var(--cirrus-fg);
     display: block;
     border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
     margin-bottom: -1px; /* Get rid of any remaining border lines */
-    background: var(--cirrus-bg);
+    background-color: var(--cirrus-bg);
 }
 
 .tab-container li:hover a {
     border-bottom-color: rgba(240, 61, 77, 0.6);
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -4253,7 +4242,6 @@ video.video-fullscreen {
     border-bottom-color: var(--cirrus-accent-bg);
     color: var(--cirrus-accent-bg);
     border-width: 2px;
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -4283,12 +4271,11 @@ video.video-fullscreen {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-radius: 3px 3px 0 0; /* Only round the top left and right corners */
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
 .tab-container.tabs-classic li:not(.selected) a:hover {
-    background: rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
     -webkit-transition: all .3s;
     transition: all .3s;
 }
@@ -4297,7 +4284,6 @@ video.video-fullscreen {
     border: 1px solid transparent;
     border-bottom-color: #dbdbdb;
     border-radius: 3px 3px 0 0;
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -4348,6 +4334,7 @@ video.video-fullscreen {
 }
 
 /* IN PROGERSS */
+/* TAGS */
 /* Color scheme for Cirrus */
 :root {
     --cirrus-fg: #374054;
@@ -4366,9 +4353,14 @@ video.video-fullscreen {
     --cirrus-warning: #ffc107;
     --cirrus-danger: #dc3545;
 
+    --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+
     --cirrus-code-bg: #ffdadd;
     --cirrus-code-bg-dark: #242424;
     --cirrus-code-fg: #dc4753;
+
+    --cirrus-form-group-bg: #f8f9fa;
+    --cirrus-form-group-fg: #909090;
 
     --toast-primary-bg: rgba(240, 61, 77, 0.9);
     --toast-success-bg: rgba(64, 179, 84, 0.9);
@@ -4378,16 +4370,32 @@ video.video-fullscreen {
     --toast-error-bg: rgba(255, 59, 48, 0.9);
     --toast-error-border: #ff3b30;
 }
+
+/* GLOBAL THEME SELECTORS */
+.bg-primary {background-color: var(--cirrus-primary) !important; }
+.bg-success { background-color: var(--cirrus-success) !important; }
+.bg-warning { background-color: var(--cirrus-warning) !important; }
+.bg-danger { background-color: var(--cirrus-danger) !important; }
+.bg-light { background-color: var(--cirrus-light) !important; }
+.bg-dark { background-color: var(--cirrus-dark) !important; }
+.bg-link { background-color: var(--cirrus-link) !important; }
+.bg-link-dark { background-color: var(--cirrus-link-dark) !important; }
+.bg-info { background-color: var(--cirrus-info) !important; }
 .toast {
     display: block;
     width: 100%;
-    padding: 1rem;
-    background: rgba(49, 59, 80, 0.9);
+    padding: .75rem 1.25rem;
+    background-color: rgba(49, 59, 80, 0.9);
     border: 1px solid #313b50;
     border-radius: 2px;
     color: #fff;
     position: relative;
     margin: 0.5rem;
+}
+
+.toast h1, .toast h2, .toast h3, .toast h4, .toast h5, .toast h6 {
+    margin: 0;
+    margin-top: 1rem;
 }
 
 .toast p {
@@ -4410,30 +4418,28 @@ video.video-fullscreen {
 
 /* TOAST TYPES */
 .toast.primary {
-    background: rgba(240, 61, 77, 0.9);
+    background-color: rgba(240, 61, 77, 0.9);
     border-color: var(--cirrus-accent-bg);
 }
 
 .toast.success {
-    background: var(--toast-success-bg);
+    background-color: var(--toast-success-bg);
     border-color: var(--toast-success-border);
 }
 
 .toast.warning {
-    background: var(--toast-warning-bg);
+    background-color: var(--toast-warning-bg);
     border-color: var(--toast-warning-border);
 }
 
 .toast.error {
-    background: var(--toast-error-bg);
+    background-color: var(--toast-error-bg);
     border-color: var(--toast-error-border);
 }
 
 /* Add the rest later */
-
 .toast a {
     color: #fff;
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -4457,7 +4463,7 @@ video.video-fullscreen {
   position: absolute;
   color: #fff;
   font-size: .6rem;
-  background: rgba(69, 77, 93, .9);
+  background-color: rgba(69, 77, 93, .9);
   content: attr(data-tooltip); /* Retrieves the data specified in this element property and displays it as text */
   display: block;
   line-height: 1rem;
@@ -4470,10 +4476,6 @@ video.video-fullscreen {
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   transition: all .2s ease;
-      -webkit-transition: all .2s ease;
-      -moz-transition: all .2s ease;
-      -ms-transition: all .2s ease;
-      -o-transition: all .2s ease;
   z-index: 200;
   pointer-events: none;
   bottom: 100%; /* Pushes the tooltip above the button */
@@ -4487,10 +4489,6 @@ video.video-fullscreen {
       -webkit-transform: translate(-50%, -.5rem);
       transform: translate(-50%, -.5rem);
       transition: all .2s ease;
-      -webkit-transition: all .2s ease;
-      -moz-transition: all .2s ease;
-      -ms-transition: all .2s ease;
-      -o-transition: all .2s ease;
 }
 
 /* Tooltip top left */

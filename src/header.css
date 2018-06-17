@@ -8,7 +8,7 @@
     z-index: 100;
     margin-bottom: 20px; 
     box-shadow: 0 3px 15px rgba(57, 63, 72, 0.1);
-    background: var(--cirrus-bg);
+    background-color: var(--cirrus-bg);
     max-height: 100vh;
 }
 
@@ -145,7 +145,6 @@
     background-clip: padding-box;
     border: 1px solid #eee;
     border-radius: 0 0 4px 4px;
-    -webkit-box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
     box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
 }
 
@@ -420,7 +419,7 @@
     top: 1rem;
     float: none;
     border: none;
-    background: transparent;
+    background-color: transparent;
     margin-bottom: 1rem;
   }
 
@@ -455,7 +454,7 @@
   }
 
   .nav-btn span {
-        background-color: #4D565F;
+    background-color: #4D565F;
     display: block;
     height: 2px;
     left: 50%;
@@ -469,6 +468,10 @@
     transition-property: background, left, opacity, transform;
     transition-property: background, left, opacity, transform, -webkit-transform;
     width: 15px;
+  }
+
+  .header-dark .nav-btn span {
+      background-color: #fff;
   }
 
   /* Line spacing in hamburger button */

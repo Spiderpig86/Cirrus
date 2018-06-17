@@ -18,7 +18,6 @@
 }
 
 .table tr {
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -31,7 +30,7 @@
 }
 
 .table tr:hover, .table.striped tbody tr:nth-child(even):hover {
-    background: rgba(216, 216, 216, 0.15);
+    background-color: rgba(216, 216, 216, 0.15);
 }
 
 /* Thicker border for table header */
@@ -91,7 +90,7 @@
 }
 
 .table tr.selected { /* Style a selected row */
-    background: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-accent-bg);
     color: #fff;
 }
 

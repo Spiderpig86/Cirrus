@@ -4,14 +4,14 @@ code {
     padding: 0.3rem;
     margin: 0.5em 0;
     overflow: auto;
-    background: var(--cirrus-code-bg);
+    background-color: var(--cirrus-code-bg);
     color: var(--cirrus-code-fg);
     border-radius: 3px;
 }
 
 /* Dark theme for code */
 code.dark {
-    background: var(--cirrus-code-bg-dark);
+    background-color: var(--cirrus-code-bg-dark);
     color: #fff;
 }
 

@@ -111,8 +111,7 @@ p,
 article,
 blockquote {
     font-size: 1rem;
-    /* line-height: 2rem; */ /* Removed 0.5.5 */
-    /* line-height: 2rem; */ /* Removed 0.5.5 */
+    line-height: 2; /* Removed 0.5.5 */
     margin: 1rem 0;
 }
 
@@ -293,7 +292,7 @@ abbr[title] {
 }
 
 kbd {
-    background: #394558;
+    background-color: var(--cirrus-fg);
     border-radius: 0.2rem;
     color: #fff;
     display: inline-block;
