@@ -175,7 +175,6 @@ ul.menu {
   animation: slide-down .1s ease 1;
   background: var(--cirrus-bg);
   border-radius: .2rem;
-  -webkit-box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
           box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
   margin: 0;
   opacity: 0;

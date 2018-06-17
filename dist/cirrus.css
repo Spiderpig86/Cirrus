@@ -1088,8 +1088,6 @@ pre > code {
     margin: 0;
     padding: 0;
     /* Prevent setting borders from increasing the size of an elrement */
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -1617,7 +1615,6 @@ input[type="color"] {
     border: 1px solid #ddd;
     box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     outline: none;
     padding: 0.55rem 0.8rem;
@@ -1982,11 +1979,6 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    /* border: .1rem solid #ececec; */
     box-shadow: 0 0.05rem 0.2rem rgba(69, 77, 93, .3);
 }
 
@@ -2172,7 +2164,6 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     background-clip: padding-box;
     border: 1px solid #eee;
     border-radius: 0 0 4px 4px;
-    -webkit-box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
     box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
 }
 
@@ -3282,7 +3273,6 @@ a.underline {
 /* Please note that usquare is the parent span (not div) which would create the left and right borders. The link (.utb-OLR) gets nested within this */
 
 .usquare {
-    box-sizing: border-box; /* keeps the border from resizing the link */
     margin-left: 0.4rem;
     position: relative;
     overflow: hidden;
@@ -3296,7 +3286,6 @@ a.underline {
 .usquare:before,
 .usquare:after {
     content: "";
-    box-sizing: border-box;
     transition: 0.25s all ease;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -3531,7 +3520,6 @@ ul.menu {
   animation: slide-down .1s ease 1;
   background: var(--cirrus-bg);
   border-radius: .2rem;
-  -webkit-box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
           box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
   margin: 0;
   opacity: 0;
@@ -4095,7 +4083,6 @@ video.video-fullscreen {
 }
 
 .table tr {
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -4354,6 +4341,7 @@ video.video-fullscreen {
 }
 
 /* IN PROGERSS */
+/* TAGS */
 /* Color scheme for Cirrus */
 :root {
     --cirrus-fg: #374054;
@@ -4444,7 +4432,6 @@ video.video-fullscreen {
 
 .toast a {
     color: #fff;
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 

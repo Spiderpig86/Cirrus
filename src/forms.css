@@ -41,7 +41,6 @@ input[type="color"] {
     border: 1px solid #ddd;
     box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     outline: none;
     padding: 0.55rem 0.8rem;
