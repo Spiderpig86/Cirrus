@@ -45,7 +45,6 @@ input[type="color"] {
     outline: none;
     padding: 0.55rem 0.8rem;
     position: relative;
-    background: #fff;
     height: 3rem;
     border-radius: 3px;
 }
@@ -346,10 +345,10 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 /* Form group controls */
 .form-group-label {
-    background: #f8f9fa;
+    background-color: var(--cirrus-form-group-bg);
     border: 1px solid #ddd;
     border-radius: 0.2rem;
-    color: #909090;
+    color: var(--cirrus-form-group-fg);
     margin: 0;
     padding: 0.8rem;
     user-select: none;

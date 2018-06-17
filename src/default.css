@@ -85,13 +85,8 @@ label {
 }
 
 /* Selection Color */
-::-moz-selection {
-    /* Code for Firefox */
-    background: rgba(0, 161, 255, 0.2);
-}
-
 ::selection {
-    background: rgba(0, 161, 255, 0.2);
+    background-color: var(--cirrus-select-bg);
 }
 
 /* When focusing any element */

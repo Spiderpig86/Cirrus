@@ -1034,14 +1034,14 @@ code {
     padding: 0.3rem;
     margin: 0.5em 0;
     overflow: auto;
-    background: var(--cirrus-code-bg);
+    background-color: var(--cirrus-code-bg);
     color: var(--cirrus-code-fg);
     border-radius: 3px;
 }
 
 /* Dark theme for code */
 code.dark {
-    background: var(--cirrus-code-bg-dark);
+    background-color: var(--cirrus-code-bg-dark);
     color: #fff;
 }
 
@@ -1168,13 +1168,8 @@ label {
 }
 
 /* Selection Color */
-::-moz-selection {
-    /* Code for Firefox */
-    background: rgba(0, 161, 255, 0.2);
-}
-
 ::selection {
-    background: rgba(0, 161, 255, 0.2);
+    background-color: var(--cirrus-select-bg);
 }
 
 /* When focusing any element */
@@ -1477,7 +1472,7 @@ abbr[title] {
 }
 
 kbd {
-    background: #394558;
+    background-color: var(--cirrus-fg);
     border-radius: 0.2rem;
     color: #fff;
     display: inline-block;
@@ -1519,7 +1514,7 @@ kbd {
 footer {
     width: 100%;
     padding: 6rem 0;
-    background: #111;
+    background-color: #111;
     text-align: center;
     margin-top: 5rem;
 }
@@ -1619,7 +1614,6 @@ input[type="color"] {
     outline: none;
     padding: 0.55rem 0.8rem;
     position: relative;
-    background: #fff;
     height: 3rem;
     border-radius: 3px;
 }
@@ -1920,10 +1914,10 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 /* Form group controls */
 .form-group-label {
-    background: #f8f9fa;
+    background-color: var(--cirrus-form-group-bg);
     border: 1px solid #ddd;
     border-radius: 0.2rem;
-    color: #909090;
+    color: var(--cirrus-form-group-fg);
     margin: 0;
     padding: 0.8rem;
     user-select: none;
@@ -2027,7 +2021,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     z-index: 100;
     margin-bottom: 20px; 
     box-shadow: 0 3px 15px rgba(57, 63, 72, 0.1);
-    background: var(--cirrus-bg);
+    background-color: var(--cirrus-bg);
     max-height: 100vh;
 }
 
@@ -2438,7 +2432,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     top: 1rem;
     float: none;
     border: none;
-    background: transparent;
+    background-color: transparent;
     margin-bottom: 1rem;
   }
 
@@ -2473,7 +2467,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
   }
 
   .nav-btn span {
-        background-color: #4D565F;
+    background-color: #4D565F;
     display: block;
     height: 2px;
     left: 50%;
@@ -2487,6 +2481,10 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     transition-property: background, left, opacity, transform;
     transition-property: background, left, opacity, transform, -webkit-transform;
     width: 15px;
+  }
+
+  .header-dark .nav-btn span {
+      background-color: #fff;
   }
 
   /* Line spacing in hamburger button */
@@ -2575,7 +2573,7 @@ section {
     position: relative;
     border-top: none;
     margin: 1.5rem 0;
-    background: #eee;
+    background-color: #eee;
     width: 100%;
 }
 
@@ -3438,7 +3436,7 @@ ul.menu {
 }
 
 .menu .menu-item:hover > a {
-  background: rgba(208, 208, 208, 0.3);
+  background-color: rgba(208, 208, 208, 0.3);
   color: #d43644;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -3447,7 +3445,7 @@ ul.menu {
 
 .menu .menu-item.selected > a {
   color: #fff;
-  background: var(--cirrus-accent-bg);
+  background-color: var(--cirrus-accent-bg);
 }
 
 .menu .menu-item .menu-addon {
@@ -3496,7 +3494,7 @@ ul.menu {
 /* Title for the section separated by the divider */
 .menu .divider:after {
   content: attr(data-label); /* Text that will be displayed */
-  background: var(--cirrus-bg);
+  background-color: var(--cirrus-bg);
   color: #b7b7b7;
   display: inline-block;
   padding: 0 .7rem;
@@ -3518,7 +3516,7 @@ ul.menu {
   left: 0;
   -webkit-animation: slide-down .2s ease 1;
   animation: slide-down .1s ease 1;
-  background: var(--cirrus-bg);
+  background-color: var(--cirrus-bg);
   border-radius: .2rem;
           box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
   margin: 0;
@@ -3690,7 +3688,7 @@ ul.menu {
 
   /* Create the area to click to close the menu */
   .tree-nav .tree-nav-close {
-    background: rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, .15);
     display: none;
     height: 100%;
     left: 0;
@@ -3704,7 +3702,7 @@ ul.menu {
   /* Show the darkened area when the tree nav menu is clicked */
   .tree-nav:target + .tree-nav-close {
     display: block;
-    background: rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, .15);
     height: 100%;
     left: 0;
     position: fixed;
@@ -3725,7 +3723,7 @@ ul.menu {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(248, 249, 250, .8);
+    background-color: rgba(248, 249, 250, .8);
     height: 3.5rem;
     padding: .75rem .5rem;
     text-align: center;
@@ -3910,12 +3908,12 @@ video.video-fullscreen {
     right: 0;
     bottom: 0;
     display: block;
-    background: rgba(54, 59, 68, 0.5);
+    background-color: rgba(54, 59, 68, 0.5);
 }
 
 /* The modal dialog body with the text itself */
 .modal-content {
-    background: var(--cirrus-bg);
+    background-color: var(--cirrus-bg);
     padding: 0;
     display: block;
     border-radius: 3px;
@@ -4036,7 +4034,7 @@ video.video-fullscreen {
 /* Designed to be embedded in any parent container as placeholder when content is absent. */
 
 .placeholder {
-    background: rgba(231, 234, 241, 0.5);
+    background-color: rgba(231, 234, 241, 0.5);
     border-radius: 3px;
     text-align: center;
     padding: 3rem 2rem;
@@ -4095,7 +4093,7 @@ video.video-fullscreen {
 }
 
 .table tr:hover, .table.striped tbody tr:nth-child(even):hover {
-    background: rgba(216, 216, 216, 0.15);
+    background-color: rgba(216, 216, 216, 0.15);
 }
 
 /* Thicker border for table header */
@@ -4155,7 +4153,7 @@ video.video-fullscreen {
 }
 
 .table tr.selected { /* Style a selected row */
-    background: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-accent-bg);
     color: #fff;
 }
 
@@ -4226,19 +4224,17 @@ video.video-fullscreen {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0.5rem 1rem;
-    -webkit-transition: all .3s;
     transition: all .3s;
     color: var(--cirrus-fg);
     display: block;
     border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
     margin-bottom: -1px; /* Get rid of any remaining border lines */
-    background: var(--cirrus-bg);
+    background-color: var(--cirrus-bg);
 }
 
 .tab-container li:hover a {
     border-bottom-color: rgba(240, 61, 77, 0.6);
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -4246,7 +4242,6 @@ video.video-fullscreen {
     border-bottom-color: var(--cirrus-accent-bg);
     color: var(--cirrus-accent-bg);
     border-width: 2px;
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -4276,12 +4271,11 @@ video.video-fullscreen {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-radius: 3px 3px 0 0; /* Only round the top left and right corners */
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
 .tab-container.tabs-classic li:not(.selected) a:hover {
-    background: rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
     -webkit-transition: all .3s;
     transition: all .3s;
 }
@@ -4290,7 +4284,6 @@ video.video-fullscreen {
     border: 1px solid transparent;
     border-bottom-color: #dbdbdb;
     border-radius: 3px 3px 0 0;
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -4360,9 +4353,14 @@ video.video-fullscreen {
     --cirrus-warning: #ffc107;
     --cirrus-danger: #dc3545;
 
+    --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+
     --cirrus-code-bg: #ffdadd;
     --cirrus-code-bg-dark: #242424;
     --cirrus-code-fg: #dc4753;
+
+    --cirrus-form-group-bg: #f8f9fa;
+    --cirrus-form-group-fg: #909090;
 
     --toast-primary-bg: rgba(240, 61, 77, 0.9);
     --toast-success-bg: rgba(64, 179, 84, 0.9);
@@ -4372,11 +4370,14 @@ video.video-fullscreen {
     --toast-error-bg: rgba(255, 59, 48, 0.9);
     --toast-error-border: #ff3b30;
 }
+
+/* GLOBAL THEME SELECTORS */
+.bg-success { background-color: var(--cirrus-success) !important; }
 .toast {
     display: block;
     width: 100%;
     padding: .75rem 1.25rem;
-    background: rgba(49, 59, 80, 0.9);
+    background-color: rgba(49, 59, 80, 0.9);
     border: 1px solid #313b50;
     border-radius: 2px;
     color: #fff;
@@ -4409,27 +4410,26 @@ video.video-fullscreen {
 
 /* TOAST TYPES */
 .toast.primary {
-    background: rgba(240, 61, 77, 0.9);
+    background-color: rgba(240, 61, 77, 0.9);
     border-color: var(--cirrus-accent-bg);
 }
 
 .toast.success {
-    background: var(--toast-success-bg);
+    background-color: var(--toast-success-bg);
     border-color: var(--toast-success-border);
 }
 
 .toast.warning {
-    background: var(--toast-warning-bg);
+    background-color: var(--toast-warning-bg);
     border-color: var(--toast-warning-border);
 }
 
 .toast.error {
-    background: var(--toast-error-bg);
+    background-color: var(--toast-error-bg);
     border-color: var(--toast-error-border);
 }
 
 /* Add the rest later */
-
 .toast a {
     color: #fff;
     transition: all .3s;
@@ -4455,7 +4455,7 @@ video.video-fullscreen {
   position: absolute;
   color: #fff;
   font-size: .6rem;
-  background: rgba(69, 77, 93, .9);
+  background-color: rgba(69, 77, 93, .9);
   content: attr(data-tooltip); /* Retrieves the data specified in this element property and displays it as text */
   display: block;
   line-height: 1rem;
@@ -4468,10 +4468,6 @@ video.video-fullscreen {
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   transition: all .2s ease;
-      -webkit-transition: all .2s ease;
-      -moz-transition: all .2s ease;
-      -ms-transition: all .2s ease;
-      -o-transition: all .2s ease;
   z-index: 200;
   pointer-events: none;
   bottom: 100%; /* Pushes the tooltip above the button */
@@ -4485,10 +4481,6 @@ video.video-fullscreen {
       -webkit-transform: translate(-50%, -.5rem);
       transform: translate(-50%, -.5rem);
       transition: all .2s ease;
-      -webkit-transition: all .2s ease;
-      -moz-transition: all .2s ease;
-      -ms-transition: all .2s ease;
-      -o-transition: all .2s ease;
 }
 
 /* Tooltip top left */

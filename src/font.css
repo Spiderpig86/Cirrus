@@ -292,7 +292,7 @@ abbr[title] {
 }
 
 kbd {
-    background: #394558;
+    background-color: var(--cirrus-fg);
     border-radius: 0.2rem;
     color: #fff;
     display: inline-block;

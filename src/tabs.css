@@ -59,19 +59,17 @@
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0.5rem 1rem;
-    -webkit-transition: all .3s;
     transition: all .3s;
     color: var(--cirrus-fg);
     display: block;
     border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
     margin-bottom: -1px; /* Get rid of any remaining border lines */
-    background: var(--cirrus-bg);
+    background-color: var(--cirrus-bg);
 }
 
 .tab-container li:hover a {
     border-bottom-color: rgba(240, 61, 77, 0.6);
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -79,7 +77,6 @@
     border-bottom-color: var(--cirrus-accent-bg);
     color: var(--cirrus-accent-bg);
     border-width: 2px;
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
@@ -109,12 +106,11 @@
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-radius: 3px 3px 0 0; /* Only round the top left and right corners */
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
 .tab-container.tabs-classic li:not(.selected) a:hover {
-    background: rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
     -webkit-transition: all .3s;
     transition: all .3s;
 }
@@ -123,7 +119,6 @@
     border: 1px solid transparent;
     border-bottom-color: #dbdbdb;
     border-radius: 3px 3px 0 0;
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 

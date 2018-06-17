@@ -93,7 +93,7 @@ ul.menu {
 }
 
 .menu .menu-item:hover > a {
-  background: rgba(208, 208, 208, 0.3);
+  background-color: rgba(208, 208, 208, 0.3);
   color: #d43644;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -102,7 +102,7 @@ ul.menu {
 
 .menu .menu-item.selected > a {
   color: #fff;
-  background: var(--cirrus-accent-bg);
+  background-color: var(--cirrus-accent-bg);
 }
 
 .menu .menu-item .menu-addon {
@@ -151,7 +151,7 @@ ul.menu {
 /* Title for the section separated by the divider */
 .menu .divider:after {
   content: attr(data-label); /* Text that will be displayed */
-  background: var(--cirrus-bg);
+  background-color: var(--cirrus-bg);
   color: #b7b7b7;
   display: inline-block;
   padding: 0 .7rem;
@@ -173,7 +173,7 @@ ul.menu {
   left: 0;
   -webkit-animation: slide-down .2s ease 1;
   animation: slide-down .1s ease 1;
-  background: var(--cirrus-bg);
+  background-color: var(--cirrus-bg);
   border-radius: .2rem;
           box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
   margin: 0;
@@ -345,7 +345,7 @@ ul.menu {
 
   /* Create the area to click to close the menu */
   .tree-nav .tree-nav-close {
-    background: rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, .15);
     display: none;
     height: 100%;
     left: 0;
@@ -359,7 +359,7 @@ ul.menu {
   /* Show the darkened area when the tree nav menu is clicked */
   .tree-nav:target + .tree-nav-close {
     display: block;
-    background: rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, .15);
     height: 100%;
     left: 0;
     position: fixed;
@@ -380,7 +380,7 @@ ul.menu {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(248, 249, 250, .8);
+    background-color: rgba(248, 249, 250, .8);
     height: 3.5rem;
     padding: .75rem .5rem;
     text-align: center;

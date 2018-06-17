@@ -2,7 +2,7 @@
     display: block;
     width: 100%;
     padding: .75rem 1.25rem;
-    background: rgba(49, 59, 80, 0.9);
+    background-color: rgba(49, 59, 80, 0.9);
     border: 1px solid #313b50;
     border-radius: 2px;
     color: #fff;
@@ -35,27 +35,26 @@
 
 /* TOAST TYPES */
 .toast.primary {
-    background: rgba(240, 61, 77, 0.9);
+    background-color: rgba(240, 61, 77, 0.9);
     border-color: var(--cirrus-accent-bg);
 }
 
 .toast.success {
-    background: var(--toast-success-bg);
+    background-color: var(--toast-success-bg);
     border-color: var(--toast-success-border);
 }
 
 .toast.warning {
-    background: var(--toast-warning-bg);
+    background-color: var(--toast-warning-bg);
     border-color: var(--toast-warning-border);
 }
 
 .toast.error {
-    background: var(--toast-error-bg);
+    background-color: var(--toast-error-bg);
     border-color: var(--toast-error-border);
 }
 
 /* Add the rest later */
-
 .toast a {
     color: #fff;
     transition: all .3s;
