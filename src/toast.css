@@ -1,13 +1,18 @@
 .toast {
     display: block;
     width: 100%;
-    padding: 1rem;
+    padding: .75rem 1.25rem;
     background: rgba(49, 59, 80, 0.9);
     border: 1px solid #313b50;
     border-radius: 2px;
     color: #fff;
     position: relative;
     margin: 0.5rem;
+}
+
+.toast h1, .toast h2, .toast h3, .toast h4, .toast h5, .toast h6 {
+    margin: 0;
+    margin-top: 1rem;
 }
 
 .toast p {
