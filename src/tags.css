@@ -1,1 +1,32 @@
 /* TAGS */
+.tag {
+    align-items: center;
+    background-color: var(--cirrus-light);
+    border-radius: 0.25rem;
+    color: var(--cirrus-fg);
+    display: inline-flex;
+    font-size: 75%;
+    height: 2rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+}
+
+/* TAG CONTAINER */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Add margin in between tag containers */
+.tag-container:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.tag-container .tag {
+    margin-bottom: .5rem;
+}
+
+.tag-container .tag:not(:last-child) {
+    margin-right: .5rem;
+}
