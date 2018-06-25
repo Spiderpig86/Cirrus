@@ -4348,6 +4348,51 @@ video.video-fullscreen {
     white-space: nowrap;
 }
 
+.tag.tag-large {
+    font-size: 1rem;
+}
+
+.tag.tag-xlarge {
+    font-size: 1.5rem;
+}
+
+.tag.tag-rounded {
+    border-radius: 290486px;
+}
+
+/* Delete button for tag */
+.tag.tag-delete {
+    margin-left: 1px;
+    padding: 0;
+    position: relative;
+    width: 2em;
+}
+
+/* Draw the delete button */
+.tag.tag-delete::before,
+.tag.tag-delete::after {
+    background-color: var(--cirrus-light);
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.tag.tag-delete::before {
+    height: 1px;
+    width: 50%;
+}
+
+.tag.tag-delete::after {
+    height: 50%;
+    width: 1px;
+}
+
 /* TAG CONTAINER */
 .tag-container {
     display: flex;
