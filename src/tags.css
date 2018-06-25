@@ -75,3 +75,39 @@
 .tag-container .tag:not(:last-child) {
     margin-right: .5rem;
 }
+
+/* Used for grouping tags together */
+.tag-container.group-tags {
+    margin-right: 0;
+}
+
+.tag-container.group-tags .tag:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.tag-container.group-tags .tag:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Tag positioning */
+.tags.tag-centered {
+    justify-content: center;
+}
+
+.tags.tag-centered .tag {
+    margin: 0 0.25rem;
+}
+
+.tags.tag-right {
+    justify-content: flex-end;
+}
+
+.tags.tag-right .tag:not(:first-child) {
+    margin-left: 0.5rem;
+}
+
+.tags.tag-right .tag:not(:last-child) {
+    margin-right: 0;
+}
