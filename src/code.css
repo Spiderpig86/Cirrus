@@ -29,9 +29,6 @@ pre > code {
     display: block;
     padding: 2rem 1.5rem 1rem;
     white-space: pre-wrap; /* css-3 */
-    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-    white-space: -pre-wrap; /* Opera 4-6 */
-    white-space: -o-pre-wrap; /* Opera 7 */
     word-wrap: break-word; /* Internet Explorer 5.5+ */
     font-family: Consolas, Monaco, "Andale Mono", monospace;
     direction: ltr;
@@ -40,7 +37,6 @@ pre > code {
     word-break: normal;
     line-height: 1.5;
     -moz-tab-size: 4;
-    -o-tab-size: 4;
     tab-size: 4;
     -webkit-hyphens: none;
     -moz-hyphens: none;

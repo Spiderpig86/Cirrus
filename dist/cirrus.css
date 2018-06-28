@@ -1023,11 +1023,6 @@ border-color: transparent;
   overflow: hidden;
   margin-bottom: 0;
 }
-
-/* Reduce margins for paragraph in card body */
-.card-body p {
-  margin: 1rem 0 !important;
-}
 /* CODE */
 
 code {
@@ -1059,9 +1054,6 @@ pre > code {
     display: block;
     padding: 2rem 1.5rem 1rem;
     white-space: pre-wrap; /* css-3 */
-    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-    white-space: -pre-wrap; /* Opera 4-6 */
-    white-space: -o-pre-wrap; /* Opera 7 */
     word-wrap: break-word; /* Internet Explorer 5.5+ */
     font-family: Consolas, Monaco, "Andale Mono", monospace;
     direction: ltr;
@@ -1070,7 +1062,6 @@ pre > code {
     word-break: normal;
     line-height: 1.5;
     -moz-tab-size: 4;
-    -o-tab-size: 4;
     tab-size: 4;
     -webkit-hyphens: none;
     -moz-hyphens: none;
@@ -1300,10 +1291,6 @@ blockquote {
     font-size: 1.25rem;
 }
 
-.content > p:last-of-type {
-    margin-bottom: 2rem;
-}
-
 blockquote {
     background-color: #f5f5f5;
     border-left: 5px solid #dbdbdb;
@@ -1319,11 +1306,8 @@ blockquote p {
 /* Use default line-height for these texts and when line-height-inherit is specified */
 .card-tile p,
 .card-tile article,
-.card-tile blockquote,
-p.line-height-inherit,
-article.line-height-inherit,
-blockquote.line-height-inherit {
-    line-height: inherit !important;
+.card-tile blockquote {
+    line-height: inherit;
 }
 
 cite {

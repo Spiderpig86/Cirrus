@@ -120,10 +120,6 @@ blockquote {
     font-size: 1.25rem;
 }
 
-.content > p:last-of-type {
-    margin-bottom: 2rem;
-}
-
 blockquote {
     background-color: #f5f5f5;
     border-left: 5px solid #dbdbdb;
@@ -139,11 +135,8 @@ blockquote p {
 /* Use default line-height for these texts and when line-height-inherit is specified */
 .card-tile p,
 .card-tile article,
-.card-tile blockquote,
-p.line-height-inherit,
-article.line-height-inherit,
-blockquote.line-height-inherit {
-    line-height: inherit !important;
+.card-tile blockquote {
+    line-height: inherit;
 }
 
 cite {
