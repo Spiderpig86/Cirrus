@@ -6,31 +6,28 @@
     --cirrus-primary: #f03d4d;
     --cirrus-accent-hover: #d62939;
     --cirrus-accent-border: #c21b2b;
-    --cirrus-light: #f8f9fa;
+    --cirrus-light: #f6f9fc;
     --cirrus-dark: #363636;
     --cirrus-link: #379afd;
     --cirrus-link-dark: #083d71;
-    --cirrus-info: #17a2b8;
-    --cirrus-success: #28a745;
-    --cirrus-warning: #ffc107;
-    --cirrus-danger: #dc3545;
+    --cirrus-info: #2972fa;
+    --cirrus-success: #0dd157;
+    --cirrus-warning: #fab633;
+    --cirrus-danger: #fb4143;
 
     --cirrus-select-bg: rgba(0, 161, 255, 0.2);
 
     --cirrus-code-bg: #ffdadd;
-    --cirrus-code-bg-dark: #242424;
     --cirrus-code-fg: #dc4753;
 
     --cirrus-form-group-bg: #f8f9fa;
     --cirrus-form-group-fg: #909090;
 
-    --toast-primary-bg: rgba(240, 61, 77, 0.9);
-    --toast-success-bg: rgba(64, 179, 84, 0.9);
-    --toast-success-border: #40b354;
-    --toast-warning-bg: rgba(255, 204, 0, 0.9);
-    --toast-warning-border: #ffcc00;
-    --toast-error-bg: rgba(255, 59, 48, 0.9);
-    --toast-error-border: #ff3b30;
+    --toast-primary-bg: rgba(0, 201, 167, 0.9);
+    --toast-primary-border: #00c9a7;
+    --toast-success-bg: rgba(13, 209, 87, 0.9);
+    --toast-warning-bg: rgba(250, 182, 51, 0.9);
+    --toast-error-bg: rgba(251, 65, 67, 0.9);
 }
 
 /* GLOBAL THEME SELECTORS */

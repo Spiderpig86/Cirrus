@@ -11,7 +11,7 @@ code {
 
 /* Dark theme for code */
 code.dark {
-    background-color: var(--cirrus-code-bg-dark);
+    background-color: var(--cirrus-dark);
     color: #fff;
 }
 
