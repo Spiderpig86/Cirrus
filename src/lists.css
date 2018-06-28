@@ -102,7 +102,7 @@ ul.menu {
 
 .menu .menu-item.selected > a {
   color: #fff;
-  background-color: var(--cirrus-accent-bg);
+  background-color: var(--cirrus-primary);
 }
 
 .menu .menu-item .menu-addon {

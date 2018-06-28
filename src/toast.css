@@ -36,7 +36,7 @@
 /* TOAST TYPES */
 .toast.primary {
     background-color: rgba(240, 61, 77, 0.9);
-    border-color: var(--cirrus-accent-bg);
+    border-color: var(--cirrus-primary);
 }
 
 .toast.success {

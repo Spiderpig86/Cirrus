@@ -161,14 +161,14 @@ button.btn-close::after {
 
 /* Accent button disabled */
 .btn-accent:disabled {
-    background-color: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-primary);
     color: #fff;
     border-color: #c21b2b;
     opacity: 0.6;
 }
 
 .btn-accent:disabled:hover {
-    background-color: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-primary);
     color: #fff;
     border-color: #c21b2b;
 }
@@ -361,7 +361,7 @@ button span:last-child,
 
 /* Button with accent */
 .btn-accent {
-    background-color: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-primary);
     color: #fff;
     border-color: var(--cirrus-accent-border);
 }

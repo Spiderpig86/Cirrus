@@ -449,7 +449,7 @@ space.x-large {
 
 /* Color the selected pagination item with accent color */
 .pagination .pagination-item.short.selected {
-    background-color: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-primary);
     color: #fff;
 }
 
@@ -480,7 +480,7 @@ space.x-large {
 .pagination .pagination-item:hover h6,
 .pagination .pagination-item:hover *:not([disabled]) {
     transition: all 0.3s;
-    color: var(--cirrus-accent-bg);
+    color: var(--cirrus-primary);
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;

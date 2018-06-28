@@ -448,14 +448,14 @@ button.btn-close::after {
 
 /* Accent button disabled */
 .btn-accent:disabled {
-    background-color: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-primary);
     color: #fff;
     border-color: #c21b2b;
     opacity: 0.6;
 }
 
 .btn-accent:disabled:hover {
-    background-color: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-primary);
     color: #fff;
     border-color: #c21b2b;
 }
@@ -648,7 +648,7 @@ button span:last-child,
 
 /* Button with accent */
 .btn-accent {
-    background-color: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-primary);
     color: #fff;
     border-color: var(--cirrus-accent-border);
 }
@@ -1076,7 +1076,7 @@ pre > code {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    border-left: 0.3rem solid var(--cirrus-accent-bg);
+    border-left: 0.3rem solid var(--cirrus-primary);
     margin: 0;
     position: relative;
 }
@@ -2176,7 +2176,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 /* Dropdown menu indicator */
 .nav-item.has-sub .nav-dropdown-link::after {
-    border: 2px solid var(--cirrus-accent-bg); /* Must be first to create the triangle shape */
+    border: 2px solid var(--cirrus-primary); /* Must be first to create the triangle shape */
     border-right: 0; /* Create the triangle effect */
     border-top: 0;
     display: block;
@@ -2979,7 +2979,7 @@ space.x-large {
 
 /* Color the selected pagination item with accent color */
 .pagination .pagination-item.short.selected {
-    background-color: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-primary);
     color: #fff;
 }
 
@@ -3010,7 +3010,7 @@ space.x-large {
 .pagination .pagination-item:hover h6,
 .pagination .pagination-item:hover *:not([disabled]) {
     transition: all 0.3s;
-    color: var(--cirrus-accent-bg);
+    color: var(--cirrus-primary);
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -3445,7 +3445,7 @@ ul.menu {
 
 .menu .menu-item.selected > a {
   color: #fff;
-  background-color: var(--cirrus-accent-bg);
+  background-color: var(--cirrus-primary);
 }
 
 .menu .menu-item .menu-addon {
@@ -3822,7 +3822,7 @@ video.video-fullscreen {
     font-weight: lighter;
     width: 3.2rem;
     height: 3.2rem;
-    background-color: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-primary);
     overflow: hidden;
 }
 
@@ -4153,7 +4153,7 @@ video.video-fullscreen {
 }
 
 .table tr.selected { /* Style a selected row */
-    background-color: var(--cirrus-accent-bg);
+    background-color: var(--cirrus-primary);
     color: #fff;
 }
 
@@ -4239,8 +4239,8 @@ video.video-fullscreen {
 }
 
 .tab-container li.selected a {
-    border-bottom-color: var(--cirrus-accent-bg);
-    color: var(--cirrus-accent-bg);
+    border-bottom-color: var(--cirrus-primary);
+    color: var(--cirrus-primary);
     border-width: 2px;
     transition: all .3s;
 }
@@ -4288,7 +4288,7 @@ video.video-fullscreen {
 }
 
 .tab-container.tabs-classic li.selected a {
-    color: var(--cirrus-accent-bg);
+    color: var(--cirrus-primary);
     border-color: #dbdbdb;
     border-bottom-color: transparent !important;
 }
@@ -4451,11 +4451,10 @@ video.video-fullscreen {
 :root {
     --cirrus-fg: #374054;
     --cirrus-bg: #fff;
-    --cirrus-accent-bg: #f03d4d;
-    --cirrus-accent-hover: #d62939;
-    --cirrus-accent-border: #c21b2b;
 
     --cirrus-primary: #f03d4d;
+    --cirrus-accent-hover: #d62939;
+    --cirrus-accent-border: #c21b2b;
     --cirrus-light: #f8f9fa;
     --cirrus-dark: #363636;
     --cirrus-link: #379afd;
@@ -4531,7 +4530,7 @@ video.video-fullscreen {
 /* TOAST TYPES */
 .toast.primary {
     background-color: rgba(240, 61, 77, 0.9);
-    border-color: var(--cirrus-accent-bg);
+    border-color: var(--cirrus-primary);
 }
 
 .toast.success {

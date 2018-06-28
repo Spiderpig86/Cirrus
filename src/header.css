@@ -163,7 +163,7 @@
 
 /* Dropdown menu indicator */
 .nav-item.has-sub .nav-dropdown-link::after {
-    border: 2px solid var(--cirrus-accent-bg); /* Must be first to create the triangle shape */
+    border: 2px solid var(--cirrus-primary); /* Must be first to create the triangle shape */
     border-right: 0; /* Create the triangle effect */
     border-top: 0;
     display: block;
