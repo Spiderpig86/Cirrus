@@ -23,7 +23,8 @@ gulp.task('minify', ['compile'], function() {
                     normalizeUrls: false
                   },
                 2: {
-                    restructureRules: true
+                    restructureRules: true,
+                    removeDuplicateRules: true
                 }
               }
         }, function(details) {

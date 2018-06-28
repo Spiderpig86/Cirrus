@@ -444,7 +444,7 @@ space.x-large {
 
 .pagination-item-subtitle {
     opacity: 0.7;
-    margin: 0 !important; /* Needed to override style after formatting paragraph update */
+    margin: 0; /* Needed to override style after formatting paragraph update */
 }
 
 /* Color the selected pagination item with accent color */
