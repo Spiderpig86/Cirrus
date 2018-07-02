@@ -14,7 +14,33 @@ gulp.task('compile', function() {
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('minify', ['compile'], function() {
+gulp.task('core', function() {
+    return gulp.src([
+        'src/button.css',
+        'src/card.css',
+        'src/code.css',
+        'src/default.css',
+        'src/font.css',
+        'src/forms.css',
+        'src/frames.css',
+        'src/header.css',
+        'src/layout.css',
+        'src/links.css',
+        'src/lists.css',
+        'src/media.css',
+        'src/modal.css',
+        'src/table.css',
+        'src/tabs.css',
+        'src/theme.css',
+        'src/util.css'
+    ])
+        .pipe($.concat('cirrus.core.css'))
+        .pipe($.header(head))
+        .pipe($.size())
+        .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('minify', ['compile', 'core'], function() {
     return gulp.src(['./dist/cirrus.css'])
         .pipe(minify({
             level: {
