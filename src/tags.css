@@ -57,6 +57,52 @@
     width: 1px;
 }
 
+/* TAG THEMES */
+.tag .delete {
+    margin-left: 0.25rem;
+    margin-right: -0.375rem;
+}
+
+.tag.white {
+    background-color: #fff;
+    color: var(--cirrus-dark);
+}
+
+.tag.black {
+    background-color: var(--cirrus-black);
+    color: #fff;
+}
+
+.tag.primary {
+    background-color: var(--cirrus-primary);
+    color: var(--cirrus-dark);
+}
+
+.tag.link {
+    background-color: var(--cirrus-link);
+    color: #fff;
+}
+
+.tag.info {
+    background-color: var(--cirrus-info);
+    color: #fff;
+}
+
+.tag.success {
+    background-color: var(--cirrus-success);
+    color: #fff;
+}
+
+.tag.warning {
+    background-color: var(--cirrus-warning);
+    color: var(--cirrus-fg);
+}
+
+.tag.danger {
+    background-color: var(--cirrus-danger);
+    color: #fff;
+}
+
 /* TAG CONTAINER */
 .tag-container {
     display: flex;
@@ -92,22 +138,27 @@
 }
 
 /* Tag positioning */
-.tags.tag-centered {
+.tags.tags-centered {
     justify-content: center;
 }
 
-.tags.tag-centered .tag {
+.tags.tags-centered .tag {
     margin: 0 0.25rem;
 }
 
-.tags.tag-right {
+.tags.tags-right {
     justify-content: flex-end;
 }
 
-.tags.tag-right .tag:not(:first-child) {
+.tags.tags-right .tag:not(:first-child) {
     margin-left: 0.5rem;
 }
 
-.tags.tag-right .tag:not(:last-child) {
+.tags.tags-right .tag:not(:last-child) {
     margin-right: 0;
+}
+
+/* MISC */
+a.tag:hover {
+    text-decoration: underline;
 }
