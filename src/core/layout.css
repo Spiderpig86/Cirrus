@@ -6,18 +6,17 @@
     width: 80%;
 }
 
-.content-no-padding {
-    /* Content without the extra margin at the bottom */
+/* .content-no-padding { Removed 0.5.5
     max-width: 60em;
     margin: 0 auto;
     width: 80%;
-}
+} */
 
 /* Content that centers in parent and fills parent div without the extra vertical margin */
-.content-fluid {
+/* .content-fluid { Removed 0.5.5
     width: 100%;
     margin: 0 auto;
-}
+} */
 
 .fullscreen {
     top: 0;
