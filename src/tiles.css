@@ -1,0 +1,79 @@
+/* TILES */
+.tile {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-content: space-between; /* Ensure space between child elements of card tile */
+    -webkit-align-content: space-between;
+    align-items: flex-start; /* Push elements to the top of container instead of center/bottom */
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    -ms-flex-line-pack: justify; /* Evenly distribute lines */
+}
+
+.tile p {
+    font-size: 0.9rem;
+}
+
+.tile .tile-icon,
+.tile .tile-buttons {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+}
+
+/* Override the default behavior where buttons display as blocks */
+.tile .tile-buttons button,
+.tile .tile-buttons .btn,
+.tile .tile-buttons [type="submit"] {
+    display: inline-block;
+    margin: 0.1rem; /* Reduce space used by buttons, default .5rem */
+}
+
+.tile .tile-container {
+    flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+}
+
+/* Add spacing between the elements in between */
+.tile .tile-container:not(:first-child) {
+    padding-left: 1rem;
+}
+
+.tile .tile-container:not(:last-child) {
+    padding-right: 1rem;
+}
+
+.tile .tile-title {
+    line-height: 2rem;
+    font-weight: bolder;
+    margin: 0.1rem auto;
+}
+
+.tile .tile-subtitle {
+    line-height: 1.25rem;
+    opacity: 0.7;
+    margin: 0.1rem auto;
+}
+
+/* Force elements to align at the center vertical height */
+.tile.tile-center {
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+}
+
+.tile.tile-center .tile-container {
+    /* Shrink the text to fit inside the tile */
+    overflow: hidden;
+}
+
+/* Keep the text from overflowing */
+.tile.tile-center .tile-title,
+.tile.tile-center .tile-subtitle.no-wrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0;
+}
