@@ -3,288 +3,6 @@
 * Stanley Lim, Copyright 2018
 * https://spiderpig86.github.io/Cirrus
 */
-/* ANIMATIONS */
-
-/* Spinning loading animation */
-@-webkit-keyframes loading {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(359deg);
-    }
-}
-
-@keyframes loading {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(359deg);
-    }
-}
-
-/* Hover animation */
-.hover-grow {
-    /* Mouse leave */
-    transition-duration: 0.32s;
-}
-
-.hover-grow:hover {
-    /* Mouse enter */
-    transform: scale(1.1);
-    transition-duration: 0.08s;
-}
-
-/* Loading button position relatively for loading spinner location */
-.animated.loading {
-    display: block;
-    position: relative;
-}
-
-/* Loading Spinner, align center by default */
-.animated.loading:after {
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-top-color: transparent;
-    content: "";
-    display: block;
-    height: 1rem;
-    width: 1rem;
-    left: calc(50% - (1em / 1.25));
-    top: calc(50% - (1em / 1.35));
-    position: absolute;
-    -webkit-animation: loading 500ms infinite linear;
-    animation: loading 500ms infinite linear;
-}
-
-.animated.loading.loading-white:after {
-    border-left-color: #fff;
-    border-bottom-color: #fff;
-}
-
-/* Align spinner left */
-.animated.loading.loading-left:after {
-    left: 2rem;
-    right: auto;
-}
-
-.animated.loading.loading-left {
-    padding-left: 4rem;
-}
-
-/* Align spinner right */
-.animated.loading.loading-right:after {
-    left: auto;
-    right: 2rem;
-}
-
-.animated.loading.loading-right {
-    padding-right: 4rem;
-}
-
-/* Hide text in loading button */
-.animated.loading.hide-text {
-    color: transparent !important;
-}
-
-/* Heart animation */
-@-webkit-keyframes pound {
-    to {
-        transform: scale(1.1);
-    }
-}
-@keyframes pound {
-    to {
-        transform: scale(1.1);
-    }
-}
-
-.animated.pulse {
-    animation: pound 0.35s infinite alternate;
-    -webkit-animation: pound 0.35s infinite alternate;
-    vertical-align: baseline;
-}
-
-/* Bounce animations */
-@-webkit-keyframes bounce {
-    from,
-    20%,
-    53%,
-    80%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(
-            0.215,
-            0.61,
-            0.355,
-            1
-        ); /* Ease-out based on power of four */
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-    40%,
-    43% {
-        -webkit-animation-timing-function: cubic-bezier(
-            0.755,
-            0.05,
-            0.855,
-            0.06
-        );
-        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        -webkit-transform: translate3d(0, -30px, 0);
-        transform: translate3d(0, -30px, 0);
-    }
-    70% {
-        -webkit-animation-timing-function: cubic-bezier(
-            0.755,
-            0.05,
-            0.855,
-            0.06
-        );
-        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        -webkit-transform: translate3d(0, -15px, 0);
-        transform: translate3d(0, -15px, 0);
-    }
-    90% {
-        -webkit-transform: translate3d(0, -4px, 0);
-        transform: translate3d(0, -4px, 0);
-    }
-}
-
-@keyframes bounce {
-    from,
-    20%,
-    53%,
-    80%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(
-            0.215,
-            0.61,
-            0.355,
-            1
-        ); /* Ease-out based on power of four */
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-    40%,
-    43% {
-        -webkit-animation-timing-function: cubic-bezier(
-            0.755,
-            0.05,
-            0.855,
-            0.06
-        );
-        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        -webkit-transform: translate3d(0, -30px, 0);
-        transform: translate3d(0, -30px, 0);
-    }
-    70% {
-        -webkit-animation-timing-function: cubic-bezier(
-            0.755,
-            0.05,
-            0.855,
-            0.06
-        );
-        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        -webkit-transform: translate3d(0, -15px, 0);
-        transform: translate3d(0, -15px, 0);
-    }
-    90% {
-        -webkit-transform: translate3d(0, -4px, 0);
-        transform: translate3d(0, -4px, 0);
-    }
-}
-
-.animated.bounce {
-    animation-name: bounce;
-    -webkit-animation-name: bounce;
-    transform-origin: center bottom;
-    -webkit-transform-origin: center bottom;
-}
-
-@keyframes bounceIn {
-    from,
-    20%,
-    40%,
-    60%,
-    80%,
-    to {
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    0% {
-        opacity: 0;
-        transform: scale3d(0.3, 0.3, 0.3);
-    }
-    20% {
-        transform: scale3d(1.1, 1.1, 1.1);
-    }
-    40% {
-        transform: scale3d(0.9, 0.9, 0.9);
-    }
-    60% {
-        opacity: 1;
-        transform: scale3d(1.03, 1.03, 1.03);
-    }
-    80% {
-        transform: scale3d(0.97, 0.97, 0.97);
-    }
-    to {
-        opacity: 1;
-        transform: scale3d(1, 1, 1);
-    }
-}
-
-.animated.bounceIn {
-    animation-name: bounceIn;
-}
-
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.animated.fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-}
-
-.animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-.animated.infinite {
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-}
-
-.animated.infinite.alternate {
-    animation-direction: alternate;
-}
-
-.animated.paused {
-    -webkit-animation-play-state: paused !important; /* Safari 4.0 - 8.0 */
-    animation-play-state: paused !important;
-}
-
 /* BUTTONS */
 
 /* Button styling */
@@ -738,291 +456,6 @@ button span:last-child,
     margin-left: -0.1rem;
 }
 
-/* CARDS */
-
-.card {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    display: block;
-    position: relative;
-    overflow: hidden;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    backface-visibility: hidden;
-}
-
-.card:hover {
-    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1), 0 0 12px 2px rgba(10, 10, 10, 0.1);
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-.slide-up:hover .card-image {
-   transform: translateY(-40px);
-}
-
-.card:hover .card-image:after {
-  opacity: 0;
-}
-
-.card-image {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-      border-radius: 5px 5px 0 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.card-image:after {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
-  top: 0;
-  left: 0;
-  right: 0;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  bottom: 0;
-}
-
-.card-container {
-  display: block;
-position: relative;
-  height: 40%;
-  min-height: 332px; /* So it appears in html5 standards mode */
-}
-
-.card .title-container .title, .card .title-container .subtitle {
-  color: #fff;
-  margin: 1rem auto;
-}
-
-.card .title-container {
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
-  padding: 0 1rem;
-}
-
-.card .title-container .title {
-  font-weight: 300;
-  font-size: 1.5rem;
-  margin-bottom: .3rem;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-}
-
-.card .action-bar {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding: .5rem;
-    border-top: 1px solid #E0E0E0;
-    box-sizing: border-box;
-    -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-/* Add some padding to the buttons */
-.card .action-bar button,
-.card .action-bar .btn,
-.card .action-bar [type=submit] {
-  margin: 0 .5rem;
-}
-
-.card .action-bar + .card-footer {
-  padding: 1rem 0;
-  border-top: 1px solid #E0E0E0;
-}
-
-.card button, .card .btn {
-  display: inline-block;
-  display: inline-block;
-border-color: transparent;
-}
-
-.card button:hover, .card .btn:hover {
-  -webkit-transform: none;
-          transform: none;
-}
-
-.card button:focus, .card .btn:focus {
-  -webkit-transform: none;
-          transform: none;
-}
-
-/* More card components in second example */
-.mobile-title {
-  position: absolute;
-  left: 0;
-  background-color: var(--cirrus-bg);
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  width: 100%;
-      padding: 1rem 0;
-      backface-visibility: hidden;
-}
-
-.card:hover .mobile-title {
-  margin-top: -7rem;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.card:hover .card-body {
-  opacity: 1;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.card-body {
-  opacity: 0;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.card-footer {
-  position: relative;
-    margin: .5rem auto;
-    font-size: .75rem;
-    color: #9FA5A8;
-}
-
-.card p {
-    margin: 1rem 0;
-    /*max-height: 8rem; /* Prevents ridiculously looking cards */
-}
-
-/*
-    NOTE: To have cards with the same height, place the card class with col-x classes and have the parent have fluid-container.
-*/
-
-/* Card Title Bar */
-.card-head {
-    align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    box-shadow: 0px 1px 8px 1px rgba(10, 10, 10, 0.07);
-    display: flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-}
-
-.card-head-title {
-  align-items: center;
-  -webkit-box-align: center;
-    -ms-flex-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    font-weight: 700;
-    padding: 0 1rem;
-}
-
-/* TILES */
-/* More flexible layout for cards using flexbox */
-
-.tile {
-  display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  align-content: space-between; /* Ensure space between child elements of card tile */
-  -webkit-align-content: space-between;
-  align-items: flex-start; /* Push elements to the top of container instead of center/bottom */
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  -ms-flex-line-pack: justify; /* Evenly distribute lines */
-}
-
-.tile p {
-  font-size: .9rem;
-}
-
-.tile .tile-icon, .tile .tile-buttons {
-  flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-}
-
-/* Override the default behavior where buttons display as blocks */
-.tile .tile-buttons button,
-.tile .tile-buttons .btn,
-.tile .tile-buttons [type=submit] {
-  display: inline-block;
-  margin: .1rem; /* Reduce space used by buttons, default .5rem */
-}
-
-.tile .tile-container {
-  flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-}
-
-/* Add spacing between the elements in between */
-.tile .tile-container:not(:first-child) {
-  padding-left: 1rem;
-}
-
-.tile .tile-container:not(:last-child) {
-  padding-right: 1rem;
-}
-
-.tile .tile-title {
-  line-height: 2rem;
-  font-weight: bolder;
-  margin: 0.1rem auto;
-}
-
-.tile .tile-subtitle {
-  line-height: 1.25rem;
-  opacity: .7;
-  margin: 0.1rem auto;
-}
-
-/* Force elements to align at the center vertical height */
-.tile.tile-center {
-  align-items: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-}
-
-.tile.tile-center .tile-container { /* Shrink the text to fit inside the tile */
-  overflow: hidden;
-}
-
-/* Keep the text from overflowing */
-.tile.tile-center .tile-title,
-.tile.tile-center .tile-subtitle.no-wrap {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  margin-bottom: 0;
-}
 /* CODE */
 
 code {
@@ -3790,64 +3223,6 @@ video.video-fullscreen {
     object-fit: contain;
 }
 
-/* Avatar */
-.avatar {
-    border-radius: 50%;
-    position: relative;
-    display: block;
-    margin: auto;
-    font-size: 1rem;
-    font-weight: lighter;
-    width: 3.2rem;
-    height: 3.2rem;
-    background-color: var(--cirrus-primary);
-    overflow: hidden;
-}
-
-/* Draw text on image just like in Gmail */
-.avatar:before {
-    content: attr(data-text);
-    color: #fff;
-    /* Removed z-index: 1, makes text blurry */
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-}
-
-.avatar.img-xsmall {
-    font-size: .8rem;
-    width: 1.6rem;
-    height: 1.6rem;
-}
-
-.avatar.img-small {
-    font-size: 1rem;
-    height: 2.4rem;
-    width: 2.4rem;
-}
-
-.avatar.img-large {
-    font-size: 2rem;
-    height: 4.8rem;
-    width: 4.8rem;
-}
-
-.avatar.img-xlarge {
-    font-size: 2.6rem;
-    height: 6.4rem;
-    width: 6.4rem;
-}
-
-.avatar img.padded {
-    padding: .5rem;
-    width: 100%;
-}
-
 /* The base of the modal dialog, which is an overlay of the webpage */
 .modal {
     position: fixed; /* Scrolls with the user */
@@ -4008,37 +3383,6 @@ video.video-fullscreen {
         transform:translateY(0)
     }
 }
-/* PLACEHOLDER */
-/* Designed to be embedded in any parent container as placeholder when content is absent. */
-
-.placeholder {
-    background-color: rgba(231, 234, 241, 0.5);
-    border-radius: 3px;
-    text-align: center;
-    padding: 3rem 2rem;
-    color: #6c7892; /* Lighter than original text color */
-    display: block;
-}
-
-/* Not sure if needed */
-.placeholder-icon {
-    text-align: center;
-}
-
-.placeholder .placeholder-title,
-.placeholder .placeholder-subtitle {
-    margin: 1rem auto;
-}
-
-.placeholder .placeholder-subtitle {
-    opacity: 0.7;
-    margin: 0;
-}
-
-/* Place buttons here for the placeholder */
-.placeholder .placeholder-commands {
-    margin-top: 1rem;
-}
 /* TABLE */
 
 .table {
@@ -4140,6 +3484,834 @@ video.video-fullscreen {
 .table.borderless th,
 .table.borderless td {
     border: none;
+}
+/* Color scheme for Cirrus */
+:root {
+    --cirrus-fg: #374054;
+    --cirrus-bg: #fff;
+
+    --cirrus-primary: #f03d4d;
+    --cirrus-accent-hover: #d62939;
+    --cirrus-accent-border: #c21b2b;
+    --cirrus-light: #f6f9fc;
+    --cirrus-dark: #363636;
+    --cirrus-link: #379afd;
+    --cirrus-link-dark: #083d71;
+    --cirrus-info: #2972fa;
+    --cirrus-success: #0dd157;
+    --cirrus-warning: #fab633;
+    --cirrus-danger: #fb4143;
+
+    --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+
+    --cirrus-code-bg: #ffdadd;
+    --cirrus-code-fg: #dc4753;
+
+    --cirrus-form-group-bg: #f8f9fa;
+    --cirrus-form-group-fg: #909090;
+
+    --toast-primary-bg: #00c9a7;
+}
+
+/* GLOBAL THEME SELECTORS */
+.bg-primary {background-color: var(--cirrus-primary) !important; }
+.bg-success { background-color: var(--cirrus-success) !important; }
+.bg-warning { background-color: var(--cirrus-warning) !important; }
+.bg-danger { background-color: var(--cirrus-danger) !important; }
+.bg-light { background-color: var(--cirrus-light) !important; }
+.bg-dark { background-color: var(--cirrus-dark) !important; }
+.bg-link { background-color: var(--cirrus-link) !important; }
+.bg-link-dark { background-color: var(--cirrus-link-dark) !important; }
+.bg-info { background-color: var(--cirrus-info) !important; }
+/* UTILS */
+/* Utility classes to help solve some very annoying issues */
+
+.this-inline {
+  display: inline;
+}
+
+.this-inline-block {
+  display: inline-block;
+}
+
+.this-inline-flex {
+  display: -webkit-inline-bpx;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
+  display: inline-flex;
+}
+
+.this-block {
+  display: block;
+}
+
+/*
+   When using floats, clearfix allows the container to automatically resize so that
+   other elements are not blocked by children.
+*/
+
+.clearfix:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+/* This is mainly to keep elements from overlapping when using floats */
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
+}
+
+.clear-both {
+  clear: both;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Center element - best used for hero bodies or text */
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+      margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.center-alt, .center-alt:hover, .center-alt:active { /* If flexbox method fails, this works for elements with unknown dimensions */
+  position: absolute;
+ top: 50%;
+ left: 50%;
+ -webkit-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+}
+
+.vertical-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+          align-items: center;
+  vertical-align: middle;
+}
+
+.horizontal-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.this-overlay {
+  bottom:0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.hide-overflow {
+  overflow: hidden !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hide {
+  display: none !important;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.box {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  display: block;
+  padding: 1rem;
+}
+
+.box:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.fill-width {
+  width: 100%
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+/* Round the corners of the element */
+.round {
+  border-radius: .1rem;
+}
+
+/* Turns element into a circle */
+.circle {
+  border-radius: 50%;
+}
+
+/* Responsiveness and Element Hiding */
+
+/* Do the actual balancing only on larger screens */
+@media screen and (min-width: 769px) {
+.level, .level-left, .level-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* Hide elements based on screen size */
+@media screen and (max-width: 450px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Hide on devices that are tablets or smaller */
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 768px) {
+  .hide-tablet-only {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  /* Hide element on laptops, desktops, etc */
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* ANIMATIONS */
+
+/* Spinning loading animation */
+@-webkit-keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* Hover animation */
+.hover-grow {
+    /* Mouse leave */
+    transition-duration: 0.32s;
+}
+
+.hover-grow:hover {
+    /* Mouse enter */
+    transform: scale(1.1);
+    transition-duration: 0.08s;
+}
+
+/* Loading button position relatively for loading spinner location */
+.animated.loading {
+    display: block;
+    position: relative;
+}
+
+/* Loading Spinner, align center by default */
+.animated.loading:after {
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    left: calc(50% - (1em / 1.25));
+    top: calc(50% - (1em / 1.35));
+    position: absolute;
+    -webkit-animation: loading 500ms infinite linear;
+    animation: loading 500ms infinite linear;
+}
+
+.animated.loading.loading-white:after {
+    border-left-color: #fff;
+    border-bottom-color: #fff;
+}
+
+/* Align spinner left */
+.animated.loading.loading-left:after {
+    left: 2rem;
+    right: auto;
+}
+
+.animated.loading.loading-left {
+    padding-left: 4rem;
+}
+
+/* Align spinner right */
+.animated.loading.loading-right:after {
+    left: auto;
+    right: 2rem;
+}
+
+.animated.loading.loading-right {
+    padding-right: 4rem;
+}
+
+/* Hide text in loading button */
+.animated.loading.hide-text {
+    color: transparent !important;
+}
+
+/* Heart animation */
+@-webkit-keyframes pound {
+    to {
+        transform: scale(1.1);
+    }
+}
+@keyframes pound {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.animated.pulse {
+    animation: pound 0.35s infinite alternate;
+    -webkit-animation: pound 0.35s infinite alternate;
+    vertical-align: baseline;
+}
+
+/* Bounce animations */
+@-webkit-keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.215,
+            0.61,
+            0.355,
+            1
+        ); /* Ease-out based on power of four */
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.755,
+            0.05,
+            0.855,
+            0.06
+        );
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.755,
+            0.05,
+            0.855,
+            0.06
+        );
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.215,
+            0.61,
+            0.355,
+            1
+        ); /* Ease-out based on power of four */
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.755,
+            0.05,
+            0.855,
+            0.06
+        );
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.755,
+            0.05,
+            0.855,
+            0.06
+        );
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+.animated.bounce {
+    animation-name: bounce;
+    -webkit-animation-name: bounce;
+    transform-origin: center bottom;
+    -webkit-transform-origin: center bottom;
+}
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.animated.bounceIn {
+    animation-name: bounceIn;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animated.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.animated.infinite.alternate {
+    animation-direction: alternate;
+}
+
+.animated.paused {
+    -webkit-animation-play-state: paused !important; /* Safari 4.0 - 8.0 */
+    animation-play-state: paused !important;
+}
+
+/* Avatar */
+.avatar {
+    border-radius: 50%;
+    position: relative;
+    display: block;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: lighter;
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: var(--cirrus-primary);
+    overflow: hidden;
+}
+
+/* Draw text on image just like in Gmail */
+.avatar:before {
+    content: attr(data-text);
+    color: #fff;
+    /* Removed z-index: 1, makes text blurry */
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.avatar.img-xsmall {
+    font-size: .8rem;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.avatar.img-small {
+    font-size: 1rem;
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.avatar.img-large {
+    font-size: 2rem;
+    height: 4.8rem;
+    width: 4.8rem;
+}
+
+.avatar.img-xlarge {
+    font-size: 2.6rem;
+    height: 6.4rem;
+    width: 6.4rem;
+}
+
+.avatar img.padded {
+    padding: .5rem;
+    width: 100%;
+}
+/* CARDS */
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    backface-visibility: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1), 0 0 12px 2px rgba(10, 10, 10, 0.1);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.slide-up:hover .card-image {
+   transform: translateY(-40px);
+}
+
+.card:hover .card-image:after {
+  opacity: 0;
+}
+
+.card-image {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+      border-radius: 5px 5px 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.card-image:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  bottom: 0;
+}
+
+.card-container {
+  display: block;
+position: relative;
+  height: 40%;
+  min-height: 332px; /* So it appears in html5 standards mode */
+}
+
+.card .title-container .title, .card .title-container .subtitle {
+  color: #fff;
+  margin: 1rem auto;
+}
+
+.card .title-container {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.card .title-container .title {
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: .3rem;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card .action-bar {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .5rem;
+    border-top: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Add some padding to the buttons */
+.card .action-bar button,
+.card .action-bar .btn,
+.card .action-bar [type=submit] {
+  margin: 0 .5rem;
+}
+
+.card .action-bar + .card-footer {
+  padding: 1rem 0;
+  border-top: 1px solid #E0E0E0;
+}
+
+.card button, .card .btn {
+  display: inline-block;
+  display: inline-block;
+border-color: transparent;
+}
+
+.card button:hover, .card .btn:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.card button:focus, .card .btn:focus {
+  -webkit-transform: none;
+          transform: none;
+}
+
+/* More card components in second example */
+.mobile-title {
+  position: absolute;
+  left: 0;
+  background-color: var(--cirrus-bg);
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  width: 100%;
+      padding: 1rem 0;
+      backface-visibility: hidden;
+}
+
+.card:hover .mobile-title {
+  margin-top: -7rem;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.card:hover .card-body {
+  opacity: 1;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.card-body {
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.card-footer {
+  position: relative;
+    margin: .5rem auto;
+    font-size: .75rem;
+    color: #9FA5A8;
+}
+
+.card p {
+    margin: 1rem 0;
+    /*max-height: 8rem; /* Prevents ridiculously looking cards */
+}
+
+/*
+    NOTE: To have cards with the same height, place the card class with col-x classes and have the parent have fluid-container.
+*/
+
+/* Card Title Bar */
+.card-head {
+    align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    box-shadow: 0px 1px 8px 1px rgba(10, 10, 10, 0.07);
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+}
+
+.card-head-title {
+  align-items: center;
+  -webkit-box-align: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-weight: 700;
+    padding: 0 1rem;
+}
+/* PLACEHOLDER */
+/* Designed to be embedded in any parent container as placeholder when content is absent. */
+
+.placeholder {
+    background-color: rgba(231, 234, 241, 0.5);
+    border-radius: 3px;
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #6c7892; /* Lighter than original text color */
+    display: block;
+}
+
+/* Not sure if needed */
+.placeholder-icon {
+    text-align: center;
+}
+
+.placeholder .placeholder-title,
+.placeholder .placeholder-subtitle {
+    margin: 1rem auto;
+}
+
+.placeholder .placeholder-subtitle {
+    opacity: 0.7;
+    margin: 0;
+}
+
+/* Place buttons here for the placeholder */
+.placeholder .placeholder-commands {
+    margin-top: 1rem;
 }
 /* TABS AND TAB CONTAINER */
 .tab-container {
@@ -4425,44 +4597,86 @@ video.video-fullscreen {
 .tags.tag-right .tag:not(:last-child) {
     margin-right: 0;
 }
-/* Color scheme for Cirrus */
-:root {
-    --cirrus-fg: #374054;
-    --cirrus-bg: #fff;
-
-    --cirrus-primary: #f03d4d;
-    --cirrus-accent-hover: #d62939;
-    --cirrus-accent-border: #c21b2b;
-    --cirrus-light: #f6f9fc;
-    --cirrus-dark: #363636;
-    --cirrus-link: #379afd;
-    --cirrus-link-dark: #083d71;
-    --cirrus-info: #2972fa;
-    --cirrus-success: #0dd157;
-    --cirrus-warning: #fab633;
-    --cirrus-danger: #fb4143;
-
-    --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-
-    --cirrus-code-bg: #ffdadd;
-    --cirrus-code-fg: #dc4753;
-
-    --cirrus-form-group-bg: #f8f9fa;
-    --cirrus-form-group-fg: #909090;
-
-    --toast-primary-bg: #00c9a7;
+/* TILES */
+.tile {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-content: space-between; /* Ensure space between child elements of card tile */
+    -webkit-align-content: space-between;
+    align-items: flex-start; /* Push elements to the top of container instead of center/bottom */
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    -ms-flex-line-pack: justify; /* Evenly distribute lines */
 }
 
-/* GLOBAL THEME SELECTORS */
-.bg-primary {background-color: var(--cirrus-primary) !important; }
-.bg-success { background-color: var(--cirrus-success) !important; }
-.bg-warning { background-color: var(--cirrus-warning) !important; }
-.bg-danger { background-color: var(--cirrus-danger) !important; }
-.bg-light { background-color: var(--cirrus-light) !important; }
-.bg-dark { background-color: var(--cirrus-dark) !important; }
-.bg-link { background-color: var(--cirrus-link) !important; }
-.bg-link-dark { background-color: var(--cirrus-link-dark) !important; }
-.bg-info { background-color: var(--cirrus-info) !important; }
+.tile p {
+    font-size: 0.9rem;
+}
+
+.tile .tile-icon,
+.tile .tile-buttons {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+}
+
+/* Override the default behavior where buttons display as blocks */
+.tile .tile-buttons button,
+.tile .tile-buttons .btn,
+.tile .tile-buttons [type="submit"] {
+    display: inline-block;
+    margin: 0.1rem; /* Reduce space used by buttons, default .5rem */
+}
+
+.tile .tile-container {
+    flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+}
+
+/* Add spacing between the elements in between */
+.tile .tile-container:not(:first-child) {
+    padding-left: 1rem;
+}
+
+.tile .tile-container:not(:last-child) {
+    padding-right: 1rem;
+}
+
+.tile .tile-title {
+    line-height: 2rem;
+    font-weight: bolder;
+    margin: 0.1rem auto;
+}
+
+.tile .tile-subtitle {
+    line-height: 1.25rem;
+    opacity: 0.7;
+    margin: 0.1rem auto;
+}
+
+/* Force elements to align at the center vertical height */
+.tile.tile-center {
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+}
+
+.tile.tile-center .tile-container {
+    /* Shrink the text to fit inside the tile */
+    overflow: hidden;
+}
+
+/* Keep the text from overflowing */
+.tile.tile-center .tile-title,
+.tile.tile-center .tile-subtitle.no-wrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
 .toast {
     display: block;
     width: 100%;
@@ -4684,219 +4898,4 @@ video.video-fullscreen {
   -moz-transform: translate(-.5rem, 50%);
   -ms-transform: translate(-.5rem, 50%);
   -o-transform: translate(-.5rem, 50%);
-}
-
-/* UTILS */
-/* Utility classes to help solve some very annoying issues */
-
-.this-inline {
-  display: inline;
-}
-
-.this-inline-block {
-  display: inline-block;
-}
-
-.this-inline-flex {
-  display: -webkit-inline-bpx;
-  display: -ms-inline-flexbox;
-  display: -webkit-inline-box;
-  display: inline-flex;
-}
-
-.this-block {
-  display: block;
-}
-
-/*
-   When using floats, clearfix allows the container to automatically resize so that
-   other elements are not blocked by children.
-*/
-
-.clearfix:after {
-  clear: both;
-  content: " ";
-  display: table;
-}
-
-/* This is mainly to keep elements from overlapping when using floats */
-.clear-left {
-  clear: left;
-}
-
-.clear-right {
-  clear: right;
-}
-
-.clear-both {
-  clear: both;
-}
-
-.pull-left {
-  float: left;
-}
-
-.pull-right {
-  float: right;
-}
-
-.text-center {
-  text-align: center;
-}
-
-/* Center element - best used for hero bodies or text */
-.center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-      margin: 0 auto;
-  flex-wrap: wrap;
-}
-
-.center-alt, .center-alt:hover, .center-alt:active { /* If flexbox method fails, this works for elements with unknown dimensions */
-  position: absolute;
- top: 50%;
- left: 50%;
- -webkit-transform: translate(-50%, -50%);
-         transform: translate(-50%, -50%);
-}
-
-.vertical-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-          align-items: center;
-  vertical-align: middle;
-}
-
-.horizontal-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.this-overlay {
-  bottom:0;
-  left: 0;
-  right: 0;
-  top: 0;
-  position: absolute;
-}
-
-.hide-overflow {
-  overflow: hidden !important;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.hide {
-  display: none !important;
-}
-
-.disabled {
-  cursor: not-allowed;
-}
-
-.unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.box {
-  background-color: white;
-  border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  display: block;
-  padding: 1rem;
-}
-
-.box:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.fill-width {
-  width: 100%
-}
-
-.no-margin {
-  margin: 0 !important;
-}
-
-.no-padding {
-  padding: 0 !important;
-}
-
-/* Round the corners of the element */
-.round {
-  border-radius: .1rem;
-}
-
-/* Turns element into a circle */
-.circle {
-  border-radius: 50%;
-}
-
-/* Responsiveness and Element Hiding */
-
-/* Do the actual balancing only on larger screens */
-@media screen and (min-width: 769px) {
-.level, .level-left, .level-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-/* Hide elements based on screen size */
-@media screen and (max-width: 450px) {
-  .hide-mobile {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  /* Hide on devices that are tablets or smaller */
-  .hide-tablet {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: 451px) and (max-width: 768px) {
-  .hide-tablet-only {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  /* Hide element on laptops, desktops, etc */
-  .hide-desktop {
-    display: none !important;
-  }
 }

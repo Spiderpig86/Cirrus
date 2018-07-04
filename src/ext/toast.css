@@ -1,0 +1,67 @@
+.toast {
+    display: block;
+    width: 100%;
+    padding: .75rem 1.25rem;
+    background-color: var(--toast-primary-bg);
+    border: 1px solid var(--toast-primary-bg);
+    border-radius: 2px;
+    color: #fff;
+    position: relative;
+    margin: 0.5rem;
+}
+
+.toast h1, .toast h2, .toast h3, .toast h4, .toast h5, .toast h6 {
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.toast p {
+    margin: 0;
+}
+
+.toast.translucent {
+    opacity: .5;
+}
+
+.toast.translucent:hover {
+    opacity: 1;
+}
+
+.toast .btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}       
+
+/* TOAST TYPES */
+.toast.primary {
+    background-color: var(--toast-primary-bg);
+    border-color: var(--toast-primary-bg);
+}
+
+.toast.success {
+    background-color: var(--cirrus-success);
+    border-color: var(--cirrus-success);
+}
+
+.toast.warning {
+    background-color: var(--cirrus-warning);
+    border-color: var(--cirrus-warning);
+}
+
+.toast.error {
+    background-color: var(--cirrus-danger);
+    border-color: var(--cirrus-danger);
+}
+
+/* Add the rest later */
+.toast a {
+    color: var(--cirrus-light);
+    transition: all .3s;
+}
+
+.toast a:hover {
+    opacity: .8;
+    transition: all .3s;
+}
+

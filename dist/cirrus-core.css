@@ -456,291 +456,6 @@ button span:last-child,
     margin-left: -0.1rem;
 }
 
-/* CARDS */
-
-.card {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    display: block;
-    position: relative;
-    overflow: hidden;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    backface-visibility: hidden;
-}
-
-.card:hover {
-    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1), 0 0 12px 2px rgba(10, 10, 10, 0.1);
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-.slide-up:hover .card-image {
-   transform: translateY(-40px);
-}
-
-.card:hover .card-image:after {
-  opacity: 0;
-}
-
-.card-image {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-      border-radius: 5px 5px 0 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.card-image:after {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
-  top: 0;
-  left: 0;
-  right: 0;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  bottom: 0;
-}
-
-.card-container {
-  display: block;
-position: relative;
-  height: 40%;
-  min-height: 332px; /* So it appears in html5 standards mode */
-}
-
-.card .title-container .title, .card .title-container .subtitle {
-  color: #fff;
-  margin: 1rem auto;
-}
-
-.card .title-container {
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
-  padding: 0 1rem;
-}
-
-.card .title-container .title {
-  font-weight: 300;
-  font-size: 1.5rem;
-  margin-bottom: .3rem;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-}
-
-.card .action-bar {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding: .5rem;
-    border-top: 1px solid #E0E0E0;
-    box-sizing: border-box;
-    -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-/* Add some padding to the buttons */
-.card .action-bar button,
-.card .action-bar .btn,
-.card .action-bar [type=submit] {
-  margin: 0 .5rem;
-}
-
-.card .action-bar + .card-footer {
-  padding: 1rem 0;
-  border-top: 1px solid #E0E0E0;
-}
-
-.card button, .card .btn {
-  display: inline-block;
-  display: inline-block;
-border-color: transparent;
-}
-
-.card button:hover, .card .btn:hover {
-  -webkit-transform: none;
-          transform: none;
-}
-
-.card button:focus, .card .btn:focus {
-  -webkit-transform: none;
-          transform: none;
-}
-
-/* More card components in second example */
-.mobile-title {
-  position: absolute;
-  left: 0;
-  background-color: var(--cirrus-bg);
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  width: 100%;
-      padding: 1rem 0;
-      backface-visibility: hidden;
-}
-
-.card:hover .mobile-title {
-  margin-top: -7rem;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.card:hover .card-body {
-  opacity: 1;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.card-body {
-  opacity: 0;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.card-footer {
-  position: relative;
-    margin: .5rem auto;
-    font-size: .75rem;
-    color: #9FA5A8;
-}
-
-.card p {
-    margin: 1rem 0;
-    /*max-height: 8rem; /* Prevents ridiculously looking cards */
-}
-
-/*
-    NOTE: To have cards with the same height, place the card class with col-x classes and have the parent have fluid-container.
-*/
-
-/* Card Title Bar */
-.card-head {
-    align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    box-shadow: 0px 1px 8px 1px rgba(10, 10, 10, 0.07);
-    display: flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-}
-
-.card-head-title {
-  align-items: center;
-  -webkit-box-align: center;
-    -ms-flex-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    font-weight: 700;
-    padding: 0 1rem;
-}
-
-/* TILES */
-/* More flexible layout for cards using flexbox */
-
-.tile {
-  display: flex;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  align-content: space-between; /* Ensure space between child elements of card tile */
-  -webkit-align-content: space-between;
-  align-items: flex-start; /* Push elements to the top of container instead of center/bottom */
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  -ms-flex-line-pack: justify; /* Evenly distribute lines */
-}
-
-.tile p {
-  font-size: .9rem;
-}
-
-.tile .tile-icon, .tile .tile-buttons {
-  flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-}
-
-/* Override the default behavior where buttons display as blocks */
-.tile .tile-buttons button,
-.tile .tile-buttons .btn,
-.tile .tile-buttons [type=submit] {
-  display: inline-block;
-  margin: .1rem; /* Reduce space used by buttons, default .5rem */
-}
-
-.tile .tile-container {
-  flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-}
-
-/* Add spacing between the elements in between */
-.tile .tile-container:not(:first-child) {
-  padding-left: 1rem;
-}
-
-.tile .tile-container:not(:last-child) {
-  padding-right: 1rem;
-}
-
-.tile .tile-title {
-  line-height: 2rem;
-  font-weight: bolder;
-  margin: 0.1rem auto;
-}
-
-.tile .tile-subtitle {
-  line-height: 1.25rem;
-  opacity: .7;
-  margin: 0.1rem auto;
-}
-
-/* Force elements to align at the center vertical height */
-.tile.tile-center {
-  align-items: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-}
-
-.tile.tile-center .tile-container { /* Shrink the text to fit inside the tile */
-  overflow: hidden;
-}
-
-/* Keep the text from overflowing */
-.tile.tile-center .tile-title,
-.tile.tile-center .tile-subtitle.no-wrap {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  margin-bottom: 0;
-}
 /* CODE */
 
 code {
@@ -1211,6 +926,64 @@ kbd {
     }
 }
 
+/* FOOTER */
+
+footer {
+    width: 100%;
+    padding: 6rem 0;
+    background-color: #111;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+footer a {
+    font-weight: bolder;
+    color: #fff;
+}
+
+footer p {
+    color: #848484;
+}
+
+footer ul {
+    margin: 0.5rem 0; /* Remove the left margin seen in global style */
+}
+
+footer h6 {
+    text-align: center;
+    letter-spacing: 6px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+footer .footer-list-title {
+    font-size: 75%;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #ddd;
+}
+
+footer .footer-list-title:after {
+    content: "";
+    display: block;
+    width: 10%;
+    margin: auto;
+    border-bottom: 2px solid;
+    border-color: #343b49;
+}
+
+footer ul a .list-item, footer .list-item {
+      margin: 0.1rem;
+    color: #888;
+    transition: all .3s;
+    font-size: 75%;
+    text-transform: uppercase;
+}
+
+footer.footer-fixed {
+    bottom: 0;
+    position: fixed;
+}
 /* FORMS */
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]),
@@ -3450,64 +3223,6 @@ video.video-fullscreen {
     object-fit: contain;
 }
 
-/* Avatar */
-.avatar {
-    border-radius: 50%;
-    position: relative;
-    display: block;
-    margin: auto;
-    font-size: 1rem;
-    font-weight: lighter;
-    width: 3.2rem;
-    height: 3.2rem;
-    background-color: var(--cirrus-primary);
-    overflow: hidden;
-}
-
-/* Draw text on image just like in Gmail */
-.avatar:before {
-    content: attr(data-text);
-    color: #fff;
-    /* Removed z-index: 1, makes text blurry */
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-}
-
-.avatar.img-xsmall {
-    font-size: .8rem;
-    width: 1.6rem;
-    height: 1.6rem;
-}
-
-.avatar.img-small {
-    font-size: 1rem;
-    height: 2.4rem;
-    width: 2.4rem;
-}
-
-.avatar.img-large {
-    font-size: 2rem;
-    height: 4.8rem;
-    width: 4.8rem;
-}
-
-.avatar.img-xlarge {
-    font-size: 2.6rem;
-    height: 6.4rem;
-    width: 6.4rem;
-}
-
-.avatar img.padded {
-    padding: .5rem;
-    width: 100%;
-}
-
 /* The base of the modal dialog, which is an overlay of the webpage */
 .modal {
     position: fixed; /* Scrolls with the user */
@@ -3770,177 +3485,6 @@ video.video-fullscreen {
 .table.borderless td {
     border: none;
 }
-/* TABS AND TAB CONTAINER */
-.tab-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    overflow: hidden;
-    overflow-x: auto; /* Allow scrollbar to be visible if the width of the tabs exeeds container */
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    white-space: nowarp;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    font-size: 0.85rem;
-}
-
-/* Tabs are embedded inside an unordered list */
-.tab-container ul {
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; /* Move tab items to left side  */
-    display: -webkit-box; /* Flow the elements */
-    margin: 0.5rem; /* Override the behavior for standard ul and add equal padding */
-    border-bottom: 1px solid #eee; /* Bottom border of tabs */
-    list-style: none;
-}
-
-.tab-container li {
-    display: block; /* Keep the tabs from extending too far */
-    cursor: pointer;
-    margin: 0;
-    -webkit-flex: 1 0 0;
-    -ms-flex: 1 0 0;
-    flex: 1 0 0;
-    text-align: center;
-}
-
-.tab-container li a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-bottom: 1px solid #eee;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0.5rem 1rem;
-    transition: all .3s;
-    color: var(--cirrus-fg);
-    display: block;
-    border-bottom-color: rgba(197, 197, 197, 0.63);
-    border-width: 2px;
-    margin-bottom: -1px; /* Get rid of any remaining border lines */
-    background-color: var(--cirrus-bg);
-}
-
-.tab-container li:hover a {
-    border-bottom-color: rgba(240, 61, 77, 0.6);
-    transition: all .3s;
-}
-
-.tab-container li.selected a {
-    border-bottom-color: var(--cirrus-primary);
-    color: var(--cirrus-primary);
-    border-width: 2px;
-    transition: all .3s;
-}
-
-/* Shift tabs to the center */
-.tab-container.tabs-center ul {
-    justify-content: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-}
-
-/* Shift tabs to the right */
-.tab-container.tabs-right ul {
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-}
-
-/* Depth tab styles */
-.tab-container.tabs-depth ul {
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
-    border-bottom: 0;
-}
-
-/* Classic tab styles */
-.tab-container.tabs-classic ul {
-    border-bottom-color: #dbdbdb;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-radius: 3px 3px 0 0; /* Only round the top left and right corners */
-    transition: all .3s;
-}
-
-.tab-container.tabs-classic li:not(.selected) a:hover {
-    background-color: rgb(240, 240, 240);
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-.tab-container.tabs-classic li a {
-    border: 1px solid transparent;
-    border-bottom-color: #dbdbdb;
-    border-radius: 3px 3px 0 0;
-    transition: all .3s;
-}
-
-.tab-container.tabs-classic li.selected a {
-    color: var(--cirrus-primary);
-    border-color: #dbdbdb;
-    border-bottom-color: transparent !important;
-}
-
-/* Tabs that fill the width */
-.tab-container.tabs-fill li {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -ms-flex-negative: 0;
-        flex-shrink: 0; /* Disable shrinking to original width */
-}
-
-/* Override the -webkit-box display that sizes tab items based on text */
-.tab-container.tabs-fill ul {
-    display: flex; /* Equal size tabs */
-}
-
-/* Different tab sizes */
-.tab-container.tabs-xsmall {
-    font-size: 0.6rem;
-}
-
-.tab-container.tabs-small {
-    font-size: 0.75rem;
-}
-
-.tab-container.tabs-large {
-    font-size: 1.25rem;
-}
-
-.tab-container.tabs-xlarge {
-    font-size: 1.5rem;
-}
-
-/* Font Awesome Integration */
-.tab-container .icon:first-child { /* Left icon */
-    margin-right: .75rem;
-}
-
-.tab-container .icon:last-child { /* Right icon */
-    margin-left: .75rem;
-}
-
-/* IN PROGERSS */
 /* Color scheme for Cirrus */
 :root {
     --cirrus-fg: #374054;
