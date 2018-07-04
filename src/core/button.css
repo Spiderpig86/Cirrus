@@ -29,16 +29,13 @@ button,
 button:hover,
 .btn:hover,
 [type="submit"]:hover {
-    -webkit-transition: all 0.1s;
     transition: all 0.1s;
-    -moz-transition: all 0.1s;
     background: #eee;
 }
 
 .btn:active,
 button:active,
 [type="submit"]:active {
-    -webkit-transition: 0.1s ease;
     transition: 0.1s ease;
     background: #ddd;
 }
@@ -47,7 +44,6 @@ button:active,
 .btn.loading:active:after,
 button.loading:active:after,
 [type="submit"].loading:active:after {
-    -webkit-transition: 0.1s ease;
     transition: 0.1s ease;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -185,7 +181,6 @@ button.btn-close::after {
 .btn-outline {
     color: #fff;
     background: transparent;
-    -webkit-transition: all 0.1s;
     transition: all 0.1s;
     border: 1px solid #fff;
     -webkit-backface-visibility: hidden;
@@ -196,7 +191,6 @@ button.btn-close::after {
 .btn-outline:active {
     background: rgba(255, 255, 255, 0.35);
     color: #fff;
-    -webkit-transition: all 0.1s;
     transition: all 0.1s;
 }
 
@@ -205,7 +199,6 @@ button.btn-close::after {
     border: 1px solid #222;
     color: #222;
     background: transparent;
-    -webkit-transition: all 0.1s;
     transition: all 0.1s;
 }
 

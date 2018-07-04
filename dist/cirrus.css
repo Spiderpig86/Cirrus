@@ -34,16 +34,13 @@ button,
 button:hover,
 .btn:hover,
 [type="submit"]:hover {
-    -webkit-transition: all 0.1s;
     transition: all 0.1s;
-    -moz-transition: all 0.1s;
     background: #eee;
 }
 
 .btn:active,
 button:active,
 [type="submit"]:active {
-    -webkit-transition: 0.1s ease;
     transition: 0.1s ease;
     background: #ddd;
 }
@@ -52,7 +49,6 @@ button:active,
 .btn.loading:active:after,
 button.loading:active:after,
 [type="submit"].loading:active:after {
-    -webkit-transition: 0.1s ease;
     transition: 0.1s ease;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -190,7 +186,6 @@ button.btn-close::after {
 .btn-outline {
     color: #fff;
     background: transparent;
-    -webkit-transition: all 0.1s;
     transition: all 0.1s;
     border: 1px solid #fff;
     -webkit-backface-visibility: hidden;
@@ -201,7 +196,6 @@ button.btn-close::after {
 .btn-outline:active {
     background: rgba(255, 255, 255, 0.35);
     color: #fff;
-    -webkit-transition: all 0.1s;
     transition: all 0.1s;
 }
 
@@ -210,7 +204,6 @@ button.btn-close::after {
     border: 1px solid #222;
     color: #222;
     background: transparent;
-    -webkit-transition: all 0.1s;
     transition: all 0.1s;
 }
 
@@ -1988,7 +1981,7 @@ section {
     width: 100%;
 }
 
-/* Removed 0.5.5 */
+/* Removed 0.5.5 */ 
 /* .divider-short {
     max-width: 15rem;
     width: 100%;
@@ -2438,8 +2431,6 @@ space.x-large {
 /* LINKS */
 
 a {
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
     transition: all 0.3s;
     color: var(--cirrus-link);
     text-decoration: none;
@@ -2451,8 +2442,6 @@ a {
 
 a:hover {
     color: var(--cirrus-link-dark);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -2489,8 +2478,6 @@ a.underline {
 
 .u:after {
     content: "";
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -2530,8 +2517,6 @@ a.underline {
 .utb:before,
 .utb:after {
     content: "";
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -4224,10 +4209,6 @@ border-color: transparent;
 .pagination .pagination-item {
     margin: 1rem 0.1rem;
     transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
 }
 
 .pagination .pagination-item.pagination-next {
@@ -4277,10 +4258,6 @@ border-color: transparent;
 .pagination .pagination-item:hover *:not([disabled]) {
     transition: all 0.3s;
     color: var(--cirrus-primary);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
 }
 /* PLACEHOLDER */
 /* Designed to be embedded in any parent container as placeholder when content is absent. */
@@ -4426,7 +4403,6 @@ border-color: transparent;
 
 .tab-container.tabs-classic li:not(.selected) a:hover {
     background-color: rgb(240, 240, 240);
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 

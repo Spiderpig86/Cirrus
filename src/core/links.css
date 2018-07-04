@@ -1,8 +1,6 @@
 /* LINKS */
 
 a {
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
     transition: all 0.3s;
     color: var(--cirrus-link);
     text-decoration: none;
@@ -14,8 +12,6 @@ a {
 
 a:hover {
     color: var(--cirrus-link-dark);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -52,8 +48,6 @@ a.underline {
 
 .u:after {
     content: "";
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -93,8 +87,6 @@ a.underline {
 .utb:before,
 .utb:after {
     content: "";
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
     transition: all 0.3s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;

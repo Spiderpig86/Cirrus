@@ -111,7 +111,6 @@
 
 .tab-container.tabs-classic li:not(.selected) a:hover {
     background-color: rgb(240, 240, 240);
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 
