@@ -22,7 +22,7 @@
    transform: translateY(-40px);
 }
 
-.card:hover .card-image:after {
+.card:hover .card-image::after {
   opacity: 0;
 }
 
@@ -42,7 +42,7 @@
   transition: all .3s ease-in-out;
 }
 
-.card-image:after {
+.card-image::after {
   content: "";
   display: block;
   position: absolute;

@@ -115,16 +115,52 @@
 }
 
 .tag-container .tag {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .tag-container .tag:not(:last-child) {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
 }
 
 /* Used for grouping tags together */
 .tag-container.group-tags {
     margin-right: 0;
+}
+
+/* Tag close button */
+.tags.tag-close-btn {
+    padding: 0;
+    position: relative;
+    width: 1rem;
+}
+
+.tags.tag-close-btn::before,
+.tags.tag-close-btn::after {
+    background-color: var(--cirrus-fg);
+    content: "";
+    display: block;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.tag.tag-close-btn::before {
+    height: 1px;
+    width: 50%;
+}
+
+.tag.tag-close-btn::after {
+    height: 50%;
+    width: 1px;
+}
+
+/* MISC */
+a.tag:hover {
+    text-decoration: underline;
 }
 
 .tag-container.group-tags .tag:not(:first-child) {
@@ -156,9 +192,4 @@
 
 .tags.tags-right .tag:not(:last-child) {
     margin-right: 0;
-}
-
-/* MISC */
-a.tag:hover {
-    text-decoration: underline;
 }

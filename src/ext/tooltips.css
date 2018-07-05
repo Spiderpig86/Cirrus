@@ -6,7 +6,7 @@
 }
 
 /* This is the psuedoelement that creates the tooltip */
-.tooltip:after, .tooltip.tooltip-top:after {
+.tooltip::after, .tooltip.tooltip-top::after {
   -webkit-appearance: none;
   -moz-appearance: none;
   position: absolute;
@@ -41,7 +41,7 @@
 }
 
 /* Tooltip top left */
-.tooltip.tooltip-top-left:after {
+.tooltip.tooltip-top-left::after {
   -webkit-transform: translate(-65%, 0);
   transform: translate(-65%, 0);
 }
@@ -53,7 +53,7 @@
 }
 
 /* Tooltip top right */
-.tooltip.tooltip-top-right:after {
+.tooltip.tooltip-top-right::after {
   -webkit-transform: translate(15%, 0);
   transform: translate(15%, 0);
 }
@@ -85,7 +85,7 @@
 }
 
 /* Tooltip bottom left */
-.tooltip.tooltip-bottom-left:after, {
+.tooltip.tooltip-bottom-left::after, {
   top: 100%;
   -webkit-transform: translate(-65%, -1rem);
   transform: translate(-65%, -1rem);
@@ -99,7 +99,7 @@
 }
 
 /* Tooltip bottom right */
-.tooltip.tooltip-bottom-right:after {
+.tooltip.tooltip-bottom-right::after {
   top: 100%;
   -webkit-transform: translate(0%, -1rem);
   transform: translate(0%, -1rem);

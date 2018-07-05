@@ -117,7 +117,7 @@ space.x-large {
     padding: 0.5rem;
 }
 
-.row:after {
+.row::after {
     content: "";
     clear: both;
     display: table;

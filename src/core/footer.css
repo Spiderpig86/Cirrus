@@ -35,7 +35,7 @@ footer .footer-list-title {
     color: #ddd;
 }
 
-footer .footer-list-title:after {
+footer .footer-list-title::after {
     content: "";
     display: block;
     width: 10%;

@@ -38,7 +38,7 @@
 }
 
 /* Loading Spinner, align center by default */
-.animated.loading:after {
+.animated.loading::after {
     border: 2px solid #ccc;
     border-radius: 50%;
     border-right-color: transparent;
@@ -54,13 +54,13 @@
     animation: loading 500ms infinite linear;
 }
 
-.animated.loading.loading-white:after {
+.animated.loading.loading-white::after {
     border-left-color: #fff;
     border-bottom-color: #fff;
 }
 
 /* Align spinner left */
-.animated.loading.loading-left:after {
+.animated.loading.loading-left::after {
     left: 2rem;
     right: auto;
 }
@@ -70,7 +70,7 @@
 }
 
 /* Align spinner right */
-.animated.loading.loading-right:after {
+.animated.loading.loading-right::after {
     left: auto;
     right: 2rem;
 }

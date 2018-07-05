@@ -13,7 +13,7 @@
 }
 
 /* Draw text on image just like in Gmail */
-.avatar:before {
+.avatar::before {
     content: attr(data-text);
     color: #fff;
     /* Removed z-index: 1, makes text blurry */

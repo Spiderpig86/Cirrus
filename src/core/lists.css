@@ -149,7 +149,7 @@ ul.menu {
 }
 
 /* Title for the section separated by the divider */
-.menu .divider:after {
+.menu .divider::after {
   content: attr(data-label); /* Text that will be displayed */
   background-color: var(--cirrus-bg);
   color: #b7b7b7;

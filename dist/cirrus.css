@@ -46,9 +46,9 @@ button:active,
 }
 
 /* Make the loading circle, if present, white when button is active */
-.btn.loading:active:after,
-button.loading:active:after,
-[type="submit"].loading:active:after {
+.btn.loading:active::after,
+button.loading:active::after,
+[type="submit"].loading:active::after {
     transition: 0.1s ease;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -956,7 +956,7 @@ footer .footer-list-title {
     color: #ddd;
 }
 
-footer .footer-list-title:after {
+footer .footer-list-title::after {
     content: "";
     display: block;
     width: 10%;
@@ -1940,18 +1940,17 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     width: 80%;
 }
 
-.content-no-padding {
-    /* Content without the extra margin at the bottom */
+/* .content-no-padding { Removed 0.5.5
     max-width: 60em;
     margin: 0 auto;
     width: 80%;
-}
+} */
 
 /* Content that centers in parent and fills parent div without the extra vertical margin */
-.content-fluid {
+/* .content-fluid { Removed 0.5.5
     width: 100%;
     margin: 0 auto;
-}
+} */
 
 .fullscreen {
     top: 0;
@@ -2052,7 +2051,7 @@ space.x-large {
     padding: 0.5rem;
 }
 
-.row:after {
+.row::after {
     content: "";
     clear: both;
     display: table;
@@ -2476,7 +2475,7 @@ a.underline {
 
 /* Underline */
 
-.u:after {
+.u::after {
     content: "";
     transition: all 0.3s;
     -webkit-backface-visibility: hidden;
@@ -2488,25 +2487,25 @@ a.underline {
     bottom: -0.25em;
 }
 
-.u:hover:after {
+.u:hover::after {
     width: 100%;
 }
 
-.u-LR:after {
+.u-LR::after {
     /* Left to Right */
     left: 0;
 }
 
-.u-RL:after {
+.u-RL::after {
     /* Right to Left */
     right: 0;
 }
 
-.u-RL:hover:after {
+.u-RL:hover::after {
     width: 100%;
 }
 
-.u-C:after {
+.u-C::after {
     /* Center Outwards */
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -2514,8 +2513,8 @@ a.underline {
 }
 
 /* Underline top and bottom */
-.utb:before,
-.utb:after {
+.utb::before,
+.utb::after {
     content: "";
     transition: all 0.3s;
     -webkit-backface-visibility: hidden;
@@ -2526,51 +2525,51 @@ a.underline {
     background: var(--cirrus-link-dark);
 }
 
-.utb:before {
+.utb::before {
     top: -0.25em;
 }
 
-.utb:after {
+.utb::after {
     bottom: -0.25em;
 }
 
-.utb:hover:before,
-.utb:hover:after {
+.utb:hover::before,
+.utb:hover::after {
     width: 100%;
 }
 
-.utb-LR:before,
-.utb-LR:after {
+.utb-LR::before,
+.utb-LR::after {
     left: 0;
 }
 
-.utb-RL:before,
-.utb-RL:after {
+.utb-RL::before,
+.utb-RL::after {
     right: 0;
 }
 
-.utb-C:before,
-.utb-C:after {
+.utb-C::before,
+.utb-C::after {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
 /* Opposite start */
-.utb-OLR:before {
+.utb-OLR::before {
     /* Suffix denotes border transition direction for the top border (left to right). Bottom border will be the opposite direction */
     left: 0;
 }
 
-.utb-OLR:after {
+.utb-OLR::after {
     right: 0;
 }
 
-.utb-ORL:before {
+.utb-ORL::before {
     right: 0;
 }
 
-.utb-ORL:after {
+.utb-ORL::after {
     left: 0;
 }
 
@@ -2589,8 +2588,8 @@ a.underline {
     padding: 0.2rem 0.4rem;
 }
 
-.usquare:before,
-.usquare:after {
+.usquare::before,
+.usquare::after {
     content: "";
     transition: 0.25s all ease;
     -webkit-backface-visibility: hidden;
@@ -2602,45 +2601,45 @@ a.underline {
     background: var(--cirrus-link-dark);
 }
 
-.usquare:before {
+.usquare::before {
     left: 0;
     bottom: -0.2rem;
 }
 
-.usquare.delay:before {
+.usquare.delay::before {
     transition-delay: 0.6s;
 }
 
-.usquare:after {
+.usquare::after {
     right: 0;
     top: -0.2rem;
 }
 
-.usquare.delay:after {
+.usquare.delay::after {
     transition-delay: 0.2s;
 }
 
-.usquare a:before {
+.usquare a::before {
     left: 0;
     transition: 0.25s all ease;
 }
 
-.usquare a:after {
+.usquare a::after {
     right: 0;
     transition: 0.25s all ease;
 }
 
-.usquare.delay a:after {
+.usquare.delay a::after {
     transition: 0.25s all ease 0.4s;
 }
 
-.usquare:hover:before,
-.usquare:hover:after {
+.usquare:hover::before,
+.usquare:hover::after {
     height: calc(100% + 0.4rem); /* Makes the left and right borders */
 }
 
-.usquare:hover a:before,
-.usquare:hover a:after {
+.usquare:hover a::before,
+.usquare:hover a::after {
     width: 100%;
 }
 
@@ -2800,7 +2799,7 @@ ul.menu {
 }
 
 /* Title for the section separated by the divider */
-.menu .divider:after {
+.menu .divider::after {
   content: attr(data-label); /* Text that will be displayed */
   background-color: var(--cirrus-bg);
   color: #b7b7b7;
@@ -3675,7 +3674,7 @@ video.video-fullscreen {
 }
 
 /* Loading Spinner, align center by default */
-.animated.loading:after {
+.animated.loading::after {
     border: 2px solid #ccc;
     border-radius: 50%;
     border-right-color: transparent;
@@ -3691,13 +3690,13 @@ video.video-fullscreen {
     animation: loading 500ms infinite linear;
 }
 
-.animated.loading.loading-white:after {
+.animated.loading.loading-white::after {
     border-left-color: #fff;
     border-bottom-color: #fff;
 }
 
 /* Align spinner left */
-.animated.loading.loading-left:after {
+.animated.loading.loading-left::after {
     left: 2rem;
     right: auto;
 }
@@ -3707,7 +3706,7 @@ video.video-fullscreen {
 }
 
 /* Align spinner right */
-.animated.loading.loading-right:after {
+.animated.loading.loading-right::after {
     left: auto;
     right: 2rem;
 }
@@ -3932,7 +3931,7 @@ video.video-fullscreen {
 }
 
 /* Draw text on image just like in Gmail */
-.avatar:before {
+.avatar::before {
     content: attr(data-text);
     color: #fff;
     /* Removed z-index: 1, makes text blurry */
@@ -3998,7 +3997,7 @@ video.video-fullscreen {
    transform: translateY(-40px);
 }
 
-.card:hover .card-image:after {
+.card:hover .card-image::after {
   opacity: 0;
 }
 
@@ -4018,7 +4017,7 @@ video.video-fullscreen {
   transition: all .3s ease-in-out;
 }
 
-.card-image:after {
+.card-image::after {
   content: "";
   display: block;
   position: absolute;
@@ -4577,16 +4576,52 @@ border-color: transparent;
 }
 
 .tag-container .tag {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .tag-container .tag:not(:last-child) {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
 }
 
 /* Used for grouping tags together */
 .tag-container.group-tags {
     margin-right: 0;
+}
+
+/* Tag close button */
+.tags.tag-close-btn {
+    padding: 0;
+    position: relative;
+    width: 1rem;
+}
+
+.tags.tag-close-btn::before,
+.tags.tag-close-btn::after {
+    background-color: var(--cirrus-fg);
+    content: "";
+    display: block;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.tag.tag-close-btn::before {
+    height: 1px;
+    width: 50%;
+}
+
+.tag.tag-close-btn::after {
+    height: 50%;
+    width: 1px;
+}
+
+/* MISC */
+a.tag:hover {
+    text-decoration: underline;
 }
 
 .tag-container.group-tags .tag:not(:first-child) {
@@ -4620,10 +4655,6 @@ border-color: transparent;
     margin-right: 0;
 }
 
-/* MISC */
-a.tag:hover {
-    text-decoration: underline;
-}
 /* TILES */
 .tile {
     display: flex;
@@ -4780,7 +4811,7 @@ a.tag:hover {
 }
 
 /* This is the psuedoelement that creates the tooltip */
-.tooltip:after, .tooltip.tooltip-top:after {
+.tooltip::after, .tooltip.tooltip-top::after {
   -webkit-appearance: none;
   -moz-appearance: none;
   position: absolute;
@@ -4815,7 +4846,7 @@ a.tag:hover {
 }
 
 /* Tooltip top left */
-.tooltip.tooltip-top-left:after {
+.tooltip.tooltip-top-left::after {
   -webkit-transform: translate(-65%, 0);
   transform: translate(-65%, 0);
 }
@@ -4827,7 +4858,7 @@ a.tag:hover {
 }
 
 /* Tooltip top right */
-.tooltip.tooltip-top-right:after {
+.tooltip.tooltip-top-right::after {
   -webkit-transform: translate(15%, 0);
   transform: translate(15%, 0);
 }
@@ -4859,7 +4890,7 @@ a.tag:hover {
 }
 
 /* Tooltip bottom left */
-.tooltip.tooltip-bottom-left:after, {
+.tooltip.tooltip-bottom-left::after, {
   top: 100%;
   -webkit-transform: translate(-65%, -1rem);
   transform: translate(-65%, -1rem);
@@ -4873,7 +4904,7 @@ a.tag:hover {
 }
 
 /* Tooltip bottom right */
-.tooltip.tooltip-bottom-right:after {
+.tooltip.tooltip-bottom-right::after {
   top: 100%;
   -webkit-transform: translate(0%, -1rem);
   transform: translate(0%, -1rem);
