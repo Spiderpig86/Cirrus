@@ -3586,6 +3586,10 @@ video.video-fullscreen {
   padding: 0 !important;
 }
 
+.margin-auto {
+  margin: 0 auto !important;
+}
+
 /* Round the corners of the element */
 .round {
   border-radius: .1rem;
