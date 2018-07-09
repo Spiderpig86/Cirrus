@@ -14,15 +14,14 @@
 }
 
 .pagination a {
-    color: #8292a2;
+    color: #5d6c7b;
 }
 
-.pagination .pagination-item *[disabled] {
+.pagination .pagination-item a[disabled] {
     cursor: pointer;
     opacity: 0.5;
     pointer-events: none;
     user-select: none;
-    -webkit-user-select: none;
 }
 
 .pagination .pagination-item {
@@ -54,24 +53,45 @@
     color: #fff;
 }
 
-.pagination .pagination-item.short * {
+.pagination .pagination-item.short a {
     display: inline-block;
     line-height: 1.25;
+    padding: 0.5rem 0.75rem;
 }
 
 /* Used to display many pagination items */
 .pagination .pagination-item.short {
-    margin: 0.2rem;
     border-radius: 0.1rem;
-    padding: 0 0.25rem;
+    margin: 0.2rem 0;
     -webkit-flex: 0; /* Flex to fill */
     -ms-flex: 0;
     flex: 0;
 }
 
+.pagination .pagination-item.short:first-child {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.pagination .pagination-item.short:last-child {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.pagination .pagination-item.short:not(.selected):hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 .pagnation .pagination-item.ellipses {
     color: #b5b5b5;
     pointer-events: none;
+}
+
+/* Bordered pagination */
+.pagination.pagination-bordered .pagination-item.short a {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    margin-left: -1px;
 }
 
 /* Not good but CSS does not have heading selectors. Need to move to SASS */
@@ -82,7 +102,7 @@
 .pagination .pagination-item:hover h4,
 .pagination .pagination-item:hover h5,
 .pagination .pagination-item:hover h6,
-.pagination .pagination-item:hover *:not([disabled]):not(.ellipses) {
+.pagination .pagination-item:not(.selected):hover *:not([disabled]):not(.ellipses) {
     transition: all 0.3s;
     color: var(--cirrus-primary);
 }
