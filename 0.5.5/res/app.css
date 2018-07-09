@@ -4,12 +4,40 @@
     background-repeat: no-repeat;
 }
 
+#hero-body {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#fade {
+    background-image: linear-gradient(to bottom, transparent, #fff);
+    bottom: 0;
+    height: 175px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    transition: all .3s;
+}
+
+#fade.faded {
+    opacity: 1;
+    transition: all .3s;
+}
+
+.header {
+    transition: all .3s;
+}
+
 .header a {
     color: #fff;
 }
 
-.header a:hover {
-    color: var(--cirrus-accent);
+.header .nav-item a:hover {
+    color: var(--cirrus-primary);
+}
+
+.header .btn .btn-accent {
+    position: inherit;
 }
 
 section {

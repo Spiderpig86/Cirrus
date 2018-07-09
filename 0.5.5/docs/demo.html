@@ -22,11 +22,11 @@
 </head>
 
 <body>
-    <div class="header header-fixed unselectable header-animated header-clear">
+    <div id="header" class="header header-top header-fixed unselectable header-animated header-clear">
         <div class="header-brand">
             <div class="nav-item no-hover">
                 <a>
-                    <h6 class="title">Cirrus</h6>
+                    <h5 class="title">Cirrus</h5>
                 </a>
             </div>
             <div class="nav-item nav-btn" id="header-btn">
@@ -60,7 +60,7 @@
                         </span>
                         Docs</a>
                 </div>
-                <div class="nav-item btn btn-accent" style="margin: 1rem;">
+                <div class="nav-item btn btn-accent" style="margin: 0.5rem;">
                     <a href="#">
                         <span class="icon">
                             <i class="fas fa fa-cloud-download-alt small"></i>
@@ -73,12 +73,13 @@
 
     <section id="splash">
         <div id="splash-img" class="hero fullscreen hero-img parallax-img">
-            <div class="hero-body">
+            <div id="hero-body" class="hero-body">
                 <div class="content text-center">
                     <h5 class="uppercase white sub-title">A gorgeous CSS framework for the web.</h5>
                     <h1 class="headline-1 white title">Cirrus.CSS</h1>
                 </div>
             </div>
+            <div id="fade"></div>
         </div>
     </section>
 
@@ -89,11 +90,18 @@
             </p>
             <h6 class="light font-normal">A fully responsive and comprehensive CSS framework with beautiful controls and simplistic structure. Cirrus is
                 designed to be adaptable to existing themes or when starting fresh.</h6>
-
+            <div class="row">
+                <a class="github-button" href="https://github.com/Spiderpig86/Cirrus" data-show-count="true" aria-label="Star Spiderpig86/Cirrus on GitHub">Star</a>
+            </div>
             <space class="x-large"></space>
             <div class="divider"></div>
         </div>
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+    <script src="../res/app.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
