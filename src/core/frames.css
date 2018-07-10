@@ -39,11 +39,11 @@
 .frame .frame-title {
     color: var(--cirrus-fg);
     font-size: 1rem;
-    margin: 0.5rem auto;
+    margin: .75rem auto 0;
 }
 
 .frame .frame-subtitle {
     color: rgba(55, 64, 84, 0.6);
     font-size: .85rem;
-    margin: 0.25rem auto;
+    margin: .25rem auto .75rem;
 }

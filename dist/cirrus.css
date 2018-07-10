@@ -1407,13 +1407,13 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 .frame .frame-title {
     color: var(--cirrus-fg);
     font-size: 1rem;
-    margin: 0.5rem auto;
+    margin: .75rem auto 0;
 }
 
 .frame .frame-subtitle {
     color: rgba(55, 64, 84, 0.6);
     font-size: .85rem;
-    margin: 0.25rem auto;
+    margin: .25rem auto .75rem;
 }
 /* HEADER */
 .header {
@@ -3391,8 +3391,8 @@ video.video-fullscreen {
     --cirrus-accent-border: #c21b2b;
     --cirrus-light: #f6f9fc;
     --cirrus-dark: #363636;
-    --cirrus-link: #379afd;
-    --cirrus-link-dark: #083d71;
+    --cirrus-link: #5e5cc7;
+    --cirrus-link-dark: #4643e2;
     --cirrus-info: #2972fa;
     --cirrus-success: #0dd157;
     --cirrus-warning: #fab633;
@@ -3410,7 +3410,7 @@ video.video-fullscreen {
 }
 
 /* GLOBAL THEME SELECTORS */
-.bg-primary {background-color: var(--cirrus-primary) !important; }
+.bg-primary { background-color: var(--cirrus-primary) !important; }
 .bg-success { background-color: var(--cirrus-success) !important; }
 .bg-warning { background-color: var(--cirrus-warning) !important; }
 .bg-danger { background-color: var(--cirrus-danger) !important; }
@@ -3419,6 +3419,16 @@ video.video-fullscreen {
 .bg-link { background-color: var(--cirrus-link) !important; }
 .bg-link-dark { background-color: var(--cirrus-link-dark) !important; }
 .bg-info { background-color: var(--cirrus-info) !important; }
+
+.text-primary { color: var(--cirrus-primary) !important; }
+.text-success { color: var(--cirrus-success) !important; }
+.text-warning { color: var(--cirrus-warning) !important; }
+.text-danger { color: var(--cirrus-danger) !important; }
+.text-light { color: var(--cirrus-light) !important; }
+.text-dark { color: var(--cirrus-dark) !important; }
+.text-link { color: var(--cirrus-link) !important; }
+.text-link-dark { color: var(--cirrus-link-dark) !important; }
+.text-info { color: var(--cirrus-info) !important; }
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
 
