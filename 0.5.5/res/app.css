@@ -28,6 +28,11 @@
     transition: all .3s;
 }
 
+.header-clear {
+    opacity: 0.9;
+    padding: 1.5rem;
+}
+
 .header a {
     color: #fff;
 }
