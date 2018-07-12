@@ -1,3 +1,7 @@
+* {
+    word-break: break-all;
+}
+
 #splash-img{ 
     background: url('https://images.unsplash.com/photo-1508182314998-3bd49473002f?ixlib=rb-0.3.5&s=f8ac09c936bac8105fde945ea267da65&auto=format&fit=crop&w=2560&q=100');
     background-size: cover;
@@ -61,4 +65,12 @@ section {
 .frame {
     box-shadow: 0 0.2rem 1.25rem 0 rgba(27, 30, 36, 0.07);
     margin: 1rem 0;
+}
+
+/* Fonts */
+.desc {
+    font-size: 11px;
+    font-family: 'Nunito Sans';
+    margin-left: 10px;
+    vertical-align: bottom;
 }
