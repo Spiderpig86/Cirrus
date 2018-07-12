@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-A fully responsive CSS and UI framework with custom design controls and simplistic structure. A components are customizable and work with your CSS.
+A fully responsive and comprehensive CSS framework with cbeautiful controls and simplistic structure. Cirrus is designed to be adaptable to existing themes or when starting fresh.
 </p>
 
 ## Framework Components
@@ -70,6 +70,9 @@ A fully responsive CSS and UI framework with custom design controls and simplist
 * [Tooltips](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tooltips.css "Tooltips")
   * Add tooltips to any control for contextual info.
 
+## jQuery
+* The only component that requires the use of jQuery is the `Header` component for toggling the dropdown menu on mobile.
+* It is possible to use these components without jQuery in other frameworks like Angular and React by mimicking the behavior of toggling the class.
 
 ## Why not other frameworks?
 Even with a multitude of CSS frameworks, some are either too basic to develop more complex websites and some are too bogged down with a lot of styles that don't end up getting used. Cirrus is meant to bridge a gap between boilerplate stylesheets and UI frameworks.
