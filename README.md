@@ -8,48 +8,71 @@
 </p>
 
 <p align="center">
-A fully responsive CSS and UI framework with custom design controls and simplistic structure. A components are customizable and work with your CSS.
+A fully responsive and comprehensive CSS framework with cbeautiful controls and simplistic structure. Cirrus is designed to be adaptable to existing themes or when starting fresh.
 </p>
 
 ## Framework Components
-* [Animations](https://github.com/Spiderpig86/Cirrus/blob/master/src/animations.css "Animations")
-  * Consists of animations that will work with the controls.
-* [Buttons](https://github.com/Spiderpig86/Cirrus/blob/master/src/button.css "Buttons")
+* Framework components are now broken down into `core` and `ext` packages. The `core` package only contains the essentials for basic styling while `core + ext` adds specially designed components.
+
+#### Core
+* [Buttons](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/button.css "Buttons")
   * Styles for the button with 3 different variations.
-* [Cards](https://github.com/Spiderpig86/Cirrus/blob/master/src/card.css "Cards")
-  * Base for card controls.
-* [Code](https://github.com/Spiderpig86/Cirrus/blob/master/src/code.css "Code")
+* [Code](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/code.css "Code")
   * Style for code markup blocks.
-* [Default (Base)](https://github.com/Spiderpig86/Cirrus/blob/master/src/default.css "Default")
+* [Default (Base)](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/default.css "Default")
   * The core of this framework.
-* [Frames](https://github.com/Spiderpig86/Cirrus/blob/master/src/frames.css "Frames")
-  * A more flexible version of a Card with a basic structure system. This is shown in the Layout documentation.
-* [Font](https://github.com/Spiderpig86/Cirrus/blob/master/src/font.css "Font")
+* [Font](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/font.css "Font")
   * All text styles for this framework for headers, articles, blockquotes, and paragraphs.
-* [Footer](https://github.com/Spiderpig86/Cirrus/blob/master/src/footer.css "Footer")
+* [Footer](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/footer.css "Footer")
   * Basic styles for setting up a page footer.
-* [Forms](https://github.com/Spiderpig86/Cirrus/blob/master/src/forms.css "Forms")
+* [Forms](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/forms.css "Forms")
   * Form styles for textboxes, textfields, selects, and layout.
-* [Header](https://github.com/Spiderpig86/Cirrus/blob/master/src/header.css "Header")
+* [Frames](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/frames.css "Frames")
+  * Flexible panel with header, body, and footer for layouts.
+* [Header](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/header.css "Header")
   * Styles for header elements including drop down menus.
-* [Layout](https://github.com/Spiderpig86/Cirrus/blob/master/src/layout.css "Layout")
+* [Layout](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/layout.css "Layout")
   * Rules for grids, item alignment, and layout borders.
-* [Links](https://github.com/Spiderpig86/Cirrus/blob/master/src/links.css "Links")
+* [Links](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/links.css "Links")
   * Link styles with different effects.
-* [Lists](https://github.com/Spiderpig86/Cirrus/blob/master/src/lists.css "Lists")
+* [Lists](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/lists.css "Lists")
   * A simple stylesheet to simplify list UI.
-* [Media](https://github.com/Spiderpig86/Cirrus/blob/master/src/media.css "Media")
+* [Media](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/media.css "Media")
   * Rules for styling images, videos, figures, avatars, and other media components.
-* [Modal](https://github.com/Spiderpig86/Cirrus/blob/master/src/modal.css "Modal")
+* [Modal](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/modal.css "Modal")
   * Styles for a pop up modal dialog.
-* [Placeholder](https://github.com/Spiderpig86/Cirrus/blob/master/src/placeholder.css "Placeholder")
+* [Placeholder](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/placeholder.css "Placeholder")
   * A padded generic container to display additional information.
-* [Tables](https://github.com/Spiderpig86/Cirrus/blob/master/src/table.css "Tables")
+* [Tables](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/table.css "Tables")
   * Clean designs for tables.
-* [Toast](https://github.com/Spiderpig86/Cirrus/blob/master/src/toast.css "Toast")
-  * A small overaly notification for websites.
-* [Util](https://github.com/Spiderpig86/Cirrus/blob/master/src/util.css "Utils")
+* [Theme](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/theme.css "Theme")
+  * Default colors of the framework.
+* [Util](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/util.css "Utils")
   * Designed to solve many common headaches with CSS.
+  
+#### Ext
+* [Animations](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/animations.css "Animations")
+  * Consists of animations that will work with the controls.
+* [Avatar](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/avatar.css "Avatar")
+  * Styles for user avatars.
+* [Cards](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/card.css "Cards")
+  * Base for card controls.
+* [Pagination](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/pagination.css "Pagination")
+  * Design for pagination and pagination navigation links.
+* [Tabs](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tabs.css "Tabs")
+  * Contains styles for tab controls.
+* [Tags](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tags.css "Tags")
+  * Chip-like controls that are helpful for listing items.
+* [Tiles](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tiles.css "Tiles")
+  * Flexible layout used for tiling controls horizontally.
+* [Toast](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/toast.css "Toast")
+  * A small overaly notification for websites.
+* [Tooltips](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tooltips.css "Tooltips")
+  * Add tooltips to any control for contextual info.
+
+## jQuery
+* The only component that requires the use of jQuery is the `Header` component for toggling the dropdown menu on mobile.
+* It is possible to use these components without jQuery in other frameworks like Angular and React by mimicking the behavior of toggling the class.
 
 ## Why not other frameworks?
 Even with a multitude of CSS frameworks, some are either too basic to develop more complex websites and some are too bogged down with a lot of styles that don't end up getting used. Cirrus is meant to bridge a gap between boilerplate stylesheets and UI frameworks.
