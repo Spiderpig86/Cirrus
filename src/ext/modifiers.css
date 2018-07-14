@@ -1,0 +1,42 @@
+/* A collection of modifiers that extend control styling */
+.btn--pilled {
+    border-radius: 6.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.btn--circle {
+    border-radius: 100%;
+    height: 3.125rem;
+    line-height: 3.125rem;
+    padding: 0;
+    width: 3.125rem;
+}
+
+/* Form controls apply to inputs */
+.form-control--pilled {
+    border-radius: 6.25rem !important;
+}
+
+/* Theme modifiers */
+
+/* GLOBAL THEME SELECTORS */
+.bg-primary { background-color: var(--cirrus-primary) !important; }
+.bg-success { background-color: var(--cirrus-success) !important; }
+.bg-warning { background-color: var(--cirrus-warning) !important; }
+.bg-danger { background-color: var(--cirrus-danger) !important; }
+.bg-light { background-color: var(--cirrus-light) !important; }
+.bg-dark { background-color: var(--cirrus-dark) !important; }
+.bg-link { background-color: var(--cirrus-link) !important; }
+.bg-link-dark { background-color: var(--cirrus-link-dark) !important; }
+.bg-info { background-color: var(--cirrus-info) !important; }
+
+.fg-primary { color: var(--cirrus-primary) !important; }
+.fg-success { color: var(--cirrus-success) !important; }
+.fg-warning { color: var(--cirrus-warning) !important; }
+.fg-danger { color: var(--cirrus-danger) !important; }
+.fg-light { color: var(--cirrus-light) !important; }
+.fg-dark { color: var(--cirrus-dark) !important; }
+.fg-link { color: var(--cirrus-link) !important; }
+.fg-link-dark { color: var(--cirrus-link-dark) !important; }
+.fg-info { color: var(--cirrus-info) !important; }
