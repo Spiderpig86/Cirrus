@@ -448,21 +448,6 @@ button span:last-child,
     border-radius: 0; /* Remove roundness from center buttons */
     margin-left: -0.1rem;
 }
-
-/* BUTTON MODIFIERS */
-.btn-pill {
-    border-radius: 6.25rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-}
-
-.btn-circle {
-    border-radius: 100%;
-    height: 2.625rem;
-    line-height: 2.625rem;
-    padding: 0;
-    width: 2.625rem;
-}
 /* CODE */
 
 code {
@@ -3429,27 +3414,6 @@ video.video-fullscreen {
 
     --toast-primary-bg: #00c9a7;
 }
-
-/* GLOBAL THEME SELECTORS */
-.bg-primary { background-color: var(--cirrus-primary) !important; }
-.bg-success { background-color: var(--cirrus-success) !important; }
-.bg-warning { background-color: var(--cirrus-warning) !important; }
-.bg-danger { background-color: var(--cirrus-danger) !important; }
-.bg-light { background-color: var(--cirrus-light) !important; }
-.bg-dark { background-color: var(--cirrus-dark) !important; }
-.bg-link { background-color: var(--cirrus-link) !important; }
-.bg-link-dark { background-color: var(--cirrus-link-dark) !important; }
-.bg-info { background-color: var(--cirrus-info) !important; }
-
-.text-primary { color: var(--cirrus-primary) !important; }
-.text-success { color: var(--cirrus-success) !important; }
-.text-warning { color: var(--cirrus-warning) !important; }
-.text-danger { color: var(--cirrus-danger) !important; }
-.text-light { color: var(--cirrus-light) !important; }
-.text-dark { color: var(--cirrus-dark) !important; }
-.text-link { color: var(--cirrus-link) !important; }
-.text-link-dark { color: var(--cirrus-link-dark) !important; }
-.text-info { color: var(--cirrus-info) !important; }
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
 
