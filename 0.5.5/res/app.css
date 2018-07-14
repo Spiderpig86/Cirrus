@@ -1,7 +1,3 @@
-* {
-    word-break: break-all;
-}
-
 #splash-img{ 
     background: url('https://images.unsplash.com/photo-1508182314998-3bd49473002f?ixlib=rb-0.3.5&s=f8ac09c936bac8105fde945ea267da65&auto=format&fit=crop&w=2560&q=100');
     background-size: cover;
@@ -73,4 +69,8 @@ section {
     font-family: 'Nunito Sans';
     margin-left: 10px;
     vertical-align: bottom;
+}
+
+.frame h2 {
+    word-break: break-all;
 }
