@@ -194,41 +194,56 @@ button.btn-close::after {
     --btn-color: var(--cirrus-light);
     --btn-fg: var(--cirrus-dark);
 }
+.btn-light:hover { --btn-color: var(--cirrus-light-hover); }
 .btn-light:focus { box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5); }
+
 .btn-dark {
     --btn-color: var(--cirrus-dark);
     --btn-fg: var(--cirrus-light);
 }
+.btn-dark:hover { --btn-color: var(--cirrus-dark-hover); }
 .btn-dark:focus { box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
+
 .btn-primary {
     --btn-color: var(--cirrus-primary);
     --btn-fg: var(--cirrus-light);
 }
+.btn-primary:hover { --btn-color: var(--cirrus-primary-hover); }
 .btn-primary:focus { box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, 0.5); }
+
 .btn-info {
     --btn-color: var(--cirrus-info);
     --btn-fg: var(--cirrus-light);
 }
+.btn-info:hover { --btn-color: var(--cirrus-info-hover); }
 .btn-info:focus { box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5); }
+
 .btn-link {
     --btn-color: var(--cirrus-link);
     --btn-fg: var(--cirrus-light);
 }
+.btn-link:hover { --btn-color: var(--cirrus-link-hover); }
 .btn-link:focus { box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5); }
+
 .btn-success {
     --btn-color: var(--cirrus-success);
     --btn-fg: var(--cirrus-light);
 }
+.btn-success:hover { --btn-color: var(--cirrus-success-hover); }
 .btn-success:focus { box-shadow: 0 0 0 0.2rem rgba(13, 210, 89, 0.5); }
+
 .btn-warning {
     --btn-color: var(--cirrus-warning);
     --btn-fg: var(--cirrus-dark);
 }
+.btn-warning:hover { --btn-color: var(--cirrus-warning-hover); }
 .btn-warning:focus { box-shadow: 0 0 0 0.2rem rgba(250, 180, 51, 0.5); }
+
 .btn-danger {
     --btn-color: var(--cirrus-danger);
     --btn-fg: var(--cirrus-light);
 }
+.btn-danger:hover { --btn-color: var(--cirrus-danger-hover); }
 .btn-danger:focus { box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5); }
 
 [class^="btn-"] {
@@ -237,8 +252,7 @@ button.btn-close::after {
     color: var(--btn-fg);
 }
 
-[class^="btn-"]:hover { opacity: 0.95; transition: all .1s; }
-[class^="btn-"]:focus { opacity: 0.9; }
+[class^="btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-color); transition: all .1s; }
 
 /* Outline Variants */
 [class^="btn-"].outline {
@@ -379,21 +393,6 @@ button span:last-child,
 
 .btn-accent:active {
     background-color: var(--cirrus-accent-border);
-}
-
-/* Success Button */
-.btn-success {
-    color: #fff;
-    background-color: #00cb52;
-    border-color: #00ad46;
-}
-
-.btn-success:hover {
-    background-color: #00b147;
-}
-
-.btn-success:active {
-    background-color: #00b147;
 }
 
 /* BUTTON GROUPS */
@@ -3412,6 +3411,13 @@ video.video-fullscreen {
     --cirrus-success: #0dd157;
     --cirrus-warning: #fab633;
     --cirrus-danger: #fb4143;
+
+    --cirrus-light-hover: #d9e6f2;
+    --cirrus-dark-hover: #424242;
+    --cirrus-info-hover: #2368e9;
+    --cirrus-success-hover: #00b147;
+    --cirrus-warning-hover: #f9a90e;
+    --cirrus-danger-hover: #f1393c;
 
     --cirrus-select-bg: rgba(0, 161, 255, 0.2);
 
