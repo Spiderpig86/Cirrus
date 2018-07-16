@@ -4974,7 +4974,7 @@ a.tag:hover {
 }
 
 /* Tooltip bottom left */
-.tooltip.tooltip-bottom-left::after, {
+.tooltip.tooltip-bottom-left::after {
   top: 100%;
   -webkit-transform: translate(-65%, -1rem);
   transform: translate(-65%, -1rem);
