@@ -141,6 +141,7 @@ button.btn-close::after {
     --btn-color: transparent;
     --btn-fg: var(--cirrus-dark);
 }
+.btn-transparent.outline { --btn-fg: var(--cirrus-dark); }
 .btn-transparent:hover { --btn-color: rgba(0, 0, 0, .1); }
 .btn-transparent:focus { box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5); }
 
@@ -169,7 +170,7 @@ button.btn-close::after {
     --btn-color: var(--cirrus-primary);
     --btn-fg: var(--cirrus-light);
 }
-.btn-primary:hover { --btn-color: var(--cirrus-accent-hover); }
+.btn-primary:hover { --btn-color: var(--cirrus-primary); }
 .btn-primary:focus { box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, 0.5); }
 
 .btn-info {
@@ -181,36 +182,39 @@ button.btn-close::after {
 
 .btn-link {
     --btn-color: var(--cirrus-link);
-    --btn-fg: var(--cirrus-link);
+    --btn-fg: var(--cirrus-light);
 }
-.btn-link:hover { --btn-color: var(--cirrus-link-dark); border: 1px solid transparent; text-decoration: underline; }
+.btn-link.outline { --btn-fg: var(--cirrus-link); }
+.btn-link:hover { --btn-color: var(--cirrus-link-hover); }
+.btn-link.outline:hover { border: 1px solid transparent; text-decoration: underline; }
 .btn-link:focus { box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5); }
 
 .btn-success {
     --btn-color: var(--cirrus-success);
     --btn-fg: var(--cirrus-light);
 }
-.btn-success:hover { --btn-color: var(--cirrus-success-hover); }
+.btn-success:hover { --btn-color: var(--cirrus-success); }
 .btn-success:focus { box-shadow: 0 0 0 0.2rem rgba(13, 210, 89, 0.5); }
 
 .btn-warning {
     --btn-color: var(--cirrus-warning);
     --btn-fg: var(--cirrus-dark);
 }
-.btn-warning:hover { --btn-color: var(--cirrus-warning-hover); }
+.btn-warning:hover { --btn-color: var(--cirrus-warning); }
 .btn-warning:focus { box-shadow: 0 0 0 0.2rem rgba(250, 180, 51, 0.5); }
 
 .btn-danger {
     --btn-color: var(--cirrus-danger);
     --btn-fg: var(--cirrus-light);
 }
-.btn-danger:hover { --btn-color: var(--cirrus-danger-hover); }
+.btn-danger:hover { --btn-color: var(--cirrus-danger); }
 .btn-danger:focus { box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5); }
 
 [class^="btn-"] {
     background-color: var(--btn-color); 
     border: 1px solid var(--btn-color);
     color: var(--btn-fg);
+    transition: all .1s;
 }
 
 [class^="btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-color); transition: all .1s; }
