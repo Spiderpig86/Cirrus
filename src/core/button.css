@@ -13,7 +13,7 @@ button,
     border-radius: 0.25rem;
     cursor: pointer;
     text-align: center;
-    transition: all 0.1s;
+    transition: all 0.2s;
     background-color: #fefefe;
     border-color: #d9d9d9;
     color: #737373;
@@ -23,18 +23,20 @@ button,
     font-family: Montserrat;
     min-width: 2rem;
     user-select: none;
+    margin-bottom: 1rem;
+    outline: none;
 }
 
 button:hover,
 .btn:hover,
 [type="submit"]:hover {
-    transition: all 0.1s;
+    transition: all 0.2s;
 }
 
 .btn:active,
 button:active,
 [type="submit"]:active {
-    transition: 0.1s ease;
+    transition: 0.2s ease;
 }
 
 /* Default button colors */
@@ -54,7 +56,7 @@ button:not([class^="btn-"]):active,
 .btn.loading:active::after,
 button.loading:active::after,
 [type="submit"].loading:active::after {
-    transition: 0.1s ease;
+    transition: 0.2s ease;
     border-radius: 50%;
     border-right-color: transparent;
     border-top-color: transparent;
@@ -70,50 +72,14 @@ button.btn-animated:active,
 .btn:focus,
 button:focus,
 input[type="submit"]:focus {
-    box-shadow: 0 0 0 0.2rem rgba(217, 217, 217, 0.5);
     outline: none;
-}
-
-.btn.btn-accent:focus,
-button.btn-accent:focus,
-[type="submit"].btn-accent:focus {
-    border-color: rgba(240, 61, 77, 0.45);
-    box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.5);
-}
-
-.btn.btn-outline-inverted:focus,
-button.btn-outline-inverted:focus,
-[type="submit"].btn-outline-inverted:focus,
-.btn.btn-black:focus,
-button.btn-black:focus,
-[type="submit"].btn-black:focus,
-.btn.btn-dark:focus,
-button.btn-dark:focus,
-[type="submit"].btn-dark:focus {
-    outline: none;
-    border: 1px solid #222;
-    box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
-}
-
-.btn.btn-transparent:focus,
-button.btn-transparent:focus,
-[type="submit"].btn-transparent:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(217, 217, 217, 0.5);
 }
 
 .btn:disabled,
 button:disabled,
 [type="submit"]:disabled {
     cursor: not-allowed;
-    background-color: #d7d7da; /* Make it darker than the other input colors */
-    color: #fff;
-}
-
-.btn:disabled:hover,
-button:disabled:hover,
-[type="submit"]:disabled:hover {
-    background-color: #d7d7da; /* Make it darker than the other input colors */
+    opacity: .5;
 }
 
 button.btn-close {
@@ -163,20 +129,6 @@ button.btn-close::after {
     width: 2px;
 }
 
-/* Accent button disabled */
-.btn-accent:disabled {
-    background-color: var(--cirrus-primary);
-    color: #fff;
-    border-color: #c21b2b;
-    opacity: 0.6;
-}
-
-.btn-accent:disabled:hover {
-    background-color: var(--cirrus-primary);
-    color: #fff;
-    border-color: #c21b2b;
-}
-
 /* Adds small margin around buttons */
 .btn-container {
     margin: 0.5rem;
@@ -185,6 +137,14 @@ button.btn-close::after {
 
 /* BUTTON STYLES */
 /* Regular */
+.btn-transparent {
+    --btn-color: transparent;
+    --btn-fg: var(--cirrus-dark);
+}
+.btn-transparent.outline { --btn-color: var(--cirrus-dark); }
+.btn-transparent:hover { --btn-color: rgba(0, 0, 0, .1); }
+.btn-transparent:focus { box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5); }
+
 .btn-light {
     --btn-color: var(--cirrus-light);
     --btn-fg: var(--cirrus-dark);
@@ -197,13 +157,22 @@ button.btn-close::after {
     --btn-fg: var(--cirrus-light);
 }
 .btn-dark:hover { --btn-color: var(--cirrus-dark-hover); }
+.btn-dark.outline:hover { --btn-color: var(--cirrus-dark); }
 .btn-dark:focus { box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
+
+.btn-black {
+    --btn-color: #000;
+    --btn-fg: var(--cirrus-light);
+}
+.btn-black:hover { --btn-color: #000; }
+.btn-black:focus { box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
 
 .btn-primary {
     --btn-color: var(--cirrus-primary);
     --btn-fg: var(--cirrus-light);
 }
-.btn-primary:hover { --btn-color: var(--cirrus-primary-hover); }
+.btn-primary:hover { --btn-color: var(--cirrus-accent-hover); }
+.btn-primary.outline:hover { --btn-color: var(--cirrus-primary); }
 .btn-primary:focus { box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, 0.5); }
 
 .btn-info {
@@ -211,13 +180,16 @@ button.btn-close::after {
     --btn-fg: var(--cirrus-light);
 }
 .btn-info:hover { --btn-color: var(--cirrus-info-hover); }
+.btn-info.outline:hover { --btn-color: var(--cirrus-info); }
 .btn-info:focus { box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5); }
 
 .btn-link {
     --btn-color: var(--cirrus-link);
     --btn-fg: var(--cirrus-light);
 }
-.btn-link:hover { --btn-color: var(--cirrus-link-hover); }
+.btn-link.outline { --btn-fg: var(--cirrus-link); }
+.btn-link:hover { --btn-color: var(--cirrus-link-dark); }
+.btn-link.outline:hover { --btn-color: var(--cirrus-link-hover); border: 1px solid transparent; text-decoration: underline; }
 .btn-link:focus { box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5); }
 
 .btn-success {
@@ -225,6 +197,7 @@ button.btn-close::after {
     --btn-fg: var(--cirrus-light);
 }
 .btn-success:hover { --btn-color: var(--cirrus-success-hover); }
+.btn-success.outline:hover { --btn-color: var(--cirrus-success); }
 .btn-success:focus { box-shadow: 0 0 0 0.2rem rgba(13, 210, 89, 0.5); }
 
 .btn-warning {
@@ -232,6 +205,7 @@ button.btn-close::after {
     --btn-fg: var(--cirrus-dark);
 }
 .btn-warning:hover { --btn-color: var(--cirrus-warning-hover); }
+.btn-warning.outline:hover { --btn-color: var(--cirrus-warning); }
 .btn-warning:focus { box-shadow: 0 0 0 0.2rem rgba(250, 180, 51, 0.5); }
 
 .btn-danger {
@@ -239,15 +213,17 @@ button.btn-close::after {
     --btn-fg: var(--cirrus-light);
 }
 .btn-danger:hover { --btn-color: var(--cirrus-danger-hover); }
+.btn-danger.outline:hover { --btn-color: var(--cirrus-danger); }
 .btn-danger:focus { box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5); }
 
 [class^="btn-"] {
     background-color: var(--btn-color); 
     border: 1px solid var(--btn-color);
     color: var(--btn-fg);
+    transition: all .2s;
 }
 
-[class^="btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-color); transition: all .1s; }
+[class^="btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-color); transition: all .2s; }
 
 /* Outline Variants */
 [class^="btn-"].outline {
@@ -257,39 +233,7 @@ button.btn-close::after {
 [class^="btn-"].outline:hover {
     background-color: var(--btn-color);
     color: var(--btn-fg);
-    transition: all .1s;
-}
-
-/* Transparent Background */
-.btn-transparent {
-    background: transparent;
-    color: #999;
-    border: 1px solid transparent;
-}
-
-.btn-transparent:hover {
-    background: rgba(0, 0, 0, 0.1);
-    color: #999;
-}
-
-.btn-transparent:active {
-    background: rgba(0, 0, 0, 0.3);
-    color: #f5f5f5;
-    transform: none;
-}
-
-/* Black */
-.btn-black {
-    background: #000;
-    color: #fff;
-}
-
-.btn-black:hover {
-    background: #000;
-}
-
-.btn-black:active {
-    background: #000;
+    transition: all .2s;
 }
 
 /* Right of input */
