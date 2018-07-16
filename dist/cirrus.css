@@ -162,6 +162,7 @@ button.btn-close::after {
     --btn-fg: var(--cirrus-light);
 }
 .btn-dark:hover { --btn-color: var(--cirrus-dark-hover); }
+.btn-dark.outline:hover { --btn-color: var(--cirrus-dark); }
 .btn-dark:focus { box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
 
 .btn-black {
@@ -175,7 +176,8 @@ button.btn-close::after {
     --btn-color: var(--cirrus-primary);
     --btn-fg: var(--cirrus-light);
 }
-.btn-primary:hover { --btn-color: var(--cirrus-primary); }
+.btn-primary:hover { --btn-color: var(--cirrus-accent-hover); }
+.btn-primary.outline:hover { --btn-color: var(--cirrus-primary); }
 .btn-primary:focus { box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, 0.5); }
 
 .btn-info {
@@ -183,6 +185,7 @@ button.btn-close::after {
     --btn-fg: var(--cirrus-light);
 }
 .btn-info:hover { --btn-color: var(--cirrus-info-hover); }
+.btn-info.outline:hover { --btn-color: var(--cirrus-info); }
 .btn-info:focus { box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5); }
 
 .btn-link {
@@ -191,28 +194,31 @@ button.btn-close::after {
 }
 .btn-link.outline { --btn-fg: var(--cirrus-link); }
 .btn-link:hover { --btn-color: var(--cirrus-link-hover); }
-.btn-link.outline:hover { border: 1px solid transparent; text-decoration: underline; }
+.btn-link.outline:hover { --btn-color: var(--cirrus-link); border: 1px solid transparent; text-decoration: underline; }
 .btn-link:focus { box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5); }
 
 .btn-success {
     --btn-color: var(--cirrus-success);
     --btn-fg: var(--cirrus-light);
 }
-.btn-success:hover { --btn-color: var(--cirrus-success); }
+.btn-success:hover { --btn-color: var(--cirrus-success-hover); }
+.btn-success.outline:hover { --btn-color: var(--cirrus-success); }
 .btn-success:focus { box-shadow: 0 0 0 0.2rem rgba(13, 210, 89, 0.5); }
 
 .btn-warning {
     --btn-color: var(--cirrus-warning);
     --btn-fg: var(--cirrus-dark);
 }
-.btn-warning:hover { --btn-color: var(--cirrus-warning); }
+.btn-warning:hover { --btn-color: var(--cirrus-warning-hover); }
+.btn-warning.outline:hover { --btn-color: var(--cirrus-warning); }
 .btn-warning:focus { box-shadow: 0 0 0 0.2rem rgba(250, 180, 51, 0.5); }
 
 .btn-danger {
     --btn-color: var(--cirrus-danger);
     --btn-fg: var(--cirrus-light);
 }
-.btn-danger:hover { --btn-color: var(--cirrus-danger); }
+.btn-danger:hover { --btn-color: var(--cirrus-danger-hover); }
+.btn-danger.outline:hover { --btn-color: var(--cirrus-danger); }
 .btn-danger:focus { box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5); }
 
 [class^="btn-"] {
