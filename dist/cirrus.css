@@ -279,12 +279,6 @@ button.btn-close::after {
     font-size: 110%;
 }
 
-.btn-xxlarge {
-    line-height: 4.5rem;
-    padding: 0 2rem;
-    font-size: 120%;
-}
-
 /* Make the loader white so it is visible */
 .loading.btn-accent:after {
     border: 2px solid #fff;
