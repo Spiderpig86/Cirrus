@@ -74,3 +74,13 @@ section {
 .frame h2 {
     word-break: break-all;
 }
+
+/* Buttons */
+.btn-primary.hover,
+.btn-primary.focus {
+    background-color: #d62939;
+}
+
+.btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, .5)
+}
