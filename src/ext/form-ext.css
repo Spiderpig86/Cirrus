@@ -1,0 +1,21 @@
+/* EXTENDED FORM */
+
+/* Base class layout for extended form */
+.form-ext-control {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+/* Hides the original input */
+.form-ext-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.form-ext-label {
+    margin-bottom: 0;
+    position: relative;
+}

@@ -4125,6 +4125,27 @@ border-color: transparent;
     font-weight: 700;
     padding: 0 1rem;
 }
+/* EXTENDED FORM */
+
+/* Base class layout for extended form */
+.form-ext-control {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+/* Hides the original input */
+.form-ext-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.form-ext-label {
+    margin-bottom: 0;
+    position: relative;
+}
 /* A collection of modifiers that extend control styling */
 .btn--pilled {
     border-radius: 6.25rem;
