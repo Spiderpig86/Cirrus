@@ -192,7 +192,7 @@ button.btn-close::after {
     --btn-color: var(--cirrus-link);
     --btn-fg: var(--cirrus-light);
 }
-.btn-link.outline { --btn-fg: var(--cirrus-link); }
+.btn-link.outline { --btn-fg: var(--cirrus-link); --btn-color: transparent; }
 .btn-link:hover { --btn-color: var(--cirrus-link-dark); }
 .btn-link.outline:hover { --btn-color: var(--cirrus-link-hover); border: 1px solid transparent; text-decoration: underline; }
 .btn-link:focus { box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5); }

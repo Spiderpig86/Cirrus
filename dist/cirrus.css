@@ -192,7 +192,7 @@ button.btn-close::after {
     --btn-color: var(--cirrus-link);
     --btn-fg: var(--cirrus-light);
 }
-.btn-link.outline { --btn-fg: var(--cirrus-link); }
+.btn-link.outline { --btn-fg: var(--cirrus-link); --btn-color: transparent; }
 .btn-link:hover { --btn-color: var(--cirrus-link-dark); }
 .btn-link.outline:hover { --btn-color: var(--cirrus-link-hover); border: 1px solid transparent; text-decoration: underline; }
 .btn-link:focus { box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5); }
@@ -4145,6 +4145,39 @@ border-color: transparent;
 .form-ext-label {
     margin-bottom: 0;
     position: relative;
+}
+
+/* Base of custom form inputs */
+.form-ext-label:before,
+.form-ext-label:after {
+    content: "";
+    display: block;
+    height: 1rem;
+    left: -1.5rem;
+    position: absolute;
+    width: 1rem;
+}
+
+.form-ext-label:before {
+    background-color: var(--cirrus-light);
+    border-radius: .25rem;
+    pointer-events: none;
+    user-select: none;
+}
+
+.form-ext-label:after {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+}
+
+/* Checkbox */
+.form-ext-control.form-ext-checkbox .form-ext-input:checked ~ .form-ext-label:before {
+    background-color: var(--cirrus-primary);
+}
+
+.form-ext-control.form-ext-checkbox .form-ext-input:checked ~ .form-ext-label:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' v…M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 /* A collection of modifiers that extend control styling */
 .btn--pilled {
