@@ -10,7 +10,12 @@
     margin: 0.5rem;
 }
 
-.toast h1, .toast h2, .toast h3, .toast h4, .toast h5, .toast h6 {
+/* .toast h1, .toast h2, .toast h3, .toast h4, .toast h5, .toast h6 {
+    margin: 0;
+    margin-top: 1rem;
+} (Deprecated 0.5.5) */
+
+.toast.toast__title {
     margin: 0;
     margin-top: 1rem;
 }
@@ -19,11 +24,11 @@
     margin: 0;
 }
 
-.toast.translucent {
+.toast.toast__translucent {
     opacity: .5;
 }
 
-.toast.translucent:hover {
+.toast.toast__translucent:hover {
     opacity: 1;
 }
 
@@ -34,22 +39,22 @@
 }       
 
 /* TOAST TYPES */
-.toast.primary {
+.toast.toast__primary {
     background-color: var(--toast-primary-bg);
     border-color: var(--toast-primary-bg);
 }
 
-.toast.success {
+.toast.toast__success {
     background-color: var(--cirrus-success);
     border-color: var(--cirrus-success);
 }
 
-.toast.warning {
+.toast.toast__warning {
     background-color: var(--cirrus-warning);
     border-color: var(--cirrus-warning);
 }
 
-.toast.error {
+.toast.toast__error {
     background-color: var(--cirrus-danger);
     border-color: var(--cirrus-danger);
 }
