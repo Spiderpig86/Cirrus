@@ -1,22 +1,22 @@
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
 
-.this-inline {
+.u-inline {
   display: inline;
 }
 
-.this-inline-block {
+.u-inline-block {
   display: inline-block;
 }
 
-.this-inline-flex {
+.u-inline-flex {
   display: -webkit-inline-bpx;
   display: -ms-inline-flexbox;
   display: -webkit-inline-box;
   display: inline-flex;
 }
 
-.this-block {
+.u-block {
   display: block;
 }
 
@@ -25,115 +25,118 @@
    other elements are not blocked by children.
 */
 
-.clearfix:after {
+.u-clearfix:after {
   clear: both;
   content: " ";
   display: table;
 }
 
 /* This is mainly to keep elements from overlapping when using floats */
-.clear-left {
+.u-clear-left {
   clear: left;
 }
 
-.clear-right {
+.u-clear-right {
   clear: right;
 }
 
-.clear-both {
+.u-clear-both {
   clear: both;
 }
 
-.pull-left {
+.u-pull-left {
   float: left;
 }
 
-.pull-right {
+.u-pull-right {
   float: right;
 }
 
-.text-center {
+.u-text-center {
   text-align: center;
 }
 
 /* Center element - best used for hero bodies or text */
-.center {
+.u-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-      margin: 0 auto;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
   flex-wrap: wrap;
 }
 
-.center-alt, .center-alt:hover, .center-alt:active { /* If flexbox method fails, this works for elements with unknown dimensions */
+.u-center-alt,
+.u-center-alt:hover,
+.u-center-alt:active {
+  /* If flexbox method fails, this works for elements with unknown dimensions */
   position: absolute;
- top: 50%;
- left: 50%;
- -webkit-transform: translate(-50%, -50%);
-         transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-.vertical-center {
+.u-vertical-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-          align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
   vertical-align: middle;
 }
 
-.horizontal-center {
+.u-horizontal-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.this-overlay {
-  bottom:0;
+.u-this-overlay {
+  bottom: 0;
   left: 0;
   right: 0;
   top: 0;
   position: absolute;
 }
 
-.hide-overflow {
+.u-hide-overflow {
   overflow: hidden !important;
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
-.text-center {
+.u-text-center {
   text-align: center;
 }
 
-.text-left {
+.u-text-left {
   text-align: left;
 }
 
-.text-right {
+.u-text-right {
   text-align: right;
 }
 
-.hide {
+.u-hide {
   display: none !important;
 }
 
-.disabled {
+.u-disabled {
   cursor: not-allowed;
 }
 
-.unselectable {
+.u-unselectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -141,7 +144,7 @@
   user-select: none;
 }
 
-.box {
+.u-box {
   background-color: white;
   border-radius: 3px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
@@ -149,33 +152,33 @@
   padding: 1rem;
 }
 
-.box:not(:last-child) {
+.u-box:not(:last-child) {
   margin-bottom: 1rem;
 }
 
-.fill-width {
-  width: 100%
+.u-fill-width {
+  width: 100%;
 }
 
-.no-margin {
+.u-no-margin {
   margin: 0 !important;
 }
 
-.no-padding {
+.u-no-padding {
   padding: 0 !important;
 }
 
-.margin-auto {
+.u-margin-auto {
   margin: 0 auto !important;
 }
 
 /* Round the corners of the element */
-.round {
-  border-radius: .1rem;
+.u-round {
+  border-radius: 0.1rem;
 }
 
 /* Turns element into a circle */
-.circle {
+.u-circle {
   border-radius: 50%;
 }
 
@@ -183,7 +186,9 @@
 
 /* Do the actual balancing only on larger screens */
 @media screen and (min-width: 769px) {
-.level, .level-left, .level-right {
+  .level,
+  .level-left,
+  .level-right {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -192,27 +197,27 @@
 
 /* Hide elements based on screen size */
 @media screen and (max-width: 450px) {
-  .hide-mobile {
+  .u-hide-mobile {
     display: none !important;
   }
 }
 
 @media screen and (max-width: 768px) {
   /* Hide on devices that are tablets or smaller */
-  .hide-tablet {
+  .u-hide-tablet {
     display: none !important;
   }
 }
 
 @media screen and (min-width: 451px) and (max-width: 768px) {
-  .hide-tablet-only {
+  .u-hide-tablet-only {
     display: none !important;
   }
 }
 
 @media screen and (min-width: 769px) {
   /* Hide element on laptops, desktops, etc */
-  .hide-desktop {
+  .u-hide-desktop {
     display: none !important;
   }
 }
