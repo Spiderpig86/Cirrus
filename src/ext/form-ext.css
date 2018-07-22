@@ -66,3 +66,55 @@
 .form-ext-control.form-ext-radio .form-ext-input:checked ~ .form-ext-label:after {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
 }
+
+/* Toggle Switches */
+.form-ext-toggle {
+    cursor: pointer;
+    position: relative;
+}
+
+.form-ext-toggle .input[type="checkbox"],
+.form-ext-toggle .input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.form-ext-toggle__toggler {
+    border: 1px solid var(--cirrus-gray);
+    border-radius: 6.25rem;
+    color: var(--cirrus-gray);
+    display: block;
+    font-size: 9px;
+    height: 1.5rem;
+    width: 3rem;
+}
+
+.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler {
+    background-color: var(--cirrus-primary);
+    border-color: var(--cirrus-primary);
+    color: #fff;
+    transition: all .4s ease;
+}
+
+.form-ext-toggle i {
+    display: inline-block;
+}
+
+.form-ext-toggle__toggler i::before,
+.form-ext-toggle__toggler i::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.form-ext-toggle__toggler i::before {
+    /* TODO SET CONTENT */
+    text-align: left;
+}
+
+.form-ext-toggle__toggler i::after {
+    background-color: #fff;
+    left: calc(100% - 20px);
+}
