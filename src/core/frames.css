@@ -13,8 +13,8 @@
 }
 
 /* For the frame header and footer, use flex display */
-.frame .frame-header,
-.frame .frame-footer {
+.frame .frame__header,
+.frame .frame__footer {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
@@ -22,13 +22,13 @@
 }
 
 /* The frame navbar can be used with level or header classes to create a navigation menu */
-.frame .frame-nav {
+.frame .frame__nav {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
 }
 
-.frame .frame-body {
+.frame .frame__body {
     flex: 1 1 auto;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
@@ -36,13 +36,13 @@
     padding: 0 1.5rem;
 }
 
-.frame .frame-title {
+.frame .frame__title {
     color: var(--cirrus-fg);
     font-size: 1rem;
     margin: .75rem auto 0;
 }
 
-.frame .frame-subtitle {
+.frame .frame__subtitle {
     color: rgba(55, 64, 84, 0.6);
     font-size: .85rem;
     margin: .25rem auto .75rem;
