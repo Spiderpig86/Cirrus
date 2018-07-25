@@ -768,7 +768,6 @@ mark,
 .fa {
     font-size: 21px; /* Font sizes in multiple of 7s since they render the best */
     text-align: center;
-    /* vertical-align: top; */ /* Removed 0.5.4 as it caused alignment issues */
 }
 
 .fa.x-small {
@@ -796,7 +795,8 @@ mark,
 
 .info {
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
+    margin-top: .25rem;
     color: #979797;
 }
 
@@ -806,13 +806,13 @@ mark,
     margin-left: 0.5rem;
 }
 
-.info.success {
+/* .info.success { Deprecated 0.5.5
     color: #4caf50;
 }
 
 .info.error {
     color: #f44336;
-}
+} */
 
 .caret {
     display: inline-block;
@@ -4611,6 +4611,7 @@ border-color: transparent;
     display: inline-flex;
     font-size: 75%;
     line-height: 1.5;
+    min-height: 1.5rem;
     padding: 0 0.5rem;
     white-space: nowrap;
 }

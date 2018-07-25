@@ -7,6 +7,7 @@
     display: inline-flex;
     font-size: 75%;
     line-height: 1.5;
+    min-height: 1.5rem;
     padding: 0 0.5rem;
     white-space: nowrap;
 }
