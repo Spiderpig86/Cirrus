@@ -20,7 +20,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
 </head>
 
@@ -329,10 +329,9 @@
                 </div>
             </div>
 
-            <div class="divider"></div>
-            <space></space>
+            <space class="x-large"></space>
 
-            <h3 class="uppercase u-text-center">Headings</h3>
+            <h3 class="font-alt font-normal u-text-center">Headings</h3>
             <div class="row">
                 <h6 class="uppercase">Standard headings:</h6>
                 <h1 class="uppercase">This is h1
@@ -495,18 +494,18 @@
             <p class="title">With Glyphs</p>
             <div class="row">
                 <div class="col-fluid">
-                    <button>See More
+                    <button class="btn-info">See More
                         <i class="fas fa-chevron-right pad-left" aria-hidden="true"></i>
                     </button>
                 </div>
                 <div class="col-fluid">
-                    <button>
+                    <button class="btn-info">
                         <i class="fas fa-chevron-left pad-right" aria-hidden="true"></i>
                         See More
                     </button>
                 </div>
                 <div class="col-fluid">
-                    <button class="btn btn--circle">
+                    <button class="btn-info btn--circle">
                         <i class="fas fa-comment" aria-hidden="true"></i>
                     </button>
                 </div>
@@ -515,19 +514,19 @@
             <p class="title">Sizes</p>
             <div class="row">
                 <div class="col-fluid">
-                    <button class="btn btn-tiny">Tiny</button>
+                    <button class="btn-link btn-tiny">Tiny</button>
                 </div>
                 <div class="col-fluid">
-                    <button class="btn btn-small">Small</button>
+                    <button class="btn-link btn-small">Small</button>
                 </div>
                 <div class="col-fluid">
-                    <button class="btn">Normal</button>
+                    <button class="btn-link">Normal</button>
                 </div>
                 <div class="col-fluid">
-                    <button class="btn btn-large">Large</button>
+                    <button class="btn-link btn-large">Large</button>
                 </div>
                 <div class="col-fluid">
-                    <button class="btn btn-xlarge">Extra Large</button>
+                    <button class="btn-link btn-xlarge">Extra Large</button>
                 </div>
             </div>
 
@@ -546,8 +545,88 @@
                     <button class="btn-primary focus" id="btnFocus" disable>Focused</button>
                 </div>
             </div>
+
+            <space class="x-large"></space>
+            <div class="divider"></div>
         </div>
 
+    </section>
+
+    <section id="forms" class="padtop">
+        <div class="content">
+            <div class="u-text-center content">
+                <h3 class="uppercase">Forms</h3>
+                <h6 class="font-alt font-normal">Dozens of beautifully styled form controls for making development a breeze. Keep things simple with default
+                    controls or jazz it up with styled inputs.</h6>
+            </div>
+
+            <div class="frame">
+                <div class="frame__header">
+                    <h6 class="title u-no-margin">Inputs</h6>
+                </div>
+                <div class="frame__body">
+                    <div class="form-section">
+                        <label>Regular Input</label>
+                        <input type="text" placeholder="Type here..." />
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form-section">
+                        <label>Success</label>
+                        <input class="input-success" type="text" placeholder="Wooooo" />
+                        <span class="fg-success info">You did it!</span>
+                    </div>
+
+                    <div class="form-section">
+                        <label>Error</label>
+                        <input class="input-error" type="text" placeholder="Darn" />
+                        <span class="fg-danger info">Try again.</span>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form-section">
+                        <label>Left Glyph</label>
+                        <div class="input-control">
+                            <input type="email" class="input-contains-icon" placeholder="LEft glyph">
+                            <span class="icon">
+                                <i class="fas fa fa-layer-group small" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <label>Right Glyph</label>
+
+                        <div class="input-control">
+                            <input type="email" class="input-contains-icon-right" placeholder="Right glyph">
+                            <span class="icon icon-right">
+                                <i class="fas fa fa-poop small" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <label>Left and Right Glyphs</label>
+                        <div class="input-control">
+                            <input type="email" class="input-contains-icon input-contains-icon-right" placeholder="Left and right glyphs">
+                            <span class="icon">
+                                <i class="fas fa fa-layer-group small" aria-hidden="true"></i>
+                            </span>
+                            <span class="icon icon-right">
+                                <i class="fas fa fa-poop small" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <space></space>
+                </div>
+                <div class="frame__footer">
+
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
