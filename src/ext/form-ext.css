@@ -16,6 +16,7 @@
 }
 
 .form-ext-label {
+    border-radius: .25rem;
     margin-bottom: 0;
     position: relative;
 }
@@ -28,6 +29,7 @@
     height: 1rem;
     left: -1.5rem;
     position: absolute;
+    top: .3rem;
     width: 1rem;
 }
 
@@ -55,7 +57,7 @@
 }
 
 .form-ext-control.form-ext-checkbox .form-ext-input:checked ~ .form-ext-label:after {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' v…M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E")
 }
 
 /* Radio Button */
