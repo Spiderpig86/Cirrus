@@ -16,7 +16,6 @@
 }
 
 .form-ext-label {
-    border-radius: .25rem;
     margin-bottom: 0;
     position: relative;
 }
@@ -30,11 +29,13 @@
     left: -1.5rem;
     position: absolute;
     top: .3rem;
+    transition: all .2s;
     width: 1rem;
 }
 
 .form-ext-label:before {
     background-color: var(--cirrus-light);
+    border-radius: .25rem;
     pointer-events: none;
     user-select: none;
 }
