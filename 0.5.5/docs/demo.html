@@ -562,7 +562,7 @@
 
             <div class="frame">
                 <div class="frame__header">
-                    <h6 class="title u-no-margin">Inputs</h6>
+                    <h6 class="frame__title u-no-margin">Inputs</h6>
                 </div>
                 <div class="frame__body">
                     <div class="form-section">
@@ -584,12 +584,18 @@
                         <span class="fg-danger info">Try again.</span>
                     </div>
 
+                    <div class="form-section">
+                        <label>Disabled</label>
+                        <input disabled type="text" placeholder="Can't touch me." />
+                        <span class="info">Unless you inspect element.</span>
+                    </div>
+
                     <div class="divider"></div>
 
                     <div class="form-section">
                         <label>Left Glyph</label>
                         <div class="input-control">
-                            <input type="email" class="input-contains-icon" placeholder="LEft glyph">
+                            <input type="email" class="input-contains-icon" placeholder="Left glyph">
                             <span class="icon">
                                 <i class="fas fa fa-layer-group small" aria-hidden="true"></i>
                             </span>
@@ -621,6 +627,23 @@
                     </div>
 
                     <space></space>
+                </div>
+                <div class="frame__footer"></div>
+            </div>
+
+            <div class="frame">
+                <div class="frame__header">
+                    <h6 class="frame__title u-no-margin">Checkboxes</h6>
+                </div>
+                <div class="frame__body">
+                    <div class="form-ext-control form-ext-checkbox">
+                        <input id="check1" class="form-ext-input" type="checkbox">
+                        <label class="form-ext-label" for="check1">Unchecked</label>
+                    </div>
+                    <div class="form-ext-control form-ext-checkbox">
+                        <input id="check2" class="form-ext-input" type="checkbox">
+                        <label class="form-ext-label" for="check2">Checked</label>
+                    </div>
                 </div>
                 <div class="frame__footer">
 
