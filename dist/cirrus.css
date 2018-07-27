@@ -3981,7 +3981,7 @@ border-color: transparent;
     color: var(--cirrus-success);
 }
 
-.form-ext-input.form-ext-input--danger:checked ~ .form-ext-label:before {
+.form-ext-input.form-ext-input--error:checked ~ .form-ext-label:before {
     background-color: var(--cirrus-danger);
     color: var(--cirrus-danger);
 }
