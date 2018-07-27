@@ -3976,13 +3976,19 @@ border-color: transparent;
     opacity: 0.8;
 }
 
-.form-ext-input.form-ext-input--success:checked ~ .form-ext-label:before {
+.form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label:before {
     background-color: var(--cirrus-success);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label {
     color: var(--cirrus-success);
 }
 
-.form-ext-input.form-ext-input--error:checked ~ .form-ext-label:before {
+.form-ext-control .form-ext-input.form-ext-input--error:checked ~ .form-ext-label:before {
     background-color: var(--cirrus-danger);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--error:checked ~ .form-ext-label {
     color: var(--cirrus-danger);
 }
 
