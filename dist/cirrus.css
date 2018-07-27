@@ -3972,6 +3972,20 @@ border-color: transparent;
     z-index: -1;
 }
 
+.form-ext-input:disabled ~ .form-ext-label {
+    opacity: 0.8;
+}
+
+.form-ext-input.form-ext-input--success:checked ~ .form-ext-label:before {
+    background-color: var(--cirrus-success);
+    color: var(--cirrus-success);
+}
+
+.form-ext-input.form-ext-input--danger:checked ~ .form-ext-label:before {
+    background-color: var(--cirrus-danger);
+    color: var(--cirrus-danger);
+}
+
 .form-ext-label {
     margin-bottom: 0;
     position: relative;
