@@ -4118,8 +4118,10 @@ border-color: transparent;
     transition: left .2s ease;
 }
 
-
-input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after {
+input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
+input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
+input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
+input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
     background-color: #fff;
     left: calc(100% - 20px);
 }
