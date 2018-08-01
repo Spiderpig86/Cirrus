@@ -175,26 +175,26 @@
     left: calc(100% - 20px);
 }
 
-.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
-.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
-.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
-.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
+.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + * .form-ext-toggle__toggler {
     background-color: var(--cirrus-danger);
     border-color: var(--cirrus-danger);
 }
 
-.form-ext-toggle..form-ext-toggle--error .form-ext-toggle__toggler {
+.form-ext-toggle.form-ext-toggle--error .form-ext-toggle__toggler {
     border-color: var(--cirrus-danger);
 }
 
-.form-ext-toggle..form-ext-toggle--error .form-ext-toggle__toggler i::after {
+.form-ext-toggle.form-ext-toggle--error .form-ext-toggle__toggler i::after {
     background-color: var(--cirus-danger);
 }
 
-.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
-.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
-.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
-.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
+.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + * .form-ext-toggle__toggler {
     background-color: var(--cirrus-success);
     border-color: var(--cirrus-success);
 }
