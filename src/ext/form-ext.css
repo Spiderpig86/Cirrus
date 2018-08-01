@@ -188,7 +188,7 @@
 }
 
 .form-ext-toggle.form-ext-toggle--error .form-ext-toggle__toggler i::after {
-    background-color: var(--cirus-danger);
+    background-color: var(--cirrus-danger);
 }
 
 .form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + .form-ext-toggle__toggler,
@@ -204,5 +204,5 @@
 }
 
 .form-ext-toggle--success .form-ext-toggle__toggler i::after {
-    background-color: var(--cirus-success);
+    background-color: var(--cirrus-success);
 }
