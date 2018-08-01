@@ -125,6 +125,7 @@
     background-color: var(--cirrus-primary);
     border-color: var(--cirrus-primary);
     color: #fff;
+    position: relative;
     transition: all .4s ease;
 }
 
@@ -141,10 +142,27 @@
 
 .form-ext-toggle__toggler i::before {
     /* TODO SET CONTENT */
-    text-align: left;
+    content: attr(data-uncheck-icon);
+    left: 0;
+    padding: 2px 7px;
+    line-height: 18px;
+    text-align: right;
+    top: 0;
+    width: 100%;
 }
 
 .form-ext-toggle__toggler i::after {
+    background-color: var(--cirrus-gray);
+    border-radius: 50%;
+    height: 16px;
+    left: 4px;
+    width: 16px;
+    transform: translateY(-50%);
+    transition: left .2s ease;
+}
+
+
+input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after {
     background-color: #fff;
     left: calc(100% - 20px);
 }
