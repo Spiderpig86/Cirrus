@@ -4078,7 +4078,9 @@ border-color: transparent;
 }
 
 .form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler {
+.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
+.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler {
     background-color: var(--cirrus-primary);
     border-color: var(--cirrus-primary);
     color: #fff;
@@ -4088,6 +4090,10 @@ border-color: transparent;
 
 .form-ext-toggle i {
     display: inline-block;
+}
+
+.form-ext-input:disabled ~ .form-ext-toggle__toggler {
+    opacity: 0.5;
 }
 
 .form-ext-toggle__toggler i::before,
@@ -4118,12 +4124,44 @@ border-color: transparent;
     transition: left .2s ease;
 }
 
-input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
-input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
-input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
-input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
+.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
+.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
     background-color: #fff;
     left: calc(100% - 20px);
+}
+
+.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
+.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
+    background-color: var(--cirrus-danger);
+    border-color: var(--cirrus-danger);
+}
+
+.form-ext-toggle..form-ext-toggle--error .form-ext-toggle__toggler {
+    border-color: var(--cirrus-danger);
+}
+
+.form-ext-toggle..form-ext-toggle--error .form-ext-toggle__toggler i::after {
+    background-color: var(--cirus-danger);
+}
+
+.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
+.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
+    background-color: var(--cirrus-success);
+    border-color: var(--cirrus-success);
+}
+
+.form-ext-toggle--success .form-ext-toggle__toggler {
+    border-color: var(--cirrus-success);
+}
+
+.form-ext-toggle--success .form-ext-toggle__toggler i::after {
+    background-color: var(--cirus-success);
 }
 /* EXTENDED LINKS */
 /* Animated links */
