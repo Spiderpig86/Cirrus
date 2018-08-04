@@ -4369,8 +4369,8 @@ border-color: transparent;
     width: 3.125rem;
 }
 
-/* Form controls apply to inputs */
-.form-control--pilled {
+/* Input (primary text-based) controls apply to inputs */
+.input-control--pilled {
     border-radius: 6.25rem !important;
 }
 
