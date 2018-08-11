@@ -34,16 +34,16 @@
     ]
   },
   "devDependencies": {
-    "clipboard": "^1.7.1",
+    "clipboard": "^2.0.1",
     "global": "^4.3.1",
     "gulp": "^3.9.1",
     "gulp-build": "^0.5.3",
-    "gulp-cli": "^1.2.2",
+    "gulp-cli": "^2.0.1",
     "gulp-concat": "^2.6.1",
-    "gulp-header": "^1.8.8",
+    "gulp-header": "^2.0.5",
     "gulp-load-plugins": "^1.5.0",
     "gulp-minify-css": "^1.2.4",
-    "gulp-size": "^2.1.0"
+    "gulp-size": "^3.0.0"
   },
   "dependencies": {
     "gulp-clean-css": "^3.10.0"

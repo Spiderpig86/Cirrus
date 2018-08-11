@@ -1,12 +1,10 @@
-// Automate my builds
-
 var gulp = require('gulp');
 var prop = require('./package.json');
 var minify = require('gulp-clean-css');
 var $ = require('gulp-load-plugins')();
 var head = '\/*\r\n* Cirrus ' + prop.version + `\r\n* Stanley Lim, Copyright ${(new Date()).getFullYear()}\r\n* https://spiderpig86.github.io/Cirrus\r\n*/\r\n`;
 
-gulp.task('compile', function() {
+gulp.task('compile', () => {
     return gulp.src('./src/**/*.css')
         .pipe($.concat('cirrus.css'))
         .pipe($.header(head))
@@ -14,7 +12,7 @@ gulp.task('compile', function() {
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('minify', ['compile'], function() {
+gulp.task('minify', ['compile'], () => {
     return gulp.src(['./dist/cirrus.css'])
         .pipe(minify({
             level: {
@@ -23,14 +21,21 @@ gulp.task('minify', ['compile'], function() {
                     normalizeUrls: false
                   },
                 2: {
-                    restructureRules: true,
-                    removeDuplicateRules: true
+                    all: false,
+                    removeDuplicateRules: true,reduceNonAdjacentRules: true, 
+                    removeDuplicateFontRules: true, 
+                    removeDuplicateMediaBlocks: true,mergeAdjacentRules: true, 
+                    mergeIntoShorthands: true, 
+                    mergeMedia: true, 
+                    mergeNonAdjacentRules: true, 
+                    mergeSemantically: false, 
+                    removeEmpty: true, 
                 }
               }
-        }, function(details) {
+        }, (details) => {
             console.log('FULL');
             console.log(details.name + ': ' + details.stats.originalSize);
-            console.log(details.name + ': ' + details.stats.minifiedSize);
+            console.log(details.name + '-min: ' + details.stats.minifiedSize);
           }))
         .pipe($.header(head))
         .pipe($.size())
@@ -38,7 +43,7 @@ gulp.task('minify', ['compile'], function() {
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('core', function() {
+gulp.task('core', () => {
     return gulp.src('./src/core/*.css')
         .pipe($.concat('cirrus-core.css'))
         .pipe($.header(head))
@@ -55,14 +60,21 @@ gulp.task('minify-core', ['core'], function() {
                     normalizeUrls: false
                   },
                 2: {
-                    restructureRules: true,
-                    removeDuplicateRules: true
+                    all: false,
+                    removeDuplicateRules: true,reduceNonAdjacentRules: true, 
+                    removeDuplicateFontRules: true, 
+                    removeDuplicateMediaBlocks: true,mergeAdjacentRules: true, 
+                    mergeIntoShorthands: true, 
+                    mergeMedia: true, 
+                    mergeNonAdjacentRules: true, 
+                    mergeSemantically: false, 
+                    removeEmpty: true, 
                 }
               }
-        }, function(details) {
+        }, (details) => {
             console.log('CORE');
             console.log(details.name + ': ' + details.stats.originalSize);
-            console.log(details.name + ': ' + details.stats.minifiedSize);
+            console.log(details.name + '-min: ' + details.stats.minifiedSize);
           }))
         .pipe($.header(head))
         .pipe($.size())
