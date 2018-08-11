@@ -4545,11 +4545,8 @@ border-color: transparent;
     justify-content: space-between;
     overflow: hidden;
     overflow-x: auto; /* Allow scrollbar to be visible if the width of the tabs exeeds container */
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
             user-select: none;
-    white-space: nowarp;
+    white-space: nowrap;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
@@ -4560,15 +4557,9 @@ border-color: transparent;
 .tab-container ul {
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start; /* Move tab items to left side  */
-    display: -webkit-box; /* Flow the elements */
+    justify-content: flex-start; /* Move tab items to left side */
     margin: 0.5rem; /* Override the behavior for standard ul and add equal padding */
     border-bottom: 1px solid #eee; /* Bottom border of tabs */
     list-style: none;
@@ -4598,7 +4589,6 @@ border-color: transparent;
     padding: 0.5rem 1rem;
     transition: all .3s;
     color: var(--cirrus-fg);
-    display: block;
     border-bottom-color: rgba(197, 197, 197, 0.63);
     border-width: 2px;
     margin-bottom: -1px; /* Get rid of any remaining border lines */
@@ -4703,8 +4693,6 @@ border-color: transparent;
 .tab-container .icon:last-child { /* Right icon */
     margin-left: .75rem;
 }
-
-/* IN PROGERSS */
 /* TAGS */
 .tag {
     align-items: center;
