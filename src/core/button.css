@@ -282,21 +282,21 @@ button.btn-close::after {
 }
 
 /* Override default behavior of aligning font awesome icons to the top */
-button .fa,
-.btn .fa,
-[type="submit"] .fa {
+button .fa-wrapper,
+.btn .fa-wrapper,
+[type="submit"] .fa-wrapper {
     vertical-align: baseline;
 }
 
-button .fa.pad-right,
-.btn .fa.pad-right,
-[type="submit"] .fa.pad-right {
+button .fa-wrapper.pad-right,
+.btn .fa-wrapper.pad-right,
+[type="submit"] .fa-wrapper.pad-right {
     margin-right: 0.4rem;
 }
 
-button .fa.pad-left,
-.btn .fa.pad-left,
-[type="submit"] .fa.pad-left {
+button .fa-wrapper.pad-left,
+.btn .fa-wrapper.pad-left,
+[type="submit"] .fa-wrapper.pad-left {
     margin-left: 0.4rem;
 }
 
