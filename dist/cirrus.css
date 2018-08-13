@@ -3716,61 +3716,61 @@ video.video-fullscreen {
 
 /* Avatar */
 .avatar {
-    border-radius: 50%;
-    position: relative;
-    display: block;
-    margin: auto;
-    font-size: 1rem;
-    font-weight: lighter;
-    width: 3.2rem;
-    height: 3.2rem;
-    background-color: var(--cirrus-primary);
-    overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  margin: auto;
+  font-size: 1rem;
+  font-weight: lighter;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: var(--cirrus-primary);
+  overflow: hidden;
 }
 
 /* Draw text on image just like in Gmail */
 .avatar::before {
-    content: attr(data-text);
-    color: #fff;
-    /* Removed z-index: 1, makes text blurry */
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+  content: attr(data-text);
+  color: #fff;
+  /* Removed z-index: 1, makes text blurry */
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 .avatar.img-xsmall {
-    font-size: .8rem;
-    width: 1.6rem;
-    height: 1.6rem;
+  font-size: 0.8rem;
+  width: 1.6rem;
+  height: 1.6rem;
 }
 
 .avatar.img-small {
-    font-size: 1rem;
-    height: 2.4rem;
-    width: 2.4rem;
+  font-size: 1rem;
+  height: 2.4rem;
+  width: 2.4rem;
 }
 
 .avatar.img-large {
-    font-size: 2rem;
-    height: 4.8rem;
-    width: 4.8rem;
+  font-size: 2rem;
+  height: 4.8rem;
+  width: 4.8rem;
 }
 
 .avatar.img-xlarge {
-    font-size: 2.6rem;
-    height: 6.4rem;
-    width: 6.4rem;
+  font-size: 2.6rem;
+  height: 6.4rem;
+  width: 6.4rem;
 }
 
 .avatar img.padded {
-    padding: .5rem;
-    width: 100%;
+  padding: 0.5rem;
+  width: 100%;
 }
+
 /* CARDS */
 
 .card {
@@ -3811,7 +3811,7 @@ video.video-fullscreen {
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
+  
   transition: all .3s ease-in-out;
 }
 
@@ -3902,7 +3902,7 @@ border-color: transparent;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
+  
   transition: all .3s ease-in-out;
   width: 100%;
       padding: 1rem 0;
@@ -3914,7 +3914,7 @@ border-color: transparent;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
+  
   transition: all .3s ease-in-out;
 }
 
@@ -3923,7 +3923,7 @@ border-color: transparent;
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
+  
   transition: all .3s ease-in-out;
 }
 
@@ -3932,7 +3932,7 @@ border-color: transparent;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -ms-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
+  
   transition: all .2s ease-in-out;
 }
 
@@ -5071,38 +5071,42 @@ a.tag:hover {
 }
 
 /* This is the psuedoelement that creates the tooltip */
-.tooltip::after, .tooltip.tooltip--top::after {
+.tooltip::after,
+.tooltip.tooltip--top::after {
   -webkit-appearance: none;
   -moz-appearance: none;
   position: absolute;
   color: #fff;
-  font-size: .6rem;
-  background-color: rgba(69, 77, 93, .9);
-  content: attr(data-tooltip); /* Retrieves the data specified in this element property and displays it as text */
+  font-size: 0.6rem;
+  background-color: rgba(69, 77, 93, 0.9);
+  content: attr(
+    data-tooltip
+  ); /* Retrieves the data specified in this element property and displays it as text */
   display: block;
   line-height: 1rem;
   text-transform: none;
   overflow: hidden;
-  padding: .4rem .8rem;
+  padding: 0.4rem 0.8rem;
   opacity: 0; /* Hide the element */
   text-overflow: ellipsis;
   max-width: 15rem;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   z-index: 200;
   pointer-events: none;
   bottom: 100%; /* Pushes the tooltip above the button */
   left: 50%; /* Horizontally center it */
-  border-radius: .2rem;
+  border-radius: 0.2rem;
 }
 
 /* Handles the on hover event of the button and then modifies the associated tooltip accordingly. */
-.tooltip:focus::after, .tooltip:hover::after {
-      opacity: 1;
-      -webkit-transform: translate(-50%, -.5rem);
-      transform: translate(-50%, -.5rem);
-      transition: all .2s ease;
+.tooltip:focus::after,
+.tooltip:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -0.5rem);
+  transform: translate(-50%, -0.5rem);
+  transition: all 0.2s ease;
 }
 
 /* Tooltip top left */
@@ -5113,8 +5117,8 @@ a.tag:hover {
 
 .tooltip.tooltip--top-left:hover::after,
 .tooltip.tooltip--top-left:focus::after {
-  -webkit-transform: translate(-125%, -.5rem);
-  transform: translate(-125%, -.5rem);
+  -webkit-transform: translate(-125%, -0.5rem);
+  transform: translate(-125%, -0.5rem);
 }
 
 /* Tooltip top right */
@@ -5124,29 +5128,31 @@ a.tag:hover {
 }
 
 .tooltip.tooltip--top-right:hover::after,
-.tooltip.tooltip--top-right:focus::after{
-  -webkit-transform: translate(25%, -.5rem);
-  transform: translate(25%, -.5rem);
+.tooltip.tooltip--top-right:focus::after {
+  -webkit-transform: translate(25%, -0.5rem);
+  transform: translate(25%, -0.5rem);
 }
 
 /* Tooltip bottom */
 .tooltip.tooltip--bottom::after {
   top: 100%;
-  transform: translate(-50%, -1rem); /* Moves tooltip to the center horizontally and shifts tooltip down */
+  transform: translate(
+    -50%,
+    -1rem
+  ); /* Moves tooltip to the center horizontally and shifts tooltip down */
   -webkit-transform: translate(-50%, -1rem);
   -moz-transform: translate(-50%, -1rem);
   -ms-transform: translate(-50%, -1rem);
-  -o-transform: translate(-50%, -1rem);
+
   bottom: auto;
 }
 
 .tooltip.tooltip--bottom:hover::after,
 .tooltip.tooltip--bottom:focus::after {
-  transform: translate(-50%, .5rem);
-  -webkit-transform: translate(-50%, .5rem);
-  -moz-transform: translate(-50%, .5rem);
-  -ms-transform: translate(-50%, .5rem);
-  -o-transform: translate(-50%, .5rem);
+  transform: translate(-50%, 0.5rem);
+  -webkit-transform: translate(-50%, 0.5rem);
+  -moz-transform: translate(-50%, 0.5rem);
+  -ms-transform: translate(-50%, 0.5rem);
 }
 
 /* Tooltip bottom left */
@@ -5159,8 +5165,8 @@ a.tag:hover {
 
 .tooltip.tooltip--bottom-left:hover::after,
 .tooltip.tooltip--bottom-left:focus::after {
-  -webkit-transform: translate(-125%, .5rem);
-  transform: translate(-125%, .5rem);
+  -webkit-transform: translate(-125%, 0.5rem);
+  transform: translate(-125%, 0.5rem);
 }
 
 /* Tooltip bottom right */
@@ -5173,8 +5179,8 @@ a.tag:hover {
 
 .tooltip.tooltip--bottom-right:hover::after,
 .tooltip.tooltip--bottom-right:focus::after {
-  -webkit-transform: translate(10%, .5rem);
-  transform: translate(10%, .5rem);
+  -webkit-transform: translate(10%, 0.5rem);
+  transform: translate(10%, 0.5rem);
 }
 
 /* Tooltip right */
@@ -5185,16 +5191,14 @@ a.tag:hover {
   -webkit-transform: translate(-1rem, 50%);
   -moz-transform: translate(-1rem, 50%);
   -ms-transform: translate(-1rem, 50%);
-  -o-transform: translate(-1rem, 50%);
 }
 
 .tooltip.tooltip--right:hover::after,
 .tooltip.tooltip--right:focus::after {
-  transform: translate(.5rem, 50%);
-  -webkit-transform: translate(.5rem, 50%);
-  -moz-transform: translate(.5rem, 50%);
-  -ms-transform: translate(.5rem, 50%);
-  -o-transform: translate(.5rem, 50%);
+  transform: translate(0.5rem, 50%);
+  -webkit-transform: translate(0.5rem, 50%);
+  -moz-transform: translate(0.5rem, 50%);
+  -ms-transform: translate(0.5rem, 50%);
 }
 
 /* Tooltip Left */
@@ -5206,14 +5210,12 @@ a.tag:hover {
   -webkit-transform: translate(1rem, 50%);
   -moz-transform: translate(1rem, 50%);
   -ms-transform: translate(1rem, 50%);
-  -o-transform: translate(1rem, 50%);
 }
 
 .tooltip.tooltip--left:hover::after,
 .tooltip.tooltip--left:focus::after {
-  transform: translate(-.5rem, 50%);
-  -webkit-transform: translate(-.5rem, 50%);
-  -moz-transform: translate(-.5rem, 50%);
-  -ms-transform: translate(-.5rem, 50%);
-  -o-transform: translate(-.5rem, 50%);
+  transform: translate(-0.5rem, 50%);
+  -webkit-transform: translate(-0.5rem, 50%);
+  -moz-transform: translate(-0.5rem, 50%);
+  -ms-transform: translate(-0.5rem, 50%);
 }
