@@ -287,21 +287,21 @@ button.btn-close::after {
 }
 
 /* Override default behavior of aligning font awesome icons to the top */
-button .fa,
-.btn .fa,
-[type="submit"] .fa {
+button .fa-wrapper,
+.btn .fa-wrapper,
+[type="submit"] .fa-wrapper {
     vertical-align: baseline;
 }
 
-button .fa.pad-right,
-.btn .fa.pad-right,
-[type="submit"] .fa.pad-right {
+button .fa-wrapper.pad-right,
+.btn .fa-wrapper.pad-right,
+[type="submit"] .fa-wrapper.pad-right {
     margin-right: 0.4rem;
 }
 
-button .fa.pad-left,
-.btn .fa.pad-left,
-[type="submit"] .fa.pad-left {
+button .fa-wrapper.pad-left,
+.btn .fa-wrapper.pad-left,
+[type="submit"] .fa-wrapper.pad-left {
     margin-left: 0.4rem;
 }
 
@@ -750,7 +750,7 @@ mark,
   vertical-align: baseline; /* Experiment */
 }
 
-.icon .fa {
+.icon .fa-wrapper {
   font-size: inherit;
   vertical-align: middle;
 }
@@ -763,30 +763,30 @@ mark,
   margin: 0.95rem 0 0 0.1rem;
 }
 
-.fa {
+.fa-wrapper {
   font-size: 21px; /* Font sizes in multiple of 7s since they render the best */
   text-align: center;
 }
 
-.fa.x-small {
+.fa-wrapper.x-small {
   font-size: 7px;
 }
 
-.fa.small {
+.fa-wrapper.small {
   font-size: 14px;
 }
 
-.fa.large {
+.fa-wrapper.large {
   font-size: 28px;
   padding: 0.5rem 0;
 }
 
-.fa.x-large {
+.fa-wrapper.x-large {
   font-size: 35px;
   padding: 1rem 0;
 }
 
-.fa.xx-large {
+.fa-wrapper.xx-large {
   font-size: 42px;
   padding: 2rem 0;
 }
