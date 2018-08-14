@@ -1408,9 +1408,10 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
   color: #697888;
 }
 
-/* Hader dar theme */
+/* Header dark theme */
 .header-dark {
   background-color: rgba(0, 0, 0, 0.87);
+  color: #fff;
 }
 
 .header-clear {
@@ -1637,6 +1638,12 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
   height: 3.5rem;
   position: relative;
   width: 3.5rem;
+}
+
+.header .btn,
+.header button,
+.header input[type="submit"] {
+  margin: 0;
 }
 
 @media screen and (min-width: 769px) {
