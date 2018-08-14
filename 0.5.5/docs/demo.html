@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <div id="header" class="header header-top header-fixed unselectable header-animated header-clear">
+    <div id="header" class="header header-top header-fixed unselectable header-animated header-clear-mod">
         <div class="header-brand">
             <div class="nav-item no-hover">
                 <a>
@@ -45,28 +45,28 @@
                 <div class="nav-item">
                     <a href="#">
                         <span class="icon">
-                            <i class="fas fa fa-pen-fancy small"></i>
+                            <i class="fas fa-wrapper fa-pen-fancy small"></i>
                         </span>
                         Design and Colors</a>
                 </div>
                 <div class="nav-item">
                     <a href="#">
                         <span class="icon">
-                            <i class="fas fa fa-palette small"></i>
+                            <i class="fas fa-wrapper fa-palette small"></i>
                         </span>
                         Examples</a>
                 </div>
                 <div class="nav-item">
                     <a href="#">
                         <span class="icon">
-                            <i class="fas fa fa-boxes small"></i>
+                            <i class="fas fa-wrapper fa-boxes small"></i>
                         </span>
                         Docs</a>
                 </div>
                 <div class="nav-item btn btn-accent" style="margin: 0.5rem;">
                     <a href="#">
                         <span class="icon">
-                            <i class="fas fa fa-cloud-download-alt small"></i>
+                            <i class="fas fa-wrapper fa-cloud-download-alt small"></i>
                         </span>
                         Download</a>
                 </div>
@@ -597,7 +597,7 @@
                         <div class="input-control">
                             <input type="email" class="input-contains-icon" placeholder="Left glyph">
                             <span class="icon">
-                                <i class="fas fa fa-layer-group small" aria-hidden="true"></i>
+                                <i class="fas fa-wrapper fa-layer-group small" aria-hidden="true"></i>
                             </span>
                         </div>
                     </div>
@@ -608,7 +608,7 @@
                         <div class="input-control">
                             <input type="email" class="input-contains-icon-right" placeholder="Right glyph">
                             <span class="icon icon-right">
-                                <i class="fas fa fa-poop small" aria-hidden="true"></i>
+                                <i class="fas fa-wrapper fa-poop small" aria-hidden="true"></i>
                             </span>
                         </div>
                     </div>
@@ -618,10 +618,10 @@
                         <div class="input-control">
                             <input type="email" class="input-contains-icon input-contains-icon-right" placeholder="Left and right glyphs">
                             <span class="icon">
-                                <i class="fas fa fa-layer-group small" aria-hidden="true"></i>
+                                <i class="fas fa-wrapper fa-layer-group small" aria-hidden="true"></i>
                             </span>
                             <span class="icon icon-right">
-                                <i class="fas fa fa-poop small" aria-hidden="true"></i>
+                                <i class="fas fa-wrapper fa-poop small" aria-hidden="true"></i>
                             </span>
                         </div>
                     </div>
@@ -856,7 +856,7 @@
                         <div class="input-control">
                             <input type="email" class="input-contains-icon input-control--pilled" placeholder="Left glyph">
                             <span class="icon">
-                                <i class="fas fa fa-layer-group small" aria-hidden="true"></i>
+                                <i class="fas fa-wrapper fa-layer-group small" aria-hidden="true"></i>
                             </span>
                         </div>
                     </div>
@@ -867,7 +867,7 @@
                         <div class="input-control">
                             <input type="email" class="input-contains-icon-right input-control--pilled" placeholder="Right glyph">
                             <span class="icon icon-right">
-                                <i class="fas fa fa-poop small" aria-hidden="true"></i>
+                                <i class="fas fa-wrapper fa-poop small" aria-hidden="true"></i>
                             </span>
                         </div>
                     </div>
@@ -877,10 +877,10 @@
                         <div class="input-control">
                             <input type="email" class="input-contains-icon input-contains-icon-right input-control--pilled" placeholder="Left and right glyphs">
                             <span class="icon">
-                                <i class="fas fa fa-layer-group small" aria-hidden="true"></i>
+                                <i class="fas fa-wrapper fa-layer-group small" aria-hidden="true"></i>
                             </span>
                             <span class="icon icon-right">
-                                <i class="fas fa fa-poop small" aria-hidden="true"></i>
+                                <i class="fas fa-wrapper fa-poop small" aria-hidden="true"></i>
                             </span>
                         </div>
                     </div>
@@ -889,6 +889,9 @@
 
                 </div>
             </div>
+
+            <space class="x-large"></space>
+            <div class="divider"></div>
         </div>
     </section>
 
@@ -915,24 +918,63 @@
             </div>
             <div class="header-nav" id="header-menu">
                 <div class="nav-left">
+                    <div class="nav-item">
+                        <a href="#">Home</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">About</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Tutorials</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="nav-right">
+                    <div class="nav-item btn btn-accent" style="margin: 0.5rem; height: 2rem;">
+                        <a href="#" class="white">
+                            <span class="icon">
+                                <i class="fas fa-wrapper fa-cloud-download-alt small"></i>
+                            </span>
+                            Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header header-dark unselectable header-animated">
+            <div class="header-brand">
+                <div class="nav-item no-hover">
+                    <h6 class="title">Logo</h6>
+                </div>
+                <div class="nav-item nav-btn" id="header-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="header-nav" id="header-menu">
+                <div class="nav-left">
                     <div class="nav-item text-center">
                         <a href="#">
                             <span class="icon">
-                                <i class="fab fa-github" aria-hidden="true"></i>
+                                <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
                             </span>
                         </a>
                     </div>
                     <div class="nav-item text-center">
                         <a href="#">
                             <span class="icon">
-                                <i class="fab fa-slack" aria-hidden="true"></i>
+                                <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
                             </span>
                         </a>
                     </div>
                     <div class="nav-item text-center">
                         <a href="#">
                             <span class="icon">
-                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                                <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
                             </span>
                         </a>
                     </div>
@@ -947,7 +989,79 @@
                 </div>
                 
                 <div class="nav-right">
-                    <div class="nav-item selected">
+                    <div class="nav-item active">
+                        <a href="#">Selected</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Link 1</a>
+                    </div>
+                    
+                    <div class="nav-item has-sub toggle-hover" id="dropdown">
+                        <a class="nav-dropdown-link">Animated</a>
+                        <ul class="dropdown-menu dropdown-animated" role="menu">
+                            <li role="menu-item"><a href="#">First Item</a></li>
+                            <li role="menu-item"><a href="#">Second Item</a></li>
+                            <li role="menu-item"><a href="#">Third Item</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-item has-sub" id="dropdown">
+                        <a class="nav-dropdown-link">Click Me</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="menu-item"><a href="#">First Item</a></li>
+                            <li role="menu-item"><a href="#">Second Item</a></li>
+                            <li role="menu-item"><a href="#">Third Item</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header header-clear unselectable header-animated">
+            <div class="header-brand">
+                <div class="nav-item no-hover">
+                    <h6 class="title">Logo</h6>
+                </div>
+                <div class="nav-item nav-btn" id="header-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="header-nav" id="header-menu">
+                <div class="nav-left">
+                    <div class="nav-item text-center">
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="nav-item text-center">
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="nav-item text-center">
+                        <a href="#">
+                            <span class="icon">
+                                <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="nav-item has-sub toggle-hover" id="dropdown">
+                        <a class="nav-dropdown-link">DropDown</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="menu-item"><a href="#">First Item</a></li>
+                            <li role="menu-item"><a href="#">Second Item</a></li>
+                            <li role="menu-item"><a href="#">Third Item</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="nav-right">
+                    <div class="nav-item active">
                         <a href="#">Selected</a>
                     </div>
                     <div class="nav-item">

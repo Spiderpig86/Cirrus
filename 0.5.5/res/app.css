@@ -28,12 +28,14 @@
     transition: all .3s;
 }
 
-.header-clear {
+.header-clear-mod {
+    background-color: transparent;
+    box-shadow: none;
     opacity: 0.9;
     padding: 1.5rem;
 }
 
-.header-clear a {
+.header-clear-mod a {
     color: #fff;
 }
 
