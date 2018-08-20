@@ -99,3 +99,9 @@ section {
 .form-ext-control {
     margin-bottom: 0.75rem;
 }
+
+/* Tooltips */
+#tooltips button {
+    text-align: center;
+    width: 100%;
+}
