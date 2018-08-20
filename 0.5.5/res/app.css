@@ -35,6 +35,14 @@
     padding: 1.5rem;
 }
 
+.header-fill {
+    background-color: rgba(0, 0, 0, 0.87);
+}
+
+.translucent {
+    background: rgba(0, 0, 0, 0.87);
+}
+
 .header-clear-mod a {
     color: #fff;
 }
