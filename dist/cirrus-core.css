@@ -1398,6 +1398,8 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
   box-shadow: 0 3px 15px rgba(57, 63, 72, 0.1);
   background-color: var(--cirrus-bg);
   max-height: 100vh;
+  padding: 0 2rem;
+  transition: all .3s;
 }
 
 .header a {
