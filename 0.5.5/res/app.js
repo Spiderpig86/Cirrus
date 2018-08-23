@@ -27,7 +27,7 @@ $('.nav-item').not('.has-sub').not('.nav-btn').on('click', function(e) {
 });
 
 // Show dropdown when clicked
-$('#header-btn').on('click', function(e) {
+$('.nav-btn').on('click', function(e) {
     $('#header-menu').toggleClass('active');
     $('.nav-btn').toggleClass('active');
     $('#header').toggleClass('translucent');
