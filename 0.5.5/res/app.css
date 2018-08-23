@@ -24,6 +24,10 @@
     transition: all .3s;
 }
 
+.padtop {
+    padding-top: 4rem;
+}
+
 .header {
     transition: all .3s;
 }
@@ -56,7 +60,7 @@
 }
 
 section {
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
 }
 
 .content h6 {
@@ -104,4 +108,31 @@ section {
 #tooltips button {
     text-align: center;
     width: 100%;
+}
+
+/* Examples */
+#examples {
+    background-color: #1c222b;
+}
+
+/* Footer */
+footer ul a {
+    display: block;
+}
+
+footer h3 {
+    letter-spacing: 6px;
+}
+
+footer .divider {
+    background: rgba(238, 238, 238, 0.2);
+    height: 1px;
+}
+
+footer p .fa.fa-heart {
+    color: #E90606;
+    margin: 0 3px;
+    animation: pound 0.35s infinite alternate;
+    -webkit-animation: pound 0.35s infinite alternate;
+    vertical-align: baseline;
 }
