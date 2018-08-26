@@ -982,14 +982,13 @@
                         <a class="nav-dropdown-link">Services</a>
                         <ul class="dropdown-menu dropdown-animated" role="menu">
                             <li role="menu-item">
-                                <a href="#">Profile</a>
+                                <a href="#">First Item</a>
                             </li>
                             <li role="menu-item">
-                                <a href="#">Settings</a>
+                                <a href="#">Second Item</a>
                             </li>
-                            <li class="dropdown-menu-divider"></li>
                             <li role="menu-item">
-                                <a href="#">Logout</a>
+                                <a href="#">Third Item</a>
                             </li>
                         </ul>
                     </div>
@@ -1044,13 +1043,14 @@
                             <a class="nav-dropdown-link">John Doe</a>
                             <ul class="dropdown-menu dropdown-animated" role="menu">
                                 <li role="menu-item">
-                                    <a href="#">First Item</a>
+                                    <a href="#">Profile</a>
                                 </li>
                                 <li role="menu-item">
-                                    <a href="#">Second Item</a>
+                                    <a href="#">Settings</a>
                                 </li>
+                                <li class="dropdown-menu-divider"></li>
                                 <li role="menu-item">
-                                    <a href="#">Third Item</a>
+                                    <a href="#">Logout</a>
                                 </li>
                             </ul>
                         </div>
@@ -1200,7 +1200,7 @@
             <p>For a more compact verison, use <code>Tiles</code> instead.</p>
             
             <div class="row">
-                <div class="col-8">
+                <div class="col-8 offset-2">
                     <div class="tile tile-center" style="box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.03); padding: 0.25rem 1rem;">
                         <div class="tile-icon">
                             <figure class="avatar">
@@ -1220,6 +1220,7 @@
                 </div>
             </div>
 
+            <space></space>
             <div class="divider"></div>
         </div>
     </section>
@@ -1233,7 +1234,7 @@
 
             <div class="row">
                 <a href="#modal-test">
-                    <button class="btn-accent center">Show Modal Dialog</button>
+                    <button class="btn-accent u-center">Show Modal Dialog</button>
                 </a>
             </div>
 
@@ -1246,20 +1247,91 @@
         <div class="modal-content" role="document">
             <div class="modal-header">
                 <a href="#components" class="u-pull-right" aria-label="Close"><span class="icon"><i class="fa fa-times"></i></span></a>
-                <div class="modal-title">Modal Dialog</div>
+                <div class="modal-title">Invite</div>
             </div>
             <div class="modal-body">
-                <h6>How to use.</h6>
-                <p>Insert anything you want inside this modal dialog.</p>
+                <div class="row">
+                    <h3 class="font-alt font-light u-text-center">Invite people to project</h3>
+                </div>
+                <space></space>
+                <div class="row u-margin-auto w-80">
+                    <div class="input-control">
+                        <input type="text" class="input-contains-icon" placeholder="Search for team members"><span class="icon"><i class="fa-wrapper fas fa-search small" aria-hidden="true"></i></span>
+                    </div>
+                </div>
+                <div class="divider"></div>
                 
-                <h6>What is Lorem Ipsum?</h6>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <div class="row">
+                    <div class="tile tile-center" style="box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.03); margin: 1rem 0; padding: 0.5rem 1rem; min-width: 25rem;">
+                        <div class="tile-icon">
+                            <figure class="avatar" data-text="Jn">
+                            </figure>
+                        </div>
+                        <div class="tile-container">
+                            <p class="tile-title no-margin">John Newman</p>
+                            <p class="tile-subtitle no-margin">jnewman@gmail.com</p>
+                        </div>
+                        <div class="tile-buttons">
+                            <button class="btn-success btn-small uppercase">Add</button>
+                        </div>
+                    </div>
 
-                <h6>Ipsum</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="tile tile-center" style="box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.03); margin: 1rem 0; padding: 0.5rem 1rem; min-width: 25rem;">
+                        <div class="tile-icon">
+                            <figure class="avatar" style="background-color: #8D91C7" data-text="Fw">
+                            </figure>
+                        </div>
+                        <div class="tile-container">
+                            <p class="tile-title no-margin">Franklin Watson</p>
+                            <p class="tile-subtitle no-margin">fwatsonm@gmail.com</p>
+                        </div>
+                        <div class="tile-buttons">
+                            <button class="btn-success btn-small uppercase">Add</button>
+                        </div>
+                    </div>
 
-                <h6>Ipsum II</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet luctus venenatis lectus magna. Facilisis gravida neque convallis a cras semper. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Erat imperdiet sed euismod nisi porta lorem. </p>
+                    <div class="tile tile-center" style="box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.03); margin: 1rem 0; padding: 0.5rem 1rem; min-width: 25rem;">
+                        <div class="tile-icon">
+                            <figure class="avatar" style="background-color: #6E75A8" data-text="Cr">
+                            </figure>
+                        </div>
+                        <div class="tile-container">
+                            <p class="tile-title no-margin">Cornelia Roberts</p>
+                            <p class="tile-subtitle no-margin">croberts@outlook.com</p>
+                        </div>
+                        <div class="tile-buttons">
+                            <button class="btn-danger btn-small uppercase">Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="tile tile-center" style="box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.03); margin: 1rem 0; padding: 0.5rem 1rem; min-width: 25rem;">
+                        <div class="tile-icon">
+                            <figure class="avatar" style="background-color: #3E1929" data-text="Da">
+                            </figure>
+                        </div>
+                        <div class="tile-container">
+                            <p class="tile-title no-margin">Dominic Alvarado</p>
+                            <p class="tile-subtitle no-margin">dalvarado@yahoo.com</p>
+                        </div>
+                        <div class="tile-buttons">
+                            <button class="btn-success btn-small uppercase">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="tile tile-center" style="box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 3px 6px rgba(0,0,0,0.03); margin: 1rem 0; padding: 0.5rem 1rem; min-width: 25rem;">
+                        <div class="tile-icon">
+                            <figure class="avatar" style="background-color: #845A6D" data-text="Sl">
+                            </figure>
+                        </div>
+                        <div class="tile-container">
+                            <p class="tile-title no-margin">Stanley Lim</p>
+                            <p class="tile-subtitle no-margin">slim@stanleylim.me</p>
+                        </div>
+                        <div class="tile-buttons">
+                            <button class="btn-success btn-small uppercase">Add</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <div class="row level">
@@ -1267,7 +1339,7 @@
                         <button class="btn btn-small" style="margin-right: .75rem; padding: 0 1rem">Cancel</button></a>
                     </div>
                     <div class="level-right level-content">
-                        <a href="#components" style="display: inline-block"><button class="btn-accent btn-small" style="padding: 0 1rem">Share</button></a>
+                        <a href="#components" style="display: inline-block"><button class="btn-info btn-small" style="padding: 0 1rem">Confirm</button></a>
                     </div>
                 </div>
             </div>
