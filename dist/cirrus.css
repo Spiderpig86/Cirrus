@@ -5123,15 +5123,16 @@ a.tag:hover {
 }
 
 /* Tooltip top left */
-.tooltip.tooltip--top-left::after {
-  -webkit-transform: translate(-65%, 0);
-  transform: translate(-65%, 0);
+.tooltip.tooltip-top-left::after {
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 
-.tooltip.tooltip--top-left:hover::after,
-.tooltip.tooltip--top-left:focus::after {
-  -webkit-transform: translate(-125%, -0.5rem);
-  transform: translate(-125%, -0.5rem);
+.tooltip.tooltip-top-left:hover::after,
+.tooltip.tooltip-top-left:focus::after {
+  left: 0;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 
 /* Tooltip top right */
@@ -5140,10 +5141,11 @@ a.tag:hover {
   transform: translate(15%, 0);
 }
 
-.tooltip.tooltip--top-right:hover::after,
-.tooltip.tooltip--top-right:focus::after {
-  -webkit-transform: translate(25%, -0.5rem);
-  transform: translate(25%, -0.5rem);
+.tooltip.tooltip-top-right:hover::after,
+.tooltip.tooltip-top-right:focus::after{
+  right: 0;
+  -webkit-transform: translate(100%, -.5rem);
+  transform: translate(100%, -.5rem);
 }
 
 /* Tooltip bottom */
@@ -5156,16 +5158,16 @@ a.tag:hover {
   -webkit-transform: translate(-50%, -1rem);
   -moz-transform: translate(-50%, -1rem);
   -ms-transform: translate(-50%, -1rem);
-
   bottom: auto;
 }
 
-.tooltip.tooltip--bottom:hover::after,
-.tooltip.tooltip--bottom:focus::after {
-  transform: translate(-50%, 0.5rem);
-  -webkit-transform: translate(-50%, 0.5rem);
-  -moz-transform: translate(-50%, 0.5rem);
-  -ms-transform: translate(-50%, 0.5rem);
+.tooltip.tooltip-bottom:hover::after,
+.tooltip.tooltip-bottom:focus::after {
+  transform: translate(-50%, .5rem);
+  -webkit-transform: translate(-50%, .5rem);
+  -moz-transform: translate(-50%, .5rem);
+  -ms-transform: translate(-50%, .5rem);
+  bottom: auto;
 }
 
 /* Tooltip bottom left */
@@ -5176,10 +5178,11 @@ a.tag:hover {
   bottom: auto;
 }
 
-.tooltip.tooltip--bottom-left:hover::after,
-.tooltip.tooltip--bottom-left:focus::after {
-  -webkit-transform: translate(-125%, 0.5rem);
-  transform: translate(-125%, 0.5rem);
+.tooltip.tooltip-bottom-left:hover::after,
+.tooltip.tooltip-bottom-left:focus::after {
+  left: 0;
+  -webkit-transform: translate(-100%, .5rem);
+  transform: translate(-100%, .5rem);
 }
 
 /* Tooltip bottom right */
@@ -5190,10 +5193,11 @@ a.tag:hover {
   bottom: auto;
 }
 
-.tooltip.tooltip--bottom-right:hover::after,
-.tooltip.tooltip--bottom-right:focus::after {
-  -webkit-transform: translate(10%, 0.5rem);
-  transform: translate(10%, 0.5rem);
+.tooltip.tooltip-bottom-right:hover::after,
+.tooltip.tooltip-bottom-right:focus::after {
+  right: 0;
+  -webkit-transform: translate(100%, .5rem);
+  transform: translate(100%, .5rem);
 }
 
 /* Tooltip right */
@@ -5206,12 +5210,12 @@ a.tag:hover {
   -ms-transform: translate(-1rem, 50%);
 }
 
-.tooltip.tooltip--right:hover::after,
-.tooltip.tooltip--right:focus::after {
-  transform: translate(0.5rem, 50%);
-  -webkit-transform: translate(0.5rem, 50%);
-  -moz-transform: translate(0.5rem, 50%);
-  -ms-transform: translate(0.5rem, 50%);
+.tooltip.tooltip-right:hover::after,
+.tooltip.tooltip-right:focus::after {
+  transform: translate(.5rem, 50%);
+  -webkit-transform: translate(.5rem, 50%);
+  -moz-transform: translate(.5rem, 50%);
+  -ms-transform: translate(.5rem, 50%);
 }
 
 /* Tooltip Left */
@@ -5225,10 +5229,10 @@ a.tag:hover {
   -ms-transform: translate(1rem, 50%);
 }
 
-.tooltip.tooltip--left:hover::after,
-.tooltip.tooltip--left:focus::after {
-  transform: translate(-0.5rem, 50%);
-  -webkit-transform: translate(-0.5rem, 50%);
-  -moz-transform: translate(-0.5rem, 50%);
-  -ms-transform: translate(-0.5rem, 50%);
+.tooltip.tooltip-left:hover::after,
+.tooltip.tooltip-left:focus::after {
+  transform: translate(-.5rem, 50%);
+  -webkit-transform: translate(-.5rem, 50%);
+  -moz-transform: translate(-.5rem, 50%);
+  -ms-transform: translate(-.5rem, 50%);
 }
