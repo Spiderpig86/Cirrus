@@ -1,13 +1,13 @@
 /* LINKS */
 
 a {
-    transition: all 0.3s;
+    backface-visibility: hidden;
     color: var(--cirrus-link);
-    text-decoration: none;
+    display: block;
     font-weight: 600;
     padding: 2px;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    text-decoration: none;
+    transition: all 0.3s;
 }
 
 a:hover {
