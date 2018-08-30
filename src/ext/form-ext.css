@@ -15,8 +15,27 @@
     z-index: -1;
 }
 
+.form-ext-input:disabled ~ .form-ext-label {
+    opacity: 0.8;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label:before {
+    background-color: var(--cirrus-success);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label {
+    color: var(--cirrus-success);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--error:checked ~ .form-ext-label:before {
+    background-color: var(--cirrus-danger);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--error:checked ~ .form-ext-label {
+    color: var(--cirrus-danger);
+}
+
 .form-ext-label {
-    border-radius: .25rem;
     margin-bottom: 0;
     position: relative;
 }
@@ -30,11 +49,13 @@
     left: -1.5rem;
     position: absolute;
     top: .3rem;
+    transition: all .2s;
     width: 1rem;
 }
 
 .form-ext-label:before {
     background-color: var(--cirrus-light);
+    border-radius: .25rem;
     pointer-events: none;
     user-select: none;
 }
@@ -52,21 +73,22 @@
 
 
 /* Checkbox */
-.form-ext-control.form-ext-checkbox:before {
-    border-radius: .25rem;
-}
-
 .form-ext-control.form-ext-checkbox .form-ext-input:checked ~ .form-ext-label:after {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E")
 }
 
-/* Radio Button */
-.form-ext-control.form-ext-radio:before {
-    border-radius: 50%;
+.form-ext-checkbox .form-ext-label:before {
+    border-radius: .25rem;
 }
+
+/* Radio Button */
 
 .form-ext-control.form-ext-radio .form-ext-input:checked ~ .form-ext-label:after {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.form-ext-radio .form-ext-label:before {
+    border-radius: 50%;
 }
 
 /* Toggle Switches */
@@ -75,11 +97,17 @@
     position: relative;
 }
 
-.form-ext-toggle .input[type="checkbox"],
-.form-ext-toggle .input[type="radio"] {
+.form-ext-toggle input[type="checkbox"],
+.form-ext-toggle input[type="radio"] {
     opacity: 0;
     position: absolute;
     z-index: -1;
+}
+
+.form-ext-toggle__label {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .form-ext-toggle__toggler {
@@ -89,19 +117,27 @@
     display: block;
     font-size: 9px;
     height: 1.5rem;
+    position: relative;
     width: 3rem;
 }
 
 .form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler {
+.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
+.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler {
     background-color: var(--cirrus-primary);
     border-color: var(--cirrus-primary);
     color: #fff;
+    position: relative;
     transition: all .4s ease;
 }
 
 .form-ext-toggle i {
     display: inline-block;
+}
+
+.form-ext-input:disabled ~ .form-ext-toggle__toggler {
+    opacity: 0.5;
 }
 
 .form-ext-toggle__toggler i::before,
@@ -113,10 +149,73 @@
 
 .form-ext-toggle__toggler i::before {
     /* TODO SET CONTENT */
-    text-align: left;
+    content: attr(data-uncheck-icon);
+    padding: 2px 7px;
+    line-height: 18px;
+    text-align: right;
+    top: 0;
+    width: 65%;
+    font-size: 12px;
 }
 
 .form-ext-toggle__toggler i::after {
+    background-color: var(--cirrus-gray);
+    border-radius: 50%;
+    height: 16px;
+    left: 4px;
+    width: 16px;
+    transform: translateY(-50%);
+    transition: left .2s ease;
+    text-align: left;
+}
+
+.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler i::before,
+.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::before,
+.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler i::before,
+.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler i::before {
+    color: #fff;
+    content: attr(data-check-icon);
+    text-align: left;
+}
+
+.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
+.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
     background-color: #fff;
     left: calc(100% - 20px);
+}
+
+.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + * .form-ext-toggle__toggler {
+    background-color: var(--cirrus-danger);
+    border-color: var(--cirrus-danger);
+}
+
+.form-ext-toggle.form-ext-toggle--error .form-ext-toggle__toggler {
+    border-color: var(--cirrus-danger);
+    color: var(--cirrus-danger);
+}
+
+.form-ext-toggle.form-ext-toggle--error .form-ext-toggle__toggler i::after {
+    background-color: var(--cirrus-danger);
+}
+
+.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + * .form-ext-toggle__toggler {
+    background-color: var(--cirrus-success);
+    border-color: var(--cirrus-success);
+}
+
+.form-ext-toggle--success .form-ext-toggle__toggler {
+    border-color: var(--cirrus-success);
+    color: var(--cirrus-success);
+}
+
+.form-ext-toggle--success .form-ext-toggle__toggler i::after {
+    background-color: var(--cirrus-success);
 }

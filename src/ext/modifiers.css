@@ -1,11 +1,13 @@
 /* A collection of modifiers that extend control styling */
-.btn--pilled {
+.btn.btn--pilled,
+[class^="btn-"].btn--pilled {
     border-radius: 6.25rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
 
-.btn--circle {
+.btn.btn--circle,
+[class^="btn-"].btn--circle {
     border-radius: 100%;
     height: 3.125rem;
     line-height: 3.125rem;
