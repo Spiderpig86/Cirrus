@@ -42,14 +42,15 @@
 
 /* Tooltip top left */
 .tooltip.tooltip-top-left::after {
-  -webkit-transform: translate(-65%, 0);
-  transform: translate(-65%, 0);
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 
 .tooltip.tooltip-top-left:hover::after,
 .tooltip.tooltip-top-left:focus::after {
-  -webkit-transform: translate(-125%, -.5rem);
-  transform: translate(-125%, -.5rem);
+  left: 0;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 
 /* Tooltip top right */
@@ -60,8 +61,9 @@
 
 .tooltip.tooltip-top-right:hover::after,
 .tooltip.tooltip-top-right:focus::after{
-  -webkit-transform: translate(25%, -.5rem);
-  transform: translate(25%, -.5rem);
+  right: 0;
+  -webkit-transform: translate(100%, -.5rem);
+  transform: translate(100%, -.5rem);
 }
 
 /* Tooltip bottom */
@@ -71,7 +73,6 @@
   -webkit-transform: translate(-50%, -1rem);
   -moz-transform: translate(-50%, -1rem);
   -ms-transform: translate(-50%, -1rem);
-  -o-transform: translate(-50%, -1rem);
   bottom: auto;
 }
 
@@ -81,7 +82,6 @@
   -webkit-transform: translate(-50%, .5rem);
   -moz-transform: translate(-50%, .5rem);
   -ms-transform: translate(-50%, .5rem);
-  -o-transform: translate(-50%, .5rem);
 }
 
 /* Tooltip bottom left */
@@ -94,8 +94,9 @@
 
 .tooltip.tooltip-bottom-left:hover::after,
 .tooltip.tooltip-bottom-left:focus::after {
-  -webkit-transform: translate(-125%, .5rem);
-  transform: translate(-125%, .5rem);
+  left: 0;
+  -webkit-transform: translate(-100%, .5rem);
+  transform: translate(-100%, .5rem);
 }
 
 /* Tooltip bottom right */
@@ -108,8 +109,9 @@
 
 .tooltip.tooltip-bottom-right:hover::after,
 .tooltip.tooltip-bottom-right:focus::after {
-  -webkit-transform: translate(10%, .5rem);
-  transform: translate(10%, .5rem);
+  right: 0;
+  -webkit-transform: translate(100%, .5rem);
+  transform: translate(100%, .5rem);
 }
 
 /* Tooltip right */
@@ -120,7 +122,6 @@
   -webkit-transform: translate(-1rem, 50%);
   -moz-transform: translate(-1rem, 50%);
   -ms-transform: translate(-1rem, 50%);
-  -o-transform: translate(-1rem, 50%);
 }
 
 .tooltip.tooltip-right:hover::after,
@@ -129,7 +130,6 @@
   -webkit-transform: translate(.5rem, 50%);
   -moz-transform: translate(.5rem, 50%);
   -ms-transform: translate(.5rem, 50%);
-  -o-transform: translate(.5rem, 50%);
 }
 
 /* Tooltip Left */
@@ -141,7 +141,6 @@
   -webkit-transform: translate(1rem, 50%);
   -moz-transform: translate(1rem, 50%);
   -ms-transform: translate(1rem, 50%);
-  -o-transform: translate(1rem, 50%);
 }
 
 .tooltip.tooltip-left:hover::after,
@@ -150,5 +149,4 @@
   -webkit-transform: translate(-.5rem, 50%);
   -moz-transform: translate(-.5rem, 50%);
   -ms-transform: translate(-.5rem, 50%);
-  -o-transform: translate(-.5rem, 50%);
 }
