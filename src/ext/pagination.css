@@ -68,12 +68,12 @@
     flex: 0;
 }
 
-.pagination .pagination-item.short:first-child {
+.pagination .pagination-item.short:first-child a {
     border-top-left-radius: .25rem;
     border-bottom-left-radius: .25rem;
 }
 
-.pagination .pagination-item.short:last-child {
+.pagination .pagination-item.short:last-child a {
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
 }
