@@ -744,10 +744,10 @@ mark,
   /* Usually used in spans */
   display: inline-block;
   font-size: 21px; /* Best font sizes are multiples of 7 */
+  line-height: 1.5rem;
   text-align: center;
-  vertical-align: top;
   width: 1.5rem;
-  vertical-align: baseline; /* Experiment */
+  vertical-align: baseline;
 }
 
 .icon .fa-wrapper {
@@ -2436,6 +2436,7 @@ a,
 a:visited,
 a:hover,
 a:active {
+    display: inline-block;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     text-decoration: none;

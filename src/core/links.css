@@ -21,6 +21,7 @@ a,
 a:visited,
 a:hover,
 a:active {
+    display: inline-block;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     text-decoration: none;
