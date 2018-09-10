@@ -145,6 +145,7 @@ button.btn-close::after {
 .btn-transparent {
     --btn-color: transparent;
     --btn-fg: var(--cirrus-dark);
+    --btn-border-color: transparent;
 }
 .btn-transparent.outline { --btn-color: var(--cirrus-dark); }
 .btn-transparent:hover { --btn-color: rgba(0, 0, 0, .1); }
@@ -153,6 +154,7 @@ button.btn-close::after {
 .btn-light {
     --btn-color: var(--cirrus-light);
     --btn-fg: var(--cirrus-dark);
+    --btn-border-color: var(--cirrus-light);
 }
 .btn-light:hover { --btn-color: var(--cirrus-light-hover); }
 .btn-light:focus { box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5); }
@@ -160,6 +162,7 @@ button.btn-close::after {
 .btn-dark {
     --btn-color: var(--cirrus-dark);
     --btn-fg: var(--cirrus-light);
+    --btn-border-color: var(--cirrus-dark);
 }
 .btn-dark:hover { --btn-color: var(--cirrus-dark-hover); }
 .btn-dark.outline:hover { --btn-color: var(--cirrus-dark); }
@@ -168,6 +171,7 @@ button.btn-close::after {
 .btn-black {
     --btn-color: #000;
     --btn-fg: var(--cirrus-light);
+    --btn-border-color: #000;
 }
 .btn-black:hover { --btn-color: #000; }
 .btn-black:focus { box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
@@ -175,6 +179,7 @@ button.btn-close::after {
 .btn-primary {
     --btn-color: var(--cirrus-primary);
     --btn-fg: var(--cirrus-light);
+    --btn-border-color: var(--cirrus-accent-border);
 }
 .btn-primary:hover { --btn-color: var(--cirrus-accent-hover); }
 .btn-primary.outline:hover { --btn-color: var(--cirrus-primary); }
@@ -183,6 +188,7 @@ button.btn-close::after {
 .btn-info {
     --btn-color: var(--cirrus-info);
     --btn-fg: var(--cirrus-light);
+    --btn-border-color: var(--cirrus-info);
 }
 .btn-info:hover { --btn-color: var(--cirrus-info-hover); }
 .btn-info.outline:hover { --btn-color: var(--cirrus-info); }
@@ -191,6 +197,7 @@ button.btn-close::after {
 .btn-link {
     --btn-color: var(--cirrus-link);
     --btn-fg: var(--cirrus-light);
+    --btn-border-color: var(--cirrus-link);
 }
 .btn-link.outline { --btn-fg: var(--cirrus-link); border: 1px solid transparent; }
 .btn-link:hover { --btn-color: var(--cirrus-link-dark); }
@@ -200,6 +207,7 @@ button.btn-close::after {
 .btn-success {
     --btn-color: var(--cirrus-success);
     --btn-fg: var(--cirrus-light);
+    --btn-border-color: var(--cirrus-success);
 }
 .btn-success:hover { --btn-color: var(--cirrus-success-hover); }
 .btn-success.outline:hover { --btn-color: var(--cirrus-success); }
@@ -208,6 +216,7 @@ button.btn-close::after {
 .btn-warning {
     --btn-color: var(--cirrus-warning);
     --btn-fg: var(--cirrus-dark);
+    --btn-border-color: var(--cirrus-warning);
 }
 .btn-warning:hover { --btn-color: var(--cirrus-warning-hover); }
 .btn-warning.outline:hover { --btn-color: var(--cirrus-warning); }
@@ -216,6 +225,7 @@ button.btn-close::after {
 .btn-danger {
     --btn-color: var(--cirrus-danger);
     --btn-fg: var(--cirrus-light);
+    --btn-border-color: var(--cirrus-danger);
 }
 .btn-danger:hover { --btn-color: var(--cirrus-danger-hover); }
 .btn-danger.outline:hover { --btn-color: var(--cirrus-danger); }
@@ -223,12 +233,12 @@ button.btn-close::after {
 
 [class^="btn-"] {
     background-color: var(--btn-color); 
-    border: 1px solid var(--btn-color);
+    border: 1px solid var(--btn-border-color);
     color: var(--btn-fg);
     transition: all .2s;
 }
 
-[class^="btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-color); transition: all .2s; }
+[class^="btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all .2s; }
 
 /* Outline Variants */
 [class^="btn-"].outline {
