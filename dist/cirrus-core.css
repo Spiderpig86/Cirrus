@@ -744,7 +744,7 @@ mark,
   /* Usually used in spans */
   display: inline-block;
   font-size: 21px; /* Best font sizes are multiples of 7 */
-  line-height: 1.5rem;
+  /* line-height: 1.5rem; Allow line height to be inherited or overwritten */
   text-align: center;
   width: 1.5rem;
   vertical-align: baseline;
@@ -2418,7 +2418,7 @@ space.x-large {
 a {
     backface-visibility: hidden;
     color: var(--cirrus-link);
-    display: block;
+    display: block; /* Allow this to be overwritten, never set to inline-block */
     font-weight: 600;
     padding: 2px;
     text-decoration: none;
@@ -2428,16 +2428,11 @@ a {
 a:hover {
     color: var(--cirrus-link-dark);
     transition: all 0.3s;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
 }
 
-a,
 a:visited,
 a:hover,
 a:active {
-    display: inline-block;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     text-decoration: none;
 }
@@ -2446,12 +2441,16 @@ a:active {
     padding: 0; /* Removes weird offset in subtitle links */
 }
 
-a.display-block {
+/* a.display-block { Deprecated 0.5.5
     display: block;
-}
+} */
 
 a.underline {
     text-decoration: underline;
+}
+
+p, h1, h2, h3, h4, h5, h6, blockquote, article {
+    display: inline-block;
 }
 /* LISTS */
 
@@ -2570,6 +2569,10 @@ ul.menu {
   margin-right: .1rem;
   -webkit-transition: all .2s;
   transition: all .2s;
+}
+
+.menu .menu-item.menu-addon .icon {
+  font-size: inherit;
 }
 
 /* Darken on hover to differentiate from menu-item */

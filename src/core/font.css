@@ -202,7 +202,7 @@ mark,
   /* Usually used in spans */
   display: inline-block;
   font-size: 21px; /* Best font sizes are multiples of 7 */
-  line-height: 1.5rem;
+  /* line-height: 1.5rem; Allow line height to be inherited or overwritten */
   text-align: center;
   width: 1.5rem;
   vertical-align: baseline;
