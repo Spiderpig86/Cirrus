@@ -322,8 +322,8 @@ button span:last-child,
 [type="submit"] span:last-child {
     margin-left: 0.2rem;
 }
-
-/* Button with accent */
+/* Deprecated 0.5.5
+/* Button with accent 
 .btn-accent {
     background-color: var(--cirrus-primary);
     color: #fff;
@@ -336,7 +336,7 @@ button span:last-child,
 
 .btn-accent:active {
     background-color: var(--cirrus-accent-border);
-}
+} */
 
 /* BUTTON GROUPS */
 /* Will group buttons with components in a single component */
