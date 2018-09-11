@@ -2581,7 +2581,7 @@ ul.menu {
   transition: all .2s;
 }
 
-.menu .menu-item.menu-addon .icon {
+.menu .menu-item .menu-addon .icon {
   font-size: inherit;
 }
 
@@ -5137,16 +5137,16 @@ a.tag:hover {
 }
 
 /* Tooltip top left */
-.tooltip.tooltip-top-left::after {
+.tooltip.tooltip--top-left::after {
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
 
-.tooltip.tooltip-top-left:hover::after,
-.tooltip.tooltip-top-left:focus::after {
+.tooltip.tooltip--top-left:hover::after,
+.tooltip.tooltip--top-left:focus::after {
   left: 0;
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-100%, -.5rem);
+  transform: translate(-100%, -.5rem);
 }
 
 /* Tooltip top right */
@@ -5155,8 +5155,8 @@ a.tag:hover {
   transform: translate(15%, 0);
 }
 
-.tooltip.tooltip-top-right:hover::after,
-.tooltip.tooltip-top-right:focus::after{
+.tooltip.tooltip--top-right:hover::after,
+.tooltip.tooltip--top-right:focus::after{
   right: 0;
   -webkit-transform: translate(100%, -.5rem);
   transform: translate(100%, -.5rem);
@@ -5175,8 +5175,8 @@ a.tag:hover {
   bottom: auto;
 }
 
-.tooltip.tooltip-bottom:hover::after,
-.tooltip.tooltip-bottom:focus::after {
+.tooltip.tooltip--bottom:hover::after,
+.tooltip.tooltip--bottom:focus::after {
   transform: translate(-50%, .5rem);
   -webkit-transform: translate(-50%, .5rem);
   -moz-transform: translate(-50%, .5rem);
@@ -5192,8 +5192,8 @@ a.tag:hover {
   bottom: auto;
 }
 
-.tooltip.tooltip-bottom-left:hover::after,
-.tooltip.tooltip-bottom-left:focus::after {
+.tooltip.tooltip--bottom-left:hover::after,
+.tooltip.tooltip--bottom-left:focus::after {
   left: 0;
   -webkit-transform: translate(-100%, .5rem);
   transform: translate(-100%, .5rem);
@@ -5207,8 +5207,8 @@ a.tag:hover {
   bottom: auto;
 }
 
-.tooltip.tooltip-bottom-right:hover::after,
-.tooltip.tooltip-bottom-right:focus::after {
+.tooltip.tooltip--bottom-right:hover::after,
+.tooltip.tooltip--bottom-right:focus::after {
   right: 0;
   -webkit-transform: translate(100%, .5rem);
   transform: translate(100%, .5rem);
@@ -5224,8 +5224,8 @@ a.tag:hover {
   -ms-transform: translate(-1rem, 50%);
 }
 
-.tooltip.tooltip-right:hover::after,
-.tooltip.tooltip-right:focus::after {
+.tooltip.tooltip--right:hover::after,
+.tooltip.tooltip--right:focus::after {
   transform: translate(.5rem, 50%);
   -webkit-transform: translate(.5rem, 50%);
   -moz-transform: translate(.5rem, 50%);
@@ -5243,8 +5243,8 @@ a.tag:hover {
   -ms-transform: translate(1rem, 50%);
 }
 
-.tooltip.tooltip-left:hover::after,
-.tooltip.tooltip-left:focus::after {
+.tooltip.tooltip--left:hover::after,
+.tooltip.tooltip--left:focus::after {
   transform: translate(-.5rem, 50%);
   -webkit-transform: translate(-.5rem, 50%);
   -moz-transform: translate(-.5rem, 50%);

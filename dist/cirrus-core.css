@@ -2581,7 +2581,7 @@ ul.menu {
   transition: all .2s;
 }
 
-.menu .menu-item.menu-addon .icon {
+.menu .menu-item .menu-addon .icon {
   font-size: inherit;
 }
 
