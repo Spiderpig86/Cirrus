@@ -1968,11 +1968,11 @@ section {
 /* This works well with spans and maybe even hr */
 .divider {
     display: block;
-    height: 2px;
+    height: 1px;
     position: relative;
     border-top: none;
     margin: 1.5rem 0;
-    background-color: #eee;
+    background-color: rgba(238, 238, 238, 0.5);
     width: 100%;
 }
 
