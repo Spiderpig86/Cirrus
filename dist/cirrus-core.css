@@ -2462,6 +2462,10 @@ a.underline {
 p a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, blockquote a, article a {
     display: inline;
 }
+
+a .btn, a button {
+    margin-bottom: 0; /* Remove random excess space */
+}
 /* LISTS */
 
 ul {
