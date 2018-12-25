@@ -2001,9 +2001,9 @@ section {
     display: -ms-flexbox;
     display: flex; /* Important to stretch height of hero-body */
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
+    /* -webkit-box-direction: normal; /* Deprecated 0.5.5 
     -ms-flex-direction: column;
-    flex-direction: column; /* Stack the items in the container */
+    flex-direction: column; Stack the items in the container */
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
