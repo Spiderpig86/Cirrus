@@ -49,6 +49,14 @@ video {
     height: auto;
 }
 
+.hero.fullscreen video {
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
 iframe {
     outline: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
