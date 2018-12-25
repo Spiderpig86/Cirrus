@@ -451,6 +451,7 @@ space.x-large {
         align-items: stretch;
         display: -webkit-box;
         display: -ms-flexbox;
+        display: flex;
     }
 }
 
@@ -490,5 +491,9 @@ space.x-large {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+    }
+
+    .level.fill-height {
+        display: inherit; /* Allow children to expand */
     }
 }

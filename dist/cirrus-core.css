@@ -504,6 +504,14 @@ video {
     height: auto;
 }
 
+.hero.fullscreen video {
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
 iframe {
     outline: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -2381,6 +2389,7 @@ space.x-large {
         align-items: stretch;
         display: -webkit-box;
         display: -ms-flexbox;
+        display: flex;
     }
 }
 
@@ -2420,6 +2429,10 @@ space.x-large {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+    }
+
+    .level.fill-height {
+        display: inherit; /* Allow children to expand */
     }
 }
 
