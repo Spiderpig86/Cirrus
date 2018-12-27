@@ -4241,6 +4241,79 @@ border-color: transparent;
 .form-ext-toggle--success .form-ext-toggle__toggler i::after {
     background-color: var(--cirrus-success);
 }
+/* GRID */
+:root {
+    --gap-0: 0;
+    --gap-1: 0.25rem;
+    --gap-2: 0.5rem;
+    --gap-3: 1rem;
+    --gap-4: 1.25rem;
+    --gap-5: 1.5rem;
+    --gap-6: 3rem;
+    --gap-7: 6rem;
+    --gap-8: 9rem;
+    --gap-9: 12rem;
+}
+
+.grid { 
+    display: grid;
+    grid-gap: var(--gap-2);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid.grid-col-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid.grid-col-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid.grid-col-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid.grid-col-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid.grid-col-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid.grid-col-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid.grid-col-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid.grid-col-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid.grid-col-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid.grid-col-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.grid.grid-col-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+
+.grid.grid-col-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
 /* EXTENDED LINKS */
 /* Animated links */
 .u,
