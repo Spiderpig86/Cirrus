@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-A fully responsive and comprehensive CSS framework with cbeautiful controls and simplistic structure. Cirrus is designed to be adaptable to existing themes or when starting fresh.
+A fully responsive and comprehensive CSS framework with beautiful controls and simplistic structure. Cirrus is designed to be adaptable to existing themes or when starting fresh.
 </p>
 
 ## Framework Components
