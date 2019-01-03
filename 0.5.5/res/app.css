@@ -54,7 +54,6 @@
 .header .nav-item > a:hover {
     color: var(--cirrus-primary);
 }
-
 .header .btn .btn-accent {
     position: inherit;
 }
@@ -108,6 +107,11 @@ section {
 #tooltips button {
     text-align: center;
     width: 100%;
+}
+
+.doc-link {
+    font-weight: 300;
+    margin-right: .5rem;
 }
 
 /* Examples */
