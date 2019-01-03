@@ -1,6 +1,6 @@
 /*
 * Cirrus 0.5.4
-* Stanley Lim, Copyright 2018
+* Stanley Lim, Copyright 2019
 * https://spiderpig86.github.io/Cirrus
 */
 /* BUTTONS */
@@ -857,6 +857,39 @@ kbd {
   line-height: 1;
   padding: 0.5rem;
   vertical-align: baseline;
+}
+
+/* Text theme elements */
+.text-primary {
+  color: var(--cirrus-primary);
+}
+
+.text-info {
+  color: var(--cirrus-info);
+}
+
+.text-link {
+  color: var(--cirrus-link);
+}
+
+.text-dark {
+  color: var(--cirrus-dark);
+}
+
+.text-success {
+  color: var(--cirrus-success);
+}
+
+.text-warning {
+  color: var(--cirrus-warning);
+}
+
+.text-danger {
+  color: var(--cirrus-danger);
+}
+
+.text-light {
+  color: var(--cirrus-light);
 }
 
 /* MOBILE */
