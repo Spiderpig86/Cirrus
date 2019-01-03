@@ -51,7 +51,7 @@
     color: #fff;
 }
 
-.header .nav-item a:hover {
+.header .nav-item > a:hover {
     color: var(--cirrus-primary);
 }
 
