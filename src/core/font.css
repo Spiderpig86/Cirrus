@@ -299,39 +299,6 @@ kbd {
   vertical-align: baseline;
 }
 
-/* Text theme elements */
-.text-primary {
-  color: var(--cirrus-primary);
-}
-
-.text-info {
-  color: var(--cirrus-info);
-}
-
-.text-link {
-  color: var(--cirrus-link);
-}
-
-.text-dark {
-  color: var(--cirrus-dark);
-}
-
-.text-success {
-  color: var(--cirrus-success);
-}
-
-.text-warning {
-  color: var(--cirrus-warning);
-}
-
-.text-danger {
-  color: var(--cirrus-danger);
-}
-
-.text-light {
-  color: var(--cirrus-light);
-}
-
 /* MOBILE */
 
 @media (max-width: 650px) {
