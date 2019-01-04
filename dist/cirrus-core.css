@@ -51,14 +51,13 @@ button:active,
 button:not([class^="btn-"]):not([class*=" btn-"]):hover,
 .btn:not([class^="btn-"]):not([class*=" btn-"]):hover,
 [type="submit"]:not([class^="btn-"]):not([class*=" btn-"]):hover {
-    background-color: #eee;
     --btn-color: #eee;
 }
 
-.btn:not([class^="btn-"]):not([class*=" btn-"]):active,
-button:not([class^="btn-"]):not([class*=" btn-"]):active,
-[type="submit"]:not([class^="btn-"]):not([class*=" btn-"]):active {
-    background-color: #ddd;
+.btn:active,
+button:active,
+[type="submit"]:active {
+    --btn-color: #ddd;
 }
 
 /* Make the loading circle, if present, white when button is active */
