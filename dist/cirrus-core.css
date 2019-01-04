@@ -19,9 +19,9 @@ button,
     cursor: pointer;
     text-align: center;
     transition: all 0.2s;
-    background-color: #fefefe;
+    /* background-color: #fefefe;
     border-color: #d9d9d9;
-    color: #737373;
+    color: #737373; */
     font-size: 0.75rem;
     letter-spacing: 0.03rem;
     text-transform: uppercase;
@@ -30,6 +30,9 @@ button,
     user-select: none;
     margin-bottom: 1rem;
     outline: none;
+    --btn-color: #fefefe;
+    --btn-fg: #d9d9d9;
+    --btn-border-color: #737373;
 }
 
 button:hover,
