@@ -46,12 +46,14 @@ button:active,
 button:hover,
 .btn:hover,
 [type="submit"]:hover {
+    background-color: #eee;
     --btn-color: #eee;
 }
 
 .btn:active,
 button:active,
 [type="submit"]:active {
+    background-color: #ddd;
     --btn-color: #ddd;
 }
 
