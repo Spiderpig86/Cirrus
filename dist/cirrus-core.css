@@ -19,9 +19,9 @@ button,
     cursor: pointer;
     text-align: center;
     transition: all 0.2s;
-    /* background-color: #fefefe;
+    background-color: #fefefe;
     border-color: #d9d9d9;
-    color: #737373; */
+    color: #737373;
     font-size: 0.75rem;
     letter-spacing: 0.03rem;
     text-transform: uppercase;
@@ -31,8 +31,8 @@ button,
     margin-bottom: 1rem;
     outline: none;
     --btn-color: #fefefe;
-    --btn-fg: #d9d9d9;
-    --btn-border-color: #737373;
+    --btn-fg: #737373;
+    --btn-border-color: #d9d9d9;
 }
 
 button:hover,
@@ -51,7 +51,8 @@ button:active,
 button:not([class^="btn-"]):not([class*=" btn-"]):hover,
 .btn:not([class^="btn-"]):not([class*=" btn-"]):hover,
 [type="submit"]:not([class^="btn-"]):not([class*=" btn-"]):hover {
-    background-color: #eee
+    background-color: #eee;
+    --btn-color: #eee;
 }
 
 .btn:not([class^="btn-"]):not([class*=" btn-"]):active,
