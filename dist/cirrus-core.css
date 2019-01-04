@@ -47,13 +47,19 @@ button:active,
 /* Default button colors */
 button:not([class^="btn-"]):hover,
 .btn:not([class^="btn-"]):hover,
-[type="submit"]:not([class^="btn-"]):hover {
+[type="submit"]:not([class^="btn-"]):hover,
+button:not([class*=" btn-"]):hover,
+.btn:not([class*=" btn-"]):hover,
+[type="submit"]:not([class*=" btn-"]):hover  {
     background-color: #eee
 }
 
 .btn:not([class^="btn-"]):active,
 button:not([class^="btn-"]):active,
-[type="submit"]:not([class^="btn-"]):active {
+[type="submit"]:not([class^="btn-"]):active,
+.btn:not([class*=" btn-"]):active,
+button:not([class*=" btn-"]):active,
+[type="submit"]:not([class*=" btn-"]):active {
     background-color: #ddd;
 }
 
@@ -231,21 +237,21 @@ button.btn-close::after {
 .btn-danger.outline:hover { --btn-color: var(--cirrus-danger); }
 .btn-danger:focus { box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5); }
 
-[class^="btn-"] {
+[class^="btn-"], [class*=" btn-"] {
     background-color: var(--btn-color); 
     border: 1px solid var(--btn-border-color);
     color: var(--btn-fg);
     transition: all .2s;
 }
 
-[class^="btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all .2s; }
+[class^="btn-"]:hover, [class*=" btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all .2s; }
 
 /* Outline Variants */
-[class^="btn-"].outline {
+[class^="btn-"].outline, [class*=" btn-"].outline {
     background-color: transparent; 
     color: var(--btn-color);
 }
-[class^="btn-"].outline:hover {
+[class^="btn-"].outline:hover, [class*=" btn-"].outline:hover {
     background-color: var(--btn-color);
     color: var(--btn-fg);
     transition: all .2s;
@@ -2245,11 +2251,6 @@ space.x-large {
     flex: none;
 }
 
-/* Known to cause spacing issues in columns */
-/*.row [class^='col-']:first-child, .row [class*=" col-"]:first-child{
-  margin-left: 0;
-}*/
-
 /* Used for aligning controls next to each other */
 .row.has-controls {
     display: -webkit-box;
@@ -2262,13 +2263,13 @@ space.x-large {
 
 /* Divider for multiple elements in a div */
 .divided > .fluid-container:not(.row),
-.divided > .row [class^="col-"] {
+.divided > .row [class^="col-"], .divided > .row [class*=" col-"] {
     box-shadow: -1px 0 0 0 rgba(34, 36, 38, 0.15);
 }
 
 /* Remove border in first child */
 .divided > .row [class^="col-"]:first-child,
-.divided > .row [class^="col-"]:first-child {
+.divided > .row [class*=" col-"]:first-child {
     box-shadow: none;
 }
 
@@ -2408,7 +2409,7 @@ space.x-large {
     }
 
     /* Increase space with cards */
-    .fluid-container [class^="col-"]:not(.ignore-screen),
+    .fluid-container [class*="col-"]:not(.ignore-screen),
     .row [class*=" col-"]:not(.ignore-screen) {
         margin-top: 1rem;
     }
@@ -2419,7 +2420,7 @@ space.x-large {
 
     /* Dividers for mobile layout */
     .divided > .fluid-container:not(.row),
-    .divided > .row [class^="col-"] {
+    .divided > .row [class*="col-"] {
         box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
     }
 
