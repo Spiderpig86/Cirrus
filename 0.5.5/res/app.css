@@ -70,6 +70,11 @@ section {
     font-weight: 400;
 }
 
+pre:not(.get-cirrus) > code {
+    padding: 2rem 1.5rem 1rem !important;
+    background: #f6f8fa;
+}
+
 /* Colors */
 .frame {
     box-shadow: 0 0.2rem 1.25rem 0 rgba(27, 30, 36, 0.07);
