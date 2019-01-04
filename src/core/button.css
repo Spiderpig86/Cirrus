@@ -43,9 +43,9 @@ button:active,
 }
 
 /* Default button colors */
-button:not([class^="btn-"]):not([class*=" btn-"]):hover,
-.btn:not([class^="btn-"]):not([class*=" btn-"]):hover,
-[type="submit"]:not([class^="btn-"]):not([class*=" btn-"]):hover {
+button:hover,
+.btn:hover,
+[type="submit"]:hover {
     --btn-color: #eee;
 }
 
