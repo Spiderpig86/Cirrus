@@ -465,7 +465,8 @@ space.x-large {
     }
 
     /* Increase space with cards */
-    .fluid-container [class*="col-"]:not(.ignore-screen),
+    .fluid-container [class^="col-"]:not(.ignore-screen),
+    .fluid-container [class*=" col-"]:not(.ignore-screen),
     .row [class*=" col-"]:not(.ignore-screen) {
         margin-top: 1rem;
     }
@@ -476,7 +477,8 @@ space.x-large {
 
     /* Dividers for mobile layout */
     .divided > .fluid-container:not(.row),
-    .divided > .row [class*="col-"] {
+    .divided > .row [class^="col-"],
+    .divided > .row [class*=" col-"] {
         box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
     }
 
