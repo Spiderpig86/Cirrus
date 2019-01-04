@@ -45,21 +45,15 @@ button:active,
 }
 
 /* Default button colors */
-button:not([class^="btn-"]):hover,
-.btn:not([class^="btn-"]):hover,
-[type="submit"]:not([class^="btn-"]):hover,
-button:not([class*=" btn-"]):hover,
-.btn:not([class*=" btn-"]):hover,
-[type="submit"]:not([class*=" btn-"]):hover  {
+button:not([class^="btn-"]):not([class*=" btn-"]):hover,
+.btn:not([class^="btn-"]):not([class*=" btn-"]):hover,
+[type="submit"]:not([class^="btn-"]):not([class*=" btn-"]):hover {
     background-color: #eee
 }
 
-.btn:not([class^="btn-"]):active,
-button:not([class^="btn-"]):active,
-[type="submit"]:not([class^="btn-"]):active,
-.btn:not([class*=" btn-"]):active,
-button:not([class*=" btn-"]):active,
-[type="submit"]:not([class*=" btn-"]):active {
+.btn:not([class^="btn-"]):not([class*=" btn-"]):active,
+button:not([class^="btn-"]):not([class*=" btn-"]):active,
+[type="submit"]:not([class^="btn-"]):not([class*=" btn-"]):active {
     background-color: #ddd;
 }
 

@@ -3,6 +3,2000 @@
 * Stanley Lim, Copyright 2019
 * https://spiderpig86.github.io/Cirrus
 */
+/* ANIMATIONS */
+
+/* Spinning loading animation */
+@-webkit-keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* Hover animation */
+.hover-grow {
+    /* Mouse leave */
+    transition-duration: 0.32s;
+}
+
+.hover-grow:hover {
+    /* Mouse enter */
+    transform: scale(1.1);
+    transition-duration: 0.08s;
+}
+
+/* Loading button position relatively for loading spinner location */
+.animated.loading {
+    display: block;
+    position: relative;
+}
+
+/* Loading Spinner, align center by default */
+.animated.loading::after {
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    left: calc(50% - (1em / 1.25));
+    top: calc(50% - (1em / 1.35));
+    position: absolute;
+    -webkit-animation: loading 500ms infinite linear;
+    animation: loading 500ms infinite linear;
+}
+
+.animated.loading.loading-white::after {
+    border-left-color: #fff;
+    border-bottom-color: #fff;
+}
+
+/* Align spinner left */
+.animated.loading.loading-left::after {
+    left: 2rem;
+    right: auto;
+}
+
+.animated.loading.loading-left {
+    padding-left: 4rem;
+}
+
+/* Align spinner right */
+.animated.loading.loading-right::after {
+    left: auto;
+    right: 2rem;
+}
+
+.animated.loading.loading-right {
+    padding-right: 4rem;
+}
+
+/* Hide text in loading button */
+.animated.loading.hide-text {
+    color: transparent !important;
+}
+
+/* Heart animation */
+@-webkit-keyframes pound {
+    to {
+        transform: scale(1.1);
+    }
+}
+@keyframes pound {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.animated.pulse {
+    animation: pound 0.35s infinite alternate;
+    -webkit-animation: pound 0.35s infinite alternate;
+    vertical-align: baseline;
+}
+
+/* Bounce animations */
+@-webkit-keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.215,
+            0.61,
+            0.355,
+            1
+        ); /* Ease-out based on power of four */
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.755,
+            0.05,
+            0.855,
+            0.06
+        );
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.755,
+            0.05,
+            0.855,
+            0.06
+        );
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+@keyframes bounce {
+    from,
+    20%,
+    53%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.215,
+            0.61,
+            0.355,
+            1
+        ); /* Ease-out based on power of four */
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%,
+    43% {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.755,
+            0.05,
+            0.855,
+            0.06
+        );
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(
+            0.755,
+            0.05,
+            0.855,
+            0.06
+        );
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+.animated.bounce {
+    animation-name: bounce;
+    -webkit-animation-name: bounce;
+    transform-origin: center bottom;
+    -webkit-transform-origin: center bottom;
+}
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.animated.bounceIn {
+    animation-name: bounceIn;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animated.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.animated.infinite.alternate {
+    animation-direction: alternate;
+}
+
+.animated.paused {
+    -webkit-animation-play-state: paused !important; /* Safari 4.0 - 8.0 */
+    animation-play-state: paused !important;
+}
+
+/* Avatar */
+.avatar {
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  margin: auto;
+  font-size: 1rem;
+  font-weight: lighter;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: var(--cirrus-primary);
+  overflow: hidden;
+}
+
+/* Draw text on image just like in Gmail */
+.avatar::before {
+  content: attr(data-text);
+  color: #fff;
+  /* Removed z-index: 1, makes text blurry */
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.avatar.img-xsmall {
+  font-size: 0.8rem;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.avatar.img-small {
+  font-size: 1rem;
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.avatar.img-large {
+  font-size: 2rem;
+  height: 4.8rem;
+  width: 4.8rem;
+}
+
+.avatar.img-xlarge {
+  font-size: 2.6rem;
+  height: 6.4rem;
+  width: 6.4rem;
+}
+
+.avatar img.padded {
+  padding: 0.5rem;
+  width: 100%;
+}
+
+/* CARDS */
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    backface-visibility: hidden;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1), 0 0 12px 2px rgba(10, 10, 10, 0.1);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.slide-up:hover .card-image {
+   transform: translateY(-40px);
+}
+
+.card:hover .card-image::after {
+  opacity: 0;
+}
+
+.card-image {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+      border-radius: 5px 5px 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  
+  transition: all .3s ease-in-out;
+}
+
+.card-image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  bottom: 0;
+}
+
+.card-container {
+  display: block;
+position: relative;
+  height: 40%;
+  min-height: 332px; /* So it appears in html5 standards mode */
+}
+
+.card .title-container .title, .card .title-container .subtitle {
+  color: #fff;
+  margin: 1rem auto;
+}
+
+.card .title-container {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.card .title-container .title {
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: .3rem;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card .action-bar {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .5rem;
+    border-top: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Add some padding to the buttons */
+.card .action-bar button,
+.card .action-bar .btn,
+.card .action-bar [type=submit] {
+  margin: 0 .5rem;
+}
+
+.card .action-bar + .card-footer {
+  padding: 1rem 0;
+  border-top: 1px solid #E0E0E0;
+}
+
+.card button, .card .btn {
+  display: inline-block;
+  display: inline-block;
+border-color: transparent;
+}
+
+.card button:hover, .card .btn:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.card button:focus, .card .btn:focus {
+  -webkit-transform: none;
+          transform: none;
+}
+
+/* More card components in second example */
+.mobile-title {
+  position: absolute;
+  left: 0;
+  background-color: var(--cirrus-bg);
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  
+  transition: all .3s ease-in-out;
+  width: 100%;
+      padding: 1rem 0;
+      backface-visibility: hidden;
+}
+
+.card:hover .mobile-title {
+  margin-top: -7rem;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  
+  transition: all .3s ease-in-out;
+}
+
+.card:hover .card-body {
+  opacity: 1;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  
+  transition: all .3s ease-in-out;
+}
+
+.card-body {
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  
+  transition: all .2s ease-in-out;
+}
+
+.card-footer {
+  position: relative;
+    margin: .5rem auto;
+    font-size: .75rem;
+    color: #9FA5A8;
+}
+
+.card p {
+    margin: 1rem 0;
+    /*max-height: 8rem; /* Prevents ridiculously looking cards */
+}
+
+/*
+    NOTE: To have cards with the same height, place the card class with col-x classes and have the parent have fluid-container.
+*/
+
+/* Card Title Bar */
+.card-head {
+    align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    box-shadow: 0px 1px 8px 1px rgba(10, 10, 10, 0.07);
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+}
+
+.card-head-title {
+  align-items: center;
+  -webkit-box-align: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-weight: 700;
+    padding: 0 1rem;
+}
+/* EXTENDED FORM */
+
+/* Base class layout for extended form */
+.form-ext-control {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+/* Hides the original input */
+.form-ext-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.form-ext-input:disabled ~ .form-ext-label {
+    opacity: 0.8;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label:before {
+    background-color: var(--cirrus-success);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label {
+    color: var(--cirrus-success);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--error:checked ~ .form-ext-label:before {
+    background-color: var(--cirrus-danger);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--error:checked ~ .form-ext-label {
+    color: var(--cirrus-danger);
+}
+
+.form-ext-label {
+    margin-bottom: 0;
+    position: relative;
+}
+
+/* Base of custom form inputs */
+.form-ext-label:before,
+.form-ext-label:after {
+    content: "";
+    display: block;
+    height: 1rem;
+    left: -1.5rem;
+    position: absolute;
+    top: .3rem;
+    transition: all .2s;
+    width: 1rem;
+}
+
+.form-ext-label:before {
+    background-color: var(--cirrus-light);
+    border-radius: .25rem;
+    pointer-events: none;
+    user-select: none;
+}
+
+.form-ext-label:after {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+}
+
+/* Checked state */
+.form-ext-control .form-ext-input:checked ~ .form-ext-label:before {
+    background-color: var(--cirrus-primary);
+}
+
+
+/* Checkbox */
+.form-ext-control.form-ext-checkbox .form-ext-input:checked ~ .form-ext-label:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E")
+}
+
+.form-ext-checkbox .form-ext-label:before {
+    border-radius: .25rem;
+}
+
+/* Radio Button */
+
+.form-ext-control.form-ext-radio .form-ext-input:checked ~ .form-ext-label:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.form-ext-radio .form-ext-label:before {
+    border-radius: 50%;
+}
+
+/* Toggle Switches */
+.form-ext-toggle {
+    cursor: pointer;
+    position: relative;
+}
+
+.form-ext-toggle input[type="checkbox"],
+.form-ext-toggle input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.form-ext-toggle__label {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-ext-toggle__toggler {
+    border: 1px solid var(--cirrus-gray);
+    border-radius: 6.25rem;
+    color: var(--cirrus-gray);
+    display: block;
+    font-size: 9px;
+    height: 1.5rem;
+    position: relative;
+    width: 3rem;
+}
+
+.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
+.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler {
+    background-color: var(--cirrus-primary);
+    border-color: var(--cirrus-primary);
+    color: #fff;
+    position: relative;
+    transition: all .4s ease;
+}
+
+.form-ext-toggle i {
+    display: inline-block;
+}
+
+.form-ext-input:disabled ~ .form-ext-toggle__toggler {
+    opacity: 0.5;
+}
+
+.form-ext-toggle__toggler i::before,
+.form-ext-toggle__toggler i::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.form-ext-toggle__toggler i::before {
+    /* TODO SET CONTENT */
+    content: attr(data-uncheck-icon);
+    padding: 2px 7px;
+    line-height: 18px;
+    text-align: right;
+    top: 0;
+    width: 65%;
+    font-size: 12px;
+}
+
+.form-ext-toggle__toggler i::after {
+    background-color: var(--cirrus-gray);
+    border-radius: 50%;
+    height: 16px;
+    left: 4px;
+    width: 16px;
+    transform: translateY(-50%);
+    transition: left .2s ease;
+    text-align: left;
+}
+
+.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler i::before,
+.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::before,
+.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler i::before,
+.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler i::before {
+    color: #fff;
+    content: attr(data-check-icon);
+    text-align: left;
+}
+
+.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
+.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
+    background-color: #fff;
+    left: calc(100% - 20px);
+}
+
+.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + * .form-ext-toggle__toggler {
+    background-color: var(--cirrus-danger);
+    border-color: var(--cirrus-danger);
+}
+
+.form-ext-toggle.form-ext-toggle--error .form-ext-toggle__toggler {
+    border-color: var(--cirrus-danger);
+    color: var(--cirrus-danger);
+}
+
+.form-ext-toggle.form-ext-toggle--error .form-ext-toggle__toggler i::after {
+    background-color: var(--cirrus-danger);
+}
+
+.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + .form-ext-toggle__toggler,
+.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + * .form-ext-toggle__toggler {
+    background-color: var(--cirrus-success);
+    border-color: var(--cirrus-success);
+}
+
+.form-ext-toggle--success .form-ext-toggle__toggler {
+    border-color: var(--cirrus-success);
+    color: var(--cirrus-success);
+}
+
+.form-ext-toggle--success .form-ext-toggle__toggler i::after {
+    background-color: var(--cirrus-success);
+}
+/* GRID */
+:root {
+    --gap-0: 0;
+    --gap-1: 0.25rem;
+    --gap-2: 0.5rem;
+    --gap-3: 1rem;
+    --gap-4: 1.25rem;
+    --gap-5: 1.5rem;
+    --gap-6: 3rem;
+    --gap-7: 6rem;
+    --gap-8: 9rem;
+    --gap-9: 12rem;
+}
+
+.grid { 
+    display: grid;
+    grid-gap: var(--gap-2);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+/* Templates */
+.grid.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid.grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid.grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid.grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid.grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid.grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid.grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.grid.grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+
+.grid.grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid.grid-gap-0 {
+    grid-gap: var(--gap-0);
+}
+
+.grid.grid-gap-1 {
+    grid-gap: var(--gap-1);
+}
+
+.grid.grid-gap-2 {
+    grid-gap: var(--gap-2);
+}
+
+.grid.grid-gap-3 {
+    grid-gap: var(--gap-3);
+}
+
+.grid.grid-gap-4 {
+    grid-gap: var(--gap-4);
+}
+
+.grid.grid-gap-5 {
+    grid-gap: var(--gap-5);
+}
+
+.grid.grid-gap-6 {
+    grid-gap: var(--gap-6);
+}
+
+.grid.grid-gap-7 {
+    grid-gap: var(--gap-7);
+}
+
+.grid.grid-gap-8 {
+    grid-gap: var(--gap-8);
+}
+
+.grid.grid-gap-9 {
+    grid-gap: var(--gap-9);
+}
+
+/* Column expansion */
+.grid.grid-col-1 {
+    grid-column: span 1;
+}
+
+.grid.grid-col-2 {
+    grid-column: span 2;
+}
+
+.grid.grid-col-3 {
+    grid-column: span 3;
+}
+
+.grid.grid-col-4 {
+    grid-column: span 4;
+}
+
+.grid.grid-col-5 {
+    grid-column: span 5;
+}
+
+.grid.grid-col-6 {
+    grid-column: span 6;
+}
+
+.grid.grid-col-7 {
+    grid-column: span 7;
+}
+
+.grid.grid-col-8 {
+    grid-column: span 8;
+}
+
+.grid.grid-col-9 {
+    grid-column: span 9;
+}
+
+.grid.grid-col-10 {
+    grid-column: span 10;
+}
+
+.grid.grid-col-11 {
+    grid-column: span 11;
+}
+
+.grid.grid-col-12 {
+    grid-column: span 12;
+}
+
+/* Row expansion */
+.grid.grid-row-1 {
+    grid-row: span 1;
+}
+.grid.grid-row-2 {
+    grid-row: span 2;
+}
+.grid.grid-row-3 {
+    grid-row: span 3;
+}
+.grid.grid-row-4 {
+    grid-row: span 4;
+}
+.grid.grid-row-5 {
+    grid-row: span 5;
+}
+.grid.grid-row-6 {
+    grid-row: span 6;
+}
+.grid.grid-row-7 {
+    grid-row: span 7;
+}
+.grid.grid-row-8 {
+    grid-row: span 8;
+}
+.grid.grid-row-9 {
+    grid-row: span 9;
+}
+.grid.grid-row-10 {
+    grid-row: span 10;
+}
+.grid.grid-row-11 {
+    grid-row: span 11;
+}
+.grid.grid-row-12 {
+    grid-row: span 12;
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+/* EXTENDED LINKS */
+/* Animated links */
+.u,
+.utb {
+    position: relative; /* So the psuedo-elements are positioned correctly */
+}
+
+/* Underline */
+
+.u::after {
+    content: "";
+    transition: all 0.3s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    height: 0.1rem;
+    width: 0;
+    background: var(--cirrus-link-dark);
+    bottom: -0.25em;
+}
+
+.u:hover::after {
+    width: 100%;
+}
+
+.u-LR::after {
+    /* Left to Right */
+    left: 0;
+}
+
+.u-RL::after {
+    /* Right to Left */
+    right: 0;
+}
+
+.u-RL:hover::after {
+    width: 100%;
+}
+
+.u-C::after {
+    /* Center Outwards */
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+/* Underline top and bottom */
+.utb::before,
+.utb::after {
+    content: "";
+    transition: all 0.3s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    height: 0.1rem;
+    width: 0;
+    background: var(--cirrus-link-dark);
+}
+
+.utb::before {
+    top: -0.25em;
+}
+
+.utb::after {
+    bottom: -0.25em;
+}
+
+.utb:hover::before,
+.utb:hover::after {
+    width: 100%;
+}
+
+.utb-LR::before,
+.utb-LR::after {
+    left: 0;
+}
+
+.utb-RL::before,
+.utb-RL::after {
+    right: 0;
+}
+
+.utb-C::before,
+.utb-C::after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+/* Opposite start */
+.utb-OLR::before {
+    /* Suffix denotes border transition direction for the top border (left to right). Bottom border will be the opposite direction */
+    left: 0;
+}
+
+.utb-OLR::after {
+    right: 0;
+}
+
+.utb-ORL::before {
+    right: 0;
+}
+
+.utb-ORL::after {
+    left: 0;
+}
+
+/* Links with square borders */
+
+/* Please note that usquare is the parent span (not div) which would create the left and right borders. The link (.utb-OLR) gets nested within this */
+
+.usquare {
+    margin-left: 0.4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.usquare a {
+    position: static;
+    padding: 0.2rem 0.4rem;
+}
+
+.usquare::before,
+.usquare::after {
+    content: "";
+    transition: 0.25s all ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 2px;
+    width: 0.1 rem;
+    height: 0;
+    background: var(--cirrus-link-dark);
+}
+
+.usquare::before {
+    left: 0;
+    bottom: -0.2rem;
+}
+
+.usquare.delay::before {
+    transition-delay: 0.6s;
+}
+
+.usquare::after {
+    right: 0;
+    top: -0.2rem;
+}
+
+.usquare.delay::after {
+    transition-delay: 0.2s;
+}
+
+.usquare a::before {
+    left: 0;
+    transition: 0.25s all ease;
+}
+
+.usquare a::after {
+    right: 0;
+    transition: 0.25s all ease;
+}
+
+.usquare.delay a::after {
+    transition: 0.25s all ease 0.4s;
+}
+
+.usquare:hover::before,
+.usquare:hover::after {
+    height: calc(100% + 0.4rem); /* Makes the left and right borders */
+}
+
+.usquare:hover a::before,
+.usquare:hover a::after {
+    width: 100%;
+}
+/* A collection of modifiers that extend control styling */
+.btn.btn--pilled,
+[class^="btn-"].btn--pilled,
+[class*=" btn-"].btn--pilled {
+    border-radius: 6.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.btn.btn--circle,
+[class^="btn-"].btn--circle,
+[class*=" btn-"].btn--circle {
+    border-radius: 100%;
+    height: 3.125rem;
+    line-height: 3.125rem;
+    padding: 0;
+    width: 3.125rem;
+}
+
+/* Input (primary text-based) controls apply to inputs */
+.input-control--pilled {
+    border-radius: 6.25rem !important;
+}
+
+/* Theme modifiers */
+
+/* GLOBAL THEME SELECTORS */
+.bg-primary { background-color: var(--cirrus-primary) !important; }
+.bg-success { background-color: var(--cirrus-success) !important; }
+.bg-warning { background-color: var(--cirrus-warning) !important; }
+.bg-danger { background-color: var(--cirrus-danger) !important; }
+.bg-light { background-color: var(--cirrus-light) !important; }
+.bg-dark { background-color: var(--cirrus-dark) !important; }
+.bg-link { background-color: var(--cirrus-link) !important; }
+.bg-link-dark { background-color: var(--cirrus-link-dark) !important; }
+.bg-info { background-color: var(--cirrus-info) !important; }
+
+.text-primary { color: var(--cirrus-primary) !important; }
+.text-success { color: var(--cirrus-success) !important; }
+.text-warning { color: var(--cirrus-warning) !important; }
+.text-danger { color: var(--cirrus-danger) !important; }
+.text-light { color: var(--cirrus-light) !important; }
+.text-dark { color: var(--cirrus-dark) !important; }
+.text-link { color: var(--cirrus-link) !important; }
+.text-link-dark { color: var(--cirrus-link-dark) !important; }
+.text-info { color: var(--cirrus-info) !important; }
+/* PAGINATION */
+/* Parent contianer for page navigation */
+.pagination {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+
+/* Use for the major pagination meant to display about 2 items */
+.pagination-item {
+    -webkit-flex: 1 0 50%; /* Flex to fill */
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
+}
+
+.pagination a {
+    color: #5d6c7b;
+}
+
+.pagination .pagination-item a[disabled] {
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+}
+
+.pagination .pagination-item {
+    margin: 1rem 0.1rem;
+    transition: all 0.3s;
+}
+
+.pagination .pagination-item.pagination-next {
+    text-align: right;
+}
+
+.pagination .pagination-item.pagination-prev {
+    text-align: left;
+}
+
+/* Pagination Item */
+.pagination-item-subtitle {
+    opacity: 0.7;
+    margin: 0; /* Needed to override style after formatting paragraph update */
+}
+
+/* Color the selected pagination item with accent color */
+.pagination .pagination-item.short.selected {
+    background-color: var(--cirrus-primary);
+    color: #fff;
+}
+
+.pagination .pagination-item.short.selected a {
+    color: #fff;
+}
+
+.pagination .pagination-item.short a {
+    display: inline-block;
+    line-height: 1.25;
+    padding: 0.5rem 0.75rem;
+}
+
+/* Used to display many pagination items */
+.pagination .pagination-item.short {
+    border-radius: 0.1rem;
+    margin: 0.2rem 0;
+    -webkit-flex: 0; /* Flex to fill */
+    -ms-flex: 0;
+    flex: 0;
+}
+
+.pagination .pagination-item.short:first-child a {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.pagination .pagination-item.short:last-child a {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.pagination .pagination-item.short:not(.selected):hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pagnation .pagination-item.ellipses {
+    color: #b5b5b5;
+    pointer-events: none;
+}
+
+/* Bordered pagination */
+.pagination.pagination-bordered .pagination-item.short a {
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 0;
+    margin-left: -1px;
+}
+
+/* Not good but CSS does not have heading selectors. Need to move to SASS */
+.pagination .pagination-item:hover p,
+.pagination .pagination-item:hover h1,
+.pagination .pagination-item:hover h2,
+.pagination .pagination-item:hover h3,
+.pagination .pagination-item:hover h4,
+.pagination .pagination-item:hover h5,
+.pagination .pagination-item:hover h6,
+.pagination .pagination-item:not(.selected):hover *:not([disabled]):not(.ellipses) {
+    transition: all 0.3s;
+    color: var(--cirrus-primary);
+}
+/* PLACEHOLDER */
+/* Designed to be embedded in any parent container as placeholder when content is absent. */
+
+.placeholder {
+    background-color: rgba(231, 234, 241, 0.5);
+    border-radius: 3px;
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #6c7892; /* Lighter than original text color */
+    display: block;
+}
+
+/* Not sure if needed */
+.placeholder-icon {
+    text-align: center;
+}
+
+.placeholder .placeholder-title,
+.placeholder .placeholder-subtitle {
+    margin: 1rem auto;
+}
+
+.placeholder .placeholder-subtitle {
+    opacity: 0.7;
+    margin: 0;
+}
+
+/* Place buttons here for the placeholder */
+.placeholder .placeholder-commands {
+    margin-top: 1rem;
+}
+/* TABS AND TAB CONTAINER */
+.tab-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    overflow: hidden;
+    overflow-x: auto; /* Allow scrollbar to be visible if the width of the tabs exeeds container */
+            user-select: none;
+    white-space: nowrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    font-size: 0.85rem;
+}
+
+/* Tabs are embedded inside an unordered list */
+.tab-container ul {
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; /* Move tab items to left side */
+    margin: 0.5rem; /* Override the behavior for standard ul and add equal padding */
+    border-bottom: 1px solid #eee; /* Bottom border of tabs */
+    flex-grow: 1;
+    list-style: none;
+}
+
+.tab-container li {
+    display: block; /* Keep the tabs from extending too far */
+    cursor: pointer;
+    margin: 0;
+    -webkit-flex: 1 0 0;
+    -ms-flex: 1 0 0;
+    flex: 1 0 0;
+    text-align: center;
+}
+
+.tab-container li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px solid #eee;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0.5rem 1rem;
+    transition: all .3s;
+    color: var(--cirrus-fg);
+    border-bottom-color: rgba(197, 197, 197, 0.63);
+    border-width: 2px;
+    margin-bottom: -1px; /* Get rid of any remaining border lines */
+    background-color: var(--cirrus-bg);
+}
+
+.tab-container li:hover a {
+    border-bottom-color: rgba(240, 61, 77, 0.6);
+    transition: all .3s;
+}
+
+.tab-container li.selected a {
+    border-bottom-color: var(--cirrus-primary);
+    color: var(--cirrus-primary);
+    border-width: 2px;
+    transition: all .3s;
+}
+
+/* Shift tabs to the center */
+.tab-container.tabs-center ul {
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+}
+
+/* Shift tabs to the right */
+.tab-container.tabs-right ul {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+/* Depth tab styles */
+.tab-container.tabs-depth ul {
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+    border-bottom: 0;
+}
+
+/* Classic tab styles */
+.tab-container.tabs-classic ul {
+    border-bottom-color: #dbdbdb;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-radius: 3px 3px 0 0; /* Only round the top left and right corners */
+    transition: all .3s;
+}
+
+.tab-container.tabs-classic li:not(.selected) a:hover {
+    background-color: rgb(240, 240, 240);
+    transition: all .3s;
+}
+
+.tab-container.tabs-classic li a {
+    border: 1px solid transparent;
+    border-bottom-color: #dbdbdb;
+    border-radius: 3px 3px 0 0;
+    transition: all .3s;
+}
+
+.tab-container.tabs-classic li.selected a {
+    color: var(--cirrus-primary);
+    border-color: #dbdbdb;
+    border-bottom-color: transparent !important;
+}
+
+/* Tabs that fill the width */
+.tab-container.tabs-fill li {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; /* Disable shrinking to original width */
+}
+
+/* Override the -webkit-box display that sizes tab items based on text */
+.tab-container.tabs-fill ul {
+    display: flex; /* Equal size tabs */
+}
+
+/* Different tab sizes */
+.tab-container.tabs-xsmall {
+    font-size: 0.6rem;
+}
+
+.tab-container.tabs-small {
+    font-size: 0.75rem;
+}
+
+.tab-container.tabs-large {
+    font-size: 1.25rem;
+}
+
+.tab-container.tabs-xlarge {
+    font-size: 1.5rem;
+}
+
+/* Font Awesome Integration */
+.tab-container .icon:first-child { /* Left icon */
+    margin-right: .75rem;
+}
+
+.tab-container .icon:last-child { /* Right icon */
+    margin-left: .75rem;
+}
+/* TAGS */
+.tag {
+    align-items: center;
+    background-color: var(--cirrus-light);
+    border-radius: 0.25rem;
+    color: var(--cirrus-fg);
+    display: inline-flex;
+    font-size: 75%;
+    line-height: 1.5;
+    min-height: 1.5rem;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+}
+
+.tag.tag-large {
+    font-size: 1rem;
+}
+
+.tag.tag-xlarge {
+    font-size: 1.5rem;
+}
+
+.tag.tag-rounded {
+    border-radius: 290486px;
+}
+
+/* Delete button for tag */
+.tag.tag-delete {
+    margin-left: 1px;
+    padding: 0;
+    position: relative;
+    width: 2em;
+}
+
+/* Draw the delete button */
+.tag.tag-delete::before,
+.tag.tag-delete::after {
+    background-color: var(--cirrus-light);
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.tag.tag-delete::before {
+    height: 1px;
+    width: 50%;
+}
+
+.tag.tag-delete::after {
+    height: 50%;
+    width: 1px;
+}
+
+/* TAG THEMES */
+.tag .delete {
+    margin-left: 0.25rem;
+    margin-right: -0.375rem;
+}
+
+.tag.white {
+    background-color: #fff;
+    color: var(--cirrus-dark);
+}
+
+.tag.black {
+    background-color: var(--cirrus-black);
+    color: #fff;
+}
+
+.tag.primary {
+    background-color: var(--cirrus-primary);
+    color: var(--cirrus-dark);
+}
+
+.tag.link {
+    background-color: var(--cirrus-link);
+    color: #fff;
+}
+
+.tag.info {
+    background-color: var(--cirrus-info);
+    color: #fff;
+}
+
+.tag.success {
+    background-color: var(--cirrus-success);
+    color: #fff;
+}
+
+.tag.warning {
+    background-color: var(--cirrus-warning);
+    color: var(--cirrus-fg);
+}
+
+.tag.danger {
+    background-color: var(--cirrus-danger);
+    color: #fff;
+}
+
+/* TAG CONTAINER */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Add margin in between tag containers */
+.tag-container:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.tag-container .tag {
+    margin-bottom: 0.5rem;
+}
+
+.tag-container .tag:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+/* Used for grouping tags together */
+.tag-container.group-tags {
+    margin-right: 0;
+}
+
+/* Tag close button */
+.tags.tag-close-btn {
+    padding: 0;
+    position: relative;
+    width: 1rem;
+}
+
+.tags.tag-close-btn::before,
+.tags.tag-close-btn::after {
+    background-color: var(--cirrus-fg);
+    content: "";
+    display: block;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.tag.tag-close-btn::before {
+    height: 1px;
+    width: 50%;
+}
+
+.tag.tag-close-btn::after {
+    height: 50%;
+    width: 1px;
+}
+
+/* MISC */
+a.tag:hover {
+    text-decoration: underline;
+}
+
+.tag-container.group-tags .tag:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.tag-container.group-tags .tag:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Tag positioning */
+.tags.tags-centered {
+    justify-content: center;
+}
+
+.tags.tags-centered .tag {
+    margin: 0 0.25rem;
+}
+
+.tags.tags-right {
+    justify-content: flex-end;
+}
+
+.tags.tags-right .tag:not(:first-child) {
+    margin-left: 0.5rem;
+}
+
+.tags.tags-right .tag:not(:last-child) {
+    margin-right: 0;
+}
+
+/* TILES */
+.tile {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-content: space-between; /* Ensure space between child elements of card tile */
+    -webkit-align-content: space-between;
+    align-items: flex-start; /* Push elements to the top of container instead of center/bottom */
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    -ms-flex-line-pack: justify; /* Evenly distribute lines */
+}
+
+.tile p {
+    font-size: 0.9rem;
+}
+
+.tile .tile-icon,
+.tile .tile-buttons {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+}
+
+/* Override the default behavior where buttons display as blocks */
+.tile .tile-buttons button,
+.tile .tile-buttons .btn,
+.tile .tile-buttons [type="submit"] {
+    display: inline-block;
+    margin: 0.1rem; /* Reduce space used by buttons, default .5rem */
+}
+
+.tile .tile-container {
+    flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+}
+
+/* Add spacing between the elements in between */
+.tile .tile-container:not(:first-child) {
+    padding-left: 1rem;
+}
+
+.tile .tile-container:not(:last-child) {
+    padding-right: 1rem;
+}
+
+.tile .tile-title {
+    line-height: 2rem;
+    font-weight: bolder;
+    margin: 0.1rem auto;
+}
+
+.tile .tile-subtitle {
+    line-height: 1.25rem;
+    opacity: 0.7;
+    margin: 0.1rem auto;
+}
+
+/* Force elements to align at the center vertical height */
+.tile.tile-center {
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+}
+
+.tile.tile-center .tile-container {
+    /* Shrink the text to fit inside the tile */
+    overflow: hidden;
+}
+
+/* Keep the text from overflowing */
+.tile.tile-center .tile-title,
+.tile.tile-center .tile-subtitle.no-wrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.toast {
+    display: block;
+    width: 100%;
+    padding: .75rem 1.25rem;
+    background-color: var(--toast-primary-bg);
+    border: 1px solid var(--toast-primary-bg);
+    border-radius: 2px;
+    color: #fff;
+    position: relative;
+    margin: 0.5rem;
+}
+
+/* .toast h1, .toast h2, .toast h3, .toast h4, .toast h5, .toast h6 {
+    margin: 0;
+    margin-top: 1rem;
+} (Deprecated 0.5.5) */
+
+.toast.toast__title {
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.toast p {
+    margin: 0;
+}
+
+.toast.toast__translucent {
+    opacity: .5;
+}
+
+.toast.toast__translucent:hover {
+    opacity: 1;
+}
+
+.toast .btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}       
+
+/* TOAST TYPES */
+.toast.toast__primary {
+    background-color: var(--toast-primary-bg);
+    border-color: var(--toast-primary-bg);
+}
+
+.toast.toast__success {
+    background-color: var(--cirrus-success);
+    border-color: var(--cirrus-success);
+}
+
+.toast.toast__warning {
+    background-color: var(--cirrus-warning);
+    border-color: var(--cirrus-warning);
+}
+
+.toast.toast__error {
+    background-color: var(--cirrus-danger);
+    border-color: var(--cirrus-danger);
+}
+
+/* Add the rest later */
+.toast a {
+    color: var(--cirrus-light);
+    transition: all .3s;
+}
+
+.toast a:hover {
+    opacity: .8;
+    transition: all .3s;
+}
+
+
+/* TOOLTIPS */
+.tooltip {
+  position: relative; /* let's the pseudoelement that we are displaying relative to the button. */
+  overflow: visible; /* Allows the pseudoelement to be shown */
+  white-space: nowrap; /* Keeps the button text from wrapping and getting too large */
+}
+
+/* This is the psuedoelement that creates the tooltip */
+.tooltip::after,
+.tooltip.tooltip--top::after {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  color: #fff;
+  font-size: 0.6rem;
+  background-color: rgba(69, 77, 93, 0.9);
+  content: attr(
+    data-tooltip
+  ); /* Retrieves the data specified in this element property and displays it as text */
+  display: block;
+  line-height: 1rem;
+  text-transform: none;
+  overflow: hidden;
+  padding: 0.4rem 0.8rem;
+  opacity: 0; /* Hide the element */
+  text-overflow: ellipsis;
+  max-width: 15rem;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  transition: all 0.2s ease;
+  z-index: 200;
+  pointer-events: none;
+  bottom: 100%; /* Pushes the tooltip above the button */
+  left: 50%; /* Horizontally center it */
+  border-radius: 0.2rem;
+}
+
+/* Handles the on hover event of the button and then modifies the associated tooltip accordingly. */
+.tooltip:focus::after,
+.tooltip:hover::after {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -0.5rem);
+  transform: translate(-50%, -0.5rem);
+  transition: all 0.2s ease;
+}
+
+/* Tooltip top left */
+.tooltip.tooltip--top-left::after {
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.tooltip.tooltip--top-left:hover::after,
+.tooltip.tooltip--top-left:focus::after {
+  left: 0;
+  -webkit-transform: translate(-100%, -.5rem);
+  transform: translate(-100%, -.5rem);
+}
+
+/* Tooltip top right */
+.tooltip.tooltip--top-right::after {
+  -webkit-transform: translate(15%, 0);
+  transform: translate(15%, 0);
+}
+
+.tooltip.tooltip--top-right:hover::after,
+.tooltip.tooltip--top-right:focus::after{
+  right: 0;
+  -webkit-transform: translate(100%, -.5rem);
+  transform: translate(100%, -.5rem);
+}
+
+/* Tooltip bottom */
+.tooltip.tooltip--bottom::after {
+  top: 100%;
+  transform: translate(
+    -50%,
+    -1rem
+  ); /* Moves tooltip to the center horizontally and shifts tooltip down */
+  -webkit-transform: translate(-50%, -1rem);
+  -moz-transform: translate(-50%, -1rem);
+  -ms-transform: translate(-50%, -1rem);
+  bottom: auto;
+}
+
+.tooltip.tooltip--bottom:hover::after,
+.tooltip.tooltip--bottom:focus::after {
+  transform: translate(-50%, .5rem);
+  -webkit-transform: translate(-50%, .5rem);
+  -moz-transform: translate(-50%, .5rem);
+  -ms-transform: translate(-50%, .5rem);
+  bottom: auto;
+}
+
+/* Tooltip bottom left */
+.tooltip.tooltip--bottom-left::after {
+  top: 100%;
+  -webkit-transform: translate(-65%, -1rem);
+  transform: translate(-65%, -1rem);
+  bottom: auto;
+}
+
+.tooltip.tooltip--bottom-left:hover::after,
+.tooltip.tooltip--bottom-left:focus::after {
+  left: 0;
+  -webkit-transform: translate(-100%, .5rem);
+  transform: translate(-100%, .5rem);
+}
+
+/* Tooltip bottom right */
+.tooltip.tooltip--bottom-right::after {
+  top: 100%;
+  -webkit-transform: translate(0%, -1rem);
+  transform: translate(0%, -1rem);
+  bottom: auto;
+}
+
+.tooltip.tooltip--bottom-right:hover::after,
+.tooltip.tooltip--bottom-right:focus::after {
+  right: 0;
+  -webkit-transform: translate(100%, .5rem);
+  transform: translate(100%, .5rem);
+}
+
+/* Tooltip right */
+.tooltip.tooltip--right::after {
+  left: 100%;
+  bottom: 50%;
+  transform: translate(-1rem, 50%);
+  -webkit-transform: translate(-1rem, 50%);
+  -moz-transform: translate(-1rem, 50%);
+  -ms-transform: translate(-1rem, 50%);
+}
+
+.tooltip.tooltip--right:hover::after,
+.tooltip.tooltip--right:focus::after {
+  transform: translate(.5rem, 50%);
+  -webkit-transform: translate(.5rem, 50%);
+  -moz-transform: translate(.5rem, 50%);
+  -ms-transform: translate(.5rem, 50%);
+}
+
+/* Tooltip Left */
+.tooltip.tooltip--left::after {
+  right: 100%;
+  bottom: 50%;
+  left: auto; /* Needed to work */
+  transform: translate(1rem, 50%);
+  -webkit-transform: translate(1rem, 50%);
+  -moz-transform: translate(1rem, 50%);
+  -ms-transform: translate(1rem, 50%);
+}
+
+.tooltip.tooltip--left:hover::after,
+.tooltip.tooltip--left:focus::after {
+  transform: translate(-.5rem, 50%);
+  -webkit-transform: translate(-.5rem, 50%);
+  -moz-transform: translate(-.5rem, 50%);
+  -ms-transform: translate(-.5rem, 50%);
+}
 /* BUTTONS */
 
 /* Button styling */
@@ -45,21 +2039,15 @@ button:active,
 }
 
 /* Default button colors */
-button:not([class^="btn-"]):hover,
-.btn:not([class^="btn-"]):hover,
-[type="submit"]:not([class^="btn-"]):hover,
-button:not([class*=" btn-"]):hover,
-.btn:not([class*=" btn-"]):hover,
-[type="submit"]:not([class*=" btn-"]):hover  {
+button:not([class^="btn-"]):not([class*=" btn-"]):hover,
+.btn:not([class^="btn-"]):not([class*=" btn-"]):hover,
+[type="submit"]:not([class^="btn-"]):not([class*=" btn-"]):hover {
     background-color: #eee
 }
 
-.btn:not([class^="btn-"]):active,
-button:not([class^="btn-"]):active,
-[type="submit"]:not([class^="btn-"]):active,
-.btn:not([class*=" btn-"]):active,
-button:not([class*=" btn-"]):active,
-[type="submit"]:not([class*=" btn-"]):active {
+.btn:not([class^="btn-"]):not([class*=" btn-"]):active,
+button:not([class^="btn-"]):not([class*=" btn-"]):active,
+[type="submit"]:not([class^="btn-"]):not([class*=" btn-"]):active {
     background-color: #ddd;
 }
 
@@ -3481,1999 +5469,4 @@ video.video-fullscreen {
   .u-hide-desktop {
     display: none !important;
   }
-}
-
-/* ANIMATIONS */
-
-/* Spinning loading animation */
-@-webkit-keyframes loading {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(359deg);
-    }
-}
-
-@keyframes loading {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(359deg);
-    }
-}
-
-/* Hover animation */
-.hover-grow {
-    /* Mouse leave */
-    transition-duration: 0.32s;
-}
-
-.hover-grow:hover {
-    /* Mouse enter */
-    transform: scale(1.1);
-    transition-duration: 0.08s;
-}
-
-/* Loading button position relatively for loading spinner location */
-.animated.loading {
-    display: block;
-    position: relative;
-}
-
-/* Loading Spinner, align center by default */
-.animated.loading::after {
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-top-color: transparent;
-    content: "";
-    display: block;
-    height: 1rem;
-    width: 1rem;
-    left: calc(50% - (1em / 1.25));
-    top: calc(50% - (1em / 1.35));
-    position: absolute;
-    -webkit-animation: loading 500ms infinite linear;
-    animation: loading 500ms infinite linear;
-}
-
-.animated.loading.loading-white::after {
-    border-left-color: #fff;
-    border-bottom-color: #fff;
-}
-
-/* Align spinner left */
-.animated.loading.loading-left::after {
-    left: 2rem;
-    right: auto;
-}
-
-.animated.loading.loading-left {
-    padding-left: 4rem;
-}
-
-/* Align spinner right */
-.animated.loading.loading-right::after {
-    left: auto;
-    right: 2rem;
-}
-
-.animated.loading.loading-right {
-    padding-right: 4rem;
-}
-
-/* Hide text in loading button */
-.animated.loading.hide-text {
-    color: transparent !important;
-}
-
-/* Heart animation */
-@-webkit-keyframes pound {
-    to {
-        transform: scale(1.1);
-    }
-}
-@keyframes pound {
-    to {
-        transform: scale(1.1);
-    }
-}
-
-.animated.pulse {
-    animation: pound 0.35s infinite alternate;
-    -webkit-animation: pound 0.35s infinite alternate;
-    vertical-align: baseline;
-}
-
-/* Bounce animations */
-@-webkit-keyframes bounce {
-    from,
-    20%,
-    53%,
-    80%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(
-            0.215,
-            0.61,
-            0.355,
-            1
-        ); /* Ease-out based on power of four */
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-    40%,
-    43% {
-        -webkit-animation-timing-function: cubic-bezier(
-            0.755,
-            0.05,
-            0.855,
-            0.06
-        );
-        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        -webkit-transform: translate3d(0, -30px, 0);
-        transform: translate3d(0, -30px, 0);
-    }
-    70% {
-        -webkit-animation-timing-function: cubic-bezier(
-            0.755,
-            0.05,
-            0.855,
-            0.06
-        );
-        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        -webkit-transform: translate3d(0, -15px, 0);
-        transform: translate3d(0, -15px, 0);
-    }
-    90% {
-        -webkit-transform: translate3d(0, -4px, 0);
-        transform: translate3d(0, -4px, 0);
-    }
-}
-
-@keyframes bounce {
-    from,
-    20%,
-    53%,
-    80%,
-    to {
-        -webkit-animation-timing-function: cubic-bezier(
-            0.215,
-            0.61,
-            0.355,
-            1
-        ); /* Ease-out based on power of four */
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-    40%,
-    43% {
-        -webkit-animation-timing-function: cubic-bezier(
-            0.755,
-            0.05,
-            0.855,
-            0.06
-        );
-        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        -webkit-transform: translate3d(0, -30px, 0);
-        transform: translate3d(0, -30px, 0);
-    }
-    70% {
-        -webkit-animation-timing-function: cubic-bezier(
-            0.755,
-            0.05,
-            0.855,
-            0.06
-        );
-        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-        -webkit-transform: translate3d(0, -15px, 0);
-        transform: translate3d(0, -15px, 0);
-    }
-    90% {
-        -webkit-transform: translate3d(0, -4px, 0);
-        transform: translate3d(0, -4px, 0);
-    }
-}
-
-.animated.bounce {
-    animation-name: bounce;
-    -webkit-animation-name: bounce;
-    transform-origin: center bottom;
-    -webkit-transform-origin: center bottom;
-}
-
-@keyframes bounceIn {
-    from,
-    20%,
-    40%,
-    60%,
-    80%,
-    to {
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-    0% {
-        opacity: 0;
-        transform: scale3d(0.3, 0.3, 0.3);
-    }
-    20% {
-        transform: scale3d(1.1, 1.1, 1.1);
-    }
-    40% {
-        transform: scale3d(0.9, 0.9, 0.9);
-    }
-    60% {
-        opacity: 1;
-        transform: scale3d(1.03, 1.03, 1.03);
-    }
-    80% {
-        transform: scale3d(0.97, 0.97, 0.97);
-    }
-    to {
-        opacity: 1;
-        transform: scale3d(1, 1, 1);
-    }
-}
-
-.animated.bounceIn {
-    animation-name: bounceIn;
-}
-
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.animated.fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-}
-
-.animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-.animated.infinite {
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-}
-
-.animated.infinite.alternate {
-    animation-direction: alternate;
-}
-
-.animated.paused {
-    -webkit-animation-play-state: paused !important; /* Safari 4.0 - 8.0 */
-    animation-play-state: paused !important;
-}
-
-/* Avatar */
-.avatar {
-  border-radius: 50%;
-  position: relative;
-  display: block;
-  margin: auto;
-  font-size: 1rem;
-  font-weight: lighter;
-  width: 3.2rem;
-  height: 3.2rem;
-  background-color: var(--cirrus-primary);
-  overflow: hidden;
-}
-
-/* Draw text on image just like in Gmail */
-.avatar::before {
-  content: attr(data-text);
-  color: #fff;
-  /* Removed z-index: 1, makes text blurry */
-  left: 50%;
-  top: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-
-.avatar.img-xsmall {
-  font-size: 0.8rem;
-  width: 1.6rem;
-  height: 1.6rem;
-}
-
-.avatar.img-small {
-  font-size: 1rem;
-  height: 2.4rem;
-  width: 2.4rem;
-}
-
-.avatar.img-large {
-  font-size: 2rem;
-  height: 4.8rem;
-  width: 4.8rem;
-}
-
-.avatar.img-xlarge {
-  font-size: 2.6rem;
-  height: 6.4rem;
-  width: 6.4rem;
-}
-
-.avatar img.padded {
-  padding: 0.5rem;
-  width: 100%;
-}
-
-/* CARDS */
-
-.card {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    display: block;
-    position: relative;
-    overflow: hidden;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    backface-visibility: hidden;
-}
-
-.card:hover {
-    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1), 0 0 12px 2px rgba(10, 10, 10, 0.1);
-    -webkit-transition: all .3s;
-    transition: all .3s;
-}
-
-.slide-up:hover .card-image {
-   transform: translateY(-40px);
-}
-
-.card:hover .card-image::after {
-  opacity: 0;
-}
-
-.card-image {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-      border-radius: 5px 5px 0 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  
-  transition: all .3s ease-in-out;
-}
-
-.card-image::after {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
-  top: 0;
-  left: 0;
-  right: 0;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  bottom: 0;
-}
-
-.card-container {
-  display: block;
-position: relative;
-  height: 40%;
-  min-height: 332px; /* So it appears in html5 standards mode */
-}
-
-.card .title-container .title, .card .title-container .subtitle {
-  color: #fff;
-  margin: 1rem auto;
-}
-
-.card .title-container {
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
-  padding: 0 1rem;
-}
-
-.card .title-container .title {
-  font-weight: 300;
-  font-size: 1.5rem;
-  margin-bottom: .3rem;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-}
-
-.card .action-bar {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding: .5rem;
-    border-top: 1px solid #E0E0E0;
-    box-sizing: border-box;
-    -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-/* Add some padding to the buttons */
-.card .action-bar button,
-.card .action-bar .btn,
-.card .action-bar [type=submit] {
-  margin: 0 .5rem;
-}
-
-.card .action-bar + .card-footer {
-  padding: 1rem 0;
-  border-top: 1px solid #E0E0E0;
-}
-
-.card button, .card .btn {
-  display: inline-block;
-  display: inline-block;
-border-color: transparent;
-}
-
-.card button:hover, .card .btn:hover {
-  -webkit-transform: none;
-          transform: none;
-}
-
-.card button:focus, .card .btn:focus {
-  -webkit-transform: none;
-          transform: none;
-}
-
-/* More card components in second example */
-.mobile-title {
-  position: absolute;
-  left: 0;
-  background-color: var(--cirrus-bg);
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  
-  transition: all .3s ease-in-out;
-  width: 100%;
-      padding: 1rem 0;
-      backface-visibility: hidden;
-}
-
-.card:hover .mobile-title {
-  margin-top: -7rem;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  
-  transition: all .3s ease-in-out;
-}
-
-.card:hover .card-body {
-  opacity: 1;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  
-  transition: all .3s ease-in-out;
-}
-
-.card-body {
-  opacity: 0;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  
-  transition: all .2s ease-in-out;
-}
-
-.card-footer {
-  position: relative;
-    margin: .5rem auto;
-    font-size: .75rem;
-    color: #9FA5A8;
-}
-
-.card p {
-    margin: 1rem 0;
-    /*max-height: 8rem; /* Prevents ridiculously looking cards */
-}
-
-/*
-    NOTE: To have cards with the same height, place the card class with col-x classes and have the parent have fluid-container.
-*/
-
-/* Card Title Bar */
-.card-head {
-    align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    box-shadow: 0px 1px 8px 1px rgba(10, 10, 10, 0.07);
-    display: flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-}
-
-.card-head-title {
-  align-items: center;
-  -webkit-box-align: center;
-    -ms-flex-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    font-weight: 700;
-    padding: 0 1rem;
-}
-/* EXTENDED FORM */
-
-/* Base class layout for extended form */
-.form-ext-control {
-    display: block;
-    min-height: 1.5rem;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-/* Hides the original input */
-.form-ext-input {
-    opacity: 0;
-    position: absolute;
-    z-index: -1;
-}
-
-.form-ext-input:disabled ~ .form-ext-label {
-    opacity: 0.8;
-}
-
-.form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label:before {
-    background-color: var(--cirrus-success);
-}
-
-.form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label {
-    color: var(--cirrus-success);
-}
-
-.form-ext-control .form-ext-input.form-ext-input--error:checked ~ .form-ext-label:before {
-    background-color: var(--cirrus-danger);
-}
-
-.form-ext-control .form-ext-input.form-ext-input--error:checked ~ .form-ext-label {
-    color: var(--cirrus-danger);
-}
-
-.form-ext-label {
-    margin-bottom: 0;
-    position: relative;
-}
-
-/* Base of custom form inputs */
-.form-ext-label:before,
-.form-ext-label:after {
-    content: "";
-    display: block;
-    height: 1rem;
-    left: -1.5rem;
-    position: absolute;
-    top: .3rem;
-    transition: all .2s;
-    width: 1rem;
-}
-
-.form-ext-label:before {
-    background-color: var(--cirrus-light);
-    border-radius: .25rem;
-    pointer-events: none;
-    user-select: none;
-}
-
-.form-ext-label:after {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 50% 50%;
-}
-
-/* Checked state */
-.form-ext-control .form-ext-input:checked ~ .form-ext-label:before {
-    background-color: var(--cirrus-primary);
-}
-
-
-/* Checkbox */
-.form-ext-control.form-ext-checkbox .form-ext-input:checked ~ .form-ext-label:after {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E")
-}
-
-.form-ext-checkbox .form-ext-label:before {
-    border-radius: .25rem;
-}
-
-/* Radio Button */
-
-.form-ext-control.form-ext-radio .form-ext-input:checked ~ .form-ext-label:after {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
-}
-
-.form-ext-radio .form-ext-label:before {
-    border-radius: 50%;
-}
-
-/* Toggle Switches */
-.form-ext-toggle {
-    cursor: pointer;
-    position: relative;
-}
-
-.form-ext-toggle input[type="checkbox"],
-.form-ext-toggle input[type="radio"] {
-    opacity: 0;
-    position: absolute;
-    z-index: -1;
-}
-
-.form-ext-toggle__label {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
-
-.form-ext-toggle__toggler {
-    border: 1px solid var(--cirrus-gray);
-    border-radius: 6.25rem;
-    color: var(--cirrus-gray);
-    display: block;
-    font-size: 9px;
-    height: 1.5rem;
-    position: relative;
-    width: 3rem;
-}
-
-.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
-.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler {
-    background-color: var(--cirrus-primary);
-    border-color: var(--cirrus-primary);
-    color: #fff;
-    position: relative;
-    transition: all .4s ease;
-}
-
-.form-ext-toggle i {
-    display: inline-block;
-}
-
-.form-ext-input:disabled ~ .form-ext-toggle__toggler {
-    opacity: 0.5;
-}
-
-.form-ext-toggle__toggler i::before,
-.form-ext-toggle__toggler i::after {
-    content: "";
-    display: block;
-    position: absolute;
-}
-
-.form-ext-toggle__toggler i::before {
-    /* TODO SET CONTENT */
-    content: attr(data-uncheck-icon);
-    padding: 2px 7px;
-    line-height: 18px;
-    text-align: right;
-    top: 0;
-    width: 65%;
-    font-size: 12px;
-}
-
-.form-ext-toggle__toggler i::after {
-    background-color: var(--cirrus-gray);
-    border-radius: 50%;
-    height: 16px;
-    left: 4px;
-    width: 16px;
-    transform: translateY(-50%);
-    transition: left .2s ease;
-    text-align: left;
-}
-
-.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler i::before,
-.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::before,
-.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler i::before,
-.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler i::before {
-    color: #fff;
-    content: attr(data-check-icon);
-    text-align: left;
-}
-
-.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
-.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
-.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
-.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
-    background-color: #fff;
-    left: calc(100% - 20px);
-}
-
-.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
-.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + * .form-ext-toggle__toggler {
-    background-color: var(--cirrus-danger);
-    border-color: var(--cirrus-danger);
-}
-
-.form-ext-toggle.form-ext-toggle--error .form-ext-toggle__toggler {
-    border-color: var(--cirrus-danger);
-    color: var(--cirrus-danger);
-}
-
-.form-ext-toggle.form-ext-toggle--error .form-ext-toggle__toggler i::after {
-    background-color: var(--cirrus-danger);
-}
-
-.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
-.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + * .form-ext-toggle__toggler {
-    background-color: var(--cirrus-success);
-    border-color: var(--cirrus-success);
-}
-
-.form-ext-toggle--success .form-ext-toggle__toggler {
-    border-color: var(--cirrus-success);
-    color: var(--cirrus-success);
-}
-
-.form-ext-toggle--success .form-ext-toggle__toggler i::after {
-    background-color: var(--cirrus-success);
-}
-/* GRID */
-:root {
-    --gap-0: 0;
-    --gap-1: 0.25rem;
-    --gap-2: 0.5rem;
-    --gap-3: 1rem;
-    --gap-4: 1.25rem;
-    --gap-5: 1.5rem;
-    --gap-6: 3rem;
-    --gap-7: 6rem;
-    --gap-8: 9rem;
-    --gap-9: 12rem;
-}
-
-.grid { 
-    display: grid;
-    grid-gap: var(--gap-2);
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-
-/* Templates */
-.grid.grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid.grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid.grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid.grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.grid.grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.grid.grid-cols-6 {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.grid.grid-cols-7 {
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-}
-
-.grid.grid-cols-8 {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-}
-
-.grid.grid-cols-9 {
-    grid-template-columns: repeat(9, minmax(0, 1fr));
-}
-
-.grid.grid-cols-10 {
-    grid-template-columns: repeat(10, minmax(0, 1fr));
-}
-
-.grid.grid-cols-11 {
-    grid-template-columns: repeat(11, minmax(0, 1fr));
-}
-
-.grid.grid-cols-12 {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-
-.grid.grid-gap-0 {
-    grid-gap: var(--gap-0);
-}
-
-.grid.grid-gap-1 {
-    grid-gap: var(--gap-1);
-}
-
-.grid.grid-gap-2 {
-    grid-gap: var(--gap-2);
-}
-
-.grid.grid-gap-3 {
-    grid-gap: var(--gap-3);
-}
-
-.grid.grid-gap-4 {
-    grid-gap: var(--gap-4);
-}
-
-.grid.grid-gap-5 {
-    grid-gap: var(--gap-5);
-}
-
-.grid.grid-gap-6 {
-    grid-gap: var(--gap-6);
-}
-
-.grid.grid-gap-7 {
-    grid-gap: var(--gap-7);
-}
-
-.grid.grid-gap-8 {
-    grid-gap: var(--gap-8);
-}
-
-.grid.grid-gap-9 {
-    grid-gap: var(--gap-9);
-}
-
-/* Column expansion */
-.grid.grid-col-1 {
-    grid-column: span 1;
-}
-
-.grid.grid-col-2 {
-    grid-column: span 2;
-}
-
-.grid.grid-col-3 {
-    grid-column: span 3;
-}
-
-.grid.grid-col-4 {
-    grid-column: span 4;
-}
-
-.grid.grid-col-5 {
-    grid-column: span 5;
-}
-
-.grid.grid-col-6 {
-    grid-column: span 6;
-}
-
-.grid.grid-col-7 {
-    grid-column: span 7;
-}
-
-.grid.grid-col-8 {
-    grid-column: span 8;
-}
-
-.grid.grid-col-9 {
-    grid-column: span 9;
-}
-
-.grid.grid-col-10 {
-    grid-column: span 10;
-}
-
-.grid.grid-col-11 {
-    grid-column: span 11;
-}
-
-.grid.grid-col-12 {
-    grid-column: span 12;
-}
-
-/* Row expansion */
-.grid.grid-row-1 {
-    grid-row: span 1;
-}
-.grid.grid-row-2 {
-    grid-row: span 2;
-}
-.grid.grid-row-3 {
-    grid-row: span 3;
-}
-.grid.grid-row-4 {
-    grid-row: span 4;
-}
-.grid.grid-row-5 {
-    grid-row: span 5;
-}
-.grid.grid-row-6 {
-    grid-row: span 6;
-}
-.grid.grid-row-7 {
-    grid-row: span 7;
-}
-.grid.grid-row-8 {
-    grid-row: span 8;
-}
-.grid.grid-row-9 {
-    grid-row: span 9;
-}
-.grid.grid-row-10 {
-    grid-row: span 10;
-}
-.grid.grid-row-11 {
-    grid-row: span 11;
-}
-.grid.grid-row-12 {
-    grid-row: span 12;
-}
-
-@media screen and (max-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-}
-/* EXTENDED LINKS */
-/* Animated links */
-.u,
-.utb {
-    position: relative; /* So the psuedo-elements are positioned correctly */
-}
-
-/* Underline */
-
-.u::after {
-    content: "";
-    transition: all 0.3s;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    height: 0.1rem;
-    width: 0;
-    background: var(--cirrus-link-dark);
-    bottom: -0.25em;
-}
-
-.u:hover::after {
-    width: 100%;
-}
-
-.u-LR::after {
-    /* Left to Right */
-    left: 0;
-}
-
-.u-RL::after {
-    /* Right to Left */
-    right: 0;
-}
-
-.u-RL:hover::after {
-    width: 100%;
-}
-
-.u-C::after {
-    /* Center Outwards */
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-
-/* Underline top and bottom */
-.utb::before,
-.utb::after {
-    content: "";
-    transition: all 0.3s;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    height: 0.1rem;
-    width: 0;
-    background: var(--cirrus-link-dark);
-}
-
-.utb::before {
-    top: -0.25em;
-}
-
-.utb::after {
-    bottom: -0.25em;
-}
-
-.utb:hover::before,
-.utb:hover::after {
-    width: 100%;
-}
-
-.utb-LR::before,
-.utb-LR::after {
-    left: 0;
-}
-
-.utb-RL::before,
-.utb-RL::after {
-    right: 0;
-}
-
-.utb-C::before,
-.utb-C::after {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-
-/* Opposite start */
-.utb-OLR::before {
-    /* Suffix denotes border transition direction for the top border (left to right). Bottom border will be the opposite direction */
-    left: 0;
-}
-
-.utb-OLR::after {
-    right: 0;
-}
-
-.utb-ORL::before {
-    right: 0;
-}
-
-.utb-ORL::after {
-    left: 0;
-}
-
-/* Links with square borders */
-
-/* Please note that usquare is the parent span (not div) which would create the left and right borders. The link (.utb-OLR) gets nested within this */
-
-.usquare {
-    margin-left: 0.4rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.usquare a {
-    position: static;
-    padding: 0.2rem 0.4rem;
-}
-
-.usquare::before,
-.usquare::after {
-    content: "";
-    transition: 0.25s all ease;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    width: 2px;
-    width: 0.1 rem;
-    height: 0;
-    background: var(--cirrus-link-dark);
-}
-
-.usquare::before {
-    left: 0;
-    bottom: -0.2rem;
-}
-
-.usquare.delay::before {
-    transition-delay: 0.6s;
-}
-
-.usquare::after {
-    right: 0;
-    top: -0.2rem;
-}
-
-.usquare.delay::after {
-    transition-delay: 0.2s;
-}
-
-.usquare a::before {
-    left: 0;
-    transition: 0.25s all ease;
-}
-
-.usquare a::after {
-    right: 0;
-    transition: 0.25s all ease;
-}
-
-.usquare.delay a::after {
-    transition: 0.25s all ease 0.4s;
-}
-
-.usquare:hover::before,
-.usquare:hover::after {
-    height: calc(100% + 0.4rem); /* Makes the left and right borders */
-}
-
-.usquare:hover a::before,
-.usquare:hover a::after {
-    width: 100%;
-}
-/* A collection of modifiers that extend control styling */
-.btn.btn--pilled,
-[class^="btn-"].btn--pilled,
-[class*=" btn-"].btn--pilled {
-    border-radius: 6.25rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-}
-
-.btn.btn--circle,
-[class^="btn-"].btn--circle,
-[class*=" btn-"].btn--circle {
-    border-radius: 100%;
-    height: 3.125rem;
-    line-height: 3.125rem;
-    padding: 0;
-    width: 3.125rem;
-}
-
-/* Input (primary text-based) controls apply to inputs */
-.input-control--pilled {
-    border-radius: 6.25rem !important;
-}
-
-/* Theme modifiers */
-
-/* GLOBAL THEME SELECTORS */
-.bg-primary { background-color: var(--cirrus-primary) !important; }
-.bg-success { background-color: var(--cirrus-success) !important; }
-.bg-warning { background-color: var(--cirrus-warning) !important; }
-.bg-danger { background-color: var(--cirrus-danger) !important; }
-.bg-light { background-color: var(--cirrus-light) !important; }
-.bg-dark { background-color: var(--cirrus-dark) !important; }
-.bg-link { background-color: var(--cirrus-link) !important; }
-.bg-link-dark { background-color: var(--cirrus-link-dark) !important; }
-.bg-info { background-color: var(--cirrus-info) !important; }
-
-.text-primary { color: var(--cirrus-primary) !important; }
-.text-success { color: var(--cirrus-success) !important; }
-.text-warning { color: var(--cirrus-warning) !important; }
-.text-danger { color: var(--cirrus-danger) !important; }
-.text-light { color: var(--cirrus-light) !important; }
-.text-dark { color: var(--cirrus-dark) !important; }
-.text-link { color: var(--cirrus-link) !important; }
-.text-link-dark { color: var(--cirrus-link-dark) !important; }
-.text-info { color: var(--cirrus-info) !important; }
-/* PAGINATION */
-/* Parent contianer for page navigation */
-.pagination {
-    display: flex;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-}
-
-/* Use for the major pagination meant to display about 2 items */
-.pagination-item {
-    -webkit-flex: 1 0 50%; /* Flex to fill */
-    -ms-flex: 1 0 50%;
-    flex: 1 0 50%;
-}
-
-.pagination a {
-    color: #5d6c7b;
-}
-
-.pagination .pagination-item a[disabled] {
-    cursor: pointer;
-    opacity: 0.5;
-    pointer-events: none;
-    user-select: none;
-}
-
-.pagination .pagination-item {
-    margin: 1rem 0.1rem;
-    transition: all 0.3s;
-}
-
-.pagination .pagination-item.pagination-next {
-    text-align: right;
-}
-
-.pagination .pagination-item.pagination-prev {
-    text-align: left;
-}
-
-/* Pagination Item */
-.pagination-item-subtitle {
-    opacity: 0.7;
-    margin: 0; /* Needed to override style after formatting paragraph update */
-}
-
-/* Color the selected pagination item with accent color */
-.pagination .pagination-item.short.selected {
-    background-color: var(--cirrus-primary);
-    color: #fff;
-}
-
-.pagination .pagination-item.short.selected a {
-    color: #fff;
-}
-
-.pagination .pagination-item.short a {
-    display: inline-block;
-    line-height: 1.25;
-    padding: 0.5rem 0.75rem;
-}
-
-/* Used to display many pagination items */
-.pagination .pagination-item.short {
-    border-radius: 0.1rem;
-    margin: 0.2rem 0;
-    -webkit-flex: 0; /* Flex to fill */
-    -ms-flex: 0;
-    flex: 0;
-}
-
-.pagination .pagination-item.short:first-child a {
-    border-top-left-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-}
-
-.pagination .pagination-item.short:last-child a {
-    border-top-right-radius: .25rem;
-    border-bottom-right-radius: .25rem;
-}
-
-.pagination .pagination-item.short:not(.selected):hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.pagnation .pagination-item.ellipses {
-    color: #b5b5b5;
-    pointer-events: none;
-}
-
-/* Bordered pagination */
-.pagination.pagination-bordered .pagination-item.short a {
-    border: 1px solid rgb(222, 222, 222);
-    border-radius: 0;
-    margin-left: -1px;
-}
-
-/* Not good but CSS does not have heading selectors. Need to move to SASS */
-.pagination .pagination-item:hover p,
-.pagination .pagination-item:hover h1,
-.pagination .pagination-item:hover h2,
-.pagination .pagination-item:hover h3,
-.pagination .pagination-item:hover h4,
-.pagination .pagination-item:hover h5,
-.pagination .pagination-item:hover h6,
-.pagination .pagination-item:not(.selected):hover *:not([disabled]):not(.ellipses) {
-    transition: all 0.3s;
-    color: var(--cirrus-primary);
-}
-/* PLACEHOLDER */
-/* Designed to be embedded in any parent container as placeholder when content is absent. */
-
-.placeholder {
-    background-color: rgba(231, 234, 241, 0.5);
-    border-radius: 3px;
-    text-align: center;
-    padding: 3rem 2rem;
-    color: #6c7892; /* Lighter than original text color */
-    display: block;
-}
-
-/* Not sure if needed */
-.placeholder-icon {
-    text-align: center;
-}
-
-.placeholder .placeholder-title,
-.placeholder .placeholder-subtitle {
-    margin: 1rem auto;
-}
-
-.placeholder .placeholder-subtitle {
-    opacity: 0.7;
-    margin: 0;
-}
-
-/* Place buttons here for the placeholder */
-.placeholder .placeholder-commands {
-    margin-top: 1rem;
-}
-/* TABS AND TAB CONTAINER */
-.tab-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    overflow: hidden;
-    overflow-x: auto; /* Allow scrollbar to be visible if the width of the tabs exeeds container */
-            user-select: none;
-    white-space: nowrap;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    font-size: 0.85rem;
-}
-
-/* Tabs are embedded inside an unordered list */
-.tab-container ul {
-    display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; /* Move tab items to left side */
-    margin: 0.5rem; /* Override the behavior for standard ul and add equal padding */
-    border-bottom: 1px solid #eee; /* Bottom border of tabs */
-    flex-grow: 1;
-    list-style: none;
-}
-
-.tab-container li {
-    display: block; /* Keep the tabs from extending too far */
-    cursor: pointer;
-    margin: 0;
-    -webkit-flex: 1 0 0;
-    -ms-flex: 1 0 0;
-    flex: 1 0 0;
-    text-align: center;
-}
-
-.tab-container li a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-bottom: 1px solid #eee;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0.5rem 1rem;
-    transition: all .3s;
-    color: var(--cirrus-fg);
-    border-bottom-color: rgba(197, 197, 197, 0.63);
-    border-width: 2px;
-    margin-bottom: -1px; /* Get rid of any remaining border lines */
-    background-color: var(--cirrus-bg);
-}
-
-.tab-container li:hover a {
-    border-bottom-color: rgba(240, 61, 77, 0.6);
-    transition: all .3s;
-}
-
-.tab-container li.selected a {
-    border-bottom-color: var(--cirrus-primary);
-    color: var(--cirrus-primary);
-    border-width: 2px;
-    transition: all .3s;
-}
-
-/* Shift tabs to the center */
-.tab-container.tabs-center ul {
-    justify-content: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-}
-
-/* Shift tabs to the right */
-.tab-container.tabs-right ul {
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-}
-
-/* Depth tab styles */
-.tab-container.tabs-depth ul {
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
-    border-bottom: 0;
-}
-
-/* Classic tab styles */
-.tab-container.tabs-classic ul {
-    border-bottom-color: #dbdbdb;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-radius: 3px 3px 0 0; /* Only round the top left and right corners */
-    transition: all .3s;
-}
-
-.tab-container.tabs-classic li:not(.selected) a:hover {
-    background-color: rgb(240, 240, 240);
-    transition: all .3s;
-}
-
-.tab-container.tabs-classic li a {
-    border: 1px solid transparent;
-    border-bottom-color: #dbdbdb;
-    border-radius: 3px 3px 0 0;
-    transition: all .3s;
-}
-
-.tab-container.tabs-classic li.selected a {
-    color: var(--cirrus-primary);
-    border-color: #dbdbdb;
-    border-bottom-color: transparent !important;
-}
-
-/* Tabs that fill the width */
-.tab-container.tabs-fill li {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -ms-flex-negative: 0;
-        flex-shrink: 0; /* Disable shrinking to original width */
-}
-
-/* Override the -webkit-box display that sizes tab items based on text */
-.tab-container.tabs-fill ul {
-    display: flex; /* Equal size tabs */
-}
-
-/* Different tab sizes */
-.tab-container.tabs-xsmall {
-    font-size: 0.6rem;
-}
-
-.tab-container.tabs-small {
-    font-size: 0.75rem;
-}
-
-.tab-container.tabs-large {
-    font-size: 1.25rem;
-}
-
-.tab-container.tabs-xlarge {
-    font-size: 1.5rem;
-}
-
-/* Font Awesome Integration */
-.tab-container .icon:first-child { /* Left icon */
-    margin-right: .75rem;
-}
-
-.tab-container .icon:last-child { /* Right icon */
-    margin-left: .75rem;
-}
-/* TAGS */
-.tag {
-    align-items: center;
-    background-color: var(--cirrus-light);
-    border-radius: 0.25rem;
-    color: var(--cirrus-fg);
-    display: inline-flex;
-    font-size: 75%;
-    line-height: 1.5;
-    min-height: 1.5rem;
-    padding: 0 0.5rem;
-    white-space: nowrap;
-}
-
-.tag.tag-large {
-    font-size: 1rem;
-}
-
-.tag.tag-xlarge {
-    font-size: 1.5rem;
-}
-
-.tag.tag-rounded {
-    border-radius: 290486px;
-}
-
-/* Delete button for tag */
-.tag.tag-delete {
-    margin-left: 1px;
-    padding: 0;
-    position: relative;
-    width: 2em;
-}
-
-/* Draw the delete button */
-.tag.tag-delete::before,
-.tag.tag-delete::after {
-    background-color: var(--cirrus-light);
-    content: "";
-    display: block;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-}
-
-.tag.tag-delete::before {
-    height: 1px;
-    width: 50%;
-}
-
-.tag.tag-delete::after {
-    height: 50%;
-    width: 1px;
-}
-
-/* TAG THEMES */
-.tag .delete {
-    margin-left: 0.25rem;
-    margin-right: -0.375rem;
-}
-
-.tag.white {
-    background-color: #fff;
-    color: var(--cirrus-dark);
-}
-
-.tag.black {
-    background-color: var(--cirrus-black);
-    color: #fff;
-}
-
-.tag.primary {
-    background-color: var(--cirrus-primary);
-    color: var(--cirrus-dark);
-}
-
-.tag.link {
-    background-color: var(--cirrus-link);
-    color: #fff;
-}
-
-.tag.info {
-    background-color: var(--cirrus-info);
-    color: #fff;
-}
-
-.tag.success {
-    background-color: var(--cirrus-success);
-    color: #fff;
-}
-
-.tag.warning {
-    background-color: var(--cirrus-warning);
-    color: var(--cirrus-fg);
-}
-
-.tag.danger {
-    background-color: var(--cirrus-danger);
-    color: #fff;
-}
-
-/* TAG CONTAINER */
-.tag-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* Add margin in between tag containers */
-.tag-container:not(:last-child) {
-    margin-bottom: 1rem;
-}
-
-.tag-container .tag {
-    margin-bottom: 0.5rem;
-}
-
-.tag-container .tag:not(:last-child) {
-    margin-right: 0.5rem;
-}
-
-/* Used for grouping tags together */
-.tag-container.group-tags {
-    margin-right: 0;
-}
-
-/* Tag close button */
-.tags.tag-close-btn {
-    padding: 0;
-    position: relative;
-    width: 1rem;
-}
-
-.tags.tag-close-btn::before,
-.tags.tag-close-btn::after {
-    background-color: var(--cirrus-fg);
-    content: "";
-    display: block;
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-}
-
-.tag.tag-close-btn::before {
-    height: 1px;
-    width: 50%;
-}
-
-.tag.tag-close-btn::after {
-    height: 50%;
-    width: 1px;
-}
-
-/* MISC */
-a.tag:hover {
-    text-decoration: underline;
-}
-
-.tag-container.group-tags .tag:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.tag-container.group-tags .tag:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-/* Tag positioning */
-.tags.tags-centered {
-    justify-content: center;
-}
-
-.tags.tags-centered .tag {
-    margin: 0 0.25rem;
-}
-
-.tags.tags-right {
-    justify-content: flex-end;
-}
-
-.tags.tags-right .tag:not(:first-child) {
-    margin-left: 0.5rem;
-}
-
-.tags.tags-right .tag:not(:last-child) {
-    margin-right: 0;
-}
-
-/* TILES */
-.tile {
-    display: flex;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    align-content: space-between; /* Ensure space between child elements of card tile */
-    -webkit-align-content: space-between;
-    align-items: flex-start; /* Push elements to the top of container instead of center/bottom */
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    -ms-flex-line-pack: justify; /* Evenly distribute lines */
-}
-
-.tile p {
-    font-size: 0.9rem;
-}
-
-.tile .tile-icon,
-.tile .tile-buttons {
-    flex: 0 0 auto;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-}
-
-/* Override the default behavior where buttons display as blocks */
-.tile .tile-buttons button,
-.tile .tile-buttons .btn,
-.tile .tile-buttons [type="submit"] {
-    display: inline-block;
-    margin: 0.1rem; /* Reduce space used by buttons, default .5rem */
-}
-
-.tile .tile-container {
-    flex: 1 1 auto;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-}
-
-/* Add spacing between the elements in between */
-.tile .tile-container:not(:first-child) {
-    padding-left: 1rem;
-}
-
-.tile .tile-container:not(:last-child) {
-    padding-right: 1rem;
-}
-
-.tile .tile-title {
-    line-height: 2rem;
-    font-weight: bolder;
-    margin: 0.1rem auto;
-}
-
-.tile .tile-subtitle {
-    line-height: 1.25rem;
-    opacity: 0.7;
-    margin: 0.1rem auto;
-}
-
-/* Force elements to align at the center vertical height */
-.tile.tile-center {
-    align-items: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-}
-
-.tile.tile-center .tile-container {
-    /* Shrink the text to fit inside the tile */
-    overflow: hidden;
-}
-
-/* Keep the text from overflowing */
-.tile.tile-center .tile-title,
-.tile.tile-center .tile-subtitle.no-wrap {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    margin-bottom: 0;
-}
-
-.toast {
-    display: block;
-    width: 100%;
-    padding: .75rem 1.25rem;
-    background-color: var(--toast-primary-bg);
-    border: 1px solid var(--toast-primary-bg);
-    border-radius: 2px;
-    color: #fff;
-    position: relative;
-    margin: 0.5rem;
-}
-
-/* .toast h1, .toast h2, .toast h3, .toast h4, .toast h5, .toast h6 {
-    margin: 0;
-    margin-top: 1rem;
-} (Deprecated 0.5.5) */
-
-.toast.toast__title {
-    margin: 0;
-    margin-top: 1rem;
-}
-
-.toast p {
-    margin: 0;
-}
-
-.toast.toast__translucent {
-    opacity: .5;
-}
-
-.toast.toast__translucent:hover {
-    opacity: 1;
-}
-
-.toast .btn-close {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-}       
-
-/* TOAST TYPES */
-.toast.toast__primary {
-    background-color: var(--toast-primary-bg);
-    border-color: var(--toast-primary-bg);
-}
-
-.toast.toast__success {
-    background-color: var(--cirrus-success);
-    border-color: var(--cirrus-success);
-}
-
-.toast.toast__warning {
-    background-color: var(--cirrus-warning);
-    border-color: var(--cirrus-warning);
-}
-
-.toast.toast__error {
-    background-color: var(--cirrus-danger);
-    border-color: var(--cirrus-danger);
-}
-
-/* Add the rest later */
-.toast a {
-    color: var(--cirrus-light);
-    transition: all .3s;
-}
-
-.toast a:hover {
-    opacity: .8;
-    transition: all .3s;
-}
-
-
-/* TOOLTIPS */
-.tooltip {
-  position: relative; /* let's the pseudoelement that we are displaying relative to the button. */
-  overflow: visible; /* Allows the pseudoelement to be shown */
-  white-space: nowrap; /* Keeps the button text from wrapping and getting too large */
-}
-
-/* This is the psuedoelement that creates the tooltip */
-.tooltip::after,
-.tooltip.tooltip--top::after {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  position: absolute;
-  color: #fff;
-  font-size: 0.6rem;
-  background-color: rgba(69, 77, 93, 0.9);
-  content: attr(
-    data-tooltip
-  ); /* Retrieves the data specified in this element property and displays it as text */
-  display: block;
-  line-height: 1rem;
-  text-transform: none;
-  overflow: hidden;
-  padding: 0.4rem 0.8rem;
-  opacity: 0; /* Hide the element */
-  text-overflow: ellipsis;
-  max-width: 15rem;
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-  transition: all 0.2s ease;
-  z-index: 200;
-  pointer-events: none;
-  bottom: 100%; /* Pushes the tooltip above the button */
-  left: 50%; /* Horizontally center it */
-  border-radius: 0.2rem;
-}
-
-/* Handles the on hover event of the button and then modifies the associated tooltip accordingly. */
-.tooltip:focus::after,
-.tooltip:hover::after {
-  opacity: 1;
-  -webkit-transform: translate(-50%, -0.5rem);
-  transform: translate(-50%, -0.5rem);
-  transition: all 0.2s ease;
-}
-
-/* Tooltip top left */
-.tooltip.tooltip--top-left::after {
-  -webkit-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
-}
-
-.tooltip.tooltip--top-left:hover::after,
-.tooltip.tooltip--top-left:focus::after {
-  left: 0;
-  -webkit-transform: translate(-100%, -.5rem);
-  transform: translate(-100%, -.5rem);
-}
-
-/* Tooltip top right */
-.tooltip.tooltip--top-right::after {
-  -webkit-transform: translate(15%, 0);
-  transform: translate(15%, 0);
-}
-
-.tooltip.tooltip--top-right:hover::after,
-.tooltip.tooltip--top-right:focus::after{
-  right: 0;
-  -webkit-transform: translate(100%, -.5rem);
-  transform: translate(100%, -.5rem);
-}
-
-/* Tooltip bottom */
-.tooltip.tooltip--bottom::after {
-  top: 100%;
-  transform: translate(
-    -50%,
-    -1rem
-  ); /* Moves tooltip to the center horizontally and shifts tooltip down */
-  -webkit-transform: translate(-50%, -1rem);
-  -moz-transform: translate(-50%, -1rem);
-  -ms-transform: translate(-50%, -1rem);
-  bottom: auto;
-}
-
-.tooltip.tooltip--bottom:hover::after,
-.tooltip.tooltip--bottom:focus::after {
-  transform: translate(-50%, .5rem);
-  -webkit-transform: translate(-50%, .5rem);
-  -moz-transform: translate(-50%, .5rem);
-  -ms-transform: translate(-50%, .5rem);
-  bottom: auto;
-}
-
-/* Tooltip bottom left */
-.tooltip.tooltip--bottom-left::after {
-  top: 100%;
-  -webkit-transform: translate(-65%, -1rem);
-  transform: translate(-65%, -1rem);
-  bottom: auto;
-}
-
-.tooltip.tooltip--bottom-left:hover::after,
-.tooltip.tooltip--bottom-left:focus::after {
-  left: 0;
-  -webkit-transform: translate(-100%, .5rem);
-  transform: translate(-100%, .5rem);
-}
-
-/* Tooltip bottom right */
-.tooltip.tooltip--bottom-right::after {
-  top: 100%;
-  -webkit-transform: translate(0%, -1rem);
-  transform: translate(0%, -1rem);
-  bottom: auto;
-}
-
-.tooltip.tooltip--bottom-right:hover::after,
-.tooltip.tooltip--bottom-right:focus::after {
-  right: 0;
-  -webkit-transform: translate(100%, .5rem);
-  transform: translate(100%, .5rem);
-}
-
-/* Tooltip right */
-.tooltip.tooltip--right::after {
-  left: 100%;
-  bottom: 50%;
-  transform: translate(-1rem, 50%);
-  -webkit-transform: translate(-1rem, 50%);
-  -moz-transform: translate(-1rem, 50%);
-  -ms-transform: translate(-1rem, 50%);
-}
-
-.tooltip.tooltip--right:hover::after,
-.tooltip.tooltip--right:focus::after {
-  transform: translate(.5rem, 50%);
-  -webkit-transform: translate(.5rem, 50%);
-  -moz-transform: translate(.5rem, 50%);
-  -ms-transform: translate(.5rem, 50%);
-}
-
-/* Tooltip Left */
-.tooltip.tooltip--left::after {
-  right: 100%;
-  bottom: 50%;
-  left: auto; /* Needed to work */
-  transform: translate(1rem, 50%);
-  -webkit-transform: translate(1rem, 50%);
-  -moz-transform: translate(1rem, 50%);
-  -ms-transform: translate(1rem, 50%);
-}
-
-.tooltip.tooltip--left:hover::after,
-.tooltip.tooltip--left:focus::after {
-  transform: translate(-.5rem, 50%);
-  -webkit-transform: translate(-.5rem, 50%);
-  -moz-transform: translate(-.5rem, 50%);
-  -ms-transform: translate(-.5rem, 50%);
 }
