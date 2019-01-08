@@ -308,6 +308,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
+    margin-bottom: 0;
 }
 
 /* This is just an extended portion of an input which is just like a label and is read only */
