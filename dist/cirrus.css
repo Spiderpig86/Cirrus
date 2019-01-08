@@ -3253,7 +3253,7 @@ video.video-fullscreen {
     --cirrus-form-group-bg: #f8f9fa;
     --cirrus-form-group-fg: #909090;
 
-    --toast-primary-bg: #00c9a7;
+    --toast-primary-bg: rgba(49, 59, 80, 0.9);
 }
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
@@ -5271,11 +5271,11 @@ a.tag:hover {
     margin: 0;
 }
 
-.toast.toast__translucent {
+.toast.toast--translucent {
     opacity: .5;
 }
 
-.toast.toast__translucent:hover {
+.toast.toast--translucent:hover {
     opacity: 1;
 }
 
@@ -5286,24 +5286,39 @@ a.tag:hover {
 }       
 
 /* TOAST TYPES */
-.toast.toast__primary {
+.toast.toast--primary {
     background-color: var(--toast-primary-bg);
     border-color: var(--toast-primary-bg);
 }
 
-.toast.toast__success {
+.toast.toast--success {
     background-color: var(--cirrus-success);
     border-color: var(--cirrus-success);
 }
 
-.toast.toast__warning {
+.toast.toast--warning {
     background-color: var(--cirrus-warning);
     border-color: var(--cirrus-warning);
 }
 
-.toast.toast__error {
+.toast.toast--error {
     background-color: var(--cirrus-danger);
     border-color: var(--cirrus-danger);
+}
+
+.toast.toast--info {
+    background-color: var(--cirrus-info);
+    border-color: var(--cirrus-info);
+}
+
+.toast.toast--link {
+    background-color: var(--cirrus-link);
+    border-color: var(--cirrus-link);
+}
+
+.toast.toast--primary {
+    background-color: var(--cirrus-primary);
+    border-color: var(--cirrus-primary);
 }
 
 /* Add the rest later */
