@@ -55,13 +55,6 @@ button:hover,
     --btn-color: #eee;
 }
 
-.btn:active,
-button:active,
-[type="submit"]:active {
-    background-color: #ddd;
-    --btn-color: #ddd;
-}
-
 /* Make the loading circle, if present, white when button is active */
 .btn.loading:active::after,
 button.loading:active::after,
