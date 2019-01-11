@@ -65,11 +65,18 @@ button.loading:active::after,
     border-top-color: transparent;
 }
 
+button.btn-animated,
+[type="submit"].btn-animated,
+.btn.btn-animated {
+    transition: calc(var(--animation-duration) / 2) ease;
+}
+
 button.btn-animated:active,
 [type="submit"].btn-animated:active,
 .btn.btn-animated:active {
     -webkit-transform: scale(0.98);
     transform: inherit, scale(0.98);
+    transition: calc(var(--animation-duration) / 2) ease;
 }
 
 .btn:focus,
