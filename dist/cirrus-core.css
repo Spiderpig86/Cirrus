@@ -18,7 +18,7 @@ button,
     border-radius: 0.25rem;
     cursor: pointer;
     text-align: center;
-    transition: all 0.2s;
+    transition: all 0var(--animation-duration);
     background-color: #fefefe;
     border-color: #d9d9d9;
     color: #737373;
@@ -38,13 +38,13 @@ button,
 button:hover,
 .btn:hover,
 [type="submit"]:hover {
-    transition: all 0.2s;
+    transition: all var(--animation-duration);
 }
 
 .btn:active,
 button:active,
 [type="submit"]:active {
-    transition: 0.2s ease;
+    transition: var(--animation-duration) ease;
 }
 
 /* Default button colors */
@@ -59,7 +59,7 @@ button:hover,
 .btn.loading:active::after,
 button.loading:active::after,
 [type="submit"].loading:active::after {
-    transition: 0.2s ease;
+    transition: var(--animation-duration) ease;
     border-radius: 50%;
     border-right-color: transparent;
     border-top-color: transparent;
@@ -68,8 +68,8 @@ button.loading:active::after,
 button.btn-animated:active,
 [type="submit"].btn-animated:active,
 .btn.btn-animated:active {
-    -webkit-transform: scale(0.99);
-    transform: inherit, scale(0.99);
+    -webkit-transform: scale(0.98);
+    transform: inherit, scale(0.98);
 }
 
 .btn:focus,
@@ -233,10 +233,10 @@ button.btn-close::after {
     background-color: var(--btn-color); 
     border: 1px solid var(--btn-border-color);
     color: var(--btn-fg);
-    transition: all .2s;
+    transition: all var(--animation-duration);
 }
 
-[class^="btn-"]:hover, [class*=" btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all .2s; }
+[class^="btn-"]:hover, [class*=" btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all var(--animation-duration); }
 
 /* Outline Variants */
 [class^="btn-"].outline, [class*=" btn-"].outline {
@@ -246,7 +246,7 @@ button.btn-close::after {
 [class^="btn-"].outline:hover, [class*=" btn-"].outline:hover {
     background-color: var(--btn-color);
     color: var(--btn-fg);
-    transition: all .2s;
+    transition: all var(--animation-duration);
 }
 
 /* Right of input */
@@ -1564,8 +1564,8 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 /* Just add a transition in general */
 .nav-item .dropdown-menu.dropdown-animated {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 /* Dropdown menu location adjustment located below for sizes above phones */
@@ -2565,15 +2565,15 @@ ul.menu {
   border-radius: 3px;
   font-size: 0.85rem;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu .menu-item:hover > a {
   background-color: rgba(208, 208, 208, 0.3);
   color: #d43644;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
   
 }
 
@@ -2590,8 +2590,8 @@ ul.menu {
   cursor: pointer;
   float: left;
   margin-right: .1rem;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu .menu-item .menu-addon .icon {
@@ -2601,8 +2601,8 @@ ul.menu {
 /* Darken on hover to differentiate from menu-item */
 .menu .menu-item .menu-addon:hover {
   background-color: rgba(60, 60, 60, 0.25);
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu .menu-item .menu-addon.right {
@@ -2652,7 +2652,7 @@ ul.menu {
   position: absolute;
   top: 75%;
   left: 0;
-  -webkit-animation: slide-down .2s ease 1;
+  -webkit-animation: slide-down var(--animation-duration) ease 1;
   animation: slide-down .1s ease 1;
   background-color: var(--cirrus-bg);
   border-radius: .2rem;
@@ -2666,8 +2666,8 @@ ul.menu {
   z-index: 10;
   pointer-events: none; /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
   overflow: hidden;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu-dropdown.dropdown-right .menu {
@@ -2685,8 +2685,8 @@ ul.menu {
   z-index: 100;
   pointer-events: auto; /* Restore pointer events */
   height: auto;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu-dropdown .btn-group .btn-dropdown:nth-last-child(2) {
@@ -2711,8 +2711,8 @@ ul.menu {
 
 /* The dropdown glyph of the tree menu */
 .tree .tree-item .tree-item-header .icon {
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 /* Expand the tree-item-body (has menu-items) */
@@ -2731,8 +2731,8 @@ ul.menu {
   max-height: 0; /* Hidden at first */
   margin-left: 1.5rem;
   overflow: hidden;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 /* TODO: Docs */
@@ -2806,10 +2806,10 @@ ul.menu {
     top: 0;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
-    transition: transform .2s ease, -webkit-transform .2s ease;
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: transform .2s ease;
-    transition: -webkit-transform .2s ease;
+    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+    -webkit-transition: -webkit-transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
+    transition: -webkit-transform var(--animation-duration) ease;
     z-index: 400;
   }
 
@@ -2818,10 +2818,10 @@ ul.menu {
   .tree-nav:target {
     -webkit-transform: translateX(0);
     transform: translateX(0);
-    transition: transform .2s ease, -webkit-transform .2s ease;
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: -webkit-transform .2s ease;
-    transition: transform .2s ease;
+    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+    -webkit-transition: -webkit-transform var(--animation-duration) ease;
+    transition: -webkit-transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
   }
 
   /* Create the area to click to close the menu */
@@ -3023,8 +3023,8 @@ video.video-fullscreen {
 
 .modal:target .modal-container,
 .modal.shown .modal-container {
-  -webkit-animation: slide-down .2s ease 1;
-  animation: slide-down .2s ease 1;
+  -webkit-animation: slide-down var(--animation-duration) ease 1;
+  animation: slide-down var(--animation-duration) ease 1;
   z-index: 1;
 }
 
@@ -3055,8 +3055,8 @@ video.video-fullscreen {
 
 /* MODAL ANIMATIONS */
 .modal.modal-animated--dropdown {
-    -webkit-animation: slide-down .2s ease 1;
-    animation: slide-down .2s ease 1;
+    -webkit-animation: slide-down var(--animation-duration) ease 1;
+    animation: slide-down var(--animation-duration) ease 1;
 }
 
 /* Visible state */
@@ -3247,6 +3247,8 @@ video.video-fullscreen {
     --cirrus-form-group-fg: #909090;
 
     --toast-primary-bg: rgba(49, 59, 80, 0.9);
+
+    --animation-duration: .2s;
 }
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */

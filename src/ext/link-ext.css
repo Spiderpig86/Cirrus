@@ -148,7 +148,7 @@
 }
 
 .usquare.delay::after {
-    transition-delay: 0.2s;
+    transition-delay: var(--animation-duration);
 }
 
 .usquare a::before {

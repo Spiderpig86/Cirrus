@@ -49,7 +49,7 @@
     left: -1.5rem;
     position: absolute;
     top: .3rem;
-    transition: all .2s;
+    transition: all var(--animation-duration);
     width: 1rem;
 }
 
@@ -165,7 +165,7 @@
     left: 4px;
     width: 16px;
     transform: translateY(-50%);
-    transition: left .2s ease;
+    transition: left var(--animation-duration) ease;
     text-align: left;
 }
 

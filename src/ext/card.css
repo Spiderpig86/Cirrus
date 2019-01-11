@@ -161,11 +161,11 @@
 
 .card-body {
     opacity: 0;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
+    -webkit-transition: all var(--animation-duration) ease-in-out;
+    -moz-transition: all var(--animation-duration) ease-in-out;
+    -ms-transition: all var(--animation-duration) ease-in-out;
 
-    transition: all 0.2s ease-in-out;
+    transition: all var(--animation-duration) ease-in-out;
 }
 
 .card-footer {

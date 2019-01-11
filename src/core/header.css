@@ -159,8 +159,8 @@
 
 /* Just add a transition in general */
 .nav-item .dropdown-menu.dropdown-animated {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 /* Dropdown menu location adjustment located below for sizes above phones */
