@@ -119,6 +119,20 @@ pre:not(.get-cirrus) > code {
     margin-right: .5rem;
 }
 
+/* Layout */
+#grids .col > div, #grids [class^='col-'] > div, #grids [class*=" col-"] > div, #grids .col > div, #grids [class^='w-'] > div, #grids [class*=" w-"] > div {
+    background: #eee;
+    text-align: center;
+    border-radius: 5px;
+    font-size: .7rem;
+    text-transform: uppercase;
+    min-height: 30px !important;
+    line-height: 30px;
+    margin-bottom: .75rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
 /* Examples */
 #examples {
     background-color: #1c222b;

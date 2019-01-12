@@ -26,7 +26,7 @@
         <div class="header-brand">
             <div class="nav-item">
                 <a href="../../">
-                    <h6 class="title">Cirrus</h6>
+                    <h6 class="title">Cirrus</h5>
                 </a>
             </div>
             <div class="nav-item nav-btn" id="header-btn">
@@ -36,28 +36,28 @@
             </div>
         </div>
         <div class="header-nav" id="header-menu">
-            <div class="nav-left text-center">
-                <div class="nav-item text-center">
+            <div class="nav-left u-text-center">
+                <div class="nav-item u-text-center">
                     <a href="https://github.com/Spiderpig86/Cirrus">
                     <span class="icon">
-                    <i class="fa fa-github"></i>
+                    <i class="fa fa-wrapper fa-github"></i>
                     </span>
                     </a>
                 </div>
-                <div class="nav-item text-center">
+                <div class="nav-item u-text-center">
                     <a href="#">
                     <span class="icon white">
-                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-wrapper fa-twitter"></i>
                     </span>
                     </a>
                 </div>
             </div>
-            <div class="nav-right text-center nav-menu">
+            <div class="nav-right u-text-center nav-menu">
                 <div class="nav-item">
-                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/layout.css" target="_blank"><span class="icon"><i class="fa fa-code"></i></span></a>
+                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/layout.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
                 </div>
 
-                <div class="nav-item text-center has-sub">
+                <div class="nav-item u-text-center has-sub">
                     <a class="nav-dropdown-link">Layout</a>
                     <ul class="dropdown-menu dropdown-animated">
                         <li><a href="#started" class="smoothScroll">Top</a></li>
@@ -78,7 +78,7 @@
 
     <section id="started" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#started" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Layout</h3>
+            <h1><a href="./index.html#started" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Layout</h1>
             <div class="divider"></div>
             <p>Perhaps the most annoying part of designing a website is ensuring that column widths are consistent throughout the website. Cirrus aims to solve this issue with a simple 12-column grid system powered by <b>Flexbox</b> to provide an easy to maintain and scalable framework. If 12 columns are not enough, there is a flexible column that will automatically adjust according to the browser's width and its neighboring columns.</p>
             <div id="grids">
@@ -277,7 +277,7 @@
     <!-- Columns no gaps -->
     <section id="no_gaps">
         <div class="content">
-            <h6>Columns with no spaces.</h6>
+            <h5>Columns with no spaces.</h5>
             <p>You can easily remove spaces in the columns by adding the <code>no-space</code> class to the column elements.</p>
             <div id="grids">
                 <div class="row">
@@ -301,7 +301,7 @@
     <!-- Grid line spacing -->
     <section id="line_spacing" class="padtop">
         <div class="content">
-            <h6>Grid vertical line spacing.</h6>
+            <h5>Grid vertical line spacing.</h5>
             <p>By default, the grid system in Cirrus will automatically shift columns that do not fit in one row horizontally down to the next line. For example:</p>
             <div id="grids">
                 <div class="row">
@@ -346,7 +346,7 @@
     <!-- Keep widths in mobile -->
     <section id="width_ignore">
         <div class="content">
-            <h6>Preserve column widths.</h6>
+            <h5>Preserve column widths.</h5>
             <p>The <code>ignore-screen</code> class allows you preserve column widths even in small screen sizes replacing the default behavior of stretching 100%.</p>
             <div id="grids" class="content">
                 <p class="title">Before</p>
@@ -368,7 +368,7 @@
     <!-- Columns that automatically adjust the width to each element to the number that are in the row -->
     <section id="col_fluid" class="padtop">
         <div class="content">
-            <h6>Fluid Columns</h6>
+            <h5>Fluid Columns</h5>
             <p>Fluid columns will automatically adjust the width of every single element inside <code>row fluid-container</code> to all have the same width inside the parent div.</p>
             <div id="grids">
                 <div class="row fluid-container" id="fluidContainerTest">
@@ -377,8 +377,8 @@
                     <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
                 </div>
                 <div class="btn-group btn-group-fill">
-                    <button class="btn-accent" id="fluid-container-add">Add Column</button>
-                    <button class="btn-accent" id="fluid-container-delete">Delete Column</button>
+                    <button class="btn-primary" id="fluid-container-add">Add Column</button>
+                    <button class="btn-primary" id="fluid-container-delete">Delete Column</button>
                 </div>
             </div>
             <p>Adding the <code>wrap</code> class to the <code>fluid-container</code> will make new columns wrap to the next line when an overflow occurs instead of showing a scrollbar.</p>
@@ -407,7 +407,7 @@
 
     <section id="grid_offset" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#grid_offset" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Column Offset</h3>
+            <h1><a href="./index.html#grid_offset" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Column Offset</h1>
             <div class="divider"></div>
             <p>Rather than using empty columns to space columns out, Cirrus provides offsets to make styling much easier. The classes follow the same sizing as the <code>col-n</code> classes. To add the offset, just add the <code>offset-n</code> class to your column and Cirrus will take care of the spacing and calculations. Note that for these specific offsets, they simply need to be embedded inside a <code>row</code> div without the <code>flui-container</code> class.</p>
             <div id="grids">
@@ -452,7 +452,7 @@
     <!-- 10-grid-system -->
     <section id="ten_grid_system">
         <div class="content">
-            <h3><a href="./index.html#ten_grid_system" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> 10-grid Layout</h3>
+            <h1><a href="./index.html#ten_grid_system" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> 10-grid Layout</h1>
             <div class="divider"></div>
             <p>Hate the 12-grid layout? Cirrus also comes with a 10-grid layout system out of the box. <i>Note: Embedding 10-grid columns inside <code>row</code> divs is optional.</i></p>
             <div id="grids">
@@ -475,10 +475,11 @@
     <!-- Page Structure -->
     <section id="page_structure" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#page_structure" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Page Structure</h3>
+            <h1><a href="./index.html#page_structure" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Page Structure</h1>
             <div class="divider"></div>
             <p>Cirrus provides styles that enable you to design pages that are spacious and elegant with ease.</p>
-            <h6>Basic Classes</h6>
+            <space></space>
+            <h5>Basic Classes</h5>
             <p class="title">.content</p>
             <p class="subtitle">Adds padding from the sides and the bottom to push content to the middle of the screen.</p>
             <p class="title">.content-no-padding</p>
@@ -511,16 +512,16 @@
     <!-- Full Screen -->
     <section id="full_screen" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#full_screen" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Splash Screen</h3>
+            <h1><a href="./index.html#full_screen" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Splash Screen</h1>
             <div class="divider"></div>
             <p>Creating an eye caching splash screen is incredibly easy with Cirrus which includes customizations to the content within and the layout.</p>
             <p>You can design your splash screen however you'd like. Below is an example that takes advantage of all the classes which includes <code>hero</code>, <code>fullscreen</code>, <code>hero-img</code>, <code>parallax-img</code>, and <code>hero-body</code> (for the div immediately underneath).</p>
         </div>
         <div id="splash-img" class="hero fullscreen hero-img parallax-img">
             <div class="hero-body">
-                <div class="content text-center">
-                    <h3 class="uppercase white title">Easily create beautiful splash screens</h3>
-                    <h5 class="uppercase white sub-title faded">Only 6 lines needed and no additional CSS</h5>
+                <div class="content u-text-center">
+                    <h1 class="uppercase white title">Easily create beautiful splash screens</h1>
+                    <h3 class="uppercase white sub-title faded">Only 6 lines needed and no additional CSS</h3>
                 </div>
             </div>
         </div>
@@ -528,9 +529,9 @@
         <div class="content">
             <pre><code class="html" data-lang="HTML">&lt;div id=&quot;splash-img&quot; class=&quot;hero fullscreen hero-img parallax-img&quot;&gt;
     &lt;div class=&quot;hero-body&quot;&gt;
-        &lt;div class=&quot;content text-center&quot;&gt;
-            &lt;h3 class=&quot;uppercase white title&quot;&gt;Easily create beautiful splash screens&lt;/h3&gt;
-            &lt;h5 class=&quot;uppercase white sub-title faded&quot;&gt;Only 6 lines needed and no additional CSS&lt;/h5&gt;
+        &lt;div class=&quot;content u-text-center&quot;&gt;
+            &lt;h1 class=&quot;uppercase white title&quot;&gt;Easily create beautiful splash screens&lt;/h1&gt;
+            &lt;h3 class=&quot;uppercase white sub-title faded&quot;&gt;Only 6 lines needed and no additional CSS&lt;/h3&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -539,23 +540,23 @@
 
     <section id="level" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#level" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Leveling Content</h3>
+            <h1><a href="./index.html#level" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Leveling Content</h1>
             <div class="divider"></div>
             <p>With Cirrus, you can easily vertically center your divs with the <code>level</code> class in the parent container and the <code>level-item</code> class for the children to align the items. The <code>level-content</code> class is used with the <code>level-item</code> class to make the content of the item stretch the width of the parent div relative to other divs.</p>
             <div class="row">
                 <div class="level" style="background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%); width:100%; border-radius: .3rem; overflow: hidden;">
                     <div class="level-item" style="background: rgba(255, 255, 255, 0.2); padding: 1rem;">
-                        <div class="text-center">
+                        <div class="u-text-center">
                             <p>.level-item<br>padding: 1rem</p>
                         </div>
                     </div>
                     <div class="level-item" style="background: rgba(255, 255, 255, 0.2); padding: 2rem 1rem;">
-                        <div class="text-center">
+                        <div class="u-text-center">
                             <p>.level-item<br>padding: 1.5rem 1rem</p>
                         </div>
                     </div>
                     <div class="level-item" style="background: rgba(255, 255, 255, 0.2); padding: 1rem;">
-                        <div class="text-center">
+                        <div class="u-text-center">
                             <p>.level-item<br>padding: 1rem</p>
                         </div>
                     </div>
@@ -565,9 +566,9 @@
             <div class="row">
                 <div class="level">
                     <div class="level-left">
-                        <h6 class="level-item uppercase">Brand</h6>
-                        <a href="#" class="level-item uppercase btn-link">Item 1</a>
-                        <a href="#" class="level-item uppercase btn-link">Item 2</a>
+                        <h6 class="level-item uppercase">Brand</h5>
+                        <a href="#" class="level-item uppercase" style="padding: 0 1rem;">Item 1</a>
+                        <a href="#" class="level-item uppercase" style="padding: 0 1rem;">Item 2</a>
                     </div>
                     <div>
                         <p class="level-item">Center</p>
@@ -583,14 +584,14 @@
             <p>You can also create your very own navbar with the level class and specify the content displayed on the left and right side with the <code>level-left</code> and <code> level-right</code> classes respectively. This differs from the header class in the sense that divs have more padding with the same color along with a slight adjustment to the divs.</p>
             <div class="row">
                  <div class="level" style="background-image: linear-gradient(to right, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%); border-radius: .3rem; overflow: hidden;">
-                    <div class="level-left level-content" style="background:rgba(255, 255, 255, 0.2);">
-                        <p class="level-item content-no-padding">.level-left<br>.level-item<br>.level-content</p>
+                    <div class="level-left level-content level-item" style="background:rgba(255, 255, 255, 0.2);">
+                        <p>.level-left<br>.level-item<br>.level-content</p>
                     </div>
-                    <div class="level-item level-content" style="background:rgba(255, 255, 255, 0.2);">
-                        <p class="content-no-padding text-center">.level-content<br>.level-item</p>
+                    <div class="level-item level-content level-item" style="background:rgba(255, 255, 255, 0.2);">
+                        <p>.level-content<br>.level-item</p>
                     </div>
-                    <div class="level-right level-content" style="background:rgba(255, 255, 255, 0.2);">
-                        <p class="level-item content-no-padding">.level-right<br>.level-item<br>.level-content</p>
+                    <div class="level-right level-content level-item" style="background:rgba(255, 255, 255, 0.2);">
+                        <p>.level-right<br>.level-item<br>.level-content</p>
                     </div>
                 </div>
             </div>
@@ -599,18 +600,18 @@
             
             <space></space>
 
-            <h6>Fill Height</h6>
+            <h5>Fill Height</h5>
             <p>Looking at the previous examples, you may be wondering how to force the <code>level-items</code> to fill the height of its parent container. This is easily done by adding the <code>fill-height</code> class to the <code>level</code> div.</p>
             <div class="row">
                  <div class="level" style="background-image: linear-gradient(to right, #fff1eb 0%, #ace0f9 100%); border-radius: .3rem; overflow: hidden;">
-                    <div class="level-left level-content" style="background:rgba(255, 255, 255, 0.2);">
-                        <p class="level-item content-no-padding padtop">Totally</p>
+                    <div class="level-left level-content level-item" style="background:rgba(255, 255, 255, 0.2);">
+                        <p>Totally</p>
                     </div>
-                    <div class="level-item level-content" style="background:rgba(255, 255, 255, 0.2);">
-                        <p class="content-no-padding text-center padtop">Equal</p>
+                    <div class="level-item level-content level-item" style="background:rgba(255, 255, 255, 0.2);">
+                        <p>Equal</p>
                     </div>
-                    <div class="level-right level-content" style="background:rgba(255, 255, 255, 0.2);">
-                        <p class="level-item content-no-padding padtop">Heights</p>
+                    <div class="level-right level-content level-item" style="background:rgba(255, 255, 255, 0.2);">
+                        <p>Heights</p>
                     </div>
                 </div>
             </div>
@@ -619,133 +620,133 @@
 
     <section id="pagination" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#pagination" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Pagination</h3>
+            <h1><a href="./index.html#pagination" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Pagination</h1>
             <div class="divider"></div>
             <p>Cirrus comes with easy to style pagination menus that allow for easy navigation between pages in websites and forums. All you need to do is add the <code>pagination</code> class to the parent container and the <code>pagination-item</code> class to the children. To display numerous small pagination items, add the <code>short</code> class. In the small pagination menu shown below, to indicate that a page is selected, add the <code>selected</code> class to the page item.</p>
             <div class="row">
                 <div class="col-6">
                     <div class="pagination">
                         <div class="pagination-item short">
-                            <a href="#" class="btn-link">Prev</a>
-                        </div>
-                        <div class="pagination-item short">
-                            <a href="#" class="btn-link">1</a>
-                        </div>
-                        <div class="pagination-item short">
-                            <a>...</a>
-                        </div>
-                        <div class="pagination-item short">
-                            <a href="#" class="btn-link">3</a>
-                        </div>
-                        <div class="pagination-item short">
-                            <a href="#" class="btn-link">4</a>
+                            <a disabled="" href="#" class="">Prev</a>
                         </div>
                         <div class="pagination-item short selected">
-                            <a href="#" class="btn-link">5</a>
+                            <a href="#" class="">1</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="">2</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="">3</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="">4</a>
                         </div>
                         <div class="pagination-item short">
                             <a>...</a>
                         </div>
                         <div class="pagination-item short">
-                            <a href="#" class="btn-link">23</a>
+                            <a href="#" class="">13</a>
                         </div>
                         <div class="pagination-item short">
-                            <a href="#" class="btn-link">Next</a>
+                            <a href="#" class="">Next</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6">
-                    <div class="pagination">
+                    <div class="pagination pagination-bordered">
                         <div class="pagination-item short">
-                            <a disabled href="#" class="btn-link">Prev</a>
-                        </div>
-                        <div class="pagination-item short selected">
-                            <a href="#" class="btn-link">1</a>
+                            <a href="#" class="">Prev</a>
                         </div>
                         <div class="pagination-item short">
-                            <a href="#" class="btn-link">2</a>
-                        </div>
-                        <div class="pagination-item short">
-                            <a href="#" class="btn-link">3</a>
-                        </div>
-                        <div class="pagination-item short">
-                            <a href="#" class="btn-link">4</a>
+                            <a href="#" class="">1</a>
                         </div>
                         <div class="pagination-item short">
                             <a>...</a>
                         </div>
                         <div class="pagination-item short">
-                            <a href="#" class="btn-link">13</a>
+                            <a href="#" class="">3</a>
                         </div>
                         <div class="pagination-item short">
-                            <a href="#" class="btn-link">Next</a>
+                            <a href="#" class="">4</a>
+                        </div>
+                        <div class="pagination-item short selected">
+                            <a href="#" class="">5</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a>...</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="">23</a>
+                        </div>
+                        <div class="pagination-item short">
+                            <a href="#" class="">Next</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-6&quot;&gt;
-    &lt;div class=&quot;pagination&quot;&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;Prev&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;1&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a&gt;...&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;3&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;4&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short selected&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;5&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a&gt;...&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;23&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;Next&lt;/a&gt;
+    &lt;div class=&quot;col-6&quot;&gt;
+        &lt;div class=&quot;pagination&quot;&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a disabled=&quot;&quot; href=&quot;#&quot; class=&quot;&quot;&gt;Prev&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short selected&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;1&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;2&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;3&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;4&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a&gt;...&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;13&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Next&lt;/a&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
 
-&lt;div class=&quot;col-6&quot;&gt;
-    &lt;div class=&quot;pagination&quot;&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a disabled href=&quot;#&quot; class=&quot;btn-link&quot;&gt;Prev&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short selected&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;1&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;2&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;3&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;4&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a&gt;...&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;13&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;pagination-item short&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;btn-link&quot;&gt;Next&lt;/a&gt;
+    &lt;div class=&quot;col-6&quot;&gt;
+        &lt;div class=&quot;pagination pagination-bordered&quot;&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Prev&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;1&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a&gt;...&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;3&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;4&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short selected&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;5&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a&gt;...&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;23&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pagination-item short&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Next&lt;/a&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
             <p>Paginations are also designed to provide easy access to different pages once the user reaches the bottom of a page. Just simply add the <code>pagination</code> class to the parent container and add the <code>pagination-item</code> class to 2 children (3 or more may take up more width than the parent container).</p>
@@ -786,39 +787,39 @@
     <!-- Frames documentation -->
     <section id="frames" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#frames" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Frames</h3>
+            <h1><a href="./index.html#frames" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Frames</h1>
             <div class="divider"></div>
             <p>Frames are designed similar to <a href="../components#cards" class="u u-LR">cards</a>, but provide more flexibility to the developer to align items in a structured layout. The <b>frame</b> is designed to auto-expand with more content.</p>
             <div class="row">
                 <div class="col-6">
                     <div class="frame" style="background: #fff; padding: 1rem;">
                         <div class="frame-header" style="background: #eee; padding: 1rem; margin: 1rem;">
-                            <div class="frame-title text-center">Frame Title</div>
-                            <div class="frame-subtitle text-center">Frame Subtitle</div>
-                            <div class="frame-subtitle text-center">This is the frame header.</div>
+                            <div class="frame__title u-text-center">Frame Title</div>
+                            <div class="frame__subtitle u-text-center">Frame Subtitle</div>
+                            <div class="frame__subtitle u-text-center">This is the frame header.</div>
                         </div>
-                        <div class="frame-body" style="background: #eee; padding: 1rem; margin: 1rem;">
-                            <div class="frame-title text-center">Frame Body</div>
-                            <div class="frame-subtitle text-center">Insert any component here, including a frame navigation menu using <code>frame-nav</code>. The frame will auto-expand and if a specific height is set, a scrollbar will appear to take care of overflow.</div>
-                            <blockquote class="text-center">The lighter gray is the frame itself while the grey are the components of the frame. Please note that the margins are just to serve as an example.</blockquote>
+                        <div class="frame__body" style="background: #eee; padding: 1rem; margin: 1rem;">
+                            <div class="frame__title u-text-center">Frame Body</div>
+                            <div class="frame__subtitle u-text-center">Insert any component here, including a frame navigation menu using <code>frame-nav</code>. The frame will auto-expand and if a specific height is set, a scrollbar will appear to take care of overflow.</div>
+                            <blockquote class="u-text-center">The lighter gray is the frame itself while the grey are the components of the frame. Please note that the margins are just to serve as an example.</blockquote>
                         </div>
-                        <div class="frame-footer" style="background: #eee; padding: 1rem; margin: 1rem;">
-                            <div class="frame-title text-center">Frame Footer</div>
-                            <div class="frame-subtitle text-center">Takes up the bottom of the frame.</div>
+                        <div class="frame__footer" style="background: #eee; padding: 1rem; margin: 1rem;">
+                            <div class="frame__title u-text-center">Frame Footer</div>
+                            <div class="frame__subtitle u-text-center">Takes up the bottom of the frame.</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot;&gt;
     &lt;div class=&quot;frame-header&quot;&gt;
-        &lt;div class=&quot;frame-title text-center&quot;&gt;Frame Title&lt;/div&gt;
-        &lt;div class=&quot;frame-subtitle text-center&quot;&gt;Frame Subtitle&lt;/div&gt;
-        &lt;div class=&quot;frame-subtitle text-center&quot;&gt;This is the frame header.&lt;/div&gt;
+        &lt;div class=&quot;frame__title u-text-center&quot;&gt;Frame Title&lt;/div&gt;
+        &lt;div class=&quot;frame__subtitle u-text-center&quot;&gt;Frame Subtitle&lt;/div&gt;
+        &lt;div class=&quot;frame__subtitle u-text-center&quot;&gt;This is the frame header.&lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;frame-body&quot;&gt;
+    &lt;div class=&quot;frame__body&quot;&gt;
         &lt;!-- Insert other controls here --&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;frame-footer&quot;&gt;
+    &lt;div class=&quot;frame__footer&quot;&gt;
         &lt;!-- Insert some controls here --&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -828,63 +829,63 @@
             <div class="row">
                 <div class="col-6">
                     <div class="frame">
-                        <div class="frame-header text-center">
+                        <div class="frame__header u-text-center">
                             <div class="row">
                                 <figure class="avatar">
                                     <img src="http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg">
                                 </figure>
                             </div>
                             <div class="row">
-                                <div class="frame-title">John Doe</div>
-                                <div class="frame-subtitle">Freelance Photographer</div>
+                                <div class="frame__title">John Doe</div>
+                                <div class="frame__subtitle">Freelance Photographer</div>
                             </div>
                             <div class="row fluid-container">
-                                <a class="col-fluid" href="#"><i class="fa fa-facebook link-btn"></i></a>
-                                <a class="col-fluid" href="#"><i class="fa fa-twitter link-btn"></i></a>
-                                <a class="col-fluid" href="#"><i class="fa fa-instagram link-btn"></i></a>
-                                <a class="col-fluid" href="#"><i class="fa fa-medium link-btn"></i></a>
+                                <a class="col-fluid" href="#"><i class="fa fa-wrapper fa-facebook link-btn"></i></a>
+                                <a class="col-fluid" href="#"><i class="fa fa-wrapper fa-twitter link-btn"></i></a>
+                                <a class="col-fluid" href="#"><i class="fa fa-wrapper fa-instagram link-btn"></i></a>
+                                <a class="col-fluid" href="#"><i class="fa fa-wrapper fa-medium link-btn"></i></a>
                             </div>
                         </div>
                         <div class="content-no-padding"><div class="divider no-margin"></div></div>
-                        <div class="frame-body">
-                            <div class="content text-center">
+                        <div class="frame__body">
+                            <div class="content u-text-center">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
                         </div>
                         <div class="content-no-padding"><div class="divider no-margin"></div></div>
-                        <div class="frame-footer">
-                            <div class="frame-subtitle text-center"><i>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i></div>
+                        <div class="frame__footer">
+                            <div class="frame__subtitle u-text-center"><i>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot;&gt;
-    &lt;div class=&quot;frame-header text-center&quot;&gt;
+    &lt;div class=&quot;frame__header u-text-center&quot;&gt;
         &lt;div class=&quot;row&quot;&gt;
             &lt;figure class=&quot;avatar&quot;&gt;
                 &lt;img src=&quot;http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg&quot;&gt;
             &lt;/figure&gt;
         &lt;/div&gt;
         &lt;div class=&quot;row&quot;&gt;
-            &lt;div class=&quot;frame-title&quot;&gt;John Doe&lt;/div&gt;
-            &lt;div class=&quot;frame-subtitle&quot;&gt;Freelance Photographer&lt;/div&gt;
+            &lt;div class=&quot;frame__title&quot;&gt;John Doe&lt;/div&gt;
+            &lt;div class=&quot;frame__subtitle&quot;&gt;Freelance Photographer&lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;row fluid-container&quot;&gt;
-            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-facebook link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-twitter link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-instagram link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-medium link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-facebook link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-twitter link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-instagram link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-medium link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;content-no-padding&quot;&gt;&lt;div class=&quot;divider no-margin&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;div class=&quot;frame-body&quot;&gt;
-        &lt;div class=&quot;content text-center&quot;&gt;
+    &lt;div class=&quot;frame__body&quot;&gt;
+        &lt;div class=&quot;content u-text-center&quot;&gt;
             &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;content-no-padding&quot;&gt;&lt;div class=&quot;divider no-margin&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-    &lt;div class=&quot;frame-footer&quot;&gt;
-        &lt;div class=&quot;frame-subtitle text-center&quot;&gt;&lt;i&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/i&gt;&lt;/div&gt;
+    &lt;div class=&quot;frame__footer&quot;&gt;
+        &lt;div class=&quot;frame__subtitle u-text-center&quot;&gt;&lt;i&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/i&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 </div>
@@ -893,13 +894,13 @@
             <div class="row">
                 <div class="col-6">
                     <div class="frame" style="height:30rem;">
-                        <div class="frame-header" style="box-shadow: 0 2px 3px rgba(85, 85, 85, 0.1);">
-                            <div class="frame-title title no-margin">Super Awesome Group Chat</div>
+                        <div class="frame__header" style="box-shadow: 0 2px 3px rgba(85, 85, 85, 0.1);">
+                            <div class="frame__title title no-margin">Super Awesome Group Chat</div>
                         </div>
-                        <div class="frame-body">
+                        <div class="frame__body">
                             <space></space>
                             <div class="row">
-                                <div class="tile no-margin">
+                                <div class="tile tile-center no-margin">
                                     <div class="tile-icon">
                                         <figure class="avatar img-small" data-text="El"></figure>
                                     </div>
@@ -910,7 +911,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="tile no-margin">
+                                <div class="tile tile-center no-margin">
                                     <figure class="avatar img-small">
                                         <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
                                     </figure>
@@ -921,7 +922,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="tile no-margin">
+                                <div class="tile tile-center no-margin">
                                      <div class="tile-icon">
                                         <figure class="avatar img-small" data-text="El"></figure>
                                     </div>
@@ -932,7 +933,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="tile no-margin">
+                                <div class="tile tile-center no-margin">
                                     <div class="tile-icon">
                                         <figure class="avatar img-small">
                                             <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
@@ -945,7 +946,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="tile no-margin">
+                                <div class="tile tile-center no-margin">
                                      <div class="tile-icon">
                                         <figure class="avatar img-small" data-text="El"></figure>
                                     </div>
@@ -956,30 +957,30 @@
                                     <div class="tile-buttons">
                                         <a href="#" style="display: block;">
                                             <div class="btn-link">
-                                                <i class="fa fa-ellipsis-v small" aria-hidden="true"></i>
+                                                <i class="fa fa-wrapper fa-ellipsis-v small" aria-hidden="true"></i>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="frame-footer">
+                        <div class="frame__footer">
                             <div class="form-group input-control">
                                 <input type="text" class="form-group-input input-small input-contains-icon" placeholder="Send a message"/>
-                                <span class="icon"><a href="#" class="this-block"><i class="fa fa-plus small" aria-hidden="true"></i></a></span>
-                                <button class="btn-accent form-group-btn btn-small">Send</button>
+                                <span class="icon"><a href="#"><i class="fa fa-wrapper fa-plus small" aria-hidden="true"></i></a></span>
+                                <button class="btn-primary form-group-btn btn-small">Send</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="frame" style="height:30rem;">
-                        <div class="frame-header">
+                        <div class="frame__header">
                             <div class="avatar">
                                 <img src="http://i.imgur.com/sbKJVxr.png" />
                             </div>
-                            <p class="text-center frame-title">John Doe</p>
-                            <p class="text-center frame-subtitle">Former youngest person on Earth </p>
+                            <p class="u-text-center frame__title">John Doe</p>
+                            <p class="u-text-center frame__subtitle">Former youngest person on Earth </p>
                             <div class="tab-container tabs-fill">
                                 <ul>
                                     <li class="tab-item"><a>Favorites</a></li>
@@ -988,11 +989,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="frame-body">
+                        <div class="frame__body">
                            <div class="tile level">
                                 <div class="tile-avatar">
                                     <span class="icon">
-                                        <i class="fa fa-twitter"></i>
+                                        <i class="fa fa-wrapper fa-twitter"></i>
                                     </span>
                                 </div>
                                 <div class="tile-container">
@@ -1002,7 +1003,7 @@
                                 <div class="tile-buttons">
                                     <a href="#" class="link-btn">
                                         <span class="icon">
-                                            <i class="fa fa-pencil small"></i>
+                                            <i class="fa fa-wrapper fa-pencil small"></i>
                                         </span>
                                     </a>
                                 </div>
@@ -1011,7 +1012,7 @@
                            <div class="tile level">
                                 <div class="tile-avatar">
                                     <span class="icon">
-                                        <i class="fa fa-instagram"></i>
+                                        <i class="fa fa-wrapper fa-instagram"></i>
                                     </span>
                                 </div>
                                 <div class="tile-container">
@@ -1023,7 +1024,7 @@
                            <div class="tile level">
                                 <div class="tile-avatar">
                                     <span class="icon">
-                                        <i class="fa fa-envelope-o"></i>
+                                        <i class="fa fa-wrapper fa-envelope-o"></i>
                                     </span>
                                 </div>
                                 <div class="tile-container">
@@ -1035,7 +1036,7 @@
                            <div class="tile level">
                                 <div class="tile-avatar">
                                     <span class="icon">
-                                        <i class="fa fa-map-marker"></i>
+                                        <i class="fa fa-wrapper fa-map-marker"></i>
                                     </span>
                                 </div>
                                 <div class="tile-container">
@@ -1044,7 +1045,7 @@
                                 </div>
                            </div>
                         </div>
-                        <div class="frame-footer">
+                        <div class="frame__footer">
 
                         </div>
                     </div>
@@ -1074,8 +1075,8 @@
         </div>
     </section>
 
-    <script async src="../../demo_res/js/smoothscroll.js"></script>
-    <script async src="../../demo_res/js/app.js"></script>
+    <script async src="../../res/js/smoothscroll.js"></script>
+    <script async src="../../res/js/app.js"></script>
     <script async src="./app.js"></script>
 
     <script src="https://use.fontawesome.com/a696b91557.js"></script>
@@ -1086,7 +1087,7 @@
 </body>
 
     <footer>
-        <h6 class="white uppercase">Cirrus</h6>
+        <h6 class="white uppercase">Cirrus</h5>
         <div class="content">
             <div class="divider"></div>
             <!--<li class="no-bullets footer-list-title">Docs</li>-->
@@ -1146,7 +1147,7 @@
             </div>
         </div>
         <p class="subtitle">The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
-        <p>Made with <i class="fa fa-heart pulse" aria-hidden="true"></i> by <a href="http://stanleylim.me" target="_blank">Stanley Lim</a>
+        <p>Made with <i class="fa fa-wrapper fa-heart pulse" aria-hidden="true"></i> by <a href="http://stanleylim.me" target="_blank">Stanley Lim</a>
         </p>
     </footer>
 
