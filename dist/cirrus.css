@@ -4461,7 +4461,7 @@ video.video-fullscreen {
 /* Animated links */
 .u,
 .utb {
-    display: block;
+    display: inline;
     position: relative; /* So the psuedo-elements are positioned correctly */
 }
 
