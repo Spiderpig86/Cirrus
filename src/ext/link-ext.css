@@ -2,6 +2,7 @@
 /* Animated links */
 .u,
 .utb {
+    display: block;
     position: relative; /* So the psuedo-elements are positioned correctly */
 }
 
