@@ -5185,63 +5185,63 @@ a.tag:hover {
     font-size: 0.95rem;
 }
 
-.tile .tile-icon,
-.tile .tile-buttons {
+.tile .tile__icon,
+.tile .tile__buttons {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
 }
 
 /* Override the default behavior where buttons display as blocks */
-.tile .tile-buttons button,
-.tile .tile-buttons .btn,
-.tile .tile-buttons [type="submit"] {
+.tile .tile__buttons button,
+.tile .tile__buttons .btn,
+.tile .tile__buttons [type="submit"] {
     display: inline-block;
     margin: 0.1rem; /* Reduce space used by buttons, default .5rem */
 }
 
-.tile .tile-container {
+.tile .tile__container {
     flex: 1 1 auto;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
 }
 
 /* Add spacing between the elements in between */
-.tile .tile-container:not(:first-child) {
+.tile .tile__container:not(:first-child) {
     padding-left: 1rem;
 }
 
-.tile .tile-container:not(:last-child) {
+.tile .tile__container:not(:last-child) {
     padding-right: 1rem;
 }
 
-.tile .tile-title {
+.tile .tile__title {
     line-height: 2rem;
     font-weight: bolder;
     margin: 0.1rem auto;
 }
 
-.tile .tile-subtitle {
+.tile .tile__subtitle {
     line-height: 1.25rem;
     opacity: 0.7;
     margin: 0.1rem auto;
 }
 
 /* Force elements to align at the center vertical height */
-.tile.tile-center {
+.tile.tile--center {
     align-items: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
 }
 
-.tile.tile-center .tile-container {
+.tile.tile--center .tile__container {
     /* Shrink the text to fit inside the tile */
     overflow: hidden;
 }
 
 /* Keep the text from overflowing */
-.tile.tile-center .tile-title,
-.tile.tile-center .tile-subtitle.no-wrap {
+.tile.tile--center .tile__title,
+.tile.tile--center .tile__subtitle.no-wrap {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
