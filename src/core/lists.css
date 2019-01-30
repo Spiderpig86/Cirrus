@@ -166,12 +166,12 @@ ul.menu {
 }
 
 /* Dropdown menu for dropdown buttons */
-.menu-dropdown {
+.list-dropdown {
   display: inline-block;
   position: relative;
 }
 
-.menu-dropdown .menu {
+.list-dropdown .menu {
   position: absolute;
   top: 75%;
   left: 0;
@@ -193,15 +193,15 @@ ul.menu {
   transition: all .2s;
 }
 
-.menu-dropdown.dropdown-right .menu {
+.list-dropdown.dropdown-right .menu {
   left: auto;
   right: 0;
 }
 
 /* Allow for shown and :focus selectors for JS and native CSS transitions */
-.menu-dropdown.shown .menu,
-.menu-dropdown .btn-dropdown:focus + .menu,
-.menu-dropdown .menu:hover {
+.list-dropdown.shown .menu,
+.list-dropdown .btn-dropdown:focus + .menu,
+.list-dropdown .menu:hover {
   display: block;
   opacity: 1;
   top: 100%;
@@ -212,7 +212,7 @@ ul.menu {
   transition: all .2s;
 }
 
-.menu-dropdown .btn-group .btn-dropdown:nth-last-child(2) {
+.list-dropdown .btn-group .btn-dropdown:nth-last-child(2) {
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
 }
@@ -392,7 +392,7 @@ ul.menu {
   }
 
   /* For dropdown menu used in header (different from header dropdown) */
-  .nav-item.has-sub .menu-dropdown { width: 100%; }
-  .nav-item.has-sub .menu-dropdown .btn-group { width: 100%; }
-  .nav-item.has-sub .menu-dropdown .btn-group .btn-dropdown { flex-grow: 0; }
+  .nav-item.has-sub .list-dropdown { width: 100%; }
+  .nav-item.has-sub .list-dropdown .btn-group { width: 100%; }
+  .nav-item.has-sub .list-dropdown .btn-group .btn-dropdown { flex-grow: 0; }
 }
