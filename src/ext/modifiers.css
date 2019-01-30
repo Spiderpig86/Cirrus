@@ -1,13 +1,15 @@
 /* A collection of modifiers that extend control styling */
 .btn.btn--pilled,
-[class^="btn-"].btn--pilled {
+[class^="btn-"].btn--pilled,
+[class*=" btn-"].btn--pilled {
     border-radius: 6.25rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
 
 .btn.btn--circle,
-[class^="btn-"].btn--circle {
+[class^="btn-"].btn--circle,
+[class*=" btn-"].btn--circle {
     border-radius: 100%;
     height: 3.125rem;
     line-height: 3.125rem;
@@ -33,12 +35,12 @@
 .bg-link-dark { background-color: var(--cirrus-link-dark) !important; }
 .bg-info { background-color: var(--cirrus-info) !important; }
 
-.fg-primary { color: var(--cirrus-primary) !important; }
-.fg-success { color: var(--cirrus-success) !important; }
-.fg-warning { color: var(--cirrus-warning) !important; }
-.fg-danger { color: var(--cirrus-danger) !important; }
-.fg-light { color: var(--cirrus-light) !important; }
-.fg-dark { color: var(--cirrus-dark) !important; }
-.fg-link { color: var(--cirrus-link) !important; }
-.fg-link-dark { color: var(--cirrus-link-dark) !important; }
-.fg-info { color: var(--cirrus-info) !important; }
+.text-primary { color: var(--cirrus-primary) !important; }
+.text-success { color: var(--cirrus-success) !important; }
+.text-warning { color: var(--cirrus-warning) !important; }
+.text-danger { color: var(--cirrus-danger) !important; }
+.text-light { color: var(--cirrus-light) !important; }
+.text-dark { color: var(--cirrus-dark) !important; }
+.text-link { color: var(--cirrus-link) !important; }
+.text-link-dark { color: var(--cirrus-link-dark) !important; }
+.text-info { color: var(--cirrus-info) !important; }

@@ -140,7 +140,6 @@
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -180,6 +179,11 @@
 /* Turns element into a circle */
 .u-circle {
   border-radius: 50%;
+}
+
+/* Remove outline or drop shadow when element is focused */
+.u-no-shadow {
+  box-shadow: none;
 }
 
 /* Responsiveness and Element Hiding */

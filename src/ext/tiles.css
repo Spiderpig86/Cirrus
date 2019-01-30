@@ -5,14 +5,12 @@
     display: -webkit-flex;
     align-content: space-between; /* Ensure space between child elements of card tile */
     -webkit-align-content: space-between;
-    align-items: flex-start; /* Push elements to the top of container instead of center/bottom */
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
+    /* align-items: flex-start; Push elements to the top of container instead of center/bottom (removed since unneeded */
     -ms-flex-line-pack: justify; /* Evenly distribute lines */
 }
 
 .tile p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .tile .tile-icon,

@@ -2,6 +2,7 @@
 /* Animated links */
 .u,
 .utb {
+    display: inline;
     position: relative; /* So the psuedo-elements are positioned correctly */
 }
 
@@ -148,7 +149,7 @@
 }
 
 .usquare.delay::after {
-    transition-delay: 0.2s;
+    transition-delay: var(--animation-duration);
 }
 
 .usquare a::before {

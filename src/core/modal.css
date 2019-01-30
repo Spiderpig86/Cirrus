@@ -72,8 +72,8 @@
 
 .modal:target .modal-container,
 .modal.shown .modal-container {
-  -webkit-animation: slide-down .2s ease 1;
-  animation: slide-down .2s ease 1;
+  -webkit-animation: slide-down var(--animation-duration) ease 1;
+  animation: slide-down var(--animation-duration) ease 1;
   z-index: 1;
 }
 
@@ -104,8 +104,8 @@
 
 /* MODAL ANIMATIONS */
 .modal.modal-animated--dropdown {
-    -webkit-animation: slide-down .2s ease 1;
-    animation: slide-down .2s ease 1;
+    -webkit-animation: slide-down var(--animation-duration) ease 1;
+    animation: slide-down var(--animation-duration) ease 1;
 }
 
 /* Visible state */

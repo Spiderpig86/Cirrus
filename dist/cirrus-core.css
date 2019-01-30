@@ -18,7 +18,7 @@ button,
     border-radius: 0.25rem;
     cursor: pointer;
     text-align: center;
-    transition: all 0.2s;
+    transition: all 0var(--animation-duration);
     background-color: #fefefe;
     border-color: #d9d9d9;
     color: #737373;
@@ -30,48 +30,53 @@ button,
     user-select: none;
     margin-bottom: 1rem;
     outline: none;
+    --btn-color: #fefefe;
+    --btn-fg: #737373;
+    --btn-border-color: #d9d9d9;
 }
 
 button:hover,
 .btn:hover,
 [type="submit"]:hover {
-    transition: all 0.2s;
+    transition: all var(--animation-duration);
 }
 
 .btn:active,
 button:active,
 [type="submit"]:active {
-    transition: 0.2s ease;
+    transition: var(--animation-duration) ease;
 }
 
 /* Default button colors */
-button:not([class^="btn-"]):hover,
-.btn:not([class^="btn-"]):hover,
-[type="submit"]:not([class^="btn-"]):hover {
-    background-color: #eee
-}
-
-.btn:not([class^="btn-"]):active,
-button:not([class^="btn-"]):active,
-[type="submit"]:not([class^="btn-"]):active {
-    background-color: #ddd;
+button:hover,
+.btn:hover,
+[type="submit"]:hover {
+    background-color: #eee;
+    --btn-color: #eee;
 }
 
 /* Make the loading circle, if present, white when button is active */
 .btn.loading:active::after,
 button.loading:active::after,
 [type="submit"].loading:active::after {
-    transition: 0.2s ease;
+    transition: var(--animation-duration) ease;
     border-radius: 50%;
     border-right-color: transparent;
     border-top-color: transparent;
 }
 
+button.btn-animated,
+[type="submit"].btn-animated,
+.btn.btn-animated {
+    transition: calc(var(--animation-duration) / 2) ease;
+}
+
 button.btn-animated:active,
 [type="submit"].btn-animated:active,
 .btn.btn-animated:active {
-    -webkit-transform: scale(0.99);
-    transform: inherit, scale(0.99);
+    -webkit-transform: scale(0.98);
+    transform: inherit, scale(0.98);
+    transition: calc(var(--animation-duration) / 2) ease;
 }
 
 .btn:focus,
@@ -231,24 +236,24 @@ button.btn-close::after {
 .btn-danger.outline:hover { --btn-color: var(--cirrus-danger); }
 .btn-danger:focus { box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5); }
 
-[class^="btn-"] {
+[class^="btn-"], [class*=" btn-"] {
     background-color: var(--btn-color); 
     border: 1px solid var(--btn-border-color);
     color: var(--btn-fg);
-    transition: all .2s;
+    transition: all var(--animation-duration);
 }
 
-[class^="btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all .2s; }
+[class^="btn-"]:hover, [class*=" btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all var(--animation-duration); }
 
 /* Outline Variants */
-[class^="btn-"].outline {
+[class^="btn-"].outline, [class*=" btn-"].outline {
     background-color: transparent; 
     color: var(--btn-color);
 }
-[class^="btn-"].outline:hover {
+[class^="btn-"].outline:hover, [class*=" btn-"].outline:hover {
     background-color: var(--btn-color);
     color: var(--btn-fg);
-    transition: all .2s;
+    transition: all var(--animation-duration);
 }
 
 /* Right of input */
@@ -502,6 +507,14 @@ audio,
 video {
     max-width: 100%;
     height: auto;
+}
+
+.hero.fullscreen video {
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
 }
 
 iframe {
@@ -1268,6 +1281,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
+    margin-bottom: 0;
 }
 
 /* This is just an extended portion of an input which is just like a label and is read only */
@@ -1557,8 +1571,8 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 /* Just add a transition in general */
 .nav-item .dropdown-menu.dropdown-animated {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 /* Dropdown menu location adjustment located below for sizes above phones */
@@ -1968,11 +1982,11 @@ section {
 /* This works well with spans and maybe even hr */
 .divider {
     display: block;
-    height: 2px;
+    height: 1px;
     position: relative;
     border-top: none;
     margin: 1.5rem 0;
-    background-color: #eee;
+    background-color: rgba(173, 173, 173, 0.5);
     width: 100%;
 }
 
@@ -2001,9 +2015,9 @@ section {
     display: -ms-flexbox;
     display: flex; /* Important to stretch height of hero-body */
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
+    /* -webkit-box-direction: normal; /* Deprecated 0.5.5 
     -ms-flex-direction: column;
-    flex-direction: column; /* Stack the items in the container */
+    flex-direction: column; Stack the items in the container */
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -2237,11 +2251,6 @@ space.x-large {
     flex: none;
 }
 
-/* Known to cause spacing issues in columns */
-/*.row [class^='col-']:first-child, .row [class*=" col-"]:first-child{
-  margin-left: 0;
-}*/
-
 /* Used for aligning controls next to each other */
 .row.has-controls {
     display: -webkit-box;
@@ -2254,13 +2263,13 @@ space.x-large {
 
 /* Divider for multiple elements in a div */
 .divided > .fluid-container:not(.row),
-.divided > .row [class^="col-"] {
+.divided > .row [class^="col-"], .divided > .row [class*=" col-"] {
     box-shadow: -1px 0 0 0 rgba(34, 36, 38, 0.15);
 }
 
 /* Remove border in first child */
 .divided > .row [class^="col-"]:first-child,
-.divided > .row [class^="col-"]:first-child {
+.divided > .row [class*=" col-"]:first-child {
     box-shadow: none;
 }
 
@@ -2381,6 +2390,7 @@ space.x-large {
         align-items: stretch;
         display: -webkit-box;
         display: -ms-flexbox;
+        display: flex;
     }
 }
 
@@ -2400,6 +2410,7 @@ space.x-large {
 
     /* Increase space with cards */
     .fluid-container [class^="col-"]:not(.ignore-screen),
+    .fluid-container [class*=" col-"]:not(.ignore-screen),
     .row [class*=" col-"]:not(.ignore-screen) {
         margin-top: 1rem;
     }
@@ -2410,7 +2421,8 @@ space.x-large {
 
     /* Dividers for mobile layout */
     .divided > .fluid-container:not(.row),
-    .divided > .row [class^="col-"] {
+    .divided > .row [class^="col-"],
+    .divided > .row [class*=" col-"] {
         box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
     }
 
@@ -2420,6 +2432,10 @@ space.x-large {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+    }
+
+    .level.fill-height {
+        display: inherit; /* Allow children to expand */
     }
 }
 
@@ -2460,7 +2476,11 @@ a.underline {
 }
 
 p a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, blockquote a, article a {
-    display: inline-block;
+    display: inline;
+}
+
+a .btn, a button {
+    margin-bottom: 0; /* Remove random excess space */
 }
 /* LISTS */
 
@@ -2552,15 +2572,15 @@ ul.menu {
   border-radius: 3px;
   font-size: 0.85rem;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu .menu-item:hover > a {
   background-color: rgba(208, 208, 208, 0.3);
   color: #d43644;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
   
 }
 
@@ -2577,8 +2597,8 @@ ul.menu {
   cursor: pointer;
   float: left;
   margin-right: .1rem;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu .menu-item .menu-addon .icon {
@@ -2588,8 +2608,8 @@ ul.menu {
 /* Darken on hover to differentiate from menu-item */
 .menu .menu-item .menu-addon:hover {
   background-color: rgba(60, 60, 60, 0.25);
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu .menu-item .menu-addon.right {
@@ -2639,7 +2659,7 @@ ul.menu {
   position: absolute;
   top: 75%;
   left: 0;
-  -webkit-animation: slide-down .2s ease 1;
+  -webkit-animation: slide-down var(--animation-duration) ease 1;
   animation: slide-down .1s ease 1;
   background-color: var(--cirrus-bg);
   border-radius: .2rem;
@@ -2653,8 +2673,8 @@ ul.menu {
   z-index: 10;
   pointer-events: none; /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
   overflow: hidden;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .list-dropdown.dropdown-right .menu {
@@ -2672,8 +2692,8 @@ ul.menu {
   z-index: 100;
   pointer-events: auto; /* Restore pointer events */
   height: auto;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .list-dropdown .btn-group .btn-dropdown:nth-last-child(2) {
@@ -2698,8 +2718,8 @@ ul.menu {
 
 /* The dropdown glyph of the tree menu */
 .tree .tree-item .tree-item-header .icon {
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 /* Expand the tree-item-body (has menu-items) */
@@ -2718,8 +2738,8 @@ ul.menu {
   max-height: 0; /* Hidden at first */
   margin-left: 1.5rem;
   overflow: hidden;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 /* TODO: Docs */
@@ -2793,10 +2813,10 @@ ul.menu {
     top: 0;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
-    transition: transform .2s ease, -webkit-transform .2s ease;
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: transform .2s ease;
-    transition: -webkit-transform .2s ease;
+    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+    -webkit-transition: -webkit-transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
+    transition: -webkit-transform var(--animation-duration) ease;
     z-index: 400;
   }
 
@@ -2805,10 +2825,10 @@ ul.menu {
   .tree-nav:target {
     -webkit-transform: translateX(0);
     transform: translateX(0);
-    transition: transform .2s ease, -webkit-transform .2s ease;
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: -webkit-transform .2s ease;
-    transition: transform .2s ease;
+    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+    -webkit-transition: -webkit-transform var(--animation-duration) ease;
+    transition: -webkit-transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
   }
 
   /* Create the area to click to close the menu */
@@ -3015,8 +3035,8 @@ video.video-fullscreen {
 
 .modal:target .modal-container,
 .modal.shown .modal-container {
-  -webkit-animation: slide-down .2s ease 1;
-  animation: slide-down .2s ease 1;
+  -webkit-animation: slide-down var(--animation-duration) ease 1;
+  animation: slide-down var(--animation-duration) ease 1;
   z-index: 1;
 }
 
@@ -3047,8 +3067,8 @@ video.video-fullscreen {
 
 /* MODAL ANIMATIONS */
 .modal.modal-animated--dropdown {
-    -webkit-animation: slide-down .2s ease 1;
-    animation: slide-down .2s ease 1;
+    -webkit-animation: slide-down var(--animation-duration) ease 1;
+    animation: slide-down var(--animation-duration) ease 1;
 }
 
 /* Visible state */
@@ -3238,7 +3258,9 @@ video.video-fullscreen {
     --cirrus-form-group-bg: #f8f9fa;
     --cirrus-form-group-fg: #909090;
 
-    --toast-primary-bg: #00c9a7;
+    --toast-primary-bg: rgba(49, 59, 80, 0.9);
+
+    --animation-duration: .2s;
 }
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
@@ -3382,7 +3404,6 @@ video.video-fullscreen {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -3422,6 +3443,11 @@ video.video-fullscreen {
 /* Turns element into a circle */
 .u-circle {
   border-radius: 50%;
+}
+
+/* Remove outline or drop shadow when element is focused */
+.u-no-shadow {
+  box-shadow: none;
 }
 
 /* Responsiveness and Element Hiding */

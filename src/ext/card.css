@@ -7,78 +7,80 @@
     display: block;
     position: relative;
     overflow: hidden;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     backface-visibility: hidden;
 }
 
 .card:hover {
-    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1), 0 0 12px 2px rgba(10, 10, 10, 0.1);
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1),
+        0 0 12px 2px rgba(10, 10, 10, 0.1);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .slide-up:hover .card-image {
-   transform: translateY(-40px);
+    transform: translateY(-40px);
 }
 
 .card:hover .card-image::after {
-  opacity: 0;
+    opacity: 0;
 }
 
 .card-image {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-      border-radius: 5px 5px 0 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  
-  transition: all .3s ease-in-out;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .card-image::after {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
-  top: 0;
-  left: 0;
-  right: 0;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    bottom: 0;
 }
 
 .card-container {
-  display: block;
-position: relative;
-  height: 40%;
-  min-height: 332px; /* So it appears in html5 standards mode */
+    display: block;
+    position: relative;
+    height: 40%;
+    min-height: 332px; /* So it appears in html5 standards mode */
 }
 
-.card .title-container .title, .card .title-container .subtitle {
-  color: #fff;
-  margin: 1rem auto;
+.card .title-container .title,
+.card .title-container .subtitle {
+    color: #fff;
+    margin: 1rem auto;
 }
 
 .card .title-container {
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
-  padding: 0 1rem;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 .card .title-container .title {
-  font-weight: 300;
-  font-size: 1.5rem;
-  margin-bottom: .3rem;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .card .action-bar {
@@ -86,8 +88,8 @@ position: relative;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    padding: .5rem;
-    border-top: 1px solid #E0E0E0;
+    padding: 0.5rem;
+    border-top: 1px solid #e0e0e0;
     box-sizing: border-box;
     -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -96,78 +98,81 @@ position: relative;
 /* Add some padding to the buttons */
 .card .action-bar button,
 .card .action-bar .btn,
-.card .action-bar [type=submit] {
-  margin: 0 .5rem;
+.card .action-bar [type='submit'] {
+    margin: 0 0.5rem;
 }
 
 .card .action-bar + .card-footer {
-  padding: 1rem 0;
-  border-top: 1px solid #E0E0E0;
+    padding: 1rem 0;
+    border-top: 1px solid #e0e0e0;
 }
 
-.card button, .card .btn {
-  display: inline-block;
-  display: inline-block;
-border-color: transparent;
+.card button,
+.card .btn {
+    display: inline-block;
+    display: inline-block;
+    border-color: transparent;
 }
 
-.card button:hover, .card .btn:hover {
-  -webkit-transform: none;
-          transform: none;
+.card button:hover,
+.card .btn:hover {
+    -webkit-transform: none;
+    transform: none;
 }
 
-.card button:focus, .card .btn:focus {
-  -webkit-transform: none;
-          transform: none;
+.card button:focus,
+.card .btn:focus {
+    -webkit-transform: none;
+    transform: none;
 }
 
 /* More card components in second example */
 .mobile-title {
-  position: absolute;
-  left: 0;
-  background-color: var(--cirrus-bg);
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  
-  transition: all .3s ease-in-out;
-  width: 100%;
-      padding: 1rem 0;
-      backface-visibility: hidden;
+    position: absolute;
+    left: 0;
+    background-color: var(--cirrus-bg);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    padding: 1rem 0;
+    backface-visibility: hidden;
 }
 
 .card:hover .mobile-title {
-  margin-top: -7rem;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  
-  transition: all .3s ease-in-out;
+    margin-top: -7rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .card:hover .card-body {
-  opacity: 1;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  
-  transition: all .3s ease-in-out;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .card-body {
-  opacity: 0;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  
-  transition: all .2s ease-in-out;
+    opacity: 0;
+    -webkit-transition: all var(--animation-duration) ease-in-out;
+    -moz-transition: all var(--animation-duration) ease-in-out;
+    -ms-transition: all var(--animation-duration) ease-in-out;
+
+    transition: all var(--animation-duration) ease-in-out;
 }
 
 .card-footer {
-  position: relative;
-    margin: .5rem auto;
-    font-size: .75rem;
-    color: #9FA5A8;
+    position: relative;
+    margin: 0.5rem auto;
+    font-size: 0.75rem;
+    color: #9fa5a8;
 }
 
 .card p {
@@ -184,15 +189,15 @@ border-color: transparent;
     align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
-    box-shadow: 0px 1px 8px 1px rgba(10, 10, 10, 0.07);
     display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .card-head-title {
-  align-items: center;
-  -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-align: center;
     -ms-flex-align: center;
     display: -webkit-box;
     display: -ms-flexbox;

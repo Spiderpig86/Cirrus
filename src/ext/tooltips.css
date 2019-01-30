@@ -27,7 +27,7 @@
   max-width: 15rem;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  transition: all 0.2s ease;
+  transition: all var(--animation-duration) ease;
   z-index: 200;
   pointer-events: none;
   bottom: 100%; /* Pushes the tooltip above the button */
@@ -41,7 +41,7 @@
   opacity: 1;
   -webkit-transform: translate(-50%, -0.5rem);
   transform: translate(-50%, -0.5rem);
-  transition: all 0.2s ease;
+  transition: all var(--animation-duration) ease;
 }
 
 /* Tooltip top left */

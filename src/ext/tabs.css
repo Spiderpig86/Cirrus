@@ -32,9 +32,6 @@
     display: block; /* Keep the tabs from extending too far */
     cursor: pointer;
     margin: 0;
-    -webkit-flex: 1 0 0;
-    -ms-flex: 1 0 0;
-    flex: 1 0 0;
     text-align: center;
 }
 

@@ -18,7 +18,7 @@ button,
     border-radius: 0.25rem;
     cursor: pointer;
     text-align: center;
-    transition: all 0.2s;
+    transition: all 0var(--animation-duration);
     background-color: #fefefe;
     border-color: #d9d9d9;
     color: #737373;
@@ -30,48 +30,53 @@ button,
     user-select: none;
     margin-bottom: 1rem;
     outline: none;
+    --btn-color: #fefefe;
+    --btn-fg: #737373;
+    --btn-border-color: #d9d9d9;
 }
 
 button:hover,
 .btn:hover,
 [type="submit"]:hover {
-    transition: all 0.2s;
+    transition: all var(--animation-duration);
 }
 
 .btn:active,
 button:active,
 [type="submit"]:active {
-    transition: 0.2s ease;
+    transition: var(--animation-duration) ease;
 }
 
 /* Default button colors */
-button:not([class^="btn-"]):hover,
-.btn:not([class^="btn-"]):hover,
-[type="submit"]:not([class^="btn-"]):hover {
-    background-color: #eee
-}
-
-.btn:not([class^="btn-"]):active,
-button:not([class^="btn-"]):active,
-[type="submit"]:not([class^="btn-"]):active {
-    background-color: #ddd;
+button:hover,
+.btn:hover,
+[type="submit"]:hover {
+    background-color: #eee;
+    --btn-color: #eee;
 }
 
 /* Make the loading circle, if present, white when button is active */
 .btn.loading:active::after,
 button.loading:active::after,
 [type="submit"].loading:active::after {
-    transition: 0.2s ease;
+    transition: var(--animation-duration) ease;
     border-radius: 50%;
     border-right-color: transparent;
     border-top-color: transparent;
 }
 
+button.btn-animated,
+[type="submit"].btn-animated,
+.btn.btn-animated {
+    transition: calc(var(--animation-duration) / 2) ease;
+}
+
 button.btn-animated:active,
 [type="submit"].btn-animated:active,
 .btn.btn-animated:active {
-    -webkit-transform: scale(0.99);
-    transform: inherit, scale(0.99);
+    -webkit-transform: scale(0.98);
+    transform: inherit, scale(0.98);
+    transition: calc(var(--animation-duration) / 2) ease;
 }
 
 .btn:focus,
@@ -231,24 +236,24 @@ button.btn-close::after {
 .btn-danger.outline:hover { --btn-color: var(--cirrus-danger); }
 .btn-danger:focus { box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5); }
 
-[class^="btn-"] {
+[class^="btn-"], [class*=" btn-"] {
     background-color: var(--btn-color); 
     border: 1px solid var(--btn-border-color);
     color: var(--btn-fg);
-    transition: all .2s;
+    transition: all var(--animation-duration);
 }
 
-[class^="btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all .2s; }
+[class^="btn-"]:hover, [class*=" btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all var(--animation-duration); }
 
 /* Outline Variants */
-[class^="btn-"].outline {
+[class^="btn-"].outline, [class*=" btn-"].outline {
     background-color: transparent; 
     color: var(--btn-color);
 }
-[class^="btn-"].outline:hover {
+[class^="btn-"].outline:hover, [class*=" btn-"].outline:hover {
     background-color: var(--btn-color);
     color: var(--btn-fg);
-    transition: all .2s;
+    transition: all var(--animation-duration);
 }
 
 /* Right of input */
@@ -502,6 +507,14 @@ audio,
 video {
     max-width: 100%;
     height: auto;
+}
+
+.hero.fullscreen video {
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
 }
 
 iframe {
@@ -1268,6 +1281,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
+    margin-bottom: 0;
 }
 
 /* This is just an extended portion of an input which is just like a label and is read only */
@@ -1557,8 +1571,8 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 /* Just add a transition in general */
 .nav-item .dropdown-menu.dropdown-animated {
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 /* Dropdown menu location adjustment located below for sizes above phones */
@@ -1968,11 +1982,11 @@ section {
 /* This works well with spans and maybe even hr */
 .divider {
     display: block;
-    height: 2px;
+    height: 1px;
     position: relative;
     border-top: none;
     margin: 1.5rem 0;
-    background-color: #eee;
+    background-color: rgba(173, 173, 173, 0.5);
     width: 100%;
 }
 
@@ -2001,9 +2015,9 @@ section {
     display: -ms-flexbox;
     display: flex; /* Important to stretch height of hero-body */
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
+    /* -webkit-box-direction: normal; /* Deprecated 0.5.5 
     -ms-flex-direction: column;
-    flex-direction: column; /* Stack the items in the container */
+    flex-direction: column; Stack the items in the container */
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -2237,11 +2251,6 @@ space.x-large {
     flex: none;
 }
 
-/* Known to cause spacing issues in columns */
-/*.row [class^='col-']:first-child, .row [class*=" col-"]:first-child{
-  margin-left: 0;
-}*/
-
 /* Used for aligning controls next to each other */
 .row.has-controls {
     display: -webkit-box;
@@ -2254,13 +2263,13 @@ space.x-large {
 
 /* Divider for multiple elements in a div */
 .divided > .fluid-container:not(.row),
-.divided > .row [class^="col-"] {
+.divided > .row [class^="col-"], .divided > .row [class*=" col-"] {
     box-shadow: -1px 0 0 0 rgba(34, 36, 38, 0.15);
 }
 
 /* Remove border in first child */
 .divided > .row [class^="col-"]:first-child,
-.divided > .row [class^="col-"]:first-child {
+.divided > .row [class*=" col-"]:first-child {
     box-shadow: none;
 }
 
@@ -2381,6 +2390,7 @@ space.x-large {
         align-items: stretch;
         display: -webkit-box;
         display: -ms-flexbox;
+        display: flex;
     }
 }
 
@@ -2400,6 +2410,7 @@ space.x-large {
 
     /* Increase space with cards */
     .fluid-container [class^="col-"]:not(.ignore-screen),
+    .fluid-container [class*=" col-"]:not(.ignore-screen),
     .row [class*=" col-"]:not(.ignore-screen) {
         margin-top: 1rem;
     }
@@ -2410,7 +2421,8 @@ space.x-large {
 
     /* Dividers for mobile layout */
     .divided > .fluid-container:not(.row),
-    .divided > .row [class^="col-"] {
+    .divided > .row [class^="col-"],
+    .divided > .row [class*=" col-"] {
         box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
     }
 
@@ -2420,6 +2432,10 @@ space.x-large {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+    }
+
+    .level.fill-height {
+        display: inherit; /* Allow children to expand */
     }
 }
 
@@ -2460,7 +2476,11 @@ a.underline {
 }
 
 p a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, blockquote a, article a {
-    display: inline-block;
+    display: inline;
+}
+
+a .btn, a button {
+    margin-bottom: 0; /* Remove random excess space */
 }
 /* LISTS */
 
@@ -2552,15 +2572,15 @@ ul.menu {
   border-radius: 3px;
   font-size: 0.85rem;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu .menu-item:hover > a {
   background-color: rgba(208, 208, 208, 0.3);
   color: #d43644;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
   
 }
 
@@ -2577,8 +2597,8 @@ ul.menu {
   cursor: pointer;
   float: left;
   margin-right: .1rem;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu .menu-item .menu-addon .icon {
@@ -2588,8 +2608,8 @@ ul.menu {
 /* Darken on hover to differentiate from menu-item */
 .menu .menu-item .menu-addon:hover {
   background-color: rgba(60, 60, 60, 0.25);
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu .menu-item .menu-addon.right {
@@ -2639,7 +2659,7 @@ ul.menu {
   position: absolute;
   top: 75%;
   left: 0;
-  -webkit-animation: slide-down .2s ease 1;
+  -webkit-animation: slide-down var(--animation-duration) ease 1;
   animation: slide-down .1s ease 1;
   background-color: var(--cirrus-bg);
   border-radius: .2rem;
@@ -2653,8 +2673,8 @@ ul.menu {
   z-index: 10;
   pointer-events: none; /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
   overflow: hidden;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .list-dropdown.dropdown-right .menu {
@@ -2672,8 +2692,8 @@ ul.menu {
   z-index: 100;
   pointer-events: auto; /* Restore pointer events */
   height: auto;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .list-dropdown .btn-group .btn-dropdown:nth-last-child(2) {
@@ -2698,8 +2718,8 @@ ul.menu {
 
 /* The dropdown glyph of the tree menu */
 .tree .tree-item .tree-item-header .icon {
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 /* Expand the tree-item-body (has menu-items) */
@@ -2718,8 +2738,8 @@ ul.menu {
   max-height: 0; /* Hidden at first */
   margin-left: 1.5rem;
   overflow: hidden;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 /* TODO: Docs */
@@ -2793,10 +2813,10 @@ ul.menu {
     top: 0;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
-    transition: transform .2s ease, -webkit-transform .2s ease;
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: transform .2s ease;
-    transition: -webkit-transform .2s ease;
+    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+    -webkit-transition: -webkit-transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
+    transition: -webkit-transform var(--animation-duration) ease;
     z-index: 400;
   }
 
@@ -2805,10 +2825,10 @@ ul.menu {
   .tree-nav:target {
     -webkit-transform: translateX(0);
     transform: translateX(0);
-    transition: transform .2s ease, -webkit-transform .2s ease;
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: -webkit-transform .2s ease;
-    transition: transform .2s ease;
+    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+    -webkit-transition: -webkit-transform var(--animation-duration) ease;
+    transition: -webkit-transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
   }
 
   /* Create the area to click to close the menu */
@@ -3015,8 +3035,8 @@ video.video-fullscreen {
 
 .modal:target .modal-container,
 .modal.shown .modal-container {
-  -webkit-animation: slide-down .2s ease 1;
-  animation: slide-down .2s ease 1;
+  -webkit-animation: slide-down var(--animation-duration) ease 1;
+  animation: slide-down var(--animation-duration) ease 1;
   z-index: 1;
 }
 
@@ -3047,8 +3067,8 @@ video.video-fullscreen {
 
 /* MODAL ANIMATIONS */
 .modal.modal-animated--dropdown {
-    -webkit-animation: slide-down .2s ease 1;
-    animation: slide-down .2s ease 1;
+    -webkit-animation: slide-down var(--animation-duration) ease 1;
+    animation: slide-down var(--animation-duration) ease 1;
 }
 
 /* Visible state */
@@ -3238,7 +3258,9 @@ video.video-fullscreen {
     --cirrus-form-group-bg: #f8f9fa;
     --cirrus-form-group-fg: #909090;
 
-    --toast-primary-bg: #00c9a7;
+    --toast-primary-bg: rgba(49, 59, 80, 0.9);
+
+    --animation-duration: .2s;
 }
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
@@ -3382,7 +3404,6 @@ video.video-fullscreen {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -3422,6 +3443,11 @@ video.video-fullscreen {
 /* Turns element into a circle */
 .u-circle {
   border-radius: 50%;
+}
+
+/* Remove outline or drop shadow when element is focused */
+.u-no-shadow {
+  box-shadow: none;
 }
 
 /* Responsiveness and Element Hiding */
@@ -3812,78 +3838,80 @@ video.video-fullscreen {
     display: block;
     position: relative;
     overflow: hidden;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
     backface-visibility: hidden;
 }
 
 .card:hover {
-    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1), 0 0 12px 2px rgba(10, 10, 10, 0.1);
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1),
+        0 0 12px 2px rgba(10, 10, 10, 0.1);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .slide-up:hover .card-image {
-   transform: translateY(-40px);
+    transform: translateY(-40px);
 }
 
 .card:hover .card-image::after {
-  opacity: 0;
+    opacity: 0;
 }
 
 .card-image {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-      border-radius: 5px 5px 0 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  
-  transition: all .3s ease-in-out;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .card-image::after {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
-  top: 0;
-  left: 0;
-  right: 0;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    bottom: 0;
 }
 
 .card-container {
-  display: block;
-position: relative;
-  height: 40%;
-  min-height: 332px; /* So it appears in html5 standards mode */
+    display: block;
+    position: relative;
+    height: 40%;
+    min-height: 332px; /* So it appears in html5 standards mode */
 }
 
-.card .title-container .title, .card .title-container .subtitle {
-  color: #fff;
-  margin: 1rem auto;
+.card .title-container .title,
+.card .title-container .subtitle {
+    color: #fff;
+    margin: 1rem auto;
 }
 
 .card .title-container {
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
-  padding: 0 1rem;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 .card .title-container .title {
-  font-weight: 300;
-  font-size: 1.5rem;
-  margin-bottom: .3rem;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .card .action-bar {
@@ -3891,8 +3919,8 @@ position: relative;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    padding: .5rem;
-    border-top: 1px solid #E0E0E0;
+    padding: 0.5rem;
+    border-top: 1px solid #e0e0e0;
     box-sizing: border-box;
     -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -3901,78 +3929,81 @@ position: relative;
 /* Add some padding to the buttons */
 .card .action-bar button,
 .card .action-bar .btn,
-.card .action-bar [type=submit] {
-  margin: 0 .5rem;
+.card .action-bar [type='submit'] {
+    margin: 0 0.5rem;
 }
 
 .card .action-bar + .card-footer {
-  padding: 1rem 0;
-  border-top: 1px solid #E0E0E0;
+    padding: 1rem 0;
+    border-top: 1px solid #e0e0e0;
 }
 
-.card button, .card .btn {
-  display: inline-block;
-  display: inline-block;
-border-color: transparent;
+.card button,
+.card .btn {
+    display: inline-block;
+    display: inline-block;
+    border-color: transparent;
 }
 
-.card button:hover, .card .btn:hover {
-  -webkit-transform: none;
-          transform: none;
+.card button:hover,
+.card .btn:hover {
+    -webkit-transform: none;
+    transform: none;
 }
 
-.card button:focus, .card .btn:focus {
-  -webkit-transform: none;
-          transform: none;
+.card button:focus,
+.card .btn:focus {
+    -webkit-transform: none;
+    transform: none;
 }
 
 /* More card components in second example */
 .mobile-title {
-  position: absolute;
-  left: 0;
-  background-color: var(--cirrus-bg);
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  
-  transition: all .3s ease-in-out;
-  width: 100%;
-      padding: 1rem 0;
-      backface-visibility: hidden;
+    position: absolute;
+    left: 0;
+    background-color: var(--cirrus-bg);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    padding: 1rem 0;
+    backface-visibility: hidden;
 }
 
 .card:hover .mobile-title {
-  margin-top: -7rem;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  
-  transition: all .3s ease-in-out;
+    margin-top: -7rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .card:hover .card-body {
-  opacity: 1;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  
-  transition: all .3s ease-in-out;
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .card-body {
-  opacity: 0;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  
-  transition: all .2s ease-in-out;
+    opacity: 0;
+    -webkit-transition: all var(--animation-duration) ease-in-out;
+    -moz-transition: all var(--animation-duration) ease-in-out;
+    -ms-transition: all var(--animation-duration) ease-in-out;
+
+    transition: all var(--animation-duration) ease-in-out;
 }
 
 .card-footer {
-  position: relative;
-    margin: .5rem auto;
-    font-size: .75rem;
-    color: #9FA5A8;
+    position: relative;
+    margin: 0.5rem auto;
+    font-size: 0.75rem;
+    color: #9fa5a8;
 }
 
 .card p {
@@ -3989,15 +4020,15 @@ border-color: transparent;
     align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
-    box-shadow: 0px 1px 8px 1px rgba(10, 10, 10, 0.07);
     display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .card-head-title {
-  align-items: center;
-  -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-align: center;
     -ms-flex-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4008,6 +4039,7 @@ border-color: transparent;
     font-weight: 700;
     padding: 0 1rem;
 }
+
 /* EXTENDED FORM */
 
 /* Base class layout for extended form */
@@ -4059,7 +4091,7 @@ border-color: transparent;
     left: -1.5rem;
     position: absolute;
     top: .3rem;
-    transition: all .2s;
+    transition: all var(--animation-duration);
     width: 1rem;
 }
 
@@ -4175,7 +4207,7 @@ border-color: transparent;
     left: 4px;
     width: 16px;
     transform: translateY(-50%);
-    transition: left .2s ease;
+    transition: left var(--animation-duration) ease;
     text-align: left;
 }
 
@@ -4229,10 +4261,212 @@ border-color: transparent;
 .form-ext-toggle--success .form-ext-toggle__toggler i::after {
     background-color: var(--cirrus-success);
 }
+/* GRID */
+:root {
+    --gap-0: 0;
+    --gap-1: 0.25rem;
+    --gap-2: 0.5rem;
+    --gap-3: 1rem;
+    --gap-4: 1.25rem;
+    --gap-5: 1.5rem;
+    --gap-6: 3rem;
+    --gap-7: 6rem;
+    --gap-8: 9rem;
+    --gap-9: 12rem;
+}
+
+.grid { 
+    display: grid;
+    grid-gap: var(--gap-2);
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+/* Templates */
+.grid.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid.grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid.grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid.grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid.grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid.grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid.grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.grid.grid-cols-11 {
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+
+.grid.grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid.grid-gap-0 {
+    grid-gap: var(--gap-0);
+}
+
+.grid.grid-gap-1 {
+    grid-gap: var(--gap-1);
+}
+
+.grid.grid-gap-2 {
+    grid-gap: var(--gap-2);
+}
+
+.grid.grid-gap-3 {
+    grid-gap: var(--gap-3);
+}
+
+.grid.grid-gap-4 {
+    grid-gap: var(--gap-4);
+}
+
+.grid.grid-gap-5 {
+    grid-gap: var(--gap-5);
+}
+
+.grid.grid-gap-6 {
+    grid-gap: var(--gap-6);
+}
+
+.grid.grid-gap-7 {
+    grid-gap: var(--gap-7);
+}
+
+.grid.grid-gap-8 {
+    grid-gap: var(--gap-8);
+}
+
+.grid.grid-gap-9 {
+    grid-gap: var(--gap-9);
+}
+
+/* Column expansion */
+.grid.grid-col-1 {
+    grid-column: span 1;
+}
+
+.grid.grid-col-2 {
+    grid-column: span 2;
+}
+
+.grid.grid-col-3 {
+    grid-column: span 3;
+}
+
+.grid.grid-col-4 {
+    grid-column: span 4;
+}
+
+.grid.grid-col-5 {
+    grid-column: span 5;
+}
+
+.grid.grid-col-6 {
+    grid-column: span 6;
+}
+
+.grid.grid-col-7 {
+    grid-column: span 7;
+}
+
+.grid.grid-col-8 {
+    grid-column: span 8;
+}
+
+.grid.grid-col-9 {
+    grid-column: span 9;
+}
+
+.grid.grid-col-10 {
+    grid-column: span 10;
+}
+
+.grid.grid-col-11 {
+    grid-column: span 11;
+}
+
+.grid.grid-col-12 {
+    grid-column: span 12;
+}
+
+/* Row expansion */
+.grid.grid-row-1 {
+    grid-row: span 1;
+}
+.grid.grid-row-2 {
+    grid-row: span 2;
+}
+.grid.grid-row-3 {
+    grid-row: span 3;
+}
+.grid.grid-row-4 {
+    grid-row: span 4;
+}
+.grid.grid-row-5 {
+    grid-row: span 5;
+}
+.grid.grid-row-6 {
+    grid-row: span 6;
+}
+.grid.grid-row-7 {
+    grid-row: span 7;
+}
+.grid.grid-row-8 {
+    grid-row: span 8;
+}
+.grid.grid-row-9 {
+    grid-row: span 9;
+}
+.grid.grid-row-10 {
+    grid-row: span 10;
+}
+.grid.grid-row-11 {
+    grid-row: span 11;
+}
+.grid.grid-row-12 {
+    grid-row: span 12;
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
 /* EXTENDED LINKS */
 /* Animated links */
 .u,
 .utb {
+    display: inline;
     position: relative; /* So the psuedo-elements are positioned correctly */
 }
 
@@ -4379,7 +4613,7 @@ border-color: transparent;
 }
 
 .usquare.delay::after {
-    transition-delay: 0.2s;
+    transition-delay: var(--animation-duration);
 }
 
 .usquare a::before {
@@ -4407,14 +4641,16 @@ border-color: transparent;
 }
 /* A collection of modifiers that extend control styling */
 .btn.btn--pilled,
-[class^="btn-"].btn--pilled {
+[class^="btn-"].btn--pilled,
+[class*=" btn-"].btn--pilled {
     border-radius: 6.25rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
 
 .btn.btn--circle,
-[class^="btn-"].btn--circle {
+[class^="btn-"].btn--circle,
+[class*=" btn-"].btn--circle {
     border-radius: 100%;
     height: 3.125rem;
     line-height: 3.125rem;
@@ -4440,15 +4676,15 @@ border-color: transparent;
 .bg-link-dark { background-color: var(--cirrus-link-dark) !important; }
 .bg-info { background-color: var(--cirrus-info) !important; }
 
-.fg-primary { color: var(--cirrus-primary) !important; }
-.fg-success { color: var(--cirrus-success) !important; }
-.fg-warning { color: var(--cirrus-warning) !important; }
-.fg-danger { color: var(--cirrus-danger) !important; }
-.fg-light { color: var(--cirrus-light) !important; }
-.fg-dark { color: var(--cirrus-dark) !important; }
-.fg-link { color: var(--cirrus-link) !important; }
-.fg-link-dark { color: var(--cirrus-link-dark) !important; }
-.fg-info { color: var(--cirrus-info) !important; }
+.text-primary { color: var(--cirrus-primary) !important; }
+.text-success { color: var(--cirrus-success) !important; }
+.text-warning { color: var(--cirrus-warning) !important; }
+.text-danger { color: var(--cirrus-danger) !important; }
+.text-light { color: var(--cirrus-light) !important; }
+.text-dark { color: var(--cirrus-dark) !important; }
+.text-link { color: var(--cirrus-link) !important; }
+.text-link-dark { color: var(--cirrus-link-dark) !important; }
+.text-info { color: var(--cirrus-info) !important; }
 /* PAGINATION */
 /* Parent contianer for page navigation */
 .pagination {
@@ -4540,7 +4776,7 @@ border-color: transparent;
 
 /* Bordered pagination */
 .pagination.pagination-bordered .pagination-item.short a {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(222, 222, 222);
     border-radius: 0;
     margin-left: -1px;
 }
@@ -4622,9 +4858,6 @@ border-color: transparent;
     display: block; /* Keep the tabs from extending too far */
     cursor: pointer;
     margin: 0;
-    -webkit-flex: 1 0 0;
-    -ms-flex: 1 0 0;
-    flex: 1 0 0;
     text-align: center;
 }
 
@@ -4949,14 +5182,12 @@ a.tag:hover {
     display: -webkit-flex;
     align-content: space-between; /* Ensure space between child elements of card tile */
     -webkit-align-content: space-between;
-    align-items: flex-start; /* Push elements to the top of container instead of center/bottom */
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
+    /* align-items: flex-start; Push elements to the top of container instead of center/bottom (removed since unneeded */
     -ms-flex-line-pack: justify; /* Evenly distribute lines */
 }
 
 .tile p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .tile .tile-icon,
@@ -5048,11 +5279,11 @@ a.tag:hover {
     margin: 0;
 }
 
-.toast.toast__translucent {
+.toast.toast--translucent {
     opacity: .5;
 }
 
-.toast.toast__translucent:hover {
+.toast.toast--translucent:hover {
     opacity: 1;
 }
 
@@ -5063,24 +5294,39 @@ a.tag:hover {
 }       
 
 /* TOAST TYPES */
-.toast.toast__primary {
+.toast.toast--primary {
     background-color: var(--toast-primary-bg);
     border-color: var(--toast-primary-bg);
 }
 
-.toast.toast__success {
+.toast.toast--success {
     background-color: var(--cirrus-success);
     border-color: var(--cirrus-success);
 }
 
-.toast.toast__warning {
+.toast.toast--warning {
     background-color: var(--cirrus-warning);
     border-color: var(--cirrus-warning);
 }
 
-.toast.toast__error {
+.toast.toast--error {
     background-color: var(--cirrus-danger);
     border-color: var(--cirrus-danger);
+}
+
+.toast.toast--info {
+    background-color: var(--cirrus-info);
+    border-color: var(--cirrus-info);
+}
+
+.toast.toast--link {
+    background-color: var(--cirrus-link);
+    border-color: var(--cirrus-link);
+}
+
+.toast.toast--primary {
+    background-color: var(--cirrus-primary);
+    border-color: var(--cirrus-primary);
 }
 
 /* Add the rest later */
@@ -5124,7 +5370,7 @@ a.tag:hover {
   max-width: 15rem;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  transition: all 0.2s ease;
+  transition: all var(--animation-duration) ease;
   z-index: 200;
   pointer-events: none;
   bottom: 100%; /* Pushes the tooltip above the button */
@@ -5138,7 +5384,7 @@ a.tag:hover {
   opacity: 1;
   -webkit-transform: translate(-50%, -0.5rem);
   transform: translate(-50%, -0.5rem);
-  transition: all 0.2s ease;
+  transition: all var(--animation-duration) ease;
 }
 
 /* Tooltip top left */

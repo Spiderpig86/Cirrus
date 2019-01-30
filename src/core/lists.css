@@ -88,15 +88,15 @@ ul.menu {
   border-radius: 3px;
   font-size: 0.85rem;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu .menu-item:hover > a {
   background-color: rgba(208, 208, 208, 0.3);
   color: #d43644;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
   
 }
 
@@ -113,8 +113,8 @@ ul.menu {
   cursor: pointer;
   float: left;
   margin-right: .1rem;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu .menu-item .menu-addon .icon {
@@ -124,8 +124,8 @@ ul.menu {
 /* Darken on hover to differentiate from menu-item */
 .menu .menu-item .menu-addon:hover {
   background-color: rgba(60, 60, 60, 0.25);
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .menu .menu-item .menu-addon.right {
@@ -175,7 +175,7 @@ ul.menu {
   position: absolute;
   top: 75%;
   left: 0;
-  -webkit-animation: slide-down .2s ease 1;
+  -webkit-animation: slide-down var(--animation-duration) ease 1;
   animation: slide-down .1s ease 1;
   background-color: var(--cirrus-bg);
   border-radius: .2rem;
@@ -189,8 +189,8 @@ ul.menu {
   z-index: 10;
   pointer-events: none; /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
   overflow: hidden;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .list-dropdown.dropdown-right .menu {
@@ -208,8 +208,8 @@ ul.menu {
   z-index: 100;
   pointer-events: auto; /* Restore pointer events */
   height: auto;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 .list-dropdown .btn-group .btn-dropdown:nth-last-child(2) {
@@ -234,8 +234,8 @@ ul.menu {
 
 /* The dropdown glyph of the tree menu */
 .tree .tree-item .tree-item-header .icon {
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 /* Expand the tree-item-body (has menu-items) */
@@ -254,8 +254,8 @@ ul.menu {
   max-height: 0; /* Hidden at first */
   margin-left: 1.5rem;
   overflow: hidden;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
 }
 
 /* TODO: Docs */
@@ -329,10 +329,10 @@ ul.menu {
     top: 0;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
-    transition: transform .2s ease, -webkit-transform .2s ease;
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: transform .2s ease;
-    transition: -webkit-transform .2s ease;
+    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+    -webkit-transition: -webkit-transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
+    transition: -webkit-transform var(--animation-duration) ease;
     z-index: 400;
   }
 
@@ -341,10 +341,10 @@ ul.menu {
   .tree-nav:target {
     -webkit-transform: translateX(0);
     transform: translateX(0);
-    transition: transform .2s ease, -webkit-transform .2s ease;
-    -webkit-transition: -webkit-transform .2s ease;
-    transition: -webkit-transform .2s ease;
-    transition: transform .2s ease;
+    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+    -webkit-transition: -webkit-transform var(--animation-duration) ease;
+    transition: -webkit-transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
   }
 
   /* Create the area to click to close the menu */

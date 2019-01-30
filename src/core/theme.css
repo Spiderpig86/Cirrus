@@ -32,5 +32,7 @@
     --cirrus-form-group-bg: #f8f9fa;
     --cirrus-form-group-fg: #909090;
 
-    --toast-primary-bg: #00c9a7;
+    --toast-primary-bg: rgba(49, 59, 80, 0.9);
+
+    --animation-duration: .2s;
 }

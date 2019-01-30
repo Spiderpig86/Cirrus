@@ -13,7 +13,7 @@ button,
     border-radius: 0.25rem;
     cursor: pointer;
     text-align: center;
-    transition: all 0.2s;
+    transition: all 0var(--animation-duration);
     background-color: #fefefe;
     border-color: #d9d9d9;
     color: #737373;
@@ -25,48 +25,53 @@ button,
     user-select: none;
     margin-bottom: 1rem;
     outline: none;
+    --btn-color: #fefefe;
+    --btn-fg: #737373;
+    --btn-border-color: #d9d9d9;
 }
 
 button:hover,
 .btn:hover,
 [type="submit"]:hover {
-    transition: all 0.2s;
+    transition: all var(--animation-duration);
 }
 
 .btn:active,
 button:active,
 [type="submit"]:active {
-    transition: 0.2s ease;
+    transition: var(--animation-duration) ease;
 }
 
 /* Default button colors */
-button:not([class^="btn-"]):hover,
-.btn:not([class^="btn-"]):hover,
-[type="submit"]:not([class^="btn-"]):hover {
-    background-color: #eee
-}
-
-.btn:not([class^="btn-"]):active,
-button:not([class^="btn-"]):active,
-[type="submit"]:not([class^="btn-"]):active {
-    background-color: #ddd;
+button:hover,
+.btn:hover,
+[type="submit"]:hover {
+    background-color: #eee;
+    --btn-color: #eee;
 }
 
 /* Make the loading circle, if present, white when button is active */
 .btn.loading:active::after,
 button.loading:active::after,
 [type="submit"].loading:active::after {
-    transition: 0.2s ease;
+    transition: var(--animation-duration) ease;
     border-radius: 50%;
     border-right-color: transparent;
     border-top-color: transparent;
 }
 
+button.btn-animated,
+[type="submit"].btn-animated,
+.btn.btn-animated {
+    transition: calc(var(--animation-duration) / 2) ease;
+}
+
 button.btn-animated:active,
 [type="submit"].btn-animated:active,
 .btn.btn-animated:active {
-    -webkit-transform: scale(0.99);
-    transform: inherit, scale(0.99);
+    -webkit-transform: scale(0.98);
+    transform: inherit, scale(0.98);
+    transition: calc(var(--animation-duration) / 2) ease;
 }
 
 .btn:focus,
@@ -226,24 +231,24 @@ button.btn-close::after {
 .btn-danger.outline:hover { --btn-color: var(--cirrus-danger); }
 .btn-danger:focus { box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5); }
 
-[class^="btn-"] {
+[class^="btn-"], [class*=" btn-"] {
     background-color: var(--btn-color); 
     border: 1px solid var(--btn-border-color);
     color: var(--btn-fg);
-    transition: all .2s;
+    transition: all var(--animation-duration);
 }
 
-[class^="btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all .2s; }
+[class^="btn-"]:hover, [class*=" btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all var(--animation-duration); }
 
 /* Outline Variants */
-[class^="btn-"].outline {
+[class^="btn-"].outline, [class*=" btn-"].outline {
     background-color: transparent; 
     color: var(--btn-color);
 }
-[class^="btn-"].outline:hover {
+[class^="btn-"].outline:hover, [class*=" btn-"].outline:hover {
     background-color: var(--btn-color);
     color: var(--btn-fg);
-    transition: all .2s;
+    transition: all var(--animation-duration);
 }
 
 /* Right of input */
