@@ -1,6 +1,6 @@
 /*
 * Cirrus 0.5.4
-* Stanley Lim, Copyright 2018
+* Stanley Lim, Copyright 2019
 * https://spiderpig86.github.io/Cirrus
 */
 /* ANIMATIONS */
@@ -4645,6 +4645,11 @@ ul.menu {
     text-align: center;
     z-index: 300;
   }
+
+  /* For dropdown menu used in header (different from header dropdown) */
+  .nav-item.has-sub .menu-dropdown { width: 100%; }
+  .nav-item.has-sub .menu-dropdown .btn-group { width: 100%; }
+  .nav-item.has-sub .menu-dropdown .btn-group .btn-dropdown { flex-grow: 0; }
 }
 /* MEDIA CSS */
 /* Handles images, videos, figures, etc */
