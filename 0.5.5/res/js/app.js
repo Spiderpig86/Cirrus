@@ -1,5 +1,6 @@
 // Hide when clicking nav-item
 $('.nav-item').not('.has-sub').not('.nav-btn').on('click', function(e) {
+    console.log('test');
     $('#header-menu').removeClass('active');
 });
 
