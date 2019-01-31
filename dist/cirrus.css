@@ -313,25 +313,25 @@
   -ms-transform: translate(-50%, -50%);
 }
 
-.avatar.img-xsmall {
+.avatar.avatar--xsmall {
   font-size: 0.8rem;
   width: 1.6rem;
   height: 1.6rem;
 }
 
-.avatar.img-small {
+.avatar.avatar--small {
   font-size: 1rem;
   height: 2.4rem;
   width: 2.4rem;
 }
 
-.avatar.img-large {
+.avatar.avatar--large {
   font-size: 2rem;
   height: 4.8rem;
   width: 4.8rem;
 }
 
-.avatar.img-xlarge {
+.avatar.avatar--xlarge {
   font-size: 2.6rem;
   height: 6.4rem;
   width: 6.4rem;
@@ -1506,20 +1506,20 @@
     white-space: nowrap;
 }
 
-.tag.tag-large {
+.tag.tag--large {
     font-size: 1rem;
 }
 
-.tag.tag-xlarge {
+.tag.tag--xlarge {
     font-size: 1.5rem;
 }
 
-.tag.tag-rounded {
+.tag.tag--rounded {
     border-radius: 290486px;
 }
 
 /* Delete button for tag */
-.tag.tag-delete {
+.tag.tag--delete {
     margin-left: 1px;
     padding: 0;
     position: relative;
@@ -1527,8 +1527,8 @@
 }
 
 /* Draw the delete button */
-.tag.tag-delete::before,
-.tag.tag-delete::after {
+.tag.tag--delete::before,
+.tag.tag--delete::after {
     background-color: var(--cirrus-light);
     content: "";
     display: block;
@@ -1541,58 +1541,58 @@
     transform-origin: center center;
 }
 
-.tag.tag-delete::before {
+.tag.tag--delete::before {
     height: 1px;
     width: 50%;
 }
 
-.tag.tag-delete::after {
+.tag.tag--delete::after {
     height: 50%;
     width: 1px;
 }
 
 /* TAG THEMES */
-.tag .delete {
+.tag.tag--delete {
     margin-left: 0.25rem;
     margin-right: -0.375rem;
 }
 
-.tag.white {
+.tag.tag--white {
     background-color: #fff;
     color: var(--cirrus-dark);
 }
 
-.tag.black {
+.tag.tag--black {
     background-color: var(--cirrus-black);
     color: #fff;
 }
 
-.tag.primary {
+.tag.tag--primary {
     background-color: var(--cirrus-primary);
     color: var(--cirrus-dark);
 }
 
-.tag.link {
+.tag.tag--link {
     background-color: var(--cirrus-link);
     color: #fff;
 }
 
-.tag.info {
+.tag.tag--info {
     background-color: var(--cirrus-info);
     color: #fff;
 }
 
-.tag.success {
+.tag.tag--success {
     background-color: var(--cirrus-success);
     color: #fff;
 }
 
-.tag.warning {
+.tag.tag--warning {
     background-color: var(--cirrus-warning);
     color: var(--cirrus-fg);
 }
 
-.tag.danger {
+.tag.tag--danger {
     background-color: var(--cirrus-danger);
     color: #fff;
 }
@@ -1617,19 +1617,19 @@
 }
 
 /* Used for grouping tags together */
-.tag-container.group-tags {
+.tag-container.group-tags .tag {
     margin-right: 0;
 }
 
 /* Tag close button */
-.tags.tag-close-btn {
+.tag.tag__close-btn {
     padding: 0;
     position: relative;
     width: 1rem;
 }
 
-.tags.tag-close-btn::before,
-.tags.tag-close-btn::after {
+.tag.tag__close-btn::before,
+.tag.tag__close-btn::after {
     background-color: var(--cirrus-fg);
     content: "";
     display: block;
@@ -1642,12 +1642,12 @@
     transform-origin: center center;
 }
 
-.tag.tag-close-btn::before {
+.tag.tag__close-btn::before {
     height: 1px;
     width: 50%;
 }
 
-.tag.tag-close-btn::after {
+.tag.tag__close-btn::after {
     height: 50%;
     width: 1px;
 }
@@ -1657,34 +1657,34 @@ a.tag:hover {
     text-decoration: underline;
 }
 
-.tag-container.group-tags .tag:not(:first-child) {
+.tag-container.tag-container--grouped .tag:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-.tag-container.group-tags .tag:not(:last-child) {
+.tag-container.tag-container--grouped .tag:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
 /* Tag positioning */
-.tags.tags-centered {
+.tag-container.tag-container--centered {
     justify-content: center;
 }
 
-.tags.tags-centered .tag {
+.tag-container.tag-container--centered .tag {
     margin: 0 0.25rem;
 }
 
-.tags.tags-right {
+.tag-container.tag-container--right {
     justify-content: flex-end;
 }
 
-.tags.tags-right .tag:not(:first-child) {
+.tag-container.tag-container--right .tag:not(:first-child) {
     margin-left: 0.5rem;
 }
 
-.tags.tags-right .tag:not(:last-child) {
+.tag-container.tag-container--right .tag:not(:last-child) {
     margin-right: 0;
 }
 
@@ -1703,63 +1703,63 @@ a.tag:hover {
     font-size: 0.95rem;
 }
 
-.tile .tile-icon,
-.tile .tile-buttons {
+.tile .tile__icon,
+.tile .tile__buttons {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
 }
 
 /* Override the default behavior where buttons display as blocks */
-.tile .tile-buttons button,
-.tile .tile-buttons .btn,
-.tile .tile-buttons [type="submit"] {
+.tile .tile__buttons button,
+.tile .tile__buttons .btn,
+.tile .tile__buttons [type="submit"] {
     display: inline-block;
     margin: 0.1rem; /* Reduce space used by buttons, default .5rem */
 }
 
-.tile .tile-container {
+.tile .tile__container {
     flex: 1 1 auto;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
 }
 
 /* Add spacing between the elements in between */
-.tile .tile-container:not(:first-child) {
+.tile .tile__container:not(:first-child) {
     padding-left: 1rem;
 }
 
-.tile .tile-container:not(:last-child) {
+.tile .tile__container:not(:last-child) {
     padding-right: 1rem;
 }
 
-.tile .tile-title {
+.tile .tile__title {
     line-height: 2rem;
     font-weight: bolder;
     margin: 0.1rem auto;
 }
 
-.tile .tile-subtitle {
+.tile .tile__subtitle {
     line-height: 1.25rem;
     opacity: 0.7;
     margin: 0.1rem auto;
 }
 
 /* Force elements to align at the center vertical height */
-.tile.tile-center {
+.tile.tile--center {
     align-items: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
 }
 
-.tile.tile-center .tile-container {
+.tile.tile--center .tile__container {
     /* Shrink the text to fit inside the tile */
     overflow: hidden;
 }
 
 /* Keep the text from overflowing */
-.tile.tile-center .tile-title,
-.tile.tile-center .tile-subtitle.no-wrap {
+.tile.tile--center .tile__title,
+.tile.tile--center .tile__subtitle.no-wrap {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -1783,7 +1783,7 @@ a.tag:hover {
     margin-top: 1rem;
 } (Deprecated 0.5.5) */
 
-.toast.toast__title {
+.toast .toast__title {
     margin: 0;
     margin-top: 1rem;
 }
