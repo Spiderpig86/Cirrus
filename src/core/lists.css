@@ -395,4 +395,10 @@ ul.menu {
   .nav-item.has-sub .list-dropdown { width: 100%; }
   .nav-item.has-sub .list-dropdown .btn-group { width: 100%; }
   .nav-item.has-sub .list-dropdown .btn-group .btn-dropdown { flex-grow: 0; }
+
+  /* Show the dropdown menu in mobile hamburger menu relative with the header menu */
+  .list-dropdown .btn-dropdown:focus + .menu {
+    position: relative;
+    width: 100%;
+  }
 }
