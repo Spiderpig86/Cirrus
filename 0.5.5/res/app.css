@@ -159,3 +159,9 @@ footer p .fa.fa-heart {
     -webkit-animation: pound 0.35s infinite alternate;
     vertical-align: baseline;
 }
+
+@media (max-width: 768px) {
+    .nav-item.has-sub .list-dropdown .btn-group button:not(.btn-dropdown) {
+        flex-grow: 1;
+    }
+}
