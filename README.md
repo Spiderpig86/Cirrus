@@ -11,6 +11,34 @@
 A fully responsive and comprehensive CSS framework with beautiful controls and simplistic structure. Cirrus is designed to be adaptable to existing themes or when starting fresh.
 </p>
 
+## Quick Install
+### Npm
+```sh
+npm install cirrus-ui
+```
+
+**or**
+
+### Yarn
+
+```sh
+yarn add cirrus-ui
+```
+
+### CDN
+
+```html
+https://unpkg.com/cirrus-ui
+```
+
+## Supported Browsers
+* Chrome
+* Opera
+* Firefox
+* Safari
+* Edge (Untested)
+* Internet Explorer (Untested)
+
 ## Framework Components
 * Framework components are now broken down into `core` and `ext` packages. The `core` package only contains the essentials for basic styling while `core + ext` adds specially designed components.
 
@@ -77,27 +105,10 @@ A fully responsive and comprehensive CSS framework with beautiful controls and s
 ## Why not other frameworks?
 Even with a multitude of CSS frameworks, some are either too basic to develop more complex websites and some are too bogged down with a lot of styles that don't end up getting used. Cirrus is meant to bridge a gap between boilerplate stylesheets and UI frameworks.
 
-## Getting Started
-### Install with npm
-```
-npm install cirrus-ui
-```
-### Install with Yarn
-```
-yarn add cirrus-ui
-```
-### Link
-```html
-https://unpkg.com/cirrus-ui
-```
-
-## Supported Browsers
-* Chrome
-* Opera
-* Firefox
-* Safari
-* Edge (Untested)
-* Internet Explorer (Untested)
+## Related Projects
+| Project                                                                              | Description                                                                            |
+|--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| [vue-cirrus](https://github.com/FlorianWoelki/vue-cirrus)   | Cirrus components for Vue.js with straightforward syntax                                             |
 
 ## Examples that use Cirrus
 * [Polarity 9](http://polarity.x10.mx/browser "Polarity 9 Promo Page")
