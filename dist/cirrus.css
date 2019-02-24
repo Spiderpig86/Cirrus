@@ -4413,6 +4413,9 @@ video.video-fullscreen {
 .grid.grid-col-12 {
     grid-column: span 12;
 }
+.grid.grid-col-end {
+    grid-column: span -1;
+}
 
 /* Row expansion */
 .grid.grid-row-1 {
@@ -4450,6 +4453,9 @@ video.video-fullscreen {
 }
 .grid.grid-row-12 {
     grid-row: span 12;
+}
+.grid.grid-row-end {
+    grid-row: span -1;
 }
 
 @media screen and (max-width: 768px) {
