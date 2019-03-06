@@ -37,13 +37,47 @@ section {
 
 /* This works well with spans and maybe even hr */
 .divider {
+    border-top: .05rem solid rgba(173, 173, 173, 0.5);
+    height: .05rem;
+    margin: .4rem 0;
+}
+
+.divider[data-content] {
+    margin: .8rem 0;
+}
+
+.divider--v[data-content] {
     display: block;
-    height: 1px;
-    position: relative;
-    border-top: none;
-    margin: 1.5rem 0;
-    background-color: rgba(173, 173, 173, 0.5);
-    width: 100%;
+    padding: .8rem;
+}
+
+.divider--v::before {
+    border-left: .05rem solid rgba(173, 173, 173, 0.5);
+    bottom: .4rem;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: .4rem;
+    transform: translateX(-50%);
+}
+
+.divider--v[data-content]::after, .divider[data-content]::after {
+    background: #fff;
+    color: #bcc3ce;
+    content: attr(data-content);
+    display: inline-block;
+    font-size: .7rem;
+    padding: 0 .4rem;
+    transform: translateY(-.65rem);
+}
+
+.divider--v[data-content] {
+    left: 50%;
+    padding: .2rem 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 /* Removed 0.5.5 */ 
