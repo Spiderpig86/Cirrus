@@ -365,7 +365,6 @@ button span:last-child,
     display: -webkit-box;
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-flex;
 }
 
 .btn-group .btn,
@@ -439,23 +438,17 @@ pre > code {
     font-size: 14px;
     display: block;
     padding: 2rem 1.5rem 1rem;
-    white-space: pre-wrap; /* css-3 */
-    word-wrap: break-word; /* Internet Explorer 5.5+ */
-    font-family: Consolas, Monaco, "Andale Mono", monospace;
-    direction: ltr;
-    text-align: left;
-    word-spacing: normal;
-    word-break: normal;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: Consolas,Monaco,"Andale Mono",monospace;
     line-height: 1.5;
     -moz-tab-size: 4;
     tab-size: 4;
-    -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    border-left: 0.3rem solid var(--cirrus-primary);
+    border-left: .3rem solid var(--cirrus-primary);
     margin: 0;
-    position: relative;
 }
 
 /* BASE STYLING FOR CIRRUS */
@@ -1272,7 +1265,6 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 .form-group {
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-flex; /* Using flexbox for form group */
     margin: 0.5rem 0; /* Add margin to the container since they have been removed from children */
 }
 
@@ -1366,7 +1358,6 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 /* The base container that is similar in structure to a card but more flexible */
 .frame {
     display: flex;
-    display: -webkit-flex;
     display: -ms-flexbox;
     flex-direction: column;
     -webkit-flex-direction: column;
@@ -2064,8 +2055,6 @@ section {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     padding: 3rem 1.5rem;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2228,7 +2217,6 @@ space.x-large {
     align-items: center;
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-flex;
     -ms-flex-align: center;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -2476,7 +2464,6 @@ space.x-large {
 /* LINKS */
 
 a {
-    backface-visibility: hidden;
     color: var(--cirrus-link);
     display: block; /* Allow this to be overwritten, never set to inline-block */
     font-weight: 600;
@@ -3162,6 +3149,12 @@ video.video-fullscreen {
         transform:translateY(0)
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .modal-content {
+        max-width: 90%;
+    }
+}
 /* TABLE */
 
 .table {
@@ -3172,8 +3165,9 @@ video.video-fullscreen {
     text-align: center; /* Text center by default */
 }
 
-.table td, .table th {
-        border: 1px solid rgba(219, 219, 219, 0.50);
+.table td,
+.table th {
+    border: 1px solid rgba(219, 219, 219, 0.5);
     border-width: 0 0 1px;
     padding: 0.75rem;
     vertical-align: top;
@@ -3182,47 +3176,53 @@ video.video-fullscreen {
 }
 
 .table tr {
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
 .table caption {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     color: #6c757d;
     text-align: left;
     caption-side: bottom;
 }
 
-.table tr:hover, .table.striped tbody tr:nth-child(even):hover {
+.table tr:hover,
+.table.striped tbody tr:nth-child(even):hover {
     background-color: rgba(216, 216, 216, 0.15);
 }
 
 /* Thicker border for table header */
-.table thead th, .table thead {
+.table thead th,
+.table thead {
     border-bottom: 2px solid rgba(219, 219, 219, 0.49);
 }
 
-.table.bordered thead th, .table.bordered thead {
-    border-bottom: 1px solid rgba(219, 219, 219, 0.50);
+.table.bordered thead th,
+.table.bordered thead {
+    border-bottom: 1px solid rgba(219, 219, 219, 0.5);
 }
 
-.table thead th, .table tfoot th {
-      padding: 1rem;
+.table thead th,
+.table tfoot th {
+    padding: 1rem;
 }
 
 .table tfoot th {
-  border-top: 2px solid rgba(219, 219, 219, 0.50);
-  border-bottom: none;
+    border-top: 2px solid rgba(219, 219, 219, 0.5);
+    border-bottom: none;
 }
 
 /* CUSTOM STYLES */
 /* All borders */
-.table.bordered td, .table.bordered th {
-  border: 1px solid rgba(219, 219, 219, 0.50);
+.table.bordered td,
+.table.bordered th {
+    border: 1px solid rgba(219, 219, 219, 0.5);
 }
 
-.table.bordered thead td, .table.borderd thead {
-  border-width: 1px;
+.table.bordered thead td,
+.table.borderd thead {
+    border-width: 1px;
 }
 
 /* Striped table */
@@ -3230,30 +3230,31 @@ video.video-fullscreen {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-
 /* Decrease padding */
-.table.small td, .table.small th {
+.table.small td,
+.table.small th {
     padding: 0.25rem 0.75rem;
 }
 
 /* Fixed title table */
 .table.fixed-head thead {
-      position: relative;
+    position: relative;
     display: block;
 }
 
 .table.fixed-head tbody {
-      height: 200px; /* Set the height you want */
+    height: 200px; /* Set the height you want */
     display: block; /* Needed */
     overflow: auto; /* Shows scrollbars */
 }
 
 .table.fixed-head tr {
-  display: table;
+    display: table;
     width: 100%; /* Forces row to span container */
 }
 
-.table tr.selected { /* Style a selected row */
+.table tr.selected {
+    /* Style a selected row */
     background-color: var(--cirrus-primary);
     color: #fff;
 }
@@ -3264,6 +3265,7 @@ video.video-fullscreen {
 .table.borderless td {
     border: none;
 }
+
 /* Color scheme for Cirrus */
 :root {
     --cirrus-fg: #374054;

@@ -1,7 +1,6 @@
 /* LINKS */
 
 a {
-    backface-visibility: hidden;
     color: var(--cirrus-link);
     display: block; /* Allow this to be overwritten, never set to inline-block */
     font-weight: 600;

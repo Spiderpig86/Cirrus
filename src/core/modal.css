@@ -159,3 +159,9 @@
         transform:translateY(0)
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .modal-content {
+        max-width: 90%;
+    }
+}

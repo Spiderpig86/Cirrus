@@ -2,7 +2,6 @@
 /* Parent contianer for page navigation */
 .pagination {
     display: flex;
-    display: -webkit-flex;
     display: -ms-flexbox;
 }
 

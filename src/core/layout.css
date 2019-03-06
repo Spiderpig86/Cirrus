@@ -120,8 +120,6 @@ section {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     padding: 3rem 1.5rem;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -284,7 +282,6 @@ space.x-large {
     align-items: center;
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-flex;
     -ms-flex-align: center;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;

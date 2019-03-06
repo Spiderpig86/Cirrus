@@ -299,7 +299,6 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 .form-group {
     display: flex;
     display: -ms-flexbox;
-    display: -webkit-flex; /* Using flexbox for form group */
     margin: 0.5rem 0; /* Add margin to the container since they have been removed from children */
 }
 

@@ -28,21 +28,15 @@ pre > code {
     font-size: 14px;
     display: block;
     padding: 2rem 1.5rem 1rem;
-    white-space: pre-wrap; /* css-3 */
-    word-wrap: break-word; /* Internet Explorer 5.5+ */
-    font-family: Consolas, Monaco, "Andale Mono", monospace;
-    direction: ltr;
-    text-align: left;
-    word-spacing: normal;
-    word-break: normal;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: Consolas,Monaco,"Andale Mono",monospace;
     line-height: 1.5;
     -moz-tab-size: 4;
     tab-size: 4;
-    -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    border-left: 0.3rem solid var(--cirrus-primary);
+    border-left: .3rem solid var(--cirrus-primary);
     margin: 0;
-    position: relative;
 }
