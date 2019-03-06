@@ -32,6 +32,7 @@ https://unpkg.com/cirrus-ui
 ```
 
 ## Supported Browsers
+Cirrus relies on  [What CSS to prefix?](http://shouldiprefix.com/) to determine which selectors need preprocessors.
 * Chrome
 * Opera
 * Firefox
