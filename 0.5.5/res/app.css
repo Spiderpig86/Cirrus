@@ -170,6 +170,39 @@ footer p .fa.fa-heart {
     vertical-align: baseline;
 }
 
+/* Documentation Page */
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.doc-tile {
+    border-radius: .25rem;
+    cursor: pointer;
+    height: 100%;
+    padding: 2.5rem 2rem;
+    transition: all .2s;
+    user-select: none;
+}
+
+.doc-tile .lead {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    margin-top: .5rem;
+}
+
+.doc-tile:hover {
+    background-color: rgba(0,0,0,.05);
+    color: #3273dc;
+    transition: all .2s;
+}
+
+.doc-tile:active {
+    background-color: rgba(0,0,0,.10);
+    color: #3273dc;
+    transform: scale(.98);
+}
+
 @media (max-width: 768px) {
     .nav-item.has-sub .list-dropdown .btn-group button:not(.btn-dropdown) {
         flex-grow: 1;
