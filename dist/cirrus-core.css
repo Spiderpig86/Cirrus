@@ -655,9 +655,9 @@ strong {
   margin-bottom: 1rem;
 }
 
-.accent .subtitle {
+/* .accent .subtitle { Deprecated 0.5.5
   color: rgba(255, 255, 255, 0.9);
-}
+} */
 
 .title + .subtitle {
   /* Make the subtitlte closer to the title */
@@ -880,22 +880,22 @@ kbd {
   }
 
   .headline-1 {
-    font-size: 4.5rem;
+    font-size: 3rem;
     letter-spacing: 0.05rem;
   }
 
   .headline-2 {
-    font-size: 4rem;
+    font-size: 2.75rem;
     letter-spacing: 0.05rem;
   }
 
   .headline-3 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     letter-spacing: 0.05rem;
   }
 
   .headline-4 {
-    font-size: 3rem;
+    font-size: 2.25rem;
     letter-spacing: 0.025rem;
   }
 
