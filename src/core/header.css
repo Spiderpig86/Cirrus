@@ -186,7 +186,7 @@
 /* Add room for the dropdown chevron pseudoelement */
 .nav-item.has-sub .nav-dropdown-link {
   padding-right: 2.5rem;
-  /* position: relative; Redundant */
+  position: relative; /* Needed for hiding glyphs in mobile header */
 }
 
 /* Dark dropdown menu theme */
