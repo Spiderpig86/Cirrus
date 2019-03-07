@@ -81,6 +81,16 @@ pre:not(.get-cirrus) > code {
     margin: 1rem 0;
 }
 
+.color-panel {
+    transition-duration: 86ms;
+}
+
+.color-panel:hover {
+    box-shadow: 0 3rem 3rem -1.25rem rgba(10,10,10,.1);
+    -webkit-transform: translateY(-.5rem);
+    transform: translateY(-.5rem);
+}
+
 /* Fonts */
 .desc {
     font-size: 11px;
