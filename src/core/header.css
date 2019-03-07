@@ -186,7 +186,7 @@
 /* Add room for the dropdown chevron pseudoelement */
 .nav-item.has-sub .nav-dropdown-link {
   padding-right: 2.5rem;
-  position: relative;
+  /* position: relative; Redundant */
 }
 
 /* Dark dropdown menu theme */

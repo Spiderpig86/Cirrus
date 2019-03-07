@@ -1589,7 +1589,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 /* Add room for the dropdown chevron pseudoelement */
 .nav-item.has-sub .nav-dropdown-link {
   padding-right: 2.5rem;
-  position: relative;
+  /* position: relative; Redundant */
 }
 
 /* Dark dropdown menu theme */
@@ -1974,7 +1974,7 @@ section {
 .divider {
     border-top: .05rem solid rgba(173, 173, 173, 0.5);
     height: .05rem;
-    margin: .4rem 0;
+    margin: 1.8rem 0 1.6rem;
 }
 
 .divider[data-content] {
@@ -3874,22 +3874,19 @@ video.video-fullscreen {
 /* CARDS */
 
 .card {
-    background-color: white;
+    background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    display: block;
     position: relative;
     overflow: hidden;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+    transition: all .3s;
     backface-visibility: hidden;
+    box-shadow: 0px 5px 12px 0 rgba(42,51,83,.12), 0px 0px 5px rgba(0,0,0,.06);
+    margin-bottom: 1rem;
 }
 
 .card:hover {
-    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1),
-        0 0 12px 2px rgba(10, 10, 10, 0.1);
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
+    transition: all .3s;
+    box-shadow: 0px 8px 20px 0 rgba(42,51,83,.12), 0 5px 5px rgba(0,0,0,.06);
 }
 
 .slide-up:hover .card-image {

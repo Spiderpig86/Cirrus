@@ -39,7 +39,7 @@ section {
 .divider {
     border-top: .05rem solid rgba(173, 173, 173, 0.5);
     height: .05rem;
-    margin: .4rem 0;
+    margin: 1.8rem 0 1.6rem;
 }
 
 .divider[data-content] {
