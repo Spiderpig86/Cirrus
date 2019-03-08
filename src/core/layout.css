@@ -114,16 +114,15 @@ section {
 }
 
 .hero-body {
-    -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1; /* Tells the hero-body to take up the entire space */
     -ms-flex-negative: 0;
     flex-shrink: 0;
     padding: 3rem 1.5rem;
     align-items: center;
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
 }
 
 space {
