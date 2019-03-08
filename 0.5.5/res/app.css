@@ -178,6 +178,7 @@ footer p .fa.fa-heart {
 
 .doc-tile {
     border-radius: .25rem;
+    color: var(--cirrus-fg);
     cursor: pointer;
     height: 100%;
     padding: 2.5rem 2rem;
@@ -185,8 +186,12 @@ footer p .fa.fa-heart {
     user-select: none;
 }
 
+.col-6 a:focus {
+    box-shadow: none;
+}
+
 .doc-tile .lead {
-    font-size: 1.125rem;
+    font-size: 1.175rem;
     line-height: 2rem;
     margin-top: .5rem;
 }
