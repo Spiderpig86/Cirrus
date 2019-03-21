@@ -54,7 +54,7 @@
             </div>
             <div class="nav-right u-text-center nav-menu">
                 <div class="nav-item">
-                    <a href=https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/animations.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
+                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/animations.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
                 </div>
 
                 <div class="nav-item has-sub">
@@ -113,20 +113,20 @@
                 <space class="x-large"></space>
                 <h5>Loading Button</h5>
                 <p>These buttons are designed to tell users that a function is in progress. This is simply created by adding the <code>animated loading</code> classes to the button and it will automatically 
-                <div class="row fluid-container">
-                    <div class="col-fluid">
+                <div class="row">
+                    <div class="col">
                         <button class="animated loading u-center hide-text btn-primary">1</button>
                     </div>
-                    <div class="col-fluid">
+                    <div class="col">
                         <button class="animated loading u-center loading-left btn-info">Loading</button>
                     </div>
-                    <div class="col-fluid">
+                    <div class="col">
                         <button class="animated loading u-center loading-white hide-text btn-link" id="btn3">3</button>
                     </div>
-                    <div class="col-fluid">
+                    <div class="col">
                         <button class="animated loading u-center loading-right loading-white white btn-success" id="btn4">Loading</button>
                     </div>
-                    <div class="col-fluid">
+                    <div class="col">
                         <button class="animated loading u-center hide-text loading-white btn-warning" id="btn5">5</button>
                     </div>
                 </div>
@@ -134,30 +134,30 @@
                 <space></space>
 
                     <div class="row">
-                        <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col-fluid&quot;&gt;
-    &lt;button class=&quot;animated loading center hide-text&quot;&gt;1&lt;/button&gt;
+                        <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;animated loading u-center hide-text&quot;&gt;1&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-fluid&quot;&gt;
-    &lt;button class=&quot;animated loading center loading-left btn-primary&quot;&gt;Loading&lt;/button&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;animated loading u-center loading-left btn-primary&quot;&gt;Loading&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-fluid&quot;&gt;
-    &lt;button class=&quot;animated loading center loading-white hide-text&quot; id=&quot;btn3&quot;&gt;3&lt;/button&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;animated loading u-center loading-white hide-text&quot; id=&quot;btn3&quot;&gt;3&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-fluid&quot;&gt;
-    &lt;button class=&quot;animated loading center loading-right loading-white white&quot; id=&quot;btn4&quot;&gt;Loading&lt;/button&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;animated loading u-center loading-right loading-white white&quot; id=&quot;btn4&quot;&gt;Loading&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class=&quot;col-fluid&quot;&gt;
-    &lt;button class=&quot;animated loading center hide-text&quot; id=&quot;btn5&quot;&gt;5&lt;/button&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;animated loading u-center hide-text&quot; id=&quot;btn5&quot;&gt;5&lt;/button&gt;
 &lt;/div&gt;</code></pre>
                     </div>
 
                     <space class="x-large"></space>
 
-                <div class="row">
+                <div class="r">
                     <h5>Hover Grow</h5>
                     <p>Zoom in various elements to make the stand out from the rest. Just add <code>hover-grow</code> to your control.</p>
 
-                    <div class="row fluid-container u-text-center content" id="grid">
+                    <div class="row u-text-center content" id="grid">
                         <a href="#">
                             <div class="content">
                                 <img src="../../res/img/FileBot.png" class="hover-grow"/>
@@ -184,7 +184,7 @@
                         </a>
                     </div>
 
-                     <div class="row fluid-container u-text-center content" id="grid">
+                     <div class="row u-text-center content" id="grid">
                         <a href="#">
                             <div class="content">
                                 <img src="../../res/img/photoshop.png" class="hover-grow"/>
@@ -227,8 +227,8 @@
             <div class="divider"></div>
             <h5>Pulse</h5>
             <p>This animation adds a pulsing animation to any component such as divs, images, buttons, etc.</p>
+                <h6 class="font-alt font-light">Pulsing animation with Font Awesome</h6>
                 <div class="row">
-                    <h6 class="font-alt font-light">Pulsing animation with Font Awesome</h6>
                     <div class="col-6 no-margin">
                         <div class="u-text-center">
                             <i class="fa fa-wrapper fa-heart animated pulse large paused" id="pulse-heart" aria-hidden="true"></i>
@@ -242,8 +242,8 @@
                     </div>
                 </div>
 
+                <h6 class="font-alt font-light">Pulsing animation with a div</h6>
                 <div class="row">
-                    <h6 class="font-alt font-light">Pulsing animation with a div</h6>
                     <div class="col-6 no-margin">
                         <div class="u-text-center">
                             <div class="content u-text-center animated pulse paused" id="pulse-div" style="background: #f03d4d; color: white">
@@ -254,14 +254,14 @@
                         <button class="docs-btn-play" id="toggle-pulse-div"><i class="fa fa-wrapper fa-play pad-right" aria-hidden="true"></i>Play</button>
                     </div>
                     <div class="col-6">
-<pre><code class="HTML" data-lang="HTML"> &lt;div class=&quot;content u-text-center animated pulse paused&quot; id=&quot;pulse-div&quot; style=&quot;background: #f03d4d; color: white&quot;&gt;
+    <pre><code class="HTML" data-lang="HTML"> &lt;div class=&quot;content u-text-center animated pulse paused&quot; id=&quot;pulse-div&quot; style=&quot;background: #f03d4d; color: white&quot;&gt;
     &lt;p&gt;This is a div!&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+    &lt;/div&gt;</code></pre>
                     </div>
                 </div>
 
+                <h6 class="font-alt font-light">Pulsing animation with a button</h6>
                 <div class="row">
-                    <h6 class="font-alt font-light">Pulsing animation with a button</h6>
                     <div class="col-6 no-margin">
                         <div class="u-text-center btn-container">
                             <button class="btn-primary animated pulse paused" id="pulse-btn">Click me!</button>
@@ -271,7 +271,7 @@
                     <div class="col-6">
                         <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;u-text-center&quot;&gt;
     &lt;button class=&quot;btn-primary animated pulse paused&quot; id=&quot;pulse-btn&quot;&gt;Click me!&lt;/button&gt;
-&lt;/div&gt;</code></pre>
+    &lt;/div&gt;</code></pre>
                     </div>
                 </div>
         </div>
