@@ -158,7 +158,7 @@ space.x-large {
 .row .col {
     display: block;
     flex: 1;
-    padding: 0.75rem;
+    padding: .15rem .75rem;
 }
 
 .row .col-1 {
@@ -258,30 +258,30 @@ space.x-large {
     margin-left: 100%;
 }
 
-/* Auto align col-n to left in fluid-container */
-.fluid-container .offset-right {
+/* Auto align col to left in row */
+.row .offset-right {
     margin-left: 0;
     margin-right: auto;
 }
 
-/* Auto align col-n to middle in fluid-container */
-.fluid-container .offset-center {
+/* Auto align col to middle in row */
+.row .offset-center {
     margin-left: auto;
     margin-right: auto;
 }
-/* Auto align col-n to right in fluid-container */
-.fluid-container .offset-left {
+/* Auto align col to right in row */
+.row .offset-left {
     margin-left: auto;
     margin-right: 0;
 }
 
-/* Use in parent div of fluid col */
+/* Use in parent div of fluid col
 .fluid-container {
     display: flex;
     overflow: auto;
 }
 
-/* Wrap controls instead on overflow */
+/* Wrap controls instead on overflow 
 .fluid-container.wrap {
     -webkit-align-items: center;
     align-items: center;
@@ -293,7 +293,7 @@ space.x-large {
     flex-wrap: wrap;
 }
 
-/* Resizes elements in a row equally given the number of elements located in it */
+/* Resizes elements in a row equally given the number of elements located in it 
 .fluid-container .col-fluid {
     display: block;
     -ms-flex-preferred-size: 0;
@@ -305,14 +305,14 @@ space.x-large {
     flex-shrink: 1;
 }
 
-/* No expansion for specific col-fluid columns */
+/* No expansion for specific col-fluid columns 
 .fluid-container .col-fluid.no-flex {
     flex-grow: 0;
     flex-shrink: 0;
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     -ms-flex-negative: 0;
-}
+} */
 
 /* Some offset values */
 .row [class^="col-"],
