@@ -148,6 +148,13 @@ space.x-large {
     padding: 0.5rem;
 }
 
+.row.row--no-wrap {
+    -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default */
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Can be disabled to remove scroll bar */
+}
+
 .row::after {
     content: "";
     clear: both;
@@ -328,20 +335,20 @@ space.x-large {
 }
 
 /* Ignore overflow in columns */
-.row.expand {
-    -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default */
+/* .row.expand { DEPRECATED 0.5.5
+    -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default 
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    overflow-x: auto; /* Can be disabled to remove scroll bar */
-}
+    overflow-x: auto; /* Can be disabled to remove scroll bar 
+} */
 
 /* Only for divs with .expand so they can go past the parent div width */
-.row.expand [class^="col-"],
+/* .row.expand [class^="col-"], DEPRECATED 0.5.5, no use
 .row.expand [class*=" col-"] {
     -webkit-flex: none;
     -ms-flex: none;
     flex: none;
-}
+} */
 
 /* Used for aligning controls next to each other */
 .row.has-controls {
