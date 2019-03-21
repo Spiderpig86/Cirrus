@@ -2083,6 +2083,11 @@ space.x-large {
     padding: 0.5rem;
 }
 
+.r { /* Legacy row pre 0.5.5 */
+    max-width: 100%;
+    padding: .5rem;
+}
+
 .row.row--no-wrap {
     -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default */
     -ms-flex-wrap: nowrap;
