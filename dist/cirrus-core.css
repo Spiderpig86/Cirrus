@@ -2076,10 +2076,10 @@ space.x-large {
 
 /* Use for spacing out elements vertically */
 .row {
-    -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    max-width: 100%;
+    /* max-width: 100%; */
+    flex-wrap: wrap;
     padding: 0.5rem;
 }
 
@@ -2090,6 +2090,12 @@ space.x-large {
 }
 
 /* GRID */
+.row .col {
+    display: block;
+    flex: 1;
+    padding: 0.75rem;
+}
+
 .row .col-1 {
     width: 8.33333333%;
 }
@@ -2400,6 +2406,11 @@ space.x-large {
 }
 
 @media screen and (min-width: 769px) {
+
+    .row {
+        display: flex;
+    }
+
     .level-right {
         margin-left: 1rem;
     }
@@ -2436,9 +2447,9 @@ space.x-large {
         margin-top: 1rem;
     }
 
-    .fluid-container {
+    /* .fluid-container { DEPRECATED 0.5.5
         display: inherit;
-    }
+    } */
 
     /* Dividers for mobile layout */
     .divided > .fluid-container:not(.row),
