@@ -9,7 +9,7 @@
 }
 
 #fade {
-    background-image: linear-gradient(to bottom, transparent, #fff);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.0001), #fff);
     bottom: 0;
     height: 175px;
     left: 0;
