@@ -441,6 +441,7 @@ pre > code {
     white-space: pre-wrap;
     word-wrap: break-word;
     font-family: Consolas,Monaco,"Andale Mono",monospace;
+    text-align: left
     line-height: 1.5;
     -moz-tab-size: 4;
     tab-size: 4;
@@ -449,6 +450,7 @@ pre > code {
     hyphens: none;
     border-left: .3rem solid var(--cirrus-primary);
     margin: 0;
+    position: relative;
 }
 
 /* BASE STYLING FOR CIRRUS */
@@ -3098,7 +3100,7 @@ video.video-fullscreen {
 
 .modal-content .modal-header .modal-title {
     font-weight: bolder;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .modal-content .modal-body {
@@ -4021,13 +4023,11 @@ video.video-fullscreen {
     position: absolute;
     left: 0;
     background-color: var(--cirrus-bg);
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-
-    transition: all 0.3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: .3s ease-in-out;
     width: 100%;
-    padding: 1rem 0;
+    padding: 2rem 0 0 0;
     backface-visibility: hidden;
 }
 
