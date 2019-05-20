@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div id="header" class="header header-fill unselectable header-fixed no-transition header-darkheader-animated">
+    <div id="header" class="header header-fill unselectable header-fixed no-transition header-dark header-animated">
         <div class="header-brand">
             <div class="nav-item">
                 <a href="../../">
@@ -98,9 +98,9 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet luctus venenatis lectus magna. Facilisis gravida neque convallis a cras semper. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Erat imperdiet sed euismod nisi porta lorem. </p>
             </div>
             <div class="modal-footer">
-                <div class="row level">
+                <div class="level">
                     <div class="level-left level-content"><a href="#components" style="display: inline-block;">
-                        <button class="btn-small" style="margin-right: .75rem; padding: 0 1rem">Cancel</button></a>
+                        <button class="btn-small">Cancel</button></a>
                     </div>
                     <div class="level-right level-content">
                         <a href="#components" style="display: inline-block"><button class="btn-primary btn-small" style="padding: 0 1rem">Share</button></a>
@@ -248,7 +248,7 @@
 
     
 
-    <section id="basic">
+    <section id="basic" class="padtop">
         <div class="content">
             <h3>Basic Design</h3>
             <p>Sometimes the best way to get information across is a minimallistic approach. Cards in Cirrus are adaptable to what you want to show.</p>
@@ -257,11 +257,9 @@
                     <a href="#">
                         <div class="card">
                             <div class="content">
-                                <div class="row">
-                                    <img src="https://maxcdn.icons8.com/Share/icon/Logos//chrome1600.png" class="level" id="projectlogo" />
-                                    <p id="projectname" class="title level">Google Chrome</p>
-                                    <p>Hello here is some text for this card wrapped inside a link.</p>
-                                </div>
+                                <img src="https://maxcdn.icons8.com/Share/icon/Logos//chrome1600.png" class="level" id="projectlogo" />
+                                <p id="projectname" class="title level">Google Chrome</p>
+                                <p>Hello here is some text for this card wrapped inside a link.</p>
                             </div>
                         </div>
                     </a>
@@ -271,11 +269,9 @@
                     <pre><code class="html" data-lang="HTML">&lt;a href=&quot;#&quot;&gt;
     &lt;div class=&quot;card&quot;&gt;
         &lt;div class=&quot;content&quot;&gt;
-            &lt;div class=&quot;row&quot;&gt;
-                &lt;img src=&quot;https://maxcdn.icons8.com/Share/icon/Logos//chrome1600.png&quot; class=&quot;level&quot; id=&quot;projectlogo&quot; /&gt;
-                &lt;p id=&quot;projectname&quot; class=&quot;title level&quot;&gt;Google Chrome&lt;/p&gt;
-                &lt;p&gt;Hello here is some text for this card wrapped inside a link.&lt;/p&gt;
-            &lt;/div&gt;
+            &lt;img src=&quot;https://maxcdn.icons8.com/Share/icon/Logos//chrome1600.png&quot; class=&quot;level&quot; id=&quot;projectlogo&quot; /&gt;
+            &lt;p id=&quot;projectname&quot; class=&quot;title level&quot;&gt;Google Chrome&lt;/p&gt;
+            &lt;p&gt;Hello here is some text for this card wrapped inside a link.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/a&gt;</code></pre>
@@ -1123,7 +1119,7 @@
             <div class="divider"></div>
             <p>A friendly way to notify users of updates or upcoming events.</p>
 
-            <div class="row">
+            <div class="r">
                 <div class="placeholder">
                     <div class="placeholder-icon">
                         <span class="icon">
@@ -1144,7 +1140,7 @@
                 </div>
             </div>
             
-            <div class="row">
+            <div class="r">
                 <div class="col-6">
                     <pre><code class="html" data-lang="HTML">&lt;div class=&quot;placeholder&quot;&gt;
     &lt;div class=&quot;placeholder-icon&quot;&gt;
@@ -1182,7 +1178,7 @@
                 </div>
             </div>
             
-            <div class="row">
+            <div class="r">
                 <div class="placeholder">
                     <div class="placeholder-icon">
                         <span class="icon">
@@ -1208,7 +1204,7 @@
             <h1><a href="./index.html#tabs" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Tabs</h1>
             <div class="divider"></div>
             <p>Simple tab navigation for presenting different views with different styles and add-ons.</p>
-            <div class="row">
+            <div class="r">
                 <div class="tab-container">
                     <ul>
                         <li><a>Home</a></li>
@@ -1256,8 +1252,9 @@
             <h4>Alternative Sizes</h4>
             <p>Modify the size of the <code>tab-container</code> using the <code>tabs-xsmall</code>, <code>tabs-small</code>, <code>tabs-large</code>, and <code>tabs-xlarge</code> classes.</p>
 
+            
+            <p class="title">X-Small</p>
             <div class="row">
-                <p class="title">X-Small</p>
                 <div class="col-6">
                     <div class="tab-container tabs-xsmall">
                         <ul>
@@ -1277,8 +1274,8 @@
                 </div>
             </div>
 
+            <p class="title">Small</p>
             <div class="row">
-                <p class="title">Small</p>
                 <div class="col-6">
                     <div class="tab-container tabs-small">
                         <ul>
@@ -1298,8 +1295,8 @@
                 </div>
             </div>
 
+            <p class="title">Large</p>
             <div class="row">
-                <p class="title">Large</p>
                 <div class="col-6">
                     <div class="tab-container tabs-large">
                         <ul>
@@ -1319,8 +1316,8 @@
                 </div>
             </div>
 
+            <p class="title">X-Large</p>
             <div class="row">
-                <p class="title">X-Large</p>
                 <div class="col-6">
                     <div class="tab-container tabs-xlarge">
                         <ul>
@@ -1345,8 +1342,8 @@
             <h4>Alignment</h4>
             <p>Easily change the alignment on the tabs with <code>tabs-center</code>, <code>tabs-right</code>, and <code>tabs-fill</code>. Note that tabs are left-justified by default.</p>
 
+            <p class="title">Centered</p>
             <div class="row">
-                <p class="title">Centered</p>
                 <div class="col-6">
                     <div class="tab-container tabs-center">
                         <ul>
@@ -1369,8 +1366,8 @@
                 </div>
             </div>
 
+            <p class="title">Right</p>
             <div class="row">
-                <p class="title">Right</p>
                 <div class="col-6">
                     <div class="tab-container tabs-right">
                         <ul>
@@ -1393,8 +1390,8 @@
                 </div>
             </div>
 
+            <p class="title">Fill</p>
             <div class="row">
-                <p class="title">Fill</p>
                 <div class="col-6">
                     <div class="tab-container tabs-fill">
                         <ul>
@@ -1423,8 +1420,8 @@
             <h4>Styles</h4>
             <p>Try out alternative styles with tabs.</p>
 
+            <p class="title">Depth</p>
             <div class="row">
-                <p class="title">Depth</p>
                 <div class="col-6">
                     <div class="tab-container tabs-depth tabs-fill">
                         <ul>
@@ -1447,8 +1444,8 @@
                 </div>
             </div>
 
+            <p class="title">Classic</p>
             <div class="row">
-                <p class="title">Classic</p>
                 <div class="col-6">
                     <div class="tab-container tabs-classic tabs-center">
                         <ul>
@@ -1474,8 +1471,8 @@
             <h4>Font Awesome</h4>
             <p>Integrate FontAwesome glyphs into your tabs. Cirrus will automatically align the glyphs to the left or right depending if the glyph or text comes first.</p>
 
+            <p class="title">Classic</p>
             <div class="row">
-                <p class="title">Classic</p>
                 <div class="col-6">
                     <div class="tab-container tabs-classic tabs-center">
                         <ul>
