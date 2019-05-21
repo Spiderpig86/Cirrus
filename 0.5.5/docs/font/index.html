@@ -66,6 +66,7 @@
                     <ul class="dropdown-menu dropdown-animated">
                         <li><a href="#started" class="smoothScroll">Top</a></li>
                         <li><a href="#headings" class="smoothScroll">Headings</a></li>
+                        <li><a href="#headline" class="smoothScroll">Headline</a></li>
                         <li><a href="#typesetting" class="smoothScroll">Typesetting</a></li>
                         <li><a href="#transformations" class="smoothScroll">Transformations</a></li>
                         <li><a href="#font_awesome" class="smoothScroll">Font Awesome</a></li>
@@ -105,69 +106,82 @@
         <div class="content">
             <h1><a href="./index.html#headings" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Headings</h1>
             <div class="divider"></div>
-            <p>Cirrus styles the standard header tags <code>h1, h2, h3, h4, h5, h6</code> with font sizes ranging from <code>4rem</code> to <code>1rem</code> where each <code>rem</code> is <code>16px</code>. Cirrus allows you to choose between two fonts: <code>Montserrat</code> and <code>Nunito Sans</code> by specifying the font weight of the headers. Simply add the <code>light</code> class to your headings to use <code>Nunito Sans</code> and leave it as is to use <code>Montserrat</code>.</p>
+            <p>Cirrus styles the standard header tags <code>h1, h2, h3, h4, h5, h6</code> with font sizes ranging from <code>4rem</code> to <code>1rem</code> where each <code>rem</code> is <code>16px</code>. Cirrus allows you to choose between two fonts: <code>Montserrat</code> and <code>Nunito Sans</code> by specifying the font weight of the headers. Simply add the <code>font-alt  font-light</code> class to your headings to use <code>Nunito Sans</code> and leave it as is to use <code>Montserrat</code>.</p>
             <div class="row">
                 <div class="col-6">
                     <h6 class="uppercase">Standard headings:</h6>
-                    <h1 class="uppercase">this is h1<span class="desc"><code>h1</code>4rem (48px)</span></h1>
-                    <h2 class="uppercase">this is h2<span class="desc"><code>h2</code>3.5rem (40px)</span></h1>
+                    <h1 class="uppercase">this is h1<span class="desc"><code>h1</code> 3rem (48px)</span></h1>
+                    <h2 class="uppercase">this is h2<span class="desc"><code>h2</code> 2.5rem (40px)</span></h1>
                     </h2>
-                    <h3 class="uppercase">this is h3<span class="desc"><code>h3</code>3rem (32px)</span></h1>
+                    <h3 class="uppercase">this is h3<span class="desc"><code>h3</code> 2rem (32px)</span></h1>
                     </h1>
-                    <h4 class="uppercase">this is h4<span class="desc"><code>h4</code>2.5rem (24px)</span></h1>
+                    <h4 class="uppercase">this is h4<span class="desc"><code>h4</code> 1.75rem (24px)</span></h1>
                     </h4>
-                    <h5 class="uppercase">this is h5<span class="desc"><code>h5</code>2rem (16px)</span></h1>
+                    <h5 class="uppercase">this is h5<span class="desc"><code>h5</code> 1.5rem (16px)</span></h1>
                     </h5>
-                    <h6 class="uppercase">this is h6<span class="desc"><code>h6</code>1rem (12px)</span></h1>
+                    <h6 class="uppercase">this is h6<span class="desc"><code>h6</code> 1.25rem (12px)</span></h1>
                     </h6>
                 </div>
 
                 <div class="col-6">
                     <h6 class="uppercase">Light headings:</h6>
-                    <h1 class="light uppercase">this is h1<span class="desc"><code>h1</code>4rem (48px)</span></h1>
-                    <h2 class="light uppercase">this is h2<span class="desc"><code>h2</code>3.5rem (40px)</span></h1>
+                    <h1 class="font-alt font-light uppercase">this is h1<span class="desc"><code>h1</code> 3rem (48px)</span></h1>
+                    <h2 class="font-alt font-light uppercase">this is h2<span class="desc"><code>h2</code> 2.5rem (40px)</span></h1>
                     </h2>
-                    <h3 class="light uppercase">this is h3<span class="desc"><code>h3</code>3rem (32px)</span></h1>
+                    <h3 class="font-alt font-light uppercase">this is h3<span class="desc"><code>h3</code> 2rem (32px)</span></h1>
                     </h1>
-                    <h4 class="light uppercase">this is h4<span class="desc"><code>h4</code>2.5rem (24px)</span></h1>
+                    <h4 class="font-alt font-light uppercase">this is h4<span class="desc"><code>h4</code> 1.75rem (24px)</span></h1>
                     </h4>
-                    <h5 class="light uppercase">this is h5<span class="desc"><code>h5</code>2rem (16px)</span></h1>
+                    <h5 class="font-alt font-light uppercase">this is h5<span class="desc"><code>h5</code> 1.5rem (16px)</span></h1>
                     </h5>
-                    <h6 class="light uppercase">this is h6<span class="desc"><code>h6</code>1rem (12px)</span></h1>
+                    <h6 class="font-alt font-light uppercase">this is h6<span class="desc"><code>h6</code> 1.25rem (12px)</span></h6>
                     </h6>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;h1 class=&quot;uppercase&quot;&gt;this is h1&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h1&lt;/code&gt;4rem (48px)&lt;/span&gt;&lt;/h1&gt;
-
-&lt;h2 class=&quot;uppercase&quot;&gt;this is h2&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h2&lt;/code&gt;3.5rem (40px)&lt;/span&gt;&lt;/h1&gt;&lt;/h2&gt;
-
-&lt;h3 class=&quot;uppercase&quot;&gt;this is h3&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h3&lt;/code&gt;3rem (32px)&lt;/span&gt;&lt;/h1&gt;&lt;/h3&gt;
-
-&lt;h4 class=&quot;uppercase&quot;&gt;this is h4&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h4&lt;/code&gt;2.5rem (24px)&lt;/span&gt;&lt;/h1&gt;&lt;/h4&gt;
-
-&lt;h5 class=&quot;uppercase&quot;&gt;this is h5&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h5&lt;/code&gt;2rem (16px)&lt;/span&gt;&lt;/h1&gt;&lt;/h5&gt;
-
-&lt;h6 class=&quot;uppercase&quot;&gt;this is h6&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h6&lt;/code&gt;1rem (12px)&lt;/span&gt;&lt;/h1&gt;&lt;/h6&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;h1 class=&quot;uppercase&quot;&gt;this is h1&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h1&lt;/code&gt; 3rem (48px)&lt;/span&gt;&lt;/h1&gt;
+&lt;h2 class=&quot;uppercase&quot;&gt;this is h2&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h2&lt;/code&gt; 2.5rem (40px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h2&gt;
+&lt;h3 class=&quot;uppercase&quot;&gt;this is h3&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h3&lt;/code&gt; 2rem (32px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h1&gt;
+&lt;h4 class=&quot;uppercase&quot;&gt;this is h4&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h4&lt;/code&gt; 1.75rem (24px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h4&gt;
+&lt;h5 class=&quot;uppercase&quot;&gt;this is h5&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h5&lt;/code&gt; 1.5rem (16px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h5&gt;
+&lt;h6 class=&quot;uppercase&quot;&gt;this is h6&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h6&lt;/code&gt; 1.25rem (12px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h6&gt;
                         </code></pre>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;h1 class=&quot;light uppercase&quot;&gt;this is h1&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h1&lt;/code&gt;4rem (48px)&lt;/span&gt;&lt;/h1&gt;
-
-&lt;h2 class=&quot;light uppercase&quot;&gt;this is h2&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h2&lt;/code&gt;3.5rem (40px)&lt;/span&gt;&lt;/h1&gt;&lt;/h2&gt;
-
-&lt;h3 class=&quot;light uppercase&quot;&gt;this is h3&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h3&lt;/code&gt;3rem (32px)&lt;/span&gt;&lt;/h1&gt;&lt;/h3&gt;
-
-&lt;h4 class=&quot;light uppercase&quot;&gt;this is h4&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h4&lt;/code&gt;2.5rem (24px)&lt;/span&gt;&lt;/h1&gt;&lt;/h4&gt;
-
-&lt;h5 class=&quot;light uppercase&quot;&gt;this is h5&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h5&lt;/code&gt;2rem (16px)&lt;/span&gt;&lt;/h1&gt;&lt;/h5&gt;
-
-&lt;h6 class=&quot;light uppercase&quot;&gt;this is h6&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h6&lt;/code&gt;1rem (12px)&lt;/span&gt;&lt;/h1&gt;&lt;/h6&gt;
-
+                    <pre><code class="html" data-lang="HTML">&lt;h1 class=&quot;font-alt font-light uppercase&quot;&gt;this is h1&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h1&lt;/code&gt; 3rem (48px)&lt;/span&gt;&lt;/h1&gt;
+&lt;h2 class=&quot;font-alt font-light uppercase&quot;&gt;this is h2&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h2&lt;/code&gt; 2.5rem (40px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h2&gt;
+&lt;h3 class=&quot;font-alt font-light uppercase&quot;&gt;this is h3&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h3&lt;/code&gt; 2rem (32px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h1&gt;
+&lt;h4 class=&quot;font-alt font-light uppercase&quot;&gt;this is h4&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h4&lt;/code&gt; 1.75rem (24px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h4&gt;
+&lt;h5 class=&quot;font-alt font-light uppercase&quot;&gt;this is h5&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h5&lt;/code&gt; 1.5rem (16px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h5&gt;
+&lt;h6 class=&quot;font-alt font-light uppercase&quot;&gt;this is h6&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h6&lt;/code&gt; 1.25rem (12px)&lt;/span&gt;&lt;/h6&gt;
                     </code></pre>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="padtop" id="headline">
+        <div class="content">
+            <h1><a href="./index.html#headline" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Blockquotes</h1>
+            <div class="divider"></div>
+            <p>For larger titles, using a <b>headline</b> would be the best choice.</p>
+
+            <div class="r">
+                <h1 class="headline-1 uppercase"> <b>headline-1</b><span class="desc"><code>headline-1</code> 6.5rem (104px)</span></h1>
+                <h1 class="headline-2 uppercase"> <b>headline-2</b><span class="desc"><code>headline-2</code> 5.5rem (88px)</span></h1>
+                <h1 class="headline-3 uppercase"> <b>headline-3</b><span class="desc"><code>headline-3</code> 4.5rem (72px)</span></h1>
+                <h1 class="headline-4 uppercase"> <b>headline-4</b><span class="desc"><code>headline-4</code> 3.5rem (56px)</span></h1>
             </div>
         </div>
     </section>
@@ -454,30 +468,30 @@
             <p>Some other text elements.</p>
             <div class="row">
                 <div class="col-3">
-                    <abbr title="You Only Live Once">YOLO</abbr><span><code>&lt;abbr&gt;</code></span>
+                    <abbr title="You Only Live Once">YOLO</abbr>&nbsp;&nbsp;<span><code>&lt;abbr&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <code>Foo bar</code><span><code>&lt;code&gt;</code></span>
+                    <code>Foo bar</code>&nbsp;&nbsp;<span><code>&lt;code&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <del>Deleted</del><span><code>&lt;del&gt;</code></span>
+                    <del>Deleted</del>&nbsp;&nbsp;<span><code>&lt;del&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <del>Deleted</del><span><code>&lt;del&gt;</code></span>
+                    <del>Deleted</del>&nbsp;&nbsp;<span><code>&lt;del&gt;</code></span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    <i>Italis</i><span><code>&lt;i&gt;</code></span>
+                    <i>Italis</i><span>&nbsp;&nbsp;<code>&lt;i&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <ins>Inserted</ins><span><code>&lt;ins&gt;</code></span>
+                    <ins>Inserted</ins>&nbsp;&nbsp;<span><code>&lt;ins&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <kbd>Alt + F4</kbd><span><code>&lt;kbd&gt;</code></span>
+                    <kbd>Alt + F4</kbd>&nbsp;&nbsp;<span><code>&lt;kbd&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <mark>Highlight</mark><span><code>&lt;mark&gt;</code></span>
+                    <mark>Highlight</mark>&nbsp;&nbsp;<span><code>&lt;mark&gt;</code></span>
                 </div>
             </div>
             <div class="row">
@@ -488,24 +502,24 @@
               </ruby><span><code>&lt;ruby&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <s>Strikethrough</s><span><code>&lt;s&gt;</code></span>
+                    <s>Strikethrough</s>&nbsp;&nbsp;<span><code>&lt;s&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <samp>Sample</samp><span><code>&lt;samp&gt;</code></span>
+                    <samp>Sample</samp>&nbsp;&nbsp;<span><code>&lt;samp&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    Text<sub>Subscript</sub><span><code>&lt;sub&gt;</code></span>
+                    Text<sub>Subscript</sub>&nbsp;&nbsp;<span><code>&lt;sub&gt;</code></span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    Text<sup>Superscript</sup><span><code>&lt;sup&gt;</code></span>
+                    Text<sup>Superscript</sup>&nbsp;&nbsp;<span><code>&lt;sup&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <time>05:00</time><span><code>&lt;time&gt;</code></span>
+                    <time>05:00</time>&nbsp;&nbsp;<span><code>&lt;time&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <var>x</var> = <var>y</var> + 2<span><code>&lt;var&gt;</code></span>
+                    <var>x</var> = <var>y</var> + 2&nbsp;&nbsp;<span><code>&lt;var&gt;</code></span>
                 </div>
             </div>
             </div>
