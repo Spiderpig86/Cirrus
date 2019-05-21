@@ -59,6 +59,7 @@
 
 /* Tooltip top right */
 .tooltip.tooltip--top-right::after {
+  left: auto;
   -webkit-transform: translate(15%, 0);
   transform: translate(15%, 0);
 }
@@ -109,6 +110,7 @@
 
 /* Tooltip bottom right */
 .tooltip.tooltip--bottom-right::after {
+  left: auto;
   top: 100%;
   -webkit-transform: translate(0%, -1rem);
   transform: translate(0%, -1rem);
