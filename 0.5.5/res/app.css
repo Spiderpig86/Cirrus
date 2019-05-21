@@ -207,6 +207,10 @@ footer p .fa.fa-heart {
     transform: scale(.98);
 }
 
+.demo-tooltip {
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     .nav-item.has-sub .list-dropdown .btn-group button:not(.btn-dropdown) {
         flex-grow: 1;
