@@ -21,11 +21,12 @@
                 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
                 <style>
-                    input[type='text'], input[type='email'] {
+                    .input-control input:not([type=checkbox]):not([type=radio]):not([type=submit]).input {
                         background: transparent;
                         border: 0;
                         border-bottom: 2px solid #fff;
                         border-radius: 0;
+                        box-shadow: none;
                         color: #fff;
                     }
                     i { color: #fff; }
@@ -55,16 +56,16 @@
         
                         <div class="row">
                             <div class="input-control">
-                                <input type="text" class="input-contains-icon-left" placeholder="Name"/><span class="icon icon-left"><i class="fa fa-wrapper fa-user small"></i></span>
+                                <input type="text" class="input input-contains-icon-left" placeholder="Name"/><span class="icon icon-left"><i class="fa fa-wrapper fa-user small"></i></span>
                             </div>
                             <div class="input-control">
-                                <input type="email" class="input-contains-icon-left" placeholder="Email"/><span class="icon icon-left"><i class="fa fa-wrapper fa-envelope small"></i></span>
+                                <input type="email" class="input input-contains-icon-left" placeholder="Email"/><span class="icon icon-left"><i class="fa fa-wrapper fa-envelope small"></i></span>
                             </div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="u-text-center">
-                            <button class="btn-outline" style="
+                        <div class="u-center">
+                            <button class="btn-light outline" style="
                                 color: #fff;
                                 font-weight: bold;
                                 border-radius: 0;
@@ -73,7 +74,7 @@
                     </div>
                 </div>
                 <space class="large"></space>
-                <p class="white u-text-center">Made at 2am. Venturious &copy; 2018</p>
+                <p class="white u-center">Made at 2am. Venturious &copy; 2019</p>
             </div>
         </footer>
     </html>
