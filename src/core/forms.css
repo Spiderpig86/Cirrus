@@ -37,16 +37,14 @@ textarea[type="text"] {
 }
 
 input[type="color"] {
-    width: 100%;
-    border: 1px solid #ddd;
-    box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
     box-sizing: border-box;
-    transition: all 0.3s;
-    outline: none;
-    padding: 0.55rem 0.8rem;
+    transition: .3s;
+    outline: 0;
     position: relative;
     height: 3rem;
-    border-radius: 3px;
+    background-color: #fff;
+    padding: .55rem .8rem !important;
 }
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]):focus,
@@ -57,13 +55,6 @@ input[type=text].input-focused,
 .input-focused {
     border-color: rgb(61, 171, 240);
     box-shadow: 0 0 0 0.2rem rgba(61, 171, 240, 0.4), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-}
-
-select:not([multiple]) {
-    -webkit-appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 9 12"><path fill="#5e6c75" d="M0.722,4.823L-0.01,4.1,4.134-.01,4.866,0.716Zm7.555,0L9.01,4.1,4.866-.01l-0.732.726ZM0.722,7.177L-0.01,7.9,4.134,12.01l0.732-.726Zm7.555,0L9.01,7.9,4.866,12.01l-0.732-.726Z"/></svg>'); /* Add the up/down arrows for the multiselect */
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
 }
 
 select[multiple] option {
@@ -79,10 +70,7 @@ input.search {
     padding-left: 2rem !important;
 }
 
-input:disabled,
-input:disabled:hover,
-select:disabled,
-textarea:disabled {
+input:not([class*="btn-"]):disabled, input:not([class*=" btn-"]):disabled:hover, select:disabled, textarea:disabled {
     background-color: #f3f3f6;
     cursor: not-allowed;
     border: 1px solid #f3f3f6;
@@ -248,6 +236,13 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     font-size: 35px;
 }
 
+.input-contains-icon ~ .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
 .input-contains-icon ~ .icon:not(.icon-right),
 .input-contains-icon-left ~ .icon.icon-left {
     /* Nomral input only */
@@ -255,8 +250,6 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     left: 0;
     top: 0;
     width: 3rem;
-    line-height: 2.75rem;
-    vertical-align: baseline;
     z-index: 1;
 }
 
