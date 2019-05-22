@@ -276,7 +276,7 @@
             </div>
             <space></space>
             <p>The same sizing principle also applies to select controls. Select also uses the classes <code>input-xsmall, input-small, input-large, and input-xlarge</code>.</p>
-            <div class="row">
+            <div class="r">
                 <div class="input-control">
                     <select class="select input-xsmall" placeholder="Dropdown Xsmall"><option value="1">Dropdown Xsmall</option><option value="2">2</option></select>
                 </div>
@@ -362,7 +362,7 @@
                 <div class="input-control">
                     <select disabled class="select" placeholder="Dropdown"><option value="1">Disabled state</option></select>
                 </div>
-                <div class="row">
+                <div class="r">
                     <input disabled type="checkbox">   Check this</input>
                     <input disabled type="radio">   I'm a radio button.</input>
                 </div>
@@ -449,7 +449,7 @@
         <h6>Multi-sized Glyphs</h6>
         <p>Below are some examples of how Font Awesome glyphs look with different textfield sizes. To add a glyph on the left side, add <code>input-contains-icon-left</code> to the input box inside <code>input-control</code> and a span sibling with classes <code>icon icon-left</code>. The process is the same for glyphs on the right, but the <code>left</code> is changed to <code>right</code>.</p>
         <p>Remember to add sizes to the glyph themselves which include <code>x-small</code>, <code>small</code>, <code>large</code>, <code>x-large</code>, and nothing for default.</p>
-        <div class="row">
+        <div class="r">
             <div class="input-control">
                 <input type="email" class="input-contains-icon input-contains-icon-right input-xsmall" placeholder="Extra Small"/>
                 <span class="icon"><i class="fa fa-wrapper fa-envelope x-small"></i></span>
@@ -686,7 +686,7 @@
             </div>
             <space class="large"></space>
             <p>And of course, more controls can be combined with each other with different sizes. To make things easier, Cirrus is designed to make components to fit with other same sized controls. For instance, any <code>*-small</code> class matches with all components that have the <code>small</code> class.</p>
-            <div class="row">
+            <div class="r">
                 <div class="form-group">
                     <label class="form-group-label label-xsmall">github.com/</label>
                     <input type="text" class="form-group-input input-xsmall" placeholder="Extra Small"></input>
@@ -713,7 +713,7 @@
                     <button class="form-group-btn btn-primary btn-xlarge">Go</button>
                 </div>
             </div>
-            <div class="row">
+            <div class="r">
                 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;form-group&quot;&gt;
     &lt;label class=&quot;form-group-label label-xsmall&quot;&gt;github.com/&lt;/label&gt;
     &lt;input type=&quot;text&quot; class=&quot;form-group-input input-xsmall&quot; placeholder=&quot;Extra Small&quot;&gt;&lt;/input&gt;
@@ -743,10 +743,10 @@
             <space></space>
             <h6>Integrating Them All Together</h6>
             <p>The form below utilizes most of the different components in <code>forms.css</code>.</p>
-            <div class="row no-padding">
+            <div class="no-padding">
                 <div class="form-section">
                     <label class="font-bold">Contact</label>
-                    <div class="section-body row no-padding">
+                    <div class="section-body row u-no-padding">
                         <div class="col-6">
                             <div class="input-control">
                                 <input class="input-contains-icon-left input-small" type="text" placeholder="Name" />
@@ -764,15 +764,15 @@
                 </div>
                 <div class="form-section">
                     <label class="font-bold">Phone <span class="info inline font-light">We are not telemarketers.</span></label>
-                    <div class="section-body row">
+                    <div class="section-body">
                         <div class="form-group">
                             <label class="form-group-label label-small">+1</label>
                             <input type="text" class="form-group-input input-small" placeholder="Enter your phone number" />
                         </div>
                     </div>
                 </div>
-                <div class="row no-padding">
-                    <div class="form-section col-6">
+                <div class="row  u-no-padding">
+                    <div class="form-section col-6" style="padding-left: 0">
                         <label class="font-bold">Choose One</label>
                         <select class="select input-small" placeholder="Choose one">
                             <option>Shibe</option>
@@ -780,7 +780,7 @@
                             <option>Pupper</option>
                         </select>
                     </div>
-                    <div class="form-section col-6">
+                    <div class="form-section col-6  u-no-padding">
                         <label class="font-bold label-small">Select One <span class="required">*</span></label>
                         <div class="section-body">
                                     <label class="radio">
@@ -797,16 +797,14 @@
                 </div>
                 <div class="form-section">
                     <label class="font-bold label-small">Message</label>
-                    <div class="row">
-                        <textarea placeholder="Enter your message"></textarea>
-                    </div>
+                    <textarea placeholder="Enter your message"></textarea>
                 </div>
             </div>
-            <div class="row">
-                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row no-padding&quot;&gt;
+            <div class="r">
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row u-no-padding&quot;&gt;
     &lt;div class=&quot;form-section&quot;&gt;
         &lt;label class=&quot;font-bold&quot;&gt;Contact&lt;/label&gt;
-        &lt;div class=&quot;section-body row no-padding&quot;&gt;
+        &lt;div class=&quot;section-body row u-no-padding&quot;&gt;
             &lt;div class=&quot;col-6&quot;&gt;
                 &lt;div class=&quot;input-control&quot;&gt;
                     &lt;input class=&quot;input-contains-icon-left input-small&quot; type=&quot;text&quot; placeholder=&quot;Name&quot; /&gt;
@@ -831,7 +829,7 @@
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;row no-padding&quot;&gt;
+    &lt;div class=&quot;row u-no-padding&quot;&gt;
         &lt;div class=&quot;form-section col-6&quot;&gt;
             &lt;label class=&quot;font-bold label-small&quot;&gt;Choose One&lt;/label&gt;
             &lt;select class=&quot;select input-small&quot; placeholder=&quot;Choose one&quot;&gt;

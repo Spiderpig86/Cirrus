@@ -75,6 +75,10 @@ pre:not(.get-cirrus) > code {
     background: #f6f8fa;
 }
 
+.hljs {
+    max-height: 750px;
+}
+
 /* Colors */
 .frame {
     box-shadow: 0 0.2rem 1.25rem 0 rgba(27, 30, 36, 0.07);
