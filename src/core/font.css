@@ -221,8 +221,9 @@ mark,
   margin: 0.95rem 0 0 0.1rem;
 }
 
-.fa-wrapper {
-  font-size: 21px; /* Font sizes in multiple of 7s since they render the best */
+/* Removed 0.5.5, not neded since sizes are covered by .icon .fa-wrapper */
+/* .fa-wrapper {
+  font-size: 21px; /* Font sizes in multiple of 7s since they render the best 
   text-align: center;
 }
 
@@ -236,18 +237,15 @@ mark,
 
 .fa-wrapper.large {
   font-size: 28px;
-  padding: 0.5rem 0;
 }
 
 .fa-wrapper.x-large {
   font-size: 35px;
-  padding: 1rem 0;
-}
+} */
 
-.fa-wrapper.xx-large {
+/* .fa-wrapper.xx-large { Removed 0.5.5
   font-size: 42px;
-  padding: 2rem 0;
-}
+} */
 
 .info {
   display: block;
