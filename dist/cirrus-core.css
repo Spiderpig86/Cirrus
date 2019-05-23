@@ -1520,12 +1520,12 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 .header:not(.header-clear) .nav-item:not(.no-hover).hovered {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: rgba(216, 216, 216, 0.15);
+  background-color: rgba(145, 145, 145, 0.15);
 }
 
 .header:not(.header-clear) .nav-item.active, /* active:hover removes the transition effect when hoveirng over the dropdown menu */ 
 .header:not(.header-clear) .nav-item.active:hover {
-  background-color: rgba(216, 216, 216, 0.25);
+  background-color: rgba(216, 216, 216, 0.35);
 }
 
 /* HEADER DROP DOWN MENU */
