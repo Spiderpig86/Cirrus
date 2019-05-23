@@ -11,13 +11,11 @@
 A fully responsive and comprehensive CSS framework with beautiful controls and simplistic structure. Cirrus is designed to be adaptable to existing themes or when starting fresh.
 </p>
 
-## Quick Install
+## :hammer: Quick Install
 ### Npm
 ```sh
 npm install cirrus-ui
 ```
-
-**or**
 
 ### Yarn
 
@@ -31,16 +29,13 @@ yarn add cirrus-ui
 https://unpkg.com/cirrus-ui
 ```
 
-## Supported Browsers
+## :dart: Supported Browsers
 Cirrus relies on  [What CSS to prefix?](http://shouldiprefix.com/) to determine which selectors need preprocessors.
-* Chrome
-* Opera
-* Firefox
-* Safari
-* Edge (Untested)
-* Internet Explorer (Untested)
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Electron |
+| --- | --- | --- | --- | --- | --- |
+| IE9, IE10, IE11, Edge | last 3 versions, ESR | last 3 versions | last 3 versions | last 3 versions | last 3 versions |
 
-## Framework Components
+## :crystal_ball: Framework Components
 * Framework components are now broken down into `core` and `ext` packages. The `core` package only contains the essentials for basic styling while `core + ext` adds specially designed components.
 
 #### Core
@@ -86,8 +81,14 @@ Cirrus relies on  [What CSS to prefix?](http://shouldiprefix.com/) to determine 
   * Styles for user avatars.
 * [Cards](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/card.css "Cards")
   * Base for card controls.
+* [Grid](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/card.css "Grid")
+  * Experimental implementation of CSS Grid standard.
+* [Modifiers](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/modifiers.css "Modifiers")
+  * Classes designed for modifying text and backgrounds.
 * [Pagination](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/pagination.css "Pagination")
   * Design for pagination and pagination navigation links.
+* [Placeholder](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/placeholder.css "Placeholder")
+  * Styles for a control designed to be a placeholder such as "Coming Soon" panels and so on.
 * [Tabs](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tabs.css "Tabs")
   * Contains styles for tab controls.
 * [Tags](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tags.css "Tags")
@@ -99,21 +100,21 @@ Cirrus relies on  [What CSS to prefix?](http://shouldiprefix.com/) to determine 
 * [Tooltips](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tooltips.css "Tooltips")
   * Add tooltips to any control for contextual info.
 
-## jQuery
+## :pager: jQuery
 * The only component that requires the use of jQuery is the `Header` component for toggling the dropdown menu on mobile.
 * It is possible to use these components without jQuery in other frameworks like Angular and React by mimicking the behavior of toggling the class.
 
-## Why not other frameworks?
+## :sparkles: Why not other frameworks?
 Even with a multitude of CSS frameworks, some are either too basic to develop more complex websites and some are too bogged down with a lot of styles that don't end up getting used. Cirrus is meant to bridge a gap between boilerplate stylesheets and UI frameworks.
 
-## Related Projects
+## :clap: Related Projects
 | Project                                                                              | Description                                                                            |
 |--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
 | [vue-cirrus](https://github.com/FlorianWoelki/vue-cirrus)   | Cirrus components for Vue.js with straightforward syntax                                             |
 
-## Examples that use Cirrus
+## :gem: Examples that use Cirrus
 * [Polarity 9](http://polarity.x10.mx/browser "Polarity 9 Promo Page")
 * [Phraze](https://phrazes.net "Phraze")
 
-## License and Attribution
+## :ledger: License and Attribution
 Cirrus is licensed under the [MIT license](https://github.com/Spiderpig86/Cirrus/blob/master/LICENSE "MIT License"). If this frame work has helped you in any way, attribution in the footer of your website would be much appreciated.
