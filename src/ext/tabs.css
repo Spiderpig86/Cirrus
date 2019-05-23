@@ -121,6 +121,7 @@
             flex-grow: 1;
     -ms-flex-negative: 0;
         flex-shrink: 0; /* Disable shrinking to original width */
+    flex-basis: 0;
 }
 
 /* Override the -webkit-box display that sizes tab items based on text */

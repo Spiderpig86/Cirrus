@@ -334,8 +334,8 @@ space.x-large {
 }
 
 /* Columns without the spacing */
-.row [class^="col-"].no-space,
-.row [class*=" col-"].no-space {
+.row.no-space [class^="col-"],
+.row.no-space [class*=" col-"] {
     padding: 0;
 }
 
