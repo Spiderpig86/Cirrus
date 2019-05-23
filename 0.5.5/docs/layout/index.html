@@ -278,22 +278,24 @@
     <section id="no_gaps">
         <div class="content">
             <h5>Columns with no spaces.</h5>
-            <p>You can easily remove spaces in the columns by adding the <code>no-space</code> class to the column elements.</p>
+            <p>Remove spaces in the columns by adding the <code>no-space</code> to <code>row</code>.</p>
             <div id="grids">
-                <div class="row">
-                    <div class="col-6 no-space">
+                <div class="row no-space">
+                    <div class="col-6">
                         <div class="uppercase">Col-6</div>
                     </div>
-                    <div class="col-6 no-space">
+                    <div class="col-6">
                         <div class="uppercase">Col-6</div>
                     </div>
                 </div>
             </div>
-            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col-6 no-space&quot;&gt;
-    &lt;div class=&quot;uppercase&quot;&gt;Col-6&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-6 no-space&quot;&gt;
-    &lt;div class=&quot;uppercase&quot;&gt;Col-6&lt;/div&gt;
+            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row no-space&quot;&gt;
+    &lt;div class=&quot;col-6&quot;&gt;
+        &lt;div class=&quot;uppercase&quot;&gt;Col-6&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-6&quot;&gt;
+        &lt;div class=&quot;uppercase&quot;&gt;Col-6&lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         </div>
     </section>
@@ -316,29 +318,20 @@
                     <div class="col-9"><div class="uppercase">col-9</div></div>
                 </div>
             </div>
-            <p>However, you can override that behavior with the embedding the columns inside a <code>fluid-container</code> div.</p>
+            <p>However, you can override that behavior with the embedding the columns inside a <code>row--no-wrap</code> div.</p>
             <div id="grids">
-                <div class="row fluid-container">
+                <div class="row row--no-wrap">
                     <div class="col-10"><div class="uppercase">col-10</div></div>
                     <div class="col-10"><div class="uppercase">col-10</div></div>
                     <div class="col-10"><div class="uppercase">col-10</div></div>
                 </div>
             </div>
-            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row fluid-container&quot;&gt;
+            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row row--no-wrap&quot;&gt;
     &lt;div class=&quot;col-10&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-10&lt;/div&gt;&lt;/div&gt;
     &lt;div class=&quot;col-10&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-10&lt;/div&gt;&lt;/div&gt;
     &lt;div class=&quot;col-10&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-10&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 <br>
-
-            <p>If you still want to use the <code>fluid-container</code> while retaining flex wrapping, add <code>wrap</code> to the <code>fluid-container</code>.</p>
-            <div id="grids">
-                <div class="row fluid-container wrap">
-                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
-                    <div class="col-10"><div class="uppercase">col-10</div></div>
-                    <div class="col-8"><div class="uppercase">col-8</div></div>
-                </div>
-            </div>
             
         </div>
     </section>
@@ -369,39 +362,29 @@
     <section id="col_fluid" class="padtop">
         <div class="content">
             <h5>Fluid Columns</h5>
-            <p>Fluid columns will automatically adjust the width of every single element inside <code>row fluid-container</code> to all have the same width inside the parent div.</p>
+            <p>All column classes <code>col</code> without a number designation will equally distribute the width among wither <code>col</code> elements with a <code>row</code> parent.</p>
             <div id="grids">
-                <div class="row fluid-container" id="fluidContainerTest">
-                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
-                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
-                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
+                <div class="row" id="fluidContainerTest">
+                    <div class="col"><div class="uppercase">col</div></div>
+                    <div class="col"><div class="uppercase">col</div></div>
+                    <div class="col"><div class="uppercase">col</div></div>
                 </div>
                 <div class="btn-group btn-group-fill">
                     <button class="btn-primary" id="fluid-container-add">Add Column</button>
                     <button class="btn-primary" id="fluid-container-delete">Delete Column</button>
                 </div>
             </div>
-            <p>Adding the <code>wrap</code> class to the <code>fluid-container</code> will make new columns wrap to the next line when an overflow occurs instead of showing a scrollbar.</p>
+            <p>By default, the elements will wrap to the next row if there is not enough space. To disable it, add the <code>row--no-wrap</code> class to your <code>row</code>.</p>
 
             <p class="title">Column Autosizing</p>
-            <p>By default, placing <code>col-fluid</code> divs in a <code>row</code> with predefined column classes like <code>col-3</code> will not autoexpand to fill the remaining space.</p>
+            <p>Regular <code>col</code> divs will autoexpand alongside columns with a specific width.</p>
             <div id="grids">
                 <div class="row">
-                    <div class="col-3"><div class="uppercase">col-3</div></div>
-                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
-                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
+                    <div class="col-2"><div class="uppercase">col-2</div></div>
+                    <div class="col"><div class="uppercase">col</div></div>
+                    <div class="col"><div class="uppercase">col</div></div>
                 </div>
             </div>
-
-            <p>But by adding the <code>fluid-container</code> class to the <code>row</code>, any <code>col-fluid</code> column will fill up the remaining space dividing up the space equally among the other columns.</p>
-            <div id="grids">
-                <div class="row fluid-container">
-                    <div class="col-3"><div class="uppercase">col-3</div></div>
-                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
-                    <div class="col-fluid"><div class="uppercase">col-fluid</div></div>
-                </div>
-            </div>
-            
         </div>
     </section>
 
@@ -409,9 +392,9 @@
         <div class="content">
             <h1><a href="./index.html#grid_offset" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Column Offset</h1>
             <div class="divider"></div>
-            <p>Rather than using empty columns to space columns out, Cirrus provides offsets to make styling much easier. The classes follow the same sizing as the <code>col-n</code> classes. To add the offset, just add the <code>offset-n</code> class to your column and Cirrus will take care of the spacing and calculations. Note that for these specific offsets, they simply need to be embedded inside a <code>row</code> div without the <code>flui-container</code> class.</p>
+            <p>Rather than using empty columns to space columns out, Cirrus provides offsets to make styling much easier. The classes follow the same sizing as the <code>col-n</code> classes. To add the offset, just add the <code>offset-n</code> class to your column and Cirrus will take care of the spacing and calculations.</p>
             <div id="grids">
-                <div class="row wrap">
+                <div class="row">
                     <div class="col-3 offset-1"><div class="uppercase">offset-1</div></div>
                     <div class="col-3 offset-3"><div class="uppercase">offset-3</div></div>
                     <div class="col-3 offset-4"><div class="uppercase">offset-4</div></div>
@@ -419,30 +402,30 @@
                     <div class="col-3 offset-9"><div class="uppercase">offset-9</div></div>
                 </div>
             </div>
-            <p>For less specific spacing, you can use <code>offset-right</code> to push the column to the left, <code>offset-center</code> to push the column to the center, and <code>offset-left</code> to push the column to the right. This works for columns with specific sizes and <code>col-fluid</code> inside a <code>fluid-container</code>. Note that the <code>row</code> must have the <code>fluid-container</code> class.</p>
+            <p>For less specific spacing, you can use <code>offset-right</code> to push the column to the left, <code>offset-center</code> to push the column to the center, and <code>offset-left</code> to push the column to the right.</p>
             <div id="grids">
-                <div class="row fluid-container wrap">
+                <div class="row">
                     <div class="col-2"><div class="uppercase">col-2</div></div>
                     <div class="col-3 offset-center"><div class="uppercase"> col-3 offset-center</div></div>
                 </div>
-                <div class="row fluid-container wrap">
+                <div class="row">
                     <div class="col-5 offset-1"><div class="uppercase">col-3 offset-1</div></div>
                     <div class="col-3 offset-left"><div class="uppercase">col-3 offset-left</div></div>
                 </div>
-                <div class="row fluid-container wrap">
+                <div class="row">
                     <div class="col-5 offset-1"><div class="uppercase">col-3 offset-1</div></div>
-                    <div class="col-4 offset-right"><div class="uppercase">col-4 offset-right</div></div>
+                    <div class="col-4"><div class="uppercase">col-4 offset-right</div></div>
                 </div>
             </div>
-            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row fluid-container wrap&quot;&gt;
+            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col-2&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-2&lt;/div&gt;&lt;/div&gt;
     &lt;div class=&quot;col-3 offset-center&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt; col-3 offset-center&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;row fluid-container wrap&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col-5 offset-1&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-3 offset-1&lt;/div&gt;&lt;/div&gt;
     &lt;div class=&quot;col-3 offset-left&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-3 offset-left&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;row fluid-container wrap&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
     &lt;div class=&quot;col-5 offset-1&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-3 offset-1&lt;/div&gt;&lt;/div&gt;
     &lt;div class=&quot;col-4 offset-right&quot;&gt;&lt;div class=&quot;uppercase&quot;&gt;col-4 offset-right&lt;/div&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -456,18 +439,16 @@
             <div class="divider"></div>
             <p>Hate the 12-grid layout? Cirrus also comes with a 10-grid layout system out of the box. <i>Note: Embedding 10-grid columns inside <code>row</code> divs is optional.</i></p>
             <div id="grids">
-                <div class="row">
-                    <div class="w-10"><div class="uppercase">w-10</div></div>
-                    <div class="w-20"><div class="uppercase">w-20</div></div>
-                    <div class="w-30"><div class="uppercase">w-30</div></div>
-                    <div class="w-40"><div class="uppercase">w-40</div></div>
-                    <div class="w-50"><div class="uppercase">w-50</div></div>
-                    <div class="w-60"><div class="uppercase">w-60</div></div>
-                    <div class="w-70"><div class="uppercase">w-70</div></div>
-                    <div class="w-80"><div class="uppercase">w-80</div></div>
-                    <div class="w-90"><div class="uppercase">w-90</div></div>
-                    <div class="w-100"><div class="uppercase">w-100</div></div>
-                </div>
+                <div class="w-10"><div class="uppercase">w-10</div></div>
+                <div class="w-20"><div class="uppercase">w-20</div></div>
+                <div class="w-30"><div class="uppercase">w-30</div></div>
+                <div class="w-40"><div class="uppercase">w-40</div></div>
+                <div class="w-50"><div class="uppercase">w-50</div></div>
+                <div class="w-60"><div class="uppercase">w-60</div></div>
+                <div class="w-70"><div class="uppercase">w-70</div></div>
+                <div class="w-80"><div class="uppercase">w-80</div></div>
+                <div class="w-90"><div class="uppercase">w-90</div></div>
+                <div class="w-100"><div class="uppercase">w-100</div></div>
             </div>
         </div>
     </section>
@@ -492,14 +473,7 @@
             <p class="subtitle">Works great as a sub-element of <code>section</code> which provides <code>2.5rem</code> rem padding to the top and bottom.</p>
             <p class="title">.divider</p>
             <p class="subtitle">A simple gray divider with padding at the top and bottom.</p>
-            <div class="row">
-                <div class="divider"></div>
-            </div>
-            <p class="title">.divider .divider-short</p>
-            <p class="subtitle">A shorter variant of the regular divider at <code>15rem</code> wide.</p>
-            <div class="row">
-                <div class="divider divider-short"></div>
-            </div>
+            <div class="divider"></div>
             <p class="title">space, space.large, space.x-large</p>
             <p class="subtitle">A <code>div</code> alternative to <code>br</code> that is more flexible starting at 1rem to 5rem.</p>
             <p class="title">.row</p>
@@ -543,7 +517,7 @@
             <h1><a href="./index.html#level" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Leveling Content</h1>
             <div class="divider"></div>
             <p>With Cirrus, you can easily vertically center your divs with the <code>level</code> class in the parent container and the <code>level-item</code> class for the children to align the items. The <code>level-content</code> class is used with the <code>level-item</code> class to make the content of the item stretch the width of the parent div relative to other divs.</p>
-            <div class="row">
+            <div class="r">
                 <div class="level" style="background-image: linear-gradient(to right, #ffc3a0 0%, #ffafbd 100%); width:100%; border-radius: .3rem; overflow: hidden;">
                     <div class="level-item" style="background: rgba(255, 255, 255, 0.2); padding: 1rem;">
                         <div class="u-text-center">
@@ -563,7 +537,7 @@
                 </div>
             </div>
             <p>Above is an example that uses the <code>level</code> class as the container and then the <code>level-item</code> class to space out the children and keep the left and right divs in the center (vertically speaking) to the parent div.</p>
-            <div class="row">
+            <div class="r">
                 <div class="level">
                     <div class="level-left">
                         <h6 class="level-item uppercase">Brand</h5>
@@ -582,7 +556,7 @@
                 </div>
             </div>
             <p>You can also create your very own navbar with the level class and specify the content displayed on the left and right side with the <code>level-left</code> and <code> level-right</code> classes respectively. This differs from the header class in the sense that divs have more padding with the same color along with a slight adjustment to the divs.</p>
-            <div class="row">
+            <div class="r">
                  <div class="level" style="background-image: linear-gradient(to right, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%); border-radius: .3rem; overflow: hidden;">
                     <div class="level-left level-content level-item" style="background:rgba(255, 255, 255, 0.2);">
                         <p>.level-left<br>.level-item<br>.level-content</p>
@@ -602,13 +576,17 @@
 
             <h5>Fill Height</h5>
             <p>Looking at the previous examples, you may be wondering how to force the <code>level-items</code> to fill the height of its parent container. This is easily done by adding the <code>fill-height</code> class to the <code>level</code> div.</p>
-            <div class="row">
-                 <div class="level" style="background-image: linear-gradient(to right, #fff1eb 0%, #ace0f9 100%); border-radius: .3rem; overflow: hidden;">
+            <div class="r">
+                 <div class="level fill-height" style="background-image: linear-gradient(to right, #fff1eb 0%, #ace0f9 100%); border-radius: .3rem; overflow: hidden;">
                     <div class="level-left level-content level-item" style="background:rgba(255, 255, 255, 0.2);">
                         <p>Totally</p>
                     </div>
                     <div class="level-item level-content level-item" style="background:rgba(255, 255, 255, 0.2);">
-                        <p>Equal</p>
+                        <div>
+                            <p>Equal</p>
+                            <p>Equal</p>
+                            <p>Equal</p>
+                        </div>
                     </div>
                     <div class="level-right level-content level-item" style="background:rgba(255, 255, 255, 0.2);">
                         <p>Heights</p>
@@ -623,7 +601,8 @@
             <h1><a href="./index.html#pagination" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Pagination</h1>
             <div class="divider"></div>
             <p>Cirrus comes with easy to style pagination menus that allow for easy navigation between pages in websites and forums. All you need to do is add the <code>pagination</code> class to the parent container and the <code>pagination-item</code> class to the children. To display numerous small pagination items, add the <code>short</code> class. In the small pagination menu shown below, to indicate that a page is selected, add the <code>selected</code> class to the page item.</p>
-            <div class="row">
+            <p>For a bordered look, add the <code>pagination-bordered</code> class to the <code>pagination</code>.</p>
+            <div class="r">
                 <div class="col-6">
                     <div class="pagination">
                         <div class="pagination-item short">
@@ -686,83 +665,83 @@
                 </div>
             </div>
             <div class="row">
-                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row&quot;&gt;
-    &lt;div class=&quot;col-6&quot;&gt;
-        &lt;div class=&quot;pagination&quot;&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a disabled=&quot;&quot; href=&quot;#&quot; class=&quot;&quot;&gt;Prev&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short selected&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;1&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;2&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;3&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;4&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a&gt;...&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;13&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Next&lt;/a&gt;
-            &lt;/div&gt;
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col-6&quot;&gt;
+    &lt;div class=&quot;pagination&quot;&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a disabled=&quot;&quot; href=&quot;#&quot; class=&quot;&quot;&gt;Prev&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short selected&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;1&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;2&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;3&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;4&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a&gt;...&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;13&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Next&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
+&lt;/div&gt;
 
-    &lt;div class=&quot;col-6&quot;&gt;
-        &lt;div class=&quot;pagination pagination-bordered&quot;&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Prev&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;1&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a&gt;...&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;3&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;4&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short selected&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;5&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a&gt;...&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;23&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pagination-item short&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Next&lt;/a&gt;
-            &lt;/div&gt;
+&lt;div class=&quot;col-6&quot;&gt;
+    &lt;div class=&quot;pagination pagination-bordered&quot;&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Prev&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;1&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a&gt;...&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;3&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;4&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short selected&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;5&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a&gt;...&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;23&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Next&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
+            
+            <h6>Pagination Prev/Next</h6>
             <p>Paginations are also designed to provide easy access to different pages once the user reaches the bottom of a page. Just simply add the <code>pagination</code> class to the parent container and add the <code>pagination-item</code> class to 2 children (3 or more may take up more width than the parent container).</p>
 
-            <div class="row">
+            <div class="r">
                 <ul class="pagination no-bullets">
                     <li class="pagination-item pagination-prev">
                         <a href="#" class="display-block">
                             <p class="pagination-item-subtitle">Previous</p>
-                            <h5 class="light u-no-margin">Choose Items</h5>
+                            <h5 class="u-no-margin">Choose Items</h5>
                         </a>
                     </li>
                     <li class="pagination-item pagination-next">
                         <a href="#" class="display-block">
                             <p class="pagination-item-subtitle">Next</p>
-                            <h5 class="light u-no-margin">Order</h5>
+                            <h5 class="u-no-margin">Order</h5>
                         </a>
                     </li>
                 </ul>
@@ -770,13 +749,13 @@
     &lt;li class=&quot;pagination-item pagination-prev&quot;&gt;
         &lt;a href=&quot;#&quot; class=&quot;display-block&quot;&gt;
             &lt;p class=&quot;pagination-item-subtitle&quot;&gt;Previous&lt;/p&gt;
-            &lt;h5 class=&quot;light u-no-margin&quot;&gt;Choose Items&lt;/h5&gt;
+            &lt;h5 class=&quot;u-no-margin&quot;&gt;Choose Items&lt;/h5&gt;
         &lt;/a&gt;
     &lt;/li&gt;
     &lt;li class=&quot;pagination-item pagination-next&quot;&gt;
         &lt;a href=&quot;#&quot; class=&quot;display-block&quot;&gt;
             &lt;p class=&quot;pagination-item-subtitle&quot;&gt;Next&lt;/p&gt;
-            &lt;h5 class=&quot;light u-no-margin&quot;&gt;Order&lt;/h5&gt;
+            &lt;h5 class=&quot;u-no-margin&quot;&gt;Order&lt;/h5&gt;
         &lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
@@ -830,20 +809,20 @@
                 <div class="col-6">
                     <div class="frame">
                         <div class="frame__header u-text-center">
-                            <div class="row">
+                            <div>
                                 <figure class="avatar">
                                     <img src="http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg">
                                 </figure>
                             </div>
-                            <div class="row">
+                            <div>
                                 <div class="frame__title">John Doe</div>
                                 <div class="frame__subtitle">Freelance Photographer</div>
                             </div>
-                            <div class="row fluid-container">
-                                <a class="col-fluid" href="#"><i class="fa fa-wrapper fa-facebook link-btn"></i></a>
-                                <a class="col-fluid" href="#"><i class="fa fa-wrapper fa-twitter link-btn"></i></a>
-                                <a class="col-fluid" href="#"><i class="fa fa-wrapper fa-instagram link-btn"></i></a>
-                                <a class="col-fluid" href="#"><i class="fa fa-wrapper fa-medium link-btn"></i></a>
+                            <div class="row">
+                                <a class="col" href="#"><i class="fa fa-wrapper fa-facebook link-btn"></i></a>
+                                <a class="col" href="#"><i class="fa fa-wrapper fa-twitter link-btn"></i></a>
+                                <a class="col" href="#"><i class="fa fa-wrapper fa-instagram link-btn"></i></a>
+                                <a class="col" href="#"><i class="fa fa-wrapper fa-medium link-btn"></i></a>
                             </div>
                         </div>
                         <div class="content-no-padding"><div class="divider u-no-margin"></div></div>
@@ -861,20 +840,20 @@
                 <div class="col-6">
                     <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot;&gt;
     &lt;div class=&quot;frame__header u-text-center&quot;&gt;
-        &lt;div class=&quot;row&quot;&gt;
+        &lt;div&gt;
             &lt;figure class=&quot;avatar&quot;&gt;
                 &lt;img src=&quot;http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg&quot;&gt;
             &lt;/figure&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;row&quot;&gt;
+        &lt;div&gt;
             &lt;div class=&quot;frame__title&quot;&gt;John Doe&lt;/div&gt;
             &lt;div class=&quot;frame__subtitle&quot;&gt;Freelance Photographer&lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;row fluid-container&quot;&gt;
-            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-facebook link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-twitter link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-instagram link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-            &lt;a class=&quot;col-fluid&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-medium link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;a class=&quot;col&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-facebook link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;col&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-twitter link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;col&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-instagram link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;col&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-medium link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;content-no-padding&quot;&gt;&lt;div class=&quot;divider u-no-margin&quot;&gt;&lt;/div&gt;&lt;/div&gt;
@@ -916,7 +895,7 @@
                                         <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
                                     </figure>
                                     <div class="tile__container">
-                                        <p class="tile__title u-no-margin">Robert</p>
+                                        <p class="tile__title u-no-margin">Tony</p>
                                         <p class="tile__subtitle u-no-margin">What's up?</p>
                                     </div>
                                 </div>
@@ -940,8 +919,8 @@
                                         </figure>
                                     </div>
                                     <div class="tile__container">
-                                        <p class="tile__title u-no-margin line-height-inherit">Robert</p>
-                                        <p class="tile__subtitle u-no-margin line-height-inherit">Check out Cirrus. <a href="https://spiderpig86.github.io/Cirrus">https://spiderpig86.github.io/Cirrus</a></p>
+                                        <p class="tile__title u-no-margin">Tony</p>
+                                        <p class="tile__subtitle u-no-margin">Check out Cirrus. <a href="https://spiderpig86.github.io/Cirrus">https://spiderpig86.github.io/Cirrus</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -951,8 +930,8 @@
                                         <figure class="avatar img-small" data-text="El"></figure>
                                     </div>
                                     <div class="tile__container">
-                                        <p class="tile__title u-no-margin line-height-inherit">Elk</p>
-                                        <p class="tile__subtitle u-no-margin line-height-inherit">Just what I needed.</p>
+                                        <p class="tile__title u-no-margin">Elk</p>
+                                        <p class="tile__subtitle u-no-margin">Just what I needed.</p>
                                     </div>
                                     <div class="tile__buttons">
                                         <a href="#" style="display: block;">
