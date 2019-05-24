@@ -36,7 +36,7 @@
   "devDependencies": {
     "clipboard": "^2.0.1",
     "global": "^4.3.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-build": "^0.5.3",
     "gulp-cli": "^2.0.1",
     "gulp-concat": "^2.6.1",
@@ -46,7 +46,7 @@
     "gulp-size": "^3.0.0"
   },
   "dependencies": {
-    "gulp-clean-css": "^3.10.0"
+    "gulp-clean-css": "^4.2.0"
   },
   "browserslist": [
     "last 1 major version",
