@@ -12,7 +12,7 @@ gulp.task('compile', () => {
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('minify', ['compile'], () => {
+gulp.task('minify', gulp.series('compile', () => {
     return gulp.src(['./dist/cirrus.css'])
         .pipe(minify({
             level: {
@@ -43,7 +43,7 @@ gulp.task('minify', ['compile'], () => {
         .pipe($.size())
         .pipe($.concat('cirrus.min.css'))
         .pipe(gulp.dest('./dist/'));
-});
+}));
 
 gulp.task('core', () => {
     return gulp.src('./src/core/*.css')
@@ -53,7 +53,7 @@ gulp.task('core', () => {
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('minify-core', ['core'], function() {
+gulp.task('minify-core', gulp.series('core', function() {
     return gulp.src(['./dist/cirrus-core.css'])
         .pipe(minify({
             level: {
@@ -84,10 +84,10 @@ gulp.task('minify-core', ['core'], function() {
         .pipe($.size())
         .pipe($.concat('cirrus-core.min.css'))
         .pipe(gulp.dest('./dist/'));
-});
+}));
 
 gulp.task('watch', function() {
     gulp.watch('./src/*.css', ['minify', 'minify-core']);
 });
 
-gulp.task('default', ['minify', 'minify-core']);
+gulp.task('default', gulp.parallel('minify', 'minify-core'));
