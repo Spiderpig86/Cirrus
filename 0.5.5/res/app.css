@@ -51,9 +51,14 @@
     color: #fff;
 }
 
-.header .nav-item > a:hover {
-    color: var(--cirrus-primary);
+.header .nav-item button a:hover {
+    color: #fff;
 }
+
+.header .nav-item a .icon {
+    font-size: inherit;
+}
+
 .header .btn .btn-accent {
     position: inherit;
 }
