@@ -12,6 +12,9 @@ A fully responsive and comprehensive CSS framework with beautiful controls and s
 </p>
 
 ## :hammer: Quick Install
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Spiderpig86/Cirrus.svg)](https://greenkeeper.io/)
+
 ### Npm
 ```sh
 npm install cirrus-ui
