@@ -78,41 +78,72 @@
                 <table class="table bordered text-left">
                     <tbody>
                         <tr>
-                            <th rowspan="5">Layout</th>
+                            <th rowspan="9">Layout</th>
                             <td>
-                                <code class="css">this-inline</code>
+                                <code class="css">u-inline</code>
                             </td>
                             <td>Makes the container or element display inline like a <code>span</code>.</td>
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">this-inline-block</code>
+                                <code class="css">u-inline-block</code>
                             </td>
                             <td>The container is rendered as an inline element while its children are formatted as block-level boxes.</td>
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">this-block</code>
+                                <code class="css">u-block</code>
                             </td>
                             <td>The container is rendered as a block element.</td>
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">this-inline-flex</code>
+                                <code class="css">u-inline-flex</code>
                             </td>
                             <td>Displays an element as an inline-level flex container.</td>
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">this-overlay</code>
+                                <code class="css">u-this-overlay</code>
                             </td>
                             <td>Displays element absolutely overlaying other elements.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="css">u-hide-overflow</code>
+                            </td>
+                            <td>Hides overflow of element and all scrollbars.</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <code class="css">u-hide</code>
+                            </td>
+                            <td>
+                                Hides element.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="css">u-disabled</code>
+                            </td>
+                            <td>
+                                Disables element.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="css">u-unselectable</code>
+                            </td>
+                            <td>
+                                Makes the element unseelctable.
+                            </td>
                         </tr>
 
                         <tr>
                             <th rowspan="5">Floats</th>
                             <td>
-                                <code class="css">clear-left</code>
+                                <code class="css">u-clear-left</code>
                             </td>
                             <td>
                                 When using floats with other elements,moves element such that it is not overlapping an element with <code>float-left</code>.
@@ -120,7 +151,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">clear-right</code>
+                                <code class="css">u-clear-right</code>
                             </td>
                             <td>
                                 When using floats with other elements,moves element such that it is not overlapping an element with <code>float-right</code>.
@@ -128,7 +159,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">clear-both</code>
+                                <code class="css">u-clear-both</code>
                             </td>
                             <td>
                                 When using floats with other elements,moves element such that it is not overlapping any element with floats left or right.
@@ -136,7 +167,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">pull-left</code>
+                                <code class="css">u-pull-left</code>
                             </td>
                             <td>
                                 Makes an element float left.
@@ -144,7 +175,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">pull-right</code>
+                                <code class="css">u-pull-right</code>
                             </td>
                             <td>
                                 Makes an element float right.
@@ -154,7 +185,7 @@
                          <tr>
                              <th rowspan="4">Centering</th>
                             <td>
-                                <code class="css">center</code>
+                                <code class="css">u-center</code>
                             </td>
                             <td>
                                 Centers an element using flexbox with automatic margin on the sides.
@@ -162,7 +193,7 @@
                         </tr>
                          <tr>
                             <td>
-                                <code class="css">center-alt</code>
+                                <code class="css">u-center-alt</code>
                             </td>
                             <td>
                                 Backwards compatible version of the center class that centers the element absolutely relative to the other elements.
@@ -170,7 +201,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">vertical-center</code>
+                                <code class="css">u-vertical-center</code>
                             </td>
                             <td>
                                 Centering elements vertically using flexbox.
@@ -178,7 +209,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">horizontal-center</code>
+                                <code class="css">u-horizontal-center</code>
                             </td>
                             <td>
                                 Aligns elements in the center horizontally using flexbox.
@@ -188,7 +219,7 @@
                         <tr>
                             <th rowspan="3">Text</th>
                             <td>
-                                <code class="css">text-center</code>
+                                <code class="css">u-text-center</code>
                             </td>
                             <td>
                                 Aligns text in the center.
@@ -196,7 +227,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">text-left</code>
+                                <code class="css">u-text-left</code>
                             </td>
                             <td>
                                 Aligns text in the left
@@ -204,7 +235,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">text-right</code>
+                                <code class="css">u-text-right</code>
                             </td>
                             <td>
                                 Aligns text in the right.
@@ -212,9 +243,9 @@
                         </tr>
 
                         <tr>
-                            <th rowspan="2">Size</th>
+                            <th rowspan="5">Size</th>
                             <td>
-                                <code class="css">box</code>
+                                <code class="css">u-box</code>
                             </td>
                             <td>
                                 A box style for any div with a box shadow and 1 rem padding.
@@ -222,17 +253,41 @@
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">fill-width</code>
+                                <code class="css">u-fill-width</code>
                             </td>
                             <td>
                                 Makes element width 100% of the parent container's width.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="css">u-no-margin</code>
+                            </td>
+                            <td>
+                                Removes all margins from element.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="css">u-fill-width</code>
+                            </td>
+                            <td>
+                                Removes all padding from element.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code class="css">u-margin-auto</code>
+                            </td>
+                            <td>
+                                Automatically center an element.
                             </td>
                         </tr>
 
                         <tr>
                             <th rowspan="2">Shapes</th>
                             <td>
-                                <code class="css">round</code>
+                                <code class="css">u-round</code>
                             </td>
                             <td>
                                 Rounds the corner of the element.
@@ -240,7 +295,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">circle</code>
+                                <code class="css">u-circle</code>
                             </td>
                             <td>
                                 Turns the element into a circle.
@@ -258,10 +313,10 @@
                         </tr>
                         <tr>
                             <td>
-                                <code class="css">no-padding</code>
+                                <code class="css">u-no-shadow</code>
                             </td>
                             <td>
-                                Removes padding from element.
+                                Removes box shadow from element.
                             </td>
                         </tr>
                     </tbody>
