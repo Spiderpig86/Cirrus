@@ -322,6 +322,116 @@
                     </tbody>
                 </table>
             </div>
+
+            <space class="x-large"></space>
+
+            <h3>Breakpoints</h3>
+            <p>The standard breakpoints used in Cirrus are for <code>mobile</code>, <code>tablet</code>, and <code>desktop</code>.</p>
+
+            <table class="table bordered">
+                <tr>
+                    <th>Type</th>
+                    <th>Min (px)</th>
+                    <th>Max (px)</th>
+                </tr>
+                <tr>
+                    <td>Mobile</td>
+                    <td><code>0</code></td>
+                    <td><code>768</code></td>
+                </tr>
+                <tr>
+                    <td>Tablet</td>
+                    <td><code>769</code></td>
+                    <td><code>1023</code></td>
+                </tr>
+                <tr>
+                    <td>Desktop</td>
+                    <td><code>1024</code></td>
+                    <td>-</td>
+                </tr>
+            </table>
+
+            <p>From that, the class designations in Cirrus so far follow this guideline:</p>
+
+            <table class="table bordered">
+                <thead>
+                  <tr>
+                      <th style="width: 20%;">
+                        Mobile<br>
+                          Below and including <code>768px</code>
+                      </th>
+                      
+                      <th style="width: 20%;">
+                            Tablet<br>
+                            Between <code>769px</code> and <code>1023px</code>
+                      </th>
+                    
+                      
+                      <th style="width: 20%;">
+                            Desktop<br>
+                            Above and including <code>1024px</code>
+                      </th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p class="toast toast--info" style="width: auto">*-mobile</p>
+                    </td>
+                    <td colspan="4">
+                      <p>-</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td colspan="4">
+                      <p class="toast toast--info" style="width: auto">*-tablet</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <p>-</p>
+                    </td>
+                    <td>
+                      <p class="toast toast--info" style="width: auto">*-desktop</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td>
+                      <p class="toast toast--info" style="width: auto">*-tablet-only</p>
+                    </td>
+                    <td>
+                      <p>-</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            <p>Classes for hiding content:</p>
+            <table class="table bordered">
+                <tr>
+                    <td><code>u-hide-mobile</code></td>
+                    <td>Hide content for mobile devices.</td>
+                </tr>
+                <tr>
+                    <td><code>u-hide-tablet</code></td>
+                    <td>Hide content for tablets and larger screens.</td>
+                </tr>
+                <tr>
+                    <td><code>u-hide-tablet-only</code></td>
+                    <td>Hide content only for tablets.</td>
+                </tr>
+                <tr>
+                    <td><code>u-hide-desktop</code></td>
+                    <td>Hide content for large screens.</td>
+                </tr>
+            </table>
         </div>
     </section>
 
