@@ -99,27 +99,27 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="r">
                     <pre>
     <code class="html" data-lang="HTML">&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;col-4&quot;&gt;
-    &lt;ul&gt;
-        &lt;li&gt;Item 1&lt;/li&gt;
-        &lt;li&gt;Item 2&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-4&quot;&gt;
-    &lt;ol&gt;
-        &lt;li&gt;Item 1&lt;/li&gt;
-        &lt;li&gt;Item 2&lt;/li&gt;
-    &lt;/ol&gt;
-&lt;/div&gt;
-&lt;div class=&quot;col-4&quot;&gt;
-    &lt;dl&gt;
-        &lt;dt&gt;Main description&lt;/dt&gt;
-        &lt;dd&gt;Sub item description&lt;/dd&gt;
-    &lt;/dl&gt;
-&lt;/div&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Item 1&lt;/li&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+        &lt;ol&gt;
+            &lt;li&gt;Item 1&lt;/li&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-4&quot;&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;Main description&lt;/dt&gt;
+            &lt;dd&gt;Sub item description&lt;/dd&gt;
+        &lt;/dl&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code>
                     </pre>
             </div>
@@ -168,7 +168,7 @@
             </div>
 
             <p class="title">Plain</p>
-            <p class="subtitle">An list with no item decorations.</p>
+            <p class="subtitle">A list with no item decorations.</p>
             <div class="row">
                 <div class="col-6">
                     <ul class="no-bullets">
@@ -267,7 +267,7 @@
                 </div>
 
             </div>
-            <div class="row">
+            <div class="r">
                 <pre><code class="html" data-lang="HTML">&lt;!-- Unordered List --&gt;
 &lt;ul&gt;
     &lt;li&gt;List Item 1&lt;/li&gt;
@@ -301,17 +301,18 @@
             <div class="row">
                 <div class="col-6">
                     <div class="frame">
-
                         <div class="frame__body">
-                            <div class="tile level">
-                                <div class="tile-icon">
-                                    <figure class="avatar">
-                                        <img src="https://crunchbase-production-res.cloudinary.com/image/upload/c_thumb,h_256,w_256,f_auto,g_faces,z_0.7,q_auto:eco/v1398292826/a1tq244sp7uqhb5a0utg.png"/>
-                                    </figure>
-                                </div>
-                                <div class="tile-container">
-                                    <p class="tile-title no-margin">Richard Hendricks</b>.</p>
-                                    <p class="tile-subtitle no-margin">Founder and CEO of Pied Piper.</p>
+                            <div class="frame__header">
+                                <div class="tile level">
+                                    <div class="tile__icon">
+                                        <figure class="avatar">
+                                            <img src="https://crunchbase-production-res.cloudinary.com/image/upload/c_thumb,h_256,w_256,f_auto,g_faces,z_0.7,q_auto:eco/v1398292826/a1tq244sp7uqhb5a0utg.png"/>
+                                        </figure>
+                                    </div>
+                                    <div class="tile__container">
+                                        <p class="tile__title">Richard Hendricks</b>.</p>
+                                        <p class="tile__subtitle">Founder and CEO of Pied Piper.</p>
+                                    </div>
                                 </div>
                             </div>
                             <ul class="menu">
@@ -336,23 +337,21 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col-4&quot;&gt;
-&lt;div class=&quot;frame&quot;&gt;
-    &lt;div class=&quot;frame__header&quot;&gt;
-        &lt;div class=&quot;tile level&quot;&gt;
-            &lt;div class=&quot;tile-icon&quot;&gt;
-                &lt;figure class=&quot;avatar&quot;&gt;
-                    &lt;img src=&quot;https://crunchbase-production-res.cloudinary.com/image/upload/c_thumb,h_256,w_256,f_auto,g_faces,z_0.7,q_auto:eco/v1398292826/a1tq244sp7uqhb5a0utg.png&quot;/&gt;
-                &lt;/figure&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;tile-container&quot;&gt;
-                &lt;p class=&quot;tile-title no-margin&quot;&gt;Richard Hendricks&lt;/b&gt;.&lt;/p&gt;
-                &lt;p class=&quot;tile-subtitle no-margin&quot;&gt;Founder and CEO of Pied Piper.&lt;/p&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot;&gt;
+    &lt;div class=&quot;frame__body&quot;&gt;
+        &lt;div class=&quot;frame__header&quot;&gt;
+            &lt;div class=&quot;tile level&quot;&gt;
+                &lt;div class=&quot;tile__icon&quot;&gt;
+                    &lt;figure class=&quot;avatar&quot;&gt;
+                        &lt;img src=&quot;https://crunchbase-production-res.cloudinary.com/image/upload/c_thumb,h_256,w_256,f_auto,g_faces,z_0.7,q_auto:eco/v1398292826/a1tq244sp7uqhb5a0utg.png&quot;/&gt;
+                    &lt;/figure&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;tile__container&quot;&gt;
+                    &lt;p class=&quot;tile__title&quot;&gt;Richard Hendricks&lt;/b&gt;.&lt;/p&gt;
+                    &lt;p class=&quot;tile__subtitle&quot;&gt;Founder and CEO of Pied Piper.&lt;/p&gt;
+                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;frame__body&quot;&gt;
         &lt;ul class=&quot;menu&quot;&gt;
             &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
             &lt;li class=&quot;menu-item selected&quot;&gt;
@@ -433,7 +432,7 @@
                 <div class="col-6">
                      <div class="frame">
                         <div class="frame__header">
-                            <p class="title no-margin">Bookmarks</p>
+                            <p class="title u-no-margin">Bookmarks</p>
                         </div>
                         <div class="frame__body">
                             <ul class="menu">
@@ -479,7 +478,7 @@
                 <div class="col-6">
                     <pre><code class="html" data-lang="HTML">&lt;div class=&quot;frame&quot;&gt;
     &lt;div class=&quot;frame__header&quot;&gt;
-        &lt;p class=&quot;title no-margin&quot;&gt;Bookmarks&lt;/p&gt;
+        &lt;p class=&quot;title u-no-margin&quot;&gt;Bookmarks&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;frame__body&quot;&gt;
         &lt;ul class=&quot;menu&quot;&gt;
@@ -1069,7 +1068,7 @@
                         <li><code>tree-nav</code> is the sidebar of the page. At the moment, it is only supported in showing the menu on the left side properly for touch devices and desktops.
                             
                             <ul>
-                                <li><code>tree-nav-container</code> will be the container that will house the <code>tree</code> element. For more info on making a tree, you can refer to it in the docs <a href="#tree_list" class="smoothScroll">here</a>.</li>
+                                <li><code>tree-nav-container</code> will be the container that will house the <code>tree</code> element. For more info on making a tree, you can refer to it in the docs <a href="#tree_list" class="u u-LR smoothScroll">here</a>.</li>
                             </ul>
                         </li>
                         <li><code>tree-nav-content</code> is the container that would store the other elements of the page such as text, images, etc.</li>
