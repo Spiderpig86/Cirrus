@@ -206,8 +206,8 @@
   }
 }
 
-@media screen and (max-width: 1023px) {
-  /* Hide on devices that are tablets or smaller */
+@media screen and (min-width: 768px) {
+  /* Hide on devices that are tablets or larger */
   .u-hide-tablet {
     display: none !important;
   }
