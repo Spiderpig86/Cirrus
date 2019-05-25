@@ -1,12 +1,12 @@
 /* LISTS */
 
 ul {
-  list-style: disc inside;
+  list-style: disc outside;
   margin: 1rem 0 1rem 1rem;
 }
 
 ol {
-  list-style: decimal inside;
+  list-style: decimal outside;
   margin: 1rem 0 1rem 1rem;
 }
 

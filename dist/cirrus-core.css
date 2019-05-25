@@ -1920,7 +1920,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
   }
 }
 
-@media screen and (min-width: 1003px) {
+@media screen and (min-width: 1023px) {
   .header {
     padding: 0 2rem;
   }
@@ -2519,12 +2519,12 @@ a .btn, a button {
 /* LISTS */
 
 ul {
-  list-style: disc inside;
+  list-style: disc outside;
   margin: 1rem 0 1rem 1rem;
 }
 
 ol {
-  list-style: decimal inside;
+  list-style: decimal outside;
   margin: 1rem 0 1rem 1rem;
 }
 
@@ -3103,6 +3103,7 @@ video.video-fullscreen {
 
 .modal-content .modal-footer {
     padding: 1rem 3rem;
+    text-align: right;
 }
 
 /* MODAL ANIMATIONS */
@@ -3519,26 +3520,26 @@ video.video-fullscreen {
 }
 
 /* Hide elements based on screen size */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
   .u-hide-mobile {
     display: none !important;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   /* Hide on devices that are tablets or smaller */
   .u-hide-tablet {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 451px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1023px) {
   .u-hide-tablet-only {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
   /* Hide element on laptops, desktops, etc */
   .u-hide-desktop {
     display: none !important;

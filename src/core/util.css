@@ -200,26 +200,26 @@
 }
 
 /* Hide elements based on screen size */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
   .u-hide-mobile {
     display: none !important;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   /* Hide on devices that are tablets or smaller */
   .u-hide-tablet {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 451px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1023px) {
   .u-hide-tablet-only {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1024px) {
   /* Hide element on laptops, desktops, etc */
   .u-hide-desktop {
     display: none !important;
