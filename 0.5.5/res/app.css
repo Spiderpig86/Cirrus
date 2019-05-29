@@ -220,6 +220,13 @@ footer p .fa.fa-heart {
     width: 100%;
 }
 
+/* Colors */
+.color-circle {
+    border-radius: 50%;
+    margin: .5rem;
+    padding: 1rem;
+}
+
 @media (max-width: 768px) {
     .nav-item.has-sub .list-dropdown .btn-group button:not(.btn-dropdown) {
         flex-grow: 1;

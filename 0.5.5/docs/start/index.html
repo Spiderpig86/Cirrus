@@ -54,14 +54,21 @@
                 </div>
             </div>
             <div class="nav-right u-text-center nav-menu">
-                
+                <div class="nav-item u-text-center has-sub">
+                    <a class="nav-dropdown-link">Layout</a>
+                    <ul class="dropdown-menu dropdown-animated">
+                        <li><a href="#start" class="smoothScroll">Top</a></li>
+                        <li><a href="#variants" class="smoothScroll">Variants</a></li>
+                        <li><a href="#support" class="smoothScroll">Support</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 
     <space class="large"></space>
     
-    <section class="padtop">
+    <section class="padtop" id="start">
         <div class="content">
             <h1>Jumpstart with Cirrus</h1>
             <p class="lead">Everything you need to know on setting up your first project.</p>
@@ -134,10 +141,184 @@
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
         </div>
+        <space class="x-large"></space>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-    crossorigin="anonymous"></script>
+    <section class="padtop" id="variants">
+        <div class="content">
+            <h1>Project Variants</h1>
+            <div class="divider"></div>
+            <p>There are currently <b>two</b> variants of the project:</p>
+            <space class="large"></space>
+
+            <h6 class="u-no-margin">Core</h6>
+            <p class="u-no-margin">This only contains the essential styles needed to build a project with Cirrus. It consists of these components:</p>
+            
+            <div class="r">
+                <ul>
+                    <li><b>Buttons</b></li>
+                    <li><b>Code</b></li>
+                    <li><b>Default (Base)</b></li>
+                    <li><b>Font</b></li>
+                    <li><b>Footer</b></li>
+                    <li><b>Forms</b></li>
+                    <li><b>Frames</b></li>
+                    <li><b>Header</b></li>
+                    <li><b>Layout</b></li>
+                    <li><b>Links</b></li>
+                    <li><b>Lists</b></li>
+                    <li><b>Media</b></li>
+                    <li><b>Modal</b></li>
+                    <li><b>Tables</b></li>
+                    <li><b>Theme</b></li>
+                    <li><b>Util</b></li>
+                </ul>
+            </div>
+
+            <p>In the <code>dist</code> folder, these styles are found in the <code>cirrus-core.min.css</code> file <a class="u u-LR" target="_blank" rel="noopener noreferrer" href="https://github.com/Spiderpig86/Cirrus/blob/master/dist/cirrus-core.min.css">here</a>.</p>
+
+            <space></space>
+
+            <h6 class="u-no-margin">Ext</h6>
+            <p class="u-no-margin">This adds an extension to the framework with more styles, layouts, and <b>pre-built components</b> for quick prototyping.</p>
+
+            <div class="r">
+                <ul>
+                    <li><b>Animations</b></li>
+                    <li><b>Avatar</b></li>
+                    <li><b>Card</b></li>
+                    <li><b>Form (Extended Styles)</b></li>
+                    <li><b>Grid</b></li>
+                    <li><b>Link (Extended Styles)</b></li>
+                    <li><b>Modifiers</b></li>
+                    <li><b>Pagination</b></li>
+                    <li><b>Placeholder</b></li>
+                    <li><b>Tabs</b></li>
+                    <li><b>Tags</b></li>
+                    <li><b>Tiles</b></li>
+                    <li><b>Toasts</b></li>
+                    <li><b>Tooltips</b></li>
+                </ul>
+            </div>
+
+            <p>All these styles are combined with the <code>core</code> build in the <code>cirrus.min.css</code> file in the <code>/dist</code> folder <a class="u u-LR" target="_blank" rel="noopener noreferrer" href="https://github.com/Spiderpig86/Cirrus/blob/master/dist/cirrus.min.css">here</a>.</p>
+        </div>
+    </section>
+
+    <section class="padtop" id="support">
+        <div class="content">
+            <h1>Browser Support</h1>
+            <div class="divider"></div>
+            <p>Cirrus relies on <a class="u u-LR" target="_blank" rel="noopener noreferrer" href="http://shouldiprefix.com/">What CSS to prefix?</a> and <a class="u u-LR" target="_blank" rel="noopener noreferrer" href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to help add backwards compatibility to older browsers. Cirrus works well with the following browser versions:</p>
+
+            <table class="table bordered">
+                <thead>
+                <tr>
+                <th><a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" style="max-width:100%;"></a><br>IE / Edge</th>
+                <th><a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" style="max-width:100%;"></a><br>Firefox</th>
+                <th><a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" style="max-width:100%;"></a><br>Chrome</th>
+                <th><a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" style="max-width:100%;"></a><br>Safari</th>
+                <th><a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" style="max-width:100%;"></a><br>Opera</th>
+                <th><a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" style="max-width:100%;"></a><br>Electron</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td><div class="tag tag--warning">IE9</div>, <div class="tag tag--warning">IE10</div>, <div class="tag tag--warning">IE11</div>, <div class="tag tag--success">Edge</div></td>
+                <td><div class="tag tag--success">last 3</div>, <div class="tag tag--success">ESR</div></td>
+                <td><div class="tag tag--success">last 3</div></td>
+                <td><div class="tag tag--success">last 3</div></td>
+                <td><div class="tag tag--success">last 3</div></td>
+                <td><div class="tag tag--success">last 3</div></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="padtop" id="breakpoints">
+        <div class="content">
+            <h1>Breakpoints</h1>
+            <div class="divider"></div>
+            <p>Breakpoints are quite standard across the entire framework. These are the 3 number ranges you need to know:</p>
+            <ul>
+                <li><code>0 &lt; 768</code> - <b>mobile</b></li>
+                <li><code>769 &lt; x &lt; 1024</code> - <b>tablet</b></li>
+                <li><code>&gt; 1024</code> - <b>desktop</b></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="padtop">
+        <div class="content">
+            <h1>Colors</h1>
+            <div class="divider"></div>
+            <p>These are the colors that style most of the framework.</p>
+
+            <table class="table bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 50px">Color</th>
+                        <th>Name</th>
+                        <th>Hex</th>
+                        <th>Modifier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="color-circle bg-primary"></div></td>
+                        <td><b>Primary</b></td>
+                        <td><code>#f03d4d</code></td>
+                        <td><code>-primary</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-info"></div></td>
+                        <td><b>Info</b></td>
+                        <td><code>#2972fa</code></td>
+                        <td><code>-info</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-link"></div></td>
+                        <td><b>Link</b></td>
+                        <td><code>#5e5cc7</code></td>
+                        <td><code>-link</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-dark"></div></td>
+                        <td><b>Dark</b></td>
+                        <td><code>#363636</code></td>
+                        <td><code>-dark</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-success"></div></td>
+                        <td><b>Success</b></td>
+                        <td><code>#0dd157</code></td>
+                        <td><code>-success</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-warning"></div></td>
+                        <td><b>Warning</b></td>
+                        <td><code>#fab633</code></td>
+                        <td><code>-warning</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-danger"></div></td>
+                        <td><b>Danger</b></td>
+                        <td><code>#fb4143</code></td>
+                        <td><code>-danger</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-light"></div></td>
+                        <td><b>Light</b></td>
+                        <td><code>#f6f9fc</code></td>
+                        <td><code>-light</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script async src="../../res/js/smoothscroll.js"></script>
     
     <!-- Syntax highlight code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
