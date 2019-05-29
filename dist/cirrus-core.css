@@ -441,7 +441,7 @@ pre > code {
     white-space: pre-wrap;
     word-wrap: break-word;
     font-family: Consolas,Monaco,"Andale Mono",monospace;
-    text-align: left
+    text-align: left;
     line-height: 1.5;
     -moz-tab-size: 4;
     tab-size: 4;
@@ -451,6 +451,7 @@ pre > code {
     border-left: .3rem solid var(--cirrus-primary);
     margin: 0;
     position: relative;
+    color: #222;
 }
 
 /* BASE STYLING FOR CIRRUS */
@@ -675,7 +676,7 @@ blockquote {
 }
 
 p.lead {
-  font-size: 1.125rem;
+  font-size: 1.2rem;
 }
 
 blockquote {
