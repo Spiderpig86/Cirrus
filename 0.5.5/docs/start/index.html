@@ -79,17 +79,22 @@
             <p>There are a few ways to get <b>Cirrus</b> for your project:</p>
             <space></space>
             <h6 class="u-no-margin">Npm</h6>
-            <pre>
-                <code data-lang="sh">npm i cirrus-ui --save</code>
+            <pre class="get-cirrus">
+                <code class="dark">npm i cirrus-ui --save</code>
+                <div id="yarnCopy" class="copy" data-clipboard-text="npm i cirrus-ui --save">Copy</div>
             </pre>
             <h6 class="u-no-margin">Yarn</h6>
-            <pre>
-                <code data-lang="sh">yarn add cirrus-ui</code>
+            <pre class="get-cirrus">
+                <code class="dark">yarn add cirrus-ui</code>
+                <div id="yarnCopy" class="copy" data-clipboard-text="yarn add cirrus-ui">Copy</div>
             </pre>
             <h6 class="u-no-margin">Unpkg CDN</h6>
-            <pre>
-                <code data-lang="html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/cirrus-ui&quot;&gt;</code>
+            <pre class="get-cirrus">
+                <code class="dark">https://unpkg.com/cirrus-ui</code>
+                <div id="yarnCopy" class="copy" data-clipboard-text="https://unpkg.com/cirrus-ui">Copy</div>
             </pre>
+            <h6 class="u-no-margin">JsDelivr</h6>
+            <pre class="get-cirrus"><code class="dark">https://cdn.jsdelivr.net/npm/cirrus-ui@0.5.4/dist/cirrus.min.css</code><div id="yarnCopy" class="copy" data-clipboard-text="https://cdn.jsdelivr.net/npm/cirrus-ui@0.5.4/dist/cirrus.min.css">Copy</div></pre>
             <h6 class="u-no-margin">Manual Install</h6>
             <p>All the files you need can be found right <a class="u u-LR" href="https://github.com/Spiderpig86/Cirrus/releases">here</a>.</p>
 
@@ -255,6 +260,8 @@
             <div class="divider"></div>
             <p>These are the colors that style most of the framework.</p>
 
+            <space></space>
+
             <table class="table bordered">
                 <thead>
                     <tr>
@@ -318,13 +325,88 @@
         </div>
     </section>
 
+    <section class="padtop" id="developing">
+        <div class="content">
+            <h1>Developing</h1>
+            <div class="divider"></div>
+            <p>Developing your own version of Cirrus is quite simple with these simple steps.</p>
+
+            <space class="x-large"></space>
+
+            <h5>Get the Source</h5>
+            <p>You can clone the <b>source</b> of the project straight from Github. You can add files or remove them from the <code>/src</code> directory to fit your needs.</p>
+            <div class="row"><a rel="nofollow" href="https://github.com/Spiderpig86/Cirrus" target="_blank"><button class="btn btn-info">Source Code</button></a></div>
+
+            <space class="x-large"></space>
+
+            <h5>Building the Project</h5>
+            <p>Cirrus can be modified to include only components that you will need. Since it is processed with <a href="http://gulpjs.com/">Gulp</a> swapping different components in and out of your distribution build is very simple.</p>
+            <p>Just follow the following steps:</p>
+            <ol style="list-style: inside">
+                <li>Open the root directory in your terminal.</li>
+                <li>Remember to run <code>npm install</code> to get all the necessary dependencies.</li>
+                <li>Modify <code>gulpfile.js</code> to add or remove components and then run <code>gulp minify</code> to build the regular and minified versions.</li>
+                <li>These build files should appear in the <code>/dist</code> directory.</li>
+            </ol>
+            <p><b>Gulp Commands</b></p>
+            <ul style="list-style: inside">
+                <li><code>gulp compile</code> - just compile the CSS without minification.</li>
+                <li><code>gulp minify</code> - compile the CSS with <a class="u u-LR" href="https://github.com/jakubpawlowicz/clean-css#level-2-optimizations">level 2 minification</a>.</li>
+                <li><code>gulp watch</code> - automate compiling and minication.</li>
+            </ul>
+
+            <space class="x-large"></space>
+
+            <h5>Folder Structure</h5>
+            <p>The project is organized like this:</p>
+            <pre><code class="js">├───dist                    // Dist files (git ignored)
+│   ├───cirrus.css
+│   └───cirrus.min.css
+├───img                     // Docs resources
+│   └───CirrusLogo.png
+├───src                     // CSS source files
+│   ├───core                // Styles for core build
+│   │   └───...
+│   └───ext                 // Extended styles for components
+│       └───...
+├───...
+├───.travis.yml
+├───...
+├───README.md
+├───gulpfile.js             // Build file
+└───...</code></pre>
+                
+                <space class="x-large"></space>
+
+                <h5 class="title">Setting Up</h5>
+                <p>Setting up Cirrus for any project is very simple and will only require a couple of lines on each file.</p>
+
+                <pre><code class="html" data-lang="HTML">&lt;!-- Google Fonts --&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Montserrat:400,700&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- Minified Cirrus CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/cirrus.min.css&quot;&gt;
+
+&lt;!-- Import your other dependencies --&gt;</code></pre>
+                </div>
+        </div>
+    </section>
+
     <script async src="../../res/js/smoothscroll.js"></script>
     
     <!-- Syntax highlight code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <!-- <script src="https://use.fontawesome.com/a696b91557.js"></script> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script> <!-- clipboard.js -->
     <script src="../../res/js/app.js"></script>
+    <script>
+        // Copy button script
+        if (document.getElementsByClassName('copy').length !== 0)
+        var clipboard = new Clipboard('.copy'); // It will handle the rest...
+    </script>
 
 </body>
 

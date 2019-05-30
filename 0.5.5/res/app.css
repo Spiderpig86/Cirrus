@@ -227,6 +227,39 @@ footer p .fa.fa-heart {
     padding: 1rem;
 }
 
+pre.get-cirrus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .3rem;
+    background: var(--cirrus-dark) !important;
+    margin: 1rem 0;
+}
+
+pre.get-cirrus code {
+    padding: 1rem;
+}
+
+/* Copy button */
+pre .copy {
+    margin: auto 1rem;
+    color: #f03d4d;
+    padding: 0.25rem 0.75rem;
+    border-radius: .3rem;
+    font-weight: 700;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+pre .copy:hover {
+    background: #f03d4d;
+    color: #fff;
+    transition: all .2s;
+}
+
 @media (max-width: 768px) {
     .nav-item.has-sub .list-dropdown .btn-group button:not(.btn-dropdown) {
         flex-grow: 1;
