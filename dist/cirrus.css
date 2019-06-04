@@ -1024,6 +1024,12 @@ input[type=text].input-focused,
     box-shadow: 0 0 0 0.2rem rgba(61, 171, 240, 0.4), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
+select {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-appearance: menulist;
+}
+
 select[multiple] option {
     padding: 0.2rem 0.4rem;
 }
