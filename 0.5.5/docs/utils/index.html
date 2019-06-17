@@ -58,9 +58,10 @@
                 </div>
 
                 <div class="nav-item text-center has-sub">
-                    <a class="nav-dropdown-link">Lists</a>
+                    <a class="nav-dropdown-link">Utils</a>
                     <ul class="dropdown-menu dropdown-animated">
                         <li><a href="#started" class="smoothScroll">Top</a></li>
+                        <li><a href="#breakpoints" class="smoothScroll">Breakpoints</a></li>
                     </ul>
                 </div>
             </div>
@@ -322,10 +323,13 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </section>
 
-            <space class="x-large"></space>
-
-            <h3>Breakpoints</h3>
+    <section class="padtop" id="breakpoints">
+        <div class="content">
+            <h1><a href="./index.html#breakpoints" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Breakpoints</h1>
+            <div class="divider"></div>
             <p>The standard breakpoints used in Cirrus are for <code>mobile</code>, <code>tablet</code>, and <code>desktop</code>.</p>
 
             <table class="table bordered">
@@ -432,6 +436,9 @@
                     <td>Hide content for large screens.</td>
                 </tr>
             </table>
+
+            <h3>Ignoring Breakpoints</h3>
+            <p>Currently, only the <code>col-*</code> classes which are nested inside <code>row</code>. By adding the <code>ignore-screen</code> class, we instruct Cirrus to not resize for mobile displays. More documentation can be found <a class="u u-LR" href="../layout/" target="_blank">here</a>.</p>
         </div>
     </section>
 
