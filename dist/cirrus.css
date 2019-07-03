@@ -1034,6 +1034,11 @@ select[multiple] option {
     padding: 0.2rem 0.4rem;
 }
 
+/* Add normal height to Apple users for single-line selects */
+select.select:not([size]):not([multiple]) {
+    height: calc(3rem + 2px);
+}
+
 /* Search field */
 input[type="search"],
 input.search {
