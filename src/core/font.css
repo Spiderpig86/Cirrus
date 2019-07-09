@@ -201,7 +201,7 @@ mark,
 .icon {
   /* Usually used in spans */
   display: inline-block;
-  font-size: 21px; /* Best font sizes are multiples of 7 */
+  /* font-size: 21px; Allow font sizes for icons to be overwritten */
   /* line-height: 1.5rem; Allow line height to be inherited or overwritten */
   text-align: center;
   width: 1.5rem;
