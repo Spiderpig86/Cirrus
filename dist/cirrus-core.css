@@ -762,7 +762,7 @@ mark,
 .icon {
   /* Usually used in spans */
   display: inline-block;
-  font-size: 21px; /* Best font sizes are multiples of 7 */
+  /* font-size: 21px; Allow font sizes for icons to be overwritten */
   /* line-height: 1.5rem; Allow line height to be inherited or overwritten */
   text-align: center;
   width: 1.5rem;
@@ -1532,7 +1532,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 .header:not(.header-clear) .nav-item:not(.no-hover).hovered {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: rgba(145, 145, 145, 0.15);
+  background-color: rgba(216, 216, 216, 0.15);
 }
 
 .header:not(.header-clear) .nav-item.active, /* active:hover removes the transition effect when hoveirng over the dropdown menu */ 
