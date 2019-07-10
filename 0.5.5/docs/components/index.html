@@ -68,8 +68,8 @@
                         <li><a href="#card_tiles" class="smoothScroll">Modal Dialogs</a></li>
                         <li><a href="#placeholders" class="smoothScroll">Placeholders</a></li>
                         <li><a href="#tabs" class="smoothScroll">Tabs</a></li>
-                        <li><a href="#tooltips" class="smoothScroll">Tooltips</a></li>
                         <li><a href="#toasts" class="smoothScroll">Toasts</a></li>
+                        <li><a href="#tooltips" class="smoothScroll">Tooltips</a></li>
                     </ul>
                 </div>
             </div>
@@ -1507,6 +1507,81 @@
         </div>
     </section>
 
+    <section class="padtop" id="toasts">
+        <div class="content">
+            <h1><a href="./index.html#toasts" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Toasts</h1>
+            <div class="divider"></div>
+            <p>Use toasts to notify users of any changes. For titles, remember to add the <code>toast__title</code> class.</p>
+            <div class="row">
+                <div class="toast toast--primary">
+                    <button class="btn-close"></button>
+                    <h4 class="toast__title">Danger!</h4>
+                    <p>Run.</p>
+                </div>
+
+                <div class="toast">
+                    <button class="btn-close"></button>
+                    <p>Just kidding. False alarm.</p>
+                </div>
+            </div>
+            <p>Different colors are supported in Cirrus to indicate different states.</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="toast toast--success">
+                        <button class="btn-close"></button>
+                        <p>Success</p>
+                    </div>
+                    <div class="toast toast--warning">
+                        <button class="btn-close"></button>
+                        <p>Warning</p>
+                    </div>
+                    <div class="toast toast--error">
+                        <button class="btn-close"></button>
+                        <p>Error</p>
+                    </div>
+                    <div class="toast toast--info">
+                        <button class="btn-close"></button>
+                        <p>Info</p>
+                    </div>
+                    <div class="toast toast--link">
+                        <button class="btn-close"></button>
+                        <p>Link</p>
+                    </div>
+                    <div class="toast toast--primary">
+                        <button class="btn-close"></button>
+                        <p>Primary</p>
+                    </div>
+                </div>
+                <div class="col-6">
+<pre><code class="html" data-lang="HTML">&lt;div class=&quot;toast toast--success&quot;&gt;
+    &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
+    &lt;p&gt;Success&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;toast toast--warning&quot;&gt;
+    &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
+    &lt;p&gt;Warning&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;toast toast--error&quot;&gt;
+    &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
+    &lt;p&gt;Error&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;toast toast--info&quot;&gt;
+    &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
+    &lt;p&gt;Info&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;toast toast--link&quot;&gt;
+    &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
+    &lt;p&gt;Link&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;toast toast--primary&quot;&gt;
+    &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
+    &lt;p&gt;Primary&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="tooltips" class="padtop">
         <div class="content">
             <h1><a href="./index.html#tooltips" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Tooltips</h1>
@@ -1593,57 +1668,6 @@
 &lt;/div&gt;
 &lt;div class=&quot;btn-container&quot;&gt;
     &lt;button class=&quot;tooltip tooltip-right&quot; data-tooltip=&quot;Tooltip Right&quot;&gt;Tooltip Right&lt;/button&gt;
-&lt;/div&gt;</code></pre>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="padtop" id="toasts">
-        <div class="content">
-            <h1><a href="./index.html#toasts" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Toasts</h1>
-            <div class="divider"></div>
-            <p>Use toasts to notify users of any changes. For titles, remember to add the <code>toast__title</code> class.</p>
-            <div class="row">
-                <div class="toast toast--primary">
-                    <button class="btn-close"></button>
-                    <h4 class="toast__title">Danger!</h4>
-                    <p>Run.</p>
-                </div>
-
-                <div class="toast">
-                    <button class="btn-close"></button>
-                    <p>Just kidding. False alarm.</p>
-                </div>
-            </div>
-            <p>Different colors are supported in Cirrus to indicate different states.</p>
-            <div class="row">
-                <div class="col-6">
-                    <div class="toast toast--success">
-                        <button class="btn-close"></button>
-                        <p>Success</p>
-                    </div>
-                    <div class="toast toast--warning">
-                        <button class="btn-close"></button>
-                        <p>Warning</p>
-                    </div>
-                    <div class="toast toast--error">
-                        <button class="btn-close"></button>
-                        <p>Error</p>
-                    </div>
-                </div>
-                <div class="col-6">
-<pre><code class="html" data-lang="HTML">&lt;div class=&quot;toast toast--success&quot;&gt;
-    &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
-    &lt;p&gt;Success&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;toast toast--warning&quot;&gt;
-    &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
-    &lt;p&gt;Warning&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;toast toast--error&quot;&gt;
-    &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
-    &lt;p&gt;Error&lt;/p&gt;
 &lt;/div&gt;</code></pre>
                 </div>
             </div>

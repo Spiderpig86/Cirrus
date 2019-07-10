@@ -472,14 +472,19 @@
             <p class="title">.panel</p>
             <p class="subtitle">Works great as a sub-element of <code>section</code> which provides <code>2.5rem</code> rem padding to the top and bottom.</p>
             <p class="title">.divider</p>
-            <p class="subtitle">A simple gray divider with padding at the top and bottom.</p>
+            <p class="subtitle">A simple gray divider with an optional text field called <code>data-content</code>.</p>
             <div class="divider"></div>
+            <p class="title">.divider--v</p>
+            <p class="subtitle">A vertical divider with an optional text field called <code>data-content</code>.</p>
+            <div style="position: relative; height: 300px;">
+                <div class="divider--v" style="height: 100%;" data-content="test"></div>
+            </div>
             <p class="title">space, space.large, space.x-large</p>
             <p class="subtitle">A <code>div</code> alternative to <code>br</code> that is more flexible starting at 1rem to 5rem.</p>
             <p class="title">.row</p>
             <p class="subtitle">The basic container for column.</p>
-            <p class="title">.row .flex</p>
-            <p class="subtitle">A variant of the orignal row with flexbox.</p>
+            <p class="title">.r</p>
+            <div class="subtitle">The legacy container for content going across (non-flexbox).</div>
         </div>
     </section>
 
@@ -602,7 +607,7 @@
             <div class="divider"></div>
             <p>Cirrus comes with easy to style pagination menus that allow for easy navigation between pages in websites and forums. All you need to do is add the <code>pagination</code> class to the parent container and the <code>pagination-item</code> class to the children. To display numerous small pagination items, add the <code>short</code> class. In the small pagination menu shown below, to indicate that a page is selected, add the <code>selected</code> class to the page item.</p>
             <p>For a bordered look, add the <code>pagination-bordered</code> class to the <code>pagination</code>.</p>
-            <div class="r">
+            <div class="row">
                 <div class="col-6">
                     <div class="pagination">
                         <div class="pagination-item short">
@@ -664,7 +669,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="r">
                 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col-6&quot;&gt;
     &lt;div class=&quot;pagination&quot;&gt;
         &lt;div class=&quot;pagination-item short&quot;&gt;
@@ -878,7 +883,7 @@
                         </div>
                         <div class="frame__body">
                             <space></space>
-                            <div class="row">
+                            <div class="r">
                                 <div class="tile tile--center u-no-margin">
                                     <div class="tile-icon">
                                         <figure class="avatar img-small" data-text="El"></figure>
@@ -889,7 +894,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="r">
                                 <div class="tile tile--center u-no-margin">
                                     <figure class="avatar img-small">
                                         <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
@@ -900,7 +905,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="r">
                                 <div class="tile tile--center u-no-margin">
                                      <div class="tile-icon">
                                         <figure class="avatar img-small" data-text="El"></figure>
@@ -911,7 +916,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="r">
                                 <div class="tile tile--center u-no-margin">
                                     <div class="tile-icon">
                                         <figure class="avatar img-small">
@@ -924,7 +929,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="r">
                                 <div class="tile tile--center u-no-margin">
                                      <div class="tile-icon">
                                         <figure class="avatar img-small" data-text="El"></figure>
