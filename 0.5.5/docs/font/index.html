@@ -290,17 +290,18 @@
         <div class="content">
             <h1><a href="./index.html#font_awesome" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Font Awesome</h1>
             <div class="divider"></div>
-            <p>Using Font Awesome? Cirrus's got you covered with a bunch of font-sizes to help your glyphs fit within any component. Cirrus makes sure that each glyph is rendered correctly by setting the font sizes to base 7 since those glyphs preserve aspect ratios at those font sizes.</p>
+            <p>Using Font Awesome? Cirrus makes it easy to integrate glyphs into your website. Just add the <code>fa-wrapper</code> class along with your desired glyph class.</p>
+            <p>Note that glyph sizes now inherity directly from parent classes. Glyphs appear the best when the font size is a multiple of <b>7</b>.</p>
             <div class="row level">
                 <div class="col-6">
                     <p class="title">X-Small (7px)</p>
-                    <span class="icon subtitle">
-                    <i class="fa fa-wrapper x-small fa-github"></i>
-                </span>
+                    <span class="icon subtitle" style="font-size: 7px">
+                        <i class="fab fa-wrapper fa-github"></i>
+                    </span>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon&quot;&gt;
-    &lt;i class=&quot;fa fa-wrapper x-small fa-github&quot;&gt;&lt;/i&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon subtitle&quot; style=&quot;font-size: 7px&quot;&gt;
+    &lt;i class=&quot;fab fa-wrapper fa-github&quot;&gt;&lt;/i&gt;
 &lt;/span&gt;</code></pre>
                 </div>
             </div>
@@ -309,54 +310,40 @@
                 <div class="col-6">
                     <p class="title">Small/Default (14px)</p>
                     <span class="icon subtitle">
-                    <i class="fa fa-wrapper small fa-github"></i>
-                </span>
+                        <i class="fab fa-wrapper small fa-github" style="font-size: 14px"></i>
+                    </span>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon&quot;&gt;
-    &lt;i class=&quot;fa fa-wrapper small fa-github&quot;&gt;&lt;/i&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon subtitle&quot; style=&quot;font-size: 14px&quot;&gt;
+    &lt;i class=&quot;fab fa-wrapper fa-github&quot;&gt;&lt;/i&gt;
 &lt;/span&gt;</code></pre>
                 </div>
             </div>
 
             <div class="row level">
                 <div class="col-6">
-                    <p class="title">Large (28px)</p>
+                    <p class="title">Large (21px)</p>
                     <span class="icon subtitle">
-                    <i class="fa fa-wrapper large fa-github"></i>
-                </span>
+                        <i class="fa fa-wrapper fa-github" style="font-size: 21px;"></i>
+                    </span>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon&quot;&gt;
-    &lt;i class=&quot;fa fa-wrapper large fa-github&quot;&gt;&lt;/i&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon subtitle&quot; style=&quot;font-size: 21px&quot;&gt;
+    &lt;i class=&quot;fab fa-wrapper fa-github&quot;&gt;&lt;/i&gt;
 &lt;/span&gt;</code></pre>
                 </div>
             </div>
 
             <div class="row level">
                 <div class="col-6">
-                    <p class="title">X-Large (35px)</p>
-                    <span class="icon subtitle">
-                    <i class="fa fa-wrapper x-large fa-github"></i>
-                </span>
+                    <p class="title">X-Large (28px)</p>
+                    <span class="icon subtitle" style="font-size: 28px">
+                        <i class="fa fa-wrapper fa-github"></i>
+                    </span>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon&quot;&gt;
-    &lt;i class=&quot;fa fa-wrapper x-large fa-github&quot;&gt;&lt;/i&gt;
-&lt;/span&gt;</code></pre>
-                </div>
-            </div>
-
-            <div class="row level">
-                <div class="col-6">
-                    <p class="title">XX-Large (42px)</p>
-                    <span class="icon subtitle">
-                    <i class="fa fa-wrapper xx-large fa-github"></i>
-                </span>
-                </div>
-                <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon&quot;&gt;
-    &lt;i class=&quot;fa fa-wrapper xx-large fa-github&quot;&gt;&lt;/i&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon subtitle&quot; style=&quot;font-size: 28px&quot;&gt;
+    &lt;i class=&quot;fab fa-wrapper fa-github&quot;&gt;&lt;/i&gt;
 &lt;/span&gt;</code></pre>
                 </div>
             </div>
