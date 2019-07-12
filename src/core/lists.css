@@ -1,13 +1,8 @@
 /* LISTS */
 
-ul {
-  list-style: disc outside;
+ul, ol {
   margin: 1rem 0 1rem 1rem;
-}
-
-ol {
-  list-style: decimal outside;
-  margin: 1rem 0 1rem 1rem;
+  padding-inline-start: 0.5rem;
 }
 
 /* Handle nesting */
