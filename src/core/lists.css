@@ -5,6 +5,10 @@ ul, ol {
   padding-inline-start: 0.5rem;
 }
 
+ul {
+  list-style: disc;
+}
+
 /* Handle nesting */
 ul ul, ol ul, ul ol, ol ol {
   margin: 0 0 0 1rem;

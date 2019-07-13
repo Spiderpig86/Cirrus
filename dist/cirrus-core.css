@@ -56,9 +56,9 @@ button:hover,
 }
 
 /* Make the loading circle, if present, white when button is active */
-.btn.loading::after:active,
-button.loading::after:active,
-[type="submit"].loading::after:active {
+.btn.loading:active::after,
+button.loading:active::after,
+[type="submit"].loading:active::after {
     transition: var(--animation-duration) ease;
     border-radius: 50%;
     border-right-color: transparent;
@@ -2535,6 +2535,10 @@ a .btn, a button {
 ul, ol {
   margin: 1rem 0 1rem 1rem;
   padding-inline-start: 0.5rem;
+}
+
+ul {
+  list-style: disc;
 }
 
 /* Handle nesting */

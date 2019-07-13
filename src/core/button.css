@@ -51,9 +51,9 @@ button:hover,
 }
 
 /* Make the loading circle, if present, white when button is active */
-.btn.loading::after:active,
-button.loading::after:active,
-[type="submit"].loading::after:active {
+.btn.loading:active::after,
+button.loading:active::after,
+[type="submit"].loading:active::after {
     transition: var(--animation-duration) ease;
     border-radius: 50%;
     border-right-color: transparent;
