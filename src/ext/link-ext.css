@@ -20,7 +20,7 @@
     bottom: -0.25em;
 }
 
-.u:hover::after {
+.u::after:hover {
     width: 100%;
 }
 
@@ -34,7 +34,7 @@
     right: 0;
 }
 
-.u-RL:hover::after {
+.u-RL::after:hover {
     width: 100%;
 }
 
@@ -66,8 +66,8 @@
     bottom: -0.25em;
 }
 
-.utb:hover::before,
-.utb:hover::after {
+.utb::before:hover,
+.utb::after:hover {
     width: 100%;
 }
 
@@ -166,8 +166,8 @@
     transition: 0.25s all ease 0.4s;
 }
 
-.usquare:hover::before,
-.usquare:hover::after {
+.usquare::before:hover,
+.usquare::after:hover {
     height: calc(100% + 0.4rem); /* Makes the left and right borders */
 }
 

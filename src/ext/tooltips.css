@@ -36,8 +36,8 @@
 }
 
 /* Handles the on hover event of the button and then modifies the associated tooltip accordingly. */
-.tooltip:focus::after,
-.tooltip:hover::after {
+.tooltip::after:focus,
+.tooltip::after:hover {
   opacity: 1;
   -webkit-transform: translate(-50%, -0.5rem);
   transform: translate(-50%, -0.5rem);
@@ -50,8 +50,8 @@
   transform: translate(-50%, 0);
 }
 
-.tooltip.tooltip--top-left:hover::after,
-.tooltip.tooltip--top-left:focus::after {
+.tooltip.tooltip--top-left::after:hover,
+.tooltip.tooltip--top-left::after:focus {
   left: 0;
   -webkit-transform: translate(-100%, -.5rem);
   transform: translate(-100%, -.5rem);
@@ -64,8 +64,8 @@
   transform: translate(15%, 0);
 }
 
-.tooltip.tooltip--top-right:hover::after,
-.tooltip.tooltip--top-right:focus::after{
+.tooltip.tooltip--top-right::after:hover,
+.tooltip.tooltip--top-right::after:focus{
   right: 0;
   -webkit-transform: translate(100%, -.5rem);
   transform: translate(100%, -.5rem);
@@ -84,8 +84,8 @@
   bottom: auto;
 }
 
-.tooltip.tooltip--bottom:hover::after,
-.tooltip.tooltip--bottom:focus::after {
+.tooltip.tooltip--bottom::after:hover,
+.tooltip.tooltip--bottom::after:focus {
   transform: translate(-50%, .5rem);
   -webkit-transform: translate(-50%, .5rem);
   -moz-transform: translate(-50%, .5rem);
@@ -101,8 +101,8 @@
   bottom: auto;
 }
 
-.tooltip.tooltip--bottom-left:hover::after,
-.tooltip.tooltip--bottom-left:focus::after {
+.tooltip.tooltip--bottom-left::after:hover,
+.tooltip.tooltip--bottom-left::after:focus {
   left: 0;
   -webkit-transform: translate(-100%, .5rem);
   transform: translate(-100%, .5rem);
@@ -117,8 +117,8 @@
   bottom: auto;
 }
 
-.tooltip.tooltip--bottom-right:hover::after,
-.tooltip.tooltip--bottom-right:focus::after {
+.tooltip.tooltip--bottom-right::after:hover,
+.tooltip.tooltip--bottom-right::after:focus {
   right: 0;
   -webkit-transform: translate(100%, .5rem);
   transform: translate(100%, .5rem);
@@ -134,8 +134,8 @@
   -ms-transform: translate(-1rem, 50%);
 }
 
-.tooltip.tooltip--right:hover::after,
-.tooltip.tooltip--right:focus::after {
+.tooltip.tooltip--right::after:hover,
+.tooltip.tooltip--right::after:focus {
   transform: translate(.5rem, 50%);
   -webkit-transform: translate(.5rem, 50%);
   -moz-transform: translate(.5rem, 50%);
@@ -153,8 +153,8 @@
   -ms-transform: translate(1rem, 50%);
 }
 
-.tooltip.tooltip--left:hover::after,
-.tooltip.tooltip--left:focus::after {
+.tooltip.tooltip--left::after:hover,
+.tooltip.tooltip--left::after:focus {
   transform: translate(-.5rem, 50%);
   -webkit-transform: translate(-.5rem, 50%);
   -moz-transform: translate(-.5rem, 50%);

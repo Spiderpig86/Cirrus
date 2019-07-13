@@ -56,9 +56,9 @@ button:hover,
 }
 
 /* Make the loading circle, if present, white when button is active */
-.btn.loading:active::after,
-button.loading:active::after,
-[type="submit"].loading:active::after {
+.btn.loading::after:active,
+button.loading::after:active,
+[type="submit"].loading::after:active {
     transition: var(--animation-duration) ease;
     border-radius: 50%;
     border-right-color: transparent;
@@ -2579,7 +2579,7 @@ li {
 }
 
 /* Exclude margin in menus */
-li:not('.dropdown-menu li'):last-child {
+li:not(.dropdown-menu li):last-child {
   margin-bottom: 1em;
 }
 
