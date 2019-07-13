@@ -58,7 +58,7 @@ section {
     display: block;
     left: 50%;
     position: absolute;
-    top: .4rem;
+    top: 50%;
     transform: translateX(-50%);
 }
 
@@ -66,10 +66,12 @@ section {
     background: #fff;
     color: #bcc3ce;
     content: attr(data-content);
+    left: 50%;
     display: inline-block;
-    font-size: .7rem;
     padding: 0 .4rem;
-    transform: translateY(-.65rem);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
 }
 
 .divider--v[data-content] {

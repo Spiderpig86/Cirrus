@@ -762,7 +762,7 @@ mark,
 .icon {
   /* Usually used in spans */
   display: inline-block;
-  font-size: 21px; /* Best font sizes are multiples of 7 */
+  /* font-size: 21px; Allow font sizes for icons to be overwritten */
   /* line-height: 1.5rem; Allow line height to be inherited or overwritten */
   text-align: center;
   width: 1.5rem;
@@ -1032,6 +1032,11 @@ select {
 
 select[multiple] option {
     padding: 0.2rem 0.4rem;
+}
+
+/* Add normal height to Apple users for single-line selects */
+select.select:not([size]):not([multiple]) {
+    height: calc(3rem + 2px);
 }
 
 /* Search field */
@@ -1527,7 +1532,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 .header:not(.header-clear) .nav-item:not(.no-hover).hovered {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: rgba(145, 145, 145, 0.15);
+  background-color: rgba(216, 216, 216, 0.15);
 }
 
 .header:not(.header-clear) .nav-item.active, /* active:hover removes the transition effect when hoveirng over the dropdown menu */ 
@@ -1993,7 +1998,7 @@ section {
     display: block;
     left: 50%;
     position: absolute;
-    top: .4rem;
+    top: 50%;
     transform: translateX(-50%);
 }
 
@@ -2001,10 +2006,12 @@ section {
     background: #fff;
     color: #bcc3ce;
     content: attr(data-content);
+    left: 50%;
     display: inline-block;
-    font-size: .7rem;
     padding: 0 .4rem;
-    transform: translateY(-.65rem);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
 }
 
 .divider--v[data-content] {
@@ -2525,14 +2532,9 @@ a .btn, a button {
 }
 /* LISTS */
 
-ul {
-  list-style: disc outside;
+ul, ol {
   margin: 1rem 0 1rem 1rem;
-}
-
-ol {
-  list-style: decimal outside;
-  margin: 1rem 0 1rem 1rem;
+  padding-inline-start: 0.5rem;
 }
 
 /* Handle nesting */
