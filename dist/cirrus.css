@@ -2584,7 +2584,7 @@ li {
 }
 
 /* Exclude margin in menus */
-li:not(.dropdown-menu li):last-child {
+li:not('.dropdown-menu li'):last-child {
   margin-bottom: 1em;
 }
 
