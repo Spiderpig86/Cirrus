@@ -63,6 +63,7 @@
                         <li><a href="#started" class="smoothScroll">Top</a></li>
                         <li><a href="#inputfield" class="smoothScroll">Input Fields</a></li>
                         <li><a href="#textareas" class="smoothScroll">TextArea</a></li>
+                        <li><a href="#form_controls" class="smoothScroll">Form Controls</a></li>
                         <li><a href="#sampleforms" class="smoothScroll">Form Sections</a></li>
                         <li><a href="#form_groups" class="smoothScroll">Form Groups</a></li>
                     </ul>
@@ -586,6 +587,394 @@
             </div>
         </div>
     </section>
+    
+    <section id="form_controls" class="padtop">
+        <div class="content">
+            <h1><a href="./index.html#form_controls" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Form Controls</h1>
+            <div class="divider"></div>
+            <p>Cirrus allows you to use standard form controls as is such as radio buttons and checkboxes. However, Cirrus extends on that with custom styled radio buttons and checkboxes with additional classes that provide better styling.</p>
+            <div class="row">
+                <div class="col-6 u-center">
+                    <label> 
+                        <input type="checkbox"/> Remember me
+                    </label>
+                    <label>
+                        <input type="checkbox"/> Read our <a href="#" class="u-inline-block">Terms of Service</a>
+                    </label>
+                </div>
+
+                <div class="col-6 u-center">
+                    <label>
+                        <input type="radio" name="house" checked> Starks
+                    </label>
+                    <label>
+                        <input type="radio" name="house"> Lannisters
+                    </label>
+                </div>
+            </div>
+
+            <space></space>
+
+            <h5>Styled Checkboxes</h5>
+            <p>Below are some colored checkboxes.</p>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-ext-control form-ext-checkbox">
+                        <input id="check1" class="form-ext-input" type="checkbox">
+                        <label class="form-ext-label" for="check1">Unchecked</label>
+                    </div>
+                    <div class="form-ext-control form-ext-checkbox">
+                        <input id="check2" class="form-ext-input" type="checkbox" checked="">
+                        <label class="form-ext-label" for="check2">Checked</label>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form-ext-control form-ext-checkbox">
+                        <input id="check3" class="form-ext-input" type="checkbox" disabled="">
+                        <label class="form-ext-label" for="check3">Unchecked</label>
+                    </div>
+                    <div class="form-ext-control form-ext-checkbox">
+                        <input id="check4" class="form-ext-input" type="checkbox" checked="" disabled="">
+                        <label class="form-ext-label" for="check4">Checked</label>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form-ext-control form-ext-checkbox">
+                        <input id="check5" class="form-ext-input form-ext-input--success" type="checkbox" checked="">
+                        <label class="form-ext-label" for="check5">Success</label>
+                    </div>
+                    <div class="form-ext-control form-ext-checkbox">
+                        <input id="check6" class="form-ext-input form-ext-input--error" type="checkbox" checked="">
+                        <label class="form-ext-label" for="check6">Error</label>
+                    </div>
+                </div>
+                <div class="col-6"><pre><code data-lang="HTML">&lt;div class=&quot;form-ext-control form-ext-checkbox&quot;&gt;
+    &lt;input id=&quot;check1&quot; class=&quot;form-ext-input&quot; type=&quot;checkbox&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;check1&quot;&gt;Unchecked&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-ext-control form-ext-checkbox&quot;&gt;
+    &lt;input id=&quot;check2&quot; class=&quot;form-ext-input&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;check2&quot;&gt;Checked&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-ext-control form-ext-checkbox&quot;&gt;
+    &lt;input id=&quot;check3&quot; class=&quot;form-ext-input&quot; type=&quot;checkbox&quot; disabled=&quot;&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;check3&quot;&gt;Unchecked&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-ext-control form-ext-checkbox&quot;&gt;
+    &lt;input id=&quot;check4&quot; class=&quot;form-ext-input&quot; type=&quot;checkbox&quot; checked=&quot;&quot; disabled=&quot;&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;check4&quot;&gt;Checked&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-ext-control form-ext-checkbox&quot;&gt;
+    &lt;input id=&quot;check5&quot; class=&quot;form-ext-input form-ext-input--success&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;check5&quot;&gt;Success&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-ext-control form-ext-checkbox&quot;&gt;
+    &lt;input id=&quot;check6&quot; class=&quot;form-ext-input form-ext-input--error&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;check6&quot;&gt;Error&lt;/label&gt;
+&lt;/div&gt;</code></pre></div>
+            </div>
+
+            <h5>Styled Radio</h5>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-ext-control form-ext-radio">
+                        <input id="radio-1a" name="customRadio1" class="form-ext-input" type="radio">
+                        <label class="form-ext-label" for="radio-1a">Unselected</label>
+
+                    </div>
+                    <div class="form-ext-control form-ext-radio">
+                        <input id="radio-2a" name="customRadio1" class="form-ext-input" type="radio" checked>
+                        <label class="form-ext-label" for="radio-2a">Selected</label>
+
+                    </div>
+                    <div class="form-ext-control form-ext-radio">
+                        <input id="radio-3a" name="customRadio1" class="form-ext-input" type="radio">
+                        <label class="form-ext-label" for="radio-3a">Unselected</label>
+
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form-ext-control form-ext-radio">
+                        <input id="radio-1b" name="customRadio2" class="form-ext-input" type="radio" disabled>
+                        <label class="form-ext-label" for="radio-1b">Unselected</label>
+                    </div>
+                    <div class="form-ext-control form-ext-radio">
+                        <input id="radio-2b" name="customRadio2" class="form-ext-input" type="radio" checked disabled>
+                        <label class="form-ext-label" for="radio-2b">Selected</label>
+
+                    </div>
+                    <div class="form-ext-control form-ext-radio">
+                        <input id="radio-3b" name="customRadio2" class="form-ext-input" type="radio" disabled>
+                        <label class="form-ext-label" for="radio-3b">Unselected</label>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form-ext-control form-ext-radio">
+                        <input id="radio-1c" name="customRadio3" class="form-ext-input form-ext-input--success" type="radio" checked>
+                        <label class="form-ext-label" for="radio-1c">Sucess</label>
+                    </div>
+                    <div class="form-ext-control form-ext-radio">
+                        <input id="radio-2c" name="customRadio3" class="form-ext-input form-ext-input--error" type="radio">
+                        <label class="form-ext-label" for="radio-2c">Error</label>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre><code data-lang="HTML">&lt;div class=&quot;form-ext-control form-ext-radio&quot;&gt;
+    &lt;input id=&quot;radio-1a&quot; name=&quot;customRadio1&quot; class=&quot;form-ext-input&quot; type=&quot;radio&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-1a&quot;&gt;Unselected&lt;/label&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;form-ext-control form-ext-radio&quot;&gt;
+    &lt;input id=&quot;radio-2a&quot; name=&quot;customRadio1&quot; class=&quot;form-ext-input&quot; type=&quot;radio&quot; checked&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-2a&quot;&gt;Selected&lt;/label&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;form-ext-control form-ext-radio&quot;&gt;
+    &lt;input id=&quot;radio-3a&quot; name=&quot;customRadio1&quot; class=&quot;form-ext-input&quot; type=&quot;radio&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-3a&quot;&gt;Unselected&lt;/label&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;form-ext-control form-ext-radio&quot;&gt;
+    &lt;input id=&quot;radio-1b&quot; name=&quot;customRadio2&quot; class=&quot;form-ext-input&quot; type=&quot;radio&quot; disabled&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-1b&quot;&gt;Unselected&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-ext-control form-ext-radio&quot;&gt;
+    &lt;input id=&quot;radio-2b&quot; name=&quot;customRadio2&quot; class=&quot;form-ext-input&quot; type=&quot;radio&quot; checked disabled&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-2b&quot;&gt;Selected&lt;/label&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;form-ext-control form-ext-radio&quot;&gt;
+    &lt;input id=&quot;radio-3b&quot; name=&quot;customRadio2&quot; class=&quot;form-ext-input&quot; type=&quot;radio&quot; disabled&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-3b&quot;&gt;Unselected&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-ext-control form-ext-radio&quot;&gt;
+    &lt;input id=&quot;radio-1c&quot; name=&quot;customRadio3&quot; class=&quot;form-ext-input form-ext-input--success&quot; type=&quot;radio&quot; checked&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-1c&quot;&gt;Sucess&lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-ext-control form-ext-radio&quot;&gt;
+    &lt;input id=&quot;radio-2c&quot; name=&quot;customRadio3&quot; class=&quot;form-ext-input form-ext-input--error&quot; type=&quot;radio&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-2c&quot;&gt;Error&lt;/label&gt;
+&lt;/div&gt; </code></pre>
+                </div>
+            </div>
+
+            <h5>Styled Toggles</h5>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-ext-control">
+                        <label class="form-ext-toggle__label">
+                            <span>Toggle off</span>
+                            <div class="form-ext-toggle">
+                                <input name="toggleCheckbox" type="checkbox" class="form-ext-input">
+                                <div class="form-ext-toggle__toggler">
+                                    <i></i>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="form-ext-control">
+                        <label class="form-ext-toggle__label">
+                            <span>Toggle on</span>
+                            <div class="form-ext-toggle">
+                                <input name="toggleCheckbox" type="checkbox" class="form-ext-input" checked>
+                                <div class="form-ext-toggle__toggler">
+                                    <i></i>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form-ext-control">
+                        <label class="form-ext-toggle__label">
+                            <span>Toggle off disabled</span>
+                            <div class="form-ext-toggle">
+                                <input name="toggleCheckbox" type="checkbox" class="form-ext-input" disabled>
+                                <div class="form-ext-toggle__toggler">
+                                    <i></i>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="form-ext-control">
+                        <label class="form-ext-toggle__label">
+                            <span>Toggle on disabled</span>
+                            <div class="form-ext-toggle">
+                                <input name="toggleCheckbox" type="checkbox" class="form-ext-input" checked disabled>
+                                <div class="form-ext-toggle__toggler">
+                                    <i></i>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form-ext-control">
+                        <label class="form-ext-toggle__label">
+                            <span>Toggle success</span>
+                            <div class="form-ext-toggle form-ext-toggle--success">
+                                <input name="toggleCheckbox" type="checkbox" class="form-ext-input">
+                                <div class="form-ext-toggle__toggler">
+                                    <i></i>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="form-ext-control">
+                        <label class="form-ext-toggle__label">
+                            <span>Toggle error</span>
+                            <div class="form-ext-toggle form-ext-toggle--error">
+                                <input name="toggleCheckbox" type="checkbox" class="form-ext-input" checked>
+                                <div class="form-ext-toggle__toggler">
+                                    <i></i>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="form-ext-control">
+                        <label class="form-ext-toggle__label">
+                            <span>Toggle success</span>
+                            <div class="form-ext-toggle form-ext-toggle--success">
+                                <input name="toggleCheckbox" type="checkbox" class="form-ext-input">
+                                <div class="form-ext-toggle__toggler">
+                                    <i class="fa" data-check-icon="" data-uncheck-icon=""></i>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="form-ext-control">
+                        <label class="form-ext-toggle__label">
+                            <span>Toggle error</span>
+                            <div class="form-ext-toggle form-ext-toggle--error">
+                                <input name="toggleCheckbox" type="checkbox" class="form-ext-input" checked>
+                                <div class="form-ext-toggle__toggler">
+                                    <i class="fa" data-check-icon="" data-uncheck-icon=""></i>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-6"><pre><code data-lang="HTML">&lt;div class=&quot;form-ext-control&quot;&gt;
+    &lt;label class=&quot;form-ext-toggle__label&quot;&gt;
+        &lt;span&gt;Toggle off&lt;/span&gt;
+        &lt;div class=&quot;form-ext-toggle&quot;&gt;
+            &lt;input name=&quot;toggleCheckbox&quot; type=&quot;checkbox&quot; class=&quot;form-ext-input&quot;&gt;
+            &lt;div class=&quot;form-ext-toggle__toggler&quot;&gt;
+                &lt;i&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-ext-control&quot;&gt;
+    &lt;label class=&quot;form-ext-toggle__label&quot;&gt;
+        &lt;span&gt;Toggle on&lt;/span&gt;
+        &lt;div class=&quot;form-ext-toggle&quot;&gt;
+            &lt;input name=&quot;toggleCheckbox&quot; type=&quot;checkbox&quot; class=&quot;form-ext-input&quot; checked&gt;
+            &lt;div class=&quot;form-ext-toggle__toggler&quot;&gt;
+                &lt;i&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;form-ext-control&quot;&gt;
+    &lt;label class=&quot;form-ext-toggle__label&quot;&gt;
+        &lt;span&gt;Toggle off disabled&lt;/span&gt;
+        &lt;div class=&quot;form-ext-toggle&quot;&gt;
+            &lt;input name=&quot;toggleCheckbox&quot; type=&quot;checkbox&quot; class=&quot;form-ext-input&quot; disabled&gt;
+            &lt;div class=&quot;form-ext-toggle__toggler&quot;&gt;
+                &lt;i&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-ext-control&quot;&gt;
+    &lt;label class=&quot;form-ext-toggle__label&quot;&gt;
+        &lt;span&gt;Toggle on disabled&lt;/span&gt;
+        &lt;div class=&quot;form-ext-toggle&quot;&gt;
+            &lt;input name=&quot;toggleCheckbox&quot; type=&quot;checkbox&quot; class=&quot;form-ext-input&quot; checked disabled&gt;
+            &lt;div class=&quot;form-ext-toggle__toggler&quot;&gt;
+                &lt;i&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;form-ext-control&quot;&gt;
+    &lt;label class=&quot;form-ext-toggle__label&quot;&gt;
+        &lt;span&gt;Toggle success&lt;/span&gt;
+        &lt;div class=&quot;form-ext-toggle form-ext-toggle--success&quot;&gt;
+            &lt;input name=&quot;toggleCheckbox&quot; type=&quot;checkbox&quot; class=&quot;form-ext-input&quot;&gt;
+            &lt;div class=&quot;form-ext-toggle__toggler&quot;&gt;
+                &lt;i&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-ext-control&quot;&gt;
+    &lt;label class=&quot;form-ext-toggle__label&quot;&gt;
+        &lt;span&gt;Toggle error&lt;/span&gt;
+        &lt;div class=&quot;form-ext-toggle form-ext-toggle--error&quot;&gt;
+            &lt;input name=&quot;toggleCheckbox&quot; type=&quot;checkbox&quot; class=&quot;form-ext-input&quot; checked&gt;
+            &lt;div class=&quot;form-ext-toggle__toggler&quot;&gt;
+                &lt;i&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
+
+&lt;div class=&quot;form-ext-control&quot;&gt;
+    &lt;label class=&quot;form-ext-toggle__label&quot;&gt;
+        &lt;span&gt;Toggle success&lt;/span&gt;
+        &lt;div class=&quot;form-ext-toggle form-ext-toggle--success&quot;&gt;
+            &lt;input name=&quot;toggleCheckbox&quot; type=&quot;checkbox&quot; class=&quot;form-ext-input&quot;&gt;
+            &lt;div class=&quot;form-ext-toggle__toggler&quot;&gt;
+                &lt;i class=&quot;fa&quot; data-check-icon=&quot;&quot; data-uncheck-icon=&quot;&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-ext-control&quot;&gt;
+    &lt;label class=&quot;form-ext-toggle__label&quot;&gt;
+        &lt;span&gt;Toggle error&lt;/span&gt;
+        &lt;div class=&quot;form-ext-toggle form-ext-toggle--error&quot;&gt;
+            &lt;input name=&quot;toggleCheckbox&quot; type=&quot;checkbox&quot; class=&quot;form-ext-input&quot; checked&gt;
+            &lt;div class=&quot;form-ext-toggle__toggler&quot;&gt;
+                &lt;i class=&quot;fa&quot; data-check-icon=&quot;&quot; data-uncheck-icon=&quot;&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/label&gt;
+&lt;/div&gt;</code></pre></div>
+            </div>
+        </div>
+    </section>
 
     <section id="sampleforms" class="padtop">
         <div class="content">
@@ -610,7 +999,7 @@
                         <textarea placeholder="Tell us about yourself..."></textarea>
                         <div class="form-section">
                             <div class="btn-container u-inline-block">
-                                <input style="margin-right: 1rem" type="submit" class="animated btn-primary pull-left"/>
+                                <input type="submit" class="animated btn-primary pull-left"/>
                             </div>
                             <div class="btn-container u-inline-block">
                                 <button class="animated pull-left">Clear</button>
@@ -644,7 +1033,7 @@
 
     <section id="form_groups">
         <div class="content">
-            <h1><a href="./index.html#form_groups" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Forms Groups</h1>
+            <h1><a href="./index.html#form_groups" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Form Groups</h1>
             <div class="divider"></div>
             <p>Cirrus allows you to bundle input fields in form groups with other components such as buttons, dropdown menus, or labels using the <code>form-group</code> class. This adds some unique styling to the elements creating a unified design when combining these components together.</p>
             <div class="row">
