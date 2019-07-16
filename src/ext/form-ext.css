@@ -55,9 +55,11 @@
 
 .form-ext-label:before {
     background-color: var(--cirrus-light);
+    border: 1px solid #d5d7dc;
     border-radius: .25rem;
     pointer-events: none;
     user-select: none;
+    box-sizing: border-box;
 }
 
 .form-ext-label:after {
@@ -167,6 +169,18 @@
     transform: translateY(-50%);
     transition: left var(--animation-duration) ease;
     text-align: left;
+}
+
+.form-ext-control .form-ext-input:checked ~ .form-ext-label:before {
+    border: none;
+}
+
+.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
+.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
+    background-color: #fff;
+    left: calc(100% - 20px);
 }
 
 .form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler i::before,

@@ -26,10 +26,21 @@
 
 /* Delete button for tag */
 .tag.tag--delete {
-    margin-left: 1px;
-    padding: 0;
+    background-color: rgba(10,10,10,.2);
+    border-radius: 290486px;
+    cursor: pointer;
+    pointer-events: auto;
+    display: inline-block;
+    height: 20px;
+    max-height: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    min-width: 20px;
     position: relative;
-    width: 2em;
+}
+
+.tag--delete:hover {
+    background-color: rgba(10,10,10,.3);
 }
 
 /* Draw the delete button */
@@ -69,7 +80,12 @@
 }
 
 .tag.tag--black {
-    background-color: var(--cirrus-black);
+    background-color: #000;
+    color: #fff;
+}
+
+.tag.tag--dark {
+    background-color: var(--cirrus-dark);
     color: #fff;
 }
 
@@ -125,6 +141,14 @@
 /* Used for grouping tags together */
 .tag-container.group-tags .tag {
     margin-right: 0;
+}
+
+.tag-container.group-tags .tag:not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+
+.tag-container.group-tags .tag:last-child {
+    border-radius: 0 .25rem .25rem 0;
 }
 
 /* Tag close button */
