@@ -1563,10 +1563,12 @@
                     <div class="tag tag--link tag--large">Large</div>
                     <div class="tag tag--primary tag--xlarge">Extra Large</div>
                 </div>
-                <div class="col-6"></div>
+                <div class="col-6">
+
+                </div>
             </div>
 
-            <h6>Tag Button</h6>
+            <h6>Tag Close</h6>
             <p>This is a special tag that is designed to serve as a close button for the tag with the <code>tag__close-btn</code> class.</p>
 
             <div class="row">
@@ -1578,11 +1580,62 @@
                 </div>
             </div>
 
-            <p>Use the <code>tag--delete</code> class with <code>tag__close</code> for a delete button.</p>
+            <h6>Tag Delete</h6>
+            <p>This is embedded within the tag itself unlike the close button to the side. Create a new <code>div</code> inside the <code>tag</code> with the <code>tag--delete</code> class.</p>
 
-            <h6>Grouped Tabs</h6>
+            <div class="row">
+                <div class="col-6">
+                    <div class="tag tag--success">
+                        Close Me
+                        <div class="tag tag--delete"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+
+                </div>
+            </div>
+
+            <h6>Grouped Tags</h6>
+            <p>Group tags with extra buttons like the delete button </p>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="tag-container group-tags">
+                        <div class="tag">Test</div><div class="tag">Test</div>
+                        <div class="tag tag--close"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;tag-container group-tags&quot;&gt;
+    &lt;div class=&quot;tag&quot;&gt;Test&lt;/div&gt;&lt;div class=&quot;tag&quot;&gt;Test&lt;/div&gt;
+    &lt;div class=&quot;tag tag--close&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
 
             <h6>Tag Container</h6>
+            <p>The <code>tag-container</code> is a container for different tags.</p>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="tag-container">
+                        <div class="tag tag--link">One</div>
+                        <div class="tag tag--link">Two</div>
+                        <div class="tag tag--link">Three</div>
+                        <div class="tag tag--link">Four</div>
+                        <div class="tag tag--link">Five</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;tag-container&quot;&gt;
+    &lt;div class=&quot;tag tag--link&quot;&gt;One&lt;/div&gt;
+    &lt;div class=&quot;tag tag--link&quot;&gt;Two&lt;/div&gt;
+    &lt;div class=&quot;tag tag--link&quot;&gt;Three&lt;/div&gt;
+    &lt;div class=&quot;tag tag--link&quot;&gt;Four&lt;/div&gt;
+    &lt;div class=&quot;tag tag--link&quot;&gt;Five&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
         </div>
     </section>
 
