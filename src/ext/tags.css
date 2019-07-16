@@ -143,6 +143,10 @@
     margin-right: 0;
 }
 
+.tag-container.group-tags .tag:first-child {
+    border-radius: .25rem 0 0 .25rem;
+}
+
 .tag-container.group-tags .tag:not(:first-child):not(:last-child) {
     border-radius: 0;
 }
