@@ -1999,7 +1999,7 @@ section {
     display: block;
     left: 50%;
     position: absolute;
-    top: 50%;
+    top: 0;
     transform: translateX(-50%);
 }
 
