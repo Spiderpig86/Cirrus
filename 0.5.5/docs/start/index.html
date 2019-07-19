@@ -60,6 +60,9 @@
                         <li><a href="#start" class="smoothScroll">Top</a></li>
                         <li><a href="#variants" class="smoothScroll">Variants</a></li>
                         <li><a href="#support" class="smoothScroll">Support</a></li>
+                        <li><a href="#breakpoints" class="smoothScroll">Breakpoints</a></li>
+                        <li><a href="#colors" class="smoothScroll">Colors</a></li>
+                        <li><a href="#developing" class="smoothScroll">Developing</a></li>
                     </ul>
                 </div>
             </div>
@@ -151,7 +154,7 @@
 
     <section class="padtop" id="variants">
         <div class="content">
-            <h1>Project Variants</h1>
+            <h1><a href="./index.html#variants" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Project Variants</h1>
             <div class="divider"></div>
             <p>There are currently <b>two</b> variants of the project:</p>
             <space class="large"></space>
@@ -212,7 +215,7 @@
 
     <section class="padtop" id="support">
         <div class="content">
-            <h1>Browser Support</h1>
+            <h1><a href="./index.html#support" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Browser Support</h1>
             <div class="divider"></div>
             <p>Cirrus relies on <a class="u u-LR" target="_blank" rel="noopener noreferrer" href="http://shouldiprefix.com/">What CSS to prefix?</a> and <a class="u u-LR" target="_blank" rel="noopener noreferrer" href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to help add backwards compatibility to older browsers. Cirrus works well with the following browser versions:</p>
 
@@ -243,20 +246,74 @@
 
     <section class="padtop" id="breakpoints">
         <div class="content">
-            <h1>Breakpoints</h1>
+            <h1><a href="./index.html#breakpoints" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Breakpoints</h1>
             <div class="divider"></div>
             <p>Breakpoints are quite standard across the entire framework. These are the 3 number ranges you need to know:</p>
-            <ul>
-                <li><code>0 &lt; 768</code> - <b>mobile</b></li>
-                <li><code>769 &lt; x &lt; 1024</code> - <b>tablet</b></li>
-                <li><code>&gt; 1024</code> - <b>desktop</b></li>
-            </ul>
+            <table class="table bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">
+                        Mobile<br>
+                            Below and including <code>768px</code>
+                        </th>
+                        
+                        <th style="width: 20%;">
+                            Tablet<br>
+                            Between <code>769px</code> and <code>1023px</code>
+                        </th>
+                    
+                        
+                        <th style="width: 20%;">
+                            Desktop<br>
+                            Above and including <code>1024px</code>
+                        </th>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>
+                        <p class="toast toast--info" style="width: auto">*-mobile</p>
+                    </td>
+                    <td colspan="4">
+                        <p>-</p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <p>-</p>
+                    </td>
+                    <td colspan="4">
+                        <p class="toast toast--info" style="width: auto">*-tablet</p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td colspan="2">
+                        <p>-</p>
+                    </td>
+                    <td>
+                        <p class="toast toast--info" style="width: auto">*-desktop</p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <p>-</p>
+                    </td>
+                    <td>
+                        <p class="toast toast--info" style="width: auto">*-tablet-only</p>
+                    </td>
+                    <td>
+                        <p>-</p>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
-    <section class="padtop">
+    <section class="padtop" id="colors">
         <div class="content">
-            <h1>Colors</h1>
+            <h1><a href="./index.html#colors" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Colors</h1>
             <div class="divider"></div>
             <p>These are the colors that style most of the framework.</p>
 
@@ -327,7 +384,7 @@
 
     <section class="padtop" id="developing">
         <div class="content">
-            <h1>Developing</h1>
+            <h1><a href="./index.html#developing" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Developing</h1>
             <div class="divider"></div>
             <p>Developing your own version of Cirrus is quite simple with these simple steps.</p>
 
