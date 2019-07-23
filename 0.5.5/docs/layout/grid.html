@@ -22,16 +22,257 @@
 </head>
 
 <body>
+    <div id="header" class="header header-fill unselectable header-fixed no-transition header-dark header-animated">
+        <div class="header-brand">
+            <div class="nav-item">
+                <a href="../../">
+                    <h6 class="title">Cirrus</h5>
+                </a>
+            </div>
+            <div class="nav-item nav-btn" id="header-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="header-nav" id="header-menu">
+            <div class="nav-left u-text-center">
+                <div class="nav-item u-text-center">
+                    <a href="https://github.com/Spiderpig86/Cirrus">
+                    <span class="icon">
+                    <i class="fab fa-wrapper fa-github"></i>
+                    </span>
+                    </a>
+                </div>
+                <div class="nav-item u-text-center">
+                    <a href="#">
+                    <span class="icon white">
+                    <i class="fab fa-wrapper fa-twitter"></i>
+                    </span>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-right u-text-center nav-menu">
+                <div class="nav-item">
+                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/layout.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
+                </div>
+
+                <div class="nav-item u-text-center has-sub">
+                    <a class="nav-dropdown-link">Layout</a>
+                    <ul class="dropdown-menu dropdown-animated">
+                        <li><a href="#started" class="smoothScroll">Top</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <space class="x-large"></space>
 
     <section id="started" class="padtop">
         <div class="content">
-            <h1><a href="./index.html#started" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Grid</h1>
+            <h1><a href="./grid.html#started" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Grid</h1>
             <div class="divider"></div>
 
             <p>A light-weight abstraction developed as an alternative to the existing <b>flexbox</b> implementation.</p>
+
+            <div class="r">
+                <div class="grid grid-gap-3 u-text-center">
+                    <div class="grid-c-12" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
+                        <p><b>Header</b></p>
+                    </div>
+                    <div class="grid-c-4 grid-r-6" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
+                        <p><b>Sidebar</b></p>
+                    </div>
+                    <div class="grid-c-8 grid-r-3" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
+                        <p><b>Main Content</b></p>
+                    </div>
+                    <div class="grid-c-4 grid-r-3" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
+                        <p><b>Sub Content</b></p>
+                    </div>
+                    <div class="grid-c-4 grid-r-3" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
+                        <p><b>Sub Content</b></p>
+                    </div>
+                    <div class="grid-c-12" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
+                        <p><b>Footer</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <p>By default, <code>grid</code> is preset with 12 individual columns horizontally and vertically. That means that it is simple to partition the grid into 144 separate cells.</p>
+
+            <space class="large"></space>
+
+            <h3>Different Grid Templates</h3>
+
+            <p>Instead of the default 12-column layout, you can specify the grid template with the <code>grid-cols-*</code> class. The asterisk represents any value from <b>1 through 12 inclusive</b>.</p>
+
+            <div class="r">
+                <div class="grid grid-gap-3 grid-cols-1">
+                    <div class="c _grid-ex">
+                        <p>grid-cols-1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="r">
+                <div class="grid grid-gap-3 grid-cols-2">
+                    <div class="c _grid-ex">
+                        <p>grid-cols-2</p>
+                    </div>
+                    <div class="c _grid-ex">
+                        <p>grid-cols-2</p>
+                    </div>
+                </div>
+            </div>
+            <div class="r">
+                <div class="grid grid-gap-3 grid-cols-3">
+                    <div class="c _grid-ex">
+                        <p>grid-cols-3</p>
+                    </div>
+                    <div class="c _grid-ex">
+                        <p>grid-cols-3</p>
+                    </div>
+                    <div class="c _grid-ex">
+                        <p>grid-cols-3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="r">
+                <div class="grid grid-gap-4 grid-cols-4">
+                    <div class="c _grid-ex">
+                        <p>grid-cols-4</p>
+                    </div>
+                    <div class="c _grid-ex">
+                        <p>grid-cols-4</p>
+                    </div>
+                    <div class="c _grid-ex">
+                        <p>grid-cols-4</p>
+                    </div>
+                    <div class="c _grid-ex">
+                        <p>grid-cols-4</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+            <p class="lead u-text-center">I think you get the idea.</p>
+            <div class="divider"></div>
+
+            <p>As an example, let's use a grid of 3 with the <code>grid-cols-3</code> class.</p>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="grid grid-cols-3 grid-gap-3">
+                        <div class="c _grid-ex">
+                            <p>1</p>
+                        </div>
+                        <div class="c _grid-ex">
+                            <p>2</p>
+                        </div>
+                        <div class="c _grid-ex">
+                            <p>3</p>
+                        </div>
+                        <div class="c _grid-ex">
+                            <p>4</p>
+                        </div>
+                        <div class="c _grid-ex">
+                            <p>5</p>
+                        </div>
+                        <div class="c _grid-ex">
+                            <p>6</p>
+                        </div>
+                        <div class="c _grid-ex">
+                            <p>7</p>
+                        </div>
+                        <div class="c _grid-ex">
+                            <p>8</p>
+                        </div>
+                        <div class="c _grid-ex">
+                            <p>9</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                        <pre ><code style="max-height: 225px" class="html" data-lang="HTML">&lt;div class=&quot;grid grid-cols-3 grid-gap-3&quot;&gt;
+    &lt;div class=&quot;c&quot;&gt;
+        &lt;p&gt;1&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c&quot;&gt;
+        &lt;p&gt;2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c&quot;&gt;
+        &lt;p&gt;3&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c&quot;&gt;
+        &lt;p&gt;4&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c&quot;&gt;
+        &lt;p&gt;5&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c&quot;&gt;
+        &lt;p&gt;6&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c&quot;&gt;
+        &lt;p&gt;7&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c&quot;&gt;
+        &lt;p&gt;8&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c&quot;&gt;
+        &lt;p&gt;9&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
         </div>
     </section>
+
+    <section class="padtop" class="grid">
+        <div class="content">
+            <h1><a href="./grid.html#started" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Row</h1>
+            <div class="divider"></div>
+            
+            <p>Grid rows are cells that span <b>horizontally</b> with a given amount columns to extend. This uses the <code>grid-c-*</code> class where the asterisk represents a <b>number from 1 to 12 inclusive</b>.</p>
+
+        </div>
+    </section>
+
+    <section class="padtop" id="col">
+        <div class="content">
+            <h1><a href="./grid.html#started" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Column</h1>
+            <div class="divider"></div>
+            
+            <p>Grid columns are cells that span <b>vertically</b> with a given amount rows to extend. This uses the <code>grid-r-*</code> class where the asterisk represents a <b>number from 1 to 12 inclusive</b></p>
+
+        </div>
+    </section>
+
+    <section class="padtop" id="gaps">
+        <div class="content">
+            <h1><a href="./grid.html#gaps" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Gaps</h1>
+            <div class="divider"></div>
+
+            <p>Grid gaps are added in order to provide spacing between the individual grid cells. This uses the <code>grid-gap-*</code> class where the asterisk represents a <b>number from 1 to 9 inclusive</b>.</p>
+        </div>
+    </section>
+
+    <section class="padtop" id="example">
+        <div class="content">
+            <h1><a href="./grid.html#examples" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Examples</h1>
+            <div class="divider"></div>
+        </div>
+    </section>
+
+    <script async src="../../res/js/smoothscroll.js"></script>
+    <script async src="../../res/js/app.js"></script>
+    <script async src="./app.js"></script>
+
+    <script src="https://use.fontawesome.com/a696b91557.js"></script>
+
+    <!-- Syntax highlight code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 
 <footer>

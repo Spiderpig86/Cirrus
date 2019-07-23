@@ -260,6 +260,14 @@ pre .copy:hover {
     transition: all .2s;
 }
 
+/* Grid */
+._grid-ex {
+    background-color: #eee;
+    border-radius: .25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .nav-item.has-sub .list-dropdown .btn-group button:not(.btn-dropdown) {
         flex-grow: 1;
