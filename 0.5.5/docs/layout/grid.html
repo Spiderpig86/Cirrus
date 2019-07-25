@@ -54,11 +54,11 @@
             </div>
             <div class="nav-right u-text-center nav-menu">
                 <div class="nav-item">
-                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/layout.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
+                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/grid.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
                 </div>
 
                 <div class="nav-item u-text-center has-sub">
-                    <a class="nav-dropdown-link">Layout</a>
+                    <a class="nav-dropdown-link">Grid</a>
                     <ul class="dropdown-menu dropdown-animated">
                         <li><a href="#started" class="smoothScroll">Top</a></li>
                         
@@ -235,6 +235,98 @@
             
             <p>Grid rows are cells that span <b>horizontally</b> with a given amount columns to extend. This uses the <code>grid-c-*</code> class where the asterisk represents a <b>number from 1 to 12 inclusive</b>.</p>
 
+            <div class="r">
+                <div class="grid grid-gap-3">
+                    <div class="grid-c-1 _grid-ex">
+                        <span>1</span>
+                    </div>
+                    <div class="grid-c-11"></div>
+                    <div class="grid-c-2 _grid-ex">
+                        <span>grid-c-2</span>
+                    </div>
+                    <div class="grid-c-10"></div>
+                    <div class="grid-c-3 _grid-ex">
+                        <span>grid-c-3</span>
+                    </div>
+                    <div class="grid-c-9"></div>
+                    <div class="grid-c-4 _grid-ex">
+                        <span>grid-c-4</span>
+                    </div>
+                    <div class="grid-c-8"></div>
+                    <div class="grid-c-5 _grid-ex">
+                        <span>grid-c-5</span>
+                    </div>
+                    <div class="grid-c-7"></div>
+                    <div class="grid-c-6 _grid-ex">
+                        <span>grid-c-6</span>
+                    </div>
+                    <div class="grid-c-7 _grid-ex">
+                        <span>grid-c-7</span>
+                    </div>
+                    <div class="grid-c-8 _grid-ex">
+                        <span>grid-c-8</span>
+                    </div>
+                    <div class="grid-c-9 _grid-ex">
+                        <span>grid-c-9</span>
+                    </div>
+                    <div class="grid-c-10 _grid-ex">
+                        <span>grid-c-10</span>
+                    </div>
+                    <div class="grid-c-11 _grid-ex">
+                        <span>grid-c-11</span>
+                    </div>
+                    <div class="grid-c-12 _grid-ex">
+                        <span>grid-c-12</span>
+                    </div>
+                </div>
+            </div>
+
+            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;grid grid-gap-3&quot;&gt;
+    &lt;div class=&quot;grid-c-1 _grid-ex&quot;&gt;
+        &lt;span&gt;1&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-c-11&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-c-2 _grid-ex&quot;&gt;
+        &lt;span&gt;grid-c-2&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-c-10&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-c-3 _grid-ex&quot;&gt;
+        &lt;span&gt;grid-c-3&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-c-9&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-c-4 _grid-ex&quot;&gt;
+        &lt;span&gt;grid-c-4&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-c-8&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-c-5 _grid-ex&quot;&gt;
+        &lt;span&gt;grid-c-5&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-c-7&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;grid-c-6 _grid-ex&quot;&gt;
+        &lt;span&gt;grid-c-6&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-c-7 _grid-ex&quot;&gt;
+        &lt;span&gt;grid-c-7&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-c-8 _grid-ex&quot;&gt;
+        &lt;span&gt;grid-c-8&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-c-9 _grid-ex&quot;&gt;
+        &lt;span&gt;grid-c-9&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-c-10 _grid-ex&quot;&gt;
+        &lt;span&gt;grid-c-10&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-c-11 _grid-ex&quot;&gt;
+        &lt;span&gt;grid-c-11&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-c-12 _grid-ex&quot;&gt;
+        &lt;span&gt;grid-c-12&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+                <p>For designs that require greater control, use the <code>grid-cs-*</code> and <code>grid-ce-*</code> classes to denote the </p>
+
         </div>
     </section>
 
@@ -243,7 +335,87 @@
             <h1><a href="./grid.html#started" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Column</h1>
             <div class="divider"></div>
             
-            <p>Grid columns are cells that span <b>vertically</b> with a given amount rows to extend. This uses the <code>grid-r-*</code> class where the asterisk represents a <b>number from 1 to 12 inclusive</b></p>
+            <p>Grid columns are cells that span <b>vertically</b> with a given amount rows to extend. This uses the <code>grid-r-*</code> class where the asterisk represents a <b>number from 1 to 12 inclusive</b>. The heights of the various row spans varies with the amount of content present along with the grid gaps.</p>
+
+            <div class="r">
+                <div class="grid grid-gap-3">
+                    <div class="grid-r-1 _grid-ex level">
+                        <span>grid-r-1</span>
+                    </div>
+                    <div class="grid-r-2 _grid-ex level">
+                        <span>grid-r-2</span>
+                    </div>
+                    <div class="grid-r-3 _grid-ex level">
+                        <span>grid-r-3</span>
+                    </div>
+                    <div class="grid-r-4 _grid-ex level">
+                        <span>grid-r-4</span>
+                    </div>
+                    <div class="grid-r-5 _grid-ex level">
+                        <span>grid-r-5</span>
+                    </div>
+                    <div class="grid-r-6 _grid-ex level">
+                        <span>grid-r-6</span>
+                    </div>
+                    <div class="grid-r-7 _grid-ex level">
+                        <span>grid-r-7</span>
+                    </div>
+                    <div class="grid-r-8 _grid-ex level">
+                        <span>grid-r-8</span>
+                    </div>
+                    <div class="grid-r-9 _grid-ex level">
+                        <span>grid-r-9</span>
+                    </div>
+                    <div class="grid-r-10 _grid-ex level">
+                        <span>grid-r-10</span>
+                    </div>
+                    <div class="grid-r-11 _grid-ex level">
+                        <span>grid-r-11</span>
+                    </div>
+                    <div class="grid-r-12 _grid-ex level">
+                        <span>grid-r-12</span>
+                    </div>
+                </div>
+            </div>
+
+            <pre><code class="html" data-lang="HTML">&lt;div class=&quot;grid grid-gap-3&quot;&gt;
+    &lt;div class=&quot;grid-r-1 _grid-ex level&quot;&gt;
+        &lt;span&gt;grid-r-1&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-r-2 _grid-ex level&quot;&gt;
+        &lt;span&gt;grid-r-2&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-r-3 _grid-ex level&quot;&gt;
+        &lt;span&gt;grid-r-3&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-r-4 _grid-ex level&quot;&gt;
+        &lt;span&gt;grid-r-4&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-r-5 _grid-ex level&quot;&gt;
+        &lt;span&gt;grid-r-5&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-r-6 _grid-ex level&quot;&gt;
+        &lt;span&gt;grid-r-6&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-r-7 _grid-ex level&quot;&gt;
+        &lt;span&gt;grid-r-7&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-r-8 _grid-ex level&quot;&gt;
+        &lt;span&gt;grid-r-8&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-r-9 _grid-ex level&quot;&gt;
+        &lt;span&gt;grid-r-9&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-r-10 _grid-ex level&quot;&gt;
+        &lt;span&gt;grid-r-10&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-r-11 _grid-ex level&quot;&gt;
+        &lt;span&gt;grid-r-11&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;grid-r-12 _grid-ex level&quot;&gt;
+        &lt;span&gt;grid-r-12&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
         </div>
     </section>
