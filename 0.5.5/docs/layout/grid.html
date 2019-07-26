@@ -325,7 +325,20 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-                <p>For designs that require greater control, use the <code>grid-cs-*</code> and <code>grid-ce-*</code> classes to denote the </p>
+            <p>For designs that require greater control, use the <code>grid-cs-*</code> and <code>grid-ce-*</code> classes to denote the start and end range for the column span. The values in asterisk could range from <code>1</code> to <code>12</code> and are both inclusive. Use the <code>grid-col-end</code> class to stretch the column span to the end of the grid.</p>
+
+            <div class="grid grid-gap-3">
+                <div class="grid-cs-2 grid-ce-7 _grid-ex">
+                    2-7
+                </div>
+                <div class="grid-cs-1 grid-ce-4 _grid-ex">
+                    1-4
+                </div>
+                <div class="grid-c-5"></div>
+                <div class="grid-cs-6 grid-cs-end _grid-ex">
+                    6 - end
+                </div>
+            </div>
 
         </div>
     </section>
