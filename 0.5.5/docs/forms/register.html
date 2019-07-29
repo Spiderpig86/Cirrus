@@ -1,156 +1,279 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        />
+        <meta charset="UTF-8" />
         <title>Register - Mizio</title>
 
-        <link href="../../res/cirrus.min.css" type="text/css" rel="stylesheet"/>
+        <link
+            href="../../res/cirrus.min.css"
+            type="text/css"
+            rel="stylesheet"
+        />
 
-        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Oswald"
+            rel="stylesheet"
+        />
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-        crossorigin="anonymous">
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+            crossorigin="anonymous"
+        />
 
         <style>
-        body {
-            background: #C9D6FF;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to bottom, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to bottom, #E2E2E2, #C9D6FF) no-repeat fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        }
+            body {
+                background: #c9d6ff; /* fallback for old browsers */
+                background: -webkit-linear-gradient(
+                    to bottom,
+                    #e2e2e2,
+                    #c9d6ff
+                ); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to bottom, #e2e2e2, #c9d6ff)
+                    no-repeat fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
 
-        .bg {
-            background: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-371678.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top center;
+            .bg {
+                background: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-371678.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top center;
 
-            padding-bottom: 100%;
-        }
+                padding-bottom: 100%;
+            }
 
-        .frame {
-            background-color: #fff;
-        }
+            .frame {
+                background-color: #fff;
+            }
 
-        .padded {
-            padding: 0 2rem;
-        }
+            .padded {
+                padding: 0 2rem;
+            }
 
-        .level.fill-height {
-            -webkit-box-align: stretch;
-            -ms-flex-align: stretch;
-            align-items: stretch;
-            display: -ms-flexbox;
-            display: flex;
-        }
+            .level.fill-height {
+                -webkit-box-align: stretch;
+                -ms-flex-align: stretch;
+                align-items: stretch;
+                display: -ms-flexbox;
+                display: flex;
+            }
 
-        .col-6:first-child {
-            padding-left: 0;
-        }
+            .col-6:first-child {
+                padding-left: 0;
+            }
 
-        .col-6:last-child {
-            padding-right: 0;
-        }
+            .col-6:last-child {
+                padding-right: 0;
+            }
 
-        ul {
-            display: flex;
-            list-style: none;
-        }
+            ul {
+                display: flex;
+                list-style: none;
+            }
 
-        li {
-            padding: 0 0.5rem;
-        }
+            li {
+                padding: 0 0.5rem;
+            }
 
-        .btn-info {
-            margin-left: 1rem;
-        }
+            .btn-info {
+                margin-left: 1rem;
+            }
         </style>
 
         <script
-        src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous"></script>      
-        
-        
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"
+        ></script>
     </head>
 
     <body>
-        
-<div class="hero fullscreen">
-    <div class="hero-body">
-        <div class="content">
-            <form class="frame u-no-padding" method="post">
-                <div class="frame__body u-no-padding">
-                    <div class="row u-no-padding level fill-height">
-                        <div class="col-6 u-no-padding bg">
-                        </div>
-                        <div class="col-6">
-                            <space class="x-large"></space>
-                            <div class="padded">
-                                <h3>Sign Up</h3>
-                                <div class="form-section">
-                                    <label>Name</label>
-                                    <div class="input-control">
-                                        <input class="input-contains-icon" id="name" name="name" placeholder="Name" type="text" value="">
-                                        <span class="icon">
-                                            <i class="far fa-wrapper fa-user-circle small"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="form-section">
-                                    <p>Gender</p>
-                                    <ul id="gender"><li><input id="gender-0" name="gender" type="radio" value="male"> <label for="gender-0">Male</label></li><li><input id="gender-1" name="gender" type="radio" value="female"> <label for="gender-1">Female</label></li><li><input id="gender-2" name="gender" type="radio" value="other"> <label for="gender-2">Other</label></li></ul>
-                                </div>
-                                <div class="form-section">
-                                    <div class="input-control">
-                                        <input class="input-contains-icon" id="email" name="email" placeholder="Email" type="text" value="">
-                                        <span class="icon">
-                                            <i class="far fa-wrapper fa-envelope-open small"></i>
-                                    </div>
-                                </div>
-                                <div class="form-section">
-                                    <div class="input-control">
-                                        <input class="input-contains-icon" id="password" name="password" placeholder="Password" type="password" value="">
-                                        <span class="icon">
-                                            <i class="fas fa-wrapper fa-key small"></i>
-                                    </div>
-                                </div>
-                                <div class="row u-no-padding">
-                                    <div class="col-6">
+        <div class="hero fullscreen">
+            <div class="hero-body">
+                <div class="content">
+                    <form class="frame u-no-padding" method="post">
+                        <div class="frame__body u-no-padding">
+                            <div class="row u-no-padding level fill-height">
+                                <div class="col-6 u-no-padding bg"></div>
+                                <div class="col-6">
+                                    <space class="x-large"></space>
+                                    <div class="padded">
+                                        <h3>Sign Up</h3>
+                                        <div class="form-section">
+                                            <label>Name</label>
                                             <div class="input-control">
-                                                <input class="input-contains-icon" id="city" name="city" placeholder="City" type="text" value="">
+                                                <input
+                                                    class="input-contains-icon"
+                                                    id="name"
+                                                    name="name"
+                                                    placeholder="Name"
+                                                    type="text"
+                                                    value=""
+                                                />
                                                 <span class="icon">
-                                                    <i class="fas fa-wrapper fa-map-marker-alt small"></i>
+                                                    <i
+                                                        class="far fa-wrapper fa-user-circle small"
+                                                    ></i>
+                                                </span>
                                             </div>
-                                    </div>
-                                    <div class="col-6">
-                                            <div class="input-control">
-                                                <input class="input-contains-icon" id="country" name="country" placeholder="Country" type="text" value="">
-                                                <span class="icon">
-                                                    <i class="fas fa-wrapper fa-globe-americas small"></i>
-                                            </div>
-                                    </div>
-                                </div>
-                                <div class="form-section">
-                                        <div class="input-control">
-                                            <select id="subscription" name="subscription"><option value="Free">Free</option><option value="Plus">Plus</option><option value="Premium">Premium</option></select>
                                         </div>
+                                        <div class="form-section">
+                                            <p>Gender</p>
+                                            <ul id="gender">
+                                                <li>
+                                                    <input
+                                                        id="gender-0"
+                                                        name="gender"
+                                                        type="radio"
+                                                        value="male"
+                                                    />
+                                                    <label for="gender-0"
+                                                        >Male</label
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <input
+                                                        id="gender-1"
+                                                        name="gender"
+                                                        type="radio"
+                                                        value="female"
+                                                    />
+                                                    <label for="gender-1"
+                                                        >Female</label
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <input
+                                                        id="gender-2"
+                                                        name="gender"
+                                                        type="radio"
+                                                        value="other"
+                                                    />
+                                                    <label for="gender-2"
+                                                        >Other</label
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="input-control">
+                                                <input
+                                                    class="input-contains-icon"
+                                                    id="email"
+                                                    name="email"
+                                                    placeholder="Email"
+                                                    type="text"
+                                                    value=""
+                                                />
+                                                <span class="icon">
+                                                    <i
+                                                        class="far fa-wrapper fa-envelope-open small"
+                                                    ></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="input-control">
+                                                <input
+                                                    class="input-contains-icon"
+                                                    id="password"
+                                                    name="password"
+                                                    placeholder="Password"
+                                                    type="password"
+                                                    value=""
+                                                />
+                                                <span class="icon">
+                                                    <i
+                                                        class="fas fa-wrapper fa-key small"
+                                                    ></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="row u-no-padding">
+                                            <div class="col-6">
+                                                <div class="input-control">
+                                                    <input
+                                                        class="input-contains-icon"
+                                                        id="city"
+                                                        name="city"
+                                                        placeholder="City"
+                                                        type="text"
+                                                        value=""
+                                                    />
+                                                    <span class="icon">
+                                                        <i
+                                                            class="fas fa-wrapper fa-map-marker-alt small"
+                                                        ></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="input-control">
+                                                    <input
+                                                        class="input-contains-icon"
+                                                        id="country"
+                                                        name="country"
+                                                        placeholder="Country"
+                                                        type="text"
+                                                        value=""
+                                                    />
+                                                    <span class="icon">
+                                                        <i
+                                                            class="fas fa-wrapper fa-globe-americas small"
+                                                        ></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div class="input-control">
+                                                <select
+                                                    id="subscription"
+                                                    name="subscription"
+                                                    ><option value="Free"
+                                                        >Free</option
+                                                    ><option value="Plus"
+                                                        >Plus</option
+                                                    ><option value="Premium"
+                                                        >Premium</option
+                                                    ></select
+                                                >
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="btn-info u-pull-right"
+                                            name="register"
+                                            type="submit"
+                                        >
+                                            Sign Up
+                                        </button>
+                                        <span class="fg-danger info"></span>
+                                        <span class="info"
+                                            >If there are any issues, please
+                                            email our admin at
+                                            admin@mizio.io.</span
+                                        >
+                                    </div>
+                                    <space class="x-large"></space>
                                 </div>
-                                <button class="btn-info u-pull-right" name="register" type="submit">Sign Up</button>
-                                <span class="fg-danger info"></span>
-                                <span class="info">If there are any issues, please email our admin at admin@mizio.io.</span>
                             </div>
-                            <space class="x-large"></space>
                         </div>
-                    </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
-</div>
-
     </body>
 </html>
