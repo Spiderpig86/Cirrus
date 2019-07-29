@@ -80,6 +80,11 @@
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
+/* Allow for the cards to have the same height when u-flex is used on the card */
+.card.u-flex .content {
+    flex-grow: 1;
+}
+
 .card .action-bar {
     -webkit-user-select: none;
     -moz-user-select: none;
