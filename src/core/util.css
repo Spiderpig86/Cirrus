@@ -9,8 +9,19 @@
   display: inline-block;
 }
 
+.u-flex {
+  display: flex;
+}
+
+.u-flex-column {
+  flex-direction: column;
+}
+
+.u-flex-row {
+  flex-direction: row;
+}
+
 .u-inline-flex {
-  display: -webkit-inline-bpx;
   display: -ms-inline-flexbox;
   display: -webkit-inline-box;
   display: inline-flex;

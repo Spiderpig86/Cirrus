@@ -3,3563 +3,6 @@
 * Stanley Lim, Copyright 2019
 * https://spiderpig86.github.io/Cirrus
 */
-/* BUTTONS */
-
-/* Button styling */
-/* Un-themed */
-button,
-.btn,
-[type="submit"] {
-    display: block;
-    line-height: 2rem;
-    overflow: hidden;
-    padding: 0.5rem 1.5rem;
-    border: 1px solid transparent;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0var(--animation-duration);
-    background-color: #fefefe;
-    border-color: #d9d9d9;
-    color: #737373;
-    font-size: 0.75rem;
-    letter-spacing: 0.03rem;
-    text-transform: uppercase;
-    font-family: Montserrat;
-    min-width: 2rem;
-    user-select: none;
-    margin-bottom: 1rem;
-    outline: none;
-    --btn-color: #fefefe;
-    --btn-fg: #737373;
-    --btn-border-color: #d9d9d9;
-}
-
-button:hover,
-.btn:hover,
-[type="submit"]:hover {
-    transition: all var(--animation-duration);
-}
-
-.btn:active,
-button:active,
-[type="submit"]:active {
-    transition: var(--animation-duration) ease;
-}
-
-/* Default button colors */
-button:hover,
-.btn:hover,
-[type="submit"]:hover {
-    background-color: #eee;
-    --btn-color: #eee;
-}
-
-/* Make the loading circle, if present, white when button is active */
-.btn.loading:active::after,
-button.loading:active::after,
-[type="submit"].loading:active::after {
-    transition: var(--animation-duration) ease;
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-top-color: transparent;
-}
-
-button.btn-animated,
-[type="submit"].btn-animated,
-.btn.btn-animated {
-    transition: calc(var(--animation-duration) / 2) ease;
-}
-
-button.btn-animated:active,
-[type="submit"].btn-animated:active,
-.btn.btn-animated:active {
-    -webkit-transform: scale(0.98);
-    transform: inherit, scale(0.98);
-    transition: calc(var(--animation-duration) / 2) ease;
-}
-
-.btn:focus,
-button:focus,
-input[type="submit"]:focus {
-    outline: none;
-}
-
-.btn:disabled,
-button:disabled,
-[type="submit"]:disabled {
-    cursor: not-allowed;
-    opacity: .5;
-}
-
-button.btn-close {
-    background-color: rgba(10, 10, 10, 0.2);
-    border: none;
-    border-radius: 290486px;
-    cursor: pointer;
-    display: inline-block;
-    flex-grow: 0;
-    flex-shrink: 0;
-    font-size: 0;
-    height: 20px;
-    outline: 0;
-    position: relative;
-    vertical-align: top;
-    width: 20px;
-    padding: 0;
-    min-width: 20px;
-}
-
-button.btn-close:hover {
-    background-color: rgba(10, 10, 10, 0.3);
-}
-
-/* Render the x in the close button */
-button.btn-close::before,
-button.btn-close::after {
-    background-color: var(--cirrus-bg);
-    content: "";
-    display: block;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-}
-
-button.btn-close::before {
-    height: 2px;
-    width: 50%;
-}
-
-button.btn-close::after {
-    height: 50%;
-    width: 2px;
-}
-
-/* Adds small margin around buttons */
-.btn-container {
-    margin: 0.5rem;
-    overflow: visible;
-}
-
-/* BUTTON STYLES */
-/* Regular */
-.btn-transparent {
-    --btn-color: transparent;
-    --btn-fg: var(--cirrus-dark);
-    --btn-border-color: transparent;
-}
-.btn-transparent.outline { --btn-color: var(--cirrus-dark); }
-.btn-transparent:hover { --btn-color: rgba(0, 0, 0, .1); }
-.btn-transparent:focus { box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5); }
-
-.btn-light {
-    --btn-color: var(--cirrus-light);
-    --btn-fg: var(--cirrus-dark);
-    --btn-border-color: var(--cirrus-light);
-}
-.btn-light:hover { --btn-color: var(--cirrus-light-hover); }
-.btn-light:focus { box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5); }
-
-.btn-dark {
-    --btn-color: var(--cirrus-dark);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-dark);
-}
-.btn-dark:hover { --btn-color: var(--cirrus-dark-hover); }
-.btn-dark.outline:hover { --btn-color: var(--cirrus-dark); }
-.btn-dark:focus { box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
-
-.btn-black {
-    --btn-color: #000;
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: #000;
-}
-.btn-black:hover { --btn-color: #000; }
-.btn-black:focus { box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
-
-.btn-primary {
-    --btn-color: var(--cirrus-primary);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-accent-border);
-}
-.btn-primary:hover { --btn-color: var(--cirrus-accent-hover); }
-.btn-primary.outline:hover { --btn-color: var(--cirrus-primary); }
-.btn-primary:focus { box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, 0.5); }
-
-.btn-info {
-    --btn-color: var(--cirrus-info);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-info);
-}
-.btn-info:hover { --btn-color: var(--cirrus-info-hover); }
-.btn-info.outline:hover { --btn-color: var(--cirrus-info); }
-.btn-info:focus { box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5); }
-
-.btn-link {
-    --btn-color: var(--cirrus-link);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-link);
-}
-.btn-link.outline { --btn-fg: var(--cirrus-link); border: 1px solid transparent; }
-.btn-link:hover { --btn-color: var(--cirrus-link-dark); }
-.btn-link.outline:hover { --btn-color: var(--cirrus-link-hover); border: 1px solid transparent; text-decoration: underline; }
-.btn-link:focus { box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5); }
-
-.btn-success {
-    --btn-color: var(--cirrus-success);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-success);
-}
-.btn-success:hover { --btn-color: var(--cirrus-success-hover); }
-.btn-success.outline:hover { --btn-color: var(--cirrus-success); }
-.btn-success:focus { box-shadow: 0 0 0 0.2rem rgba(13, 210, 89, 0.5); }
-
-.btn-warning {
-    --btn-color: var(--cirrus-warning);
-    --btn-fg: var(--cirrus-dark);
-    --btn-border-color: var(--cirrus-warning);
-}
-.btn-warning:hover { --btn-color: var(--cirrus-warning-hover); }
-.btn-warning.outline:hover { --btn-color: var(--cirrus-warning); }
-.btn-warning:focus { box-shadow: 0 0 0 0.2rem rgba(250, 180, 51, 0.5); }
-
-.btn-danger {
-    --btn-color: var(--cirrus-danger);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-danger);
-}
-.btn-danger:hover { --btn-color: var(--cirrus-danger-hover); }
-.btn-danger.outline:hover { --btn-color: var(--cirrus-danger); }
-.btn-danger:focus { box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5); }
-
-[class^="btn-"], [class*=" btn-"] {
-    background-color: var(--btn-color); 
-    border: 1px solid var(--btn-border-color);
-    color: var(--btn-fg);
-    transition: all var(--animation-duration);
-}
-
-[class^="btn-"]:hover, [class*=" btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all var(--animation-duration); }
-
-/* Outline Variants */
-[class^="btn-"].outline, [class*=" btn-"].outline {
-    background-color: transparent; 
-    color: var(--btn-color);
-}
-[class^="btn-"].outline:hover, [class*=" btn-"].outline:hover {
-    background-color: var(--btn-color);
-    color: var(--btn-fg);
-    transition: all var(--animation-duration);
-}
-
-/* Right of input */
-.has-controls.input:not([class*="left action"]) > button:last-child,
-.has-controls.input:not([class*="left action"]) > .btn:last-child > .btn {
-    border-radius: 0 0.28571429rem 0.28571429rem 0;
-}
-
-.has-controls.input:not([class*="right action"]) > button:last-child,
-.has-controls.input:not([class*="right action"]) > .btn:last-child > .btn {
-    border-radius: 0.28571429rem 0 0 0.28571429rem;
-}
-
-/* Tiny button */
-.btn-tiny {
-    line-height: 1.5rem;
-    padding: 0 0.25rem;
-    font-size: 50%;
-}
-
-/* Small button */
-.btn-small {
-    line-height: 2.4rem;
-    padding: 0 0.5rem;
-    font-size: 70%;
-}
-
-/* Big button */
-.btn-large {
-    line-height: 3.5rem;
-    padding: 0 2rem;
-    font-size: 90%;
-}
-
-.btn-xlarge {
-    line-height: 4.5rem;
-    padding: 0 2rem;
-    font-size: 110%;
-}
-
-/* Make the loader white so it is visible */
-.loading.btn-accent:after {
-    border: 2px solid #fff;
-    border-right-color: transparent;
-    border-top-color: transparent;
-}
-
-/* Override default behavior of aligning font awesome icons to the top */
-button .fa-wrapper,
-.btn .fa-wrapper,
-[type="submit"] .fa-wrapper {
-    vertical-align: baseline;
-}
-
-button .fa-wrapper.pad-right,
-.btn .fa-wrapper.pad-right,
-[type="submit"] .fa-wrapper.pad-right {
-    margin-right: 0.4rem;
-}
-
-button .fa-wrapper.pad-left,
-.btn .fa-wrapper.pad-left,
-[type="submit"] .fa-wrapper.pad-left {
-    margin-left: 0.4rem;
-}
-
-/* Alternatives to pad-left and pad-right */
-button span:first-child,
-.btn span:first-child,
-[type="submit"] span:first-child {
-    margin-right: 0.2rem;
-}
-
-button span:last-child,
-.btn span:last-child,
-[type="submit"] span:last-child {
-    margin-left: 0.2rem;
-}
-/* Deprecated 0.5.5
-/* Button with accent 
-.btn-accent {
-    background-color: var(--cirrus-primary);
-    color: #fff;
-    border-color: var(--cirrus-accent-border);
-}
-
-.btn-accent:hover {
-    background-color: var(--cirrus-accent-hover);
-}
-
-.btn-accent:active {
-    background-color: var(--cirrus-accent-border);
-} */
-
-/* BUTTON GROUPS */
-/* Will group buttons with components in a single component */
-
-.btn-group {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; /* Wrap contents to next row on overflow */
-    display: -webkit-inline-box;
-    display: inline-flex;
-    display: -ms-inline-flexbox;
-    display: -webkit-inline-flex;
-}
-
-.btn-group.btn-group-fill {
-    /* Makes the button group fill the width and proportion the buttons to fill the space */
-    display: -webkit-box;
-    display: flex;
-    display: -ms-flexbox;
-}
-
-.btn-group .btn,
-.btn-group button,
-.btn-group [type="submit"] {
-    -ms-flex: 1 0 auto;
-    -webkit-box-flex: 1;
-    flex: 1 0 auto;
-    margin: 0;
-}
-
-.btn-group.btn-group-fill .btn,
-.btn-group.btn-group-fill button,
-.btn-group.btn-group-fill [type="submit"] {
-    -ms-flex: 1 0 0;
-    -webkit-box-flex: 1;
-    flex: 1 0 0; /* Make the buttons fill the available width and proportion themselves */
-}
-
-.btn-group .btn:first-child:not(:last-child),
-.btn-group button:first-child:not(:last-child),
-.btn-group [type="submit"]:first-child:not(:last-child) {
-    /* Style the first child in group > 1 buttons */
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.btn-group .btn:last-child:not(:first-child),
-.btn-group button:last-child:not(:first-child),
-.btn-group [type="submit"]:last-child:not(:first-child) {
-    /* Style the last child in group > 1 buttons */
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: -0.1rem;
-}
-
-.btn-group .btn:not(:first-child):not(:last-child),
-.btn-group button:not(:first-child):not(:last-child),
-.btn-group [type="submit"]:not(:first-child):not(:last-child) {
-    /* Style button in middle of group */
-    border-radius: 0; /* Remove roundness from center buttons */
-    margin-left: -0.1rem;
-}
-/* CODE */
-
-code {
-    padding: 0.3rem;
-    margin: 0.5em 0;
-    overflow: auto;
-    background-color: var(--cirrus-code-bg);
-    color: var(--cirrus-code-fg);
-    border-radius: 3px;
-}
-
-/* Dark theme for code */
-code.dark {
-    background-color: var(--cirrus-dark);
-    color: #fff;
-}
-
-code:before {
-    color: #acb3c2;
-    content: attr(data-lang);
-    font-size: 0.9rem;
-    position: absolute;
-    right: 1rem;
-    top: 0.7rem;
-}
-
-pre > code {
-    font-size: 14px;
-    display: block;
-    padding: 2rem 1.5rem 1rem;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    font-family: Consolas,Monaco,"Andale Mono",monospace;
-    text-align: left;
-    line-height: 1.5;
-    -moz-tab-size: 4;
-    tab-size: 4;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    border-left: .3rem solid var(--cirrus-primary);
-    margin: 0;
-    position: relative;
-    color: #222;
-}
-
-/* BASE STYLING FOR CIRRUS */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito+Sans:400,700");
-
-* {
-    margin: 0;
-    padding: 0;
-    /* Prevent setting borders from increasing the size of an elrement */
-    box-sizing: border-box;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-tap-highlight-color: transparent;
-}
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-    border: none;
-    height: 100%;
-}
-
-/* Nunito Sans for the font */
-body {
-    letter-spacing: 0.01rem;
-    line-height: 1.8; /* Globally adjust line height */
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-        "Segoe UI Emoji", "Segoe UI Symbol";
-    letter-spacing: 0.01rem;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-    color: var(--cirrus-fg);
-}
-
-/* Remove bullets from unordered lists */
-ul {
-    list-style: none;
-}
-
-/* Setting up embedded content */
-img,
-embed,
-object,
-audio,
-video {
-    max-width: 100%;
-    height: auto;
-}
-
-.hero.fullscreen video {
-    height: 100%;
-    object-fit: fill;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-}
-
-iframe {
-    outline: 0;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-article,
-aside,
-figure,
-footer,
-header,
-hgroup,
-section {
-    display: block;
-}
-
-input,
-optgroup,
-select,
-textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-}
-
-label {
-    display: inline-block;
-    margin: 0.25rem 0;
-}
-
-[hidden] {
-    display: none !important;
-}
-
-/* Selection Color */
-::selection {
-    background-color: var(--cirrus-select-bg);
-}
-
-/* When focusing any element */
-:focus {
-    box-shadow: 0 0 0.1rem 0.15rem rgba(240, 61, 77, 0.13);
-    outline: none;
-}
-
-/* FONT */
-
-@import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-/* Silent header */
-h1 .silent,
-h2 .silent,
-h3 .silent,
-h4 .silent,
-h5 .silent,
-h6 .silent {
-  color: #788196;
-}
-
-h1 {
-  font-size: 3rem;
-  letter-spacing: 0.025rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
-h4 {
-  font-size: 1.75rem;
-}
-
-h5 {
-  font-size: 1.5rem;
-}
-
-h6 {
-  font-size: 1.25rem;
-}
-
-/* Headlines (for larger titles) */
-.headline-1 {
-  font-size: 6.5rem;
-  letter-spacing: 0.05rem;
-}
-
-.headline-2 {
-  font-size: 5.5rem;
-  letter-spacing: 0.05rem;
-}
-
-.headline-3 {
-  font-size: 4.5rem;
-  letter-spacing: 0.05rem;
-}
-
-.headline-4 {
-  font-size: 3.5rem;
-  letter-spacing: 0.025rem;
-}
-
-strong {
-  font-weight: 700;
-}
-
-.font-alt {
-  font-family: "Nunito Sans";
-}
-
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
-  line-height: 1.125em;
-  margin: 1rem 0;
-}
-
-.title {
-  font-weight: bolder;
-}
-
-.title:not(:last-child),
-.subtitle:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-/* .accent .subtitle { Deprecated 0.5.5
-  color: rgba(255, 255, 255, 0.9);
-} */
-
-.title + .subtitle {
-  /* Make the subtitlte closer to the title */
-  margin-top: -1.25rem;
-}
-
-p,
-article,
-blockquote {
-  font-size: 1rem;
-  line-height: 2; /* Removed 0.5.5 */
-  margin: 1rem 0;
-}
-
-p.lead {
-  font-size: 1.2rem;
-}
-
-blockquote {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-}
-
-blockquote {
-  background-color: #f5f5f5;
-  border-left: 5px solid #dbdbdb;
-  padding: 1rem 2rem;
-  border-radius: 3px;
-}
-
-blockquote p {
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-/* Use default line-height for these texts and when line-height-inherit is specified */
-.card-tile p,
-.card-tile article,
-.card-tile blockquote {
-  line-height: inherit;
-}
-
-cite {
-  opacity: 0.7;
-}
-
-mark,
-.mark {
-  padding: 0.2em;
-  background-color: #f0e8c4;
-}
-
-/* Weights */
-.font-thin {
-  font-weight: 200;
-}
-
-.font-light {
-  font-weight: 300;
-}
-
-.font-normal {
-  font-weight: 400;
-}
-
-.font-semibold {
-  font-weight: 600;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.lowercase {
-  text-transform: lowercase;
-}
-
-.rtl {
-  direction: rtl;
-}
-
-.white {
-  color: #fff !important;
-}
-
-.faded {
-  opacity: 0.75;
-}
-
-.italics {
-  font-style: italic;
-}
-
-/* Font Awesome */
-.icon {
-  /* Usually used in spans */
-  display: inline-block;
-  /* font-size: 21px; Allow font sizes for icons to be overwritten */
-  /* line-height: 1.5rem; Allow line height to be inherited or overwritten */
-  text-align: center;
-  width: 1.5rem;
-  vertical-align: baseline;
-}
-
-.icon .fa-wrapper {
-  font-size: inherit;
-  vertical-align: middle;
-}
-
-.icon.x-small {
-  margin: 0.55rem 0 0 0.1rem;
-}
-
-.icon.small {
-  margin: 0.95rem 0 0 0.1rem;
-}
-
-/* Removed 0.5.5, not neded since sizes are covered by .icon .fa-wrapper */
-/* .fa-wrapper {
-  font-size: 21px; /* Font sizes in multiple of 7s since they render the best 
-  text-align: center;
-}
-
-.fa-wrapper.x-small {
-  font-size: 7px;
-}
-
-.fa-wrapper.small {
-  font-size: 14px;
-}
-
-.fa-wrapper.large {
-  font-size: 28px;
-}
-
-.fa-wrapper.x-large {
-  font-size: 35px;
-} */
-
-/* .fa-wrapper.xx-large { Removed 0.5.5
-  font-size: 42px;
-} */
-
-.info {
-  display: block;
-  font-size: 0.85rem;
-  margin-top: 0.25rem;
-  color: #979797;
-}
-
-.info.inline {
-  /* Keeps the extra info inline */
-  display: inline-block;
-  margin-left: 0.5rem;
-}
-
-/* .info.success { Deprecated 0.5.5
-    color: #4caf50;
-}
-
-.info.error {
-    color: #f44336;
-} */
-
-.caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px dashed;
-  border-top: 4px solid\9;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-}
-
-/* Other text elements */
-abbr[title] {
-  border-bottom: 0.1rem dotted;
-  cursor: help;
-  text-decoration: none;
-}
-
-kbd {
-  background-color: var(--cirrus-fg);
-  border-radius: 0.2rem;
-  color: #fff;
-  display: inline-block;
-  line-height: 1;
-  padding: 0.5rem;
-  vertical-align: baseline;
-}
-
-/* MOBILE */
-
-@media (max-width: 650px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1.5rem;
-  }
-  h5 {
-    font-size: 1.25rem;
-  }
-  h6 {
-    font-size: 1rem;
-  }
-
-  .headline-1 {
-    font-size: 3rem;
-    letter-spacing: 0.05rem;
-  }
-
-  .headline-2 {
-    font-size: 2.75rem;
-    letter-spacing: 0.05rem;
-  }
-
-  .headline-3 {
-    font-size: 2.5rem;
-    letter-spacing: 0.05rem;
-  }
-
-  .headline-4 {
-    font-size: 2.25rem;
-    letter-spacing: 0.025rem;
-  }
-
-  p,
-  article,
-  blockquote {
-    margin: 1rem 0;
-  }
-}
-
-/* FOOTER */
-
-footer {
-    width: 100%;
-    padding: 6rem 0;
-    background-color: #111;
-    text-align: center;
-    margin-top: 5rem;
-}
-
-footer a {
-    font-weight: bolder;
-    color: #fff;
-}
-
-footer p {
-    color: #848484;
-}
-
-footer ul {
-    margin: 0.5rem 0; /* Remove the left margin seen in global style */
-}
-
-footer h6 {
-    text-align: center;
-    letter-spacing: 6px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-footer .footer-list-title {
-    font-size: 75%;
-    text-transform: uppercase;
-    font-weight: bolder;
-    color: #ddd;
-}
-
-footer .footer-list-title::after {
-    content: "";
-    display: block;
-    width: 10%;
-    margin: auto;
-    border-bottom: 2px solid;
-    border-color: #343b49;
-}
-
-footer ul a .list-item, footer .list-item {
-      margin: 0.1rem;
-    color: #888;
-    transition: all .3s;
-    font-size: 75%;
-    text-transform: uppercase;
-}
-
-footer.footer-fixed {
-    bottom: 0;
-    position: fixed;
-}
-/* FORMS */
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]),
-select {
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    color: #5a5a5a;
-    font-family: "Nunito Sans";
-    font-size: 0.85rem;
-    letter-spacing: 0.02rem;
-    transition: all 0.3s;
-    outline: none;
-    padding: 0.85rem 1.1rem;
-}
-
-input[type="search"] {
-    -webkit-appearance: none; /* Fix Safari issue */
-}
-
-textarea,
-textarea[type="text"] {
-    width: 100%;
-    border: 1px solid #ddd;
-    padding: 0.8rem;
-    border-radius: 3px;
-    font-family: "Nunito Sans";
-    font-size: 0.85rem;
-    letter-spacing: 0.02rem;
-    transition: all 0.3s;
-    outline: none;
-    margin: 0.5rem 0;
-    padding: 1rem 1.3rem;
-    min-height: 8rem;
-    line-height: 1.5rem;
-    resize: vertical;
-}
-
-input[type="color"] {
-    box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
-    box-sizing: border-box;
-    transition: .3s;
-    outline: 0;
-    position: relative;
-    height: 3rem;
-    background-color: #fff;
-    padding: .55rem .8rem !important;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):focus,
-select:focus,
-textarea:focus,
-textarea[type=text]:focus,
-input[type=text].input-focused,
-.input-focused {
-    border-color: rgb(61, 171, 240);
-    box-shadow: 0 0 0 0.2rem rgba(61, 171, 240, 0.4), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-}
-
-select {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    -webkit-appearance: menulist;
-}
-
-select[multiple] option {
-    padding: 0.2rem 0.4rem;
-}
-
-/* Fixes for Safari and other browsers for consistent UI */
-select.select:not([size]):not([multiple]) {
-    background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center/.4rem .5rem;
-    -webkit-appearance: none;
-}
-
-/* Search field */
-input[type="search"],
-input.search {
-    background-repeat: no-repeat;
-    background-position: left 0.6rem center;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path opacity="0.45" d="M14.891,14.39l-0.5.5a0.355,0.355,0,0,1-.5,0L9.526,10.529a5.3,5.3,0,1,1,2.106-4.212,5.268,5.268,0,0,1-1.1,3.21l4.362,4.362A0.354,0.354,0,0,1,14.891,14.39ZM6.316,2.418a3.9,3.9,0,1,0,3.9,3.9A3.9,3.9,0,0,0,6.316,2.418Z"/></svg>'); /* NEEDS FIXING */
-    padding-left: 2rem !important;
-}
-
-input:not([class*="btn-"]):disabled, input:not([class*=" btn-"]):disabled:hover, select:disabled, textarea:disabled {
-    background-color: #f3f3f6;
-    cursor: not-allowed;
-    border: 1px solid #f3f3f6;
-}
-
-label:first-child:not(:last-child):not(.form-group-label) {
-    margin-right: 0.5rem;
-}
-
-label:not(:first-child):not(:last-child):not(.form-group-label) {
-    margin: 0 0.5rem;
-}
-
-label:last-child:not(:first-child):not(.form-group-label) {
-    margin-left: 0.5rem;
-}
-
-/* Required asterisk */
-.required {
-    /* Use this in a span or a div */
-    position: relative;
-    top: 1px;
-    font-weight: bold;
-    color: #f03c69;
-    padding-left: 0.1rem;
-}
-
-.label:not(:last-child) {
-    margin-bottom: 0;
-}
-
-.label {
-    color: #4a4a4a;
-    display: inline-block; /* changed from block */
-    font-weight: bold;
-    margin-top: 0.8rem;
-}
-
-.input-success {
-    background-color: rgba(0, 224, 0, 0.05) !important;
-    border-color: var(--cirrus-success) !important;
-}
-
-.input-success:not([type=checkbox]):not([type=radio]):not([type=submit]):focus, .btn-success:focus {
-    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-}
-
-.input-error {
-    background-color: rgba(244, 67, 54, 0.05) !important;
-    border-color: var(--cirrus-danger) !important;
-}
-
-.input-error:not([type=checkbox]):not([type=radio]):not([type=submit]):focus, .btn-error:focus {
-    box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-}
-
-/* Input Field Sizes */
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-xsmall,
-select.input-xsmall {
-    font-size: 0.65rem;
-    padding: 0.35rem 0.9rem;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-small,
-select.input-small {
-    font-size: 0.75rem;
-    padding: 0.55rem 1rem;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-large,
-select.input-large {
-    font-size: 1.5rem;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-xlarge,
-select.input-xlarge {
-    font-size: 2rem;
-}
-
-/* Select sizes */
-select.input-xsmall {
-    padding: 0.65rem 0.9rem;
-}
-
-select.input-small {
-    padding: 0.75rem 1rem;
-}
-
-select.input-large {
-    padding: 0.95rem 1.2rem;
-}
-
-select.input-xlarge {
-    padding: 1.05rem 1.3rem;
-}
-
-/* Used for when the input controls have another control adjacent to it but we want to position it inside the input field like font-awesome glyphs. As of 0.5.2, it is the default container for input fields. */
-.input-control {
-    position: relative;
-    margin: 0.5rem 0;
-}
-
-/* Hold Font Awesome glyphs inside input fields */
-/* More sizes coming soon */
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-left {
-    padding-left: 2.75rem;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right {
-    padding-right: 2.75rem;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-xsmall,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-xsmall {
-    padding-left: 2rem;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-xsmall ~ .icon,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-left.input-xsmall ~ .icon,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-xsmall ~ .icon.icon-right {
-    line-height: 1.75rem;
-    width: 1.75rem;
-    font-size: 7px;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-small,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-small {
-    padding-left: 2.5rem;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-small ~ .icon,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-left.input-small ~ .icon,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-small ~ .icon.icon-right {
-    line-height: 2rem;
-    width: 2.5rem;
-    font-size: 14px;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-large,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-large {
-    padding-left: 3rem;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-large ~ .icon,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-left.input-large ~ .icon,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-large ~ .icon.icon-right {
-    line-height: 3.5rem;
-    width: 3.5rem;
-    font-size: 28px;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-xlarge,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-xlarge {
-    padding-left: 3.5rem;
-}
-
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-xlarge ~ .icon,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-left.input-xlarge ~ .icon,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-xlarge ~ .icon.icon-right {
-    line-height: 2.5rem;
-    width: 3.75rem;
-    font-size: 35px;
-}
-
-.input-contains-icon ~ .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.input-contains-icon ~ .icon:not(.icon-right),
-.input-contains-icon-left ~ .icon.icon-left {
-    /* Nomral input only */
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 3rem;
-    z-index: 1;
-}
-
-.input-contains-icon-right ~ .icon.icon-right {
-    position: absolute;
-    pointer-events: none;
-    line-height: 2.75rem;
-    vertical-align: baseline;
-    top: 0;
-    right: 0;
-    width: 3rem;
-    z-index: 1;
-}
-
-/* Form section just adds extra spacing between form elements tiled vertically */
-.form-section:not(:last-child) {
-    margin-bottom: 0.5rem;
-}
-
-/* A flexbox version of form-section for inline forms */
-.form-section.section-inline {
-    display: flex;
-}
-
-.form-section.section-inline label:not(.form-group-label),
-.form-section.section-inline button {
-    align-items: center;
-    flex-grow: 0; /* Keep it from taking up extra space */
-    display: flex;
-    flex-shrink: 0;
-}
-
-.form-section.section-inline input,
-.form-section.section-inline .section-body {
-    align-items: center;
-    flex-grow: 1;
-}
-
-/* Form groups that group inputs with other controls. */
-.form-group {
-    display: flex;
-    display: -ms-flexbox;
-    margin: 0.5rem 0; /* Add margin to the container since they have been removed from children */
-}
-
-/* Fixes the text width being cut off */
-.form-group .form-group-btn {
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-    margin-bottom: 0;
-}
-
-/* This is just an extended portion of an input which is just like a label and is read only */
-/* This will style the controls if they are the leftmost control in the form group for labels, inputs, and buttons. */
-.form-group .form-group-label:first-child:not(:last-child),
-.form-group .form-group-input:first-child:not(:last-child),
-.form-group .form-group-btn:first-child:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-/* Style the middle controls */
-.form-group .form-group-label:not(:first-child):not(:last-child),
-.form-group .form-group-input:not(:first-child):not(:last-child),
-.form-group .form-group-btn:not(:first-child):not(:last-child) {
-    border-radius: 0;
-    margin-left: -0.1rem;
-    margin-right: -0.1rem; /* Remove spacing in middle controls */
-}
-
-/* Handles right most control in form group */
-.form-group .form-group-label:last-child:not(:first-child),
-.form-group .form-group-input:last-child:not(:first-child),
-.form-group .form-group-btn:last-child:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: -0.1rem;
-}
-
-/* Form group controls */
-.form-group-label {
-    background-color: var(--cirrus-form-group-bg);
-    border: 1px solid #ddd;
-    border-radius: 0.2rem;
-    color: var(--cirrus-form-group-fg);
-    margin: 0;
-    padding: 0.8rem;
-    user-select: none;
-}
-
-.form-group-label.label-xsmall {
-    font-size: 0.55rem;
-    padding: 0.35rem 0.9rem;
-}
-
-.form-group-label.label-small {
-    font-size: 0.75rem;
-    padding: 0.55rem 1rem;
-}
-
-.form-group-label.label-large {
-    font-size: 1.5rem;
-}
-
-.form-group-label.label-xlarge {
-    font-size: 2rem;
-}
-
-/* Keeps inputs in form group above other components */
-.form-group-input {
-    z-index: 1;
-}
-
-/* Change place holder color */
-::-moz-placeholder {
-    color: #a9a9a9; /* Lighter than the default */
-}
-
-::-webkit-input-placeholder {
-    color: #a9a9a9; /* Lighter than the default */
-}
-
-@media screen and (max-width: 768px) {
-    /* Remove flex in form-section */
-    .form-section.section-inline {
-        display: inherit;
-    }
-}
-
-/* Separate CSS file, but same part as Layout */
-
-/* The base container that is similar in structure to a card but more flexible */
-.frame {
-    display: flex;
-    display: -ms-flexbox;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    border-radius: 3px;
-    box-shadow: 0 0.05rem 0.2rem rgba(69, 77, 93, .3);
-}
-
-/* For the frame header and footer, use flex display */
-.frame .frame__header,
-.frame .frame__footer {
-    flex: 0 0 auto;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    padding: 1rem;
-}
-
-/* The frame navbar can be used with level or header classes to create a navigation menu */
-.frame .frame__nav {
-    flex: 0 0 auto;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-}
-
-.frame .frame__body {
-    flex: 1 1 auto;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    overflow-y: auto; /* Show the scrollbar when needed */
-    padding: 0 1.5rem;
-}
-
-.frame .frame__title {
-    color: var(--cirrus-fg);
-    font-size: 1rem;
-    margin: .75rem auto 0;
-}
-
-.frame .frame__subtitle {
-    color: rgba(55, 64, 84, 0.6);
-    font-size: .85rem;
-    margin: .25rem auto .75rem;
-}
-/* HEADER */
-.header {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -ms-flex-negative: 0;
-  width: 100%;
-  z-index: 100;
-  margin-bottom: 20px;
-  box-shadow: 0 3px 15px rgba(57, 63, 72, 0.1);
-  background-color: var(--cirrus-bg);
-  max-height: 100vh;
-  padding: 0 2rem;
-  transition: all .3s;
-}
-
-.header a {
-  color: #8292a2;
-}
-
-.header a:hover {
-  color: #697888;
-}
-
-/* Header dark theme */
-.header-dark {
-  background-color: rgba(0, 0, 0, 0.87);
-  color: #fff;
-}
-
-.header-clear {
-  background-color: transparent;
-  box-shadow: none;
-}
-
-/* Add transition to nav menu when it drops down */
-.header.header-animated .header-nav {
-  -webkit-transition: background 0.4s ease, height 0.4s ease;
-  transition: background 0.4s ease, height 0.4s ease;
-  -webkit-transition-property: background, height;
-  transition-property: background, height;
-  -webkit-transition-duration: 0.4s, 0.4s;
-  transition-duration: 0.4s, 0.4s;
-  -webkit-transition-timing-function: ease, ease;
-  transition-timing-function: ease, ease;
-  -webkit-transition-delay: initial, initial;
-  transition-delay: initial, initial;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.header-brand {
-  -webkit-overflow-scrolling: touch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  max-width: 100vw;
-  min-height: 3.25rem;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-
-/* The container that contains all the header menu components. Child of header */
-.header-nav {
-  /* Flex display 768px and higher */
-  overflow: auto;
-}
-
-/* Styles for header menu (aka the nav bar) */
-.nav-menu {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-/* Allow the user to scroll through navbar items if it exceeds nav-left, nav-center, or nav-right widths */
-.nav-overflow-x {
-  -webkit-box-pack: inherit;
-  -ms-flex-pack: inherit;
-  justify-content: inherit;
-  overflow-x: scroll;
-}
-
-/* Static header at the top of the screen */
-.header-fixed {
-  position: fixed;
-  top: 0; /* Change this if you want to float the header somewhere else */
-}
-
-/* Wrapper to vertically center header items */
-.nav-item {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  padding: 0 0.3rem;
-  cursor: pointer;
-}
-
-.nav-item a {
-  align-items: center;
-  display: flex;
-  height: 100%;
-}
-
-/* Hover effect for header elements when appropriate */
-.header:not(.header-clear) .nav-item:not(.no-hover):hover,
-.header:not(.header-clear) .nav-item:not(.no-hover).hovered {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  background-color: rgba(216, 216, 216, 0.15);
-}
-
-.header:not(.header-clear) .nav-item.active, /* active:hover removes the transition effect when hoveirng over the dropdown menu */ 
-.header:not(.header-clear) .nav-item.active:hover {
-  background-color: rgba(216, 216, 216, 0.35);
-}
-
-/* HEADER DROP DOWN MENU */
-.nav-item .dropdown-menu {
-  background-color: var(--cirrus-bg);
-  position: absolute;
-  top: 95%;
-  /*right: 0; /* Unable to solve problem when we have multiple drop down menus */
-  z-index: 1000;
-  float: left;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0;
-  font-size: 14px;
-  text-align: left;
-  list-style: none;
-  background-clip: padding-box;
-  border: 1px solid #eee;
-  border-radius: 0 0 4px 4px;
-  box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
-}
-
-/* Add border radius to whole menu with clear header */
-.header.header-clear .nav-item .dropdown-menu {
-  border-radius: 4px;
-}
-
-/* Just add a transition in general */
-.nav-item .dropdown-menu.dropdown-animated {
-  -webkit-transition: all var(--animation-duration);
-  transition: all var(--animation-duration);
-}
-
-/* Dropdown menu location adjustment located below for sizes above phones */
-
-/* Dropdown menu indicator */
-.nav-item.has-sub .nav-dropdown-link::after {
-  border: 2px solid var(--cirrus-primary); /* Must be first to create the triangle shape */
-  border-right: 0; /* Create the triangle effect */
-  border-top: 0;
-  display: block;
-  height: 0.5em;
-  width: 0.5em;
-  content: " ";
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  pointer-events: none;
-  margin-top: -0.435em;
-  right: 1.125em;
-  top: 50%;
-  position: absolute;
-}
-
-/* Add room for the dropdown chevron pseudoelement */
-.nav-item.has-sub .nav-dropdown-link {
-  padding-right: 2.5rem;
-  position: relative; /* Needed for hiding glyphs in mobile header */
-}
-
-/* Dark dropdown menu theme */
-.nav-item .dropdown-menu.dropdown-dark,
-.header-dark .dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.87);
-  border: 1px solid #333;
-  color: #fff;
-}
-
-.dropdown-menu.dropdown-shown,
-.nav-item.active {
-  opacity: 1;
-}
-
-.dropdown-menu > li > a {
-  display: block;
-  padding: 0.5rem 1rem;
-  clear: both;
-  line-height: 1.42857143;
-  white-space: nowrap;
-}
-
-/* Theme for dark menu */
-.header-dark .nav-item a,
-.header-dark .dropdown-menu > li > a {
-  color: #fff;
-}
-
-.dropdown-menu > li {
-  margin: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.dropdown-menu > li:hover {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  background-color: rgba(216, 216, 216, 0.15);
-}
-
-.dropdown-menu > li:active {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  background-color: rgba(216, 216, 216, 0.25);
-}
-
-.dropdown-menu > li:last-child {
-  margin-bottom: 0;
-}
-
-.dropdown-menu .dropdown-menu-divider {
-  border: none;
-  background-color: rgba(216, 216, 216, 0.15);
-  height: 1px;
-  margin: 0.5rem 0;
-}
-
-.nav-btn {
-  cursor: pointer;
-  display: block;
-  height: 3.5rem;
-  position: relative;
-  width: 3.5rem;
-}
-
-.header .btn,
-.header button,
-.header input[type="submit"] {
-  margin: 0;
-}
-
-@media screen and (min-width: 769px) {
-  .header {
-    -webkit-box-align: stretch; /* Box Align and align items to stretch to make nav-items fill up parent height */
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    display: -webkit-box;
-    display: -ms-flexbox;
-  }
-
-  .header-nav {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-negative: 0;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch; /* Make items fill up all available space regardless of width https://drafts.csswg.org/css-align/ */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    text-align: center;
-    width: 100%;
-    top: 0;
-    overflow: visible; /* Only visible for showing dropdown menus, hidden for mobile */
-  }
-
-  /* These styles can also be used on menus in the body */
-  .nav-left,
-  .nav-right {
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    -ms-grid-row-align: stretch;
-    align-items: stretch;
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    /*overflow: hidden;*/
-  }
-
-  /* Align items to the left */
-  .nav-left {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    /*overflow: hidden;
-        overflow-x: auto;*/
-    white-space: nowrap;
-  }
-
-  /* Align items to the right */
-  .nav-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    /*overflow: hidden;
-        overflow-x: auto;*/
-    white-space: nowrap;
-  }
-
-  /* Centering items, best used when nav-brand is not used to prevent offset */
-  .nav-center {
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Hide hamburger button */
-  .nav-btn {
-    display: none;
-  }
-
-  .nav-item {
-    position: relative; /* Include for helping dropdown menu positioning */
-  }
-
-  /* Expand link area for desktop views so it is easier to click */
-  .nav-item a {
-    padding: 0.5rem 1rem;
-  }
-
-  .nav-item .dropdown-menu {
-    opacity: 0;
-    pointer-events: none; /* Make cursor not respond to menu links when not displayed */
-  }
-
-  .nav-item .dropdown-menu.dropdown-animated {
-    -webkit-transform: translateY(
-      -5px
-    ); /* Used for transitional drop down effect */
-    transform: translateY(-5px);
-  }
-
-  .nav-item .dropdown-menu.dropdown-shown,
-  .nav-item.toggle-hover:hover .dropdown-menu,
-  .nav-item .dropdown-menu.dropdown-animated.dropdown-shown,
-  .nav-item.toggle-hover:hover .dropdown-animated.dropdown-menu {
-    opacity: 1;
-    -webkit-transform: none; /* Used for transitional drop down effect */
-    transform: none;
-    pointer-events: auto;
-  }
-
-  /* Align dropdown menu to the left side of the parent nav-item for header-left */
-  .nav-left .has-sub .dropdown-menu {
-    left: 0;
-    right: auto;
-  }
-
-  /* Align dropdown menu to the right side of the parent nav-item for header-right */
-  .nav-right .has-sub .dropdown-menu {
-    left: auto;
-    right: 0;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  /* Add scrolling support in header */
-  .header {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .header-brand .nav-item:first-child {
-    padding: 0 1rem; /* Add padding to the first child, usually the logo */
-  }
-
-  /* Hide dropdon menu on mobile */
-  .header-nav {
-    height: 0;
-  }
-
-  /* Show the dropdown */
-  .header-nav.active {
-    height: 100vh;
-  }
-
-  /* Remove flex for mobile devices */
-  .nav-item.has-sub {
-    display: block;
-  }
-
-  .nav-item.has-sub .dropdown-menu.dropdown-shown {
-    border-radius: 0;
-    box-shadow: none;
-    display: block;
-    position: relative;
-    top: 1rem;
-    float: none;
-    border: none;
-    background-color: transparent;
-    margin-bottom: 1rem;
-  }
-
-  .nav-item.has-sub .dropdown-menu.dropdown-dark {
-    background-color: rgba(0, 0, 0, 0.17);
-    border: 0;
-    color: #fff;
-  }
-
-  /* Hide the menu by default in mobile view (overflow on header-right can expose it) */
-  .nav-item.has-sub .dropdown-menu {
-    display: none;
-  }
-
-  /* Make the menu items larger in the dropdown menu */
-  .header-nav .nav-item {
-    padding: 1rem;
-  }
-
-  /* Get rid of extra spaces */
-  .header-nav .nav-item > a {
-    padding: 0;
-    width: 100%; /* Stretch the link to span the entire list item */
-  }
-
-  /* Hamburger button */
-  .nav-btn {
-    cursor: pointer;
-    display: block;
-    position: relative;
-    margin-left: auto;
-  }
-
-  .nav-btn span {
-    background-color: #4d565f;
-    display: block;
-    height: 2px;
-    left: 50%;
-    margin-left: -7px;
-    position: absolute;
-    top: 50%;
-    -webkit-transition: none 86ms ease-out;
-    transition: none 86ms ease-out;
-    -webkit-transition-property: background, left, opacity, -webkit-transform;
-    transition-property: background, left, opacity, -webkit-transform;
-    transition-property: background, left, opacity, transform;
-    transition-property: background, left, opacity, transform, -webkit-transform;
-    width: 15px;
-  }
-
-  .header-dark .nav-btn span {
-    background-color: #fff;
-  }
-
-  /* Line spacing in hamburger button */
-  .nav-btn span:nth-child(1) {
-    margin-top: -6px;
-  }
-
-  .nav-btn span:nth-child(2) {
-    margin-top: -1px;
-  }
-
-  .nav-btn span:nth-child(3) {
-    margin-top: 4px;
-  }
-
-  /* Hamburger button on active */
-  .nav-btn.active span:nth-child(1) {
-    margin-left: -5px;
-    transform: rotate(45deg);
-    transform-origin: left top;
-  }
-
-  .nav-btn.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-btn.active span:nth-child(3) {
-    margin-left: -5px;
-    transform: rotate(-45deg);
-    transform-origin: left bottom;
-  }
-
-  /* Hide drop down menu items */
-  .nav-left,
-  .nav-center,
-  .nav-right {
-    overflow: hidden;
-  }
-}
-
-@media screen and (min-width: 1023px) {
-  .header {
-    padding: 0 2rem;
-  }
-}
-
-/* HEADER */
-
-.content {
-    max-width: 60em;
-    margin: 0 auto 1.5em;
-    width: 80%;
-}
-
-/* .content-no-padding { Removed 0.5.5
-    max-width: 60em;
-    margin: 0 auto;
-    width: 80%;
-} */
-
-/* Content that centers in parent and fills parent div without the extra vertical margin */
-/* .content-fluid { Removed 0.5.5
-    width: 100%;
-    margin: 0 auto;
-} */
-
-.fullscreen {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 100vh;
-}
-
-/* This works well with panel */
-section {
-    display: block;
-}
-
-.panel {
-    padding: 2.5em 0;
-}
-
-/* This works well with spans and maybe even hr */
-.divider {
-    border-top: .05rem solid rgba(173, 173, 173, 0.5);
-    height: .1rem;
-    margin: 1.8rem 0 1.6rem;
-}
-
-.divider[data-content] {
-    margin: .8rem 0;
-}
-
-.divider--v[data-content] {
-    display: block;
-    padding: .8rem;
-}
-
-.divider--v::before {
-    border-left: .05rem solid rgba(173, 173, 173, 0.5);
-    bottom: .4rem;
-    content: "";
-    display: block;
-    left: 50%;
-    position: absolute;
-    top: 0;
-    transform: translateX(-50%);
-}
-
-.divider--v[data-content]::after, .divider[data-content]::after {
-    background: #fff;
-    color: #bcc3ce;
-    content: attr(data-content);
-    left: 50%;
-    display: inline-block;
-    padding: 0 .4rem;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-}
-
-.divider--v[data-content] {
-    left: 50%;
-    padding: .2rem 0;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%,-50%);
-}
-
-/* Removed 0.5.5 */ 
-/* .divider-short {
-    max-width: 15rem;
-    width: 100%;
-} */
-
-/* Hero image div */
-.hero-img {
-    /* Specify the backgroud image yourself */
-    background-size: cover;
-}
-
-.parallax-img {
-    background-attachment: fixed !important;
-}
-
-.hero {
-    /* Parent of hero-body */
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; /* Important to stretch height of hero-body */
-    -webkit-box-orient: vertical;
-    /* -webkit-box-direction: normal; /* Deprecated 0.5.5 
-    -ms-flex-direction: column;
-    flex-direction: column; Stack the items in the container */
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
-.hero-body {
-    -ms-flex-positive: 1;
-    flex-grow: 1; /* Tells the hero-body to take up the entire space */
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    padding: 3rem 1.5rem;
-    align-items: center;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-}
-
-space {
-    display: block;
-    width: 100%;
-    height: 1rem;
-}
-
-space.large {
-    padding: 1rem 0;
-}
-
-space.x-large {
-    padding: 2rem 0;
-}
-
-/* Use for spacing out elements vertically */
-.row {
-    -ms-flex: 1;
-    flex: 1;
-    /* max-width: 100%; */
-    flex-wrap: wrap;
-    padding: 0.5rem;
-}
-
-.r { /* Legacy row pre 0.5.5 */
-    max-width: 100%;
-    padding: .5rem;
-}
-
-.row.row--no-wrap {
-    -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default */
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Can be disabled to remove scroll bar */
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* GRID */
-.row .col {
-    display: block;
-    flex: 1;
-    padding: .15rem .75rem;
-}
-
-.row .col-1 {
-    width: 8.33333333%;
-}
-
-.row .col-2 {
-    width: 16.66666667%;
-}
-
-.row .col-3 {
-    width: 25%;
-}
-
-.row .col-4 {
-    width: 33.33333333%;
-}
-
-.row .col-5 {
-    width: 41.66666667%;
-}
-
-.row .col-6 {
-    width: 50%;
-}
-
-.row .col-7 {
-    width: 58.33333333%;
-}
-
-.row .col-8 {
-    width: 66.66666667%;
-}
-
-.row .col-9 {
-    width: 75%;
-}
-
-.row .col-10 {
-    width: 83.33333333%;
-}
-
-.row .col-11 {
-    width: 91.66666667%;
-}
-
-.row .col-12 {
-    width: 100%;
-}
-
-/* Column offsets on the left side */
-.row .offset-1 {
-    margin-left: 8.33333333%;
-}
-
-.row .offset-2 {
-    margin-left: 16.66666667%;
-}
-
-.row .offset-3 {
-    margin-left: 25%;
-}
-
-.row .offset-4 {
-    margin-left: 33.33333333%;
-}
-
-.row .offset-5 {
-    margin-left: 41.66666667%;
-}
-
-.row .offset-6 {
-    margin-left: 50%;
-}
-
-.row .offset-7 {
-    margin-left: 58.33333333%;
-}
-
-.row .offset-8 {
-    margin-left: 66.66666667%;
-}
-
-.row .offset-9 {
-    margin-left: 75%;
-}
-
-.row .offset-10 {
-    margin-left: 83.33333333%;
-}
-
-.row .offset-11 {
-    margin-left: 91.66666667%;
-}
-
-.row .offset-12 {
-    margin-left: 100%;
-}
-
-/* Auto align col to left in row */
-.row .offset-right {
-    margin-left: 0;
-    margin-right: auto;
-}
-
-/* Auto align col to middle in row */
-.row .offset-center {
-    margin-left: auto;
-    margin-right: auto;
-}
-/* Auto align col to right in row */
-.row .offset-left {
-    margin-left: auto;
-    margin-right: 0;
-}
-
-/* Use in parent div of fluid col
-.fluid-container {
-    display: flex;
-    overflow: auto;
-}
-
-/* Wrap controls instead on overflow 
-.fluid-container.wrap {
-    -webkit-align-items: center;
-    align-items: center;
-    display: flex;
-    display: -ms-flexbox;
-    -ms-flex-align: center;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-/* Resizes elements in a row equally given the number of elements located in it 
-.fluid-container .col-fluid {
-    display: block;
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-negative: 1;
-    flex-shrink: 1;
-}
-
-/* No expansion for specific col-fluid columns 
-.fluid-container .col-fluid.no-flex {
-    flex-grow: 0;
-    flex-shrink: 0;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
-    -ms-flex-negative: 0;
-} */
-
-/* Some offset values */
-.row [class^="col-"],
-.row [class*=" col-"] {
-    float: left; /* Keeps the elements in 1 row */
-    padding: 0 0.5rem;
-}
-
-/* Columns without the spacing */
-.row.no-space [class^="col-"],
-.row.no-space [class*=" col-"] {
-    padding: 0;
-}
-
-/* Ignore overflow in columns */
-/* .row.expand { DEPRECATED 0.5.5
-    -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default 
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Can be disabled to remove scroll bar 
-} */
-
-/* Only for divs with .expand so they can go past the parent div width */
-/* .row.expand [class^="col-"], DEPRECATED 0.5.5, no use
-.row.expand [class*=" col-"] {
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
-} */
-
-/* Used for aligning controls next to each other */
-.row.has-controls {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-}
-
-/* Divider for multiple elements in a div */
-/* .divided > .fluid-container:not(.row),
-.divided > .row [class^="col-"], .divided > .row [class*=" col-"] { DEPRECATED 0.5.5
-    box-shadow: -1px 0 0 0 rgba(34, 36, 38, 0.15);
-} */
-
-/* Remove border in first child */
-/* .divided > .row [class^="col-"]:first-child,
-.divided > .row [class*=" col-"]:first-child {
-    box-shadow: none; DEPRECATED 0.5.5
-} */
-
-.level {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-
-.level-left {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; /* Start for left */
-    margin-right: 1rem;
-}
-
-.level-right {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end; /* End for right */
-}
-
-.level-item {
-    /* Centers items */
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-/* Used to stretch the contents of div in level to fill */
-.level-content {
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-negative: 1;
-    flex-shrink: 1;
-    text-align: left;
-    width: 100%;
-}
-
-/* Width CSS */
-.w-10 {
-    width: 10%;
-}
-
-.w-20 {
-    width: 20%;
-}
-
-.w-30 {
-    width: 30%;
-}
-
-.w-40 {
-    width: 40%;
-}
-
-.w-50 {
-    width: 50%;
-}
-
-.w-60 {
-    width: 60%;
-}
-
-.w-70 {
-    width: 70%;
-}
-
-.w-80 {
-    width: 80%;
-}
-
-.w-90 {
-    width: 90%;
-}
-
-.w-100 {
-    width: 100%;
-}
-
-@media screen and (min-width: 769px) {
-
-    .row {
-        display: flex;
-    }
-
-    .level-right {
-        margin-left: 1rem;
-    }
-
-    /* Keep all level children the same height */
-    .level.fill-height {
-        -webkit-box-align: stretch; /* Box Align and align items to stretch to make nav-items fill up parent height */
-        -ms-flex-align: stretch;
-        align-items: stretch;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-}
-
-/* MOBILE */
-@media screen and (max-width: 768px) {
-    .row {
-        margin-top: 0;
-    }
-
-    .row [class^="col-"]:not(.ignore-screen),
-    .row [class*=" col-"]:not(.ignore-screen) {
-        /* Remove the grid structure for smaller screens */
-        width: 100%;
-        margin-top: 1rem;
-        margin-left: 0;
-    }
-
-    /* Increase space with cards */
-    .row [class^="col-"]:not(.ignore-screen),
-    .row [class*=" col-"]:not(.ignore-screen) {
-        margin-top: 1rem;
-    }
-
-    /* .fluid-container { DEPRECATED 0.5.5
-        display: inherit;
-    } */
-
-    /* Dividers for mobile layout */
-    .divided > .row [class^="col-"],
-    .divided > .row [class*=" col-"] {
-        box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
-    }
-
-    .level.ignore-screen,
-    .level-left.ignore-screen,
-    .level-right.ignore-screen {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-
-    .level.fill-height {
-        display: inherit; /* Allow children to expand */
-    }
-}
-
-/* LINKS */
-
-a {
-    color: var(--cirrus-link);
-    display: block; /* Allow this to be overwritten, never set to inline-block */
-    font-weight: 600;
-    padding: 2px;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-a:hover {
-    color: var(--cirrus-link-dark);
-    transition: all 0.3s;
-}
-
-a:visited,
-a:hover,
-a:active {
-    backface-visibility: hidden;
-    text-decoration: none;
-}
-
-.subtitle a {
-    padding: 0; /* Removes weird offset in subtitle links */
-}
-
-/* a.display-block { Deprecated 0.5.5
-    display: block;
-} */
-
-a.underline {
-    text-decoration: underline;
-}
-
-p a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, blockquote a, article a {
-    display: inline;
-}
-
-a .btn, a button {
-    margin-bottom: 0; /* Remove random excess space */
-}
-/* LISTS */
-
-ul, ol {
-  margin: 1rem 0 1rem 1rem;
-  padding-inline-start: 0.5rem;
-}
-
-ul {
-  list-style: disc;
-}
-
-/* Handle nesting */
-ul ul, ol ul, ul ol, ol ol {
-  margin: 0 0 0 1rem;
-}
-
-/* Nested list bullet types */
-ul ul {
-  list-style-type: circle;
-}
-
-ul ul ul {
-  list-style-type: square;
-}
-
-ol ol {
-  list-style: lower-alpha;
-}
-
-ol ol ol {
-  list-style: upper-roman;
-}
-
-/* Description lists */
-
-dl {
-  margin: 1rem 0;
-}
-
-/* Detail title */
-dt {
-  font-weight: 700;
-}
-
-dd {
-    margin-bottom: .5rem;
-}
-
-li {
-  margin: 0.25rem 0;
-}
-
-/* Exclude margin in menus */
-li:not('.dropdown-menu li'):last-child {
-  margin-bottom: 1em;
-}
-
-/* MISC */
-ul.no-bullets {
-  list-style: none;
-}
-
-/* MENU LISTS */
-.menu {
-  font-size: 1rem;
-}
-
-ul.menu {
-  list-style: none;
-  margin: .5rem 0;
-}
-
-/* Style headers to have even space distribution. */
-.menu-title:not(:first-child) {
-  margin-bottom: 1rem;
-}
-
-.menu-title:not(:last-child) {
-  margin-top: 1rem;
-}
-
-/* Style menu items */
-.menu .menu-item a {
-  color: #555;
-  display: block;
-  padding: 0.5em 0.75em;
-  border-radius: 3px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  -webkit-transition: all var(--animation-duration);
-  transition: all var(--animation-duration);
-}
-
-.menu .menu-item:hover > a {
-  background-color: rgba(208, 208, 208, 0.3);
-  color: #d43644;
-  -webkit-transition: all var(--animation-duration);
-  transition: all var(--animation-duration);
-  
-}
-
-.menu .menu-item.selected > a {
-  color: #fff;
-  background-color: var(--cirrus-primary);
-}
-
-.menu .menu-item .menu-addon {
-  padding: 0.3rem;
-  z-index: 1;
-  position: relative;
-  color: var(--cirrus-fg);
-  cursor: pointer;
-  float: left;
-  margin-right: .1rem;
-  -webkit-transition: all var(--animation-duration);
-  transition: all var(--animation-duration);
-}
-
-.menu .menu-item .menu-addon .icon {
-  font-size: inherit;
-}
-
-/* Darken on hover to differentiate from menu-item */
-.menu .menu-item .menu-addon:hover {
-  background-color: rgba(60, 60, 60, 0.25);
-  -webkit-transition: all var(--animation-duration);
-  transition: all var(--animation-duration);
-}
-
-.menu .menu-item .menu-addon.right {
-  float: right;
-  margin-right: 0;
-  margin-left: .1rem
-}
-
-.menu .menu-item.selected .menu-addon {
-  color: #fff;
-}
-
-/* Style sub menus inside a menu */
-.menu .menu-item ul {
-    border-left: 1px solid #dbdbdb;
-    margin: 0.75rem;
-    padding-left: 0.75rem;
-}
-
-/* Menu item divider */
-.menu .divider {
-    border-top: .1rem solid #eee;
-    height: .1rem;
-    margin: 1rem 0;
-}
-
-/* Title for the section separated by the divider */
-.menu .divider::after {
-  content: attr(data-label); /* Text that will be displayed */
-  background-color: var(--cirrus-bg);
-  color: #b7b7b7;
-  display: inline-block;
-  padding: 0 .7rem;
-  margin: .5rem;
-  font-size: .7rem;
-  -webkit-transform: translateY(-1.1rem);
-    transform: translateY(-1.1rem);
-}
-
-/* Dropdown menu for dropdown buttons */
-.list-dropdown {
-  display: inline-block;
-  position: relative;
-}
-
-.list-dropdown .menu {
-  position: absolute;
-  top: 75%;
-  left: 0;
-  -webkit-animation: slide-down var(--animation-duration) ease 1;
-  animation: slide-down .1s ease 1;
-  background-color: var(--cirrus-bg);
-  border-radius: .2rem;
-          box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
-  margin: 0;
-  opacity: 0;
-  min-width: 15rem;
-  padding: 0.25rem 0.5rem;
-  -webkit-transform: translateY(.5rem);
-  transform: translateY(.5rem);
-  z-index: 10;
-  pointer-events: none; /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
-  overflow: hidden;
-  -webkit-transition: all var(--animation-duration);
-  transition: all var(--animation-duration);
-}
-
-.list-dropdown.dropdown-right .menu {
-  left: auto;
-  right: 0;
-}
-
-/* Allow for shown and :focus selectors for JS and native CSS transitions */
-.list-dropdown.shown .menu,
-.list-dropdown .btn-dropdown:focus + .menu,
-.list-dropdown .menu:hover {
-  display: block;
-  opacity: 1;
-  top: 100%;
-  z-index: 100;
-  pointer-events: auto; /* Restore pointer events */
-  height: auto;
-  -webkit-transition: all var(--animation-duration);
-  transition: all var(--animation-duration);
-}
-
-.list-dropdown .btn-group .btn-dropdown:nth-last-child(2) {
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-}
-
-/* TREE */
-/* Tree Navigation Menu */
-.tree {
-  margin: 0;
-}
-
-/* The title of the tree menu */
-.tree .tree-item .tree-item-header {
-  display: block;
-  padding: .25rem .5rem;
-  cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: 600; /* Keep styling consistent with menu-items */
-}
-
-/* The dropdown glyph of the tree menu */
-.tree .tree-item .tree-item-header .icon {
-  -webkit-transition: all var(--animation-duration);
-  transition: all var(--animation-duration);
-}
-
-/* Expand the tree-item-body (has menu-items) */
-.tree .tree-item input:checked ~ .tree-item-body {
-  max-height: 100vh;
-}
-
-/* Rotate the dropdown glyph */
-.tree .tree-item input:checked ~ .tree-item-header .icon {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-/* Container for the menu-items of the tree menu */
-.tree .tree-item .tree-item-body {
-  max-height: 0; /* Hidden at first */
-  margin-left: 1.5rem;
-  overflow: hidden;
-  -webkit-transition: all var(--animation-duration);
-  transition: all var(--animation-duration);
-}
-
-/* TODO: Docs */
-/* The body that will encompass the tree-nav and tree-nav-content */
-.tree-nav-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100vh;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-
-/* A fixed menu on the side with a tree component */
-.tree-nav {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
-  padding: 2rem 1rem 2rem 2rem;
-  min-width: 15rem;
-  height: 100vh;
-  overflow: auto;
-}
-
-/* The container for the tree component to prevent it from overflowing */
-.tree-nav .tree-nav-container {
-  overflow-y: auto;
-  top: 4rem;
-  bottom: 1rem;
-}
-
-/* Darkened area that will close the navbar when clicked for mobile only */
-.tree-nav + .tree-nav-close {
-  display: none; /* Not needed in desktop */
-}
-
-/* Push document body further right to account for sidebar space */
-.tree-nav + .tree-nav-content {
-    max-width: 100%;
-    padding: 2rem;
-    -ms-flex: 1 0 auto;
-    -webkit-box-flex: 1;
-            flex: 1 0 auto;
-    overflow: auto;
-    margin: 0;
-}
-
-/* The body where all other HTML components are entered if a tree-nav is used */
-.tree-nav-content {
-  width: 100%;
-  overflow: auto;
-  margin: 0;
-  padding: 2rem;
-}
-
-/* Decrease font-weight in tree-nav menu-items */
-.tree-item-body .menu .menu-item a {
-  font-weight: 400;
-}
-
-@media screen and (max-width: 768px) {
-  /* Hide the menu to the side by default */
-  .tree-nav {
-    height: 100%;
-    left: 0;
-    overflow-y: auto;
-    padding: 3rem 1.5rem;
-    position: fixed;
-    top: 0;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
-    -webkit-transition: -webkit-transform var(--animation-duration) ease;
-    transition: transform var(--animation-duration) ease;
-    transition: -webkit-transform var(--animation-duration) ease;
-    z-index: 400;
-  }
-
-  /* Open the menu from the side */
-  /* Use a link and add the id of this element as the url */
-  .tree-nav:target {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
-    -webkit-transition: -webkit-transform var(--animation-duration) ease;
-    transition: -webkit-transform var(--animation-duration) ease;
-    transition: transform var(--animation-duration) ease;
-  }
-
-  /* Create the area to click to close the menu */
-  .tree-nav .tree-nav-close {
-    background-color: rgba(0, 0, 0, .15);
-    display: none;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: 300;
-  }
-
-  /* Show the darkened area when the tree nav menu is clicked */
-  .tree-nav:target + .tree-nav-close {
-    display: block;
-    background-color: rgba(0, 0, 0, .15);
-    height: 100%;
-    left: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: 300;
-  }
-
-  /* Reset max-width in mobile */
-  .tree-nav + .tree-nav-body {
-    max-width: inherit;
-  }
-
-  /* Header bar for mobile websites with the tree-nav */
-  .tree-nav-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(248, 249, 250, .8);
-    height: 3.5rem;
-    padding: .75rem .5rem;
-    text-align: center;
-    z-index: 300;
-  }
-
-  /* For dropdown menu used in header (different from header dropdown) */
-  .nav-item.has-sub .list-dropdown { width: 100%; }
-  .nav-item.has-sub .list-dropdown .btn-group { width: 100%; }
-  .nav-item.has-sub .list-dropdown .btn-group .btn-dropdown { flex-grow: 0; }
-
-  /* Show the dropdown menu in mobile hamburger menu relative with the header menu */
-  .list-dropdown .btn-dropdown:focus + .menu {
-    position: relative;
-    width: 100%;
-  }
-}
-/* MEDIA CSS */
-/* Handles images, videos, figures, etc */
-
-/* Altered, originally just video in 0.4.6 */
-video.video-fullscreen {
-  position: absolute;
-  height: 100vh;
-  object-fit: cover;
-  width: 100%;
-  z-index: -1;
-}
-
-/* Add to parent container to make media child fill container */
-.media-stretch {
-    display: block;
-    padding: 0;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-}
-
-/* Add pseudoclass to allow media to have height (default height is 0) */
-.media-stretch::before {
-    content: "";
-    display: block;
-    padding-bottom: 56.25%; /* 9 / 16  for 16:9 ratio */
-}
-
-/* Force media embed to fill parent container */
-.media-stretch iframe,
-.media-stretch embed,
-.media-stretch object {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%; /* Make sure media does exceed or go under boundary limit */
-    height: 100%;
-}
-
-/* For HTML5 video objects */
-.media-stretch video {
-    height: auto;
-    max-width: 100%;
-    width: 100%;
-}
-
-/* Alternate media ratios */
-.media-stretch.rat-4-3::before {
-    padding-bottom: 75%;
-}
-
-.media-stretch.rat-1-1::before {
-    padding-bottom: 100%;
-}
-
-/* FIGURES */
-/* For flexible media display */
-.fig {
-    margin: 0 0 0.5rem 0; /* Small margin at the bottom */
-}
-
-.fig .fig-caption {
-    margin-top: 1rem;
-}
-
-/* IMAGES */
-.img-stretch {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.img-cover {
-    object-fit: cover;
-}
-
-.img-contain {
-    object-fit: contain;
-}
-
-/* The base of the modal dialog, which is an overlay of the webpage */
-.modal {
-    position: fixed; /* Scrolls with the user */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0; /* Initially hidden */
-    padding: 1rem;
-    display: none; /* Doesn't block the elements underneath */
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; /* Vertical centering */
-    pointer-events: none; /* Prevent any pointer events made to modal while hidden */
-}
-
-/* When the modal dialog is visible */
-.modal:target, .modal.shown {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    opacity: 1;
-    z-index: 999;
-    pointer-events: auto; /* Re-enable pointer events */
-}
-
-/* The div in the modal dialpog used to create the translucent background */
-.modal:target .modal-overlay,
-.modal.shown .modal-overlay {
-    position: absolute; /* Absolute inside of the modal container */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    background-color: rgba(54, 59, 68, 0.5);
-}
-
-/* The modal dialog body with the text itself */
-.modal-content {
-    background-color: var(--cirrus-bg);
-    padding: 0;
-    display: block;
-    border-radius: 3px;
-    box-shadow: 0 .4rem 1rem rgba(54, 59, 68, .3);
-    z-index: 1;
-    color: var(--cirrus-fg);
-    max-width: 40rem; /* 640px */
-}
-
-/* Different size modals */
-.modal.modal-small .modal-content {
-    max-width: 20rem; /* 320px */
-}
-
-.modal.modal-large .modal-content {
-    max-width: 60rem; /* 960px */
-}
-
-.modal-content h1,
-.modal-content h2,
-.modal-content h3,
-.modal-content h4,
-.modal-content h5,
-.modal-content h6 {
-    color: var(--cirrus-fg);
-}
-
-.modal:target .modal-container,
-.modal.shown .modal-container {
-  -webkit-animation: slide-down var(--animation-duration) ease 1;
-  animation: slide-down var(--animation-duration) ease 1;
-  z-index: 1;
-}
-
-/* Restrict width  */
-.modal-content.small {
-    max-width: 32rem;
-}
-
-.modal-content .modal-header {
-    padding: 1rem 3rem;
-}
-
-.modal-content .modal-header .modal-title {
-    font-weight: bolder;
-    font-size: 1.4rem;
-}
-
-.modal-content .modal-body {
-    padding: 1rem 3rem;
-    overflow-y: auto;
-    max-height: 50vh; /* Max height is 50% of viewport height which prevents dialog from extetnding past screen */
-    position: relative;
-}
-
-.modal-content .modal-footer {
-    padding: 1rem 3rem;
-    text-align: right;
-}
-
-/* MODAL ANIMATIONS */
-.modal.modal-animated--dropdown {
-    -webkit-animation: slide-down var(--animation-duration) ease 1;
-    animation: slide-down var(--animation-duration) ease 1;
-}
-
-/* Visible state */
-.modal.modal-animated--zoom-in, .modal.modal-animated--zoom-out {
-    display: -webkit-box; /* Force dialog to appear in the center */
-    display: -ms-flexbox;
-    display: flex;
-    opacity: 0;
-    transition: 300ms all ease;
-}
-.modal:target.modal-animated--zoom-in, .modal:target.modal-animated--zoom-out {
-    opacity: 1;
-    transition: 300ms all ease;
-}
-.modal.modal-animated--zoom-in .modal-content {
-    transform: scale(0.8);
-    transition: 300ms all ease;
-}
-.modal:target.modal-animated--zoom-in .modal-content, .modal:target.modal-animated--zoom-out .modal-content {
-    transform: scale(1);
-    transition: 300ms all ease;
-}
-
-.modal.modal-animated--zoom-out .modal-content {
-    transform: scale(1.2);
-    transition: 300ms all ease;
-}
-
-/* Keyframes for slide down animation */
-@-webkit-keyframes slide-down{
-    0%{
-        opacity:0;
-        -webkit-transform:translateY(-3rem);
-        transform:translateY(-3rem)
-    }
-    100%{
-        opacity:1;
-        -webkit-transform:translateY(0);
-        transform:translateY(0)
-    }
-}
-@keyframes slide-down{
-    0%{
-        opacity:0;
-        -webkit-transform:translateY(-3rem);
-        transform:translateY(-3rem)
-    }
-    100%{
-        opacity:1;
-        -webkit-transform:translateY(0);
-        transform:translateY(0)
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .modal-content {
-        max-width: 90%;
-    }
-}
-/* TABLE */
-
-.table {
-    margin-bottom: 1.5rem;
-    width: 100%;
-    border-collapse: collapse; /* Allows us to set 0 margin in table cells */
-    border-spacing: 0;
-    text-align: center; /* Text center by default */
-}
-
-.table td,
-.table th {
-    border: 1px solid rgba(219, 219, 219, 0.5);
-    border-width: 0 0 1px;
-    padding: 0.75rem;
-    vertical-align: top;
-    text-align: inherit;
-    margin: 0;
-}
-
-.table tr {
-    transition: all 0.3s;
-}
-
-.table caption {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    color: #6c757d;
-    text-align: left;
-    caption-side: bottom;
-}
-
-.table tr:hover,
-.table.striped tbody tr:nth-child(even):hover {
-    background-color: rgba(216, 216, 216, 0.15);
-}
-
-/* Thicker border for table header */
-.table thead th,
-.table thead {
-    border-bottom: 2px solid rgba(219, 219, 219, 0.49);
-}
-
-.table.bordered thead th,
-.table.bordered thead {
-    border-bottom: 1px solid rgba(219, 219, 219, 0.5);
-}
-
-.table thead th,
-.table tfoot th {
-    padding: 1rem;
-}
-
-.table tfoot th {
-    border-top: 2px solid rgba(219, 219, 219, 0.5);
-    border-bottom: none;
-}
-
-/* CUSTOM STYLES */
-/* All borders */
-.table.bordered td,
-.table.bordered th {
-    border: 1px solid rgba(219, 219, 219, 0.5);
-}
-
-.table.bordered thead td,
-.table.borderd thead {
-    border-width: 1px;
-}
-
-/* Striped table */
-.table.striped tbody tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* Decrease padding */
-.table.small td,
-.table.small th {
-    padding: 0.25rem 0.75rem;
-}
-
-/* Fixed title table */
-.table.fixed-head thead {
-    position: relative;
-    display: block;
-}
-
-.table.fixed-head tbody {
-    height: 200px; /* Set the height you want */
-    display: block; /* Needed */
-    overflow: auto; /* Shows scrollbars */
-}
-
-.table.fixed-head tr {
-    display: table;
-    width: 100%; /* Forces row to span container */
-}
-
-.table tr.selected {
-    /* Style a selected row */
-    background-color: var(--cirrus-primary);
-    color: #fff;
-}
-
-/* Borderless Table (for inner cells) */
-.table.borderless thead th,
-.table.borderless th,
-.table.borderless td {
-    border: none;
-}
-
-/* Color scheme for Cirrus */
-:root {
-    --cirrus-fg: #374054;
-    --cirrus-bg: #fff;
-
-    --cirrus-primary: #f03d4d;
-    --cirrus-accent-hover: #d62939;
-    --cirrus-accent-border: #c21b2b;
-    --cirrus-light: #f6f9fc;
-    --cirrus-gray: #d5d7dc;
-    --cirrus-dark: #363636;
-    --cirrus-link: #5e5cc7;
-    --cirrus-link-dark: #4643e2;
-    --cirrus-info: #2972fa;
-    --cirrus-success: #0dd157;
-    --cirrus-warning: #fab633;
-    --cirrus-danger: #fb4143;
-
-    --cirrus-light-hover: #d9e6f2;
-    --cirrus-dark-hover: #424242;
-    --cirrus-info-hover: #2368e9;
-    --cirrus-link-hover: #f8f7ff;
-    --cirrus-success-hover: #00b147;
-    --cirrus-warning-hover: #f9a90e;
-    --cirrus-danger-hover: #f1393c;
-
-    --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-
-    --cirrus-code-bg: #ffdadd;
-    --cirrus-code-fg: #dc4753;
-
-    --cirrus-form-group-bg: #f8f9fa;
-    --cirrus-form-group-fg: #909090;
-
-    --toast-primary-bg: rgba(49, 59, 80, 0.9);
-
-    --animation-duration: .2s;
-}
-/* UTILS */
-/* Utility classes to help solve some very annoying issues */
-
-.u-inline {
-  display: inline;
-}
-
-.u-inline-block {
-  display: inline-block;
-}
-
-.u-inline-flex {
-  display: -webkit-inline-bpx;
-  display: -ms-inline-flexbox;
-  display: -webkit-inline-box;
-  display: inline-flex;
-}
-
-.u-block {
-  display: block;
-}
-
-/*
-   When using floats, clearfix allows the container to automatically resize so that
-   other elements are not blocked by children.
-*/
-
-.u-clearfix:after {
-  clear: both;
-  content: " ";
-  display: table;
-}
-
-/* This is mainly to keep elements from overlapping when using floats */
-.u-clear-left {
-  clear: left;
-}
-
-.u-clear-right {
-  clear: right;
-}
-
-.u-clear-both {
-  clear: both;
-}
-
-.u-pull-left {
-  float: left;
-}
-
-.u-pull-right {
-  float: right;
-}
-
-.u-text-center {
-  text-align: center;
-}
-
-/* Center element - best used for hero bodies or text */
-.u-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-
-.u-center-alt,
-.u-center-alt:hover,
-.u-center-alt:active {
-  /* If flexbox method fails, this works for elements with unknown dimensions */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.u-vertical-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-}
-
-.u-horizontal-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.u-this-overlay {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  position: absolute;
-}
-
-.u-hide-overflow {
-  overflow: hidden !important;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-.u-text-center {
-  text-align: center;
-}
-
-.u-text-left {
-  text-align: left;
-}
-
-.u-text-right {
-  text-align: right;
-}
-
-.u-hide {
-  display: none !important;
-}
-
-.u-disabled {
-  cursor: not-allowed;
-}
-
-.u-unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-.u-box {
-  background-color: white;
-  border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-  display: block;
-  padding: 1rem;
-}
-
-.u-box:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.u-fill-width {
-  width: 100%;
-}
-
-.u-no-margin {
-  margin: 0 !important;
-}
-
-.u-no-padding {
-  padding: 0 !important;
-}
-
-.u-margin-auto {
-  margin: 0 auto !important;
-}
-
-/* Round the corners of the element */
-.u-round {
-  border-radius: 0.1rem;
-}
-
-/* Turns element into a circle */
-.u-circle {
-  border-radius: 50%;
-}
-
-/* Remove outline or drop shadow when element is focused */
-.u-no-shadow {
-  box-shadow: none;
-}
-
-/* Responsiveness and Element Hiding */
-
-/* Do the actual balancing only on larger screens */
-@media screen and (min-width: 769px) {
-  .level,
-  .level-left,
-  .level-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-/* Hide elements based on screen size */
-@media screen and (max-width: 768px) {
-  .u-hide-mobile {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  /* Hide on devices that are tablets or larger */
-  .u-hide-tablet {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1023px) {
-  .u-hide-tablet-only {
-    display: none !important;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  /* Hide element on laptops, desktops, etc */
-  .u-hide-desktop {
-    display: none !important;
-  }
-}
-
 /* ANIMATIONS */
 
 /* Spinning loading animation */
@@ -4007,7 +450,6 @@ video.video-fullscreen {
 
 .card button,
 .card .btn {
-    display: inline-block;
     display: inline-block;
     border-color: transparent;
 }
@@ -5555,4 +1997,3606 @@ a.tag:hover {
   -webkit-transform: translate(-.5rem, 50%);
   -moz-transform: translate(-.5rem, 50%);
   -ms-transform: translate(-.5rem, 50%);
+}
+/* BUTTONS */
+
+/* Button styling */
+/* Un-themed */
+button,
+.btn,
+[type="submit"] {
+    display: block;
+    line-height: 2rem;
+    overflow: hidden;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0var(--animation-duration);
+    background-color: #fefefe;
+    border-color: #d9d9d9;
+    color: #737373;
+    font-size: 0.75rem;
+    letter-spacing: 0.03rem;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    min-width: 2rem;
+    user-select: none;
+    margin-bottom: 1rem;
+    outline: none;
+    --btn-color: #fefefe;
+    --btn-fg: #737373;
+    --btn-border-color: #d9d9d9;
+}
+
+button:hover,
+.btn:hover,
+[type="submit"]:hover {
+    transition: all var(--animation-duration);
+}
+
+.btn:active,
+button:active,
+[type="submit"]:active {
+    transition: var(--animation-duration) ease;
+}
+
+/* Default button colors */
+button:hover,
+.btn:hover,
+[type="submit"]:hover {
+    background-color: #eee;
+    --btn-color: #eee;
+}
+
+/* Make the loading circle, if present, white when button is active */
+.btn.loading:active::after,
+button.loading:active::after,
+[type="submit"].loading:active::after {
+    transition: var(--animation-duration) ease;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+button.btn-animated,
+[type="submit"].btn-animated,
+.btn.btn-animated {
+    transition: calc(var(--animation-duration) / 2) ease;
+}
+
+button.btn-animated:active,
+[type="submit"].btn-animated:active,
+.btn.btn-animated:active {
+    -webkit-transform: scale(0.98);
+    transform: inherit, scale(0.98);
+    transition: calc(var(--animation-duration) / 2) ease;
+}
+
+.btn:focus,
+button:focus,
+input[type="submit"]:focus {
+    outline: none;
+}
+
+.btn:disabled,
+button:disabled,
+[type="submit"]:disabled {
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+button.btn-close {
+    background-color: rgba(10, 10, 10, 0.2);
+    border: none;
+    border-radius: 290486px;
+    cursor: pointer;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 0;
+    height: 20px;
+    outline: 0;
+    position: relative;
+    vertical-align: top;
+    width: 20px;
+    padding: 0;
+    min-width: 20px;
+}
+
+button.btn-close:hover {
+    background-color: rgba(10, 10, 10, 0.3);
+}
+
+/* Render the x in the close button */
+button.btn-close::before,
+button.btn-close::after {
+    background-color: var(--cirrus-bg);
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+button.btn-close::before {
+    height: 2px;
+    width: 50%;
+}
+
+button.btn-close::after {
+    height: 50%;
+    width: 2px;
+}
+
+/* Adds small margin around buttons */
+.btn-container {
+    margin: 0.5rem;
+    overflow: visible;
+}
+
+/* BUTTON STYLES */
+/* Regular */
+.btn-transparent {
+    --btn-color: transparent;
+    --btn-fg: var(--cirrus-dark);
+    --btn-border-color: transparent;
+}
+.btn-transparent.outline { --btn-color: var(--cirrus-dark); }
+.btn-transparent:hover { --btn-color: rgba(0, 0, 0, .1); }
+.btn-transparent:focus { box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5); }
+
+.btn-light {
+    --btn-color: var(--cirrus-light);
+    --btn-fg: var(--cirrus-dark);
+    --btn-border-color: var(--cirrus-light);
+}
+.btn-light:hover { --btn-color: var(--cirrus-light-hover); }
+.btn-light:focus { box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5); }
+
+.btn-dark {
+    --btn-color: var(--cirrus-dark);
+    --btn-fg: var(--cirrus-light);
+    --btn-border-color: var(--cirrus-dark);
+}
+.btn-dark:hover { --btn-color: var(--cirrus-dark-hover); }
+.btn-dark.outline:hover { --btn-color: var(--cirrus-dark); }
+.btn-dark:focus { box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
+
+.btn-black {
+    --btn-color: #000;
+    --btn-fg: var(--cirrus-light);
+    --btn-border-color: #000;
+}
+.btn-black:hover { --btn-color: #000; }
+.btn-black:focus { box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
+
+.btn-primary {
+    --btn-color: var(--cirrus-primary);
+    --btn-fg: var(--cirrus-light);
+    --btn-border-color: var(--cirrus-accent-border);
+}
+.btn-primary:hover { --btn-color: var(--cirrus-accent-hover); }
+.btn-primary.outline:hover { --btn-color: var(--cirrus-primary); }
+.btn-primary:focus { box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, 0.5); }
+
+.btn-info {
+    --btn-color: var(--cirrus-info);
+    --btn-fg: var(--cirrus-light);
+    --btn-border-color: var(--cirrus-info);
+}
+.btn-info:hover { --btn-color: var(--cirrus-info-hover); }
+.btn-info.outline:hover { --btn-color: var(--cirrus-info); }
+.btn-info:focus { box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5); }
+
+.btn-link {
+    --btn-color: var(--cirrus-link);
+    --btn-fg: var(--cirrus-light);
+    --btn-border-color: var(--cirrus-link);
+}
+.btn-link.outline { --btn-fg: var(--cirrus-link); border: 1px solid transparent; }
+.btn-link:hover { --btn-color: var(--cirrus-link-dark); }
+.btn-link.outline:hover { --btn-color: var(--cirrus-link-hover); border: 1px solid transparent; text-decoration: underline; }
+.btn-link:focus { box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5); }
+
+.btn-success {
+    --btn-color: var(--cirrus-success);
+    --btn-fg: var(--cirrus-light);
+    --btn-border-color: var(--cirrus-success);
+}
+.btn-success:hover { --btn-color: var(--cirrus-success-hover); }
+.btn-success.outline:hover { --btn-color: var(--cirrus-success); }
+.btn-success:focus { box-shadow: 0 0 0 0.2rem rgba(13, 210, 89, 0.5); }
+
+.btn-warning {
+    --btn-color: var(--cirrus-warning);
+    --btn-fg: var(--cirrus-dark);
+    --btn-border-color: var(--cirrus-warning);
+}
+.btn-warning:hover { --btn-color: var(--cirrus-warning-hover); }
+.btn-warning.outline:hover { --btn-color: var(--cirrus-warning); }
+.btn-warning:focus { box-shadow: 0 0 0 0.2rem rgba(250, 180, 51, 0.5); }
+
+.btn-danger {
+    --btn-color: var(--cirrus-danger);
+    --btn-fg: var(--cirrus-light);
+    --btn-border-color: var(--cirrus-danger);
+}
+.btn-danger:hover { --btn-color: var(--cirrus-danger-hover); }
+.btn-danger.outline:hover { --btn-color: var(--cirrus-danger); }
+.btn-danger:focus { box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5); }
+
+[class^="btn-"], [class*=" btn-"] {
+    background-color: var(--btn-color); 
+    border: 1px solid var(--btn-border-color);
+    color: var(--btn-fg);
+    transition: all var(--animation-duration);
+}
+
+[class^="btn-"]:hover, [class*=" btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all var(--animation-duration); }
+
+/* Outline Variants */
+[class^="btn-"].outline, [class*=" btn-"].outline {
+    background-color: transparent; 
+    color: var(--btn-color);
+}
+[class^="btn-"].outline:hover, [class*=" btn-"].outline:hover {
+    background-color: var(--btn-color);
+    color: var(--btn-fg);
+    transition: all var(--animation-duration);
+}
+
+/* Right of input */
+.has-controls.input:not([class*="left action"]) > button:last-child,
+.has-controls.input:not([class*="left action"]) > .btn:last-child > .btn {
+    border-radius: 0 0.28571429rem 0.28571429rem 0;
+}
+
+.has-controls.input:not([class*="right action"]) > button:last-child,
+.has-controls.input:not([class*="right action"]) > .btn:last-child > .btn {
+    border-radius: 0.28571429rem 0 0 0.28571429rem;
+}
+
+/* Tiny button */
+.btn-tiny {
+    line-height: 1.5rem;
+    padding: 0 0.25rem;
+    font-size: 50%;
+}
+
+/* Small button */
+.btn-small {
+    line-height: 2.4rem;
+    padding: 0 0.5rem;
+    font-size: 70%;
+}
+
+/* Big button */
+.btn-large {
+    line-height: 3.5rem;
+    padding: 0 2rem;
+    font-size: 90%;
+}
+
+.btn-xlarge {
+    line-height: 4.5rem;
+    padding: 0 2rem;
+    font-size: 110%;
+}
+
+/* Make the loader white so it is visible */
+.loading.btn-accent:after {
+    border: 2px solid #fff;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+/* Override default behavior of aligning font awesome icons to the top */
+button .fa-wrapper,
+.btn .fa-wrapper,
+[type="submit"] .fa-wrapper {
+    vertical-align: baseline;
+}
+
+button .fa-wrapper.pad-right,
+.btn .fa-wrapper.pad-right,
+[type="submit"] .fa-wrapper.pad-right {
+    margin-right: 0.4rem;
+}
+
+button .fa-wrapper.pad-left,
+.btn .fa-wrapper.pad-left,
+[type="submit"] .fa-wrapper.pad-left {
+    margin-left: 0.4rem;
+}
+
+/* Alternatives to pad-left and pad-right */
+button span:first-child,
+.btn span:first-child,
+[type="submit"] span:first-child {
+    margin-right: 0.2rem;
+}
+
+button span:last-child,
+.btn span:last-child,
+[type="submit"] span:last-child {
+    margin-left: 0.2rem;
+}
+/* Deprecated 0.5.5
+/* Button with accent 
+.btn-accent {
+    background-color: var(--cirrus-primary);
+    color: #fff;
+    border-color: var(--cirrus-accent-border);
+}
+
+.btn-accent:hover {
+    background-color: var(--cirrus-accent-hover);
+}
+
+.btn-accent:active {
+    background-color: var(--cirrus-accent-border);
+} */
+
+/* BUTTON GROUPS */
+/* Will group buttons with components in a single component */
+
+.btn-group {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; /* Wrap contents to next row on overflow */
+    display: -webkit-inline-box;
+    display: inline-flex;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+}
+
+.btn-group.btn-group-fill {
+    /* Makes the button group fill the width and proportion the buttons to fill the space */
+    display: -webkit-box;
+    display: flex;
+    display: -ms-flexbox;
+}
+
+.btn-group .btn,
+.btn-group button,
+.btn-group [type="submit"] {
+    -ms-flex: 1 0 auto;
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    margin: 0;
+}
+
+.btn-group.btn-group-fill .btn,
+.btn-group.btn-group-fill button,
+.btn-group.btn-group-fill [type="submit"] {
+    -ms-flex: 1 0 0;
+    -webkit-box-flex: 1;
+    flex: 1 0 0; /* Make the buttons fill the available width and proportion themselves */
+}
+
+.btn-group .btn:first-child:not(:last-child),
+.btn-group button:first-child:not(:last-child),
+.btn-group [type="submit"]:first-child:not(:last-child) {
+    /* Style the first child in group > 1 buttons */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-group .btn:last-child:not(:first-child),
+.btn-group button:last-child:not(:first-child),
+.btn-group [type="submit"]:last-child:not(:first-child) {
+    /* Style the last child in group > 1 buttons */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -0.1rem;
+}
+
+.btn-group .btn:not(:first-child):not(:last-child),
+.btn-group button:not(:first-child):not(:last-child),
+.btn-group [type="submit"]:not(:first-child):not(:last-child) {
+    /* Style button in middle of group */
+    border-radius: 0; /* Remove roundness from center buttons */
+    margin-left: -0.1rem;
+}
+/* CODE */
+
+code {
+    padding: 0.3rem;
+    margin: 0.5em 0;
+    overflow: auto;
+    background-color: var(--cirrus-code-bg);
+    color: var(--cirrus-code-fg);
+    border-radius: 3px;
+}
+
+/* Dark theme for code */
+code.dark {
+    background-color: var(--cirrus-dark);
+    color: #fff;
+}
+
+code:before {
+    color: #acb3c2;
+    content: attr(data-lang);
+    font-size: 0.9rem;
+    position: absolute;
+    right: 1rem;
+    top: 0.7rem;
+}
+
+pre > code {
+    font-size: 14px;
+    display: block;
+    padding: 2rem 1.5rem 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: Consolas,Monaco,"Andale Mono",monospace;
+    text-align: left;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    border-left: .3rem solid var(--cirrus-primary);
+    margin: 0;
+    position: relative;
+    color: #222;
+}
+
+/* BASE STYLING FOR CIRRUS */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito+Sans:400,700");
+
+* {
+    margin: 0;
+    padding: 0;
+    /* Prevent setting borders from increasing the size of an elrement */
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 100%;
+}
+
+/* Nunito Sans for the font */
+body {
+    letter-spacing: 0.01rem;
+    line-height: 1.8; /* Globally adjust line height */
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
+    letter-spacing: 0.01rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    color: var(--cirrus-fg);
+}
+
+/* Remove bullets from unordered lists */
+ul {
+    list-style: none;
+}
+
+/* Setting up embedded content */
+img,
+embed,
+object,
+audio,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+.hero.fullscreen video {
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+iframe {
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+    display: block;
+}
+
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+label {
+    display: inline-block;
+    margin: 0.25rem 0;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Selection Color */
+::selection {
+    background-color: var(--cirrus-select-bg);
+}
+
+/* When focusing any element */
+:focus {
+    box-shadow: 0 0 0.1rem 0.15rem rgba(240, 61, 77, 0.13);
+    outline: none;
+}
+
+/* FONT */
+
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Silent header */
+h1 .silent,
+h2 .silent,
+h3 .silent,
+h4 .silent,
+h5 .silent,
+h6 .silent {
+  color: #788196;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.025rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+/* Headlines (for larger titles) */
+.headline-1 {
+  font-size: 6.5rem;
+  letter-spacing: 0.05rem;
+}
+
+.headline-2 {
+  font-size: 5.5rem;
+  letter-spacing: 0.05rem;
+}
+
+.headline-3 {
+  font-size: 4.5rem;
+  letter-spacing: 0.05rem;
+}
+
+.headline-4 {
+  font-size: 3.5rem;
+  letter-spacing: 0.025rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.font-alt {
+  font-family: "Nunito Sans";
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  line-height: 1.125em;
+  margin: 1rem 0;
+}
+
+.title {
+  font-weight: bolder;
+}
+
+.title:not(:last-child),
+.subtitle:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/* .accent .subtitle { Deprecated 0.5.5
+  color: rgba(255, 255, 255, 0.9);
+} */
+
+.title + .subtitle {
+  /* Make the subtitlte closer to the title */
+  margin-top: -1.25rem;
+}
+
+p,
+article,
+blockquote {
+  font-size: 1rem;
+  line-height: 2; /* Removed 0.5.5 */
+  margin: 1rem 0;
+}
+
+p.lead {
+  font-size: 1.2rem;
+}
+
+blockquote {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+blockquote {
+  background-color: #f5f5f5;
+  border-left: 5px solid #dbdbdb;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+}
+
+blockquote p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Use default line-height for these texts and when line-height-inherit is specified */
+.card-tile p,
+.card-tile article,
+.card-tile blockquote {
+  line-height: inherit;
+}
+
+cite {
+  opacity: 0.7;
+}
+
+mark,
+.mark {
+  padding: 0.2em;
+  background-color: #f0e8c4;
+}
+
+/* Weights */
+.font-thin {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.white {
+  color: #fff !important;
+}
+
+.faded {
+  opacity: 0.75;
+}
+
+.italics {
+  font-style: italic;
+}
+
+/* Font Awesome */
+.icon {
+  /* Usually used in spans */
+  display: inline-block;
+  /* font-size: 21px; Allow font sizes for icons to be overwritten */
+  /* line-height: 1.5rem; Allow line height to be inherited or overwritten */
+  text-align: center;
+  width: 1.5rem;
+  vertical-align: baseline;
+}
+
+.icon .fa-wrapper {
+  font-size: inherit;
+  vertical-align: middle;
+}
+
+.icon.x-small {
+  margin: 0.55rem 0 0 0.1rem;
+}
+
+.icon.small {
+  margin: 0.95rem 0 0 0.1rem;
+}
+
+/* Removed 0.5.5, not neded since sizes are covered by .icon .fa-wrapper */
+/* .fa-wrapper {
+  font-size: 21px; /* Font sizes in multiple of 7s since they render the best 
+  text-align: center;
+}
+
+.fa-wrapper.x-small {
+  font-size: 7px;
+}
+
+.fa-wrapper.small {
+  font-size: 14px;
+}
+
+.fa-wrapper.large {
+  font-size: 28px;
+}
+
+.fa-wrapper.x-large {
+  font-size: 35px;
+} */
+
+/* .fa-wrapper.xx-large { Removed 0.5.5
+  font-size: 42px;
+} */
+
+.info {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  color: #979797;
+}
+
+.info.inline {
+  /* Keeps the extra info inline */
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+/* .info.success { Deprecated 0.5.5
+    color: #4caf50;
+}
+
+.info.error {
+    color: #f44336;
+} */
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid\9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+/* Other text elements */
+abbr[title] {
+  border-bottom: 0.1rem dotted;
+  cursor: help;
+  text-decoration: none;
+}
+
+kbd {
+  background-color: var(--cirrus-fg);
+  border-radius: 0.2rem;
+  color: #fff;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.5rem;
+  vertical-align: baseline;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+
+  .headline-1 {
+    font-size: 3rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .headline-2 {
+    font-size: 2.75rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .headline-3 {
+    font-size: 2.5rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .headline-4 {
+    font-size: 2.25rem;
+    letter-spacing: 0.025rem;
+  }
+
+  p,
+  article,
+  blockquote {
+    margin: 1rem 0;
+  }
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    padding: 6rem 0;
+    background-color: #111;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+footer a {
+    font-weight: bolder;
+    color: #fff;
+}
+
+footer p {
+    color: #848484;
+}
+
+footer ul {
+    margin: 0.5rem 0; /* Remove the left margin seen in global style */
+}
+
+footer h6 {
+    text-align: center;
+    letter-spacing: 6px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+footer .footer-list-title {
+    font-size: 75%;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #ddd;
+}
+
+footer .footer-list-title::after {
+    content: "";
+    display: block;
+    width: 10%;
+    margin: auto;
+    border-bottom: 2px solid;
+    border-color: #343b49;
+}
+
+footer ul a .list-item, footer .list-item {
+      margin: 0.1rem;
+    color: #888;
+    transition: all .3s;
+    font-size: 75%;
+    text-transform: uppercase;
+}
+
+footer.footer-fixed {
+    bottom: 0;
+    position: fixed;
+}
+/* FORMS */
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]),
+select {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #5a5a5a;
+    font-family: "Nunito Sans";
+    font-size: 0.85rem;
+    letter-spacing: 0.02rem;
+    transition: all 0.3s;
+    outline: none;
+    padding: 0.85rem 1.1rem;
+}
+
+input[type="search"] {
+    -webkit-appearance: none; /* Fix Safari issue */
+}
+
+textarea,
+textarea[type="text"] {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    border-radius: 3px;
+    font-family: "Nunito Sans";
+    font-size: 0.85rem;
+    letter-spacing: 0.02rem;
+    transition: all 0.3s;
+    outline: none;
+    margin: 0.5rem 0;
+    padding: 1rem 1.3rem;
+    min-height: 8rem;
+    line-height: 1.5rem;
+    resize: vertical;
+}
+
+input[type="color"] {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+    box-sizing: border-box;
+    transition: .3s;
+    outline: 0;
+    position: relative;
+    height: 3rem;
+    background-color: #fff;
+    padding: .55rem .8rem !important;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):focus,
+select:focus,
+textarea:focus,
+textarea[type=text]:focus,
+input[type=text].input-focused,
+.input-focused {
+    border-color: rgb(61, 171, 240);
+    box-shadow: 0 0 0 0.2rem rgba(61, 171, 240, 0.4), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+select {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    -webkit-appearance: menulist;
+}
+
+select[multiple] option {
+    padding: 0.2rem 0.4rem;
+}
+
+/* Fixes for Safari and other browsers for consistent UI */
+select.select:not([size]):not([multiple]) {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .85rem center/.5rem .6rem no-repeat;
+    -webkit-appearance: none;
+}
+
+/* Search field */
+input[type="search"],
+input.search {
+    background-repeat: no-repeat;
+    background-position: left 0.6rem center;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path opacity="0.45" d="M14.891,14.39l-0.5.5a0.355,0.355,0,0,1-.5,0L9.526,10.529a5.3,5.3,0,1,1,2.106-4.212,5.268,5.268,0,0,1-1.1,3.21l4.362,4.362A0.354,0.354,0,0,1,14.891,14.39ZM6.316,2.418a3.9,3.9,0,1,0,3.9,3.9A3.9,3.9,0,0,0,6.316,2.418Z"/></svg>'); /* NEEDS FIXING */
+    padding-left: 2rem !important;
+}
+
+input:not([class*="btn-"]):disabled, input:not([class*=" btn-"]):disabled:hover, select:disabled, textarea:disabled {
+    background-color: #f3f3f6;
+    cursor: not-allowed;
+    border: 1px solid #f3f3f6;
+}
+
+label:first-child:not(:last-child):not(.form-group-label) {
+    margin-right: 0.5rem;
+}
+
+label:not(:first-child):not(:last-child):not(.form-group-label) {
+    margin: 0 0.5rem;
+}
+
+label:last-child:not(:first-child):not(.form-group-label) {
+    margin-left: 0.5rem;
+}
+
+/* Required asterisk */
+.required {
+    /* Use this in a span or a div */
+    position: relative;
+    top: 1px;
+    font-weight: bold;
+    color: #f03c69;
+    padding-left: 0.1rem;
+}
+
+.label:not(:last-child) {
+    margin-bottom: 0;
+}
+
+.label {
+    color: #4a4a4a;
+    display: inline-block; /* changed from block */
+    font-weight: bold;
+    margin-top: 0.8rem;
+}
+
+.input-success {
+    background-color: rgba(0, 224, 0, 0.05) !important;
+    border-color: var(--cirrus-success) !important;
+}
+
+.input-success:not([type=checkbox]):not([type=radio]):not([type=submit]):focus, .btn-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.input-error {
+    background-color: rgba(244, 67, 54, 0.05) !important;
+    border-color: var(--cirrus-danger) !important;
+}
+
+.input-error:not([type=checkbox]):not([type=radio]):not([type=submit]):focus, .btn-error:focus {
+    box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+/* Input Field Sizes */
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-xsmall,
+select.input-xsmall {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.9rem;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-small,
+select.input-small {
+    font-size: 0.75rem;
+    padding: 0.55rem 1rem;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-large,
+select.input-large {
+    font-size: 1.5rem;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-xlarge,
+select.input-xlarge {
+    font-size: 2rem;
+}
+
+/* Select sizes */
+select.input-xsmall {
+    padding: 0.65rem 0.9rem;
+}
+
+select.input-small {
+    padding: 0.75rem 1rem;
+}
+
+select.input-large {
+    padding: 0.95rem 1.2rem;
+}
+
+select.input-xlarge {
+    padding: 1.05rem 1.3rem;
+}
+
+/* Used for when the input controls have another control adjacent to it but we want to position it inside the input field like font-awesome glyphs. As of 0.5.2, it is the default container for input fields. */
+.input-control {
+    position: relative;
+    margin: 0.5rem 0;
+}
+
+/* Hold Font Awesome glyphs inside input fields */
+/* More sizes coming soon */
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-left {
+    padding-left: 2.75rem;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right {
+    padding-right: 2.75rem;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-xsmall,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-xsmall {
+    padding-left: 2rem;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-xsmall ~ .icon,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-left.input-xsmall ~ .icon,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-xsmall ~ .icon.icon-right {
+    line-height: 1.75rem;
+    width: 1.75rem;
+    font-size: 7px;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-small,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-small {
+    padding-left: 2.5rem;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-small ~ .icon,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-left.input-small ~ .icon,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-small ~ .icon.icon-right {
+    line-height: 2rem;
+    width: 2.5rem;
+    font-size: 14px;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-large,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-large {
+    padding-left: 3rem;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-large ~ .icon,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-left.input-large ~ .icon,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-large ~ .icon.icon-right {
+    line-height: 3.5rem;
+    width: 3.5rem;
+    font-size: 28px;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-xlarge,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-xlarge {
+    padding-left: 3.5rem;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-xlarge ~ .icon,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-left.input-xlarge ~ .icon,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-xlarge ~ .icon.icon-right {
+    line-height: 2.5rem;
+    width: 3.75rem;
+    font-size: 35px;
+}
+
+.input-contains-icon ~ .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.input-contains-icon ~ .icon:not(.icon-right),
+.input-contains-icon-left ~ .icon.icon-left {
+    /* Nomral input only */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3rem;
+    z-index: 1;
+}
+
+.input-contains-icon-right ~ .icon.icon-right {
+    position: absolute;
+    pointer-events: none;
+    line-height: 2.75rem;
+    vertical-align: baseline;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    z-index: 1;
+}
+
+/* Form section just adds extra spacing between form elements tiled vertically */
+.form-section:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+/* A flexbox version of form-section for inline forms */
+.form-section.section-inline {
+    display: flex;
+}
+
+.form-section.section-inline label:not(.form-group-label),
+.form-section.section-inline button {
+    align-items: center;
+    flex-grow: 0; /* Keep it from taking up extra space */
+    display: flex;
+    flex-shrink: 0;
+}
+
+.form-section.section-inline input,
+.form-section.section-inline .section-body {
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Form groups that group inputs with other controls. */
+.form-group {
+    display: flex;
+    display: -ms-flexbox;
+    margin: 0.5rem 0; /* Add margin to the container since they have been removed from children */
+}
+
+/* Fixes the text width being cut off */
+.form-group .form-group-btn {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    margin-bottom: 0;
+}
+
+/* This is just an extended portion of an input which is just like a label and is read only */
+/* This will style the controls if they are the leftmost control in the form group for labels, inputs, and buttons. */
+.form-group .form-group-label:first-child:not(:last-child),
+.form-group .form-group-input:first-child:not(:last-child),
+.form-group .form-group-btn:first-child:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Style the middle controls */
+.form-group .form-group-label:not(:first-child):not(:last-child),
+.form-group .form-group-input:not(:first-child):not(:last-child),
+.form-group .form-group-btn:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    margin-left: -0.1rem;
+    margin-right: -0.1rem; /* Remove spacing in middle controls */
+}
+
+/* Handles right most control in form group */
+.form-group .form-group-label:last-child:not(:first-child),
+.form-group .form-group-input:last-child:not(:first-child),
+.form-group .form-group-btn:last-child:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -0.1rem;
+}
+
+/* Form group controls */
+.form-group-label {
+    background-color: var(--cirrus-form-group-bg);
+    border: 1px solid #ddd;
+    border-radius: 0.2rem;
+    color: var(--cirrus-form-group-fg);
+    margin: 0;
+    padding: 0.8rem;
+    user-select: none;
+}
+
+.form-group-label.label-xsmall {
+    font-size: 0.55rem;
+    padding: 0.35rem 0.9rem;
+}
+
+.form-group-label.label-small {
+    font-size: 0.75rem;
+    padding: 0.55rem 1rem;
+}
+
+.form-group-label.label-large {
+    font-size: 1.5rem;
+}
+
+.form-group-label.label-xlarge {
+    font-size: 2rem;
+}
+
+/* Keeps inputs in form group above other components */
+.form-group-input {
+    z-index: 1;
+}
+
+/* Change place holder color */
+::-moz-placeholder {
+    color: #a9a9a9; /* Lighter than the default */
+}
+
+::-webkit-input-placeholder {
+    color: #a9a9a9; /* Lighter than the default */
+}
+
+@media screen and (max-width: 768px) {
+    /* Remove flex in form-section */
+    .form-section.section-inline {
+        display: inherit;
+    }
+}
+
+/* Separate CSS file, but same part as Layout */
+
+/* The base container that is similar in structure to a card but more flexible */
+.frame {
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    border-radius: 3px;
+    box-shadow: 0 0.05rem 0.2rem rgba(69, 77, 93, .3);
+}
+
+/* For the frame header and footer, use flex display */
+.frame .frame__header,
+.frame .frame__footer {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    padding: 1rem;
+}
+
+/* The frame navbar can be used with level or header classes to create a navigation menu */
+.frame .frame__nav {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+}
+
+.frame .frame__body {
+    flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    overflow-y: auto; /* Show the scrollbar when needed */
+    padding: 0 1.5rem;
+}
+
+.frame .frame__title {
+    color: var(--cirrus-fg);
+    font-size: 1rem;
+    margin: .75rem auto 0;
+}
+
+.frame .frame__subtitle {
+    color: rgba(55, 64, 84, 0.6);
+    font-size: .85rem;
+    margin: .25rem auto .75rem;
+}
+/* HEADER */
+.header {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 0;
+  width: 100%;
+  z-index: 100;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 15px rgba(57, 63, 72, 0.1);
+  background-color: var(--cirrus-bg);
+  max-height: 100vh;
+  padding: 0 2rem;
+  transition: all .3s;
+}
+
+.header a {
+  color: #8292a2;
+}
+
+.header a:hover {
+  color: #697888;
+}
+
+/* Header dark theme */
+.header-dark {
+  background-color: rgba(0, 0, 0, 0.87);
+  color: #fff;
+}
+
+.header-clear {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* Add transition to nav menu when it drops down */
+.header.header-animated .header-nav {
+  -webkit-transition: background 0.4s ease, height 0.4s ease;
+  transition: background 0.4s ease, height 0.4s ease;
+  -webkit-transition-property: background, height;
+  transition-property: background, height;
+  -webkit-transition-duration: 0.4s, 0.4s;
+  transition-duration: 0.4s, 0.4s;
+  -webkit-transition-timing-function: ease, ease;
+  transition-timing-function: ease, ease;
+  -webkit-transition-delay: initial, initial;
+  transition-delay: initial, initial;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header-brand {
+  -webkit-overflow-scrolling: touch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  max-width: 100vw;
+  min-height: 3.25rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* The container that contains all the header menu components. Child of header */
+.header-nav {
+  /* Flex display 768px and higher */
+  overflow: auto;
+}
+
+/* Styles for header menu (aka the nav bar) */
+.nav-menu {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* Allow the user to scroll through navbar items if it exceeds nav-left, nav-center, or nav-right widths */
+.nav-overflow-x {
+  -webkit-box-pack: inherit;
+  -ms-flex-pack: inherit;
+  justify-content: inherit;
+  overflow-x: scroll;
+}
+
+/* Static header at the top of the screen */
+.header-fixed {
+  position: fixed;
+  top: 0; /* Change this if you want to float the header somewhere else */
+}
+
+/* Wrapper to vertically center header items */
+.nav-item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  padding: 0 0.3rem;
+  cursor: pointer;
+}
+
+.nav-item a {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+/* Hover effect for header elements when appropriate */
+.header:not(.header-clear) .nav-item:not(.no-hover):hover,
+.header:not(.header-clear) .nav-item:not(.no-hover).hovered {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: rgba(216, 216, 216, 0.15);
+}
+
+.header:not(.header-clear) .nav-item.active, /* active:hover removes the transition effect when hoveirng over the dropdown menu */ 
+.header:not(.header-clear) .nav-item.active:hover {
+  background-color: rgba(216, 216, 216, 0.35);
+}
+
+/* HEADER DROP DOWN MENU */
+.nav-item .dropdown-menu {
+  background-color: var(--cirrus-bg);
+  position: absolute;
+  top: 95%;
+  /*right: 0; /* Unable to solve problem when we have multiple drop down menus */
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-clip: padding-box;
+  border: 1px solid #eee;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
+}
+
+/* Add border radius to whole menu with clear header */
+.header.header-clear .nav-item .dropdown-menu {
+  border-radius: 4px;
+}
+
+/* Just add a transition in general */
+.nav-item .dropdown-menu.dropdown-animated {
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
+}
+
+/* Dropdown menu location adjustment located below for sizes above phones */
+
+/* Dropdown menu indicator */
+.nav-item.has-sub .nav-dropdown-link::after {
+  border: 2px solid var(--cirrus-primary); /* Must be first to create the triangle shape */
+  border-right: 0; /* Create the triangle effect */
+  border-top: 0;
+  display: block;
+  height: 0.5em;
+  width: 0.5em;
+  content: " ";
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  pointer-events: none;
+  margin-top: -0.435em;
+  right: 1.125em;
+  top: 50%;
+  position: absolute;
+}
+
+/* Add room for the dropdown chevron pseudoelement */
+.nav-item.has-sub .nav-dropdown-link {
+  padding-right: 2.5rem;
+  position: relative; /* Needed for hiding glyphs in mobile header */
+}
+
+/* Dark dropdown menu theme */
+.nav-item .dropdown-menu.dropdown-dark,
+.header-dark .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.87);
+  border: 1px solid #333;
+  color: #fff;
+}
+
+.dropdown-menu.dropdown-shown,
+.nav-item.active {
+  opacity: 1;
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 0.5rem 1rem;
+  clear: both;
+  line-height: 1.42857143;
+  white-space: nowrap;
+}
+
+/* Theme for dark menu */
+.header-dark .nav-item a,
+.header-dark .dropdown-menu > li > a {
+  color: #fff;
+}
+
+.dropdown-menu > li {
+  margin: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.dropdown-menu > li:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: rgba(216, 216, 216, 0.15);
+}
+
+.dropdown-menu > li:active {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: rgba(216, 216, 216, 0.25);
+}
+
+.dropdown-menu > li:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-menu .dropdown-menu-divider {
+  border: none;
+  background-color: rgba(216, 216, 216, 0.15);
+  height: 1px;
+  margin: 0.5rem 0;
+}
+
+.nav-btn {
+  cursor: pointer;
+  display: block;
+  height: 3.5rem;
+  position: relative;
+  width: 3.5rem;
+}
+
+.header .btn,
+.header button,
+.header input[type="submit"] {
+  margin: 0;
+}
+
+@media screen and (min-width: 769px) {
+  .header {
+    -webkit-box-align: stretch; /* Box Align and align items to stretch to make nav-items fill up parent height */
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+  }
+
+  .header-nav {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch; /* Make items fill up all available space regardless of width https://drafts.csswg.org/css-align/ */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    overflow: visible; /* Only visible for showing dropdown menus, hidden for mobile */
+  }
+
+  /* These styles can also be used on menus in the body */
+  .nav-left,
+  .nav-right {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-items: stretch;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    /*overflow: hidden;*/
+  }
+
+  /* Align items to the left */
+  .nav-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    /*overflow: hidden;
+        overflow-x: auto;*/
+    white-space: nowrap;
+  }
+
+  /* Align items to the right */
+  .nav-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    /*overflow: hidden;
+        overflow-x: auto;*/
+    white-space: nowrap;
+  }
+
+  /* Centering items, best used when nav-brand is not used to prevent offset */
+  .nav-center {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Hide hamburger button */
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-item {
+    position: relative; /* Include for helping dropdown menu positioning */
+  }
+
+  /* Expand link area for desktop views so it is easier to click */
+  .nav-item a {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-item .dropdown-menu {
+    opacity: 0;
+    pointer-events: none; /* Make cursor not respond to menu links when not displayed */
+  }
+
+  .nav-item .dropdown-menu.dropdown-animated {
+    -webkit-transform: translateY(
+      -5px
+    ); /* Used for transitional drop down effect */
+    transform: translateY(-5px);
+  }
+
+  .nav-item .dropdown-menu.dropdown-shown,
+  .nav-item.toggle-hover:hover .dropdown-menu,
+  .nav-item .dropdown-menu.dropdown-animated.dropdown-shown,
+  .nav-item.toggle-hover:hover .dropdown-animated.dropdown-menu {
+    opacity: 1;
+    -webkit-transform: none; /* Used for transitional drop down effect */
+    transform: none;
+    pointer-events: auto;
+  }
+
+  /* Align dropdown menu to the left side of the parent nav-item for header-left */
+  .nav-left .has-sub .dropdown-menu {
+    left: 0;
+    right: auto;
+  }
+
+  /* Align dropdown menu to the right side of the parent nav-item for header-right */
+  .nav-right .has-sub .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Add scrolling support in header */
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-brand .nav-item:first-child {
+    padding: 0 1rem; /* Add padding to the first child, usually the logo */
+  }
+
+  /* Hide dropdon menu on mobile */
+  .header-nav {
+    height: 0;
+  }
+
+  /* Show the dropdown */
+  .header-nav.active {
+    height: 100vh;
+  }
+
+  /* Remove flex for mobile devices */
+  .nav-item.has-sub {
+    display: block;
+  }
+
+  .nav-item.has-sub .dropdown-menu.dropdown-shown {
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    position: relative;
+    top: 1rem;
+    float: none;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 1rem;
+  }
+
+  .nav-item.has-sub .dropdown-menu.dropdown-dark {
+    background-color: rgba(0, 0, 0, 0.17);
+    border: 0;
+    color: #fff;
+  }
+
+  /* Hide the menu by default in mobile view (overflow on header-right can expose it) */
+  .nav-item.has-sub .dropdown-menu {
+    display: none;
+  }
+
+  /* Make the menu items larger in the dropdown menu */
+  .header-nav .nav-item {
+    padding: 1rem;
+  }
+
+  /* Get rid of extra spaces */
+  .header-nav .nav-item > a {
+    padding: 0;
+    width: 100%; /* Stretch the link to span the entire list item */
+  }
+
+  /* Hamburger button */
+  .nav-btn {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    margin-left: auto;
+  }
+
+  .nav-btn span {
+    background-color: #4d565f;
+    display: block;
+    height: 2px;
+    left: 50%;
+    margin-left: -7px;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: none 86ms ease-out;
+    transition: none 86ms ease-out;
+    -webkit-transition-property: background, left, opacity, -webkit-transform;
+    transition-property: background, left, opacity, -webkit-transform;
+    transition-property: background, left, opacity, transform;
+    transition-property: background, left, opacity, transform, -webkit-transform;
+    width: 15px;
+  }
+
+  .header-dark .nav-btn span {
+    background-color: #fff;
+  }
+
+  /* Line spacing in hamburger button */
+  .nav-btn span:nth-child(1) {
+    margin-top: -6px;
+  }
+
+  .nav-btn span:nth-child(2) {
+    margin-top: -1px;
+  }
+
+  .nav-btn span:nth-child(3) {
+    margin-top: 4px;
+  }
+
+  /* Hamburger button on active */
+  .nav-btn.active span:nth-child(1) {
+    margin-left: -5px;
+    transform: rotate(45deg);
+    transform-origin: left top;
+  }
+
+  .nav-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-btn.active span:nth-child(3) {
+    margin-left: -5px;
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
+  }
+
+  /* Hide drop down menu items */
+  .nav-left,
+  .nav-center,
+  .nav-right {
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .header {
+    padding: 0 2rem;
+  }
+}
+
+/* HEADER */
+
+.content {
+    max-width: 60em;
+    margin: 0 auto 1.5em;
+    width: 80%;
+}
+
+/* .content-no-padding { Removed 0.5.5
+    max-width: 60em;
+    margin: 0 auto;
+    width: 80%;
+} */
+
+/* Content that centers in parent and fills parent div without the extra vertical margin */
+/* .content-fluid { Removed 0.5.5
+    width: 100%;
+    margin: 0 auto;
+} */
+
+.fullscreen {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+}
+
+/* This works well with panel */
+section {
+    display: block;
+}
+
+.panel {
+    padding: 2.5em 0;
+}
+
+/* This works well with spans and maybe even hr */
+.divider {
+    border-top: .05rem solid rgba(173, 173, 173, 0.5);
+    height: .1rem;
+    margin: 1.8rem 0 1.6rem;
+}
+
+.divider[data-content] {
+    margin: .8rem 0;
+}
+
+.divider--v[data-content] {
+    display: block;
+    padding: .8rem;
+}
+
+.divider--v::before {
+    border-left: .05rem solid rgba(173, 173, 173, 0.5);
+    bottom: .4rem;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.divider--v[data-content]::after, .divider[data-content]::after {
+    background: #fff;
+    color: #bcc3ce;
+    content: attr(data-content);
+    left: 50%;
+    display: inline-block;
+    padding: 0 .4rem;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+}
+
+.divider--v[data-content] {
+    left: 50%;
+    padding: .2rem 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Removed 0.5.5 */ 
+/* .divider-short {
+    max-width: 15rem;
+    width: 100%;
+} */
+
+/* Hero image div */
+.hero-img {
+    /* Specify the backgroud image yourself */
+    background-size: cover;
+}
+
+.parallax-img {
+    background-attachment: fixed !important;
+}
+
+.hero {
+    /* Parent of hero-body */
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Important to stretch height of hero-body */
+    -webkit-box-orient: vertical;
+    /* -webkit-box-direction: normal; /* Deprecated 0.5.5 
+    -ms-flex-direction: column;
+    flex-direction: column; Stack the items in the container */
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.hero-body {
+    -ms-flex-positive: 1;
+    flex-grow: 1; /* Tells the hero-body to take up the entire space */
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 3rem 1.5rem;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+
+space {
+    display: block;
+    width: 100%;
+    height: 1rem;
+}
+
+space.large {
+    padding: 1rem 0;
+}
+
+space.x-large {
+    padding: 2rem 0;
+}
+
+/* Use for spacing out elements vertically */
+.row {
+    -ms-flex: 1;
+    flex: 1;
+    /* max-width: 100%; */
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+
+.r { /* Legacy row pre 0.5.5 */
+    max-width: 100%;
+    padding: .5rem;
+}
+
+.row.row--no-wrap {
+    -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default */
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Can be disabled to remove scroll bar */
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* GRID */
+.row .col {
+    display: block;
+    flex: 1;
+    padding: .15rem .75rem;
+}
+
+.row .col-1 {
+    width: 8.33333333%;
+}
+
+.row .col-2 {
+    width: 16.66666667%;
+}
+
+.row .col-3 {
+    width: 25%;
+}
+
+.row .col-4 {
+    width: 33.33333333%;
+}
+
+.row .col-5 {
+    width: 41.66666667%;
+}
+
+.row .col-6 {
+    width: 50%;
+}
+
+.row .col-7 {
+    width: 58.33333333%;
+}
+
+.row .col-8 {
+    width: 66.66666667%;
+}
+
+.row .col-9 {
+    width: 75%;
+}
+
+.row .col-10 {
+    width: 83.33333333%;
+}
+
+.row .col-11 {
+    width: 91.66666667%;
+}
+
+.row .col-12 {
+    width: 100%;
+}
+
+/* Column offsets on the left side */
+.row .offset-1 {
+    margin-left: 8.33333333%;
+}
+
+.row .offset-2 {
+    margin-left: 16.66666667%;
+}
+
+.row .offset-3 {
+    margin-left: 25%;
+}
+
+.row .offset-4 {
+    margin-left: 33.33333333%;
+}
+
+.row .offset-5 {
+    margin-left: 41.66666667%;
+}
+
+.row .offset-6 {
+    margin-left: 50%;
+}
+
+.row .offset-7 {
+    margin-left: 58.33333333%;
+}
+
+.row .offset-8 {
+    margin-left: 66.66666667%;
+}
+
+.row .offset-9 {
+    margin-left: 75%;
+}
+
+.row .offset-10 {
+    margin-left: 83.33333333%;
+}
+
+.row .offset-11 {
+    margin-left: 91.66666667%;
+}
+
+.row .offset-12 {
+    margin-left: 100%;
+}
+
+/* Auto align col to left in row */
+.row .offset-right {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+/* Auto align col to middle in row */
+.row .offset-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Auto align col to right in row */
+.row .offset-left {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Use in parent div of fluid col
+.fluid-container {
+    display: flex;
+    overflow: auto;
+}
+
+/* Wrap controls instead on overflow 
+.fluid-container.wrap {
+    -webkit-align-items: center;
+    align-items: center;
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* Resizes elements in a row equally given the number of elements located in it 
+.fluid-container .col-fluid {
+    display: block;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+}
+
+/* No expansion for specific col-fluid columns 
+.fluid-container .col-fluid.no-flex {
+    flex-grow: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    -ms-flex-negative: 0;
+} */
+
+/* Some offset values */
+.row [class^="col-"],
+.row [class*=" col-"] {
+    float: left; /* Keeps the elements in 1 row */
+    padding: 0 0.5rem;
+}
+
+/* Columns without the spacing */
+.row.no-space [class^="col-"],
+.row.no-space [class*=" col-"] {
+    padding: 0;
+}
+
+/* Ignore overflow in columns */
+/* .row.expand { DEPRECATED 0.5.5
+    -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default 
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Can be disabled to remove scroll bar 
+} */
+
+/* Only for divs with .expand so they can go past the parent div width */
+/* .row.expand [class^="col-"], DEPRECATED 0.5.5, no use
+.row.expand [class*=" col-"] {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+} */
+
+/* Used for aligning controls next to each other */
+.row.has-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+/* Divider for multiple elements in a div */
+/* .divided > .fluid-container:not(.row),
+.divided > .row [class^="col-"], .divided > .row [class*=" col-"] { DEPRECATED 0.5.5
+    box-shadow: -1px 0 0 0 rgba(34, 36, 38, 0.15);
+} */
+
+/* Remove border in first child */
+/* .divided > .row [class^="col-"]:first-child,
+.divided > .row [class*=" col-"]:first-child {
+    box-shadow: none; DEPRECATED 0.5.5
+} */
+
+.level {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.level-left {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; /* Start for left */
+    margin-right: 1rem;
+}
+
+.level-right {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; /* End for right */
+}
+
+.level-item {
+    /* Centers items */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* Used to stretch the contents of div in level to fill */
+.level-content {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    text-align: left;
+    width: 100%;
+}
+
+/* Width CSS */
+.w-10 {
+    width: 10%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* Height CSS */
+.h-10 {
+    height: 10%;
+}
+
+.h-20 {
+    height: 20%;
+}
+
+.h-30 {
+    height: 30%;
+}
+
+.h-40 {
+    height: 40%;
+}
+
+.h-50 {
+    height: 50%;
+}
+
+.h-60 {
+    height: 60%;
+}
+
+.h-70 {
+    height: 70%;
+}
+
+.h-80 {
+    height: 80%;
+}
+
+.h-90 {
+    height: 90%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+@media screen and (min-width: 769px) {
+
+    .row {
+        display: flex;
+    }
+
+    .level-right {
+        margin-left: 1rem;
+    }
+
+    /* Keep all level children the same height */
+    .level.fill-height {
+        -webkit-box-align: stretch; /* Box Align and align items to stretch to make nav-items fill up parent height */
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    .row {
+        margin-top: 0;
+    }
+
+    .row [class^="col-"]:not(.ignore-screen),
+    .row [class*=" col-"]:not(.ignore-screen) {
+        /* Remove the grid structure for smaller screens */
+        width: 100%;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    /* .fluid-container { DEPRECATED 0.5.5
+        display: inherit;
+    } */
+
+    /* Dividers for mobile layout */
+    .divided > .row [class^="col-"],
+    .divided > .row [class*=" col-"] {
+        box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
+    }
+
+    .level.ignore-screen,
+    .level-left.ignore-screen,
+    .level-right.ignore-screen {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .level.fill-height {
+        display: inherit; /* Allow children to expand */
+    }
+}
+
+/* LINKS */
+
+a {
+    color: var(--cirrus-link);
+    display: block; /* Allow this to be overwritten, never set to inline-block */
+    font-weight: 600;
+    padding: 2px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: var(--cirrus-link-dark);
+    transition: all 0.3s;
+}
+
+a:visited,
+a:hover,
+a:active {
+    backface-visibility: hidden;
+    text-decoration: none;
+}
+
+.subtitle a {
+    padding: 0; /* Removes weird offset in subtitle links */
+}
+
+/* a.display-block { Deprecated 0.5.5
+    display: block;
+} */
+
+a.underline {
+    text-decoration: underline;
+}
+
+p a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, blockquote a, article a {
+    display: inline;
+}
+
+a .btn, a button {
+    margin-bottom: 0; /* Remove random excess space */
+}
+/* LISTS */
+
+ul, ol {
+  margin: 1rem 0 1rem 1rem;
+  padding-inline-start: 0.5rem;
+}
+
+ul {
+  list-style: disc;
+}
+
+/* Handle nesting */
+ul ul, ol ul, ul ol, ol ol {
+  margin: 0 0 0 1rem;
+}
+
+/* Nested list bullet types */
+ul ul {
+  list-style-type: circle;
+}
+
+ul ul ul {
+  list-style-type: square;
+}
+
+ol ol {
+  list-style: lower-alpha;
+}
+
+ol ol ol {
+  list-style: upper-roman;
+}
+
+/* Description lists */
+
+dl {
+  margin: 1rem 0;
+}
+
+/* Detail title */
+dt {
+  font-weight: 700;
+}
+
+dd {
+    margin-bottom: .5rem;
+}
+
+li {
+  margin: 0.25rem 0;
+}
+
+/* Exclude margin in menus */
+li:not('.dropdown-menu li'):last-child {
+  margin-bottom: 1em;
+}
+
+/* MISC */
+ul.no-bullets {
+  list-style: none;
+}
+
+/* MENU LISTS */
+.menu {
+  font-size: 1rem;
+}
+
+ul.menu {
+  list-style: none;
+  margin: .5rem 0;
+}
+
+/* Style headers to have even space distribution. */
+.menu-title:not(:first-child) {
+  margin-bottom: 1rem;
+}
+
+.menu-title:not(:last-child) {
+  margin-top: 1rem;
+}
+
+/* Style menu items */
+.menu .menu-item a {
+  color: #555;
+  display: block;
+  padding: 0.5em 0.75em;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
+}
+
+.menu .menu-item:hover > a {
+  background-color: rgba(208, 208, 208, 0.3);
+  color: #d43644;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
+  
+}
+
+.menu .menu-item.selected > a {
+  color: #fff;
+  background-color: var(--cirrus-primary);
+}
+
+.menu .menu-item .menu-addon {
+  padding: 0.3rem;
+  z-index: 1;
+  position: relative;
+  color: var(--cirrus-fg);
+  cursor: pointer;
+  float: left;
+  margin-right: .1rem;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
+}
+
+.menu .menu-item .menu-addon .icon {
+  font-size: inherit;
+}
+
+/* Darken on hover to differentiate from menu-item */
+.menu .menu-item .menu-addon:hover {
+  background-color: rgba(60, 60, 60, 0.25);
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
+}
+
+.menu .menu-item .menu-addon.right {
+  float: right;
+  margin-right: 0;
+  margin-left: .1rem
+}
+
+.menu .menu-item.selected .menu-addon {
+  color: #fff;
+}
+
+/* Style sub menus inside a menu */
+.menu .menu-item ul {
+    border-left: 1px solid #dbdbdb;
+    margin: 0.75rem;
+    padding-left: 0.75rem;
+}
+
+/* Menu item divider */
+.menu .divider {
+    border-top: .1rem solid #eee;
+    height: .1rem;
+    margin: 1rem 0;
+}
+
+/* Title for the section separated by the divider */
+.menu .divider::after {
+  content: attr(data-label); /* Text that will be displayed */
+  background-color: var(--cirrus-bg);
+  color: #b7b7b7;
+  display: inline-block;
+  padding: 0 .7rem;
+  margin: .5rem;
+  font-size: .7rem;
+  -webkit-transform: translateY(-1.1rem);
+    transform: translateY(-1.1rem);
+}
+
+/* Dropdown menu for dropdown buttons */
+.list-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.list-dropdown .menu {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  -webkit-animation: slide-down var(--animation-duration) ease 1;
+  animation: slide-down .1s ease 1;
+  background-color: var(--cirrus-bg);
+  border-radius: .2rem;
+          box-shadow: 0 0.1rem 0.4rem rgba(69, 77, 93, .3);
+  margin: 0;
+  opacity: 0;
+  min-width: 15rem;
+  padding: 0.25rem 0.5rem;
+  -webkit-transform: translateY(.5rem);
+  transform: translateY(.5rem);
+  z-index: 10;
+  pointer-events: none; /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
+  overflow: hidden;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
+}
+
+.list-dropdown.dropdown-right .menu {
+  left: auto;
+  right: 0;
+}
+
+/* Allow for shown and :focus selectors for JS and native CSS transitions */
+.list-dropdown.shown .menu,
+.list-dropdown .btn-dropdown:focus + .menu,
+.list-dropdown .menu:hover {
+  display: block;
+  opacity: 1;
+  top: 100%;
+  z-index: 100;
+  pointer-events: auto; /* Restore pointer events */
+  height: auto;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
+}
+
+.list-dropdown .btn-group .btn-dropdown:nth-last-child(2) {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+/* TREE */
+/* Tree Navigation Menu */
+.tree {
+  margin: 0;
+}
+
+/* The title of the tree menu */
+.tree .tree-item .tree-item-header {
+  display: block;
+  padding: .25rem .5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600; /* Keep styling consistent with menu-items */
+}
+
+/* The dropdown glyph of the tree menu */
+.tree .tree-item .tree-item-header .icon {
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
+}
+
+/* Expand the tree-item-body (has menu-items) */
+.tree .tree-item input:checked ~ .tree-item-body {
+  max-height: 100vh;
+}
+
+/* Rotate the dropdown glyph */
+.tree .tree-item input:checked ~ .tree-item-header .icon {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+/* Container for the menu-items of the tree menu */
+.tree .tree-item .tree-item-body {
+  max-height: 0; /* Hidden at first */
+  margin-left: 1.5rem;
+  overflow: hidden;
+  -webkit-transition: all var(--animation-duration);
+  transition: all var(--animation-duration);
+}
+
+/* TODO: Docs */
+/* The body that will encompass the tree-nav and tree-nav-content */
+.tree-nav-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+/* A fixed menu on the side with a tree component */
+.tree-nav {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  padding: 2rem 1rem 2rem 2rem;
+  min-width: 15rem;
+  height: 100vh;
+  overflow: auto;
+}
+
+/* The container for the tree component to prevent it from overflowing */
+.tree-nav .tree-nav-container {
+  overflow-y: auto;
+  top: 4rem;
+  bottom: 1rem;
+}
+
+/* Darkened area that will close the navbar when clicked for mobile only */
+.tree-nav + .tree-nav-close {
+  display: none; /* Not needed in desktop */
+}
+
+/* Push document body further right to account for sidebar space */
+.tree-nav + .tree-nav-content {
+    max-width: 100%;
+    padding: 2rem;
+    -ms-flex: 1 0 auto;
+    -webkit-box-flex: 1;
+            flex: 1 0 auto;
+    overflow: auto;
+    margin: 0;
+}
+
+/* The body where all other HTML components are entered if a tree-nav is used */
+.tree-nav-content {
+  width: 100%;
+  overflow: auto;
+  margin: 0;
+  padding: 2rem;
+}
+
+/* Decrease font-weight in tree-nav menu-items */
+.tree-item-body .menu .menu-item a {
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  /* Hide the menu to the side by default */
+  .tree-nav {
+    height: 100%;
+    left: 0;
+    overflow-y: auto;
+    padding: 3rem 1.5rem;
+    position: fixed;
+    top: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+    -webkit-transition: -webkit-transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
+    transition: -webkit-transform var(--animation-duration) ease;
+    z-index: 400;
+  }
+
+  /* Open the menu from the side */
+  /* Use a link and add the id of this element as the url */
+  .tree-nav:target {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+    -webkit-transition: -webkit-transform var(--animation-duration) ease;
+    transition: -webkit-transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
+  }
+
+  /* Create the area to click to close the menu */
+  .tree-nav .tree-nav-close {
+    background-color: rgba(0, 0, 0, .15);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 300;
+  }
+
+  /* Show the darkened area when the tree nav menu is clicked */
+  .tree-nav:target + .tree-nav-close {
+    display: block;
+    background-color: rgba(0, 0, 0, .15);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 300;
+  }
+
+  /* Reset max-width in mobile */
+  .tree-nav + .tree-nav-body {
+    max-width: inherit;
+  }
+
+  /* Header bar for mobile websites with the tree-nav */
+  .tree-nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(248, 249, 250, .8);
+    height: 3.5rem;
+    padding: .75rem .5rem;
+    text-align: center;
+    z-index: 300;
+  }
+
+  /* For dropdown menu used in header (different from header dropdown) */
+  .nav-item.has-sub .list-dropdown { width: 100%; }
+  .nav-item.has-sub .list-dropdown .btn-group { width: 100%; }
+  .nav-item.has-sub .list-dropdown .btn-group .btn-dropdown { flex-grow: 0; }
+
+  /* Show the dropdown menu in mobile hamburger menu relative with the header menu */
+  .list-dropdown .btn-dropdown:focus + .menu {
+    position: relative;
+    width: 100%;
+  }
+}
+/* MEDIA CSS */
+/* Handles images, videos, figures, etc */
+
+/* Altered, originally just video in 0.4.6 */
+video.video-fullscreen {
+  position: absolute;
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+  z-index: -1;
+}
+
+/* Add to parent container to make media child fill container */
+.media-stretch {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* Add pseudoclass to allow media to have height (default height is 0) */
+.media-stretch::before {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%; /* 9 / 16  for 16:9 ratio */
+}
+
+/* Force media embed to fill parent container */
+.media-stretch iframe,
+.media-stretch embed,
+.media-stretch object {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make sure media does exceed or go under boundary limit */
+    height: 100%;
+}
+
+/* For HTML5 video objects */
+.media-stretch video {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Alternate media ratios */
+.media-stretch.rat-4-3::before {
+    padding-bottom: 75%;
+}
+
+.media-stretch.rat-1-1::before {
+    padding-bottom: 100%;
+}
+
+/* FIGURES */
+/* For flexible media display */
+.fig {
+    margin: 0 0 0.5rem 0; /* Small margin at the bottom */
+}
+
+.fig .fig-caption {
+    margin-top: 1rem;
+}
+
+/* IMAGES */
+.img-stretch {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+.img-contain {
+    object-fit: contain;
+}
+
+/* The base of the modal dialog, which is an overlay of the webpage */
+.modal {
+    position: fixed; /* Scrolls with the user */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0; /* Initially hidden */
+    padding: 1rem;
+    display: none; /* Doesn't block the elements underneath */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; /* Vertical centering */
+    pointer-events: none; /* Prevent any pointer events made to modal while hidden */
+}
+
+/* When the modal dialog is visible */
+.modal:target, .modal.shown {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+    z-index: 999;
+    pointer-events: auto; /* Re-enable pointer events */
+}
+
+/* The div in the modal dialpog used to create the translucent background */
+.modal:target .modal-overlay,
+.modal.shown .modal-overlay {
+    position: absolute; /* Absolute inside of the modal container */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-color: rgba(54, 59, 68, 0.5);
+}
+
+/* The modal dialog body with the text itself */
+.modal-content {
+    background-color: var(--cirrus-bg);
+    padding: 0;
+    display: block;
+    border-radius: 3px;
+    box-shadow: 0 .4rem 1rem rgba(54, 59, 68, .3);
+    z-index: 1;
+    color: var(--cirrus-fg);
+    max-width: 40rem; /* 640px */
+}
+
+/* Different size modals */
+.modal.modal-small .modal-content {
+    max-width: 20rem; /* 320px */
+}
+
+.modal.modal-large .modal-content {
+    max-width: 60rem; /* 960px */
+}
+
+.modal-content h1,
+.modal-content h2,
+.modal-content h3,
+.modal-content h4,
+.modal-content h5,
+.modal-content h6 {
+    color: var(--cirrus-fg);
+}
+
+.modal:target .modal-container,
+.modal.shown .modal-container {
+  -webkit-animation: slide-down var(--animation-duration) ease 1;
+  animation: slide-down var(--animation-duration) ease 1;
+  z-index: 1;
+}
+
+/* Restrict width  */
+.modal-content.small {
+    max-width: 32rem;
+}
+
+.modal-content .modal-header {
+    padding: 1rem 3rem;
+}
+
+.modal-content .modal-header .modal-title {
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+.modal-content .modal-body {
+    padding: 1rem 3rem;
+    overflow-y: auto;
+    max-height: 50vh; /* Max height is 50% of viewport height which prevents dialog from extetnding past screen */
+    position: relative;
+}
+
+.modal-content .modal-footer {
+    padding: 1rem 3rem;
+    text-align: right;
+}
+
+/* MODAL ANIMATIONS */
+.modal.modal-animated--dropdown {
+    -webkit-animation: slide-down var(--animation-duration) ease 1;
+    animation: slide-down var(--animation-duration) ease 1;
+}
+
+/* Visible state */
+.modal.modal-animated--zoom-in, .modal.modal-animated--zoom-out {
+    display: -webkit-box; /* Force dialog to appear in the center */
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    transition: 300ms all ease;
+}
+.modal:target.modal-animated--zoom-in, .modal:target.modal-animated--zoom-out {
+    opacity: 1;
+    transition: 300ms all ease;
+}
+.modal.modal-animated--zoom-in .modal-content {
+    transform: scale(0.8);
+    transition: 300ms all ease;
+}
+.modal:target.modal-animated--zoom-in .modal-content, .modal:target.modal-animated--zoom-out .modal-content {
+    transform: scale(1);
+    transition: 300ms all ease;
+}
+
+.modal.modal-animated--zoom-out .modal-content {
+    transform: scale(1.2);
+    transition: 300ms all ease;
+}
+
+/* Keyframes for slide down animation */
+@-webkit-keyframes slide-down{
+    0%{
+        opacity:0;
+        -webkit-transform:translateY(-3rem);
+        transform:translateY(-3rem)
+    }
+    100%{
+        opacity:1;
+        -webkit-transform:translateY(0);
+        transform:translateY(0)
+    }
+}
+@keyframes slide-down{
+    0%{
+        opacity:0;
+        -webkit-transform:translateY(-3rem);
+        transform:translateY(-3rem)
+    }
+    100%{
+        opacity:1;
+        -webkit-transform:translateY(0);
+        transform:translateY(0)
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .modal-content {
+        max-width: 90%;
+    }
+}
+/* TABLE */
+
+.table {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border-collapse: collapse; /* Allows us to set 0 margin in table cells */
+    border-spacing: 0;
+    text-align: center; /* Text center by default */
+}
+
+.table td,
+.table th {
+    border: 1px solid rgba(219, 219, 219, 0.5);
+    border-width: 0 0 1px;
+    padding: 0.75rem;
+    vertical-align: top;
+    text-align: inherit;
+    margin: 0;
+}
+
+.table tr {
+    transition: all 0.3s;
+}
+
+.table caption {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: #6c757d;
+    text-align: left;
+    caption-side: bottom;
+}
+
+.table tr:hover,
+.table.striped tbody tr:nth-child(even):hover {
+    background-color: rgba(216, 216, 216, 0.15);
+}
+
+/* Thicker border for table header */
+.table thead th,
+.table thead {
+    border-bottom: 2px solid rgba(219, 219, 219, 0.49);
+}
+
+.table.bordered thead th,
+.table.bordered thead {
+    border-bottom: 1px solid rgba(219, 219, 219, 0.5);
+}
+
+.table thead th,
+.table tfoot th {
+    padding: 1rem;
+}
+
+.table tfoot th {
+    border-top: 2px solid rgba(219, 219, 219, 0.5);
+    border-bottom: none;
+}
+
+/* CUSTOM STYLES */
+/* All borders */
+.table.bordered td,
+.table.bordered th {
+    border: 1px solid rgba(219, 219, 219, 0.5);
+}
+
+.table.bordered thead td,
+.table.borderd thead {
+    border-width: 1px;
+}
+
+/* Striped table */
+.table.striped tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Decrease padding */
+.table.small td,
+.table.small th {
+    padding: 0.25rem 0.75rem;
+}
+
+/* Fixed title table */
+.table.fixed-head thead {
+    position: relative;
+    display: block;
+}
+
+.table.fixed-head tbody {
+    height: 200px; /* Set the height you want */
+    display: block; /* Needed */
+    overflow: auto; /* Shows scrollbars */
+}
+
+.table.fixed-head tr {
+    display: table;
+    width: 100%; /* Forces row to span container */
+}
+
+.table tr.selected {
+    /* Style a selected row */
+    background-color: var(--cirrus-primary);
+    color: #fff;
+}
+
+/* Borderless Table (for inner cells) */
+.table.borderless thead th,
+.table.borderless th,
+.table.borderless td {
+    border: none;
+}
+
+/* Color scheme for Cirrus */
+:root {
+    --cirrus-fg: #374054;
+    --cirrus-bg: #fff;
+
+    --cirrus-primary: #f03d4d;
+    --cirrus-accent-hover: #d62939;
+    --cirrus-accent-border: #c21b2b;
+    --cirrus-light: #f6f9fc;
+    --cirrus-gray: #d5d7dc;
+    --cirrus-dark: #363636;
+    --cirrus-link: #5e5cc7;
+    --cirrus-link-dark: #4643e2;
+    --cirrus-info: #2972fa;
+    --cirrus-success: #0dd157;
+    --cirrus-warning: #fab633;
+    --cirrus-danger: #fb4143;
+
+    --cirrus-light-hover: #d9e6f2;
+    --cirrus-dark-hover: #424242;
+    --cirrus-info-hover: #2368e9;
+    --cirrus-link-hover: #f8f7ff;
+    --cirrus-success-hover: #00b147;
+    --cirrus-warning-hover: #f9a90e;
+    --cirrus-danger-hover: #f1393c;
+
+    --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+
+    --cirrus-code-bg: #ffdadd;
+    --cirrus-code-fg: #dc4753;
+
+    --cirrus-form-group-bg: #f8f9fa;
+    --cirrus-form-group-fg: #909090;
+
+    --toast-primary-bg: rgba(49, 59, 80, 0.9);
+
+    --animation-duration: .2s;
+}
+/* UTILS */
+/* Utility classes to help solve some very annoying issues */
+
+.u-inline {
+  display: inline;
+}
+
+.u-inline-block {
+  display: inline-block;
+}
+
+.u-flex {
+  display: flex;
+}
+
+.u-flex-column {
+  flex-direction: column;
+}
+
+.u-flex-row {
+  flex-direction: row;
+}
+
+.u-inline-flex {
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
+  display: inline-flex;
+}
+
+.u-block {
+  display: block;
+}
+
+/*
+   When using floats, clearfix allows the container to automatically resize so that
+   other elements are not blocked by children.
+*/
+
+.u-clearfix:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+/* This is mainly to keep elements from overlapping when using floats */
+.u-clear-left {
+  clear: left;
+}
+
+.u-clear-right {
+  clear: right;
+}
+
+.u-clear-both {
+  clear: both;
+}
+
+.u-pull-left {
+  float: left;
+}
+
+.u-pull-right {
+  float: right;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+/* Center element - best used for hero bodies or text */
+.u-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.u-center-alt,
+.u-center-alt:hover,
+.u-center-alt:active {
+  /* If flexbox method fails, this works for elements with unknown dimensions */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.u-vertical-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.u-horizontal-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.u-this-overlay {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.u-hide-overflow {
+  overflow: hidden !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-hide {
+  display: none !important;
+}
+
+.u-disabled {
+  cursor: not-allowed;
+}
+
+.u-unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.u-box {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  display: block;
+  padding: 1rem;
+}
+
+.u-box:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.u-fill-width {
+  width: 100%;
+}
+
+.u-no-margin {
+  margin: 0 !important;
+}
+
+.u-no-padding {
+  padding: 0 !important;
+}
+
+.u-margin-auto {
+  margin: 0 auto !important;
+}
+
+/* Round the corners of the element */
+.u-round {
+  border-radius: 0.1rem;
+}
+
+/* Turns element into a circle */
+.u-circle {
+  border-radius: 50%;
+}
+
+/* Remove outline or drop shadow when element is focused */
+.u-no-shadow {
+  box-shadow: none;
+}
+
+/* Responsiveness and Element Hiding */
+
+/* Do the actual balancing only on larger screens */
+@media screen and (min-width: 769px) {
+  .level,
+  .level-left,
+  .level-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* Hide elements based on screen size */
+@media screen and (max-width: 768px) {
+  .u-hide-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* Hide on devices that are tablets or larger */
+  .u-hide-tablet {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .u-hide-tablet-only {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Hide element on laptops, desktops, etc */
+  .u-hide-desktop {
+    display: none !important;
+  }
 }
