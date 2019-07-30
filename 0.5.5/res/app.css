@@ -138,7 +138,8 @@ pre:not(.get-cirrus) > code {
 }
 
 /* Layout */
-#grids .col > div, #grids [class^='col-'] > div, #grids [class*=" col-"] > div, #grids .col > div, #grids [class^='w-'] > div, #grids [class*=" w-"] > div {
+#grids .col > div, #grids [class^='col-'] > div, #grids [class*=" col-"] > div, #grids .col > div, #grids [class^='w-'] > div, #grids [class*=" w-"] > div,
+#grids [class^='h-'] > div, #grids [class*=" h-"] > div {
     background: #eee;
     text-align: center;
     border-radius: 5px;
@@ -149,6 +150,10 @@ pre:not(.get-cirrus) > code {
     margin-bottom: .75rem;
     font-weight: bold;
     letter-spacing: .1rem;
+}
+
+#grids [class^='h-'] > div, #grids [class*=" h-"] > div {
+    height: 100%;
 }
 
 /* Examples */
