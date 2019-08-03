@@ -16,7 +16,7 @@
 }
 
 .form-ext-input:disabled ~ .form-ext-label {
-    opacity: 0.8;
+    opacity: 0.4;
 }
 
 .form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label:before {

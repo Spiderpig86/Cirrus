@@ -4,10 +4,13 @@
     --cirrus-bg: #fff;
 
     --cirrus-primary: #f03d4d;
+    --cirrus-primary-light: #ffdadd;
     --cirrus-accent-hover: #d62939;
     --cirrus-accent-border: #c21b2b;
     --cirrus-light: #f6f9fc;
+    --cirrus-light-gray: #f8f9fa;
     --cirrus-gray: #d5d7dc;
+    --cirrus-dark-gray: #909090;
     --cirrus-dark: #363636;
     --cirrus-link: #5e5cc7;
     --cirrus-link-dark: #4643e2;
@@ -26,11 +29,11 @@
 
     --cirrus-select-bg: rgba(0, 161, 255, 0.2);
 
-    --cirrus-code-bg: #ffdadd;
+    --cirrus-code-bg: var(--cirrus-primary-light);
     --cirrus-code-fg: #dc4753;
 
-    --cirrus-form-group-bg: #f8f9fa;
-    --cirrus-form-group-fg: #909090;
+    --cirrus-form-group-bg: var(--cirrus-light-gray);
+    --cirrus-form-group-fg: var(--cirrus-dark-gray);
 
     --toast-primary-bg: rgba(49, 59, 80, 0.9);
 
