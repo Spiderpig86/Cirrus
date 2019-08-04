@@ -122,6 +122,10 @@ pre:not(.get-cirrus) > code {
     box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, .5)
 }
 
+._shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
 /* Checkboxes */
 .form-ext-control {
     margin-bottom: 0.75rem;
