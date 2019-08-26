@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  [![v.0.5.4](https://img.shields.io/badge/cirrus-0.5.4-blue.svg?style=flat-square)](https://github.com/Spiderpig86/Cirrus)
+  [![v.0.5.5](https://img.shields.io/badge/cirrus-0.5.5-blue.svg?style=flat-square)](https://github.com/Spiderpig86/Cirrus)
   [![MIT License](https://img.shields.io/github/license/Spiderpig86/Cirrus.svg?style=flat-square)](https://opensource.org/licenses/MIT)
   [![Travis](https://img.shields.io/travis/Spiderpig86/Cirrus.svg?style=flat-square)](https://travis-ci.org/Spiderpig86/Cirrus)
   [![Greenkeeper badge](https://badges.greenkeeper.io/Spiderpig86/Cirrus.svg?style=flat-square)](https://greenkeeper.io/)
