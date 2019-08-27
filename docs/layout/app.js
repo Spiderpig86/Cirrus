@@ -4,10 +4,10 @@ var fluidContainerTest = $('#fluidContainerTest');
 
 fluidContainerAddBtn.click(() => {
     var col = document.createElement('div');
-    col.className = 'col-fluid';
+    col.className = 'col';
     var p = document.createElement('div');
     p.className = 'uppercase';
-    p.innerText = 'col-fluid';
+    p.innerText = 'col';
     $(col).append(p);
     $(fluidContainerTest).append(col);
 });

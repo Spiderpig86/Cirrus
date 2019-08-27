@@ -1,0 +1,62 @@
+.hackedbtn {
+    color: #fff;
+    background-color: #00cb52;
+    border-color: #00ad46;
+}
+
+.hackedbtn:hover {
+    background-color: #00b147;
+}
+
+#dark-button {
+  background-color: rgb(67, 67, 67);
+background-image: linear-gradient(to left, rgb(0, 0, 0), rgb(67, 67, 67));
+clear: both;
+width: 100% ;
+padding: 6rem 0;
+margin: 3rem 0;
+}
+
+#grids .col, #grids [class^='col-'], #grids [class*=" col-"] {
+    background: #eee;
+    text-align: center;
+    border-radius: 5px;
+    font-size: .7rem;
+    text-transform: uppercase;
+    min-height: 30px !important;
+    line-height: 30px;
+    margin-bottom: .75rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
+#splash-img {
+  background:url("https://images.unsplash.com/photo-1465414829459-d228b58caf6e?ifit=crop&amp;fm=jpg&amp;q=100&amp;h=1440&amp;w=2560");
+  background-size: cover;
+}
+
+#grid-gradient {
+  padding: 1.5rem 0;
+  background: -webkit-linear-gradient(left, #FF512F, #DD2476);
+background: linear-gradient(to right, #FF512F, #DD2476);
+color: #fff;
+}
+
+#grid-gradient .col, #grid-gradient [class^='col-'], #grid-gradient [class*=" col-"] {
+    background: rgba(238, 238, 238, 0.3);
+    text-align: center;
+    border-radius: 5px;
+    font-size: .7rem;
+    text-transform: uppercase;
+    min-height: 30px !important;
+    line-height: 30px;
+    margin-bottom: .75rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    -webkit-transition: all .3s;
+transition: all .3s;
+}
+
+#grid-gradient .col:hover, #grid-gradient [class^='col-']:hover, #grid-gradient [class*=" col-"]:hover {
+    background: rgba(238, 238, 238, 0.5);
+}

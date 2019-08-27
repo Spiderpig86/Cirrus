@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,8 +8,10 @@
     <meta name="description" content="A responsive and lightweight CSS framework.">
     <meta charset="UTF-8">
 
-    <link href="../../dist/cirrus.css" type="text/css" rel="stylesheet" />
-    <link href="../../demo_res/css/app.css" type="text/css" rel="stylesheet" />
+    <link href="../../res/cirrus.min.css" type="text/css" rel="stylesheet" />
+    <link href="../../res/app.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        crossorigin="anonymous">
 
     <!-- Syntax highlight code -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github-gist.min.css">
@@ -19,7 +22,7 @@
 </head>
 
 <body>
-    <div id="header" class="header header-fill unselectable header-fixed no-transition header-dark">
+    <div id="header" class="header header-fill unselectable header-fixed no-transition header-dark header-animated">
         <div class="header-brand">
             <div class="nav-item">
                 <a href="../../">
@@ -37,21 +40,21 @@
                 <div class="nav-item text-center">
                     <a href="https://github.com/Spiderpig86/Cirrus">
                     <span class="icon">
-                    <i class="fa fa-github"></i>
+                    <i class="fab fa-wrapper fa-github"></i>
                     </span>
                     </a>
                 </div>
                 <div class="nav-item text-center">
                     <a href="#">
                     <span class="icon white">
-                    <i class="fa fa-twitter"></i>
+                    <i class="fab fa-wrapper fa-twitter"></i>
                     </span>
                     </a>
                 </div>
             </div>
             <div class="nav-right text-center nav-menu">
                 <div class="nav-item">
-                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/links.css" target="_blank"><span class="icon"><i class="fa fa-code"></i></span></a>
+                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/links.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
                 </div>
                 <div class="nav-item text-center has-sub">
                     <a class="nav-dropdown-link">Links</a>
@@ -67,31 +70,31 @@
 
     <section id="started" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#started" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a> Links</h3>
+            <h1><a href="./index.html#started" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Links</h1>
             <div class="divider"></div>
             <p>Cirrus provides a variety of styles for links to choose from. Styles range from the original plain style to a bunch of specially designed links with transitions and animations.</p>
             <div class="row">
                 <div class="col-6">
-                    <div class="row">
+                    <div ">
                             <a href="#">I am just an ordinary link</a>
                     </div>
-                    <div class="row">
+                    <div>
                         <a href="#" class="u u-LR">Hover me</a>
                     </div>
-                    <div class="row">
+                    <div>
                         <span class="usquare">
                             <a href="#" class="utb utb-OLR">I am a square</a>
                         </span>
                     </div>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row&quot;&gt;
-        &lt;a href=&quot;#&quot;&gt;I am just an ordinary link&lt;/a&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;div&gt;
+    &lt;a href=&quot;#&quot;&gt;I am just an ordinary link&lt;/a&gt;
 &lt;/div&gt;
-&lt;div class=&quot;row&quot;&gt;
+&lt;div&gt;
     &lt;a href=&quot;#&quot; class=&quot;u u-LR&quot;&gt;Hover me&lt;/a&gt;
 &lt;/div&gt;
-&lt;div class=&quot;row&quot;&gt;
+&lt;div&gt;
     &lt;span class=&quot;usquare&quot;&gt;
         &lt;a href=&quot;#&quot; class=&quot;utb utb-OLR&quot;&gt;I am a square&lt;/a&gt;
     &lt;/span&gt;
@@ -267,8 +270,8 @@
         </div>
     </section>
 
-    <script async src="../../demo_res/js/smoothscroll.js"></script>
-    <script async src="../../demo_res/js/app.js"></script>
+    <script async src="../../res/js/smoothscroll.js"></script>
+    <script async src="../../res/js/app.js"></script>
 
     <script src="https://use.fontawesome.com/a696b91557.js"></script>
 
@@ -338,7 +341,7 @@
         </div>
     </div>
     <p class="subtitle">The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
-    <p>Made with <i class="fa fa-heart pulse" aria-hidden="true"></i> by <a href="http://stanleylim.me" target="_blank">Stanley Lim</a>
+    <p>Made with <i class="fa fa-wrapper fa-heart pulse" aria-hidden="true"></i> by <a href="http://stanleylim.me" target="_blank">Stanley Lim</a>
     </p>
 </footer>
 

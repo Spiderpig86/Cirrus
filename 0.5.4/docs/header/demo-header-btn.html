@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        
+        <link href="../../dist/cirrus.css" type="text/css" rel="stylesheet" />
+
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+        <style>
+        .btn-span {
+            background-color: #4D565F;
+            display: block;
+            height: 2px;
+            left: 50%;
+            margin-left: -7px;
+            position: absolute;
+            top: 50%;
+            -webkit-transition: none 86ms ease-out;
+            transition: none 86ms ease-out;
+            -webkit-transition-property: background, left, opacity, -webkit-transform;
+            transition-property: background, left, opacity, -webkit-transform;
+            transition-property: background, left, opacity, transform;
+            transition-property: background, left, opacity, transform, -webkit-transform;
+            width: 15px;
+        }
+        .top {
+            margin-top: -6px !important;
+        }
+        .middle {
+            margin-top: -1px !important;
+        }
+        .bottom {
+            margin-top: 4px !important;
+        }
+        </style>
+    </header>
+    <body>
+        <div class="header header-fixed unselectable header-animated level">
+            <div class="header-brand" style="width: 100%">
+                <div class="nav-item nav-btn" style="background-color: #ffdadd; cursor: pointer; display: block; position: relative; margin-left: auto;">
+                    <span class="btn-span top"></span>
+                    <span class="btn-span middle"></span>
+                    <span class="btn-span bottom"></span>
+                </div>
+            </div>
+        </div>
+
+        <script async src="../../demo_res/js/test.js"></script>
+
+        <script src="https://use.fontawesome.com/a696b91557.js"></script>
+    </body>
+</html>

@@ -8,8 +8,10 @@
     <meta name="description" content="A responsive and lightweight CSS framework.">
     <meta charset="UTF-8">
 
-    <link href="../../dist/cirrus.css" type="text/css" rel="stylesheet" />
-    <link href="../../demo_res/css/app.css" type="text/css" rel="stylesheet" />
+    <link href="../../res/cirrus.min.css" type="text/css" rel="stylesheet" />
+    <link href="../../res/app.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github-gist.min.css">
 
@@ -24,7 +26,7 @@
 </head>
 
 <body>
-    <div id="header" class="header header-fill unselectable header-fixed no-transition header-dark">
+    <div id="header" class="header header-fill unselectable header-fixed no-transition header-dark header-animated">
         <div class="header-brand">
             <div class="nav-item">
                 <a href="../../">
@@ -42,21 +44,21 @@
                 <div class="nav-item text-center">
                     <a href="https://github.com/Spiderpig86/Cirrus">
                     <span class="icon">
-                    <i class="fa fa-github"></i>
+                    <i class="fab fa-wrapper fa-github"></i>
                     </span>
                     </a>
                 </div>
                 <div class="nav-item text-center">
                     <a href="#">
                     <span class="icon white">
-                    <i class="fa fa-twitter"></i>
+                    <i class="fab fa-wrapper fa-twitter"></i>
                     </span>
                     </a>
                 </div>
             </div>
             <div class="nav-right text-center nav-menu">
                 <div class="nav-item">
-                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/font.css" target="_blank"><span class="icon"><i class="fa fa-code"></i></span></a>
+                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/font.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
                 </div>
 
                 <div class="nav-item has-sub">
@@ -64,6 +66,7 @@
                     <ul class="dropdown-menu dropdown-animated">
                         <li><a href="#started" class="smoothScroll">Top</a></li>
                         <li><a href="#headings" class="smoothScroll">Headings</a></li>
+                        <li><a href="#headline" class="smoothScroll">Headline</a></li>
                         <li><a href="#typesetting" class="smoothScroll">Typesetting</a></li>
                         <li><a href="#transformations" class="smoothScroll">Transformations</a></li>
                         <li><a href="#font_awesome" class="smoothScroll">Font Awesome</a></li>
@@ -78,7 +81,7 @@
 
     <section class="padtop" id="started">
         <div class="content">
-            <h3><a href="./index.html#started" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Font</h3>
+            <h1><a href="./index.html#started" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Font</h1>
             <div class="divider"></div>
             <p><b>Cirrus</b> incorporates beautiful typography to make your website stand out from the rest. Nunito Sans, by <a href="http://sansoxygen.com/" class="u u-LR"><b>Vernon Adams</b></a> is chosen for the default typography for most elements such as <code>paragraphs</code>, <code>articles</code>, <code>blockquotes</code>, and more while Montserrat adds a bold but elegant touch to titles. The <code>font-size</code> have been converted to rems which is independent of the font sizes of the parent elements. The default is set to 1rem (16px) where each interval of rem is 16 pixels.
 
@@ -101,78 +104,94 @@
 
     <section class="padtop" id="headings">
         <div class="content">
-            <h3><a href="./index.html#headings" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Headings</h3>
+            <h1><a href="./index.html#headings" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Headings</h1>
             <div class="divider"></div>
-            <p>Cirrus styles the standard header tags <code>h1, h2, h3, h4, h5, h6</code> with font sizes ranging from <code>4rem</code> to <code>1rem</code> where each <code>rem</code> is <code>16px</code>. Cirrus allows you to choose between two fonts: <code>Montserrat</code> and <code>Nunito Sans</code> by specifying the font weight of the headers. Simply add the <code>light</code> class to your headings to use <code>Nunito Sans</code> and leave it as is to use <code>Montserrat</code>.</p>
+            <p>Cirrus styles the standard header tags <code>h1, h2, h3, h4, h5, h6</code> with font sizes ranging from <code>4rem</code> to <code>1rem</code> where each <code>rem</code> is <code>16px</code>. Cirrus allows you to choose between two fonts: <code>Montserrat</code> and <code>Nunito Sans</code> by specifying the font weight of the headers. Simply add the <code>font-alt  font-light</code> class to your headings to use <code>Nunito Sans</code> and leave it as is to use <code>Montserrat</code>.</p>
             <div class="row">
                 <div class="col-6">
                     <h6 class="uppercase">Standard headings:</h6>
-                    <h1 class="uppercase">this is h1<span class="desc"><code>h1</code>4rem (48px)</span></h1>
-                    <h2 class="uppercase">this is h2<span class="desc"><code>h2</code>3.5rem (40px)</span></h1>
+                    <h1 class="uppercase">this is h1<span class="desc"><code>h1</code> 3rem (48px)</span></h1>
+                    <h2 class="uppercase">this is h2<span class="desc"><code>h2</code> 2.5rem (40px)</span></h1>
                     </h2>
-                    <h3 class="uppercase">this is h3<span class="desc"><code>h3</code>3rem (32px)</span></h1>
-                    </h3>
-                    <h4 class="uppercase">this is h4<span class="desc"><code>h4</code>2.5rem (24px)</span></h1>
+                    <h3 class="uppercase">this is h3<span class="desc"><code>h3</code> 2rem (32px)</span></h1>
+                    </h1>
+                    <h4 class="uppercase">this is h4<span class="desc"><code>h4</code> 1.75rem (24px)</span></h1>
                     </h4>
-                    <h5 class="uppercase">this is h5<span class="desc"><code>h5</code>2rem (16px)</span></h1>
+                    <h5 class="uppercase">this is h5<span class="desc"><code>h5</code> 1.5rem (16px)</span></h1>
                     </h5>
-                    <h6 class="uppercase">this is h6<span class="desc"><code>h6</code>1rem (12px)</span></h1>
+                    <h6 class="uppercase">this is h6<span class="desc"><code>h6</code> 1.25rem (12px)</span></h1>
                     </h6>
                 </div>
 
                 <div class="col-6">
                     <h6 class="uppercase">Light headings:</h6>
-                    <h1 class="light uppercase">this is h1<span class="desc"><code>h1</code>4rem (48px)</span></h1>
-                    <h2 class="light uppercase">this is h2<span class="desc"><code>h2</code>3.5rem (40px)</span></h1>
+                    <h1 class="font-alt font-light uppercase">this is h1<span class="desc"><code>h1</code> 3rem (48px)</span></h1>
+                    <h2 class="font-alt font-light uppercase">this is h2<span class="desc"><code>h2</code> 2.5rem (40px)</span></h1>
                     </h2>
-                    <h3 class="light uppercase">this is h3<span class="desc"><code>h3</code>3rem (32px)</span></h1>
-                    </h3>
-                    <h4 class="light uppercase">this is h4<span class="desc"><code>h4</code>2.5rem (24px)</span></h1>
+                    <h3 class="font-alt font-light uppercase">this is h3<span class="desc"><code>h3</code> 2rem (32px)</span></h1>
+                    </h1>
+                    <h4 class="font-alt font-light uppercase">this is h4<span class="desc"><code>h4</code> 1.75rem (24px)</span></h1>
                     </h4>
-                    <h5 class="light uppercase">this is h5<span class="desc"><code>h5</code>2rem (16px)</span></h1>
+                    <h5 class="font-alt font-light uppercase">this is h5<span class="desc"><code>h5</code> 1.5rem (16px)</span></h1>
                     </h5>
-                    <h6 class="light uppercase">this is h6<span class="desc"><code>h6</code>1rem (12px)</span></h1>
+                    <h6 class="font-alt font-light uppercase">this is h6<span class="desc"><code>h6</code> 1.25rem (12px)</span></h6>
                     </h6>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;h1 class=&quot;uppercase&quot;&gt;this is h1&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h1&lt;/code&gt;4rem (48px)&lt;/span&gt;&lt;/h1&gt;
-
-&lt;h2 class=&quot;uppercase&quot;&gt;this is h2&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h2&lt;/code&gt;3.5rem (40px)&lt;/span&gt;&lt;/h1&gt;&lt;/h2&gt;
-
-&lt;h3 class=&quot;uppercase&quot;&gt;this is h3&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h3&lt;/code&gt;3rem (32px)&lt;/span&gt;&lt;/h1&gt;&lt;/h3&gt;
-
-&lt;h4 class=&quot;uppercase&quot;&gt;this is h4&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h4&lt;/code&gt;2.5rem (24px)&lt;/span&gt;&lt;/h1&gt;&lt;/h4&gt;
-
-&lt;h5 class=&quot;uppercase&quot;&gt;this is h5&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h5&lt;/code&gt;2rem (16px)&lt;/span&gt;&lt;/h1&gt;&lt;/h5&gt;
-
-&lt;h6 class=&quot;uppercase&quot;&gt;this is h6&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h6&lt;/code&gt;1rem (12px)&lt;/span&gt;&lt;/h1&gt;&lt;/h6&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;h1 class=&quot;uppercase&quot;&gt;this is h1&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h1&lt;/code&gt; 3rem (48px)&lt;/span&gt;&lt;/h1&gt;
+&lt;h2 class=&quot;uppercase&quot;&gt;this is h2&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h2&lt;/code&gt; 2.5rem (40px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h2&gt;
+&lt;h3 class=&quot;uppercase&quot;&gt;this is h3&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h3&lt;/code&gt; 2rem (32px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h1&gt;
+&lt;h4 class=&quot;uppercase&quot;&gt;this is h4&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h4&lt;/code&gt; 1.75rem (24px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h4&gt;
+&lt;h5 class=&quot;uppercase&quot;&gt;this is h5&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h5&lt;/code&gt; 1.5rem (16px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h5&gt;
+&lt;h6 class=&quot;uppercase&quot;&gt;this is h6&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h6&lt;/code&gt; 1.25rem (12px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h6&gt;
                         </code></pre>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;h1 class=&quot;light uppercase&quot;&gt;this is h1&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h1&lt;/code&gt;4rem (48px)&lt;/span&gt;&lt;/h1&gt;
-
-&lt;h2 class=&quot;light uppercase&quot;&gt;this is h2&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h2&lt;/code&gt;3.5rem (40px)&lt;/span&gt;&lt;/h1&gt;&lt;/h2&gt;
-
-&lt;h3 class=&quot;light uppercase&quot;&gt;this is h3&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h3&lt;/code&gt;3rem (32px)&lt;/span&gt;&lt;/h1&gt;&lt;/h3&gt;
-
-&lt;h4 class=&quot;light uppercase&quot;&gt;this is h4&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h4&lt;/code&gt;2.5rem (24px)&lt;/span&gt;&lt;/h1&gt;&lt;/h4&gt;
-
-&lt;h5 class=&quot;light uppercase&quot;&gt;this is h5&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h5&lt;/code&gt;2rem (16px)&lt;/span&gt;&lt;/h1&gt;&lt;/h5&gt;
-
-&lt;h6 class=&quot;light uppercase&quot;&gt;this is h6&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h6&lt;/code&gt;1rem (12px)&lt;/span&gt;&lt;/h1&gt;&lt;/h6&gt;
-
+                    <pre><code class="html" data-lang="HTML">&lt;h1 class=&quot;font-alt font-light uppercase&quot;&gt;this is h1&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h1&lt;/code&gt; 3rem (48px)&lt;/span&gt;&lt;/h1&gt;
+&lt;h2 class=&quot;font-alt font-light uppercase&quot;&gt;this is h2&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h2&lt;/code&gt; 2.5rem (40px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h2&gt;
+&lt;h3 class=&quot;font-alt font-light uppercase&quot;&gt;this is h3&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h3&lt;/code&gt; 2rem (32px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h1&gt;
+&lt;h4 class=&quot;font-alt font-light uppercase&quot;&gt;this is h4&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h4&lt;/code&gt; 1.75rem (24px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h4&gt;
+&lt;h5 class=&quot;font-alt font-light uppercase&quot;&gt;this is h5&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h5&lt;/code&gt; 1.5rem (16px)&lt;/span&gt;&lt;/h1&gt;
+&lt;/h5&gt;
+&lt;h6 class=&quot;font-alt font-light uppercase&quot;&gt;this is h6&lt;span class=&quot;desc&quot;&gt;&lt;code&gt;h6&lt;/code&gt; 1.25rem (12px)&lt;/span&gt;&lt;/h6&gt;
                     </code></pre>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="padtop" id="headline">
+        <div class="content">
+            <h1><a href="./index.html#headline" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Headline</h1>
+            <div class="divider"></div>
+            <span class="tag-container group-tags">
+                <div class="tag tag--dark">Added</div><div class="tag tag--info">0.5.5</div>
+            </span>
+            <p>For larger titles, using a <b>headline</b> would be the best choice.</p>
+
+            <div class="r">
+                <h1 class="headline-1 uppercase"> <b>headline-1</b><span class="desc"><code>headline-1</code> 6.5rem (104px)</span></h1>
+                <h1 class="headline-2 uppercase"> <b>headline-2</b><span class="desc"><code>headline-2</code> 5.5rem (88px)</span></h1>
+                <h1 class="headline-3 uppercase"> <b>headline-3</b><span class="desc"><code>headline-3</code> 4.5rem (72px)</span></h1>
+                <h1 class="headline-4 uppercase"> <b>headline-4</b><span class="desc"><code>headline-4</code> 3.5rem (56px)</span></h1>
+            </div>
+        </div>
+    </section>
+
     <section class="padtop" id="blockquotes">
         <div class="content">
-            <h3><a href="./index.html#blockquotes" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Blockquotes</h3>
+            <h1><a href="./index.html#blockquotes" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Blockquotes</h1>
             <div class="divider"></div>
             <p>Blockquotes are beatifully designed to help you cite from other sources.</p>
             <div class="row level">
@@ -192,7 +211,7 @@
 
     <section class="padtop" id="typesetting">
         <div class="content">
-            <h3><a href="./index.html#typesetting" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Typesetting</h3>
+            <h1><a href="./index.html#typesetting" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Typesetting</h1>
             <div class="divider"></div>
             <div class="row">
                 <h6>Paragraph</h6>
@@ -213,7 +232,7 @@
 
     <section class="padtop" id="transformations">
         <div class="content">
-            <h3><a href="./index.html#transformations" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Text Transformations</h3>
+            <h1><a href="./index.html#transformations" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Text Transformations</h1>
             <div class="divider"></div>
             <p>Cirrus comes with a ton of ways to customize your text ranging from changing font weights to changing font styles.</p>
             <h6>Font weights:</h6>
@@ -272,19 +291,20 @@
 
     <section class="padtop" id="font_awesome">
         <div class="content">
-            <h3><a href="./index.html#font_awesome" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Font Awesome</h3>
+            <h1><a href="./index.html#font_awesome" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Font Awesome</h1>
             <div class="divider"></div>
-            <p>Using Font Awesome? Cirrus's got you covered with a bunch of font-sizes to help your glyphs fit within any component. Cirrus makes sure that each glyph is rendered correctly by setting the font sizes to base 7 since those glyphs preserve aspect ratios at those font sizes.</p>
+            <p>Using Font Awesome? Cirrus makes it easy to integrate glyphs into your website. Just add the <code>fa-wrapper</code> class along with your desired glyph class.</p>
+            <p>Note that glyph sizes now inherity directly from parent classes. Glyphs appear the best when the font size is a multiple of <b>7</b>.</p>
             <div class="row level">
                 <div class="col-6">
                     <p class="title">X-Small (7px)</p>
-                    <span class="icon subtitle">
-                    <i class="fa x-small fa-github"></i>
-                </span>
+                    <span class="icon subtitle" style="font-size: 7px">
+                        <i class="fab fa-wrapper fa-github"></i>
+                    </span>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon&quot;&gt;
-    &lt;i class=&quot;fa x-small fa-github&quot;&gt;&lt;/i&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon subtitle&quot; style=&quot;font-size: 7px&quot;&gt;
+    &lt;i class=&quot;fab fa-wrapper fa-github&quot;&gt;&lt;/i&gt;
 &lt;/span&gt;</code></pre>
                 </div>
             </div>
@@ -293,54 +313,40 @@
                 <div class="col-6">
                     <p class="title">Small/Default (14px)</p>
                     <span class="icon subtitle">
-                    <i class="fa small fa-github"></i>
-                </span>
+                        <i class="fab fa-wrapper small fa-github" style="font-size: 14px"></i>
+                    </span>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon&quot;&gt;
-    &lt;i class=&quot;fa small fa-github&quot;&gt;&lt;/i&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon subtitle&quot; style=&quot;font-size: 14px&quot;&gt;
+    &lt;i class=&quot;fab fa-wrapper fa-github&quot;&gt;&lt;/i&gt;
 &lt;/span&gt;</code></pre>
                 </div>
             </div>
 
             <div class="row level">
                 <div class="col-6">
-                    <p class="title">Large (28px)</p>
+                    <p class="title">Large (21px)</p>
                     <span class="icon subtitle">
-                    <i class="fa large fa-github"></i>
-                </span>
+                        <i class="fa fa-wrapper fa-github" style="font-size: 21px;"></i>
+                    </span>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon&quot;&gt;
-    &lt;i class=&quot;fa large fa-github&quot;&gt;&lt;/i&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon subtitle&quot; style=&quot;font-size: 21px&quot;&gt;
+    &lt;i class=&quot;fab fa-wrapper fa-github&quot;&gt;&lt;/i&gt;
 &lt;/span&gt;</code></pre>
                 </div>
             </div>
 
             <div class="row level">
                 <div class="col-6">
-                    <p class="title">X-Large (35px)</p>
-                    <span class="icon subtitle">
-                    <i class="fa x-large fa-github"></i>
-                </span>
+                    <p class="title">X-Large (28px)</p>
+                    <span class="icon subtitle" style="font-size: 28px">
+                        <i class="fa fa-wrapper fa-github"></i>
+                    </span>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon&quot;&gt;
-    &lt;i class=&quot;fa x-large fa-github&quot;&gt;&lt;/i&gt;
-&lt;/span&gt;</code></pre>
-                </div>
-            </div>
-
-            <div class="row level">
-                <div class="col-6">
-                    <p class="title">XX-Large (42px)</p>
-                    <span class="icon subtitle">
-                    <i class="fa xx-large fa-github"></i>
-                </span>
-                </div>
-                <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon&quot;&gt;
-    &lt;i class=&quot;fa xx-large fa-github&quot;&gt;&lt;/i&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;span class=&quot;icon subtitle&quot; style=&quot;font-size: 28px&quot;&gt;
+    &lt;i class=&quot;fab fa-wrapper fa-github&quot;&gt;&lt;/i&gt;
 &lt;/span&gt;</code></pre>
                 </div>
             </div>
@@ -349,7 +355,7 @@
 
     <section class="padtop" id="misc">
         <div class="content">
-            <h3><a href="./index.html#misc" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Misc.</h3>
+            <h1><a href="./index.html#misc" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Misc.</h1>
             <div class="divider"></div>
             <p>Along with all the features above, Cirrus also has some smaller features that didn't quite make it on those lists but still deserve a mention.</p>
 
@@ -447,35 +453,35 @@
 
     <section id="textele">
         <div class="content">
-            <h3><a href="./index.html#textele" class="doc-link btn-tooltip tooltip-left" data-tooltip="Click to copy">#</a>Other Text Elements</h3>
+            <h1><a href="./index.html#textele" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Other Text Elements</h1>
             <div class="divider"></div>
             <p>Some other text elements.</p>
             <div class="row">
                 <div class="col-3">
-                    <abbr title="You Only Live Once">YOLO</abbr><span><code>&lt;abbr&gt;</code></span>
+                    <abbr title="You Only Live Once">YOLO</abbr>&nbsp;&nbsp;<span><code>&lt;abbr&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <code>Foo bar</code><span><code>&lt;code&gt;</code></span>
+                    <code>Foo bar</code>&nbsp;&nbsp;<span><code>&lt;code&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <del>Deleted</del><span><code>&lt;del&gt;</code></span>
+                    <del>Deleted</del>&nbsp;&nbsp;<span><code>&lt;del&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <del>Deleted</del><span><code>&lt;del&gt;</code></span>
+                    <del>Deleted</del>&nbsp;&nbsp;<span><code>&lt;del&gt;</code></span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    <i>Italis</i><span><code>&lt;i&gt;</code></span>
+                    <i>Italis</i><span>&nbsp;&nbsp;<code>&lt;i&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <ins>Inserted</ins><span><code>&lt;ins&gt;</code></span>
+                    <ins>Inserted</ins>&nbsp;&nbsp;<span><code>&lt;ins&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <kbd>Alt + F4</kbd><span><code>&lt;kbd&gt;</code></span>
+                    <kbd>Alt + F4</kbd>&nbsp;&nbsp;<span><code>&lt;kbd&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <mark>Highlight</mark><span><code>&lt;mark&gt;</code></span>
+                    <mark>Highlight</mark>&nbsp;&nbsp;<span><code>&lt;mark&gt;</code></span>
                 </div>
             </div>
             <div class="row">
@@ -486,24 +492,24 @@
               </ruby><span><code>&lt;ruby&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <s>Strikethrough</s><span><code>&lt;s&gt;</code></span>
+                    <s>Strikethrough</s>&nbsp;&nbsp;<span><code>&lt;s&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <samp>Sample</samp><span><code>&lt;samp&gt;</code></span>
+                    <samp>Sample</samp>&nbsp;&nbsp;<span><code>&lt;samp&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    Text<sub>Subscript</sub><span><code>&lt;sub&gt;</code></span>
+                    Text<sub>Subscript</sub>&nbsp;&nbsp;<span><code>&lt;sub&gt;</code></span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    Text<sup>Superscript</sup><span><code>&lt;sup&gt;</code></span>
+                    Text<sup>Superscript</sup>&nbsp;&nbsp;<span><code>&lt;sup&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <time>05:00</time><span><code>&lt;time&gt;</code></span>
+                    <time>05:00</time>&nbsp;&nbsp;<span><code>&lt;time&gt;</code></span>
                 </div>
                 <div class="col-3">
-                    <var>x</var> = <var>y</var> + 2<span><code>&lt;var&gt;</code></span>
+                    <var>x</var> = <var>y</var> + 2&nbsp;&nbsp;<span><code>&lt;var&gt;</code></span>
                 </div>
             </div>
             </div>
@@ -532,8 +538,8 @@
     </section>
 
 
-    <script async src="../../demo_res/js/smoothscroll.js"></script>
-    <script async src="../../demo_res/js/app.js"></script>
+    <script async src="../../res/js/smoothscroll.js"></script>
+    <script async src="../../res/js/app.js"></script>
 
     <script src="https://use.fontawesome.com/a696b91557.js"></script>
 
@@ -603,7 +609,7 @@
         </div>
     </div>
     <p class="subtitle">The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
-    <p>Made with <i class="fa fa-heart pulse" aria-hidden="true"></i> by <a href="http://stanleylim.me" target="_blank">Stanley Lim</a>
+    <p>Made with <i class="fa fa-wrapper fa-heart pulse" aria-hidden="true"></i> by <a href="http://stanleylim.me" target="_blank">Stanley Lim</a>
     </p>
 </footer>
 

@@ -8,8 +8,10 @@
     <meta name="description" content="A responsive and lightweight CSS framework.">
     <meta charset="UTF-8">
 
-    <link href="../../dist/cirrus.css" type="text/css" rel="stylesheet" />
-    <link href="../../demo_res/css/app.css" type="text/css" rel="stylesheet" />
+    <link href="../../res/cirrus.min.css" type="text/css" rel="stylesheet" />
+    <link href="../../res/app.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
 
     <!-- Syntax highlight code -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github-gist.min.css">
@@ -20,7 +22,7 @@
 </head>
 
 <body>
-    <div id="header" class="header header-fill unselectable header-fixed no-transition header-dark">
+    <div id="header" class="header header-fill unselectable header-fixed no-transition header-dark header-animated">
         <div class="header-brand">
             <div class="nav-item">
                 <a href="../../">
@@ -38,21 +40,21 @@
                 <div class="nav-item">
                     <a href="https://github.com/Spiderpig86/Cirrus">
                     <span class="icon">
-                    <i class="fa fa-github"></i>
+                    <i class="fa-wrapper fab fa-github"></i>
                     </span>
                     </a>
                 </div>
                 <div class="nav-item">
                     <a href="#">
                     <span class="icon white">
-                    <i class="fa fa-twitter"></i>
+                    <i class="fa-wrapper fab fa-twitter"></i>
                     </span>
                     </a>
                 </div>
             </div>
             <div class="nav-right text-center nav-menu">
                 <div class="nav-item">
-                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/button.css" target="_blank"><span class="icon"><i class="fa fa-code"></i></span></a>
+                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/button.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
                 </div>
 
                 <div class="nav-item has-sub">
@@ -71,15 +73,15 @@
 
     <section id="started" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#started" class="doc-link tooltip tooltip-left" data-tooltip="Click to copy">#</a>Buttons</h3>
+            <h1><a href="./index.html#started" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Buttons</h1>
             <div class="divider"></div>
             <p>Cirrus provides minimally designed buttons created to work well with any website. It is also minimally designed to provide a blank canvas for designers to craft custom buttons for any design. By default, buttons will be placed next to each other with no space. By wrapping each button with a <code>btn-container</code> div.</p>
             <space></space
             >
              <h6 class="uppercase">Basic options</h6>
                 <p class="title">Non-animated buttons.</p>
-                <div class="row fluid-container">
-                    <div class="col-fluid">
+                <div class="row">
+                    <div class="col">
                         <div class="btn-container">
                             <div class="btn">test</div>
                         </div>
@@ -90,7 +92,7 @@
                             <input type="submit" value="Submit"/>
                         </div>
                     </div>
-                    <div class="col-fluid">
+                    <div class="col">
                     <pre><code class="html" data-lang="HTML"> &lt;div class=&quot;btn-container&quot;&gt;
     &lt;div class=&quot;btn&quot;&gt;test&lt;/div&gt;
 &lt;/div&gt;
@@ -106,27 +108,27 @@
                 <space class="large"></space>
 
                 <p class="title">Animated</ph6>
-                <div class="row fluid-container">
-                    <div class="col-fluid">
+                <div class="row">
+                    <div class="col">
                         <div class="btn-container">
-                            <div class="btn btn-animated">test</div>
+                            <div class="btn btn-primary btn-animated">test</div>
                         </div>
                         <div class="btn-container">
-                            <button class="btn-animated">Regular Button</button>
+                            <button class="btn-primary btn-animated">Regular Button</button>
                         </div>
                         <div class="btn-container">
-                            <input type="submit" class="btn-animated" value="Submit"/>
+                            <input type="submit" class="btn-primary btn-animated" value="Submit"/>
                         </div>
                     </div>
-                    <div class="col-fluid">
+                    <div class="col">
                     <pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
-    &lt;div class=&quot;btn btn-animated&quot;&gt;test&lt;/div&gt;
+    &lt;div class=&quot;btn btn-primary btn-animated&quot;&gt;test&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;btn-container&quot;&gt;
-    &lt;button class=&quot;btn-animated&quot;&gt;Regular Button&lt;/button&gt;
+    &lt;button class=&quot;btn-primary btn-animated&quot;&gt;Regular Button&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;btn-container&quot;&gt;
-    &lt;input type=&quot;submit&quot; class=&quot;btn-animated&quot; value=&quot;Submit&quot;/&gt;
+    &lt;input type=&quot;submit&quot; class=&quot;btn-primary btn-animated&quot; value=&quot;Submit&quot;/&gt;
 &lt;/div&gt;</code></pre>
                     </div>
                 </div>
@@ -135,16 +137,16 @@
             <h6 class="uppercase">States</h6>
             <p class="title">Disabled buttons.</p>
             <p class="subtitle">Please note that using <code>&lt;div class=&quot;btn&quot;&gt;test&lt;/div&gt</code> is not supported.</p>
-                <div class="row fluid-container">
-                    <div class="col-fluid">
+                <div class="row">
+                    <div class="col">
                         <div class="btn-container">
-                            <button disabled class="btn-animated">Regular Button</button>
+                            <button disabled class="btn-primary btn-animated">Regular Button</button>
                         </div>
                         <div class="btn-container">
-                            <input disabled type="submit" class="btn-animated" value="Submit"/>
+                            <input disabled type="submit" class="btn-primary btn-animated" value="Submit"/>
                         </div>
                     </div>
-                    <div class="col-fluid">
+                    <div class="col">
 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
     &lt;button disabled class=&quot;btn-animated&quot;&gt;Regular Button&lt;/button&gt;
 &lt;/div&gt;
@@ -154,23 +156,23 @@
                     </div>
                 </div>
 
-            <p class="title">Disabled accented button.</p>
+            <p class="title">Disabled primary button.</p>
             <p class="subtitle">Please note that using <code>&lt;div class=&quot;btn&quot;&gt;test&lt;/div&gt</code> is not supported.</p>
-                <div class="row fluid-container">
-                    <div class="col-fluid">
+                <div class="row">
+                    <div class="col">
                         <div class="btn-container">
-                            <button disabled class="btn-animated btn-accent">Regular Button</button>
+                            <button disabled class="btn-animated btn-primary">Regular Button</button>
                         </div>
                         <div class="btn-container">
-                            <input disabled type="submit" class="btn-animated btn-accent" value="Submit"/>
+                            <input disabled type="submit" class="btn-primary btn-animated" value="Submit"/>
                         </div>
                     </div>
-                    <div class="col-fluid">
+                    <div class="col">
 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
-    &lt;button disabled class=&quot;btn-animated btn-accent&quot;&gt;Regular Button&lt;/button&gt;
+    &lt;button disabled class=&quot;btn-animated btn-primary&quot;&gt;Regular Button&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;btn-container&quot;&gt;
-    &lt;input disabled type=&quot;submit&quot; class=&quot;btn-animated btn-accent&quot; value=&quot;Submit&quot;/&gt;
+    &lt;input disabled type=&quot;submit&quot; class=&quot;btn-animated btn-primary&quot; value=&quot;Submit&quot;/&gt;
 &lt;/div&gt;</code></pre>
                     </div>
                 </div>
@@ -178,94 +180,160 @@
                 <space class="large"></space>
 
                 <h6 class="uppercase">Styles</h6>
+                <span class="tag-container group-tags">
+                    <div class="tag tag--dark">Added</div><div class="tag tag--info">0.5.5</div>
+                </span>
 
-                <p class="title">Accent</p>
-                <div class="row fluid-container">
-                    <div class="col-fluid">
-                        <div class="btn-container">
-                            <div class="btn btn-accent">test</div>
-                        </div>
-                        <div class="btn-container">
-                            <button class="btn-accent">Regular Button</button>
-                        </div>
-                        <div class="btn-container">
-                            <input type="submit" class="btn-accent" value="Submit"/>
-                        </div>
+                <p class="title">Themed</p>
+                <div class="row">
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn">Plain</button>
                     </div>
-                    <div class="col-fluid">
-<pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
-    &lt;div class=&quot;btn btn-accent&quot;&gt;test&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;btn-container&quot;&gt;
-    &lt;button class=&quot;btn-accent&quot;&gt;Regular Button&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class=&quot;btn-container&quot;&gt;
-    &lt;input type=&quot;submit&quot; class=&quot;btn-accent&quot; value=&quot;Submit&quot;/&gt;
-&lt;/div&gt;</code></pre>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-primary">Primary</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-transparent">Transparent</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-light">Light</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-dark">Dark</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-black">Black</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-info">Info</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-link">Link</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-success">Success</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-warning">Warning</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-danger">Danger</button>
                     </div>
                 </div>
+
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn&quot;&gt;Plain&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn-transparent&quot;&gt;Transparent&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn-light&quot;&gt;Light&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn-dark&quot;&gt;Dark&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn-black&quot;&gt;Black&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn-info&quot;&gt;Info&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn-link&quot;&gt;Link&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn-success&quot;&gt;Success&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn-warning&quot;&gt;Warning&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col&quot;&gt;
+    &lt;button class=&quot;btn-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;/div&gt;</code></pre>
 
                 <space class="large"></space>
 
                 <p class="title">Outline</p>
-                <div class="row fluid-container level" style="background: #c7c7c7">
-                    <div class="col-fluid">
-                        <div class="btn-container">
-                            <div class="btn btn-outline">test</div>
-                        </div>
-                        <div class="btn-container">
-                            <button class="btn-outline">Regular Button</button>
-                        </div>
-                        <div class="btn-container">
-                            <input type="submit" class="btn-outline" value="Submit"/>
-                        </div>
+                <div class="row">
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn outline">Plain</button>
                     </div>
-                    <div class="col-fluid">
-<pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
-    &lt;div class=&quot;btn btn-outline&quot;&gt;test&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;btn-container&quot;&gt;
-    &lt;button class=&quot;btn-outline&quot;&gt;Regular Button&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class=&quot;btn-container&quot;&gt;
-    &lt;input type=&quot;submit&quot; class=&quot;btn-outline&quot; value=&quot;Submit&quot;/&gt;
-&lt;/div&gt;</code></pre>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-primary outline">Primary</button>
                     </div>
-                </div>
-
-                <space class="large"></space>
-
-                <p class="title">Inverted Outline</p>
-                <div class="row fluid-container">
-                    <div class="col-fluid">
-                        <div class="btn-container">
-                            <div class="btn btn-outline-inverted">test</div>
-                        </div>
-                        <div class="btn-container">
-                            <button class="btn-outline-inverted">Regular Button</button>
-                        </div>
-                        <div class="btn-container">
-                            <input type="submit" class="btn-outline-inverted" value="Submit"/>
-                        </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-transparent outline">Transparent</button>
                     </div>
-                    <div class="col-fluid">
-<pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
-    &lt;div class=&quot;btn btn-outline-inverted&quot;&gt;test&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;btn-container&quot;&gt;
-    &lt;button class=&quot;btn-outline-inverted&quot;&gt;Regular Button&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class=&quot;btn-container&quot;&gt;
-    &lt;input type=&quot;submit&quot; class=&quot;btn-outline-inverted&quot; value=&quot;Submit&quot;/&gt;
-&lt;/div&gt;</code></pre>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-light outline">Light</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-dark outline">Dark</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-black outline">Black</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-info outline">Info</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-link outline">Link</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-success outline">Success</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-warning outline">Warning</button>
+                    </div>
+                    <div style="margin: 0 0.5rem">
+                        <button class="btn-danger outline">Danger</button>
                     </div>
                 </div>
 
+                <pre><code class="html" data-lang="HTML">&lt;div style=&quot;margin: 0 0.5rem&quot;&gt;
+    &lt;button class=&quot;btn outline&quot;&gt;Plain&lt;/button&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 0 0.5rem&quot;&gt;
+    &lt;button class=&quot;btn-primary outline&quot;&gt;Primary&lt;/button&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 0 0.5rem&quot;&gt;
+    &lt;button class=&quot;btn-transparent outline&quot;&gt;Transparent&lt;/button&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 0 0.5rem&quot;&gt;
+    &lt;button class=&quot;btn-light outline&quot;&gt;Light&lt;/button&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 0 0.5rem&quot;&gt;
+    &lt;button class=&quot;btn-dark outline&quot;&gt;Dark&lt;/button&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 0 0.5rem&quot;&gt;
+    &lt;button class=&quot;btn-black outline&quot;&gt;Black&lt;/button&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 0 0.5rem&quot;&gt;
+    &lt;button class=&quot;btn-info outline&quot;&gt;Info&lt;/button&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 0 0.5rem&quot;&gt;
+    &lt;button class=&quot;btn-link outline&quot;&gt;Link&lt;/button&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 0 0.5rem&quot;&gt;
+    &lt;button class=&quot;btn-success outline&quot;&gt;Success&lt;/button&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 0 0.5rem&quot;&gt;
+    &lt;button class=&quot;btn-warning outline&quot;&gt;Warning&lt;/button&gt;
+&lt;/div&gt;
+&lt;div style=&quot;margin: 0 0.5rem&quot;&gt;
+    &lt;button class=&quot;btn-danger outline&quot;&gt;Danger&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
                 <space class="large"></space>
 
+                <h6 class="uppercase">Legacy Styles</h6>
                 <p class="title">Transparent</p>
-                <div class="row fluid-container">
-                    <div class="col-fluid">
+                <div class="row">
+                    <div class="col">
                         <div class="btn-container">
                             <div class="btn btn-transparent">test</div>
                         </div>
@@ -277,7 +345,7 @@
                         </div>
 
                     </div>
-                    <div class="col-fluid">
+                    <div class="col">
 <pre><code class="html" data-lang="HTML"> &lt;div class=&quot;btn-container&quot;&gt;
     &lt;div class=&quot;btn btn-transparent&quot;&gt;test&lt;/div&gt;
 &lt;/div&gt;
@@ -292,9 +360,9 @@
 
                 <space class="large"></space>
 
-                 <p class="title">Light Gray</p>
-                <div class="row fluid-container">
-                    <div class="col-fluid">
+                <p class="title">Light Gray</p>
+                <div class="row">
+                    <div class="col">
                         <div class="btn-container">
                             <div class="btn btn-light">test</div>
                         </div>
@@ -305,7 +373,7 @@
                             <input type="submit" class="btn-light" value="Submit"/>
                         </div>
                     </div>
-                    <div class="col-fluid">
+                    <div class="col">
 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
     &lt;div class=&quot;btn btn-light&quot;&gt;test&lt;/div&gt;
 &lt;/div&gt;
@@ -320,9 +388,9 @@
                 
                 <space class="large"></space>
 
-                 <p class="title">Dark Gray</p>
-                <div class="row fluid-container">
-                    <div class="col-fluid">
+                <p class="title">Dark Gray</p>
+                <div class="row">
+                    <div class="col">
                         <div class="btn-container">
                             <div class="btn btn-dark">test</div>
                         </div>
@@ -333,7 +401,7 @@
                             <input type="submit" class="btn-dark" value="Submit"/>
                         </div>
                     </div>
-                    <div class="col-fluid">
+                    <div class="col">
 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
     &lt;div class=&quot;btn btn-dark&quot;&gt;test&lt;/div&gt;
 &lt;/div&gt;
@@ -348,9 +416,9 @@
 
                 <space class="large"></space>
 
-                 <p class="title">Black</p>
-                <div class="row fluid-container">
-                    <div class="col-fluid">
+                <p class="title">Black</p>
+                <div class="row">
+                    <div class="col">
                         <div class="btn-container">
                             <div class="btn btn-black">test</div>
                         </div>
@@ -361,7 +429,7 @@
                             <input type="submit" class="btn-black" value="Submit"/>
                         </div>
                     </div>
-                    <div class="col-fluid">
+                    <div class="col">
 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
     &lt;div class=&quot;btn btn-black&quot;&gt;test&lt;/div&gt;
 &lt;/div&gt;
@@ -375,28 +443,24 @@
                 </div>
 
 
-                  <space class="large"></space>
+                <space class="large"></space>
                 <h6 class="uppercase">Sizes</h6>
                 <p>Besides the regular button size, Cirrus allows you to choose which size buttons you want to use.
                 <p class="title">Tiny</p>
 
                 <div class="row">
                     <div class="col-6">
-                        <div class="row">
-                            <div class="btn-container">
-                                <div class="btn btn-tiny">test</div>
-                            </div>
-                            <div class="btn-container">
-                                <button class="btn-tiny">Tiny Button</button>
-                            </div>
-                            <div class="btn-container">
-                                <input type="submit" class="btn-tiny" value="Submit"/>
-                            </div>
+                        <div class="btn-container">
+                            <div class="btn btn-tiny">test</div>
                         </div>
-                        
+                        <div class="btn-container">
+                            <button class="btn-tiny">Tiny Button</button>
+                        </div>
+                        <div class="btn-container">
+                            <input type="submit" class="btn-tiny" value="Submit"/>
+                        </div>
                     </div>
                     <div class="col-6">
-                         <div class="row">
 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
     &lt;div class=&quot;btn btn-tiny&quot;&gt;test&lt;/div&gt;
 &lt;/div&gt;
@@ -406,28 +470,24 @@
 &lt;div class=&quot;btn-container&quot;&gt;
     &lt;input type=&quot;submit&quot; class=&quot;btn-tiny&quot; value=&quot;Submit&quot;/&gt;
 &lt;/div&gt;</code></pre>
-                        </div>
                     </div>
                 </div>
 
                 <p class="title">Small</p>
                 <div class="row">
                     <div class="col-6">
-                        <div class="row">
-                            <div class="btn-container">
-                                <div class="btn btn-small">test</div>
-                            </div>
-                            <div class="btn-container">
-                                <button class="btn-small">Small Button</button>
-                            </div>
-                            <div class="btn-container">
-                                <input type="submit" class="btn-small" value="Submit"/>
-                            </div>
+                        <div class="btn-container">
+                            <div class="btn btn-small">test</div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-small">Small Button</button>
+                        </div>
+                        <div class="btn-container">
+                            <input type="submit" class="btn-small" value="Submit"/>
                         </div>
                         
                     </div>
                     <div class="col-6">
-                         <div class="row">
             <pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
     &lt;div class=&quot;btn btn-small&quot;&gt;test&lt;/div&gt;
 &lt;/div&gt;
@@ -437,28 +497,24 @@
 &lt;div class=&quot;btn-container&quot;&gt;
     &lt;input type=&quot;submit&quot; class=&quot;btn-small&quot; value=&quot;Submit&quot;/&gt;
 &lt;/div&gt;</code></pre>
-                        </div>
                     </div>
                 </div>
 
                 <p class="title">Large</p>
                 <div class="row">
                     <div class="col-6">
-                        <div class="row">
-                            <div class="btn-container">
-                                <div class="btn btn-large">test</div>
-                            </div>
-                            <div class="btn-container">
-                                <button class="btn-large">Large Button</button>
-                            </div>
-                            <div class="btn-container">
-                                <input type="submit" class="btn-large" value="Submit"/>
-                            </div>
+                        <div class="btn-container">
+                            <div class="btn btn-large">test</div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-large">Large Button</button>
+                        </div>
+                        <div class="btn-container">
+                            <input type="submit" class="btn-large" value="Submit"/>
                         </div>
                     </div>
 
                     <div class="col-6">
-                                                <div class="row">
 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
     &lt;div class=&quot;btn btn-large&quot;&gt;test&lt;/div&gt;
 &lt;/div&gt;
@@ -467,7 +523,7 @@
 &lt;/div&gt;
 &lt;div class=&quot;btn-container&quot;&gt;
     &lt;input type=&quot;submit&quot; class=&quot;btn-large&quot; value=&quot;Submit&quot;/&gt;
-&lt;/div&gt;</code></pre></div>
+&lt;/div&gt;</code></pre>
                     </div>
                 </div>
 
@@ -475,21 +531,18 @@
 
                 <div class="row">
                     <div class="col-6">
-                        <div class="row">
-                            <div class="btn-container">
-                                <div class="btn btn-xlarge">test</div>
-                            </div>
-                            <div class="btn-container">
-                                <button class="btn-xlarge">Extra Large Button</button>
-                            </div>
-                            <div class="btn-container">
-                                <input type="submit" class="btn-xlarge" value="Submit"/>
-                            </div>
+                        <div class="btn-container">
+                            <div class="btn btn-xlarge">test</div>
+                        </div>
+                        <div class="btn-container">
+                            <button class="btn-xlarge">Extra Large Button</button>
+                        </div>
+                        <div class="btn-container">
+                            <input type="submit" class="btn-xlarge" value="Submit"/>
                         </div>
                         
                     </div>
                     <div class="col-6">
-                         <div class="row">
             <pre><code class="html" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
     &lt;div class=&quot;btn btn-xlarge&quot;&gt;test&lt;/div&gt;
 &lt;/div&gt;
@@ -499,7 +552,6 @@
 &lt;div class=&quot;btn-container&quot;&gt;
     &lt;input type=&quot;submit&quot; class=&quot;btn-xlarge&quot; value=&quot;Submit&quot;/&gt;
 &lt;/div&gt;</code></pre>
-                        </div>
                     </div>
                 </div>
 
@@ -511,10 +563,10 @@
                 <p class="title">Glyph on the right.</p>
                 <div class="row">
                     <div class="col-6">
-                        <a href="#"><button>See More<i class="fa fa-chevron-right pad-left"></i></button></a>
+                        <a href="#"><button>See More<i class="fa-wrapper fa fa-chevron-right pad-left"></i></button></a>
                     </div>
                     <div class="col-6">
-<pre><code class="html" data-lang="HTML">&lt;a href=&quot;&quot;&gt;&lt;button&gt;See More&lt;i class=&quot;fa fa-chevron-right pad-left&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;</code></pre>
+<pre><code class="html" data-lang="HTML">&lt;a href=&quot;&quot;&gt;&lt;button&gt;See More&lt;i class=&quot;fa-wrapper fa fa-chevron-right pad-left&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;</code></pre>
                     </div>
                 </div>
 
@@ -523,10 +575,10 @@
                 <p class="title">Glyph on the left.</p>
                 <div class="row">
                     <div class="col-6">
-                        <a><button><i class="fa fa-chevron-left pad-right"></i>See More</button></a>
+                        <a><button><i class="fa-wrapper fa fa-chevron-left pad-right"></i>See More</button></a>
                     </div>
                     <div class="col-6">
-<pre><code class="html" data-lang="HTML">&lt;a href=&quot;&quot;&gt;&lt;button&gt;&lt;i class=&quot;fa fa-chevron-left pad-right&quot;&gt;&lt;/i&gt;See More&lt;/button&gt;&lt;/a&gt;</code></pre>
+<pre><code class="html" data-lang="HTML">&lt;a href=&quot;&quot;&gt;&lt;button&gt;&lt;i class=&quot;fa-wrapper fa fa-chevron-left pad-right&quot;&gt;&lt;/i&gt;See More&lt;/button&gt;&lt;/a&gt;</code></pre>
                     </div>
                 </div>
 
@@ -535,25 +587,22 @@
                 <p class="title">Different glyph sizes.</p>
                 <div class="row">
                     <div class="col-6">
-                        <a><button class="btn-tiny">Tiny<i class="fa fa-chevron-right pad-left "></i></button></a>
-                        <a><button class="btn-small">Small<i class="fa fa-chevron-right pad-left "></i></button></a>
-                        <a><button>Normal<i class="fa fa-chevron-right pad-left"></i></button></a>
-                        <a><button class="btn-large">Large<i class="fa fa-chevron-right pad-left"></i></button></a>
-                        <a><button class="btn-xlarge">Extra Large<i class="fa fa-chevron-right pad-left "></i></button></a>
-                        <a><button class="btn-xxlarge">Extra Extra Large<i class="fa fa-chevron-right pad-left "></i></button></a>
+                        <a><button class="btn-tiny">Tiny<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button></a>
+                        <a><button class="btn-small">Small<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button></a>
+                        <a><button>Normal<i class="fa-wrapper fa fa-chevron-right pad-left"></i></button></a>
+                        <a><button class="btn-large">Large<i class="fa-wrapper fa fa-chevron-right pad-left"></i></button></a>
+                        <a><button class="btn-xlarge">Extra Large<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button></a>
                     </div>
                     <div class="col-6">
-<pre><code class="html" data-lang="HTML">&lt;a href=&quot;&quot;&gt;&lt;button class=&quot;btn-tiny&quot;&gt;Tiny&lt;i class=&quot;fa fa-chevron-right pad-left &quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;
+<pre><code class="html" data-lang="HTML">&lt;a href=&quot;&quot;&gt;&lt;button class=&quot;btn-tiny&quot;&gt;Tiny&lt;i class=&quot;fa-wrapper fa fa-chevron-right pad-left &quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;
 
-&lt;a href=&quot;&quot;&gt;&lt;button class=&quot;btn-small&quot;&gt;Small&lt;i class=&quot;fa fa-chevron-right pad-left &quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;
+&lt;a href=&quot;&quot;&gt;&lt;button class=&quot;btn-small&quot;&gt;Small&lt;i class=&quot;fa-wrapper fa fa-chevron-right pad-left &quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;
 
-&lt;a href=&quot;&quot;&gt;&lt;button&gt;Normal&lt;i class=&quot;fa fa-chevron-right pad-left&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;
+&lt;a href=&quot;&quot;&gt;&lt;button&gt;Normal&lt;i class=&quot;fa-wrapper fa fa-chevron-right pad-left&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;
 
-&lt;a href=&quot;&quot;&gt;&lt;button class=&quot;btn-large&quot;&gt;Large&lt;i class=&quot;fa fa-chevron-right pad-left&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;
+&lt;a href=&quot;&quot;&gt;&lt;button class=&quot;btn-large&quot;&gt;Large&lt;i class=&quot;fa-wrapper fa fa-chevron-right pad-left&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;
 
-&lt;a href=&quot;&quot;&gt;&lt;button class=&quot;btn-xlarge&quot;&gt;Extra Large&lt;i class=&quot;fa fa-chevron-right pad-left &quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;
-
-&lt;a href=&quot;&quot;&gt;&lt;button class=&quot;btn-xxlarge&quot;&gt;Extra Extra Large&lt;i class=&quot;fa fa-chevron-right pad-left &quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;</code></pre>
+&lt;a href=&quot;&quot;&gt;&lt;button class=&quot;btn-xlarge&quot;&gt;Extra Large&lt;i class=&quot;fa-wrapper fa fa-chevron-right pad-left &quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/a&gt;</code></pre>
                     </div>
                 </div>
         </div>
@@ -561,22 +610,22 @@
 
     <section id="groups" class="padtop">
         <div class="content">
-            <h3><a href="./index.html#groups" class="doc-link tooltip tooltip-left" data-tooltip="Click to copy">#</a>Button Groups</h3>
+            <h1><a href="./index.html#groups" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Button Groups</h1>
             <div class="divider"></div>
             <p>Button groups are designed to group buttons of similar actions or properties together in a seemless fashion. Buttons are placed adjacent to each other and buttons at each of the ends are rounded off respectively.</p>
             <div class="row">
                 <div class="col-6">
                     <div class="btn-group">
-                        <button class="btn-accent">First Button</button>
-                        <button class="btn-accent">Second Button</button>
-                        <button class="btn-accent">Third Button</button>
+                        <button class="btn-primary">First Button</button>
+                        <button class="btn-primary">Second Button</button>
+                        <button class="btn-primary">Third Button</button>
                     </div>
                 </div>
                 <div class="col-6">
                     <pre><code class="HTML" data-lang="HTML"> &lt;div class=&quot;btn-group&quot;&gt;
-    &lt;button class=&quot;btn-accent&quot;&gt;First Button&lt;/button&gt;
-    &lt;button class=&quot;btn-accent&quot;&gt;Second Button&lt;/button&gt;
-    &lt;button class=&quot;btn-accent&quot;&gt;Third Button&lt;/button&gt;
+    &lt;button class=&quot;btn-primary&quot;&gt;First Button&lt;/button&gt;
+    &lt;button class=&quot;btn-primary&quot;&gt;Second Button&lt;/button&gt;
+    &lt;button class=&quot;btn-primary&quot;&gt;Third Button&lt;/button&gt;
 &lt;/div&gt;</code></pre>
                 </div>
             </div>
@@ -591,9 +640,9 @@
                 </div>
                 <div class="col-6">
                     <pre><code class="HTML" data-lang="HTML"> &lt;div class=&quot;btn-group&quot;&gt;
-    &lt;button class=&quot;btn-accent&quot;&gt;First Button&lt;/button&gt;
-    &lt;button class=&quot;btn-accent&quot;&gt;Second Button&lt;/button&gt;
-    &lt;button class=&quot;btn-accent&quot;&gt;Third Button&lt;/button&gt;
+    &lt;button class=&quot;btn-primary&quot;&gt;First Button&lt;/button&gt;
+    &lt;button class=&quot;btn-primary&quot;&gt;Second Button&lt;/button&gt;
+    &lt;button class=&quot;btn-primary&quot;&gt;Third Button&lt;/button&gt;
 &lt;/div&gt;</code></pre>
                 </div>
             </div>
@@ -647,21 +696,21 @@
                 <li class="pagination-item pagination-prev">
                     <a href="../animations" class="display-block">
                         <p class="pagination-item-subtitle">Previous</p>
-                        <h5 class="light no-margin">Animations</h5>
+                        <h5 class="font-alt font-light no-margin">Animations</h5>
                     </a>
                 </li>
                 <li class="pagination-item pagination-next">
                     <a href="../components" class="display-block">
                         <p class="pagination-item-subtitle">Next</p>
-                        <h5 class="light no-margin">Components</h5>
+                        <h5 class="font-alt font-light no-margin">Components</h5>
                     </a>
                 </li>
             </ul>
         </div>
     </section>
 
-    <script async src="../../demo_res/js/smoothscroll.js"></script>
-    <script async src="../../demo_res/js/app.js"></script>
+    <script async src="../../res/js/smoothscroll.js"></script>
+    <script async src="../../res/js/app.js"></script>
     <script src="https://use.fontawesome.com/a696b91557.js"></script>
 
     <!-- Syntax highlight code -->

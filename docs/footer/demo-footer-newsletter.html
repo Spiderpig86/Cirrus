@@ -8,8 +8,10 @@
                 <meta name="description" content="A responsive and lightweight CSS framework.">
                 <meta charset="UTF-8">
             
-                <link href="../../dist/cirrus.css" type="text/css" rel="stylesheet" />
-                <link href="../../demo_res/css/app.css" type="text/css" rel="stylesheet" />
+                <link href="../../res/cirrus.min.css" type="text/css" rel="stylesheet" />
+                <link href="../../res/app.css" type="text/css" rel="stylesheet" />
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+                    crossorigin="anonymous">
             
                 <!-- Syntax highlight code -->
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github-gist.min.css">
@@ -19,11 +21,12 @@
                 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
                 <style>
-                    input[type='text'], input[type='email'] {
+                    .input-control input:not([type=checkbox]):not([type=radio]):not([type=submit]).input {
                         background: transparent;
                         border: 0;
                         border-bottom: 2px solid #fff;
                         border-radius: 0;
+                        box-shadow: none;
                         color: #fff;
                     }
                     i { color: #fff; }
@@ -39,7 +42,7 @@
             <space class="x-large"></space>
             <div class="content">
                 <h1 class="uppercase">Interesting Content</h1>
-                <h6 class="light">Subscribe to our newsletter for more updates.</h6>
+                <h6 class="font-alt font-light">Subscribe to our newsletter for more updates.</h6>
             </div>
             <script src="https://use.fontawesome.com/a696b91557.js"></script>
         </body>
@@ -53,25 +56,25 @@
         
                         <div class="row">
                             <div class="input-control">
-                                <input type="text" class="input-contains-icon-left" placeholder="Name"/><span class="icon icon-left"><i class="fa fa-user small"></i></span>
+                                <input type="text" class="input input-contains-icon-left" placeholder="Name"/><span class="icon icon-left"><i class="fa fa-wrapper fa-user small"></i></span>
                             </div>
                             <div class="input-control">
-                                <input type="email" class="input-contains-icon-left" placeholder="Email"/><span class="icon icon-left"><i class="fa fa-envelope small"></i></span>
+                                <input type="email" class="input input-contains-icon-left" placeholder="Email"/><span class="icon icon-left"><i class="fa fa-wrapper fa-envelope small"></i></span>
                             </div>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="center">
-                            <button class="btn-outline" style="
+                        <div class="u-center">
+                            <button class="btn-light outline" style="
                                 color: #fff;
                                 font-weight: bold;
                                 border-radius: 0;
-                            ">Sign Me Up <i class="fa fa-chevron-right pad-left" aria-hidden="true"></i></button>
+                            ">Sign Me Up <i class="fa fa-wrapper fa-chevron-right pad-left" aria-hidden="true"></i></button>
                         </div>
                     </div>
                 </div>
                 <space class="large"></space>
-                <p class="white center">Made at 2am. Venturious &copy; 2018</p>
+                <p class="white u-center">Made at 2am. Venturious &copy; 2019</p>
             </div>
         </footer>
     </html>
