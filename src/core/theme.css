@@ -4,6 +4,7 @@
     --cirrus-bg: #fff;
 
     --cirrus-primary: #f03d4d;
+    --cirrus-primary-rgb: 240,61,77;
     --cirrus-primary-light: #ffdadd;
     --cirrus-accent-hover: #d62939;
     --cirrus-accent-border: #c21b2b;
@@ -16,6 +17,7 @@
     --cirrus-link-dark: #4643e2;
     --cirrus-info: #2972fa;
     --cirrus-success: #0dd157;
+    --cirrus-success-rgb: 13,209,87;
     --cirrus-warning: #fab633;
     --cirrus-danger: #fb4143;
 
@@ -38,4 +40,5 @@
     --toast-primary-bg: rgba(49, 59, 80, 0.9);
 
     --animation-duration: .2s;
+    --focus-opacity: 0.4;
 }

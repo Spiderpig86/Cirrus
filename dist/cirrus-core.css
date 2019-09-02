@@ -1021,7 +1021,7 @@ textarea[type=text]:focus,
 input[type=text].input-focused,
 .input-focused {
     border-color: rgb(61, 171, 240);
-    box-shadow: 0 0 0 0.2rem rgba(61, 171, 240, 0.4), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 0 0.2rem rgba(61, 171, 240, var(--focus-opacity)), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 select {
@@ -1094,7 +1094,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 }
 
 .input-success:not([type=checkbox]):not([type=radio]):not([type=submit]):focus, .btn-success:focus {
-    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, var(--focus-opacity)), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 .input-error {
@@ -1103,7 +1103,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 }
 
 .input-error:not([type=checkbox]):not([type=radio]):not([type=submit]):focus, .btn-error:focus {
-    box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, var(--focus-opacity)), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 /* Input Field Sizes */
@@ -3335,6 +3335,7 @@ video.video-fullscreen {
     --cirrus-bg: #fff;
 
     --cirrus-primary: #f03d4d;
+    --cirrus-primary-rgb: 240,61,77;
     --cirrus-primary-light: #ffdadd;
     --cirrus-accent-hover: #d62939;
     --cirrus-accent-border: #c21b2b;
@@ -3347,6 +3348,7 @@ video.video-fullscreen {
     --cirrus-link-dark: #4643e2;
     --cirrus-info: #2972fa;
     --cirrus-success: #0dd157;
+    --cirrus-success-rgb: 13,209,87;
     --cirrus-warning: #fab633;
     --cirrus-danger: #fb4143;
 
@@ -3369,6 +3371,7 @@ video.video-fullscreen {
     --toast-primary-bg: rgba(49, 59, 80, 0.9);
 
     --animation-duration: .2s;
+    --focus-opacity: 0.4;
 }
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */

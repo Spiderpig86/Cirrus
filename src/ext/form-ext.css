@@ -233,3 +233,16 @@
 .form-ext-toggle--success .form-ext-toggle__toggler i::after {
     background-color: var(--cirrus-success);
 }
+
+/**
+ * Accessibility
+ */
+.form-ext-input:focus + .form-ext-toggle__toggler,
+.form-ext-input:focus ~ .form-ext-label:before {
+    box-shadow: 0 0 0 0.2rem rgba(var(--cirrus-primary-rgb), var(--focus-opacity)), inset 0 1px 8px rgba(0, 0, 0, .07);
+}
+
+.form-ext-input.form-ext-input--success:focus ~ .form-ext-label:before {
+    border-color: inherit;
+    box-shadow: 0 0 0 0.2rem rgba(var(--cirrus-success-rgb), var(--focus-opacity)), inset 0 1px 8px rgba(0, 0, 0, .07);
+}
