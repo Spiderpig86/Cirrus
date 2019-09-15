@@ -86,3 +86,13 @@ $('.doc-link').on('click', function(e) {
     target.textContent = "";
     return false;
 });
+
+// Escape modal dialogs
+document.addEventListener('keyup', function(e) {
+    if(e.key === "Escape") {
+        const modals = document.querySelectorAll('.modal-overlay');
+        for (const modal of modals) {
+            modal.click();
+        }
+    }
+});

@@ -497,7 +497,7 @@
                 <div class="tag tag--dark">Added</div><div class="tag tag--info">0.5.5</div>
             </span>
             <p>You may have noticed that the heights of the cards are not the same if the length of the content is different. To fix this, you can add the <code>u-flex u-flex-column h-100</code> classes to <code>card</code>.</p>
-            <p>Note that <b>this does not work with the card with the sliding title</b>.</p>
+            <p>Note that <b>this does not work with the card with the animated card above</b>.</p>
 
             <h6>Before</h6>
             <div class="row">
@@ -1207,25 +1207,43 @@
                 </div>
             </div>            
 
-        <space></space>
+            <space></space>
 
-        <h4>Sizes</h4>
-        <p>Modal dialogs come in 3 pre-defined sizes, each corresponding to small, medium, and large viewports using the <code>modal-small</code>, <code>modal</code>, and <code>modal-large</code> class selectors respectively.</p>
-        <div class="row level u-center">
-            <a href="#modal-small"><button>Small</button></a>
-            <a href="#modal-normal"><button>Normal</button></a>
-            <a href="#modal-large"><button>Large</button></a>
-        </div>
+            <h4>Sizes</h4>
+            <p>Modal dialogs come in 3 pre-defined sizes, each corresponding to small, medium, and large viewports using the <code>modal-small</code>, <code>modal</code>, and <code>modal-large</code> class selectors respectively.</p>
+            <div class="row level u-center">
+                <a href="#modal-small"><button>Small</button></a>
+                <a href="#modal-normal"><button>Normal</button></a>
+                <a href="#modal-large"><button>Large</button></a>
+            </div>
 
-        <space></space>
+            <space></space>
 
-        <h4>Animations</h4>
-        <p>Spice up your modal dialogs with a couple of animations.</p>
-        <div class="row level u-center">
-            <a href="#modal-drop"><button>Dropdown</button></a>
-            <a href="#modal-in"><button>Zoom In</button></a>
-            <a href="#modal-out"><button>Zoom Out</button></a>
-        </div>
+            <h4>Animations</h4>
+            <p>Spice up your modal dialogs with a couple of animations.</p>
+            <div class="row level u-center">
+                <a href="#modal-drop"><button>Dropdown</button></a>
+                <a href="#modal-in"><button>Zoom In</button></a>
+                <a href="#modal-out"><button>Zoom Out</button></a>
+            </div>
+
+            <space></space>
+
+            <h4>Accessibility</h4>
+            <p>To be complaint with <a class="u u-LR" href="https://www.w3.org/TR/wai-aria-practices/#dialog_modal" target="_blank">WAI-ARIA Best Practices</a>, you can easily include this snippet of JavaScript to close all dialogs when hitting the escape key.</p>
+            
+            <div class="r">
+                <pre>
+                    <code class="js" data-lang="JS">document.addEventListener('keyup', function(e) {
+    if(e.key === "Escape") {
+        const modals = document.querySelectorAll('.modal-overlay');
+        for (const modal of modals) {
+            modal.click();
+        }
+    }
+});</code>
+                </pre>
+            </div>
 
         </div>
     </section>
