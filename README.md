@@ -16,9 +16,9 @@ A fully responsive and comprehensive CSS framework with beautiful controls and s
 <a href="https://spiderpig86.github.io/Cirrus"><strong>Check out the docs »</strong></a>
 <br />
 <br />
-<a href="" target="_blank">Request Feature</a>
+<a href="https://github.com/Spiderpig86/Cirrus/issues" target="_blank">Request Feature</a>
 /
-<a href="" target="_blank">Report a Bug</a>
+<a href="https://github.com/Spiderpig86/Cirrus/issues" target="_blank">Report a Bug</a>
 /
 <a href="https://spiderpig86.github.io/Cirrus/docs/examples/" target="_blank">Examples</a>
 </p>
