@@ -12,26 +12,46 @@
 
 <p align="center">
 A fully responsive and comprehensive CSS framework with beautiful controls and simplistic structure. Cirrus is designed to be adaptable to existing themes or when starting fresh.
+<br />
+<a href="https://spiderpig86.github.io/Cirrus"><strong>Check out the docs »</strong></a>
+<br />
+<br />
+<a href="" target="_blank">Request Feature</a>
+/
+<a href="" target="_blank">Report a Bug</a>
+/
+<a href="https://spiderpig86.github.io/Cirrus/docs/examples/" target="_blank">Examples</a>
 </p>
 
 ## :hammer: Quick Install
 
-### Npm
+#### Npm
 ```sh
 npm install cirrus-ui
 ```
 
-### Yarn
+#### Yarn
 
 ```sh
 yarn add cirrus-ui
 ```
 
-### CDN
+#### CDN
 
 ```html
 https://unpkg.com/cirrus-ui
 ```
+
+## :ledger: Official Documentation
+Check out the official documentation for Cirrus at [https://spiderpig86.github.io/Cirrus/](https://spiderpig86.github.io/Cirrus/).
+
+## :sparkles: Why not other frameworks?
+Even with a multitude of CSS frameworks, some are either too basic to develop more complex websites and some are too bogged down with a lot of styles that don't end up getting used. Cirrus is meant to bridge a gap between boilerplate stylesheets and UI frameworks.
+
+* :zap: Lightweight - Cirrus consists of a single minified file using only **9.9kb** and **15.1.kb** respectively.
+* :gift: Beautiful Components - Tons of pre-built components to for rapid prototyping.
+* :gem: Clean - Styles are easy to follow and written using [BEM Notation](http://getbem.com/introduction/).
+* :iphone: Responsive - Responsive designs out of the box.
 
 ## :dart: Supported Browsers
 Cirrus relies on  [What CSS to prefix?](http://shouldiprefix.com/) to determine which selectors need preprocessors.
@@ -40,7 +60,7 @@ Cirrus relies on  [What CSS to prefix?](http://shouldiprefix.com/) to determine 
 | --- | --- | --- | --- | --- | --- |
 | IE9, IE10, IE11, Edge | last 3 versions, ESR | last 3 versions | last 3 versions | last 3 versions | last 3 versions |
 
-## :crystal_ball: Framework Components
+## :crystal_ball: What's Included
 * Framework components are now broken down into `core` and `ext` packages. The `core` package only contains the essentials for basic styling while `core + ext` adds specially designed components.
 
 #### Core
@@ -109,9 +129,6 @@ Cirrus relies on  [What CSS to prefix?](http://shouldiprefix.com/) to determine 
 * The only component that requires the use of jQuery is the `Header` component for toggling the dropdown menu on mobile.
 * It is possible to use these components without jQuery in other frameworks like Angular and React by mimicking the behavior of toggling the class.
 
-## :sparkles: Why not other frameworks?
-Even with a multitude of CSS frameworks, some are either too basic to develop more complex websites and some are too bogged down with a lot of styles that don't end up getting used. Cirrus is meant to bridge a gap between boilerplate stylesheets and UI frameworks.
-
 ## :clap: Related Projects
 | Project                                                                              | Description                                                                            |
 |--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -121,5 +138,5 @@ Even with a multitude of CSS frameworks, some are either too basic to develop mo
 * [Polarity 9](http://polarity.x10.mx/browser "Polarity 9 Promo Page")
 * [Phraze](https://phrazes.net "Phraze")
 
-## :ledger: License and Attribution
+## :newspaper: License and Attribution
 Cirrus is licensed under the [MIT license](https://github.com/Spiderpig86/Cirrus/blob/master/LICENSE "MIT License"). If this frame work has helped you in any way, attribution in the footer of your website would be much appreciated.
