@@ -114,5 +114,6 @@ Framework components are now broken down into `core` and `ext` packages. The `co
 
 ## :newspaper: License and Attribution
 Cirrus is licensed under the [MIT license](https://github.com/Spiderpig86/Cirrus/blob/master/LICENSE "MIT License"). If this frame work has helped you in any way, attribution in the footer of your website would be much appreciated.
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSpiderpig86%2FCirrus.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSpiderpig86%2FCirrus?ref=badge_large)
 
