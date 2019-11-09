@@ -3,7 +3,8 @@
 
 <div align="center">
 
-  [![v.0.5.5](https://img.shields.io/badge/cirrus-0.5.5-blue.svg?style=flat-square)](https://github.com/Spiderpig86/Cirrus)
+  [![v.0.5.5](https://img.shields.io/badge/cirrus-0.5.5-blue.svg?style=flat-square)](https://github.com/Spiderpig86/Cirrus)[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSpiderpig86%2FCirrus.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FSpiderpig86%2FCirrus?ref=badge_shield)
+
   [![MIT License](https://img.shields.io/github/license/Spiderpig86/Cirrus.svg?style=flat-square)](https://opensource.org/licenses/MIT)
   [![Travis](https://img.shields.io/travis/Spiderpig86/Cirrus.svg?style=flat-square)](https://travis-ci.org/Spiderpig86/Cirrus)
   [![Greenkeeper badge](https://badges.greenkeeper.io/Spiderpig86/Cirrus.svg?style=flat-square)](https://greenkeeper.io/)
@@ -22,6 +23,9 @@ A fully responsive and comprehensive CSS framework with beautiful controls and s
 /
 <a href="https://spiderpig86.github.io/Cirrus/docs/examples/" target="_blank">Examples</a>
 </p>
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSpiderpig86%2FCirrus.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FSpiderpig86%2FCirrus?ref=badge_large)
 
 ## :hammer: Quick Install
 
