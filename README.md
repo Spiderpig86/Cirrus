@@ -63,7 +63,7 @@ Cirrus relies on [What CSS to prefix?](http://shouldiprefix.com/) to determine w
 Framework components are now broken down into `core` and `ext` packages. The `core` package only contains the essentials for basic styling while `core + ext` adds specially designed components.
 
 #### Core
-* [Buttons](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/button.css "Buttons - Styles for the button with 3 different variations.
+* [Buttons](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/button.css "Buttons") - Styles for the button with 3 different variations.
 * [Code](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/code.css "Code") - Style for code markup blocks.
 * [Default (Base)](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/default.css "Default") - The core of this framework.
 * [Font](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/font.css "Font") - All text styles for this framework for headers, articles, blockquotes, and paragraphs.
