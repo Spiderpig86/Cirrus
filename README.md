@@ -82,7 +82,7 @@ Framework components are now broken down into `core` and `ext` packages. The `co
 * [Util](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/util.css "Utils") - Designed to solve many common headaches with CSS.
   
 #### Ext
-* [Animations](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/animations.css "Animations - Consists of animations that will work with the controls.
+* [Animations](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/animations.css "Animations") - Consists of animations that will work with the controls.
 * [Avatar](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/avatar.css "Avatar") - Styles for user avatars.
 * [Cards](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/card.css "Cards") - Base for card controls.
 * [Grid](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/card.css "Grid") - Experimental implementation of CSS Grid standard.
