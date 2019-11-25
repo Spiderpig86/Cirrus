@@ -2,33 +2,33 @@
 /* Utility classes to help solve some very annoying issues */
 
 .u-inline {
-  display: inline;
+  display: inline !important;
 }
 
 .u-inline-block {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 .u-flex {
-  display: flex;
+  display: flex !important;
 }
 
 .u-flex-column {
-  flex-direction: column;
+  flex-direction: column !important;
 }
 
 .u-flex-row {
-  flex-direction: row;
+  flex-direction: row !important;
 }
 
 .u-inline-flex {
-  display: -ms-inline-flexbox;
-  display: -webkit-inline-box;
-  display: inline-flex;
+  display: -ms-inline-flexbox !important;
+  display: -webkit-inline-box !important;
+  display: inline-flex !important;
 }
 
 .u-block {
-  display: block;
+  display: block !important;
 }
 
 /*
@@ -37,34 +37,34 @@
 */
 
 .u-clearfix:after {
-  clear: both;
+  clear: both !important;
   content: " ";
-  display: table;
+  display: table !important;
 }
 
 /* This is mainly to keep elements from overlapping when using floats */
 .u-clear-left {
-  clear: left;
+  clear: left !important;
 }
 
 .u-clear-right {
-  clear: right;
+  clear: right !important;
 }
 
 .u-clear-both {
-  clear: both;
+  clear: both !important;
 }
 
 .u-pull-left {
-  float: left;
+  float: left !important;
 }
 
 .u-pull-right {
-  float: right;
+  float: right !important;
 }
 
 .u-text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 /* Center element - best used for hero bodies or text */
@@ -128,15 +128,15 @@
 }
 
 .u-text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .u-text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .u-text-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .u-hide {
@@ -144,7 +144,7 @@
 }
 
 .u-disabled {
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
 
 .u-unselectable {
@@ -167,7 +167,7 @@
 }
 
 .u-fill-width {
-  width: 100%;
+  width: 100% !important;
 }
 
 .u-no-margin {
