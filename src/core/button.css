@@ -327,21 +327,6 @@ button span:last-child,
 [type="submit"] span:last-child {
     margin-left: 0.2rem;
 }
-/* Deprecated 0.5.5
-/* Button with accent 
-.btn-accent {
-    background-color: var(--cirrus-primary);
-    color: #fff;
-    border-color: var(--cirrus-accent-border);
-}
-
-.btn-accent:hover {
-    background-color: var(--cirrus-accent-hover);
-}
-
-.btn-accent:active {
-    background-color: var(--cirrus-accent-border);
-} */
 
 /* BUTTON GROUPS */
 /* Will group buttons with components in a single component */
@@ -402,4 +387,36 @@ button span:last-child,
     /* Style button in middle of group */
     border-radius: 0; /* Remove roundness from center buttons */
     margin-left: -0.1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-group .btn,
+    .btn-group button,
+    .btn-group [type="submit"] {
+        margin-bottom: -1px;
+    }
+
+    .btn-group .btn:first-child:not(:last-child),
+    .btn-group button:first-child:not(:last-child),
+    .btn-group [type="submit"]:first-child:not(:last-child) {
+        border-radius: .25rem .25rem 0 0;
+    }
+
+    .btn-group .btn:last-child:not(:first-child),
+    .btn-group button:last-child:not(:first-child),
+    .btn-group [type="submit"]:last-child:not(:first-child) {
+        margin: 0;
+    }
+
+    .btn-group .btn:not(:first-child):not(:last-child),
+    .btn-group button:not(:first-child):not(:last-child),
+    .btn-group [type="submit"]:not(:first-child):not(:last-child) {
+        border-radius: 0 0 .25rem .25rem ;
+        margin: 0;
+    }
 }
