@@ -412,17 +412,17 @@ button span:last-child,
         border-radius: .25rem .25rem 0 0;
     }
 
-    .btn-group .btn:last-child:not(:first-child),
-    .btn-group button:last-child:not(:first-child),
-    .btn-group [type="submit"]:last-child:not(:first-child) {
-        margin: 0;
-    }
-
     .btn-group .btn:not(:first-child):not(:last-child),
     .btn-group button:not(:first-child):not(:last-child),
     .btn-group [type="submit"]:not(:first-child):not(:last-child) {
+        margin-left: 0;
+    }
+
+    .btn-group .btn:last-child:not(:first-child),
+    .btn-group button:last-child:not(:first-child),
+    .btn-group [type="submit"]:last-child:not(:first-child) {
         border-radius: 0 0 .25rem .25rem ;
-        margin: 0;
+        margin-left: 0;
     }
 }
 /* CODE */
