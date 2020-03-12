@@ -361,7 +361,7 @@ button span:last-child,
 .btn-group.btn-group-fill [type="submit"] {
     -ms-flex: 1 0 0;
     -webkit-box-flex: 1;
-    flex: 1 0 0; /* Make the buttons fill the available width and proportion themselves */
+    flex: 1 0; /* Make the buttons fill the available width and proportion themselves */
 }
 
 .btn-group .btn:first-child:not(:last-child),
