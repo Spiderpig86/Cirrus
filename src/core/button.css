@@ -332,8 +332,8 @@ button span:last-child,
 /* Will group buttons with components in a single component */
 
 .btn-group {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap; /* Wrap contents to next row on overflow */
+    /* -ms-flex-wrap: wrap; Deprecated 0.5.6, allow for overflow
+    flex-wrap: wrap; Wrap contents to next row on overflow */
     display: -webkit-inline-box;
     display: inline-flex;
     display: -ms-inline-flexbox;
@@ -359,7 +359,7 @@ button span:last-child,
 .btn-group.btn-group-fill .btn,
 .btn-group.btn-group-fill button,
 .btn-group.btn-group-fill [type="submit"] {
-    -ms-flex: 1 0 0;
+    -ms-flex: 1 0;
     -webkit-box-flex: 1;
     flex: 1 0; /* Make the buttons fill the available width and proportion themselves */
 }
