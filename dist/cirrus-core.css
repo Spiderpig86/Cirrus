@@ -771,7 +771,7 @@ mark,
   opacity: 0.75;
 }
 
-.italics {
+.font-italic {
   font-style: italic;
 }
 
@@ -799,32 +799,6 @@ mark,
   margin: 0.95rem 0 0 0.1rem;
 }
 
-/* Removed 0.5.5, not neded since sizes are covered by .icon .fa-wrapper */
-/* .fa-wrapper {
-  font-size: 21px; /* Font sizes in multiple of 7s since they render the best 
-  text-align: center;
-}
-
-.fa-wrapper.x-small {
-  font-size: 7px;
-}
-
-.fa-wrapper.small {
-  font-size: 14px;
-}
-
-.fa-wrapper.large {
-  font-size: 28px;
-}
-
-.fa-wrapper.x-large {
-  font-size: 35px;
-} */
-
-/* .fa-wrapper.xx-large { Removed 0.5.5
-  font-size: 42px;
-} */
-
 .info {
   display: block;
   font-size: 0.85rem;
@@ -837,14 +811,6 @@ mark,
   display: inline-block;
   margin-left: 0.5rem;
 }
-
-/* .info.success { Deprecated 0.5.5
-    color: #4caf50;
-}
-
-.info.error {
-    color: #f44336;
-} */
 
 .caret {
   display: inline-block;
@@ -3427,7 +3393,6 @@ video.video-fullscreen {
    When using floats, clearfix allows the container to automatically resize so that
    other elements are not blocked by children.
 */
-
 .u-clearfix:after {
   clear: both !important;
   content: " ";
@@ -3457,6 +3422,20 @@ video.video-fullscreen {
 
 .u-text-center {
   text-align: center !important;
+}
+
+.u-text-justify {
+  text-align: justify !important;
+}
+
+.u-text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.u-text-break {
+  hyphens: auto;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 
 /* Center element - best used for hero bodies or text */
@@ -3505,7 +3484,7 @@ video.video-fullscreen {
   align-items: center;
 }
 
-.u-this-overlay {
+.u-overlay {
   bottom: 0;
   left: 0;
   right: 0;
@@ -3546,7 +3525,8 @@ video.video-fullscreen {
   user-select: none;
 }
 
-.u-box {
+/* Deprecated 0.5.6 */
+/* .u-box {
   background-color: white;
   border-radius: 3px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
@@ -3556,11 +3536,12 @@ video.video-fullscreen {
 
 .u-box:not(:last-child) {
   margin-bottom: 1rem;
-}
+} */
 
-.u-fill-width {
+/* Deprecated 0.5.6 */
+/* .u-fill-width {
   width: 100% !important;
-}
+} */
 
 .u-no-margin {
   margin: 0 !important;

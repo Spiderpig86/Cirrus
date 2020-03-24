@@ -193,7 +193,7 @@ mark,
   opacity: 0.75;
 }
 
-.italics {
+.font-italic {
   font-style: italic;
 }
 
@@ -221,32 +221,6 @@ mark,
   margin: 0.95rem 0 0 0.1rem;
 }
 
-/* Removed 0.5.5, not neded since sizes are covered by .icon .fa-wrapper */
-/* .fa-wrapper {
-  font-size: 21px; /* Font sizes in multiple of 7s since they render the best 
-  text-align: center;
-}
-
-.fa-wrapper.x-small {
-  font-size: 7px;
-}
-
-.fa-wrapper.small {
-  font-size: 14px;
-}
-
-.fa-wrapper.large {
-  font-size: 28px;
-}
-
-.fa-wrapper.x-large {
-  font-size: 35px;
-} */
-
-/* .fa-wrapper.xx-large { Removed 0.5.5
-  font-size: 42px;
-} */
-
 .info {
   display: block;
   font-size: 0.85rem;
@@ -259,14 +233,6 @@ mark,
   display: inline-block;
   margin-left: 0.5rem;
 }
-
-/* .info.success { Deprecated 0.5.5
-    color: #4caf50;
-}
-
-.info.error {
-    color: #f44336;
-} */
 
 .caret {
   display: inline-block;

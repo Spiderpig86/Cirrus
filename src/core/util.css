@@ -35,7 +35,6 @@
    When using floats, clearfix allows the container to automatically resize so that
    other elements are not blocked by children.
 */
-
 .u-clearfix:after {
   clear: both !important;
   content: " ";
@@ -65,6 +64,20 @@
 
 .u-text-center {
   text-align: center !important;
+}
+
+.u-text-justify {
+  text-align: justify !important;
+}
+
+.u-text-ellipsis {
+  text-overflow: ellipsis;
+}
+
+.u-text-break {
+  hyphens: auto;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 
 /* Center element - best used for hero bodies or text */
@@ -113,7 +126,7 @@
   align-items: center;
 }
 
-.u-this-overlay {
+.u-overlay {
   bottom: 0;
   left: 0;
   right: 0;
@@ -154,7 +167,8 @@
   user-select: none;
 }
 
-.u-box {
+/* Deprecated 0.5.6 */
+/* .u-box {
   background-color: white;
   border-radius: 3px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
@@ -164,11 +178,12 @@
 
 .u-box:not(:last-child) {
   margin-bottom: 1rem;
-}
+} */
 
-.u-fill-width {
+/* Deprecated 0.5.6 */
+/* .u-fill-width {
   width: 100% !important;
-}
+} */
 
 .u-no-margin {
   margin: 0 !important;
