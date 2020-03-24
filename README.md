@@ -75,17 +75,16 @@ Framework components are now broken down into `core` and `ext` packages. The `co
 * [Links](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/links.css "Links") - Link styles with different effects.
 * [Lists](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/lists.css "Lists") - A simple stylesheet to simplify list UI.
 * [Media](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/media.css "Media") - Rules for styling images, videos, figures, avatars, and other media components.
-* [Modal](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/modal.css "Modal") - Styles for a pop up modal dialog.
-* [Placeholder](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/placeholder.css "Placeholder") - A padded generic container to display additional information.
 * [Tables](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/table.css "Tables") - Clean designs for tables.
 * [Theme](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/theme.css "Theme") - Default colors of the framework.
 * [Util](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/util.css "Utils") - Designed to solve many common headaches with CSS.
-  
+
 #### Ext
 * [Animations](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/animations.css "Animations") - Consists of animations that will work with the controls.
 * [Avatar](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/avatar.css "Avatar") - Styles for user avatars.
 * [Cards](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/card.css "Cards") - Base for card controls.
 * [Grid](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/card.css "Grid") - Experimental implementation of CSS Grid standard.
+* [Modal](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/modal.css "Modal") - Styles for a pop up modal dialog.
 * [Modifiers](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/modifiers.css "Modifiers") - Classes designed for modifying text and backgrounds.
 * [Pagination](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/pagination.css "Pagination") - Design for pagination and pagination navigation links.
 * [Placeholder](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/placeholder.css "Placeholder") - Styles for a control designed to be a placeholder such as "Coming Soon" panels and so on.
