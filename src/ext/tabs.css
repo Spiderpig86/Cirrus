@@ -7,13 +7,13 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     overflow: hidden;
-    overflow-x: auto; /* Allow scrollbar to be visible if the width of the tabs exeeds container */
+    overflow-x: auto; /* Allow scrollbar to be visible if the width of the tabs exceeds container */
             user-select: none;
     white-space: nowrap;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
-    font-size: 0.85rem;
+    font-size: var(--font-size-s);
 }
 
 /* Tabs are embedded inside an unordered list */

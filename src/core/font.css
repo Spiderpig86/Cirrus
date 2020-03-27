@@ -223,7 +223,7 @@ mark,
 
 .info {
   display: block;
-  font-size: 0.85rem;
+  font-size: var(--font-size-s);
   margin-top: 0.25rem;
   color: #979797;
 }

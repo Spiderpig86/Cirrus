@@ -37,12 +37,12 @@
 
 .frame .frame__title {
     color: var(--cirrus-fg);
-    font-size: 1rem;
+    font-size: var(--font-size-m);
     margin: .75rem auto 0;
 }
 
 .frame .frame__subtitle {
     color: rgba(55, 64, 84, 0.6);
-    font-size: .85rem;
+    font-size: var(--font-size-s);
     margin: .25rem auto .75rem;
 }

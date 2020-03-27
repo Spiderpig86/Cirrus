@@ -85,7 +85,7 @@ ul.menu {
   display: block;
   padding: 0.5em 0.75em;
   border-radius: 3px;
-  font-size: 0.85rem;
+  font-size: var(--font-size-s);
   cursor: pointer;
   -webkit-transition: all var(--animation-duration);
   transition: all var(--animation-duration);

@@ -801,7 +801,7 @@ mark,
 
 .info {
   display: block;
-  font-size: 0.85rem;
+  font-size: var(--font-size-s);
   margin-top: 0.25rem;
   color: #979797;
 }
@@ -957,7 +957,7 @@ select {
     border-radius: 3px;
     color: #5a5a5a;
     font-family: "Nunito Sans";
-    font-size: 0.85rem;
+    font-size: var(--font-size-m);
     letter-spacing: 0.02rem;
     transition: all 0.3s;
     outline: none;
@@ -975,7 +975,7 @@ textarea[type="text"] {
     padding: 0.8rem;
     border-radius: 3px;
     font-family: "Nunito Sans";
-    font-size: 0.85rem;
+    font-size: var(--font-size-m);
     letter-spacing: 0.02rem;
     transition: all 0.3s;
     outline: none;
@@ -1092,24 +1092,24 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Input Field Sizes */
 input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-xsmall,
 select.input-xsmall {
-    font-size: 0.65rem;
+    font-size: var(--font-size-xs);
     padding: 0.35rem 0.9rem;
 }
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-small,
 select.input-small {
-    font-size: 0.75rem;
+    font-size: var(--font-size-s);
     padding: 0.55rem 1rem;
 }
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-large,
 select.input-large {
-    font-size: 1.5rem;
+    font-size: var(--font-size-l);
 }
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-xlarge,
 select.input-xlarge {
-    font-size: 2rem;
+    font-size: var(--font-size-xl);
 }
 
 /* Select sizes */
@@ -1174,7 +1174,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-large,
 input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-large {
-    padding-left: 3rem;
+    padding-left: 3.5rem;
 }
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-large ~ .icon,
@@ -1187,7 +1187,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-xlarge,
 input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right.input-xlarge {
-    padding-left: 3.5rem;
+    padding-left: 4rem;
 }
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon.input-xlarge ~ .icon,
@@ -1381,13 +1381,13 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 
 .frame .frame__title {
     color: var(--cirrus-fg);
-    font-size: 1rem;
+    font-size: var(--font-size-m);
     margin: .75rem auto 0;
 }
 
 .frame .frame__subtitle {
     color: rgba(55, 64, 84, 0.6);
-    font-size: .85rem;
+    font-size: var(--font-size-s);
     margin: .25rem auto .75rem;
 }
 /* HEADER */
@@ -2636,7 +2636,7 @@ ul.menu {
   display: block;
   padding: 0.5em 0.75em;
   border-radius: 3px;
-  font-size: 0.85rem;
+  font-size: var(--font-size-s);
   cursor: pointer;
   -webkit-transition: all var(--animation-duration);
   transition: all var(--animation-duration);
@@ -3261,6 +3261,12 @@ video.video-fullscreen {
     --focus-opacity: 0.4;
 
     --space-size: 0.5rem;
+
+    --font-size-xs: .7rem;
+    --font-size-s: .85rem;
+    --font-size-m: 1rem;
+    --font-size-l: 1.35rem;
+    --font-size-xl: 1.75rem;
 }
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
