@@ -1352,7 +1352,7 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     border-radius: 3px;
-    box-shadow: 0 0.05rem 0.2rem rgba(69, 77, 93, .3);
+    box-shadow: 0 0.2rem 1.25rem 0 rgba(27, 30, 36, 0.07);
 }
 
 /* For the frame header and footer, use flex display */
