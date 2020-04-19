@@ -116,7 +116,6 @@
 .nav-item a {
   align-items: center;
   display: flex;
-  height: 100%;
 }
 
 /* Hover effect for header elements when appropriate */
@@ -353,9 +352,9 @@
     display: none;
   }
 
-  .nav-item {
-    position: relative; /* Include for helping dropdown menu positioning */
-  }
+  /* .nav-item {
+    position: relative; /* Include for helping dropdown menu positioning  Deprecated 0.5.6
+  } */
 
   /* Expand link area for desktop views so it is easier to click */
   .nav-item a {

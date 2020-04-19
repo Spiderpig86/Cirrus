@@ -97,10 +97,6 @@ strong {
   margin-bottom: 1rem;
 }
 
-/* .accent .subtitle { Deprecated 0.5.5
-  color: rgba(255, 255, 255, 0.9);
-} */
-
 .title + .subtitle {
   /* Make the subtitlte closer to the title */
   margin-top: -0.75rem;

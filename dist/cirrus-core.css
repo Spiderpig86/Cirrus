@@ -675,10 +675,6 @@ strong {
   margin-bottom: 1rem;
 }
 
-/* .accent .subtitle { Deprecated 0.5.5
-  color: rgba(255, 255, 255, 0.9);
-} */
-
 .title + .subtitle {
   /* Make the subtitlte closer to the title */
   margin-top: -0.75rem;
@@ -1507,7 +1503,6 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
 .nav-item a {
   align-items: center;
   display: flex;
-  height: 100%;
 }
 
 /* Hover effect for header elements when appropriate */
@@ -1744,9 +1739,9 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
     display: none;
   }
 
-  .nav-item {
-    position: relative; /* Include for helping dropdown menu positioning */
-  }
+  /* .nav-item {
+    position: relative; /* Include for helping dropdown menu positioning  Deprecated 0.5.6
+  } */
 
   /* Expand link area for desktop views so it is easier to click */
   .nav-item a {
