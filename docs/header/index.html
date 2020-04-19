@@ -95,7 +95,7 @@
                 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;header header-fixed unselectable header-animated&quot;&gt;
     &lt;div class=&quot;header-brand&quot;&gt;
         &lt;div class=&quot;nav-item no-hover&quot;&gt;
-            &lt;h6 class=&quot;title&quot;&gt;Logo&lt;/h6&gt;
+            &lt;a&gt;&lt;h6 class=&quot;title&quot;&gt;Logo&lt;/h6&gt;&lt;/a&gt;
         &lt;/div&gt;
         &lt;div class=&quot;nav-item nav-btn&quot; id=&quot;header-btn&quot;&gt;
             &lt;span&gt;&lt;/span&gt;
@@ -108,42 +108,24 @@
             &lt;div class=&quot;nav-item text-center&quot;&gt;
                 &lt;a href=&quot;#&quot;&gt;
                     &lt;span class=&quot;icon&quot;&gt;
-                        &lt;i class=&quot;fa fa-wrapper fa-github&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                        &lt;i class=&quot;fab fa-wrapper fa-github&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
                     &lt;/span&gt;
                 &lt;/a&gt;
             &lt;/div&gt;
             &lt;div class=&quot;nav-item text-center&quot;&gt;
                 &lt;a href=&quot;#&quot;&gt;
                     &lt;span class=&quot;icon&quot;&gt;
-                        &lt;i class=&quot;fa fa-wrapper fa-slack&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                        &lt;i class=&quot;fab fa-wrapper fa-slack&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
                     &lt;/span&gt;
                 &lt;/a&gt;
             &lt;/div&gt;
             &lt;div class=&quot;nav-item text-center&quot;&gt;
                 &lt;a href=&quot;#&quot;&gt;
                     &lt;span class=&quot;icon&quot;&gt;
-                        &lt;i class=&quot;fa fa-wrapper fa-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                        &lt;i class=&quot;fab fa-wrapper fa-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
                     &lt;/span&gt;
                 &lt;/a&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;nav-item has-sub toggle-hover&quot; id=&quot;dropdown&quot;&gt;
-                &lt;a class=&quot;nav-dropdown-link&quot;&gt;DropDown&lt;/a&gt;
-                &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
-                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;First Item&lt;/a&gt;&lt;/li&gt;
-                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Second Item&lt;/a&gt;&lt;/li&gt;
-                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Third Item&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        
-        &lt;div class=&quot;nav-right&quot;&gt;
-            &lt;div class=&quot;nav-item selected&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;Selected&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;nav-item&quot;&gt;
-                &lt;a href=&quot;#&quot;&gt;Link 1&lt;/a&gt;
-            &lt;/div&gt;
-            
             &lt;div class=&quot;nav-item has-sub toggle-hover&quot; id=&quot;dropdown&quot;&gt;
                 &lt;a class=&quot;nav-dropdown-link&quot;&gt;Animated&lt;/a&gt;
                 &lt;ul class=&quot;dropdown-menu dropdown-animated&quot; role=&quot;menu&quot;&gt;
@@ -152,12 +134,23 @@
                     &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Third Item&lt;/a&gt;&lt;/li&gt;
                 &lt;/ul&gt;
             &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;nav-right&quot;&gt;
+            &lt;div class=&quot;nav-item active&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Active&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;nav-item&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Link 1&lt;/a&gt;
+            &lt;/div&gt;
             &lt;div class=&quot;nav-item has-sub&quot; id=&quot;dropdown&quot;&gt;
                 &lt;a class=&quot;nav-dropdown-link&quot;&gt;Click Me&lt;/a&gt;
                 &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
                     &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;First Item&lt;/a&gt;&lt;/li&gt;
                     &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Second Item&lt;/a&gt;&lt;/li&gt;
                     &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Third Item&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;dropdown-menu-divider&quot;&gt;&lt;/li&gt;
+                    &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Fourth Item&lt;/a&gt;&lt;/li&gt;
                 &lt;/ul&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -280,7 +273,7 @@
         &lt;div class=&quot;nav-item&quot;&gt;
             &lt;a href=&quot;#&quot;&gt;
                 &lt;span class=&quot;icon&quot;&gt;
-                    &lt;i class=&quot;fa fa-wrapper fa-github&quot;&gt;&lt;/i&gt;
+                    &lt;i class=&quot;fab fa-wrapper fa-github&quot;&gt;&lt;/i&gt;
                 &lt;/span&gt;
             &lt;/a&gt;
         &lt;/div&gt;
@@ -290,7 +283,7 @@
             &lt;span&gt;&lt;/span&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;header-nav&quot;&gt;
+    &lt;div class=&quot;header-nav&quot; style=&quot;background-color: #ffdadd;&quot; id=&quot;header-menu&quot;&gt;
         &lt;!-- Other nav categories, controls, nav-items, etc. This is hidden on touch enabled devices --&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -418,6 +411,8 @@ $('.dropdown-menu li').on('click', function(e) {
     &lt;button class=&quot;btn-accent&quot;&gt;Hello&lt;/button&gt;
     &lt;button class=&quot;btn-accent&quot;&gt;World&lt;/button&gt;
 &lt;/div&gt;</code></pre>
+            <iframe src="./demo-dropdown-content.html" width="100%" height="100"></iframe>
+
             </div>
             <p>Cirrus provides flexibility for which type of elements you can use for your <code>nav-item</code> elements which can be declared as either <code>&lt;div&gt;</code> or <code>&lt;a&gt;</code>.</p>
 
