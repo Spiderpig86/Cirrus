@@ -114,12 +114,14 @@
 
             <h6>Font Awesome</h6>
             <p>To use glyphs, you must include the <b>Font Awesome</b> library.</p>
-            <pre><code data-lang="HTML">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.2.0/css/all.css&quot; integrity=&quot;sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ&quot; crossorigin=&quot;anonymous&quot;&gt;
+            <pre><code data-lang="HTML">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot; integrity=&quot;sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ&quot; crossorigin=&quot;anonymous&quot;&gt;
             </code></pre>
+            <p>Please visit <a class="u u-LR" rel="noopener noreferrer" href="https://fontawesome.com/start" target="_blank">FontAwesome</a> and sign up to get your developer kit to get started. The CDN above is just a sample.</p>
 
             <space class="x-large"></space>
             <h3>Template</h3>
             <p>Start your project now with this template.</p>
+            <iframe src="./starter.html" width="100%" height="500"></iframe>
             <pre><code data-lang="HTML">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -140,12 +142,53 @@
     &lt;/head&gt;
 
     &lt;body&gt;
-        &lt;div class=&quot;content&quot;&gt;
-            &lt;div class=&quot;row text-center&quot;&gt;
-                &lt;h1 class=&quot;title&quot;&gt;My First Page&lt;/h1&gt;
-                &lt;h6 class=&quot;light subtitle&quot;&gt;A webpage powered by &lt;b&gt;Cirrus&lt;/b&gt;&lt;/p&gt;
+        &lt;div class=&quot;header header-fixed unselectable header-animated&quot;&gt;
+            &lt;div class=&quot;header-brand&quot;&gt;
+                &lt;div class=&quot;nav-item no-hover&quot;&gt;
+                    &lt;h6 class=&quot;title&quot;&gt;My App&lt;/h6&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;nav-item nav-btn&quot; id=&quot;header-btn&quot;&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;header-nav&quot; id=&quot;header-menu&quot;&gt;
+                &lt;div class=&quot;nav-left&quot;&gt;
+                    &lt;div class=&quot;nav-item text-center&quot;&gt;
+                        &lt;a href=&quot;#&quot;&gt;
+                            &lt;span class=&quot;icon&quot;&gt;
+                                &lt;i class=&quot;fab fa-wrapper fa-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;nav-right&quot;&gt;
+                    &lt;div class=&quot;nav-item has-sub toggle-hover&quot; id=&quot;dropdown&quot;&gt;
+                        &lt;a class=&quot;nav-dropdown-link&quot;&gt;Menu&lt;/a&gt;
+                        &lt;ul class=&quot;dropdown-menu dropdown-animated&quot; role=&quot;menu&quot;&gt;
+                            &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;First Item&lt;/a&gt;&lt;/li&gt;
+                            &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Second Item&lt;/a&gt;&lt;/li&gt;
+                            &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Third Item&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
+
+        &lt;section class=&quot;section&quot;&gt;
+            &lt;div class=&quot;hero fullscreen&quot;&gt;
+                &lt;div class=&quot;hero-body&quot;&gt;
+                    &lt;div class=&quot;content&quot;&gt;
+                        &lt;div class=&quot;text-center&quot;&gt;
+                            &lt;h1&gt;👋 Hello world!&lt;/h1&gt;
+                            &lt;h6 class=&quot;font-alt font-light&quot;&gt;A webpage powered by &lt;b&gt;Cirrus.&lt;/b&gt;&lt;/h6&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
         </div>
@@ -455,7 +498,6 @@
     <!-- Syntax highlight code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <!-- <script src="https://use.fontawesome.com/a696b91557.js"></script> -->
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script> <!-- clipboard.js -->
     <script src="../../res/js/app.js"></script>
