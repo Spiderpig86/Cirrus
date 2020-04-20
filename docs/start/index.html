@@ -106,17 +106,78 @@
             <h3>Requirements</h3>
             <p>Cirrus has a <b>few requirements</b> in your setup before getting started to allow for mobile responsiveness and the latest web standards.</p>
 
-            <h6>Add the HTML5 DocType</h6>
-            <pre><code data-lang="HTML">&lt;!DOCTYPE html&gt;</code></pre>
+            <div id="installationTabs">
+                <div class="tab-container mb-3">
+                    <ul>
+                        <li class="tab-item selected">
+                            <a>Webpage</a>
+                        </li>
+                        <li class="tab-item">
+                            <a>Node</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabpage tabpage--shown">
+                    <p class="lead">Traditional Webpage</p>
+                    <p class="font-bold title">Add the HTML5 DocType</p>
+                    <pre class="mb-3"><code data-lang="HTML">&lt;!DOCTYPE html&gt;</code></pre>
+        
+                    <p class="font-bold title">Add the responsive viewport meta tag</p>
+                    <pre class="mb-3"><code data-lang="HTML">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code></pre class="mb-3">
+        
+                    <p class="font-bold title">Font Awesome</p>
+                    <p class="subtitle">To use glyphs, you must include the <b>Font Awesome</b> library.</p>
+                    <pre><code data-lang="HTML">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot; integrity=&quot;sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ&quot; crossorigin=&quot;anonymous&quot;&gt;
+                    </code></pre>
+                    <p>Please visit <a class="u u-LR" rel="noopener noreferrer" href="https://fontawesome.com/start" target="_blank">FontAwesome</a> and sign up to get your developer kit to get started. The CDN above is just a sample.</p>
+        
+                    <p class="font-bold title">Required Fonts</p>
+                    <p class="subtitle">Don't forget to include the required fonts.</p>
+        
+                        <pre class="mb-3"><code class="html" data-lang="HTML">&lt;!-- Google Fonts --&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Montserrat:400,700&quot; rel=&quot;stylesheet&quot;&gt;
 
-            <h6>Add the responsive viewport meta tag</h6>
-            <pre><code data-lang="html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code></pre>
+&lt;!-- Minified Cirrus CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/cirrus.min.css&quot;&gt;
 
-            <h6>Font Awesome</h6>
-            <p>To use glyphs, you must include the <b>Font Awesome</b> library.</p>
-            <pre><code data-lang="HTML">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot; integrity=&quot;sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ&quot; crossorigin=&quot;anonymous&quot;&gt;
-            </code></pre>
-            <p>Please visit <a class="u u-LR" rel="noopener noreferrer" href="https://fontawesome.com/start" target="_blank">FontAwesome</a> and sign up to get your developer kit to get started. The CDN above is just a sample.</p>
+&lt;!-- Import your other dependencies --&gt;</code></pre>
+                </div>
+                <div class="tabpage">
+                    <p class="lead">Node App</p>
+                    <p class="font-bold title">Import cirrus-ui</p>
+                    <pre class="mb-3"><code class="js" data-lang="JS">
+    import 'cirrus-ui';
+
+    // Your other framework code
+</code></pre>
+
+                    <p class="font-bold title">Setup Template</p>
+                    <p>In your main <code>index.html</code> page, make sure that the following dependencies are also included. For example, it would be in the <code>index.html</code> file in your React project.</p>
+                    <pre><code data-lang="HTML">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+            &lt;title&gt;Getting Started with Cirrus&lt;/title&gt;
+
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0&quot;&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge;&quot; /&gt;
+        
+            &lt;!-- Fonts --&gt;
+            &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&quot; rel=&quot;stylesheet&quot;&gt;
+            &lt;link href=&quot;https://fonts.googleapis.com/css?family=Montserrat:400,700&quot; rel=&quot;stylesheet&quot;&gt;
+
+            &lt;!-- Font Awesome --&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.2.0/css/all.css&quot; integrity=&quot;sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+            &lt;!-- JQuery (Optional to help add navbar functionality) --&gt;
+            &lt;script src=&quot;https://code.jquery.com/jquery-2.2.4.min.js&quot; integrity=&quot;sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+
+    ...
+    </code></pre>
+                </div>
+            </div>
 
             <space class="x-large"></space>
             <h3>Template</h3>
@@ -437,7 +498,7 @@
             <p>You can clone the <b>source</b> of the project straight from Github. You can add files or remove them from the <code>/src</code> directory to fit your needs.</p>
             <div class="row"><a rel="nofollow" href="https://github.com/Spiderpig86/Cirrus" target="_blank"><button class="btn btn-info">Source Code</button></a></div>
 
-            <space class="x-large"></space>
+            <space></space>
 
             <h5>Building the Project</h5>
             <p>Cirrus can be modified to include only components that you will need. Since it is processed with <a href="http://gulpjs.com/">Gulp</a> swapping different components in and out of your distribution build is very simple.</p>
@@ -454,6 +515,17 @@
                 <li><code>gulp minify</code> - compile the CSS with <a class="u u-LR" href="https://github.com/jakubpawlowicz/clean-css#level-2-optimizations">level 2 minification</a>.</li>
                 <li><code>gulp watch</code> - automate compiling and minication.</li>
             </ul>
+            
+            <space></space>
+
+            <h6>Customizing the Theme</h6>
+            <p>You can find Cirrus's color palette within <a rel="noopener noreferrer" target="_blank" href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/theme.css">theme.css</a>. Modify and rebuild the project to use the theme you prefer.</p>
+            <p>For more granular control, you can modify the theme for a specific control by changing the CSS variable value for that specific class. For example, the modification below changes the background color of <b>all buttons</b> for <code>btn--info</code> to <code>#222</code>.</p>
+
+            <pre><code class="css" data-lang="CSS">button, .btn, input[type="text"] {
+    --cirrus-info: #222;
+}</code></pre>
+            <p>The other selectors will still see the original <code>--cirrus-info</code> color instead.</p>
 
             <space class="x-large"></space>
 
@@ -476,19 +548,6 @@
 ├───gulpfile.js             // Build file
 └───...</code></pre>
                 
-                <space class="x-large"></space>
-
-                <h5 class="title">Setting Up</h5>
-                <p>Setting up Cirrus for any project is very simple and will only require a couple of lines on each file.</p>
-
-                <pre><code class="html" data-lang="HTML">&lt;!-- Google Fonts --&gt;
-&lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;link href=&quot;https://fonts.googleapis.com/css?family=Montserrat:400,700&quot; rel=&quot;stylesheet&quot;&gt;
-
-&lt;!-- Minified Cirrus CSS --&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/cirrus.min.css&quot;&gt;
-
-&lt;!-- Import your other dependencies --&gt;</code></pre>
                 </div>
         </div>
     </section>
@@ -501,11 +560,21 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script> <!-- clipboard.js -->
     <script src="../../res/js/app.js"></script>
+    <script src="../../res/js/tabs.js"></script>
     <script>
         // Copy button script
         if (document.getElementsByClassName('copy').length !== 0)
         var clipboard = new Clipboard('.copy'); // It will handle the rest...
     </script>
+    <script>
+        const installationTabs = tabs({
+            el: '#installationTabs',
+            tabNavigationLinks: '.tab-item',
+            tabContentContainers: '.tabpage'
+        });
+        installationTabs.init();
+    </script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40470494-2"></script>
     <script>

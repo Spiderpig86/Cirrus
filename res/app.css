@@ -277,6 +277,14 @@ pre .copy:hover {
     text-align: center;
 }
 
+.tabpage {
+    display: none;
+}
+
+.tabpage.tabpage--shown {
+    display: block;
+}
+
 @media (max-width: 768px) {
     .nav-item.has-sub .list-dropdown .btn-group button:not(.btn-dropdown) {
         flex-grow: 1;
