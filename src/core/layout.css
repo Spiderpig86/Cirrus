@@ -289,7 +289,7 @@ section {
     margin-right: 0;
 }
 
-/* Use in parent div of fluid col
+/* Use in parent div of fluid col Deprecated in 0.5.6, use .row
 .fluid-container {
     display: flex;
     overflow: auto;
@@ -484,6 +484,10 @@ section {
     width: 100%;
 }
 
+.w-auto {
+    width: auto;
+}
+
 /* Height CSS */
 .h-10 {
     height: 10%;
@@ -523,6 +527,10 @@ section {
 
 .h-100 {
     height: 100%;
+}
+
+.h-auto {
+    height: auto;
 }
 
 @media screen and (min-width: 769px) {

@@ -2207,7 +2207,7 @@ section {
     margin-right: 0;
 }
 
-/* Use in parent div of fluid col
+/* Use in parent div of fluid col Deprecated in 0.5.6, use .row
 .fluid-container {
     display: flex;
     overflow: auto;
@@ -3264,6 +3264,13 @@ video.video-fullscreen {
 }
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
+.u-hidden {
+  display: none !important;
+}
+
+.u-block {
+  display: block !important;
+}
 
 .u-inline {
   display: inline !important;
@@ -3277,22 +3284,25 @@ video.video-fullscreen {
   display: flex !important;
 }
 
-.u-flex-column {
+.u-flex.u-flex-column {
   flex-direction: column !important;
 }
 
-.u-flex-row {
+.u-flex.u-flex-row {
   flex-direction: row !important;
 }
 
 .u-inline-flex {
   display: -ms-inline-flexbox !important;
-  display: -webkit-inline-box !important;
   display: inline-flex !important;
 }
 
-.u-block {
-  display: block !important;
+.u-table {
+  display: table !important;
+}
+
+.u-table-row {
+  display: table-row !important;
 }
 
 /*
