@@ -81,7 +81,7 @@
         </div>
     </div>
 
-    <space class="large"></space>
+    <div class="space large"></div>
 
     <section id="started" class="padtop">
         <div class="content">
@@ -291,7 +291,7 @@
 
             <p>Since that <code>header-nav</code> fills up the rest of the space for devices with widths larger than <code>768px</code>, Cirrus provides different layouts to place elements within the container itself using <code>nav-left</code>, <code>nav-center</code>, and <code>nav-right</code> directly as children.</p>
 
-            <space></space>
+            <div class="space"></div>
             <h5>JavaScript Toggle</h6>
             <p>Keep in mind that the script used to toggle the menus is not included in Cirrus and it is best to develop a custom one that fits your site. Below is a sample of what can fit in any site running Cirrus.</p>
 
@@ -310,7 +310,7 @@ navBtns.forEach(function (ele) {
         dropDownMenu.classList.toggle('active');
     });
 });</code></pre>
-        <space></space>
+        <div class="space"></div>
         <h6>JQuery</h6>
         <pre><code class="javascript" data-lang="JS">// Show dropdown when clicked
 $('#header-btn').on('click', function(e) {
@@ -428,7 +428,7 @@ $('.dropdown-menu li').on('click', function(e) {
             <div class="divider"></div>
             <p>The <code>dropdown-menu</code> allows you to display a drpdown menu from a <code>nav-item</code> that displays additional options. This is simply a <code>nav-item</code> that has an <code>has-sub</code> class attached to it to indicate that this contains a dropdown menu with additional options. On desktops <code>&gt; 768px</code>, the dropdown menu appears as a regular menu item and the menu portion displays below the <code>nav-item</code>. On mobile devices, it just expands the <code>nav-item</code> it is in. The user clicks this toggle and the <code>dropdown-menu</code> will appear based on its previous state. The whole implementation is really broken down into two parts:</p>
             
-            <space></space>
+            <div class="space"></div>
             <h6>1) The Dropdown Toggle</h6>
             <p>Inside the <code>nav-item has-sub</code> element, the main toggle of the component will be handled by an anchor tag with the <code>nav-dropdown-link</code> class. Inside this control, icons and text can be added to specify the contents of the menu. When the dropdown menu is shown, the <code>active</code> class will be added to the <code>nav-item has-sub</code> element (the parent).</p>
             <div class="r">
@@ -439,7 +439,7 @@ $('.dropdown-menu li').on('click', function(e) {
 &lt;/div&gt;</code></pre>
 </div>
             
-            <space></space>
+            <div class="space"></div>
             <h6>2) The Menu Itself</h6>
             <p>The menu itself will be <b>adjacent</b> to the <code>nav-dropdown-link</code> and is a <code>ul</code> with the <code>dropdown-menu</code> class. Addition modifers include:
             <ul>
@@ -467,7 +467,7 @@ $('.dropdown-menu li').on('click', function(e) {
 &lt;/div&gt;</code></pre>
             </div>
 
-            <space></space>
+            <div class="space"></div>
             <h6>JavaScript (jQuery)</h6>
             <p>With JavaScript, the cleanest solution relies on jQuery. Below is a snippet that should work for general implementations of the <code>dropdown-menu</code>, but may require slight modification depending on the design of the website.</p>
             <div class="r">
