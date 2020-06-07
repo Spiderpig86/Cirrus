@@ -3220,7 +3220,7 @@ video.video-fullscreen {
 
 /* Color scheme for Cirrus */
 :root {
-    /* Legacy Colors */
+    /* v1 Colors */
     --cirrus-fg: #374054;
     --cirrus-bg: #fff;
 
@@ -3271,7 +3271,7 @@ video.video-fullscreen {
     --font-size-l: 1.35rem;
     --font-size-xl: 1.75rem;
 
-    /* New Color Palette */
+    /* v2 Colors */
     --pink-100: #F8E7F1;
     --pink-200: #F3D2E3;
     --pink-300: #ECB7D3;
@@ -3371,6 +3371,17 @@ video.video-fullscreen {
     --purple-700: #6340B6;
     --purple-800: #50388E;
     --purple-900: #413170;
+
+    --gray-000: #f8f9fa;
+    --gray-100: #f1f3f5;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #868e96;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
 }
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
