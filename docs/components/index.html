@@ -97,15 +97,9 @@
                 <h4>Ipsum II</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet luctus venenatis lectus magna. Facilisis gravida neque convallis a cras semper. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Erat imperdiet sed euismod nisi porta lorem. </p>
             </div>
-            <div class="modal-footer">
-                <div class="u-flex">
-                    <div class="level-left level-content"><a href="#components" style="display: inline-block;">
-                        <button class="btn-small">Cancel</button></a>
-                    </div>
-                    <div class="level-right level-content">
-                        <a href="#components" style="display: inline-block"><button class="btn-primary btn-small" style="padding: 0 1rem">Share</button></a>
-                    </div>
-                </div>
+            <div class="modal-footer"><a href="#components" style="display: inline-block;">
+                <button class="btn-small">Cancel</button></a>
+                <a href="#components" style="display: inline-block"><button class="btn-primary btn-small" style="padding: 0 1rem">Share</button></a>
             </div>
         </div>
     </div>
@@ -137,12 +131,23 @@
                 </div>
                 <div class="col-4">
                     <p class="u-text-center font-bold">Tab Component</p>
-                    <div class="tab-container tabs-fill">
-                        <ul>
-                            <li class="tab-item"><a>Favorites</a></li>
-                            <li class="tab-item selected"><a>Profile</a></li>
-                            <li class="tab-item"><a>Pins</a></li>
-                        </ul>
+                    <div id="tabsDemo">
+                        <div class="tab-container tabs-fill">
+                            <ul>
+                                <li class="tab-item selected"><a>Favorites</a></li>
+                                <li class="tab-item"><a>Profile</a></li>
+                                <li class="tab-item"><a>Pins</a></li>
+                            </ul>
+                        </div>
+                        <div class="tabpage tabpage--shown">
+                            <p>⭐ Favorites</p>
+                        </div>
+                        <div class="tabpage">
+                            <p>🙈 Profile</p>
+                        </div>
+                        <div class="tabpage">
+                            <p>📌 Pins</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1147,10 +1152,11 @@
         <div class="content">
             <h1><a href="./index.html#modals" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Modals</h1>
             <div class="divider"></div>
-            <p>Modals makes prompts simple for any website or app.</p>
+            <p>Modals make prompts simple for any website or app.</p>
             <a href="#modal-test">
                 <button class="btn-primary">Show Dialog</button>
             </a>
+            <div class="space"></div>
 
             <p>Setting up a modal is quite simple. To start, create a <code>div</code> with the <code>modal</code> class anywhere on the page. The next crucial step is to specify an <code>id</code> that you will use to reference the modal dialog with (from a button for example).</p> 
             <p>For a close button, you must specify an <code>id</code> to change the closing behavior.</p>
@@ -1963,7 +1969,7 @@
             </div>
             <div class="modal-body">
                 <!-- Modal content -->
-                <div class="u-text-center">
+                <div class="u-text-center content">
                     <h3>Max-width: 20rem</h3>
                     <h4>What is Lorem Ipsum?</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -1987,7 +1993,7 @@
             </div>
             <div class="modal-body">
                 <!-- Modal content -->
-                <div class="u-text-center">
+                <div class="u-text-center content">
                     <h3>Max-width: 40rem</h3>
                     <h4>What is Lorem Ipsum?</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -2011,7 +2017,7 @@
             </div>
             <div class="modal-body">
                 <!-- Modal content -->
-                <div class="u-text-center">
+                <div class="u-text-center content">
                     <h3>Max-width: 60rem</h3>
                     <h4>What is Lorem Ipsum?</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -2114,13 +2120,22 @@
 
     <script async src="../../res/js/smoothscroll.js"></script>
     <script async src="../../res/js/app.js"></script>
-    <!-- <script src="https://use.fontawesome.com/a696b91557.js"></script> -->
+    <script src="../../res/js/tabs.js"></script>
 
     <!-- Syntax highlight code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40470494-2"></script>
+    
+    <script>
+        const installationTabs = tabs({
+            el: '#tabsDemo',
+            tabNavigationLinks: '.tab-item',
+            tabContentContainers: '.tabpage'
+        });
+        installationTabs.init();
+    </script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
