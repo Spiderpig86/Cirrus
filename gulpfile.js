@@ -1,11 +1,13 @@
 const gulp = require('gulp');
 const prop = require('./package.json');
 const minify = require('gulp-clean-css');
+const sass = require('gulp-sass');
 const $ = require('gulp-load-plugins')();
 const head = '\/*\r\n* Cirrus ' + prop.version + `\r\n* Stanley Lim, Copyright ${(new Date()).getFullYear()}\r\n* https://spiderpig86.github.io/Cirrus\r\n*/\r\n`;
 
 gulp.task('compile', () => {
-    return gulp.src('./src/**/*.css')
+    return gulp.src(['src/core/default.scss', './src/**/*.scss'])
+        .pipe(sass.sync().on('error', sass.logError))
         .pipe($.concat('cirrus.css'))
         .pipe($.header(head))
         .pipe($.size())
@@ -86,6 +88,6 @@ gulp.task('minify-core', gulp.series('core', () => {
         .pipe(gulp.dest('./dist/'));
 }));
 
-gulp.task('watch', () => gulp.watch('./src/**/*.css', gulp.parallel('minify', 'minify-core')));
+gulp.task('watch', () => gulp.watch('./src/**/*.scss', gulp.parallel('minify', 'minify-core')));
 
 gulp.task('default', gulp.parallel('minify', 'minify-core'));
