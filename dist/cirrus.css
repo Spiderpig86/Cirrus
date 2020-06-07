@@ -9,8 +9,8 @@
 /* Un-themed */
 button,
 .btn,
-[type="submit"] {
-    display: block;
+[type='submit'] {
+    display: inline-flex;
     line-height: 2rem;
     overflow: hidden;
     padding: 0.5rem 1.5rem;
@@ -18,10 +18,10 @@ button,
     border-radius: 0.25rem;
     cursor: pointer;
     text-align: center;
-    transition: all 0var(--animation-duration);
-    background-color: #fefefe;
-    border-color: #d9d9d9;
-    color: #737373;
+    transition: all 0var (--animation-duration);
+    background-color: var(--btn-color);
+    border-color: var(--btn-border-color);
+    color: var(--btn-fg);
     font-size: 0.75rem;
     letter-spacing: 0.03rem;
     text-transform: uppercase;
@@ -37,20 +37,20 @@ button,
 
 button:hover,
 .btn:hover,
-[type="submit"]:hover {
+[type='submit']:hover {
     transition: all var(--animation-duration);
 }
 
 .btn:active,
 button:active,
-[type="submit"]:active {
+[type='submit']:active {
     transition: var(--animation-duration) ease;
 }
 
 /* Default button colors */
 button:hover,
 .btn:hover,
-[type="submit"]:hover {
+[type='submit']:hover {
     background-color: #eee;
     --btn-color: #eee;
 }
@@ -58,7 +58,7 @@ button:hover,
 /* Make the loading circle, if present, white when button is active */
 .btn.loading:active::after,
 button.loading:active::after,
-[type="submit"].loading:active::after {
+[type='submit'].loading:active::after {
     transition: var(--animation-duration) ease;
     border-radius: 50%;
     border-right-color: transparent;
@@ -66,13 +66,13 @@ button.loading:active::after,
 }
 
 button.btn-animated,
-[type="submit"].btn-animated,
+[type='submit'].btn-animated,
 .btn.btn-animated {
     transition: calc(var(--animation-duration) / 2) ease;
 }
 
 button.btn-animated:active,
-[type="submit"].btn-animated:active,
+[type='submit'].btn-animated:active,
 .btn.btn-animated:active {
     -webkit-transform: scale(0.98);
     transform: inherit, scale(0.98);
@@ -81,15 +81,15 @@ button.btn-animated:active,
 
 .btn:focus,
 button:focus,
-input[type="submit"]:focus {
+input[type='submit']:focus {
     outline: none;
 }
 
 .btn:disabled,
 button:disabled,
-[type="submit"]:disabled {
+[type='submit']:disabled {
     cursor: not-allowed;
-    opacity: .5;
+    opacity: 0.5;
 }
 
 button.btn-close {
@@ -118,7 +118,7 @@ button.btn-close:hover {
 button.btn-close::before,
 button.btn-close::after {
     background-color: var(--cirrus-bg);
-    content: "";
+    content: '';
     display: block;
     left: 50%;
     position: absolute;
@@ -152,118 +152,187 @@ button.btn-close::after {
     --btn-fg: var(--cirrus-dark);
     --btn-border-color: transparent;
 }
-.btn-transparent.outline { --btn-color: var(--cirrus-dark); }
-.btn-transparent:hover { --btn-color: rgba(0, 0, 0, .1); }
-.btn-transparent:focus { box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5); }
+.btn-transparent.outline {
+    --btn-color: var(--cirrus-dark);
+}
+.btn-transparent:hover {
+    --btn-color: rgba(0, 0, 0, 0.1);
+}
+.btn-transparent:focus {
+    box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
+}
 
 .btn-light {
     --btn-color: var(--cirrus-light);
     --btn-fg: var(--cirrus-dark);
     --btn-border-color: var(--cirrus-light);
 }
-.btn-light:hover { --btn-color: var(--cirrus-light-hover); }
-.btn-light:focus { box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5); }
+.btn-light:hover {
+    --btn-color: var(--cirrus-light-hover);
+}
+.btn-light:focus {
+    box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
+}
 
 .btn-dark {
     --btn-color: var(--cirrus-dark);
     --btn-fg: var(--cirrus-light);
     --btn-border-color: var(--cirrus-dark);
 }
-.btn-dark:hover { --btn-color: var(--cirrus-dark-hover); }
-.btn-dark.outline:hover { --btn-color: var(--cirrus-dark); }
-.btn-dark:focus { box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
+.btn-dark:hover {
+    --btn-color: var(--cirrus-dark-hover);
+}
+.btn-dark.outline:hover {
+    --btn-color: var(--cirrus-dark);
+}
+.btn-dark:focus {
+    box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5);
+}
 
 .btn-black {
     --btn-color: #000;
     --btn-fg: var(--cirrus-light);
     --btn-border-color: #000;
 }
-.btn-black:hover { --btn-color: #000; }
-.btn-black:focus { box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
+.btn-black:hover {
+    --btn-color: #000;
+}
+.btn-black:focus {
+    box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5);
+}
 
 .btn-primary {
     --btn-color: var(--cirrus-primary);
     --btn-fg: var(--cirrus-light);
     --btn-border-color: var(--cirrus-accent-border);
 }
-.btn-primary:hover { --btn-color: var(--cirrus-accent-hover); }
-.btn-primary.outline:hover { --btn-color: var(--cirrus-primary); }
-.btn-primary:focus { box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, 0.5); }
+.btn-primary:hover {
+    --btn-color: var(--cirrus-accent-hover);
+}
+.btn-primary.outline:hover {
+    --btn-color: var(--cirrus-primary);
+}
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, 0.5);
+}
 
 .btn-info {
     --btn-color: var(--cirrus-info);
     --btn-fg: var(--cirrus-light);
     --btn-border-color: var(--cirrus-info);
 }
-.btn-info:hover { --btn-color: var(--cirrus-info-hover); }
-.btn-info.outline:hover { --btn-color: var(--cirrus-info); }
-.btn-info:focus { box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5); }
+.btn-info:hover {
+    --btn-color: var(--cirrus-info-hover);
+}
+.btn-info.outline:hover {
+    --btn-color: var(--cirrus-info);
+}
+.btn-info:focus {
+    box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5);
+}
 
 .btn-link {
     --btn-color: var(--cirrus-link);
     --btn-fg: var(--cirrus-light);
     --btn-border-color: var(--cirrus-link);
 }
-.btn-link.outline { --btn-fg: var(--cirrus-link); border: 1px solid transparent; }
-.btn-link:hover { --btn-color: var(--cirrus-link-dark); }
-.btn-link.outline:hover { --btn-color: var(--cirrus-link-hover); border: 1px solid transparent; text-decoration: underline; }
-.btn-link:focus { box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5); }
+.btn-link.outline {
+    --btn-fg: var(--cirrus-link);
+    border: 1px solid transparent;
+}
+.btn-link:hover {
+    --btn-color: var(--cirrus-link-dark);
+}
+.btn-link.outline:hover {
+    --btn-color: var(--cirrus-link-hover);
+    border: 1px solid transparent;
+    text-decoration: underline;
+}
+.btn-link:focus {
+    box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5);
+}
 
 .btn-success {
     --btn-color: var(--cirrus-success);
     --btn-fg: var(--cirrus-light);
     --btn-border-color: var(--cirrus-success);
 }
-.btn-success:hover { --btn-color: var(--cirrus-success-hover); }
-.btn-success.outline:hover { --btn-color: var(--cirrus-success); }
-.btn-success:focus { box-shadow: 0 0 0 0.2rem rgba(13, 210, 89, 0.5); }
+.btn-success:hover {
+    --btn-color: var(--cirrus-success-hover);
+}
+.btn-success.outline:hover {
+    --btn-color: var(--cirrus-success);
+}
+.btn-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 210, 89, 0.5);
+}
 
 .btn-warning {
     --btn-color: var(--cirrus-warning);
     --btn-fg: var(--cirrus-dark);
     --btn-border-color: var(--cirrus-warning);
 }
-.btn-warning:hover { --btn-color: var(--cirrus-warning-hover); }
-.btn-warning.outline:hover { --btn-color: var(--cirrus-warning); }
-.btn-warning:focus { box-shadow: 0 0 0 0.2rem rgba(250, 180, 51, 0.5); }
+.btn-warning:hover {
+    --btn-color: var(--cirrus-warning-hover);
+}
+.btn-warning.outline:hover {
+    --btn-color: var(--cirrus-warning);
+}
+.btn-warning:focus {
+    box-shadow: 0 0 0 0.2rem rgba(250, 180, 51, 0.5);
+}
 
 .btn-danger {
     --btn-color: var(--cirrus-danger);
     --btn-fg: var(--cirrus-light);
     --btn-border-color: var(--cirrus-danger);
 }
-.btn-danger:hover { --btn-color: var(--cirrus-danger-hover); }
-.btn-danger.outline:hover { --btn-color: var(--cirrus-danger); }
-.btn-danger:focus { box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5); }
+.btn-danger:hover {
+    --btn-color: var(--cirrus-danger-hover);
+}
+.btn-danger.outline:hover {
+    --btn-color: var(--cirrus-danger);
+}
+.btn-danger:focus {
+    box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5);
+}
 
-[class^="btn-"], [class*=" btn-"] {
-    background-color: var(--btn-color); 
+[class^='btn-'],
+[class*=' btn-'] {
+    background-color: var(--btn-color);
     border: 1px solid var(--btn-border-color);
     color: var(--btn-fg);
     transition: all var(--animation-duration);
 }
 
-[class^="btn-"]:hover, [class*=" btn-"]:hover { background-color: var(--btn-color); border-color: var(--btn-border-color); transition: all var(--animation-duration); }
+[class^='btn-']:hover,
+[class*=' btn-']:hover {
+    background-color: var(--btn-color);
+    border-color: var(--btn-border-color);
+    transition: all var(--animation-duration);
+}
 
 /* Outline Variants */
-[class^="btn-"].outline, [class*=" btn-"].outline {
-    background-color: transparent; 
+[class^='btn-'].outline,
+[class*=' btn-'].outline {
+    background-color: transparent;
     color: var(--btn-color);
 }
-[class^="btn-"].outline:hover, [class*=" btn-"].outline:hover {
+[class^='btn-'].outline:hover,
+[class*=' btn-'].outline:hover {
     background-color: var(--btn-color);
     color: var(--btn-fg);
     transition: all var(--animation-duration);
 }
 
 /* Right of input */
-.has-controls.input:not([class*="left action"]) > button:last-child,
-.has-controls.input:not([class*="left action"]) > .btn:last-child > .btn {
+.has-controls.input:not([class*='left action']) > button:last-child,
+.has-controls.input:not([class*='left action']) > .btn:last-child > .btn {
     border-radius: 0 0.28571429rem 0.28571429rem 0;
 }
 
-.has-controls.input:not([class*="right action"]) > button:last-child,
-.has-controls.input:not([class*="right action"]) > .btn:last-child > .btn {
+.has-controls.input:not([class*='right action']) > button:last-child,
+.has-controls.input:not([class*='right action']) > .btn:last-child > .btn {
     border-radius: 0.28571429rem 0 0 0.28571429rem;
 }
 
@@ -304,32 +373,32 @@ button.btn-close::after {
 /* Override default behavior of aligning font awesome icons to the top */
 button .fa-wrapper,
 .btn .fa-wrapper,
-[type="submit"] .fa-wrapper {
+[type='submit'] .fa-wrapper {
     vertical-align: baseline;
 }
 
 button .fa-wrapper.pad-right,
 .btn .fa-wrapper.pad-right,
-[type="submit"] .fa-wrapper.pad-right {
+[type='submit'] .fa-wrapper.pad-right {
     margin-right: 0.4rem;
 }
 
 button .fa-wrapper.pad-left,
 .btn .fa-wrapper.pad-left,
-[type="submit"] .fa-wrapper.pad-left {
+[type='submit'] .fa-wrapper.pad-left {
     margin-left: 0.4rem;
 }
 
 /* Alternatives to pad-left and pad-right */
 button span:first-child,
 .btn span:first-child,
-[type="submit"] span:first-child {
+[type='submit'] span:first-child {
     margin-right: 0.2rem;
 }
 
 button span:last-child,
 .btn span:last-child,
-[type="submit"] span:last-child {
+[type='submit'] span:last-child {
     margin-left: 0.2rem;
 }
 
@@ -354,7 +423,7 @@ button span:last-child,
 
 .btn-group .btn,
 .btn-group button,
-.btn-group [type="submit"] {
+.btn-group [type='submit'] {
     -ms-flex: 1 0 auto;
     -webkit-box-flex: 1;
     flex: 1 0 auto;
@@ -363,7 +432,7 @@ button span:last-child,
 
 .btn-group.btn-group-fill .btn,
 .btn-group.btn-group-fill button,
-.btn-group.btn-group-fill [type="submit"] {
+.btn-group.btn-group-fill [type='submit'] {
     -ms-flex: 1 0;
     -webkit-box-flex: 1;
     flex: 1 0; /* Make the buttons fill the available width and proportion themselves */
@@ -371,7 +440,7 @@ button span:last-child,
 
 .btn-group .btn:first-child:not(:last-child),
 .btn-group button:first-child:not(:last-child),
-.btn-group [type="submit"]:first-child:not(:last-child) {
+.btn-group [type='submit']:first-child:not(:last-child) {
     /* Style the first child in group > 1 buttons */
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -379,7 +448,7 @@ button span:last-child,
 
 .btn-group .btn:last-child:not(:first-child),
 .btn-group button:last-child:not(:first-child),
-.btn-group [type="submit"]:last-child:not(:first-child) {
+.btn-group [type='submit']:last-child:not(:first-child) {
     /* Style the last child in group > 1 buttons */
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -388,7 +457,7 @@ button span:last-child,
 
 .btn-group .btn:not(:first-child):not(:last-child),
 .btn-group button:not(:first-child):not(:last-child),
-.btn-group [type="submit"]:not(:first-child):not(:last-child) {
+.btn-group [type='submit']:not(:first-child):not(:last-child) {
     /* Style button in middle of group */
     border-radius: 0; /* Remove roundness from center buttons */
     margin-left: -0.1rem;
@@ -402,29 +471,30 @@ button span:last-child,
 
     .btn-group .btn,
     .btn-group button,
-    .btn-group [type="submit"] {
+    .btn-group [type='submit'] {
         margin-bottom: -1px;
     }
 
     .btn-group .btn:first-child:not(:last-child),
     .btn-group button:first-child:not(:last-child),
-    .btn-group [type="submit"]:first-child:not(:last-child) {
-        border-radius: .25rem .25rem 0 0;
+    .btn-group [type='submit']:first-child:not(:last-child) {
+        border-radius: 0.25rem 0.25rem 0 0;
     }
 
     .btn-group .btn:not(:first-child):not(:last-child),
     .btn-group button:not(:first-child):not(:last-child),
-    .btn-group [type="submit"]:not(:first-child):not(:last-child) {
+    .btn-group [type='submit']:not(:first-child):not(:last-child) {
         margin-left: 0;
     }
 
     .btn-group .btn:last-child:not(:first-child),
     .btn-group button:last-child:not(:first-child),
-    .btn-group [type="submit"]:last-child:not(:first-child) {
-        border-radius: 0 0 .25rem .25rem ;
+    .btn-group [type='submit']:last-child:not(:first-child) {
+        border-radius: 0 0 0.25rem 0.25rem;
         margin-left: 0;
     }
 }
+
 /* CODE */
 
 code {
@@ -1464,6 +1534,10 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
   transition: all 0.3s;
 }
 
+.nav-item.has-sub {
+  position: relative;
+}
+
 /* Allow the user to scroll through navbar items if it exceeds nav-left, nav-center, or nav-right widths */
 .nav-overflow-x {
   -webkit-box-pack: inherit;
@@ -1955,24 +2029,24 @@ section {
 
 /* This works well with spans and maybe even hr */
 .divider {
-    border-top: .05rem solid rgba(173, 173, 173, 0.5);
-    height: .1rem;
+    border-top: 0.05rem solid rgba(173, 173, 173, 0.5);
+    height: 0.1rem;
     margin: 1.8rem 0 1.6rem;
 }
 
 .divider[data-content] {
-    margin: .8rem 0;
+    margin: 0.8rem 0;
 }
 
 .divider--v[data-content] {
     display: block;
-    padding: .8rem;
+    padding: 0.8rem;
 }
 
 .divider--v::before {
-    border-left: .05rem solid rgba(173, 173, 173, 0.5);
-    bottom: .4rem;
-    content: "";
+    border-left: 0.05rem solid rgba(173, 173, 173, 0.5);
+    bottom: 0.4rem;
+    content: '';
     display: block;
     left: 50%;
     position: absolute;
@@ -1980,27 +2054,28 @@ section {
     transform: translateX(-50%);
 }
 
-.divider--v[data-content]::after, .divider[data-content]::after {
+.divider--v[data-content]::after,
+.divider[data-content]::after {
     background: #fff;
     color: #bcc3ce;
     content: attr(data-content);
     left: 50%;
     display: inline-block;
-    padding: 0 .4rem;
+    padding: 0 0.4rem;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     top: 50%;
 }
 
 .divider--v[data-content] {
     left: 50%;
-    padding: .2rem 0;
+    padding: 0.2rem 0;
     position: absolute;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
-/* Removed 0.5.5 */ 
+/* Removed 0.5.5 */
 /* .divider-short {
     max-width: 15rem;
     width: 100%;
@@ -2065,12 +2140,13 @@ section {
     flex: 1;
     /* max-width: 100%; */
     flex-wrap: wrap;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
 }
 
-.r { /* Legacy row pre 0.5.5 */
+.r {
+    /* Legacy row pre 0.5.5 */
     max-width: 100%;
-    padding: .5rem;
+    padding: 0.5rem;
 }
 
 .row.row--no-wrap {
@@ -2081,7 +2157,7 @@ section {
 }
 
 .row::after {
-    content: "";
+    content: '';
     clear: both;
     display: table;
 }
@@ -2090,7 +2166,7 @@ section {
 .row .col {
     display: block;
     flex: 1;
-    padding: .15rem .75rem;
+    padding: 0.15rem 0.75rem;
 }
 
 .row .col-1 {
@@ -2247,15 +2323,15 @@ section {
 } */
 
 /* Some offset values */
-.row [class^="col-"],
-.row [class*=" col-"] {
+.row [class^='col-'],
+.row [class*=' col-'] {
     float: left; /* Keeps the elements in 1 row */
     padding: 0 0.5rem;
 }
 
 /* Columns without the spacing */
-.row.no-space [class^="col-"],
-.row.no-space [class*=" col-"] {
+.row.no-space [class^='col-'],
+.row.no-space [class*=' col-'] {
     padding: 0;
 }
 
@@ -2452,7 +2528,6 @@ section {
 }
 
 @media screen and (min-width: 769px) {
-
     .row {
         display: flex;
     }
@@ -2474,25 +2549,25 @@ section {
 
 /* MOBILE */
 @media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
     .row {
         margin-top: 0;
     }
 
-    .row [class^="col-"]:not(.ignore-screen),
-    .row [class*=" col-"]:not(.ignore-screen) {
+    .row [class^='col-']:not(.ignore-screen),
+    .row [class*=' col-']:not(.ignore-screen) {
         /* Remove the grid structure for smaller screens */
         width: 100%;
         margin-left: 0;
         padding: 0;
     }
 
-    /* .fluid-container { DEPRECATED 0.5.5
-        display: inherit;
-    } */
-
     /* Dividers for mobile layout */
-    .divided > .row [class^="col-"],
-    .divided > .row [class*=" col-"] {
+    .divided > .row [class^='col-'],
+    .divided > .row [class*=' col-'] {
         box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
     }
 
@@ -2544,11 +2619,21 @@ a.underline {
     text-decoration: underline;
 }
 
-p a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, blockquote a, article a {
+p a,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a,
+blockquote a,
+article a {
     display: inline;
 }
 
-a .btn, a button {
+a .btn,
+a button,
+[type='submit'] a {
     margin-bottom: 0; /* Remove random excess space */
 }
 /* LISTS */
@@ -3311,16 +3396,6 @@ video.video-fullscreen {
     --yellow-700: #7C4D09;
     --yellow-800: #6C3E0C;
     --yellow-900: #5D320F;
-    
-    --green-100: #E1F7EB;
-    --green-200: #C2ECD6;
-    --green-300: #98D9B7;
-    --green-400: #64C192;
-    --green-500: #44A675;
-    --green-600: #33855D;
-    --green-700: #27684A;
-    --green-800: #275440;
-    --green-900: #234535;
 
     --green-100: #E1F7EB;
     --green-200: #C2ECD6;

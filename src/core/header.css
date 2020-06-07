@@ -77,6 +77,10 @@
   transition: all 0.3s;
 }
 
+.nav-item.has-sub {
+  position: relative;
+}
+
 /* Allow the user to scroll through navbar items if it exceeds nav-left, nav-center, or nav-right widths */
 .nav-overflow-x {
   -webkit-box-pack: inherit;
