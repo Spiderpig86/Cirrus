@@ -1,5 +1,6 @@
 /* Color scheme for Cirrus */
 :root {
+    /* Legacy Colors */
     --cirrus-fg: #374054;
     --cirrus-bg: #fff;
 
@@ -49,4 +50,105 @@
     --font-size-m: 1rem;
     --font-size-l: 1.35rem;
     --font-size-xl: 1.75rem;
+
+    /* New Color Palette */
+    --pink-100: #F8E7F1;
+    --pink-200: #F3D2E3;
+    --pink-300: #ECB7D3;
+    --pink-400: #EB8CBC;
+    --pink-500: #DD5A9C;
+    --pink-600: #D12E81;
+    --pink-700: #A21F61;
+    --pink-800: #831B50;
+    --pink-900: #741648;
+
+    --red-100: #FDE7E9;
+    --red-200: #FBD4D5;
+    --red-300: #F7B1B1;
+    --red-400: #F19393;
+    --red-500: #E85C61;
+    --red-600: #DB3839;
+    --red-700: #B31E1D;
+    --red-800: #9B1313;
+    --red-900: #890E10;
+    
+    --orange-100: #FDEED1;
+    --orange-200: #FBDBAA;
+    --orange-300: #F6B65C;
+    --orange-400: #F19736;
+    --orange-500: #E4771C;
+    --orange-600: #C45307;
+    --orange-700: #9B3908;
+    --orange-800: #842B09;
+    --orange-900: #890E10;
+    
+    --yellow-100: #FFFDE4;
+    --yellow-200: #F9E978;
+    --yellow-300: #F6DA52;
+    --yellow-400: #E8BB24;
+    --yellow-500: #D29507;
+    --yellow-600: #9D6B0C;
+    --yellow-700: #7C4D09;
+    --yellow-800: #6C3E0C;
+    --yellow-900: #5D320F;
+    
+    --green-100: #E1F7EB;
+    --green-200: #C2ECD6;
+    --green-300: #98D9B7;
+    --green-400: #64C192;
+    --green-500: #44A675;
+    --green-600: #33855D;
+    --green-700: #27684A;
+    --green-800: #275440;
+    --green-900: #234535;
+
+    --green-100: #E1F7EB;
+    --green-200: #C2ECD6;
+    --green-300: #98D9B7;
+    --green-400: #64C192;
+    --green-500: #44A675;
+    --green-600: #33855D;
+    --green-700: #27684A;
+    --green-800: #275440;
+    --green-900: #234535;
+    
+    --teal-100: #DDF2F5;
+    --teal-200: #B5E6EB;
+    --teal-300: #7FCED5;
+    --teal-400: #59BAC3;
+    --teal-500: #1E9CA8;
+    --teal-600: #0F7D8A;
+    --teal-700: #0A616A;
+    --teal-800: #105157;
+    --teal-900: #114448;
+    
+    --blue-100: #E1EFFC;
+    --blue-200: #BFDCFC;
+    --blue-300: #8BC2F8;
+    --blue-400: #5FA7F3;
+    --blue-500: #3C91EC;
+    --blue-600: #1B74D9;
+    --blue-700: #1E5898;
+    --blue-800: #1E4C80;
+    --blue-900: #1C3C63;
+    
+    --indigo-100: #E2EFFF;
+    --indigo-200: #C4DBFD;
+    --indigo-300: #A1BEFA;
+    --indigo-400: #89A3F7;
+    --indigo-500: #6C83E9;
+    --indigo-600: #5966D9;
+    --indigo-700: #4C4F9E;
+    --indigo-800: #42417B;
+    --indigo-900: #3A3462;
+    
+    --purple-100: #F0E9FB;
+    --purple-200: #E2D4F8;
+    --purple-300: #CBB2F6;
+    --purple-400: #B89AF4;
+    --purple-500: #9C73ED;
+    --purple-600: #8256E1;
+    --purple-700: #6340B6;
+    --purple-800: #50388E;
+    --purple-900: #413170;
 }
