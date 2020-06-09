@@ -41,6 +41,26 @@
   display: table-row !important;
 }
 
+.u-position-static {
+  position: static !important;
+}
+
+.u-position-relative {
+  position: static !important;
+}
+
+.u-position-absolute {
+  position: absolute !important;
+}
+
+.u-position-fixed {
+  position: fixed !important;
+}
+
+.u-position-sticky {
+  position: sticky !important;
+}
+
 /*
    When using floats, clearfix allows the container to automatically resize so that
    other elements are not blocked by children.
@@ -195,6 +215,8 @@
   width: 100% !important;
 } */
 
+/* Deprecated 0.5.6 */
+/*
 .u-no-margin {
   margin: 0 !important;
 }
@@ -202,6 +224,7 @@
 .u-no-padding {
   padding: 0 !important;
 }
+*/
 
 .u-margin-auto {
   margin: 0 auto !important;
