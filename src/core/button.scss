@@ -5,7 +5,6 @@
 button,
 .btn,
 [type='submit'] {
-    display: inline-flex;
     line-height: 2rem;
     overflow: hidden;
     padding: 0.5rem 1.5rem;
@@ -339,18 +338,18 @@ button.btn-close::after {
 
 /* Small button */
 .btn-small {
-    padding: 0 1rem;
+    padding: .25rem 1rem;
     font-size: 70%;
 }
 
 /* Big button */
 .btn-large {
-    padding: 0 2rem;
+    padding: .75rem 2rem;
     font-size: 90%;
 }
 
 .btn-xlarge {
-    padding: 0 2.5rem;
+    padding: 1rem 2.5rem;
     font-size: 110%;
 }
 
