@@ -6,7 +6,8 @@
   [![v.0.5.5](https://img.shields.io/badge/cirrus-0.5.5-blue.svg?style=flat-square)](https://github.com/Spiderpig86/Cirrus)
   [![MIT License](https://img.shields.io/github/license/Spiderpig86/Cirrus.svg?style=flat-square)](https://opensource.org/licenses/MIT)
   [![Travis](https://img.shields.io/travis/Spiderpig86/Cirrus.svg?style=flat-square)](https://travis-ci.org/Spiderpig86/Cirrus)
-  [![Known Vulnerabilities](https://snyk.io/test/github/Spiderpig86/Cirrus/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Spiderpig86/Cirrus?targetFile=package.json)
+  [![Known Vulnerabilities](https://snyk.io/test/github/Spiderpig86/Cirrus/badge.svg?targetFile=package.json&style=flat-square)](https://snyk.io/test/github/Spiderpig86/Cirrus?targetFile=package.json)
+  [![Known Vulnerabilities](https://img.shields.io/npm/dm/cirrus-ui.svg?style=flat-square)](https://www.npmjs.com/package/cirrus-ui)
 
 </div>
 
