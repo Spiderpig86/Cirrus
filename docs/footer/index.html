@@ -95,8 +95,8 @@
                     <li><code>footer</code> serves as the main base component of the *<i>drum roll...</i>* footer. By default, it comes with equal padding at the top and bottom of <code>6rem</code> and a margin top of <code>5rem</code> to create a separation between the main content and the footer.</li>
                     <ul>
                         <li>At this point, pretty much anything can be placed into the <code>footer</code>, but there are a few footer specific components worth mentioning.</li>
-                        <li><code>footer-list-title</code> is a standard list title in the footer with a bottom border.</li>
-                        <li><code>footer-list-item</code> provides default stylings for list items. These can be used in combination with Cirrus's columns to create a clean site map.</li>
+                        <li><code>footer__list-title</code> is a standard list title in the footer with a bottom border.</li>
+                        <li><code>footer__list-item</code> provides default stylings for list items. These can be used in combination with Cirrus's columns to create a clean site map.</li>
                     </ul>
                 </ul>
             </div>
@@ -107,7 +107,7 @@
         <div class="content">
             <h1><a href="./index.html#footer_title" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Footer List Titles</h1>
             <div class="divider"></div>
-            <p>As stated above, this forms the basis for a footer list title as seen in the 'Bear &amp; Co.', 'About', and other titles with the <code>footer-list-title</code> class. The items below them are styled by the <code>footer-list-item</code> class.</p>
+            <p>As stated above, this forms the basis for a footer list title as seen in the 'Bear &amp; Co.', 'About', and other titles with the <code>footer__list-title</code> class. The items below them are styled by the <code>footer__list-item</code> class.</p>
             <div class="row">
                 <iframe src="./demo-footer-title.html" width="100%" height="350"></iframe>
             </div>
@@ -118,7 +118,7 @@
         <div class="content">
             <h1><a href="./index.html#static" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Static Footer</h1>
             <div class="divider"></div>
-            <p>Static footers are designed to stick to the bottom of a page. To make a static footer, add the <code>footer-fixed</code> class to the footer.</p>
+            <p>Static footers are designed to stick to the bottom of a page. To make a static footer, add the <code>footer--fixed</code> class to the footer.</p>
             <div class="row">
                 <iframe src="./demo-footer-static.html" width="100%" height="550"></iframe>
             </div>
@@ -232,61 +232,61 @@
     </script>
 </body>
 
-<footer>
-    <h6 class="white uppercase">Cirrus</h6>
+<footer class="footer">
+    <h6 class="footer__title white uppercase">Cirrus</h6>
     <div class="content">
         <div class="divider"></div>
-        <!--<li class="no-bullets footer-list-title">Docs</li>-->
+        
         <div class="row">
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../animations">
-                        <li class="list-item">Animations</li>
+                        <li class="footer__list-item">Animations</li>
                     </a>
                     <a href="../buttons">
-                        <li class="list-item">Buttons</li>
+                        <li class="footer__list-item">Buttons</li>
                     </a>
                     <a href="../components">
-                        <li class="list-item">Components</li>
+                        <li class="footer__list-item">Components</li>
                     </a>
                     <ul>
             </div>
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../font">
-                        <li class="list-item">Font</li>
+                        <li class="footer__list-item">Font</li>
                     </a>
                     <a href="../footer">
-                        <li class="list-item">Footer</li>
+                        <li class="footer__list-item">Footer</li>
                     </a>
                     <a href="../forms">
-                        <li class="list-item">Forms</li>
+                        <li class="footer__list-item">Forms</li>
                     </a>
                     <ul>
             </div>
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../header">
-                        <li class="list-item">Header</li>
+                        <li class="footer__list-item">Header</li>
                     </a>
                     <a href="../layout">
-                        <li class="list-item">Layout</li>
+                        <li class="footer__list-item">Layout</li>
                     </a>
                     <a href="../links">
-                        <li class="list-item">Links</li>
+                        <li class="footer__list-item">Links</li>
                     </a>
                     <ul>
             </div>
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../lists">
-                        <li class="list-item">Lists</li>
+                        <li class="footer__list-item">Lists</li>
                     </a>
                     <a href="../tables">
-                        <li class="list-item">Table</li>
+                        <li class="footer__list-item">Table</li>
                     </a>
                     <a href="../utils">
-                        <li class="list-item">Util</li>
+                        <li class="footer__list-item">Util</li>
                     </a>
                 </ul>
             </div>
