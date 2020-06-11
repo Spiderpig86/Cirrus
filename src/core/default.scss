@@ -43,7 +43,6 @@ ul {
 img,
 embed,
 object,
-audio,
 video {
     max-width: 100%;
     height: auto;
@@ -86,6 +85,14 @@ textarea {
 label {
     display: inline-block;
     margin: 0.25rem 0;
+}
+
+fieldset {
+    padding: 1rem;
+
+    legend {
+        font-weight: bold;
+    }
 }
 
 [hidden] {

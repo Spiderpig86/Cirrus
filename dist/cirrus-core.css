@@ -662,7 +662,7 @@ h6 {
   line-height: 1.2;
 }
 
-/* Silent header */
+/* Silent header Deprecated 0.5.6
 h1 .silent,
 h2 .silent,
 h3 .silent,
@@ -670,7 +670,7 @@ h4 .silent,
 h5 .silent,
 h6 .silent {
   color: #788196;
-}
+} */
 
 h1 {
   font-size: 3rem;

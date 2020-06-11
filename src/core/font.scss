@@ -3,18 +3,16 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
+@for $index from 1 through 6 {
+  h#{$index} {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
 }
 
-/* Silent header */
+/* Silent header Deprecated 0.5.6
 h1 .silent,
 h2 .silent,
 h3 .silent,
@@ -22,7 +20,7 @@ h4 .silent,
 h5 .silent,
 h6 .silent {
   color: #788196;
-}
+} */
 
 h1 {
   font-size: 3rem;
@@ -89,7 +87,7 @@ strong {
 }
 
 .title {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .title:not(:last-child),

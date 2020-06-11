@@ -42,7 +42,6 @@ ul {
 img,
 embed,
 object,
-audio,
 video {
   max-width: 100%;
   height: auto; }
@@ -80,6 +79,11 @@ textarea {
 label {
   display: inline-block;
   margin: 0.25rem 0; }
+
+fieldset {
+  padding: 1rem; }
+  fieldset legend {
+    font-weight: bold; }
 
 [hidden] {
   display: none !important; }
@@ -567,25 +571,51 @@ pre > code {
 /* FONT */
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
-h1,
-h2,
-h3,
-h4,
-h5,
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem; }
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem; }
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem; }
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem; }
+
+h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem; }
+
 h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-bottom: 1rem; }
 
-/* Silent header */
+/* Silent header Deprecated 0.5.6
 h1 .silent,
 h2 .silent,
 h3 .silent,
 h4 .silent,
 h5 .silent,
 h6 .silent {
-  color: #788196; }
-
+  color: #788196;
+} */
 h1 {
   font-size: 3rem;
   letter-spacing: 0.025rem; }
@@ -638,7 +668,7 @@ strong {
   margin: 1rem 0; }
 
 .title {
-  font-weight: bolder; }
+  font-weight: bold; }
 
 .title:not(:last-child),
 .subtitle:not(:last-child) {
@@ -852,7 +882,7 @@ kbd {
     text-transform: uppercase; }
 
 /* FORMS */
-input:not([type=checkbox]):not([type=radio]):not([type=submit]),
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]),
 select {
   width: 100%;
   border: 1px solid #ddd;
@@ -1246,7 +1276,20 @@ input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-i
   background-color: var(--cirrus-bg);
   max-height: 100vh;
   padding: 0 2rem;
-  transition: all .3s; }
+  transition: all .3s;
+  /* Remove any padding set for headers in default.scss */ }
+  .header h1 {
+    margin: 0; }
+  .header h2 {
+    margin: 0; }
+  .header h3 {
+    margin: 0; }
+  .header h4 {
+    margin: 0; }
+  .header h5 {
+    margin: 0; }
+  .header h6 {
+    margin: 0; }
 
 .header a {
   color: #8292a2; }

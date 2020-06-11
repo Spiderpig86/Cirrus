@@ -12,6 +12,13 @@
   max-height: 100vh;
   padding: 0 2rem;
   transition: all .3s;
+
+  /* Remove any padding set for headers in default.scss */
+  @for $i from 1 through 6 {
+    h#{$i} {
+      margin: 0;
+    }
+  }
 }
 
 .header a {

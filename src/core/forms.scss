@@ -1,6 +1,6 @@
 /* FORMS */
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]),
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]),
 select {
     width: 100%;
     border: 1px solid #ddd;
