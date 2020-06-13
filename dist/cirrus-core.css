@@ -1202,12 +1202,12 @@ select.input-xlarge {
 
 /* Hold Font Awesome glyphs inside input fields */
 /* More sizes coming soon */
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-left {
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-contains-icon,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-contains-icon-left {
     padding-left: 2.75rem;
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-contains-icon-right {
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-contains-icon-right {
     padding-right: 2.75rem;
 }
 
