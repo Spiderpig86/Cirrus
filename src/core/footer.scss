@@ -1,7 +1,8 @@
-/* FOOTER */
+@import "../core/theme.scss";
 
+/* FOOTER */
 .footer {
-    background-color: var(--gray-900);
+    background-color: $gray-900;
     padding: 6rem 0;
     text-align: center;
     margin-top: 5rem;
@@ -18,7 +19,7 @@
     }
 
     p {
-        color: var(--gray-600);
+        color: $gray-600;
     }
 
     ul {
@@ -51,7 +52,7 @@
     ul a .footer__list-item,
     .footer__list-item {
         margin: 0.1rem;
-        color: var(--gray-600);
+        color: $gray-600;
         transition: all var(--animation-duration);
         font-size: 75%;
         text-transform: uppercase;

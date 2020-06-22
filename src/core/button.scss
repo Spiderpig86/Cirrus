@@ -1,3 +1,6 @@
+@import '../core/theme.scss';
+@import '../utils/_functions';
+
 /* BUTTONS */
 
 /* Button styling */
@@ -12,7 +15,7 @@ button,
     border-radius: 0.25rem;
     cursor: pointer;
     text-align: center;
-    transition: all 0var (--animation-duration);
+    transition: all var(--animation-duration);
     background-color: var(--btn-color);
     border-color: var(--btn-border-color);
     color: var(--btn-fg);
@@ -24,271 +27,261 @@ button,
     user-select: none;
     margin-bottom: 1rem;
     outline: none;
-    --btn-color: #fefefe;
-    --btn-fg: #737373;
-    --btn-border-color: #d9d9d9;
-}
+    --btn-color: #{$gray-000};
+    --btn-fg: #{$gray-700};
+    --btn-border-color: #{$gray-300};
 
-button:hover,
-.btn:hover,
-[type='submit']:hover {
-    transition: all var(--animation-duration);
-}
+    /* Base States */
+    &:hover {
+        transition: all var(--animation-duration);
+        --btn-color: #{$gray-200};
+    }
 
-.btn:active,
-button:active,
-[type='submit']:active {
-    transition: var(--animation-duration) ease;
-}
+    &:active {
+        transition: var(--animation-duration) ease;
+    }
 
-/* Default button colors */
-button:hover,
-.btn:hover,
-[type='submit']:hover {
-    background-color: #eee;
-    --btn-color: #eee;
-}
+    &:focus {
+        outline: none;
+    }
 
-/* Make the loading circle, if present, white when button is active */
-.btn.loading:active::after,
-button.loading:active::after,
-[type='submit'].loading:active::after {
-    transition: var(--animation-duration) ease;
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-top-color: transparent;
-}
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
 
-button.btn-animated,
-[type='submit'].btn-animated,
-.btn.btn-animated {
-    transition: calc(var(--animation-duration) / 2) ease;
-}
+    /* Loading Button*/
+    /* Make the loading circle, if present, white when button is active */
+    &.loading:active::after {
+        border-radius: 50%;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        transition: var(--animation-duration) ease;
+    }
 
-button.btn-animated:active,
-[type='submit'].btn-animated:active,
-.btn.btn-animated:active {
-    -webkit-transform: scale(0.98);
-    transform: inherit, scale(0.98);
-    transition: calc(var(--animation-duration) / 2) ease;
-}
+    /* Animated Button */
+    &.btn-animated {
+        transition: calc(var(--animation-duration) / 2) ease;
 
-.btn:focus,
-button:focus,
-input[type='submit']:focus {
-    outline: none;
-}
+        &:active {
+            -webkit-transform: scale(0.98);
+            transform: inherit, scale(0.98);
+            transition: calc(var(--animation-duration) / 2) ease;
+        }
+    }
 
-.btn:disabled,
-button:disabled,
-[type='submit']:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-}
+    /* Close Button */
+    &.btn-close {
+        background-color: rgba(10, 10, 10, 0.2);
+        border: none;
+        border-radius: 290486px;
+        cursor: pointer;
+        display: inline-block;
+        flex-grow: 0;
+        flex-shrink: 0;
+        font-size: 0;
+        height: 20px;
+        outline: 0;
+        position: relative;
+        vertical-align: top;
+        width: 20px;
+        padding: 0;
+        min-width: 20px;
 
-button.btn-close {
-    background-color: rgba(10, 10, 10, 0.2);
-    border: none;
-    border-radius: 290486px;
-    cursor: pointer;
-    display: inline-block;
-    flex-grow: 0;
-    flex-shrink: 0;
-    font-size: 0;
-    height: 20px;
-    outline: 0;
-    position: relative;
-    vertical-align: top;
-    width: 20px;
-    padding: 0;
-    min-width: 20px;
-}
+        &:hover {
+            background-color: var(--gray-900);
+        }
 
-button.btn-close:hover {
-    background-color: rgba(10, 10, 10, 0.3);
-}
+        /* Render the x in the close button */
+        @mixin close-btn-x($height, $width) {
+            background-color: var(--cirrus-bg);
+            content: '';
+            display: block;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            -webkit-transform-origin: center center;
+            transform-origin: center center;
+        }
 
-/* Render the x in the close button */
-button.btn-close::before,
-button.btn-close::after {
-    background-color: var(--cirrus-bg);
-    content: '';
-    display: block;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    -webkit-transform-origin: center center;
-    transform-origin: center center;
-}
+        &::before {
+            @include close-btn-x(2px, 50%);
+        }
 
-button.btn-close::before {
-    height: 2px;
-    width: 50%;
-}
+        &::after {
+            @include close-btn-x(50%, 2px);
+        }
+    }
 
-button.btn-close::after {
-    height: 50%;
-    width: 2px;
+    /* BUTTON STYLES */
+    /* Regular */
+    &.btn-transparent {
+        --btn-color: transparent;
+        --btn-fg: var(--cirrus-dark);
+        --btn-border-color: transparent;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
+        }
+        &:hover {
+            --btn-color: rgba(0, 0, 0, 0.1);
+        }
+        &.outline {
+            --btn-color: var(--cirrus-dark);
+        }
+    }
+
+    &.btn-light {
+        --btn-color: var(--cirrus-light);
+        --btn-fg: var(--cirrus-dark);
+        --btn-border-color: var(--cirrus-light);
+
+        &:hover {
+            --btn-color: var(--cirrus-light-hover);
+        }
+        &:focus {
+            box-shadow: 0 0 0 0.2rem transparentize($cirrus-light, 0.5);
+        }
+    }
+
+    &.btn-dark {
+        --btn-color: var(--cirrus-dark);
+        --btn-fg: var(--cirrus-light);
+        --btn-border-color: var(--cirrus-dark);
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem transparentize($cirrus-dark, 0.5);
+        }
+        &:hover {
+            --btn-color: var(--cirrus-dark-hover);
+        }
+        &.outline:hover {
+            --btn-color: var(--cirrus-dark);
+        }
+    }
+
+    &.btn-black {
+        --btn-color: #000;
+        --btn-fg: var(--cirrus-light);
+        --btn-border-color: #000;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem transparentize($cirrus-dark, 0.5);
+        }
+        &:hover {
+            --btn-color: #000;
+        }
+    }
+
+    &.btn-primary {
+        --btn-color: var(--cirrus-primary);
+        --btn-fg: var(--cirrus-light);
+        --btn-border-color: var(--cirrus-accent-border);
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem transparentize($cirrus-primary, 0.5);
+        }
+        &:hover {
+            --btn-color: var(--cirrus-accent-hover);
+        }
+        &.outline:hover {
+            --btn-color: var(--cirrus-primary);
+        }
+    }
+
+    &.btn-info {
+        --btn-color: var(--cirrus-info);
+        --btn-fg: var(--cirrus-light);
+        --btn-border-color: var(--cirrus-info);
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem transparentize($cirrus-info, 0.5);
+        }
+        &:hover {
+            --btn-color: var(--cirrus-info-hover);
+        }
+        &.outline:hover {
+            --btn-color: var(--cirrus-info);
+        }
+    }
+
+    &.btn-link {
+        --btn-color: var(--cirrus-link);
+        --btn-fg: var(--cirrus-light);
+        --btn-border-color: var(--cirrus-link);
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem transparentize($cirrus-link, 0.5);
+        }
+        &:hover {
+            --btn-color: var(--cirrus-link-dark);
+        }
+        &.outline {
+            --btn-fg: var(--cirrus-link);
+            border: 1px solid transparent;
+        }
+        &.outline:hover {
+            --btn-color: var(--cirrus-link-hover);
+            border: 1px solid transparent;
+            text-decoration: underline;
+        }
+    }
+
+    &.btn-success {
+        --btn-color: var(--cirrus-success);
+        --btn-fg: var(--cirrus-light);
+        --btn-border-color: var(--cirrus-success);
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem transparentize($cirrus-success, 0.5);
+        }
+        &:hover {
+            --btn-color: var(--cirrus-success-hover);
+        }
+        &.outline:hover {
+            --btn-color: var(--cirrus-success);
+        }
+    }
+
+    &.btn-warning {
+        --btn-color: var(--cirrus-warning);
+        --btn-fg: var(--cirrus-dark);
+        --btn-border-color: var(--cirrus-warning);
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem transparentize($cirrus-warning, 0.5);
+        }
+        &:hover {
+            --btn-color: var(--cirrus-warning-hover);
+        }
+        &.outline:hover {
+            --btn-color: var(--cirrus-warning);
+        }
+    }
+
+    &.btn-danger {
+        --btn-color: var(--cirrus-danger);
+        --btn-fg: var(--cirrus-light);
+        --btn-border-color: var(--cirrus-danger);
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem transparentize($cirrus-danger, 0.5);
+        }
+        &:hover {
+            --btn-color: var(--cirrus-danger-hover);
+        }
+        &.outline:hover {
+            --btn-color: var(--cirrus-danger);
+        }
+    }
 }
 
 /* Adds small margin around buttons */
 .btn-container {
     margin: 0.5rem;
     overflow: visible;
-}
-
-/* BUTTON STYLES */
-/* Regular */
-.btn-transparent {
-    --btn-color: transparent;
-    --btn-fg: var(--cirrus-dark);
-    --btn-border-color: transparent;
-}
-.btn-transparent.outline {
-    --btn-color: var(--cirrus-dark);
-}
-.btn-transparent:hover {
-    --btn-color: rgba(0, 0, 0, 0.1);
-}
-.btn-transparent:focus {
-    box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
-}
-
-.btn-light {
-    --btn-color: var(--cirrus-light);
-    --btn-fg: var(--cirrus-dark);
-    --btn-border-color: var(--cirrus-light);
-}
-.btn-light:hover {
-    --btn-color: var(--cirrus-light-hover);
-}
-.btn-light:focus {
-    box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
-}
-
-.btn-dark {
-    --btn-color: var(--cirrus-dark);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-dark);
-}
-.btn-dark:hover {
-    --btn-color: var(--cirrus-dark-hover);
-}
-.btn-dark.outline:hover {
-    --btn-color: var(--cirrus-dark);
-}
-.btn-dark:focus {
-    box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5);
-}
-
-.btn-black {
-    --btn-color: #000;
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: #000;
-}
-.btn-black:hover {
-    --btn-color: #000;
-}
-.btn-black:focus {
-    box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5);
-}
-
-.btn-primary {
-    --btn-color: var(--cirrus-primary);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-accent-border);
-}
-.btn-primary:hover {
-    --btn-color: var(--cirrus-accent-hover);
-}
-.btn-primary.outline:hover {
-    --btn-color: var(--cirrus-primary);
-}
-.btn-primary:focus {
-    box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, 0.5);
-}
-
-.btn-info {
-    --btn-color: var(--cirrus-info);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-info);
-}
-.btn-info:hover {
-    --btn-color: var(--cirrus-info-hover);
-}
-.btn-info.outline:hover {
-    --btn-color: var(--cirrus-info);
-}
-.btn-info:focus {
-    box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5);
-}
-
-.btn-link {
-    --btn-color: var(--cirrus-link);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-link);
-}
-.btn-link.outline {
-    --btn-fg: var(--cirrus-link);
-    border: 1px solid transparent;
-}
-.btn-link:hover {
-    --btn-color: var(--cirrus-link-dark);
-}
-.btn-link.outline:hover {
-    --btn-color: var(--cirrus-link-hover);
-    border: 1px solid transparent;
-    text-decoration: underline;
-}
-.btn-link:focus {
-    box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5);
-}
-
-.btn-success {
-    --btn-color: var(--cirrus-success);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-success);
-}
-.btn-success:hover {
-    --btn-color: var(--cirrus-success-hover);
-}
-.btn-success.outline:hover {
-    --btn-color: var(--cirrus-success);
-}
-.btn-success:focus {
-    box-shadow: 0 0 0 0.2rem rgba(13, 210, 89, 0.5);
-}
-
-.btn-warning {
-    --btn-color: var(--cirrus-warning);
-    --btn-fg: var(--cirrus-dark);
-    --btn-border-color: var(--cirrus-warning);
-}
-.btn-warning:hover {
-    --btn-color: var(--cirrus-warning-hover);
-}
-.btn-warning.outline:hover {
-    --btn-color: var(--cirrus-warning);
-}
-.btn-warning:focus {
-    box-shadow: 0 0 0 0.2rem rgba(250, 180, 51, 0.5);
-}
-
-.btn-danger {
-    --btn-color: var(--cirrus-danger);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-danger);
-}
-.btn-danger:hover {
-    --btn-color: var(--cirrus-danger-hover);
-}
-.btn-danger.outline:hover {
-    --btn-color: var(--cirrus-danger);
-}
-.btn-danger:focus {
-    box-shadow: 0 0 0 0.2rem rgba(251, 65, 68, 0.5);
 }
 
 [class^='btn-'],
@@ -338,13 +331,13 @@ button.btn-close::after {
 
 /* Small button */
 .btn-small {
-    padding: .25rem 1rem;
+    padding: 0.25rem 1rem;
     font-size: 70%;
 }
-     
+
 /* Big button */
 .btn-large {
-    padding: .75rem 2rem;
+    padding: 0.75rem 2rem;
     font-size: 90%;
 }
 
