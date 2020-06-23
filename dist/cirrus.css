@@ -182,7 +182,12 @@ button,
   /* Animated Button */
   /* Close Button */
   /* BUTTON STYLES */
-  /* Regular */ }
+  /* Regular */
+  /* Extra small button */
+  /* Small button */
+  /* Big button */
+  /* GLYPHS */
+  /* Alternatives to pad-left and pad-right */ }
   button:hover,
   .btn:hover,
   [type='submit']:hover {
@@ -446,97 +451,76 @@ button,
     .btn.btn-danger.outline:hover,
     [type='submit'].btn-danger.outline:hover {
       --btn-color: var(--cirrus-danger); }
+  button.btn-xsmall,
+  .btn.btn-xsmall,
+  [type='submit'].btn-xsmall {
+    padding: 0 0.5rem;
+    font-size: 50%; }
+  button.btn-small,
+  .btn.btn-small,
+  [type='submit'].btn-small {
+    padding: 0.25rem 1rem;
+    font-size: 70%; }
+  button.btn-large,
+  .btn.btn-large,
+  [type='submit'].btn-large {
+    padding: 0.75rem 2rem;
+    font-size: 90%; }
+  button.btn-xlarge,
+  .btn.btn-xlarge,
+  [type='submit'].btn-xlarge {
+    padding: 1rem 2.5rem;
+    font-size: 110%; }
+  button .fa-wrapper,
+  .btn .fa-wrapper,
+  [type='submit'] .fa-wrapper {
+    /* Override default behavior of aligning font awesome icons to the top */
+    vertical-align: baseline; }
+    button .fa-wrapper.pad-right,
+    .btn .fa-wrapper.pad-right,
+    [type='submit'] .fa-wrapper.pad-right {
+      margin-right: 0.4rem; }
+    button .fa-wrapper.pad-left,
+    .btn .fa-wrapper.pad-left,
+    [type='submit'] .fa-wrapper.pad-left {
+      margin-left: 0.4rem; }
+  button span:first-child,
+  .btn span:first-child,
+  [type='submit'] span:first-child {
+    margin-right: 0.2rem; }
+  button span:last-child,
+  .btn span:last-child,
+  [type='submit'] span:last-child {
+    margin-left: 0.2rem; }
 
-/* Adds small margin around buttons */
-.btn-container {
-  margin: 0.5rem;
-  overflow: visible; }
-
+/* Deprecated 0.5.6, use m-1 instead */
 [class^='btn-'],
 [class*=' btn-'] {
   background-color: var(--btn-color);
   border: 1px solid var(--btn-border-color);
   color: var(--btn-fg);
-  transition: all var(--animation-duration); }
-
-[class^='btn-']:hover,
-[class*=' btn-']:hover {
-  background-color: var(--btn-color);
-  border-color: var(--btn-border-color);
-  transition: all var(--animation-duration); }
-
-/* Outline Variants */
-[class^='btn-'].outline,
-[class*=' btn-'].outline {
-  background-color: transparent;
-  color: var(--btn-color); }
-
-[class^='btn-'].outline:hover,
-[class*=' btn-'].outline:hover {
-  background-color: var(--btn-color);
-  color: var(--btn-fg);
-  transition: all var(--animation-duration); }
-
-/* Right of input */
-.has-controls.input:not([class*='left action']) > button:last-child,
-.has-controls.input:not([class*='left action']) > .btn:last-child > .btn {
-  border-radius: 0 0.28571429rem 0.28571429rem 0; }
-
-.has-controls.input:not([class*='right action']) > button:last-child,
-.has-controls.input:not([class*='right action']) > .btn:last-child > .btn {
-  border-radius: 0.28571429rem 0 0 0.28571429rem; }
-
-/* Extra small button */
-.btn-xsmall {
-  padding: 0 0.5rem;
-  font-size: 50%; }
-
-/* Small button */
-.btn-small {
-  padding: 0.25rem 1rem;
-  font-size: 70%; }
-
-/* Big button */
-.btn-large {
-  padding: 0.75rem 2rem;
-  font-size: 90%; }
-
-.btn-xlarge {
-  padding: 1rem 2.5rem;
-  font-size: 110%; }
+  transition: all var(--animation-duration);
+  /* Outline Variants */ }
+  [class^='btn-']:hover,
+  [class*=' btn-']:hover {
+    background-color: var(--btn-color);
+    border-color: var(--btn-border-color);
+    transition: all var(--animation-duration); }
+  [class^='btn-'].outline,
+  [class*=' btn-'].outline {
+    background-color: transparent;
+    color: var(--btn-color); }
+    [class^='btn-'].outline:hover,
+    [class*=' btn-'].outline:hover {
+      background-color: var(--btn-color);
+      color: var(--btn-fg);
+      transition: all var(--animation-duration); }
 
 /* Make the loader white so it is visible */
 .loading.btn-accent:after {
   border: 2px solid #fff;
   border-right-color: transparent;
   border-top-color: transparent; }
-
-/* Override default behavior of aligning font awesome icons to the top */
-button .fa-wrapper,
-.btn .fa-wrapper,
-[type='submit'] .fa-wrapper {
-  vertical-align: baseline; }
-
-button .fa-wrapper.pad-right,
-.btn .fa-wrapper.pad-right,
-[type='submit'] .fa-wrapper.pad-right {
-  margin-right: 0.4rem; }
-
-button .fa-wrapper.pad-left,
-.btn .fa-wrapper.pad-left,
-[type='submit'] .fa-wrapper.pad-left {
-  margin-left: 0.4rem; }
-
-/* Alternatives to pad-left and pad-right */
-button span:first-child,
-.btn span:first-child,
-[type='submit'] span:first-child {
-  margin-right: 0.2rem; }
-
-button span:last-child,
-.btn span:last-child,
-[type='submit'] span:last-child {
-  margin-left: 0.2rem; }
 
 /* BUTTON GROUPS */
 /* Will group buttons with components in a single component */
@@ -547,73 +531,115 @@ button span:last-child,
   display: inline-flex;
   display: -ms-inline-flexbox;
   display: -webkit-inline-flex; }
-
-.btn-group.btn-group-fill {
-  /* Makes the button group fill the width and proportion the buttons to fill the space */
-  display: -webkit-box;
-  display: flex;
-  display: -ms-flexbox; }
-
-.btn-group .btn,
-.btn-group button,
-.btn-group [type='submit'] {
-  -ms-flex: 1 0 auto;
-  -webkit-box-flex: 1;
-  flex: 1 0 auto;
-  margin: 0; }
-
-.btn-group.btn-group-fill .btn,
-.btn-group.btn-group-fill button,
-.btn-group.btn-group-fill [type='submit'] {
-  -ms-flex: 1 0;
-  -webkit-box-flex: 1;
-  flex: 1 0;
-  /* Make the buttons fill the available width and proportion themselves */ }
-
-.btn-group .btn:first-child:not(:last-child),
-.btn-group button:first-child:not(:last-child),
-.btn-group [type='submit']:first-child:not(:last-child) {
-  /* Style the first child in group > 1 buttons */
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0; }
-
-.btn-group .btn:last-child:not(:first-child),
-.btn-group button:last-child:not(:first-child),
-.btn-group [type='submit']:last-child:not(:first-child) {
-  /* Style the last child in group > 1 buttons */
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  margin-left: -0.1rem; }
-
-.btn-group .btn:not(:first-child):not(:last-child),
-.btn-group button:not(:first-child):not(:last-child),
-.btn-group [type='submit']:not(:first-child):not(:last-child) {
-  /* Style button in middle of group */
-  border-radius: 0;
-  /* Remove roundness from center buttons */
-  margin-left: -0.1rem; }
+  .btn-group .btn {
+    -ms-flex: 1 0 auto;
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    margin: 0; }
+    .btn-group .btn:first-child:not(:last-child) {
+      /* Style the first child in group > 1 buttons */
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    .btn-group .btn:last-child:not(:first-child) {
+      /* Style the last child in group > 1 buttons */
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      margin-left: -0.1rem; }
+    .btn-group .btn:not(:first-child):not(:last-child) {
+      /* Style button in middle of group */
+      border-radius: 0;
+      /* Remove roundness from center buttons */
+      margin-left: -0.1rem; }
+  .btn-group button {
+    -ms-flex: 1 0 auto;
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    margin: 0; }
+    .btn-group button:first-child:not(:last-child) {
+      /* Style the first child in group > 1 buttons */
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    .btn-group button:last-child:not(:first-child) {
+      /* Style the last child in group > 1 buttons */
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      margin-left: -0.1rem; }
+    .btn-group button:not(:first-child):not(:last-child) {
+      /* Style button in middle of group */
+      border-radius: 0;
+      /* Remove roundness from center buttons */
+      margin-left: -0.1rem; }
+  .btn-group [type="submit"] {
+    -ms-flex: 1 0 auto;
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    margin: 0; }
+    .btn-group [type="submit"]:first-child:not(:last-child) {
+      /* Style the first child in group > 1 buttons */
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    .btn-group [type="submit"]:last-child:not(:first-child) {
+      /* Style the last child in group > 1 buttons */
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      margin-left: -0.1rem; }
+    .btn-group [type="submit"]:not(:first-child):not(:last-child) {
+      /* Style button in middle of group */
+      border-radius: 0;
+      /* Remove roundness from center buttons */
+      margin-left: -0.1rem; }
+  .btn-group.btn-group-fill {
+    /* Makes the button group fill the width and proportion the buttons to fill the space */
+    display: -webkit-box;
+    display: flex;
+    display: -ms-flexbox; }
+    .btn-group.btn-group-fill .btn {
+      -ms-flex: 1 0;
+      -webkit-box-flex: 1;
+      flex: 1 0;
+      /* Make the buttons fill the available width and proportion themselves */ }
+    .btn-group.btn-group-fill button {
+      -ms-flex: 1 0;
+      -webkit-box-flex: 1;
+      flex: 1 0;
+      /* Make the buttons fill the available width and proportion themselves */ }
+    .btn-group.btn-group-fill [type="submit"] {
+      -ms-flex: 1 0;
+      -webkit-box-flex: 1;
+      flex: 1 0;
+      /* Make the buttons fill the available width and proportion themselves */ }
 
 @media screen and (max-width: 768px) {
   .btn-group {
     display: flex;
     flex-direction: column; }
-  .btn-group .btn,
-  .btn-group button,
-  .btn-group [type='submit'] {
-    margin-bottom: -1px; }
-  .btn-group .btn:first-child:not(:last-child),
-  .btn-group button:first-child:not(:last-child),
-  .btn-group [type='submit']:first-child:not(:last-child) {
-    border-radius: 0.25rem 0.25rem 0 0; }
-  .btn-group .btn:not(:first-child):not(:last-child),
-  .btn-group button:not(:first-child):not(:last-child),
-  .btn-group [type='submit']:not(:first-child):not(:last-child) {
-    margin-left: 0; }
-  .btn-group .btn:last-child:not(:first-child),
-  .btn-group button:last-child:not(:first-child),
-  .btn-group [type='submit']:last-child:not(:first-child) {
-    border-radius: 0 0 0.25rem 0.25rem;
-    margin-left: 0; } }
+    .btn-group .btn {
+      margin-bottom: -1px; }
+      .btn-group .btn:first-child:not(:last-child) {
+        border-radius: 0.25rem 0.25rem 0 0; }
+      .btn-group .btn:not(:first-child):not(:last-child) {
+        margin-left: 0; }
+      .btn-group .btn:last-child:not(:first-child) {
+        border-radius: 0 0 0.25rem 0.25rem;
+        margin-left: 0; }
+    .btn-group button {
+      margin-bottom: -1px; }
+      .btn-group button:first-child:not(:last-child) {
+        border-radius: 0.25rem 0.25rem 0 0; }
+      .btn-group button:not(:first-child):not(:last-child) {
+        margin-left: 0; }
+      .btn-group button:last-child:not(:first-child) {
+        border-radius: 0 0 0.25rem 0.25rem;
+        margin-left: 0; }
+    .btn-group [type="submit"] {
+      margin-bottom: -1px; }
+      .btn-group [type="submit"]:first-child:not(:last-child) {
+        border-radius: 0.25rem 0.25rem 0 0; }
+      .btn-group [type="submit"]:not(:first-child):not(:last-child) {
+        margin-left: 0; }
+      .btn-group [type="submit"]:last-child:not(:first-child) {
+        border-radius: 0 0 0.25rem 0.25rem;
+        margin-left: 0; } }
 
 /* CODE */
 code {

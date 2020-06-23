@@ -276,13 +276,60 @@ button,
             --btn-color: var(--cirrus-danger);
         }
     }
+
+    /* Extra small button */
+    &.btn-xsmall {
+        padding: 0 0.5rem;
+        font-size: 50%;
+    }
+
+    /* Small button */
+    &.btn-small {
+        padding: 0.25rem 1rem;
+        font-size: 70%;
+    }
+
+    /* Big button */
+    &.btn-large {
+        padding: 0.75rem 2rem;
+        font-size: 90%;
+    }
+
+    &.btn-xlarge {
+        padding: 1rem 2.5rem;
+        font-size: 110%;
+    }
+
+    /* GLYPHS */
+    .fa-wrapper {
+        /* Override default behavior of aligning font awesome icons to the top */
+        vertical-align: baseline;
+
+        &.pad-right {
+            margin-right: 0.4rem;
+        }
+
+        &.pad-left {
+            margin-left: 0.4rem;
+        }
+    }
+
+    /* Alternatives to pad-left and pad-right */
+    span:first-child {
+        margin-right: 0.2rem;
+    }
+
+    span:last-child {
+        margin-left: 0.2rem;
+    }
 }
 
-/* Adds small margin around buttons */
-.btn-container {
-    margin: 0.5rem;
-    overflow: visible;
-}
+/* Deprecated 0.5.6, use m-1 instead */
+// /* Adds small margin around buttons */
+// .btn-container {
+//     margin: 0.5rem;
+//     overflow: visible;
+// }
 
 [class^='btn-'],
 [class*=' btn-'] {
@@ -290,61 +337,37 @@ button,
     border: 1px solid var(--btn-border-color);
     color: var(--btn-fg);
     transition: all var(--animation-duration);
+
+    &:hover {
+        background-color: var(--btn-color);
+        border-color: var(--btn-border-color);
+        transition: all var(--animation-duration);
+    }
+
+    /* Outline Variants */
+    &.outline {
+        background-color: transparent;
+        color: var(--btn-color);
+
+        &:hover {
+            background-color: var(--btn-color);
+            color: var(--btn-fg);
+            transition: all var(--animation-duration);
+        }
+    }
 }
 
-[class^='btn-']:hover,
-[class*=' btn-']:hover {
-    background-color: var(--btn-color);
-    border-color: var(--btn-border-color);
-    transition: all var(--animation-duration);
-}
+// Deprecated 0.5.6 -- unpopular
+// /* Right of input */
+// .has-controls.input:not([class*='left action']) > button:last-child,
+// .has-controls.input:not([class*='left action']) > .btn:last-child {
+//     border-radius: 0 0.28571429rem 0.28571429rem 0;
+// }
 
-/* Outline Variants */
-[class^='btn-'].outline,
-[class*=' btn-'].outline {
-    background-color: transparent;
-    color: var(--btn-color);
-}
-[class^='btn-'].outline:hover,
-[class*=' btn-'].outline:hover {
-    background-color: var(--btn-color);
-    color: var(--btn-fg);
-    transition: all var(--animation-duration);
-}
-
-/* Right of input */
-.has-controls.input:not([class*='left action']) > button:last-child,
-.has-controls.input:not([class*='left action']) > .btn:last-child > .btn {
-    border-radius: 0 0.28571429rem 0.28571429rem 0;
-}
-
-.has-controls.input:not([class*='right action']) > button:last-child,
-.has-controls.input:not([class*='right action']) > .btn:last-child > .btn {
-    border-radius: 0.28571429rem 0 0 0.28571429rem;
-}
-
-/* Extra small button */
-.btn-xsmall {
-    padding: 0 0.5rem;
-    font-size: 50%;
-}
-
-/* Small button */
-.btn-small {
-    padding: 0.25rem 1rem;
-    font-size: 70%;
-}
-
-/* Big button */
-.btn-large {
-    padding: 0.75rem 2rem;
-    font-size: 90%;
-}
-
-.btn-xlarge {
-    padding: 1rem 2.5rem;
-    font-size: 110%;
-}
+// .has-controls.input:not([class*='right action']) > button:last-child,
+// .has-controls.input:not([class*='right action']) > .btn:last-child {
+//     border-radius: 0.28571429rem 0 0 0.28571429rem;
+// }
 
 /* Make the loader white so it is visible */
 .loading.btn-accent:after {
@@ -353,127 +376,87 @@ button,
     border-top-color: transparent;
 }
 
-/* Override default behavior of aligning font awesome icons to the top */
-button .fa-wrapper,
-.btn .fa-wrapper,
-[type='submit'] .fa-wrapper {
-    vertical-align: baseline;
-}
-
-button .fa-wrapper.pad-right,
-.btn .fa-wrapper.pad-right,
-[type='submit'] .fa-wrapper.pad-right {
-    margin-right: 0.4rem;
-}
-
-button .fa-wrapper.pad-left,
-.btn .fa-wrapper.pad-left,
-[type='submit'] .fa-wrapper.pad-left {
-    margin-left: 0.4rem;
-}
-
-/* Alternatives to pad-left and pad-right */
-button span:first-child,
-.btn span:first-child,
-[type='submit'] span:first-child {
-    margin-right: 0.2rem;
-}
-
-button span:last-child,
-.btn span:last-child,
-[type='submit'] span:last-child {
-    margin-left: 0.2rem;
-}
-
 /* BUTTON GROUPS */
 /* Will group buttons with components in a single component */
 
 .btn-group {
+    $child-elements: '.btn', 'button', '[type="submit"]';
+
     /* -ms-flex-wrap: wrap; Deprecated 0.5.6, allow for overflow
     flex-wrap: wrap; Wrap contents to next row on overflow */
     display: -webkit-inline-box;
     display: inline-flex;
     display: -ms-inline-flexbox;
     display: -webkit-inline-flex;
-}
 
-.btn-group.btn-group-fill {
-    /* Makes the button group fill the width and proportion the buttons to fill the space */
-    display: -webkit-box;
-    display: flex;
-    display: -ms-flexbox;
-}
+    @each $child in $child-elements {
+        #{$child} {
+            -ms-flex: 1 0 auto;
+            -webkit-box-flex: 1;
+            flex: 1 0 auto;
+            margin: 0;
 
-.btn-group .btn,
-.btn-group button,
-.btn-group [type='submit'] {
-    -ms-flex: 1 0 auto;
-    -webkit-box-flex: 1;
-    flex: 1 0 auto;
-    margin: 0;
-}
+            &:first-child:not(:last-child) {
+                /* Style the first child in group > 1 buttons */
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
 
-.btn-group.btn-group-fill .btn,
-.btn-group.btn-group-fill button,
-.btn-group.btn-group-fill [type='submit'] {
-    -ms-flex: 1 0;
-    -webkit-box-flex: 1;
-    flex: 1 0; /* Make the buttons fill the available width and proportion themselves */
-}
+            &:last-child:not(:first-child) {
+                /* Style the last child in group > 1 buttons */
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                margin-left: -0.1rem;
+            }
 
-.btn-group .btn:first-child:not(:last-child),
-.btn-group button:first-child:not(:last-child),
-.btn-group [type='submit']:first-child:not(:last-child) {
-    /* Style the first child in group > 1 buttons */
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
+            &:not(:first-child):not(:last-child) {
+                /* Style button in middle of group */
+                border-radius: 0; /* Remove roundness from center buttons */
+                margin-left: -0.1rem;
+            }
+        }
+    }
 
-.btn-group .btn:last-child:not(:first-child),
-.btn-group button:last-child:not(:first-child),
-.btn-group [type='submit']:last-child:not(:first-child) {
-    /* Style the last child in group > 1 buttons */
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: -0.1rem;
-}
+    &.btn-group-fill {
+        /* Makes the button group fill the width and proportion the buttons to fill the space */
+        display: -webkit-box;
+        display: flex;
+        display: -ms-flexbox;
 
-.btn-group .btn:not(:first-child):not(:last-child),
-.btn-group button:not(:first-child):not(:last-child),
-.btn-group [type='submit']:not(:first-child):not(:last-child) {
-    /* Style button in middle of group */
-    border-radius: 0; /* Remove roundness from center buttons */
-    margin-left: -0.1rem;
+        @each $child in $child-elements {
+            #{$child} {
+                -ms-flex: 1 0;
+                -webkit-box-flex: 1;
+                flex: 1 0; /* Make the buttons fill the available width and proportion themselves */
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
+    $child-elements: '.btn', 'button', '[type="submit"]';
+    
     .btn-group {
         display: flex;
         flex-direction: column;
-    }
 
-    .btn-group .btn,
-    .btn-group button,
-    .btn-group [type='submit'] {
-        margin-bottom: -1px;
-    }
+        @each $child in $child-elements {
+            #{$child} {
+                margin-bottom: -1px;
 
-    .btn-group .btn:first-child:not(:last-child),
-    .btn-group button:first-child:not(:last-child),
-    .btn-group [type='submit']:first-child:not(:last-child) {
-        border-radius: 0.25rem 0.25rem 0 0;
-    }
+                &:first-child:not(:last-child) {
+                    border-radius: 0.25rem 0.25rem 0 0;
+                }
 
-    .btn-group .btn:not(:first-child):not(:last-child),
-    .btn-group button:not(:first-child):not(:last-child),
-    .btn-group [type='submit']:not(:first-child):not(:last-child) {
-        margin-left: 0;
-    }
+                &:not(:first-child):not(:last-child) {
+                    margin-left: 0;
+                }
 
-    .btn-group .btn:last-child:not(:first-child),
-    .btn-group button:last-child:not(:first-child),
-    .btn-group [type='submit']:last-child:not(:first-child) {
-        border-radius: 0 0 0.25rem 0.25rem;
-        margin-left: 0;
+                &:last-child:not(:first-child) {
+                    border-radius: 0 0 0.25rem 0.25rem;
+                    margin-left: 0;
+                }
+            }
+        }
     }
 }
