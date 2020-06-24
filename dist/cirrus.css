@@ -641,6 +641,54 @@ button,
         border-radius: 0 0 0.25rem 0.25rem;
         margin-left: 0; } }
 
+/*
+    Converts a given hex value to RGB.
+*/
+/* Color scheme for Cirrus */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.4;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 /* CODE */
 code {
   padding: 0.3rem;
@@ -648,20 +696,18 @@ code {
   overflow: auto;
   background-color: var(--cirrus-code-bg);
   color: var(--cirrus-code-fg);
-  border-radius: 3px; }
-
-/* Dark theme for code */
-code.dark {
-  background-color: var(--cirrus-dark);
-  color: #fff; }
-
-code:before {
-  color: #acb3c2;
-  content: attr(data-lang);
-  font-size: 0.9rem;
-  position: absolute;
-  right: 1rem;
-  top: 0.7rem; }
+  border-radius: 3px;
+  /* Dark theme for code */ }
+  code:before {
+    color: #acb3c2;
+    content: attr(data-lang);
+    font-size: 0.9rem;
+    position: absolute;
+    right: 1rem;
+    top: 0.7rem; }
+  code.dark {
+    background-color: #363636;
+    color: #fff; }
 
 pre > code {
   font-size: 14px;
@@ -677,7 +723,7 @@ pre > code {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  border-left: 0.3rem solid var(--cirrus-primary);
+  border-left: 0.3rem solid #f03d4d;
   margin: 0;
   position: relative;
   color: #222; }

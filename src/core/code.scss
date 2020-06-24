@@ -1,5 +1,6 @@
-/* CODE */
+@import "../core/theme.scss";
 
+/* CODE */
 code {
     padding: 0.3rem;
     margin: 0.5em 0;
@@ -7,21 +8,21 @@ code {
     background-color: var(--cirrus-code-bg);
     color: var(--cirrus-code-fg);
     border-radius: 3px;
-}
 
-/* Dark theme for code */
-code.dark {
-    background-color: var(--cirrus-dark);
-    color: #fff;
-}
+    &:before {
+        color: #acb3c2;
+        content: attr(data-lang);
+        font-size: 0.9rem;
+        position: absolute;
+        right: 1rem;
+        top: 0.7rem;
+    }
 
-code:before {
-    color: #acb3c2;
-    content: attr(data-lang);
-    font-size: 0.9rem;
-    position: absolute;
-    right: 1rem;
-    top: 0.7rem;
+    /* Dark theme for code */
+    &.dark {
+        background-color: $cirrus-dark;
+        color: #fff;
+    }
 }
 
 pre > code {
@@ -38,7 +39,7 @@ pre > code {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    border-left: .3rem solid var(--cirrus-primary);
+    border-left: .3rem solid $cirrus-primary;
     margin: 0;
     position: relative;
     color: #222;
