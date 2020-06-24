@@ -86,7 +86,7 @@
             <p><b>Cirrus</b> incorporates beautiful typography to make your website stand out from the rest. Nunito Sans, by <a href="http://sansoxygen.com/" class="u u-LR"><b>Vernon Adams</b></a> is chosen for the default typography for most elements such as <code>paragraphs</code>, <code>articles</code>, <code>blockquotes</code>, and more while Montserrat adds a bold but elegant touch to titles. The <code>font-size</code> have been converted to rems which is independent of the font sizes of the parent elements. The default is set to 1rem (16px) where each interval of rem is 16 pixels.
 
                 <h6>Sample paragraph with title, subtitle, and text:</h6>
-                <div class="row level">
+                <div class="row">
                     <div class="col-6">
                         <p class="title">This is a title.</p>
                         <p class="subtitle">This is a subtitle.</p>
@@ -194,7 +194,7 @@
             <h1><a href="./index.html#blockquotes" class="doc-link tooltip tooltip--left tooltip-left" data-tooltip="Click to copy">#</a>Blockquotes</h1>
             <div class="divider"></div>
             <p>Blockquotes are beatifully designed to help you cite from other sources.</p>
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <blockquote class="example">
                         <p>You know, I think Cirrus is a pretty good CSS framework. <cite>- Marc Andreessen</cite>
@@ -237,7 +237,7 @@
             <p>Cirrus comes with a ton of ways to customize your text ranging from changing font weights to changing font styles.</p>
             <h6>Font weights:</h6>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Thin (200)</p>
                     <p class="subtitle font-thin">The quick brown fox jumps over the lazy dog.</p>
@@ -247,7 +247,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Light (300)</p>
                     <p class="subtitle font-light">The quick brown fox jumps over the lazy dog.</p>
@@ -257,7 +257,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Regular (400)</p>
                     <p class="subtitle">The quick brown fox jumps over the lazy dog.</p>
@@ -267,7 +267,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Semibold (600)</p>
                     <p class="subtitle font-semibold">The quick brown fox jumps over the lazy dog.</p>
@@ -277,7 +277,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Bold (700)</p>
                     <p class="subtitle font-bold">The quick brown fox jumps over the lazy dog.</p>
@@ -295,7 +295,7 @@
             <div class="divider"></div>
             <p>Using Font Awesome? Cirrus makes it easy to integrate glyphs into your website. Just add the <code>fa-wrapper</code> class along with your desired glyph class.</p>
             <p>Note that glyph sizes now inherity directly from parent classes. Glyphs appear the best when the font size is a multiple of <b>7</b>.</p>
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">X-Small (7px)</p>
                     <span class="icon subtitle" style="font-size: 7px">
@@ -309,7 +309,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Small/Default (14px)</p>
                     <span class="icon subtitle">
@@ -323,7 +323,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Large (21px)</p>
                     <span class="icon subtitle">
@@ -337,7 +337,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">X-Large (28px)</p>
                     <span class="icon subtitle" style="font-size: 28px">
@@ -359,7 +359,7 @@
             <div class="divider"></div>
             <p>Along with all the features above, Cirrus also has some smaller features that didn't quite make it on those lists but still deserve a mention.</p>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Anchor</p>
                     <a class="subtitle">The quick brown fox jumps over the lazy dog.</a>
@@ -369,7 +369,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Emphasis</p>
                     <em class="subtitle">The quick brown fox jumps over the lazy dog.</em>
@@ -379,7 +379,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Small</p>
                     <small class="subtitle">The quick brown fox jumps over the lazy dog.</small>
@@ -389,7 +389,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Strong</p>
                     <strong class="subtitle">The quick brown fox jumps over the lazy dog.</strong>
@@ -399,7 +399,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Underline</p>
                     <u class="subtitle">The quick brown fox jumps over the lazy dog.</u>
@@ -408,8 +408,39 @@
                     <pre><code class="html" data-lang="HTML">&lt;u&gt;The quick brown fox jumps over the lazy dog.&lt;/u&gt;</code></pre>
                 </div>
             </div>
+            
+            <div class="row">
+                <div class="col-6">
+                    <p class="title">Uppercase</p>
+                    <p class="subtitle uppercase">The quick brown fox jumps over the lazy dog.</p>
+                </div>
+                <div class="col-6">
+                    <pre><code class="html" data-lang="HTML">&lt;p class=&quot;uppercase&quot;&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+                </div>
+            </div>
 
-            <div class="row level">
+            <div class="row">
+                <div class="col-6">
+                    <p class="title">Lowercase</p>
+                    <p class="subtitle lowercase">The quick brown fox jumps over the lazy dog.</p>
+                </div>
+                <div class="col-6">
+                    <pre><code class="html" data-lang="HTML">&lt;p class=&quot;lowercase&quot;&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+                </div>
+            </div>
+
+            
+            <div class="row">
+                <div class="col-6">
+                    <p class="title">Capitalize</p>
+                    <p class="subtitle capitalize">The quick brown fox jumps over the lazy dog.</p>
+                </div>
+                <div class="col-6">
+                    <pre><code class="html" data-lang="HTML">&lt;p class=&quot;capitalize&quot;&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="row">
                 <div class="col-6">
                     <p class="title">White</p>
                     <p class="subtitle white" style="background: #222">The quick brown fox jumps over the lazy dog.</p>
@@ -419,7 +450,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Faded</p>
                     <p class="subtitle faded">The quick brown fox jumps over the lazy dog.</p>
@@ -429,7 +460,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Italics</p>
                     <p class="subtitle italics">The quick brown fox jumps over the lazy dog.</p>
@@ -439,7 +470,7 @@
                 </div>
             </div>
 
-            <div class="row level">
+            <div class="row">
                 <div class="col-6">
                     <p class="title">Caret</p>
                     <p class="subtitle caret"></p>
