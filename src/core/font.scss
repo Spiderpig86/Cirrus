@@ -1,11 +1,22 @@
-/* FONT */
-
+@import "./theme.scss";
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
+/* FONT */
+
+/* Constants */
+$base-header-size: 1.25rem;
+$header-size-diff: 0.25rem;
+$base-headline-size: 3.5rem;
+$headline-size-diff: 1rem;
+$font-weights: ("thin": 200, "light": 300, "normal": 400, "semibold": 600, "bold": 700);
+$font-transformations: "uppercase", "lowercase", "capitalize";
+
+/* Headers */
 @for $index from 1 through 6 {
   h#{$index} {
     font-family: "Montserrat", sans-serif;
+    font-size: $base-header-size + $header-size-diff * (6 - $index);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
@@ -23,81 +34,7 @@ h6 .silent {
 } */
 
 h1 {
-  font-size: 3rem;
   letter-spacing: 0.025rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
-h4 {
-  font-size: 1.75rem;
-}
-
-h5 {
-  font-size: 1.5rem;
-}
-
-h6 {
-  font-size: 1.25rem;
-}
-
-/* Headlines (for larger titles) */
-.headline-1 {
-  font-size: 6.5rem;
-  letter-spacing: 0.05rem;
-}
-
-.headline-2 {
-  font-size: 5.5rem;
-  letter-spacing: 0.05rem;
-}
-
-.headline-3 {
-  font-size: 4.5rem;
-  letter-spacing: 0.05rem;
-}
-
-.headline-4 {
-  font-size: 3.5rem;
-  letter-spacing: 0.025rem;
-}
-
-strong {
-  font-weight: 700;
-}
-
-.font-alt {
-  font-family: "Nunito Sans";
-}
-
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
-  line-height: 1.125em;
-  margin: 1rem 0;
-}
-
-.title {
-  font-weight: bold;
-}
-
-.title:not(:last-child),
-.subtitle:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.title + .subtitle {
-  /* Make the subtitlte closer to the title */
-  margin-top: -0.75rem;
 }
 
 p,
@@ -113,27 +50,17 @@ p.lead {
 }
 
 blockquote {
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-}
-
-blockquote {
   background-color: #f5f5f5;
   border-left: 5px solid #dbdbdb;
-  padding: 1rem 2rem;
   border-radius: 3px;
-}
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
 
-blockquote p {
-  margin: 0;
-  font-size: 0.95rem;
-}
-
-/* Use default line-height for these texts and when line-height-inherit is specified */
-.card-tile p,
-.card-tile article,
-.card-tile blockquote {
-  line-height: inherit;
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
 }
 
 cite {
@@ -146,33 +73,66 @@ mark,
   background-color: #f0e8c4;
 }
 
+/* Headlines (for larger titles) */
+@for $index from 1 through 4 {
+  .headline-#{$index} {
+    font-size: $base-headline-size + $headline-size-diff * (6 - $index);
+    letter-spacing: 0.05rem;
+  }
+}
+
+/* Deprecated, use font-bold */
+// strong {
+//   font-weight: 700;
+// }
+
+.font-alt {
+  font-family: "Nunito Sans";
+}
+
+.content {
+  @for $index from 1 through 6 {
+    h#{$index} {
+      line-height: 1.125em;
+      margin: 1rem 0;
+    }
+  }
+}
+
+/* TODO: To deprecate */
+.title {
+  font-weight: bold;
+}
+
+.title:not(:last-child),
+.subtitle:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.title + .subtitle {
+  /* Make the subtitlte closer to the title */
+  margin-top: -0.75rem;
+}
+
+/* Use default line-height for these texts and when line-height-inherit is specified */
+.card-tile p,
+.card-tile article,
+.card-tile blockquote {
+  line-height: inherit;
+}
+
 /* Weights */
-.font-thin {
-  font-weight: 200;
+@each $weight, $value in $font-weights {
+  .font-#{$weight} {
+    font-weight: $value;
+  }
 }
 
-.font-light {
-  font-weight: 300;
-}
-
-.font-normal {
-  font-weight: 400;
-}
-
-.font-semibold {
-  font-weight: 600;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.lowercase {
-  text-transform: lowercase;
+/* Text Transformations */
+@each $transformation in $font-transformations {
+  .#{$transformation} {
+    text-transform: $transformation;
+  }
 }
 
 .rtl {
@@ -200,32 +160,32 @@ mark,
   text-align: center;
   width: 1.5rem;
   vertical-align: baseline;
-}
+  
+  &.x-small {
+    margin: 0.55rem 0 0 0.1rem;
+  }
+  
+  &.small {
+    margin: 0.95rem 0 0 0.1rem;
+  }
 
-.icon .fa-wrapper {
-  font-size: inherit;
-  vertical-align: middle;
-}
-
-.icon.x-small {
-  margin: 0.55rem 0 0 0.1rem;
-}
-
-.icon.small {
-  margin: 0.95rem 0 0 0.1rem;
+  .fa-wrapper {
+    font-size: inherit;
+    vertical-align: middle;
+  }
 }
 
 .info {
   display: block;
   font-size: var(--font-size-s);
   margin-top: 0.25rem;
-  color: #979797;
-}
+  color: $gray-600;
 
-.info.inline {
-  /* Keeps the extra info inline */
-  display: inline-block;
-  margin-left: 0.5rem;
+  &.inline {
+    /* Keeps the extra info inline */
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
 }
 
 .caret {
@@ -260,43 +220,22 @@ kbd {
 /* MOBILE */
 
 @media (max-width: 650px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1.5rem;
-  }
-  h5 {
-    font-size: 1.25rem;
-  }
-  h6 {
-    font-size: 1rem;
+  
+  $base-header-size: 1rem;
+  $header-size-diff: 0.25rem;
+  $base-headline-size: 2.5rem;
+  $headline-size-diff: .25rem;
+
+  @for $index from 1 through 6 {
+    h#{$index} {
+      font-size: $base-header-size + $header-size-diff * (6 - $index);
+    }
   }
 
-  .headline-1 {
-    font-size: 3rem;
-    letter-spacing: 0.05rem;
-  }
-
-  .headline-2 {
-    font-size: 2.75rem;
-    letter-spacing: 0.05rem;
-  }
-
-  .headline-3 {
-    font-size: 2.5rem;
-    letter-spacing: 0.05rem;
-  }
-
-  .headline-4 {
-    font-size: 2.25rem;
-    letter-spacing: 0.025rem;
+  @for $index from 1 through 4 {
+    .headline-#{$index} {
+      font-size: $base-headline-size + $headline-size-diff * (6 - $index);
+    }
   }
 
   p,
