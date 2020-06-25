@@ -51,6 +51,8 @@
             }
 
             li {
+                align-items: center;
+                display: flex;
                 padding: 0 0.5rem;
             }
 
@@ -129,7 +131,42 @@
                                     </div>
                                     <div class="form-section">
                                         <p>Gender</p>
-                                        <ul id="gender"><li><input id="gender-0" name="gender" type="radio" value="male"> <label for="gender-0">Male</label></li><li><input id="gender-1" name="gender" type="radio" value="female"> <label for="gender-1">Female</label></li><li><input id="gender-2" name="gender" type="radio" value="other"> <label for="gender-2">Other</label></li></ul>
+                                        <ul id="gender">
+                                            <li><label class="font-bold">Gender</label></li>
+                                            <li>
+                                                <input
+                                                    id="gender-0"
+                                                    name="gender"
+                                                    type="radio"
+                                                    value="male"
+                                                />
+                                                <label for="gender-0"
+                                                    >Male</label
+                                                >
+                                            </li>
+                                            <li>
+                                                <input
+                                                    id="gender-1"
+                                                    name="gender"
+                                                    type="radio"
+                                                    value="female"
+                                                />
+                                                <label for="gender-1"
+                                                    >Female</label
+                                                >
+                                            </li>
+                                            <li>
+                                                <input
+                                                    id="gender-2"
+                                                    name="gender"
+                                                    type="radio"
+                                                    value="other"
+                                                />
+                                                <label for="gender-2"
+                                                    >Other</label
+                                                >
+                                            </li>
+                                        </ul>
                                     </div>
                                     <div class="form-section">
                                         <div class="input-control">
