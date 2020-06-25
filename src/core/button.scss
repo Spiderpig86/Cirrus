@@ -1,5 +1,6 @@
 @import '../core/theme.scss';
 @import '../utils/_functions';
+@import '../utils/_mixins.scss';
 
 /* BUTTONS */
 
@@ -300,6 +301,15 @@ button,
         font-size: 110%;
     }
 
+    /* STATES */
+    &.btn-success {
+        @include input-success();
+    }
+
+    &.btn-error {
+        @include input-error();
+    }
+
     /* GLYPHS */
     .fa-wrapper {
         /* Override default behavior of aligning font awesome icons to the top */
@@ -435,7 +445,7 @@ button,
 
 @media screen and (max-width: 768px) {
     $child-elements: '.btn', 'button', '[type="submit"]';
-    
+
     .btn-group {
         display: flex;
         flex-direction: column;

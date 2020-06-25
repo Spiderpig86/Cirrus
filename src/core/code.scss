@@ -1,4 +1,4 @@
-@import "../core/theme.scss";
+@import '../core/theme.scss';
 
 /* CODE */
 code {
@@ -31,7 +31,7 @@ pre > code {
     padding: 2rem 1.5rem 1rem;
     white-space: pre-wrap;
     word-wrap: break-word;
-    font-family: Consolas,Monaco,"Andale Mono",monospace;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
     text-align: left;
     line-height: 1.5;
     -moz-tab-size: 4;
@@ -39,7 +39,7 @@ pre > code {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    border-left: .3rem solid $cirrus-primary;
+    border-left: 0.3rem solid $cirrus-primary;
     margin: 0;
     position: relative;
     color: #222;

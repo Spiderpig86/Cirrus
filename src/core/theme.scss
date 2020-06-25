@@ -29,6 +29,7 @@ $cirrus-warning-hover: #f9a90e;
 $cirrus-danger-hover: #f1393c;
 
 $cirrus-select-bg: rgba(0, 161, 255, 0.2);
+$cirrus-input-border: rgb(61, 171, 240);
 
 $cirrus-code-bg: var($cirrus-primary-light);
 $cirrus-code-fg: #dc4753;
@@ -39,7 +40,7 @@ $cirrus-form-group-fg: var($cirrus-dark-gray);
 $toast-primary-bg: rgba(49, 59, 80, 0.9);
 
 $animation-duration: .2s;
-$focus-opacity: 0.4;
+$focus-opacity: 0.55;
 
 $space-size: 0.5rem;
 

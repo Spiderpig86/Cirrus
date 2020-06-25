@@ -1,0 +1,19 @@
+/*
+    Global Mixins
+*/
+
+@mixin input-success {
+    border-color: var(--cirrus-success) !important;
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, var(--focus-opacity)), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+    }
+}
+
+@mixin input-error {
+    border-color: var(--cirrus-danger) !important;
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, var(--focus-opacity)), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+    }
+}
