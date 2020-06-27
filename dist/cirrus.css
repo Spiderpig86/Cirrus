@@ -881,7 +881,7 @@ blockquote {
   background-color: #f5f5f5;
   border-left: 5px solid #dbdbdb;
   border-radius: 3px;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   margin-bottom: 1rem;
   padding: 1rem 2rem; }
   blockquote p {
@@ -1695,48 +1695,94 @@ label:last-child:not(:first-child):not(.form-group-label) {
   .form-section.section-inline {
     display: inherit; } }
 
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Color scheme for Cirrus */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 /* Separate CSS file, but same part as Layout */
 /* The base container that is similar in structure to a card but more flexible */
 .frame {
+  border-radius: 3px;
+  box-shadow: 0 0.2rem 1.25rem 0 rgba(27, 30, 36, 0.07);
   display: flex;
   display: -ms-flexbox;
   flex-direction: column;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  border-radius: 3px;
-  box-shadow: 0 0.2rem 1.25rem 0 rgba(27, 30, 36, 0.07); }
-
-/* For the frame header and footer, use flex display */
-.frame .frame__header,
-.frame .frame__footer {
-  flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  padding: 1rem; }
-
-/* The frame navbar can be used with level or header classes to create a navigation menu */
-.frame .frame__nav {
-  flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto; }
-
-.frame .frame__body {
-  flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  overflow-y: auto;
-  /* Show the scrollbar when needed */
-  padding: 0 1.5rem; }
-
-.frame .frame__title {
-  color: var(--cirrus-fg);
-  font-size: var(--font-size-m);
-  margin: .75rem auto 0; }
-
-.frame .frame__subtitle {
-  color: rgba(55, 64, 84, 0.6);
-  font-size: var(--font-size-s);
-  margin: .25rem auto .75rem; }
+  /* For the frame header and footer, use flex display */
+  /* The frame navbar can be used with level or header classes to create a navigation menu */ }
+  .frame .frame__header,
+  .frame .frame__footer {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    padding: 1rem; }
+  .frame .frame__nav {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto; }
+  .frame .frame__body {
+    flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    overflow-y: auto;
+    /* Show the scrollbar when needed */
+    padding: 0 1.5rem; }
+  .frame .frame__title {
+    color: #374054;
+    font-size: 1rem;
+    margin: .75rem auto 0; }
+  .frame .frame__subtitle {
+    color: rgba(55, 64, 84, 0.6);
+    font-size: 1rem;
+    margin: 0 auto .75rem; }
 
 /* HEADER */
 .header {
