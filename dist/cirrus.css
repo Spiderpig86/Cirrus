@@ -1611,14 +1611,16 @@ label:last-child:not(:first-child):not(.form-group-label) {
   /* Form group controls */
   /* Keeps inputs in form group above other components */ }
   .form-group .form-group-btn {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    /* Style the middle controls */
-    /* Handles right most control in form group */
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    /* Style the front controls */
+    /* Style the middle controls */
+    /* Handles right most control in form group */ }
+    .form-group .form-group-btn:first-child:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
     .form-group .form-group-btn:not(:first-child):not(:last-child) {
       border-radius: 0;
       margin-left: -0.1rem;
@@ -1629,17 +1631,20 @@ label:last-child:not(:first-child):not(.form-group-label) {
       border-bottom-left-radius: 0;
       margin-left: -0.1rem; }
   .form-group .form-group-label {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    /* Style the middle controls */
-    /* Handles right most control in form group */
     background-color: var(--cirrus-form-group-bg);
     border: 1px solid #dee2e6;
     border-radius: 0.2rem;
     color: var(--cirrus-form-group-fg);
     margin: 0;
     padding: 0.8rem;
-    user-select: none; }
+    user-select: none;
+    z-index: 1;
+    /* Style the front controls */
+    /* Style the middle controls */
+    /* Handles right most control in form group */ }
+    .form-group .form-group-label:first-child:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
     .form-group .form-group-label:not(:first-child):not(:last-child) {
       border-radius: 0;
       margin-left: -0.1rem;
@@ -1660,11 +1665,12 @@ label:last-child:not(:first-child):not(.form-group-label) {
     .form-group .form-group-label.label-xlarge {
       font-size: 2rem; }
   .form-group .form-group-input {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    /* Style the front controls */
     /* Style the middle controls */
-    /* Handles right most control in form group */
-    z-index: 1; }
+    /* Handles right most control in form group */ }
+    .form-group .form-group-input:first-child:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
     .form-group .form-group-input:not(:first-child):not(:last-child) {
       border-radius: 0;
       margin-left: -0.1rem;

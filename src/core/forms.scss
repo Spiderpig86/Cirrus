@@ -298,12 +298,15 @@ label {
 
 /* Form groups that group inputs with other controls. */
 .form-group {
-
     /* This is just an extended portion of an input which is just like a label and is read only */
     /* This will style the controls if they are the leftmost control in the form group for labels, inputs, and buttons. */
     @mixin form-group-border-radius-override {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+        
+        /* Style the front controls */
+        &:first-child:not(:last-child) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
 
         /* Style the middle controls */
         &:not(:first-child):not(:last-child) {
@@ -326,18 +329,15 @@ label {
 
     /* Fixes the text width being cut off */
     .form-group-btn {
-        @include form-group-border-radius-override()
-        ;
         -webkit-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
         flex: 1 0 auto;
         margin-bottom: 0;
+        @include form-group-border-radius-override();
     }
 
     /* Form group controls */
     .form-group-label {
-        @include form-group-border-radius-override()
-        ;
         background-color: var(--cirrus-form-group-bg);
         border: 1px solid $gray-300;
         border-radius: 0.2rem;
@@ -345,6 +345,8 @@ label {
         margin: 0;
         padding: 0.8rem;
         user-select: none;
+        z-index: 1;
+        @include form-group-border-radius-override();
 
         &.label-xsmall {
             font-size: 0.55rem;
@@ -367,9 +369,7 @@ label {
 
     /* Keeps inputs in form group above other components */
     .form-group-input {
-        @include form-group-border-radius-override()
-        ;
-        z-index: 1;
+        @include form-group-border-radius-override();
     }
 }
 
