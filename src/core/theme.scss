@@ -42,6 +42,7 @@ $toast-primary-bg: rgba(49, 59, 80, 0.9);
 $animation-duration: .2s;
 $focus-opacity: 0.55;
 
+/* TODO: Move to dimensions.scss */
 $space-size: 0.5rem;
 
 $font-size-xs: .7rem;
@@ -152,6 +153,7 @@ $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 
+/* TODO: Deprecate CSS Vars */
 :root {
     /* v1 Colors */
     --cirrus-fg: #{$cirrus-fg};

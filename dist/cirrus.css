@@ -104,7 +104,9 @@ fieldset {
     Converts a given hex value to RGB.
 */
 /* Color scheme for Cirrus */
+/* TODO: Move to dimensions.scss */
 /* v2 Colors */
+/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -154,6 +156,59 @@ fieldset {
 /*
     Converts a given hex value to RGB.
 */
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Color scheme for Cirrus */
+/* TODO: Move to dimensions.scss */
+/* v2 Colors */
+/* TODO: Deprecate CSS Vars */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 /*
     Global Mixins
 */
@@ -488,7 +543,7 @@ button,
     button.btn-success:focus,
     .btn.btn-success:focus,
     [type='submit'].btn-success:focus {
-      box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, var(--focus-opacity)), inset 0px 1px 8px rgba(0, 0, 0, 0.07); }
+      box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07); }
   button.btn-error,
   .btn.btn-error,
   [type='submit'].btn-error {
@@ -496,7 +551,7 @@ button,
     button.btn-error:focus,
     .btn.btn-error:focus,
     [type='submit'].btn-error:focus {
-      box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, var(--focus-opacity)), inset 0px 1px 8px rgba(0, 0, 0, 0.07); }
+      box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07); }
   button .fa-wrapper,
   .btn .fa-wrapper,
   [type='submit'] .fa-wrapper {
@@ -674,7 +729,9 @@ button,
     Converts a given hex value to RGB.
 */
 /* Color scheme for Cirrus */
+/* TODO: Move to dimensions.scss */
 /* v2 Colors */
+/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -764,7 +821,9 @@ pre > code {
     Converts a given hex value to RGB.
 */
 /* Color scheme for Cirrus */
+/* TODO: Move to dimensions.scss */
 /* v2 Colors */
+/* TODO: Deprecate CSS Vars */
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 :root {
@@ -1084,7 +1143,9 @@ kbd {
     Converts a given hex value to RGB.
 */
 /* Color scheme for Cirrus */
+/* TODO: Move to dimensions.scss */
 /* v2 Colors */
+/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -1178,7 +1239,62 @@ kbd {
     Converts a given hex value to RGB.
 */
 /* Color scheme for Cirrus */
+/* TODO: Move to dimensions.scss */
 /* v2 Colors */
+/* TODO: Deprecate CSS Vars */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Color scheme for Cirrus */
+/* TODO: Move to dimensions.scss */
+/* v2 Colors */
+/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -1317,12 +1433,12 @@ input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type=
     border-color: var(--cirrus-success) !important;
     background-color: rgba(0, 224, 0, 0.05) !important; }
     input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']).input-success:focus {
-      box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, var(--focus-opacity)), inset 0px 1px 8px rgba(0, 0, 0, 0.07); }
+      box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07); }
   input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']).input-error {
     border-color: var(--cirrus-danger) !important;
     background-color: rgba(244, 67, 54, 0.05) !important; }
     input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']).input-error:focus {
-      box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, var(--focus-opacity)), inset 0px 1px 8px rgba(0, 0, 0, 0.07); }
+      box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07); }
 
 textarea,
 textarea[type='text'] {
@@ -1702,7 +1818,9 @@ label:last-child:not(:first-child):not(.form-group-label) {
     Converts a given hex value to RGB.
 */
 /* Color scheme for Cirrus */
+/* TODO: Move to dimensions.scss */
 /* v2 Colors */
+/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -3497,7 +3615,9 @@ video.video-fullscreen {
     Converts a given hex value to RGB.
 */
 /* Color scheme for Cirrus */
+/* TODO: Move to dimensions.scss */
 /* v2 Colors */
+/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
