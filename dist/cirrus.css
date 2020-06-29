@@ -106,7 +106,6 @@ fieldset {
 /* Color scheme for Cirrus */
 /* TODO: Move to dimensions.scss */
 /* v2 Colors */
-/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -165,7 +164,6 @@ fieldset {
 /* Color scheme for Cirrus */
 /* TODO: Move to dimensions.scss */
 /* v2 Colors */
-/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -731,7 +729,6 @@ button,
 /* Color scheme for Cirrus */
 /* TODO: Move to dimensions.scss */
 /* v2 Colors */
-/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -823,7 +820,6 @@ pre > code {
 /* Color scheme for Cirrus */
 /* TODO: Move to dimensions.scss */
 /* v2 Colors */
-/* TODO: Deprecate CSS Vars */
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 :root {
@@ -1145,7 +1141,6 @@ kbd {
 /* Color scheme for Cirrus */
 /* TODO: Move to dimensions.scss */
 /* v2 Colors */
-/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -1241,7 +1236,6 @@ kbd {
 /* Color scheme for Cirrus */
 /* TODO: Move to dimensions.scss */
 /* v2 Colors */
-/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -1294,7 +1288,6 @@ kbd {
 /* Color scheme for Cirrus */
 /* TODO: Move to dimensions.scss */
 /* v2 Colors */
-/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -1820,7 +1813,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Color scheme for Cirrus */
 /* TODO: Move to dimensions.scss */
 /* v2 Colors */
-/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -1902,6 +1894,58 @@ label:last-child:not(:first-child):not(.form-group-label) {
     font-size: 1rem;
     margin: 0 auto .75rem; }
 
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Color scheme for Cirrus */
+/* TODO: Move to dimensions.scss */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 /* HEADER */
 .header {
   -webkit-box-flex: 1;
@@ -1915,8 +1959,12 @@ label:last-child:not(:first-child):not(.form-group-label) {
   background-color: var(--cirrus-bg);
   max-height: 100vh;
   padding: 0 2rem;
-  transition: all .3s;
-  /* Remove any padding set for headers in default.scss */ }
+  transition: all 0.3s;
+  /* Remove any padding set for headers in default.scss */
+  /* Header dark theme */
+  /* Add transition to nav menu when it drops down */
+  /* Static header at the top of the screen */
+  /* Hover effect for header elements when appropriate */ }
   .header h1 {
     margin: 0; }
   .header h2 {
@@ -1929,51 +1977,72 @@ label:last-child:not(:first-child):not(.form-group-label) {
     margin: 0; }
   .header h6 {
     margin: 0; }
-
-.header a {
-  color: #8292a2; }
-
-.header a:hover {
-  color: #697888; }
-
-/* Header dark theme */
-.header-dark {
-  background-color: rgba(0, 0, 0, 0.87);
-  color: #fff; }
-
-.header-clear {
-  background-color: transparent;
-  box-shadow: none; }
-
-/* Add transition to nav menu when it drops down */
-.header.header-animated .header-nav {
-  -webkit-transition: background 0.4s ease, height 0.4s ease;
-  transition: background 0.4s ease, height 0.4s ease;
-  -webkit-transition-property: background, height;
-  transition-property: background, height;
-  -webkit-transition-duration: 0.4s, 0.4s;
-  transition-duration: 0.4s, 0.4s;
-  -webkit-transition-timing-function: ease, ease;
-  transition-timing-function: ease, ease;
-  -webkit-transition-delay: initial, initial;
-  transition-delay: initial, initial;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-
-.header-brand {
-  -webkit-overflow-scrolling: touch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  max-width: 100vw;
-  min-height: 3.25rem;
-  overflow-x: auto;
-  overflow-y: hidden; }
+  .header a {
+    color: #8292a2; }
+    .header a:hover {
+      color: #697888; }
+  .header.header-dark {
+    background-color: rgba(0, 0, 0, 0.87);
+    color: #fff;
+    /* Theme for dark menu */ }
+    .header.header-dark .nav-item a,
+    .header.header-dark .dropdown-menu > li > a {
+      color: #fff; }
+  .header.header-clear {
+    background-color: transparent;
+    box-shadow: none;
+    /* Add border radius to whole menu with clear header */ }
+    .header.header-clear .nav-item .dropdown-menu {
+      border-radius: 4px; }
+  .header.header-animated .header-nav {
+    -webkit-transition: background 0.4s ease, height 0.4s ease;
+    transition: background 0.4s ease, height 0.4s ease;
+    -webkit-transition-property: background, height;
+    transition-property: background, height;
+    -webkit-transition-duration: 0.4s, 0.4s;
+    transition-duration: 0.4s, 0.4s;
+    -webkit-transition-timing-function: ease, ease;
+    transition-timing-function: ease, ease;
+    -webkit-transition-delay: initial, initial;
+    transition-delay: initial, initial;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+  .header .header-brand {
+    -webkit-overflow-scrolling: touch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    max-width: 100vw;
+    min-height: 3.25rem;
+    overflow-x: auto;
+    overflow-y: hidden; }
+  .header .header-fixed {
+    position: fixed;
+    top: 0;
+    /* Change this if you want to float the header somewhere else */ }
+  .header:not(.header-clear) .nav-item:not(.no-hover):hover,
+  .header:not(.header-clear) .nav-item:not(.no-hover).hovered {
+    background-color: rgba(216, 216, 216, 0.15);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+  .header:not(.header-clear) .nav-item.active,
+  .header:not(.header-clear) .nav-item.active:hover {
+    background-color: rgba(216, 216, 216, 0.35); }
+  .header .nav-btn {
+    cursor: pointer;
+    display: block;
+    height: 3.5rem;
+    position: relative;
+    width: 3.5rem; }
+  .header .btn,
+  .header button,
+  .header input[type='submit'] {
+    margin: 0; }
 
 /* The container that contains all the header menu components. Child of header */
 .header-nav {
@@ -1984,9 +2053,8 @@ label:last-child:not(:first-child):not(.form-group-label) {
 .nav-menu {
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
-
-.nav-item.has-sub {
-  position: relative; }
+  .nav-menu .has-sub {
+    position: relative; }
 
 /* Allow the user to scroll through navbar items if it exceeds nav-left, nav-center, or nav-right widths */
 .nav-overflow-x {
@@ -1994,12 +2062,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
   -ms-flex-pack: inherit;
   justify-content: inherit;
   overflow-x: scroll; }
-
-/* Static header at the top of the screen */
-.header-fixed {
-  position: fixed;
-  top: 0;
-  /* Change this if you want to float the header somewhere else */ }
 
 /* Wrapper to vertically center header items */
 .nav-item {
@@ -2009,6 +2071,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-flex: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
@@ -2020,135 +2083,92 @@ label:last-child:not(:first-child):not(.form-group-label) {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   padding: 0 0.3rem;
-  cursor: pointer; }
-
-.nav-item a {
-  align-items: center;
-  display: flex; }
-
-/* Hover effect for header elements when appropriate */
-.header:not(.header-clear) .nav-item:not(.no-hover):hover,
-.header:not(.header-clear) .nav-item:not(.no-hover).hovered {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  background-color: rgba(216, 216, 216, 0.15); }
-
-.header:not(.header-clear) .nav-item.active,
-.header:not(.header-clear) .nav-item.active:hover {
-  background-color: rgba(216, 216, 216, 0.35); }
-
-/* HEADER DROP DOWN MENU */
-.nav-item .dropdown-menu {
-  background-color: var(--cirrus-bg);
-  position: absolute;
-  top: 95%;
-  /*right: 0; /* Unable to solve problem when we have multiple drop down menus */
-  z-index: 1000;
-  float: left;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0;
-  font-size: 14px;
-  text-align: left;
-  list-style: none;
-  background-clip: padding-box;
-  border: 1px solid #eee;
-  border-radius: 0 0 4px 4px;
-  box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1); }
-
-/* Add border radius to whole menu with clear header */
-.header.header-clear .nav-item .dropdown-menu {
-  border-radius: 4px; }
-
-/* Just add a transition in general */
-.nav-item .dropdown-menu.dropdown-animated {
-  -webkit-transition: all var(--animation-duration);
-  transition: all var(--animation-duration); }
-
-/* Dropdown menu location adjustment located below for sizes above phones */
-/* Dropdown menu indicator */
-.nav-item.has-sub .nav-dropdown-link::after {
-  border: 2px solid var(--cirrus-primary);
-  /* Must be first to create the triangle shape */
-  border-right: 0;
-  /* Create the triangle effect */
-  border-top: 0;
-  display: block;
-  height: 0.5em;
-  width: 0.5em;
-  content: " ";
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  pointer-events: none;
-  margin-top: -0.435em;
-  right: 1.125em;
-  top: 50%;
-  position: absolute; }
-
-/* Add room for the dropdown chevron pseudoelement */
-.nav-item.has-sub .nav-dropdown-link {
-  padding-right: 2.5rem;
-  position: relative;
-  /* Needed for hiding glyphs in mobile header */ }
+  cursor: pointer;
+  /* HEADER DROP DOWN MENU */
+  /* Add room for the dropdown chevron pseudoelement */ }
+  .nav-item a {
+    align-items: center;
+    display: flex; }
+  .nav-item .dropdown-menu {
+    background-color: var(--cirrus-bg);
+    position: absolute;
+    top: 95%;
+    /*right: 0; /* Unable to solve problem when we have multiple drop down menus */
+    z-index: 1000;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-clip: padding-box;
+    border: 1px solid #dee2e6;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
+    /* Just add a transition in general */ }
+    .nav-item .dropdown-menu.dropdown-animated {
+      -webkit-transition: all var(--animation-duration);
+      transition: all var(--animation-duration); }
+    .nav-item .dropdown-menu > li > a {
+      display: block;
+      padding: 0.5rem 1rem;
+      clear: both;
+      line-height: 1.42857143;
+      white-space: nowrap; }
+    .nav-item .dropdown-menu > li {
+      margin: 0;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+    .nav-item .dropdown-menu > li:hover {
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      background-color: rgba(216, 216, 216, 0.15); }
+    .nav-item .dropdown-menu > li:active {
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      background-color: rgba(216, 216, 216, 0.25); }
+    .nav-item .dropdown-menu > li:last-child {
+      margin-bottom: 0; }
+    .nav-item .dropdown-menu .dropdown-menu-divider {
+      border: none;
+      background-color: rgba(216, 216, 216, 0.15);
+      height: 1px;
+      margin: 0.5rem 0; }
+  .nav-item.has-sub .nav-dropdown-link {
+    padding-right: 2.5rem;
+    position: relative;
+    /* Needed for hiding glyphs in mobile header */
+    /* Dropdown menu location adjustment located below for sizes above phones */
+    /* Dropdown menu indicator */ }
+    .nav-item.has-sub .nav-dropdown-link::after {
+      border: 2px solid var(--cirrus-primary);
+      /* Must be first to create the triangle shape */
+      border-right: 0;
+      /* Create the triangle effect */
+      border-top: 0;
+      display: block;
+      height: 0.5em;
+      width: 0.5em;
+      content: ' ';
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      pointer-events: none;
+      margin-top: -0.435em;
+      right: 1.125em;
+      top: 50%;
+      position: absolute; }
 
 /* Dark dropdown menu theme */
 .nav-item .dropdown-menu.dropdown-dark,
 .header-dark .dropdown-menu {
   background-color: rgba(0, 0, 0, 0.87);
-  border: 1px solid #333;
+  border: 1px solid #343a40;
   color: #fff; }
 
 .dropdown-menu.dropdown-shown,
 .nav-item.active {
   opacity: 1; }
-
-.dropdown-menu > li > a {
-  display: block;
-  padding: 0.5rem 1rem;
-  clear: both;
-  line-height: 1.42857143;
-  white-space: nowrap; }
-
-/* Theme for dark menu */
-.header-dark .nav-item a,
-.header-dark .dropdown-menu > li > a {
-  color: #fff; }
-
-.dropdown-menu > li {
-  margin: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-
-.dropdown-menu > li:hover {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  background-color: rgba(216, 216, 216, 0.15); }
-
-.dropdown-menu > li:active {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  background-color: rgba(216, 216, 216, 0.25); }
-
-.dropdown-menu > li:last-child {
-  margin-bottom: 0; }
-
-.dropdown-menu .dropdown-menu-divider {
-  border: none;
-  background-color: rgba(216, 216, 216, 0.15);
-  height: 1px;
-  margin: 0.5rem 0; }
-
-.nav-btn {
-  cursor: pointer;
-  display: block;
-  height: 3.5rem;
-  position: relative;
-  width: 3.5rem; }
-
-.header .btn,
-.header button,
-.header input[type="submit"] {
-  margin: 0; }
 
 @media screen and (min-width: 769px) {
   .header {
@@ -3617,7 +3637,6 @@ video.video-fullscreen {
 /* Color scheme for Cirrus */
 /* TODO: Move to dimensions.scss */
 /* v2 Colors */
-/* TODO: Deprecate CSS Vars */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
@@ -3698,7 +3717,7 @@ video.video-fullscreen {
   position: static !important; }
 
 .u-position-relative {
-  position: static !important; }
+  position: relative !important; }
 
 .u-position-absolute {
   position: absolute !important; }
