@@ -14,6 +14,8 @@
     max-height: 100vh;
     padding: 0 2rem;
     transition: all 0.3s;
+    --header-link-color: #{$gray-700};
+    --header-link-color-hover: #{lighten($gray-700, 10)};
 
     /* Remove any padding set for headers in default.scss */
     @for $i from 1 through 6 {
@@ -23,10 +25,10 @@
     }
 
     a {
-        color: #8292a2;
+        color: var(--header-link-color);
 
         &:hover {
-            color: #697888;
+            color: var(--header-link-color-hover);
         }
     }
 
@@ -34,12 +36,13 @@
     &.header-dark {
         background-color: rgba(0, 0, 0, 0.87);
         color: #fff;
+        --header-link-color: #fff;
+        --header-link-color-hover: #fff;
 
         /* Theme for dark menu */
-        .nav-item a,
-        .dropdown-menu > li > a {
-            color: #fff;
-        }
+        // .nav-item a {
+        //     color: #fff;
+        // }
     }
 
     &.header-clear {
@@ -68,6 +71,12 @@
         transition: all 0.3s;
     }
 
+    /* The container that contains all the header menu components. Child of header */
+    .header-nav {
+        /* Flex display 768px and higher */
+        overflow: auto;
+    }
+
     .header-brand {
         -webkit-overflow-scrolling: touch;
         -webkit-box-align: stretch;
@@ -85,7 +94,7 @@
     }
 
     /* Static header at the top of the screen */
-    .header-fixed {
+    &.header-fixed {
         position: fixed;
         top: 0; /* Change this if you want to float the header somewhere else */
     }
@@ -116,12 +125,6 @@
     input[type='submit'] {
         margin: 0;
     }
-}
-
-/* The container that contains all the header menu components. Child of header */
-.header-nav {
-    /* Flex display 768px and higher */
-    overflow: auto;
 }
 
 /* Styles for header menu (aka the nav bar) */
@@ -184,7 +187,7 @@
         text-align: left;
         list-style: none;
         background-clip: padding-box;
-        border: 1px solid $gray-300;
+        border: 1px solid $gray-200;
         border-radius: 0 0 4px 4px;
         box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
 
@@ -260,7 +263,7 @@
 
 /* Dark dropdown menu theme */
 .nav-item .dropdown-menu.dropdown-dark,
-.header-dark .dropdown-menu {
+.header.header-dark .dropdown-menu {
     background-color: rgba(0, 0, 0, 0.87);
     border: 1px solid $gray-800;
     color: #fff;
@@ -278,120 +281,121 @@
         align-items: stretch;
         display: -webkit-box;
         display: -ms-flexbox;
-    }
 
-    .header-nav {
-        -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-        -ms-flex-negative: 0;
-        -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-        align-items: stretch; /* Make items fill up all available space regardless of width https://drafts.csswg.org/css-align/ */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        position: relative;
-        text-align: center;
-        width: 100%;
-        top: 0;
-        overflow: visible; /* Only visible for showing dropdown menus, hidden for mobile */
-    }
+        .header-nav {
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            -ms-flex-negative: 0;
+            -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch; /* Make items fill up all available space regardless of width https://drafts.csswg.org/css-align/ */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            top: 0;
+            overflow: visible; /* Only visible for showing dropdown menus, hidden for mobile */
+        }
 
-    /* These styles can also be used on menus in the body */
-    .nav-left,
-    .nav-right {
-        -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-        -ms-grid-row-align: stretch;
-        align-items: stretch;
-        -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-        -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
-        /*overflow: hidden;*/
-    }
+        /* These styles can also be used on menus in the body */
+        .nav-left,
+        .nav-right {
+            -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+            -ms-grid-row-align: stretch;
+            align-items: stretch;
+            -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            /*overflow: hidden;*/
+        }
 
-    /* Align items to the left */
-    .nav-left {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        /*overflow: hidden;
-        overflow-x: auto;*/
-        white-space: nowrap;
-    }
+        /* Align items to the left */
+        .nav-left {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            /*overflow: hidden;
+            overflow-x: auto;*/
+            white-space: nowrap;
+        }
 
-    /* Align items to the right */
-    .nav-right {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-        /*overflow: hidden;
-        overflow-x: auto;*/
-        white-space: nowrap;
-    }
+        /* Align items to the right */
+        .nav-right {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            /*overflow: hidden;
+            overflow-x: auto;*/
+            white-space: nowrap;
+        }
 
-    /* Centering items, best used when nav-brand is not used to prevent offset */
-    .nav-center {
-        -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-        align-items: stretch;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-        flex-grow: 0;
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
+        /* Centering items, best used when nav-brand is not used to prevent offset */
+        .nav-center {
+            -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-flex: 0;
+            -ms-flex-positive: 0;
+            flex-grow: 0;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    /* Hide hamburger button */
-    .nav-btn {
-        display: none;
-    }
+        /* Hide hamburger button */
+        .nav-btn {
+            display: none;
+        }
 
-    /* .nav-item {
-    position: relative; /* Include for helping dropdown menu positioning  Deprecated 0.5.6
-  } */
+        .nav-item {
+            /* Expand link area for desktop views so it is easier to click */
+            a {
+                padding: 0.5rem 1rem;
+            }
 
-    /* Expand link area for desktop views so it is easier to click */
-    .nav-item a {
-        padding: 0.5rem 1rem;
-    }
+            .dropdown-menu {
+                opacity: 0;
+                pointer-events: none; /* Make cursor not respond to menu links when not displayed */
+            }
 
-    .nav-item .dropdown-menu {
-        opacity: 0;
-        pointer-events: none; /* Make cursor not respond to menu links when not displayed */
-    }
+            .dropdown-menu.dropdown-animated {
+                -webkit-transform: translateY(-5px); /* Used for transitional drop down effect */
+                transform: translateY(-5px);
+            }
 
-    .nav-item .dropdown-menu.dropdown-animated {
-        -webkit-transform: translateY(-5px); /* Used for transitional drop down effect */
-        transform: translateY(-5px);
-    }
+            .dropdown-menu.dropdown-shown,
+            &.toggle-hover:hover .dropdown-menu,
+            .dropdown-menu.dropdown-animated.dropdown-shown {
+                opacity: 1;
+                -webkit-transform: none; /* Used for transitional drop down effect */
+                transform: none;
+                pointer-events: auto;
+            }
+        }
 
-    .nav-item .dropdown-menu.dropdown-shown,
-    .nav-item.toggle-hover:hover .dropdown-menu,
-    .nav-item .dropdown-menu.dropdown-animated.dropdown-shown,
-    .nav-item.toggle-hover:hover .dropdown-animated.dropdown-menu {
-        opacity: 1;
-        -webkit-transform: none; /* Used for transitional drop down effect */
-        transform: none;
-        pointer-events: auto;
+        /* .nav-item {
+        position: relative; /* Include for helping dropdown menu positioning  Deprecated 0.5.6
+      } */
     }
 
     /* Align dropdown menu to the left side of the parent nav-item for header-left */
@@ -412,43 +416,45 @@
     .header {
         display: flex;
         flex-direction: column;
-    }
 
-    .header-brand .nav-item:first-child {
-        padding: 0 1rem; /* Add padding to the first child, usually the logo */
-    }
+        .header-brand .nav-item:first-child {
+            padding: 0 1rem; /* Add padding to the first child, usually the logo */
+        }
 
-    /* Hide dropdon menu on mobile */
-    .header-nav {
-        height: 0;
-    }
+        /* Hide dropdown menu on mobile */
+        .header-nav {
+            height: 0;
 
-    /* Show the dropdown */
-    .header-nav.active {
-        height: 100vh;
+            /* Show the dropdown */
+            &.active {
+                height: 100vh;
+            }
+        }
     }
 
     /* Remove flex for mobile devices */
     .nav-item.has-sub {
         display: block;
-    }
 
-    .nav-item.has-sub .dropdown-menu.dropdown-shown {
-        border-radius: 0;
-        box-shadow: none;
-        display: block;
-        position: relative;
-        top: 1rem;
-        float: none;
-        border: none;
-        background-color: transparent;
-        margin-bottom: 1rem;
-    }
+        .dropdown-menu {
+            &.dropdown-shown {
+                border-radius: 0;
+                box-shadow: none;
+                display: block;
+                position: relative;
+                top: 1rem;
+                float: none;
+                border: none;
+                background-color: transparent;
+                margin-bottom: 1rem;
+            }
 
-    .nav-item.has-sub .dropdown-menu.dropdown-dark {
-        background-color: rgba(0, 0, 0, 0.17);
-        border: 0;
-        color: #fff;
+            &.dropdown-dark {
+                background-color: rgba(0, 0, 0, 0.17);
+                border: 0;
+                color: #fff;
+            }
+        }
     }
 
     /* Hide the menu by default in mobile view (overflow on header-right can expose it) */
