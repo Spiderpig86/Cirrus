@@ -1,22 +1,16 @@
+@import './theme.scss';
 /* HEADER */
+
+/* This works well with panel */
+section {
+    display: block;
+}
 
 .content {
     max-width: 60em;
     margin: 0 auto 1.5em;
     width: 80%;
 }
-
-/* .content-no-padding { Removed 0.5.5
-    max-width: 60em;
-    margin: 0 auto;
-    width: 80%;
-} */
-
-/* Content that centers in parent and fills parent div without the extra vertical margin */
-/* .content-fluid { Removed 0.5.5
-    width: 100%;
-    margin: 0 auto;
-} */
 
 .fullscreen {
     top: 0;
@@ -26,69 +20,58 @@
     height: 100vh;
 }
 
-/* This works well with panel */
-section {
-    display: block;
-}
-
-.panel {
-    padding: 2.5em 0;
-}
+/* Deprecated 0.5.6
+// .panel {
+//     padding: 2.5em 0;
+// }
 
 /* This works well with spans and maybe even hr */
 .divider {
-    border-top: 0.05rem solid rgba(173, 173, 173, 0.5);
+    border-top: 0.05rem solid transparentize($gray-500, 0.5);
     height: 0.1rem;
     margin: 1.8rem 0 1.6rem;
+
+    &[data-content] {
+        margin: 0.8rem 0;
+    }
+
+    &--v[data-content]::after,
+    &[data-content]::after {
+        background: #fff;
+        color: $gray-500;
+        content: attr(data-content);
+        left: 50%;
+        display: inline-block;
+        padding: 0 0.4rem;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+    }
+
+    &--v[data-content] {
+        display: block;
+        padding: 0.8rem;
+
+        &::before {
+            border-left: 0.05rem solid transparentize($gray-500, 0.5);
+            bottom: 0.4rem;
+            content: '';
+            display: block;
+            left: 50%;
+            position: absolute;
+            top: 0;
+            transform: translateX(-50%);
+        }
+    }
+
+    &--v[data-content] {
+        left: 50%;
+        padding: 0.2rem 0;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
-
-.divider[data-content] {
-    margin: 0.8rem 0;
-}
-
-.divider--v[data-content] {
-    display: block;
-    padding: 0.8rem;
-}
-
-.divider--v::before {
-    border-left: 0.05rem solid rgba(173, 173, 173, 0.5);
-    bottom: 0.4rem;
-    content: '';
-    display: block;
-    left: 50%;
-    position: absolute;
-    top: 0;
-    transform: translateX(-50%);
-}
-
-.divider--v[data-content]::after,
-.divider[data-content]::after {
-    background: #fff;
-    color: #bcc3ce;
-    content: attr(data-content);
-    left: 50%;
-    display: inline-block;
-    padding: 0 0.4rem;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-}
-
-.divider--v[data-content] {
-    left: 50%;
-    padding: 0.2rem 0;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Removed 0.5.5 */
-/* .divider-short {
-    max-width: 15rem;
-    width: 100%;
-} */
-
 /* Hero image div */
 .hero-img {
     /* Specify the backgroud image yourself */
@@ -108,187 +91,206 @@ section {
     display: -ms-flexbox;
     display: flex; /* Important to stretch height of hero-body */
     -webkit-box-orient: vertical;
-    /* -webkit-box-direction: normal; /* Deprecated 0.5.5 
-    -ms-flex-direction: column;
-    flex-direction: column; Stack the items in the container */
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-}
 
-.hero-body {
-    -ms-flex-positive: 1;
-    flex-grow: 1; /* Tells the hero-body to take up the entire space */
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    padding: 3rem 1.5rem;
-    align-items: center;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
+    .hero-body {
+        -ms-flex-positive: 1;
+        flex-grow: 1; /* Tells the hero-body to take up the entire space */
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        padding: 3rem 1.5rem;
+        align-items: center;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+    }
 }
 
 .space {
     display: block;
     width: 100%;
     height: 1rem;
-}
 
-.space.large {
-    padding: 1rem 0;
-}
+    &.large {
+        padding: 1rem 0;
+    }
 
-.space.xlarge {
-    padding: 2rem 0;
+    &.xlarge {
+        padding: 2rem 0;
+    }
 }
 
 /* Use for spacing out elements vertically */
 .row {
     -ms-flex: 1;
     flex: 1;
-    /* max-width: 100%; */
     flex-wrap: wrap;
     padding: 0.5rem 0;
+
+    // /* Used for aligning controls next to each other */ Deprecated 0.5.6
+    // &.has-controls {
+    //     display: -webkit-box;
+    //     display: -ms-flexbox;
+    //     display: flex;
+    //     -webkit-box-pack: start;
+    //     -ms-flex-pack: start;
+    //     justify-content: flex-start;
+    // }
+
+    &::after {
+        content: '';
+        clear: both;
+        display: table;
+    }
+
+    &.row--no-wrap {
+        -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default */
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Can be disabled to remove scroll bar */
+    }
+
+    /* GRID */
+    .col {
+        display: block;
+        flex: 1;
+        padding: 0.15rem 0.75rem;
+    }
+
+    .col-1 {
+        width: 8.33333333%;
+    }
+
+    .col-2 {
+        width: 16.66666667%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33333333%;
+    }
+
+    .col-5 {
+        width: 41.66666667%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33333333%;
+    }
+
+    .col-8 {
+        width: 66.66666667%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33333333%;
+    }
+
+    .col-11 {
+        width: 91.66666667%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    /* Column offsets on the left side */
+    .offset-1 {
+        margin-left: 8.33333333%;
+    }
+
+    .offset-2 {
+        margin-left: 16.66666667%;
+    }
+
+    .offset-3 {
+        margin-left: 25%;
+    }
+
+    .offset-4 {
+        margin-left: 33.33333333%;
+    }
+
+    .offset-5 {
+        margin-left: 41.66666667%;
+    }
+
+    .offset-6 {
+        margin-left: 50%;
+    }
+
+    .offset-7 {
+        margin-left: 58.33333333%;
+    }
+
+    .offset-8 {
+        margin-left: 66.66666667%;
+    }
+
+    .offset-9 {
+        margin-left: 75%;
+    }
+
+    .offset-10 {
+        margin-left: 83.33333333%;
+    }
+
+    .offset-11 {
+        margin-left: 91.66666667%;
+    }
+
+    .offset-12 {
+        margin-left: 100%;
+    }
+
+    /* Auto align col to left in row */
+    .offset-right {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    /* Auto align col to middle in row */
+    .offset-center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Auto align col to right in row */
+    .offset-left {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    /* Some offset values */
+    [class^='col-'],
+    [class*=' col-'] {
+        float: left; /* Keeps the elements in 1 row */
+        padding: 0 0.5rem;
+    }
+
+    /* Columns without the spacing */
+    .no-space [class^='col-'],
+    .no-space [class*=' col-'] {
+        padding: 0;
+    }
 }
 
 .r {
     /* Legacy row pre 0.5.5 */
     max-width: 100%;
     padding: 0.5rem;
-}
-
-.row.row--no-wrap {
-    -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default */
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Can be disabled to remove scroll bar */
-}
-
-.row::after {
-    content: '';
-    clear: both;
-    display: table;
-}
-
-/* GRID */
-.row .col {
-    display: block;
-    flex: 1;
-    padding: 0.15rem 0.75rem;
-}
-
-.row .col-1 {
-    width: 8.33333333%;
-}
-
-.row .col-2 {
-    width: 16.66666667%;
-}
-
-.row .col-3 {
-    width: 25%;
-}
-
-.row .col-4 {
-    width: 33.33333333%;
-}
-
-.row .col-5 {
-    width: 41.66666667%;
-}
-
-.row .col-6 {
-    width: 50%;
-}
-
-.row .col-7 {
-    width: 58.33333333%;
-}
-
-.row .col-8 {
-    width: 66.66666667%;
-}
-
-.row .col-9 {
-    width: 75%;
-}
-
-.row .col-10 {
-    width: 83.33333333%;
-}
-
-.row .col-11 {
-    width: 91.66666667%;
-}
-
-.row .col-12 {
-    width: 100%;
-}
-
-/* Column offsets on the left side */
-.row .offset-1 {
-    margin-left: 8.33333333%;
-}
-
-.row .offset-2 {
-    margin-left: 16.66666667%;
-}
-
-.row .offset-3 {
-    margin-left: 25%;
-}
-
-.row .offset-4 {
-    margin-left: 33.33333333%;
-}
-
-.row .offset-5 {
-    margin-left: 41.66666667%;
-}
-
-.row .offset-6 {
-    margin-left: 50%;
-}
-
-.row .offset-7 {
-    margin-left: 58.33333333%;
-}
-
-.row .offset-8 {
-    margin-left: 66.66666667%;
-}
-
-.row .offset-9 {
-    margin-left: 75%;
-}
-
-.row .offset-10 {
-    margin-left: 83.33333333%;
-}
-
-.row .offset-11 {
-    margin-left: 91.66666667%;
-}
-
-.row .offset-12 {
-    margin-left: 100%;
-}
-
-/* Auto align col to left in row */
-.row .offset-right {
-    margin-left: 0;
-    margin-right: auto;
-}
-
-/* Auto align col to middle in row */
-.row .offset-center {
-    margin-left: auto;
-    margin-right: auto;
-}
-/* Auto align col to right in row */
-.row .offset-left {
-    margin-left: auto;
-    margin-right: 0;
 }
 
 /* Use in parent div of fluid col Deprecated in 0.5.6, use .row
@@ -330,45 +332,6 @@ section {
     -ms-flex-negative: 0;
 } */
 
-/* Some offset values */
-.row [class^='col-'],
-.row [class*=' col-'] {
-    float: left; /* Keeps the elements in 1 row */
-    padding: 0 0.5rem;
-}
-
-/* Columns without the spacing */
-.row.no-space [class^='col-'],
-.row.no-space [class*=' col-'] {
-    padding: 0;
-}
-
-/* Ignore overflow in columns */
-/* .row.expand { DEPRECATED 0.5.5
-    -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default 
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Can be disabled to remove scroll bar 
-} */
-
-/* Only for divs with .expand so they can go past the parent div width */
-/* .row.expand [class^="col-"], DEPRECATED 0.5.5, no use
-.row.expand [class*=" col-"] {
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
-} */
-
-/* Used for aligning controls next to each other */
-.row.has-controls {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-}
-
 /* Divider for multiple elements in a div */
 /* .divided > .fluid-container:not(.row),
 .divided > .row [class^="col-"], .divided > .row [class*=" col-"] { DEPRECATED 0.5.5
@@ -389,146 +352,75 @@ section {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+
+    .level-left {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start; /* Start for left */
+        margin-right: 1rem;
+    }
+    
+    .level-right {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end; /* End for right */
+    }
+
+    .level-item {
+        /* Centers items */
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+        flex-grow: 0;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    
+    /* Used to stretch the contents of div in level to fill */
+    .level-content {
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -ms-flex-negative: 1;
+        flex-shrink: 1;
+        text-align: left;
+        width: 100%;
+    }
 }
 
-.level-left {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start; /* Start for left */
-    margin-right: 1rem;
-}
+/* Width/Height CSS */
+@for $i from 1 through 10 {
+    .w-#{$i * 10} {
+        width: #{$i} * 10%;
+    }
 
-.level-right {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end; /* End for right */
-}
-
-.level-item {
-    /* Centers items */
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
-    flex-grow: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-
-/* Used to stretch the contents of div in level to fill */
-.level-content {
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-negative: 1;
-    flex-shrink: 1;
-    text-align: left;
-    width: 100%;
-}
-
-/* Width CSS */
-.w-10 {
-    width: 10%;
-}
-
-.w-20 {
-    width: 20%;
-}
-
-.w-30 {
-    width: 30%;
-}
-
-.w-40 {
-    width: 40%;
-}
-
-.w-50 {
-    width: 50%;
-}
-
-.w-60 {
-    width: 60%;
-}
-
-.w-70 {
-    width: 70%;
-}
-
-.w-80 {
-    width: 80%;
-}
-
-.w-90 {
-    width: 90%;
-}
-
-.w-100 {
-    width: 100%;
+    .h-#{$i * 10} {
+        height: #{$i} * 10%;
+    }
 }
 
 .w-auto {
     width: auto;
-}
-
-/* Height CSS */
-.h-10 {
-    height: 10%;
-}
-
-.h-20 {
-    height: 20%;
-}
-
-.h-30 {
-    height: 30%;
-}
-
-.h-40 {
-    height: 40%;
-}
-
-.h-50 {
-    height: 50%;
-}
-
-.h-60 {
-    height: 60%;
-}
-
-.h-70 {
-    height: 70%;
-}
-
-.h-80 {
-    height: 80%;
-}
-
-.h-90 {
-    height: 90%;
-}
-
-.h-100 {
-    height: 100%;
 }
 
 .h-auto {
@@ -563,14 +455,14 @@ section {
 
     .row {
         margin-top: 0;
-    }
 
-    .row [class^='col-']:not(.ignore-screen),
-    .row [class*=' col-']:not(.ignore-screen) {
-        /* Remove the grid structure for smaller screens */
-        width: 100%;
-        margin-left: 0;
-        padding: 0;
+        [class^='col-']:not(.ignore-screen),
+        [class*=' col-']:not(.ignore-screen) {
+            /* Remove the grid structure for smaller screens */
+            width: 100%;
+            margin-left: 0;
+            padding: 0;
+        }
     }
 
     /* Dividers for mobile layout */

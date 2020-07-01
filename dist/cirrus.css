@@ -4478,22 +4478,68 @@ label:last-child:not(:first-child):not(.form-group-label) {
   .nav-right {
     overflow: hidden; } }
 
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Color scheme for Cirrus */
+/* TODO: Move to dimensions.scss */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 /* HEADER */
+/* This works well with panel */
+section {
+  display: block; }
+
 .content {
   max-width: 60em;
   margin: 0 auto 1.5em;
   width: 80%; }
 
-/* .content-no-padding { Removed 0.5.5
-    max-width: 60em;
-    margin: 0 auto;
-    width: 80%;
-} */
-/* Content that centers in parent and fills parent div without the extra vertical margin */
-/* .content-fluid { Removed 0.5.5
-    width: 100%;
-    margin: 0 auto;
-} */
 .fullscreen {
   top: 0;
   right: 0;
@@ -4501,60 +4547,47 @@ label:last-child:not(:first-child):not(.form-group-label) {
   left: 0;
   height: 100vh; }
 
-/* This works well with panel */
-section {
-  display: block; }
-
-.panel {
-  padding: 2.5em 0; }
+/* Deprecated 0.5.6
+// .panel {
+//     padding: 2.5em 0;
+// }
 
 /* This works well with spans and maybe even hr */
 .divider {
-  border-top: 0.05rem solid rgba(173, 173, 173, 0.5);
+  border-top: 0.05rem solid rgba(173, 181, 189, 0.5);
   height: 0.1rem;
   margin: 1.8rem 0 1.6rem; }
+  .divider[data-content] {
+    margin: 0.8rem 0; }
+  .divider--v[data-content]::after, .divider[data-content]::after {
+    background: #fff;
+    color: #adb5bd;
+    content: attr(data-content);
+    left: 50%;
+    display: inline-block;
+    padding: 0 0.4rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%; }
+  .divider--v[data-content] {
+    display: block;
+    padding: 0.8rem; }
+    .divider--v[data-content]::before {
+      border-left: 0.05rem solid rgba(173, 181, 189, 0.5);
+      bottom: 0.4rem;
+      content: '';
+      display: block;
+      left: 50%;
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%); }
+  .divider--v[data-content] {
+    left: 50%;
+    padding: 0.2rem 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%); }
 
-.divider[data-content] {
-  margin: 0.8rem 0; }
-
-.divider--v[data-content] {
-  display: block;
-  padding: 0.8rem; }
-
-.divider--v::before {
-  border-left: 0.05rem solid rgba(173, 173, 173, 0.5);
-  bottom: 0.4rem;
-  content: '';
-  display: block;
-  left: 50%;
-  position: absolute;
-  top: 0;
-  transform: translateX(-50%); }
-
-.divider--v[data-content]::after,
-.divider[data-content]::after {
-  background: #fff;
-  color: #bcc3ce;
-  content: attr(data-content);
-  left: 50%;
-  display: inline-block;
-  padding: 0 0.4rem;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%; }
-
-.divider--v[data-content] {
-  left: 50%;
-  padding: 0.2rem 0;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%); }
-
-/* Removed 0.5.5 */
-/* .divider-short {
-    max-width: 15rem;
-    width: 100%;
-} */
 /* Hero image div */
 .hero-img {
   /* Specify the backgroud image yourself */
@@ -4573,155 +4606,128 @@ section {
   display: flex;
   /* Important to stretch height of hero-body */
   -webkit-box-orient: vertical;
-  /* -webkit-box-direction: normal; /* Deprecated 0.5.5 
-    -ms-flex-direction: column;
-    flex-direction: column; Stack the items in the container */
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
-
-.hero-body {
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  /* Tells the hero-body to take up the entire space */
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  padding: 3rem 1.5rem;
-  align-items: center;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%; }
+  .hero .hero-body {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    /* Tells the hero-body to take up the entire space */
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 3rem 1.5rem;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
 
 .space {
   display: block;
   width: 100%;
   height: 1rem; }
-
-.space.large {
-  padding: 1rem 0; }
-
-.space.xlarge {
-  padding: 2rem 0; }
+  .space.large {
+    padding: 1rem 0; }
+  .space.xlarge {
+    padding: 2rem 0; }
 
 /* Use for spacing out elements vertically */
 .row {
   -ms-flex: 1;
   flex: 1;
-  /* max-width: 100%; */
   flex-wrap: wrap;
-  padding: 0.5rem 0; }
+  padding: 0.5rem 0;
+  /* GRID */
+  /* Column offsets on the left side */
+  /* Auto align col to left in row */
+  /* Auto align col to middle in row */
+  /* Auto align col to right in row */
+  /* Some offset values */
+  /* Columns without the spacing */ }
+  .row::after {
+    content: '';
+    clear: both;
+    display: table; }
+  .row.row--no-wrap {
+    -webkit-flex-wrap: nowrap;
+    /* Remove wrapping of the columns by default */
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    /* Can be disabled to remove scroll bar */ }
+  .row .col {
+    display: block;
+    flex: 1;
+    padding: 0.15rem 0.75rem; }
+  .row .col-1 {
+    width: 8.33333333%; }
+  .row .col-2 {
+    width: 16.66666667%; }
+  .row .col-3 {
+    width: 25%; }
+  .row .col-4 {
+    width: 33.33333333%; }
+  .row .col-5 {
+    width: 41.66666667%; }
+  .row .col-6 {
+    width: 50%; }
+  .row .col-7 {
+    width: 58.33333333%; }
+  .row .col-8 {
+    width: 66.66666667%; }
+  .row .col-9 {
+    width: 75%; }
+  .row .col-10 {
+    width: 83.33333333%; }
+  .row .col-11 {
+    width: 91.66666667%; }
+  .row .col-12 {
+    width: 100%; }
+  .row .offset-1 {
+    margin-left: 8.33333333%; }
+  .row .offset-2 {
+    margin-left: 16.66666667%; }
+  .row .offset-3 {
+    margin-left: 25%; }
+  .row .offset-4 {
+    margin-left: 33.33333333%; }
+  .row .offset-5 {
+    margin-left: 41.66666667%; }
+  .row .offset-6 {
+    margin-left: 50%; }
+  .row .offset-7 {
+    margin-left: 58.33333333%; }
+  .row .offset-8 {
+    margin-left: 66.66666667%; }
+  .row .offset-9 {
+    margin-left: 75%; }
+  .row .offset-10 {
+    margin-left: 83.33333333%; }
+  .row .offset-11 {
+    margin-left: 91.66666667%; }
+  .row .offset-12 {
+    margin-left: 100%; }
+  .row .offset-right {
+    margin-left: 0;
+    margin-right: auto; }
+  .row .offset-center {
+    margin-left: auto;
+    margin-right: auto; }
+  .row .offset-left {
+    margin-left: auto;
+    margin-right: 0; }
+  .row [class^='col-'],
+  .row [class*=' col-'] {
+    float: left;
+    /* Keeps the elements in 1 row */
+    padding: 0 0.5rem; }
+  .row .no-space [class^='col-'],
+  .row .no-space [class*=' col-'] {
+    padding: 0; }
 
 .r {
   /* Legacy row pre 0.5.5 */
   max-width: 100%;
   padding: 0.5rem; }
-
-.row.row--no-wrap {
-  -webkit-flex-wrap: nowrap;
-  /* Remove wrapping of the columns by default */
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  /* Can be disabled to remove scroll bar */ }
-
-.row::after {
-  content: '';
-  clear: both;
-  display: table; }
-
-/* GRID */
-.row .col {
-  display: block;
-  flex: 1;
-  padding: 0.15rem 0.75rem; }
-
-.row .col-1 {
-  width: 8.33333333%; }
-
-.row .col-2 {
-  width: 16.66666667%; }
-
-.row .col-3 {
-  width: 25%; }
-
-.row .col-4 {
-  width: 33.33333333%; }
-
-.row .col-5 {
-  width: 41.66666667%; }
-
-.row .col-6 {
-  width: 50%; }
-
-.row .col-7 {
-  width: 58.33333333%; }
-
-.row .col-8 {
-  width: 66.66666667%; }
-
-.row .col-9 {
-  width: 75%; }
-
-.row .col-10 {
-  width: 83.33333333%; }
-
-.row .col-11 {
-  width: 91.66666667%; }
-
-.row .col-12 {
-  width: 100%; }
-
-/* Column offsets on the left side */
-.row .offset-1 {
-  margin-left: 8.33333333%; }
-
-.row .offset-2 {
-  margin-left: 16.66666667%; }
-
-.row .offset-3 {
-  margin-left: 25%; }
-
-.row .offset-4 {
-  margin-left: 33.33333333%; }
-
-.row .offset-5 {
-  margin-left: 41.66666667%; }
-
-.row .offset-6 {
-  margin-left: 50%; }
-
-.row .offset-7 {
-  margin-left: 58.33333333%; }
-
-.row .offset-8 {
-  margin-left: 66.66666667%; }
-
-.row .offset-9 {
-  margin-left: 75%; }
-
-.row .offset-10 {
-  margin-left: 83.33333333%; }
-
-.row .offset-11 {
-  margin-left: 91.66666667%; }
-
-.row .offset-12 {
-  margin-left: 100%; }
-
-/* Auto align col to left in row */
-.row .offset-right {
-  margin-left: 0;
-  margin-right: auto; }
-
-/* Auto align col to middle in row */
-.row .offset-center {
-  margin-left: auto;
-  margin-right: auto; }
-
-/* Auto align col to right in row */
-.row .offset-left {
-  margin-left: auto;
-  margin-right: 0; }
 
 /* Use in parent div of fluid col Deprecated in 0.5.6, use .row
 .fluid-container {
@@ -4761,41 +4767,6 @@ section {
     -ms-flex-positive: 0;
     -ms-flex-negative: 0;
 } */
-/* Some offset values */
-.row [class^='col-'],
-.row [class*=' col-'] {
-  float: left;
-  /* Keeps the elements in 1 row */
-  padding: 0 0.5rem; }
-
-/* Columns without the spacing */
-.row.no-space [class^='col-'],
-.row.no-space [class*=' col-'] {
-  padding: 0; }
-
-/* Ignore overflow in columns */
-/* .row.expand { DEPRECATED 0.5.5
-    -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default 
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Can be disabled to remove scroll bar 
-} */
-/* Only for divs with .expand so they can go past the parent div width */
-/* .row.expand [class^="col-"], DEPRECATED 0.5.5, no use
-.row.expand [class*=" col-"] {
-    -webkit-flex: none;
-    -ms-flex: none;
-    flex: none;
-} */
-/* Used for aligning controls next to each other */
-.row.has-controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
-
 /* Divider for multiple elements in a div */
 /* .divided > .fluid-container:not(.row),
 .divided > .row [class^="col-"], .divided > .row [class*=" col-"] { DEPRECATED 0.5.5
@@ -4813,124 +4784,119 @@ section {
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  /* Used to stretch the contents of div in level to fill */ }
+  .level .level-left {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    /* Start for left */
+    margin-right: 1rem; }
+  .level .level-right {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    /* End for right */ }
+  .level .level-item {
+    /* Centers items */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .level .level-content {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    text-align: left;
+    width: 100%; }
 
-.level-left {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -ms-grid-row-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  /* Start for left */
-  margin-right: 1rem; }
-
-.level-right {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -ms-grid-row-align: center;
-  align-items: center;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  /* End for right */ }
-
-.level-item {
-  /* Centers items */
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
-/* Used to stretch the contents of div in level to fill */
-.level-content {
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  text-align: left;
-  width: 100%; }
-
-/* Width CSS */
+/* Width/Height CSS */
 .w-10 {
-  width: 10%; }
+  width: 1 * 10%; }
+
+.h-10 {
+  height: 1 * 10%; }
 
 .w-20 {
-  width: 20%; }
+  width: 2 * 10%; }
+
+.h-20 {
+  height: 2 * 10%; }
 
 .w-30 {
-  width: 30%; }
+  width: 3 * 10%; }
+
+.h-30 {
+  height: 3 * 10%; }
 
 .w-40 {
-  width: 40%; }
+  width: 4 * 10%; }
+
+.h-40 {
+  height: 4 * 10%; }
 
 .w-50 {
-  width: 50%; }
+  width: 5 * 10%; }
+
+.h-50 {
+  height: 5 * 10%; }
 
 .w-60 {
-  width: 60%; }
+  width: 6 * 10%; }
+
+.h-60 {
+  height: 6 * 10%; }
 
 .w-70 {
-  width: 70%; }
+  width: 7 * 10%; }
+
+.h-70 {
+  height: 7 * 10%; }
 
 .w-80 {
-  width: 80%; }
+  width: 8 * 10%; }
+
+.h-80 {
+  height: 8 * 10%; }
 
 .w-90 {
-  width: 90%; }
+  width: 9 * 10%; }
+
+.h-90 {
+  height: 9 * 10%; }
 
 .w-100 {
-  width: 100%; }
+  width: 10 * 10%; }
+
+.h-100 {
+  height: 10 * 10%; }
 
 .w-auto {
   width: auto; }
-
-/* Height CSS */
-.h-10 {
-  height: 10%; }
-
-.h-20 {
-  height: 20%; }
-
-.h-30 {
-  height: 30%; }
-
-.h-40 {
-  height: 40%; }
-
-.h-50 {
-  height: 50%; }
-
-.h-60 {
-  height: 60%; }
-
-.h-70 {
-  height: 70%; }
-
-.h-80 {
-  height: 80%; }
-
-.h-90 {
-  height: 90%; }
-
-.h-100 {
-  height: 100%; }
 
 .h-auto {
   height: auto; }
@@ -4956,12 +4922,12 @@ section {
     width: 100%; }
   .row {
     margin-top: 0; }
-  .row [class^='col-']:not(.ignore-screen),
-  .row [class*=' col-']:not(.ignore-screen) {
-    /* Remove the grid structure for smaller screens */
-    width: 100%;
-    margin-left: 0;
-    padding: 0; }
+    .row [class^='col-']:not(.ignore-screen),
+    .row [class*=' col-']:not(.ignore-screen) {
+      /* Remove the grid structure for smaller screens */
+      width: 100%;
+      margin-left: 0;
+      padding: 0; }
   /* Dividers for mobile layout */
   .divided > .row [class^='col-'],
   .divided > .row [class*=' col-'] {
