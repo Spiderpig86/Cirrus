@@ -6,30 +6,19 @@ a {
     padding: 2px;
     text-decoration: none;
     transition: all 0.3s;
-}
 
-a:hover {
-    color: var(--cirrus-link-dark);
-    transition: all 0.3s;
-}
+    &:hover {
+        color: var(--cirrus-link-dark);
+        transition: all 0.3s;
+    }
 
-a:visited,
-a:hover,
-a:active {
-    backface-visibility: hidden;
-    text-decoration: none;
+    a.underline {
+        text-decoration: underline;
+    }
 }
 
 .subtitle a {
     padding: 0; /* Removes weird offset in subtitle links */
-}
-
-/* a.display-block { Deprecated 0.5.5
-    display: block;
-} */
-
-a.underline {
-    text-decoration: underline;
 }
 
 p a,
@@ -44,8 +33,9 @@ article a {
     display: inline;
 }
 
+/* Remove uneeded space since buttons have their own padding */
 a .btn,
 a button,
 [type='submit'] a {
-    margin-bottom: 0; /* Remove random excess space */
+    margin-bottom: 0;
 }
