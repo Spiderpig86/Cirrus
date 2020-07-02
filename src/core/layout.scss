@@ -409,19 +409,19 @@ section {
 }
 
 /* Width/Height CSS */
-@for $i from 1 through 10 {
-    .w-#{$i * 10} {
-        width: #{$i} * 10%;
+@for $value from 1 through 10 {
+    .w-#{$value * 10} {
+        width: percentage($value / 10);
     }
 
-    .h-#{$i * 10} {
-        height: #{$i} * 10%;
+    .h-#{$value * 10} {
+        height: percentage($value / 10);
     }
 }
 
 .w-auto {
     width: auto;
-}
+}   
 
 .h-auto {
     height: auto;
