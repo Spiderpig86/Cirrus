@@ -51,6 +51,14 @@ button,
         opacity: 0.5;
     }
 
+    &.outline {
+        --btn-color: transparent;
+
+        &:hover {
+            --btn-color: #{$gray-200};
+        }
+    }
+
     /* Loading Button*/
     /* Make the loading circle, if present, white when button is active */
     &.loading:active::after {
