@@ -138,7 +138,7 @@ button,
             --btn-color: rgba(0, 0, 0, 0.1);
         }
         &.outline {
-            --btn-color: var(--cirrus-dark);
+            color: var(--cirrus-dark);
         }
     }
 
