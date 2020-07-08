@@ -329,7 +329,9 @@ button,
       -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
       transform: translateX(-50%) translateY(-50%) rotate(45deg);
       -webkit-transform-origin: center center;
-      transform-origin: center center; }
+      transform-origin: center center;
+      height: 2px;
+      width: 50%; }
     button.btn-close::after,
     .btn.btn-close::after,
     [type='submit'].btn-close::after {
@@ -342,7 +344,9 @@ button,
       -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
       transform: translateX(-50%) translateY(-50%) rotate(45deg);
       -webkit-transform-origin: center center;
-      transform-origin: center center; }
+      transform-origin: center center;
+      height: 50%;
+      width: 2px; }
   button.btn-transparent,
   .btn.btn-transparent,
   [type='submit'].btn-transparent {

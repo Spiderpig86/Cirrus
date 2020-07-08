@@ -113,6 +113,8 @@ button,
             transform: translateX(-50%) translateY(-50%) rotate(45deg);
             -webkit-transform-origin: center center;
             transform-origin: center center;
+            height: $height;
+            width: $width;
         }
 
         &::before {
