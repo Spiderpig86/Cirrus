@@ -12,7 +12,7 @@ $spacing-system: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32;
     .mr-#{$size}, .mx-#{$size} { margin-right: calc(var(--space-size) * #{$size}) !important; }
 
     /* Spacing */
-    .p-#{$size} { margin: calc(var(--space-size) * #{$size}) !important; }
+    .p-#{$size} { padding: calc(var(--space-size) * #{$size}) !important; }
 
     .pt-#{$size}, .py-#{$size} { padding-top: calc(var(--space-size) * #{$size}) !important; }
     .pb-#{$size}, .py-#{$size} { padding-bottom: calc(var(--space-size) * #{$size}) !important; }
