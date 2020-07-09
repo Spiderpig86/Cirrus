@@ -1,3 +1,5 @@
+@import './theme.scss';
+
 /* TABLE */
 
 .table {
@@ -6,105 +8,107 @@
     border-collapse: collapse; /* Allows us to set 0 margin in table cells */
     border-spacing: 0;
     text-align: center; /* Text center by default */
-}
 
-.table td,
-.table th {
-    border: 1px solid rgba(219, 219, 219, 0.5);
-    border-width: 0 0 1px;
-    padding: 0.75rem;
-    vertical-align: top;
-    text-align: inherit;
-    margin: 0;
-}
+    td,
+    th {
+        border: 1px solid transparentize($gray-300, 0.5);
+        border-width: 0 0 1px;
+        padding: 0.75rem;
+        vertical-align: top;
+        text-align: inherit;
+        margin: 0;
+    }
 
-.table tr {
-    transition: all 0.3s;
-}
+    tr {
+        transition: all 0.3s;
+        
+        &.selected {
+            /* Style a selected row */
+            background-color: var(--cirrus-primary);
+            color: #fff;
+        }
+    }
 
-.table caption {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    color: #6c757d;
-    text-align: left;
-    caption-side: bottom;
-}
+    .table caption {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        color: $gray-300;
+        text-align: left;
+        caption-side: bottom;
+    }
 
-.table tr:hover,
-.table.striped tbody tr:nth-child(even):hover {
-    background-color: rgba(216, 216, 216, 0.15);
-}
+    tr:not(.selected):hover,
+    &.striped tbody tr:not(.selected):nth-child(even):hover {
+        background-color: transparentize($gray-300, 0.85);
+    }
 
-/* Thicker border for table header */
-.table thead th,
-.table thead {
-    border-bottom: 2px solid rgba(219, 219, 219, 0.49);
-}
+    /* Thicker border for table header */
+    thead th,
+    thead {
+        border-bottom: 2px solid transparentize($gray-300, 0.5);
+    }
 
-.table.bordered thead th,
-.table.bordered thead {
-    border-bottom: 1px solid rgba(219, 219, 219, 0.5);
-}
+    thead th,
+    tfoot th {
+        padding: 1rem;
+    }
 
-.table thead th,
-.table tfoot th {
-    padding: 1rem;
-}
+    tfoot th {
+        border-top: 2px solid transparentize($gray-300, 0.5);
+        border-bottom: none;
+    }
 
-.table tfoot th {
-    border-top: 2px solid rgba(219, 219, 219, 0.5);
-    border-bottom: none;
-}
+    /* CUSTOM STYLES */
+    /* All borders */
+    &.bordered {
+        thead th,
+        thead {
+            border-bottom: 1px solid transparentize($gray-300, 0.5);
+        }
 
-/* CUSTOM STYLES */
-/* All borders */
-.table.bordered td,
-.table.bordered th {
-    border: 1px solid rgba(219, 219, 219, 0.5);
-}
+        td,
+        th {
+            border: 1px solid rgba(219, 219, 219, 0.5);
+        }
 
-.table.bordered thead td,
-.table.borderd thead {
-    border-width: 1px;
-}
+        thead td,
+        thead {
+            border-width: 1px;
+        }
+    }
 
-/* Striped table */
-.table.striped tbody tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.05);
-}
+    /* Striped table */
+    &.striped tbody tr:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
 
-/* Decrease padding */
-.table.small td,
-.table.small th {
-    padding: 0.25rem 0.75rem;
-}
+    /* Decrease padding */
+    &.small td,
+    &.small th {
+        padding: 0.25rem 0.75rem;
+    }
 
-/* Fixed title table */
-.table.fixed-head thead {
-    position: relative;
-    display: block;
-}
+    /* Fixed title table */
+    &.fixed-head thead {
+        position: relative;
+        display: block;
+    }
+    
+    &.fixed-head tbody {
+        height: 200px; /* Set the height you want */
+        display: block; /* Needed */
+        overflow: auto; /* Shows scrollbars */
+    }
+    
+    &.fixed-head tr {
+        display: table;
+        width: 100%; /* Forces row to span container */
+    }
 
-.table.fixed-head tbody {
-    height: 200px; /* Set the height you want */
-    display: block; /* Needed */
-    overflow: auto; /* Shows scrollbars */
-}
-
-.table.fixed-head tr {
-    display: table;
-    width: 100%; /* Forces row to span container */
-}
-
-.table tr.selected {
-    /* Style a selected row */
-    background-color: var(--cirrus-primary);
-    color: #fff;
-}
-
-/* Borderless Table (for inner cells) */
-.table.borderless thead th,
-.table.borderless th,
-.table.borderless td {
-    border: none;
+    /* Borderless Table (for inner cells) */
+    &.borderless thead th,
+    &.borderless th,
+    &.borderless td {
+        border: none;
+    }
 }

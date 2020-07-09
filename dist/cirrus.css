@@ -3068,7 +3068,7 @@ ul {
   ul .menu-title:not(:last-child) {
     margin-top: 1rem; }
   ul .menu-item a {
-    color: #555;
+    color: #495057;
     display: block;
     padding: 0.5em 0.75em;
     border-radius: 3px;
@@ -3107,9 +3107,11 @@ ul {
   ul .menu-item.selected .menu-addon {
     color: #fff; }
   ul .menu-item ul {
-    border-left: 1px solid #dbdbdb;
+    border-left: 1px solid #dee2e6;
     margin: 0.75rem;
     padding-left: 0.75rem; }
+  ul li.menu-item:last-child {
+    margin-bottom: 0; }
   ul .divider {
     border-top: 0.1rem solid #e9ecef;
     height: 0.1rem;
@@ -3835,6 +3837,58 @@ video.video-fullscreen {
 .pr-32, .px-32 {
   padding-right: calc(var(--space-size) * 32) !important; }
 
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Color scheme for Cirrus */
+/* TODO: Move to dimensions.scss */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 /* TABLE */
 .table {
   margin-bottom: 1.5rem;
@@ -3843,95 +3897,78 @@ video.video-fullscreen {
   /* Allows us to set 0 margin in table cells */
   border-spacing: 0;
   text-align: center;
-  /* Text center by default */ }
-
-.table td,
-.table th {
-  border: 1px solid rgba(219, 219, 219, 0.5);
-  border-width: 0 0 1px;
-  padding: 0.75rem;
-  vertical-align: top;
-  text-align: inherit;
-  margin: 0; }
-
-.table tr {
-  transition: all 0.3s; }
-
-.table caption {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  color: #6c757d;
-  text-align: left;
-  caption-side: bottom; }
-
-.table tr:hover,
-.table.striped tbody tr:nth-child(even):hover {
-  background-color: rgba(216, 216, 216, 0.15); }
-
-/* Thicker border for table header */
-.table thead th,
-.table thead {
-  border-bottom: 2px solid rgba(219, 219, 219, 0.49); }
-
-.table.bordered thead th,
-.table.bordered thead {
-  border-bottom: 1px solid rgba(219, 219, 219, 0.5); }
-
-.table thead th,
-.table tfoot th {
-  padding: 1rem; }
-
-.table tfoot th {
-  border-top: 2px solid rgba(219, 219, 219, 0.5);
-  border-bottom: none; }
-
-/* CUSTOM STYLES */
-/* All borders */
-.table.bordered td,
-.table.bordered th {
-  border: 1px solid rgba(219, 219, 219, 0.5); }
-
-.table.bordered thead td,
-.table.borderd thead {
-  border-width: 1px; }
-
-/* Striped table */
-.table.striped tbody tr:nth-child(even) {
-  background-color: rgba(0, 0, 0, 0.05); }
-
-/* Decrease padding */
-.table.small td,
-.table.small th {
-  padding: 0.25rem 0.75rem; }
-
-/* Fixed title table */
-.table.fixed-head thead {
-  position: relative;
-  display: block; }
-
-.table.fixed-head tbody {
-  height: 200px;
-  /* Set the height you want */
-  display: block;
-  /* Needed */
-  overflow: auto;
-  /* Shows scrollbars */ }
-
-.table.fixed-head tr {
-  display: table;
-  width: 100%;
-  /* Forces row to span container */ }
-
-.table tr.selected {
-  /* Style a selected row */
-  background-color: var(--cirrus-primary);
-  color: #fff; }
-
-/* Borderless Table (for inner cells) */
-.table.borderless thead th,
-.table.borderless th,
-.table.borderless td {
-  border: none; }
+  /* Text center by default */
+  /* Thicker border for table header */
+  /* CUSTOM STYLES */
+  /* All borders */
+  /* Striped table */
+  /* Decrease padding */
+  /* Fixed title table */
+  /* Borderless Table (for inner cells) */ }
+  .table td,
+  .table th {
+    border: 1px solid rgba(222, 226, 230, 0.5);
+    border-width: 0 0 1px;
+    padding: 0.75rem;
+    vertical-align: top;
+    text-align: inherit;
+    margin: 0; }
+  .table tr {
+    transition: all 0.3s; }
+    .table tr.selected {
+      /* Style a selected row */
+      background-color: var(--cirrus-primary);
+      color: #fff; }
+  .table .table caption {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: #dee2e6;
+    text-align: left;
+    caption-side: bottom; }
+  .table tr:not(.selected):hover,
+  .table.striped tbody tr:not(.selected):nth-child(even):hover {
+    background-color: rgba(222, 226, 230, 0.15); }
+  .table thead th,
+  .table thead {
+    border-bottom: 2px solid rgba(222, 226, 230, 0.5); }
+  .table thead th,
+  .table tfoot th {
+    padding: 1rem; }
+  .table tfoot th {
+    border-top: 2px solid rgba(222, 226, 230, 0.5);
+    border-bottom: none; }
+  .table.bordered thead th,
+  .table.bordered thead {
+    border-bottom: 1px solid rgba(222, 226, 230, 0.5); }
+  .table.bordered td,
+  .table.bordered th {
+    border: 1px solid rgba(219, 219, 219, 0.5); }
+  .table.bordered thead td,
+  .table.bordered thead {
+    border-width: 1px; }
+  .table.striped tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05); }
+  .table.small td,
+  .table.small th {
+    padding: 0.25rem 0.75rem; }
+  .table.fixed-head thead {
+    position: relative;
+    display: block; }
+  .table.fixed-head tbody {
+    height: 200px;
+    /* Set the height you want */
+    display: block;
+    /* Needed */
+    overflow: auto;
+    /* Shows scrollbars */ }
+  .table.fixed-head tr {
+    display: table;
+    width: 100%;
+    /* Forces row to span container */ }
+  .table.borderless thead th,
+  .table.borderless th,
+  .table.borderless td {
+    border: none; }
 
 /*
   Functions

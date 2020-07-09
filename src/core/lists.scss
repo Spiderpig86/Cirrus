@@ -82,7 +82,7 @@ ul {
 
     /* Style menu items */
     .menu-item a {
-        color: #555;
+        color: $gray-700;
         display: block;
         padding: 0.5em 0.75em;
         border-radius: 3px;
@@ -139,9 +139,13 @@ ul {
 
     /* Style sub menus inside a menu */
     .menu-item ul {
-        border-left: 1px solid #dbdbdb;
+        border-left: 1px solid $gray-300;
         margin: 0.75rem;
         padding-left: 0.75rem;
+    }
+    
+    li.menu-item:last-child {
+        margin-bottom: 0;
     }
 
     /* Menu item divider */
