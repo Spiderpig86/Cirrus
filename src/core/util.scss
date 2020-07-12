@@ -1,64 +1,64 @@
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
 .u-hidden {
-  display: none !important;
+    display: none !important;
 }
 
 .u-block {
-  display: block !important;
+    display: block !important;
 }
 
 .u-inline {
-  display: inline !important;
+    display: inline !important;
 }
 
 .u-inline-block {
-  display: inline-block !important;
+    display: inline-block !important;
 }
 
 .u-flex {
-  display: flex !important;
+    display: flex !important;
 }
 
 .u-flex.u-flex-column {
-  flex-direction: column !important;
+    flex-direction: column !important;
 }
 
 .u-flex.u-flex-row {
-  flex-direction: row !important;
+    flex-direction: row !important;
 }
 
 .u-inline-flex {
-  display: -ms-inline-flexbox !important;
-  display: inline-flex !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
 }
 
 .u-table {
-  display: table !important;
+    display: table !important;
 }
 
 .u-table-row {
-  display: table-row !important;
+    display: table-row !important;
 }
 
 .u-position-static {
-  position: static !important;
+    position: static !important;
 }
 
 .u-position-relative {
-  position: relative !important;
+    position: relative !important;
 }
 
 .u-position-absolute {
-  position: absolute !important;
+    position: absolute !important;
 }
 
 .u-position-fixed {
-  position: fixed !important;
+    position: fixed !important;
 }
 
 .u-position-sticky {
-  position: sticky !important;
+    position: sticky !important;
 }
 
 /*
@@ -66,135 +66,135 @@
    other elements are not blocked by children.
 */
 .u-clearfix:after {
-  clear: both !important;
-  content: " ";
-  display: table !important;
+    clear: both !important;
+    content: ' ';
+    display: table !important;
 }
 
 /* This is mainly to keep elements from overlapping when using floats */
 .u-clear-left {
-  clear: left !important;
+    clear: left !important;
 }
 
 .u-clear-right {
-  clear: right !important;
+    clear: right !important;
 }
 
 .u-clear-both {
-  clear: both !important;
+    clear: both !important;
 }
 
 .u-pull-left {
-  float: left !important;
+    float: left !important;
 }
 
 .u-pull-right {
-  float: right !important;
+    float: right !important;
 }
 
 .u-text-center {
-  text-align: center !important;
+    text-align: center !important;
 }
 
 .u-text-justify {
-  text-align: justify !important;
+    text-align: justify !important;
 }
 
 .u-text-ellipsis {
-  text-overflow: ellipsis;
+    text-overflow: ellipsis;
 }
 
 .u-text-break {
-  hyphens: auto;
-  word-break: break-word;
-  word-wrap: break-word;
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
 }
 
 /* Center element - best used for hero bodies or text */
 .u-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0 auto;
-  flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .u-center-alt,
 .u-center-alt:hover,
 .u-center-alt:active {
-  /* If flexbox method fails, this works for elements with unknown dimensions */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+    /* If flexbox method fails, this works for elements with unknown dimensions */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .u-vertical-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
 }
 
 .u-horizontal-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .u-overlay {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
 }
 
 .u-hide-overflow {
-  overflow: hidden !important;
-  overflow-x: hidden;
-  overflow-y: hidden;
+    overflow: hidden !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .u-text-center {
-  text-align: center !important;
+    text-align: center !important;
 }
 
 .u-text-left {
-  text-align: left !important;
+    text-align: left !important;
 }
 
 .u-text-right {
-  text-align: right !important;
+    text-align: right !important;
 }
 
 .u-hide {
-  display: none !important;
+    display: none !important;
 }
 
 .u-disabled {
-  cursor: not-allowed !important;
+    cursor: not-allowed !important;
 }
 
 .u-unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 /* Deprecated 0.5.6 */
@@ -227,60 +227,60 @@
 */
 
 .u-margin-auto {
-  margin: 0 auto !important;
+    margin: 0 auto !important;
 }
 
 /* Round the corners of the element */
 .u-round {
-  border-radius: 0.1rem;
+    border-radius: 0.1rem;
 }
 
 /* Turns element into a circle */
 .u-circle {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 /* Remove outline or drop shadow when element is focused */
 .u-no-shadow {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 /* Responsiveness and Element Hiding */
 
 /* Do the actual balancing only on larger screens */
 @media screen and (min-width: 769px) {
-  .level,
-  .level-left,
-  .level-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+    .level,
+    .level-left,
+    .level-right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
 }
 
 /* Hide elements based on screen size */
 @media screen and (max-width: 768px) {
-  .u-hide-mobile {
-    display: none !important;
-  }
+    .u-hide-mobile {
+        display: none !important;
+    }
 }
 
 @media screen and (min-width: 768px) {
-  /* Hide on devices that are tablets or larger */
-  .u-hide-tablet {
-    display: none !important;
-  }
+    /* Hide on devices that are tablets or larger */
+    .u-hide-tablet {
+        display: none !important;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  .u-hide-tablet-only {
-    display: none !important;
-  }
+    .u-hide-tablet-only {
+        display: none !important;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-  /* Hide element on laptops, desktops, etc */
-  .u-hide-desktop {
-    display: none !important;
-  }
+    /* Hide element on laptops, desktops, etc */
+    .u-hide-desktop {
+        display: none !important;
+    }
 }

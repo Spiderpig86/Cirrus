@@ -1,4 +1,5 @@
 @import "../utils/_functions";
+@import "../utils/_size";
 
 /* Color scheme for Cirrus */
 $cirrus-fg: #374054;
@@ -41,15 +42,6 @@ $toast-primary-bg: rgba(49, 59, 80, 0.9);
 
 $animation-duration: .2s;
 $focus-opacity: 0.55;
-
-/* TODO: Move to dimensions.scss */
-$space-size: 0.5rem;
-
-$font-size-xs: .7rem;
-$font-size-s: .85rem;
-$font-size-m: 1rem;
-$font-size-l: 1.35rem;
-$font-size-xl: 1.75rem;
 
 /* v2 Colors */
 $pink-100: #F8E7F1;

@@ -103,8 +103,10 @@ fieldset {
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 :root {
   /* v1 Colors */
@@ -161,8 +163,10 @@ fieldset {
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 :root {
   /* v1 Colors */
@@ -738,8 +742,10 @@ button,
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 :root {
   /* v1 Colors */
@@ -829,8 +835,10 @@ pre > code {
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
@@ -1150,8 +1158,10 @@ kbd {
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 :root {
   /* v1 Colors */
@@ -1245,8 +1255,10 @@ kbd {
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 :root {
   /* v1 Colors */
@@ -1297,8 +1309,10 @@ kbd {
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 :root {
   /* v1 Colors */
@@ -1891,8 +1905,10 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 :root {
   /* v1 Colors */
@@ -1981,8 +1997,10 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 :root {
   /* v1 Colors */
@@ -2459,8 +2477,10 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 :root {
   /* v1 Colors */
@@ -2959,8 +2979,10 @@ a button,
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 :root {
   /* v1 Colors */
@@ -3388,7 +3410,9 @@ video.video-fullscreen {
 .img-contain {
   object-fit: contain; }
 
-/* Margin */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Margin */
 .m-0 {
   margin: calc(var(--space-size) * 0) !important; }
@@ -3843,8 +3867,10 @@ video.video-fullscreen {
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 :root {
   /* v1 Colors */
@@ -3976,8 +4002,10 @@ video.video-fullscreen {
 /*
     Converts a given hex value to RGB.
 */
+/* Spacing */
+/* Fonts */
+/* Media Queries */
 /* Color scheme for Cirrus */
-/* TODO: Move to dimensions.scss */
 /* v2 Colors */
 :root {
   /* v1 Colors */
@@ -4076,7 +4104,7 @@ video.video-fullscreen {
 */
 .u-clearfix:after {
   clear: both !important;
-  content: " ";
+  content: ' ';
   display: table !important; }
 
 /* This is mainly to keep elements from overlapping when using floats */
