@@ -4282,7 +4282,62 @@ video.video-fullscreen {
   .u-hide-desktop {
     display: none !important; } }
 
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Spacing */
+/* Fonts */
+/* Media Queries */
+/* Color scheme for Cirrus */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 /* ANIMATIONS */
+/* Keyframes */
 /* Spinning loading animation */
 @-webkit-keyframes loading {
   from {
@@ -4296,61 +4351,6 @@ video.video-fullscreen {
   to {
     transform: rotate(359deg); } }
 
-/* Hover animation */
-.hover-grow {
-  /* Mouse leave */
-  transition-duration: 0.32s; }
-
-.hover-grow:hover {
-  /* Mouse enter */
-  transform: scale(1.1);
-  transition-duration: 0.08s; }
-
-/* Loading button position relatively for loading spinner location */
-.animated.loading {
-  display: block;
-  position: relative; }
-
-/* Loading Spinner, align center by default */
-.animated.loading::after {
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  content: "";
-  display: block;
-  height: 1rem;
-  width: 1rem;
-  left: calc(50% - (1em / 1.25));
-  top: calc(50% - (1em / 1.35));
-  position: absolute;
-  -webkit-animation: loading 500ms infinite linear;
-  animation: loading 500ms infinite linear; }
-
-.animated.loading.loading-white::after {
-  border-left-color: #fff;
-  border-bottom-color: #fff; }
-
-/* Align spinner left */
-.animated.loading.loading-left::after {
-  left: 2rem;
-  right: auto; }
-
-.animated.loading.loading-left {
-  padding-left: 4rem; }
-
-/* Align spinner right */
-.animated.loading.loading-right::after {
-  left: auto;
-  right: 2rem; }
-
-.animated.loading.loading-right {
-  padding-right: 4rem; }
-
-/* Hide text in loading button */
-.animated.loading.hide-text {
-  color: transparent !important; }
-
 /* Heart animation */
 @-webkit-keyframes pound {
   to {
@@ -4359,11 +4359,6 @@ video.video-fullscreen {
 @keyframes pound {
   to {
     transform: scale(1.1); } }
-
-.animated.pulse {
-  animation: pound 0.35s infinite alternate;
-  -webkit-animation: pound 0.35s infinite alternate;
-  vertical-align: baseline; }
 
 /* Bounce animations */
 @-webkit-keyframes bounce {
@@ -4418,12 +4413,6 @@ video.video-fullscreen {
     -webkit-transform: translate3d(0, -4px, 0);
     transform: translate3d(0, -4px, 0); } }
 
-.animated.bounce {
-  animation-name: bounce;
-  -webkit-animation-name: bounce;
-  transform-origin: center bottom;
-  -webkit-transform-origin: center bottom; }
-
 @keyframes bounceIn {
   from,
   20%,
@@ -4448,9 +4437,6 @@ video.video-fullscreen {
     opacity: 1;
     transform: scale3d(1, 1, 1); } }
 
-.animated.bounceIn {
-  animation-name: bounceIn; }
-
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0; }
@@ -4463,27 +4449,80 @@ video.video-fullscreen {
   to {
     opacity: 1; } }
 
-.animated.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn; }
+/* Hover animation */
+.hover-grow {
+  /* Mouse leave */
+  transition-duration: 0.32s; }
+  .hover-grow:hover {
+    /* Mouse enter */
+    transform: scale(1.1);
+    transition-duration: 0.08s; }
 
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-
-.animated.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite; }
-
-.animated.infinite.alternate {
-  animation-direction: alternate; }
-
-.animated.paused {
-  -webkit-animation-play-state: paused !important;
-  /* Safari 4.0 - 8.0 */
-  animation-play-state: paused !important; }
+  animation-fill-mode: both;
+  /* Loading button position relatively for loading spinner location */ }
+  .animated.loading {
+    display: block;
+    position: relative;
+    /* Loading Spinner, align center by default */
+    /* Hide text in loading button */ }
+    .animated.loading::after {
+      border: 2px solid #ced4da;
+      border-radius: 50%;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      content: '';
+      display: block;
+      height: 1rem;
+      width: 1rem;
+      left: calc(50% - (1em / 1.25));
+      top: calc(50% - (1em / 1.35));
+      position: absolute;
+      -webkit-animation: loading 500ms infinite linear;
+      animation: loading 500ms infinite linear; }
+    .animated.loading.loading-white::after {
+      border-left-color: #fff;
+      border-bottom-color: #fff; }
+    .animated.loading.loading-left {
+      padding-left: 4rem;
+      /* Align spinner left */ }
+      .animated.loading.loading-left::after {
+        left: 2rem;
+        right: auto; }
+    .animated.loading.loading-right {
+      padding-right: 4rem;
+      /* Align spinner right */ }
+      .animated.loading.loading-right::after {
+        left: auto;
+        right: 2rem; }
+    .animated.loading.hide-text {
+      color: transparent !important; }
+  .animated.pulse {
+    animation: pound 0.35s infinite alternate;
+    -webkit-animation: pound 0.35s infinite alternate;
+    vertical-align: baseline; }
+  .animated.bounce {
+    animation-name: bounce;
+    -webkit-animation-name: bounce;
+    transform-origin: center bottom;
+    -webkit-transform-origin: center bottom; }
+  .animated.bounceIn {
+    animation-name: bounceIn; }
+  .animated.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn; }
+  .animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+    .animated.infinite.alternate {
+      animation-direction: alternate; }
+  .animated.paused {
+    -webkit-animation-play-state: paused !important;
+    /* Safari 4.0 - 8.0 */
+    animation-play-state: paused !important; }
 
 /* Avatar */
 .avatar {
