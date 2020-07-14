@@ -4530,49 +4530,39 @@ video.video-fullscreen {
   position: relative;
   display: block;
   margin: auto;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: lighter;
   width: 3.2rem;
   height: 3.2rem;
   background-color: var(--cirrus-primary);
-  overflow: hidden; }
-
-/* Draw text on image just like in Gmail */
-.avatar::before {
-  content: attr(data-text);
-  color: #fff;
-  /* Removed z-index: 1, makes text blurry */
-  left: 50%;
-  top: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); }
-
-.avatar.avatar--xsmall {
-  font-size: 0.8rem;
-  width: 1.6rem;
-  height: 1.6rem; }
-
-.avatar.avatar--small {
-  font-size: 1rem;
-  height: 2.4rem;
-  width: 2.4rem; }
-
-.avatar.avatar--large {
-  font-size: 2rem;
-  height: 4.8rem;
-  width: 4.8rem; }
-
-.avatar.avatar--xlarge {
-  font-size: 2.6rem;
-  height: 6.4rem;
-  width: 6.4rem; }
-
-.avatar img.padded {
-  padding: 0.5rem;
-  width: 100%; }
+  overflow: hidden;
+  /* Draw text on image just like in Gmail */ }
+  .avatar::before {
+    content: attr(data-text);
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); }
+  .avatar.avatar--xsmall {
+    font-size: 0.8rem;
+    width: 1.6rem;
+    height: 1.6rem; }
+  .avatar.avatar--small {
+    font-size: 1rem;
+    width: 2.4rem;
+    height: 2.4rem; }
+  .avatar.avatar--large {
+    font-size: 2rem;
+    width: 4.8rem;
+    height: 4.8rem; }
+  .avatar.avatar--xlarge {
+    font-size: 3rem;
+    width: 6.4rem;
+    height: 6.4rem; }
 
 /* CARDS */
 .card {
