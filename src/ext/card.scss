@@ -1,208 +1,178 @@
-/* CARDS */
+@import '../core/theme.scss';
 
+/* CARDS */
 .card {
     background-color: #fff;
     border-radius: 5px;
     position: relative;
     overflow: hidden;
-    transition: all .3s;
+    transition: all 0.3s;
     backface-visibility: hidden;
-    box-shadow: 0px 5px 12px 0 rgba(42,51,83,.12), 0px 0px 5px rgba(0,0,0,.06);
+    box-shadow: 0px 5px 12px 0 rgba(42, 51, 83, 0.12), 0px 0px 5px rgba(0, 0, 0, 0.06);
     margin-bottom: 1rem;
-}
 
-.card:hover {
-    transition: all .3s;
-    box-shadow: 0px 8px 20px 0 rgba(42,51,83,.12), 0 5px 5px rgba(0,0,0,.06);
-}
+    &:hover {
+        transition: all 0.3s;
+        box-shadow: 0px 8px 20px 0 rgba(42, 51, 83, 0.12), 0 5px 5px rgba(0, 0, 0, 0.06);
 
-.slide-up:hover .card-image {
-    transform: translateY(-40px);
-}
+        .card-image::after {
+            opacity: 0;
+        }
 
-.card:hover .card-image::after {
-    opacity: 0;
-}
+        .mobile-title {
+            margin-top: -7rem;
+            transition: all 0.3s ease-in-out;
+        }
 
-.card-image {
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: 5px 5px 0 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
+        .card-body {
+            opacity: 1;
+        }
+    }
 
-    transition: all 0.3s ease-in-out;
-}
+    /* Allow for the cards to have the same height when u-flex is used on the card */
+    &.u-flex .content {
+        flex-grow: 1;
+    }
 
-.card-image::after {
-    content: '';
-    display: block;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.1);
-    top: 0;
-    left: 0;
-    right: 0;
-    -webkit-transition: all 500ms;
-    transition: all 500ms;
-    bottom: 0;
-}
+    p {
+        margin: 1rem 0;
+    }
 
-.card-container {
-    display: block;
-    position: relative;
-    height: 40%;
-    min-height: 332px; /* So it appears in html5 standards mode */
-}
+    .slide-up:hover .card-image {
+        transform: translateY(-40px);
+    }
 
-.card .title-container .title,
-.card .title-container .subtitle {
-    color: #fff;
-    margin: 1rem auto;
-}
+    .card-image {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 5px 5px 0 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
 
-.card .title-container {
-    position: absolute;
-    bottom: 1rem;
-    width: 100%;
-    padding: 0 1rem;
-}
+        transition: all 0.3s ease-in-out;
 
-.card .title-container .title {
-    font-weight: 300;
-    font-size: 1.5rem;
-    margin-bottom: 0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-}
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.1);
+            top: 0;
+            left: 0;
+            right: 0;
+            -webkit-transition: all 500ms;
+            transition: all 500ms;
+            bottom: 0;
+        }
+    }
 
-/* Allow for the cards to have the same height when u-flex is used on the card */
-.card.u-flex .content {
-    flex-grow: 1;
-}
+    .card-container {
+        display: block;
+        position: relative;
+        height: 40%;
+        min-height: 332px; /* So it appears in html5 standards mode */
+    }
 
-.card .action-bar {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    padding: 0.5rem;
-    border-top: 1px solid #e0e0e0;
-    box-sizing: border-box;
-    -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-    transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+    .title-container {
+        position: absolute;
+        bottom: 1rem;
+        width: 100%;
+        padding: 0 1rem;
 
-/* Add some padding to the buttons */
-.card .action-bar button,
-.card .action-bar .btn,
-.card .action-bar [type='submit'] {
-    margin: 0 0.5rem;
-}
+        .title,
+        .subtitle {
+            color: #fff;
+            margin: 1rem auto;
+        }
 
-.card .action-bar + .card-footer {
-    padding: 1rem 0;
-    border-top: 1px solid #e0e0e0;
-}
+        .title {
+            font-weight: 300;
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        }
+    }
 
-.card button,
-.card .btn {
-    display: inline-block;
-    border-color: transparent;
-}
+    .action-bar {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        padding: 0.5rem;
+        margin: 0;
+        border-top: 1px solid $gray-200;
+        box-sizing: border-box;
+        -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
-.card button:hover,
-.card .btn:hover {
-    -webkit-transform: none;
-    transform: none;
-}
+        /* Add some padding to the buttons */
+        button,
+        .btn,
+        [type='submit'] {
+            margin: 0 0.5rem;
+        }
 
-.card button:focus,
-.card .btn:focus {
-    -webkit-transform: none;
-    transform: none;
-}
+        & + .card-footer {
+            padding: 1rem 0;
+            border-top: 1px solid $gray-200;
+        }
+    }
 
-/* More card components in second example */
-.mobile-title {
-    position: absolute;
-    left: 0;
-    background-color: var(--cirrus-bg);
-    -moz-transition: .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    transition: .3s ease-in-out;
-    width: 100%;
-    padding: 2rem 0 0 0;
-    backface-visibility: hidden;
-}
+    /* More card components in second example */
+    .mobile-title {
+        position: absolute;
+        left: 0;
+        background-color: var(--cirrus-bg);
+        -moz-transition: 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+        width: 100%;
+        padding: 2rem 0 0 0;
+        backface-visibility: hidden;
+    }
 
-.card:hover .mobile-title {
-    margin-top: -7rem;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
+    .card-body {
+        opacity: 0;
+        transition: all var(--animation-duration) ease-in-out;
+    }
 
-    transition: all 0.3s ease-in-out;
-}
+    .card-footer {
+        position: relative;
+        font-size: 0.75rem;
+        color: $gray-600;
+    }
 
-.card:hover .card-body {
-    opacity: 1;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-
-    transition: all 0.3s ease-in-out;
-}
-
-.card-body {
-    opacity: 0;
-    -webkit-transition: all var(--animation-duration) ease-in-out;
-    -moz-transition: all var(--animation-duration) ease-in-out;
-    -ms-transition: all var(--animation-duration) ease-in-out;
-
-    transition: all var(--animation-duration) ease-in-out;
-}
-
-.card-footer {
-    position: relative;
-    font-size: 0.75rem;
-    color: #9fa5a8;
-}
-
-.card p {
-    margin: 1rem 0;
-    /*max-height: 8rem; /* Prevents ridiculously looking cards */
-}
-
-/*
+    /*
     NOTE: To have cards with the same height, place the card class with col-x classes and have the parent have fluid-container.
 */
 
-/* Card Title Bar */
-.card-head {
-    align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    display: flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    border-bottom: 1px solid #e0e0e0;
-}
+    /* Card Title Bar */
+    .card-head {
+        align-items: stretch;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        border-bottom: 1px solid $gray-200;
+    }
 
-.card-head-title {
-    align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    font-weight: 700;
-    padding: 0 1rem;
+    .card-head-title {
+        align-items: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        font-weight: 700;
+        padding: 0 1rem;
+    }
 }

@@ -4563,6 +4563,63 @@ video.video-fullscreen {
     font-size: 3rem;
     width: 6.4rem;
     height: 6.4rem; }
+  .avatar img.padded {
+    padding: 0.5rem;
+    width: 100%; }
+
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Spacing */
+/* Fonts */
+/* Media Queries */
+/* Color scheme for Cirrus */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
 
 /* CARDS */
 .card {
@@ -4570,178 +4627,132 @@ video.video-fullscreen {
   border-radius: 5px;
   position: relative;
   overflow: hidden;
-  transition: all .3s;
+  transition: all 0.3s;
   backface-visibility: hidden;
   box-shadow: 0px 5px 12px 0 rgba(42, 51, 83, 0.12), 0px 0px 5px rgba(0, 0, 0, 0.06);
-  margin-bottom: 1rem; }
-
-.card:hover {
-  transition: all .3s;
-  box-shadow: 0px 8px 20px 0 rgba(42, 51, 83, 0.12), 0 5px 5px rgba(0, 0, 0, 0.06); }
-
-.slide-up:hover .card-image {
-  transform: translateY(-40px); }
-
-.card:hover .card-image::after {
-  opacity: 0; }
-
-.card-image {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  border-radius: 5px 5px 0 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
-
-.card-image::after {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
-  top: 0;
-  left: 0;
-  right: 0;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  bottom: 0; }
-
-.card-container {
-  display: block;
-  position: relative;
-  height: 40%;
-  min-height: 332px;
-  /* So it appears in html5 standards mode */ }
-
-.card .title-container .title,
-.card .title-container .subtitle {
-  color: #fff;
-  margin: 1rem auto; }
-
-.card .title-container {
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
-  padding: 0 1rem; }
-
-.card .title-container .title {
-  font-weight: 300;
-  font-size: 1.5rem;
-  margin-bottom: 0;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); }
-
-/* Allow for the cards to have the same height when u-flex is used on the card */
-.card.u-flex .content {
-  flex-grow: 1; }
-
-.card .action-bar {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  padding: 0.5rem;
-  border-top: 1px solid #e0e0e0;
-  box-sizing: border-box;
-  -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1); }
-
-/* Add some padding to the buttons */
-.card .action-bar button,
-.card .action-bar .btn,
-.card .action-bar [type='submit'] {
-  margin: 0 0.5rem; }
-
-.card .action-bar + .card-footer {
-  padding: 1rem 0;
-  border-top: 1px solid #e0e0e0; }
-
-.card button,
-.card .btn {
-  display: inline-block;
-  border-color: transparent; }
-
-.card button:hover,
-.card .btn:hover {
-  -webkit-transform: none;
-  transform: none; }
-
-.card button:focus,
-.card .btn:focus {
-  -webkit-transform: none;
-  transform: none; }
-
-/* More card components in second example */
-.mobile-title {
-  position: absolute;
-  left: 0;
-  background-color: var(--cirrus-bg);
-  -moz-transition: .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  transition: .3s ease-in-out;
-  width: 100%;
-  padding: 2rem 0 0 0;
-  backface-visibility: hidden; }
-
-.card:hover .mobile-title {
-  margin-top: -7rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
-
-.card:hover .card-body {
-  opacity: 1;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
-
-.card-body {
-  opacity: 0;
-  -webkit-transition: all var(--animation-duration) ease-in-out;
-  -moz-transition: all var(--animation-duration) ease-in-out;
-  -ms-transition: all var(--animation-duration) ease-in-out;
-  transition: all var(--animation-duration) ease-in-out; }
-
-.card-footer {
-  position: relative;
-  font-size: 0.75rem;
-  color: #9fa5a8; }
-
-.card p {
-  margin: 1rem 0;
-  /*max-height: 8rem; /* Prevents ridiculously looking cards */ }
-
-/*
+  margin-bottom: 1rem;
+  /* Allow for the cards to have the same height when u-flex is used on the card */
+  /* More card components in second example */
+  /*
     NOTE: To have cards with the same height, place the card class with col-x classes and have the parent have fluid-container.
 */
-/* Card Title Bar */
-.card-head {
-  align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  display: flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  border-bottom: 1px solid #e0e0e0; }
-
-.card-head-title {
-  align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  font-weight: 700;
-  padding: 0 1rem; }
+  /* Card Title Bar */ }
+  .card:hover {
+    transition: all 0.3s;
+    box-shadow: 0px 8px 20px 0 rgba(42, 51, 83, 0.12), 0 5px 5px rgba(0, 0, 0, 0.06); }
+    .card:hover .card-image::after {
+      opacity: 0; }
+    .card:hover .mobile-title {
+      margin-top: -7rem;
+      transition: all 0.3s ease-in-out; }
+    .card:hover .card-body {
+      opacity: 1; }
+  .card.u-flex .content {
+    flex-grow: 1; }
+  .card p {
+    margin: 1rem 0; }
+  .card .slide-up:hover .card-image {
+    transform: translateY(-40px); }
+  .card .card-image {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 5px 5px 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .card .card-image::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.1);
+      top: 0;
+      left: 0;
+      right: 0;
+      -webkit-transition: all 500ms;
+      transition: all 500ms;
+      bottom: 0; }
+  .card .card-container {
+    display: block;
+    position: relative;
+    height: 40%;
+    min-height: 332px;
+    /* So it appears in html5 standards mode */ }
+  .card .title-container {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    padding: 0 1rem; }
+    .card .title-container .title,
+    .card .title-container .subtitle {
+      color: #fff;
+      margin: 1rem auto; }
+    .card .title-container .title {
+      font-weight: 300;
+      font-size: 1.5rem;
+      margin-bottom: 0;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); }
+  .card .action-bar {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0.5rem;
+    margin: 0;
+    border-top: 1px solid #e9ecef;
+    box-sizing: border-box;
+    -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* Add some padding to the buttons */ }
+    .card .action-bar button,
+    .card .action-bar .btn,
+    .card .action-bar [type='submit'] {
+      margin: 0 0.5rem; }
+    .card .action-bar + .card-footer {
+      padding: 1rem 0;
+      border-top: 1px solid #e9ecef; }
+  .card .mobile-title {
+    position: absolute;
+    left: 0;
+    background-color: var(--cirrus-bg);
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    padding: 2rem 0 0 0;
+    backface-visibility: hidden; }
+  .card .card-body {
+    opacity: 0;
+    transition: all var(--animation-duration) ease-in-out; }
+  .card .card-footer {
+    position: relative;
+    font-size: 0.75rem;
+    color: #868e96; }
+  .card .card-head {
+    align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    border-bottom: 1px solid #e9ecef; }
+  .card .card-head-title {
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-weight: 700;
+    padding: 0 1rem; }
 
 /* EXTENDED FORM */
 /* Base class layout for extended form */
@@ -5849,7 +5860,6 @@ video.video-fullscreen {
   padding: 0.5rem 1rem;
   transition: all .3s;
   color: var(--cirrus-fg);
-  border-bottom-color: rgba(197, 197, 197, 0.63);
   border-width: 2px;
   margin-bottom: -1px;
   /* Get rid of any remaining border lines */
