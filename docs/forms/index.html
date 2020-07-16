@@ -82,12 +82,18 @@
             <p>Here is a sample form below:</p>
              <form>
                     <div class="row">
-                        <div class="col-6"><input type="text" placeholder="Your Name"></div>
                         <div class="col-6">
-                            <select class="select" placeholder="Select One">
-                            <option value="I love this">I love Cirrus</option>
-                            <option value="I still love this">I also love Cirrus</option>
-                            </select>
+                            <div class="input-control">
+                                <input type="text" placeholder="Your Name"/>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="input-control">
+                                <select class="select" placeholder="Select One">
+                                    <option value="I love this">I love Cirrus</option>
+                                    <option value="I still love this">I also love Cirrus</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -435,7 +441,7 @@
                     <input type="text" class="text-danger input-error" placeholder="Success state">
                 </div>
                 <div class="input-control">
-                    <select class="select text-danger input-error" placeholder="Dropdown"><option value="1">Error state</option></select>
+                    <select class="select text-danger input-error" placeholder="Dropdown"><option value="1">Error/Danger state</option></select>
                 </div>
             </div>
             <div class="col-6">
@@ -443,7 +449,7 @@
     &lt;input type=&quot;text&quot; class=&quot;text-danger input-error&quot; placeholder=&quot;Success state&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;input-control&quot;&gt;
-    &lt;select class=&quot;select text-danger input-error&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Error state&lt;/option&gt;&lt;/select&gt;
+    &lt;select class=&quot;select text-danger input-error&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Error/Danger state&lt;/option&gt;&lt;/select&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
@@ -670,8 +676,8 @@
                         <label class="form-ext-label" for="check5">Success</label>
                     </div>
                     <div class="form-ext-control form-ext-checkbox">
-                        <input id="check6" class="form-ext-input form-ext-input--error" type="checkbox" checked="">
-                        <label class="form-ext-label" for="check6">Error</label>
+                        <input id="check6" class="form-ext-input form-ext-input--danger" type="checkbox" checked="">
+                        <label class="form-ext-label" for="check6">Error/Danger</label>
                     </div>
                 </div>
                 <div class="col-6"><pre><code class="html" data-lang="HTML">&lt;div class=&quot;form-ext-control form-ext-checkbox&quot;&gt;
@@ -697,8 +703,8 @@
     &lt;label class=&quot;form-ext-label&quot; for=&quot;check5&quot;&gt;Success&lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;form-ext-control form-ext-checkbox&quot;&gt;
-    &lt;input id=&quot;check6&quot; class=&quot;form-ext-input form-ext-input--error&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&gt;
-    &lt;label class=&quot;form-ext-label&quot; for=&quot;check6&quot;&gt;Error&lt;/label&gt;
+    &lt;input id=&quot;check6&quot; class=&quot;form-ext-input form-ext-input--danger&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;check6&quot;&gt;Error/Danger&lt;/label&gt;
 &lt;/div&gt;</code></pre></div>
             </div>
 
@@ -744,8 +750,8 @@
                         <label class="form-ext-label" for="radio-1c">Sucess</label>
                     </div>
                     <div class="form-ext-control form-ext-radio">
-                        <input id="radio-2c" name="customRadio3" class="form-ext-input form-ext-input--error" type="radio">
-                        <label class="form-ext-label" for="radio-2c">Error</label>
+                        <input id="radio-2c" name="customRadio3" class="form-ext-input form-ext-input--danger" type="radio">
+                        <label class="form-ext-label" for="radio-2c">Error/Danger</label>
                     </div>
                 </div>
                 <div class="col-6">
@@ -784,8 +790,8 @@
     &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-1c&quot;&gt;Sucess&lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;form-ext-control form-ext-radio&quot;&gt;
-    &lt;input id=&quot;radio-2c&quot; name=&quot;customRadio3&quot; class=&quot;form-ext-input form-ext-input--error&quot; type=&quot;radio&quot;&gt;
-    &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-2c&quot;&gt;Error&lt;/label&gt;
+    &lt;input id=&quot;radio-2c&quot; name=&quot;customRadio3&quot; class=&quot;form-ext-input form-ext-input--danger&quot; type=&quot;radio&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-2c&quot;&gt;Error/Danger&lt;/label&gt;
 &lt;/div&gt; </code></pre>
                 </div>
             </div>
@@ -1296,13 +1302,13 @@
                 <li class="pagination-item pagination-prev">
                     <a href="../footer" class="u-block">
                         <p class="pagination-item-subtitle">Previous</p>
-                        <h5 class="light no-margin">Footer</h5>
+                        <h5 class="light m-0">Footer</h5>
                     </a>
                 </li>
                 <li class="pagination-item pagination-next">
                     <a href="../header" class="u-block">
                         <p class="pagination-item-subtitle">Next</p>
-                        <h5 class="light no-margin">Header</h5>
+                        <h5 class="light m-0">Header</h5>
                     </a>
                 </li>
             </ul>
