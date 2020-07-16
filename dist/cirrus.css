@@ -3065,10 +3065,7 @@ dd {
   margin-bottom: 0.5rem; }
 
 li {
-  margin: 0.25rem 0;
-  /* Exclude margin in menus */ }
-  li:last-child {
-    margin-bottom: 1rem; }
+  margin: 0.25rem 0; }
 
 /* MISC */
 ul {
@@ -4754,216 +4751,373 @@ video.video-fullscreen {
     font-weight: 700;
     padding: 0 1rem; }
 
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Spacing */
+/* Fonts */
+/* Media Queries */
+/* Color scheme for Cirrus */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
 /* EXTENDED FORM */
+/* Constants */
+/* Mixins */
 /* Base class layout for extended form */
 .form-ext-control {
-  display: block;
-  min-height: 1.5rem;
   padding-left: 1.5rem;
-  position: relative; }
-
-/* Hides the original input */
-.form-ext-input {
-  opacity: 0;
-  position: absolute;
-  z-index: -1; }
-
-.form-ext-input:disabled ~ .form-ext-label {
-  opacity: 0.4; }
-
-.form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label:before {
-  background-color: var(--cirrus-success); }
-
-.form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label {
-  color: var(--cirrus-success); }
-
-.form-ext-control .form-ext-input.form-ext-input--error:checked ~ .form-ext-label:before {
-  background-color: var(--cirrus-danger); }
-
-.form-ext-control .form-ext-input.form-ext-input--error:checked ~ .form-ext-label {
-  color: var(--cirrus-danger); }
-
-.form-ext-label {
-  margin-bottom: 0;
-  position: relative; }
-
-/* Base of custom form inputs */
-.form-ext-label:before,
-.form-ext-label:after {
-  content: "";
-  display: block;
-  height: 1rem;
-  left: -1.5rem;
-  position: absolute;
-  top: .3rem;
-  transition: all var(--animation-duration);
-  width: 1rem; }
-
-.form-ext-label:before {
-  background-color: var(--cirrus-light);
-  border: 1px solid #d5d7dc;
-  border-radius: .25rem;
-  pointer-events: none;
-  user-select: none;
-  box-sizing: border-box; }
-
-.form-ext-label:after {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 50% 50%; }
-
-/* Checked state */
-.form-ext-control .form-ext-input:checked ~ .form-ext-label:before {
-  background-color: var(--cirrus-primary); }
-
-/* Checkbox */
-.form-ext-control.form-ext-checkbox .form-ext-input:checked ~ .form-ext-label:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"); }
-
-.form-ext-checkbox .form-ext-label:before {
-  border-radius: .25rem; }
-
-/* Radio Button */
-.form-ext-control.form-ext-radio .form-ext-input:checked ~ .form-ext-label:after {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E"); }
-
-.form-ext-radio .form-ext-label:before {
-  border-radius: 50%; }
-
-/* Toggle Switches */
-.form-ext-toggle {
-  cursor: pointer;
-  position: relative; }
-
-.form-ext-toggle input[type="checkbox"],
-.form-ext-toggle input[type="radio"] {
-  opacity: 0;
-  position: absolute;
-  z-index: -1; }
-
-.form-ext-toggle__label {
-  align-items: center;
-  display: flex;
-  justify-content: space-between; }
-
-.form-ext-toggle__toggler {
-  border: 1px solid var(--cirrus-gray);
-  border-radius: 6.25rem;
-  color: var(--cirrus-gray);
-  display: block;
-  font-size: 9px;
-  height: 1.5rem;
   position: relative;
-  width: 3rem; }
-
-.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
-.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler {
-  background-color: var(--cirrus-primary);
-  border-color: var(--cirrus-primary);
-  color: #fff;
-  position: relative;
-  transition: all .4s ease; }
-
-.form-ext-toggle i {
-  display: inline-block; }
-
-.form-ext-input:disabled ~ .form-ext-toggle__toggler {
-  opacity: 0.5; }
-
-.form-ext-toggle__toggler i::before,
-.form-ext-toggle__toggler i::after {
-  content: "";
-  display: block;
-  position: absolute; }
-
-.form-ext-toggle__toggler i::before {
-  /* TODO SET CONTENT */
-  content: attr(data-uncheck-icon);
-  padding: 2px 7px;
-  line-height: 18px;
-  text-align: right;
-  top: 0;
-  width: 65%;
-  font-size: 12px; }
-
-.form-ext-toggle__toggler i::after {
-  background-color: var(--cirrus-gray);
-  border-radius: 50%;
-  height: 16px;
-  left: 4px;
-  width: 16px;
-  transform: translateY(-50%);
-  transition: left var(--animation-duration) ease;
-  text-align: left; }
+  /* Checkbox */
+  /* Radio Button */
+  /* Hides the original input */
+  /* Toggle Switches */ }
+  .form-ext-control.form-ext-checkbox .form-ext-input:checked ~ .form-ext-label:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"); }
+  .form-ext-control.form-ext-checkbox .form-ext-label:before {
+    border-radius: 0.25rem; }
+  .form-ext-control.form-ext-radio .form-ext-input:checked ~ .form-ext-label:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E"); }
+  .form-ext-control.form-ext-radio .form-ext-label:before {
+    border-radius: 50%; }
+  .form-ext-control .form-ext-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    /* Checked state */ }
+    .form-ext-control .form-ext-input:disabled ~ .form-ext-label {
+      opacity: 0.4; }
+    .form-ext-control .form-ext-input:checked ~ .form-ext-label:before {
+      background-color: var(--cirrus-primary); }
+    .form-ext-control .form-ext-input.form-ext-input--gray:checked ~ .form-ext-label {
+      color: var(--cirrus-gray); }
+      .form-ext-control .form-ext-input.form-ext-input--gray:checked ~ .form-ext-label:before {
+        background-color: var(--cirrus-gray); }
+    .form-ext-control .form-ext-input.form-ext-input--gray:focus ~ .form-ext-label:before {
+      border-color: inherit;
+      box-shadow: 0 0 0 0.2rem rgba(213, 215, 220, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-input.form-ext-input--dark:checked ~ .form-ext-label {
+      color: var(--cirrus-dark); }
+      .form-ext-control .form-ext-input.form-ext-input--dark:checked ~ .form-ext-label:before {
+        background-color: var(--cirrus-dark); }
+    .form-ext-control .form-ext-input.form-ext-input--dark:focus ~ .form-ext-label:before {
+      border-color: inherit;
+      box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-input.form-ext-input--link:checked ~ .form-ext-label {
+      color: var(--cirrus-link); }
+      .form-ext-control .form-ext-input.form-ext-input--link:checked ~ .form-ext-label:before {
+        background-color: var(--cirrus-link); }
+    .form-ext-control .form-ext-input.form-ext-input--link:focus ~ .form-ext-label:before {
+      border-color: inherit;
+      box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-input.form-ext-input--info:checked ~ .form-ext-label {
+      color: var(--cirrus-info); }
+      .form-ext-control .form-ext-input.form-ext-input--info:checked ~ .form-ext-label:before {
+        background-color: var(--cirrus-info); }
+    .form-ext-control .form-ext-input.form-ext-input--info:focus ~ .form-ext-label:before {
+      border-color: inherit;
+      box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label {
+      color: var(--cirrus-success); }
+      .form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label:before {
+        background-color: var(--cirrus-success); }
+    .form-ext-control .form-ext-input.form-ext-input--success:focus ~ .form-ext-label:before {
+      border-color: inherit;
+      box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-input.form-ext-input--warning:checked ~ .form-ext-label {
+      color: var(--cirrus-warning); }
+      .form-ext-control .form-ext-input.form-ext-input--warning:checked ~ .form-ext-label:before {
+        background-color: var(--cirrus-warning); }
+    .form-ext-control .form-ext-input.form-ext-input--warning:focus ~ .form-ext-label:before {
+      border-color: inherit;
+      box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-input.form-ext-input--danger:checked ~ .form-ext-label {
+      color: var(--cirrus-danger); }
+      .form-ext-control .form-ext-input.form-ext-input--danger:checked ~ .form-ext-label:before {
+        background-color: var(--cirrus-danger); }
+    .form-ext-control .form-ext-input.form-ext-input--danger:focus ~ .form-ext-label:before {
+      border-color: inherit;
+      box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+  .form-ext-control .form-ext-input:disabled ~ .form-ext-toggle__toggler {
+    opacity: 0.5; }
+  .form-ext-control .form-ext-toggle__label {
+    align-items: center;
+    display: flex;
+    justify-content: space-between; }
+  .form-ext-control .form-ext-toggle {
+    cursor: pointer;
+    position: relative;
+    /* Toggle themes */
+    /**
+             * Accessibility
+             */
+    /**
+             * Accessibility
+             */
+    /**
+             * Accessibility
+             */
+    /**
+             * Accessibility
+             */
+    /**
+             * Accessibility
+             */
+    /**
+             * Accessibility
+             */
+    /**
+             * Accessibility
+             */ }
+    .form-ext-control .form-ext-toggle input[type='checkbox'],
+    .form-ext-control .form-ext-toggle input[type='radio'] {
+      opacity: 0;
+      position: absolute;
+      z-index: -1; }
+    .form-ext-control .form-ext-toggle .form-ext-toggle__toggler {
+      border: 1px solid var(--cirrus-gray);
+      border-radius: 6.25rem;
+      color: var(--cirrus-gray);
+      display: block;
+      font-size: 9px;
+      height: 1.5rem;
+      position: relative;
+      width: 3rem; }
+      .form-ext-control .form-ext-toggle .form-ext-toggle__toggler i {
+        display: inline-block; }
+    .form-ext-control .form-ext-toggle input[type='checkbox']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle input[type='checkbox']:checked + * .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle input[type='radio']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle input[type='radio']:checked + * .form-ext-toggle__toggler {
+      background-color: var(--cirrus-primary);
+      border-color: var(--cirrus-primary);
+      color: #fff;
+      position: relative;
+      transition: all 0.4s ease; }
+      .form-ext-control .form-ext-toggle input[type='checkbox']:checked + .form-ext-toggle__toggler i::after,
+      .form-ext-control .form-ext-toggle input[type='checkbox']:checked + * .form-ext-toggle__toggler i::after,
+      .form-ext-control .form-ext-toggle input[type='radio']:checked + .form-ext-toggle__toggler i::after,
+      .form-ext-control .form-ext-toggle input[type='radio']:checked + * .form-ext-toggle__toggler i::after {
+        background-color: #fff;
+        left: calc(100% - 20px); }
+      .form-ext-control .form-ext-toggle input[type='checkbox']:checked + .form-ext-toggle__toggler i::before,
+      .form-ext-control .form-ext-toggle input[type='checkbox']:checked + * .form-ext-toggle__toggler i::before,
+      .form-ext-control .form-ext-toggle input[type='radio']:checked + .form-ext-toggle__toggler i::before,
+      .form-ext-control .form-ext-toggle input[type='radio']:checked + * .form-ext-toggle__toggler i::before {
+        color: #fff;
+        content: attr(data-check-icon);
+        text-align: left; }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--gray input[type='checkbox']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--gray input[type='checkbox']:checked + * .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--gray input[type='radio']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--gray input[type='radio']:checked + * .form-ext-toggle__toggler {
+      background-color: var(--cirrus-gray);
+      border-color: var(--cirrus-gray); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--gray .form-ext-toggle__toggler {
+      border-color: var(--cirrus-gray);
+      color: var(--cirrus-gray); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--gray .form-ext-toggle__toggler i::after {
+      background-color: var(--cirrus-gray); }
+    .form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+      box-shadow: 0 0 0 0.2rem rgba(213, 215, 220, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--gray .form-ext-input:focus + .form-ext-toggle__toggler {
+      box-shadow: 0 0 0 0.2rem rgba(213, 215, 220, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--dark input[type='checkbox']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--dark input[type='checkbox']:checked + * .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--dark input[type='radio']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--dark input[type='radio']:checked + * .form-ext-toggle__toggler {
+      background-color: var(--cirrus-dark);
+      border-color: var(--cirrus-dark); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--dark .form-ext-toggle__toggler {
+      border-color: var(--cirrus-dark);
+      color: var(--cirrus-dark); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--dark .form-ext-toggle__toggler i::after {
+      background-color: var(--cirrus-dark); }
+    .form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+      box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--dark .form-ext-input:focus + .form-ext-toggle__toggler {
+      box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--link input[type='checkbox']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--link input[type='checkbox']:checked + * .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--link input[type='radio']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--link input[type='radio']:checked + * .form-ext-toggle__toggler {
+      background-color: var(--cirrus-link);
+      border-color: var(--cirrus-link); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--link .form-ext-toggle__toggler {
+      border-color: var(--cirrus-link);
+      color: var(--cirrus-link); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--link .form-ext-toggle__toggler i::after {
+      background-color: var(--cirrus-link); }
+    .form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+      box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--link .form-ext-input:focus + .form-ext-toggle__toggler {
+      box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--info input[type='checkbox']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--info input[type='checkbox']:checked + * .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--info input[type='radio']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--info input[type='radio']:checked + * .form-ext-toggle__toggler {
+      background-color: var(--cirrus-info);
+      border-color: var(--cirrus-info); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--info .form-ext-toggle__toggler {
+      border-color: var(--cirrus-info);
+      color: var(--cirrus-info); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--info .form-ext-toggle__toggler i::after {
+      background-color: var(--cirrus-info); }
+    .form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+      box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--info .form-ext-input:focus + .form-ext-toggle__toggler {
+      box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--success input[type='checkbox']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--success input[type='checkbox']:checked + * .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--success input[type='radio']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--success input[type='radio']:checked + * .form-ext-toggle__toggler {
+      background-color: var(--cirrus-success);
+      border-color: var(--cirrus-success); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--success .form-ext-toggle__toggler {
+      border-color: var(--cirrus-success);
+      color: var(--cirrus-success); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--success .form-ext-toggle__toggler i::after {
+      background-color: var(--cirrus-success); }
+    .form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+      box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--success .form-ext-input:focus + .form-ext-toggle__toggler {
+      box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--warning input[type='checkbox']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--warning input[type='checkbox']:checked + * .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--warning input[type='radio']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--warning input[type='radio']:checked + * .form-ext-toggle__toggler {
+      background-color: var(--cirrus-warning);
+      border-color: var(--cirrus-warning); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--warning .form-ext-toggle__toggler {
+      border-color: var(--cirrus-warning);
+      color: var(--cirrus-warning); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--warning .form-ext-toggle__toggler i::after {
+      background-color: var(--cirrus-warning); }
+    .form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+      box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--warning .form-ext-input:focus + .form-ext-toggle__toggler {
+      box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--danger input[type='checkbox']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--danger input[type='checkbox']:checked + * .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--danger input[type='radio']:checked + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle.form-ext-toggle--danger input[type='radio']:checked + * .form-ext-toggle__toggler {
+      background-color: var(--cirrus-danger);
+      border-color: var(--cirrus-danger); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--danger .form-ext-toggle__toggler {
+      border-color: var(--cirrus-danger);
+      color: var(--cirrus-danger); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle.form-ext-toggle--danger .form-ext-toggle__toggler i::after {
+      background-color: var(--cirrus-danger); }
+    .form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+    .form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+      box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle.form-ext-toggle--danger .form-ext-input:focus + .form-ext-toggle__toggler {
+      box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
+    .form-ext-control .form-ext-toggle .form-ext-toggle__toggler i::before,
+    .form-ext-control .form-ext-toggle .form-ext-toggle__toggler i::after {
+      content: '';
+      display: block;
+      position: absolute; }
+    .form-ext-control .form-ext-toggle .form-ext-toggle__toggler i::before {
+      content: attr(data-uncheck-icon);
+      padding: 2px 7px;
+      line-height: 18px;
+      text-align: right;
+      top: 0;
+      width: 65%;
+      font-size: 12px; }
+    .form-ext-control .form-ext-toggle .form-ext-toggle__toggler i::after {
+      background-color: var(--cirrus-gray);
+      border-radius: 50%;
+      height: 16px;
+      left: 4px;
+      width: 16px;
+      transform: translateY(-50%);
+      transition: left var(--animation-duration) ease;
+      text-align: left; }
+  .form-ext-control .form-ext-label {
+    margin-bottom: 0;
+    position: relative;
+    /* Base of custom form inputs */ }
+    .form-ext-control .form-ext-label:before, .form-ext-control .form-ext-label:after {
+      content: '';
+      display: block;
+      height: 1rem;
+      left: -1.5rem;
+      position: absolute;
+      top: 0.3rem;
+      transition: all var(--animation-duration);
+      width: 1rem; }
+    .form-ext-control .form-ext-label:before {
+      background-color: var(--cirrus-light);
+      border: 1px solid #dee2e6;
+      border-radius: 0.25rem;
+      pointer-events: none;
+      user-select: none;
+      box-sizing: border-box; }
+    .form-ext-control .form-ext-label:after {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50% 50%; }
 
 .form-ext-control .form-ext-input:checked ~ .form-ext-label:before {
   border: none; }
-
-.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
-.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
-.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
-.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
-  background-color: #fff;
-  left: calc(100% - 20px); }
-
-.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler i::before,
-.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::before,
-.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler i::before,
-.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler i::before {
-  color: #fff;
-  content: attr(data-check-icon);
-  text-align: left; }
-
-.form-ext-toggle input[type="checkbox"]:checked + .form-ext-toggle__toggler i::after,
-.form-ext-toggle input[type="checkbox"]:checked + * .form-ext-toggle__toggler i::after,
-.form-ext-toggle input[type="radio"]:checked + .form-ext-toggle__toggler i::after,
-.form-ext-toggle input[type="radio"]:checked + * .form-ext-toggle__toggler i::after {
-  background-color: #fff;
-  left: calc(100% - 20px); }
-
-.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle.form-ext-toggle--error input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
-.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle.form-ext-toggle--error input[type="radio"]:checked + * .form-ext-toggle__toggler {
-  background-color: var(--cirrus-danger);
-  border-color: var(--cirrus-danger); }
-
-.form-ext-toggle.form-ext-toggle--error .form-ext-toggle__toggler {
-  border-color: var(--cirrus-danger);
-  color: var(--cirrus-danger); }
-
-.form-ext-toggle.form-ext-toggle--error .form-ext-toggle__toggler i::after {
-  background-color: var(--cirrus-danger); }
-
-.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle.form-ext-toggle--success input[type="checkbox"]:checked + * .form-ext-toggle__toggler,
-.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + .form-ext-toggle__toggler,
-.form-ext-toggle.form-ext-toggle--success input[type="radio"]:checked + * .form-ext-toggle__toggler {
-  background-color: var(--cirrus-success);
-  border-color: var(--cirrus-success); }
-
-.form-ext-toggle--success .form-ext-toggle__toggler {
-  border-color: var(--cirrus-success);
-  color: var(--cirrus-success); }
-
-.form-ext-toggle--success .form-ext-toggle__toggler i::after {
-  background-color: var(--cirrus-success); }
-
-/**
- * Accessibility
- */
-.form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
-.form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
-  box-shadow: 0 0 0 0.2rem rgba(var(--cirrus-primary-rgb), var(--focus-opacity)), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
-
-.form-ext-toggle.form-ext-toggle--success .form-ext-input:focus + .form-ext-toggle__toggler {
-  box-shadow: 0 0 0 0.2rem rgba(var(--cirrus-success-rgb), var(--focus-opacity)), inset 0 1px 8px rgba(34, 197, 127, 0.13); }
-
-.form-ext-input.form-ext-input--success:focus ~ .form-ext-label:before {
-  border-color: inherit;
-  box-shadow: 0 0 0 0.2rem rgba(var(--cirrus-success-rgb), var(--focus-opacity)), inset 0 1px 8px rgba(0, 0, 0, 0.07); }
 
 /* GRID */
 :root {
