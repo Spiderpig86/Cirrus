@@ -1,3 +1,4 @@
+@import "../utils/_size.scss";
 
 /* The base of the modal dialog, which is an overlay of the webpage */
 .modal {
@@ -16,148 +17,158 @@
     -ms-flex-pack: center;
     justify-content: center; /* Vertical centering */
     pointer-events: none; /* Prevent any pointer events made to modal while hidden */
-}
 
-/* When the modal dialog is visible */
-.modal:target, .modal.shown {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    opacity: 1;
-    z-index: 999;
-    pointer-events: auto; /* Re-enable pointer events */
-}
+    /* When the modal dialog is visible */
+    &:target,
+    &.shown {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        opacity: 1;
+        z-index: 999;
+        pointer-events: auto; /* Re-enable pointer events */
 
-/* The div in the modal dialpog used to create the translucent background */
-.modal:target .modal-overlay,
-.modal.shown .modal-overlay {
-    position: absolute; /* Absolute inside of the modal container */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    background-color: rgba(54, 59, 68, 0.5);
-}
+        /* The div in the modal dialpog used to create the translucent background */
+        .modal-overlay {
+            position: absolute; /* Absolute inside of the modal container */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            background-color: rgba(54, 59, 68, 0.5);
+        }
 
-/* The modal dialog body with the text itself */
-.modal-content {
-    background-color: var(--cirrus-bg);
-    padding: 0;
-    display: block;
-    border-radius: 3px;
-    box-shadow: 0 .4rem 1rem rgba(54, 59, 68, .3);
-    z-index: 1;
-    color: var(--cirrus-fg);
-    max-width: 40rem; /* 640px */
-}
+        .modal-container,
+        .modal-container {
+            -webkit-animation: slide-down var(--animation-duration) ease 1;
+            animation: slide-down var(--animation-duration) ease 1;
+            z-index: 1;
+        }
+    }
 
-/* Different size modals */
-.modal.modal-small .modal-content {
-    max-width: 20rem; /* 320px */
-}
+    /* Different size modals */
+    &.modal-small .modal-content {
+        max-width: 20rem; /* 320px */
+    }
 
-.modal.modal-large .modal-content {
-    max-width: 60rem; /* 960px */
-}
+    &.modal-large .modal-content {
+        max-width: 60rem; /* 960px */
+    }
 
-.modal-content h1,
-.modal-content h2,
-.modal-content h3,
-.modal-content h4,
-.modal-content h5,
-.modal-content h6 {
-    color: var(--cirrus-fg);
-}
+    /* The modal dialog body with the text itself */
+    .modal-content {
+        background-color: var(--cirrus-bg);
+        padding: 0;
+        display: block;
+        border-radius: 3px;
+        box-shadow: 0 0.4rem 1rem rgba(54, 59, 68, 0.3);
+        z-index: 1;
+        color: var(--cirrus-fg);
+        max-width: 40rem; /* 640px */
 
-.modal:target .modal-container,
-.modal.shown .modal-container {
-  -webkit-animation: slide-down var(--animation-duration) ease 1;
-  animation: slide-down var(--animation-duration) ease 1;
-  z-index: 1;
-}
+        /* Restrict width  */
+        &.small {
+            max-width: 32rem;
+        }
 
-/* Restrict width  */
-.modal-content.small {
-    max-width: 32rem;
-}
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--cirrus-fg);
+        }
 
-.modal-content .modal-header {
-    padding: 1rem 3rem;
-}
+        .modal-header {
+            padding: 1rem 2.5rem;
+        }
 
-.modal-content .modal-header .modal-title {
-    font-weight: bolder;
-    font-size: 1.4rem;
-}
+        .modal-header .modal-title {
+            font-weight: bolder;
+            font-size: 1.4rem;
+        }
 
-.modal-content .modal-body {
-    padding: 1rem 3rem;
-    overflow-y: auto;
-    max-height: 50vh; /* Max height is 50% of viewport height which prevents dialog from extetnding past screen */
-    position: relative;
-}
+        .modal-body {
+            padding: 1rem 2.5rem;
+            overflow-y: auto;
+            max-height: 50vh; /* Max height is 50% of viewport height which prevents dialog from extetnding past screen */
+            position: relative;
+        }
 
-.modal-content .modal-footer {
-    padding: 1rem 3rem;
-    text-align: right;
-}
+        .modal-footer {
+            padding: 1rem 2.5rem;
+            text-align: right;
+        }
 
-/* MODAL ANIMATIONS */
-.modal.modal-animated--dropdown {
-    -webkit-animation: slide-down var(--animation-duration) ease 1;
-    animation: slide-down var(--animation-duration) ease 1;
-}
+        @include screen-below('tablet') {
+            max-width: 90%;
+        }
+    }
 
-/* Visible state */
-.modal.modal-animated--zoom-in, .modal.modal-animated--zoom-out {
-    display: -webkit-box; /* Force dialog to appear in the center */
-    display: -ms-flexbox;
-    display: flex;
-    opacity: 0;
-    transition: 300ms all ease;
-}
-.modal:target.modal-animated--zoom-in, .modal:target.modal-animated--zoom-out {
-    opacity: 1;
-    transition: 300ms all ease;
-}
-.modal.modal-animated--zoom-in .modal-content {
-    transform: scale(0.8);
-    transition: 300ms all ease;
-}
-.modal:target.modal-animated--zoom-in .modal-content, .modal:target.modal-animated--zoom-out .modal-content {
-    transform: scale(1);
-    transition: 300ms all ease;
-}
+    /* MODAL ANIMATIONS */
+    &.modal-animated--dropdown {
+        -webkit-animation: slide-down var(--animation-duration) ease 1;
+        animation: slide-down var(--animation-duration) ease 1;
+    }
 
-.modal.modal-animated--zoom-out .modal-content {
-    transform: scale(1.2);
-    transition: 300ms all ease;
+    /* Visible state */
+    &.modal-animated--zoom-in,
+    &.modal-animated--zoom-out {
+        display: -webkit-box; /* Force dialog to appear in the center */
+        display: -ms-flexbox;
+        display: flex;
+        opacity: 0;
+        transition: 300ms all ease;
+    }
+
+    &:target.modal-animated--zoom-in,
+    &:target.modal-animated--zoom-out {
+        opacity: 1;
+        transition: 300ms all ease;
+    }
+
+    &.modal-animated--zoom-in .modal-content {
+        transform: scale(0.8);
+        transition: 300ms all ease;
+    }
+
+    &:target.modal-animated--zoom-in .modal-content,
+    &:target.modal-animated--zoom-out .modal-content {
+        transform: scale(1);
+        transition: 300ms all ease;
+    }
+
+    &.modal-animated--zoom-out .modal-content {
+        transform: scale(1.2);
+        transition: 300ms all ease;
+    }
 }
 
 /* Keyframes for slide down animation */
-@-webkit-keyframes slide-down{
-    0%{
-        opacity:0;
-        -webkit-transform:translateY(-3rem);
-        transform:translateY(-3rem)
+@-webkit-keyframes slide-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-3rem);
+        transform: translateY(-3rem);
     }
-    100%{
-        opacity:1;
-        -webkit-transform:translateY(0);
-        transform:translateY(0)
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 }
-@keyframes slide-down{
-    0%{
-        opacity:0;
-        -webkit-transform:translateY(-3rem);
-        transform:translateY(-3rem)
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-3rem);
+        transform: translateY(-3rem);
     }
-    100%{
-        opacity:1;
-        -webkit-transform:translateY(0);
-        transform:translateY(0)
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 
