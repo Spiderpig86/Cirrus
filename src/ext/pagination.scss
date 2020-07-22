@@ -1,107 +1,110 @@
+@import "../core/theme.scss";
+
 /* PAGINATION */
 /* Parent contianer for page navigation */
 .pagination {
     display: flex;
     display: -ms-flexbox;
-}
 
-/* Use for the major pagination meant to display about 2 items */
-.pagination-item {
-    -webkit-flex: 1 0 50%; /* Flex to fill */
-    -ms-flex: 1 0 50%;
-    flex: 1 0 50%;
-}
+    /* Use for the major pagination meant to display about 2 items */
+    .pagination-item {
+        -webkit-flex: 1 0 50%; /* Flex to fill */
+        -ms-flex: 1 0 50%;
+        flex: 1 0 50%;
+        margin: 1rem 0.1rem;
+        transition: all 0.3s;
 
-.pagination a {
-    color: #5d6c7b;
-}
+        &:hover {
+            p,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                transition: all 0.3s;
+                color: var(--cirrus-primary);
+            }
+        }
 
-.pagination .pagination-item a[disabled] {
-    cursor: pointer;
-    opacity: 0.5;
-    pointer-events: none;
-    user-select: none;
-}
+        &:not(.selected):hover *:not([disabled]):not(.ellipses) {
+            transition: all 0.3s;
+            color: var(--cirrus-primary);
+        }
 
-.pagination .pagination-item {
-    margin: 1rem 0.1rem;
-    transition: all 0.3s;
-}
+        &.pagination-next {
+            text-align: right;
+        }
 
-.pagination .pagination-item.pagination-next {
-    text-align: right;
-}
+        &.pagination-prev {
+            text-align: left;
+        }
 
-.pagination .pagination-item.pagination-prev {
-    text-align: left;
-}
+        a {
+            color: $gray-700;
 
-/* Pagination Item */
-.pagination-item-subtitle {
-    opacity: 0.7;
-    margin: 0; /* Needed to override style after formatting paragraph update */
-}
+            &[disabled] {
+                cursor: pointer;
+                opacity: 0.5;
+                pointer-events: none;
+                user-select: none;
+            }
+        }
 
-/* Color the selected pagination item with accent color */
-.pagination .pagination-item.short.selected {
-    background-color: var(--cirrus-primary);
-    color: #fff;
-}
+        /* Pagination Item */
+        .pagination-item-subtitle {
+            opacity: 0.7;
+            margin: 0; /* Needed to override style after formatting paragraph update */
+        }
 
-.pagination .pagination-item.short.selected a {
-    color: #fff;
-}
+        /* Used to display many pagination items */
+        &.short {
+            border-radius: 0.1rem;
+            margin: 0.2rem 0;
+            -webkit-flex: 0; /* Flex to fill */
+            -ms-flex: 0;
+            flex: 0;
 
-.pagination .pagination-item.short a {
-    display: inline-block;
-    line-height: 1.25;
-    padding: 0.5rem 0.75rem;
-}
+            &:first-child a {
+                border-top-left-radius: 0.25rem;
+                border-bottom-left-radius: 0.25rem;
+            }
 
-/* Used to display many pagination items */
-.pagination .pagination-item.short {
-    border-radius: 0.1rem;
-    margin: 0.2rem 0;
-    -webkit-flex: 0; /* Flex to fill */
-    -ms-flex: 0;
-    flex: 0;
-}
+            &:last-child a {
+                border-top-right-radius: 0.25rem;
+                border-bottom-right-radius: 0.25rem;
+            }
 
-.pagination .pagination-item.short:first-child a {
-    border-top-left-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-}
+            &:not([disabled]):not(.selected):hover {
+                background-color: rgba(0, 0, 0, 0.07);
+            }
 
-.pagination .pagination-item.short:last-child a {
-    border-top-right-radius: .25rem;
-    border-bottom-right-radius: .25rem;
-}
+            /* Color the selected pagination item with accent color */
+            &.selected {
+                background-color: var(--cirrus-primary);
+                color: #fff;
+                a {
+                    color: #fff;
+                }
+            }
 
-.pagination .pagination-item.short:not(.selected):hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
+            &.ellipses {
+                color: $gray-500;
+                pointer-events: none;
+            }
 
-.pagnation .pagination-item.ellipses {
-    color: #b5b5b5;
-    pointer-events: none;
-}
+            a {
+                display: inline-block;
+                line-height: 1.25;
+                padding: 0.5rem 0.75rem;
+            }
+        }
+    }
 
-/* Bordered pagination */
-.pagination.pagination-bordered .pagination-item.short a {
-    border: 1px solid rgb(222, 222, 222);
-    border-radius: 0;
-    margin-left: -1px;
-}
-
-/* Not good but CSS does not have heading selectors. Need to move to SASS */
-.pagination .pagination-item:hover p,
-.pagination .pagination-item:hover h1,
-.pagination .pagination-item:hover h2,
-.pagination .pagination-item:hover h3,
-.pagination .pagination-item:hover h4,
-.pagination .pagination-item:hover h5,
-.pagination .pagination-item:hover h6,
-.pagination .pagination-item:not(.selected):hover *:not([disabled]):not(.ellipses) {
-    transition: all 0.3s;
-    color: var(--cirrus-primary);
+    /* Bordered pagination */
+    &.pagination-bordered .pagination-item.short a {
+        border: 1px solid $gray-300;
+        border-radius: 0;
+        margin-left: -1px;
+    }
 }

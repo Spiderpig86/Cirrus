@@ -1,4 +1,5 @@
 @import "../utils/_size.scss";
+@import "../core/theme.scss";
 
 /* The base of the modal dialog, which is an overlay of the webpage */
 .modal {
@@ -36,7 +37,7 @@
             right: 0;
             bottom: 0;
             display: block;
-            background-color: rgba(54, 59, 68, 0.5);
+            background-color: transparentize($color: $cirrus-dark, $amount: 0.5);
         }
 
         .modal-container,
@@ -62,7 +63,7 @@
         padding: 0;
         display: block;
         border-radius: 3px;
-        box-shadow: 0 0.4rem 1rem rgba(54, 59, 68, 0.3);
+        box-shadow: 0 0.4rem 1rem transparentize($color: $cirrus-dark, $amount: 0.7);
         z-index: 1;
         color: var(--cirrus-fg);
         max-width: 40rem; /* 640px */
