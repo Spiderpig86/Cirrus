@@ -105,6 +105,8 @@ fieldset {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -165,6 +167,8 @@ fieldset {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -744,6 +748,8 @@ button,
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -837,6 +843,8 @@ pre > code {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -1160,6 +1168,8 @@ kbd {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -1257,6 +1267,8 @@ kbd {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -1311,6 +1323,8 @@ kbd {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -1907,6 +1921,8 @@ label:last-child:not(:first-child):not(.form-group-label) {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -1999,6 +2015,8 @@ label:last-child:not(:first-child):not(.form-group-label) {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -2479,6 +2497,8 @@ label:last-child:not(:first-child):not(.form-group-label) {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -2981,6 +3001,8 @@ a button,
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -3409,6 +3431,8 @@ video.video-fullscreen {
 
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Margin */
 .m-0 {
@@ -3866,6 +3890,8 @@ video.video-fullscreen {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -4001,6 +4027,8 @@ video.video-fullscreen {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -4287,6 +4315,8 @@ video.video-fullscreen {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -4572,6 +4602,8 @@ video.video-fullscreen {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -4759,6 +4791,8 @@ video.video-fullscreen {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -5121,6 +5155,8 @@ video.video-fullscreen {
 
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* GRID */
 :root {
@@ -5549,6 +5585,8 @@ video.video-fullscreen {
 
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /*
   Functions
@@ -5558,6 +5596,8 @@ video.video-fullscreen {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -5846,6 +5886,8 @@ video.video-fullscreen {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -5976,6 +6018,8 @@ video.video-fullscreen {
 */
 /* Spacing */
 /* Fonts */
+/* Grid Count */
+/* Tab Sizes */
 /* Media Queries */
 /* Color scheme for Cirrus */
 /* v2 Colors */
@@ -6044,6 +6088,67 @@ video.video-fullscreen {
   .placeholder .placeholder-commands {
     margin-top: 1rem; }
 
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Tab Sizes */
+/* Media Queries */
+/* Color scheme for Cirrus */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Tab Sizes */
+/* Media Queries */
 /* TABS AND TAB CONTAINER */
 .tab-container {
   display: -webkit-box;
@@ -6060,136 +6165,117 @@ video.video-fullscreen {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  font-size: var(--font-size-s); }
-
-/* Tabs are embedded inside an unordered list */
-.tab-container ul {
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  /* Move tab items to left side */
-  margin: 0.5rem;
-  /* Override the behavior for standard ul and add equal padding */
-  border-bottom: 1px solid #eee;
-  /* Bottom border of tabs */
-  flex-grow: 1;
-  list-style: none;
-  padding-inline-start: 0; }
-
-.tab-container li {
-  display: block;
-  /* Keep the tabs from extending too far */
-  cursor: pointer;
-  margin: 0;
-  text-align: center; }
-
-.tab-container li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-bottom: 1px solid #eee;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0.5rem 1rem;
-  transition: all .3s;
-  color: var(--cirrus-fg);
-  border-width: 2px;
-  margin-bottom: -1px;
-  /* Get rid of any remaining border lines */
-  background-color: var(--cirrus-bg); }
-
-.tab-container li:hover a {
-  border-bottom-color: rgba(240, 61, 77, 0.6);
-  transition: all .3s; }
-
-.tab-container li.selected a {
-  border-bottom-color: var(--cirrus-primary);
-  color: var(--cirrus-primary);
-  border-width: 2px;
-  transition: all .3s; }
-
-/* Shift tabs to the center */
-.tab-container.tabs-center ul {
-  justify-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center; }
-
-/* Shift tabs to the right */
-.tab-container.tabs-right ul {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
-
-/* Depth tab styles */
-.tab-container.tabs-depth ul {
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
-  border-bottom: 0; }
-
-/* Classic tab styles */
-.tab-container.tabs-classic ul {
-  border-bottom-color: #dbdbdb;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-radius: 3px 3px 0 0;
-  /* Only round the top left and right corners */
-  transition: all .3s; }
-
-.tab-container.tabs-classic li:not(.selected) a:hover {
-  background-color: #f0f0f0;
-  transition: all .3s; }
-
-.tab-container.tabs-classic li a {
-  border: 1px solid transparent;
-  border-bottom-color: #dbdbdb;
-  border-radius: 3px 3px 0 0;
-  transition: all .3s; }
-
-.tab-container.tabs-classic li.selected a {
-  color: var(--cirrus-primary);
-  border-color: #dbdbdb;
-  border-bottom-color: transparent !important; }
-
-/* Tabs that fill the width */
-.tab-container.tabs-fill li {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  /* Disable shrinking to original width */
-  flex-basis: 0; }
-
-/* Override the -webkit-box display that sizes tab items based on text */
-.tab-container.tabs-fill ul {
-  display: flex;
-  /* Equal size tabs */ }
-
-/* Different tab sizes */
-.tab-container.tabs-xsmall {
-  font-size: 0.6rem; }
-
-.tab-container.tabs-small {
-  font-size: 0.75rem; }
-
-.tab-container.tabs-large {
-  font-size: 1.25rem; }
-
-.tab-container.tabs-xlarge {
-  font-size: 1.5rem; }
-
-/* Font Awesome Integration */
-.tab-container .icon:first-child {
+  font-size: var(--font-size-s);
+  /* Shift tabs to the center */
+  /* Shift tabs to the right */
+  /* Depth tab styles */
+  /* Classic tab styles */
+  /* Tabs that fill the width */
+  /* Different tab sizes */
+  /* Tabs are embedded inside an unordered list */
+  /* Font Awesome Integration */
   /* Left icon */
-  margin-right: .75rem; }
-
-.tab-container .icon:last-child {
-  /* Right icon */
-  margin-left: .75rem; }
+  /* Right icon */ }
+  .tab-container.tabs-center ul {
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; }
+  .tab-container.tabs-right ul {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  .tab-container.tabs-depth ul {
+    box-shadow: 0 2px 3px rgba(33, 37, 41, 0.15);
+    border-bottom: 0; }
+  .tab-container.tabs-classic ul {
+    border-bottom-color: #dee2e6;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-radius: 3px 3px 0 0;
+    /* Only round the top left and right corners */
+    transition: all 0.3s; }
+    .tab-container.tabs-classic ul li:not(.selected) a:hover {
+      background-color: #f1f3f5;
+      transition: all 0.3s; }
+    .tab-container.tabs-classic ul li.selected a {
+      color: var(--cirrus-primary);
+      border-color: #dee2e6;
+      border-bottom-color: transparent !important; }
+    .tab-container.tabs-classic ul li a {
+      border: 1px solid transparent;
+      border-bottom-color: #dee2e6;
+      border-radius: 3px 3px 0 0;
+      transition: all 0.3s; }
+  .tab-container.tabs-fill {
+    /* Override the -webkit-box display that sizes tab items based on text */ }
+    .tab-container.tabs-fill ul {
+      display: flex;
+      /* Equal size tabs */ }
+    .tab-container.tabs-fill li {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      /* Disable shrinking to original width */
+      flex-basis: 0; }
+  .tab-container.tabs-xsmall {
+    font-size: 0.6rem; }
+  .tab-container.tabs-small {
+    font-size: 0.75rem; }
+  .tab-container.tabs-large {
+    font-size: 1.25rem; }
+  .tab-container.tabs-xlarge {
+    font-size: 1.5rem; }
+  .tab-container ul {
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    /* Move tab items to left side */
+    margin: 0.5rem;
+    /* Override the behavior for standard ul and add equal padding */
+    border-bottom: 1px solid #e9ecef;
+    /* Bottom border of tabs */
+    flex-grow: 1;
+    list-style: none;
+    padding-inline-start: 0; }
+  .tab-container li {
+    display: block;
+    /* Keep the tabs from extending too far */
+    cursor: pointer;
+    margin: 0;
+    text-align: center; }
+    .tab-container li:hover a {
+      border-bottom-color: rgba(240, 61, 77, 0.6);
+      transition: all 0.3s; }
+    .tab-container li.selected a {
+      border-bottom-color: var(--cirrus-primary);
+      color: var(--cirrus-primary);
+      border-width: 2px;
+      transition: all 0.3s; }
+    .tab-container li a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-bottom: 1px solid #e9ecef;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s;
+      color: var(--cirrus-fg);
+      border-width: 2px;
+      margin-bottom: -1px;
+      /* Get rid of any remaining border lines */
+      background-color: var(--cirrus-bg); }
+  .tab-container .icon:first-child {
+    margin-right: 0.75rem; }
+  .tab-container .icon:last-child {
+    margin-left: 0.75rem; }
 
 /* TAGS */
 .tag {

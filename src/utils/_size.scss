@@ -9,6 +9,12 @@ $font-size-m: 1rem;
 $font-size-l: 1.35rem;
 $font-size-xl: 1.75rem;
 
+/* Grid Count */
+$grid-columns: 12;
+
+/* Tab Sizes */
+$tab-sizes: ('xsmall': 0.6rem, 'small': 0.75rem, 'large': 1.25rem, 'xlarge': 1.5rem);
+
 /* Media Queries */
 $breakpoints: (
     'phone': 640px,
