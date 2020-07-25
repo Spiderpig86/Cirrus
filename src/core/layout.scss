@@ -1,4 +1,5 @@
 @import './theme.scss';
+@import '../utils/_size.scss';
 /* HEADER */
 
 /* This works well with panel */
@@ -159,101 +160,15 @@ section {
         padding: 0.15rem 0.75rem;
     }
 
-    .col-1 {
-        width: 8.33333333%;
-    }
+    /* Generate columns */
+    @for $i from 1 through $grid-columns {
+        .col-#{$i} {
+            width: percentage($number: $grid-width * $i);
+        }
 
-    .col-2 {
-        width: 16.66666667%;
-    }
-
-    .col-3 {
-        width: 25%;
-    }
-
-    .col-4 {
-        width: 33.33333333%;
-    }
-
-    .col-5 {
-        width: 41.66666667%;
-    }
-
-    .col-6 {
-        width: 50%;
-    }
-
-    .col-7 {
-        width: 58.33333333%;
-    }
-
-    .col-8 {
-        width: 66.66666667%;
-    }
-
-    .col-9 {
-        width: 75%;
-    }
-
-    .col-10 {
-        width: 83.33333333%;
-    }
-
-    .col-11 {
-        width: 91.66666667%;
-    }
-
-    .col-12 {
-        width: 100%;
-    }
-
-    /* Column offsets on the left side */
-    .offset-1 {
-        margin-left: 8.33333333%;
-    }
-
-    .offset-2 {
-        margin-left: 16.66666667%;
-    }
-
-    .offset-3 {
-        margin-left: 25%;
-    }
-
-    .offset-4 {
-        margin-left: 33.33333333%;
-    }
-
-    .offset-5 {
-        margin-left: 41.66666667%;
-    }
-
-    .offset-6 {
-        margin-left: 50%;
-    }
-
-    .offset-7 {
-        margin-left: 58.33333333%;
-    }
-
-    .offset-8 {
-        margin-left: 66.66666667%;
-    }
-
-    .offset-9 {
-        margin-left: 75%;
-    }
-
-    .offset-10 {
-        margin-left: 83.33333333%;
-    }
-
-    .offset-11 {
-        margin-left: 91.66666667%;
-    }
-
-    .offset-12 {
-        margin-left: 100%;
+        .offset-#{i} {
+            margin-left: percentage($number: $grid-width * $i);
+        }
     }
 
     /* Auto align col to left in row */
