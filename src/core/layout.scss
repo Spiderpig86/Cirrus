@@ -166,7 +166,7 @@ section {
             width: percentage($number: $grid-width * $i);
         }
 
-        .offset-#{i} {
+        .offset-#{$i} {
             margin-left: percentage($number: $grid-width * $i);
         }
     }
