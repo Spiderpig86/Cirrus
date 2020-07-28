@@ -751,6 +751,7 @@
             <h1><a href="./index.html#card_tiles" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Tiles</h1>
             <div class="divider"></div>
             <p>Tiles are the flexbox alternative to cards that tile child elements horizontally and more closely resemble horizontal cards in Android. These get displayed in <code>card slide-up</code> to show an avatar, text, or buttons.</p>
+            <p>Standard <code>tile</code> with buttons located at the bottom of <code>tile__container</code>.</p>
             <div class="row">
                 <div class="col-8">
                     <div class="tile">
@@ -763,35 +764,16 @@
                             <p class="tile__title m-0">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
                             <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p>
                             <span class="info">23 minutes ago</span>
-                            <p class="tile__buttons m-0">
+                            <div class="tile__buttons m-0">
                                 <button class="btn-primary btn-small uppercase">View</button>
                                 <button class="btn-small uppercase">Dismiss</button>
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-8">
-                    <div class="tile tile--center">
-                        <div class="tile__icon">
-                            <figure class="avatar">
-                                <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
-                            </figure>
-                        </div>
-                        <div class="tile__container">
-                            <p class="tile__title m-0">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
-                            <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p>
-                            <span class="info">23 minutes ago</span>
-                        </div>
-                        <div class="tile__buttons">
-                            <button class="btn-primary btn-small uppercase">View</button>
-                            <button class="btn-small uppercase">Dismiss</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
+
+            <div>
                 <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;tile&quot;&gt;
     &lt;div class=&quot;tile__icon&quot;&gt;
         &lt;figure class=&quot;avatar&quot;&gt;
@@ -802,14 +784,57 @@
         &lt;p class=&quot;tile__title m-0&quot;&gt;Robert Downey Jr. shared a post from &lt;b&gt;Stark Industries&lt;/b&gt;.&lt;/p&gt;
         &lt;p class=&quot;tile__subtitle m-0&quot;&gt;Robert shared: 'Stark Industries is proud to announce its brand new suit.'&lt;/p&gt;
         &lt;span class=&quot;info&quot;&gt;23 minutes ago&lt;/span&gt;
-        &lt;p class=&quot;tile__buttons m-0&quot;&gt;
-            &lt;button class=&quot;btn-primary btn-xsmall uppercase&quot;&gt;View&lt;/button&gt;
-            &lt;button class=&quot;btn-xsmall uppercase&quot;&gt;Dismiss&lt;/button&gt;
-        &lt;/p&gt;
+        &lt;div class=&quot;tile__buttons m-0&quot;&gt;
+            &lt;button class=&quot;btn-primary btn-small uppercase&quot;&gt;View&lt;/button&gt;
+            &lt;button class=&quot;btn-small uppercase&quot;&gt;Dismiss&lt;/button&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
-            <p>In the two examples above, the first one is your standard tile with the <code>tile</code> parent container and <code>tile__container</code> for other elements images, text, buttons, etc. The <code>tile__buttons</code> class could be used also to display buttons horizontally. The card tile at the bottom vertically aligns all elements to be vertically centered giving a more balanced appearance.</p>
+            
+            <div class="space"></div>
+            <p>Standard <code>tile</code> with buttons located on the right by moving <code>tile__buttons</code> outside of <code>tile__container</code>. To prevent text from wrapping, use <code>u-text-no-wrap</code>.</p>
+            <div class="row">
+                <div class="col-8">
+                    <div class="tile tile--center">
+                        <div class="tile__icon">
+                            <figure class="avatar">
+                                <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
+                            </figure>
+                        </div>
+                        <div class="tile__container">
+                            <p class="tile__title u-text-no-wrap m-0">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
+                            <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p>
+                            <span class="info">23 minutes ago</span>
+                        </div>
+                        <div class="tile__buttons">
+                            <button class="btn-primary btn-small uppercase">View</button>
+                            <button class="btn-small uppercase">Dismiss</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;tile tile--center&quot;&gt;
+    &lt;div class=&quot;tile__icon&quot;&gt;
+        &lt;figure class=&quot;avatar&quot;&gt;
+            &lt;img src=&quot;https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png&quot;&gt;
+        &lt;/figure&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tile__container&quot;&gt;
+        &lt;p class=&quot;tile__title u-text-no-wrap m-0&quot;&gt;Robert Downey Jr. shared a post from &lt;b&gt;Stark Industries&lt;/b&gt;.&lt;/p&gt;
+        &lt;p class=&quot;tile__subtitle m-0&quot;&gt;Robert shared: 'Stark Industries is proud to announce its brand new suit.'&lt;/p&gt;
+        &lt;span class=&quot;info&quot;&gt;23 minutes ago&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tile__buttons&quot;&gt;
+        &lt;button class=&quot;btn-primary btn-small uppercase&quot;&gt;View&lt;/button&gt;
+        &lt;button class=&quot;btn-small uppercase&quot;&gt;Dismiss&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="space"></div>
+            
             <div class="row">
                 <div class="col-6">
                     <div class="tile tile--center">
