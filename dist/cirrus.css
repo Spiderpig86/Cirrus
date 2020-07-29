@@ -1,5 +1,5 @@
 /*
-* Cirrus 0.5.6
+* Cirrus 0.6.0
 * Stanley Lim, Copyright 2020
 * https://spiderpig86.github.io/Cirrus
 */
@@ -639,7 +639,6 @@ fieldset {
     Converts a given hex value to RGB.
 */
 /* EXTENDED FORM */
-/* Constants */
 /* Mixins */
 /* Base class layout for extended form */
 .form-ext-control {
@@ -2077,6 +2076,63 @@ fieldset {
   .tab-container .icon:last-child {
     margin-left: 0.75rem; }
 
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Color scheme for Cirrus */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 /* TAGS */
 .tag {
   align-items: center;
@@ -2099,7 +2155,7 @@ fieldset {
     font-size: 150%; }
   .tag.tag--rounded {
     border-radius: 290486px; }
-  .tag.tag--delete {
+  .tag.tag__delete {
     background-color: rgba(10, 10, 10, 0.2);
     border-radius: 290486px;
     cursor: pointer;
@@ -2111,9 +2167,9 @@ fieldset {
     min-height: 16px;
     min-width: 16px;
     position: relative; }
-  .tag.tag--delete:hover {
+  .tag.tag__delete:hover {
     background-color: rgba(10, 10, 10, 0.3); }
-  .tag.tag--delete::before, .tag.tag--delete::after {
+  .tag.tag__delete::before, .tag.tag__delete::after {
     background-color: var(--cirrus-light);
     content: '';
     display: block;
@@ -2124,13 +2180,13 @@ fieldset {
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     -webkit-transform-origin: center center;
     transform-origin: center center; }
-  .tag.tag--delete::before {
+  .tag.tag__delete::before {
     height: 1px;
     width: 50%; }
-  .tag.tag--delete::after {
+  .tag.tag__delete::after {
     height: 50%;
     width: 1px; }
-  .tag.tag--delete {
+  .tag.tag__delete {
     margin-left: 0.25rem;
     margin-right: -0.125rem; }
   .tag.tag--white {
@@ -2139,27 +2195,65 @@ fieldset {
   .tag.tag--black {
     background-color: #000;
     color: #fff; }
-  .tag.tag--dark {
-    background-color: var(--cirrus-dark);
-    color: #fff; }
   .tag.tag--primary {
     background-color: var(--cirrus-primary);
     color: #fff; }
+  .tag.tag--gray {
+    background-color: #d5d7dc;
+    color: #fff;
+    cursor: pointer; }
+    .tag.tag--gray.tag__close-btn:hover {
+      background-color: #c7cad0; }
+    .tag.tag--gray.tag__close-btn:active {
+      background-color: #b9bdc5; }
+  .tag.tag--dark {
+    background-color: #363636;
+    color: #fff;
+    cursor: pointer; }
+    .tag.tag--dark.tag__close-btn:hover {
+      background-color: #292929; }
+    .tag.tag--dark.tag__close-btn:active {
+      background-color: #1d1d1d; }
   .tag.tag--link {
-    background-color: var(--cirrus-link);
-    color: #fff; }
+    background-color: #5e5cc7;
+    color: #fff;
+    cursor: pointer; }
+    .tag.tag--link.tag__close-btn:hover {
+      background-color: #4b49c0; }
+    .tag.tag--link.tag__close-btn:active {
+      background-color: #403db3; }
   .tag.tag--info {
-    background-color: var(--cirrus-info);
-    color: #fff; }
+    background-color: #2972fa;
+    color: #fff;
+    cursor: pointer; }
+    .tag.tag--info.tag__close-btn:hover {
+      background-color: #1062f9; }
+    .tag.tag--info.tag__close-btn:active {
+      background-color: #0555eb; }
   .tag.tag--success {
-    background-color: var(--cirrus-success);
-    color: #fff; }
+    background-color: #0dd157;
+    color: #fff;
+    cursor: pointer; }
+    .tag.tag--success.tag__close-btn:hover {
+      background-color: #0cb94d; }
+    .tag.tag--success.tag__close-btn:active {
+      background-color: #0aa143; }
   .tag.tag--warning {
-    background-color: var(--cirrus-warning);
-    color: var(--cirrus-fg); }
+    background-color: #fab633;
+    color: #fff;
+    cursor: pointer; }
+    .tag.tag--warning.tag__close-btn:hover {
+      background-color: #f9ad1a; }
+    .tag.tag--warning.tag__close-btn:active {
+      background-color: #f4a306; }
   .tag.tag--danger {
-    background-color: var(--cirrus-danger);
-    color: #fff; }
+    background-color: #fb4143;
+    color: #fff;
+    cursor: pointer; }
+    .tag.tag--danger.tag__close-btn:hover {
+      background-color: #fa282a; }
+    .tag.tag--danger.tag__close-btn:active {
+      background-color: #fa0f12; }
   .tag.tag__close-btn {
     padding: 0;
     position: relative;

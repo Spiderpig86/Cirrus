@@ -29,6 +29,16 @@ $cirrus-success-hover: #00b147;
 $cirrus-warning-hover: #f9a90e;
 $cirrus-danger-hover: #f1393c;
 
+$control-themes: (
+    'gray': $cirrus-gray,
+    'dark': $cirrus-dark,
+    'link': $cirrus-link,
+    'info': $cirrus-info,
+    'success': $cirrus-success,
+    'warning': $cirrus-warning,
+    'danger': $cirrus-danger,
+);
+
 $cirrus-select-bg: rgba(0, 161, 255, 0.2);
 $cirrus-input-border: rgb(61, 171, 240);
 

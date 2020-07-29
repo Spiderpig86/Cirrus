@@ -1,3 +1,5 @@
+@import '../core/theme.scss';
+
 /* TAGS */
 .tag {
     align-items: center;
@@ -24,7 +26,7 @@
     }
 
     /* Delete button for tag */
-    &.tag--delete {
+    &.tag__delete {
         background-color: rgba(10, 10, 10, 0.2);
         border-radius: 290486px;
         cursor: pointer;
@@ -38,13 +40,13 @@
         position: relative;
     }
 
-    &.tag--delete:hover {
+    &.tag__delete:hover {
         background-color: rgba(10, 10, 10, 0.3);
     }
 
     /* Draw the delete button */
-    &.tag--delete::before,
-    &.tag--delete::after {
+    &.tag__delete::before,
+    &.tag__delete::after {
         background-color: var(--cirrus-light);
         content: '';
         display: block;
@@ -57,22 +59,22 @@
         transform-origin: center center;
     }
 
-    &.tag--delete::before {
+    &.tag__delete::before {
         height: 1px;
         width: 50%;
     }
 
-    &.tag--delete::after {
+    &.tag__delete::after {
         height: 50%;
         width: 1px;
     }
 
-    /* TAG THEMES */
-    &.tag--delete {
+    &.tag__delete {
         margin-left: 0.25rem;
         margin-right: -0.125rem;
     }
 
+    /* TAG THEMES */
     &.tag--white {
         background-color: #fff;
         color: var(--cirrus-dark);
@@ -83,39 +85,25 @@
         color: #fff;
     }
 
-    &.tag--dark {
-        background-color: var(--cirrus-dark);
-        color: #fff;
-    }
-
     &.tag--primary {
         background-color: var(--cirrus-primary);
         color: #fff;
     }
 
-    &.tag--link {
-        background-color: var(--cirrus-link);
-        color: #fff;
-    }
+    @each $color, $value in $control-themes {
+        &.tag--#{$color} {
+            background-color: $value;
+            color: #fff;
+            cursor: pointer;
 
-    &.tag--info {
-        background-color: var(--cirrus-info);
-        color: #fff;
-    }
+            &.tag__close-btn:hover {
+                background-color: darken($color: $value, $amount: 5);
+            }
 
-    &.tag--success {
-        background-color: var(--cirrus-success);
-        color: #fff;
-    }
-
-    &.tag--warning {
-        background-color: var(--cirrus-warning);
-        color: var(--cirrus-fg);
-    }
-
-    &.tag--danger {
-        background-color: var(--cirrus-danger);
-        color: #fff;
+            &.tag__close-btn:active {
+                background-color: darken($color: $value, $amount: 10);
+            }
+        }
     }
 
     /* Tag close button */

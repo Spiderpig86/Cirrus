@@ -2,16 +2,6 @@
 @import '../utils/_functions.scss';
 
 /* EXTENDED FORM */
-/* Constants */
-$toggle-themes: (
-    'gray': $cirrus-gray,
-    'dark': $cirrus-dark,
-    'link': $cirrus-link,
-    'info': $cirrus-info,
-    'success': $cirrus-success,
-    'warning': $cirrus-warning,
-    'danger': $cirrus-danger,
-);
 
 /* Mixins */
 @mixin themed-toggle-mixin($theme-color) {
@@ -63,7 +53,7 @@ $toggle-themes: (
             background-color: var(--cirrus-primary);
         }
 
-        @each $color, $value in $toggle-themes {
+        @each $color, $value in $control-themes {
             &.form-ext-input--#{$color}:checked ~ .form-ext-label {
                 color: var(--cirrus-#{$color});
 
@@ -140,7 +130,7 @@ $toggle-themes: (
         }
 
         /* Toggle themes */
-        @each $color, $value in $toggle-themes {
+        @each $color, $value in $control-themes {
             &.form-ext-toggle--#{$color} input[type='checkbox']:checked + .form-ext-toggle__toggler,
             &.form-ext-toggle--#{$color} input[type='checkbox']:checked + * .form-ext-toggle__toggler,
             &.form-ext-toggle--#{$color} input[type='radio']:checked + .form-ext-toggle__toggler,
