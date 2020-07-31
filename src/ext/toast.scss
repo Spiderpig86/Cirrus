@@ -1,87 +1,60 @@
+@import '../core/theme.scss';
+
 .toast {
     display: block;
     width: 100%;
-    padding: .75rem 1.25rem;
+    padding: 0.75rem 1.25rem;
     background-color: var(--toast-primary-bg);
     border: 1px solid var(--toast-primary-bg);
     border-radius: 2px;
     color: #fff;
     position: relative;
     margin: 0.5rem;
+
+    &.toast--translucent {
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        color: var(--cirrus-light);
+        transition: all 0.3s;
+
+        &:hover {
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+    }
+
+    .toast__title {
+        margin: 0;
+        margin-top: 1rem;
+    }
+
+    .btn-close {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    /* TOAST TYPES */
+
+    &.toast--primary {
+        background-color: var(--cirrus-primary);
+        border-color: var(--cirrus-primary);
+    }
+
+    @each $color, $value in $control-themes {
+        &.toast--#{$color} {
+            background-color: $value;
+            border-color: $value;
+        }
+    }
 }
-
-/* .toast h1, .toast h2, .toast h3, .toast h4, .toast h5, .toast h6 {
-    margin: 0;
-    margin-top: 1rem;
-} (Deprecated 0.5.5) */
-
-.toast .toast__title {
-    margin: 0;
-    margin-top: 1rem;
-}
-
-.toast p {
-    margin: 0;
-}
-
-.toast.toast--translucent {
-    opacity: .5;
-}
-
-.toast.toast--translucent:hover {
-    opacity: 1;
-}
-
-.toast .btn-close {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-}       
-
-/* TOAST TYPES */
-.toast.toast--primary {
-    background-color: var(--toast-primary-bg);
-    border-color: var(--toast-primary-bg);
-}
-
-.toast.toast--success {
-    background-color: var(--cirrus-success);
-    border-color: var(--cirrus-success);
-}
-
-.toast.toast--warning {
-    background-color: var(--cirrus-warning);
-    border-color: var(--cirrus-warning);
-}
-
-.toast.toast--error {
-    background-color: var(--cirrus-danger);
-    border-color: var(--cirrus-danger);
-}
-
-.toast.toast--info {
-    background-color: var(--cirrus-info);
-    border-color: var(--cirrus-info);
-}
-
-.toast.toast--link {
-    background-color: var(--cirrus-link);
-    border-color: var(--cirrus-link);
-}
-
-.toast.toast--primary {
-    background-color: var(--cirrus-primary);
-    border-color: var(--cirrus-primary);
-}
-
-/* Add the rest later */
-.toast a {
-    color: var(--cirrus-light);
-    transition: all .3s;
-}
-
-.toast a:hover {
-    opacity: .8;
-    transition: all .3s;
-}
-

@@ -2367,76 +2367,117 @@ a.tag:hover {
     opacity: 0.7;
     margin: 0.1rem auto; }
 
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Color scheme for Cirrus */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 .toast {
   display: block;
   width: 100%;
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   background-color: var(--toast-primary-bg);
   border: 1px solid var(--toast-primary-bg);
   border-radius: 2px;
   color: #fff;
   position: relative;
-  margin: 0.5rem; }
-
-/* .toast h1, .toast h2, .toast h3, .toast h4, .toast h5, .toast h6 {
+  margin: 0.5rem;
+  /* TOAST TYPES */ }
+  .toast.toast--translucent {
+    opacity: 0.5; }
+    .toast.toast--translucent:hover {
+      opacity: 1; }
+  .toast p {
+    margin: 0; }
+  .toast a {
+    color: var(--cirrus-light);
+    transition: all 0.3s; }
+    .toast a:hover {
+      opacity: 0.8;
+      transition: all 0.3s; }
+  .toast .toast__title {
     margin: 0;
-    margin-top: 1rem;
-} (Deprecated 0.5.5) */
-.toast .toast__title {
-  margin: 0;
-  margin-top: 1rem; }
-
-.toast p {
-  margin: 0; }
-
-.toast.toast--translucent {
-  opacity: .5; }
-
-.toast.toast--translucent:hover {
-  opacity: 1; }
-
-.toast .btn-close {
-  position: absolute;
-  right: 1rem;
-  top: 1rem; }
-
-/* TOAST TYPES */
-.toast.toast--primary {
-  background-color: var(--toast-primary-bg);
-  border-color: var(--toast-primary-bg); }
-
-.toast.toast--success {
-  background-color: var(--cirrus-success);
-  border-color: var(--cirrus-success); }
-
-.toast.toast--warning {
-  background-color: var(--cirrus-warning);
-  border-color: var(--cirrus-warning); }
-
-.toast.toast--error {
-  background-color: var(--cirrus-danger);
-  border-color: var(--cirrus-danger); }
-
-.toast.toast--info {
-  background-color: var(--cirrus-info);
-  border-color: var(--cirrus-info); }
-
-.toast.toast--link {
-  background-color: var(--cirrus-link);
-  border-color: var(--cirrus-link); }
-
-.toast.toast--primary {
-  background-color: var(--cirrus-primary);
-  border-color: var(--cirrus-primary); }
-
-/* Add the rest later */
-.toast a {
-  color: var(--cirrus-light);
-  transition: all .3s; }
-
-.toast a:hover {
-  opacity: .8;
-  transition: all .3s; }
+    margin-top: 1rem; }
+  .toast .btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem; }
+  .toast.toast--primary {
+    background-color: var(--cirrus-primary);
+    border-color: var(--cirrus-primary); }
+  .toast.toast--gray {
+    background-color: #d5d7dc;
+    border-color: #d5d7dc; }
+  .toast.toast--dark {
+    background-color: #363636;
+    border-color: #363636; }
+  .toast.toast--link {
+    background-color: #5e5cc7;
+    border-color: #5e5cc7; }
+  .toast.toast--info {
+    background-color: #2972fa;
+    border-color: #2972fa; }
+  .toast.toast--success {
+    background-color: #0dd157;
+    border-color: #0dd157; }
+  .toast.toast--warning {
+    background-color: #fab633;
+    border-color: #fab633; }
+  .toast.toast--danger {
+    background-color: #fb4143;
+    border-color: #fb4143; }
 
 /* TOOLTIPS */
 .tooltip {
@@ -2817,7 +2858,7 @@ button,
     button.btn-close:hover,
     .btn.btn-close:hover,
     [type='submit'].btn-close:hover {
-      background-color: var(--gray-900); }
+      background-color: rgba(10, 10, 10, 0.3); }
     button.btn-close::before,
     .btn.btn-close::before,
     [type='submit'].btn-close::before {
