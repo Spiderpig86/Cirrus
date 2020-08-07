@@ -3212,10 +3212,10 @@ ul {
     overflow: hidden;
     -webkit-transition: all var(--animation-duration);
     transition: all var(--animation-duration); }
-  .list-dropdown .list-dropdown.dropdown-right .menu {
+  .list-dropdown.dropdown-right .menu {
     left: auto;
     right: 0; }
-  .list-dropdown .list-dropdown.shown .menu,
+  .list-dropdown.shown .menu,
   .list-dropdown .btn-dropdown:focus + .menu,
   .list-dropdown .menu:hover {
     display: block;

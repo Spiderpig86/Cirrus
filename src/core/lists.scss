@@ -196,13 +196,13 @@ ul {
         transition: all var(--animation-duration);
     }
     
-    .list-dropdown.dropdown-right .menu {
+    &.dropdown-right .menu {
         left: auto;
         right: 0;
     }
     
     /* Allow for shown and :focus selectors for JS and native CSS transitions */
-    .list-dropdown.shown .menu,
+    &.shown .menu,
     .btn-dropdown:focus + .menu,
     .menu:hover {
         display: block;
