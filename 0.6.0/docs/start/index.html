@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cirrus - Start</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="A responsive and lightweight CSS framework.">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+
+    <link href="../../res/cirrus.min.css" type="text/css" rel="stylesheet" />
+    <link href="../../res/app.css" type="text/css" rel="stylesheet" />
+
+    <!-- Syntax highlight code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/github-gist.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="header" class="header header-fill unselectable header-fixed no-transition header-dark header-animated">
+        <div class="header-brand">
+            <div class="nav-item">
+                <a href="../../">
+                    <h6 class="title">Cirrus</h5>
+                </a>
+            </div>
+            <div class="nav-item nav-btn" id="header-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="header-nav" id="header-menu">
+            <div class="nav-left u-text-center">
+                <div class="nav-item u-text-center">
+                    <a href="https://github.com/Spiderpig86/Cirrus">
+                    <span class="icon">
+                    <i class="fab fa-wrapper fa-github"></i>
+                    </span>
+                    </a>
+                </div>
+                <div class="nav-item u-text-center">
+                    <a href="#">
+                    <span class="icon white">
+                    <i class="fab fa-wrapper fa-twitter"></i>
+                    </span>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-right u-text-center nav-menu">
+                <div class="nav-item u-text-center has-sub">
+                    <a class="nav-dropdown-link">Start</a>
+                    <ul class="dropdown-menu dropdown-animated">
+                        <li><a href="#start" class="smoothScroll">Top</a></li>
+                        <li><a href="#variants" class="smoothScroll">Variants</a></li>
+                        <li><a href="#support" class="smoothScroll">Support</a></li>
+                        <li><a href="#breakpoints" class="smoothScroll">Breakpoints</a></li>
+                        <li><a href="#colors" class="smoothScroll">Colors</a></li>
+                        <li><a href="#developing" class="smoothScroll">Developing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="space large"></div>
+    
+    <section class="padtop" id="start">
+        <div class="content">
+            <h1>Jumpstart with Cirrus</h1>
+            <p class="lead">Everything you need to know on setting up your first project.</p>
+            <div class="divider"></div>
+            <div class="space large"></div>
+
+            <h3>Installation</h3>
+            <p>There are a few ways to get <b>Cirrus</b> for your project:</p>
+            <div class="space"></div>
+            <h6 class="m-0">Npm</h6>
+            <pre class="get-cirrus">
+                <code class="dark">npm i cirrus-ui --save</code>
+                <div id="yarnCopy" class="copy" data-clipboard-text="npm i cirrus-ui --save">Copy</div>
+            </pre>
+            <h6 class="m-0">Yarn</h6>
+            <pre class="get-cirrus">
+                <code class="dark">yarn add cirrus-ui</code>
+                <div id="yarnCopy" class="copy" data-clipboard-text="yarn add cirrus-ui">Copy</div>
+            </pre>
+            <h6 class="m-0">Unpkg CDN</h6>
+            <pre class="get-cirrus">
+                <code class="dark">https://unpkg.com/cirrus-ui</code>
+                <div id="yarnCopy" class="copy" data-clipboard-text="https://unpkg.com/cirrus-ui">Copy</div>
+            </pre>
+            <h6 class="m-0">JsDelivr</h6>
+            <pre class="get-cirrus"><code class="dark">https://cdn.jsdelivr.net/npm/cirrus-ui@0.5.5/dist/cirrus.min.css</code><div id="yarnCopy" class="copy" data-clipboard-text="https://cdn.jsdelivr.net/npm/cirrus-ui@0.5.5/dist/cirrus.min.css">Copy</div></pre>
+            <h6 class="m-0">Manual Install</h6>
+            <p>All the files you need can be found right <a class="u u-LR" href="https://github.com/Spiderpig86/Cirrus/releases">here</a>.</p>
+
+            <div class="space xlarge"></div>
+
+            <h3>Requirements</h3>
+            <p>Cirrus has a <b>few requirements</b> in your setup before getting started to allow for mobile responsiveness and the latest web standards.</p>
+
+            <div id="installationTabs">
+                <div class="tab-container mb-3">
+                    <ul>
+                        <li class="tab-item selected">
+                            <a>Webpage</a>
+                        </li>
+                        <li class="tab-item">
+                            <a>Node</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabpage tabpage--shown">
+                    <p class="lead">Traditional Webpage</p>
+                    <p class="font-bold title">Add the HTML5 DocType</p>
+                    <pre class="mb-3"><code data-lang="HTML">&lt;!DOCTYPE html&gt;</code></pre>
+        
+                    <p class="font-bold title">Add the responsive viewport meta tag</p>
+                    <pre class="mb-3"><code data-lang="HTML">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code></pre class="mb-3">
+        
+                    <p class="font-bold title">Font Awesome</p>
+                    <p class="subtitle">To use glyphs, you must include the <b>Font Awesome</b> library.</p>
+                    <pre><code data-lang="HTML">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot; integrity=&quot;sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ&quot; crossorigin=&quot;anonymous&quot;&gt;
+                    </code></pre>
+                    <p>Please visit <a class="u u-LR" rel="noopener noreferrer" href="https://fontawesome.com/start" target="_blank">FontAwesome</a> and sign up to get your developer kit to get started. The CDN above is just a sample.</p>
+        
+                    <p class="font-bold title">Required Fonts</p>
+                    <p class="subtitle">Don't forget to include the required fonts.</p>
+        
+                        <pre class="mb-3"><code class="html" data-lang="HTML">&lt;!-- Google Fonts --&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css?family=Montserrat:400,700&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- Minified Cirrus CSS --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;../css/cirrus.min.css&quot;&gt;
+
+&lt;!-- Import your other dependencies --&gt;</code></pre>
+                </div>
+                <div class="tabpage">
+                    <p class="lead">Node App</p>
+                    <p class="font-bold title">Import cirrus-ui</p>
+                    <pre class="mb-3"><code class="js" data-lang="JS">
+    import 'cirrus-ui';
+
+    // Your other framework code
+</code></pre>
+
+                    <p class="font-bold title">Setup Template</p>
+                    <p>In your main <code>index.html</code> page, make sure that the following dependencies are also included. For example, it would be in the <code>index.html</code> file in your React project.</p>
+                    <pre><code data-lang="HTML">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+            &lt;title&gt;Getting Started with Cirrus&lt;/title&gt;
+
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0&quot;&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge;&quot; /&gt;
+        
+            &lt;!-- Fonts --&gt;
+            &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&quot; rel=&quot;stylesheet&quot;&gt;
+            &lt;link href=&quot;https://fonts.googleapis.com/css?family=Montserrat:400,700&quot; rel=&quot;stylesheet&quot;&gt;
+
+            &lt;!-- Font Awesome --&gt;
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.2.0/css/all.css&quot; integrity=&quot;sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+            &lt;!-- JQuery (Optional to help add navbar functionality) --&gt;
+            &lt;script src=&quot;https://code.jquery.com/jquery-2.2.4.min.js&quot; integrity=&quot;sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+
+    ...
+    </code></pre>
+                </div>
+            </div>
+
+            <div class="space xlarge"></div>
+            <h3>Template</h3>
+            <p>Start your project now with this template.</p>
+            <iframe src="./starter.html" width="100%" height="500"></iframe>
+            <pre><code data-lang="HTML">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+            &lt;title&gt;Getting Started with Cirrus&lt;/title&gt;
+
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0&quot;&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge;&quot; /&gt;
+        
+            &lt;link href=&quot;https://unpkg.com/cirrus-ui&quot; type=&quot;text/css&quot; rel=&quot;stylesheet&quot; /&gt;
+        
+            &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700&quot; rel=&quot;stylesheet&quot;&gt;
+            &lt;link href=&quot;https://fonts.googleapis.com/css?family=Montserrat:400,700&quot; rel=&quot;stylesheet&quot;&gt;
+
+            &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.2.0/css/all.css&quot; integrity=&quot;sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ&quot; crossorigin=&quot;anonymous&quot;&gt;
+
+            &lt;script src=&quot;https://code.jquery.com/jquery-2.2.4.min.js&quot; integrity=&quot;sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;div class=&quot;header header-fixed unselectable header-animated&quot;&gt;
+            &lt;div class=&quot;header-brand&quot;&gt;
+                &lt;div class=&quot;nav-item no-hover&quot;&gt;
+                    &lt;h6 class=&quot;title&quot;&gt;My App&lt;/h6&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;nav-item nav-btn&quot; id=&quot;header-btn&quot;&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;header-nav&quot; id=&quot;header-menu&quot;&gt;
+                &lt;div class=&quot;nav-left&quot;&gt;
+                    &lt;div class=&quot;nav-item text-center&quot;&gt;
+                        &lt;a href=&quot;#&quot;&gt;
+                            &lt;span class=&quot;icon&quot;&gt;
+                                &lt;i class=&quot;fab fa-wrapper fa-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+                            &lt;/span&gt;
+                        &lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&quot;nav-right&quot;&gt;
+                    &lt;div class=&quot;nav-item has-sub toggle-hover&quot; id=&quot;dropdown&quot;&gt;
+                        &lt;a class=&quot;nav-dropdown-link&quot;&gt;Menu&lt;/a&gt;
+                        &lt;ul class=&quot;dropdown-menu dropdown-animated&quot; role=&quot;menu&quot;&gt;
+                            &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;First Item&lt;/a&gt;&lt;/li&gt;
+                            &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Second Item&lt;/a&gt;&lt;/li&gt;
+                            &lt;li role=&quot;menu-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Third Item&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;section class=&quot;section&quot;&gt;
+            &lt;div class=&quot;hero fullscreen&quot;&gt;
+                &lt;div class=&quot;hero-body&quot;&gt;
+                    &lt;div class=&quot;content&quot;&gt;
+                        &lt;div class=&quot;text-center&quot;&gt;
+                            &lt;h1&gt;👋 Hello world!&lt;/h1&gt;
+                            &lt;h6 class=&quot;font-alt font-light&quot;&gt;A webpage powered by &lt;b&gt;Cirrus.&lt;/b&gt;&lt;/h6&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        <div class="space xlarge"></div>
+    </section>
+
+    <section class="padtop" id="variants">
+        <div class="content">
+            <h1><a href="./index.html#variants" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Project Variants</h1>
+            <div class="divider"></div>
+            <p>There are currently <b>two</b> variants of the project:</p>
+            <div class="space"></div>
+
+            <h6 class="m-0">Core</h6>
+            <p class="m-0">This only contains the essential styles needed to build a project with Cirrus. It consists of these components:</p>
+            
+            <div class="r">
+                <ul>
+                    <li><b>Buttons</b></li>
+                    <li><b>Code</b></li>
+                    <li><b>Default (Base)</b></li>
+                    <li><b>Font</b></li>
+                    <li><b>Footer</b></li>
+                    <li><b>Forms</b></li>
+                    <li><b>Frames</b></li>
+                    <li><b>Header</b></li>
+                    <li><b>Layout</b></li>
+                    <li><b>Links</b></li>
+                    <li><b>Lists</b></li>
+                    <li><b>Media</b></li>
+                    <li><b>Modal</b></li>
+                    <li><b>Tables</b></li>
+                    <li><b>Theme</b></li>
+                    <li><b>Util</b></li>
+                </ul>
+            </div>
+
+            <p>In the <code>dist</code> folder, these styles are found in the <code>cirrus-core.min.css</code> file <a class="u u-LR" target="_blank" rel="noopener noreferrer" href="https://github.com/Spiderpig86/Cirrus/blob/master/dist/cirrus-core.min.css">here</a>.</p>
+
+            <div class="space"></div>
+
+            <h6 class="m-0">Ext</h6>
+            <p class="m-0">This adds an extension to the framework with more styles, layouts, and <b>pre-built components</b> for quick prototyping.</p>
+
+            <div class="r">
+                <ul>
+                    <li><b>Animations</b></li>
+                    <li><b>Avatar</b></li>
+                    <li><b>Card</b></li>
+                    <li><b>Form (Extended Styles)</b></li>
+                    <li><b>Grid</b></li>
+                    <li><b>Link (Extended Styles)</b></li>
+                    <li><b>Modifiers</b></li>
+                    <li><b>Pagination</b></li>
+                    <li><b>Placeholder</b></li>
+                    <li><b>Tabs</b></li>
+                    <li><b>Tags</b></li>
+                    <li><b>Tiles</b></li>
+                    <li><b>Toasts</b></li>
+                    <li><b>Tooltips</b></li>
+                </ul>
+            </div>
+
+            <p>All these styles are combined with the <code>core</code> build in the <code>cirrus.min.css</code> file in the <code>/dist</code> folder <a class="u u-LR" target="_blank" rel="noopener noreferrer" href="https://github.com/Spiderpig86/Cirrus/blob/master/dist/cirrus.min.css">here</a>.</p>
+        </div>
+    </section>
+
+    <section class="padtop" id="support">
+        <div class="content">
+            <h1><a href="./index.html#support" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Browser Support</h1>
+            <div class="divider"></div>
+            <p>Cirrus relies on <a class="u u-LR" target="_blank" rel="noopener noreferrer" href="http://shouldiprefix.com/">What CSS to prefix?</a> and <a class="u u-LR" target="_blank" rel="noopener noreferrer" href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to help add backwards compatibility to older browsers. Cirrus works well with the following browser versions:</p>
+
+            <table class="table bordered">
+                <thead>
+                <tr>
+                <th><a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" style="max-width:100%;"></a><br>IE / Edge</th>
+                <th><a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" style="max-width:100%;"></a><br>Firefox</th>
+                <th><a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" style="max-width:100%;"></a><br>Chrome</th>
+                <th><a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" style="max-width:100%;"></a><br>Safari</th>
+                <th><a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" style="max-width:100%;"></a><br>Opera</th>
+                <th><a href="http://godban.github.io/browsers-support-badges/" rel="nofollow"><img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" style="max-width:100%;"></a><br>Electron</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td><div class="tag tag--warning">IE9</div>, <div class="tag tag--warning">IE10</div>, <div class="tag tag--warning">IE11</div>, <div class="tag tag--success">Edge</div></td>
+                <td><div class="tag tag--success">last 3</div>, <div class="tag tag--success">ESR</div></td>
+                <td><div class="tag tag--success">last 3</div></td>
+                <td><div class="tag tag--success">last 3</div></td>
+                <td><div class="tag tag--success">last 3</div></td>
+                <td><div class="tag tag--success">last 3</div></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="padtop" id="breakpoints">
+        <div class="content">
+            <h1><a href="./index.html#breakpoints" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Breakpoints</h1>
+            <div class="divider"></div>
+            <p>Breakpoints are quite standard across the entire framework. These are the 3 number ranges you need to know:</p>
+            <table class="table bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">
+                        Mobile<br>
+                            Below and including <code>768px</code>
+                        </th>
+                        
+                        <th style="width: 20%;">
+                            Tablet<br>
+                            Between <code>769px</code> and <code>1023px</code>
+                        </th>
+                    
+                        
+                        <th style="width: 20%;">
+                            Desktop<br>
+                            Above and including <code>1024px</code>
+                        </th>
+                    
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>
+                        <p class="toast toast--info" style="width: auto">*-mobile</p>
+                    </td>
+                    <td colspan="4">
+                        <p>-</p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <p>-</p>
+                    </td>
+                    <td colspan="4">
+                        <p class="toast toast--info" style="width: auto">*-tablet</p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td colspan="2">
+                        <p>-</p>
+                    </td>
+                    <td>
+                        <p class="toast toast--info" style="width: auto">*-desktop</p>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td>
+                        <p>-</p>
+                    </td>
+                    <td>
+                        <p class="toast toast--info" style="width: auto">*-tablet-only</p>
+                    </td>
+                    <td>
+                        <p>-</p>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="padtop" id="colors">
+        <div class="content">
+            <h1><a href="./index.html#colors" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Colors</h1>
+            <div class="divider"></div>
+            <p>These are the colors that style most of the framework.</p>
+
+            <div class="space"></div>
+
+            <table class="table bordered">
+                <thead>
+                    <tr>
+                        <th style="width: 50px">Color</th>
+                        <th>Name</th>
+                        <th>Hex</th>
+                        <th>Modifier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="color-circle bg-primary"></div></td>
+                        <td><b>Primary</b></td>
+                        <td><code>#f03d4d</code></td>
+                        <td><code>-primary</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-info"></div></td>
+                        <td><b>Info</b></td>
+                        <td><code>#2972fa</code></td>
+                        <td><code>-info</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-link"></div></td>
+                        <td><b>Link</b></td>
+                        <td><code>#5e5cc7</code></td>
+                        <td><code>-link</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-dark"></div></td>
+                        <td><b>Dark</b></td>
+                        <td><code>#363636</code></td>
+                        <td><code>-dark</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-success"></div></td>
+                        <td><b>Success</b></td>
+                        <td><code>#0dd157</code></td>
+                        <td><code>-success</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-warning"></div></td>
+                        <td><b>Warning</b></td>
+                        <td><code>#fab633</code></td>
+                        <td><code>-warning</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-danger"></div></td>
+                        <td><b>Danger</b></td>
+                        <td><code>#fb4143</code></td>
+                        <td><code>-danger</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="color-circle bg-light"></div></td>
+                        <td><b>Light</b></td>
+                        <td><code>#f6f9fc</code></td>
+                        <td><code>-light</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="padtop" id="developing">
+        <div class="content">
+            <h1><a href="./index.html#developing" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a>Developing</h1>
+            <div class="divider"></div>
+            <p>Developing your own version of Cirrus is quite simple with these simple steps.</p>
+
+            <div class="space"></div>
+
+            <h5>Get the Source</h5>
+            <p>You can clone the <b>source</b> of the project straight from Github. You can add files or remove them from the <code>/src</code> directory to fit your needs.</p>
+            <div class="row"><a rel="nofollow" href="https://github.com/Spiderpig86/Cirrus" target="_blank"><button class="btn btn-info">Source Code</button></a></div>
+
+            <div class="space"></div>
+
+            <h5>Building the Project</h5>
+            <p>Cirrus can be modified to include only components that you will need. Since it is processed with <a href="http://gulpjs.com/">Gulp</a> swapping different components in and out of your distribution build is very simple.</p>
+            <p>Just follow the following steps:</p>
+            <ol style="list-style: inside">
+                <li>Open the root directory in your terminal.</li>
+                <li>Remember to run <code>npm install</code> to get all the necessary dependencies.</li>
+                <li>Modify <code>gulpfile.js</code> to add or remove components and then run <code>gulp minify</code> to build the regular and minified versions.</li>
+                <li>These build files should appear in the <code>/dist</code> directory.</li>
+            </ol>
+            <p><b>Gulp Commands</b></p>
+            <ul style="list-style: inside">
+                <li><code>gulp compile</code> - just compile the CSS without minification.</li>
+                <li><code>gulp minify</code> - compile the CSS with <a class="u u-LR" href="https://github.com/jakubpawlowicz/clean-css#level-2-optimizations">level 2 minification</a>.</li>
+                <li><code>gulp watch</code> - automate compiling and minication.</li>
+            </ul>
+            
+            <div class="space"></div>
+
+            <h6>Customizing the Theme</h6>
+            <p>You can find Cirrus's color palette within <a rel="noopener noreferrer" target="_blank" href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/theme.css">theme.css</a>. Modify and rebuild the project to use the theme you prefer.</p>
+            <p>For more granular control, you can modify the theme for a specific control by changing the CSS variable value for that specific class. For example, the modification below changes the background color of <b>all buttons</b> for <code>btn--info</code> to <code>#222</code>.</p>
+
+            <pre><code class="css" data-lang="CSS">button, .btn, input[type="text"] {
+    --cirrus-info: #222;
+}</code></pre>
+            <p>The other selectors will still see the original <code>--cirrus-info</code> color instead.</p>
+
+            <div class="space xlarge"></div>
+
+            <h5>Folder Structure</h5>
+            <p>The project is organized like this:</p>
+            <pre><code class="js">├───dist                    // Dist files (git ignored)
+│   ├───cirrus.css
+│   └───cirrus.min.css
+├───img                     // Docs resources
+│   └───CirrusLogo.png
+├───src                     // CSS source files
+│   ├───core                // Styles for core build
+│   │   └───...
+│   └───ext                 // Extended styles for components
+│       └───...
+├───...
+├───.travis.yml
+├───...
+├───README.md
+├───gulpfile.js             // Build file
+└───...</code></pre>
+                
+                </div>
+        </div>
+    </section>
+
+    <script async src="../../res/js/smoothscroll.js"></script>
+    
+    <!-- Syntax highlight code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script> <!-- clipboard.js -->
+    <script src="../../res/js/app.js"></script>
+    <script src="../../res/js/tabs.js"></script>
+    <script>
+        // Copy button script
+        if (document.getElementsByClassName('copy').length !== 0)
+        var clipboard = new Clipboard('.copy'); // It will handle the rest...
+    </script>
+    <script>
+        const installationTabs = tabs({
+            el: '#installationTabs',
+            tabNavigationLinks: '.tab-item',
+            tabContentContainers: '.tabpage'
+        });
+        installationTabs.init();
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40470494-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-40470494-2');
+    </script>
+</body>
+
+<footer class="footer">
+    <h3 class="white uppercase">Cirrus</h3>
+    <div class="content">
+        <div class="divider"></div>
+        
+        <div class="row">
+            <div class="col-3">
+                <ul class="no-bullets">
+                    <a href="../animations">
+                        <li class="footer__list-item">Animations</li>
+                    </a>
+                    <a href="../buttons">
+                        <li class="footer__list-item">Buttons</li>
+                    </a>
+                    <a href="../components">
+                        <li class="footer__list-item">Components</li>
+                    </a>
+                <ul>
+            </div>
+            <div class="col-3">
+                <ul class="no-bullets">
+                    <a href="../font">
+                        <li class="footer__list-item">Font</li>
+                    </a>
+                    <a href="../footer">
+                        <li class="footer__list-item">Footer</li>
+                    </a>
+                    <a href="../forms">
+                        <li class="footer__list-item">Forms</li>
+                    </a>
+                    <ul>
+            </div>
+            <div class="col-3">
+                <ul class="no-bullets">
+                    <a href="../header">
+                        <li class="footer__list-item">Header</li>
+                    </a>
+                    <a href="../layout">
+                        <li class="footer__list-item">Layout</li>
+                    </a>
+                    <a href="../links">
+                        <li class="footer__list-item">Links</li>
+                    </a>
+                    <ul>
+            </div>
+            <div class="col-3">
+                <ul class="no-bullets">
+                    <a href="../lists">
+                        <li class="footer__list-item">Lists</li>
+                    </a>
+                    <a href="../tables">
+                        <li class="footer__list-item">Table</li>
+                    </a>
+                    <a href="../utils">
+                        <li class="footer__list-item">Util</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p class="subtitle">The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</p>
+    <p>Made with <i class="fa fa-heart pulse" aria-hidden="true"></i> by <a href="http://stanleylim.me" target="_blank">Stanley Lim</a>
+    </p>
+</footer>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta charset="UTF-8">
+        <title>Fun Form - Mizio</title>
+
+        <link href="../../res/cirrus.min.css" type="text/css" rel="stylesheet"/>
+
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous">
+        <style>
+            body {
+                background: #C9D6FF;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to bottom, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to bottom, #E2E2E2, #C9D6FF) no-repeat fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }
+
+            .frame {
+                background-color: #fff;
+            }
+
+            .padded {
+                padding: 0 2rem;
+            }
+
+            .level.fill-height {
+                -webkit-box-align: stretch;
+                -ms-flex-align: stretch;
+                align-items: stretch;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            .col:first-child {
+                padding-left: 0;
+            }
+
+            .col:last-child {
+                padding-right: 0;
+            }
+
+            ul {
+                display: flex;
+                list-style: none;
+            }
+
+            li {
+                align-items: center;
+                display: flex;
+                padding: 0 0.5rem;
+            }
+
+            @media screen and (min-width: 769px) {    
+                .col-6:not(:last-child) {
+                    border-right: 1px solid rgba(0, 0, 0, 0.10);
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                .level.fill-height {
+                    display: inherit;
+                }
+            }
+        </style>
+
+
+        <script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>      
+        
+        
+    </head>
+
+    <body>
+        
+<div class="hero fullscreen">
+    <div class="hero-body">
+        <div class="content">
+            <div class="frame padded">
+                <div class="space large"></div>
+                <div class="frame__body p-0">
+                    <div class="row p-0 level fill-height">
+                        <div class="col-6">
+                            <form name="login-form" method="post">
+                                <div class="frame__body">
+                                    <h3>Login</h3>
+                                    <div class="form-section">
+                                        <label>Email</label>
+                                        <div class="input-control">
+                                            <input class="input-contains-icon" id="email" name="email" placeholder="Email" type="text" value=""/>
+                                            <span class="icon">
+                                                <i class="far fa-wrapper fa-envelope-open small"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-section">
+                                        <label>Password</label>
+                                        <div class="input-control">
+                                            <input class="input-contains-icon" id="password" name="password" placeholder="Password" type="password" value=""/>
+                                            <span class="icon">
+                                                <i class="fas fa-wrapper fa-key small"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="space"></div>
+                                    <button class="btn-info u-pull-right" name="btn" value="login" type="submit">Log In</button>
+                                    <span class="fg-danger info"></span>
+                                    <span class="info">admin at admin@mizio.io .</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-6">
+                            <form name="register-form" method="post">
+                                <div class="padded">
+                                    <h3>Sign Up</h3>
+                                    <div class="form-section">
+                                        <label>Name</label>
+                                        <div class="input-control">
+                                            <input class="input-contains-icon" id="name" name="name" placeholder="Name" type="text" value="">
+                                            <span class="icon">
+                                                <i class="far fa-wrapper fa-user-circle small"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="form-section">
+                                        <p>Gender</p>
+                                        <ul id="gender">
+                                            <li><label class="font-bold">Gender</label></li>
+                                            <li>
+                                                <input
+                                                    id="gender-0"
+                                                    name="gender"
+                                                    type="radio"
+                                                    value="male"
+                                                />
+                                                <label for="gender-0"
+                                                    >Male</label
+                                                >
+                                            </li>
+                                            <li>
+                                                <input
+                                                    id="gender-1"
+                                                    name="gender"
+                                                    type="radio"
+                                                    value="female"
+                                                />
+                                                <label for="gender-1"
+                                                    >Female</label
+                                                >
+                                            </li>
+                                            <li>
+                                                <input
+                                                    id="gender-2"
+                                                    name="gender"
+                                                    type="radio"
+                                                    value="other"
+                                                />
+                                                <label for="gender-2"
+                                                    >Other</label
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="form-section">
+                                        <div class="input-control">
+                                            <input class="input-contains-icon" id="register-email" name="email" placeholder="Email" type="text" value="">
+                                            <span class="icon">
+                                                <i class="far fa-wrapper fa-envelope-open small"></i>
+                                        </div>
+                                    </div>
+                                    <div class="form-section">
+                                        <div class="input-control">
+                                            <input class="input-contains-icon" id="register-password" name="password" placeholder="Password" type="password" value="">
+                                            <span class="icon">
+                                                <i class="fas fa-wrapper fa-key small"></i>
+                                        </div>
+                                    </div>
+                                    <div class="row p-0 fluid-container">
+                                        <div class="col">
+                                                <div class="input-control">
+                                                    <input class="input-contains-icon" id="city" name="city" placeholder="City" type="text" value="">
+                                                    <span class="icon">
+                                                        <i class="fas fa-wrapper fa-map-marker-alt small"></i>
+                                                </div>
+                                        </div>
+                                        <div class="col">
+                                                <div class="input-control">
+                                                    <input class="input-contains-icon" id="country" name="country" placeholder="Country" type="text" value="">
+                                                    <span class="icon">
+                                                        <i class="fas fa-wrapper fa-globe-americas small"></i>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-section">
+                                            <div class="input-control">
+                                                <select id="subscription" name="subscription"><option value="Free">Free</option><option value="Plus">Plus</option><option value="Premium">Premium</option></select>
+                                            </div>
+                                    </div>
+                                    <button class="btn-info u-pull-right" name="btn" value="register" type="submit">Sign Up</button>
+                                    <span class="fg-danger info"></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="space large"></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40470494-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-40470494-2');
+        </script>
+    </body>
+</html>

@@ -54,7 +54,7 @@
             </div>
             <div class="nav-right u-text-center nav-menu">
                 <div class="nav-item">
-                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/layout.scss" target="_blank" rel="noreferrer"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
+                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/layout.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
                 </div>
 
                 <div class="nav-item u-text-center has-sub">
@@ -75,7 +75,7 @@
         </div>
     </div>
 
-    <div class="space large"></div>
+    <space class="large"></space>
 
     <section id="started" class="padtop">
         <div class="content">
@@ -476,12 +476,18 @@
             <h1><a href="./index.html#page_structure" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Page Structure</h1>
             <div class="divider"></div>
             <p>Cirrus provides styles that enable you to design pages that are spacious and elegant with ease.</p>
-            <div class="space"></div>
+            <space></space>
             <h5>Basic Classes</h5>
             <p class="title">.content</p>
             <p class="subtitle">Adds padding from the sides and the bottom to push content to the middle of the screen.</p>
+            <p class="title">.content-no-padding</p>
+            <p class="subtitle">Just like <code>.content</code> but without the extra padding at the bottom.</p>
+            <p class="title">.content-fluid</p>
+            <p class="subtitle">A div that is centered and fills the width of the parent.</p>
             <p class="title">section</p>
             <p class="subtitle">A block element to encompass other divs and is usually adjacent to other <code>section</code> elements.</p>
+            <p class="title">.panel</p>
+            <p class="subtitle">Works great as a sub-element of <code>section</code> which provides <code>2.5rem</code> rem padding to the top and bottom.</p>
             <p class="title">.divider</p>
             <p class="subtitle">A simple gray divider with an optional text field called <code>data-content</code>.</p>
             <div class="divider"></div>
@@ -588,7 +594,7 @@
             <p>In the example above, the contents of <code>level-left</code>, the <code>level-item</code> in the center, and <code>level-right</code> will expand as more content is added into the divs.</p>
             <blockquote>Tl;dr: For navbars, check out the header menu documentation.</blockquote>
             
-            <div class="space"></div>
+            <space></space>
 
             <h5>Fill Height</h5>
             <p>Looking at the previous examples, you may be wondering how to force the <code>level-items</code> to fill the height of its parent container. This is easily done by adding the <code>fill-height</code> class to the <code>level</code> div.</p>
@@ -621,8 +627,8 @@
             <div class="row">
                 <div class="col-6">
                     <div class="pagination">
-                        <div disabled class="pagination-item short">
-                            <a disabled href="#" class="">Prev</a>
+                        <div class="pagination-item short">
+                            <a disabled="" href="#" class="">Prev</a>
                         </div>
                         <div class="pagination-item short selected">
                             <a href="#" class="">1</a>
@@ -683,8 +689,8 @@
             <div class="r">
                 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col-6&quot;&gt;
     &lt;div class=&quot;pagination&quot;&gt;
-        &lt;div disabled class=&quot;pagination-item short&quot;&gt;
-            &lt;a disabled href=&quot;#&quot; class=&quot;&quot;&gt;Prev&lt;/a&gt;
+        &lt;div class=&quot;pagination-item short&quot;&gt;
+            &lt;a disabled=&quot;&quot; href=&quot;#&quot; class=&quot;&quot;&gt;Prev&lt;/a&gt;
         &lt;/div&gt;
         &lt;div class=&quot;pagination-item short selected&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;&quot;&gt;1&lt;/a&gt;
@@ -749,29 +755,29 @@
             <div class="r">
                 <ul class="pagination no-bullets">
                     <li class="pagination-item pagination-prev">
-                        <a href="#" class="u-block">
+                        <a href="#" class="display-block">
                             <p class="pagination-item-subtitle">Previous</p>
-                            <h5 class="m-0">Choose Items</h5>
+                            <h5 class="u-no-margin">Choose Items</h5>
                         </a>
                     </li>
                     <li class="pagination-item pagination-next">
-                        <a href="#" class="u-block">
+                        <a href="#" class="display-block">
                             <p class="pagination-item-subtitle">Next</p>
-                            <h5 class="m-0">Order</h5>
+                            <h5 class="u-no-margin">Order</h5>
                         </a>
                     </li>
                 </ul>
                 <pre><code class="html" data-lang="HTML">&lt;ul class=&quot;pagination no-bullets&quot;&gt;
     &lt;li class=&quot;pagination-item pagination-prev&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;u-block&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;display-block&quot;&gt;
             &lt;p class=&quot;pagination-item-subtitle&quot;&gt;Previous&lt;/p&gt;
-            &lt;h5 class=&quot;m-0&quot;&gt;Choose Items&lt;/h5&gt;
+            &lt;h5 class=&quot;u-no-margin&quot;&gt;Choose Items&lt;/h5&gt;
         &lt;/a&gt;
     &lt;/li&gt;
     &lt;li class=&quot;pagination-item pagination-next&quot;&gt;
-        &lt;a href=&quot;#&quot; class=&quot;u-block&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;display-block&quot;&gt;
             &lt;p class=&quot;pagination-item-subtitle&quot;&gt;Next&lt;/p&gt;
-            &lt;h5 class=&quot;m-0&quot;&gt;Order&lt;/h5&gt;
+            &lt;h5 class=&quot;u-no-margin&quot;&gt;Order&lt;/h5&gt;
         &lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
@@ -787,7 +793,7 @@
             <p>Frames are designed similar to <a href="../components#cards" class="u u-LR">cards</a>, but provide more flexibility to the developer to align items in a structured layout. The <b>frame</b> is designed to auto-expand with more content.</p>
             <div class="row">
                 <div class="col-6">
-                    <div class="frame">
+                    <div class="frame" style="background: #fff; padding: 1rem;">
                         <div class="frame-header" style="background: #eee; padding: 1rem; margin: 1rem;">
                             <div class="frame__title u-text-center">Frame Title</div>
                             <div class="frame__subtitle u-text-center">Frame Subtitle</div>
@@ -796,7 +802,7 @@
                         <div class="frame__body" style="background: #eee; padding: 1rem; margin: 1rem;">
                             <div class="frame__title u-text-center">Frame Body</div>
                             <div class="frame__subtitle u-text-center">Insert any component here, including a frame navigation menu using <code>frame-nav</code>. The frame will auto-expand and if a specific height is set, a scrollbar will appear to take care of overflow.</div>
-                            <blockquote class="u-text-center">The white margins bettween the gray boxes is to demonstrate how the frame sub sections are separated.</blockquote>
+                            <blockquote class="u-text-center">The lighter gray is the frame itself while the grey are the components of the frame. Please note that the margins are just to serve as an example.</blockquote>
                         </div>
                         <div class="frame__footer" style="background: #eee; padding: 1rem; margin: 1rem;">
                             <div class="frame__title u-text-center">Frame Footer</div>
@@ -841,14 +847,13 @@
                                 <a class="col" href="#"><i class="fa fa-wrapper fa-medium link-btn"></i></a>
                             </div>
                         </div>
-                        <div class="content-no-padding"><div class="divider m-0"></div></div>
+                        <div class="content-no-padding"><div class="divider u-no-margin"></div></div>
                         <div class="frame__body">
                             <div class="content u-text-center">
-                                <h5>Lorem! Ipsum!</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
                         </div>
-                        <div class="content-no-padding"><div class="divider m-0"></div></div>
+                        <div class="content-no-padding"><div class="divider u-no-margin"></div></div>
                         <div class="frame__footer">
                             <div class="frame__subtitle u-text-center"><i>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i></div>
                         </div>
@@ -873,14 +878,13 @@
             &lt;a class=&quot;col&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-medium link-btn&quot;&gt;&lt;/i&gt;&lt;/a&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;content-no-padding&quot;&gt;&lt;div class=&quot;divider m-0&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;content-no-padding&quot;&gt;&lt;div class=&quot;divider u-no-margin&quot;&gt;&lt;/div&gt;&lt;/div&gt;
     &lt;div class=&quot;frame__body&quot;&gt;
         &lt;div class=&quot;content u-text-center&quot;&gt;
-            &lt;h3&gt;Lorem! Ipsum!&lt;/h3&gt;
             &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;content-no-padding&quot;&gt;&lt;div class=&quot;divider m-0&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;content-no-padding&quot;&gt;&lt;div class=&quot;divider u-no-margin&quot;&gt;&lt;/div&gt;&lt;/div&gt;
     &lt;div class=&quot;frame__footer&quot;&gt;
         &lt;div class=&quot;frame__subtitle u-text-center&quot;&gt;&lt;i&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/i&gt;&lt;/div&gt;
     &lt;/div&gt;
@@ -892,67 +896,67 @@
                 <div class="col-6">
                     <div class="frame" style="height:30rem;">
                         <div class="frame__header" style="box-shadow: 0 2px 3px rgba(85, 85, 85, 0.1);">
-                            <div class="frame__title title m-0">Super Awesome Group Chat</div>
+                            <div class="frame__title title u-no-margin">Super Awesome Group Chat</div>
                         </div>
                         <div class="frame__body">
-                            <div class="space"></div>
+                            <space></space>
                             <div class="r">
-                                <div class="tile tile--center m-0">
+                                <div class="tile tile--center u-no-margin">
                                     <div class="tile-icon">
                                         <figure class="avatar img-small" data-text="El"></figure>
                                     </div>
                                     <div class="tile__container">
-                                        <p class="tile__title m-0">Elk</p>
-                                        <p class="tile__subtitle m-0">Hey guys.</p>
+                                        <p class="tile__title u-no-margin">Elk</p>
+                                        <p class="tile__subtitle u-no-margin">Hey guys.</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="r">
-                                <div class="tile tile--center m-0">
+                                <div class="tile tile--center u-no-margin">
                                     <figure class="avatar img-small">
                                         <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
                                     </figure>
                                     <div class="tile__container">
-                                        <p class="tile__title m-0">Tony</p>
-                                        <p class="tile__subtitle m-0">What's up?</p>
+                                        <p class="tile__title u-no-margin">Tony</p>
+                                        <p class="tile__subtitle u-no-margin">What's up?</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="r">
-                                <div class="tile tile--center m-0">
+                                <div class="tile tile--center u-no-margin">
                                      <div class="tile-icon">
                                         <figure class="avatar img-small" data-text="El"></figure>
                                     </div>
                                     <div class="tile__container">
-                                        <p class="tile__title m-0">Elk</p>
-                                        <p class="tile__subtitle m-0">I started working on a new webapp. However I'm pretty lazy when it comes to designing from the ground up. Anyone know any good CSS frameworks for rapid prototyping?</p>
+                                        <p class="tile__title u-no-margin">Elk</p>
+                                        <p class="tile__subtitle u-no-margin">I started working on a new webapp. However I'm pretty lazy when it comes to designing from the ground up. Anyone know any good CSS frameworks for rapid prototyping?</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="r">
-                                <div class="tile tile--center m-0">
+                                <div class="tile tile--center u-no-margin">
                                     <div class="tile-icon">
                                         <figure class="avatar img-small">
                                             <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
                                         </figure>
                                     </div>
                                     <div class="tile__container">
-                                        <p class="tile__title m-0">Tony</p>
-                                        <p class="tile__subtitle m-0">Check out Cirrus. <a href="https://spiderpig86.github.io/Cirrus">https://spiderpig86.github.io/Cirrus</a></p>
+                                        <p class="tile__title u-no-margin">Tony</p>
+                                        <p class="tile__subtitle u-no-margin">Check out Cirrus. <a href="https://spiderpig86.github.io/Cirrus">https://spiderpig86.github.io/Cirrus</a></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="r">
-                                <div class="tile tile--center m-0">
+                                <div class="tile tile--center u-no-margin">
                                      <div class="tile-icon">
                                         <figure class="avatar img-small" data-text="El"></figure>
                                     </div>
                                     <div class="tile__container">
-                                        <p class="tile__title m-0">Elk</p>
-                                        <p class="tile__subtitle m-0">Just what I needed.</p>
+                                        <p class="tile__title u-no-margin">Elk</p>
+                                        <p class="tile__subtitle u-no-margin">Just what I needed.</p>
                                     </div>
                                     <div class="tile__buttons">
-                                        <a href="#">
+                                        <a href="#" style="display: block;">
                                             <i class="fa fa-wrapper fa-ellipsis-v small" aria-hidden="true"></i>
                                         </a>
                                     </div>
@@ -1083,10 +1087,10 @@
                 </div>
             </div>
 
-            <div class="space large"></div>
+            <space class="large"></space>
 
             <a href="./grid.html" class="u-inline-block u-pull-right">
-                <div class="m-1">
+                <div class="btn-container">
                     <button class="btn-primary">See More</button>
                 </div>
             </a>
@@ -1100,15 +1104,15 @@
             <div class="divider"></div>
             <ul class="pagination no-bullets">
                 <li class="pagination-item pagination-prev">
-                    <a href="../forms" class="u-block">
+                    <a href="../forms" class="display-block">
                         <p class="pagination-item-subtitle">Previous</p>
-                        <h5 class="light m-0">Forms</h5>
+                        <h5 class="light u-no-margin">Forms</h5>
                     </a>
                 </li>
                 <li class="pagination-item pagination-next">
-                    <a href="../links" class="u-block">
+                    <a href="../links" class="display-block">
                         <p class="pagination-item-subtitle">Next</p>
-                        <h5 class="light m-0">Links</h5>
+                        <h5 class="light u-no-margin">Links</h5>
                     </a>
                 </li>
             </ul>
@@ -1137,61 +1141,61 @@
     </script>
 </body>
 
-    <footer class="footer">
-        <h6 class="footer__title white uppercase">Cirrus</h5>
+    <footer>
+        <h6 class="white uppercase">Cirrus</h5>
         <div class="content">
             <div class="divider"></div>
-            
+            <!--<li class="no-bullets footer-list-title">Docs</li>-->
             <div class="row">
                 <div class="col-3">
                     <ul class="no-bullets">
                         <a href="../animations">
-                            <li class="footer__list-item"st-item">Animations</li>
+                            <li class="list-item">Animations</li>
                         </a>
                         <a href="../buttons">
-                            <li class="footer__list-item"st-item">Buttons</li>
+                            <li class="list-item">Buttons</li>
                         </a>
                         <a href="../components">
-                            <li class="footer__list-item"st-item">Components</li>
+                            <li class="list-item">Components</li>
                         </a>
                         <ul>
                 </div>
                 <div class="col-3">
                     <ul class="no-bullets">
                         <a href="../font">
-                            <li class="footer__list-item"st-item">Font</li>
+                            <li class="list-item">Font</li>
                         </a>
                         <a href="../footer">
-                            <li class="footer__list-item"st-item">Footer</li>
+                            <li class="list-item">Footer</li>
                         </a>
                         <a href="../forms">
-                            <li class="footer__list-item"st-item">Forms</li>
+                            <li class="list-item">Forms</li>
                         </a>
                         <ul>
                 </div>
                 <div class="col-3">
                     <ul class="no-bullets">
                         <a href="../header">
-                            <li class="footer__list-item"st-item">Header</li>
+                            <li class="list-item">Header</li>
                         </a>
                         <a href="../layout">
-                            <li class="footer__list-item"st-item">Layout</li>
+                            <li class="list-item">Layout</li>
                         </a>
                         <a href="../links">
-                            <li class="footer__list-item"st-item">Links</li>
+                            <li class="list-item">Links</li>
                         </a>
                         <ul>
                 </div>
                 <div class="col-3">
                     <ul class="no-bullets">
                         <a href="../lists">
-                            <li class="footer__list-item"st-item">Lists</li>
+                            <li class="list-item">Lists</li>
                         </a>
                         <a href="../tables">
-                            <li class="footer__list-item"st-item">Table</li>
+                            <li class="list-item">Table</li>
                         </a>
                         <a href="../utils">
-                            <li class="footer__list-item"st-item">Util</li>
+                            <li class="list-item">Util</li>
                         </a>
                     </ul>
                 </div>

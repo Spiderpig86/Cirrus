@@ -60,7 +60,7 @@
             </div>
             <div class="nav-right text-center nav-menu">
                 <div class="nav-item">
-                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/header.scss" target="_blank" rel="noreferrer"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
+                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/header.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
                 </div>
 
                 <div class="nav-item text-center has-sub">
@@ -81,7 +81,7 @@
         </div>
     </div>
 
-    <div class="space large"></div>
+    <space class="large"></space>
 
     <section id="started" class="padtop">
         <div class="content">
@@ -291,7 +291,7 @@
 
             <p>Since that <code>header-nav</code> fills up the rest of the space for devices with widths larger than <code>768px</code>, Cirrus provides different layouts to place elements within the container itself using <code>nav-left</code>, <code>nav-center</code>, and <code>nav-right</code> directly as children.</p>
 
-            <div class="space"></div>
+            <space></space>
             <h5>JavaScript Toggle</h6>
             <p>Keep in mind that the script used to toggle the menus is not included in Cirrus and it is best to develop a custom one that fits your site. Below is a sample of what can fit in any site running Cirrus.</p>
 
@@ -310,7 +310,7 @@ navBtns.forEach(function (ele) {
         dropDownMenu.classList.toggle('active');
     });
 });</code></pre>
-        <div class="space"></div>
+        <space></space>
         <h6>JQuery</h6>
         <pre><code class="javascript" data-lang="JS">// Show dropdown when clicked
 $('#header-btn').on('click', function(e) {
@@ -334,15 +334,15 @@ $('.dropdown-menu li').on('click', function(e) {
             <p>Note that this only shows for <code>&gt; 768px</code>.
             </p>
             <div class="r">
-                <p class="info text-center m-0">Only 1 region present (<code>nav-left</code>).</p>
+                <p class="info text-center no-margin">Only 1 region present (<code>nav-left</code>).</p>
                 <iframe src="./demo-head-dist-1.html" width="100%" height="200"></iframe>
             </div>
             <div class="r">
-                <p class="info text-center m-0">Only 2 regions present (<code>nav-left</code> and <code>nav-right</code>).</p>
+                <p class="info text-center no-margin">Only 2 regions present (<code>nav-left</code> and <code>nav-right</code>).</p>
                 <iframe src="./demo-head-dist-2.html" width="100%" height="200"></iframe>
             </div>
             <div class="r">
-                <p class="info text-center m-0">All regions present (<code>nav-left</code>, <code>nav-center</code> and <code>nav-right</code>).</p>
+                <p class="info text-center no-margin">All regions present (<code>nav-left</code>, <code>nav-center</code> and <code>nav-right</code>).</p>
                 <iframe src="./demo-head-dist-3.html" width="100%" height="200"></iframe>
             </div>
 
@@ -411,8 +411,7 @@ $('.dropdown-menu li').on('click', function(e) {
     &lt;button class=&quot;btn-accent&quot;&gt;Hello&lt;/button&gt;
     &lt;button class=&quot;btn-accent&quot;&gt;World&lt;/button&gt;
 &lt;/div&gt;</code></pre>
-            <div class="space"></div>
-            <iframe src="./demo-dropdown-content.html" width="100%" height="400"></iframe>
+            <iframe src="./demo-dropdown-content.html" width="100%" height="100"></iframe>
 
             </div>
             <p>Cirrus provides flexibility for which type of elements you can use for your <code>nav-item</code> elements which can be declared as either <code>&lt;div&gt;</code> or <code>&lt;a&gt;</code>.</p>
@@ -429,7 +428,7 @@ $('.dropdown-menu li').on('click', function(e) {
             <div class="divider"></div>
             <p>The <code>dropdown-menu</code> allows you to display a drpdown menu from a <code>nav-item</code> that displays additional options. This is simply a <code>nav-item</code> that has an <code>has-sub</code> class attached to it to indicate that this contains a dropdown menu with additional options. On desktops <code>&gt; 768px</code>, the dropdown menu appears as a regular menu item and the menu portion displays below the <code>nav-item</code>. On mobile devices, it just expands the <code>nav-item</code> it is in. The user clicks this toggle and the <code>dropdown-menu</code> will appear based on its previous state. The whole implementation is really broken down into two parts:</p>
             
-            <div class="space"></div>
+            <space></space>
             <h6>1) The Dropdown Toggle</h6>
             <p>Inside the <code>nav-item has-sub</code> element, the main toggle of the component will be handled by an anchor tag with the <code>nav-dropdown-link</code> class. Inside this control, icons and text can be added to specify the contents of the menu. When the dropdown menu is shown, the <code>active</code> class will be added to the <code>nav-item has-sub</code> element (the parent).</p>
             <div class="r">
@@ -440,7 +439,7 @@ $('.dropdown-menu li').on('click', function(e) {
 &lt;/div&gt;</code></pre>
 </div>
             
-            <div class="space"></div>
+            <space></space>
             <h6>2) The Menu Itself</h6>
             <p>The menu itself will be <b>adjacent</b> to the <code>nav-dropdown-link</code> and is a <code>ul</code> with the <code>dropdown-menu</code> class. Addition modifers include:
             <ul>
@@ -468,7 +467,7 @@ $('.dropdown-menu li').on('click', function(e) {
 &lt;/div&gt;</code></pre>
             </div>
 
-            <div class="space"></div>
+            <space></space>
             <h6>JavaScript (jQuery)</h6>
             <p>With JavaScript, the cleanest solution relies on jQuery. Below is a snippet that should work for general implementations of the <code>dropdown-menu</code>, but may require slight modification depending on the design of the website.</p>
             <div class="r">
@@ -580,15 +579,15 @@ $('.dropdown-menu li').on('click', function(e) {
             <div class="divider"></div>
             <ul class="pagination no-bullets">
                 <li class="pagination-item pagination-prev">
-                    <a href="../forms" class="u-block">
+                    <a href="../forms" class="display-block">
                         <p class="pagination-item-subtitle">Previous</p>
-                        <h5 class="light m-0">Forms</h5>
+                        <h5 class="light no-margin">Forms</h5>
                     </a>
                 </li>
                 <li class="pagination-item pagination-next">
-                    <a href="../layout" class="u-block">
+                    <a href="../layout" class="display-block">
                         <p class="pagination-item-subtitle">Next</p>
-                        <h5 class="light m-0">Layout</h5>
+                        <h5 class="light no-margin">Layout</h5>
                     </a>
                 </li>
             </ul>
@@ -616,61 +615,61 @@ $('.dropdown-menu li').on('click', function(e) {
     </script>
 </body>
 
-    <footer class="footer">
-        <h6 class="footer__title white uppercase">Cirrus</h6>
+    <footer>
+        <h6 class="white uppercase">Cirrus</h6>
         <div class="content">
             <div class="divider"></div>
-            
+            <!--<li class="no-bullets footer-list-title">Docs</li>-->
             <div class="row">
                 <div class="col-3">
                     <ul class="no-bullets">
                         <a href="../animations">
-                            <li class="footer__list-item">Animations</li>
+                            <li class="list-item">Animations</li>
                         </a>
                         <a href="../buttons">
-                            <li class="footer__list-item">Buttons</li>
+                            <li class="list-item">Buttons</li>
                         </a>
                         <a href="../components">
-                            <li class="footer__list-item">Components</li>
+                            <li class="list-item">Components</li>
                         </a>
                         <ul>
                 </div>
                 <div class="col-3">
                     <ul class="no-bullets">
                         <a href="../font">
-                            <li class="footer__list-item">Font</li>
+                            <li class="list-item">Font</li>
                         </a>
                         <a href="../footer">
-                            <li class="footer__list-item">Footer</li>
+                            <li class="list-item">Footer</li>
                         </a>
                         <a href="../forms">
-                            <li class="footer__list-item">Forms</li>
+                            <li class="list-item">Forms</li>
                         </a>
                         <ul>
                 </div>
                 <div class="col-3">
                     <ul class="no-bullets">
                         <a href="../header">
-                            <li class="footer__list-item">Header</li>
+                            <li class="list-item">Header</li>
                         </a>
                         <a href="../layout">
-                            <li class="footer__list-item">Layout</li>
+                            <li class="list-item">Layout</li>
                         </a>
                         <a href="../links">
-                            <li class="footer__list-item">Links</li>
+                            <li class="list-item">Links</li>
                         </a>
                         <ul>
                 </div>
                 <div class="col-3">
                     <ul class="no-bullets">
                         <a href="../lists">
-                            <li class="footer__list-item">Lists</li>
+                            <li class="list-item">Lists</li>
                         </a>
                         <a href="../tables">
-                            <li class="footer__list-item">Table</li>
+                            <li class="list-item">Table</li>
                         </a>
                         <a href="../utils">
-                            <li class="footer__list-item">Util</li>
+                            <li class="list-item">Util</li>
                         </a>
                     </ul>
                 </div>

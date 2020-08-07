@@ -54,7 +54,7 @@
             </div>
             <div class="nav-right text-center nav-menu">
                 <div class="nav-item">
-                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/footer.scss" target="_blank" rel="noreferrer"><span class="icon"><i class="fa fa-code"></i></span></a>
+                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/footer.css" target="_blank"><span class="icon"><i class="fa fa-code"></i></span></a>
                 </div>
 
                 <div class="nav-item has-sub">
@@ -71,7 +71,7 @@
         </div>
     </div>
 
-    <div class="space large"></div>
+    <space class="large"></space>
 
     <section id="started" class="padtop">
         <div class="content">
@@ -95,8 +95,8 @@
                     <li><code>footer</code> serves as the main base component of the *<i>drum roll...</i>* footer. By default, it comes with equal padding at the top and bottom of <code>6rem</code> and a margin top of <code>5rem</code> to create a separation between the main content and the footer.</li>
                     <ul>
                         <li>At this point, pretty much anything can be placed into the <code>footer</code>, but there are a few footer specific components worth mentioning.</li>
-                        <li><code>footer__list-title</code> is a standard list title in the footer with a bottom border.</li>
-                        <li><code>footer__list-item</code> provides default stylings for list items. These can be used in combination with Cirrus's columns to create a clean site map.</li>
+                        <li><code>footer-list-title</code> is a standard list title in the footer with a bottom border.</li>
+                        <li><code>footer-list-item</code> provides default stylings for list items. These can be used in combination with Cirrus's columns to create a clean site map.</li>
                     </ul>
                 </ul>
             </div>
@@ -107,7 +107,7 @@
         <div class="content">
             <h1><a href="./index.html#footer_title" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Footer List Titles</h1>
             <div class="divider"></div>
-            <p>As stated above, this forms the basis for a footer list title as seen in the 'Bear &amp; Co.', 'About', and other titles with the <code>footer__list-title</code> class. The items below them are styled by the <code>footer__list-item</code> class.</p>
+            <p>As stated above, this forms the basis for a footer list title as seen in the 'Bear &amp; Co.', 'About', and other titles with the <code>footer-list-title</code> class. The items below them are styled by the <code>footer-list-item</code> class.</p>
             <div class="row">
                 <iframe src="./demo-footer-title.html" width="100%" height="350"></iframe>
             </div>
@@ -118,7 +118,7 @@
         <div class="content">
             <h1><a href="./index.html#static" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Static Footer</h1>
             <div class="divider"></div>
-            <p>Static footers are designed to stick to the bottom of a page. To make a static footer, add the <code>footer--fixed</code> class to the footer.</p>
+            <p>Static footers are designed to stick to the bottom of a page. To make a static footer, add the <code>footer-fixed</code> class to the footer.</p>
             <div class="row">
                 <iframe src="./demo-footer-static.html" width="100%" height="550"></iframe>
             </div>
@@ -146,7 +146,7 @@
 
         <p>Below are a couple of examples of different footer designs with Cirrus to help you get started.</p>
 
-        <div class="space large"></div>
+        <space class="large"></space>
         <h6>Minimal Footer</h6>
         <p>A minimal footer for a clean website. Only having the copyright, logo, and social links can be sufficient. Simple, clean, and to the point.</p>
 
@@ -154,7 +154,7 @@
             <iframe src="./demo-footer-minimal.html" width="100%" height="350"></iframe>
         </div>
 
-        <div class="space xlarge"></div>
+        <space class="x-large"></space>
         <h6>Site Map</h6>
         <p>A simple way to allow users to navigate to all the different pages on your site.</p>
 
@@ -162,14 +162,14 @@
             <iframe src="./demo-footer-map.html" width="100%" height="350"></iframe>
         </div>
 
-        <div class="space xlarge"></div>
+        <space class="x-large"></space>
         <h6>Newsletter</h6>
         <p>Make your footer standout with a simple contact or sign up form. This is great for blogs and other media sites.</p>
         <div class="row">
             <iframe src="./demo-footer-newsletter.html" width="100%" height="350"></iframe>
         </div>
 
-        <div class="space xlarge"></div>
+        <space class="x-large"></space>
         
         <h6>Social</h6>
         <p>Refer users to other social networks from the main site for greater user engagement.</p>
@@ -177,7 +177,7 @@
             <iframe src="./demo-footer-social.html" width="100%" height="350"></iframe>
         </div>
 
-        <div class="space xlarge"></div>
+        <space class="x-large"></space>
 
         <div class="placeholder">
             <div class="placeholder-icon">
@@ -196,15 +196,15 @@
             <div class="divider"></div>
             <ul class="pagination no-bullets">
                 <li class="pagination-item pagination-prev">
-                    <a href="../font" class="u-block">
+                    <a href="../font" class="display-block">
                         <p class="pagination-item-subtitle">Previous</p>
-                        <h5 class="light m-0">Font</h5>
+                        <h5 class="light no-margin">Font</h5>
                     </a>
                 </li>
                 <li class="pagination-item pagination-next">
-                    <a href="../forms" class="u-block">
+                    <a href="../forms" class="display-block">
                         <p class="pagination-item-subtitle">Next</p>
-                        <h5 class="light m-0">Forms</h5>
+                        <h5 class="light no-margin">Forms</h5>
                     </a>
                 </li>
             </ul>
@@ -232,61 +232,61 @@
     </script>
 </body>
 
-<footer class="footer">
-    <h6 class="footer__title white uppercase">Cirrus</h6>
+<footer>
+    <h6 class="white uppercase">Cirrus</h6>
     <div class="content">
         <div class="divider"></div>
-        
+        <!--<li class="no-bullets footer-list-title">Docs</li>-->
         <div class="row">
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../animations">
-                        <li class="footer__list-item">Animations</li>
+                        <li class="list-item">Animations</li>
                     </a>
                     <a href="../buttons">
-                        <li class="footer__list-item">Buttons</li>
+                        <li class="list-item">Buttons</li>
                     </a>
                     <a href="../components">
-                        <li class="footer__list-item">Components</li>
+                        <li class="list-item">Components</li>
                     </a>
                     <ul>
             </div>
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../font">
-                        <li class="footer__list-item">Font</li>
+                        <li class="list-item">Font</li>
                     </a>
                     <a href="../footer">
-                        <li class="footer__list-item">Footer</li>
+                        <li class="list-item">Footer</li>
                     </a>
                     <a href="../forms">
-                        <li class="footer__list-item">Forms</li>
+                        <li class="list-item">Forms</li>
                     </a>
                     <ul>
             </div>
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../header">
-                        <li class="footer__list-item">Header</li>
+                        <li class="list-item">Header</li>
                     </a>
                     <a href="../layout">
-                        <li class="footer__list-item">Layout</li>
+                        <li class="list-item">Layout</li>
                     </a>
                     <a href="../links">
-                        <li class="footer__list-item">Links</li>
+                        <li class="list-item">Links</li>
                     </a>
                     <ul>
             </div>
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../lists">
-                        <li class="footer__list-item">Lists</li>
+                        <li class="list-item">Lists</li>
                     </a>
                     <a href="../tables">
-                        <li class="footer__list-item">Table</li>
+                        <li class="list-item">Table</li>
                     </a>
                     <a href="../utils">
-                        <li class="footer__list-item">Util</li>
+                        <li class="list-item">Util</li>
                     </a>
                 </ul>
             </div>

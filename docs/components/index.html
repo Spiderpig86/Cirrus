@@ -97,14 +97,20 @@
                 <h4>Ipsum II</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet luctus venenatis lectus magna. Facilisis gravida neque convallis a cras semper. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Erat imperdiet sed euismod nisi porta lorem. </p>
             </div>
-            <div class="modal-footer"><a href="#components" style="display: inline-block;">
-                <button class="btn-small">Cancel</button></a>
-                <a href="#components" style="display: inline-block"><button class="btn-primary btn-small">Share</button></a>
+            <div class="modal-footer">
+                <div class="u-flex">
+                    <div class="level-left level-content"><a href="#components" style="display: inline-block;">
+                        <button class="btn-small">Cancel</button></a>
+                    </div>
+                    <div class="level-right level-content">
+                        <a href="#components" style="display: inline-block"><button class="btn-primary btn-small" style="padding: 0 1rem">Share</button></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="space large"></div>
+    <space class="large"></space>
 
     <section id="started" class="padtop">
         <div class="content">
@@ -131,23 +137,12 @@
                 </div>
                 <div class="col-4">
                     <p class="u-text-center font-bold">Tab Component</p>
-                    <div id="tabsDemo">
-                        <div class="tab-container tabs-fill">
-                            <ul>
-                                <li class="tab-item selected"><a>Favorites</a></li>
-                                <li class="tab-item"><a>Profile</a></li>
-                                <li class="tab-item"><a>Pins</a></li>
-                            </ul>
-                        </div>
-                        <div class="tabpage tabpage--shown">
-                            <p>⭐ Favorites</p>
-                        </div>
-                        <div class="tabpage">
-                            <p>🙈 Profile</p>
-                        </div>
-                        <div class="tabpage">
-                            <p>📌 Pins</p>
-                        </div>
+                    <div class="tab-container tabs-fill">
+                        <ul>
+                            <li class="tab-item"><a>Favorites</a></li>
+                            <li class="tab-item selected"><a>Profile</a></li>
+                            <li class="tab-item"><a>Pins</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -219,7 +214,7 @@
                             <button class="uppercase">Buttons</button>
                             <button class="uppercase">Go here</button>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer content-fluid">
                             <div class="u-text-center">
                                 <span>This is additional footer text in <code>card-footer</code>.</span>
                             </div>
@@ -241,7 +236,7 @@
     &lt;div class=&quot;action-bar u-center&quot;&gt;
         &lt;!-- Action Bar --&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;card-footer&quot;&gt;
+    &lt;div class=&quot;card-footer content-fluid&quot;&gt;
         &lt;!-- Footer --&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
@@ -258,7 +253,7 @@
             <p>Sometimes the best way to get information across is a minimallistic approach. Cards in Cirrus are adaptable to what you want to show.</p>
             <div class="row">
                 <div class="col-4">
-                    <a class="u-block" href="#">
+                    <a href="#">
                         <div class="card">
                             <div class="content">
                                 <img src="https://maxcdn.icons8.com/Share/icon/Logos//chrome1600.png" class="level" id="projectlogo" />
@@ -270,7 +265,7 @@
                 </div>
 
                 <div class="col-8">
-                    <pre><code class="html" data-lang="HTML">&lt;a class=&quot;u-block&quot; href=&quot;#&quot;&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;a href=&quot;#&quot;&gt;
     &lt;div class=&quot;card&quot;&gt;
         &lt;div class=&quot;content&quot;&gt;
             &lt;img src=&quot;https://maxcdn.icons8.com/Share/icon/Logos//chrome1600.png&quot; class=&quot;level&quot; id=&quot;projectlogo&quot; /&gt;
@@ -495,13 +490,13 @@
                 </div>
             </div>
 
-            <div class="space"></div>
+            <space></space>
 
             <h3>Equal Heights</h3>
             <span class="tag-container group-tags">
                 <div class="tag tag--dark">Added</div><div class="tag tag--info">0.5.5</div>
             </span>
-            <p>You may have noticed that the heights of the cards are not the same if the length of the content is different. To fix this, you can add the <code>h-100 u-flex u-flex-column</code> classes to <code>card</code>.</p>
+            <p>You may have noticed that the heights of the cards are not the same if the length of the content is different. To fix this, you can add the <code>u-flex u-flex-column h-100</code> classes to <code>card</code>.</p>
             <p>Note that <b>this does not work with the card with the animated card above</b>.</p>
 
             <h6>Before</h6>
@@ -522,7 +517,7 @@
                             <button class="uppercase">Buttons</button>
                             <button class="uppercase">Go here</button>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer content-fluid">
                             <div class="u-text-center">
                                 <span>This is additional footer text in <code>card-footer</code>.</span>
                             </div>
@@ -559,7 +554,7 @@
             <h6>After</h6>
             <div class="row">
                 <div class="col-4">
-                    <div class="card h-100 u-flex u-flex-column">
+                    <div class="card u-flex u-flex-column h-100">
                         <div class="card-container">
                             <div class="card-image" style="background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);"></div>
                             <div class="title-container">
@@ -574,7 +569,7 @@
                             <button class="uppercase">Buttons</button>
                             <button class="uppercase">Go here</button>
                         </div>
-                        <div class="card-footer">
+                        <div class="card-footer content-fluid">
                             <div class="u-text-center">
                                 <span>This is additional footer text in <code>card-footer</code>.</span>
                             </div>
@@ -582,7 +577,7 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card h-100 u-flex u-flex-column">
+                    <div class="card u-flex u-flex-column h-100">
                         <div class="card-container">
                             <div class="card-image" style="background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);"></div>
                             <div class="title-container">
@@ -596,7 +591,7 @@
                     </div>
                 </div>
                 <div class="col-4">
-                    <div class="card h-100 u-flex u-flex-column">
+                    <div class="card u-flex u-flex-column h-100">
                         <div class="card-container">
                             <div class="card-image" style="background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);"></div>
                             <div class="title-container">
@@ -610,7 +605,7 @@
 
         </div>
 
-        <div class="space"></div>
+        <space></space>
 
         <div class="content">
             <h4>Twitter Card</h4>
@@ -622,7 +617,7 @@
                             <div class="card-image" style="background-image: url(https://images.unsplash.com/photo-1467952497026-86722ef1916f?dpr=1.25&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=)"></div>
                         </div>
                         <div class="content">
-                            <div class="space"></div>
+                            <space></space>
                             <div class="tile tile--center">
                                 <div class="tile__icon">
                                     <figure class="avatar">
@@ -697,7 +692,7 @@
             </div>
     </section>
 
-    <div class="space"></div>
+    <space></space>
 
     <section>
         <div class="content" id="card_header">
@@ -751,7 +746,6 @@
             <h1><a href="./index.html#card_tiles" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Tiles</h1>
             <div class="divider"></div>
             <p>Tiles are the flexbox alternative to cards that tile child elements horizontally and more closely resemble horizontal cards in Android. These get displayed in <code>card slide-up</code> to show an avatar, text, or buttons.</p>
-            <p>Standard <code>tile</code> with buttons located at the bottom of <code>tile__container</code>.</p>
             <div class="row">
                 <div class="col-8">
                     <div class="tile">
@@ -761,39 +755,17 @@
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
-                            <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p>
+                            <p class="tile__title u-no-margin">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
+                            <p class="tile__subtitle u-no-margin">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p>
                             <span class="info">23 minutes ago</span>
-                            <div class="tile__buttons m-0">
+                            <p class="tile__buttons u-no-margin">
                                 <button class="btn-primary btn-small uppercase">View</button>
                                 <button class="btn-small uppercase">Dismiss</button>
-                            </div>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div>
-                <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;tile&quot;&gt;
-    &lt;div class=&quot;tile__icon&quot;&gt;
-        &lt;figure class=&quot;avatar&quot;&gt;
-            &lt;img src=&quot;https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png&quot;&gt;
-        &lt;/figure&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;tile__container&quot;&gt;
-        &lt;p class=&quot;tile__title m-0&quot;&gt;Robert Downey Jr. shared a post from &lt;b&gt;Stark Industries&lt;/b&gt;.&lt;/p&gt;
-        &lt;p class=&quot;tile__subtitle m-0&quot;&gt;Robert shared: 'Stark Industries is proud to announce its brand new suit.'&lt;/p&gt;
-        &lt;span class=&quot;info&quot;&gt;23 minutes ago&lt;/span&gt;
-        &lt;div class=&quot;tile__buttons m-0&quot;&gt;
-            &lt;button class=&quot;btn-primary btn-small uppercase&quot;&gt;View&lt;/button&gt;
-            &lt;button class=&quot;btn-small uppercase&quot;&gt;Dismiss&lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-            
-            <div class="space"></div>
-            <p>Standard <code>tile</code> with buttons located on the right by moving <code>tile__buttons</code> outside of <code>tile__container</code>. To prevent text from wrapping, use <code>u-text-no-wrap</code>.</p>
             <div class="row">
                 <div class="col-8">
                     <div class="tile tile--center">
@@ -803,8 +775,8 @@
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title u-text-no-wrap m-0">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
-                            <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p>
+                            <p class="tile__title u-no-margin">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
+                            <p class="tile__subtitle u-no-margin">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p>
                             <span class="info">23 minutes ago</span>
                         </div>
                         <div class="tile__buttons">
@@ -814,27 +786,25 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;tile tile--center&quot;&gt;
+            <div class="row">
+                <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;tile&quot;&gt;
     &lt;div class=&quot;tile__icon&quot;&gt;
         &lt;figure class=&quot;avatar&quot;&gt;
             &lt;img src=&quot;https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png&quot;&gt;
         &lt;/figure&gt;
     &lt;/div&gt;
     &lt;div class=&quot;tile__container&quot;&gt;
-        &lt;p class=&quot;tile__title u-text-no-wrap m-0&quot;&gt;Robert Downey Jr. shared a post from &lt;b&gt;Stark Industries&lt;/b&gt;.&lt;/p&gt;
-        &lt;p class=&quot;tile__subtitle m-0&quot;&gt;Robert shared: 'Stark Industries is proud to announce its brand new suit.'&lt;/p&gt;
+        &lt;p class=&quot;tile__title u-no-margin&quot;&gt;Robert Downey Jr. shared a post from &lt;b&gt;Stark Industries&lt;/b&gt;.&lt;/p&gt;
+        &lt;p class=&quot;tile__subtitle u-no-margin&quot;&gt;Robert shared: 'Stark Industries is proud to announce its brand new suit.'&lt;/p&gt;
         &lt;span class=&quot;info&quot;&gt;23 minutes ago&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;tile__buttons&quot;&gt;
-        &lt;button class=&quot;btn-primary btn-small uppercase&quot;&gt;View&lt;/button&gt;
-        &lt;button class=&quot;btn-small uppercase&quot;&gt;Dismiss&lt;/button&gt;
+        &lt;p class=&quot;tile__buttons u-no-margin&quot;&gt;
+            &lt;button class=&quot;btn-primary btn-tiny uppercase&quot;&gt;View&lt;/button&gt;
+            &lt;button class=&quot;btn-tiny uppercase&quot;&gt;Dismiss&lt;/button&gt;
+        &lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
             </div>
-
-            <div class="space"></div>
-            
+            <p>In the two examples above, the first one is your standard tile with the <code>tile</code> parent container and <code>tile__container</code> for other elements images, text, buttons, etc. The <code>tile__buttons</code> class could be used also to display buttons horizontally. The card tile at the bottom vertically aligns all elements to be vertically centered giving a more balanced appearance.</p>
             <div class="row">
                 <div class="col-6">
                     <div class="tile tile--center">
@@ -844,12 +814,12 @@
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">Robert Downey Jr. just poked you.</p>
-                            <p class="tile__subtitle m-0">Poke him back or view on Facebook.</p>
+                            <p class="tile__title u-no-margin">Robert Downey Jr. just poked you.</p>
+                            <p class="tile__subtitle u-no-margin">Poke him back or view on Facebook.</p>
                             <span class="info">6 seconds ago</span>
                         </div>
                         <div class="tile__buttons">
-                            <button class="btn-transparent p-0"><span class="icon"><i class="fa fa-wrapper small fa-ellipsis-h" aria-hidden="true"></i></span></button>
+                            <button class="btn-transparent u-no-padding"><span class="icon"><i class="fa fa-wrapper small fa-ellipsis-h" aria-hidden="true"></i></span></button>
                         </div>
                     </div>
                 </div>
@@ -862,11 +832,11 @@
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">Polarity.exe</p>
-                            <p class="tile__subtitle m-0">953KB / 1.1MB - 3 seconds...</p>
+                            <p class="tile__title u-no-margin">Polarity.exe</p>
+                            <p class="tile__subtitle u-no-margin">953KB / 1.1MB - 3 seconds...</p>
                         </div>
                         <div class="tile__buttons">
-                            <button class="btn-transparent p-0"><span class="icon"><i class="fa fa-wrapper small fa-ellipsis-v" aria-hidden="true"></i></span></button>
+                            <button class="btn-transparent u-no-padding"><span class="icon"><i class="fa fa-wrapper small fa-ellipsis-v" aria-hidden="true"></i></span></button>
                         </div>
                     </div>
                 </div>
@@ -880,12 +850,12 @@
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">Meeting Scheduled</p>
-                            <p class="tile__subtitle m-0">You have a scheduled meeting in 1 hour.</p>
+                            <p class="tile__title u-no-margin">Meeting Scheduled</p>
+                            <p class="tile__subtitle u-no-margin">You have a scheduled meeting in 1 hour.</p>
                         </div>
                         <div class="tile__buttons">
-                            <button class="btn-primary p-0"><span class="icon"><i class="fa fa-wrapper small fa-check" aria-hidden="true"></i></span></button>
-                            <button class="btn-transparent p-0"><span class="icon"><i class="fa fa-wrapper small fa-times" aria-hidden="true"></i></span></button>
+                            <button class="btn-primary u-no-padding"><span class="icon"><i class="fa fa-wrapper small fa-check" aria-hidden="true"></i></span></button>
+                            <button class="btn-transparent u-no-padding"><span class="icon"><i class="fa fa-wrapper small fa-times" aria-hidden="true"></i></span></button>
                         </div>
                     </div>
                 </div>
@@ -894,7 +864,7 @@
         </div>
     </section>
 
-    <div class="space large"></div>
+    <space class="large"></space>
 
     <section id="media">
         <div class="content">
@@ -909,7 +879,7 @@
                 <img class="img-stretch" src="https://images.unsplash.com/photo-1429516387459-9891b7b96c78?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=574fe169c8e82622c91ccfafab46c444&auto=format&fit=crop&w=1050&q=80" />
             </div>
 
-            <div class="space"></div>
+            <space></space>
             <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;row&quot;&gt;
     &lt;img class=&quot;img-stretch&quot; src=&quot;img/yosemite.png&quot; /&gt;
 &lt;/div&gt;</code></pre>
@@ -952,7 +922,7 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-            <div class="space large"></div>
+            <space class="large"></space>
 
             <h4>Figures</h4>
             <p>Figures are simply containers for an images that would be positioned independently from the main flow of the page.</p>
@@ -983,7 +953,7 @@
     &lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
 
-            <div class="space large"></div>
+            <space class="large"></space>
 
             <h4>Videos</h4>
             <p>As for videos, responsiveness can be achieved by adding the <code>media-stretch</code> class to the parent div holding the video.</p>
@@ -1009,147 +979,147 @@
     &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;./...&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;</code></pre>
 
-            <div class="space large"></div>
+            <space class="large"></space>
 
             <h4>Avatars</h4>
             <p>A useful class for styling user profile pictures. This is used within many other components including the <code>tile</code>. To provide some flexibility, Cirrus adds a <code>data-text</code> attribute to specify some text in place of an image if it is not available.</p>
 
             <div class="row">
                 <div class="col-6">
-                    <div class="tile m-0 level">
+                    <div class="tile u-no-margin level">
                         <div class="tile__icon">
                             <figure class="avatar avatar--xsmall" data-text="Jz">
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">Jenelle Zaynab</p>
-                            <p class="tile__subtitle m-0"><a href="#">@jenelle_zaynab</a></p>
+                            <p class="tile__title u-no-margin">Jenelle Zaynab</p>
+                            <p class="tile__subtitle u-no-margin"><a href="#">@jenelle_zaynab</a></p>
                         </div>
                     </div>
 
-                    <div class="space"></div>
+                    <space></space>
 
-                    <div class="tile m-0 level">
+                    <div class="tile u-no-margin level">
                         <div class="tile__icon">
                             <figure class="avatar avatar--small" data-text="Jz" style="background: #a3d39c">
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">
+                            <p class="tile__title u-no-margin">
                                     Jenelle Zaynab</p>
-                            <p class="tile__subtitle m-0"><a href="#">@jenelle_zaynab</a></p>
+                            <p class="tile__subtitle u-no-margin"><a href="#">@jenelle_zaynab</a></p>
                         </div>
                     </div>
 
-                    <div class="space"></div>
+                    <space></space>
 
-                    <div class="tile m-0 level">
+                    <div class="tile u-no-margin level">
                         <div class="tile__icon">
                             <figure class="avatar" data-text="Jz" style="background: #7accc8">
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">
+                            <p class="tile__title u-no-margin">
                                     Jenelle Zaynab</p>
-                            <p class="tile__subtitle m-0"><a href="#">@jenelle_zaynab</a></p>
+                            <p class="tile__subtitle u-no-margin"><a href="#">@jenelle_zaynab</a></p>
                         </div>
                     </div>
 
-                    <div class="space"></div>
+                    <space></space>
 
-                    <div class="tile m-0 level">
+                    <div class="tile u-no-margin level">
                         <div class="tile__icon">
                             <figure class="avatar avatar--large" data-text="Jz" style="background: #4aaaa5">
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">
+                            <p class="tile__title u-no-margin">
                                     Jenelle Zaynab</p>
-                            <p class="tile__subtitle m-0"><a href="#">@jenelle_zaynab</a></p>
+                            <p class="tile__subtitle u-no-margin"><a href="#">@jenelle_zaynab</a></p>
                         </div>
                     </div>
     
-                    <div class="space"></div>
+                    <space></space>
 
-                    <div class="tile m-0 level">
+                    <div class="tile u-no-margin level">
                         <div class="tile__icon">
                             <figure class="avatar avatar--xlarge" data-text="Jz" style="background: #35404f">
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">
+                            <p class="tile__title u-no-margin">
                                     Jenelle Zaynab</p>
-                            <p class="tile__subtitle m-0"><a href="#">@jenelle_zaynab</a></p>
+                            <p class="tile__subtitle u-no-margin"><a href="#">@jenelle_zaynab</a></p>
                         </div>
                     </div>
 
                 </div>
                 <div class="col-6">
-                    <div class="tile m-0 level">
+                    <div class="tile u-no-margin level">
                         <div class="tile__icon">
                             <figure class="avatar avatar--xsmall">
                                 <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&auto=format&fit=crop&w=64&h=64&q=60&cs=tinysrgb&crop=faces&bg=fff" />
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">Nathan Dumlao</p>
-                            <p class="tile__subtitle m-0"><a href="#">@nate_dumlao</a></p>
+                            <p class="tile__title u-no-margin">Nathan Dumlao</p>
+                            <p class="tile__subtitle u-no-margin"><a href="#">@nate_dumlao</a></p>
                         </div>
                     </div>
                     
-                    <div class="space"></div>
+                    <space></space>
     
-                    <div class="tile m-0 level">
+                    <div class="tile u-no-margin level">
                         <div class="tile__icon">
                             <figure class="avatar avatar--small">
                                 <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&auto=format&fit=crop&w=64&h=64&q=60&cs=tinysrgb&crop=faces&bg=fff" />
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">Nathan Dumlao</p>
-                            <p class="tile__subtitle m-0"><a href="#">@nate_dumlao</a></p>
+                            <p class="tile__title u-no-margin">Nathan Dumlao</p>
+                            <p class="tile__subtitle u-no-margin"><a href="#">@nate_dumlao</a></p>
                         </div>
                     </div>
     
-                    <div class="space"></div>
+                    <space></space>
     
-                    <div class="tile m-0 level">
+                    <div class="tile u-no-margin level">
                         <div class="tile__icon">
                             <figure class="avatar">
                                 <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&auto=format&fit=crop&w=256&h=256&q=60&cs=tinysrgb&crop=faces&bg=fff" />
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">Nathan Dumlao</p>
-                            <p class="tile__subtitle m-0"><a href="#">@nate_dumlao</a></p>
+                            <p class="tile__title u-no-margin">Nathan Dumlao</p>
+                            <p class="tile__subtitle u-no-margin"><a href="#">@nate_dumlao</a></p>
                         </div>
                     </div>
     
-                    <div class="space"></div>
+                    <space></space>
     
-                    <div class="tile m-0 level">
+                    <div class="tile u-no-margin level">
                         <div class="tile__icon">
                             <figure class="avatar avatar--large">
                                 <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&auto=format&fit=crop&w=256&h=256&q=60&cs=tinysrgb&crop=faces&bg=fff" />
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">Nathan Dumlao</p>
-                            <p class="tile__subtitle m-0"><a href="#">@nate_dumlao</a></p>
+                            <p class="tile__title u-no-margin">Nathan Dumlao</p>
+                            <p class="tile__subtitle u-no-margin"><a href="#">@nate_dumlao</a></p>
                         </div>
                     </div>
     
-                    <div class="space"></div>
+                    <space></space>
     
-                    <div class="tile m-0 level">
+                    <div class="tile u-no-margin level">
                         <div class="tile__icon">
                             <figure class="avatar avatar--xlarge">
                                 <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&auto=format&fit=crop&w=256&h=256&q=60&cs=tinysrgb&crop=faces&bg=fff" />
                             </figure>
                         </div>
                         <div class="tile__container">
-                            <p class="tile__title m-0">Nathan Dumlao</p>
-                            <p class="tile__subtitle m-0"><a href="#">@nate_dumlao</a></p>
+                            <p class="tile__title u-no-margin">Nathan Dumlao</p>
+                            <p class="tile__subtitle u-no-margin"><a href="#">@nate_dumlao</a></p>
                         </div>
                     </div>
                 </div>
@@ -1164,6 +1134,12 @@
     &lt;img src=&quot;./img/avatar.png&quot; /&gt;
 &lt;/figure&gt;</code></pre>
 
+            
+            <p>To show the surrounding avatar circle, add the <code>padded</code> class to the avatar's image element.</p>
+            <pre><code class="HTML" data-lang="HTML">&lt;figure class=&quot;avatar avatar--xsmall&quot;&gt;
+    &lt;img src=&quot;./img/avatar.png&quot; class=&quot;padded&quot; /&gt;
+&lt;/figure&gt;</code></pre>
+
         </div>
     </section>
 
@@ -1171,11 +1147,10 @@
         <div class="content">
             <h1><a href="./index.html#modals" class="doc-link tooltip tooltip--left" data-tooltip="Click to copy">#</a> Modals</h1>
             <div class="divider"></div>
-            <p>Modals make prompts simple for any website or app.</p>
+            <p>Modals makes prompts simple for any website or app.</p>
             <a href="#modal-test">
                 <button class="btn-primary">Show Dialog</button>
             </a>
-            <div class="space"></div>
 
             <p>Setting up a modal is quite simple. To start, create a <code>div</code> with the <code>modal</code> class anywhere on the page. The next crucial step is to specify an <code>id</code> that you will use to reference the modal dialog with (from a button for example).</p> 
             <p>For a close button, you must specify an <code>id</code> to change the closing behavior.</p>
@@ -1192,7 +1167,7 @@
                 <li><pre><code class="html" data-lang="HTML">&lt;a href=&quot;#NON-EXISTANT-DIV&quot; class=&quot;modal-overlay close-btn&quot; aria-label=&quot;Close&quot;&gt;&lt;/a&gt;</code></pre></li>
             </ul>
 
-            <div class="space large"></div>
+            <space class="large"></space>
 
             <div class="row">
                 <div class="col-6">
@@ -1232,7 +1207,7 @@
                 </div>
             </div>            
 
-            <div class="space"></div>
+            <space></space>
 
             <h4>Sizes</h4>
             <p>Modal dialogs come in 3 pre-defined sizes, each corresponding to small, medium, and large viewports using the <code>modal-small</code>, <code>modal</code>, and <code>modal-large</code> class selectors respectively.</p>
@@ -1242,7 +1217,7 @@
                 <a href="#modal-large"><button>Large</button></a>
             </div>
 
-            <div class="space"></div>
+            <space></space>
 
             <h4>Animations</h4>
             <p>Spice up your modal dialogs with a couple of animations.</p>
@@ -1252,7 +1227,7 @@
                 <a href="#modal-out"><button>Zoom Out</button></a>
             </div>
 
-            <div class="space"></div>
+            <space></space>
 
             <h4>Accessibility</h4>
             <p>To be complaint with <a class="u u-LR" href="https://www.w3.org/TR/wai-aria-practices/#dialog_modal" target="_blank">WAI-ARIA Best Practices</a>, you can easily include this snippet of JavaScript to close all dialogs when hitting the escape key.</p>
@@ -1290,10 +1265,10 @@
                     <div class="placeholder-subtitle">Come back in a few hours or press the refresh button.</div>
 
                     <div class="placeholder-commands u-center">
-                        <div class="m-1">
+                        <div class="btn-container">
                             <button class="btn-primary">Refresh</button>
                         </div>
-                        <div class="m-1">
+                        <div class="btn-container">
                             <button>Home</button>
                         </div>
                     </div>
@@ -1312,10 +1287,10 @@
     &lt;div class=&quot;placeholder-subtitle&quot;&gt;Come back in a few hours or press the refresh button.&lt;/div&gt;
 
     &lt;div class=&quot;placeholder-commands u-center&quot;&gt;
-        &lt;div class=&quot;m-1&quot;&gt;
+        &lt;div class=&quot;btn-container&quot;&gt;
             &lt;button class=&quot;btn-primary&quot;&gt;Refresh&lt;/button&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;m-1&quot;&gt;
+        &lt;div class=&quot;btn-container&quot;&gt;
             &lt;button&gt;Home&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -1407,7 +1382,7 @@
                 </div>
             </div>
 
-            <div class="space xlarge"></div>
+            <space class="x-large"></space>
 
             <h4>Alternative Sizes</h4>
             <p>Modify the size of the <code>tab-container</code> using the <code>tabs-xsmall</code>, <code>tabs-small</code>, <code>tabs-large</code>, and <code>tabs-xlarge</code> classes.</p>
@@ -1497,7 +1472,7 @@
                 </div>
             </div>
 
-            <div class="space xlarge"></div>
+            <space class="x-large"></space>
 
             <h4>Alignment</h4>
             <p>Easily change the alignment on the tabs with <code>tabs-center</code>, <code>tabs-right</code>, and <code>tabs-fill</code>. Note that tabs are left-justified by default.</p>
@@ -1575,7 +1550,7 @@
             </div>
             
 
-            <div class="space large"></div>
+            <space class="large"></space>
 
             <h4>Styles</h4>
             <p>Try out alternative styles with tabs.</p>
@@ -1692,7 +1667,7 @@
                 </div>
             </div>
 
-            <div class="space large"></div>
+            <space class="large"></space>
             <h6>Tag Colors</h6>
             <p>Color your tags up just like your buttons with <b>8 different colors.</b></p>
 
@@ -1717,7 +1692,7 @@
 &lt;div class=&quot;tag tag--danger&quot;&gt;Danger&lt;/div&gt;</code></pre>
             </div>
 
-            <div class="space large"></div>
+            <space class="large"></space>
             <h6>Tag Sizes</h6>
             <p>Tags also come two sizes larger with the <code>tag--large</code> and <code>tag--xlarge</code> modifiers. Tags can also be more rounded with the <code>tag--rounded</code> class.</p>
 
@@ -1747,19 +1722,19 @@
             </div>
 
             <h6>Tag Delete</h6>
-            <p>This is embedded within the tag itself unlike the close button to the side. Create a new <code>div</code> inside the <code>tag</code> with the <code>tag__delete</code> class.</p>
+            <p>This is embedded within the tag itself unlike the close button to the side. Create a new <code>div</code> inside the <code>tag</code> with the <code>tag--delete</code> class.</p>
 
             <div class="row">
                 <div class="col-6">
                     <div class="tag tag--success">
                         Close Me
-                        <div class="tag tag__delete"></div>
+                        <div class="tag tag--delete"></div>
                     </div>
                 </div>
                 <div class="col-6">
                     <pre><code class="html" data-lang="HTML">&lt;div class=&quot;tag tag--success&quot;&gt;
     Close Me
-    &lt;div class=&quot;tag tag__delete&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;tag tag--delete&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 </div>
             </div>
@@ -1839,7 +1814,7 @@
                         <button class="btn-close"></button>
                         <p>Warning</p>
                     </div>
-                    <div class="toast toast--danger">
+                    <div class="toast toast--error">
                         <button class="btn-close"></button>
                         <p>Error</p>
                     </div>
@@ -1855,14 +1830,6 @@
                         <button class="btn-close"></button>
                         <p>Primary</p>
                     </div>
-                    <div class="toast toast--gray">
-                        <button class="btn-close"></button>
-                        <p>Gray</p>
-                    </div>
-                    <div class="toast toast--dark">
-                        <button class="btn-close"></button>
-                        <p>Dark</p>
-                    </div>
                 </div>
                 <div class="col-6">
 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;toast toast--success&quot;&gt;
@@ -1873,7 +1840,7 @@
     &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
     &lt;p&gt;Warning&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;toast toast--danger&quot;&gt;
+&lt;div class=&quot;toast toast--error&quot;&gt;
     &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
     &lt;p&gt;Error&lt;/p&gt;
 &lt;/div&gt;
@@ -1888,14 +1855,6 @@
 &lt;div class=&quot;toast toast--primary&quot;&gt;
     &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
     &lt;p&gt;Primary&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;toast toast--gray&quot;&gt;
-    &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
-    &lt;p&gt;Gray&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;toast toast--dark&quot;&gt;
-    &lt;button class=&quot;btn-close&quot;&gt;&lt;/button&gt;
-    &lt;p&gt;Dark&lt;/p&gt;
 &lt;/div&gt;</code></pre>
                 </div>
             </div>
@@ -1910,17 +1869,17 @@
             <div class="row">
                 <div class="col-6">
                     <div class="u-center">
-                        <div class="m-1">
+                        <div class="btn-container">
                             <button class="btn-primary tooltip" data-tooltip="Tooltip 1">Button 1</button>
                         </div>
-                        <div class="m-1">
+                        <div class="btn-container">
                             <button class="btn-primary tooltip" data-tooltip="Tooltip 2">Button 2</button>
                         </div>
-                        <div class="m-1">
+                        <div class="btn-container">
                             <button class="btn-primary tooltip" data-tooltip="Tooltip 3">Button 3</button>
                         </div>
                     </div>
-                    <div class="space"></div>
+                    <space></space>
                     <div class="u-center">
                         <label class="tooltip tooltip-bottom" data-tooltip="Hey there!"><input type="radio"> Hover over me</label>
                         <label class="tooltip tooltip-bottom" data-tooltip="No more long captions for checkboxes"><input type="checkbox"> Tooltips are cool!</label>
@@ -1939,54 +1898,54 @@
             <p>Show your tooltips in different directions.</p>
             <div class="row">
                 <div class="col-6">
-                    <div class="m-1">
+                    <div class="btn-container">
                         <button class="tooltip" data-tooltip="Tooltip Top (Default)">Tooltip Top</button>
                     </div>
-                    <div class="m-1">
+                    <div class="btn-container">
                         <button class="tooltip tooltip--top-left" data-tooltip="Tooltip Top Left">Tooltip Top Left</button>
                     </div>
-                    <div class="m-1">
+                    <div class="btn-container">
                         <button class="tooltip tooltip--top-right" data-tooltip="Tooltip Top Right">Tooltip Top Right</button>
                     </div>
-                    <div class="m-1">
+                    <div class="btn-container">
                         <button class="tooltip tooltip--bottom" data-tooltip="Tooltip Bottom">Tooltip Bottom</button>
                     </div>
-                    <div class="m-1">
+                    <div class="btn-container">
                         <button class="tooltip tooltip--bottom-left" data-tooltip="Tooltip Bottom Left">Tooltip Bottom Left</button>
                     </div>
-                    <div class="m-1">
+                    <div class="btn-container">
                         <button class="tooltip tooltip--bottom-right" data-tooltip="Tooltip Bottom Right">Tooltip Bottom Right</button>
                     </div>
-                    <div class="m-1">
+                    <div class="btn-container">
                         <button class="tooltip tooltip--left" data-tooltip="Tooltip Left">Tooltip Left</button>
                     </div>
-                    <div class="m-1">
+                    <div class="btn-container">
                         <button class="tooltip tooltip--right" data-tooltip="Tooltip Right">Tooltip Right</button>
                     </div>
                 </div>
                 <div class="col-6">
-                    <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;m-1&quot;&gt;
+                    <pre><code class="HTML" data-lang="HTML">&lt;div class=&quot;btn-container&quot;&gt;
     &lt;button class=&quot;tooltip&quot; data-tooltip=&quot;Tooltip Top (Default)&quot;&gt;Tooltip Top&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class=&quot;m-1&quot;&gt;
+&lt;div class=&quot;btn-container&quot;&gt;
     &lt;button class=&quot;tooltip tooltip-top-left&quot; data-tooltip=&quot;Tooltip Top Left&quot;&gt;Tooltip Top Left&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class=&quot;m-1&quot;&gt;
+&lt;div class=&quot;btn-container&quot;&gt;
     &lt;button class=&quot;tooltip tooltip-top-right&quot; data-tooltip=&quot;Tooltip Top Right&quot;&gt;Tooltip Top Right&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class=&quot;m-1&quot;&gt;
+&lt;div class=&quot;btn-container&quot;&gt;
     &lt;button class=&quot;tooltip tooltip-bottom&quot; data-tooltip=&quot;Tooltip Bottom&quot;&gt;Tooltip Bottom&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class=&quot;m-1&quot;&gt;
+&lt;div class=&quot;btn-container&quot;&gt;
     &lt;button class=&quot;tooltip tooltip-bottom-left&quot; data-tooltip=&quot;Tooltip Bottom Left&quot;&gt;Tooltip Bottom Left&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class=&quot;m-1&quot;&gt;
+&lt;div class=&quot;btn-container&quot;&gt;
     &lt;button class=&quot;tooltip tooltip-bottom-right&quot; data-tooltip=&quot;Tooltip Bottom Right&quot;&gt;Tooltip Bottom Right&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class=&quot;m-1&quot;&gt;
+&lt;div class=&quot;btn-container&quot;&gt;
     &lt;button class=&quot;tooltip tooltip--left&quot; data-tooltip=&quot;Tooltip Left&quot;&gt;Tooltip Left&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class=&quot;m-1&quot;&gt;
+&lt;div class=&quot;btn-container&quot;&gt;
     &lt;button class=&quot;tooltip tooltip-right&quot; data-tooltip=&quot;Tooltip Right&quot;&gt;Tooltip Right&lt;/button&gt;
 &lt;/div&gt;</code></pre>
                 </div>
@@ -2004,7 +1963,7 @@
             </div>
             <div class="modal-body">
                 <!-- Modal content -->
-                <div class="u-text-center content">
+                <div class="u-text-center">
                     <h3>Max-width: 20rem</h3>
                     <h4>What is Lorem Ipsum?</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -2028,7 +1987,7 @@
             </div>
             <div class="modal-body">
                 <!-- Modal content -->
-                <div class="u-text-center content">
+                <div class="u-text-center">
                     <h3>Max-width: 40rem</h3>
                     <h4>What is Lorem Ipsum?</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -2052,7 +2011,7 @@
             </div>
             <div class="modal-body">
                 <!-- Modal content -->
-                <div class="u-text-center content">
+                <div class="u-text-center">
                     <h3>Max-width: 60rem</h3>
                     <h4>What is Lorem Ipsum?</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -2137,15 +2096,15 @@
             <div class="divider"></div>
             <ul class="pagination no-bullets">
                 <li class="pagination-item pagination-prev">
-                    <a href="../buttons" class="u-block">
+                    <a href="../buttons" class="display-block">
                         <p class="pagination-item-subtitle">Previous</p>
-                        <h5 class="light m-0">Buttons</h3>
+                        <h5 class="light u-no-margin">Buttons</h3>
                     </a>
                 </li>
                 <li class="pagination-item pagination-next">
-                    <a href="../font" class="u-block">
+                    <a href="../font" class="display-block">
                         <p class="pagination-item-subtitle">Next</p>
-                        <h5 class="light m-0">Font</h3>
+                        <h5 class="light u-no-margin">Font</h3>
                     </a>
                 </li>
             </ul>
@@ -2155,22 +2114,13 @@
 
     <script async src="../../res/js/smoothscroll.js"></script>
     <script async src="../../res/js/app.js"></script>
-    <script src="../../res/js/tabs.js"></script>
+    <!-- <script src="https://use.fontawesome.com/a696b91557.js"></script> -->
 
     <!-- Syntax highlight code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40470494-2"></script>
-    
-    <script>
-        const installationTabs = tabs({
-            el: '#tabsDemo',
-            tabNavigationLinks: '.tab-item',
-            tabContentContainers: '.tabpage'
-        });
-        installationTabs.init();
-    </script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
@@ -2182,60 +2132,61 @@
     </script>
 </body>
 
-<footer class="footer">
-    <h6 class="footer__title white uppercase">Cirrus</h4>
+<footer>
+    <h6 class="white uppercase">Cirrus</h4>
     <div class="content">
         <div class="divider"></div>
+        <!--<li class="no-bullets footer-list-title">Docs</li>-->
         <div class="row">
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../animations">
-                        <li class="footer__list-item">Animations</li>
+                        <li class="list-item">Animations</li>
                     </a>
                     <a href="../buttons">
-                        <li class="footer__list-item">Buttons</li>
+                        <li class="list-item">Buttons</li>
                     </a>
                     <a href="../components">
-                        <li class="footer__list-item">Components</li>
+                        <li class="list-item">Components</li>
                     </a>
                     <ul>
             </div>
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../font">
-                        <li class="footer__list-item">Font</li>
+                        <li class="list-item">Font</li>
                     </a>
                     <a href="../footer">
-                        <li class="footer__list-item">Footer</li>
+                        <li class="list-item">Footer</li>
                     </a>
                     <a href="../forms">
-                        <li class="footer__list-item">Forms</li>
+                        <li class="list-item">Forms</li>
                     </a>
                     <ul>
             </div>
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../header">
-                        <li class="footer__list-item">Header</li>
+                        <li class="list-item">Header</li>
                     </a>
                     <a href="../layout">
-                        <li class="footer__list-item">Layout</li>
+                        <li class="list-item">Layout</li>
                     </a>
                     <a href="../links">
-                        <li class="footer__list-item">Links</li>
+                        <li class="list-item">Links</li>
                     </a>
                     <ul>
             </div>
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../lists">
-                        <li class="footer__list-item">Lists</li>
+                        <li class="list-item">Lists</li>
                     </a>
                     <a href="../tables">
-                        <li class="footer__list-item">Table</li>
+                        <li class="list-item">Table</li>
                     </a>
                     <a href="../utils">
-                        <li class="footer__list-item">Util</li>
+                        <li class="list-item">Util</li>
                     </a>
                 </ul>
             </div>

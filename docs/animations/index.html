@@ -54,7 +54,7 @@
             </div>
             <div class="nav-right u-text-center nav-menu">
                 <div class="nav-item">
-                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/animations.scss" target="_blank" rel="noreferrer"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
+                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/animations.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
                 </div>
 
                 <div class="nav-item has-sub">
@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    <div class="space xlarge"></div>
+    <space class="x-large"></space>
 
     <section id="started" class="padtop">
         <div class="content">
@@ -78,7 +78,7 @@
             <div class="divider"></div>
 
             <p>Animations are an essential part crafting beautiful websites that aren't just stunning, but are also alive. Cirrus comes bundled with a couple of animations to help you get started.</p>
-                <div class="space"></div>
+                <space></space>
                 <h5>Loading Spinner</h5>
                 <p>The loading spinner serves as an elegant indicator for progress in webpages. Just add the <code>animated loading</code> selectors to the element and Cirrus will handle the rest. By default, the spinner will be horizontally centered and it will override any text. To hide the text, just add the <code>hide-text</code> class. Below are some modifiers of the loading spinner.</p>
                 <ul class="menu-list">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
 
-                <div class="space xlarge"></div>
+                <space class="x-large"></space>
                 <h5>Loading Button</h5>
                 <p>These buttons are designed to tell users that a function is in progress. This is simply created by adding the <code>animated loading</code> classes to the button and it will automatically 
                 <div class="row">
@@ -131,7 +131,7 @@
                     </div>
                 </div>
 
-                <div class="space"></div>
+                <space></space>
 
                     <div class="row">
                         <pre><code class="html" data-lang="HTML">&lt;div class=&quot;col&quot;&gt;
@@ -151,7 +151,7 @@
 &lt;/div&gt;</code></pre>
                     </div>
 
-                    <div class="space xlarge"></div>
+                    <space class="x-large"></space>
 
                 <div class="r">
                     <h5>Hover Grow</h5>
@@ -229,7 +229,7 @@
             <p>This animation adds a pulsing animation to any component such as divs, images, buttons, etc.</p>
                 <h6 class="font-alt font-light">Pulsing animation with Font Awesome</h6>
                 <div class="row">
-                    <div class="col-6 m-0">
+                    <div class="col-6 no-margin">
                         <div class="u-text-center">
                             <i class="fa fa-wrapper fa-heart animated pulse large paused" id="pulse-heart" aria-hidden="true"></i>
                         </div>
@@ -244,7 +244,7 @@
 
                 <h6 class="font-alt font-light">Pulsing animation with a div</h6>
                 <div class="row">
-                    <div class="col-6 m-0">
+                    <div class="col-6 no-margin">
                         <div class="u-text-center">
                             <div class="content u-text-center animated pulse paused" id="pulse-div" style="background: #f03d4d; color: white">
                                 <p>This is a div!</p>
@@ -262,8 +262,8 @@
 
                 <h6 class="font-alt font-light">Pulsing animation with a button</h6>
                 <div class="row">
-                    <div class="col-6 m-0">
-                        <div class="u-text-center m-1">
+                    <div class="col-6 no-margin">
+                        <div class="u-text-center btn-container">
                             <button class="btn-primary animated pulse paused" id="pulse-btn">Click me!</button>
                         </div>
                         <button class="docs-btn-play" id="toggle-pulse-btn"><i class="fa fa-wrapper fa-play pad-right" aria-hidden="true"></i>Play</button>
@@ -321,7 +321,7 @@
         <div class="row">
     
                 <div class="col-6">
-                    <div class="u-text-center m-1">
+                    <div class="u-text-center btn-container">
                         <button class="btn-primary animated bounce" id="bounce-btn">Click me!</button>
                     </div>
                     <button class="docs-btn-play" id="toggle-bounce-btn"><i class="fa fa-wrapper fa-play pad-right" aria-hidden="true"></i>Play</button>
@@ -342,7 +342,7 @@
             <div class="row">
                 
                 <div class="col-6">
-                    <div class="u-text-center m-1">
+                    <div class="u-text-center btn-container">
                         <i class="fa fa-wrapper fa-heart animated bounceIn large" id="bounceIn-heart" aria-hidden="true"></i>
                     </div>
                     <button class="docs-btn-play" id="toggle-bounceIn-heart"><i class="fa fa-wrapper fa-play pad-right" aria-hidden="true"></i>Play</button>
@@ -372,7 +372,7 @@
         <div class="row">
     
                 <div class="col-6">
-                    <div class="u-text-center m-1">
+                    <div class="u-text-center btn-container">
                             <button class="btn-primary animated bounceIn" id="bounceIn-btn">Click me!</button>
                         </div>
                         <button class="docs-btn-play" id="toggle-bounceIn-btn"><i class="fa fa-wrapper fa-play pad-right" aria-hidden="true"></i>Play</button>
@@ -422,7 +422,7 @@
         <div class="row">
     
                 <div class="col-6">
-                    <div class="u-text-center m-1">
+                    <div class="u-text-center btn-container">
                         <button class="btn-primary animated fadeIn" id="fadeIn-btn">Click me!</button>
                     </div>
                     <button class="docs-btn-play" id="toggle-fadeIn-btn"><i class="fa fa-wrapper fa-play pad-right" aria-hidden="true"></i>Play</button>
@@ -463,7 +463,7 @@
                     <pre><code class="HTML" data-lang="HTML">&lt;button class=&quot;btn-primary animated fadeIn infinite alternate&quot;&gt;Alternating Fading&lt;/button&gt;</code></pre>
                 </div>
             </div>
-            <div class="space"></div>
+            <space></space>
             <h6>Pausing Animations</h6>
             <p>This is great with testing your animations and works well with JavaScript calls also. All you need to do is add a class to the animated component called <code>paused</code>.</p>
             <div class="row">
@@ -485,9 +485,9 @@
             <div class="divider"></div>
             <ul class="pagination no-bullets">
                 <li class="pagination-item pagination-next">
-                    <a href="../buttons" class="u-block">
+                    <a href="../buttons" class="display-block">
                         <p class="pagination-item-subtitle">Next</p>
-                        <h5 class="font-alt font-light m-0">Buttons</h5>
+                        <h5 class="font-alt font-light no-margin">Buttons</h5>
                     </a>
                 </li>
             </ul>
@@ -517,60 +517,61 @@
         </script>
 </body>
 
-<footer class="footer">
-        <h6 class="footer__title white uppercase">Cirrus</h6>
+<footer>
+        <h6 class="white uppercase">Cirrus</h6>
         <div class="content">
             <div class="divider"></div>
+            <!--<li class="no-bullets footer-list-title">Docs</li>-->
             <div class="row">
                 <div class="col-3">
                     <ul class="no-bullets">
                         <a href="../animations">
-                            <li class="footer__list-item">Animations</li>
+                            <li class="list-item">Animations</li>
                         </a>
                         <a href="../buttons">
-                            <li class="footer__list-item">Buttons</li>
+                            <li class="list-item">Buttons</li>
                         </a>
                         <a href="../components">
-                            <li class="footer__list-item">Components</li>
+                            <li class="list-item">Components</li>
                         </a>
                         <ul>
                 </div>
                 <div class="col-3">
                     <ul class="no-bullets">
                         <a href="../font">
-                            <li class="footer__list-item">Font</li>
+                            <li class="list-item">Font</li>
                         </a>
                         <a href="../footer">
-                            <li class="footer__list-item">Footer</li>
+                            <li class="list-item">Footer</li>
                         </a>
                         <a href="../forms">
-                            <li class="footer__list-item">Forms</li>
+                            <li class="list-item">Forms</li>
                         </a>
                         <ul>
                 </div>
                 <div class="col-3">
                     <ul class="no-bullets">
                         <a href="../header">
-                            <li class="footer__list-item">Header</li>
+                            <li class="list-item">Header</li>
                         </a>
                         <a href="../layout">
-                            <li class="footer__list-item">Layout</li>
+                            <li class="list-item">Layout</li>
                         </a>
                         <a href="../links">
-                            <li class="footer__list-item">Links</li>
+                            <li class="list-item">Links</li>
                         </a>
                         <ul>
                 </div>
                 <div class="col-3">
                     <ul class="no-bullets">
                         <a href="../lists">
-                            <li class="footer__list-item">Lists</li>
+                            <li class="list-item">Lists</li>
                         </a>
                         <a href="../tables">
-                            <li class="footer__list-item">Table</li>
+                            <li class="list-item">Table</li>
                         </a>
                         <a href="../utils">
-                            <li class="footer__list-item">Util</li>
+                            <li class="list-item">Util</li>
                         </a>
                     </ul>
                 </div>

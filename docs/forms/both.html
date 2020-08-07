@@ -51,8 +51,6 @@
             }
 
             li {
-                align-items: center;
-                display: flex;
                 padding: 0 0.5rem;
             }
 
@@ -84,9 +82,9 @@
     <div class="hero-body">
         <div class="content">
             <div class="frame padded">
-                <div class="space large"></div>
-                <div class="frame__body p-0">
-                    <div class="row p-0 level fill-height">
+                <space class="large"></space>
+                <div class="frame__body u-no-padding">
+                    <div class="row u-no-padding level fill-height">
                         <div class="col-6">
                             <form name="login-form" method="post">
                                 <div class="frame__body">
@@ -109,7 +107,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="space"></div>
+                                    <space></space>
                                     <button class="btn-info u-pull-right" name="btn" value="login" type="submit">Log In</button>
                                     <span class="fg-danger info"></span>
                                     <span class="info">admin at admin@mizio.io .</span>
@@ -131,42 +129,7 @@
                                     </div>
                                     <div class="form-section">
                                         <p>Gender</p>
-                                        <ul id="gender">
-                                            <li><label class="font-bold">Gender</label></li>
-                                            <li>
-                                                <input
-                                                    id="gender-0"
-                                                    name="gender"
-                                                    type="radio"
-                                                    value="male"
-                                                />
-                                                <label for="gender-0"
-                                                    >Male</label
-                                                >
-                                            </li>
-                                            <li>
-                                                <input
-                                                    id="gender-1"
-                                                    name="gender"
-                                                    type="radio"
-                                                    value="female"
-                                                />
-                                                <label for="gender-1"
-                                                    >Female</label
-                                                >
-                                            </li>
-                                            <li>
-                                                <input
-                                                    id="gender-2"
-                                                    name="gender"
-                                                    type="radio"
-                                                    value="other"
-                                                />
-                                                <label for="gender-2"
-                                                    >Other</label
-                                                >
-                                            </li>
-                                        </ul>
+                                        <ul id="gender"><li><input id="gender-0" name="gender" type="radio" value="male"> <label for="gender-0">Male</label></li><li><input id="gender-1" name="gender" type="radio" value="female"> <label for="gender-1">Female</label></li><li><input id="gender-2" name="gender" type="radio" value="other"> <label for="gender-2">Other</label></li></ul>
                                     </div>
                                     <div class="form-section">
                                         <div class="input-control">
@@ -182,7 +145,7 @@
                                                 <i class="fas fa-wrapper fa-key small"></i>
                                         </div>
                                     </div>
-                                    <div class="row p-0 fluid-container">
+                                    <div class="row u-no-padding fluid-container">
                                         <div class="col">
                                                 <div class="input-control">
                                                     <input class="input-contains-icon" id="city" name="city" placeholder="City" type="text" value="">
@@ -210,7 +173,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="space large"></div>
+                <space class="large"></space>
                 </div>
         </div>
     </div>

@@ -54,7 +54,7 @@
             </div>
             <div class="nav-right u-text-center nav-menu">
                 <div class="nav-item">
-                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/forms.scss" target="_blank" rel="noreferrer"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
+                    <a href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/forms.css" target="_blank"><span class="icon"><i class="fa fa-wrapper fa-code"></i></span></a>
                 </div>
 
                 <div class="nav-item has-sub">
@@ -72,7 +72,7 @@
         </div>
     </div>
 
-    <div class="space large"></div>
+    <space class="large"></space>
 
     <section id="started" class="padtop">
         <div class="content">
@@ -82,18 +82,12 @@
             <p>Here is a sample form below:</p>
              <form>
                     <div class="row">
+                        <div class="col-6"><input type="text" placeholder="Your Name"></div>
                         <div class="col-6">
-                            <div class="input-control">
-                                <input type="text" placeholder="Your Name"/>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="input-control">
-                                <select class="select" placeholder="Select One">
-                                    <option value="I love this">I love Cirrus</option>
-                                    <option value="I still love this">I also love Cirrus</option>
-                                </select>
-                            </div>
+                            <select class="select" placeholder="Select One">
+                            <option value="I love this">I love Cirrus</option>
+                            <option value="I still love this">I also love Cirrus</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row">
@@ -105,65 +99,54 @@
                 </form>
         </div>
 
-        <div class="space"></div>
+        <space></space>
 
         <div class="content" id="input-type-container">
             <h6>Different Types of Forms</h6>
             <div class="row">
                 <div class="col-6">
-                    <!-- Name -->
                     <div class="row ignore-screen level">
-                        <div class="col-3 ignore-screen level-item"><p class="m-0">Name:</span></div>
+                        <div class="col-3 ignore-screen level-item"><p class="u-no-margin">Name:</span></div>
                         <div class="col-9 ignore-screen level-item"><input type="name" value="John Doe"></div>
                     </div>
-                    <!-- Email -->
                     <div class="row ignore-screen level">
-                        <div class="col-3 ignore-screen level-item"><p class="m-0">Email:</span></div>
+                        <div class="col-3 ignore-screen level-item"><p class="u-no-margin">Email:</span></div>
                         <div class="col-9 ignore-screen level-item"><input type="email" value="john.doe@cirrus.io"></div>
                     </div>
-                    <!-- Url -->
                     <div class="row ignore-screen level">
-                        <div class="col-3 ignore-screen level-item"><p class="m-0">URL:</span></div>
+                        <div class="col-3 ignore-screen level-item"><p class="u-no-margin">URL:</span></div>
                         <div class="col-9 ignore-screen level-item"><input type="url" value="https://spiderpig86.github.io/Cirrus"></div>
                     </div>
-                    <!-- Search -->
                     <div class="row ignore-screen level">
-                        <div class="col-3 ignore-screen level-item"><p class="m-0">Search:</span></div>
+                        <div class="col-3 ignore-screen level-item"><p class="u-no-margin">Search:</span></div>
                         <div class="col-9 ignore-screen level-item"><input type="search" placeholder="Search"></div>
                     </div>
-                    <!-- Tel -->
                     <div class="row ignore-screen level">
-                        <div class="col-3 ignore-screen level-item"><p class="m-0">Telephone:</span></div>
+                        <div class="col-3 ignore-screen level-item"><p class="u-no-margin">Telephone:</span></div>
                         <div class="col-9 ignore-screen level-item"><input type="tel" value="1-(800)-777-7777"></div>
                     </div>
-                    <!-- Password -->
                     <div class="row ignore-screen level">
-                        <div class="col-3 ignore-screen level-item"><p class="m-0">Password:</span></div>
+                        <div class="col-3 ignore-screen level-item"><p class="u-no-margin">Password:</span></div>
                         <div class="col-9 ignore-screen level-item"><input type="password" value="password"></div>
                     </div>
-                    <!-- Number -->
                     <div class="row ignore-screen level">
-                        <div class="col-3 ignore-screen level-item"><p class="m-0">Number:</span></div>
+                        <div class="col-3 ignore-screen level-item"><p class="u-no-margin">Number:</span></div>
                         <div class="col-9 ignore-screen level-item"><input type="number" value="420"></div>
                     </div>
-                    <!-- Date -->
                     <div class="row ignore-screen level">
-                        <div class="col-3 ignore-screen level-item"><p class="m-0">Date:</span></div>
+                        <div class="col-3 ignore-screen level-item"><p class="u-no-margin">Date:</span></div>
                         <div class="col-9 ignore-screen level-item"><input type="date" value="2017-3-21"></div>
                     </div>
-                    <!-- Color -->
                     <div class="row ignore-screen level">
-                        <div class="col-3 ignore-screen level-item"><p class="m-0">Color:</span></div>
+                        <div class="col-3 ignore-screen level-item"><p class="u-no-margin">Color:</span></div>
                         <div class="col-9 ignore-screen level-item"><input type="color" value="#f03d4d"></div>
                     </div>
-                    <!-- File -->
                     <div class="row ignore-screen level">
-                        <div class="col-3 ignore-screen level-item"><p class="m-0">File:</span></div>
+                        <div class="col-3 ignore-screen level-item"><p class="u-no-margin">File:</span></div>
                         <div class="col-9 ignore-screen level-item"><input type="file"></div>
                     </div>
-                    <!-- Select -->
                     <div class="row ignore-screen level">
-                        <div class="col-3 ignore-screen level-item"><p class="m-0">Select:</p></div>
+                        <div class="col-3 ignore-screen level-item"><p class="u-no-margin">Select:</p></div>
                         <div class="col-9 ignore-screen level-item input-control">
                             <select class="select" placeholder="Choose one">
                                 <option>Shibe</option>
@@ -172,9 +155,8 @@
                             </select>
                         </div>
                     </div>
-                    <!-- Select (Multiple) -->
                     <div class="row ignore-screen level">
-                        <div class="col-3 ignore-screen level-item"><p class="m-0">Select (Multiple):</p></div>
+                        <div class="col-3 ignore-screen level-item"><p class="u-no-margin">Select (Multiple):</p></div>
                         <div class="col-9 ignore-screen level-item input-control">
                             <select class="select" multiple>
                                 <option>Shibe</option>
@@ -185,59 +167,48 @@
                     </div>
                 </div>
                 <div class="col-6">
-                    <pre><code class="html" data-lang="HTML">&lt;!-- Name --&gt;
-&lt;div class=&quot;row ignore-screen level&quot;&gt;
-    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p class=&quot;m-0&quot;&gt;Name:&lt;/span&gt;&lt;/div&gt;
+                    <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row ignore-screen level&quot;&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Name:&lt;/span&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;&lt;input type=&quot;name&quot; value=&quot;John Doe&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- Email --&gt;
 &lt;div class=&quot;row ignore-screen level&quot;&gt;
-    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p class=&quot;m-0&quot;&gt;Email:&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Email:&lt;/span&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;&lt;input type=&quot;email&quot; value=&quot;john.doe@cirrus.io&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- Url --&gt;
 &lt;div class=&quot;row ignore-screen level&quot;&gt;
-    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p class=&quot;m-0&quot;&gt;URL:&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;URL:&lt;/span&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;&lt;input type=&quot;url&quot; value=&quot;https://spiderpig86.github.io/Cirrus&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- Search --&gt;
 &lt;div class=&quot;row ignore-screen level&quot;&gt;
-    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p class=&quot;m-0&quot;&gt;Search:&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Search:&lt;/span&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;&lt;input type=&quot;search&quot; placeholder=&quot;Search&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- Tel --&gt;
 &lt;div class=&quot;row ignore-screen level&quot;&gt;
-    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p class=&quot;m-0&quot;&gt;Telephone:&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Telephone:&lt;/span&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;&lt;input type=&quot;tel&quot; value=&quot;1-(800)-777-7777&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- Password --&gt;
 &lt;div class=&quot;row ignore-screen level&quot;&gt;
-    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p class=&quot;m-0&quot;&gt;Password:&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Password:&lt;/span&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;&lt;input type=&quot;password&quot; value=&quot;password&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- Number --&gt;
 &lt;div class=&quot;row ignore-screen level&quot;&gt;
-    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p class=&quot;m-0&quot;&gt;Number:&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Number:&lt;/span&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;&lt;input type=&quot;number&quot; value=&quot;420&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- Date --&gt;
 &lt;div class=&quot;row ignore-screen level&quot;&gt;
-    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p class=&quot;m-0&quot;&gt;Date:&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Date:&lt;/span&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;&lt;input type=&quot;date&quot; value=&quot;2017-3-21&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- Color --&gt;
 &lt;div class=&quot;row ignore-screen level&quot;&gt;
-    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p class=&quot;m-0&quot;&gt;Color:&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Color:&lt;/span&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;&lt;input type=&quot;color&quot; value=&quot;#f03d4d&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- File --&gt;
 &lt;div class=&quot;row ignore-screen level&quot;&gt;
-    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p class=&quot;m-0&quot;&gt;File:&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;File:&lt;/span&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item&quot;&gt;&lt;input type=&quot;file&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- Select --&gt;
 &lt;div class=&quot;row ignore-screen level&quot;&gt;
-    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p class=&quot;m-0&quot;&gt;Select:&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Select:&lt;/p&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item input-control&quot;&gt;
         &lt;select class=&quot;select&quot; placeholder=&quot;Choose one&quot;&gt;
             &lt;option&gt;Shibe&lt;/option&gt;
@@ -246,9 +217,8 @@
         &lt;/select&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- Select (Multiple) --&gt;
 &lt;div class=&quot;row ignore-screen level&quot;&gt;
-    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p class=&quot;m-0&quot;&gt;Select (Multiple):&lt;/p&gt;&lt;/div&gt;
+    &lt;div class=&quot;col-3 ignore-screen level-item&quot;&gt;&lt;p&gt;Select (Multiple):&lt;/p&gt;&lt;/div&gt;
     &lt;div class=&quot;col-9 ignore-screen level-item input-control&quot;&gt;
         &lt;select class=&quot;select&quot; multiple&gt;
             &lt;option&gt;Shibe&lt;/option&gt;
@@ -305,7 +275,7 @@
 &lt;/div&gt;</code></pre>
                 </div>
             </div>
-            <div class="space"></div>
+            <space></space>
             <p>The same sizing principle also applies to select controls. Select also uses the classes <code>input-xsmall, input-small, input-large, and input-xlarge</code>.</p>
             <div class="r">
                 <div class="input-control">
@@ -341,7 +311,7 @@
     &lt;select class=&quot;select input-xlarge&quot; placeholder=&quot;Dropdown Xlarge&quot;&gt;&lt;option value=&quot;1&quot;&gt;Dropdown Xlarge&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;/select&gt;
 &lt;/div&gt;</code></pre>
             </div>
-        <div class="space"></div>
+        <space></space>
         <h6>States</h6>
 
         <p class="title">Normal</p>
@@ -441,7 +411,7 @@
                     <input type="text" class="text-danger input-error" placeholder="Success state">
                 </div>
                 <div class="input-control">
-                    <select class="select text-danger input-error" placeholder="Dropdown"><option value="1">Error/Danger state</option></select>
+                    <select class="select text-danger input-error" placeholder="Dropdown"><option value="1">Error state</option></select>
                 </div>
             </div>
             <div class="col-6">
@@ -449,12 +419,12 @@
     &lt;input type=&quot;text&quot; class=&quot;text-danger input-error&quot; placeholder=&quot;Success state&quot;&gt;
 &lt;/div&gt;
 &lt;div class=&quot;input-control&quot;&gt;
-    &lt;select class=&quot;select text-danger input-error&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Error/Danger state&lt;/option&gt;&lt;/select&gt;
+    &lt;select class=&quot;select text-danger input-error&quot; placeholder=&quot;Dropdown&quot;&gt;&lt;option value=&quot;1&quot;&gt;Error state&lt;/option&gt;&lt;/select&gt;
 &lt;/div&gt;</code></pre>
             </div>
         </div>
 
-        <div class="space large"></div>
+        <space class="large"></space>
         <h6>Integrate with Font Awesome</h6>
         <p>Currently a beta feature, this allows you to place Font Awesome glyphs right at the beginning of input fields. This only works for normal sized input fields and normal/small sized glyphs.</p>
         <div class="row">
@@ -535,7 +505,7 @@
 &lt;/div&gt;</code></pre>
         </div>
         
-        <div class="space large"></div>
+        <space class="large"></space>
         <p>You can also create labels to go along with the textfield to give more detail to the user. The simplest implementation is to add a <code>title</code> class to your main label and the <code>subtitle</code> class for any sub-labels.</p>
         <div class="row">
             <div class="col-6">
@@ -548,7 +518,7 @@
                 <input type="text" placeholder="The label above me displays additional info."/>
             </div>
         </div>
-        <div class="space"></div>
+        <space></space>
         <h6>Some Examples</h6>
         <div class="row">
             <div class="col-6">
@@ -563,7 +533,7 @@
             </div>
         </div>
 
-        <div class="space large"></div>
+        <space class="large"></space>
         <p>If more info is needed to be displayed, you can easily add <code>&lt;span class=&quot;info&quot;&gt;More info&lt;/span&gt;</code> and <code>&lt;span class=&quot;info inline&quot;&gt;More info&lt;/span&gt;</code> (for inline displays).
         <div class="row level">
             <div class="col-6">
@@ -588,7 +558,7 @@
             <div class="row">
                 <textarea placeholder="I'm resizable!"></textarea>
             </div>
-            <div class="space"></div>
+            <space></space>
             <h6>States</h6>
             <p class="title">Normal</p>
             <div class="row">
@@ -643,7 +613,7 @@
                 </div>
             </div>
 
-            <div class="space"></div>
+            <space></space>
 
             <h5>Styled Checkboxes</h5>
             <p>Below are some colored checkboxes.</p>
@@ -676,8 +646,8 @@
                         <label class="form-ext-label" for="check5">Success</label>
                     </div>
                     <div class="form-ext-control form-ext-checkbox">
-                        <input id="check6" class="form-ext-input form-ext-input--danger" type="checkbox" checked="">
-                        <label class="form-ext-label" for="check6">Error/Danger</label>
+                        <input id="check6" class="form-ext-input form-ext-input--error" type="checkbox" checked="">
+                        <label class="form-ext-label" for="check6">Error</label>
                     </div>
                 </div>
                 <div class="col-6"><pre><code class="html" data-lang="HTML">&lt;div class=&quot;form-ext-control form-ext-checkbox&quot;&gt;
@@ -703,8 +673,8 @@
     &lt;label class=&quot;form-ext-label&quot; for=&quot;check5&quot;&gt;Success&lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;form-ext-control form-ext-checkbox&quot;&gt;
-    &lt;input id=&quot;check6&quot; class=&quot;form-ext-input form-ext-input--danger&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&gt;
-    &lt;label class=&quot;form-ext-label&quot; for=&quot;check6&quot;&gt;Error/Danger&lt;/label&gt;
+    &lt;input id=&quot;check6&quot; class=&quot;form-ext-input form-ext-input--error&quot; type=&quot;checkbox&quot; checked=&quot;&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;check6&quot;&gt;Error&lt;/label&gt;
 &lt;/div&gt;</code></pre></div>
             </div>
 
@@ -750,8 +720,8 @@
                         <label class="form-ext-label" for="radio-1c">Sucess</label>
                     </div>
                     <div class="form-ext-control form-ext-radio">
-                        <input id="radio-2c" name="customRadio3" class="form-ext-input form-ext-input--danger" type="radio">
-                        <label class="form-ext-label" for="radio-2c">Error/Danger</label>
+                        <input id="radio-2c" name="customRadio3" class="form-ext-input form-ext-input--error" type="radio">
+                        <label class="form-ext-label" for="radio-2c">Error</label>
                     </div>
                 </div>
                 <div class="col-6">
@@ -790,8 +760,8 @@
     &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-1c&quot;&gt;Sucess&lt;/label&gt;
 &lt;/div&gt;
 &lt;div class=&quot;form-ext-control form-ext-radio&quot;&gt;
-    &lt;input id=&quot;radio-2c&quot; name=&quot;customRadio3&quot; class=&quot;form-ext-input form-ext-input--danger&quot; type=&quot;radio&quot;&gt;
-    &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-2c&quot;&gt;Error/Danger&lt;/label&gt;
+    &lt;input id=&quot;radio-2c&quot; name=&quot;customRadio3&quot; class=&quot;form-ext-input form-ext-input--error&quot; type=&quot;radio&quot;&gt;
+    &lt;label class=&quot;form-ext-label&quot; for=&quot;radio-2c&quot;&gt;Error&lt;/label&gt;
 &lt;/div&gt; </code></pre>
                 </div>
             </div>
@@ -1028,10 +998,10 @@
                         </div>
                         <textarea placeholder="Tell us about yourself..."></textarea>
                         <div class="form-section">
-                            <div class="m-1 u-inline-block">
+                            <div class="btn-container u-inline-block">
                                 <input type="submit" class="animated btn-primary pull-left"/>
                             </div>
-                            <div class="m-1 u-inline-block">
+                            <div class="btn-container u-inline-block">
                                 <button class="animated pull-left">Clear</button>
                             </div>
                         </div>
@@ -1103,13 +1073,13 @@
 &lt;/div&gt;</code></pre>
                 </div>
             </div>
-            <div class="space large"></div>
+            <space class="large"></space>
             <p>And of course, more controls can be combined with each other with different sizes. To make things easier, Cirrus is designed to make components to fit with other same sized controls. For instance, any <code>*-small</code> class matches with all components that have the <code>small</code> class.</p>
             <div class="r">
                 <div class="form-group">
                     <label class="form-group-label label-xsmall">github.com/</label>
                     <input type="text" class="form-group-input input-xsmall" placeholder="Extra Small"></input>
-                    <button class="form-group-btn btn-primary btn-xsmall">Go</button>
+                    <button class="form-group-btn btn-primary btn-tiny">Go</button>
                 </div>
                 <div class="form-group">
                     <label class="form-group-label label-small">github.com/</label>
@@ -1136,11 +1106,11 @@
                 <pre><code class="html" data-lang="HTML">&lt;div class=&quot;form-group&quot;&gt;
     &lt;label class=&quot;form-group-label label-xsmall&quot;&gt;github.com/&lt;/label&gt;
     &lt;input type=&quot;text&quot; class=&quot;form-group-input input-xsmall&quot; placeholder=&quot;Extra Small&quot;&gt;&lt;/input&gt;
-    &lt;button class=&quot;form-group-btn btn-xsmall&quot;&gt;Go&lt;/button&gt;
+    &lt;button class=&quot;form-group-btn btn-tiny&quot;&gt;Go&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;form-group&quot;&gt;
     &lt;label class=&quot;form-group-label&quot;&gt;github.com/&lt;/label&gt;
-    &lt;input type=&quot;text&quot; class=&quot;form-group-input&quot; placeholder=&quot;Small&quot;&gt;&lt;/input&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-group-input input-small&quot; placeholder=&quot;Small&quot;&gt;&lt;/input&gt;
     &lt;button class=&quot;form-group-btn btn-small&quot;&gt;Go&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;form-group&quot;&gt;
@@ -1159,22 +1129,22 @@
     &lt;button class=&quot;form-group-btn btn-xlarge&quot;&gt;Go&lt;/button&gt;
 &lt;/div&gt;</code></pre>
             </div>
-            <div class="space"></div>
+            <space></space>
             <h6>Integrating Them All Together</h6>
             <p>The form below utilizes most of the different components in <code>forms.css</code>.</p>
             <div class="no-padding">
                 <div class="form-section">
                     <label class="font-bold">Contact</label>
-                    <div class="section-body row p-0">
+                    <div class="section-body row u-no-padding">
                         <div class="col-6">
                             <div class="input-control">
-                                <input class="input-contains-icon input-contains-icon input-contains-icon-left" type="text" placeholder="Name" />
+                                <input class="input-contains-icon-left input-small" type="text" placeholder="Name" />
                                 <span class="icon icon-left"><i class="fa fa-wrapper fa-user"></i></span>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="input-control">
-                                <input class="input-contains-icon input-contains-icon-left input-contains-icon-right text-success input-success" type="text" placeholder="Email" value="somebodyoncetoldme@gmail.com" />
+                                <input class="input-contains-icon-left input-contains-icon-right text-success input-success input-small" type="text" placeholder="Email" value="somebodyoncetoldme@gmail.com" />
                                 <span class="icon icon-left"><i class="fa fa-wrapper fa-envelope"></i></span>
                                 <span class="icon icon-right"><i class="fa fa-wrapper fa-check"></i></span>
                             </div>
@@ -1185,21 +1155,21 @@
                     <label class="font-bold">Phone <span class="info inline font-light">We are not telemarketers.</span></label>
                     <div class="section-body">
                         <div class="form-group">
-                            <label class="form-group-label">+1</label>
-                            <input type="text" class="form-group-input" placeholder="Enter your phone number" />
+                            <label class="form-group-label label-small">+1</label>
+                            <input type="text" class="form-group-input input-small" placeholder="Enter your phone number" />
                         </div>
                     </div>
                 </div>
-                <div class="row  p-0">
+                <div class="row  u-no-padding">
                     <div class="form-section col-6" style="padding-left: 0">
                         <label class="font-bold">Choose One</label>
-                        <select class="select" placeholder="Choose one">
+                        <select class="select input-small" placeholder="Choose one">
                             <option>Shibe</option>
                             <option>Doggo</option>
                             <option>Pupper</option>
                         </select>
                     </div>
-                    <div class="form-section col-6  p-0">
+                    <div class="form-section col-6  u-no-padding">
                         <label class="font-bold label-small">Select One <span class="required">*</span></label>
                         <div class="section-body">
                                     <label class="radio">
@@ -1215,24 +1185,24 @@
                     </div>
                 </div>
                 <div class="form-section">
-                    <label class="font-bold">Message</label>
+                    <label class="font-bold label-small">Message</label>
                     <textarea placeholder="Enter your message"></textarea>
                 </div>
             </div>
             <div class="r">
-                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row p-0&quot;&gt;
+                <pre><code class="html" data-lang="HTML">&lt;div class=&quot;row u-no-padding&quot;&gt;
     &lt;div class=&quot;form-section&quot;&gt;
         &lt;label class=&quot;font-bold&quot;&gt;Contact&lt;/label&gt;
-        &lt;div class=&quot;section-body row p-0&quot;&gt;
+        &lt;div class=&quot;section-body row u-no-padding&quot;&gt;
             &lt;div class=&quot;col-6&quot;&gt;
                 &lt;div class=&quot;input-control&quot;&gt;
-                    &lt;input class=&quot;input-contains-icon input-contains-icon-left&quot; type=&quot;text&quot; placeholder=&quot;Name&quot; /&gt;
+                    &lt;input class=&quot;input-contains-icon-left input-small&quot; type=&quot;text&quot; placeholder=&quot;Name&quot; /&gt;
                     &lt;span class=&quot;icon icon-left&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-user&quot;&gt;&lt;/i&gt;&lt;/span&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&quot;col-6&quot;&gt;
                 &lt;div class=&quot;input-control&quot;&gt;
-                    &lt;input class=&quot;input-contains-icon input-contains-icon-left input-contains-icon-right text-success input-success&quot; type=&quot;text&quot; placeholder=&quot;Email&quot; value=&quot;somebodyoncetoldme@gmail.com&quot; /&gt;
+                    &lt;input class=&quot;input-contains-icon-left input-contains-icon-right text-success input-success input-small&quot; type=&quot;text&quot; placeholder=&quot;Email&quot; value=&quot;somebodyoncetoldme@gmail.com&quot; /&gt;
                     &lt;span class=&quot;icon icon-left&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-envelope&quot;&gt;&lt;/i&gt;&lt;/span&gt;
                     &lt;span class=&quot;icon icon-right&quot;&gt;&lt;i class=&quot;fa fa-wrapper fa-check&quot;&gt;&lt;/i&gt;&lt;/span&gt;
                 &lt;/div&gt;
@@ -1244,14 +1214,14 @@
         &lt;div class=&quot;section-body row&quot;&gt;
             &lt;div class=&quot;form-group&quot;&gt;
                 &lt;label class=&quot;form-group-label label-small&quot;&gt;+1&lt;/label&gt;
-                &lt;input type=&quot;text&quot; class=&quot;form-group-input&quot; placeholder=&quot;Enter your phone number&quot; /&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-group-input input-small&quot; placeholder=&quot;Enter your phone number&quot; /&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;row p-0;
+    &lt;div class=&quot;row u-no-padding&quot;&gt;
         &lt;div class=&quot;form-section col-6&quot;&gt;
             &lt;label class=&quot;font-bold label-small&quot;&gt;Choose One&lt;/label&gt;
-            &lt;select class=&quot;select&quot; placeholder=&quot;Choose one&quot;&gt;
+            &lt;select class=&quot;select input-small&quot; placeholder=&quot;Choose one&quot;&gt;
                 &lt;option&gt;Shibe&lt;/option&gt;
                 &lt;option&gt;Doggo&lt;/option&gt;
                 &lt;option&gt;Pupper&lt;/option&gt;
@@ -1300,15 +1270,15 @@
             <div class="divider"></div>
             <ul class="pagination no-bullets">
                 <li class="pagination-item pagination-prev">
-                    <a href="../footer" class="u-block">
+                    <a href="../footer" class="display-block">
                         <p class="pagination-item-subtitle">Previous</p>
-                        <h5 class="light m-0">Footer</h5>
+                        <h5 class="light no-margin">Footer</h5>
                     </a>
                 </li>
                 <li class="pagination-item pagination-next">
-                    <a href="../header" class="u-block">
+                    <a href="../header" class="display-block">
                         <p class="pagination-item-subtitle">Next</p>
-                        <h5 class="light m-0">Header</h5>
+                        <h5 class="light no-margin">Header</h5>
                     </a>
                 </li>
             </ul>
@@ -1335,61 +1305,61 @@
         </script>
   </body>
 
-  <footer class="footer">
-    <h6 class="footer__title white uppercase">Cirrus</h6>
+  <footer>
+    <h6 class="white uppercase">Cirrus</h6>
     <div class="content">
         <div class="divider"></div>
-        
+        <!--<li class="no-bullets footer-list-title">Docs</li>-->
         <div class="row">
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../animations">
-                        <li class="footer__list-item">Animations</li>
+                        <li class="list-item">Animations</li>
                     </a>
                     <a href="../buttons">
-                        <li class="footer__list-item">Buttons</li>
+                        <li class="list-item">Buttons</li>
                     </a>
                     <a href="../components">
-                        <li class="footer__list-item">Components</li>
+                        <li class="list-item">Components</li>
                     </a>
                     <ul>
             </div>
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../font">
-                        <li class="footer__list-item">Font</li>
+                        <li class="list-item">Font</li>
                     </a>
                     <a href="../footer">
-                        <li class="footer__list-item">Footer</li>
+                        <li class="list-item">Footer</li>
                     </a>
                     <a href="../forms">
-                        <li class="footer__list-item">Forms</li>
+                        <li class="list-item">Forms</li>
                     </a>
                     <ul>
             </div>
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../header">
-                        <li class="footer__list-item">Header</li>
+                        <li class="list-item">Header</li>
                     </a>
                     <a href="../layout">
-                        <li class="footer__list-item">Layout</li>
+                        <li class="list-item">Layout</li>
                     </a>
                     <a href="../links">
-                        <li class="footer__list-item">Links</li>
+                        <li class="list-item">Links</li>
                     </a>
                     <ul>
             </div>
             <div class="col-3">
                 <ul class="no-bullets">
                     <a href="../lists">
-                        <li class="footer__list-item">Lists</li>
+                        <li class="list-item">Lists</li>
                     </a>
                     <a href="../tables">
-                        <li class="footer__list-item">Table</li>
+                        <li class="list-item">Table</li>
                     </a>
                     <a href="../utils">
-                        <li class="footer__list-item">Util</li>
+                        <li class="list-item">Util</li>
                     </a>
                 </ul>
             </div>

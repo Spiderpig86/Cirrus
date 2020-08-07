@@ -1,0 +1,297 @@
+html {
+    background-color: white;
+}
+
+#splash-img{ 
+    background: url('https://images.unsplash.com/photo-1508182314998-3bd49473002f?ixlib=rb-0.3.5&s=f8ac09c936bac8105fde945ea267da65&auto=format&fit=crop&w=2560&q=100');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero-body {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#fade {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.0001), #fff);
+    bottom: 0;
+    height: 175px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    transition: all .3s;
+}
+
+#fade.faded {
+    opacity: 1;
+    transition: all .3s;
+}
+
+.padtop {
+    padding-top: 4rem;
+}
+
+.header {
+    transition: all .3s;
+}
+
+.header-clear-mod {
+    background-color: transparent;
+    box-shadow: none;
+    opacity: 0.9;
+    padding: 1.5rem;
+    --header-link-color: #fff;
+}
+
+.header-fill {
+    background-color: rgba(0, 0, 0, 0.87);
+}
+
+.translucent {
+    background: rgba(0, 0, 0, 0.87) !important;
+}
+
+.header-clear-mod a {
+    color: #fff;
+}
+
+.header .nav-item button a:hover {
+    color: #fff;
+}
+
+.header .nav-item a .icon {
+    font-size: inherit;
+}
+
+.header .btn .btn-accent {
+    position: inherit;
+}
+
+section {
+    padding-bottom: 2rem;
+}
+
+.content h6 {
+    line-height: 2.25rem;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+pre:not(.get-cirrus) > code {
+    padding: 1.5rem 1.5rem 1rem !important;
+    background: #f6f8fa;
+}
+
+.hljs {
+    max-height: 750px;
+}
+
+/* Colors */
+.frame {
+    box-shadow: 0 0.2rem 1.25rem 0 rgba(27, 30, 36, 0.07);
+    margin: 1rem 0;
+}
+
+.color-panel {
+    transition-duration: 86ms;
+}
+
+.color-panel:hover {
+    box-shadow: 0 3rem 3rem -1.25rem rgba(10,10,10,.1);
+    -webkit-transform: translateY(-.5rem);
+    transform: translateY(-.5rem);
+}
+
+/* Fonts */
+.desc {
+    font-size: 11px;
+    font-family: 'Nunito Sans';
+    margin-left: 10px;
+    vertical-align: bottom;
+}
+
+.frame h2 {
+    word-break: break-all;
+}
+
+/* Buttons */
+.btn-primary.hover,
+.btn-primary.focus {
+    background-color: #d62939;
+}
+
+.btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, .5)
+}
+
+._shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Checkboxes */
+.form-ext-control {
+    margin-bottom: 0.75rem;
+}
+
+/* Tooltips */
+#tooltips button {
+    text-align: center;
+}
+
+.doc-link {
+    font-weight: 300;
+    margin-right: .5rem;
+}
+
+/* Layout */
+#grids .col > div, #grids [class^='col-'] > div, #grids [class*=" col-"] > div, #grids .col > div, #grids [class^='w-'] > div, #grids [class*=" w-"] > div,
+#grids [class^='h-'] > div, #grids [class*=" h-"] > div {
+    background: #eee;
+    text-align: center;
+    border-radius: 5px;
+    font-size: .7rem;
+    text-transform: uppercase;
+    min-height: 30px !important;
+    line-height: 30px;
+    margin-bottom: .75rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
+#grids [class^='h-'] > div, #grids [class*=" h-"] > div {
+    height: 100%;
+}
+
+/* Examples */
+#examples {
+    background-color: #1c222b;
+}
+
+/* Footer */
+footer ul a {
+    display: block;
+}
+
+footer h3 {
+    letter-spacing: 6px;
+}
+
+footer .divider {
+    background: rgba(238, 238, 238, 0.2);
+    height: 1px;
+}
+
+footer p .fa.fa-heart {
+    color: #E90606;
+    margin: 0 3px;
+    animation: pound 0.35s infinite alternate;
+    -webkit-animation: pound 0.35s infinite alternate;
+    vertical-align: baseline;
+}
+
+/* Documentation Page */
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.doc-tile {
+    border-radius: .25rem;
+    color: var(--cirrus-fg);
+    cursor: pointer;
+    height: 100%;
+    padding: 2.5rem 2rem;
+    transition: all .2s;
+    user-select: none;
+}
+
+.col-6 a:focus {
+    box-shadow: none;
+}
+
+.doc-tile .lead {
+    font-size: 1.175rem;
+    line-height: 2rem;
+    margin-top: .5rem;
+}
+
+.doc-tile:hover {
+    background-color: rgba(0,0,0,.05);
+    color: #3273dc;
+    transition: all .2s;
+}
+
+.doc-tile:active {
+    background-color: rgba(0,0,0,.10);
+    color: #3273dc;
+    transform: scale(.98);
+}
+
+.demo-tooltip {
+    width: 100%;
+}
+
+/* Colors */
+.color-circle {
+    border-radius: 50%;
+    margin: .5rem;
+    padding: 1rem;
+}
+
+pre.get-cirrus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    border-radius: .3rem;
+    background: var(--cirrus-dark) !important;
+    margin: 1rem 0;
+}
+
+pre.get-cirrus code {
+    padding: 1rem;
+}
+
+/* Copy button */
+pre .copy {
+    margin: auto 1rem;
+    color: #f03d4d;
+    padding: 0.25rem 0.75rem;
+    border-radius: .3rem;
+    font-weight: 700;
+    box-sizing: border-box;
+    user-select: none;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+pre .copy:hover {
+    background: #f03d4d;
+    color: #fff;
+    transition: all .2s;
+}
+
+/* Grid */
+._grid-ex {
+    background-color: #eee;
+    border-radius: .25rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tabpage {
+    display: none;
+}
+
+.tabpage.tabpage--shown {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .nav-item.has-sub .list-dropdown .btn-group button:not(.btn-dropdown) {
+        flex-grow: 1;
+    }
+}
