@@ -6397,9 +6397,11 @@ video.video-fullscreen {
   /* TAG THEMES */
   /* Tag close button */ }
   .tag.tag--large {
-    font-size: 120%; }
+    font-size: 120%;
+    padding: .25rem .75rem; }
   .tag.tag--xlarge {
-    font-size: 150%; }
+    font-size: 150%;
+    padding: .5rem 1.25rem; }
   .tag.tag--rounded {
     border-radius: 290486px; }
   .tag.tag__delete {
