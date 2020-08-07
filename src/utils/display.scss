@@ -1,0 +1,7 @@
+$display-utils-config: 'none', 'inline', 'inline-block', 'block', 'table', 'table-row', 'table-cell';
+
+@each $display in $display-utils-config {
+    .u-#{$display} {
+        display: #{$display} !important;
+    }
+}

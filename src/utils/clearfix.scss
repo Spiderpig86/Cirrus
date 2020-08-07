@@ -1,0 +1,17 @@
+$clears: 'left', 'right', 'both';
+
+@each $clear in $clears {
+    .u-clear-#{$clear} {
+        clear: #{$clear} !important;
+    }
+}
+
+/*
+   When using floats, clearfix allows the container to automatically resize so that
+   other elements are not blocked by children.
+*/
+.u-clearfix:after {
+    clear: both !important;
+    content: ' ';
+    display: table !important;
+}

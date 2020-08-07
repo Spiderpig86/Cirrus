@@ -1,0 +1,27 @@
+$flex-directions: 'row', 'row-reverse', 'column', 'column-reverse';
+
+$justify-content: 'flex-start', 'center', 'flex-end', 'space-between', 'space-around', 'space-evenly';
+
+$align-items: 'stretch', 'flex-start', 'center', 'flex-end', 'baseline';
+
+.u-flex {
+    display: flex !important;
+
+    @each $flex-direction in $flex-directions {
+        &.u-flex-#{$flex-direction} {
+            flex-direction: #{$flex-direction} !important;
+        }
+    }
+}
+
+@each $justify in $justify-content {
+    &.u-justify-#{$justify} {
+        justify-content: #{$justify} !important;
+    }
+}
+
+@each $align in $align-items {
+    &.u-items-#{$align} {
+        align-items: #{$align} !important;
+    }
+}

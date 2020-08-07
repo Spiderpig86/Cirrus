@@ -1,88 +1,10 @@
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
-.u-hidden {
-    display: none !important;
-}
 
-.u-block {
-    display: block !important;
-}
-
-.u-inline {
-    display: inline !important;
-}
-
-.u-inline-block {
-    display: inline-block !important;
-}
-
-.u-flex {
-    display: flex !important;
-}
-
-.u-flex.u-flex-column {
-    flex-direction: column !important;
-}
-
-.u-flex.u-flex-row {
-    flex-direction: row !important;
-}
-
-.u-inline-flex {
-    display: -ms-inline-flexbox !important;
-    display: inline-flex !important;
-}
-
-.u-table {
-    display: table !important;
-}
-
-.u-table-row {
-    display: table-row !important;
-}
-
-.u-position-static {
-    position: static !important;
-}
-
-.u-position-relative {
-    position: relative !important;
-}
-
-.u-position-absolute {
-    position: absolute !important;
-}
-
-.u-position-fixed {
-    position: fixed !important;
-}
-
-.u-position-sticky {
-    position: sticky !important;
-}
-
-/*
-   When using floats, clearfix allows the container to automatically resize so that
-   other elements are not blocked by children.
-*/
-.u-clearfix:after {
-    clear: both !important;
-    content: ' ';
-    display: table !important;
-}
-
-/* This is mainly to keep elements from overlapping when using floats */
-.u-clear-left {
-    clear: left !important;
-}
-
-.u-clear-right {
-    clear: right !important;
-}
-
-.u-clear-both {
-    clear: both !important;
-}
+@import '../utils/display';
+@import '../utils/flex';
+@import '../utils/position';
+@import '../utils/clearfix';
 
 .u-pull-left {
     float: left !important;
@@ -142,25 +64,25 @@
     transform: translate(-50%, -50%);
 }
 
-.u-vertical-center {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-}
+// .u-vertical-center { Deprecated 0.6.0
+//     display: -webkit-box;
+//     display: -ms-flexbox;
+//     display: flex;
+//     -webkit-box-pack: center;
+//     -ms-flex-pack: center;
+//     justify-content: center;
+//     align-items: center;
+//     vertical-align: middle;
+// }
 
-.u-horizontal-center {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
+// .u-horizontal-center {
+//     display: -webkit-box;
+//     display: -ms-flexbox;
+//     display: flex;
+//     -webkit-box-align: center;
+//     -ms-flex-align: center;
+//     align-items: center;
+// }
 
 .u-overlay {
     bottom: 0;
@@ -188,9 +110,9 @@
     text-align: right !important;
 }
 
-.u-hide {
-    display: none !important;
-}
+// .u-hide { /* Deprecated 0.6.0, use u-none
+//     display: none !important;
+// }
 
 .u-disabled {
     cursor: not-allowed !important;
