@@ -1,4 +1,4 @@
-@import "../utils/_size";
+@import "../../helpers/_size";
 
 @each $size in $spacing-system {
     /* Margin */
