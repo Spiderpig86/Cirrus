@@ -2932,6 +2932,15 @@ section {
 .h-auto {
   height: auto; }
 
+/* Do the actual balancing only on larger screens */
+@media screen and (min-width: 769px) {
+  .level,
+  .level-left,
+  .level-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
+
 @media screen and (min-width: 769px) {
   .row {
     display: flex; }
@@ -4097,6 +4106,12 @@ video.video-fullscreen {
 
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
 .u-none {
   display: none !important; }
 
@@ -4117,6 +4132,25 @@ video.video-fullscreen {
 
 .u-table-cell {
   display: table-cell !important; }
+
+.u-none {
+  /* Hide elements based on screen size */ }
+  @media screen and (max-width: 639px) {
+    .u-none-mobile {
+      display: none !important; } }
+  @media screen and (min-width: 769px) {
+    .u-none {
+      /* Hide on devices that are tablets or larger */ }
+      .u-none-tablet {
+        display: none !important; } }
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .u-none-tablet-only {
+      display: none !important; } }
+  @media screen and (min-width: 1024px) {
+    .u-none {
+      /* Hide element on laptops, desktops, etc */ }
+      .u-none-desktop {
+        display: none !important; } }
 
 .u-flex {
   display: flex !important; }
@@ -4310,39 +4344,6 @@ video.video-fullscreen {
 /* Turns element into a circle */
 .u-circle {
   border-radius: 50%; }
-
-/* Remove outline or drop shadow when element is focused */
-.u-no-shadow {
-  box-shadow: none; }
-
-/* Responsiveness and Element Hiding */
-/* Do the actual balancing only on larger screens */
-@media screen and (min-width: 769px) {
-  .level,
-  .level-left,
-  .level-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; } }
-
-/* Hide elements based on screen size */
-@media screen and (max-width: 768px) {
-  .u-hide-mobile {
-    display: none !important; } }
-
-@media screen and (min-width: 768px) {
-  /* Hide on devices that are tablets or larger */
-  .u-hide-tablet {
-    display: none !important; } }
-
-@media screen and (min-width: 769px) and (max-width: 1023px) {
-  .u-hide-tablet-only {
-    display: none !important; } }
-
-@media screen and (min-width: 1024px) {
-  /* Hide element on laptops, desktops, etc */
-  .u-hide-desktop {
-    display: none !important; } }
 
 /*
   Functions
@@ -6871,6 +6872,12 @@ a.tag:hover {
   content: ' ';
   display: table !important; }
 
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
 .u-none {
   display: none !important; }
 
@@ -6891,6 +6898,25 @@ a.tag:hover {
 
 .u-table-cell {
   display: table-cell !important; }
+
+.u-none {
+  /* Hide elements based on screen size */ }
+  @media screen and (max-width: 639px) {
+    .u-none-mobile {
+      display: none !important; } }
+  @media screen and (min-width: 769px) {
+    .u-none {
+      /* Hide on devices that are tablets or larger */ }
+      .u-none-tablet {
+        display: none !important; } }
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .u-none-tablet-only {
+      display: none !important; } }
+  @media screen and (min-width: 1024px) {
+    .u-none {
+      /* Hide element on laptops, desktops, etc */ }
+      .u-none-desktop {
+        display: none !important; } }
 
 .u-flex {
   display: flex !important; }

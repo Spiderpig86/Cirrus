@@ -1,7 +1,38 @@
+@import '../../helpers/_size';
+
 $display-utils-config: 'none', 'inline', 'inline-block', 'block', 'table', 'table-row', 'table-cell';
 
 @each $display in $display-utils-config {
     .u-#{$display} {
         display: #{$display} !important;
+    }
+}
+
+.u-none {
+    /* Hide elements based on screen size */
+    @include screen-below('phone') {
+        &-mobile {
+            display: none !important;
+        }
+    }
+
+    @include screen-above('tablet') {
+        /* Hide on devices that are tablets or larger */
+        &-tablet {
+            display: none !important;
+        }
+    }
+
+    @include screen-between('tablet', 'desktop') {
+        &-tablet-only {
+            display: none !important;
+        }
+    }
+
+    @include screen-above('desktop') {
+        /* Hide element on laptops, desktops, etc */
+        &-desktop {
+            display: none !important;
+        }
     }
 }
