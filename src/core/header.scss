@@ -1,4 +1,5 @@
 @import './theme.scss';
+@import '../../helpers/_selectors';
 
 /* HEADER */
 .header {
@@ -120,9 +121,7 @@
         width: 3.5rem;
     }
 
-    .btn,
-    button,
-    input[type='submit'] {
+    #{$input-selectors} {
         margin: 0;
     }
 }

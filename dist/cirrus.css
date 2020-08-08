@@ -220,12 +220,13 @@ fieldset {
 /*
     Global Mixins
 */
+/*
+    Group selectors that share common styling.
+*/
 /* BUTTONS */
 /* Button styling */
 /* Un-themed */
-button,
-.btn,
-[type='submit'] {
+.btn, button, [type="submit"], [type="reset"], [type="button"] {
   line-height: 2rem;
   overflow: hidden;
   padding: 0.5rem 1.5rem;
@@ -261,52 +262,32 @@ button,
   /* STATES */
   /* GLYPHS */
   /* Alternatives to pad-left and pad-right */ }
-  button:hover,
-  .btn:hover,
-  [type='submit']:hover {
+  .btn:hover, button:hover, [type="submit"]:hover, [type="reset"]:hover, [type="button"]:hover {
     transition: all var(--animation-duration);
     --btn-color: #e9ecef; }
-  button:active,
-  .btn:active,
-  [type='submit']:active {
+  .btn:active, button:active, [type="submit"]:active, [type="reset"]:active, [type="button"]:active {
     transition: var(--animation-duration) ease; }
-  button:focus,
-  .btn:focus,
-  [type='submit']:focus {
+  .btn:focus, button:focus, [type="submit"]:focus, [type="reset"]:focus, [type="button"]:focus {
     outline: none; }
-  button:disabled,
-  .btn:disabled,
-  [type='submit']:disabled {
+  .btn:disabled, button:disabled, [type="submit"]:disabled, [type="reset"]:disabled, [type="button"]:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
-  button.outline,
-  .btn.outline,
-  [type='submit'].outline {
+  .btn.outline, button.outline, [type="submit"].outline, [type="reset"].outline, [type="button"].outline {
     --btn-color: transparent; }
-    button.outline:hover,
-    .btn.outline:hover,
-    [type='submit'].outline:hover {
+    .btn.outline:hover, button.outline:hover, [type="submit"].outline:hover, [type="reset"].outline:hover, [type="button"].outline:hover {
       --btn-color: #e9ecef; }
-  button.loading:active::after,
-  .btn.loading:active::after,
-  [type='submit'].loading:active::after {
+  .btn.loading:active::after, button.loading:active::after, [type="submit"].loading:active::after, [type="reset"].loading:active::after, [type="button"].loading:active::after {
     border-radius: 50%;
     border-right-color: transparent;
     border-top-color: transparent;
     transition: var(--animation-duration) ease; }
-  button.btn-animated,
-  .btn.btn-animated,
-  [type='submit'].btn-animated {
+  .btn.btn-animated, button.btn-animated, [type="submit"].btn-animated, [type="reset"].btn-animated, [type="button"].btn-animated {
     transition: calc(var(--animation-duration) / 2) ease; }
-    button.btn-animated:active,
-    .btn.btn-animated:active,
-    [type='submit'].btn-animated:active {
+    .btn.btn-animated:active, button.btn-animated:active, [type="submit"].btn-animated:active, [type="reset"].btn-animated:active, [type="button"].btn-animated:active {
       -webkit-transform: scale(0.98);
       transform: inherit, scale(0.98);
       transition: calc(var(--animation-duration) / 2) ease; }
-  button.btn-close,
-  .btn.btn-close,
-  [type='submit'].btn-close {
+  .btn.btn-close, button.btn-close, [type="submit"].btn-close, [type="reset"].btn-close, [type="button"].btn-close {
     background-color: rgba(10, 10, 10, 0.2);
     border: none;
     border-radius: 290486px;
@@ -323,13 +304,9 @@ button,
     padding: 0;
     min-width: 20px;
     /* Render the x in the close button */ }
-    button.btn-close:hover,
-    .btn.btn-close:hover,
-    [type='submit'].btn-close:hover {
+    .btn.btn-close:hover, button.btn-close:hover, [type="submit"].btn-close:hover, [type="reset"].btn-close:hover, [type="button"].btn-close:hover {
       background-color: rgba(10, 10, 10, 0.3); }
-    button.btn-close::before,
-    .btn.btn-close::before,
-    [type='submit'].btn-close::before {
+    .btn.btn-close::before, button.btn-close::before, [type="submit"].btn-close::before, [type="reset"].btn-close::before, [type="button"].btn-close::before {
       background-color: var(--cirrus-bg);
       content: '';
       display: block;
@@ -342,9 +319,7 @@ button,
       transform-origin: center center;
       height: 2px;
       width: 50%; }
-    button.btn-close::after,
-    .btn.btn-close::after,
-    [type='submit'].btn-close::after {
+    .btn.btn-close::after, button.btn-close::after, [type="submit"].btn-close::after, [type="reset"].btn-close::after, [type="button"].btn-close::after {
       background-color: var(--cirrus-bg);
       content: '';
       display: block;
@@ -357,241 +332,137 @@ button,
       transform-origin: center center;
       height: 50%;
       width: 2px; }
-  button.btn-transparent,
-  .btn.btn-transparent,
-  [type='submit'].btn-transparent {
+  .btn.btn-transparent, button.btn-transparent, [type="submit"].btn-transparent, [type="reset"].btn-transparent, [type="button"].btn-transparent {
     --btn-color: transparent;
     --btn-fg: var(--cirrus-dark);
     --btn-border-color: transparent; }
-    button.btn-transparent:focus,
-    .btn.btn-transparent:focus,
-    [type='submit'].btn-transparent:focus {
+    .btn.btn-transparent:focus, button.btn-transparent:focus, [type="submit"].btn-transparent:focus, [type="reset"].btn-transparent:focus, [type="button"].btn-transparent:focus {
       box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5); }
-    button.btn-transparent:hover,
-    .btn.btn-transparent:hover,
-    [type='submit'].btn-transparent:hover {
+    .btn.btn-transparent:hover, button.btn-transparent:hover, [type="submit"].btn-transparent:hover, [type="reset"].btn-transparent:hover, [type="button"].btn-transparent:hover {
       --btn-color: rgba(0, 0, 0, 0.1); }
-    button.btn-transparent.outline,
-    .btn.btn-transparent.outline,
-    [type='submit'].btn-transparent.outline {
+    .btn.btn-transparent.outline, button.btn-transparent.outline, [type="submit"].btn-transparent.outline, [type="reset"].btn-transparent.outline, [type="button"].btn-transparent.outline {
       color: var(--cirrus-dark); }
-  button.btn-light,
-  .btn.btn-light,
-  [type='submit'].btn-light {
+  .btn.btn-light, button.btn-light, [type="submit"].btn-light, [type="reset"].btn-light, [type="button"].btn-light {
     --btn-color: var(--cirrus-light);
     --btn-fg: var(--cirrus-dark);
     --btn-border-color: var(--cirrus-light); }
-    button.btn-light:hover,
-    .btn.btn-light:hover,
-    [type='submit'].btn-light:hover {
+    .btn.btn-light:hover, button.btn-light:hover, [type="submit"].btn-light:hover, [type="reset"].btn-light:hover, [type="button"].btn-light:hover {
       --btn-color: var(--cirrus-light-hover); }
-    button.btn-light:focus,
-    .btn.btn-light:focus,
-    [type='submit'].btn-light:focus {
+    .btn.btn-light:focus, button.btn-light:focus, [type="submit"].btn-light:focus, [type="reset"].btn-light:focus, [type="button"].btn-light:focus {
       box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5); }
-  button.btn-dark,
-  .btn.btn-dark,
-  [type='submit'].btn-dark {
+  .btn.btn-dark, button.btn-dark, [type="submit"].btn-dark, [type="reset"].btn-dark, [type="button"].btn-dark {
     --btn-color: var(--cirrus-dark);
     --btn-fg: var(--cirrus-light);
     --btn-border-color: var(--cirrus-dark); }
-    button.btn-dark:focus,
-    .btn.btn-dark:focus,
-    [type='submit'].btn-dark:focus {
+    .btn.btn-dark:focus, button.btn-dark:focus, [type="submit"].btn-dark:focus, [type="reset"].btn-dark:focus, [type="button"].btn-dark:focus {
       box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
-    button.btn-dark:hover,
-    .btn.btn-dark:hover,
-    [type='submit'].btn-dark:hover {
+    .btn.btn-dark:hover, button.btn-dark:hover, [type="submit"].btn-dark:hover, [type="reset"].btn-dark:hover, [type="button"].btn-dark:hover {
       --btn-color: var(--cirrus-dark-hover); }
-    button.btn-dark.outline:hover,
-    .btn.btn-dark.outline:hover,
-    [type='submit'].btn-dark.outline:hover {
+    .btn.btn-dark.outline:hover, button.btn-dark.outline:hover, [type="submit"].btn-dark.outline:hover, [type="reset"].btn-dark.outline:hover, [type="button"].btn-dark.outline:hover {
       --btn-color: var(--cirrus-dark); }
-  button.btn-black,
-  .btn.btn-black,
-  [type='submit'].btn-black {
+  .btn.btn-black, button.btn-black, [type="submit"].btn-black, [type="reset"].btn-black, [type="button"].btn-black {
     --btn-color: #000;
     --btn-fg: var(--cirrus-light);
     --btn-border-color: #000; }
-    button.btn-black:focus,
-    .btn.btn-black:focus,
-    [type='submit'].btn-black:focus {
+    .btn.btn-black:focus, button.btn-black:focus, [type="submit"].btn-black:focus, [type="reset"].btn-black:focus, [type="button"].btn-black:focus {
       box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5); }
-    button.btn-black:hover,
-    .btn.btn-black:hover,
-    [type='submit'].btn-black:hover {
+    .btn.btn-black:hover, button.btn-black:hover, [type="submit"].btn-black:hover, [type="reset"].btn-black:hover, [type="button"].btn-black:hover {
       --btn-color: #000; }
-  button.btn-primary,
-  .btn.btn-primary,
-  [type='submit'].btn-primary {
+  .btn.btn-primary, button.btn-primary, [type="submit"].btn-primary, [type="reset"].btn-primary, [type="button"].btn-primary {
     --btn-color: var(--cirrus-primary);
     --btn-fg: var(--cirrus-light);
     --btn-border-color: var(--cirrus-accent-border); }
-    button.btn-primary:focus,
-    .btn.btn-primary:focus,
-    [type='submit'].btn-primary:focus {
+    .btn.btn-primary:focus, button.btn-primary:focus, [type="submit"].btn-primary:focus, [type="reset"].btn-primary:focus, [type="button"].btn-primary:focus {
       box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.5); }
-    button.btn-primary:hover,
-    .btn.btn-primary:hover,
-    [type='submit'].btn-primary:hover {
+    .btn.btn-primary:hover, button.btn-primary:hover, [type="submit"].btn-primary:hover, [type="reset"].btn-primary:hover, [type="button"].btn-primary:hover {
       --btn-color: var(--cirrus-accent-hover); }
-    button.btn-primary.outline:hover,
-    .btn.btn-primary.outline:hover,
-    [type='submit'].btn-primary.outline:hover {
+    .btn.btn-primary.outline:hover, button.btn-primary.outline:hover, [type="submit"].btn-primary.outline:hover, [type="reset"].btn-primary.outline:hover, [type="button"].btn-primary.outline:hover {
       --btn-color: var(--cirrus-primary); }
-  button.btn-info,
-  .btn.btn-info,
-  [type='submit'].btn-info {
+  .btn.btn-info, button.btn-info, [type="submit"].btn-info, [type="reset"].btn-info, [type="button"].btn-info {
     --btn-color: var(--cirrus-info);
     --btn-fg: var(--cirrus-light);
     --btn-border-color: var(--cirrus-info); }
-    button.btn-info:focus,
-    .btn.btn-info:focus,
-    [type='submit'].btn-info:focus {
+    .btn.btn-info:focus, button.btn-info:focus, [type="submit"].btn-info:focus, [type="reset"].btn-info:focus, [type="button"].btn-info:focus {
       box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5); }
-    button.btn-info:hover,
-    .btn.btn-info:hover,
-    [type='submit'].btn-info:hover {
+    .btn.btn-info:hover, button.btn-info:hover, [type="submit"].btn-info:hover, [type="reset"].btn-info:hover, [type="button"].btn-info:hover {
       --btn-color: var(--cirrus-info-hover); }
-    button.btn-info.outline:hover,
-    .btn.btn-info.outline:hover,
-    [type='submit'].btn-info.outline:hover {
+    .btn.btn-info.outline:hover, button.btn-info.outline:hover, [type="submit"].btn-info.outline:hover, [type="reset"].btn-info.outline:hover, [type="button"].btn-info.outline:hover {
       --btn-color: var(--cirrus-info); }
-  button.btn-link,
-  .btn.btn-link,
-  [type='submit'].btn-link {
+  .btn.btn-link, button.btn-link, [type="submit"].btn-link, [type="reset"].btn-link, [type="button"].btn-link {
     --btn-color: var(--cirrus-link);
     --btn-fg: var(--cirrus-light);
     --btn-border-color: var(--cirrus-link); }
-    button.btn-link:focus,
-    .btn.btn-link:focus,
-    [type='submit'].btn-link:focus {
+    .btn.btn-link:focus, button.btn-link:focus, [type="submit"].btn-link:focus, [type="reset"].btn-link:focus, [type="button"].btn-link:focus {
       box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5); }
-    button.btn-link:hover,
-    .btn.btn-link:hover,
-    [type='submit'].btn-link:hover {
+    .btn.btn-link:hover, button.btn-link:hover, [type="submit"].btn-link:hover, [type="reset"].btn-link:hover, [type="button"].btn-link:hover {
       --btn-color: var(--cirrus-link-dark); }
-    button.btn-link.outline,
-    .btn.btn-link.outline,
-    [type='submit'].btn-link.outline {
+    .btn.btn-link.outline, button.btn-link.outline, [type="submit"].btn-link.outline, [type="reset"].btn-link.outline, [type="button"].btn-link.outline {
       --btn-fg: var(--cirrus-link);
       border: 1px solid transparent; }
-    button.btn-link.outline:hover,
-    .btn.btn-link.outline:hover,
-    [type='submit'].btn-link.outline:hover {
+    .btn.btn-link.outline:hover, button.btn-link.outline:hover, [type="submit"].btn-link.outline:hover, [type="reset"].btn-link.outline:hover, [type="button"].btn-link.outline:hover {
       --btn-color: var(--cirrus-link-hover);
       border: 1px solid transparent;
       text-decoration: underline; }
-  button.btn-success,
-  .btn.btn-success,
-  [type='submit'].btn-success {
+  .btn.btn-success, button.btn-success, [type="submit"].btn-success, [type="reset"].btn-success, [type="button"].btn-success {
     --btn-color: var(--cirrus-success);
     --btn-fg: var(--cirrus-light);
     --btn-border-color: var(--cirrus-success); }
-    button.btn-success:focus,
-    .btn.btn-success:focus,
-    [type='submit'].btn-success:focus {
+    .btn.btn-success:focus, button.btn-success:focus, [type="submit"].btn-success:focus, [type="reset"].btn-success:focus, [type="button"].btn-success:focus {
       box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.5); }
-    button.btn-success:hover,
-    .btn.btn-success:hover,
-    [type='submit'].btn-success:hover {
+    .btn.btn-success:hover, button.btn-success:hover, [type="submit"].btn-success:hover, [type="reset"].btn-success:hover, [type="button"].btn-success:hover {
       --btn-color: var(--cirrus-success-hover); }
-    button.btn-success.outline:hover,
-    .btn.btn-success.outline:hover,
-    [type='submit'].btn-success.outline:hover {
+    .btn.btn-success.outline:hover, button.btn-success.outline:hover, [type="submit"].btn-success.outline:hover, [type="reset"].btn-success.outline:hover, [type="button"].btn-success.outline:hover {
       --btn-color: var(--cirrus-success); }
-  button.btn-warning,
-  .btn.btn-warning,
-  [type='submit'].btn-warning {
+  .btn.btn-warning, button.btn-warning, [type="submit"].btn-warning, [type="reset"].btn-warning, [type="button"].btn-warning {
     --btn-color: var(--cirrus-warning);
     --btn-fg: var(--cirrus-dark);
     --btn-border-color: var(--cirrus-warning); }
-    button.btn-warning:focus,
-    .btn.btn-warning:focus,
-    [type='submit'].btn-warning:focus {
+    .btn.btn-warning:focus, button.btn-warning:focus, [type="submit"].btn-warning:focus, [type="reset"].btn-warning:focus, [type="button"].btn-warning:focus {
       box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.5); }
-    button.btn-warning:hover,
-    .btn.btn-warning:hover,
-    [type='submit'].btn-warning:hover {
+    .btn.btn-warning:hover, button.btn-warning:hover, [type="submit"].btn-warning:hover, [type="reset"].btn-warning:hover, [type="button"].btn-warning:hover {
       --btn-color: var(--cirrus-warning-hover); }
-    button.btn-warning.outline:hover,
-    .btn.btn-warning.outline:hover,
-    [type='submit'].btn-warning.outline:hover {
+    .btn.btn-warning.outline:hover, button.btn-warning.outline:hover, [type="submit"].btn-warning.outline:hover, [type="reset"].btn-warning.outline:hover, [type="button"].btn-warning.outline:hover {
       --btn-color: var(--cirrus-warning); }
-  button.btn-danger,
-  .btn.btn-danger,
-  [type='submit'].btn-danger {
+  .btn.btn-danger, button.btn-danger, [type="submit"].btn-danger, [type="reset"].btn-danger, [type="button"].btn-danger {
     --btn-color: var(--cirrus-danger);
     --btn-fg: var(--cirrus-light);
     --btn-border-color: var(--cirrus-danger); }
-    button.btn-danger:focus,
-    .btn.btn-danger:focus,
-    [type='submit'].btn-danger:focus {
+    .btn.btn-danger:focus, button.btn-danger:focus, [type="submit"].btn-danger:focus, [type="reset"].btn-danger:focus, [type="button"].btn-danger:focus {
       box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.5); }
-    button.btn-danger:hover,
-    .btn.btn-danger:hover,
-    [type='submit'].btn-danger:hover {
+    .btn.btn-danger:hover, button.btn-danger:hover, [type="submit"].btn-danger:hover, [type="reset"].btn-danger:hover, [type="button"].btn-danger:hover {
       --btn-color: var(--cirrus-danger-hover); }
-    button.btn-danger.outline:hover,
-    .btn.btn-danger.outline:hover,
-    [type='submit'].btn-danger.outline:hover {
+    .btn.btn-danger.outline:hover, button.btn-danger.outline:hover, [type="submit"].btn-danger.outline:hover, [type="reset"].btn-danger.outline:hover, [type="button"].btn-danger.outline:hover {
       --btn-color: var(--cirrus-danger); }
-  button.btn-xsmall,
-  .btn.btn-xsmall,
-  [type='submit'].btn-xsmall {
+  .btn.btn-xsmall, button.btn-xsmall, [type="submit"].btn-xsmall, [type="reset"].btn-xsmall, [type="button"].btn-xsmall {
     padding: 0 0.5rem;
     font-size: 50%; }
-  button.btn-small,
-  .btn.btn-small,
-  [type='submit'].btn-small {
+  .btn.btn-small, button.btn-small, [type="submit"].btn-small, [type="reset"].btn-small, [type="button"].btn-small {
     padding: 0.25rem 1rem;
     font-size: 70%; }
-  button.btn-large,
-  .btn.btn-large,
-  [type='submit'].btn-large {
+  .btn.btn-large, button.btn-large, [type="submit"].btn-large, [type="reset"].btn-large, [type="button"].btn-large {
     padding: 0.75rem 2rem;
     font-size: 90%; }
-  button.btn-xlarge,
-  .btn.btn-xlarge,
-  [type='submit'].btn-xlarge {
+  .btn.btn-xlarge, button.btn-xlarge, [type="submit"].btn-xlarge, [type="reset"].btn-xlarge, [type="button"].btn-xlarge {
     padding: 1rem 2.5rem;
     font-size: 110%; }
-  button.btn-success,
-  .btn.btn-success,
-  [type='submit'].btn-success {
+  .btn.btn-success, button.btn-success, [type="submit"].btn-success, [type="reset"].btn-success, [type="button"].btn-success {
     border-color: var(--cirrus-success); }
-    button.btn-success:focus,
-    .btn.btn-success:focus,
-    [type='submit'].btn-success:focus {
+    .btn.btn-success:focus, button.btn-success:focus, [type="submit"].btn-success:focus, [type="reset"].btn-success:focus, [type="button"].btn-success:focus {
       box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07); }
-  button.btn-error,
-  .btn.btn-error,
-  [type='submit'].btn-error {
+  .btn.btn-error, button.btn-error, [type="submit"].btn-error, [type="reset"].btn-error, [type="button"].btn-error {
     border-color: var(--cirrus-danger); }
-    button.btn-error:focus,
-    .btn.btn-error:focus,
-    [type='submit'].btn-error:focus {
+    .btn.btn-error:focus, button.btn-error:focus, [type="submit"].btn-error:focus, [type="reset"].btn-error:focus, [type="button"].btn-error:focus {
       box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07); }
-  button .fa-wrapper,
-  .btn .fa-wrapper,
-  [type='submit'] .fa-wrapper {
+  .btn .fa-wrapper, button .fa-wrapper, [type="submit"] .fa-wrapper, [type="reset"] .fa-wrapper, [type="button"] .fa-wrapper {
     /* Override default behavior of aligning font awesome icons to the top */
     vertical-align: baseline; }
-    button .fa-wrapper.pad-right,
-    .btn .fa-wrapper.pad-right,
-    [type='submit'] .fa-wrapper.pad-right {
+    .btn .fa-wrapper.pad-right, button .fa-wrapper.pad-right, [type="submit"] .fa-wrapper.pad-right, [type="reset"] .fa-wrapper.pad-right, [type="button"] .fa-wrapper.pad-right {
       margin-right: 0.4rem; }
-    button .fa-wrapper.pad-left,
-    .btn .fa-wrapper.pad-left,
-    [type='submit'] .fa-wrapper.pad-left {
+    .btn .fa-wrapper.pad-left, button .fa-wrapper.pad-left, [type="submit"] .fa-wrapper.pad-left, [type="reset"] .fa-wrapper.pad-left, [type="button"] .fa-wrapper.pad-left {
       margin-left: 0.4rem; }
-  button span:first-child,
-  .btn span:first-child,
-  [type='submit'] span:first-child {
+  .btn span:first-child, button span:first-child, [type="submit"] span:first-child, [type="reset"] span:first-child, [type="button"] span:first-child {
     margin-right: 0.2rem; }
-  button span:last-child,
-  .btn span:last-child,
-  [type='submit'] span:last-child {
+  .btn span:last-child, button span:last-child, [type="submit"] span:last-child, [type="reset"] span:last-child, [type="button"] span:last-child {
     margin-left: 0.2rem; }
 
 /* Deprecated 0.5.6, use m-1 instead */
@@ -2072,6 +1943,9 @@ label:last-child:not(:first-child):not(.form-group-label) {
   --font-size-l: 1.35rem;
   --font-size-xl: 1.75rem; }
 
+/*
+    Group selectors that share common styling.
+*/
 /* HEADER */
 .header {
   -webkit-box-flex: 1;
@@ -2170,9 +2044,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
     height: 3.5rem;
     position: relative;
     width: 3.5rem; }
-  .header .btn,
-  .header button,
-  .header input[type='submit'] {
+  .header .btn, .header button, .header [type="submit"], .header [type="reset"], .header [type="button"] {
     margin: 0; }
 
 /* Styles for header menu (aka the nav bar) */
@@ -4690,6 +4562,9 @@ video.video-fullscreen {
   --font-size-l: 1.35rem;
   --font-size-xl: 1.75rem; }
 
+/*
+    Group selectors that share common styling.
+*/
 /* CARDS */
 .card {
   background-color: #fff;
@@ -4778,9 +4653,7 @@ video.video-fullscreen {
     -webkit-transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
     transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
     /* Add some padding to the buttons */ }
-    .card .action-bar button,
-    .card .action-bar .btn,
-    .card .action-bar [type='submit'] {
+    .card .action-bar .btn, .card .action-bar button, .card .action-bar [type="submit"], .card .action-bar [type="reset"], .card .action-bar [type="button"] {
       margin: 0 0.5rem; }
     .card .action-bar + .card-footer {
       padding: 1rem 0;

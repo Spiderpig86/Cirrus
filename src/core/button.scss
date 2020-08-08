@@ -1,14 +1,14 @@
 @import '../core/theme.scss';
 @import '../../helpers/_functions';
 @import '../../helpers/_mixins.scss';
+@import '../../helpers/_selectors';
 
 /* BUTTONS */
 
 /* Button styling */
 /* Un-themed */
-button,
-.btn,
-[type='submit'] {
+
+#{$input-selectors} {
     line-height: 2rem;
     overflow: hidden;
     padding: 0.5rem 1.5rem;
