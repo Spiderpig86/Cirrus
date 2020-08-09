@@ -1,4 +1,5 @@
 @import "./theme.scss";
+@import "../../helpers/_size";
 /* LISTS */
 
 ul,
@@ -194,6 +195,12 @@ ul {
         overflow: hidden;
         -webkit-transition: all var(--animation-duration);
         transition: all var(--animation-duration);
+
+        @include screen-below('tablet') {
+            height: 0;
+            padding: 0 !important;
+            position: relative;
+        }
     }
     
     &.dropdown-right .menu {

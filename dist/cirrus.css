@@ -2947,6 +2947,12 @@ a button,
   --font-size-l: 1.35rem;
   --font-size-xl: 1.75rem; }
 
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
 /* LISTS */
 ul,
 ol {
@@ -3093,6 +3099,11 @@ ul {
     overflow: hidden;
     -webkit-transition: all var(--animation-duration);
     transition: all var(--animation-duration); }
+    @media screen and (max-width: 768px) {
+      .list-dropdown .menu {
+        height: 0;
+        padding: 0 !important;
+        position: relative; } }
   .list-dropdown.dropdown-right .menu {
     left: auto;
     right: 0; }
