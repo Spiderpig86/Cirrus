@@ -1,5 +1,5 @@
 @import './theme.scss';
-@import '../../helpers/_size.scss';
+@import '../../helpers/_size';
 /* HEADER */
 
 /* This works well with panel */
@@ -162,7 +162,9 @@ section {
 
     /* Generate columns */
     @for $i from 1 through $grid-columns {
-        .col-#{$i} {
+        .col-#{$i},
+        .col-sm-#{$i},
+        .col-lg-#{$i} {
             width: percentage($number: $grid-width * $i);
         }
 
@@ -193,6 +195,55 @@ section {
     [class*=' col-'] {
         float: left; /* Keeps the elements in 1 row */
         padding: 0 0.5rem;
+    }
+
+    /* Columns with breakpoints */
+    @include screen-below('desktop') {
+        [class^='col-lg-']:not(.ignore-screen),
+        [class*=' col-lg-']:not(.ignore-screen) {
+            /* Remove the grid structure for smaller screens */
+            width: 100%;
+            margin-left: 0;
+            padding: 0;
+        }
+
+        /* Dividers for mobile layout */
+        .divided > .row [class^='col-lg-'],
+        .divided > .row [class*=' col-lg-'] {
+            box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
+        }
+    }
+
+    @include screen-below('tablet') {
+        [class^='col-']:not(.ignore-screen):not([class^='col-sm']):not([class^='col-lg']),
+        [class*=' col-']:not(.ignore-screen):not([class*=' col-sm']):not([class*=' col-lg']) {
+            /* Remove the grid structure for smaller screens */
+            width: 100%;
+            margin-left: 0;
+            padding: 0;
+        }
+
+        /* Dividers for mobile layout */
+        .divided > .row [class^='col-'],
+        .divided > .row [class*=' col-'] {
+            box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
+        }
+    }
+
+    @include screen-below('phone') {
+        [class^='col-sm-']:not(.ignore-screen),
+        [class*=' col-sm-']:not(.ignore-screen) {
+            /* Remove the grid structure for smaller screens */
+            width: 100%;
+            margin-left: 0;
+            padding: 0;
+        }
+
+        /* Dividers for mobile layout */
+        .divided > .row [class^='col-sm-'],
+        .divided > .row [class*=' col-sm-'] {
+            box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
+        }
     }
 
     /* Columns without the spacing */
@@ -381,14 +432,6 @@ section {
 
     .row {
         margin-top: 0;
-
-        [class^='col-']:not(.ignore-screen),
-        [class*=' col-']:not(.ignore-screen) {
-            /* Remove the grid structure for smaller screens */
-            width: 100%;
-            margin-left: 0;
-            padding: 0;
-        }
     }
 
     /* Dividers for mobile layout */
