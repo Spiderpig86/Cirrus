@@ -170,7 +170,7 @@
 
         /* Loading Spinner, align center by default */
         &::after {
-            border: 2px solid $gray-400;
+            border: 2px solid map-get($grays, '400');
             border-radius: 50%;
             border-right-color: transparent;
             border-top-color: transparent;

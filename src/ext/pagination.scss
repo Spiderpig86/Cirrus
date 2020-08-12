@@ -41,7 +41,7 @@
         }
 
         a {
-            color: $gray-700;
+            color: map-get($grays, '700');
 
             &[disabled] {
                 cursor: pointer;
@@ -89,7 +89,7 @@
             }
 
             &.ellipses {
-                color: $gray-500;
+                color: map-get($grays, '500');
                 pointer-events: none;
             }
 
@@ -103,7 +103,7 @@
 
     /* Bordered pagination */
     &.pagination-bordered .pagination-item.short a {
-        border: 1px solid $gray-300;
+        border: 1px solid map-get($grays, '300');
         border-radius: 0;
         margin-left: -1px;
     }

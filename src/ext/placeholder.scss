@@ -4,11 +4,11 @@
 /* Designed to be embedded in any parent container as placeholder when content is absent. */
 
 .placeholder {
-    background-color: transparentize($color: $gray-300, $amount: 0.5);
+    background-color: transparentize($color: map-get($grays, '300'), $amount: 0.5);
     border-radius: 3px;
     text-align: center;
     padding: 3rem 2rem;
-    color: $gray-700; /* Lighter than original text color */
+    color: map-get($grays, '700'); /* Lighter than original text color */
     display: block;
 
     .placeholder-icon {

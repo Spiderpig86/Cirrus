@@ -211,7 +211,7 @@
 
         &:before {
             background-color: var(--cirrus-light);
-            border: 1px solid $gray-300;
+            border: 1px solid map-get($grays, '300');
             border-radius: 0.25rem;
             pointer-events: none;
             user-select: none;

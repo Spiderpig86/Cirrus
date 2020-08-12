@@ -11,7 +11,7 @@
 
     td,
     th {
-        border: 1px solid transparentize($gray-300, 0.5);
+        border: 1px solid transparentize(map-get($grays, '300'), 0.5);
         border-width: 0 0 1px;
         padding: 0.75rem;
         vertical-align: top;
@@ -32,20 +32,20 @@
     .table caption {
         padding-top: 0.75rem;
         padding-bottom: 0.75rem;
-        color: $gray-300;
+        color: map-get($grays, '300');
         text-align: left;
         caption-side: bottom;
     }
 
     tr:not(.selected):hover,
     &.striped tbody tr:not(.selected):nth-child(even):hover {
-        background-color: transparentize($gray-300, 0.85);
+        background-color: transparentize(map-get($grays, '300'), 0.85);
     }
 
     /* Thicker border for table header */
     thead th,
     thead {
-        border-bottom: 2px solid transparentize($gray-300, 0.5);
+        border-bottom: 2px solid transparentize(map-get($grays, '300'), 0.5);
     }
 
     thead th,
@@ -54,7 +54,7 @@
     }
 
     tfoot th {
-        border-top: 2px solid transparentize($gray-300, 0.5);
+        border-top: 2px solid transparentize(map-get($grays, '300'), 0.5);
         border-bottom: none;
     }
 
@@ -63,7 +63,7 @@
     &.bordered {
         thead th,
         thead {
-            border-bottom: 1px solid transparentize($gray-300, 0.5);
+            border-bottom: 1px solid transparentize(map-get($grays, '300'), 0.5);
         }
 
         td,

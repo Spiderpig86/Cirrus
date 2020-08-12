@@ -28,7 +28,7 @@ section {
 
 /* This works well with spans and maybe even hr */
 .divider {
-    border-top: 0.05rem solid transparentize($gray-500, 0.5);
+    border-top: 0.05rem solid transparentize(map-get($grays, '500'), 0.5);
     height: 0.1rem;
     margin: 1.8rem 0 1.6rem;
 
@@ -39,7 +39,7 @@ section {
     &--v[data-content]::after,
     &[data-content]::after {
         background: #fff;
-        color: $gray-500;
+        color: map-get($grays, '500');
         content: attr(data-content);
         left: 50%;
         display: inline-block;
@@ -54,7 +54,7 @@ section {
         padding: 0.8rem;
 
         &::before {
-            border-left: 0.05rem solid transparentize($gray-500, 0.5);
+            border-left: 0.05rem solid transparentize(map-get($grays, '500'), 0.5);
             bottom: 0.4rem;
             content: '';
             display: block;

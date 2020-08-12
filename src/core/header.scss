@@ -16,8 +16,8 @@
     padding: 0 2rem;
     transition: all 0.3s;
     display: flex;
-    --header-link-color: #{$gray-700};
-    --header-link-color-hover: #{lighten($gray-700, 10)};
+    --header-link-color: #{map-get($grays, '700')};
+    --header-link-color-hover: #{lighten(map-get($grays, '700'), 10)};
 
     /* Remove any padding set for headers in default.scss */
     @for $i from 1 through 6 {
@@ -187,7 +187,7 @@
         text-align: left;
         list-style: none;
         background-clip: padding-box;
-        border: 1px solid $gray-200;
+        border: 1px solid map-get($grays, '200');
         border-radius: 0 0 4px 4px;
         box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
 
@@ -265,7 +265,7 @@
 .nav-item .dropdown-menu.dropdown-dark,
 .header.header-dark .dropdown-menu {
     background-color: rgba(0, 0, 0, 0.87);
-    border: 1px solid $gray-800;
+    border: 1px solid map-get($grays, '800');
     color: #fff;
 }
 

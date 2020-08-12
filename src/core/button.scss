@@ -28,14 +28,14 @@
     user-select: none;
     margin-bottom: 1rem;
     outline: none;
-    --btn-color: #{$gray-000};
-    --btn-fg: #{$gray-700};
-    --btn-border-color: #{$gray-300};
+    --btn-color: #{map-get($grays, '400')};
+    --btn-fg: #{map-get($grays, '700')};
+    --btn-border-color: #{map-get($grays, '300')};
 
     /* Base States */
     &:hover {
         transition: all var(--animation-duration);
-        --btn-color: #{$gray-200};
+        --btn-color: #{map-get($grays, '200')};
     }
 
     &:active {
@@ -55,7 +55,7 @@
         --btn-color: transparent;
 
         &:hover {
-            --btn-color: #{$gray-200};
+            --btn-color: #{map-get($grays, '200')};
         }
     }
 

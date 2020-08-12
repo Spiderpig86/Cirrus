@@ -83,7 +83,7 @@ ul {
 
     /* Style menu items */
     .menu-item a {
-        color: $gray-700;
+        color: map-get($grays, '700');
         display: block;
         padding: 0.5em 0.75em;
         border-radius: 3px;
@@ -140,7 +140,7 @@ ul {
 
     /* Style sub menus inside a menu */
     .menu-item ul {
-        border-left: 1px solid $gray-300;
+        border-left: 1px solid map-get($grays, '300');
         margin: 0.75rem;
         padding-left: 0.75rem;
     }
@@ -151,7 +151,7 @@ ul {
 
     /* Menu item divider */
     .divider {
-        border-top: 0.1rem solid $gray-200;
+        border-top: 0.1rem solid map-get($grays, '200');
         height: 0.1rem;
         margin: 1rem 0;
     }
@@ -160,7 +160,7 @@ ul {
     .divider::after {
         content: attr(data-label); /* Text that will be displayed */
         background-color: var(--cirrus-bg);
-        color: $gray-500;
+        color: map-get($grays, '500');
         display: inline-block;
         padding: 0 0.7rem;
         margin: 0.5rem;

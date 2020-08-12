@@ -185,7 +185,7 @@ mark,
     display: block;
     font-size: var(--font-size-s);
     margin-top: 0.25rem;
-    color: $gray-600;
+    color: map-get($grays, '600');
 
     &.inline {
         /* Keeps the extra info inline */

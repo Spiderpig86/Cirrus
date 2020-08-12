@@ -2,7 +2,7 @@
 
 /* FOOTER */
 .footer {
-    background-color: $gray-900;
+    background-color: map-get($grays, '600');
     padding: 6rem 0;
     text-align: center;
     margin-top: 5rem;
@@ -19,7 +19,7 @@
     }
 
     p {
-        color: $gray-600;
+        color: map-get($grays, '600');
     }
 
     ul {
@@ -52,7 +52,7 @@
     ul a .footer__list-item,
     .footer__list-item {
         margin: 0.1rem;
-        color: $gray-600;
+        color: map-get($grays, '600');
         transition: all var(--animation-duration);
         font-size: 75%;
         text-transform: uppercase;
