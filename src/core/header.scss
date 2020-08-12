@@ -15,6 +15,7 @@
     max-height: 100vh;
     padding: 0 2rem;
     transition: all 0.3s;
+    display: flex;
     --header-link-color: #{$gray-700};
     --header-link-color-hover: #{lighten($gray-700, 10)};
 
@@ -402,7 +403,6 @@
 @media screen and (max-width: 768px) {
     /* Add scrolling support in header */
     .header {
-        display: flex;
         flex-direction: column;
 
         .header-brand .nav-item:first-child {
