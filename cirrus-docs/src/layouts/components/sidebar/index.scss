@@ -1,0 +1,40 @@
+.sidebar-container {
+    max-height: 85vh;
+    position: sticky;
+    top: 5rem;
+    width: 300px;
+}
+
+.default-layout {
+    
+    &.content {
+        max-width: 80rem;
+        width: 100%;
+    }
+    
+    .tree-nav-header {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .default-layout {
+        &.content {
+            width: 100%;
+        }
+
+        .tree-nav-header {
+            display: block;
+            position: sticky;
+            top: 10rem;
+        }
+    }
+
+    .sidebar-container {
+        background-color: #fff;
+        max-height: 100vh;
+        top: 5rem;
+        // width: 100%;
+    }
+}

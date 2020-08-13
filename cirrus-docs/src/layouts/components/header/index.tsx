@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 export interface HeaderProps {
     extraClasses?: string;
@@ -15,9 +16,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
         <div className={`header header-fixed unselectable header-animated ${props.extraClasses ?? ''}`}>
             <div className="header-brand">
                 <div className="nav-item no-hover">
-                    <a>
-                        <h6 className="title">Cirrus</h6>
-                    </a>
+                    <Link to="/"><h6 className="title">Cirrus</h6></Link>
                 </div>
                 <div className="nav-item nav-btn" id="header-btn">
                     <span></span>

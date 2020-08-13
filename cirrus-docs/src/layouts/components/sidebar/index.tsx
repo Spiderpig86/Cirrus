@@ -1,10 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import './index.scss';
+
 export const Sidebar: React.FC<any> = () => {
     return (
-        <div className="px-3">
-            <ul className="menu mt-5 mb-5">
+        <div className="sidebar px-3">
+            <ul className="menu mb-5">
                 <li className="menu-item">
                     <div className="menu-addon">
                         <span className="icon">
@@ -58,8 +60,62 @@ export const Sidebar: React.FC<any> = () => {
             </ul>
 
             <span className="font-bold uppercase text-gray-500">Getting Started</span>
-            <ul className="menu mb-5">
+            <ul className="menu">
                 <li className="menu-item selected">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#">Basic Item</a>
+                </li>
+                <li className="menu-item">
                     <a href="#">Basic Item</a>
                 </li>
             </ul>
