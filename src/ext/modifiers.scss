@@ -1,7 +1,9 @@
+@import '../core/theme';
+
 /* A collection of modifiers that extend control styling */
 .btn.btn--pilled,
-[class^="btn-"].btn--pilled,
-[class*=" btn-"].btn--pilled {
+[class^='btn-'].btn--pilled,
+[class*=' btn-'].btn--pilled {
     border-radius: 6.25rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -9,8 +11,8 @@
 
 /* btn--circle: contents must be placed inside child element */
 .btn.btn--circle,
-[class^="btn-"].btn--circle,
-[class*=" btn-"].btn--circle {
+[class^='btn-'].btn--circle,
+[class*=' btn-'].btn--circle {
     border-radius: 100%;
     min-width: 60px;
     overflow: hidden;
@@ -49,7 +51,8 @@
 /* Theme modifiers */
 
 /* GLOBAL THEME SELECTORS */
-$themes: "primary", "success", "warning", "danger", "light", "dark", "link", "link-dark", "info";
+/* v1 */
+$themes: 'primary', 'success', 'warning', 'danger', 'light', 'dark', 'link', 'link-dark', 'info';
 
 @each $theme in $themes {
     .bg-#{$theme} {
@@ -61,3 +64,28 @@ $themes: "primary", "success", "warning", "danger", "light", "dark", "link", "li
     }
 }
 
+/* v2 */
+$palettes: (
+    'pink': $pinks,
+    'red': $reds,
+    'orange': $oranges,
+    'yellow': $yellows,
+    'green': $greens,
+    'teal': $teals,
+    'blue': $blues,
+    'indigo': $indigos,
+    'purple': $purples,
+    'gray': $grays,
+);
+
+@each $name, $palette in $palettes {
+    @each $level, $color in $palette {
+        .bg-#{$name}-#{$level} {
+            background-color: #{$color} !important;
+        }
+
+        .text-#{$name}-#{$level} {
+            color: #{$color} !important;
+        }
+    }
+}
