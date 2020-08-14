@@ -386,11 +386,16 @@ section {
 }
 
 .w-auto {
-    width: auto;
+    width: auto !important;
 }
 
 .h-auto {
-    height: auto;
+    height: auto !important;
+}
+
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 /* Do the actual balancing only on larger screens */
