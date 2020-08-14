@@ -44,14 +44,15 @@
             position: sticky;
             top: 10rem;
         }
-
-        .tree-nav-container {
-            margin-top: 0;
-        }
     }
 
     .sidebar-container {
         background-color: #fff;
+        height: 100%;
         margin-top: 0;
+
+        .sidebar {
+            height: 100%;
+        }
     }
 }

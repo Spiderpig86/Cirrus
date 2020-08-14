@@ -174,6 +174,19 @@ export const AnimationsPage: React.FC<any> = (props) => {
                     </div>
                 </div>
             </section>
+            <section className="padtop">
+                <div className="content">
+                    <div className="divider"></div>
+                    <ul className="pagination no-bullets">
+                        <li className="pagination-item pagination-next">
+                            <a href="../buttons" className="u-block">
+                                <p className="pagination-item-subtitle">Next</p>
+                                <h5 className="font-alt font-light m-0">Buttons</h5>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </div>
     );
 };

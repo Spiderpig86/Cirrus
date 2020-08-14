@@ -8,7 +8,7 @@ import { Footer } from '../components/footer';
 export const DefaultLayout = ({ children, ...rest }: any) => {
     return (
         <div>
-            <Header extraClasses="header-dark" />
+            <Header extraClasses="header--docs-theme" />
             <div className="default-layout tree-nav-body mx-auto mb-0">
                 <div className="tree-nav-header">
                     <a href="#sidebar" className="u-hide-tablet">
@@ -30,9 +30,9 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
                     }}
                 >
                     {children}
-                    <Footer />
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

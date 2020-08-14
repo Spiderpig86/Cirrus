@@ -1,3 +1,23 @@
+body {
+  --scrollbar-bg: #fcfdfd;
+  --scrollbar-color: #c5c1b9;
+  --scrollbar-corner-bg: #b7b7b7;
+  --scrollbar-thumb-bg: #dddddd;
+}
+
 .padtop {
   padding-top: 6rem;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--scrollbar-bg);
+  color: var(--scrollbar-color);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--scrollbar-corner-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
 }
