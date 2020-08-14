@@ -1,19 +1,34 @@
-.sidebar-container {
-    max-height: 85vh;
+.sidebar-wrapper {
     position: sticky;
     top: 5rem;
     width: 300px;
+    height: inherit !important;
+}
+
+.tree-nav-container {
+    margin-top: 7rem;
+    overflow-y: inherit !important;
 }
 
 .default-layout {
-    
-    &.content {
-        max-width: 80rem;
-        width: 100%;
+    max-width: 1280px;
+
+    &.tree-nav-body {
+        height: inherit;
+
+        .tree-nav {
+            height: auto;
+            overflow: initial;
+        }
     }
     
     .tree-nav-header {
         display: none;
+    }
+
+    .sidebar {
+        height: calc(100vh - 5rem);
+        overflow-y: auto;
     }
 }
 
@@ -29,12 +44,14 @@
             position: sticky;
             top: 10rem;
         }
+
+        .tree-nav-container {
+            margin-top: 0;
+        }
     }
 
     .sidebar-container {
         background-color: #fff;
-        max-height: 100vh;
-        top: 5rem;
-        // width: 100%;
+        margin-top: 0;
     }
 }

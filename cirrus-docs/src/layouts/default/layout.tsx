@@ -1,15 +1,15 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Header } from '../components/header';
-import { Footer } from '../components/footer';
 import { Sidebar } from '../components/sidebar';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Footer } from '../components/footer';
 
 export const DefaultLayout = ({ children, ...rest }: any) => {
     return (
         <div>
             <Header extraClasses="header-dark" />
-            <div className="default-layout tree-nav-body padtop content" style={{ height: '100%' }}>
+            <div className="default-layout tree-nav-body mx-auto mb-0">
                 <div className="tree-nav-header">
                     <a href="#sidebar" className="u-hide-tablet">
                         <span className="icon">
@@ -18,19 +18,21 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
                     </a>
                 </div>
                 <div className="sidebar-container tree-nav p-0" id="sidebar">
-                    <Sidebar />
+                    <div className="sidebar-wrapper">
+                        <Sidebar />
+                    </div>
                 </div>
                 <a href="#sidebar-close" id="sidebar-close" className="tree-nav-close"></a>
                 <div
-                    className="tree-nav-container"
+                    className="tree-nav-container h-auto"
                     style={{
                         flexGrow: 1,
                     }}
                 >
                     {children}
+                    <Footer />
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

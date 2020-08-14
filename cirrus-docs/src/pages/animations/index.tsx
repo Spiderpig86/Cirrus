@@ -1,4 +1,5 @@
 import React from 'react';
+import { Footer } from '../../layouts/components/footer';
 
 export const AnimationsPage: React.FC<any> = (props) => {
     return (

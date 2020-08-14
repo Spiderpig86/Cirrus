@@ -129,4 +129,39 @@ export const sidebarConfig: SidebarConfig[] = [
             },
         ],
     },
+    {
+        title: 'Components',
+        sidebarItems: [
+            {
+                fontWeight: 'normal',
+                glyph: null,
+                text: 'Basic Item',
+                url: '#'
+            },
+            {
+                fontWeight: 'normal',
+                glyph: null,
+                text: 'Basic Item',
+                url: '#'
+            },
+            {
+                fontWeight: 'normal',
+                glyph: null,
+                text: 'Basic Item',
+                url: '#'
+            },
+            {
+                fontWeight: 'normal',
+                glyph: null,
+                text: 'Basic Item',
+                url: '#'
+            },
+            {
+                fontWeight: 'normal',
+                glyph: null,
+                text: 'Basic Item',
+                url: '#'
+            },
+        ],
+    },
 ];
