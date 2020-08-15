@@ -229,7 +229,7 @@ fieldset {
 .btn, button, [type="submit"], [type="reset"], [type="button"] {
   line-height: 2rem;
   overflow: hidden;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -969,8 +969,7 @@ mark,
   .icon.small {
     margin: 0.95rem 0 0 0.1rem; }
   .icon .fa-wrapper {
-    font-size: inherit;
-    vertical-align: middle; }
+    font-size: inherit; }
 
 .info {
   display: block;
@@ -1103,7 +1102,6 @@ kbd {
     bottom: 0;
     position: fixed; }
   .footer a {
-    color: #fff;
     font-weight: bolder; }
   .footer p {
     color: #868e96; }
@@ -1118,8 +1116,7 @@ kbd {
   .footer .footer__list-title {
     font-size: 75%;
     text-transform: uppercase;
-    font-weight: bolder;
-    color: #ddd; }
+    font-weight: bolder; }
     .footer .footer__list-title::after {
       content: '';
       display: block;
@@ -2865,10 +2862,6 @@ section {
 .h-auto {
   height: auto !important; }
 
-.mx-auto {
-  margin-left: auto !important;
-  margin-right: auto !important; }
-
 /* Do the actual balancing only on larger screens */
 @media screen and (min-width: 769px) {
   .level,
@@ -3057,7 +3050,6 @@ ul {
   /* MENU LISTS */
   /* Style headers to have even space distribution. */
   /* Style menu items */
-  /* Darken on hover to differentiate from menu-item */
   /* Style sub menus inside a menu */
   /* Menu item divider */
   /* Title for the section separated by the divider */ }
@@ -3099,9 +3091,9 @@ ul {
     -webkit-transition: all var(--animation-duration);
     transition: all var(--animation-duration); }
   ul .menu-item .menu-addon .icon {
-    font-size: inherit; }
+    font-size: inherit;
+    vertical-align: auto; }
   ul .menu-item .menu-addon:hover {
-    background-color: rgba(60, 60, 60, 0.25);
     -webkit-transition: all var(--animation-duration);
     transition: all var(--animation-duration); }
   ul .menu-item .menu-addon.right {
@@ -3850,6 +3842,18 @@ video.video-fullscreen {
 
 .pr-32, .px-32 {
   padding-right: calc(var(--space-size) * 32) !important; }
+
+.ml-auto, .mx-auto {
+  margin-left: auto !important; }
+
+.mr-auto, .mx-auto {
+  margin-right: auto !important; }
+
+.mt-auto, .my-auto {
+  margin-top: auto !important; }
+
+.mb-auto, .my-auto {
+  margin-bottom: auto !important; }
 
 /*
   Functions
@@ -4618,17 +4622,17 @@ video.video-fullscreen {
       border-left-color: #fff;
       border-bottom-color: #fff; }
     .animated.loading.loading-left {
-      padding-left: 4rem;
+      padding-left: 3rem;
       /* Align spinner left */ }
       .animated.loading.loading-left::after {
-        left: 2rem;
+        left: 1rem;
         right: auto; }
     .animated.loading.loading-right {
-      padding-right: 4rem;
+      padding-right: 3rem;
       /* Align spinner right */ }
       .animated.loading.loading-right::after {
         left: auto;
-        right: 2rem; }
+        right: 1rem; }
     .animated.loading.hide-text {
       color: transparent !important; }
   .animated.pulse {

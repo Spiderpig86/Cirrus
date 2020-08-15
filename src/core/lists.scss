@@ -119,11 +119,10 @@ ul {
 
     .menu-item .menu-addon .icon {
         font-size: inherit;
+        vertical-align: auto;
     }
 
-    /* Darken on hover to differentiate from menu-item */
     .menu-item .menu-addon:hover {
-        background-color: rgba(60, 60, 60, 0.25);
         -webkit-transition: all var(--animation-duration);
         transition: all var(--animation-duration);
     }

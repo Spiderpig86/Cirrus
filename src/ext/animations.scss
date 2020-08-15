@@ -191,22 +191,22 @@
         }
 
         &.loading-left {
-            padding-left: 4rem;
+            padding-left: 3rem;
 
             /* Align spinner left */
             &::after {
-                left: 2rem;
+                left: 1rem;
                 right: auto;
             }
         }
 
         &.loading-right {
-            padding-right: 4rem;
+            padding-right: 3rem;
 
             /* Align spinner right */
             &::after {
                 left: auto;
-                right: 2rem;
+                right: 1rem;
             }
         }
 

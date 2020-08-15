@@ -19,3 +19,19 @@
     .pl-#{$size}, .px-#{$size} { padding-left: calc(var(--space-size) * #{$size}) !important; }
     .pr-#{$size}, .px-#{$size} { padding-right: calc(var(--space-size) * #{$size}) !important; }
 }
+
+.ml-auto, .mx-auto {
+    margin-left: auto !important;
+}
+
+.mr-auto, .mx-auto {
+    margin-right: auto !important;
+}
+
+.mt-auto, .my-auto {
+    margin-top: auto !important;
+}
+
+.mb-auto, .my-auto {
+    margin-bottom: auto !important;
+}
