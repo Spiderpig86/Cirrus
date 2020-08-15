@@ -375,7 +375,25 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'TODO',
+                text: 'Clearfix',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Display',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Flexbox',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Positions',
                 url: '#'
             },
         ],
