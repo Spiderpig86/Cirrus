@@ -128,7 +128,85 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Todo',
+                text: 'Avatar',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Card',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Code',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Links',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Lists',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Modal',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Pagination',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Placeholder',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Table',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Tabs',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Tags',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Tiles',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Toast',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Tooltip',
                 url: '#'
             },
         ],
@@ -139,7 +217,25 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Styling',
+                text: 'Font Family',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Text Elements',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Font Weights',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Glyphs',
                 url: '#'
             },
         ],
@@ -150,7 +246,43 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'test',
+                text: 'Inputs',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'States',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'With Glyphs',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Checkbox',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Radio',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Toggle',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Form Groups',
                 url: '#'
             },
         ],
@@ -243,7 +375,7 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Todo',
+                text: 'TODO',
                 url: '#'
             },
         ],

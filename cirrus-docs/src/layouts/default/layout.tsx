@@ -22,7 +22,7 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
                         <Sidebar />
                     </div>
                 </div>
-                <a href="#sidebar-close" id="sidebar-close" className="tree-nav-close"></a>
+                <a href="#sidebar-close" id="sidebar-close" className="tree-nav-close p-0"></a>
                 <div
                     className="tree-nav-container h-auto"
                     style={{
