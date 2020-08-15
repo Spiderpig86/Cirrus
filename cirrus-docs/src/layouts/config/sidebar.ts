@@ -19,31 +19,19 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'bold',
                 glyph: ['fas', 'clock'],
-                text: 'Bold Item',
+                text: 'Why Cirrus?',
                 url: '#'
             },
             {
                 fontWeight: 'bold',
                 glyph: ['fas', 'clock'],
-                text: 'Bold Item',
+                text: 'Playground',
                 url: '#'
             },
             {
                 fontWeight: 'bold',
                 glyph: ['fas', 'clock'],
-                text: 'Bold Item',
-                url: '#'
-            },
-            {
-                fontWeight: 'bold',
-                glyph: ['fas', 'clock'],
-                text: 'Bold Item',
-                url: '#'
-            },
-            {
-                fontWeight: 'bold',
-                glyph: ['fas', 'clock'],
-                text: 'Bold Item',
+                text: 'Donate',
                 url: '#'
             },
         ],
@@ -52,9 +40,50 @@ export const sidebarConfig: SidebarConfig[] = [
         title: 'Getting Started',
         sidebarItems: [
             {
-                fontWeight: 'normal',
+                fontWeight: 'semibold',
                 glyph: null,
-                text: 'Basic Item',
+                text: 'Installation',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Update Guide',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Browser Suppport',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Tutorial',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Examples',
+                url: '#'
+            },
+        ],
+    },
+    {
+        title: 'Fundamentals',
+        sidebarItems: [
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Colors',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Typography',
                 url: '#'
             },
         ],
@@ -63,33 +92,32 @@ export const sidebarConfig: SidebarConfig[] = [
         title: 'Animations',
         sidebarItems: [
             {
-                fontWeight: 'normal',
+                fontWeight: 'semibold',
                 glyph: null,
-                text: 'Basic Item',
+                text: 'Animated Styles',
+                url: '#'
+            },
+        ],
+    },
+    {
+        title: 'Buttons',
+        sidebarItems: [
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Basics',
                 url: '#'
             },
             {
-                fontWeight: 'normal',
+                fontWeight: 'semibold',
                 glyph: null,
-                text: 'Basic Item',
+                text: 'Styles',
                 url: '#'
             },
             {
-                fontWeight: 'normal',
+                fontWeight: 'semibold',
                 glyph: null,
-                text: 'Basic Item',
-                url: '#'
-            },
-            {
-                fontWeight: 'normal',
-                glyph: null,
-                text: 'Basic Item',
-                url: '#'
-            },
-            {
-                fontWeight: 'normal',
-                glyph: null,
-                text: 'Basic Item',
+                text: 'Button Groups',
                 url: '#'
             },
         ],
@@ -98,68 +126,124 @@ export const sidebarConfig: SidebarConfig[] = [
         title: 'Components',
         sidebarItems: [
             {
-                fontWeight: 'normal',
+                fontWeight: 'semibold',
                 glyph: null,
-                text: 'Basic Item',
-                url: '#'
-            },
-            {
-                fontWeight: 'normal',
-                glyph: null,
-                text: 'Basic Item',
-                url: '#'
-            },
-            {
-                fontWeight: 'normal',
-                glyph: null,
-                text: 'Basic Item',
-                url: '#'
-            },
-            {
-                fontWeight: 'normal',
-                glyph: null,
-                text: 'Basic Item',
-                url: '#'
-            },
-            {
-                fontWeight: 'normal',
-                glyph: null,
-                text: 'Basic Item',
+                text: 'Todo',
                 url: '#'
             },
         ],
     },
     {
-        title: 'Components',
+        title: 'Fonts',
         sidebarItems: [
             {
-                fontWeight: 'normal',
+                fontWeight: 'semibold',
                 glyph: null,
-                text: 'Basic Item',
+                text: 'Styling',
+                url: '#'
+            },
+        ],
+    },
+    {
+        title: 'Forms',
+        sidebarItems: [
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'test',
+                url: '#'
+            },
+        ],
+    },
+    {
+        title: 'Grid',
+        sidebarItems: [
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Templates',
                 url: '#'
             },
             {
-                fontWeight: 'normal',
+                fontWeight: 'semibold',
                 glyph: null,
-                text: 'Basic Item',
+                text: 'Start / End',
                 url: '#'
             },
             {
-                fontWeight: 'normal',
+                fontWeight: 'semibold',
                 glyph: null,
-                text: 'Basic Item',
+                text: 'Gap',
+                url: '#'
+            },
+        ],
+    },
+    {
+        title: 'Layout',
+        sidebarItems: [
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Columns',
                 url: '#'
             },
             {
-                fontWeight: 'normal',
+                fontWeight: 'semibold',
                 glyph: null,
-                text: 'Basic Item',
+                text: 'Divider',
                 url: '#'
             },
             {
-                fontWeight: 'normal',
+                fontWeight: 'semibold',
                 glyph: null,
-                text: 'Basic Item',
+                text: 'Footer',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Hero',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Header',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Margin',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Media',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Padding',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Spacer',
+                url: '#'
+            },
+        ],
+    },
+    {
+        title: 'Utilities',
+        sidebarItems: [
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Todo',
                 url: '#'
             },
         ],

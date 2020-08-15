@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { sidebarConfig } from '../../config/sidebar';
+import { sidebarConfig, SidebarConfig, SidebarItemConfig } from '../../config/sidebar';
 
 import './index.scss';
 
@@ -9,12 +9,12 @@ export const Sidebar: React.FC<any> = () => {
     return (
         <div className="sidebar px-3">
             <ul className="menu mb-3">
-                {sidebarConfig.map((config) => {
+                {sidebarConfig.map((config: SidebarConfig) => {
                     const title = config.title ? (
-                        <span className="font-bold uppercase text-gray-500">Getting Started</span>
+                        <span className="font-bold uppercase text-gray-600">{ config.title }</span>
                     ) : null;
 
-                    const listItems = config.sidebarItems.map((listItemConfig) => {
+                    const listItems = config.sidebarItems.map((listItemConfig: SidebarItemConfig) => {
                         const glyph = listItemConfig.glyph ? (
                             <div className="menu-addon">
                                 <span className="icon">
@@ -28,7 +28,7 @@ export const Sidebar: React.FC<any> = () => {
                         return (
                             <li className="menu-item">
                                 {glyph}
-                                <a href={listItemConfig.url}>{listItemConfig.text}</a>
+                                <a className={`font-${listItemConfig.fontWeight}`} href={listItemConfig.url}>{listItemConfig.text}</a>
                             </li>
                         );
                     });
