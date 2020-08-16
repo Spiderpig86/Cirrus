@@ -6,6 +6,7 @@ import { Sidebar } from '../components/sidebar';
 import { Footer } from '../components/footer';
 
 export const DefaultLayout = ({ children, ...rest }: any) => {
+
     return (
         <div>
             <Header extraClasses="header--docs-theme" />
@@ -17,7 +18,7 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
                         </span>
                     </a>
                 </div>
-                <div className="sidebar-container tree-nav p-0" id="sidebar">
+                <div className="sidebar-container tree-nav p-0 mr-2" id="sidebar">
                     <div className="sidebar-wrapper">
                         <Sidebar />
                     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Footer: React.FC<any> = () => {
     return (
@@ -13,7 +14,8 @@ export const Footer: React.FC<any> = () => {
                 .
             </p>
             <p>
-                Made with <i className="fa fa-wrapper fa-heart pulse" aria-hidden="true"></i> by{' '}
+                Made with {' '}
+                <FontAwesomeIcon className="fa-wrapper fa-heart animated pulse text-red-500" icon={['fas', 'heart']} /> by{' '}
                 <a href="http://stanleylim.me" target="_blank">
                     Stanley Lim
                 </a>

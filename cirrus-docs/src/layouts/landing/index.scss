@@ -1,4 +1,27 @@
-.header.header-landing {
-    padding: 1.5rem;
-    --header-link-color: #fff;
+.header {
+    &.header-landing {
+        padding: 1.5rem;
+        --header-link-color: #fff;
+        --header-link-color-hover: #ddd;
+    }
+
+    &.header-dark {
+        backdrop-filter: blur(5px);
+    }
+}
+
+.transition {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.0001), #fff);
+    bottom: 0;
+    height: 175px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    transition: all .3s;
+
+    &.transition--visible {
+        opacity: 1;
+        transition: all .3s;
+    }
 }
