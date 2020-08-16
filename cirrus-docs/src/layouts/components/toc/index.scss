@@ -1,0 +1,26 @@
+.toc__nav {
+    position: sticky;
+    top: 5rem;
+    align-self: start;
+
+    li.active > a {
+        color: #333;
+        font-weight: 700;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin-left: 1rem;
+    }
+
+    li > a {
+        color: #aaa;
+        font-weight: 400;
+    }
+}

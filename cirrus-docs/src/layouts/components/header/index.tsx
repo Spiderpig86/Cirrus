@@ -24,9 +24,10 @@ export const Header: React.FC<HeaderProps> = (props) => {
             navButton?.classList.toggle('active');
             header?.classList.toggle('translucent');
         };
-        window.addEventListener('click', hamburgerButtonClick);
+        const hamburgerButton = document.querySelector('#header-btn')!;
+        hamburgerButton.addEventListener('click', hamburgerButtonClick);
 
-        return () => window.removeEventListener('click', hamburgerButtonClick);
+        return () => hamburgerButton.removeEventListener('click', hamburgerButtonClick);
     }, []);
 
     return (

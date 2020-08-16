@@ -1,0 +1,9 @@
+@media screen and (min-width: 1023px) {
+    .page-layout {
+        display: grid;
+        grid-template-columns: 1fr 15em;
+        max-width: 100rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
