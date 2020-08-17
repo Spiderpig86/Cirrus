@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './index.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ComponentSVG from '../../static/svg/component.svg';
+import UtilitySVG from '../../static/svg/utility.svg';
 
 export const Landing: React.FC<any> = () => {
     const pageAtTop = useSelector((state: any) => state.docReducer.pageAtTop);
@@ -45,7 +47,7 @@ export const Landing: React.FC<any> = () => {
                     <div className={`transition ` + (pageAtTop ? `` : `transition--visible`)}></div>
                 </div>
             </section>
-            <section className="padtop">
+            <section className="py-8">
                 <div className="content u-text-center">
                     <h6 className="uppercase font-bold mb-3">
                         Created by <span className="text-primary">Stanley Lim</span>
@@ -73,41 +75,73 @@ export const Landing: React.FC<any> = () => {
                     </div>
 
                     <a className="u-inline-block mt-3" href="#">
-                        <div className="btn btn-info">Install</div>
+                        <div className="btn btn-info">Get Started</div>
                     </a>
                 </div>
             </section>
-            <section className="padtop">
+            <section className="py-8 bg-pink-300">
                 <div className="content u-text-center">
-                    <div className="content">
-                        <div className="row">
-                            <div className="col mb-2">
-                                <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'boxes']} style={{ fontSize: '2rem' }} />
-                                <h6 className="lead uppercase mb-1 font-bold text-gray-700">Modular</h6>
-                                <div className="text-gray-700">
-                                    Separate files with separate responsibilities. Compartmentalized and easy to use in your projects.{' '}
-                                </div>
+                    <div className="row">
+                        <div className="col mb-2">
+                            <FontAwesomeIcon
+                                className="fa-wrapper small"
+                                icon={['fas', 'boxes']}
+                                style={{ fontSize: '2rem' }}
+                            />
+                            <h6 className="lead uppercase mb-1 font-bold text-gray-700">Modular</h6>
+                            <div className="text-gray-700">
+                                Separate files with separate responsibilities. Compartmentalized and easy to use in your
+                                projects.{' '}
                             </div>
-                            <div className="col mb-2">
-                                <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'bolt']} style={{ fontSize: '2rem' }} />
-                                <h6 className="lead uppercase mb-1 font-bold text-gray-700">Modern</h6>
-                                <div className="text-gray-700">
-                                    Supports the latest standards including <b>flexbox</b> and <b>CSS grid</b>.{' '}
-                                </div>
+                        </div>
+                        <div className="col mb-2">
+                            <FontAwesomeIcon
+                                className="fa-wrapper small"
+                                icon={['fas', 'bolt']}
+                                style={{ fontSize: '2rem' }}
+                            />
+                            <h6 className="lead uppercase mb-1 font-bold text-gray-700">Modern</h6>
+                            <div className="text-gray-700">
+                                Supports the latest standards including <b>flexbox</b> and <b>CSS grid</b>.{' '}
                             </div>
-                            <div className="col mb-2">
-                                <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'address-card']} style={{ fontSize: '2rem' }} />
-                                <h6 className="lead uppercase mb-1 font-bold text-gray-700">Components</h6>
-                                <div className="text-gray-700">
-                                    Beautiful pre-built components and styling for quick prototyping.{' '}
-                                </div>
+                        </div>
+                        <div className="col mb-2">
+                            <FontAwesomeIcon
+                                className="fa-wrapper small"
+                                icon={['fas', 'bolt']}
+                                style={{ fontSize: '2rem' }}
+                            />
+                            <h6 className="lead uppercase mb-1 font-bold text-gray-700">Compact</h6>
+                            <div className="text-gray-700">
+                                Cirrus packs a lot of features with only a 20.8 KB payload gzipped.
                             </div>
-                            <div className="col mb-2">
-                                <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'wrench']} style={{ fontSize: '2rem' }} />
-                                <h6 className="lead uppercase mb-1 font-bold text-gray-700">Utilities</h6>
-                                <div className="text-gray-700">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.{' '}
-                                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-8">
+                <div className="content">
+                    <div className="row mb-2">
+                        <div className="col u-flex u-flex-column u-justify-center">
+                            <h5 className="lead uppercase mb-1 font-bold text-gray-700">Component-Based</h5>
+                            <div className="text-gray-700">
+                                Beautiful pre-built components and styling for quick prototyping.
+                            </div>
+                        </div>
+                        <div className="col">
+                            <img src={ComponentSVG} />
+                        </div>
+                    </div>
+                    <div className="row mb-2">
+                        <div className="col">
+                            <img src={UtilitySVG} />
+                        </div>
+                        <div className="col u-flex u-flex-column u-justify-center">
+                            <h5 className="lead uppercase mb-1 font-bold text-gray-700">Granular Control</h5>
+                            <div className="text-gray-700">
+                                Need some quick way to adjust something? Something not looking quite right? Our utility
+                                classes will come in handy.{' '}
                             </div>
                         </div>
                     </div>

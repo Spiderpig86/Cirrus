@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import './index.scss';
+
 export interface CodeBlockProps {
     code: string;
     language: string;
@@ -14,7 +16,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
     return (
         <div className="u-position-relative">
             <pre className="html">
-                <code className="dark px-3 py-1" data-lang="HTML">{props.code}</code>
+                <code className="px-3 py-1" data-lang="HTML">{props.code}</code>
             </pre>
 
             <CopyToClipboard

@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 
 import './index.scss';
 
-interface TableOfContentsProps {
+export interface TableOfContentsProps {
     entries: TableOfContentsEntry[];
 }
 
-interface TableOfContentsEntry {
+export interface TableOfContentsEntry {
     name: string;
     anchor: string;
     children: TableOfContentsEntry[] | null;
