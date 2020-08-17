@@ -15,8 +15,11 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
 
     return (
         <div className="u-position-relative">
-            <pre className="html">
-                <code className="pl-3 pr-5 py-2" data-lang={props.languageDisplay ?? ''}>{props.code}</code>
+            <pre className={props.language}>
+                <code className="pl-3 pr-5 py-2" data-lang={props.languageDisplay ?? ''}>
+                    {props.languageDisplay ? <br /> : <></>}
+                    {props.code}
+                </code>
             </pre>
 
             <CopyToClipboard
@@ -26,11 +29,15 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
                     setTimeout(() => setCopied(false), 3000);
                 }}
             >
-                <FontAwesomeIcon className="fa-wrapper u-position-absolute text-gray-700" icon={['fas', copied ? 'clipboard-check' : 'clipboard']} style={{
-                    cursor: 'pointer',
-                    right: '1rem',
-                    top: props.languageDisplay ? '2.5rem' : '1rem'
-                }} />
+                <FontAwesomeIcon
+                    className="fa-wrapper u-position-absolute text-gray-700"
+                    icon={['fas', copied ? 'clipboard-check' : 'clipboard']}
+                    style={{
+                        cursor: 'pointer',
+                        right: '1rem',
+                        top: props.languageDisplay ? '2.5rem' : '1rem',
+                    }}
+                />
             </CopyToClipboard>
         </div>
     );

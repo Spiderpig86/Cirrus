@@ -13,6 +13,14 @@ body {
     padding-top: 6rem;
 }
 
+.tabpage {
+    display: none;
+}
+
+.tabpage.tabpage--shown {
+    display: block;
+}
+
 ::-webkit-scrollbar {
     background-color: var(--scrollbar-bg);
     color: var(--scrollbar-color);

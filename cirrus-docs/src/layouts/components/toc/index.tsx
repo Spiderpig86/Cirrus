@@ -19,7 +19,6 @@ export const TableOfContents: React.FC<TableOfContentsProps> = (props) => {
         }
 
         const tableOfContentsEventListener = (e: any) => {
-            
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
                     const id = entry.target.getAttribute('id');
@@ -29,7 +28,9 @@ export const TableOfContents: React.FC<TableOfContentsProps> = (props) => {
                     if (entry.intersectionRatio > 0) {
                         document.querySelector(`.toc__nav li a[href="#${id}"]`)!.parentElement!.classList.add('active');
                     } else {
-                        document.querySelector(`.toc__nav li a[href="#${id}"]`)!.parentElement!.classList.remove('active');
+                        document
+                            .querySelector(`.toc__nav li a[href="#${id}"]`)!
+                            .parentElement!.classList.remove('active');
                     }
                 });
             });
@@ -38,10 +39,10 @@ export const TableOfContents: React.FC<TableOfContentsProps> = (props) => {
             document.querySelectorAll('section[id]').forEach((section) => {
                 observer.observe(section);
             });
-        }
+        };
 
         window.addEventListener('load', tableOfContentsEventListener);
-        
+
         return () => window.removeEventListener('load', tableOfContentsEventListener);
     }, []);
 
@@ -60,5 +61,12 @@ export const TableOfContents: React.FC<TableOfContentsProps> = (props) => {
         );
     }
 
-    return <nav className="toc__nav">{constructList(props.entries)}</nav>;
+    return (
+        <nav className="toc__nav">
+            <span className="uppercase text-gray-600 font-bold" style={{ fontSize: '80%' }}>
+                Contents
+            </span>
+            {constructList(props.entries)}
+        </nav>
+    );
 };
