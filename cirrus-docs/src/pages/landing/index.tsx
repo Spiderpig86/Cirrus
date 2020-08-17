@@ -79,7 +79,7 @@ export const Landing: React.FC<any> = () => {
                     </a>
                 </div>
             </section>
-            <section className="py-8 bg-pink-300">
+            <section className="py-8 bg-indigo-200">
                 <div className="content u-text-center">
                     <div className="row">
                         <div className="col mb-2">

@@ -3,6 +3,7 @@ import React from 'react';
 import { CodeBlock } from '../../layouts/components/codeblock';
 import { TableOfContents } from '../../layouts/components/toc';
 import { toc } from './toc';
+import { Headline } from '../../layouts/components/headline';
 
 export const AnimationsPage: React.FC<any> = (props) => {
     return (
@@ -10,16 +11,7 @@ export const AnimationsPage: React.FC<any> = (props) => {
             <div>
                 <section id="animations">
                     <div className="content">
-                        <h1>
-                            <a
-                                href="./index.html#started"
-                                className="doc-link tooltip tooltip--left"
-                                data-tooltip="Click to copy"
-                            >
-                                #
-                            </a>
-                            Animations
-                        </h1>
+                        <Headline title={'Animations'} link={'#animations'} />
                         <div className="divider"></div>
 
                         <p>
