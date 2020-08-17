@@ -2,8 +2,8 @@ import React from 'react';
 
 import { CodeBlock } from '../../layouts/components/codeblock';
 import { TableOfContents } from '../../layouts/components/toc';
-import { toc } from './toc';
 import { Headline } from '../../layouts/components/headline';
+import { toc } from './toc';
 
 export const AnimationsPage: React.FC<any> = (props) => {
     return (

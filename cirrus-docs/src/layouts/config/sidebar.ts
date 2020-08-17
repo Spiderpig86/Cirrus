@@ -42,7 +42,7 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Installation',
+                text: 'Setup',
                 url: '#'
             },
             {

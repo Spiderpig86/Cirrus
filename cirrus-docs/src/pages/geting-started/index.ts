@@ -1,1 +1,1 @@
-export { Installation } from './installation';
+export { SetUpPage } from './setup';
