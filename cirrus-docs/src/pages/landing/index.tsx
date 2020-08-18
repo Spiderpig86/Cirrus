@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 import './index.scss';
 import ComponentSVG from '../../static/svg/component.svg';
@@ -39,9 +40,9 @@ export const Landing: React.FC<any> = () => {
                                 <b>0.6.0 Preview</b> / Coming Soon
                             </p>
 
-                            <a href="./docs/start" className="u-inline-block">
+                            <Link to="getting-started/setup" className="u-inline-block">
                                 <button className="btn-light outline">Get Started</button>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className={`transition ` + (pageAtTop ? `` : `transition--visible`)}></div>

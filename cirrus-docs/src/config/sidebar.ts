@@ -20,7 +20,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'bold',
                 glyph: ['fas', 'clock'],
                 text: 'Why Cirrus?',
-                url: '#'
+                url: '/why'
             },
             {
                 fontWeight: 'bold',
@@ -43,7 +43,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Setup',
-                url: '#'
+                url: '/getting-started/setup'
             },
             {
                 fontWeight: 'semibold',

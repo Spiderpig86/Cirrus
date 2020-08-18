@@ -9,7 +9,7 @@ export const AnimationsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
             <div>
-                <section id="animations">
+                <section id="animations padtop">
                     <div className="content">
                         <Headline title={'Animations'} link={'#animations'} />
                         <div className="divider"></div>

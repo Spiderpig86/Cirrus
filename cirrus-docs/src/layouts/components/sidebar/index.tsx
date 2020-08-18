@@ -1,17 +1,22 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { sidebarConfig, SidebarConfig, SidebarItemConfig } from '../../config/sidebar';
+import { sidebarConfig, SidebarConfig, SidebarItemConfig } from '../../../config/sidebar';
 
 import './index.scss';
+import { NavLink } from 'react-router-dom';
 
-export const Sidebar: React.FC<any> = () => {
+export const Sidebar: React.FC<any> = (props) => {
+    function isActiveLink(path: string): boolean {
+        return props.location.pathname === path;
+    }
+
     return (
         <div className="sidebar px-3">
             <ul className="menu mb-3">
                 {sidebarConfig.map((config: SidebarConfig) => {
                     const title = config.title ? (
-                        <span className="font-bold uppercase text-gray-600">{ config.title }</span>
+                        <span className="font-bold uppercase text-gray-600">{config.title}</span>
                     ) : null;
 
                     const listItems = config.sidebarItems.map((listItemConfig: SidebarItemConfig) => {
@@ -26,9 +31,11 @@ export const Sidebar: React.FC<any> = () => {
                         );
 
                         return (
-                            <li className="menu-item">
+                            <li className={`menu-item` + (isActiveLink(listItemConfig.url) ? ` selected` : ``)}>
                                 {glyph}
-                                <a className={`font-${listItemConfig.fontWeight}`} href={listItemConfig.url}>{listItemConfig.text}</a>
+                                <NavLink className={`font-${listItemConfig.fontWeight}`} to={listItemConfig.url}>
+                                    {listItemConfig.text}
+                                </NavLink>
                             </li>
                         );
                     });
@@ -36,14 +43,11 @@ export const Sidebar: React.FC<any> = () => {
                     return (
                         <>
                             {title}
-                            <ul className="menu mb-3">
-                                {listItems}
-                            </ul>
+                            <ul className="menu mb-3">{listItems}</ul>
                         </>
                     );
                 })}
-
-                </ul>
+            </ul>
         </div>
     );
 };

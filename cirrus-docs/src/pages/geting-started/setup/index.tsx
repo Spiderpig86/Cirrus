@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { TableOfContents } from '../../../layouts/components/toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { Headline } from '../../../layouts/components/headline';
+import { Link } from 'react-router-dom';
 import { toc } from './toc';
 
 import initializeTabs from '../../../static/js/tabs.js';
@@ -21,7 +22,7 @@ export const SetUpPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
             <div>
-                <section id="setup">
+                <section id="setup" className="padtop">
                     <div className="content">
                         <Headline title="Setup" link="#setup" />
                         <p className="lead">Follow these simple steps for setting up Cirrus in your project.</p>
@@ -55,7 +56,11 @@ export const SetUpPage: React.FC<any> = (props) => {
 
                         <div className="space"></div>
                         <h6>3. Download from the repository.</h6>
-                        <a href="#" className="u-inline-block">
+                        <a
+                            href="https://github.com/Spiderpig86/Cirrus/releases"
+                            target="_blank"
+                            className="u-inline-block"
+                        >
                             <button className="btn-info">Download</button>
                         </a>
                     </div>
@@ -136,9 +141,12 @@ export const SetUpPage: React.FC<any> = (props) => {
                                 <div className="mb-3">
                                     <CodeBlock
                                         code={`<!-- Google Fonts -->
+
 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
 <!-- Minified Cirrus CSS -->
+
 <link rel="stylesheet" href="../css/cirrus.min.css">
 <!-- Import your other dependencies -->`}
                                         language="html"
@@ -180,12 +188,28 @@ export const SetUpPage: React.FC<any> = (props) => {
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<!-- JQuery (Optional to help add navbar functionality) -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-</head>...`}
+</head>
+<!-- More content -->
+
+</html>`}
                                     language="html"
                                     languageDisplay="HTML"
                                 />
                             </div>
                         </div>
+                    </div>
+                </section>
+                <section className="padtop">
+                    <div className="content">
+                        <div className="divider"></div>
+                        <ul className="pagination no-bullets">
+                            <li className="pagination-item pagination-next">
+                                <Link to="../update" className="u-block">
+                                    <p className="pagination-item-subtitle">Next</p>
+                                    <h5 className="font-alt font-light m-0">Update Guide</h5>
+                                </Link>
+                            </li>
+                        </ul>
                     </div>
                 </section>
             </div>

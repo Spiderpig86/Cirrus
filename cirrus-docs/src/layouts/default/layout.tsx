@@ -8,7 +8,6 @@ import { Footer } from '../components/footer';
 import './index.scss';
 
 export const DefaultLayout = ({ children, ...rest }: any) => {
-
     return (
         <div>
             <Header extraClasses="header--docs-theme" />
@@ -22,7 +21,7 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
                 </div>
                 <div className="sidebar-container tree-nav p-0 mr-2" id="sidebar">
                     <div className="sidebar-wrapper">
-                        <Sidebar />
+                        <Sidebar {...rest} />
                     </div>
                 </div>
                 <a href="#sidebar-close" id="sidebar-close" className="tree-nav-close p-0"></a>

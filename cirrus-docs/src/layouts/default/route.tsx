@@ -9,7 +9,7 @@ export const DefaultLayoutRoute = ({ component: Component, ...rest }: any) => {
         <Route
             {...rest}
             render={(matchProps) => (
-                <DefaultLayout>
+                <DefaultLayout {...matchProps}>
                     <Component {...matchProps} />
                 </DefaultLayout>
             )}

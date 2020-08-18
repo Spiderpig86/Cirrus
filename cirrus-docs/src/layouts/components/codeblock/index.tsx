@@ -39,12 +39,12 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
                 }}
             >
                 <FontAwesomeIcon
-                    className="fa-wrapper u-position-absolute text-gray-700"
+                    className="fa-wrapper u-position-absolute text-gray-200"
                     icon={['fas', copied ? 'clipboard-check' : 'clipboard']}
                     style={{
                         cursor: 'pointer',
-                        right: '1rem',
-                        top: props.languageDisplay ? '2.25rem' : '1.15rem',
+                        right: '1.5rem',
+                        top: props.languageDisplay ? '2.25rem' : '1.2rem',
                     }}
                 />
             </CopyToClipboard>
