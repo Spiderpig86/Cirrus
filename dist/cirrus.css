@@ -109,6 +109,7 @@ fieldset {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -172,6 +173,7 @@ fieldset {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -625,6 +627,7 @@ fieldset {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -721,6 +724,7 @@ pre > code {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
@@ -1046,6 +1050,7 @@ kbd {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -1144,6 +1149,7 @@ kbd {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -1201,6 +1207,7 @@ kbd {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -1800,6 +1807,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -1895,6 +1903,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -2379,6 +2388,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -2430,6 +2440,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* HEADER */
 /* This works well with panel */
 section {
@@ -2646,17 +2657,12 @@ section {
     /* Keeps the elements in 1 row */
     padding: 0 0.5rem; }
   @media screen and (max-width: 1023px) {
-    .row {
-      /* Dividers for mobile layout */ }
-      .row [class^='col-lg-']:not(.ignore-screen),
-      .row [class*=' col-lg-']:not(.ignore-screen) {
-        /* Remove the grid structure for smaller screens */
-        width: 100%;
-        margin-left: 0;
-        padding: 0; }
-      .row .divided > .row [class^='col-lg-'],
-      .row .divided > .row [class*=' col-lg-'] {
-        box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15); } }
+    .row [class^='col-lg-']:not(.ignore-screen),
+    .row [class*=' col-lg-']:not(.ignore-screen) {
+      /* Remove the grid structure for smaller screens */
+      width: 100%;
+      margin-left: 0;
+      padding: 0; } }
   @media screen and (max-width: 768px) {
     .row {
       /* Dividers for mobile layout */ }
@@ -2666,8 +2672,8 @@ section {
         width: 100%;
         margin-left: 0;
         padding: 0; }
-      .row .divided > .row [class^='col-'],
-      .row .divided > .row [class*=' col-'] {
+      .row.divided [class^='col'],
+      .row.divided [class*=' col'] {
         box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15); } }
   @media screen and (max-width: 639px) {
     .row {
@@ -2678,8 +2684,8 @@ section {
         width: 100%;
         margin-left: 0;
         padding: 0; }
-      .row .divided > .row [class^='col-sm-'],
-      .row .divided > .row [class*=' col-sm-'] {
+      .row.divided [class^='col'],
+      .row.divided [class*=' col'] {
         box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15); } }
   .row .no-space [class^='col-'],
   .row .no-space [class*=' col-'] {
@@ -2954,6 +2960,7 @@ a button,
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -3005,6 +3012,7 @@ a button,
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* LISTS */
 ul,
 ol {
@@ -3395,6 +3403,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Margin */
 .m-0 {
   margin: calc(var(--space-size) * 0) !important; }
@@ -3867,6 +3876,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -4005,6 +4015,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -4058,6 +4069,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 .u-none {
   display: none !important; }
 
@@ -4291,129 +4303,6 @@ video.video-fullscreen {
 .u-circle {
   border-radius: 50%; }
 
-.u-clear-left {
-  clear: left !important; }
-
-.u-clear-right {
-  clear: right !important; }
-
-.u-clear-both {
-  clear: both !important; }
-
-/*
-   When using floats, clearfix allows the container to automatically resize so that
-   other elements are not blocked by children.
-*/
-.u-clearfix:after {
-  clear: both !important;
-  content: ' ';
-  display: table !important; }
-
-/* Spacing */
-/* Fonts */
-/* Grid Count */
-/* Grid Percents */
-/* Tab Sizes */
-/* Media Queries */
-.u-none {
-  display: none !important; }
-
-.u-inline {
-  display: inline !important; }
-
-.u-inline-block {
-  display: inline-block !important; }
-
-.u-block {
-  display: block !important; }
-
-.u-table {
-  display: table !important; }
-
-.u-table-row {
-  display: table-row !important; }
-
-.u-table-cell {
-  display: table-cell !important; }
-
-.u-none {
-  /* Hide elements based on screen size */ }
-  @media screen and (max-width: 639px) {
-    .u-none-mobile {
-      display: none !important; } }
-  @media screen and (min-width: 769px) {
-    .u-none {
-      /* Hide on devices that are tablets or larger */ }
-      .u-none-tablet {
-        display: none !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1023px) {
-    .u-none-tablet-only {
-      display: none !important; } }
-  @media screen and (min-width: 1024px) {
-    .u-none {
-      /* Hide element on laptops, desktops, etc */ }
-      .u-none-desktop {
-        display: none !important; } }
-
-.u-flex {
-  display: flex !important; }
-  .u-flex.u-flex-row {
-    flex-direction: row !important; }
-  .u-flex.u-flex-row-reverse {
-    flex-direction: row-reverse !important; }
-  .u-flex.u-flex-column {
-    flex-direction: column !important; }
-  .u-flex.u-flex-column-reverse {
-    flex-direction: column-reverse !important; }
-
-.u-justify-flex-start {
-  justify-content: flex-start !important; }
-
-.u-justify-center {
-  justify-content: center !important; }
-
-.u-justify-flex-end {
-  justify-content: flex-end !important; }
-
-.u-justify-space-between {
-  justify-content: space-between !important; }
-
-.u-justify-space-around {
-  justify-content: space-around !important; }
-
-.u-justify-space-evenly {
-  justify-content: space-evenly !important; }
-
-.u-items-stretch {
-  align-items: stretch !important; }
-
-.u-items-flex-start {
-  align-items: flex-start !important; }
-
-.u-items-center {
-  align-items: center !important; }
-
-.u-items-flex-end {
-  align-items: flex-end !important; }
-
-.u-items-baseline {
-  align-items: baseline !important; }
-
-.u-position-static {
-  position: static !important; }
-
-.u-position-fixed {
-  position: fixed !important; }
-
-.u-position-absolute {
-  position: absolute !important; }
-
-.u-position-relative {
-  position: relative !important; }
-
-.u-position-sticky {
-  position: sticky !important; }
-
 /*
   Functions
 */
@@ -4426,6 +4315,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -4714,6 +4604,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -4905,6 +4796,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -5269,6 +5161,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* GRID */
 :root {
   --gap-0: 0;
@@ -5700,6 +5593,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /*
   Functions
 */
@@ -5712,6 +5606,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -5912,6 +5807,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -6608,6 +6504,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -6741,6 +6638,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -6820,6 +6718,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -6871,6 +6770,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* TABS AND TAB CONTAINER */
 .tab-container {
   display: -webkit-box;
@@ -7011,6 +6911,7 @@ video.video-fullscreen {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -7304,6 +7205,7 @@ a.tag:hover {
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -7528,3 +7430,127 @@ a.tag:hover {
     -webkit-transform: translate(-0.5rem, 50%);
     -moz-transform: translate(-0.5rem, 50%);
     -ms-transform: translate(-0.5rem, 50%); }
+
+.u-clear-left {
+  clear: left !important; }
+
+.u-clear-right {
+  clear: right !important; }
+
+.u-clear-both {
+  clear: both !important; }
+
+/*
+   When using floats, clearfix allows the container to automatically resize so that
+   other elements are not blocked by children.
+*/
+.u-clearfix:after {
+  clear: both !important;
+  content: ' ';
+  display: table !important; }
+
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+.u-none {
+  display: none !important; }
+
+.u-inline {
+  display: inline !important; }
+
+.u-inline-block {
+  display: inline-block !important; }
+
+.u-block {
+  display: block !important; }
+
+.u-table {
+  display: table !important; }
+
+.u-table-row {
+  display: table-row !important; }
+
+.u-table-cell {
+  display: table-cell !important; }
+
+.u-none {
+  /* Hide elements based on screen size */ }
+  @media screen and (max-width: 639px) {
+    .u-none-mobile {
+      display: none !important; } }
+  @media screen and (min-width: 769px) {
+    .u-none {
+      /* Hide on devices that are tablets or larger */ }
+      .u-none-tablet {
+        display: none !important; } }
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .u-none-tablet-only {
+      display: none !important; } }
+  @media screen and (min-width: 1024px) {
+    .u-none {
+      /* Hide element on laptops, desktops, etc */ }
+      .u-none-desktop {
+        display: none !important; } }
+
+.u-flex {
+  display: flex !important; }
+  .u-flex.u-flex-row {
+    flex-direction: row !important; }
+  .u-flex.u-flex-row-reverse {
+    flex-direction: row-reverse !important; }
+  .u-flex.u-flex-column {
+    flex-direction: column !important; }
+  .u-flex.u-flex-column-reverse {
+    flex-direction: column-reverse !important; }
+
+.u-justify-flex-start {
+  justify-content: flex-start !important; }
+
+.u-justify-center {
+  justify-content: center !important; }
+
+.u-justify-flex-end {
+  justify-content: flex-end !important; }
+
+.u-justify-space-between {
+  justify-content: space-between !important; }
+
+.u-justify-space-around {
+  justify-content: space-around !important; }
+
+.u-justify-space-evenly {
+  justify-content: space-evenly !important; }
+
+.u-items-stretch {
+  align-items: stretch !important; }
+
+.u-items-flex-start {
+  align-items: flex-start !important; }
+
+.u-items-center {
+  align-items: center !important; }
+
+.u-items-flex-end {
+  align-items: flex-end !important; }
+
+.u-items-baseline {
+  align-items: baseline !important; }
+
+.u-position-static {
+  position: static !important; }
+
+.u-position-fixed {
+  position: fixed !important; }
+
+.u-position-absolute {
+  position: absolute !important; }
+
+.u-position-relative {
+  position: relative !important; }
+
+.u-position-sticky {
+  position: sticky !important; }

@@ -10,26 +10,26 @@ $display-utils-config: 'none', 'inline', 'inline-block', 'block', 'table', 'tabl
 
 .u-none {
     /* Hide elements based on screen size */
-    @include screen-below('phone') {
+    @include screen-below('xs') {
         &-mobile {
             display: none !important;
         }
     }
 
-    @include screen-above('tablet') {
+    @include screen-above('sm') {
         /* Hide on devices that are tablets or larger */
         &-tablet {
             display: none !important;
         }
     }
 
-    @include screen-between('tablet', 'desktop') {
+    @include screen-between('sm', 'md') {
         &-tablet-only {
             display: none !important;
         }
     }
 
-    @include screen-above('desktop') {
+    @include screen-above('md') {
         /* Hide element on laptops, desktops, etc */
         &-desktop {
             display: none !important;

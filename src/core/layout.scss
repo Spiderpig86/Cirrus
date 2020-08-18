@@ -198,7 +198,7 @@ section {
     }
 
     /* Columns with breakpoints */
-    @include screen-below('desktop') {
+    @include screen-below('md') {
         [class^='col-lg-']:not(.ignore-screen),
         [class*=' col-lg-']:not(.ignore-screen) {
             /* Remove the grid structure for smaller screens */
@@ -206,15 +206,9 @@ section {
             margin-left: 0;
             padding: 0;
         }
-
-        /* Dividers for mobile layout */
-        .divided > .row [class^='col-lg-'],
-        .divided > .row [class*=' col-lg-'] {
-            box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
-        }
     }
 
-    @include screen-below('tablet') {
+    @include screen-below('sm') {
         [class^='col-']:not(.ignore-screen):not([class^='col-sm']):not([class^='col-lg']),
         [class*=' col-']:not(.ignore-screen):not([class*=' col-sm']):not([class*=' col-lg']) {
             /* Remove the grid structure for smaller screens */
@@ -224,13 +218,13 @@ section {
         }
 
         /* Dividers for mobile layout */
-        .divided > .row [class^='col-'],
-        .divided > .row [class*=' col-'] {
+        &.divided [class^='col'],
+        &.divided [class*=' col'] {
             box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
         }
     }
 
-    @include screen-below('phone') {
+    @include screen-below('xs') {
         [class^='col-sm-']:not(.ignore-screen),
         [class*=' col-sm-']:not(.ignore-screen) {
             /* Remove the grid structure for smaller screens */
@@ -238,12 +232,13 @@ section {
             margin-left: 0;
             padding: 0;
         }
-
+        
         /* Dividers for mobile layout */
-        .divided > .row [class^='col-sm-'],
-        .divided > .row [class*=' col-sm-'] {
+        &.divided [class^='col'],
+        &.divided [class*=' col'] {
             box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
         }
+    
     }
 
     /* Columns without the spacing */
@@ -397,7 +392,7 @@ section {
 .level,
 .level-left,
 .level-right {
-    @include screen-above('tablet') {
+    @include screen-above('sm') {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;

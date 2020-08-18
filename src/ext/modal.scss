@@ -103,7 +103,7 @@
             text-align: right;
         }
 
-        @include screen-below('tablet') {
+        @include screen-below('sm') {
             max-width: 90%;
         }
     }

@@ -19,10 +19,12 @@ $grid-width: 1 / $grid-columns;
 $tab-sizes: ('xsmall': 0.6rem, 'small': 0.75rem, 'large': 1.25rem, 'xlarge': 1.5rem);
 
 /* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 $breakpoints: (
-    'phone': 640px,
-    'tablet': 769px,
-    'desktop': 1024px
+    'xs': 640px,
+    'sm': 769px,
+    'md': 1024px,
+    'lg': 1280px
 );
 
 @mixin screen-above($breakpoint) {

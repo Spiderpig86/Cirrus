@@ -61,7 +61,7 @@
         grid-column-end: var(--grid-column-end);
     }
 
-    @include screen-below('tablet') {
+    @include screen-below('sm') {
         --grid-template-column: repeat(1, minmax(0, 1fr));
     }
 }

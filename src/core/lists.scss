@@ -195,7 +195,7 @@ ul {
         -webkit-transition: all var(--animation-duration);
         transition: all var(--animation-duration);
 
-        @include screen-below('tablet') {
+        @include screen-below('sm') {
             height: 0;
             padding: 0 !important;
             position: relative;
