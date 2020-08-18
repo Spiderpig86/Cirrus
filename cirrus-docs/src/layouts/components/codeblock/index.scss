@@ -1,3 +1,29 @@
-.hljs {
-    background-color: #f5f6f8;
+.codeblock {
+    border-radius: .25rem;
+
+    code {
+        font-size: inherit;
+        display: inherit;
+        padding: inherit;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        font-family: inherit;
+        text-align: inherit;
+        line-height: inherit;
+        -moz-tab-size: inherit;
+        tab-size: inherit;
+        -webkit-hyphens: inherit;
+        hyphens: inherit;
+        border-left: inherit;
+        margin: inherit;
+        position: inherit;
+        color: inherit;
+        background-color: inherit;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    pre > code {
+        line-break: anywhere;
+    }
 }
