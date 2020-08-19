@@ -24,13 +24,13 @@ export const sidebarConfig: SidebarConfig[] = [
             },
             {
                 fontWeight: 'bold',
-                glyph: ['fas', 'clock'],
+                glyph: ['fas', 'pencil-ruler'],
                 text: 'Playground',
                 url: '#'
             },
             {
                 fontWeight: 'bold',
-                glyph: ['fas', 'clock'],
+                glyph: ['fas', 'gift'],
                 text: 'Donate',
                 url: '#'
             },
@@ -55,19 +55,19 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Browser Suppport',
-                url: '#'
+                url: '/getting-started/support'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Tutorial',
-                url: '#'
+                url: '/getting-started/tutorial'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Examples',
-                url: '#'
+                url: '/getting-started/examples'
             },
         ],
     },

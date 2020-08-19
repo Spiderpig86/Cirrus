@@ -11,6 +11,7 @@ import { Landing } from './pages/landing';
 import { _404 } from './pages/404';
 
 import './App.scss';
+import { BrowserSupportPage } from './pages/geting-started/support';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <DefaultLayoutRoute path="/why" component={WhyPage} />
 
                 <DefaultLayoutRoute path="/getting-started/setup" component={SetUpPage} />
+                <DefaultLayoutRoute path="/getting-started/support" component={BrowserSupportPage} />
 
                 <DefaultLayoutRoute path="/animations" component={AnimationsPage} />
                 <BlankLayoutRoute component={_404} />

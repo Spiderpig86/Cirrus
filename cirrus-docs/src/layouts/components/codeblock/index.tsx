@@ -16,7 +16,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
     const [copied, setCopied] = useState(false);
 
     return (
-        <div className="u-position-relative">
+        <div className="u-position-relative mb-2">
             <SyntaxHighlighter
                 className="codeblock pl-2 pr-3 py-1"
                 language={props.language}
