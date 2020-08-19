@@ -31,8 +31,8 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'bold',
                 glyph: ['fas', 'gift'],
-                text: 'Donate',
-                url: '#'
+                text: 'About',
+                url: '/about'
             },
         ],
     },
