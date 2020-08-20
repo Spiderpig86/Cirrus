@@ -11,9 +11,4 @@ export const toc: TableOfContentsEntry[] = [
         anchor: '#project-config',
         children: null,
     },
-    {
-        name: 'Starter',
-        anchor: '#starter',
-        children: null,
-    },
 ];

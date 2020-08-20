@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Frame from 'react-frame-component';
+
 import { TableOfContents } from '../../../layouts/components/toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { Headline } from '../../../layouts/components/headline';
-import { Link } from 'react-router-dom';
+
 import { toc } from './toc';
 
 import initializeTabs from '../../../static/js/tabs.js';
@@ -199,6 +202,69 @@ export const SetUpPage: React.FC<any> = (props) => {
                         </div>
                     </div>
                 </section>
+
+                <section className="padtop" id="starter">
+                    <div className="content">
+                        <Headline title="Starter" link="#starter" />
+                        <div className="divider"></div>
+                        <p>To help you get started, feel free to use the example page created below.</p>
+                        <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html" className="w-100" />
+                        <a href="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html" target="_blank">Full Page</a>
+                        <div className="space large"></div>
+                        <CodeBlock code={`<!DOCTYPE html>
+<html id="page">
+   <head>
+      <title>Getting Started with Cirrus</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+      <meta charset="UTF-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge;"/>
+      <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous" ></script> 
+   </head>
+   <body>
+      <div class="header header-fixed unselectable header-animated">
+         <div class="header-brand">
+            <div class="nav-item no-hover">
+               <h6 class="title">My App</h6>
+            </div>
+            <div class="nav-item nav-btn" id="header-btn"> <span></span> <span></span> <span></span> </div>
+         </div>
+         <div class="header-nav" id="header-menu">
+            <div class="nav-left">
+               <div class="nav-item text-center"> <a href="#"> <span class="icon"> <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i> </span> </a> </div>
+            </div>
+            <div class="nav-right">
+               <div class="nav-item has-sub toggle-hover" id="dropdown">
+                  <a class="nav-dropdown-link">Menu</a> 
+                  <ul class="dropdown-menu dropdown-animated" role="menu">
+                     <li role="menu-item"><a href="#">First Item</a></li>
+                     <li role="menu-item"><a href="#">Second Item</a></li>
+                     <li role="menu-item"><a href="#">Third Item</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <section class="section">
+         <div class="hero fullscreen">
+            <div class="hero-body">
+               <div class="content">
+                  <div class="text-center">
+                     <h1>👋 Hello world!</h1>
+                     <h6 class="font-alt font-light">A webpage powered by <b>Cirrus.</b></h6>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </body>
+</html>`} language="htmlbars" />
+                    </div>
+                </section>
+
                 <section className="padtop">
                     <div className="content">
                         <div className="divider"></div>

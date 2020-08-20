@@ -78,13 +78,13 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Colors',
-                url: '#'
+                url: '/fundamentals/colors'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Typography',
-                url: '#'
+                url: '/fundamentals/typrography'
             },
         ],
     },

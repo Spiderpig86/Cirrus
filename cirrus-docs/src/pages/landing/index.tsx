@@ -31,9 +31,9 @@ export const Landing: React.FC<any> = () => {
                     <div className="hero-body">
                         <div className="content">
                             <h1 className="headline-4 white title">Cirrus.CSS</h1>
-                            <h5 className="white sub-title font-alt font-normal">
-                                A <b>component</b> and <b>utility</b> focused CSS framework <br /> designed for{' '}
-                                <b>rapid prototyping</b>.
+                            <h5 className="text-gray-300 sub-title font-alt font-normal">
+                                A <b className="white">component</b> and <b className="white">utility focused</b> CSS framework <br /> designed for{' '}
+                                <b className="white">rapid prototyping</b>.
                             </h5>
 
                             <p className="white">
@@ -109,7 +109,7 @@ export const Landing: React.FC<any> = () => {
                         <div className="col mb-2">
                             <FontAwesomeIcon
                                 className="fa-wrapper small"
-                                icon={['fas', 'bolt']}
+                                icon={['fas', 'compress-alt']}
                                 style={{ fontSize: '2rem' }}
                             />
                             <h6 className="lead uppercase mb-1 font-bold text-gray-700">Compact</h6>
