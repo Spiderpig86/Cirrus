@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Frame from 'react-frame-component';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { Headline } from '../../../layouts/components/headline';
+import { Pagination } from '../../../layouts/components/pagination';
 
 import { toc } from './toc';
 
@@ -265,19 +264,10 @@ export const SetUpPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop">
-                    <div className="content">
-                        <div className="divider"></div>
-                        <ul className="pagination no-bullets">
-                            <li className="pagination-item pagination-next">
-                                <Link to="../update" className="u-block">
-                                    <p className="pagination-item-subtitle">Next</p>
-                                    <h5 className="font-alt font-light m-0">Update Guide</h5>
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
+                <Pagination nextLink={{
+                    name: 'Update Guide',
+                    link: './update'
+                }} />
             </div>
             <TableOfContents entries={toc} />
         </main>

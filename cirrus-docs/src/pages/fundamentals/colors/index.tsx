@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
-import { toc } from './toc';
+import { Pagination } from '../../../layouts/components/pagination';
 import { Display } from './display';
+import { toc } from './toc';
 import { v1, v2Colors, v2 } from './color-config';
 
 export const ColorsPage: React.FC<any> = (props) => {
@@ -55,19 +56,10 @@ export const ColorsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop">
-                    <div className="content">
-                        <div className="divider"></div>
-                        <ul className="pagination no-bullets">
-                            <li className="pagination-item pagination-next">
-                                <Link to="../update" className="u-block">
-                                    <p className="pagination-item-subtitle">Next</p>
-                                    <h5 className="font-alt font-light m-0">Typography</h5>
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
+                <Pagination nextLink={{
+                    name: 'Typography',
+                    link: './typography'
+                }} />
             </div>
             <TableOfContents entries={toc} />
         </main>

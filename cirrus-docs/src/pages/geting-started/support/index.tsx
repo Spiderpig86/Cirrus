@@ -5,6 +5,7 @@ import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
+import { Pagination } from '../../../layouts/components/pagination';
 
 export const BrowserSupportPage: React.FC<any> = (props) => {
     return (
@@ -128,19 +129,29 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Working with Older Browsers" link="#oldbrowsers" />
                         <div className="divider"></div>
-                        <p>As stated above, there is partial support for older browsers such as Internet Explorer or even older versions of modern browsers today. There have been no official tests for any old browsers to see what functionality works, but there is a handy place to see <a className="u u-LR" href="https://caniuse.com/" target="_blank">what features are supported</a> for which browser versions.</p>
+                        <p>
+                            As stated above, there is partial support for older browsers such as Internet Explorer or
+                            even older versions of modern browsers today. There have been no official tests for any old
+                            browsers to see what functionality works, but there is a handy place to see{' '}
+                            <a className="u u-LR" href="https://caniuse.com/" target="_blank">
+                                what features are supported
+                            </a>{' '}
+                            for which browser versions.
+                        </p>
                         <p>As an example, flexbox can be emulated by using clearfix and floats.</p>
 
-                        <CodeBlock code={`<div className="u-clearfix">
+                        <CodeBlock
+                            code={`<div className="u-clearfix">
     <div className="w-50 u-pull-left">test</div>
     <div className="w-50 u-pull-left">test</div>
     <div className="w-50 u-pull-left">test</div>
     ...
-</div>`} language={'htmlbars'} />
+</div>`}
+                            language={'htmlbars'}
+                        />
 
                         <p>There are many other classes that may be supported as well. Explore as you see fit.</p>
                     </div>
-
                 </section>
 
                 <section className="padtop">
@@ -156,6 +167,16 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                         </ul>
                     </div>
                 </section>
+                <Pagination
+                    prevLink={{
+                        name: 'Update Guide',
+                        link: './update',
+                    }}
+                    nextLink={{
+                        name: 'Tutorial',
+                        link: './tutorial',
+                    }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>
