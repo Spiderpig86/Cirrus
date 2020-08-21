@@ -7,7 +7,7 @@ import { BlankLayoutRoute } from './layouts/blank';
 import { AnimationsPage } from './pages/animations';
 import { SetUpPage, BrowserSupportPage } from './pages/geting-started';
 import { AboutPage } from './pages/about';
-import { ColorsPage } from './pages/fundamentals';
+import { ColorsPage, TypographyPage } from './pages/fundamentals';
 import { WhyPage } from './pages/why';
 import { Landing } from './pages/landing';
 import { _404 } from './pages/404';
@@ -27,6 +27,7 @@ function App() {
                 <DefaultLayoutRoute path="/getting-started/support" component={BrowserSupportPage} />
 
                 <DefaultLayoutRoute path="/fundamentals/colors" component={ColorsPage} />
+                <DefaultLayoutRoute path="/fundamentals/typography" component={TypographyPage} />
 
                 <DefaultLayoutRoute path="/animations" component={AnimationsPage} />
                 <BlankLayoutRoute component={_404} />

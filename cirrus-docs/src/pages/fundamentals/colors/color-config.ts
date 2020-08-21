@@ -16,7 +16,7 @@ export const v2Colors = ['pink', 'red', 'orange', 'yellow', 'green', 'teal', 'bl
 
 export const v1: Swatch[] = v1Colors.map((color: string[]) => {
     return {
-        name: color[0].charAt(0).toUpperCase() + color[0].slice(1),
+        name: color[0],
         class: `bg-${color[0]}`,
         hex: color[1],
     };
@@ -38,7 +38,7 @@ export const v2: Map<string, Swatch[]> = new Map([
 function generateV2Swatches(name: string, levels: string[]): Swatch[] {
     return levels.map((level: string) => {
         return {
-            name: name.charAt(0).toUpperCase() + name.slice(1) + '-' + level,
+            name: name + '-' + level,
             class: `bg-${name}-${level}`,
         };
     });

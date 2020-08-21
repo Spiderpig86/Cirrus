@@ -84,7 +84,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Typography',
-                url: '/fundamentals/typrography'
+                url: '/fundamentals/typography'
             },
         ],
     },
