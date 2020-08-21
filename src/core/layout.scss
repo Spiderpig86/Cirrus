@@ -193,12 +193,12 @@ section {
     /* Some offset values */
     [class^='col-'],
     [class*=' col-'] {
-        float: left; /* Keeps the elements in 1 row */
+        // float: left; /* Keeps the elements in 1 row  Depercated 0.6.0 */
         padding: 0 0.5rem;
     }
 
     /* Columns with breakpoints */
-    @include screen-below('md') {
+    @include screen-below('lg') {
         [class^='col-lg-']:not(.ignore-screen),
         [class*=' col-lg-']:not(.ignore-screen) {
             /* Remove the grid structure for smaller screens */

@@ -2653,10 +2653,8 @@ section {
     margin-right: 0; }
   .row [class^='col-'],
   .row [class*=' col-'] {
-    float: left;
-    /* Keeps the elements in 1 row */
     padding: 0 0.5rem; }
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1279px) {
     .row [class^='col-lg-']:not(.ignore-screen),
     .row [class*=' col-lg-']:not(.ignore-screen) {
       /* Remove the grid structure for smaller screens */
