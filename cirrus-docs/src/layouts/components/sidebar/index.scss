@@ -5,6 +5,24 @@
     height: inherit !important;
 }
 
+.sidebar__title {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    &:before {
+        background: #fff;
+        bottom: 0;
+        content: ' ';
+        display: block;
+        left: -10px;
+        position: absolute;
+        right: -10px;
+        top: -5px;
+        z-index: -1;
+    }
+}
+
 .tree-nav-container {
     margin-top: 2rem;
     overflow-y: inherit !important;
@@ -22,7 +40,7 @@
             overflow: initial;
         }
     }
-    
+
     .tree-nav-header {
         display: none;
     }
@@ -34,7 +52,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
     .default-layout {
         &.content {
             width: 100%;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NavLink } from 'react-router-dom';
 
 import { sidebarConfig, SidebarConfig, SidebarItemConfig } from '../../../config/sidebar';
 
 import './index.scss';
-import { NavLink } from 'react-router-dom';
 
 export const Sidebar: React.FC<any> = (props) => {
     function isActiveLink(path: string): boolean {
@@ -16,7 +16,7 @@ export const Sidebar: React.FC<any> = (props) => {
             <ul className="menu mb-3">
                 {sidebarConfig.map((config: SidebarConfig) => {
                     const title = config.title ? (
-                        <span className="font-bold uppercase text-gray-600">{config.title}</span>
+                        <div className="sidebar__title font-bold uppercase text-gray-600">{config.title}</div>
                     ) : null;
 
                     const listItems = config.sidebarItems.map((listItemConfig: SidebarItemConfig) => {

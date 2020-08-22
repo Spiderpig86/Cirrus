@@ -25,7 +25,7 @@ export const ButtonPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
             <div>
-                <section className="padtop">
+                <section className="padtop" id="buttons">
                     <div className="content">
                         <Headline title="Buttons" link="#buttons" />
                         <div className="divider"></div>
@@ -68,7 +68,7 @@ export const ButtonPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop">
+                <section className="padtop" id="colors">
                     <div className="content">
                         <Headline title="Colors" link="#colors" />
                         <div className="divider"></div>
@@ -134,7 +134,7 @@ export const ButtonPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop">
+                <section className="padtop" id="sizes">
                     <div className="content">
                         <Headline title="Sizes" link="#sizes" />
                         <div className="divider"></div>
