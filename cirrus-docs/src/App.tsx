@@ -10,7 +10,7 @@ import { AboutPage } from './pages/about';
 import { ColorsPage, TypographyPage } from './pages/fundamentals';
 import { WhyPage } from './pages/why';
 import { Landing } from './pages/landing';
-import { ButtonPage } from './pages/buttons';
+import { ButtonPage, GlyphsPage, VariantsPage } from './pages/buttons';
 import { _404 } from './pages/404';
 
 import './App.scss';
@@ -33,6 +33,8 @@ function App() {
                 <DefaultLayoutRoute path="/animations" component={AnimationsPage} />
 
                 <DefaultLayoutRoute path="/buttons/basics" component={ButtonPage} />
+                <DefaultLayoutRoute path="/buttons/glyphs" component={GlyphsPage} />
+                <DefaultLayoutRoute path="/buttons/variants" component={VariantsPage} />
 
                 <BlankLayoutRoute component={_404} />
             </Switch>

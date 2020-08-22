@@ -111,6 +111,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Button Groups',
+                url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Glyphs',
                 url: '/buttons/glyphs'
             },
@@ -119,12 +125,6 @@ export const sidebarConfig: SidebarConfig[] = [
                 glyph: null,
                 text: 'Variants',
                 url: '/buttons/variants'
-            },
-            {
-                fontWeight: 'semibold',
-                glyph: null,
-                text: 'Button Groups',
-                url: '#'
             },
         ],
     },
