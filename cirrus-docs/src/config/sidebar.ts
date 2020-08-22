@@ -106,13 +106,19 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Basics',
-                url: '#'
+                url: '/buttons/basics'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Styles',
-                url: '#'
+                text: 'Glyphs',
+                url: '/buttons/glyphs'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Variants',
+                url: '/buttons/variants'
             },
             {
                 fontWeight: 'semibold',
