@@ -163,17 +163,6 @@ export const ButtonPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop">
-                    <div className="content">
-                        <Headline title="Variants" link="#variants" />
-                        <div className="divider"></div>
-                        <p>
-                            Other variants of buttons include loading button, animated, and close button. Also include
-                            circle and pilled.
-                        </p>
-                    </div>
-                </section>
-
                 <Pagination nextLink={{ name: 'Button Groups', link: './button-groups' }} />
             </div>
             <TableOfContents entries={toc} />

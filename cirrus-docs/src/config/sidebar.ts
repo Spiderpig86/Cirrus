@@ -112,7 +112,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Button Groups',
-                url: '#'
+                url: '/buttons/button-groups'
             },
             {
                 fontWeight: 'semibold',
