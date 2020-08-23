@@ -70,7 +70,7 @@ export const ButtonPage: React.FC<any> = (props) => {
 
                 <section className="padtop" id="colors">
                     <div className="content">
-                        <Headline title="Colors" link="#colors" />
+                        <Headline title="Colors" link="#colors" size='4' />
                         <div className="divider"></div>
                         <p>
                             Cirrus comes in quite a few different shades of colors. Below are some of the preset styles
@@ -136,7 +136,7 @@ export const ButtonPage: React.FC<any> = (props) => {
 
                 <section className="padtop" id="sizes">
                     <div className="content">
-                        <Headline title="Sizes" link="#sizes" />
+                        <Headline title="Sizes" link="#sizes" size='4' />
                         <div className="divider"></div>
                         <p>
                             Buttons can have alternative sizes of <code>xsmall</code>, <code>small</code>,{' '}

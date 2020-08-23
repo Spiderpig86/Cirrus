@@ -23,7 +23,7 @@ export const VariantsPage: React.FC<any> = (props) => {
 
                 <section className="padtop" id="animated">
                     <div className="content">
-                        <Headline title="Animated Button" link="#animated" />
+                        <Headline title="Animated Button" link="#animated" size={`4`} />
                         <div className="divider"></div>
                         <p>
                             The <code>.btn-animated</code> class adds a slight "push" to the button when clicked.
@@ -48,7 +48,7 @@ export const VariantsPage: React.FC<any> = (props) => {
 
                 <section className="padtop" id="disabled">
                     <div className="content">
-                        <Headline title="Disabled Button" link="#disabled" />
+                        <Headline title="Disabled Button" link="#disabled" size={`4`} />
                         <div className="divider"></div>
                         <p>
                             Add the <code>disabled</code> keyword to make the button unselectable.
@@ -66,9 +66,9 @@ export const VariantsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop" id="variants">
+                <section className="padtop" id="loading">
                     <div className="content">
-                        <Headline title="Loading Button" link="#loading" />
+                        <Headline title="Loading Button" link="#loading" size={`4`} />
                         <div className="divider"></div>
                         <p>
                             Add the <code>.animated</code> and <code>.loading</code> classes to create a button containing a spinner. Since it relies on the button to contain text for height, you must specify some text. To hide the text, you just need to add the <code>.hide-text</code> class as well.
@@ -93,9 +93,9 @@ export const VariantsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop" id="variants">
+                <section className="padtop" id="close">
                     <div className="content">
-                        <Headline title="Close Button" link="#close" />
+                        <Headline title="Close Button" link="#close" size={`4`} />
                         <div className="divider"></div>
                         <p>
                             This is the generic close button control that can be added to other components in Cirrus. Below is an example of a <code>.frame</code> containing a <code>.btn-close</code>.

@@ -5,21 +5,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export interface HeadlineProps {
     title: string;
     link: string;
+    size?: string;
 }
 
 export const Headline: React.FC<HeadlineProps> = (props) => {
+
+    const HeaderTag = `h${props.size ?? '1'}` as keyof JSX.IntrinsicElements;
+
     function getUrlWithoutAnchor(): string {
         return document.URL.replace(/#.*$/, '');
     }
 
     return (
-        <h1>
+        <HeaderTag>
             <CopyToClipboard text={getUrlWithoutAnchor() + props.link}>
                 <a className="tooltip tooltip--left mr-1" data-tooltip="Copy" style={{ cursor: 'pointer' }}>
                     #
                 </a>
             </CopyToClipboard>
             {props.title}
-        </h1>
+        </HeaderTag>
     );
 };
