@@ -29,7 +29,6 @@ export const VariantsPage: React.FC<any> = (props) => {
                             The <code>.btn-animated</code> class adds a slight "push" to the button when clicked.
                         </p>
 
-                        
                         <div className="btn-container">
                             <button className="btn-animated">Button</button>
                         </div>
@@ -40,9 +39,12 @@ export const VariantsPage: React.FC<any> = (props) => {
                             <input className="btn-animated" type="submit" value="Submit" />
                         </div>
 
-                        <CodeBlock code={`<button class="btn-animated">Button</button>
+                        <CodeBlock
+                            code={`<button class="btn-animated">Button</button>
 <div class="btn btn-animated">Button</div>
-<input class="btn-animated" type="submit" value="Submit" />`} language='htmlbars' />
+<input class="btn-animated" type="submit" value="Submit" />`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -54,15 +56,23 @@ export const VariantsPage: React.FC<any> = (props) => {
                             Add the <code>disabled</code> keyword to make the button unselectable.
                         </p>
 
-                        <blockquote className="bg-orange-200 text-orange-700" style={{
-                            fontSize: '1rem'
-                        }}>Note that this is not supported for buttons created using <code>div</code> tags.</blockquote>
+                        <blockquote
+                            className="bg-orange-200 text-orange-700"
+                            style={{
+                                fontSize: '1rem',
+                            }}
+                        >
+                            Note that this is not supported for buttons created using <code>div</code> tags.
+                        </blockquote>
 
                         <button disabled>Disabled</button>
-                        
-                        <CodeBlock code={`<button class="btn-animated">Button</button>
+
+                        <CodeBlock
+                            code={`<button class="btn-animated">Button</button>
 <div class="btn btn-animated">Button</div>
-<input class="btn-animated" type="submit" value="Submit" />`} language='htmlbars' />
+<input class="btn-animated" type="submit" value="Submit" />`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -71,25 +81,44 @@ export const VariantsPage: React.FC<any> = (props) => {
                         <Headline title="Loading Button" link="#loading" size={`4`} />
                         <div className="divider"></div>
                         <p>
-                            Add the <code>.animated</code> and <code>.loading</code> classes to create a button containing a spinner. Since it relies on the button to contain text for height, you must specify some text. To hide the text, you just need to add the <code>.hide-text</code> class as well.
+                            Add the <code>.animated</code> and <code>.loading</code> classes to create a button
+                            containing a spinner. Since it relies on the button to contain text for height, you must
+                            specify some text. To hide the text, you just need to add the <code>.hide-text</code> class
+                            as well.
                         </p>
 
                         <button className="animated loading hide-text">123</button>
-                        
-                        <CodeBlock code={`<button class="btn-animated">Button</button>
+
+                        <CodeBlock
+                            code={`<button class="btn-animated">Button</button>
 <div class="btn btn-animated">Button</div>
-<input class="btn-animated" type="submit" value="Submit" />`} language='htmlbars' />
+<input class="btn-animated" type="submit" value="Submit" />`}
+                            language="htmlbars"
+                        />
 
-                        <p>To display text, there are two helper classes created to show text to the left and right of the spinner.</p>
+                        <p>
+                            To display text, there are two helper classes created to show text to the left and right of
+                            the spinner.
+                        </p>
 
-                        <p>To set the spinner to appear to the left of text, use the <code>.loading-left</code> class.</p> 
+                        <p>
+                            To set the spinner to appear to the left of text, use the <code>.loading-left</code> class.
+                        </p>
                         <button className="animated loading loading-left btn-link">Loading</button>
-                        <CodeBlock code={`<button class="animated loading loading-left btn-link">Loading</button>`} language='htmlbars' />
+                        <CodeBlock
+                            code={`<button class="animated loading loading-left btn-link">Loading</button>`}
+                            language="htmlbars"
+                        />
 
-                        <p>To set the spinner to appear to the right of text, use the <code>.loading-right</code> class.</p> 
+                        <p>
+                            To set the spinner to appear to the right of text, use the <code>.loading-right</code>{' '}
+                            class.
+                        </p>
                         <button className="animated loading loading-right btn-link">Loading</button>
-                        <CodeBlock code={`<button class="animated loading loading-right btn-link">Loading</button>`} language='htmlbars' />
-
+                        <CodeBlock
+                            code={`<button class="animated loading loading-right btn-link">Loading</button>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -98,12 +127,15 @@ export const VariantsPage: React.FC<any> = (props) => {
                         <Headline title="Close Button" link="#close" size={`4`} />
                         <div className="divider"></div>
                         <p>
-                            This is the generic close button control that can be added to other components in Cirrus. Below is an example of a <code>.frame</code> containing a <code>.btn-close</code>.
+                            This is the generic close button control that can be added to other components in Cirrus.
+                            Below is an example of a <code>.frame</code> containing a <code>.btn-close</code>.
                         </p>
 
                         <div className="frame mb-3">
                             <div className="frame__header">
-                                <span className="pb-1"><b>This is a popup.</b></span>
+                                <span className="pb-1">
+                                    <b>This is a popup.</b>
+                                </span>
                                 <button className="btn-close u-pull-right"></button>
                             </div>
                             <div className="frame__body">
@@ -121,6 +153,37 @@ export const VariantsPage: React.FC<any> = (props) => {
 </div>`}
                             language="htmlbars"
                         />
+                    </div>
+                </section>
+
+                <section className="padtop" id="shapes">
+                    <div className="content">
+                        <Headline title="Shapes" link="#shapes" size={`4`} />
+                        <div className="divider"></div>
+                        <p>Modifier classes can be used to change the shape of a button as shown below.</p>
+                        <div className="space"></div>
+
+                        <h6>Pilled</h6>
+                        <p>
+                            This provides a rounded shape for the button that closely resembles a pill with the{' '}
+                            <code>btn--pilled</code> class.
+                        </p>
+                        <button className="btn-info btn--pilled">Test</button>
+                        <CodeBlock code={`<button class="btn-info btn--pilled">Test</button>`} language="htmlbars" />
+                        <div className="space"></div>
+
+                        <h6>Circle</h6>
+                        <p>
+                            The <code>btn--circle</code> class turns a button into a circle. The circle size will scale
+                            based on the contents of the button.
+                        </p>
+                        <button className="btn-danger btn--circle"><b>Small</b></button>
+                        <button className="btn-warning btn--circle"><h6 className="px-2">Bigger</h6></button>
+                        <button className="btn-success btn--circle"><h3 className="px-2">Biggest</h3></button>
+
+                        <CodeBlock code={`<button class="btn-danger btn--circle"><b>Small</b></button>
+<button class="btn-warning btn--circle"><h6 class="px-2">Bigger</h6></button>
+<button class="btn-success btn--circle"><h3 class="px-2">Biggest</h3></button>`} language="htmlbars" />
                     </div>
                 </section>
 

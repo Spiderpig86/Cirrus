@@ -25,6 +25,11 @@ export const toc: TableOfContentsEntry[] = [
                 anchor: '#close',
                 children: null,
             },
+            {
+                name: 'Shapes',
+                anchor: '#shapes',
+                children: null,
+            },
         ],
     },
 ];
