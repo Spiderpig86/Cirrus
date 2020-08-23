@@ -60,6 +60,7 @@ $themes: 'primary', 'success', 'warning', 'danger', 'light', 'dark', 'link', 'li
     }
 
     .text-#{$theme} {
+        border-color: var(--cirrus-#{$theme}) !important;
         color: var(--cirrus-#{$theme}) !important;
     }
 }
@@ -85,6 +86,7 @@ $palettes: (
         }
 
         .text-#{$name}-#{$level} {
+            border-color: #{$color} !important;
             color: #{$color} !important;
         }
     }

@@ -28,14 +28,14 @@
     user-select: none;
     margin-bottom: 1rem;
     outline: none;
-    --btn-color: #{map-get($grays, '400')};
+    --btn-color: #{map-get($grays, '000')};
     --btn-fg: #{map-get($grays, '700')};
-    --btn-border-color: #{map-get($grays, '300')};
+    --btn-border-color: #{map-get($grays, '200')};
 
     /* Base States */
     &:hover {
         transition: all var(--animation-duration);
-        --btn-color: #{map-get($grays, '200')};
+        --btn-color: #{map-get($grays, '100')};
     }
 
     &:active {
@@ -73,8 +73,8 @@
         transition: calc(var(--animation-duration) / 2) ease;
 
         &:active {
-            -webkit-transform: scale(0.98);
-            transform: inherit, scale(0.98);
+            -webkit-transform: scale(0.95);
+            transform: scale(0.95);
             transition: calc(var(--animation-duration) / 2) ease;
         }
     }
@@ -102,7 +102,7 @@
         }
 
         /* Render the x in the close button */
-        @mixin close-btn-x($height, $width) {
+        @mixin btn-close-x($height, $width) {
             background-color: var(--cirrus-bg);
             content: '';
             display: block;
@@ -118,11 +118,11 @@
         }
 
         &::before {
-            @include close-btn-x(2px, 50%);
+            @include btn-close-x(2px, 50%);
         }
 
         &::after {
-            @include close-btn-x(50%, 2px);
+            @include btn-close-x(50%, 2px);
         }
     }
 
