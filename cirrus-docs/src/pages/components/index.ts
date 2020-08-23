@@ -1,0 +1,1 @@
+export { AvatarPage } from './avatar';

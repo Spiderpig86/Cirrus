@@ -135,7 +135,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Avatar',
-                url: '#'
+                url: '/components/avatar'
             },
             {
                 fontWeight: 'semibold',
