@@ -1647,8 +1647,13 @@ fieldset {
   --font-size-l: 1.35rem;
   --font-size-xl: 1.75rem; }
 
+/*
+    Group selectors that share common styling.
+*/
 /* A collection of modifiers that extend control styling */
+button.btn--pilled,
 .btn.btn--pilled,
+[type="submit"].btn--pilled,
 [class^='btn-'].btn--pilled,
 [class*=' btn-'].btn--pilled {
   border-radius: 6.25rem;
@@ -1656,7 +1661,9 @@ fieldset {
   padding-right: 1.25rem; }
 
 /* btn--circle: contents must be placed inside child element */
+button.btn--circle,
 .btn.btn--circle,
+[type="submit"].btn--circle,
 [class^='btn-'].btn--circle,
 [class*=' btn-'].btn--circle {
   border-radius: 100%;
@@ -1664,16 +1671,21 @@ fieldset {
   overflow: hidden;
   padding: 0;
   text-align: center; }
+  button.btn--circle:before,
   .btn.btn--circle:before,
+  [type="submit"].btn--circle:before,
   [class^='btn-'].btn--circle:before,
   [class*=' btn-'].btn--circle:before {
     content: '';
     display: inline-block;
     vertical-align: middle;
     padding-top: 100%; }
+  button.btn--circle *,
   .btn.btn--circle *,
+  [type="submit"].btn--circle *,
   [class^='btn-'].btn--circle *,
   [class*=' btn-'].btn--circle * {
+    display: inline;
     max-width: 90%;
     vertical-align: middle;
     white-space: pre-wrap; }
