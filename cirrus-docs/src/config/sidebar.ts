@@ -141,7 +141,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Card',
-                url: '#'
+                url: '/components/cards'
             },
             {
                 fontWeight: 'semibold',
