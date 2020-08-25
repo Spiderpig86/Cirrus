@@ -177,7 +177,7 @@ export const CardsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination nextLink={{ name: 'Button Groups', link: './button-groups' }} />
+                <Pagination prevLink={{ name: 'Avatar', link: './avatar' }} nextLink={{ name: 'Code', link: './code' }} />
             </div>
             <TableOfContents entries={toc} />
         </main>

@@ -5,7 +5,7 @@ export const _404: React.FC<any> = (props) => {
     return (
         <div>
             <img
-                src="https://source.unsplash.com/daily"
+                src="https://images.unsplash.com/photo-1524838101135-a71ba219084d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2560&q=100"
                 style={{
                     height: '100vh',
                     objectFit: 'cover',
@@ -15,7 +15,7 @@ export const _404: React.FC<any> = (props) => {
                 }}
             />
             <div
-                className="w-100 content u-flex u-flex-column u-text-center u-items-center u-justify-center"
+                className="w-100 u-flex u-flex-column u-text-center u-items-center u-justify-center"
                 style={{
                     height: '100vh',
                 }}

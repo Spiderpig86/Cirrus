@@ -385,7 +385,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination nextLink={{ name: 'Button Groups', link: './button-groups' }} />
+                <Pagination nextLink={{ name: 'Cards', link: './cards' }} />
             </div>
             <TableOfContents entries={toc} />
         </main>

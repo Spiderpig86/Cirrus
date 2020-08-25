@@ -86,6 +86,12 @@ export const sidebarConfig: SidebarConfig[] = [
                 text: 'Typography',
                 url: '/fundamentals/typography'
             },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Viewports',
+                url: '/fundamentals/viewports'
+            },
         ],
     },
     {
