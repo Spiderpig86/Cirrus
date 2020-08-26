@@ -7,6 +7,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { toc } from './toc';
+import { Link } from 'react-router-dom';
 
 export const CardsPage: React.FC<any> = (props) => {
     return (
@@ -36,9 +37,7 @@ export const CardsPage: React.FC<any> = (props) => {
 
                         <div className="row">
                             <div className="col-lg-5">
-                                <div
-                                    className="card"
-                                >
+                                <div className="card">
                                     <div className="card-container">
                                         <div
                                             className="card-image"
@@ -83,23 +82,36 @@ export const CardsPage: React.FC<any> = (props) => {
                                         <code>card</code>
                                         <ul>
                                             <li>
+                                                <code>card-title</code> (alternate title)
+                                            </li>
+                                            <li>
                                                 <code>card-container</code>
                                                 <ul>
                                                     <li>
-                                                        <code>card-container</code>
+                                                        <code>card-image</code>
                                                     </li>
                                                     <li>
                                                         <code>title-container</code>
                                                         <ul>
-                                                            <li><code>title</code></li>
-                                                            <li><code>subtitle</code></li>
+                                                            <li>
+                                                                <code>title</code>
+                                                            </li>
+                                                            <li>
+                                                                <code>subtitle</code>
+                                                            </li>
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li><code>content</code></li>
-                                            <li><code>action-bar</code></li>
-                                            <li><code>card-footer</code></li>
+                                            <li>
+                                                <code>content</code>
+                                            </li>
+                                            <li>
+                                                <code>action-bar</code>
+                                            </li>
+                                            <li>
+                                                <code>card-footer</code>
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -107,21 +119,21 @@ export const CardsPage: React.FC<any> = (props) => {
                         </div>
 
                         <CodeBlock
-                            code={`<div class="card" style="max-width: 350px;">
-    <div class="card-container">
-        <div class="card-image"></div>
-        <div class="title-container">
-            <p class="title">Title</p><span class="subtitle">Subtitle</span></div>
+                            code={`<div className="card" style="max-width: 350px;">
+    <div className="card-container">
+        <div className="card-image"></div>
+        <div className="title-container">
+            <p className="title">Title</p><span className="subtitle">Subtitle</span></div>
     </div>
-    <div class="content">
+    <div className="content">
         <p>Text and other content belong here, inside a <code>content</code> div.</p>
     </div>
-    <div class="action-bar u-center">
-        <button class="btn-link outline">Buttons</button>
-        <button class="btn-link outline">Go here</button>
+    <div className="action-bar u-center">
+        <button className="btn-link outline">Buttons</button>
+        <button className="btn-link outline">Go here</button>
     </div>
-    <div class="card-footer">
-        <div class="u-text-center"><span>This is additional footer text in <code>card-footer</code>.</span></div>
+    <div className="card-footer">
+        <div className="u-text-center"><span>This is additional footer text in <code>card-footer</code>.</span></div>
     </div>
 </div>`}
                             language="htmlbars"
@@ -177,7 +189,688 @@ export const CardsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Avatar', link: './avatar' }} nextLink={{ name: 'Code', link: './code' }} />
+                <section className="padtop" id="animated">
+                    <div className="content">
+                        <Headline title="Animated" link="#animated" size="4" />
+                        <div className="divider"></div>
+
+                        <p>
+                            The animated variant of a card comes with a title container the slides up to reveal more
+                            information on hover.
+                        </p>
+                        <p>
+                            Compared to a typical card, there are a couple of key differences to note regardingthe code.
+                        </p>
+                        <ul>
+                            <li>
+                                An animated card must have the <code>slide-up</code> class along with the{' '}
+                                <code>card</code> class.
+                            </li>
+                            <li>
+                                To display an image, it is recommended to create a <code>card-image</code> div nested
+                                inside a <code>card-container</code> div.
+                            </li>
+                            <li>
+                                Unlike the standard card above, the title and subtitle are placed in the{' '}
+                                <code>mobile-title</code> div below the <code>card-container</code>.
+                            </li>
+                            <li>
+                                The content or text of the card is then placed inside a standard <code>content</code>{' '}
+                                div now with the <code>card-body</code> class.
+                            </li>
+                        </ul>
+
+                        <p>Following the steps above should yield a card similar to the one below.</p>
+
+                        <div className="row">
+                            <div className="col-lg-5">
+                                <div className="card slide-up">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundImage: 'url(https://unsplash.it/640/480?random&blur)',
+                                            }}
+                                        ></div>
+                                    </div>
+                                    <div className="mobile-title">
+                                        <div className="content">
+                                            <div className="tile">
+                                                <div className="tile__container">
+                                                    <p className="tile__title">Kangaroo Valley Safari</p>
+                                                    <p className="tile__subtitle">By John Doe</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="card-body content">
+                                        <p>
+                                            Located two hours south of Sydney in the Southern Highland of New South
+                                            Wales...
+                                        </p>
+                                    </div>
+                                    <div className="card-footer content">2 min. read 22 comments</div>
+                                </div>
+                            </div>
+                            <div className="col-lg-7">
+                                <CodeBlock
+                                    code={`<div className="card slide-up">
+    <div className="card-container">
+        <div className="card-image" style="background-image: url(&quot;https://unsplash.it/640/480?random&amp;blur&quot;);"></div>
+    </div>
+    <div className="mobile-title">
+        <div className="content">
+            <div className="tile">
+                <div className="tile__container">
+                    <p className="tile__title">Kangaroo Valley Safari</p>
+                    <p className="tile__subtitle">By John Doe</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div className="card-body content">
+        <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
+    </div>
+    <div className="card-footer content">2 min. read 22 comments</div>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="padtop" id="grouping">
+                    <div className="content">
+                        <Headline title="Grouping" link="#grouping" size="4" />
+                        <div className="divider"></div>
+
+                        <p>
+                            Cards can be grouped using Cirrus's{' '}
+                            <Link className="u u-LR" to="../grid/">
+                                flexbox grid
+                            </Link>{' '}
+                            system.
+                        </p>
+
+                        <div className="row">
+                            <div className="col-4">
+                                <div className="card">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundImage: 'url(https://placeimg.com/640/480/nature)',
+                                            }}
+                                        ></div>
+
+                                        <div className="title-container">
+                                            <p className="title">Kangaroo Valley Safari</p>
+                                            <span className="subtitle">By John Doe</span>
+                                        </div>
+                                    </div>
+                                    <div className="content">
+                                        <p>
+                                            Located two hours south of Sydney in the Southern Highland of New South
+                                            Wales...
+                                        </p>
+                                    </div>
+                                    <div className="action-bar u-center">
+                                        <button className="btn">SHARE</button>
+                                        <button className="btn">LEARN MORE</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-4">
+                                <div className="card">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundImage:
+                                                    'url(https://source.unsplash.com/category/nature/640x480)',
+                                            }}
+                                        ></div>
+
+                                        <div className="title-container">
+                                            <p className="title">Kangaroo Valley Safari</p>
+                                            <span className="subtitle">By John Doe</span>
+                                        </div>
+                                    </div>
+                                    <div className="content">
+                                        <p>
+                                            Located two hours south of Sydney in the Southern Highland of New South
+                                            Wales...
+                                        </p>
+                                    </div>
+                                    <div className="action-bar u-center">
+                                        <button className="btn">SHARE</button>
+                                        <button className="btn">LEARN MORE</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-4">
+                                <div className="card">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundImage:
+                                                    'url(https://source.unsplash.com/category/nature/640x480)',
+                                            }}
+                                        ></div>
+                                        <div className="title-container">
+                                            <p className="title">Kangaroo Valley Safari</p>
+                                            <span className="subtitle">By John Doe</span>
+                                        </div>
+                                    </div>
+                                    <div className="content">
+                                        <p>
+                                            Located two hours south of Sydney in the Southern Highland of New South
+                                            Wales...
+                                        </p>
+                                    </div>
+                                    <div className="action-bar u-center">
+                                        <button className="btn">SHARE</button>
+                                        <button className="btn">LEARN MORE</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Grouping with animated cards.</p>
+
+                        <div className="row">
+                            <div className="col-4">
+                                <div className="card slide-up">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundImage: 'url(https://unsplash.it/640/480?random&amp;blur)',
+                                            }}
+                                        ></div>
+                                    </div>
+                                    <div className="mobile-title">
+                                        <div className="content">
+                                            <div className="tile">
+                                                <div className="tile__container">
+                                                    <p className="tile__title">Kangaroo Valley Safari</p>
+                                                    <p className="tile__subtitle">By John Doe</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="card-body content">
+                                        <p>
+                                            Located two hours south of Sydney in the Southern Highland of New South
+                                            Wales...
+                                        </p>
+                                    </div>
+                                    <div className="card-footer content">2 min. read 22 comments</div>
+                                </div>
+                            </div>
+
+                            <div className="col-4">
+                                <div className="card slide-up">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundImage: 'url(https://unsplash.it/g/640/480?random)',
+                                            }}
+                                        ></div>
+                                    </div>
+                                    <div className="mobile-title">
+                                        <div className="content">
+                                            <div className="tile tile--center">
+                                                <div className="tile__icon">
+                                                    <figure className="avatar">
+                                                        <img
+                                                            src="http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"
+                                                            alt="Person"
+                                                        />
+                                                    </figure>
+                                                </div>
+
+                                                <div className="tile__container">
+                                                    <p className="tile__title">Kangaroo Valley Safari</p>
+                                                    <p className="tile__subtitle">By John Doe</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="card-body content">
+                                        <p>
+                                            Located two hours south of Sydney in the Southern Highland of New South
+                                            Wales...
+                                        </p>
+                                    </div>
+                                    <div className="card-footer content">2 min. read 22 comments</div>
+                                </div>
+                            </div>
+
+                            <div className="col-4">
+                                <div className="card slide-up">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundImage: 'url(https://source.unsplash.com/user/erondu/640x480)',
+                                            }}
+                                        ></div>
+                                    </div>
+                                    <div className="mobile-title">
+                                        <div className="content">
+                                            <div className="tile">
+                                                <div className="tile__container">
+                                                    <p className="tile__title">Kangaroo Valley Safari</p>
+                                                    <p className="tile__subtitle">By John Doe</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="card-body content">
+                                        <p>
+                                            Located two hours south of Sydney in the Southern Highland of New South
+                                            Wales...
+                                        </p>
+                                    </div>
+                                    <div className="card-footer content">03:45 - 1 Jan 2017</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="padtop" id="equal">
+                    <div className="content">
+                        <Headline title="Equal Heights" link="#equal" size="4" />
+                        <div className="divider"></div>
+
+                        <p>
+                            You may have noticed that the heights of the cards are not the same if the length of the
+                            content is different. To fix this, you can add the <code>h-100 u-flex u-flex-column</code>{' '}
+                            classes to <code>card</code>.
+                        </p>
+                        <p>
+                            Note that <b>this does not work with the card with the animated card above</b>.
+                        </p>
+
+                        <h6>Before</h6>
+                        <div className="row">
+                            <div className="col-4">
+                                <div className="card">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundColor: 'rebeccapurple',
+                                                backgroundImage: `radial-gradient(
+                                    circle at top right, 
+                                    rgba(0, 255, 255, 1), rgba(0, 255, 255, 0)
+                                  ),
+                                  radial-gradient(
+                                    circle at bottom left, 
+                                    rgba(255, 20, 146, 1), rgba(255, 20, 146, 0)
+                                  )`,
+                                            }}
+                                        ></div>
+                                        <div className="title-container">
+                                            <p className="title">Title</p>
+                                            <span className="subtitle">Subtitle</span>
+                                        </div>
+                                    </div>
+                                    <div className="content">
+                                        <p>
+                                            Text and other content is embedded in the content div here. Embed the{' '}
+                                            <code>card-image</code> in the <code>card-container</code> above.
+                                        </p>
+                                    </div>
+                                    <div className="action-bar u-center">
+                                        <button className="uppercase">Buttons</button>
+                                        <button className="uppercase">Go here</button>
+                                    </div>
+                                    <div className="card-footer">
+                                        <div className="u-text-center">
+                                            <span>
+                                                This is additional footer text in <code>card-footer</code>.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-4">
+                                <div className="card">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundColor: 'rebeccapurple',
+                                                backgroundImage: `radial-gradient(
+                                    circle at top right, 
+                                    rgba(0, 255, 255, 1), rgba(0, 255, 255, 0)
+                                  ),
+                                  radial-gradient(
+                                    circle at bottom left, 
+                                    rgba(255, 20, 146, 1), rgba(255, 20, 146, 0)
+                                  )`,
+                                            }}
+                                        ></div>
+                                        <div className="title-container">
+                                            <p className="title">Title</p>
+                                            <span className="subtitle">Subtitle</span>
+                                        </div>
+                                    </div>
+                                    <div className="content">
+                                        <p>
+                                            Text and other content is embedded in the content div here. Embed the{' '}
+                                            <code>card-image</code> in the <code>card-container</code> above.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-4">
+                                <div className="card">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundColor: 'rebeccapurple',
+                                                backgroundImage: `radial-gradient(
+                                    circle at top right, 
+                                    rgba(0, 255, 255, 1), rgba(0, 255, 255, 0)
+                                  ),
+                                  radial-gradient(
+                                    circle at bottom left, 
+                                    rgba(255, 20, 146, 1), rgba(255, 20, 146, 0)
+                                  )`,
+                                            }}
+                                        ></div>
+                                        <div className="title-container">
+                                            <p className="title">Title</p>
+                                            <span className="subtitle">Subtitle</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h6>After</h6>
+                        <div className="row">
+                            <div className="col-4 h-100 u-flex u-flex-column">
+                                <div className="card">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundColor: 'rebeccapurple',
+                                                backgroundImage: `radial-gradient(
+                                    circle at top right, 
+                                    rgba(0, 255, 255, 1), rgba(0, 255, 255, 0)
+                                  ),
+                                  radial-gradient(
+                                    circle at bottom left, 
+                                    rgba(255, 20, 146, 1), rgba(255, 20, 146, 0)
+                                  )`,
+                                            }}
+                                        ></div>
+                                        <div className="title-container">
+                                            <p className="title">Title</p>
+                                            <span className="subtitle">Subtitle</span>
+                                        </div>
+                                    </div>
+                                    <div className="content">
+                                        <p>
+                                            Text and other content is embedded in the content div here. Embed the{' '}
+                                            <code>card-image</code> in the <code>card-container</code> above.
+                                        </p>
+                                    </div>
+                                    <div className="action-bar u-center">
+                                        <button className="uppercase">Buttons</button>
+                                        <button className="uppercase">Go here</button>
+                                    </div>
+                                    <div className="card-footer">
+                                        <div className="u-text-center">
+                                            <span>
+                                                This is additional footer text in <code>card-footer</code>.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-4">
+                                <div className="card h-100 u-flex u-flex-column">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundColor: 'rebeccapurple',
+                                                backgroundImage: `radial-gradient(
+                                    circle at top right, 
+                                    rgba(0, 255, 255, 1), rgba(0, 255, 255, 0)
+                                  ),
+                                  radial-gradient(
+                                    circle at bottom left, 
+                                    rgba(255, 20, 146, 1), rgba(255, 20, 146, 0)
+                                  )`,
+                                            }}
+                                        ></div>
+                                        <div className="title-container">
+                                            <p className="title">Title</p>
+                                            <span className="subtitle">Subtitle</span>
+                                        </div>
+                                    </div>
+                                    <div className="content">
+                                        <p>
+                                            Text and other content is embedded in the content div here. Embed the{' '}
+                                            <code>card-image</code> in the <code>card-container</code> above.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-4">
+                                <div className="card h-100 u-flex u-flex-column">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundColor: 'rebeccapurple',
+                                                backgroundImage: `radial-gradient(
+                                    circle at top right, 
+                                    rgba(0, 255, 255, 1), rgba(0, 255, 255, 0)
+                                  ),
+                                  radial-gradient(
+                                    circle at bottom left, 
+                                    rgba(255, 20, 146, 1), rgba(255, 20, 146, 0)
+                                  )`,
+                                            }}
+                                        ></div>
+                                        <div className="title-container">
+                                            <p className="title">Title</p>
+                                            <span className="subtitle">Subtitle</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="padtop" id="examples">
+                    <div className="content">
+                        <Headline title="Examples" link="#examples" size="4" />
+                        <div className="divider"></div>
+                        <p>
+                            Here are a couple of examples to help you get started with designing using{' '}
+                            <code>cards</code>.
+                        </p>
+                        <div className="space"></div>
+
+                        <h6>Twitter Card</h6>
+
+                        <div className="row">
+                            <div className="col-lg-5">
+                                <div className="card">
+                                    <div className="card-container">
+                                        <div
+                                            className="card-image"
+                                            style={{
+                                                backgroundImage:
+                                                    'url(https://images.unsplash.com/photo-1467952497026-86722ef1916f?dpr=1.25&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=)',
+                                            }}
+                                        ></div>
+                                    </div>
+                                    <div className="content">
+                                        <div className="space"></div>
+                                        <div className="tile tile--center">
+                                            <div className="tile__icon">
+                                                <figure className="avatar">
+                                                    <img
+                                                        src="https://organicthemes.com/demo/profile/files/2018/05/profile-pic-132x132.jpg"
+                                                        alt="Person"
+                                                    />
+                                                </figure>
+                                            </div>
+
+                                            <div className="tile__container">
+                                                <p className="tile__title">Joanne Doe</p>
+                                                <p className="tile__subtitle">
+                                                    <a>@jdoe</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Testing my new DSLR. Wow check out that deer! <a href="#">#nature</a>
+                                        </p>
+                                    </div>
+                                    <div className="card-footer level content">
+                                        6:32 PM - 3 Jul 18
+                                        <div className="u-pull-right">
+                                            <div className="level-right ignore-screen">
+                                                <a className="level-item">
+                                                    <span className="icon">
+                                                        <i
+                                                            className="fa fa-wrapper small fa-reply"
+                                                            aria-hidden="true"
+                                                        ></i>
+                                                    </span>
+                                                </a>
+                                                <a className="level-item">
+                                                    <span className="icon">
+                                                        <i
+                                                            className="fa fa-wrapper small fa-retweet"
+                                                            aria-hidden="true"
+                                                        ></i>
+                                                    </span>
+                                                </a>
+                                                <a className="level-item">
+                                                    <span className="icon">
+                                                        <i
+                                                            className="fa fa-wrapper small fa-heart"
+                                                            aria-hidden="true"
+                                                        ></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-7">
+                                <CodeBlock
+                                    code={`<div className="card">
+    <div className="card-container">
+        <div className="card-image" style="background-image: url(https://images.unsplash.com/photo-1467952497026-86722ef1916f?dpr=1.25&amp;auto=compress,format&amp;fit=crop&amp;w=1199&amp;h=799&amp;q=80&amp;cs=tinysrgb&amp;crop=)"></div>
+    </div>
+    <div className="content">
+        <div className="space"></div>
+        <div className="tile tile--center">
+            <div className="tile__icon">
+                <figure className="avatar">
+                    <img src="https://organicthemes.com/demo/profile/files/2018/05/profile-pic-132x132.jpg" alt="Person">
+                </figure>
+            </div>
+
+            <div className="tile__container">
+                <p className="tile__title">Joanne Doe</p>
+                <p className="tile__subtitle"><a>@jdoe</a></p>
+            </div>
+        </div>
+        <p>Testing my new DSLR. Wow check out that deer! <a href="#">#nature</a></p>
+    </div>
+    <div className="card-footer level content">
+        6:32 PM - 3 Jul 18
+        <div className="u-pull-right">
+            <div className="level-right ignore-screen">
+                <a className="level-item">
+                    <span className="icon"><i className="fa fa-wrapper small fa-reply" aria-hidden="true"></i></span>
+                </a>
+                <a className="level-item">
+                    <span className="icon"><i className="fa fa-wrapper small fa-retweet" aria-hidden="true"></i></span>
+                </a>
+                <a className="level-item">
+                    <span className="icon"><i className="fa fa-wrapper small fa-heart" aria-hidden="true"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <div className="space xlarge"></div>
+
+                        <h6>Simple Tweet Card</h6>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <div className="card">
+                                    <div className="card-head">
+                                        <p className="card-head-title">This is the title</p>
+                                    </div>
+                                    <div className="content">
+                                        <p>
+                                            This is some sample text spam spam spam spam spam spam spam.{' '}
+                                            <a href="#">#place</a>
+                                            <a href="#">#holder</a>
+                                            <a href="#">@Cirrus</a>
+                                        </p>
+                                    </div>
+                                    <div className="card-footer level content">6:32 PM - 3 Jul 18</div>
+                                    <div className="action-bar u-center">
+                                        <button className="btn-transparent outline">Cancel</button>
+                                        <button className="btn-transparent outline">Save</button>
+                                        <button className="btn-transparent outline">Post</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock code={`<div class="card">
+    <div class="card-head">
+        <p class="card-head-title">This is the title</p>
+    </div>
+    <div class="content">
+        <p>This is some sample text spam spam spam spam spam spam spam. <a href="#">#place</a><a href="#">#holder</a><a href="#">@Cirrus</a></p>
+    </div>
+    <div class="card-footer level content">6:32 PM - 3 Jul 18</div>
+    <div class="action-bar u-center">
+        <button class="btn-transparent outline">Cancel</button>
+        <button class="btn-transparent outline">Save</button>
+        <button class="btn-transparent outline">Post</button>
+    </div>
+</div>`} language='htmlbars' />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <Pagination
+                    prevLink={{ name: 'Avatar', link: './avatar' }}
+                    nextLink={{ name: 'Code', link: './code' }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>
