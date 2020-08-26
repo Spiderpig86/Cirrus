@@ -153,7 +153,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Code',
-                url: '#'
+                url: '/components/code'
             },
             {
                 fontWeight: 'semibold',

@@ -14,7 +14,7 @@ import { ButtonPage, GlyphsPage, VariantsPage, ButtonGroupsPage } from './pages/
 import { _404 } from './pages/404';
 
 import './App.scss';
-import { AvatarPage, CardsPage } from './pages/components';
+import { AvatarPage, CardsPage, CodePage } from './pages/components';
 
 function App() {
     return (
@@ -40,6 +40,7 @@ function App() {
 
                 <DefaultLayoutRoute path="/components/avatar" component={AvatarPage} />
                 <DefaultLayoutRoute path="/components/cards" component={CardsPage} />
+                <DefaultLayoutRoute path="/components/code" component={CodePage} />
 
                 <BlankLayoutRoute component={_404} />
             </Switch>
