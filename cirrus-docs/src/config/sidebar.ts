@@ -159,7 +159,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Links',
-                url: '#'
+                url: '/components/links'
             },
             {
                 fontWeight: 'semibold',
