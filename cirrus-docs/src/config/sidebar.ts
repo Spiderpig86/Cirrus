@@ -165,7 +165,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Lists',
-                url: '#'
+                url: '/components/lists'
             },
             {
                 fontWeight: 'semibold',
@@ -220,6 +220,12 @@ export const sidebarConfig: SidebarConfig[] = [
                 glyph: null,
                 text: 'Tooltip',
                 url: '#'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Trees',
+                url: '/components/trees'
             },
         ],
     },

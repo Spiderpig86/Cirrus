@@ -77,6 +77,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                 </div>
                             </div>
                             <div className="col-lg-7">
+                                <h6>Structure</h6>
                                 <ul>
                                     <li>
                                         <code>card</code>
