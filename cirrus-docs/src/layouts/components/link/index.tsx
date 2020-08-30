@@ -6,6 +6,8 @@ export interface LinkProps {
 
 export const ExternalLink: React.FC<any> = ({ children, ...rest }: any) => {
     return (
-        <a className="u u-LR" target="_blank" href={rest.url} rel='noopener noreferrer'>{children}</a>
+        <a className="u u-LR" target="_blank" href={rest.url} rel='noopener noreferrer' style={{
+            cursor: 'pointer'
+        }}>{children}</a>
     );
 };

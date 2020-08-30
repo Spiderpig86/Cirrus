@@ -171,55 +171,55 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Modal',
-                url: '#'
+                url: '/components/modal'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Pagination',
-                url: '#'
+                url: '/components/pagination'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Placeholder',
-                url: '#'
+                url: '/components/placeholder'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Table',
-                url: '#'
+                url: '/components/table'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Tabs',
-                url: '#'
+                url: '/components/tabs'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Tags',
-                url: '#'
+                url: '/components/tags'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Tiles',
-                url: '#'
+                url: '/components/tiles'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Toast',
-                url: '#'
+                url: '/components/toast'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Tooltip',
-                url: '#'
+                url: '/components/tooltips'
             },
             {
                 fontWeight: 'semibold',
