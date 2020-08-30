@@ -26,9 +26,10 @@ code {
 }
 
 pre > code {
+    background-color: map-get($grays, '000');
     font-size: 14px;
     display: block;
-    padding: 2rem 1.5rem 1rem;
+    padding: 1rem;
     white-space: pre-wrap;
     word-wrap: break-word;
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
@@ -43,4 +44,8 @@ pre > code {
     margin: 0;
     position: relative;
     color: #222;
+
+    &[data-lang]:not([data-lang='']) {
+        padding: 2rem 1.5rem 1rem;
+    }
 }
