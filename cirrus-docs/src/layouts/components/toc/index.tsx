@@ -52,7 +52,7 @@ export const TableOfContents: React.FC<TableOfContentsProps> = (props) => {
             <ul>
                 {entries.map((entry) => {
                     return (
-                        <li>
+                        <li key={entry.name}>
                             <a href={entry.anchor}>{entry.name}</a>
                             {entry.children && constructList(entry.children)}
                         </li>
