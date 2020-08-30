@@ -81,7 +81,7 @@ export const ListsPage: React.FC<any> = (props) => {
                         </div>
 
                         <p className="title">Plain</p>
-                        <p className="subtitle">A list with no item decorations.</p>
+                        <p className="subtitle">A list with no item decorations using the <code>no-bullets</code> class.</p>
                         <div className="row u-items-center">
                             <div className="col-6">
                                 <ul className="no-bullets">
@@ -307,7 +307,7 @@ export const ListsPage: React.FC<any> = (props) => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-7">
+                            <div className="col-lg-7 mt-1">
                                 <CodeBlock
                                     code={`<div className="list-dropdown">
     <div className="btn-group">
@@ -347,7 +347,7 @@ export const ListsPage: React.FC<any> = (props) => {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-7">
+                            <div className="col-lg-7 mt-1">
                                 <CodeBlock
                                     code={`<div className="list-dropdown dropdown-right">
     <button className="btn-primary btn-dropdown m-0">Dropdown
@@ -385,7 +385,7 @@ export const ListsPage: React.FC<any> = (props) => {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-7">
+                            <div className="col-lg-7 mt-1">
                                 <CodeBlock
                                     code={`<div className="list-dropdown">
     <button className="btn-transparent btn-dropdown m-0">
