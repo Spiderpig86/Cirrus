@@ -75,7 +75,7 @@ export const Landing: React.FC<any> = () => {
                         </div>
                     </div>
 
-                    <a className="u-inline-block mt-3" href="#">
+                    <a className="u-inline-block mt-3" href="!#">
                         <div className="btn btn-info">Get Started</div>
                     </a>
                 </div>

@@ -308,7 +308,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                             <b>Return to Top</b>
                         </p>
                         <CodeBlock
-                            code={`<a href="#" class="modal-overlay close-btn" aria-label="Close"></a>`}
+                            code={`<a href="!#" class="modal-overlay close-btn" aria-label="Close"></a>`}
                             language="htmlbars"
                         />
                         <p>

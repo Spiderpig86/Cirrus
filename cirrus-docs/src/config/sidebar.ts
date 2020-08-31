@@ -54,7 +54,7 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Browser Suppport',
+                text: 'Browser Support',
                 url: '/getting-started/support'
             },
             {

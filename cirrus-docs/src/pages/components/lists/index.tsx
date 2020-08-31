@@ -245,13 +245,13 @@ export const ListsPage: React.FC<any> = (props) => {
                             <div className="col-lg-5">
                                 <ul className="menu">
                                     <li className="menu-item selected">
-                                        <a href="#">One</a>
+                                        <a href="!#">One</a>
                                     </li>
                                     <li className="menu-item">
-                                        <a href="#">Two</a>
+                                        <a href="!#">Two</a>
                                     </li>
                                     <li className="menu-item">
-                                        <a href="#">Three</a>
+                                        <a href="!#">Three</a>
                                     </li>
                                 </ul>
                             </div>
@@ -295,13 +295,13 @@ export const ListsPage: React.FC<any> = (props) => {
                                         </button>
                                         <ul className="menu">
                                             <li className="menu-item">
-                                                <a href="#">Google Chrome</a>
+                                                <a href="!#">Google Chrome</a>
                                             </li>
                                             <li className="menu-item">
-                                                <a href="#">Firefox</a>
+                                                <a href="!#">Firefox</a>
                                             </li>
                                             <li className="menu-item">
-                                                <a href="#">Polarity</a>
+                                                <a href="!#">Polarity</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -315,9 +315,9 @@ export const ListsPage: React.FC<any> = (props) => {
         <button className="btn-primary btn-small btn-dropdown"><i className="fa fa-wrapper fa-caret-down" aria-hidden="true"></i>
         </button>
         <ul className="menu">
-            <li className="menu-item"><a href="#">Google Chrome</a></li>
-            <li className="menu-item"><a href="#">Firefox</a></li>
-            <li className="menu-item"><a href="#">Polarity</a></li>
+            <li className="menu-item"><a href="!#">Google Chrome</a></li>
+            <li className="menu-item"><a href="!#">Firefox</a></li>
+            <li className="menu-item"><a href="!#">Polarity</a></li>
         </ul>
     </div>
 </div>`}
@@ -336,13 +336,13 @@ export const ListsPage: React.FC<any> = (props) => {
                                     </button>
                                     <ul className="menu">
                                         <li className="menu-item">
-                                            <a href="#">Google Chrome</a>
+                                            <a href="!#">Google Chrome</a>
                                         </li>
                                         <li className="menu-item">
-                                            <a href="#">Firefox</a>
+                                            <a href="!#">Firefox</a>
                                         </li>
                                         <li className="menu-item">
-                                            <a href="#">Polarity</a>
+                                            <a href="!#">Polarity</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -354,9 +354,9 @@ export const ListsPage: React.FC<any> = (props) => {
         <i className="fa fa-wrapper fa-caret-down" aria-hidden="true"></i>
     </button>
     <ul className="menu">
-        <li className="menu-item"><a href="#">Google Chrome</a></li>
-        <li className="menu-item"><a href="#">Firefox</a></li>
-        <li className="menu-item"><a href="#">Polarity</a></li>
+        <li className="menu-item"><a href="!#">Google Chrome</a></li>
+        <li className="menu-item"><a href="!#">Firefox</a></li>
+        <li className="menu-item"><a href="!#">Polarity</a></li>
     </ul>
 </div>`}
                                     language="htmlbars"
@@ -374,13 +374,13 @@ export const ListsPage: React.FC<any> = (props) => {
                                     </button>
                                     <ul className="menu">
                                         <li className="menu-item">
-                                            <a href="#">Google Chrome</a>
+                                            <a href="!#">Google Chrome</a>
                                         </li>
                                         <li className="menu-item">
-                                            <a href="#">Firefox</a>
+                                            <a href="!#">Firefox</a>
                                         </li>
                                         <li className="menu-item">
-                                            <a href="#">Polarity</a>
+                                            <a href="!#">Polarity</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -392,13 +392,13 @@ export const ListsPage: React.FC<any> = (props) => {
         Dropdown <i className="fa fa-wrapper fa-caret-down" aria-hidden="true"></i></button>
     <ul className="menu">
         <li className="menu-item">
-            <a href="#">Google Chrome</a>
+            <a href="!#">Google Chrome</a>
         </li>
         <li className="menu-item">
-            <a href="#">Firefox</a>
+            <a href="!#">Firefox</a>
         </li>
         <li className="menu-item">
-            <a href="#">Polarity</a>
+            <a href="!#">Polarity</a>
         </li>
     </ul>
 </div>`}
@@ -446,14 +446,14 @@ export const ListsPage: React.FC<any> = (props) => {
                                                         ></i>
                                                     </span>
                                                 </div>
-                                                <a href="#">News Feed</a>
+                                                <a href="!#">News Feed</a>
                                             </li>
                                             <li className="menu-item">
-                                                <a href="#">Messenger</a>
+                                                <a href="!#">Messenger</a>
                                             </li>
                                             <p className="menu-title uppercase">Shortcuts</p>
                                             <li className="menu-item">
-                                                <a href="#">Some App</a>
+                                                <a href="!#">Some App</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -477,10 +477,10 @@ export const ListsPage: React.FC<any> = (props) => {
         <ul class="menu">
             <li class="divider"></li>
             <li class="menu-item selected">
-                <div class="menu-addon right"><span class="icon"><i class="fa fa-wrapper fa-ellipsis-h small" aria-hidden="true"></i></span></div><a href="#">News Feed</a></li>
-            <li class="menu-item"><a href="#">Messenger</a></li>
+                <div class="menu-addon right"><span class="icon"><i class="fa fa-wrapper fa-ellipsis-h small" aria-hidden="true"></i></span></div><a href="!#">News Feed</a></li>
+            <li class="menu-item"><a href="!#">Messenger</a></li>
             <p class="menu-title uppercase">Shortcuts</p>
-            <li class="menu-item"><a href="#">Some App</a></li>
+            <li class="menu-item"><a href="!#">Some App</a></li>
         </ul>
     </div>
 </div>`}
@@ -513,7 +513,7 @@ export const ListsPage: React.FC<any> = (props) => {
                                         <p>Did you like the photo?</p>
                                         <ul className="menu">
                                             <li className="menu-item">
-                                                <a href="#">
+                                                <a href="!#">
                                                     <span className="icon">
                                                         <i
                                                             className="fa fa-wrapper fa-check small"
@@ -524,7 +524,7 @@ export const ListsPage: React.FC<any> = (props) => {
                                                 </a>
                                             </li>
                                             <li className="menu-item">
-                                                <a href="#">
+                                                <a href="!#">
                                                     <span className="icon">
                                                         <i
                                                             className="fa fa-wrapper fa-times small"
@@ -549,8 +549,8 @@ export const ListsPage: React.FC<any> = (props) => {
     <div class="content">
         <p>Did you like the photo?</p>
         <ul class="menu">
-            <li class="menu-item"><a href="#"><span class="icon"><i class="fa fa-wrapper fa-check small" aria-hidden="true"></i></span>Yes</a></li>
-            <li class="menu-item"><a href="#"><span class="icon"><i class="fa fa-wrapper fa-times small" aria-hidden="true"></i></span>No</a></li>
+            <li class="menu-item"><a href="!#"><span class="icon"><i class="fa fa-wrapper fa-check small" aria-hidden="true"></i></span>Yes</a></li>
+            <li class="menu-item"><a href="!#"><span class="icon"><i class="fa fa-wrapper fa-times small" aria-hidden="true"></i></span>No</a></li>
         </ul>
     </div>
 </div>`}
@@ -573,7 +573,7 @@ export const ListsPage: React.FC<any> = (props) => {
                                         <ul className="menu">
                                             <li className="divider" data-label="TECH"></li>
                                             <li className="menu-item">
-                                                <a href="#">Github</a>
+                                                <a href="!#">Github</a>
                                             </li>
                                             <li className="menu-item selected">
                                                 <div className="menu-addon">
@@ -584,13 +584,13 @@ export const ListsPage: React.FC<any> = (props) => {
                                                         ></i>
                                                     </span>
                                                 </div>
-                                                <a href="#">Tech News</a>
+                                                <a href="!#">Tech News</a>
                                                 <ul className="menu">
                                                     <li className="menu-item">
-                                                        <a href="#">Hacker News</a>
+                                                        <a href="!#">Hacker News</a>
                                                     </li>
                                                     <li className="menu-item">
-                                                        <a href="#">Lobste.rs</a>
+                                                        <a href="!#">Lobste.rs</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -598,13 +598,13 @@ export const ListsPage: React.FC<any> = (props) => {
                                         <ul className="menu">
                                             <li className="divider" data-label="PROCRASTINATION"></li>
                                             <li className="menu-item">
-                                                <a href="#">Facebook</a>
+                                                <a href="!#">Facebook</a>
                                             </li>
                                             <li className="menu-item">
-                                                <a href="#">Twitter</a>
+                                                <a href="!#">Twitter</a>
                                             </li>
                                             <li className="menu-item">
-                                                <a href="#">Instagram</a>
+                                                <a href="!#">Instagram</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -620,20 +620,20 @@ export const ListsPage: React.FC<any> = (props) => {
     <div class="frame__body">
         <ul class="menu">
             <li class="divider" data-label="TECH"></li>
-            <li class="menu-item"><a href="#">Github</a></li>
+            <li class="menu-item"><a href="!#">Github</a></li>
             <li class="menu-item selected">
-                <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-folder small" aria-hidden="true"></i></span></div><a href="#">Tech News</a>
+                <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-folder small" aria-hidden="true"></i></span></div><a href="!#">Tech News</a>
                 <ul class="menu">
-                    <li class="menu-item"><a href="#">Hacker News</a></li>
-                    <li class="menu-item"><a href="#">Lobste.rs</a></li>
+                    <li class="menu-item"><a href="!#">Hacker News</a></li>
+                    <li class="menu-item"><a href="!#">Lobste.rs</a></li>
                 </ul>
             </li>
         </ul>
         <ul class="menu">
             <li class="divider" data-label="PROCRASTINATION"></li>
-            <li class="menu-item"><a href="#">Facebook</a></li>
-            <li class="menu-item"><a href="#">Twitter</a></li>
-            <li class="menu-item"><a href="#">Instagram</a></li>
+            <li class="menu-item"><a href="!#">Facebook</a></li>
+            <li class="menu-item"><a href="!#">Twitter</a></li>
+            <li class="menu-item"><a href="!#">Instagram</a></li>
         </ul>
     </div>
     <div class="frame-footer"></div>
@@ -651,7 +651,7 @@ export const ListsPage: React.FC<any> = (props) => {
                                                 <i className="fa fa-wrapper fa-clock-o" aria-hidden="true"></i>
                                             </span>
                                         </div>
-                                        <a href="#">Real-Time</a>
+                                        <a href="!#">Real-Time</a>
                                     </li>
                                     <li className="menu-item selected">
                                         <div className="menu-addon">
@@ -659,21 +659,21 @@ export const ListsPage: React.FC<any> = (props) => {
                                                 <i className="fa fa-wrapper fa-user" aria-hidden="true"></i>
                                             </span>
                                         </div>
-                                        <a href="#">Audience</a>
+                                        <a href="!#">Audience</a>
                                         <ul className="menu">
                                             <li className="menu-item">
-                                                <a href="#">Overview</a>
+                                                <a href="!#">Overview</a>
                                             </li>
                                             <li className="menu-item">
-                                                <a href="#">Active Users</a>
+                                                <a href="!#">Active Users</a>
                                             </li>
                                             <li className="menu-item">
-                                                <a href="#">
+                                                <a href="!#">
                                                     Lifetime Value <sup>BETA</sup>
                                                 </a>
                                             </li>
                                             <li className="menu-item">
-                                                <a href="#">
+                                                <a href="!#">
                                                     Cohort Analytics <sup>BETA</sup>
                                                 </a>
                                             </li>
@@ -685,7 +685,7 @@ export const ListsPage: React.FC<any> = (props) => {
                                                 <i className="fa fa-wrapper fa-share-alt" aria-hidden="true"></i>
                                             </span>
                                         </div>
-                                        <a href="#">Acquisition</a>
+                                        <a href="!#">Acquisition</a>
                                     </li>
                                 </ul>
                             </div>
@@ -693,18 +693,18 @@ export const ListsPage: React.FC<any> = (props) => {
                                 <CodeBlock
                                     code={`<ul class="menu">
     <li class="menu-item">
-        <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-clock-o" aria-hidden="true"></i></span></div><a href="#">Real-Time</a></li>
+        <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-clock-o" aria-hidden="true"></i></span></div><a href="!#">Real-Time</a></li>
     <li class="menu-item selected">
-        <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-user" aria-hidden="true"></i></span></div><a href="#">Audience</a>
+        <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-user" aria-hidden="true"></i></span></div><a href="!#">Audience</a>
         <ul class="menu">
-            <li class="menu-item"><a href="#">Overview</a></li>
-            <li class="menu-item"><a href="#">Active Users</a></li>
-            <li class="menu-item"><a href="#">Lifetime Value <sup>BETA</sup></a></li>
-            <li class="menu-item"><a href="#">Cohort Analytics <sup>BETA</sup></a></li>
+            <li class="menu-item"><a href="!#">Overview</a></li>
+            <li class="menu-item"><a href="!#">Active Users</a></li>
+            <li class="menu-item"><a href="!#">Lifetime Value <sup>BETA</sup></a></li>
+            <li class="menu-item"><a href="!#">Cohort Analytics <sup>BETA</sup></a></li>
         </ul>
     </li>
     <li class="menu-item">
-        <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-share-alt" aria-hidden="true"></i></span></div><a href="#">Acquisition</a></li>
+        <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-share-alt" aria-hidden="true"></i></span></div><a href="!#">Acquisition</a></li>
 </ul>`}
                                     language="htmlbars"
                                 />

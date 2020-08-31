@@ -227,7 +227,7 @@ export const WhyPage: React.FC<any> = (props) => {
                                         <p className="tile__subtitle">@johndoe</p>
                                     </div>
                                     <div className="tile__buttons">
-                                        <a href="#" className="link-btn">
+                                        <a href="!#" className="link-btn">
                                             <span className="icon">
                                                 <i className="fa fa-wrapper fa-pencil small" aria-hidden="true"></i>
                                             </span>
@@ -294,7 +294,7 @@ export const WhyPage: React.FC<any> = (props) => {
                 <p class="tile__title">Twitter</p>
                 <p class="tile__subtitle">@johndoe</p>
             </div>
-            <div class="tile__buttons"><a href="#" class="link-btn"><span class="icon"><i class="fa fa-wrapper fa-pencil small" aria-hidden="true"></i></span></a></div>
+            <div class="tile__buttons"><a href="!#" class="link-btn"><span class="icon"><i class="fa fa-wrapper fa-pencil small" aria-hidden="true"></i></span></a></div>
         </div>
         <div class="tile level p-1">
             <div class="tile-avatar"><span class="icon"><i class="fa fa-wrapper fa-instagram" aria-hidden="true"></i></span></div>

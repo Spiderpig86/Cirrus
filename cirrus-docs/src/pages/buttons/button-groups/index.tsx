@@ -1,13 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
-import { ExternalLink } from '../../../layouts/components/link';
 import { toc } from './toc';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const ButtonGroupsPage: React.FC<any> = (props) => {
     return (

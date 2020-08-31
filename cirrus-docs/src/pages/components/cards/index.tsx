@@ -739,19 +739,19 @@ export const CardsPage: React.FC<any> = (props) => {
                                             <div className="tile__container">
                                                 <p className="tile__title">Joanne Doe</p>
                                                 <p className="tile__subtitle">
-                                                    <a>@jdoe</a>
+                                                    <a href="!#">@jdoe</a>
                                                 </p>
                                             </div>
                                         </div>
                                         <p>
-                                            Testing my new DSLR. Wow check out that deer! <a href="#">#nature</a>
+                                            Testing my new DSLR. Wow check out that deer! <a href="!#">#nature</a>
                                         </p>
                                     </div>
                                     <div className="card-footer level content">
                                         6:32 PM - 3 Jul 18
                                         <div className="u-pull-right">
                                             <div className="level-right ignore-screen">
-                                                <a className="level-item">
+                                                <a className="level-item" href="!#">
                                                     <span className="icon">
                                                         <i
                                                             className="fa fa-wrapper small fa-reply"
@@ -800,7 +800,7 @@ export const CardsPage: React.FC<any> = (props) => {
                 <p className="tile__subtitle"><a>@jdoe</a></p>
             </div>
         </div>
-        <p>Testing my new DSLR. Wow check out that deer! <a href="#">#nature</a></p>
+        <p>Testing my new DSLR. Wow check out that deer! <a href="!#">#nature</a></p>
     </div>
     <div className="card-footer level content">
         6:32 PM - 3 Jul 18
@@ -835,9 +835,9 @@ export const CardsPage: React.FC<any> = (props) => {
                                     <div className="content">
                                         <p>
                                             This is some sample text spam spam spam spam spam spam spam.{' '}
-                                            <a href="#">#place</a>
-                                            <a href="#">#holder</a>
-                                            <a href="#">@Cirrus</a>
+                                            <a href="!#">#place</a>
+                                            <a href="!#">#holder</a>
+                                            <a href="!#">@Cirrus</a>
                                         </p>
                                     </div>
                                     <div className="card-footer level content">6:32 PM - 3 Jul 18</div>
@@ -854,7 +854,7 @@ export const CardsPage: React.FC<any> = (props) => {
         <p class="card-head-title">This is the title</p>
     </div>
     <div class="content">
-        <p>This is some sample text spam spam spam spam spam spam spam. <a href="#">#place</a><a href="#">#holder</a><a href="#">@Cirrus</a></p>
+        <p>This is some sample text spam spam spam spam spam spam spam. <a href="!#">#place</a><a href="!#">#holder</a><a href="!#">@Cirrus</a></p>
     </div>
     <div class="card-footer level content">6:32 PM - 3 Jul 18</div>
     <div class="action-bar u-center">

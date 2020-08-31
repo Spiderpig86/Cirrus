@@ -16,24 +16,24 @@ export const Pagination: React.FC<PaginationProps> = (props) => {
         <section className="padtop">
             <div className="content">
                 <div className="divider"></div>
-                <ul className="pagination no-bullets">
+                <div className="pagination no-bullets">
                     {props.prevLink && (
-                        <li className="pagination-item pagination-prev">
+                        <div className="pagination-item pagination-prev">
                             <Link to={props.prevLink.link} className="u-block">
                                 <p className="pagination-item-subtitle">Prev</p>
                                 <h5 className="font-alt font-light m-0">{props.prevLink.name}</h5>
                             </Link>
-                        </li>
+                        </div>
                     )}
                     {props.nextLink && (
-                        <li className="pagination-item pagination-next">
+                        <div className="pagination-item pagination-next">
                             <Link to={props.nextLink.link} className="u-block">
                                 <p className="pagination-item-subtitle">Next</p>
                                 <h5 className="font-alt font-light m-0">{props.nextLink.name}</h5>
                             </Link>
-                        </li>
+                        </div>
                     )}
-                </ul>
+                </div>
             </div>
         </section>
     );

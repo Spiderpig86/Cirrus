@@ -117,7 +117,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                                     <div className="tile__container">
                                         <p className="tile__title m-0">Jenelle Zaynab</p>
                                         <p className="tile__subtitle m-0">
-                                            <a href="#">@jenelle_zaynab</a>
+                                            <a href="#/">@jenelle_zaynab</a>
                                         </p>
                                     </div>
                                 </div>
@@ -135,7 +135,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                                     <div className="tile__container">
                                         <p className="tile__title m-0">Jenelle Zaynab</p>
                                         <p className="tile__subtitle m-0">
-                                            <a href="#">@jenelle_zaynab</a>
+                                            <a href="!#">@jenelle_zaynab</a>
                                         </p>
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                                     <div className="tile__container">
                                         <p className="tile__title m-0">Jenelle Zaynab</p>
                                         <p className="tile__subtitle m-0">
-                                            <a href="#">@jenelle_zaynab</a>
+                                            <a href="!#">@jenelle_zaynab</a>
                                         </p>
                                     </div>
                                 </div>
@@ -171,7 +171,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                                     <div className="tile__container">
                                         <p className="tile__title m-0">Jenelle Zaynab</p>
                                         <p className="tile__subtitle m-0">
-                                            <a href="#">@jenelle_zaynab</a>
+                                            <a href="!#">@jenelle_zaynab</a>
                                         </p>
                                     </div>
                                 </div>
@@ -189,7 +189,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                                     <div className="tile__container">
                                         <p className="tile__title m-0">Jenelle Zaynab</p>
                                         <p className="tile__subtitle m-0">
-                                            <a href="#">@jenelle_zaynab</a>
+                                            <a href="!#">@jenelle_zaynab</a>
                                         </p>
                                     </div>
                                 </div>
@@ -198,13 +198,13 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure className="avatar avatar--xsmall">
-                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff" />
+                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"alt="avatar" />
                                         </figure>
                                     </div>
                                     <div className="tile__container">
                                         <p className="tile__title m-0">Nathan Dumlao</p>
                                         <p className="tile__subtitle m-0">
-                                            <a href="#">@nate_dumlao</a>
+                                            <a href="!#">@nate_dumlao</a>
                                         </p>
                                     </div>
                                 </div>
@@ -214,13 +214,13 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure className="avatar avatar--small">
-                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff" />
+                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"alt="avatar" />
                                         </figure>
                                     </div>
                                     <div className="tile__container">
                                         <p className="tile__title m-0">Nathan Dumlao</p>
                                         <p className="tile__subtitle m-0">
-                                            <a href="#">@nate_dumlao</a>
+                                            <a href="!#">@nate_dumlao</a>
                                         </p>
                                     </div>
                                 </div>
@@ -230,13 +230,13 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure className="avatar">
-                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff" />
+                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"alt="avatar" />
                                         </figure>
                                     </div>
                                     <div className="tile__container">
                                         <p className="tile__title m-0">Nathan Dumlao</p>
                                         <p className="tile__subtitle m-0">
-                                            <a href="#">@nate_dumlao</a>
+                                            <a href="!#">@nate_dumlao</a>
                                         </p>
                                     </div>
                                 </div>
@@ -246,13 +246,13 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure className="avatar avatar--large">
-                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff" />
+                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"alt="avatar" />
                                         </figure>
                                     </div>
                                     <div className="tile__container">
                                         <p className="tile__title m-0">Nathan Dumlao</p>
                                         <p className="tile__subtitle m-0">
-                                            <a href="#">@nate_dumlao</a>
+                                            <a href="!#">@nate_dumlao</a>
                                         </p>
                                     </div>
                                 </div>
@@ -262,13 +262,13 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure className="avatar avatar--xlarge">
-                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff" />
+                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"alt="avatar" />
                                         </figure>
                                     </div>
                                     <div className="tile__container">
                                         <p className="tile__title m-0">Nathan Dumlao</p>
                                         <p className="tile__subtitle m-0">
-                                            <a href="#">@nate_dumlao</a>
+                                            <a href="!#">@nate_dumlao</a>
                                         </p>
                                     </div>
                                 </div>
@@ -284,7 +284,7 @@ export const AvatarPage: React.FC<any> = (props) => {
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Jenelle Zaynab</p>
-                <p class="tile__subtitle m-0"><a href="#">@jenelle_zaynab</a></p>
+                <p class="tile__subtitle m-0"><a href="!#">@jenelle_zaynab</a></p>
             </div>
         </div>
         <div class="space"></div>
@@ -294,7 +294,7 @@ export const AvatarPage: React.FC<any> = (props) => {
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Jenelle Zaynab</p>
-                <p class="tile__subtitle m-0"><a href="#">@jenelle_zaynab</a></p>
+                <p class="tile__subtitle m-0"><a href="!#">@jenelle_zaynab</a></p>
             </div>
         </div>
         <div class="space"></div>
@@ -304,7 +304,7 @@ export const AvatarPage: React.FC<any> = (props) => {
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Jenelle Zaynab</p>
-                <p class="tile__subtitle m-0"><a href="#">@jenelle_zaynab</a></p>
+                <p class="tile__subtitle m-0"><a href="!#">@jenelle_zaynab</a></p>
             </div>
         </div>
         <div class="space"></div>
@@ -314,7 +314,7 @@ export const AvatarPage: React.FC<any> = (props) => {
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Jenelle Zaynab</p>
-                <p class="tile__subtitle m-0"><a href="#">@jenelle_zaynab</a></p>
+                <p class="tile__subtitle m-0"><a href="!#">@jenelle_zaynab</a></p>
             </div>
         </div>
         <div class="space"></div>
@@ -324,7 +324,7 @@ export const AvatarPage: React.FC<any> = (props) => {
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Jenelle Zaynab</p>
-                <p class="tile__subtitle m-0"><a href="#">@jenelle_zaynab</a></p>
+                <p class="tile__subtitle m-0"><a href="!#">@jenelle_zaynab</a></p>
             </div>
         </div>
     </div>
@@ -335,7 +335,7 @@ export const AvatarPage: React.FC<any> = (props) => {
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Nathan Dumlao</p>
-                <p class="tile__subtitle m-0"><a href="#">@nate_dumlao</a></p>
+                <p class="tile__subtitle m-0"><a href="!#">@nate_dumlao</a></p>
             </div>
         </div>
         <div class="space"></div>
@@ -345,7 +345,7 @@ export const AvatarPage: React.FC<any> = (props) => {
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Nathan Dumlao</p>
-                <p class="tile__subtitle m-0"><a href="#">@nate_dumlao</a></p>
+                <p class="tile__subtitle m-0"><a href="!#">@nate_dumlao</a></p>
             </div>
         </div>
         <div class="space"></div>
@@ -355,7 +355,7 @@ export const AvatarPage: React.FC<any> = (props) => {
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Nathan Dumlao</p>
-                <p class="tile__subtitle m-0"><a href="#">@nate_dumlao</a></p>
+                <p class="tile__subtitle m-0"><a href="!#">@nate_dumlao</a></p>
             </div>
         </div>
         <div class="space"></div>
@@ -365,7 +365,7 @@ export const AvatarPage: React.FC<any> = (props) => {
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Nathan Dumlao</p>
-                <p class="tile__subtitle m-0"><a href="#">@nate_dumlao</a></p>
+                <p class="tile__subtitle m-0"><a href="!#">@nate_dumlao</a></p>
             </div>
         </div>
         <div class="space"></div>
@@ -375,7 +375,7 @@ export const AvatarPage: React.FC<any> = (props) => {
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Nathan Dumlao</p>
-                <p class="tile__subtitle m-0"><a href="#">@nate_dumlao</a></p>
+                <p class="tile__subtitle m-0"><a href="!#">@nate_dumlao</a></p>
             </div>
         </div>
     </div>

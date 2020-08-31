@@ -107,25 +107,25 @@ export const AnimationsPage: React.FC<any> = (props) => {
                             </p>
 
                             <div className="row u-text-center content" id="grid">
-                                <a className="col" href="#">
+                                <a className="col" href="!#">
                                     <div className="content">
                                         <img src="../../res/img/FileBot.png" className="hover-grow" />
                                         <p>FileBot</p>
                                     </div>
                                 </a>
-                                <a className="col" href="#">
+                                <a className="col" href="!#">
                                     <div className="content">
                                         <img src="../../res/img/Illustrator.png" className="hover-grow" />
                                         <p>Illustrator</p>
                                     </div>
                                 </a>
-                                <a className="col" href="#">
+                                <a className="col" href="!#">
                                     <div className="content">
                                         <img src="../../res/img/KeepassX.png" className="hover-grow" />
                                         <p>KeepassX</p>
                                     </div>
                                 </a>
-                                <a className="col" href="#">
+                                <a className="col" href="!#">
                                     <div className="content">
                                         <img src="../../res/img/Pandora2.png" className="hover-grow" />
                                         <p>Pandora</p>
@@ -134,25 +134,25 @@ export const AnimationsPage: React.FC<any> = (props) => {
                             </div>
 
                             <div className="row u-text-center content" id="grid">
-                                <a className="col" href="#">
+                                <a className="col" href="!#">
                                     <div className="content">
                                         <img src="../../res/img/photoshop.png" className="hover-grow" />
                                         <p>Photoshop</p>
                                     </div>
                                 </a>
-                                <a className="col" href="#">
+                                <a className="col" href="!#">
                                     <div className="content">
                                         <img src="../../res/img/PhpStorm.png" className="hover-grow" />
                                         <p>PhpStorm</p>
                                     </div>
                                 </a>
-                                <a className="col" href="#">
+                                <a className="col" href="!#">
                                     <div className="content">
                                         <img src="../../res/img/Python.png" className="hover-grow" />
                                         <p>Python</p>
                                     </div>
                                 </a>
-                                <a className="col" href="#">
+                                <a className="col" href="!#">
                                     <div className="content">
                                         <img src="../../res/img/Wing.png" className="hover-grow" />
                                         <p>Wing</p>

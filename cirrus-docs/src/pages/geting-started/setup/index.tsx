@@ -62,6 +62,7 @@ export const SetUpPage: React.FC<any> = (props) => {
                             href="https://github.com/Spiderpig86/Cirrus/releases"
                             target="_blank"
                             className="u-inline-block"
+                            rel="noopener noreferrer"
                         >
                             <button className="btn-info">Download</button>
                         </a>
@@ -81,6 +82,7 @@ export const SetUpPage: React.FC<any> = (props) => {
                                 className="u u-LR"
                                 href="https://www.w3resource.com/html5/doctype.php#:~:text=doctype%20html%3E%20or%20%3C!&text=This%20is%20because%2C%20html5%20is,goes%20to%20the%20quirky%20mode."
                                 target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 standard mode
                             </a>
@@ -233,15 +235,15 @@ export const SetUpPage: React.FC<any> = (props) => {
          </div>
          <div class="header-nav" id="header-menu">
             <div class="nav-left">
-               <div class="nav-item text-center"> <a href="#"> <span class="icon"> <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i> </span> </a> </div>
+               <div class="nav-item text-center"> <a href="!#"> <span class="icon"> <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i> </span> </a> </div>
             </div>
             <div class="nav-right">
                <div class="nav-item has-sub toggle-hover" id="dropdown">
                   <a class="nav-dropdown-link">Menu</a> 
                   <ul class="dropdown-menu dropdown-animated" role="menu">
-                     <li role="menu-item"><a href="#">First Item</a></li>
-                     <li role="menu-item"><a href="#">Second Item</a></li>
-                     <li role="menu-item"><a href="#">Third Item</a></li>
+                     <li role="menu-item"><a href="!#">First Item</a></li>
+                     <li role="menu-item"><a href="!#">Second Item</a></li>
+                     <li role="menu-item"><a href="!#">Third Item</a></li>
                   </ul>
                </div>
             </div>

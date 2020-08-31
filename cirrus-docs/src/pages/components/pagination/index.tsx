@@ -40,43 +40,43 @@ export const PaginationPage: React.FC<any> = (props) => {
                         </p>
                         <div className="pagination">
                             <div className="pagination-item short disabled">
-                                <a href="#" className="disabled">
+                                <a href="!#" className="disabled">
                                     Prev
                                 </a>
                             </div>
                             <div className="pagination-item short selected">
-                                <a href="#">1</a>
+                                <a href="!#">1</a>
                             </div>
                             <div className="pagination-item short">
-                                <a href="#">2</a>
+                                <a href="!#">2</a>
                             </div>
                             <div className="pagination-item short">
-                                <a href="#">3</a>
+                                <a href="!#">3</a>
                             </div>
                             <div className="pagination-item short">
-                                <a href="#">4</a>
+                                <a href="!#">4</a>
                             </div>
                             <div className="pagination-item short">
                                 <a>...</a>
                             </div>
                             <div className="pagination-item short">
-                                <a href="#">13</a>
+                                <a href="!#">13</a>
                             </div>
                             <div className="pagination-item short">
-                                <a href="#">Next</a>
+                                <a href="!#">Next</a>
                             </div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div class="pagination">
-    <div class="pagination-item short disabled"><a href="#" class="disabled">Prev</a></div>
-    <div class="pagination-item short selected"><a href="#">1</a></div>
-    <div class="pagination-item short"><a href="#">2</a></div>
-    <div class="pagination-item short"><a href="#">3</a></div>
-    <div class="pagination-item short"><a href="#">4</a></div>
+    <div class="pagination-item short disabled"><a href="!#" class="disabled">Prev</a></div>
+    <div class="pagination-item short selected"><a href="!#">1</a></div>
+    <div class="pagination-item short"><a href="!#">2</a></div>
+    <div class="pagination-item short"><a href="!#">3</a></div>
+    <div class="pagination-item short"><a href="!#">4</a></div>
     <div class="pagination-item short"><a>...</a></div>
-    <div class="pagination-item short"><a href="#">13</a></div>
-    <div class="pagination-item short"><a href="#">Next</a></div>
+    <div class="pagination-item short"><a href="!#">13</a></div>
+    <div class="pagination-item short"><a href="!#">Next</a></div>
 </div>`}
                             language="htmlbars"
                         />
@@ -86,45 +86,45 @@ export const PaginationPage: React.FC<any> = (props) => {
                         </p>
                         <div className="pagination pagination-bordered">
                             <div className="pagination-item short">
-                                <a href="#">Prev</a>
+                                <a href="!#">Prev</a>
                             </div>
                             <div className="pagination-item short">
-                                <a href="#">1</a>
+                                <a href="!#">1</a>
                             </div>
                             <div className="pagination-item short">
                                 <a>...</a>
                             </div>
                             <div className="pagination-item short">
-                                <a href="#">3</a>
+                                <a href="!#">3</a>
                             </div>
                             <div className="pagination-item short">
-                                <a href="#">4</a>
+                                <a href="!#">4</a>
                             </div>
                             <div className="pagination-item short selected">
-                                <a href="#">5</a>
+                                <a href="!#">5</a>
                             </div>
                             <div className="pagination-item short">
                                 <a>...</a>
                             </div>
                             <div className="pagination-item short">
-                                <a href="#">23</a>
+                                <a href="!#">23</a>
                             </div>
                             <div className="pagination-item short">
-                                <a href="#">Next</a>
+                                <a href="!#">Next</a>
                             </div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div class="pagination pagination-bordered">
-    <div class="pagination-item short"><a href="#">Prev</a></div>
-    <div class="pagination-item short"><a href="#">1</a></div>
+    <div class="pagination-item short"><a href="!#">Prev</a></div>
+    <div class="pagination-item short"><a href="!#">1</a></div>
     <div class="pagination-item short"><a>...</a></div>
-    <div class="pagination-item short"><a href="#">3</a></div>
-    <div class="pagination-item short"><a href="#">4</a></div>
-    <div class="pagination-item short selected"><a href="#">5</a></div>
+    <div class="pagination-item short"><a href="!#">3</a></div>
+    <div class="pagination-item short"><a href="!#">4</a></div>
+    <div class="pagination-item short selected"><a href="!#">5</a></div>
     <div class="pagination-item short"><a>...</a></div>
-    <div class="pagination-item short"><a href="#">23</a></div>
-    <div class="pagination-item short"><a href="#">Next</a></div>
+    <div class="pagination-item short"><a href="!#">23</a></div>
+    <div class="pagination-item short"><a href="!#">Next</a></div>
 </div>`}
                             language="htmlbars"
                         />
@@ -145,13 +145,13 @@ export const PaginationPage: React.FC<any> = (props) => {
 
                         <div className="pagination no-bullets">
                             <div className="pagination-item pagination-prev">
-                                <a href="#" className="u-block">
+                                <a href="!#" className="u-block">
                                     <p className="pagination-item-subtitle">Previous</p>
                                     <h5 className="m-0">Choose Items</h5>
                                 </a>
                             </div>
                             <div className="pagination-item pagination-next">
-                                <a href="#" className="u-block">
+                                <a href="!#" className="u-block">
                                     <p className="pagination-item-subtitle">Next</p>
                                     <h5 className="m-0">Order</h5>
                                 </a>
@@ -162,12 +162,12 @@ export const PaginationPage: React.FC<any> = (props) => {
                         <CodeBlock
                             code={`<div class="pagination no-bullets">
     <div class="pagination-item pagination-prev">
-        <a href="#" class="u-block">
+        <a href="!#" class="u-block">
             <p class="pagination-item-subtitle">Previous</p>
             <h5 class="m-0">Choose Items</h5></a>
     </div>
     <div class="pagination-item pagination-next">
-        <a href="#" class="u-block">
+        <a href="!#" class="u-block">
             <p class="pagination-item-subtitle">Next</p>
             <h5 class="m-0">Order</h5></a>
     </div>

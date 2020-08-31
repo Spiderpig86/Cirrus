@@ -4,3 +4,5 @@ export { CodePage } from './code';
 export { LinksPage } from './links';
 export { ListsPage } from './lists';
 export { ModalsPage } from './modals';
+export { PaginationPage } from './pagination';
+export { PlaceholderPage } from './placeholder';
