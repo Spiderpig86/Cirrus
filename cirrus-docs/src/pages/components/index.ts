@@ -7,3 +7,4 @@ export { ModalsPage } from './modals';
 export { PaginationPage } from './pagination';
 export { PlaceholderPage } from './placeholder';
 export { TablePage } from './table';
+export { TabsPage } from './tabs';

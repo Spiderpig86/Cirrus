@@ -87,6 +87,7 @@ export const TablePage: React.FC<any> = (props) => {
                                 </table>
                             </div>
                             <div className="col-lg-6">
+                                <h6>Structure</h6>
                                 <ul>
                                     <li>
                                         <code>table</code>
