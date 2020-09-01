@@ -4304,6 +4304,130 @@ video.video-fullscreen {
 .u-circle {
   border-radius: 50%; }
 
+.u-clear-left {
+  clear: left !important; }
+
+.u-clear-right {
+  clear: right !important; }
+
+.u-clear-both {
+  clear: both !important; }
+
+/*
+   When using floats, clearfix allows the container to automatically resize so that
+   other elements are not blocked by children.
+*/
+.u-clearfix:after {
+  clear: both !important;
+  content: ' ';
+  display: table !important; }
+
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+.u-none {
+  display: none !important; }
+
+.u-inline {
+  display: inline !important; }
+
+.u-inline-block {
+  display: inline-block !important; }
+
+.u-block {
+  display: block !important; }
+
+.u-table {
+  display: table !important; }
+
+.u-table-row {
+  display: table-row !important; }
+
+.u-table-cell {
+  display: table-cell !important; }
+
+.u-none {
+  /* Hide elements based on screen size */ }
+  @media screen and (max-width: 639px) {
+    .u-none-mobile {
+      display: none !important; } }
+  @media screen and (min-width: 769px) {
+    .u-none {
+      /* Hide on devices that are tablets or larger */ }
+      .u-none-tablet {
+        display: none !important; } }
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .u-none-tablet-only {
+      display: none !important; } }
+  @media screen and (min-width: 1024px) {
+    .u-none {
+      /* Hide element on laptops, desktops, etc */ }
+      .u-none-desktop {
+        display: none !important; } }
+
+.u-flex {
+  display: flex !important; }
+  .u-flex.u-flex-row {
+    flex-direction: row !important; }
+  .u-flex.u-flex-row-reverse {
+    flex-direction: row-reverse !important; }
+  .u-flex.u-flex-column {
+    flex-direction: column !important; }
+  .u-flex.u-flex-column-reverse {
+    flex-direction: column-reverse !important; }
+
+.u-justify-flex-start {
+  justify-content: flex-start !important; }
+
+.u-justify-center {
+  justify-content: center !important; }
+
+.u-justify-flex-end {
+  justify-content: flex-end !important; }
+
+.u-justify-space-between {
+  justify-content: space-between !important; }
+
+.u-justify-space-around {
+  justify-content: space-around !important; }
+
+.u-justify-space-evenly {
+  justify-content: space-evenly !important; }
+
+.u-items-stretch {
+  align-items: stretch !important; }
+
+.u-items-flex-start {
+  align-items: flex-start !important; }
+
+.u-items-center {
+  align-items: center !important; }
+
+.u-items-flex-end {
+  align-items: flex-end !important; }
+
+.u-items-baseline {
+  align-items: baseline !important; }
+
+.u-position-static {
+  position: static !important; }
+
+.u-position-fixed {
+  position: fixed !important; }
+
+.u-position-absolute {
+  position: absolute !important; }
+
+.u-position-relative {
+  position: relative !important; }
+
+.u-position-sticky {
+  position: sticky !important; }
+
 /*
   Functions
 */
@@ -6687,7 +6811,7 @@ button.btn--circle,
     .pagination .pagination-item:hover h6 {
       transition: all 0.3s;
       color: var(--cirrus-primary); }
-    .pagination .pagination-item:not(.selected):hover *:not([disabled]):not(.ellipses) {
+    .pagination .pagination-item:not(.selected):hover *:not([disabled]):not(.disabled):not(.ellipses) {
       transition: all 0.3s;
       color: var(--cirrus-primary); }
     .pagination .pagination-item.pagination-next {
@@ -6696,7 +6820,7 @@ button.btn--circle,
       text-align: left; }
     .pagination .pagination-item a {
       color: #495057; }
-      .pagination .pagination-item a[disabled] {
+      .pagination .pagination-item a[disabled], .pagination .pagination-item a.disabled {
         cursor: pointer;
         opacity: 0.5;
         pointer-events: none;
@@ -6719,7 +6843,7 @@ button.btn--circle,
       .pagination .pagination-item.short:last-child a {
         border-top-right-radius: 0.25rem;
         border-bottom-right-radius: 0.25rem; }
-      .pagination .pagination-item.short:not([disabled]):not(.selected):hover {
+      .pagination .pagination-item.short:not([disabled]):not(.disabled):not(.selected):hover {
         background-color: rgba(0, 0, 0, 0.07); }
       .pagination .pagination-item.short.selected {
         background-color: var(--cirrus-primary);
@@ -6928,17 +7052,18 @@ button.btn--circle,
     border-radius: 3px 3px 0 0;
     /* Only round the top left and right corners */
     transition: all 0.3s; }
-    .tab-container.tabs-classic ul li:not(.selected) a:hover {
+    .tab-container.tabs-classic ul li:not(.selected) span:hover {
       background-color: #f1f3f5;
       transition: all 0.3s; }
-    .tab-container.tabs-classic ul li.selected a {
+    .tab-container.tabs-classic ul li.selected span {
       color: var(--cirrus-primary);
       border-color: #dee2e6;
       border-bottom-color: transparent !important; }
-    .tab-container.tabs-classic ul li a {
+    .tab-container.tabs-classic ul li span {
       border: 1px solid transparent;
       border-bottom-color: #dee2e6;
       border-radius: 3px 3px 0 0;
+      cursor: pointer;
       transition: all 0.3s; }
   .tab-container.tabs-fill {
     /* Override the -webkit-box display that sizes tab items based on text */ }
@@ -6980,15 +7105,15 @@ button.btn--circle,
     cursor: pointer;
     margin: 0;
     text-align: center; }
-    .tab-container li:hover a {
+    .tab-container li:hover span {
       border-bottom-color: rgba(240, 61, 77, 0.6);
       transition: all 0.3s; }
-    .tab-container li.selected a {
+    .tab-container li.selected span {
       border-bottom-color: var(--cirrus-primary);
       color: var(--cirrus-primary);
       border-width: 2px;
       transition: all 0.3s; }
-    .tab-container li a {
+    .tab-container li span {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -7542,127 +7667,3 @@ a.tag:hover {
     -webkit-transform: translate(-0.5rem, 50%);
     -moz-transform: translate(-0.5rem, 50%);
     -ms-transform: translate(-0.5rem, 50%); }
-
-.u-clear-left {
-  clear: left !important; }
-
-.u-clear-right {
-  clear: right !important; }
-
-.u-clear-both {
-  clear: both !important; }
-
-/*
-   When using floats, clearfix allows the container to automatically resize so that
-   other elements are not blocked by children.
-*/
-.u-clearfix:after {
-  clear: both !important;
-  content: ' ';
-  display: table !important; }
-
-/* Spacing */
-/* Fonts */
-/* Grid Count */
-/* Grid Percents */
-/* Tab Sizes */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-.u-none {
-  display: none !important; }
-
-.u-inline {
-  display: inline !important; }
-
-.u-inline-block {
-  display: inline-block !important; }
-
-.u-block {
-  display: block !important; }
-
-.u-table {
-  display: table !important; }
-
-.u-table-row {
-  display: table-row !important; }
-
-.u-table-cell {
-  display: table-cell !important; }
-
-.u-none {
-  /* Hide elements based on screen size */ }
-  @media screen and (max-width: 639px) {
-    .u-none-mobile {
-      display: none !important; } }
-  @media screen and (min-width: 769px) {
-    .u-none {
-      /* Hide on devices that are tablets or larger */ }
-      .u-none-tablet {
-        display: none !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1023px) {
-    .u-none-tablet-only {
-      display: none !important; } }
-  @media screen and (min-width: 1024px) {
-    .u-none {
-      /* Hide element on laptops, desktops, etc */ }
-      .u-none-desktop {
-        display: none !important; } }
-
-.u-flex {
-  display: flex !important; }
-  .u-flex.u-flex-row {
-    flex-direction: row !important; }
-  .u-flex.u-flex-row-reverse {
-    flex-direction: row-reverse !important; }
-  .u-flex.u-flex-column {
-    flex-direction: column !important; }
-  .u-flex.u-flex-column-reverse {
-    flex-direction: column-reverse !important; }
-
-.u-justify-flex-start {
-  justify-content: flex-start !important; }
-
-.u-justify-center {
-  justify-content: center !important; }
-
-.u-justify-flex-end {
-  justify-content: flex-end !important; }
-
-.u-justify-space-between {
-  justify-content: space-between !important; }
-
-.u-justify-space-around {
-  justify-content: space-around !important; }
-
-.u-justify-space-evenly {
-  justify-content: space-evenly !important; }
-
-.u-items-stretch {
-  align-items: stretch !important; }
-
-.u-items-flex-start {
-  align-items: flex-start !important; }
-
-.u-items-center {
-  align-items: center !important; }
-
-.u-items-flex-end {
-  align-items: flex-end !important; }
-
-.u-items-baseline {
-  align-items: baseline !important; }
-
-.u-position-static {
-  position: static !important; }
-
-.u-position-fixed {
-  position: fixed !important; }
-
-.u-position-absolute {
-  position: absolute !important; }
-
-.u-position-relative {
-  position: relative !important; }
-
-.u-position-sticky {
-  position: sticky !important; }

@@ -48,21 +48,22 @@
             transition: all 0.3s;
 
             li {
-                &:not(.selected) a:hover {
+                &:not(.selected) span:hover {
                     background-color: map-get($grays, '100');
                     transition: all 0.3s;
                 }
 
-                &.selected a {
+                &.selected span {
                     color: var(--cirrus-primary);
                     border-color: map-get($grays, '300');
                     border-bottom-color: transparent !important;
                 }
 
-                a {
+                span {
                     border: 1px solid transparent;
                     border-bottom-color: map-get($grays, '300');
                     border-radius: 3px 3px 0 0;
+                    cursor: pointer;
                     transition: all 0.3s;
                 }
             }
@@ -113,19 +114,19 @@
         margin: 0;
         text-align: center;
 
-        &:hover a {
+        &:hover span {
             border-bottom-color: rgba(240, 61, 77, 0.6);
             transition: all 0.3s;
         }
 
-        &.selected a {
+        &.selected span {
             border-bottom-color: var(--cirrus-primary);
             color: var(--cirrus-primary);
             border-width: 2px;
             transition: all 0.3s;
         }
 
-        a {
+        span {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;

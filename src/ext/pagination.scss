@@ -27,7 +27,7 @@
             }
         }
 
-        &:not(.selected):hover *:not([disabled]):not(.ellipses) {
+        &:not(.selected):hover *:not([disabled]):not(.disabled):not(.ellipses) {
             transition: all 0.3s;
             color: var(--cirrus-primary);
         }
@@ -43,7 +43,8 @@
         a {
             color: map-get($grays, '700');
 
-            &[disabled] {
+            &[disabled],
+            &.disabled {
                 cursor: pointer;
                 opacity: 0.5;
                 pointer-events: none;
@@ -75,7 +76,7 @@
                 border-bottom-right-radius: 0.25rem;
             }
 
-            &:not([disabled]):not(.selected):hover {
+            &:not([disabled]):not(.disabled):not(.selected):hover {
                 background-color: rgba(0, 0, 0, 0.07);
             }
 
