@@ -7052,13 +7052,16 @@ button.btn--circle,
     border-radius: 3px 3px 0 0;
     /* Only round the top left and right corners */
     transition: all 0.3s; }
+    .tab-container.tabs-classic ul li:not(.selected) a:hover,
     .tab-container.tabs-classic ul li:not(.selected) span:hover {
       background-color: #f1f3f5;
       transition: all 0.3s; }
+    .tab-container.tabs-classic ul li.selected a,
     .tab-container.tabs-classic ul li.selected span {
       color: var(--cirrus-primary);
       border-color: #dee2e6;
       border-bottom-color: transparent !important; }
+    .tab-container.tabs-classic ul li a,
     .tab-container.tabs-classic ul li span {
       border: 1px solid transparent;
       border-bottom-color: #dee2e6;
@@ -7105,14 +7108,17 @@ button.btn--circle,
     cursor: pointer;
     margin: 0;
     text-align: center; }
+    .tab-container li:hover a,
     .tab-container li:hover span {
       border-bottom-color: rgba(240, 61, 77, 0.6);
       transition: all 0.3s; }
+    .tab-container li.selected a,
     .tab-container li.selected span {
       border-bottom-color: var(--cirrus-primary);
       color: var(--cirrus-primary);
       border-width: 2px;
       transition: all 0.3s; }
+    .tab-container li a,
     .tab-container li span {
       display: -webkit-box;
       display: -ms-flexbox;

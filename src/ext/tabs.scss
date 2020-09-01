@@ -1,5 +1,5 @@
-@import "../core/theme.scss";
-@import "../../helpers/_size.scss";
+@import '../core/theme.scss';
+@import '../../helpers/_size.scss';
 
 /* TABS AND TAB CONTAINER */
 .tab-container {
@@ -17,7 +17,7 @@
     -ms-flex-align: stretch;
     align-items: stretch;
     font-size: var(--font-size-s);
-    
+
     /* Shift tabs to the center */
     &.tabs-center ul {
         justify-content: center;
@@ -48,17 +48,20 @@
             transition: all 0.3s;
 
             li {
+                &:not(.selected) a:hover,
                 &:not(.selected) span:hover {
                     background-color: map-get($grays, '100');
                     transition: all 0.3s;
                 }
 
+                &.selected a,
                 &.selected span {
                     color: var(--cirrus-primary);
                     border-color: map-get($grays, '300');
                     border-bottom-color: transparent !important;
                 }
 
+                a,
                 span {
                     border: 1px solid transparent;
                     border-bottom-color: map-get($grays, '300');
@@ -68,7 +71,6 @@
                 }
             }
         }
-        
     }
 
     /* Tabs that fill the width */
@@ -114,11 +116,13 @@
         margin: 0;
         text-align: center;
 
+        &:hover a,
         &:hover span {
             border-bottom-color: rgba(240, 61, 77, 0.6);
             transition: all 0.3s;
         }
 
+        &.selected a,
         &.selected span {
             border-bottom-color: var(--cirrus-primary);
             color: var(--cirrus-primary);
@@ -126,6 +130,7 @@
             transition: all 0.3s;
         }
 
+        a,
         span {
             display: -webkit-box;
             display: -ms-flexbox;
