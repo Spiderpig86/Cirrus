@@ -6,3 +6,4 @@ export { ListsPage } from './lists';
 export { ModalsPage } from './modals';
 export { PaginationPage } from './pagination';
 export { PlaceholderPage } from './placeholder';
+export { TablePage } from './table';
