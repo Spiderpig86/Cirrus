@@ -8,3 +8,4 @@ export { PaginationPage } from './pagination';
 export { PlaceholderPage } from './placeholder';
 export { TablePage } from './table';
 export { TabsPage } from './tabs';
+export { TagsPage } from './tags';
