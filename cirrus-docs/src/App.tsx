@@ -14,14 +14,27 @@ import { ButtonPage, GlyphsPage, VariantsPage, ButtonGroupsPage } from './pages/
 import { _404 } from './pages/404';
 
 import './App.scss';
-import { AvatarPage, CardsPage, CodePage, LinksPage, ListsPage, ModalsPage, PaginationPage, PlaceholderPage, TablePage, TabsPage, TagsPage } from './pages/components';
+import {
+    AvatarPage,
+    CardsPage,
+    CodePage,
+    LinksPage,
+    ListsPage,
+    ModalsPage,
+    PaginationPage,
+    PlaceholderPage,
+    TablePage,
+    TabsPage,
+    TagsPage,
+    TilesPage,
+} from './pages/components';
 
 function App() {
     return (
         <BrowserRouter>
             <Switch>
                 <LandingLayoutRoute exact path="/" match component={Landing} />
-                
+
                 <DefaultLayoutRoute path="/why" component={WhyPage} />
                 <DefaultLayoutRoute path="/about" component={AboutPage} />
 
@@ -49,6 +62,7 @@ function App() {
                 <DefaultLayoutRoute path="/components/table" component={TablePage} />
                 <DefaultLayoutRoute path="/components/tabs" component={TabsPage} />
                 <DefaultLayoutRoute path="/components/tags" component={TagsPage} />
+                <DefaultLayoutRoute path="/components/tiles" component={TilesPage} />
 
                 <BlankLayoutRoute component={_404} />
             </Switch>

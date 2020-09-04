@@ -9,3 +9,4 @@ export { PlaceholderPage } from './placeholder';
 export { TablePage } from './table';
 export { TabsPage } from './tabs';
 export { TagsPage } from './tags';
+export { TilesPage } from './tiles';

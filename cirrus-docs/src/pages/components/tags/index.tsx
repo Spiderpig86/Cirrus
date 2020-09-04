@@ -10,7 +10,7 @@ export const TagsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
             <div>
-                <section className="padtop">
+                <section className="padtop" id="tags">
                     <div className="content">
                         <Headline title="Tags" link="#tags" />
                         <div className="divider"></div>
