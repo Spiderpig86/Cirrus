@@ -2,8 +2,8 @@ import { TableOfContentsEntry } from '../../../layouts/components/toc';
 
 export const toc: TableOfContentsEntry[] = [
     {
-        name: 'Toast',
-        anchor: '#toast',
+        name: 'Tooltips',
+        anchor: '#tooltips',
         children: [
             {
                 name: 'Basics',
@@ -11,8 +11,8 @@ export const toc: TableOfContentsEntry[] = [
                 children: null,
             },
             {
-                name: 'Styles',
-                anchor: '#styles',
+                name: 'Directions',
+                anchor: '#directions',
                 children: null,
             },
         ],

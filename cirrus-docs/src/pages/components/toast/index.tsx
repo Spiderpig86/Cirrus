@@ -18,9 +18,9 @@ export const ToastPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop" id="basic">
+                <section className="padtop" id="basics">
                     <div className="content">
-                        <Headline title="Basic" link="#basic" size="4" />
+                        <Headline title="Basics" link="#basics" size="4" />
                         <div className="divider"></div>
 
                         <p>
@@ -61,6 +61,8 @@ export const ToastPage: React.FC<any> = (props) => {
                             language="htmlbars"
                         />
                         <div className="space"></div>
+
+                        <p>The <code>toast--translucent</code> class adds a bit of translucency to the toast.</p>
                     </div>
                 </section>
 
@@ -148,7 +150,7 @@ export const ToastPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Tags', link: './tags' }} nextLink={{ name: 'Toast', link: './toast' }} />
+                <Pagination prevLink={{ name: 'Tiles', link: './tiles' }} nextLink={{ name: 'Tooltips', link: './tooltips' }} />
             </div>
             <TableOfContents entries={toc} />
         </main>

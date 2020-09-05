@@ -218,7 +218,7 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Tooltip',
+                text: 'Tooltips',
                 url: '/components/tooltips'
             },
             {
