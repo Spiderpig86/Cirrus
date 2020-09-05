@@ -27,6 +27,7 @@ import {
     TabsPage,
     TagsPage,
     TilesPage,
+    ToastPage,
 } from './pages/components';
 
 function App() {
@@ -63,6 +64,7 @@ function App() {
                 <DefaultLayoutRoute path="/components/tabs" component={TabsPage} />
                 <DefaultLayoutRoute path="/components/tags" component={TagsPage} />
                 <DefaultLayoutRoute path="/components/tiles" component={TilesPage} />
+                <DefaultLayoutRoute path="/components/toast" component={ToastPage} />
 
                 <BlankLayoutRoute component={_404} />
             </Switch>

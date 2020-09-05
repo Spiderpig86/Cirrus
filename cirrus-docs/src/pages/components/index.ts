@@ -10,3 +10,4 @@ export { TablePage } from './table';
 export { TabsPage } from './tabs';
 export { TagsPage } from './tags';
 export { TilesPage } from './tiles';
+export { ToastPage } from './toast';
