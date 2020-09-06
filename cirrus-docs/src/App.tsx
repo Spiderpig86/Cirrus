@@ -28,7 +28,8 @@ import {
     TagsPage,
     TilesPage,
     ToastPage,
-    TooltipsPage
+    TooltipsPage,
+    TreePage
 } from './pages/components';
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
                 <DefaultLayoutRoute path="/components/tiles" component={TilesPage} />
                 <DefaultLayoutRoute path="/components/toast" component={ToastPage} />
                 <DefaultLayoutRoute path="/components/tooltips" component={TooltipsPage} />
+                <DefaultLayoutRoute path='/components/trees' component={TreePage} />
 
                 <BlankLayoutRoute component={_404} />
             </Switch>

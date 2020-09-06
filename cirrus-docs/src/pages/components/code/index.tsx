@@ -46,7 +46,7 @@ export const CodePage: React.FC<any> = (props) => {
                         <pre><code className="dark" data-lang="JavaScript">console.log('hello 👋');</code></pre>
                         <div className="space"></div>
 
-                        <CodeBlock code={`<pre>< class="dark" data-lang="JavaScript">console.log('hello 👋');</code></pre>`} language='htmlbars' />
+                        <CodeBlock code={`<pre><code class="dark" data-lang="JavaScript">console.log('hello 👋');</code></pre>`} language='htmlbars' />
                         <div className="space large"></div>
                         
                         <h6>Inline</h6>

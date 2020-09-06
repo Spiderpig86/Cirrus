@@ -12,3 +12,4 @@ export { TagsPage } from './tags';
 export { TilesPage } from './tiles';
 export { ToastPage } from './toast';
 export { TooltipsPage } from './tooltips';
+export { TreePage } from './tree';
