@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import LazyLoad from 'react-lazyload';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
@@ -209,10 +210,18 @@ export const SetUpPage: React.FC<any> = (props) => {
                         <Headline title="Starter" link="#starter" />
                         <div className="divider"></div>
                         <p>To help you get started, feel free to use the example page created below.</p>
-                        <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html" className="w-100" />
-                        <a href="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html" target="_blank">Full Page</a>
+                        <LazyLoad height={200} once>
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html"
+                                className="w-100"
+                            />
+                        </LazyLoad>
+                        <a href="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html" target="_blank">
+                            Full Page
+                        </a>
                         <div className="space large"></div>
-                        <CodeBlock code={`<!DOCTYPE html>
+                        <CodeBlock
+                            code={`<!DOCTYPE html>
 <html id="page">
    <head>
       <title>Getting Started with Cirrus</title>
@@ -262,14 +271,18 @@ export const SetUpPage: React.FC<any> = (props) => {
          </div>
       </section>
    </body>
-</html>`} language="htmlbars" />
+</html>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
-                <Pagination nextLink={{
-                    name: 'Update Guide',
-                    link: './update'
-                }} />
+                <Pagination
+                    nextLink={{
+                        name: 'Update Guide',
+                        link: './update',
+                    }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>
