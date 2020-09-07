@@ -29,6 +29,13 @@ iframe {
     display: block;
 }
 
+.desc {
+    font-size: 11px;
+    font-family: 'Nunito Sans';
+    margin-left: 10px;
+    vertical-align: bottom;
+}
+
 ::-webkit-scrollbar {
     background-color: var(--scrollbar-bg);
     color: var(--scrollbar-color);

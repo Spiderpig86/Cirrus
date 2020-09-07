@@ -29,8 +29,9 @@ import {
     TilesPage,
     ToastPage,
     TooltipsPage,
-    TreePage
+    TreePage,
 } from './pages/components';
+import { TextElementsPage } from './pages/fonts';
 
 function App() {
     return (
@@ -68,7 +69,9 @@ function App() {
                 <DefaultLayoutRoute path="/components/tiles" component={TilesPage} />
                 <DefaultLayoutRoute path="/components/toast" component={ToastPage} />
                 <DefaultLayoutRoute path="/components/tooltips" component={TooltipsPage} />
-                <DefaultLayoutRoute path='/components/trees' component={TreePage} />
+                <DefaultLayoutRoute path="/components/trees" component={TreePage} />
+
+                <DefaultLayoutRoute path="/fonts/text-elements" component={TextElementsPage} />
 
                 <BlankLayoutRoute component={_404} />
             </Switch>
