@@ -8,7 +8,7 @@ import { ExternalLink } from '../../../layouts/components/link';
 import { toc } from './toc';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export const GlyphsPage: React.FC<any> = (props) => {
+export const ButtonGlyphsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
             <div>

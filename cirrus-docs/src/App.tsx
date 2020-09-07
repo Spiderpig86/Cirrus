@@ -10,7 +10,7 @@ import { AboutPage } from './pages/about';
 import { ColorsPage, TypographyPage } from './pages/fundamentals';
 import { WhyPage } from './pages/why';
 import { Landing } from './pages/landing';
-import { ButtonPage, GlyphsPage, VariantsPage, ButtonGroupsPage } from './pages/buttons';
+import { ButtonPage, ButtonGlyphsPage, VariantsPage, ButtonGroupsPage } from './pages/buttons';
 import { _404 } from './pages/404';
 
 import './App.scss';
@@ -31,7 +31,7 @@ import {
     TooltipsPage,
     TreePage,
 } from './pages/components';
-import { TextElementsPage } from './pages/fonts';
+import { FontGlyphsPage, TextElementsPage } from './pages/fonts';
 
 function App() {
     return (
@@ -52,7 +52,7 @@ function App() {
 
                 <DefaultLayoutRoute path="/buttons/basics" component={ButtonPage} />
                 <DefaultLayoutRoute path="/buttons/button-groups" component={ButtonGroupsPage} />
-                <DefaultLayoutRoute path="/buttons/glyphs" component={GlyphsPage} />
+                <DefaultLayoutRoute path="/buttons/glyphs" component={ButtonGlyphsPage} />
                 <DefaultLayoutRoute path="/buttons/variants" component={VariantsPage} />
 
                 <DefaultLayoutRoute path="/components/avatar" component={AvatarPage} />
@@ -71,6 +71,7 @@ function App() {
                 <DefaultLayoutRoute path="/components/tooltips" component={TooltipsPage} />
                 <DefaultLayoutRoute path="/components/trees" component={TreePage} />
 
+                <DefaultLayoutRoute path="/fonts/glyphs" component={FontGlyphsPage} />
                 <DefaultLayoutRoute path="/fonts/text-elements" component={TextElementsPage} />
 
                 <BlankLayoutRoute component={_404} />
