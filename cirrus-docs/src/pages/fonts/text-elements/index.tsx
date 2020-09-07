@@ -204,7 +204,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text{' '}
-                            <a className="u u-LR" href="#">
+                            <a className="u u-LR" href="!#">
                                 ever since the 1500s
                             </a>
                             , when an unknown printer took a galley of type and scrambled it to make a type specimen
@@ -245,7 +245,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             <div className="col-lg-6">
                                 <p className="title mb-0">Anchor</p>
                                 <p>
-                                    <a href="#" className="subtitle">
+                                    <a href="!#" className="subtitle">
                                         The quick brown fox jumps over the lazy dog.
                                     </a>
                                 </p>

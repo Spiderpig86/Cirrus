@@ -242,7 +242,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Font Weights',
-                url: '/font/font-weights'
+                url: '/fonts/font-weights'
             },
             {
                 fontWeight: 'semibold',

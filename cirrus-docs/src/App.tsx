@@ -12,8 +12,6 @@ import { WhyPage } from './pages/why';
 import { Landing } from './pages/landing';
 import { ButtonPage, ButtonGlyphsPage, VariantsPage, ButtonGroupsPage } from './pages/buttons';
 import { _404 } from './pages/404';
-
-import './App.scss';
 import {
     AvatarPage,
     CardsPage,
@@ -31,7 +29,9 @@ import {
     TooltipsPage,
     TreePage,
 } from './pages/components';
-import { FontGlyphsPage, TextElementsPage } from './pages/fonts';
+import { FontWeightsPage, FontGlyphsPage, TextElementsPage } from './pages/fonts';
+
+import './App.scss';
 
 function App() {
     return (
@@ -71,6 +71,7 @@ function App() {
                 <DefaultLayoutRoute path="/components/tooltips" component={TooltipsPage} />
                 <DefaultLayoutRoute path="/components/trees" component={TreePage} />
 
+                <DefaultLayoutRoute path="/fonts/font-weights" component={FontWeightsPage} />
                 <DefaultLayoutRoute path="/fonts/glyphs" component={FontGlyphsPage} />
                 <DefaultLayoutRoute path="/fonts/text-elements" component={TextElementsPage} />
 

@@ -57,7 +57,7 @@ export const PaginationPage: React.FC<any> = (props) => {
                                 <a href="!#">4</a>
                             </div>
                             <div className="pagination-item short">
-                                <a>...</a>
+                                <a href="!#">...</a>
                             </div>
                             <div className="pagination-item short">
                                 <a href="!#">13</a>
@@ -92,7 +92,7 @@ export const PaginationPage: React.FC<any> = (props) => {
                                 <a href="!#">1</a>
                             </div>
                             <div className="pagination-item short">
-                                <a>...</a>
+                                <a href="!#">...</a>
                             </div>
                             <div className="pagination-item short">
                                 <a href="!#">3</a>
@@ -104,7 +104,7 @@ export const PaginationPage: React.FC<any> = (props) => {
                                 <a href="!#">5</a>
                             </div>
                             <div className="pagination-item short">
-                                <a>...</a>
+                                <a href="!#">...</a>
                             </div>
                             <div className="pagination-item short">
                                 <a href="!#">23</a>
