@@ -455,13 +455,10 @@ fieldset {
     border-color: var(--cirrus-danger); }
     .btn.btn-error:focus, button.btn-error:focus, [type="submit"].btn-error:focus, [type="reset"].btn-error:focus, [type="button"].btn-error:focus {
       box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07); }
-  .btn .fa-wrapper, button .fa-wrapper, [type="submit"] .fa-wrapper, [type="reset"] .fa-wrapper, [type="button"] .fa-wrapper {
-    /* Override default behavior of aligning font awesome icons to the top */
-    vertical-align: baseline; }
-    .btn .fa-wrapper.pad-right, button .fa-wrapper.pad-right, [type="submit"] .fa-wrapper.pad-right, [type="reset"] .fa-wrapper.pad-right, [type="button"] .fa-wrapper.pad-right {
-      margin-right: 0.4rem; }
-    .btn .fa-wrapper.pad-left, button .fa-wrapper.pad-left, [type="submit"] .fa-wrapper.pad-left, [type="reset"] .fa-wrapper.pad-left, [type="button"] .fa-wrapper.pad-left {
-      margin-left: 0.4rem; }
+  .btn .fa-wrapper.pad-right, button .fa-wrapper.pad-right, [type="submit"] .fa-wrapper.pad-right, [type="reset"] .fa-wrapper.pad-right, [type="button"] .fa-wrapper.pad-right {
+    margin-right: 0.4rem; }
+  .btn .fa-wrapper.pad-left, button .fa-wrapper.pad-left, [type="submit"] .fa-wrapper.pad-left, [type="reset"] .fa-wrapper.pad-left, [type="button"] .fa-wrapper.pad-left {
+    margin-left: 0.4rem; }
   .btn span:first-child, button span:first-child, [type="submit"] span:first-child, [type="reset"] span:first-child, [type="button"] span:first-child {
     margin-right: 0.2rem; }
   .btn span:last-child, button span:last-child, [type="submit"] span:last-child, [type="reset"] span:last-child, [type="button"] span:last-child {
@@ -843,15 +840,15 @@ p.lead {
   font-size: 1.2rem; }
 
 blockquote {
-  background-color: #f5f5f5;
-  border-left: 5px solid #dbdbdb;
+  background-color: #f8f9fa;
+  border-left: 5px solid #e9ecef;
   border-radius: 3px;
-  font-size: 1.15rem;
   margin-bottom: 1rem;
   padding: 1rem 2rem; }
+  blockquote.text--large {
+    font-size: 1.15rem; }
   blockquote p {
-    margin: 0;
-    font-size: 0.95rem; }
+    margin: 0; }
 
 cite {
   opacity: 0.7; }
@@ -2377,7 +2374,18 @@ label:last-child:not(:first-child):not(.form-group-label) {
   .nav-left,
   .nav-center,
   .nav-right {
-    overflow: hidden; } }
+    overflow: hidden; }
+  /* No need for JS to show dropdown menu on mobile devices now */
+  .header .nav-item.has-sub.toggle-hover:not(.no-hover):hover > ul.dropdown-menu {
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    position: relative;
+    top: 1rem;
+    float: none;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 1rem; } }
 
 /*
   Functions
@@ -3197,8 +3205,7 @@ ul {
       display: block;
       padding: 0.25rem 0.5rem;
       cursor: pointer;
-      font-size: 0.95rem;
-      font-weight: 600;
+      font-weight: 700;
       /* Keep styling consistent with menu-items */ }
     .tree .tree-item .tree-item-header .icon {
       -webkit-transition: all var(--animation-duration);
@@ -4303,130 +4310,6 @@ video.video-fullscreen {
 /* Turns element into a circle */
 .u-circle {
   border-radius: 50%; }
-
-.u-clear-left {
-  clear: left !important; }
-
-.u-clear-right {
-  clear: right !important; }
-
-.u-clear-both {
-  clear: both !important; }
-
-/*
-   When using floats, clearfix allows the container to automatically resize so that
-   other elements are not blocked by children.
-*/
-.u-clearfix:after {
-  clear: both !important;
-  content: ' ';
-  display: table !important; }
-
-/* Spacing */
-/* Fonts */
-/* Grid Count */
-/* Grid Percents */
-/* Tab Sizes */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-.u-none {
-  display: none !important; }
-
-.u-inline {
-  display: inline !important; }
-
-.u-inline-block {
-  display: inline-block !important; }
-
-.u-block {
-  display: block !important; }
-
-.u-table {
-  display: table !important; }
-
-.u-table-row {
-  display: table-row !important; }
-
-.u-table-cell {
-  display: table-cell !important; }
-
-.u-none {
-  /* Hide elements based on screen size */ }
-  @media screen and (max-width: 639px) {
-    .u-none-mobile {
-      display: none !important; } }
-  @media screen and (min-width: 769px) {
-    .u-none {
-      /* Hide on devices that are tablets or larger */ }
-      .u-none-tablet {
-        display: none !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1023px) {
-    .u-none-tablet-only {
-      display: none !important; } }
-  @media screen and (min-width: 1024px) {
-    .u-none {
-      /* Hide element on laptops, desktops, etc */ }
-      .u-none-desktop {
-        display: none !important; } }
-
-.u-flex {
-  display: flex !important; }
-  .u-flex.u-flex-row {
-    flex-direction: row !important; }
-  .u-flex.u-flex-row-reverse {
-    flex-direction: row-reverse !important; }
-  .u-flex.u-flex-column {
-    flex-direction: column !important; }
-  .u-flex.u-flex-column-reverse {
-    flex-direction: column-reverse !important; }
-
-.u-justify-flex-start {
-  justify-content: flex-start !important; }
-
-.u-justify-center {
-  justify-content: center !important; }
-
-.u-justify-flex-end {
-  justify-content: flex-end !important; }
-
-.u-justify-space-between {
-  justify-content: space-between !important; }
-
-.u-justify-space-around {
-  justify-content: space-around !important; }
-
-.u-justify-space-evenly {
-  justify-content: space-evenly !important; }
-
-.u-items-stretch {
-  align-items: stretch !important; }
-
-.u-items-flex-start {
-  align-items: flex-start !important; }
-
-.u-items-center {
-  align-items: center !important; }
-
-.u-items-flex-end {
-  align-items: flex-end !important; }
-
-.u-items-baseline {
-  align-items: baseline !important; }
-
-.u-position-static {
-  position: static !important; }
-
-.u-position-fixed {
-  position: fixed !important; }
-
-.u-position-absolute {
-  position: absolute !important; }
-
-.u-position-relative {
-  position: relative !important; }
-
-.u-position-sticky {
-  position: sticky !important; }
 
 /*
   Functions
@@ -7053,16 +6936,16 @@ button.btn--circle,
     /* Only round the top left and right corners */
     transition: all 0.3s; }
     .tab-container.tabs-classic ul li:not(.selected) a:hover,
-    .tab-container.tabs-classic ul li:not(.selected) span:hover {
+    .tab-container.tabs-classic ul li:not(.selected) .tab-item-content:hover {
       background-color: #f1f3f5;
       transition: all 0.3s; }
     .tab-container.tabs-classic ul li.selected a,
-    .tab-container.tabs-classic ul li.selected span {
+    .tab-container.tabs-classic ul li.selected .tab-item-content {
       color: var(--cirrus-primary);
       border-color: #dee2e6;
       border-bottom-color: transparent !important; }
     .tab-container.tabs-classic ul li a,
-    .tab-container.tabs-classic ul li span {
+    .tab-container.tabs-classic ul li .tab-item-content {
       border: 1px solid transparent;
       border-bottom-color: #dee2e6;
       border-radius: 3px 3px 0 0;
@@ -7109,17 +6992,17 @@ button.btn--circle,
     margin: 0;
     text-align: center; }
     .tab-container li:hover a,
-    .tab-container li:hover span {
+    .tab-container li:hover .tab-item-content {
       border-bottom-color: rgba(240, 61, 77, 0.6);
       transition: all 0.3s; }
     .tab-container li.selected a,
-    .tab-container li.selected span {
+    .tab-container li.selected .tab-item-content {
       border-bottom-color: var(--cirrus-primary);
       color: var(--cirrus-primary);
       border-width: 2px;
       transition: all 0.3s; }
     .tab-container li a,
-    .tab-container li span {
+    .tab-container li .tab-item-content {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -7397,16 +7280,8 @@ a.tag:hover {
   /* align-items: flex-start; Push elements to the top of container instead of center/bottom (removed since unneeded */
   -ms-flex-line-pack: justify;
   /* Evenly distribute lines */
-  /* Force elements to align at the center vertical height */
   /* Override the default behavior where buttons display as blocks */
   /* Add spacing between the elements in between */ }
-  .tile.tile.tile--center {
-    align-items: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center; }
-  .tile.tile.tile--center .tile__container {
-    /* Shrink the text to fit inside the tile */
-    overflow: hidden; }
   .tile p {
     font-size: 0.95rem;
     /* Base font size is 1rem */ }
@@ -7422,7 +7297,8 @@ a.tag:hover {
   .tile .tile__container {
     flex: 1 1 auto;
     -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto; }
+    -ms-flex: 1 1 auto;
+    overflow: auto; }
   .tile .tile__container:not(:first-child) {
     padding-left: 1rem; }
   .tile .tile__container:not(:last-child) {
@@ -7673,3 +7549,127 @@ a.tag:hover {
     -webkit-transform: translate(-0.5rem, 50%);
     -moz-transform: translate(-0.5rem, 50%);
     -ms-transform: translate(-0.5rem, 50%); }
+
+.u-clear-left {
+  clear: left !important; }
+
+.u-clear-right {
+  clear: right !important; }
+
+.u-clear-both {
+  clear: both !important; }
+
+/*
+   When using floats, clearfix allows the container to automatically resize so that
+   other elements are not blocked by children.
+*/
+.u-clearfix:after {
+  clear: both !important;
+  content: ' ';
+  display: table !important; }
+
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+.u-none {
+  display: none !important; }
+
+.u-inline {
+  display: inline !important; }
+
+.u-inline-block {
+  display: inline-block !important; }
+
+.u-block {
+  display: block !important; }
+
+.u-table {
+  display: table !important; }
+
+.u-table-row {
+  display: table-row !important; }
+
+.u-table-cell {
+  display: table-cell !important; }
+
+.u-none {
+  /* Hide elements based on screen size */ }
+  @media screen and (max-width: 639px) {
+    .u-none-mobile {
+      display: none !important; } }
+  @media screen and (min-width: 769px) {
+    .u-none {
+      /* Hide on devices that are tablets or larger */ }
+      .u-none-tablet {
+        display: none !important; } }
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .u-none-tablet-only {
+      display: none !important; } }
+  @media screen and (min-width: 1024px) {
+    .u-none {
+      /* Hide element on laptops, desktops, etc */ }
+      .u-none-desktop {
+        display: none !important; } }
+
+.u-flex {
+  display: flex !important; }
+  .u-flex.u-flex-row {
+    flex-direction: row !important; }
+  .u-flex.u-flex-row-reverse {
+    flex-direction: row-reverse !important; }
+  .u-flex.u-flex-column {
+    flex-direction: column !important; }
+  .u-flex.u-flex-column-reverse {
+    flex-direction: column-reverse !important; }
+
+.u-justify-flex-start {
+  justify-content: flex-start !important; }
+
+.u-justify-center {
+  justify-content: center !important; }
+
+.u-justify-flex-end {
+  justify-content: flex-end !important; }
+
+.u-justify-space-between {
+  justify-content: space-between !important; }
+
+.u-justify-space-around {
+  justify-content: space-around !important; }
+
+.u-justify-space-evenly {
+  justify-content: space-evenly !important; }
+
+.u-items-stretch {
+  align-items: stretch !important; }
+
+.u-items-flex-start {
+  align-items: flex-start !important; }
+
+.u-items-center {
+  align-items: center !important; }
+
+.u-items-flex-end {
+  align-items: flex-end !important; }
+
+.u-items-baseline {
+  align-items: baseline !important; }
+
+.u-position-static {
+  position: static !important; }
+
+.u-position-fixed {
+  position: fixed !important; }
+
+.u-position-absolute {
+  position: absolute !important; }
+
+.u-position-relative {
+  position: relative !important; }
+
+.u-position-sticky {
+  position: sticky !important; }

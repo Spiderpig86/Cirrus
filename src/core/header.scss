@@ -1,6 +1,18 @@
 @import './theme.scss';
 @import '../../helpers/_selectors';
 
+@mixin mobile-dropdown-menu-show {
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    position: relative;
+    top: 1rem;
+    float: none;
+    border: none;
+    background-color: transparent;
+    margin-bottom: 1rem;
+}
+
 /* HEADER */
 .header {
     -webkit-box-flex: 1;
@@ -440,15 +452,7 @@
             display: none;
 
             &.dropdown-shown {
-                border-radius: 0;
-                box-shadow: none;
-                display: block;
-                position: relative;
-                top: 1rem;
-                float: none;
-                border: none;
-                background-color: transparent;
-                margin-bottom: 1rem;
+                @include mobile-dropdown-menu-show();
             }
 
             &.dropdown-dark {
@@ -518,5 +522,10 @@
     .nav-center,
     .nav-right {
         overflow: hidden;
+    }
+
+    /* No need for JS to show dropdown menu on mobile devices now */
+    .header .nav-item.has-sub.toggle-hover:not(.no-hover):hover > ul.dropdown-menu {
+        @include mobile-dropdown-menu-show();
     }
 }

@@ -56,16 +56,19 @@ p.lead {
 }
 
 blockquote {
-    background-color: #f5f5f5;
-    border-left: 5px solid #dbdbdb;
+    background-color: map-get($grays, '000');
+    border-left: 5px solid map-get($grays, '200');
     border-radius: 3px;
-    font-size: 1.15rem;
     margin-bottom: 1rem;
     padding: 1rem 2rem;
 
+    &.text--large {
+        font-size: 1.15rem;
+    }
+
     p {
         margin: 0;
-        font-size: 0.95rem;
+        // font-size: 0.95rem; Deprecated 0.6.0
     }
 }
 

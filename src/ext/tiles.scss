@@ -7,17 +7,12 @@
     /* align-items: flex-start; Push elements to the top of container instead of center/bottom (removed since unneeded */
     -ms-flex-line-pack: justify; /* Evenly distribute lines */
     
-    /* Force elements to align at the center vertical height */
-    &.tile.tile--center {
-        align-items: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-    }
-    
-    &.tile.tile--center .tile__container {
-        /* Shrink the text to fit inside the tile */
-        overflow: hidden;
-    }
+    // /* Force elements to align at the center vertical height */ Deprecated in 0.6.0 in favor of u-items-center
+    // &.tile.tile--center {
+    //     align-items: center;
+    //     -webkit-align-items: center;
+    //     -ms-flex-align: center;
+    // }
     
     // /* Keep the text from overflowing */ Moved to utils in 0.6.0
     // &.tile--center .tile__title,
@@ -48,6 +43,7 @@
         flex: 1 1 auto;
         -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
+        overflow: auto;
     }
     
     /* Add spacing between the elements in between */

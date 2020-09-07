@@ -49,20 +49,20 @@
 
             li {
                 &:not(.selected) a:hover,
-                &:not(.selected) span:hover {
+                &:not(.selected) .tab-item-content:hover {
                     background-color: map-get($grays, '100');
                     transition: all 0.3s;
                 }
 
                 &.selected a,
-                &.selected span {
+                &.selected .tab-item-content {
                     color: var(--cirrus-primary);
                     border-color: map-get($grays, '300');
                     border-bottom-color: transparent !important;
                 }
 
                 a,
-                span {
+                .tab-item-content {
                     border: 1px solid transparent;
                     border-bottom-color: map-get($grays, '300');
                     border-radius: 3px 3px 0 0;
@@ -117,13 +117,13 @@
         text-align: center;
 
         &:hover a,
-        &:hover span {
+        &:hover .tab-item-content {
             border-bottom-color: rgba(240, 61, 77, 0.6);
             transition: all 0.3s;
         }
 
         &.selected a,
-        &.selected span {
+        &.selected .tab-item-content {
             border-bottom-color: var(--cirrus-primary);
             color: var(--cirrus-primary);
             border-width: 2px;
@@ -131,7 +131,7 @@
         }
 
         a,
-        span {
+        .tab-item-content {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;

@@ -322,8 +322,8 @@
 
     /* GLYPHS */
     .fa-wrapper {
-        /* Override default behavior of aligning font awesome icons to the top */
-        vertical-align: baseline;
+        // /* Override default behavior of aligning font awesome icons to the top */ FontAwesome no longer does this, no need for override
+        // vertical-align: baseline;
 
         &.pad-right {
             margin-right: 0.4rem;
