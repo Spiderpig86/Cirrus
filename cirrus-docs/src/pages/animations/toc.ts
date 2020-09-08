@@ -4,20 +4,30 @@ export const toc: TableOfContentsEntry[] = [
     {
         name: 'Animations',
         anchor: '#animations',
-        children: null,
-    },
-    {
-        name: 'Test 2',
-        anchor: '#test2',
-        children: null,
-    },
-    {
-        name: 'Test 3',
-        anchor: '#test3',
         children: [
             {
-                name: 'Test 4',
-                anchor: '#test4',
+                name: 'Loading Spinner',
+                anchor: '#spinner',
+                children: null,
+            },
+            {
+                name: 'Hover Grow',
+                anchor: '#hover-grow',
+                children: null,
+            },
+            {
+                name: 'Entrance Animations',
+                anchor: '#entrance-animations',
+                children: null,
+            },
+            {
+                name: 'Infinite Animations',
+                anchor: '#infinite-animations',
+                children: null,
+            },
+            {
+                name: 'Animation Utils',
+                anchor: '#animation-utils',
                 children: null,
             },
         ],

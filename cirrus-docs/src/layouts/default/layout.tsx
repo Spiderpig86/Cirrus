@@ -13,7 +13,7 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
             <Header extraClasses="header--docs-theme" />
             <div className="default-layout tree-nav-body mx-auto mb-0">
                 <div className="tree-nav-header">
-                    <a href="#sidebar" className="u-hide-tablet">
+                    <a href="#sidebar" className="u-hide-tablet u-shadow-none">
                         <span className="icon">
                             <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'bars']} />
                         </span>
@@ -24,7 +24,7 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
                         <Sidebar {...rest} />
                     </div>
                 </div>
-                <a href="#sidebar-close" id="sidebar-close" className="tree-nav-close p-0"></a>
+                <a href="#nonexistent-div" id="sidebar-close" className="tree-nav-close p-0 u-shadow-none"></a>
                 <div
                     className="tree-nav-container h-auto"
                     style={{

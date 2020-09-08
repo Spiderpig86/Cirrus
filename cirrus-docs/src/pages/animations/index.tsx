@@ -1,219 +1,534 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { CodeBlock } from '../../layouts/components/codeblock';
 import { TableOfContents } from '../../layouts/components/toc';
 import { Headline } from '../../layouts/components/headline';
 import { toc } from './toc';
+import CreditCardSVG from '../../static/svg/credit-card.svg';
+
+import initializeAnimations from '../../static/js/animations.js';
 
 export const AnimationsPage: React.FC<any> = (props) => {
+    useEffect(() => {
+        initializeAnimations();
+    });
+
     return (
         <main className="page-layout">
             <div>
-                <section id="animations padtop">
+                <section className="padtop" id="animations">
                     <div className="content">
                         <Headline title={'Animations'} link={'#animations'} />
                         <div className="divider"></div>
-
                         <p>
                             Animations are an essential part crafting beautiful websites that aren't just stunning, but
-                            are also alive. Cirrus comes bundled with a couple of animations to help you get started.
+                            are also alive. Cirrus comes bundled with animated components to help you get started.
                         </p>
-                        <div className="space"></div>
-                        <h5>Loading Spinner</h5>
+                    </div>
+                </section>
+
+                <section className="padtop" id="spinner">
+                    <div className="content">
+                        <Headline title={'Loading'} link={'#spinner'} size="4" />
+                        <div className="divider"></div>
                         <p>
                             The loading spinner serves as an elegant indicator for progress in webpages. Just add the{' '}
-                            <code>animated loading</code> selectors to the element and Cirrus will handle the rest. By
-                            default, the spinner will be horizontally centered and it will override any text. To hide
-                            the text, just add the <code>hide-text</code> class. Below are some modifiers of the loading
-                            spinner.
+                            <code>animated loading</code> selectors to the element and Cirrus will handle the rest.
                         </p>
-                        <ul className="menu-list">
-                            <li>
-                                <code>hide-text</code> - hides the text. Best used for when the loader covers underlying
-                                text.
-                            </li>
-                            <li>
-                                <code>loading-white</code> - sets the loading spinner's color to white.
-                            </li>
-                        </ul>
-
                         <p>
-                            To make the <code>loading</code> spinner align either left or right, add the{' '}
-                            <code>loading-left</code> or <code>loading-right</code> classes respectively.
+                            By default, the spinner will be horizontally centered and it will override any text. To hide
+                            the text, just add the <code>hide-text</code> class.
                         </p>
 
-                        <div className="space xlarge"></div>
-                        <h5>Loading Button</h5>
-                        <p>
-                            These buttons are designed to tell users that a function is in progress. This is simply
-                            created by adding the <code>animated loading</code> classes to the button and it will
-                            automatically
-                        </p>
                         <div className="row">
-                            <div className="col">
-                                <button className="animated loading u-center hide-text btn-primary">1</button>
+                            <div className="col-lg-6">
+                                <div className="card u-flex u-items-center u-justify-center">
+                                    <div className="animated loading hide-text">
+                                        <p>Hidden</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="col">
-                                <button className="animated loading u-center loading-left btn-info">Loading</button>
-                            </div>
-                            <div className="col">
-                                <button
-                                    className="animated loading u-center loading-white hide-text btn-link"
-                                    id="btn3"
-                                >
-                                    3
-                                </button>
-                            </div>
-                            <div className="col">
-                                <button
-                                    className="animated loading u-center loading-right loading-white white btn-success"
-                                    id="btn4"
-                                >
-                                    Loading
-                                </button>
-                            </div>
-                            <div className="col">
-                                <button
-                                    className="animated loading u-center hide-text loading-white btn-warning"
-                                    id="btn5"
-                                >
-                                    5
-                                </button>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="card u-flex u-items-center u-justify-center">
+    <div class="animated loading hide-text">
+        <p>Hidden</p>
+    </div>
+</div>`}
+                                    language="htmlbars"
+                                />
                             </div>
                         </div>
-
                         <div className="space"></div>
 
+                        <p>
+                            The spinner's color could also be changed to white with the <code>loading-white</code>{' '}
+                            class.
+                        </p>
                         <div className="row">
-                            <CodeBlock
-                                code={`
-<button class="animated loading u-center hide-text btn-primary">1</button>
-<button class="animated loading u-center loading-left btn-info">Loading</button>
-<button class="animated loading u-center loading-white hide-text btn-link" id="btn3"> 3 </button>
-<button class="animated loading u-center loading-right loading-white white btn-success" id="btn4"> Loading </button>
-<button class="animated loading u-center hide-text loading-white btn-warning" id="btn5"> 5 </button>`}
-                                language="html"
-                                languageDisplay="HTML"
-                            />
+                            <div className="col-lg-6">
+                                <div
+                                    className="card u-flex u-items-center u-justify-center"
+                                    style={{
+                                        background: 'linear-gradient(to right, #8e2de2, #4a00e0)',
+                                    }}
+                                >
+                                    <div className="animated loading hide-text loading-white">
+                                        <p>Hidden</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="card u-flex u-items-center u-justify-center" style="background: linear-gradient(to right, rgb(142, 45, 226), rgb(74, 0, 224));">
+    <div class="animated loading hide-text loading-white">
+        <p>Hidden</p>
+    </div>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <div className="space"></div>
+
+                        <p>
+                            To show the spinner to the left, use the <code>loading-left</code> class.
+                        </p>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <div
+                                    className="card"
+                                    style={{
+                                        background: 'linear-gradient(to right, #EC6EAD, #3494E6)',
+                                    }}
+                                >
+                                    <div className="animated loading loading-left loading-white white">
+                                        <p>loading-left</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="card u-flex u-items-center u-justify-center" style="background: linear-gradient(to right, rgb(142, 45, 226), rgb(74, 0, 224));">
+    <div class="animated loading hide-text loading-white">
+        <p>Hidden</p>
+    </div>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <div className="space"></div>
+
+                        <p>
+                            For the right, use the <code>loading-right</code> class.
+                        </p>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <div
+                                    className="card"
+                                    style={{
+                                        background: 'linear-gradient(to right, #ff5858, #f857a6)',
+                                    }}
+                                >
+                                    <div className="animated loading loading-right loading-white white u-text-right">
+                                        <p>loading-right</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="card" style="background: linear-gradient(to right, rgb(255, 88, 88), rgb(248, 87, 166));">
+    <div class="animated loading loading-right loading-white white u-text-right">
+        <p>loading-right</p>
+    </div>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="padtop" id="hover-grow">
+                    <div className="content">
+                        <Headline title="Hover Grow" link="#hover-grow" size="4" />
+                        <div className="divider"></div>
+
+                        <p>
+                            This is a subtle animation that enlarges a given element on hover. Just add the{' '}
+                            <code>hover-grow</code> class to your element.
+                        </p>
+
+                        <div className="row">
+                            <div className="col-lg-4">
+                                <div className="hover-grow">
+                                    <img src={CreditCardSVG} />
+                                </div>
+                                <div className="u-text-center">Hover me.</div>
+                            </div>
+                            <div className="col-lg-8">
+                                <CodeBlock
+                                    code={`<div class="hover-grow">
+    <img src="../../card.svg" />
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="padtop" id="entrance-animations">
+                    <div className="content">
+                        <Headline title="Entrance Animations" link="#entrance-animations" size="4" />
+                        <div className="divider"></div>
+                        <p>These are animations that only run once when the page is loaded or the class is toggled.</p>
+                        <div className="space"></div>
+
+                        <h6>Bounce</h6>
+                        <p>Bouncing animation with a glyph.</p>
+                        <div className="row">
+                            <div className="col-lg-6 u-text-center">
+                                <span className="icon animated" id="bounce-heart">
+                                    <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
+                                </span>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated bounce" aria-hidden="true"></i></span>`}
+                                    language="htmlbars"
+                                />
+                            </div>
                         </div>
 
+                        <button className="docs-btn-play" id="toggle-bounce-heart">
+                            <span className="icon">
+                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                            </span>
+                            Play
+                        </button>
+                        <div className="space"></div>
+                        <p>Bouncing animation with a div.</p>
+                        <div className="row">
+                            <div className="col-lg-6 u-text-center">
+                                <div className="bg-orange-400 white u-text-center animated" id="bounce-div">
+                                    <p>This is a div!</p>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="bg-orange-400 white u-text-center animated bounce">
+    <p>This is a div!</p>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <button className="docs-btn-play" id="toggle-bounce-div">
+                            <span className="icon">
+                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                            </span>
+                            Play
+                        </button>
+                        <div className="space"></div>
+                        <p>Bouncing animation with a button.</p>
+                        <div className="row">
+                            <div className="col-lg-6 u-text-center">
+                                <button className="btn-info animated" id="bounce-btn">
+                                    Button
+                                </button>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<button class="btn-info animated bounce">Button</button>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <button className="docs-btn-play" id="toggle-bounce-btn">
+                            <span className="icon">
+                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                            </span>
+                            Play
+                        </button>
                         <div className="space xlarge"></div>
 
-                        <div className="r">
-                            <h5>Hover Grow</h5>
-                            <p>
-                                Zoom in various elements to make the stand out from the rest. Just add{' '}
-                                <code>hover-grow</code> to your control.
-                            </p>
-
-                            <div className="row u-text-center content" id="grid">
-                                <a className="col" href="!#">
-                                    <div className="content">
-                                        <img src="../../res/img/FileBot.png" className="hover-grow" />
-                                        <p>FileBot</p>
-                                    </div>
-                                </a>
-                                <a className="col" href="!#">
-                                    <div className="content">
-                                        <img src="../../res/img/Illustrator.png" className="hover-grow" />
-                                        <p>Illustrator</p>
-                                    </div>
-                                </a>
-                                <a className="col" href="!#">
-                                    <div className="content">
-                                        <img src="../../res/img/KeepassX.png" className="hover-grow" />
-                                        <p>KeepassX</p>
-                                    </div>
-                                </a>
-                                <a className="col" href="!#">
-                                    <div className="content">
-                                        <img src="../../res/img/Pandora2.png" className="hover-grow" />
-                                        <p>Pandora</p>
-                                    </div>
-                                </a>
+                        <h6>Bounce In</h6>
+                        <p>Bounce in animation with a glyph.</p>
+                        <div className="row">
+                            <div className="col-lg-6 u-text-center">
+                                <span className="icon animated" id="bounce-in-heart">
+                                    <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
+                                </span>
                             </div>
-
-                            <div className="row u-text-center content" id="grid">
-                                <a className="col" href="!#">
-                                    <div className="content">
-                                        <img src="../../res/img/photoshop.png" className="hover-grow" />
-                                        <p>Photoshop</p>
-                                    </div>
-                                </a>
-                                <a className="col" href="!#">
-                                    <div className="content">
-                                        <img src="../../res/img/PhpStorm.png" className="hover-grow" />
-                                        <p>PhpStorm</p>
-                                    </div>
-                                </a>
-                                <a className="col" href="!#">
-                                    <div className="content">
-                                        <img src="../../res/img/Python.png" className="hover-grow" />
-                                        <p>Python</p>
-                                    </div>
-                                </a>
-                                <a className="col" href="!#">
-                                    <div className="content">
-                                        <img src="../../res/img/Wing.png" className="hover-grow" />
-                                        <p>Wing</p>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div className="row">
-                                <pre>
-                                    <code className="html" data-lang="HTML">
-                                        &lt;div className=&quot;content&quot;&gt; &lt;img
-                                        src=&quot;res/img/autodesk_autocad.png&quot;
-                                        className=&quot;hover-grow&quot;/&gt; &lt;p&gt;Autodesk&lt;/p&gt; &lt;/div&gt;{' '}
-                                    </code>
-                                </pre>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated bounceIn" aria-hidden="true"></i></span>`}
+                                    language="htmlbars"
+                                />
                             </div>
                         </div>
+                        <button className="docs-btn-play" id="toggle-bounce-in-heart">
+                            <span className="icon">
+                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                            </span>
+                            Play
+                        </button>
+                        <div className="space"></div>
+                        <p>Bounce in animation with a div.</p>
+                        <div className="row">
+                            <div className="col-lg-6 u-text-center">
+                                <div className="bg-orange-400 white u-text-center animated" id="bounce-in-div">
+                                    <p>This is a div!</p>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="bg-orange-400 white u-text-center animated bounceIn">
+    <p>This is a div!</p>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <button className="docs-btn-play" id="toggle-bounce-in-div">
+                            <span className="icon ">
+                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                            </span>
+                            Play
+                        </button>
+                        <div className="space"></div>
+                        <p>Bounce in animation with a button.</p>
+                        <div className="row">
+                            <div className="col-lg-6 u-text-center">
+                                <button className="btn-info animated" id="bounce-in-btn">
+                                    Button
+                                </button>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<button class="btn-info animated bounceIn">Button</button>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <button className="docs-btn-play" id="toggle-bounce-in-btn">
+                            <span className="icon">
+                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                            </span>
+                            Play
+                        </button>
+                        <div className="space xlarge"></div>
+
+                        <h6>Fade In</h6>
+                        <p>Fade in animation with a glyph.</p>
+                        <div className="row">
+                            <div className="col-lg-6 u-text-center">
+                                <span className="icon animated" id="fade-in-heart">
+                                    <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
+                                </span>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated fadeIn" aria-hidden="true"></i></span>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <button className="docs-btn-play" id="toggle-fade-in-heart">
+                            <span className="icon">
+                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                            </span>
+                            Play
+                        </button>
+                        <div className="space"></div>
+                        <p>Fade in animation with a div.</p>
+                        <div className="row">
+                            <div className="col-lg-6 u-text-center">
+                                <div className="bg-orange-400 white u-text-center animated" id="fade-in-div">
+                                    <p>This is a div!</p>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="bg-orange-400 white u-text-center animated fadeIn">
+    <p>This is a div!</p>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <button className="docs-btn-play" id="toggle-fade-in-div">
+                            <span className="icon">
+                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                            </span>
+                            Play
+                        </button>
+                        <div className="space"></div>
+                        <p>Fade in animation with a button.</p>
+                        <div className="row">
+                            <div className="col-lg-6 u-text-center">
+                                <button className="btn-info animated" id="fade-in-btn">
+                                    Button
+                                </button>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<button class="btn-info animated fadeIn">Button</button>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <button className="docs-btn-play" id="toggle-fade-in-btn">
+                            <span className="icon">
+                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                            </span>
+                            Play
+                        </button>
+                        <div className="space"></div>
                     </div>
                 </section>
-                <section id="test2" className="padtop">
+
+                <section className="padtop" id="infinite-animations">
                     <div className="content">
-                        <p>test</p>
-                    </div>
-                </section>
-                <section id="test3" className="padtop">
-                    <div className="content">
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
-                        <p>test</p>
-                        <section id="test4">
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                            <p>test</p>
-                        </section>
-                    </div>
-                </section>
-                <section className="padtop">
-                    <div className="content">
+                        <Headline title="Infinite Animations" link="#infinite-animations" size="4" />
                         <div className="divider"></div>
-                        <ul className="pagination no-bullets">
-                            <li className="pagination-item pagination-next">
-                                <a href="../buttons" className="u-block">
-                                    <p className="pagination-item-subtitle">Next</p>
-                                    <h5 className="font-alt font-light m-0">Buttons</h5>
-                                </a>
-                            </li>
-                        </ul>
+                        <p>These are animations that only run continuously.</p>
+                        <div className="space"></div>
+
+                        <h6>Pulse</h6>
+                        <p>Pulse animation with a glyph.</p>
+                        <div className="row">
+                            <div className="col-lg-6 u-text-center">
+                                <span className="icon animated paused pulse" id="pulse-heart">
+                                    <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
+                                </span>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated pulse" aria-hidden="true"></i></span>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <button className="docs-btn-play" id="toggle-pulse-heart">
+                            <span className="icon">
+                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                            </span>
+                            Play
+                        </button>
+                        <p>Pulse animation with a div.</p>
+                        <div className="row">
+                            <div className="col-lg-6 u-text-center">
+                                <div className="bg-orange-400 white u-text-center animated paused pulse" id="pulse-div">
+                                    <p>This is a div!</p>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="bg-orange-400 white u-text-center animated pulse">
+    <p>This is a div!</p>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <button className="docs-btn-play" id="toggle-pulse-div">
+                            <span className="icon">
+                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                            </span>
+                            Play
+                        </button>
+                        <div className="space"></div>
+                        <p>Pulse animation with a button.</p>
+                        <div className="row">
+                            <div className="col-lg-6 u-text-center">
+                                <button className="btn-info animated paused pulse" id="pulse-btn">
+                                    Button
+                                </button>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<button class="btn-info animated pulse">Button</button>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <button className="docs-btn-play" id="toggle-pulse-btn">
+                            <span className="icon">
+                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                            </span>
+                            Play
+                        </button>
+                    </div>
+                </section>
+
+                <section className="padtop" id="animation-utils">
+                    <div className="content">
+                        <Headline title="Animation Utils" link="#animation-utils" size="4" />
+                        <div className="divider"></div>
+                        <p>
+                            Cirrus comes with a couple of tools you can use to help test or modify animation behavior.
+                        </p>
+                        <div className="space"></div>
+
+                        <h6>Infinite Animation</h6>
+                        <p>
+                            This will sustain an animation when the user is on the page. This even works for animations
+                            not designed to be infinitely looped. The only change needed is the addition of the{' '}
+                            <code>infinite</code> class to the component.
+                        </p>
+                        <p>Below is an example using the fade in animation.</p>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <button className="btn-primary animated fadeIn infinite">Infinitely Fading</button>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<button class="btn-primary animated fadeIn infinite">Infinitely Fading</button>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <p>
+                            Now this animation seems to cut off at the end of the cycle. To make it alternate, just add
+                            the <code>alternate</code> class to make the animation more fluid.
+                        </p>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <button className="btn-primary animated fadeIn infinite alternate">
+                                    Alternating Fading
+                                </button>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<button class="btn-primary animated fadeIn infinite alternate">Alternating Fading</button>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        <div className="space"></div>
+
+                        <h6>Pausing Animations</h6>
+                        <p>
+                            This is great with testing your animations and works well with JavaScript calls also. All
+                            you need to do is add a class to the animated component called <code>paused</code>.
+                        </p>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <button className="btn-primary animated bounce infinite alternate paused">
+                                    Paused
+                                </button>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<button class="btn-primary animated bounce infinite alternate paused">Paused</button>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>

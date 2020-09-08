@@ -107,7 +107,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Animated Styles',
-                url: '#'
+                url: '/animations'
             },
         ],
     },

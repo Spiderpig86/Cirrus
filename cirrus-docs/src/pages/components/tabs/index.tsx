@@ -11,7 +11,7 @@ export const TabsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
             <div>
-                <section className="padtop">
+                <section className="padtop" id="tabs">
                     <div className="content">
                         <Headline title="Tabs" link="#tabs" />
                         <div className="divider"></div>

@@ -30,6 +30,7 @@ export const SetUpPage: React.FC<any> = (props) => {
                         <Headline title="Setup" link="#setup" />
                         <p className="lead">Follow these simple steps for setting up Cirrus in your project.</p>
                         <div className="divider"></div>
+                        <p>Below are a couple of different ways to integrate Cirrus into your project.</p>
 
                         <h6>1. Use a Package Manager (Recommended)</h6>
                         <b>Npm</b>

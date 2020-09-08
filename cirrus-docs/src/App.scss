@@ -13,6 +13,10 @@ iframe {
     height: 500px;
 }
 
+main > div:focus {
+    box-shadow: none;
+}
+
 .content {
     max-width: 80rem !important;
 }

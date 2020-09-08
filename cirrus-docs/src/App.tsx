@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
 
 import { DefaultLayoutRoute } from './layouts/default';
 import { LandingLayoutRoute } from './layouts/landing';
@@ -34,6 +37,8 @@ import { FontWeightsPage, FontGlyphsPage, TextElementsPage } from './pages/fonts
 import './App.scss';
 
 function App() {
+    library.add(fas);
+    library.add(fab);
     return (
         <BrowserRouter>
             <Switch>
