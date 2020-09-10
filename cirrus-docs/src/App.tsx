@@ -10,7 +10,7 @@ import { BlankLayoutRoute } from './layouts/blank';
 import { AnimationsPage } from './pages/animations';
 import { SetUpPage, BrowserSupportPage } from './pages/geting-started';
 import { AboutPage } from './pages/about';
-import { ColorsPage, TypographyPage } from './pages/fundamentals';
+import { ColorsPage, TypographyPage, ViewportsPage } from './pages/fundamentals';
 import { WhyPage } from './pages/why';
 import { Landing } from './pages/landing';
 import { ButtonPage, ButtonGlyphsPage, VariantsPage, ButtonGroupsPage } from './pages/buttons';
@@ -52,6 +52,7 @@ function App() {
 
                 <DefaultLayoutRoute path="/fundamentals/colors" component={ColorsPage} />
                 <DefaultLayoutRoute path="/fundamentals/typography" component={TypographyPage} />
+                <DefaultLayoutRoute path="/fundamentals/viewports" component={ViewportsPage} />
 
                 <DefaultLayoutRoute path="/animations" component={AnimationsPage} />
 

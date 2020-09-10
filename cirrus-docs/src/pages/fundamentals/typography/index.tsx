@@ -117,10 +117,16 @@ export const TypographyPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{
-                    name: 'Colors',
-                    link: './colors'
-                }} />
+                <Pagination
+                    prevLink={{
+                        name: 'Colors',
+                        link: './colors',
+                    }}
+                    nextLink={{
+                        name: 'Viewports',
+                        link: './viewports',
+                    }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>
