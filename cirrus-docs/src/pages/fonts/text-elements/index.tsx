@@ -113,21 +113,31 @@ export const TextElementsPage: React.FC<any> = (props) => {
                                     </span>
                                 </h5>
 
-                                <span className="font-alt font-light uppercase">
+                                <h6 className="font-alt font-light uppercase">
                                     this is h6
                                     <span className="desc">
                                         <code>h6</code> 1.25rem (12px)
                                     </span>
-                                </span>
+                                </h6>
                             </div>
                         </div>
                         <div className="space"></div>
                         <div className="row">
                             <div className="col-lg-6">
-                                <CodeBlock code={``} language="htmlbars" />
+                                <CodeBlock code={`<h1 class="uppercase">this is h1<span class="desc"><code>h1</code> 3rem (48px)</span></h1>
+<h2 class="uppercase">this is h2<span class="desc"><code>h2</code> 2.5rem (40px)</span></h2>
+<h3 class="uppercase">this is h3<span class="desc"><code>h3</code> 2rem (32px)</span></h3>
+<h4 class="uppercase">this is h4<span class="desc"><code>h4</code> 1.75rem (24px)</span></h4>
+<h5 class="uppercase">this is h5<span class="desc"><code>h5</code> 1.5rem (16px)</span></h5>
+<h6 class="uppercase">this is h6<span class="desc"><code>h6</code> 1.25rem (12px)</span></h6>`} language="htmlbars" />
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={``} language="htmlbars" />
+                                <CodeBlock code={`<h1 class="font-alt font-light uppercase">this is h1<span class="desc"><code>h1</code> 3rem (48px)</span></h1>
+<h2 class="font-alt font-light uppercase">this is h2<span class="desc"><code>h2</code> 2.5rem (40px)</span></h2>
+<h3 class="font-alt font-light uppercase">this is h3<span class="desc"><code>h3</code> 2rem (32px)</span></h3>
+<h4 class="font-alt font-light uppercase">this is h4<span class="desc"><code>h4</code> 1.75rem (24px)</span></h4>
+<h5 class="font-alt font-light uppercase">this is h5<span class="desc"><code>h5</code> 1.5rem (16px)</span></h5>
+<h6 class="font-alt font-light uppercase">this is h6<span class="desc"><code>h6</code> 1.25rem (12px)</span></h6>`} language="htmlbars" />
                             </div>
                         </div>
                     </div>
@@ -177,7 +187,10 @@ export const TextElementsPage: React.FC<any> = (props) => {
                         </h1>
                         <div className="space"></div>
 
-                        <CodeBlock code={``} language="htmlbars" />
+                        <CodeBlock code={`<h1 class="headline-1 uppercase"> <b>headline-1</b><span class="desc"><code>headline-1</code> 6.5rem (104px)</span></h1>
+<h1 class="headline-2 uppercase"> <b>headline-2</b><span class="desc"><code>headline-2</code> 5.5rem (88px)</span></h1>
+<h1 class="headline-3 uppercase"> <b>headline-3</b><span class="desc"><code>headline-3</code> 4.5rem (72px)</span></h1>
+<h1 class="headline-4 uppercase"> <b>headline-4</b><span class="desc"><code>headline-4</code> 3.5rem (56px)</span></h1>`} language="htmlbars" />
                     </div>
                 </section>
 
