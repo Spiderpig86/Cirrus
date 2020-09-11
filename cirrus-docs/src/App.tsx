@@ -33,6 +33,7 @@ import {
     TreePage,
 } from './pages/components';
 import { FontWeightsPage, FontGlyphsPage, TextElementsPage } from './pages/fonts';
+import { FormsInputsPage } from './pages/forms';
 
 import './App.scss';
 
@@ -80,6 +81,8 @@ function App() {
                 <DefaultLayoutRoute path="/fonts/font-weights" component={FontWeightsPage} />
                 <DefaultLayoutRoute path="/fonts/glyphs" component={FontGlyphsPage} />
                 <DefaultLayoutRoute path="/fonts/text-elements" component={TextElementsPage} />
+
+                <DefaultLayoutRoute path="/forms/inputs" component={FormsInputsPage} />
 
                 <BlankLayoutRoute component={_404} />
             </Switch>

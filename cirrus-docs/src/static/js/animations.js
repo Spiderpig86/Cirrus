@@ -9,6 +9,10 @@ module.exports = function () {
             elements: ['#toggle-bounce-in-heart', '#toggle-bounce-in-div', '#toggle-bounce-in-btn'],
         },
         {
+            class: 'fadeIn',
+            elements: ['#toggle-fade-in-heart', '#toggle-fade-in-div', '#toggle-fade-in-btn'],
+        },
+        {
             class: 'paused',
             elements: ['#toggle-pulse-heart', '#toggle-pulse-div', '#toggle-pulse-btn'],
         },
@@ -17,7 +21,6 @@ module.exports = function () {
     for (const animation of config) {
         animation.elements.forEach((toggle) => {
             const elementId = toggle.replace('toggle-', '');
-            console.log(document.querySelector(toggle), toggle);
 
             document.querySelector(toggle).addEventListener('click', () => {
                 console.log(document.querySelector(elementId), elementId);

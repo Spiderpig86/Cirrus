@@ -265,43 +265,37 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Inputs',
-                url: '#'
-            },
-            {
-                fontWeight: 'semibold',
-                glyph: null,
-                text: 'States',
-                url: '#'
+                url: '/forms/inputs'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'With Glyphs',
-                url: '#'
+                url: '/forms/glyphs'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Checkbox',
-                url: '#'
+                url: '/forms/checkbox'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Radio',
-                url: '#'
+                url: '/forms/radio'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Toggle',
-                url: '#'
+                url: '/forms/toggle'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Form Groups',
-                url: '#'
+                url: '/forms/groups'
             },
         ],
     },

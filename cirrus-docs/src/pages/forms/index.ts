@@ -1,0 +1,1 @@
+export { FormsInputsPage } from './inputs';

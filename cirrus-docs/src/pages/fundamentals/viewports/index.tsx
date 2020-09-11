@@ -10,7 +10,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
             <div>
-                <section className="padtop" id="typography">
+                <section className="padtop" id="viewports">
                     <div className="content">
                         <Headline title="Viewports" link="#viewports" />
                         <div className="divider"></div>
