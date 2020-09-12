@@ -597,7 +597,7 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination nextLink={{ name: 'States', link: './states' }} />
+                <Pagination nextLink={{ name: 'With Glyphs', link: './glyphs' }} />
             </span>
             <TableOfContents entries={toc} />
         </main>
