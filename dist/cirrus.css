@@ -1330,7 +1330,6 @@ select {
   select.input-contains-icon.input-small ~ .icon,
   select.input-contains-icon-left.input-small ~ .icon,
   select.input-contains-icon-right.input-small ~ .icon.icon-right {
-    line-height: 2rem;
     width: 2.5rem;
     font-size: 14px; }
   input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']).input-contains-icon.input-large, input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']).input-contains-icon-right.input-large,
@@ -1465,7 +1464,6 @@ textarea[type='text'] {
   textarea[type='text'].input-contains-icon.input-small ~ .icon,
   textarea[type='text'].input-contains-icon-left.input-small ~ .icon,
   textarea[type='text'].input-contains-icon-right.input-small ~ .icon.icon-right {
-    line-height: 2rem;
     width: 2.5rem;
     font-size: 14px; }
   textarea.input-contains-icon.input-large, textarea.input-contains-icon-right.input-large,
@@ -1582,7 +1580,6 @@ select {
   select.input-contains-icon.input-small ~ .icon,
   select.input-contains-icon-left.input-small ~ .icon,
   select.input-contains-icon-right.input-small ~ .icon.icon-right {
-    line-height: 2rem;
     width: 2.5rem;
     font-size: 14px; }
   select.input-contains-icon.input-large, select.input-contains-icon-right.input-large {
@@ -1656,7 +1653,9 @@ label:last-child:not(:first-child):not(.form-group-label) {
   position: relative;
   margin: 0.5rem 0; }
 
-.input-contains-icon ~ .icon {
+.input-contains-icon ~ .icon,
+.input-contains-icon-left ~ .icon,
+.input-contains-icon-right ~ .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1682,23 +1681,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
   z-index: 1; }
 
 /* Form section just adds extra spacing between form elements tiled vertically */
-.form-section {
-  /* A flexbox version of form-section for inline forms */ }
-  .form-section:not(:last-child) {
-    margin-bottom: 0.5rem; }
-  .form-section.section-inline {
-    display: flex; }
-  .form-section button {
-    align-items: center;
-    flex-grow: 0;
-    /* Keep it from taking up extra space */
-    display: flex;
-    flex-shrink: 0; }
-  .form-section input,
-  .form-section .section-body {
-    align-items: center;
-    flex-grow: 1; }
-
 /* Form groups that group inputs with other controls. */
 .form-group {
   /* This is just an extended portion of an input which is just like a label and is read only */
@@ -1789,11 +1771,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
 ::-webkit-input-placeholder {
   color: #a9a9a9;
   /* Lighter than the default */ }
-
-@media screen and (max-width: 768px) {
-  /* Remove flex in form-section */
-  .form-section.section-inline {
-    display: inherit; } }
 
 /*
   Functions
@@ -2672,7 +2649,7 @@ section {
       width: 100%;
       margin-left: 0;
       padding: 0; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .row {
       /* Dividers for mobile layout */ }
       .row [class^='col-']:not(.ignore-screen):not([class^='col-sm']):not([class^='col-lg']),
@@ -2878,7 +2855,7 @@ section {
   height: auto !important; }
 
 /* Do the actual balancing only on larger screens */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .level,
   .level-left,
   .level-right {
@@ -3167,7 +3144,7 @@ ul {
     overflow: hidden;
     -webkit-transition: all var(--animation-duration);
     transition: all var(--animation-duration); }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .list-dropdown .menu {
         height: 0;
         padding: 0 !important;
@@ -4102,20 +4079,28 @@ video.video-fullscreen {
 .u-none {
   /* Hide elements based on screen size */ }
   @media screen and (max-width: 639px) {
-    .u-none-mobile {
+    .u-none-xs {
       display: none !important; } }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 640px) and (max-width: 767px) {
+    .u-none-sm-only {
+      display: none !important; } }
+  @media screen and (min-width: 768px) {
     .u-none {
       /* Hide on devices that are tablets or larger */ }
-      .u-none-tablet {
+      .u-none-sm {
         display: none !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1023px) {
-    .u-none-tablet-only {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .u-none-md-only {
       display: none !important; } }
   @media screen and (min-width: 1024px) {
     .u-none {
       /* Hide element on laptops, desktops, etc */ }
-      .u-none-desktop {
+      .u-none-md {
+        display: none !important; } }
+  @media screen and (min-width: 1280px) {
+    .u-none {
+      /* Hide element on large desktops, etc */ }
+      .u-none-lg {
         display: none !important; } }
 
 .u-flex {
@@ -4310,6 +4295,9 @@ video.video-fullscreen {
 /* Turns element into a circle */
 .u-circle {
   border-radius: 50%; }
+
+.u-no-outline {
+  outline: none; }
 
 /*
   Functions
@@ -5468,7 +5456,7 @@ video.video-fullscreen {
   .grid .c {
     grid-column-start: var(--grid-column-start);
     grid-column-end: var(--grid-column-end); }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .grid {
       --grid-template-column: repeat(1, minmax(0, 1fr)); } }
 
@@ -5750,7 +5738,7 @@ video.video-fullscreen {
       position: relative; }
     .modal .modal-content .modal-footer {
       padding: 1rem 2.5rem; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .modal .modal-content {
         max-width: 90%; } }
   .modal.modal-animated--dropdown {
@@ -7297,8 +7285,7 @@ a.tag:hover {
   .tile .tile__container {
     flex: 1 1 auto;
     -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    overflow: auto; }
+    -ms-flex: 1 1 auto; }
   .tile .tile__container:not(:first-child) {
     padding-left: 1rem; }
   .tile .tile__container:not(:last-child) {
@@ -7599,20 +7586,28 @@ a.tag:hover {
 .u-none {
   /* Hide elements based on screen size */ }
   @media screen and (max-width: 639px) {
-    .u-none-mobile {
+    .u-none-xs {
       display: none !important; } }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 640px) and (max-width: 767px) {
+    .u-none-sm-only {
+      display: none !important; } }
+  @media screen and (min-width: 768px) {
     .u-none {
       /* Hide on devices that are tablets or larger */ }
-      .u-none-tablet {
+      .u-none-sm {
         display: none !important; } }
-  @media screen and (min-width: 769px) and (max-width: 1023px) {
-    .u-none-tablet-only {
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .u-none-md-only {
       display: none !important; } }
   @media screen and (min-width: 1024px) {
     .u-none {
       /* Hide element on laptops, desktops, etc */ }
-      .u-none-desktop {
+      .u-none-md {
+        display: none !important; } }
+  @media screen and (min-width: 1280px) {
+    .u-none {
+      /* Hide element on large desktops, etc */ }
+      .u-none-lg {
         display: none !important; } }
 
 .u-flex {

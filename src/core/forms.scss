@@ -72,7 +72,6 @@
     &.input-contains-icon.input-small ~ .icon,
     &.input-contains-icon-left.input-small ~ .icon,
     &.input-contains-icon-right.input-small ~ .icon.icon-right {
-        line-height: 2rem;
         width: 2.5rem;
         font-size: 14px;
     }
@@ -254,7 +253,9 @@ label {
     margin: 0.5rem 0;
 }
 
-.input-contains-icon ~ .icon {
+.input-contains-icon ~ .icon,
+.input-contains-icon-left ~ .icon,
+.input-contains-icon-right ~ .icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -283,29 +284,29 @@ label {
 }
 
 /* Form section just adds extra spacing between form elements tiled vertically */
-.form-section {
-    &:not(:last-child) {
-        margin-bottom: 0.5rem;
-    }
+// .form-section { Deprecated 0.6.0
+//     &:not(:last-child) {
+//         margin-bottom: 0.5rem;
+//     }
 
-    /* A flexbox version of form-section for inline forms */
-    &.section-inline {
-        display: flex;
-    }
+//     /* A flexbox version of form-section for inline forms */
+//     &.section-inline {
+//         display: flex;
+//     }
 
-    button {
-        align-items: center;
-        flex-grow: 0; /* Keep it from taking up extra space */
-        display: flex;
-        flex-shrink: 0;
-    }
+//     button {
+//         align-items: center;
+//         flex-grow: 0; /* Keep it from taking up extra space */
+//         display: flex;
+//         flex-shrink: 0;
+//     }
 
-    input,
-    .section-body {
-        align-items: center;
-        flex-grow: 1;
-    }
-}
+//     input,
+//     .section-body {
+//         align-items: center;
+//         flex-grow: 1;
+//     }
+// }
 
 /* Form groups that group inputs with other controls. */
 .form-group {
@@ -394,8 +395,8 @@ label {
 }
 
 @media screen and (max-width: 768px) {
-    /* Remove flex in form-section */
-    .form-section.section-inline {
-        display: inherit;
-    }
+    // /* Remove flex in form-section */ Deprecated 0.6.0
+    // .form-section.section-inline {
+    //     display: inherit;
+    // }
 }
