@@ -33,7 +33,7 @@ import {
     TreePage,
 } from './pages/components';
 import { FontWeightsPage, FontGlyphsPage, TextElementsPage } from './pages/fonts';
-import { FormsInputsPage, FormsGlyphsPage } from './pages/forms';
+import { FormsInputsPage, FormsGlyphsPage, FormsCheckboxPage } from './pages/forms';
 
 import './App.scss';
 
@@ -84,6 +84,7 @@ function App() {
 
                 <DefaultLayoutRoute path="/forms/inputs" component={FormsInputsPage} />
                 <DefaultLayoutRoute path="/forms/glyphs" component={FormsGlyphsPage} />
+                <DefaultLayoutRoute path="/forms/checkbox" component={FormsCheckboxPage} />
 
                 <BlankLayoutRoute component={_404} />
             </Switch>

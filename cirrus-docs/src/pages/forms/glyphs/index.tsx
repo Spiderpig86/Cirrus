@@ -60,7 +60,7 @@ export const FormsGlyphsPage: React.FC<any> = (props) => {
 
                         <p>
                             To set it to the right, use the <code>input-contains-icon-right</code> class and the{' '}
-                            <code>icon-right</code> class on the icon.. There exists a{' '}
+                            <code>icon-right</code> class on the icon. There exists a{' '}
                             <code>input-contains-icon-left</code> class, but that accomplishes the same thing as the
                             version of the class above.
                         </p>
