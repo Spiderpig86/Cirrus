@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
-import { Link } from 'react-router-dom';
 
 export const FormsCheckboxPage: React.FC<any> = (props) => {
     // TODO: Create constants
