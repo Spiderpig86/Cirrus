@@ -33,7 +33,7 @@ import {
     TreePage,
 } from './pages/components';
 import { FontWeightsPage, FontGlyphsPage, TextElementsPage } from './pages/fonts';
-import { FormsInputsPage, FormsGlyphsPage, FormsCheckboxPage, FormsRadioPage, FormsTogglePage } from './pages/forms';
+import { FormsInputsPage, FormsGlyphsPage, FormsCheckboxPage, FormsRadioPage, FormsTogglePage, FormGroupsPage } from './pages/forms';
 
 import './App.scss';
 
@@ -87,6 +87,7 @@ function App() {
                 <DefaultLayoutRoute path="/forms/checkbox" component={FormsCheckboxPage} />
                 <DefaultLayoutRoute path="/forms/radio" component={FormsRadioPage} />
                 <DefaultLayoutRoute path="/forms/toggle" component={FormsTogglePage} />
+                <DefaultLayoutRoute path="/forms/groups" component={FormGroupsPage} />
 
                 <BlankLayoutRoute component={_404} />
             </Switch>
