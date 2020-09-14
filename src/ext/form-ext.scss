@@ -11,8 +11,6 @@
 
 /* Base class layout for extended form */
 .form-ext-control {
-    // display: block;
-    // min-height: 1.5rem;
     padding-left: 1.5rem;
     position: relative;
 
@@ -139,12 +137,12 @@
                 border-color: var(--cirrus-#{$color});
             }
 
-            .form-ext-toggle.form-ext-toggle--#{$color} .form-ext-toggle__toggler {
+            .form-ext-toggle--#{$color} .form-ext-toggle__toggler {
                 border-color: var(--cirrus-#{$color});
                 color: var(--cirrus-#{$color});
             }
 
-            .form-ext-toggle.form-ext-toggle--#{$color} .form-ext-toggle__toggler i::after {
+            .form-ext-toggle--#{$color} .form-ext-toggle__toggler i::after {
                 background-color: var(--cirrus-#{$color});
             }
 
