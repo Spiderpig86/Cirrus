@@ -601,8 +601,8 @@ export const CardsPage: React.FC<any> = (props) => {
 
                         <h6>After</h6>
                         <div className="row">
-                            <div className="col-4 h-100 u-flex u-flex-column">
-                                <div className="card">
+                            <div className="col-4">
+                                <div className="card h-100 u-flex u-flex-column">
                                     <div className="card-container">
                                         <div
                                             className="card-image"

@@ -57,7 +57,7 @@ export const FormsRadioPage: React.FC<any> = (props) => {
                             the extended controls styling, we use classes from the extended forms file which are
                             prefixed with <code>form-ext</code>.
                         </p>
-                        <p>The structure of an extended checkbox is as follows:</p>
+                        <p>The structure of an extended radio button is as follows:</p>
                         <ul>
                             <li>
                                 <code>form-ext-control form-ext-radio</code>

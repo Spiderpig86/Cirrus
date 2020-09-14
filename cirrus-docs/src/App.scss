@@ -40,6 +40,10 @@ main > div:focus {
     vertical-align: bottom;
 }
 
+.form-ext-control {
+    margin-bottom: 0.75rem;
+}
+
 ::-webkit-scrollbar {
     background-color: var(--scrollbar-bg);
     color: var(--scrollbar-color);
