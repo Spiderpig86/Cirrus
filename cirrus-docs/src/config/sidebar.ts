@@ -306,19 +306,19 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Templates',
-                url: '#'
+                url: '/grid/templates'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Start / End',
-                url: '#'
+                text: 'Span',
+                url: '/grid/span'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Gap',
-                url: '#'
+                url: '/grid/gap'
             },
         ],
     },

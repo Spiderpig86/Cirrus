@@ -1,0 +1,1 @@
+export { GridTemplatesPage } from './templates';
