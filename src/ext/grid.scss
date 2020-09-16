@@ -1,4 +1,4 @@
-@import "../../helpers/_size.scss";
+@import '../../helpers/_size.scss';
 
 /* GRID */
 
@@ -30,36 +30,63 @@
     grid-gap: var(--grid-gap);
     grid-template-columns: var(--grid-template-column);
 
+    @for $i from 1 through 12 {
+        /* Gap */
+        &.grid-gap-#{$i} {
+            --grid-gap: var(--gap-#{$i});
+        }
+    }
+
     @for $i from 1 through $grid-columns {
         /* Templates */
-        &.grid-cols-#{$i} { --grid-template-column: repeat(#{$i}, minmax(0, 1fr)); } 
-
-        /* Gap */
-        &.grid-gap-#{$i} { --grid-gap: var(--gap-#{$i}); }
+        &.grid-cols-#{$i} {
+            --grid-template-column: repeat(#{$i}, minmax(0, 1fr));
+        }
 
         /* Column expansion */
-        .grid-c-#{$i} { grid-column: span #{$i}; } 
+        .grid-c-#{$i} {
+            grid-column: span #{$i};
+        }
 
         /* Row expansion */
-        .grid-r-#{$i} { grid-row: span #{$i}; }
+        .grid-r-#{$i} {
+            grid-row: span #{$i};
+        }
 
         /* Cell Column Start/End */
-        .grid-cs-#{$i} { grid-column-start: #{$i}; } 
-        .grid-ce-#{$i} { grid-column-end: #{$i + 1}; } 
+        .grid-cs-#{$i} {
+            grid-column-start: #{$i};
+        }
+        .grid-ce-#{$i} {
+            grid-column-end: #{$i + 1};
+        }
 
         /* Cell Row Start/End */
-        .grid-rs-#{$i} { grid-row-start: #{$i}; } 
-        .grid-re-#{$i} { grid-row-end: #{$i + 1}; }
+        .grid-rs-#{$i} {
+            grid-row-start: #{$i};
+        }
+        .grid-re-#{$i} {
+            grid-row-end: #{$i + 1};
+        }
     }
 
-    .grid-cs-end { grid-column-end: -1; }
-    .grid-rs-end { grid-row-end: -1; }
+    .grid-cs-end {
+        grid-column-end: -1;
+    }
+    .grid-rs-end {
+        grid-row-end: -1;
+    }
 
     /* Styling grid cells */
-    .c {
-        grid-column-start: var(--grid-column-start);
-        grid-column-end: var(--grid-column-end);
-    }
+    // .c {
+    //     grid-column-start: var(--grid-column-start);
+    //     grid-column-end: var(--grid-column-end);
+    // }
+
+    // .r {
+    //     grid-row-start: var(--grid-column-start);
+    //     grid-row-end: var(--grid-column-end);
+    // }
 
     @include screen-below('sm') {
         --grid-template-column: repeat(1, minmax(0, 1fr));
