@@ -321,7 +321,7 @@ $grid-columns: 12;`}
                     </div>
                 </section>
 
-                <Pagination nextLink={{ name: 'Span', link: './span' }} />
+                <Pagination nextLink={{ name: 'Grid Span', link: './span' }} />
             </div>
             <TableOfContents entries={toc} />
         </main>

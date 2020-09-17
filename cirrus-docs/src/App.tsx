@@ -41,7 +41,7 @@ import {
     FormsTogglePage,
     FormGroupsPage,
 } from './pages/forms';
-import { GridTemplatesPage } from './pages/grid';
+import { GridSpanPage, GridTemplatesPage } from './pages/grid';
 
 import './App.scss';
 
@@ -98,6 +98,7 @@ function App() {
                 <DefaultLayoutRoute path="/forms/groups" component={FormGroupsPage} />
 
                 <DefaultLayoutRoute path="/grid/templates" component={GridTemplatesPage} />
+                <DefaultLayoutRoute path="/grid/span" component={GridSpanPage} />
 
                 <BlankLayoutRoute component={_404} />
             </Switch>
