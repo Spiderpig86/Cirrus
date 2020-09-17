@@ -525,6 +525,48 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
+                <section className="padtop" id="label">
+                    <div className="content">
+                        <Headline title="Label" link="#label" size="4" />
+                        <div className="divider"></div>
+
+                        <p>
+                            Labels are quite basic within Cirrus's forms. An additional <code>info</code> class exists
+                            for labels that are meant to serve as footnotes or additional context in a form.
+                        </p>
+
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <label>Regular Label</label>
+                                <input type="text" placeholder="The label above is a regular label." />
+                                <span className="info u-text-center">
+                                    I am using the <code>info</code> class.
+                                </span>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock code={`<div class="col-lg-6">
+    <label>Regular Label</label>
+    <input type="text" placeholder="The label above is a regular label." />
+    <span class="info u-text-center">I am using the <code>info</code> class.</span>
+</div>`} language="htmlbars" />
+                            </div>
+                        </div>
+
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <label>Email</label>
+                                <input type="text" placeholder="john.doe@cirrus.io" />
+                                <span className="info u-text-center">We promise we won't spam!</span>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock code={`<label>Email</label>
+<input type="text" placeholder="john.doe@cirrus.io" />
+<span class="info u-text-center">We promise we won't spam!</span>`} language="htmlbars" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section className="padtop" id="textarea">
                     <div className="content">
                         <Headline title="TextArea" link="#textarea" size="4" />
@@ -551,12 +593,14 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                                 <input type="submit" className="btn-primary pull-right" />
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<textarea>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</textarea>
-<input type="submit" class="btn-primary pull-right"/>`} language='htmlbars' />
+                                <CodeBlock
+                                    code={`<textarea>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</textarea>
+<input type="submit" class="btn-primary pull-right"/>`}
+                                    language="htmlbars"
+                                />
                             </div>
                         </div>
 
-                        
                         <p className="mb-0">
                             <b>Focused</b>
                         </p>
@@ -572,8 +616,12 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                                 <input disabled type="submit" className="btn-primary pull-right" />
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<textarea class="input-focused">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</textarea>
-<input type="submit" class="btn-primary pull-right"/>`} language='htmlbars' /></div>
+                                <CodeBlock
+                                    code={`<textarea class="input-focused">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</textarea>
+<input type="submit" class="btn-primary pull-right"/>`}
+                                    language="htmlbars"
+                                />
+                            </div>
                         </div>
 
                         <p className="mb-0">
@@ -591,8 +639,12 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                                 <input disabled type="submit" className="btn-primary pull-right" />
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<textarea disabled>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</textarea>
-<input disabled type="submit" class="btn-primary pull-right"/>`} language='htmlbars' /></div>
+                                <CodeBlock
+                                    code={`<textarea disabled>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</textarea>
+<input disabled type="submit" class="btn-primary pull-right"/>`}
+                                    language="htmlbars"
+                                />
+                            </div>
                         </div>
                     </div>
                 </section>

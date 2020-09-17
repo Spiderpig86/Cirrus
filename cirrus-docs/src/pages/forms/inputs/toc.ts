@@ -21,6 +21,11 @@ export const toc: TableOfContentsEntry[] = [
                 children: null,
             },
             {
+                name: 'Label',
+                anchor: '#label',
+                children: null,
+            },
+            {
                 name: 'TextArea',
                 anchor: '#textarea',
                 children: null,
