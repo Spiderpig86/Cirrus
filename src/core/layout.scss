@@ -129,6 +129,7 @@ section {
     flex: 1;
     flex-wrap: wrap;
     padding: 0.5rem 0;
+    display: flex;
 
     // /* Used for aligning controls next to each other */ Deprecated 0.5.6
     // &.has-controls {
@@ -162,8 +163,10 @@ section {
 
     /* Generate columns */
     @for $i from 1 through $grid-columns {
+        .col-xs-#{$i},
         .col-#{$i},
         .col-sm-#{$i},
+        .col-md-#{$i},
         .col-lg-#{$i} {
             width: percentage($number: $grid-width * $i);
         }
@@ -208,42 +211,45 @@ section {
         }
     }
 
-    @include screen-below('sm') {
-        [class^='col-']:not(.ignore-screen):not([class^='col-sm']):not([class^='col-lg']),
-        [class*=' col-']:not(.ignore-screen):not([class*=' col-sm']):not([class*=' col-lg']) {
+    /* Dividers for mobile layout */
+    &.divided [class^='col'],
+    &.divided [class*=' col'] {
+        box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
+    }
+
+    @include screen-below('md') {
+        [class^='col-md-']:not(.ignore-screen):not([class^='col-lg']),
+        [class*=' col-md-']:not(.ignore-screen):not([class*=' col-lg']) {
             /* Remove the grid structure for smaller screens */
             width: 100%;
             margin-left: 0;
             padding: 0;
         }
+    }
 
-        /* Dividers for mobile layout */
-        &.divided [class^='col'],
-        &.divided [class*=' col'] {
-            box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
+    @include screen-below('sm') {
+        [class^='col-']:not(.ignore-screen):not([class^='col-xs']):not([class^='col-md']):not([class^='col-lg']),
+        [class*=' col-']:not(.ignore-screen):not([class^='col-xs']):not([class*=' col-md']):not([class*=' col-lg']) {
+            /* Remove the grid structure for smaller screens */
+            width: 100%;
+            margin-left: 0;
+            padding: 0;
         }
     }
 
     @include screen-below('xs') {
-        [class^='col-sm-']:not(.ignore-screen),
-        [class*=' col-sm-']:not(.ignore-screen) {
+        [class^='col-xs-']:not(.ignore-screen):not([class^='col-sm']):not([class^='col-md']):not([class^='col-lg']),
+        [class*=' col-xs-']:not(.ignore-screen):not([class^='col-sm']):not([class^='col-md']):not([class^='col-lg']) {
             /* Remove the grid structure for smaller screens */
             width: 100%;
             margin-left: 0;
             padding: 0;
         }
-        
-        /* Dividers for mobile layout */
-        &.divided [class^='col'],
-        &.divided [class*=' col'] {
-            box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
-        }
-    
     }
 
     /* Columns without the spacing */
-    .no-space [class^='col-'],
-    .no-space [class*=' col-'] {
+    &.no-space [class^='col-'],
+    &.no-space [class*=' col-'] {
         padding: 0;
     }
 }
@@ -400,9 +406,9 @@ section {
 }
 
 @media screen and (min-width: 769px) {
-    .row {
-        display: flex;
-    }
+    // .row {
+    //     display: flex;
+    // }
 
     .level-right {
         margin-left: 1rem;

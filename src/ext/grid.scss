@@ -45,12 +45,12 @@
 
         /* Column expansion */
         .grid-c-#{$i} {
-            grid-column: span #{$i};
+            grid-column: span #{$i} / span #{$i};
         }
 
         /* Row expansion */
         .grid-r-#{$i} {
-            grid-row: span #{$i};
+            grid-row: span #{$i} / span #{$i};
         }
 
         /* Cell Column Start/End */
@@ -70,11 +70,17 @@
         }
     }
 
-    .grid-cs-end {
+    .grid-ce-end {
         grid-column-end: -1;
     }
-    .grid-rs-end {
+    .grid-re-end {
         grid-row-end: -1;
+    }
+    .grid-ce-auto {
+        grid-column-end: auto;
+    }
+    .grid-re-auto {
+        grid-row-end: auto;
     }
 
     /* Styling grid cells */
