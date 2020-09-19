@@ -329,7 +329,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Columns',
-                url: '#'
+                url: '/layout/columns'
             },
             {
                 fontWeight: 'semibold',
