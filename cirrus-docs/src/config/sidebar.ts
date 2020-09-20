@@ -341,7 +341,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Footer',
-                url: '#'
+                url: '/layout/footer'
             },
             {
                 fontWeight: 'semibold',

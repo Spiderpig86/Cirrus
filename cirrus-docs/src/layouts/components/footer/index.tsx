@@ -1,6 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import './index.scss';
+
 export const Footer: React.FC<any> = () => {
     return (
         <footer className="footer bg-gray-200">

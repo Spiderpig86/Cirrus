@@ -1,0 +1,9 @@
+.footer {
+    a {
+        color: var(--cirrus-link) !important;
+
+        &:hover {
+            color: var(--cirrus-link-dark) !important;
+        }
+    }
+}
