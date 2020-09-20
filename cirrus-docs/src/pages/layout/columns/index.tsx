@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazyload';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
@@ -6,14 +8,20 @@ import { Pagination } from '../../../layouts/components/pagination';
 import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 
+import initializeExamples from '../../../static/js/fluid-column-example.js';
+
 import './index.scss';
-import { Link } from 'react-router-dom';
 
 export const ColumnsPage: React.FC<any> = (props) => {
+
+    useEffect(() => {
+        initializeExamples();
+    });
+
     return (
         <main className="page-layout">
             <span>
-                <section className="padtop" id="glyphs">
+                <section className="padtop" id="columns">
                     <div className="content">
                         <Headline title="Columns" link="#columns" />
                         <div className="divider"></div>
@@ -287,15 +295,15 @@ export const ColumnsPage: React.FC<any> = (props) => {
                                         <code>col-xs-*</code>
                                     </td>
                                     <td>
-                                        Hide content for widths below <code>640px</code>.
+                                        Stack columns for widths below <code>640px</code>.
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <code>col-sm-*</code>
+                                        <code>col-*</code>, <code>col-sm-*</code>
                                     </td>
                                     <td>
-                                        Hide content for widths <code>641px</code> and above.
+                                        Stack columns for widths below <code>768px</code>.
                                     </td>
                                 </tr>
                                 <tr>
@@ -303,7 +311,7 @@ export const ColumnsPage: React.FC<any> = (props) => {
                                         <code>col-md-*</code>
                                     </td>
                                     <td>
-                                        Hide content for widths between <code>641px</code> and <code>768px</code>.
+                                        Stack columns for widths below <code>1023px</code>.
                                     </td>
                                 </tr>
                                 <tr>
@@ -311,7 +319,7 @@ export const ColumnsPage: React.FC<any> = (props) => {
                                         <code>col-lg-*</code>
                                     </td>
                                     <td>
-                                        Hide content for widths <code>768px</code> and above.
+                                        Stack columns for widths below <code>1280px</code>.
                                     </td>
                                 </tr>
                             </tbody>
@@ -319,6 +327,40 @@ export const ColumnsPage: React.FC<any> = (props) => {
 
                         <div className="space large"></div>
                         <h6>Prevent Stacking</h6>
+                        <p>
+                            To prevent the default stacking behavior, we can use the <code>ignore-screen</code> class on
+                            the column.
+                        </p>
+
+                        <p className="title">Before</p>
+                        <LazyLoad height={200}>
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/layout/width-ignore-before.html"
+                                style={{ height: '250px', width: '100%', maxWidth: '700px' }}
+                                className="w-100 p-1"
+                            />
+                        </LazyLoad>
+                        <div className="space"></div>
+                        <p className="title">After</p>
+                        <LazyLoad height={200}>
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/layout/width-ignore-after.html"
+                                style={{ height: '250px', width: '100%', maxWidth: '700px' }}
+                                className="w-100 p-1"
+                            />
+                        </LazyLoad>
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<div class="row">
+    <div class="col-6 ignore-screen">
+        <div class="uppercase">col-6</div>
+    </div>
+    <div class="col-6 ignore-screen">
+        <div class="uppercase">col-6</div>
+    </div>
+</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -327,7 +369,239 @@ export const ColumnsPage: React.FC<any> = (props) => {
                         <Headline title="Offset" link="#offset" size="4" />
                         <div className="divider"></div>
 
-                        <p>Cirrus makes defining how much a div should span very simple using with the </p>
+                        <p>
+                            Instead of using empty columns to create offsets for columns, the <code>offset-*</code>{' '}
+                            class when when applied on the <code>col-*</code> will offset the column to the right
+                            depending on the value of '*'. The value of '*' uses values from 1 through 12 inclusive.
+                        </p>
+                        <p>
+                            In other words, a column with <code>col-5 offset-3</code> is offset from the left by the
+                            same width of a <code>col-3</code>.
+                        </p>
+
+                        <div id="grids">
+                            <div className="row">
+                                <div className="col-3 offset-1">
+                                    <div className="uppercase">offset-1</div>
+                                </div>
+                                <div className="col-3 offset-3">
+                                    <div className="uppercase">offset-3</div>
+                                </div>
+                                <div className="col-3 offset-4">
+                                    <div className="uppercase">offset-4</div>
+                                </div>
+                                <div className="col-3 offset-6">
+                                    <div className="uppercase">offset-6</div>
+                                </div>
+                                <div className="col-3 offset-9">
+                                    <div className="uppercase">offset-9</div>
+                                </div>
+                            </div>
+                        </div>
+                        <CodeBlock
+                            code={`<div class="row">
+    <div class="col-3 offset-1">
+        <div class="uppercase">offset-1</div>
+    </div>
+    <div class="col-3 offset-3">
+        <div class="uppercase">offset-3</div>
+    </div>
+    <div class="col-3 offset-4">
+        <div class="uppercase">offset-4</div>
+    </div>
+    <div class="col-3 offset-6">
+        <div class="uppercase">offset-6</div>
+    </div>
+    <div class="col-3 offset-9">
+        <div class="uppercase">offset-9</div>
+    </div>
+</div>`}
+                            language="htmlbars"
+                        />
+                        <p>
+                            For less specific spacing, you can use <code>offset-right</code> to push the column to the
+                            left, <code>offset-center</code> to push the column to the center, and{' '}
+                            <code>offset-left</code> to push the column to the right.
+                        </p>
+
+                        <div className="space"></div>
+                        <div id="grids">
+                            <div className="row">
+                                <div className="col-2">
+                                    <div className="uppercase">col-2</div>
+                                </div>
+                                <div className="col-3 offset-center">
+                                    <div className="uppercase"> col-3 offset-center</div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-5 offset-1">
+                                    <div className="uppercase">col-3 offset-1</div>
+                                </div>
+                                <div className="col-3 offset-left">
+                                    <div className="uppercase">col-3 offset-left</div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-5 offset-1">
+                                    <div className="uppercase">col-3 offset-1</div>
+                                </div>
+                                <div className="col-4 offset-right offset-6">
+                                    <div className="uppercase">col-4 offset-right</div>
+                                </div>
+                            </div>
+                        </div>
+                        <table className="table bordered">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <code>offset-left</code>
+                                    </td>
+                                    <td className="u-text-left">
+                                        <CodeBlock
+                                            code={`margin-left: auto;
+margin-right: 0;`}
+                                            language="css"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>offset-center</code>
+                                    </td>
+                                    <td className="u-text-left">
+                                        <CodeBlock
+                                            code={`margin-left: auto;
+margin-right: auto;`}
+                                            language="css"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>offset-right</code>
+                                    </td>
+                                    <td className="u-text-left">
+                                        <CodeBlock
+                                            code={`margin-left: 0;
+margin-right: auto;`}
+                                            language="css"
+                                        />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<div className="row">
+    <div className="col-2">
+        <div className="uppercase">col-2</div>
+    </div>
+    <div className="col-3 offset-center">
+        <div className="uppercase"> col-3 offset-center</div>
+    </div>
+</div>
+<div className="row">
+    <div className="col-5 offset-1">
+        <div className="uppercase">col-3 offset-1</div>
+    </div>
+    <div className="col-3 offset-left">
+        <div className="uppercase">col-3 offset-left</div>
+    </div>
+</div>
+<div className="row">
+    <div className="col-5 offset-1">
+        <div className="uppercase">col-3 offset-1</div>
+    </div>
+    <div className="col-4 offset-right offset-6">
+        <div className="uppercase">col-4 offset-right</div>
+    </div>
+</div>`}
+                            language="htmlbars"
+                        />
+                    </div>
+                </section>
+
+                <section className="padtop" id="ten-grid">
+                    <div className="content">
+                        <Headline title="10-grid Layout" link="#ten-grid" size="4" />
+                        <div className="divider"></div>
+                        <p>Easily set scalable heights and widths for any element.</p>
+
+                        <div id="grids">
+                            <div className="w-10">
+                                <div className="uppercase">w-10</div>
+                            </div>
+                            <div className="w-20">
+                                <div className="uppercase">w-20</div>
+                            </div>
+                            <div className="w-30">
+                                <div className="uppercase">w-30</div>
+                            </div>
+                            <div className="w-40">
+                                <div className="uppercase">w-40</div>
+                            </div>
+                            <div className="w-50">
+                                <div className="uppercase">w-50</div>
+                            </div>
+                            <div className="w-60">
+                                <div className="uppercase">w-60</div>
+                            </div>
+                            <div className="w-70">
+                                <div className="uppercase">w-70</div>
+                            </div>
+                            <div className="w-80">
+                                <div className="uppercase">w-80</div>
+                            </div>
+                            <div className="w-90">
+                                <div className="uppercase">w-90</div>
+                            </div>
+                            <div className="w-100">
+                                <div className="uppercase">w-100</div>
+                            </div>
+                        </div>
+                        <div id="grids" className="row" style={{ height: '300px' }}>
+                            <div className="h-10 col">
+                                <div className="uppercase">h-10</div>
+                            </div>
+                            <div className="h-20 col">
+                                <div className="uppercase">h-20</div>
+                            </div>
+                            <div className="h-30 col">
+                                <div className="uppercase">h-30</div>
+                            </div>
+                            <div className="h-40 col">
+                                <div className="uppercase">h-40</div>
+                            </div>
+                            <div className="h-50 col">
+                                <div className="uppercase">h-50</div>
+                            </div>
+                            <div className="h-60 col">
+                                <div className="uppercase">h-60</div>
+                            </div>
+                            <div className="h-70 col">
+                                <div className="uppercase">h-70</div>
+                            </div>
+                            <div className="h-80 col">
+                                <div className="uppercase">h-80</div>
+                            </div>
+                            <div className="h-90 col">
+                                <div className="uppercase">h-90</div>
+                            </div>
+                            <div className="h-100 col">
+                                <div className="uppercase">h-100</div>
+                            </div>
+                        </div>
+
+                        <CodeBlock
+                            code={`<div class="w-50">
+    ...
+</div>
+<div class="h-50">
+    ...
+</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 

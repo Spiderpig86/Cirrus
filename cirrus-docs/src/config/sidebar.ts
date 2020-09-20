@@ -346,6 +346,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Frames',
+                url: '/layout/frames'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Hero',
                 url: '#'
             },
@@ -376,7 +382,7 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Spacer',
+                text: 'Spacing',
                 url: '#'
             },
         ],
