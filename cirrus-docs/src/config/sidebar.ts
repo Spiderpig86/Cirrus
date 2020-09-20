@@ -335,7 +335,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Divider',
-                url: '#'
+                url: '/layout/divider'
             },
             {
                 fontWeight: 'semibold',

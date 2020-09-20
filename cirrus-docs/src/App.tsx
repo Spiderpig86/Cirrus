@@ -44,7 +44,7 @@ import {
 import { GridGapPage, GridSpanPage, GridTemplatesPage } from './pages/grid';
 
 import './App.scss';
-import { ColumnsPage } from './pages/layout';
+import { ColumnsPage, DividerPage } from './pages/layout';
 
 function App() {
     library.add(fas);
@@ -103,6 +103,7 @@ function App() {
                 <DefaultLayoutRoute path="/grid/gap" component={GridGapPage} />
 
                 <DefaultLayoutRoute path="/layout/columns" component={ColumnsPage} />
+                <DefaultLayoutRoute path="/layout/divider" component={DividerPage} />
 
                 <BlankLayoutRoute component={_404} />
             </Switch>

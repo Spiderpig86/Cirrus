@@ -141,7 +141,99 @@ export const ColumnsPage: React.FC<any> = (props) => {
                             </div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={``} language="htmlbars" />
+                        <CodeBlock code={`<div class="row">
+    <div class="col-12 uppercase">
+        <div class="uppercase">Col-12</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-11 uppercase">
+        <div class="uppercase">Col-11</div>
+    </div>
+    <div class="col-1 uppercase">
+        <div class="uppercase">Col-1</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-10 uppercase">
+        <div class="uppercase">Col-10</div>
+    </div>
+    <div class="col-2 uppercase">
+        <div class="uppercase">Col-2</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-9 uppercase">
+        <div class="uppercase">Col-9</div>
+    </div>
+    <div class="col-3 uppercase">
+        <div class="uppercase">Col-3</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-8 uppercase">
+        <div class="uppercase">Col-8</div>
+    </div>
+    <div class="col-4 uppercase">
+        <div class="uppercase">Col-4</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-7 uppercase">
+        <div class="uppercase">Col-7</div>
+    </div>
+    <div class="col-5 uppercase">
+        <div class="uppercase">Col-5</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6 uppercase">
+        <div class="uppercase">Col-6</div>
+    </div>
+    <div class="col-6 uppercase">
+        <div class="uppercase">Col-6</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 uppercase">
+        <div class="uppercase">Col-5</div>
+    </div>
+    <div class="col-7 uppercase">
+        <div class="uppercase">Col-7</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4 uppercase">
+        <div class="uppercase">Col-4</div>
+    </div>
+    <div class="col-8 uppercase">
+        <div class="uppercase">Col-8</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 uppercase">
+        <div class="uppercase">Col-3</div>
+    </div>
+    <div class="col-9 uppercase">
+        <div class="uppercase">Col-9</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2 uppercase">
+        <div class="uppercase">Col-2</div>
+    </div>
+    <div class="col-10 uppercase">
+        <div class="uppercase">Col-10</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-1 uppercase">
+        <div class="uppercase">Col-1</div>
+    </div>
+    <div class="col-11 uppercase">
+        <div class="uppercase">Col-11</div>
+    </div>
+</div>`} language="htmlbars" />
                         <div className="space large"></div>
                         <h6>No Space</h6>
                         <p>
@@ -159,7 +251,14 @@ export const ColumnsPage: React.FC<any> = (props) => {
                             </div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={``} language="htmlbars" />
+                        <CodeBlock code={`<div class="row no-space">
+    <div class="col-6">
+        <div class="uppercase">Col-6</div>
+    </div>
+    <div class="col-6">
+        <div class="uppercase">Col-6</div>
+    </div>
+</div>`} language="htmlbars" />
                         <div className="space large"></div>
                         <h6>Automatic Overflow</h6>
                         <p>
@@ -194,7 +293,7 @@ export const ColumnsPage: React.FC<any> = (props) => {
                             </div>
                         </div>
                         <div className="space"></div>
-                        <p>
+                        <p>h
                             To change this behavior, you can use the <code>u-no-wrap</code> utility class.
                         </p>
                         <div id="grids">
@@ -211,7 +310,17 @@ export const ColumnsPage: React.FC<any> = (props) => {
                             </div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={``} language="htmlbars" />
+                        <CodeBlock code={`<div class="row row--no-wrap">
+    <div class="col-10">
+        <div class="uppercase">col-10</div>
+    </div>
+    <div class="col-10">
+        <div class="uppercase">col-10</div>
+    </div>
+    <div class="col-10">
+        <div class="uppercase">col-10</div>
+    </div>
+</div>`} language="htmlbars" />
                         <div className="space large"></div>
                         <h6>Auto Columns</h6>
                         <p>
