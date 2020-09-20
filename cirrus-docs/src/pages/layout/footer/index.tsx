@@ -246,8 +246,8 @@ export const FootersPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Columns', link: './columns' }}
-                    nextLink={{ name: 'Footer', link: './footer' }}
+                    prevLink={{ name: 'Divider', link: './divider' }}
+                    nextLink={{ name: 'Frames', link: './frames' }}
                 />
             </div>
             <TableOfContents entries={toc} />
