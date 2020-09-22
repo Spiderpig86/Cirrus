@@ -352,38 +352,38 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Hero',
-                url: '#'
+                text: 'Header',
+                url: '/layout/header'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Header',
-                url: '#'
+                text: 'Hero',
+                url: '/layout/hero'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Margin',
-                url: '#'
+                url: '/layout/margin'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Media',
-                url: '#'
+                url: '/layout/media'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Padding',
-                url: '#'
+                url: '/layout/padding'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Spacing',
-                url: '#'
+                url: '/layout/spacing'
             },
         ],
     },

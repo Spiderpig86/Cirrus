@@ -12,9 +12,9 @@ export const FormGroupsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
             <div>
-                <section className="padtop" id="toggle">
+                <section className="padtop" id="form-groups">
                     <div className="content">
-                        <Headline title="Toggle" link="#toggle" />
+                        <Headline title="Form Groups" link="#form-groups" />
                         <div className="divider"></div>
 
                         <p>
@@ -122,7 +122,31 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                             <button className="form-group-btn btn-primary btn-xlarge">Go</button>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={``} language="htmlbars" />
+                        <CodeBlock code={`<div class="form-group">
+    <label class="form-group-label label-xsmall">github.com/</label>
+    <input type="text" class="form-group-input input-xsmall" placeholder="Extra Small">
+    <button class="form-group-btn btn-primary btn-xsmall">Go</button>
+</div>
+<div class="form-group">
+    <label class="form-group-label label-small">github.com/</label>
+    <input type="text" class="form-group-input input-small" placeholder="Small">
+    <button class="form-group-btn btn-primary btn-small">Go</button>
+</div>
+<div class="form-group">
+    <label class="form-group-label">github.com/</label>
+    <input type="text" class="form-group-input" placeholder="Normal">
+    <button class="btn-primary form-group-btn">Go</button>
+</div>
+<div class="form-group">
+    <label class="form-group-label label-large">github.com/</label>
+    <input type="text" class="form-group-input input-large" placeholder="Large">
+    <button class="form-group-btn btn-primary btn-large">Go</button>
+</div>
+<div class="form-group">
+    <label class="form-group-label label-xlarge">github.com/</label>
+    <input type="text" class="form-group-input input-xlarge" placeholder="Extra Large">
+    <button class="form-group-btn btn-primary btn-xlarge">Go</button>
+</div>`} language="htmlbars" />
                     </div>
                 </section>
 
@@ -154,7 +178,7 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                                                 className="input-contains-icon input-contains-icon-left input-contains-icon-right text-success input-success"
                                                 type="text"
                                                 placeholder="Email"
-                                                value="somebodyoncetoldme@gmail.com"
+                                                defaultValue="somebodyoncetoldme@gmail.com"
                                             />
                                             <span className="icon icon-left">
                                                 <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'envelope']} />
@@ -197,11 +221,11 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                                     <div className="section-body">
                                         <label className="radio">
                                             <input type="radio" name="member" />
-                                            Yes
+                                            {' '}Yes
                                         </label>
                                         <label className="radio">
                                             <input type="radio" name="member" />
-                                            No
+                                            {' '}No
                                         </label>
                                     </div>
                                     <span className="required info">This section is required.</span>

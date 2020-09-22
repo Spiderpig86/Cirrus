@@ -44,6 +44,10 @@ main > div:focus {
     margin-bottom: 0.75rem;
 }
 
+.tree-nav-body .tree-nav {
+    min-width: 17rem !important;
+}
+
 ::-webkit-scrollbar {
     background-color: var(--scrollbar-bg);
     color: var(--scrollbar-color);

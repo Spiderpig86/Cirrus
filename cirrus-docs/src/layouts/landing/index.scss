@@ -3,6 +3,10 @@
         padding: 1.5rem;
         --header-link-color: #fff;
         --header-link-color-hover: #ddd;
+
+        &.translucent {
+            background: rgba(0, 0, 0, 0.87) !important;
+        }
     }
 
     &.header-dark {
@@ -18,10 +22,10 @@
     right: 0;
     opacity: 0;
     position: absolute;
-    transition: all .3s;
+    transition: all 0.3s;
 
     &.transition--visible {
         opacity: 1;
-        transition: all .3s;
+        transition: all 0.3s;
     }
 }
