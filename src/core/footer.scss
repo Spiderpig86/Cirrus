@@ -2,7 +2,7 @@
 
 /* FOOTER */
 .footer {
-    background-color: map-get($grays, '600');
+    background-color: map-get($grays, '800');
     padding: 6rem 0;
     text-align: center;
     margin-top: 5rem;
@@ -14,8 +14,14 @@
     }
 
     a {
+        color: map-get($grays, '200');
         font-weight: bolder;
     }
+
+    a:hover {
+        color: map-get($grays, '400');
+    }
+
 
     p {
         color: map-get($grays, '600');
@@ -33,6 +39,7 @@
     }
 
     .footer__list-title {
+        color: map-get($map: $grays, $key: '400');
         font-size: 75%;
         text-transform: uppercase;
         font-weight: bolder;

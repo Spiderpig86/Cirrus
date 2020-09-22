@@ -31,6 +31,7 @@ section {
     border-top: 0.05rem solid transparentize(map-get($grays, '500'), 0.5);
     height: 0.1rem;
     margin: 1.8rem 0 1.6rem;
+    position: relative;
 
     &[data-content] {
         margin: 0.8rem 0;
@@ -49,6 +50,7 @@ section {
         top: 50%;
     }
 
+    &--v,
     &--v[data-content] {
         display: block;
         padding: 0.8rem;
@@ -214,7 +216,7 @@ section {
     /* Dividers for mobile layout */
     &.divided [class^='col'],
     &.divided [class*=' col'] {
-        box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
+        box-shadow: 0 -1px 0 0 transparentize(map-get($grays, '500'), 0.5);
     }
 
     @include screen-below('md') {

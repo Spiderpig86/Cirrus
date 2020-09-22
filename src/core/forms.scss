@@ -16,6 +16,7 @@
     transition: all 0.3s;
     outline: none;
     padding: 0.85rem 1.1rem;
+    z-index: 10;
 
     /* Input Field Sizes */
     &.input-xsmall,
@@ -316,21 +317,21 @@ label {
         
         /* Style the front controls */
         &:first-child:not(:last-child) {
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
         }
 
         /* Style the middle controls */
         &:not(:first-child):not(:last-child) {
-            border-radius: 0;
+            border-radius: 0 !important;
             margin-left: -0.1rem;
             margin-right: -0.1rem; /* Remove spacing in middle controls */
         }
 
         /* Handles right most control in form group */
         &:last-child:not(:first-child) {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
             margin-left: -0.1rem;
         }
     }
