@@ -143,21 +143,21 @@ export const HeroPage: React.FC<any> = (props) => {
                             <div className="header-nav" id="header-menu">
                                 <div className="nav-left">
                                     <div className="nav-item text-center">
-                                        <a href="#">
+                                        <a href="!#">
                                             <span className="icon white">
                                                 <FontAwesomeIcon className="fa-wrapper" icon={['fab', 'github']} />
                                             </span>
                                         </a>
                                     </div>
                                     <div className="nav-item text-center">
-                                        <a href="#">
+                                        <a href="!#">
                                             <span className="icon white">
                                                 <FontAwesomeIcon className="fa-wrapper" icon={['fab', 'slack']} />
                                             </span>
                                         </a>
                                     </div>
                                     <div className="nav-item text-center">
-                                        <a href="#">
+                                        <a href="!#">
                                             <span className="icon white">
                                                 <FontAwesomeIcon className="fa-wrapper" icon={['fab', 'twitter']} />
                                             </span>
@@ -235,8 +235,8 @@ export const HeroPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Header', link: './header' }}
-                    nextLink={{ name: 'Margin', link: './margin' }}
+                    prevLink={{ name: 'Margin', link: './margin' }}
+                    nextLink={{ name: 'padding', link: './padding' }}
                 />
             </div>
             <TableOfContents entries={toc} />

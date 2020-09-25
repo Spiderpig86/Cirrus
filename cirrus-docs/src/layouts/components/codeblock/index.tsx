@@ -10,6 +10,7 @@ export interface CodeBlockProps {
     code: string;
     language: string;
     languageDisplay?: string;
+    breakAll?: boolean;
 }
 
 export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
@@ -17,11 +18,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
 
     return (
         <div className="u-position-relative mb-2">
-            <SyntaxHighlighter
-                className="codeblock pl-2 pr-3 py-1"
-                language={props.language}
-                style={gruvboxDark}
-            >
+            <SyntaxHighlighter className={`codeblock pl-2 pr-3 py-1 ${(props.breakAll ? `break-all` : ``)}`} language={props.language} style={gruvboxDark}>
                 {props.code}
             </SyntaxHighlighter>
             {/* <pre className={props.language}>

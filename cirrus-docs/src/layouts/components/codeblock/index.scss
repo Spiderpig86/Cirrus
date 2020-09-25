@@ -1,5 +1,5 @@
 .codeblock {
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     max-height: 500px;
 
     code {
@@ -20,6 +20,12 @@
         position: inherit;
         color: inherit;
         background-color: inherit;
+    }
+
+    &.break-all {
+        code {
+            word-break: break-all;
+        }
     }
 }
 
