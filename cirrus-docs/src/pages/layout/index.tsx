@@ -6,3 +6,4 @@ export { HeroPage } from './hero';
 export { MarginPage } from './margin';
 export { MediaPage } from './media';
 export { PaddingPage } from './padding';
+export { SpacingPage } from './spacing';
