@@ -546,7 +546,7 @@ export const FramesPage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{ name: 'Footer', link: './footer' }}
-                    nextLink={{ name: 'Hero', link: './hero' }}
+                    nextLink={{ name: 'Header', link: './header' }}
                 />
             </div>
             <TableOfContents entries={toc} />

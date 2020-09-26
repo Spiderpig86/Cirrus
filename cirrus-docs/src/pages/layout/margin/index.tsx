@@ -211,7 +211,7 @@ export const MarginPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Hero', link: './hero' }}
+                    prevLink={{ name: 'Level', link: './level' }}
                     nextLink={{ name: 'Media', link: './media' }}
                 />
             </div>

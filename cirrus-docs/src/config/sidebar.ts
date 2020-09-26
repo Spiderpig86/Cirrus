@@ -364,6 +364,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Level',
+                url: '/layout/level'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Margin',
                 url: '/layout/margin'
             },

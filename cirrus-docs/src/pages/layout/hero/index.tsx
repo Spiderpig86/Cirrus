@@ -235,8 +235,8 @@ export const HeroPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Margin', link: './margin' }}
-                    nextLink={{ name: 'padding', link: './padding' }}
+                    prevLink={{ name: 'Header', link: './header' }}
+                    nextLink={{ name: 'Level', link: './level' }}
                 />
             </div>
             <TableOfContents entries={toc} />

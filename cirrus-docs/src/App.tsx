@@ -44,7 +44,7 @@ import {
 import { GridGapPage, GridSpanPage, GridTemplatesPage } from './pages/grid';
 
 import './App.scss';
-import { ColumnsPage, DividerPage, FootersPage, FramesPage, HeroPage, MarginPage, MediaPage, PaddingPage, SpacingPage } from './pages/layout';
+import { ColumnsPage, DividerPage, FootersPage, FramesPage, HeroPage, LevelPage, MarginPage, MediaPage, PaddingPage, SpacingPage } from './pages/layout';
 
 function App() {
     library.add(fas);
@@ -107,6 +107,7 @@ function App() {
                 <DefaultLayoutRoute path="/layout/footer" component={FootersPage} />
                 <DefaultLayoutRoute path="/layout/frames" component={FramesPage} />
                 <DefaultLayoutRoute path="/layout/hero" component={HeroPage} />
+                <DefaultLayoutRoute path="/layout/level" component={LevelPage} />
                 <DefaultLayoutRoute path="/layout/margin" component={MarginPage} />
                 <DefaultLayoutRoute path="/layout/media" component={MediaPage} />
                 <DefaultLayoutRoute path="/layout/padding" component={PaddingPage} />
