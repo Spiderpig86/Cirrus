@@ -42,9 +42,21 @@ import {
     FormGroupsPage,
 } from './pages/forms';
 import { GridGapPage, GridSpanPage, GridTemplatesPage } from './pages/grid';
+import {
+    ColumnsPage,
+    DividerPage,
+    FootersPage,
+    FramesPage,
+    HeaderPage,
+    HeroPage,
+    LevelPage,
+    MarginPage,
+    MediaPage,
+    PaddingPage,
+    SpacingPage,
+} from './pages/layout';
 
 import './App.scss';
-import { ColumnsPage, DividerPage, FootersPage, FramesPage, HeroPage, LevelPage, MarginPage, MediaPage, PaddingPage, SpacingPage } from './pages/layout';
 
 function App() {
     library.add(fas);
@@ -106,6 +118,7 @@ function App() {
                 <DefaultLayoutRoute path="/layout/divider" component={DividerPage} />
                 <DefaultLayoutRoute path="/layout/footer" component={FootersPage} />
                 <DefaultLayoutRoute path="/layout/frames" component={FramesPage} />
+                <DefaultLayoutRoute path="/layout/header" component={HeaderPage} />
                 <DefaultLayoutRoute path="/layout/hero" component={HeroPage} />
                 <DefaultLayoutRoute path="/layout/level" component={LevelPage} />
                 <DefaultLayoutRoute path="/layout/margin" component={MarginPage} />
