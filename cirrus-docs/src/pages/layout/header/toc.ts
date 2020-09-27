@@ -11,13 +11,43 @@ export const toc: TableOfContentsEntry[] = [
                 children: null,
             },
             {
-                name: 'Static',
+                name: 'Header Brand',
+                anchor: '#brand',
+                children: null,
+            },
+            {
+                name: 'Header Button',
+                anchor: '#button',
+                children: null,
+            },
+            {
+                name: 'Header Nav',
+                anchor: '#nav',
+                children: null,
+            },
+            {
+                name: 'Nav Regions',
+                anchor: '#regions',
+                children: null,
+            },
+            {
+                name: 'Nav Item',
+                anchor: '#item',
+                children: null,
+            },
+            {
+                name: 'Nav Dropdown',
+                anchor: '#dropdown',
+                children: null,
+            },
+            {
+                name: 'Static Headers',
                 anchor: '#static',
                 children: null,
             },
             {
-                name: 'Examples',
-                anchor: '#examples',
+                name: 'Themes',
+                anchor: '#themes',
                 children: null,
             },
         ],
