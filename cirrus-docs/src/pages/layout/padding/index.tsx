@@ -50,7 +50,6 @@ export const PaddingPage: React.FC<any> = (props) => {
                 };
             });
         });
-        console.log(rows);
         setClassTable(([] as any).concat(...rows));
     }, []);
 

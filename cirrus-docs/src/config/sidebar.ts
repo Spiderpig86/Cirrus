@@ -400,25 +400,25 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Clearfix',
-                url: '#'
+                url: '/utils/clearfix'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Display',
-                url: '#'
+                url: '/utils/display'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Flexbox',
-                url: '#'
+                url: '/utils/flexbox'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Positions',
-                url: '#'
+                url: '/utils/positions'
             },
         ],
     },
