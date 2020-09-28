@@ -525,7 +525,7 @@
     }
 
     /* No need for JS to show dropdown menu on mobile devices now */
-    .header .nav-item.has-sub.toggle-hover:not(.no-hover):hover > ul.dropdown-menu {
+    .header .nav-item.has-sub.toggle-hover:not(.no-hover):hover > .dropdown-menu {
         @include mobile-dropdown-menu-show();
     }
 }

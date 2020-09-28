@@ -6,11 +6,15 @@ $align-items: 'stretch', 'flex-start', 'center', 'flex-end', 'baseline';
 
 .u-flex {
     display: flex !important;
+}
 
-    @each $flex-direction in $flex-directions {
-        &.u-flex-#{$flex-direction} {
-            flex-direction: #{$flex-direction} !important;
-        }
+.u-inline-flex {
+    display: inline-flex !important;
+}
+
+@each $flex-direction in $flex-directions {
+    &.u-flex-#{$flex-direction} {
+        flex-direction: #{$flex-direction} !important;
     }
 }
 

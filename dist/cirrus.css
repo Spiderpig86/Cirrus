@@ -2360,7 +2360,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   .nav-right {
     overflow: hidden; }
   /* No need for JS to show dropdown menu on mobile devices now */
-  .header .nav-item.has-sub.toggle-hover:not(.no-hover):hover > ul.dropdown-menu {
+  .header .nav-item.has-sub.toggle-hover:not(.no-hover):hover > .dropdown-menu {
     border-radius: 0;
     box-shadow: none;
     display: block;
@@ -2773,25 +2773,6 @@ section {
   -ms-flex-pack: justify;
   justify-content: space-between;
   /* Used to stretch the contents of div in level to fill */ }
-  .level .level-left {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    /* Start for left */
-    margin-right: 1rem; }
-  .level .level-right {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    /* End for right */ }
   .level .level-item {
     /* Centers items */
     -webkit-box-align: center;
@@ -4137,14 +4118,21 @@ video.video-fullscreen {
 
 .u-flex {
   display: flex !important; }
-  .u-flex.u-flex-row {
-    flex-direction: row !important; }
-  .u-flex.u-flex-row-reverse {
-    flex-direction: row-reverse !important; }
-  .u-flex.u-flex-column {
-    flex-direction: column !important; }
-  .u-flex.u-flex-column-reverse {
-    flex-direction: column-reverse !important; }
+
+.u-inline-flex {
+  display: inline-flex !important; }
+
+.u-flex-row {
+  flex-direction: row !important; }
+
+.u-flex-row-reverse {
+  flex-direction: row-reverse !important; }
+
+.u-flex-column {
+  flex-direction: column !important; }
+
+.u-flex-column-reverse {
+  flex-direction: column-reverse !important; }
 
 .u-justify-flex-start {
   justify-content: flex-start !important; }
@@ -4406,14 +4394,21 @@ video.video-fullscreen {
 
 .u-flex {
   display: flex !important; }
-  .u-flex.u-flex-row {
-    flex-direction: row !important; }
-  .u-flex.u-flex-row-reverse {
-    flex-direction: row-reverse !important; }
-  .u-flex.u-flex-column {
-    flex-direction: column !important; }
-  .u-flex.u-flex-column-reverse {
-    flex-direction: column-reverse !important; }
+
+.u-inline-flex {
+  display: inline-flex !important; }
+
+.u-flex-row {
+  flex-direction: row !important; }
+
+.u-flex-row-reverse {
+  flex-direction: row-reverse !important; }
+
+.u-flex-column {
+  flex-direction: column !important; }
+
+.u-flex-column-reverse {
+  flex-direction: column-reverse !important; }
 
 .u-justify-flex-start {
   justify-content: flex-start !important; }
