@@ -10,7 +10,7 @@ import { toc } from './toc';
 
 export const DisplayUtilsPage: React.FC<any> = (props) => {
     const displayNames = ['none', 'inline', 'inline-block', 'block', 'table', 'table-row', 'table-cell'];
-    const displays = [
+    const docExamples = [
         {
             name: 'none',
             example: (
@@ -162,7 +162,7 @@ export const DisplayUtilsPage: React.FC<any> = (props) => {
                         <Headline title="Examples" link="#examples" size="4" />
                         <div className="divider"></div>
 
-                        {displays.map((display) => {
+                        {docExamples.map((display) => {
                             return (
                                 <>
                                     <h6>{Capitalize(display.name)}</h6>
