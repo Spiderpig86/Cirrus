@@ -57,7 +57,7 @@ import {
 } from './pages/layout';
 
 import './App.scss';
-import { ClearfixUtilsPage } from './pages/utilities';
+import { ClearfixUtilsPage, DisplayUtilsPage } from './pages/utilities';
 
 function App() {
     library.add(fas);
@@ -128,6 +128,7 @@ function App() {
                 <DefaultLayoutRoute path="/layout/spacing" component={SpacingPage} />
                 
                 <DefaultLayoutRoute path="/utils/clearfix" component={ClearfixUtilsPage} />
+                <DefaultLayoutRoute path="/utils/display" component={DisplayUtilsPage} />
 
                 <BlankLayoutRoute component={_404} />
             </Switch>

@@ -4,3 +4,7 @@ export function FormatString(str: string, ...val: string[]) {
     }
     return str;
 }
+
+export function Capitalize(str: string): string {
+    return str.charAt(0).toUpperCase() + str.substring(1);
+}
