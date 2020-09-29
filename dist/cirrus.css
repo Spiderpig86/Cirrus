@@ -465,24 +465,24 @@ fieldset {
     margin-left: 0.2rem; }
 
 /* Deprecated 0.5.6, use m-1 instead */
-[class^='btn-'],
-[class*=' btn-'] {
+[class^='btn-']:not(.btn-container),
+[class*=' btn-']:not(.btn-container) {
   background-color: var(--btn-color);
   border: 1px solid var(--btn-border-color);
   color: var(--btn-fg);
   transition: all var(--animation-duration);
   /* Outline Variants */ }
-  [class^='btn-']:hover,
-  [class*=' btn-']:hover {
+  [class^='btn-']:not(.btn-container):hover,
+  [class*=' btn-']:not(.btn-container):hover {
     background-color: var(--btn-color);
     border-color: var(--btn-border-color);
     transition: all var(--animation-duration); }
-  [class^='btn-'].outline,
-  [class*=' btn-'].outline {
+  [class^='btn-']:not(.btn-container).outline,
+  [class*=' btn-']:not(.btn-container).outline {
     background-color: transparent;
     color: var(--btn-color); }
-    [class^='btn-'].outline:hover,
-    [class*=' btn-'].outline:hover {
+    [class^='btn-']:not(.btn-container).outline:hover,
+    [class*=' btn-']:not(.btn-container).outline:hover {
       background-color: var(--btn-color);
       color: var(--btn-fg);
       transition: all var(--animation-duration); }
