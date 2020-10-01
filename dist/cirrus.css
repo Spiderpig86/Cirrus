@@ -3986,7 +3986,7 @@ video.video-fullscreen {
     position: relative;
     display: block; }
   .table.fixed-head tbody {
-    height: 200px;
+    min-height: 200px;
     /* Set the height you want */
     display: block;
     /* Needed */

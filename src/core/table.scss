@@ -95,7 +95,7 @@
     }
     
     &.fixed-head tbody {
-        height: 200px; /* Set the height you want */
+        min-height: 200px; /* Set the height you want */
         display: block; /* Needed */
         overflow: auto; /* Shows scrollbars */
     }
