@@ -20,6 +20,8 @@
 
 .u-text-ellipsis {
     text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .u-text-break {
@@ -28,10 +30,22 @@
     word-wrap: break-word;
 }
 
-.u-text-no-wrap {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+// .u-text-no-wrap { Deprecated 0.6.0, use .u-text-ellipsis
+//     white-space: nowrap;
+//     text-overflow: ellipsis;
+//     overflow: hidden;
+// }
+
+.u-text-center {
+    text-align: center !important;
+}
+
+.u-text-left {
+    text-align: left !important;
+}
+
+.u-text-right {
+    text-align: right !important;
 }
 
 /* Center element - best used for hero bodies or text */
@@ -90,20 +104,6 @@
 
 .u-hide-overflow {
     overflow: hidden !important;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-.u-text-center {
-    text-align: center !important;
-}
-
-.u-text-left {
-    text-align: left !important;
-}
-
-.u-text-right {
-    text-align: right !important;
 }
 
 // .u-hide { /* Deprecated 0.6.0, use u-none
@@ -115,10 +115,10 @@
 }
 
 .u-unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    user-select: none !important;
 }
 
 /* Deprecated 0.5.6 */
@@ -156,16 +156,16 @@
 
 /* Round the corners of the element */
 .u-round {
-    border-radius: 0.25rem;
+    border-radius: 0.25rem !important;
 }
 
 /* Turns element into a circle */
 .u-circle {
-    border-radius: 50%;
+    border-radius: 50% !important;
 }
 
 .u-no-outline {
-    outline: none;
+    outline: none !important;
 }
 
 // /* Remove outline or drop shadow when element is focused */ Deprecated 0.6.0
