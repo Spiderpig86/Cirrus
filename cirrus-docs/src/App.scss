@@ -17,6 +17,10 @@ main > div:focus {
     box-shadow: none;
 }
 
+table tbody {
+    max-height: 500px;
+}
+
 .content {
     max-width: 80rem !important;
 }
