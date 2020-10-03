@@ -22,7 +22,7 @@ export const toc: TableOfContentsEntry[] = [
             },
             {
                 name: 'Appearance',
-                anchor: '#apperance',
+                anchor: '#appearance',
                 children: null,
             },
         ],
