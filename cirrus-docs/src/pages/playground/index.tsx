@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ControlledEditor, ControlledEditorProps } from '@monaco-editor/react';
+import { ControlledEditor } from '@monaco-editor/react';
 import SplitPane from 'react-split-pane';
-import InnerHTML from 'dangerously-set-html-content'
+import { IFrame } from '../../layouts/components/iframe';
 
 import './index.scss';
-import { IFrame } from '../../layouts/components/iframe';
 
 const CIRRUS_EDITOR_CODE_KEY = 'cirrus-editor-code';
 
 export const PlaygroundPage: React.FC<any> = () => {
     const editorRef = useRef<any>();
     const [code, setCode] = useState(localStorage.getItem(CIRRUS_EDITOR_CODE_KEY) ?? '');
+    const [isDragging, setDragging] = useState(false); // Hacky workaround https://github.com/tomkp/react-split-pane/issues/30
 
     useEffect(() => {
         localStorage.setItem(CIRRUS_EDITOR_CODE_KEY, code);
@@ -21,10 +21,15 @@ export const PlaygroundPage: React.FC<any> = () => {
         editorRef.current.setValue(code);
     }
 
+    function handleSplitPaneDragStarted() {
+        setDragging(true);
+    }
+
     /**
      * Lazily update Monaco editor pane for performance
      */
     function handleSplitPaneDragFinished() {
+        setDragging(false);
         if (editorRef) {
             editorRef.current.layout();
         }
@@ -43,10 +48,11 @@ export const PlaygroundPage: React.FC<any> = () => {
                 minSize={50}
                 maxSize={'99%'}
                 defaultSize={'50%'}
+                onDragStarted={handleSplitPaneDragStarted}
                 onDragFinished={handleSplitPaneDragFinished}
             >
                 <div
-                    className="p-2 u-hide-overflow h-100"
+                    className={`p-2 u-hide-overflow h-100` +( isDragging ? ` is-dragging` : ``)}
                     style={{
                         backgroundColor: '#202124',
                     }}
@@ -122,7 +128,9 @@ export const PlaygroundPage: React.FC<any> = () => {
                         }}
                     />
                 </div>
-                <IFrame content={code} />
+                <div className={`h-100` + (isDragging ? ` is-dragging` : ``)}>
+                    <IFrame content={code} />
+                </div>
             </SplitPane>
         </div>
     );

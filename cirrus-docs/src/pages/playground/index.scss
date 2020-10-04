@@ -51,3 +51,7 @@
 .Resizer.disabled:hover {
     border-color: transparent;
 }
+
+.is-dragging {
+    pointer-events: none !important;
+}
