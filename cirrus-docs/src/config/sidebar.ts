@@ -26,7 +26,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'bold',
                 glyph: ['fas', 'pencil-ruler'],
                 text: 'Playground',
-                url: '#'
+                url: './playground'
             },
             {
                 fontWeight: 'bold',

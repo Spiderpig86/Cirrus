@@ -12,6 +12,7 @@ import { SetUpPage, BrowserSupportPage } from './pages/geting-started';
 import { AboutPage } from './pages/about';
 import { ColorsPage, TypographyPage, ViewportsPage } from './pages/fundamentals';
 import { WhyPage } from './pages/why';
+import { PlaygroundPage } from './pages/playground';
 import { Landing } from './pages/landing';
 import { ButtonPage, ButtonGlyphsPage, VariantsPage, ButtonGroupsPage } from './pages/buttons';
 import { _404 } from './pages/404';
@@ -68,6 +69,7 @@ function App() {
                 <LandingLayoutRoute exact path="/" match component={Landing} />
 
                 <DefaultLayoutRoute path="/why" component={WhyPage} />
+                <BlankLayoutRoute path="/playground" component={PlaygroundPage} />
                 <DefaultLayoutRoute path="/about" component={AboutPage} />
 
                 <DefaultLayoutRoute path="/getting-started/setup" component={SetUpPage} />
