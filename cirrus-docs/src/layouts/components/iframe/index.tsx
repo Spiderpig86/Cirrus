@@ -4,24 +4,21 @@ export interface IFrameProps {
     content: string;
 }
 
-let iframeSrc = `
-<link href="https://raw.githack.com/Spiderpig86/Cirrus/master/dist/cirrus.min.css" rel="stylesheet" />
-<body></body>
-`;
+let iframeSrc = ``;
 
+/**
+ * Custom iframe created for playground.
+ * Memo is used to prevent re-rendering when screen size changes.
+ */
 export const IFrame = memo((props: IFrameProps) => {
     const [initialized, setInitialized] = useState(false);
+    const frameRef = useRef<any>();
 
     // Initially set frame with props content, useEffect runs too late for srcDoc attr
     if (!initialized) {
-        iframeSrc = `
-        <link href="https://raw.githack.com/Spiderpig86/Cirrus/master/dist/cirrus.min.css" rel="stylesheet" />
-        <body>${props.content}</body>
-        `;
+        iframeSrc = props.content;
         setInitialized(true);
     }
-    const frameRef = useRef<any>();
-
 
     const writeHtml = (frame: any) => {
         if (!frame) {
