@@ -106,12 +106,17 @@
     overflow: hidden !important;
 }
 
+.u-overflow-auto {
+    overflow: auto !important;
+}
+
 // .u-hide { /* Deprecated 0.6.0, use u-none
 //     display: none !important;
 // }
 
 .u-disabled {
     cursor: not-allowed !important;
+    pointer-events: none !important;
 }
 
 .u-unselectable {
@@ -165,7 +170,7 @@
 }
 
 .u-no-outline {
-    outline: none !important;
+    outline: 0px !important;
 }
 
 // /* Remove outline or drop shadow when element is focused */ Deprecated 0.6.0
