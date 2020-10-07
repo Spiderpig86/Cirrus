@@ -15,6 +15,10 @@ export const ColorsPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Colors" link="#colors" />
                         <div className="divider"></div>
+                        <span className="tag-container group-tags">
+                            <div className="tag tag--dark">Added</div>
+                            <div className="tag tag--info">0.6.0</div>
+                        </span>
                         <p>
                             Cirrus has an extensive color palette that has been updated with <b>0.6.0</b> to make them
                             more accessible to all page elements.

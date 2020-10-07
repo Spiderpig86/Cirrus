@@ -5,17 +5,17 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IFrame } from '../../layouts/components/iframe';
+import { CIRRUS_EDITOR_CODE_KEY, PLAYGROUND_ENDPOINT_MAP, PLAYGROUND_VERSIONS } from '../../constants/playground';
 
 import './index.scss';
 
-const CIRRUS_EDITOR_CODE_KEY = 'cirrus-editor-code';
-
 export const PlaygroundPage: React.FC<any> = () => {
     const editorRef = useRef<any>();
-    const iframeRef = useRef<any>();
     const [code, setCode] = useState(localStorage.getItem(CIRRUS_EDITOR_CODE_KEY) ?? '');
     const [isDragging, setDragging] = useState(false); // Hacky workaround https://github.com/tomkp/react-split-pane/issues/30
     const [isEditorHorizontal, setEditorHorizontal] = useState(false);
+    const [playgroundCdn, setPlaygroundCdn] = useState(PLAYGROUND_VERSIONS[0]);
+    const [iframeKey, setIFrameKey] = useState(`original`);
 
     useEffect(() => {
         localStorage.setItem(CIRRUS_EDITOR_CODE_KEY, code);
@@ -65,9 +65,15 @@ export const PlaygroundPage: React.FC<any> = () => {
 
     // TODO: Refactor code, make template dynamic so we can swap out different versions of the framework
     function constructTemplate(code: string) {
-        let template = `<link href="https://raw.githack.com/Spiderpig86/Cirrus/master/dist/cirrus.min.css" rel="stylesheet" />
-<body>${code}</body>`;
+        let template = `<link href="${PLAYGROUND_ENDPOINT_MAP.get(playgroundCdn)}" rel="stylesheet" />
+<body>${code}</body>
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">`;
         return template;
+    }
+
+    function reloadIFrame() {
+        setIFrameKey(Math.random().toString(36).substring(7));
     }
 
     return (
@@ -112,17 +118,18 @@ export const PlaygroundPage: React.FC<any> = () => {
                             </div>
                         </div>
                         <div className="nav-item has-sub toggle-hover" id="dropdown">
-                            <a className="nav-dropdown-link">Version / 0.6.0</a>
+                            <a className="nav-dropdown-link">Version / {playgroundCdn}</a>
                             <ul className="dropdown-menu dropdown-animated" role="menu">
-                                <li role="menu-item">
-                                    <a href="#">0.6.0</a>
-                                </li>
-                                <li role="menu-item">
-                                    <a href="#">0.5.5</a>
-                                </li>
-                                <li role="menu-item">
-                                    <a href="#">0.5.4</a>
-                                </li>
+                                {PLAYGROUND_VERSIONS.map((version) => {
+                                    return (
+                                        <li role="menu-item" onClick={() => {
+                                            setPlaygroundCdn(version);
+                                            reloadIFrame();
+                                        }}>
+                                            <a>{version}</a>
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </div>
                     </div>
@@ -220,7 +227,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                         />
                     </div>
                     <div className={`h-100` + (isDragging ? ` is-dragging` : ``)}>
-                        <IFrame content={constructTemplate(code)} />
+                        <IFrame key={iframeKey} content={constructTemplate(code)} />
                     </div>
                 </SplitPane>
             </div>
