@@ -6,6 +6,7 @@ export const _404: React.FC<any> = (props) => {
         <div>
             <img
                 src="https://images.unsplash.com/photo-1524838101135-a71ba219084d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2560&q=100"
+                alt="404 Landing Image"
                 style={{
                     height: '100vh',
                     objectFit: 'cover',

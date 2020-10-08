@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
@@ -37,7 +36,7 @@ export const FormsCheckboxPage: React.FC<any> = (props) => {
                                 </label>
                                 <label>
                                     <input type="checkbox" /> Read our{' '}
-                                    <a href="#" className="u-inline-block">
+                                    <a href="!#" className="u-inline-block">
                                         Terms of Service
                                     </a>
                                 </label>

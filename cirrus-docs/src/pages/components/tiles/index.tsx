@@ -34,7 +34,7 @@ export const TilesPage: React.FC<any> = (props) => {
                         <div className="tile">
                             <div className="tile__icon">
                                 <figure className="avatar">
-                                    <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
+                                    <img alt="avatar" src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
                                 </figure>
                             </div>
                             <div className="tile__container">
@@ -79,7 +79,7 @@ export const TilesPage: React.FC<any> = (props) => {
                         <div className="tile">
                             <div className="tile__icon">
                                 <figure className="avatar">
-                                    <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
+                                    <img alt="avatar" src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
                                 </figure>
                             </div>
                             <div className="tile__container">
@@ -127,7 +127,7 @@ export const TilesPage: React.FC<any> = (props) => {
                             <div className="tile">
                                 <div className="tile__icon">
                                     <figure className="avatar">
-                                        <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
+                                        <img alt="avatar" src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
                                     </figure>
                                 </div>
                                 <div className="tile__container">
@@ -178,7 +178,7 @@ export const TilesPage: React.FC<any> = (props) => {
                         <div className="tile u-items-center">
                             <div className="tile__icon">
                                 <figure className="avatar">
-                                    <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
+                                    <img alt="avatar" src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
                                 </figure>
                             </div>
                             <div className="tile__container">
@@ -225,7 +225,7 @@ export const TilesPage: React.FC<any> = (props) => {
                                 <div className="tile tile--center">
                                     <div className="tile__icon">
                                         <figure className="avatar">
-                                            <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
+                                            <img alt="avatar" src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
                                         </figure>
                                     </div>
                                     <div className="tile__container">
@@ -273,6 +273,7 @@ export const TilesPage: React.FC<any> = (props) => {
                                         <figure className="avatar">
                                             <img
                                                 className="padded"
+                                                alt="avatar"
                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABZUlEQVR4Xu2aUQ7DIAxDyU3Xk203ZeKvVNMsywRB6/3OtOERGyoR5eG/ePj8iwG4Ax5OwBZgG6DWWtkxgv6IiI8wHg6lO2AygDaBVAg7AEiFsAuANAgygIign/HPmMBiw+1AF38tcDKA4Z2wI4ChEHYAcJRS3j9sM8QOywNoFqu1vrIgbAGgrX4WhG0AZEHYCkAGhOUBwMN8L6CD8W4ACnsuMQCyxVoad5/DLHH0PvVrk61nuQ5AgK7/qwtiALOJs+9DeneAmEm2AGqx0aHDvg/pbQFbQDuXOAOQx5wBFwJq6LDAkV6txxZAhG0BW6AnoHqO7TikV+txBiDCzgBngDOgI6CGDms5pFfrcQgiwg5Bh6BD0CF4JqCmLps5SK/W410AEfYu4F3Au4B3Ae8CJwLqBQY2dFn99AsSbIHZegMgb6/LB6HsFWWfn94BbEGr6+kOWH1CbH0GwBK7m94dcLcVZefzBVVinlD6CDHWAAAAAElFTkSuQmCC"
                                             />
                                         </figure>
@@ -318,6 +319,7 @@ export const TilesPage: React.FC<any> = (props) => {
                                         <figure className="avatar">
                                             <img
                                                 className="padded"
+                                                alt="avatar"
                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAD5ElEQVR4Xu1ai20VMRDcrQA6ACogqYBQAVABpALSAaQCoAKSCkgHhAqACkgqACpYNGhPchz71mv73j3dsyUkxPk3s7Mf74PpwAcfOH4aBAwFHDgDwwVaBCAiL4joJRE9JqKHRHQU7HdNRD/wh5kvW85Zcq1bASICoB8UOP5eMv4Q0RURnTPzTcmCXc1xESAi74joTK1de8f3zHxeu7j3uiIC1OpfI4m33AWu8ZyZoYxVh0mAiMCvv6ifx5e9VWnD32+YGcBI1yAunKirPEqghCu8mtasxcIsAWr57wnwAA4pX5RcXETeYD4RxUSAhOM1lWARAPBhZAdeRPQz76WVTBCGzBEOZIlji0gRkXAOM5vqtfbE9+wmIgKLIeiF45KZYc3qISIg4XW0AbIDzsuOnRKg1voVRftZ8J4LighSYqyEalLnFlpKSSogYSX4/NGc7J0EoH5AwEwFx65E1BLwO7L+qRXwPARopoArfe6KNrGZmwARQWmLtDeNW2ZGSpsdXgKUBGSBRVVQQ0AcpD4xM6q/JQj4SERvg42zwbCU4NJ505n3YoCIoKh5FlwKxQqC1hIExGr7xswonu6NUmCl8+YIiHM/CpX/Fd7c8B6sLoAaA+dNA9XkE+usnvdIKaCq4KghQEmoOi9Hgvcee0dAi/VTa2uC4B2LaK0+6wJa699JadbBGRfojZ+sezQHwRR4oLAOVgLiILgXBMSpKZsGc+CJyCyclID4rL0gIK7QkpFZRFAc4b0QjyLwSgDWh0VWUcpdNAvoxdCpeRAclASVUIAHfEx0UcVpSaQ5CygBcTWYbVwEJHjA4zEUN1rMJ7EFviat5l6DKXlfMPNp6hJwB0+3V0Tw1kAAnMZfuIK3yZK5i6uu8DZEsiSUWEcthHQZN1W6WL+bAiYwIoL8/zQCh3cB5O7q6GqTBeBDy2PrbP1fSmo4r0sMCAiAr8L/w4CIz/g3NEWLfvEREbTA0PKKn9Vmo8VLQlcCVFJ4sMDqudY2vuEFiSgetsUxf2qLp/oJP6EGT+woIaM7AUoClACQsTuU3Ck1B+BPUm5kAWj9Hl/G1VrOdIq9JMwGvFaA1vomAlJRthA90hzKXmSR2R9HLQCt35cgAD90wtfh51OcQHADUMQEuM51adZoBWit705AyauvUCVdpg0CnD+huYJgTaXVxayOTYYC1laAZYG1vy8eBNcGaJ0/CIgY6B4ELQus/X1xBTgC9iJTLYIHAUu7wCJmdWw6FLDrOsBhnFWmWm+V5iywCirHoYMA4/8TDgU41LTJqW4FbI2FQcDWLOrFMxTgZWxr84cCtmZRL56hAC9jW5v/D+5oj19OlNgvAAAAAElFTkSuQmCC"
                                             />
                                         </figure>

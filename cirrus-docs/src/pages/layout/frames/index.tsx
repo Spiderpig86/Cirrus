@@ -107,7 +107,7 @@ export const FramesPage: React.FC<any> = (props) => {
             <div class="frame__title">John Doe</div>
             <div class="frame__subtitle">Freelance Photographer</div>
         </div>
-        <div class="row"><a class="col" href="#"><i class="fa fa-wrapper fa-facebook link-btn" aria-hidden="true"></i></a><a class="col" href="#"><i class="fa fa-wrapper fa-twitter link-btn" aria-hidden="true"></i></a><a class="col" href="#"><i class="fa fa-wrapper fa-instagram link-btn" aria-hidden="true"></i></a><a class="col" href="#"><i class="fa fa-wrapper fa-medium link-btn" aria-hidden="true"></i></a></div>
+        <div class="row"><a class="col" href="!#"><i class="fa fa-wrapper fa-facebook link-btn" aria-hidden="true"></i></a><a class="col" href="#"><i class="fa fa-wrapper fa-twitter link-btn" aria-hidden="true"></i></a><a class="col" href="#"><i class="fa fa-wrapper fa-instagram link-btn" aria-hidden="true"></i></a><a class="col" href="#"><i class="fa fa-wrapper fa-medium link-btn" aria-hidden="true"></i></a></div>
     </div>
     <div class="content-no-padding">
         <div class="divider m-0"></div>
@@ -150,16 +150,16 @@ export const FramesPage: React.FC<any> = (props) => {
                                             <div className="frame__subtitle">Freelance Photographer</div>
                                         </div>
                                         <div className="row">
-                                            <a className="col" href="#">
+                                            <a className="col" href="!#">
                                                 <i className="fa fa-wrapper fa-facebook link-btn" aria-hidden="true" />
                                             </a>
-                                            <a className="col" href="#">
+                                            <a className="col" href="!#">
                                                 <i className="fa fa-wrapper fa-twitter link-btn" aria-hidden="true" />
                                             </a>
-                                            <a className="col" href="#">
+                                            <a className="col" href="!#">
                                                 <i className="fa fa-wrapper fa-instagram link-btn" aria-hidden="true" />
                                             </a>
-                                            <a className="col" href="#">
+                                            <a className="col" href="!#">
                                                 <i className="fa fa-wrapper fa-medium link-btn" aria-hidden="true" />
                                             </a>
                                         </div>
@@ -307,7 +307,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                                     <p className="tile__subtitle m-0">Just what I needed.</p>
                                                 </div>
                                                 <div className="tile__buttons">
-                                                    <a href="#">
+                                                    <a href="!#">
                                                         <i
                                                             className="fa fa-wrapper fa-ellipsis-v small"
                                                             aria-hidden="true"
@@ -325,7 +325,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                                 placeholder="Send a message"
                                             />
                                             <span className="icon">
-                                                <a href="#">
+                                                <a href="!#">
                                                     <FontAwesomeIcon
                                                         className="fa-wrapper small"
                                                         icon={['fas', 'plus']}
@@ -446,7 +446,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                                 <p className="tile__subtitle">@johndoe</p>
                                             </div>
                                             <div className="tile__buttons">
-                                                <a href="#" className="link-btn">
+                                                <a href="!#" className="link-btn">
                                                     <span className="icon">
                                                         <i
                                                             className="fa fa-wrapper fa-pencil small"

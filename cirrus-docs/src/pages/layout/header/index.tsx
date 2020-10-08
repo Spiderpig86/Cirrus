@@ -1,6 +1,5 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
@@ -89,11 +88,13 @@ export const HeaderPage: React.FC<any> = (props) => {
                         <LazyLoad height={200}>
                             <iframe
                                 className="w-100"
+                                title="Header Demo"
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head.html"
                             />
                         </LazyLoad>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="header header-fixed u-unselectable header-animated">
+                        <CodeBlock
+                            code={`<div class="header header-fixed u-unselectable header-animated">
     <div class="header-brand">
         <div class="nav-item no-hover">
             <a><h6 class="title">Logo</h6></a>
@@ -156,7 +157,9 @@ export const HeaderPage: React.FC<any> = (props) => {
             </div>
         </div>
     </div>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -192,6 +195,7 @@ export const HeaderPage: React.FC<any> = (props) => {
                             <iframe
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-header-brand.html"
                                 width="100%"
+                                title="Header Brand"
                                 style={{ height: '200px' }}
                             />
                         </LazyLoad>
@@ -222,23 +226,36 @@ export const HeaderPage: React.FC<any> = (props) => {
                         </p>
 
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-header-btn.html" width="100%" style={{ height: '200px' }} />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-header-btn.html"
+                                width="100%"
+                                title="Header Button"
+                                style={{ height: '200px' }}
+                            />
                         </LazyLoad>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="header-brand">
+                        <CodeBlock
+                            code={`<div class="header-brand">
     <div class="nav-item nav-btn" style="cursor: pointer; display: block; position: relative; margin-left: auto;">
         <span></span>
         <span></span>
         <span></span>
     </div>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                         <p>
                             To set the <code>header-btn</code> to the close state (when the dropdown menu is present,
                             simply add the <code>active</code> class to the button.
                         </p>
 
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-header-btn-close.html" width="100%" style={{ height: '200px' }} />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-header-btn-close.html"
+                                width="100%"
+                                title="Header Button Close"
+                                style={{ height: '200px' }}
+                            />
                         </LazyLoad>
                     </div>
                 </section>
@@ -259,9 +276,15 @@ export const HeaderPage: React.FC<any> = (props) => {
                             </span>
                         </p>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-header-nav.html" width="100%" style={{ height: '200px' }} />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-header-nav.html"
+                                width="100%"
+                                title="Header Nav"
+                                style={{ height: '200px' }}
+                            />
                         </LazyLoad>
-                        <CodeBlock code={`<div class="header header-fixed u-unselectable header-animated">
+                        <CodeBlock
+                            code={`<div class="header header-fixed u-unselectable header-animated">
     <div class="header-brand">
         <div class="nav-item no-hover">
             <a><h6 class="title">Logo</h6></a>
@@ -282,7 +305,9 @@ export const HeaderPage: React.FC<any> = (props) => {
     <div class="header-nav" style="background-color: #ffdadd;" id="header-menu">
         <!-- Other nav categories, controls, nav-items, etc. This is hidden on touch enabled devices -->
     </div>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
                         <p>
                             Since that <code>header-nav</code> fills up the rest of the space for devices with widths
@@ -298,7 +323,8 @@ export const HeaderPage: React.FC<any> = (props) => {
                             site running Cirrus.
                         </p>
                         <h6>Plain JavaScript</h6>
-                        <CodeBlock code={`// Get all the nav-btns in the page
+                        <CodeBlock
+                            code={`// Get all the nav-btns in the page
 let navBtns = document.querySelectorAll('.nav-btn');
 
 // Add an event handler for all nav-btns to enable the dropdown functionality
@@ -311,10 +337,13 @@ navBtns.forEach(function (ele) {
         ele.classList.toggle('active');
         dropDownMenu.classList.toggle('active');
     });
-});`} language="javascript" />
+});`}
+                            language="javascript"
+                        />
                         <div className="space"></div>
                         <h6>JQuery</h6>
-                        <CodeBlock code={`// Show dropdown when clicked
+                        <CodeBlock
+                            code={`// Show dropdown when clicked
 $('#header-btn').on('click', function(e) {
     $('#MENU_ID_HERE').toggleClass('active');
     $('.nav-btn').toggleClass('active');
@@ -324,7 +353,9 @@ $('#header-btn').on('click', function(e) {
 $('.dropdown-menu li').on('click', function(e) {
      $('#MENU_ID_HERE').removeClass('active');
      $('.nav-btn').removeClass('active');
-});`} language="javascript" />
+});`}
+                            language="javascript"
+                        />
                     </div>
                 </section>
 
@@ -348,7 +379,12 @@ $('.dropdown-menu li').on('click', function(e) {
                             Only 1 region present (<code>nav-left</code>).
                         </p>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-dist-1.html" width="100%" style={{ height: '200px' }} />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-dist-1.html"
+                                width="100%"
+                                title="Header Demo Nav 1"
+                                style={{ height: '200px' }}
+                            />
                         </LazyLoad>
                         <div className="space"></div>
 
@@ -356,7 +392,12 @@ $('.dropdown-menu li').on('click', function(e) {
                             Only 2 regions present (<code>nav-left</code> and <code>nav-right</code>).
                         </p>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-dist-2.html" width="100%" style={{ height: '200px' }} />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-dist-2.html"
+                                width="100%"
+                                title="Header Demo Nav 2"
+                                style={{ height: '200px' }}
+                            />
                         </LazyLoad>
                         <div className="space"></div>
 
@@ -365,7 +406,12 @@ $('.dropdown-menu li').on('click', function(e) {
                             <code>nav-right</code>).
                         </p>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-dist-3.html" width="100%" style={{ height: '200px' }} />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-dist-3.html"
+                                width="100%"
+                                title="Header Demo Nav 3"
+                                style={{ height: '200px' }}
+                            />
                         </LazyLoad>
                         <div className="space large"></div>
 
@@ -375,7 +421,12 @@ $('.dropdown-menu li').on('click', function(e) {
                             are left aligned.
                         </p>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-left.html" width="100%" style={{ height: '200px' }} />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-left.html"
+                                width="100%"
+                                title="Header Demo Left"
+                                style={{ height: '200px' }}
+                            />
                         </LazyLoad>
                         <div className="space"></div>
 
@@ -390,7 +441,12 @@ $('.dropdown-menu li').on('click', function(e) {
                             </span>
                         </p>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-center.html" width="100%" style={{ height: '200px' }} />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-center.html"
+                                width="100%"
+                                title="Header Demo Center"
+                                style={{ height: '200px' }}
+                            />
                         </LazyLoad>
                         <div className="space"></div>
 
@@ -400,7 +456,12 @@ $('.dropdown-menu li').on('click', function(e) {
                             are right aligned.
                         </p>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-right.html" width="100%" style={{ height: '200px' }} />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-right.html"
+                                width="100%"
+                                title="Header Demo Right"
+                                style={{ height: '200px' }}
+                            />
                         </LazyLoad>
                         <div className="space large"></div>
                     </div>
@@ -440,44 +501,60 @@ $('.dropdown-menu li').on('click', function(e) {
                         <p>
                             A <code>header-brand</code> <b>logo</b>.
                         </p>
-                        <CodeBlock code={`<div class="nav-item">
+                        <CodeBlock
+                            code={`<div class="nav-item">
     <img src="./logo.png" />
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
 
                         <p>
                             A <b>link</b>.
                         </p>
-                        <CodeBlock code={`<div class="nav-item">
+                        <CodeBlock
+                            code={`<div class="nav-item">
     <a href="#">Link</a>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
 
                         <p>
                             The <b>dropdown menu toggle</b>.
                         </p>
-                        <CodeBlock code={`<div class="nav-item has-sub" id="dropdown">
+                        <CodeBlock
+                            code={`<div class="nav-item has-sub" id="dropdown">
     <a class="nav-dropdown-link">
         <span class="icon">
             <i class="fa fa-wrapper fa-book" aria-hidden="true"></i>
         </span> 
         Docs
     </a>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
 
                         <p>
                             Or any other <b>elements</b>.
                         </p>
-                        <CodeBlock code={`<div class="nav-item has-sub">
+                        <CodeBlock
+                            code={`<div class="nav-item has-sub">
     <input type="text" />
     <button class="btn-accent">Hello</button>
     <button class="btn-accent">World</button>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
 
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown-content.html" width="100%" />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown-content.html"
+                                title="Header Dropdown Content"
+                                width="100%"
+                            />
                         </LazyLoad>
                         <p>
                             Cirrus provides flexibility for which type of elements you can use for your{' '}
@@ -492,7 +569,12 @@ $('.dropdown-menu li').on('click', function(e) {
                             <code>no-hover</code> to the <code>nav-item</code>.
                         </p>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-navitem-states.html" width="100%" style={{ height: '200px' }} />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-navitem-states.html"
+                                width="100%"
+                                title="Header Nav Item States"
+                                style={{ height: '200px' }}
+                            />
                         </LazyLoad>
                     </div>
                 </section>
@@ -556,7 +638,11 @@ $('.dropdown-menu li').on('click', function(e) {
                         </p>
 
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown.html" width="100%" />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown.html"
+                                title="Header Dropdown"
+                                width="100%"
+                            />
                         </LazyLoad>
                         <div className="space"></div>
                         <CodeBlock
@@ -600,7 +686,12 @@ $('.dropdown-menu li').on('click', function(e) {
                         </p>
 
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown-hover.html" width="100%" style={{ height: '200px' }} />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown-hover.html"
+                                width="100%"
+                                title="Header Dropdown Hover"
+                                style={{ height: '200px' }}
+                            />
                         </LazyLoad>
                         <CodeBlock
                             code={`<div class="nav-item has-sub toggle-hover">
@@ -626,7 +717,11 @@ $('.dropdown-menu li').on('click', function(e) {
                             are right aligned. This ensures that the menus do not go past the screens.
                         </p>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown-align.html" width="100%" />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown-align.html"
+                                title="Header Dropdown Align"
+                                width="100%"
+                            />
                         </LazyLoad>
                         <div className="space"></div>
 
@@ -647,7 +742,11 @@ $('.dropdown-menu li').on('click', function(e) {
                         <div className="space"></div>
 
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown-divider.html" width="100%" />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown-divider.html"
+                                title="Header Dropdown Divider"
+                                width="100%"
+                            />
                         </LazyLoad>
                     </div>
                 </section>
@@ -665,7 +764,11 @@ $('.dropdown-menu li').on('click', function(e) {
                             A <b>normal</b> header.
                         </p>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-nofix.html" width="100%" />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-nofix.html"
+                                title="Header Demo Not Fixed"
+                                width="100%"
+                            />
                         </LazyLoad>
                         <div className="space"></div>
 
@@ -673,7 +776,11 @@ $('.dropdown-menu li').on('click', function(e) {
                             A <b>fixed</b> header.
                         </p>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-fix.html" width="100%" />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-fix.html"
+                                title="Header Demo Fixed"
+                                width="100%"
+                            />
                         </LazyLoad>
                         <div className="space"></div>
                     </div>
@@ -706,7 +813,11 @@ $('.dropdown-menu li').on('click', function(e) {
                             </li>
                         </ul>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head.html" width="100%" />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head.html"
+                                title="Header Demo Light"
+                                width="100%"
+                            />
                         </LazyLoad>
                         <div className="space"></div>
 
@@ -732,7 +843,11 @@ $('.dropdown-menu li').on('click', function(e) {
                             </li>
                         </ul>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-dark.html" width="100%" />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-dark.html"
+                                title="Header Demo Dark"
+                                width="100%"
+                            />
                         </LazyLoad>
                         <div className="space"></div>
 
@@ -754,7 +869,11 @@ $('.dropdown-menu li').on('click', function(e) {
                             </li>
                         </ul>
                         <LazyLoad height={200}>
-                            <iframe src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-clear.html" width="100%" />
+                            <iframe
+                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-clear.html"
+                                title="Header Demo Clear"
+                                width="100%"
+                            />
                         </LazyLoad>
                         <div className="space"></div>
                     </div>

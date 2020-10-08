@@ -78,10 +78,10 @@ export const LevelPage: React.FC<any> = (props) => {
                         <div className="level">
                             <div className="level-left">
                                 <h6 className="level-item uppercase">Brand</h6>
-                                <a href="#" className="level-item uppercase" style={{ padding: '0 1rem' }}>
+                                <a href="!#" className="level-item uppercase" style={{ padding: '0 1rem' }}>
                                     Item 1
                                 </a>
-                                <a href="#" className="level-item uppercase" style={{ padding: '0 1rem' }}>
+                                <a href="!#" className="level-item uppercase" style={{ padding: '0 1rem' }}>
                                     Item 2
                                 </a>
                             </div>

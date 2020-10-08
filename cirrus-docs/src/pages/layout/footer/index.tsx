@@ -57,6 +57,7 @@ export const FootersPage: React.FC<any> = (props) => {
                         <LazyLoad height={200}>
                             <iframe
                                 className="w-100"
+                                title="Footer Demo"
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer.html"
                             />
                         </LazyLoad>
@@ -69,13 +70,13 @@ export const FootersPage: React.FC<any> = (props) => {
         <div class="row">
             <div class="col-4">
                 <ul class="no-bullets">
-                    <a href="#">
+                    <a href="!#">
                         <li class="footer__list-item">Home</li>
                     </a>
-                    <a href="#">
+                    <a href="!#">
                         <li class="footer__list-item">Sign Up</li>
                     </a>
-                    <a href="#">
+                    <a href="!#">
                         <li class="footer__list-item">Downloads</li>
                     </a>
                     <ul>
@@ -84,13 +85,13 @@ export const FootersPage: React.FC<any> = (props) => {
             </div>
             <div class="col-4">
                 <ul class="no-bullets">
-                    <a href="#">
+                    <a href="!#">
                         <li class="footer__list-item">Company Information</li>
                     </a>
-                    <a href="#">
+                    <a href="!#">
                         <li class="footer__list-item">Contact Us</li>
                     </a>
-                    <a href="#">
+                    <a href="!#">
                         <li class="footer__list-item">Reviews</li>
                     </a>
                     <ul>
@@ -99,13 +100,13 @@ export const FootersPage: React.FC<any> = (props) => {
             </div>
             <div class="col-4">
                 <ul class="no-bullets">
-                    <a href="#">
+                    <a href="!#">
                         <li class="footer__list-item">FAQ</li>
                     </a>
-                    <a href="#">
+                    <a href="!#">
                         <li class="footer__list-item">Help Desk</li>
                     </a>
-                    <a href="#">
+                    <a href="!#">
                         <li class="footer__list-item">Forums</li>
                     </a>
                     <ul>
@@ -131,6 +132,7 @@ export const FootersPage: React.FC<any> = (props) => {
                         <LazyLoad height="200">
                             <iframe
                                 className="w-100"
+                                title="Static Footer"
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-static.html"
                             />
                         </LazyLoad>
@@ -166,6 +168,7 @@ export const FootersPage: React.FC<any> = (props) => {
                         <LazyLoad height="200">
                             <iframe
                                 className="w-100"
+                                title="Flexible Footer"
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-flexible.html"
                             />
                         </LazyLoad>
@@ -188,6 +191,7 @@ export const FootersPage: React.FC<any> = (props) => {
                         <LazyLoad height="200">
                             <iframe
                                 className="w-100"
+                                title="Minimal Footer"
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-minimal.html"
                             />
                         </LazyLoad>
@@ -201,6 +205,7 @@ export const FootersPage: React.FC<any> = (props) => {
                         <LazyLoad height="200">
                             <iframe
                                 className="w-100"
+                                title="Footer Map"
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-map.html"
                             />
                         </LazyLoad>
@@ -214,6 +219,7 @@ export const FootersPage: React.FC<any> = (props) => {
                         <LazyLoad height="200">
                             <iframe
                                 className="w-100"
+                                title="Footer Newsletter"
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-newsletter.html"
                             />
                         </LazyLoad>
@@ -227,6 +233,7 @@ export const FootersPage: React.FC<any> = (props) => {
                         <LazyLoad height="200">
                             <iframe
                                 className="w-100"
+                                title="Social Footer"
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-social.html"
                             />
                         </LazyLoad>
