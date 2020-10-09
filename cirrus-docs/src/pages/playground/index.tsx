@@ -5,20 +5,25 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { IFrame } from '../../layouts/components/iframe';
-import { CIRRUS_EDITOR_CODE_KEY, PLAYGROUND_ENDPOINT_MAP, PLAYGROUND_VERSIONS } from '../../constants/playground';
+import {
+    CIRRUS_DEFAULT_PLAYGROUND_CODE,
+    CIRRUS_PLAYGROUND_KEY,
+    PLAYGROUND_ENDPOINT_MAP,
+    PLAYGROUND_VERSIONS,
+} from '../../constants/playground';
 
 import './index.scss';
 
 export const PlaygroundPage: React.FC<any> = () => {
     const editorRef = useRef<any>();
-    const [code, setCode] = useState(localStorage.getItem(CIRRUS_EDITOR_CODE_KEY) ?? '');
+    const [code, setCode] = useState(localStorage.getItem(CIRRUS_PLAYGROUND_KEY) ?? CIRRUS_DEFAULT_PLAYGROUND_CODE);
     const [isDragging, setDragging] = useState(false); // Hacky workaround https://github.com/tomkp/react-split-pane/issues/30
     const [isEditorHorizontal, setEditorHorizontal] = useState(false);
     const [playgroundCdn, setPlaygroundCdn] = useState(PLAYGROUND_VERSIONS[0]);
     const [iframeKey, setIFrameKey] = useState(`original`);
 
     useEffect(() => {
-        localStorage.setItem(CIRRUS_EDITOR_CODE_KEY, code);
+        localStorage.setItem(CIRRUS_PLAYGROUND_KEY, code);
     }, [code]);
 
     function handleEditorMounted(_: () => string, editor: any) {
@@ -122,10 +127,13 @@ export const PlaygroundPage: React.FC<any> = () => {
                             <ul className="dropdown-menu dropdown-animated" role="menu">
                                 {PLAYGROUND_VERSIONS.map((version) => {
                                     return (
-                                        <li role="menu-item" onClick={() => {
-                                            setPlaygroundCdn(version);
-                                            reloadIFrame();
-                                        }}>
+                                        <li
+                                            role="menu-item"
+                                            onClick={() => {
+                                                setPlaygroundCdn(version);
+                                                reloadIFrame();
+                                            }}
+                                        >
                                             <a>{version}</a>
                                         </li>
                                     );

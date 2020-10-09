@@ -20,4 +20,25 @@ export const PLAYGROUND_ENDPOINT_MAP: Map<string, string> = new Map([
     ['0.4.6', 'https://cdn.jsdelivr.net/npm/cirrus-ui@0.4.6/dist/cirrus.min.css'],
     ['0.4.5', 'https://cdn.jsdelivr.net/npm/cirrus-ui@0.4.5/bin/cirrus.min.css'],
 ]);
-export const CIRRUS_EDITOR_CODE_KEY = 'cirrus-editor-code';
+export const CIRRUS_PLAYGROUND_KEY = 'cirrus-playground-code';
+
+export const CIRRUS_DEFAULT_PLAYGROUND_CODE = `<!--
+    Welcome to Playground!
+
+    This is a space for you to try out some ideas using Cirrus or just to test
+    out how the framework works.
+    You can rotate this view, save this as a file, or switch versions of Cirrus all
+    at the top right corner.
+
+       _______                     
+      / ____(_)___________  _______
+     / /   / / ___/ ___/ / / / ___/
+    / /___/ / /  / /  / /_/ (__  ) 
+    \\____/_/_/  /_/   \\__,_/____/  
+                           
+    Happy coding. :)
+-->
+
+<div class="u-flex u-center h-100">
+    <button class="btn-info">Click Me</button>
+</div>`;

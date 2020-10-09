@@ -1,4 +1,0 @@
-[build]
-    base = "cirrus-docs"
-    publish = "./public"
-    command = "CI=npm run build"

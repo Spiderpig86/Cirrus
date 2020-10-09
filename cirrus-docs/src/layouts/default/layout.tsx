@@ -24,7 +24,9 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
                         <Sidebar {...rest} />
                     </div>
                 </div>
-                <a href="#nonexistent-div" id="sidebar-close" className="tree-nav-close p-0 u-shadow-none"></a>
+                <a href="#nonexistent-div" id="sidebar-close" className="tree-nav-close p-0 u-shadow-none" style={{
+                    boxShadow: 'none'
+                }}></a>
                 <div
                     className="tree-nav-container h-auto"
                     style={{
