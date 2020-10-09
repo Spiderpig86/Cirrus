@@ -1,0 +1,4 @@
+[build]
+    base = "cirrus-docs"
+    publish = "cirrus-docs/public"
+    command = "cd cirrus-docs && npm run build"
