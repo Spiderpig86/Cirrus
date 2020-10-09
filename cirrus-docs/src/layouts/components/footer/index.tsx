@@ -5,7 +5,7 @@ import './index.scss';
 
 export const Footer: React.FC<any> = () => {
     return (
-        <footer className="footer bg-gray-200">
+        <footer className="footer bg-gray-200 px-2">
             <h6 className="footer__title uppercase">Cirrus</h6>
             <p className="subtitle">
                 The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The

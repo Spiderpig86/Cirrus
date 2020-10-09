@@ -5,6 +5,7 @@ import { Headline } from '../../../layouts/components/headline';
 import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { Pagination } from '../../../layouts/components/pagination';
+import { TableWrapper } from '../../../layouts/components/table-wrapper';
 
 export const BrowserSupportPage: React.FC<any> = (props) => {
     return (
@@ -30,97 +31,99 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                             for Internet Explorer. <i>Take it from me, I wouldn't advise using that browser anymore.</i>
                         </p>
 
-                        <table className="table bordered">
-                            <thead>
-                                <tr>
-                                    <th colSpan={6}>Supported Browsers</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <a href="http://godban.github.io/browsers-support-badges/">
-                                            <img
-                                                src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png"
-                                                alt="Edge"
-                                                width="24px"
-                                                height="24px"
-                                            />
-                                        </a>
-                                        <br />
-                                        Edge
-                                    </td>
-                                    <td>
-                                        <a href="http://godban.github.io/browsers-support-badges/">
-                                            <img
-                                                src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png"
-                                                alt="Firefox"
-                                                width="24px"
-                                                height="24px"
-                                            />
-                                        </a>
-                                        <br />
-                                        Firefox
-                                    </td>
-                                    <td>
-                                        <a href="http://godban.github.io/browsers-support-badges/">
-                                            <img
-                                                src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png"
-                                                alt="Chrome"
-                                                width="24px"
-                                                height="24px"
-                                            />
-                                        </a>
-                                        <br />
-                                        Chrome
-                                    </td>
-                                    <td>
-                                        <a href="http://godban.github.io/browsers-support-badges/">
-                                            <img
-                                                src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png"
-                                                alt="Safari"
-                                                width="24px"
-                                                height="24px"
-                                            />
-                                        </a>
-                                        <br />
-                                        Safari
-                                    </td>
-                                    <td>
-                                        <a href="http://godban.github.io/browsers-support-badges/">
-                                            <img
-                                                src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png"
-                                                alt="Opera"
-                                                width="24px"
-                                                height="24px"
-                                            />
-                                        </a>
-                                        <br />
-                                        Opera
-                                    </td>
-                                    <td>
-                                        <a href="http://godban.github.io/browsers-support-badges/">
-                                            <img
-                                                src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png"
-                                                alt="Electron"
-                                                width="24px"
-                                                height="24px"
-                                            />
-                                        </a>
-                                        <br />
-                                        Electron
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>latest version</td>
-                                    <td>last 3 versions, ESR</td>
-                                    <td>last 3 versions</td>
-                                    <td>last 3 versions</td>
-                                    <td>last 3 versions</td>
-                                    <td>last 3 versions</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <TableWrapper>
+                            <table className="table bordered">
+                                <thead>
+                                    <tr>
+                                        <th colSpan={6}>Supported Browsers</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="http://godban.github.io/browsers-support-badges/">
+                                                <img
+                                                    src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png"
+                                                    alt="Edge"
+                                                    width="24px"
+                                                    height="24px"
+                                                />
+                                            </a>
+                                            <br />
+                                            Edge
+                                        </td>
+                                        <td>
+                                            <a href="http://godban.github.io/browsers-support-badges/">
+                                                <img
+                                                    src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png"
+                                                    alt="Firefox"
+                                                    width="24px"
+                                                    height="24px"
+                                                />
+                                            </a>
+                                            <br />
+                                            Firefox
+                                        </td>
+                                        <td>
+                                            <a href="http://godban.github.io/browsers-support-badges/">
+                                                <img
+                                                    src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png"
+                                                    alt="Chrome"
+                                                    width="24px"
+                                                    height="24px"
+                                                />
+                                            </a>
+                                            <br />
+                                            Chrome
+                                        </td>
+                                        <td>
+                                            <a href="http://godban.github.io/browsers-support-badges/">
+                                                <img
+                                                    src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png"
+                                                    alt="Safari"
+                                                    width="24px"
+                                                    height="24px"
+                                                />
+                                            </a>
+                                            <br />
+                                            Safari
+                                        </td>
+                                        <td>
+                                            <a href="http://godban.github.io/browsers-support-badges/">
+                                                <img
+                                                    src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png"
+                                                    alt="Opera"
+                                                    width="24px"
+                                                    height="24px"
+                                                />
+                                            </a>
+                                            <br />
+                                            Opera
+                                        </td>
+                                        <td>
+                                            <a href="http://godban.github.io/browsers-support-badges/">
+                                                <img
+                                                    src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png"
+                                                    alt="Electron"
+                                                    width="24px"
+                                                    height="24px"
+                                                />
+                                            </a>
+                                            <br />
+                                            Electron
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>latest version</td>
+                                        <td>last 3 versions, ESR</td>
+                                        <td>last 3 versions</td>
+                                        <td>last 3 versions</td>
+                                        <td>last 3 versions</td>
+                                        <td>last 3 versions</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </TableWrapper>
                     </div>
                 </section>
 
@@ -152,7 +155,7 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                         <p>There are many other classes that may be supported as well. Explore as you see fit.</p>
                     </div>
                 </section>
-                
+
                 <Pagination
                     prevLink={{
                         name: 'Update Guide',

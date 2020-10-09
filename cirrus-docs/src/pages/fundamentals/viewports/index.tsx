@@ -4,6 +4,7 @@ import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
+import { TableWrapper } from '../../../layouts/components/table-wrapper';
 import { toc } from './toc';
 
 export const ViewportsPage: React.FC<any> = (props) => {
@@ -63,203 +64,208 @@ export const ViewportsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="space"></div>
 
-                        <table className="table bordered">
-                            <tbody>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Min (px)</th>
-                                    <th>Max (px)</th>
-                                </tr>
-                                <tr>
-                                    <td>xs</td>
-                                    <td>
-                                        <code>0</code>
-                                    </td>
-                                    <td>
-                                        <code>640</code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>sm</td>
-                                    <td>
-                                        <code>641</code>
-                                    </td>
-                                    <td>
-                                        <code>768</code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>md</td>
-                                    <td>
-                                        <code>769</code>
-                                    </td>
-                                    <td>
-                                        <code>1023</code>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>xl</td>
-                                    <td>
-                                        <code>1024</code>
-                                    </td>
-                                    <td>-</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <TableWrapper>
+                            <table className="table bordered">
+                                <tbody>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Min (px)</th>
+                                        <th>Max (px)</th>
+                                    </tr>
+                                    <tr>
+                                        <td>xs</td>
+                                        <td>
+                                            <code>0</code>
+                                        </td>
+                                        <td>
+                                            <code>640</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>sm</td>
+                                        <td>
+                                            <code>641</code>
+                                        </td>
+                                        <td>
+                                            <code>768</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>md</td>
+                                        <td>
+                                            <code>769</code>
+                                        </td>
+                                        <td>
+                                            <code>1023</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>xl</td>
+                                        <td>
+                                            <code>1024</code>
+                                        </td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </TableWrapper>
 
                         <p>From that, the class designations in Cirrus follow this guideline:</p>
-                        <table className="table bordered">
-                            <thead>
-                                <tr>
-                                    <th>
-                                        xs
-                                        <br />
-                                        Below and including <code>640px</code>
-                                    </th>
+                        <TableWrapper>
+                            <table className="table bordered">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            xs
+                                            <br />
+                                            Below and including <code>640px</code>
+                                        </th>
 
-                                    <th>
-                                        sm
-                                        <br />
-                                        Between <code>641px</code> and <code>768px</code>
-                                    </th>
+                                        <th>
+                                            sm
+                                            <br />
+                                            Between <code>641px</code> and <code>768px</code>
+                                        </th>
 
-                                    <th>
-                                        md
-                                        <br />
-                                        Between <code>769px</code> and <code>1023px</code>
-                                    </th>
-                                    <th>
-                                        lg
-                                        <br />
-                                        <code>1024px</code> and above
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <p className="toast toast--info" style={{ width: 'auto' }}>
-                                            *-xs
-                                        </p>
-                                    </td>
-                                    <td colSpan={3}>
-                                        <p>-</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p>-</p>
-                                    </td>
-                                    <td colSpan={3}>
-                                        <p className="toast toast--info" style={{ width: 'auto' }}>
-                                            *-sm
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colSpan={2}>
-                                        <p>-</p>
-                                    </td>
-                                    <td colSpan={2}>
-                                        <p className="toast toast--info" style={{ width: 'auto' }}>
-                                            *-md
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colSpan={3}>
-                                        <p>-</p>
-                                    </td>
-                                    <td colSpan={1}>
-                                        <p className="toast toast--info" style={{ width: 'auto' }}>
-                                            *-lg
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p>-</p>
-                                    </td>
-                                    <td>
-                                        <p className="toast toast--info" style={{ width: 'auto' }}>
-                                            *-sm-only
-                                        </p>
-                                    </td>
-                                    <td colSpan={2}>
-                                        <p>-</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colSpan={2}>
-                                        <p>-</p>
-                                    </td>
-                                    <td>
-                                        <p className="toast toast--info" style={{ width: 'auto' }}>
-                                            *-md-only
-                                        </p>
-                                    </td>
-                                    <td>
-                                        <p>-</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
+                                        <th>
+                                            md
+                                            <br />
+                                            Between <code>769px</code> and <code>1023px</code>
+                                        </th>
+                                        <th>
+                                            lg
+                                            <br />
+                                            <code>1024px</code> and above
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p className="toast toast--info" style={{ width: 'auto' }}>
+                                                *-xs
+                                            </p>
+                                        </td>
+                                        <td colSpan={3}>
+                                            <p>-</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>-</p>
+                                        </td>
+                                        <td colSpan={3}>
+                                            <p className="toast toast--info" style={{ width: 'auto' }}>
+                                                *-sm
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colSpan={2}>
+                                            <p>-</p>
+                                        </td>
+                                        <td colSpan={2}>
+                                            <p className="toast toast--info" style={{ width: 'auto' }}>
+                                                *-md
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colSpan={3}>
+                                            <p>-</p>
+                                        </td>
+                                        <td colSpan={1}>
+                                            <p className="toast toast--info" style={{ width: 'auto' }}>
+                                                *-lg
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>-</p>
+                                        </td>
+                                        <td>
+                                            <p className="toast toast--info" style={{ width: 'auto' }}>
+                                                *-sm-only
+                                            </p>
+                                        </td>
+                                        <td colSpan={2}>
+                                            <p>-</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colSpan={2}>
+                                            <p>-</p>
+                                        </td>
+                                        <td>
+                                            <p className="toast toast--info" style={{ width: 'auto' }}>
+                                                *-md-only
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p>-</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </TableWrapper>
                         <p>
                             An example of style that follows this convention is the <code>u-none-*</code> class.
                         </p>
-                        <table className="table bordered">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <code>u-hide-xs</code>
-                                    </td>
-                                    <td>
-                                        Hide content for widths below <code>640px</code>.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>u-hide-sm</code>
-                                    </td>
-                                    <td>
-                                        Hide content for widths <code>641px</code> and above.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>u-hide-sm-only</code>
-                                    </td>
-                                    <td>
-                                        Hide content for widths between <code>641px</code> and <code>768px</code>.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>u-hide-md</code>
-                                    </td>
-                                    <td>
-                                        Hide content for widths <code>768px</code> and above.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>u-hide-md-only</code>
-                                    </td>
-                                    <td>
-                                        Hide content for widths between <code>768px</code> and <code>1023px</code>.
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <code>u-hide-lg</code>
-                                    </td>
-                                    <td>
-                                        Hide content for <code>1024px</code> and above.
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <TableWrapper>
+                            <table className="table bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>u-hide-xs</code>
+                                        </td>
+                                        <td>
+                                            Hide content for widths below <code>640px</code>.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>u-hide-sm</code>
+                                        </td>
+                                        <td>
+                                            Hide content for widths <code>641px</code> and above.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>u-hide-sm-only</code>
+                                        </td>
+                                        <td>
+                                            Hide content for widths between <code>641px</code> and <code>768px</code>.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>u-hide-md</code>
+                                        </td>
+                                        <td>
+                                            Hide content for widths <code>768px</code> and above.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>u-hide-md-only</code>
+                                        </td>
+                                        <td>
+                                            Hide content for widths between <code>768px</code> and <code>1023px</code>.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>u-hide-lg</code>
+                                        </td>
+                                        <td>
+                                            Hide content for <code>1024px</code> and above.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </TableWrapper>
                     </div>
                 </section>
 

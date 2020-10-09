@@ -52,13 +52,15 @@
 
 @media screen and (max-width: 768px) {
     .default-layout {
+        display: block;
+
         &.content {
             width: 100%;
         }
 
         .tree-nav-header {
             display: block;
-            position: sticky;
+            position: fixed;
             top: 10rem;
         }
     }

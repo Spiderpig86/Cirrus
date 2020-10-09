@@ -15,7 +15,7 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
                 <div className="tree-nav-header">
                     <a href="#sidebar" className="u-hide-tablet u-shadow-none">
                         <span className="icon">
-                            <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'bars']} />
+                            <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'chevron-right']} />
                         </span>
                     </a>
                 </div>

@@ -7,3 +7,15 @@
         margin: 0 auto;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .default-layout.tree-nav-body {
+        display: block;
+    }
+
+    .tree-nav-header {
+        position: fixed;
+        width: 2.5rem;
+        height: 4rem;
+    }
+}
