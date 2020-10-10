@@ -27,10 +27,10 @@ export const ButtonGroupsPage: React.FC<any> = (props) => {
                         </div>
 
                         <CodeBlock
-                            code={`<div className="btn-group">
-    <button className="btn-primary">First Button</button>
-    <button className="btn-primary">Second Button</button>
-    <button className="btn-primary">Third Button</button>
+                            code={`<div class="btn-group">
+    <button class="btn-primary">First Button</button>
+    <button class="btn-primary">Second Button</button>
+    <button class="btn-primary">Third Button</button>
 </div>`}
                             language="htmlbars"
                         />
@@ -47,10 +47,10 @@ export const ButtonGroupsPage: React.FC<any> = (props) => {
                         </div>
 
                         <CodeBlock
-                            code={`<div className="btn-group btn-group-fill">
-    <button className="bg-orange-200 text-orange-700">Edge</button>
-    <button className="bg-orange-200 text-orange-700">To</button>
-    <button className="bg-orange-200 text-orange-700">Edge</button>
+                            code={`<div class="btn-group btn-group-fill">
+    <button class="bg-orange-200 text-orange-700">Edge</button>
+    <button class="bg-orange-200 text-orange-700">To</button>
+    <button class="bg-orange-200 text-orange-700">Edge</button>
 </div>`}
                             language="htmlbars"
                         />

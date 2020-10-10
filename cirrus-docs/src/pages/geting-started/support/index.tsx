@@ -143,10 +143,10 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                         <p>As an example, flexbox can be emulated by using clearfix and floats.</p>
 
                         <CodeBlock
-                            code={`<div className="u-clearfix">
-    <div className="w-50 u-pull-left">test</div>
-    <div className="w-50 u-pull-left">test</div>
-    <div className="w-50 u-pull-left">test</div>
+                            code={`<div class="u-clearfix">
+    <div class="w-50 u-pull-left">test</div>
+    <div class="w-50 u-pull-left">test</div>
+    <div class="w-50 u-pull-left">test</div>
     ...
 </div>`}
                             language={'htmlbars'}
@@ -162,8 +162,8 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                         link: './update',
                     }}
                     nextLink={{
-                        name: 'Tutorial',
-                        link: './tutorial',
+                        name: 'Examples',
+                        link: './examples',
                     }}
                 />
             </div>

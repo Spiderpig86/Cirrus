@@ -17,6 +17,6 @@ module.exports = function () {
         if (fluidContainerTest.childNodes.length === 0) {
             return;
         }
-        fluidContainerTest.removeChild(fluidContainerTest.lastChild); // Ty based jQuery
+        fluidContainerTest.removeChild(fluidContainerTest.lastChild);
     });
 };

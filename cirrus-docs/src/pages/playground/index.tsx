@@ -12,6 +12,8 @@ import {
     PLAYGROUND_VERSIONS,
 } from '../../constants/playground';
 
+import initializeHeaderToggle from '../../static/js/header-toggle.js';
+
 import './index.scss';
 
 export const PlaygroundPage: React.FC<any> = () => {
@@ -25,6 +27,10 @@ export const PlaygroundPage: React.FC<any> = () => {
     useEffect(() => {
         localStorage.setItem(CIRRUS_PLAYGROUND_KEY, code);
     }, [code]);
+
+    useEffect(() => {
+        initializeHeaderToggle();
+    }, []);
 
     function handleEditorMounted(_: () => string, editor: any) {
         // monacoEditor.editor.IStandaloneCodeEditor
@@ -82,11 +88,11 @@ export const PlaygroundPage: React.FC<any> = () => {
     }
 
     return (
-        <div>
+        <div className="u-hide-overflow">
             <div
-                className="header header-dark u-position-relative u-unselectable header-animated mb-0"
+                className="header header-dark header-fixed u-unselectable header-animated mb-0"
                 style={{
-                    height: '3.5rem',
+                    minHeight: '3.5rem',
                     zIndex: 1000,
                 }}
             >
@@ -104,21 +110,13 @@ export const PlaygroundPage: React.FC<any> = () => {
                 </div>
                 <div className="header-nav" id="header-menu">
                     <div className="nav-right">
-                        <div className="nav-item">
-                            <div
-                                className="px-2 py-1 tooltip tooltip--bottom"
-                                onClick={toggleEditorOrientation}
-                                data-tooltip="Rotate"
-                            >
+                        <div className="nav-item" onClick={toggleEditorOrientation}>
+                            <div className="px-2 py-1 tooltip tooltip--bottom" data-tooltip="Rotate">
                                 <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'sync']} />
                             </div>
                         </div>
-                        <div className="nav-item">
-                            <div
-                                className="px-2 py-1 tooltip tooltip--bottom"
-                                onClick={handleSaveCode}
-                                data-tooltip="Save"
-                            >
+                        <div className="nav-item" onClick={handleSaveCode}>
+                            <div className="px-2 py-1 tooltip tooltip--bottom" data-tooltip="Save">
                                 <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'save']} />
                             </div>
                         </div>
@@ -147,6 +145,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                 className="u-position-relative"
                 style={{
                     minHeight: 'calc(100vh - 3.5rem)',
+                    marginTop: '3.5rem'
                 }}
             >
                 <SplitPane
