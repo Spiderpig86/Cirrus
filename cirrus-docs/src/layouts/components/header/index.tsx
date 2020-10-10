@@ -46,14 +46,14 @@ export const Header: React.FC<HeaderProps> = (props) => {
                     <div className="header-nav" id="header-menu">
                         <div className="nav-left">
                             <div className="nav-item">
-                                <a className="smoothScroll" href="#colors">
+                                <a className="smoothScroll" href="https://github.com/Spiderpig86/Cirrus" target="_blank" rel='noopener noreferrer'>
                                     <span className="icon">
-                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'pen-fancy']} />
+                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fab', 'github']} />
                                     </span>
                                 </a>
                             </div>
                             <div className="nav-item">
-                                <a className="smoothScroll" href="#colors">
+                                <a className="smoothScroll" href="./playground" target="_blank" rel='noopener noreferrer'>
                                     <span className="icon">
                                         <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'palette']} />
                                     </span>

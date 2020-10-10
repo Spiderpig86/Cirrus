@@ -26,7 +26,7 @@ export const PlaygroundPage: React.FC<any> = () => {
     const [isEditorHorizontal, setEditorHorizontal] = useState(false);
     const [playgroundCdn, setPlaygroundCdn] = useState(PLAYGROUND_VERSIONS[0]);
     const [iframeKey, setIFrameKey] = useState(`original`);
-    const [defaultSize, setDefaultSize] = useState(`50%`);
+    const [splitPaneSize, setSplitPaneSize] = useState<string | number>(`50%`);
 
     useEffect(() => {
         localStorage.setItem(CIRRUS_PLAYGROUND_KEY, code);
@@ -49,7 +49,8 @@ export const PlaygroundPage: React.FC<any> = () => {
     /**
      * Lazily update Monaco editor pane for performance
      */
-    function handleSplitPaneDragFinished() {
+    function handleSplitPaneDragFinished(newSize: number) {
+        setSplitPaneSize(newSize);
         setDragging(false);
         if (editorRef) {
             editorRef.current.layout();
@@ -79,7 +80,7 @@ export const PlaygroundPage: React.FC<any> = () => {
     }
 
     function setEditorSize(size: string) {
-        setDefaultSize(size);
+        setSplitPaneSize(size);
         if (editorRef) {
             setTimeout(() => {
                 editorRef.current.layout();
@@ -183,7 +184,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                     split={isEditorHorizontal ? 'horizontal' : 'vertical'}
                     minSize={50}
                     maxSize={'99%'}
-                    defaultSize={defaultSize}
+                    size={splitPaneSize}
                     onDragStarted={handleSplitPaneDragStarted}
                     onDragFinished={handleSplitPaneDragFinished}
                 >

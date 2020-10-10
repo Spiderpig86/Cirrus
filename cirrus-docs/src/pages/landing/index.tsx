@@ -4,6 +4,8 @@ import Axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
+import { CodeBlock } from '../../layouts/components/codeblock';
+
 import './index.scss';
 import ComponentSVG from '../../static/svg/component.svg';
 import UtilitySVG from '../../static/svg/utility.svg';
@@ -75,9 +77,7 @@ export const Landing: React.FC<any> = () => {
                         </div>
                     </div>
 
-                    <a className="u-inline-block mt-3" href="!#">
-                        <div className="btn btn-info">Get Started</div>
-                    </a>
+                    <CodeBlock code={`$ yarn add cirrus-ui`} language='text' />
                 </div>
             </section>
             <section className="py-8 bg-indigo-200">
