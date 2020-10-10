@@ -9,7 +9,6 @@ import './index.scss';
 export interface CodeBlockProps {
     code: string;
     language: string;
-    languageDisplay?: string;
     breakAll?: boolean;
 }
 
@@ -21,13 +20,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
             <SyntaxHighlighter className={`codeblock pl-2 pr-3 py-1 ${(props.breakAll ? `break-all` : ``)}`} language={props.language} style={gruvboxDark}>
                 {props.code}
             </SyntaxHighlighter>
-            {/* <pre className={props.language}>
-                <code className="codeblock pl-3 pr-5 py-2" data-lang={props.languageDisplay ?? ''}>
-                    {props.languageDisplay ? <br /> : <></>}
-                    {props.code}
-                </code>
-            </pre> */}
-
+            
             <CopyToClipboard
                 text={props.code}
                 onCopy={() => {
@@ -41,7 +34,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
                     style={{
                         cursor: 'pointer',
                         right: '1.5rem',
-                        top: props.languageDisplay ? '2.25rem' : '1.2rem',
+                        top: '1.2rem',
                     }}
                 />
             </CopyToClipboard>

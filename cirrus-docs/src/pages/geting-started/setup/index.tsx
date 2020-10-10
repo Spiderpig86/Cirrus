@@ -168,7 +168,6 @@ export const SetUpPage: React.FC<any> = (props) => {
                                         code={`import 'cirrus-ui'; 
 // Your other framework code`}
                                         language="javascript"
-                                        languageDisplay="JS"
                                     />
                                 </div>
 
@@ -197,7 +196,6 @@ export const SetUpPage: React.FC<any> = (props) => {
 
 </html>`}
                                     language="html"
-                                    languageDisplay="HTML"
                                 />
                             </div>
                         </div>
