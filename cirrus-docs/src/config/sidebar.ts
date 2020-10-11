@@ -48,12 +48,6 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Update Guide',
-                url: '#'
-            },
-            {
-                fontWeight: 'semibold',
-                glyph: null,
                 text: 'Browser Support',
                 url: '/getting-started/support'
             },
@@ -67,7 +61,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Release Notes',
-                url: '/getting-started/relase-notes'
+                url: '/getting-started/release-notes'
             },
         ],
     },

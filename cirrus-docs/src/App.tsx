@@ -8,7 +8,7 @@ import { DefaultLayoutRoute } from './layouts/default';
 import { LandingLayoutRoute } from './layouts/landing';
 import { BlankLayoutRoute } from './layouts/blank';
 import { AnimationsPage } from './pages/animations';
-import { SetUpPage, BrowserSupportPage } from './pages/geting-started';
+import { SetUpPage, BrowserSupportPage, ReleaseNotesPage } from './pages/geting-started';
 import { AboutPage } from './pages/about';
 import { ColorsPage, TypographyPage, ViewportsPage } from './pages/fundamentals';
 import { WhyPage } from './pages/why';
@@ -74,6 +74,7 @@ function App() {
 
                 <DefaultLayoutRoute path="/getting-started/setup" component={SetUpPage} />
                 <DefaultLayoutRoute path="/getting-started/support" component={BrowserSupportPage} />
+                <DefaultLayoutRoute path="/getting-started/release-notes" component={ReleaseNotesPage} />
 
                 <DefaultLayoutRoute path="/fundamentals/colors" component={ColorsPage} />
                 <DefaultLayoutRoute path="/fundamentals/typography" component={TypographyPage} />

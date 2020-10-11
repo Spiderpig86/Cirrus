@@ -8,3 +8,7 @@ export function FormatString(str: string, ...val: string[]) {
 export function Capitalize(str: string): string {
     return str.charAt(0).toUpperCase() + str.substring(1);
 }
+
+export function ReplaceAll(str: string, target: string, replacement: string): string {
+    return str.split(target).join(replacement);
+}

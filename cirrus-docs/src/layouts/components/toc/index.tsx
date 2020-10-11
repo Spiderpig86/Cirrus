@@ -45,7 +45,7 @@ export const TableOfContents: React.FC<TableOfContentsProps> = (props) => {
         tableOfContentsEventListener(null);
 
         // return () => window.removeEventListener('load', tableOfContentsEventListener);
-    }, []);
+    });
 
     function constructList(entries: TableOfContentsEntry[]) {
         return (

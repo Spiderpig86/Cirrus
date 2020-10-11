@@ -158,8 +158,8 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{
-                        name: 'Update Guide',
-                        link: './update',
+                        name: 'Setup',
+                        link: './setup',
                     }}
                     nextLink={{
                         name: 'Examples',
