@@ -11,23 +11,27 @@ export const WhyPage: React.FC<any> = (props) => {
     const data = [
         {
             framework: 'Cirrus',
-            memory: 20.8,
+            memory: 21.4,
         },
         {
             framework: 'Bootstrap',
-            memory: 114,
+            memory: 23.5,
+        },
+        {
+            framework: 'FlatUI',
+            memory: 24.1,
         },
         {
             framework: 'Bulma',
-            memory: 114,
+            memory: 26.0,
+        },
+        {
+            framework: 'Material',
+            memory: 32.5,
         },
         {
             framework: 'Semantic UI',
-            memory: 114,
-        },
-        {
-            framework: 'Tailwind',
-            memory: 114,
+            memory: 101,
         },
     ];
 
@@ -51,7 +55,7 @@ export const WhyPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>
                             Cirrus comes with lots of functionality in a small package. Coming in at{' '}
-                            <b>20.8 KB gzipped</b>, page loads are fast and data caps are not breached.
+                            <b>21.4 KB gzipped</b>, page loads are fast and data caps are not breached.
                         </p>
 
                         {/* TODO MOVE TO NEW FILE */}
