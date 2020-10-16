@@ -182,7 +182,7 @@ export const PlaygroundPage: React.FC<any> = () => {
             >
                 <SplitPane
                     split={isEditorHorizontal ? 'horizontal' : 'vertical'}
-                    minSize={50}
+                    minSize={0}
                     maxSize={'99%'}
                     size={splitPaneSize}
                     onDragStarted={handleSplitPaneDragStarted}
