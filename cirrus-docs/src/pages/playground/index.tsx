@@ -14,9 +14,9 @@ import {
 
 import initializeHeaderToggle from '../../static/js/header-toggle.js';
 
-import PlaygroundFullscreenSVG from '../../static/svg/playground-fullscreen.svg';
-import PlaygroundHalfscreenSVG from '../../static/svg/playground-half.svg';
-import PlaygroundCodeSVG from '../../static/svg/playground-code.svg';
+import { ReactComponent as PlaygroundFullscreenSVG } from '../../static/svg/playground-fullscreen.svg';
+import { ReactComponent as PlaygroundHalfscreenSVG } from '../../static/svg/playground-half.svg';
+import { ReactComponent as PlaygroundCodeSVG } from '../../static/svg/playground-code.svg';
 import './index.scss';
 
 export const PlaygroundPage: React.FC<any> = () => {
@@ -27,6 +27,8 @@ export const PlaygroundPage: React.FC<any> = () => {
     const [playgroundCdn, setPlaygroundCdn] = useState(PLAYGROUND_VERSIONS[0]);
     const [iframeKey, setIFrameKey] = useState(`original`);
     const [splitPaneSize, setSplitPaneSize] = useState<string | number>(`50%`);
+
+    const BUTTON_ACCENT_COLOR = `#f03d4d`;
 
     useEffect(() => {
         localStorage.setItem(CIRRUS_PLAYGROUND_KEY, code);
@@ -113,10 +115,16 @@ export const PlaygroundPage: React.FC<any> = () => {
                 <div className="header-brand">
                     <div className="nav-item no-hover">
                         <Link to="../">
-                            <h6 className="title mb-0">Playground</h6><span className="uppercase ml-1 mt-1 font-bold" style={{
-                                color: '#f03d4d',
-                                fontSize: '.75rem'
-                            }}>for Cirrus</span>
+                            <h6 className="title mb-0">Playground</h6>
+                            <span
+                                className="uppercase ml-1 mt-1 font-bold"
+                                style={{
+                                    color: BUTTON_ACCENT_COLOR,
+                                    fontSize: '.75rem',
+                                }}
+                            >
+                                for Cirrus
+                            </span>
                         </Link>
                     </div>
                     <div className="nav-item nav-btn" id="header-btn">
@@ -128,18 +136,32 @@ export const PlaygroundPage: React.FC<any> = () => {
                 <div className="header-nav" id="header-menu">
                     <div className="nav-right">
                         <div className="nav-item" onClick={() => setEditorSize(`100%`)}>
-                            <div className="px-2 py-1 tooltip tooltip--bottom" data-tooltip="Code Only">
-                                <img className="svg-inline--fa" src={PlaygroundCodeSVG} />
+                            <div className="px-2 py-1 tooltip tooltip--bottom" data-tooltip="Code Only" style={{
+                                lineHeight: '1rem'
+                            }}>
+                                <PlaygroundCodeSVG style={{
+                                    stroke: splitPaneSize === '100%' ? BUTTON_ACCENT_COLOR : '#fff',
+                                    fill: splitPaneSize === '100%' ? BUTTON_ACCENT_COLOR : '#fff'
+                                }} />
                             </div>
                         </div>
                         <div className="nav-item" onClick={() => setEditorSize(`50%`)}>
-                            <div className="px-2 py-1 tooltip tooltip--bottom" data-tooltip="Half">
-                                <img className="svg-inline--fa" src={PlaygroundHalfscreenSVG} />
+                            <div className="px-2 py-1 tooltip tooltip--bottom" data-tooltip="Half" style={{
+                                lineHeight: '1rem'
+                            }}>
+                                <PlaygroundHalfscreenSVG style={{
+                                    stroke: splitPaneSize !== '100%' && splitPaneSize !== '0%' ? BUTTON_ACCENT_COLOR : '#fff',
+                                    fill: splitPaneSize !== '100%' && splitPaneSize !== '0%' ? BUTTON_ACCENT_COLOR : '#fff'
+                                }} />
                             </div>
                         </div>
                         <div className="nav-item" onClick={() => setEditorSize(`0%`)}>
-                            <div className="px-2 py-1 tooltip tooltip--bottom" data-tooltip="Fullscreen">
-                                <img className="svg-inline--fa" src={PlaygroundFullscreenSVG} />
+                            <div className="px-2 py-1 tooltip tooltip--bottom" data-tooltip="Fullscreen" style={{
+                                lineHeight: '1rem'
+                            }}>
+                                <PlaygroundFullscreenSVG style={{
+                                    stroke: splitPaneSize === '0%' ? BUTTON_ACCENT_COLOR : '#fff'
+                                }} />
                             </div>
                         </div>
                         <div className="nav-item" onClick={toggleEditorOrientation}>
