@@ -59,6 +59,7 @@ import {
 
 import './App.scss';
 import { ClearfixUtilsPage, DisplayUtilsPage, FlexboxUtilsPage, MiscUtilsPage, PositionUtilsPage } from './pages/utilities';
+import { ExamplesPage } from './pages/geting-started/examples';
 
 function App() {
     library.add(fas);
@@ -74,6 +75,7 @@ function App() {
 
                 <DefaultLayoutRoute path="/getting-started/setup" component={SetUpPage} />
                 <DefaultLayoutRoute path="/getting-started/support" component={BrowserSupportPage} />
+                <DefaultLayoutRoute path="/getting-started/examples" component={ExamplesPage} />
                 <DefaultLayoutRoute path="/getting-started/release-notes" component={ReleaseNotesPage} />
 
                 <DefaultLayoutRoute path="/fundamentals/colors" component={ColorsPage} />
