@@ -20,7 +20,7 @@ export const ExampleCard: React.FC<ExampleCardProps> = (props) => {
                     <div
                         className="card-image"
                         style={{
-                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) , rgba(226, 88, 104, 0.8)), url(${props.data.imageUrl})`,
+                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) , rgba(226, 88, 104, 1)), url(${props.data.imageUrl})`,
                         }}
                     ></div>
                     <div className="title-container">

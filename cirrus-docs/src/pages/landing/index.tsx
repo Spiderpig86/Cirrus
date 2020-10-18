@@ -5,10 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 
 import { CodeBlock } from '../../layouts/components/codeblock';
+import { ExampleCard } from '../geting-started/examples/example-card';
+import { DOC_EXAMPLES } from '../../constants/examples';
 
 import './index.scss';
+
 import ComponentSVG from '../../static/svg/component.svg';
 import UtilitySVG from '../../static/svg/utility.svg';
+import PatronImage from '../../static/img/become_a_patron_button.png';
+import PayPalImage from '../../static/img/paypal.jpg';
 
 export const Landing: React.FC<any> = () => {
     const pageAtTop = useSelector((state: any) => state.docReducer.pageAtTop);
@@ -34,8 +39,8 @@ export const Landing: React.FC<any> = () => {
                         <div className="content">
                             <h1 className="headline-4 white title">Cirrus.CSS</h1>
                             <h5 className="text-gray-300 sub-title font-alt font-normal">
-                                A <b className="white">component</b> and <b className="white">utility focused</b> CSS framework <br /> designed for{' '}
-                                <b className="white">rapid prototyping</b>.
+                                A <b className="white">component</b> and <b className="white">utility focused</b> CSS
+                                framework <br /> designed for <b className="white">rapid prototyping</b>.
                             </h5>
 
                             <p className="white">
@@ -77,7 +82,7 @@ export const Landing: React.FC<any> = () => {
                         </div>
                     </div>
 
-                    <CodeBlock code={`$ yarn add cirrus-ui`} language='text' />
+                    <CodeBlock code={`$ yarn add cirrus-ui`} language="text" />
                 </div>
             </section>
             <section className="py-8 bg-indigo-200">
@@ -144,6 +149,69 @@ export const Landing: React.FC<any> = () => {
                                 Need some quick way to adjust something? Something not looking quite right? Our utility
                                 classes will come in handy.{' '}
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                className="py-8"
+                style={{
+                    backgroundColor: '#1c222b',
+                }}
+            >
+                <div className="content">
+                    <h3 className="white uppercase u-text-center">Examples</h3>
+                    <p className="white lead u-text-center">
+                        Start off with a few examples and a few complete templates completely powered by Cirrus.
+                    </p>
+                    <div
+                        className="row mx-auto"
+                        style={{
+                            maxWidth: '960px',
+                        }}
+                    >
+                        {DOC_EXAMPLES.slice(0, 3).map((example) => (
+                            <ExampleCard data={example} />
+                        ))}
+                    </div>
+
+                    <div className="u-text-center">
+                        <a href="./getting-started/examples" target="_blank">
+                            <button className="btn-info btn-large">See More</button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-8">
+                <div className="content">
+                    <h3 className="uppercase u-text-center">Support the Project :)</h3>
+                    <p className="lead u-text-center">Feeling generous? Support the project.</p>
+                    <div className="row u-text-center">
+                        <div className="col-6">
+                            <h4 className="font-alt font-light">
+                                Donate <b>once</b>.
+                            </h4>
+                            <a
+                                href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5JW89TNNHB4JL&currency_code=USD&source=url"
+                                target="_blank"
+                                className="u-no-padding u-inline-block"
+                            >
+                                <img src={PayPalImage} className="_shadow" />
+                            </a>
+                        </div>
+                        <div className="col-6">
+                            <h4 className="font-alt font-light">
+                                Donate <b>monthly</b>.
+                            </h4>
+                            <a
+                                href="https://www.patreon.com/bePatron?u=20654861"
+                                target="_blank"
+                                className="u-no-padding u-inline-block"
+                            >
+                                <img src={PatronImage} className="_shadow" />
+                            </a>
                         </div>
                     </div>
                 </div>

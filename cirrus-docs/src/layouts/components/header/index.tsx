@@ -53,16 +53,16 @@ export const Header: React.FC<HeaderProps> = (props) => {
                                 </a>
                             </div>
                             <div className="nav-item">
-                                <a className="smoothScroll" href="/playground" target="_blank" rel='noopener noreferrer'>
+                                <a className="smoothScroll" href="/fundamentals/colors" target="_blank" rel='noopener noreferrer'>
                                     <span className="icon">
                                         <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'palette']} />
                                     </span>
                                 </a>
                             </div>
                             <div className="nav-item">
-                                <a className="smoothScroll" href="#colors">
+                                <a className="smoothScroll" href="/playground">
                                     <span className="icon">
-                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'boxes']} />
+                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'pencil-ruler']} />
                                     </span>
                                 </a>
                             </div>
