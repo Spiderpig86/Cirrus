@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@monaco-editor/react": "^3.6.3",
     "@moxy/next-layout": "^2.2.2",
+    "@nivo/bar": "^0.63.0",
+    "@svgr/webpack": "^5.4.0",
     "@types/react-syntax-highlighter": "^13.5.0",
     "axios": "^0.20.0",
     "next": "9.5.5",
@@ -19,6 +22,7 @@
     "react-dom": "16.14.0",
     "react-lazyload": "^3.0.0",
     "react-markdown": "^5.0.0",
+    "react-split-pane": "^0.1.92",
     "react-syntax-highlighter": "^15.2.1"
   },
   "devDependencies": {

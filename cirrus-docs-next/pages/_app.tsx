@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
@@ -19,14 +20,54 @@ import '../layouts/components/sidebar/index.scss';
 import '../layouts/components/toc/index.scss';
 
 /* PAGE STYLES */
-import '../pages/landing/index.scss';
+import './index/index.scss';
+import '../pages/playground/index.scss';
+import '../pages/getting-started/examples/'
 
 import '../static/css/cirrus.min.css';
 
 const App = ({ Component, pageProps }) => {
     library.add(fas);
     library.add(fab);
-    return <LayoutTree Component={Component} pageProps={pageProps} />;
+    return (
+        <>
+
+<Head>
+                <meta charSet="utf-8" />
+                <link rel="icon" href="/favicon.ico" />
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+                <meta name="theme-color" content="#f03d4d" />
+                <meta
+                    name="keywords"
+                    content="css,css framework,scss,sass,framework,design, website,web design,frontend,components,user interface,interface,ui,user experience,ux,stanley lim,tailwind,bulma,bootstrap,milligram"
+                />
+                <meta name="description" content="The SCSS framework for the modern web." />
+                <meta property="og:url" content="http://stanleylim.me/" />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content="Stanley Lim" />
+                <meta property="og:image" content="/android-icon-192x192.png" />
+                <meta property="og:description" content="The SCSS framework for the modern web." />
+                <meta property="og:site_name" content="Cirrus" />
+                <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+                <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+                <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+                <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+                <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png" />
+                <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png" />
+                <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
+                <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
+                <link rel="apple-touch-icon" sizes="192x192" href="/android-icon-192x192.png" />
+                <link rel="icon" type="image/png" href="/favicon.ico" />
+                <meta name="msapplication-TileColor" content="#f03d4d" />
+                <meta name="msapplication-TileImage" content="/ms-icon-70x70.png" />
+                <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+                <meta name="msapplication-TileImage" content="/ms-icon-150x150.png" />
+                <meta name="msapplication-TileImage" content="/ms-icon-310x310.png" />
+                <link rel="manifest" href="/manifest.json" />
+            </Head>
+    <LayoutTree Component={Component} pageProps={pageProps} />
+        </>);
 };
 
 export default App;
