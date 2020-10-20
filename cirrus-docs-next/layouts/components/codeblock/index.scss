@@ -1,0 +1,36 @@
+.codeblock {
+    border-radius: 0.25rem;
+    max-height: 500px;
+
+    code {
+        font-size: inherit;
+        display: inherit;
+        padding: inherit;
+        white-space: pre;
+        word-wrap: break-word;
+        font-family: inherit;
+        text-align: inherit;
+        line-height: inherit;
+        -moz-tab-size: inherit;
+        tab-size: inherit;
+        -webkit-hyphens: inherit;
+        hyphens: inherit;
+        border-left: inherit;
+        margin: inherit;
+        position: inherit;
+        color: inherit;
+        background-color: inherit;
+    }
+
+    &.break-all {
+        code {
+            word-break: break-all;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    pre > code {
+        line-break: anywhere;
+    }
+}
