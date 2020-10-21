@@ -1,4 +1,4 @@
-import { ExampleCardData } from '../pages/getting-started/examples/example-card';
+import { ExampleCardData } from '../src/views/getting-started/examples/example-card';
 
 export const DOC_EXAMPLES: ExampleCardData[] = [
     {

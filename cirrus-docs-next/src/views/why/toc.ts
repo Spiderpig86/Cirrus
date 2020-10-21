@@ -1,4 +1,4 @@
-import { TableOfContentsEntry } from '../../layouts/components/toc';
+import { TableOfContentsEntry } from '../../../layouts/components/toc';
 
 export const toc: TableOfContentsEntry[] = [
     {

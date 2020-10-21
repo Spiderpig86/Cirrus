@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
-import { DefaultLayout } from '../../layouts/default';
+import { DefaultLayout } from '../../../layouts/default';
 
 export const AboutPage: React.FC<any> = (props) => {
     return (

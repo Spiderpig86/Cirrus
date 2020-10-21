@@ -3,11 +3,11 @@ import { withLayout } from '@moxy/next-layout';
 import Link from 'next/link';
 import { ResponsiveBar } from '@nivo/bar';
 
-import { TableOfContents } from '../../layouts/components/toc';
-import { Headline } from '../../layouts/components/headline';
+import { TableOfContents } from '../../../layouts/components/toc';
+import { Headline } from '../../../layouts/components/headline';
 import { toc } from './toc';
-import { CodeBlock } from '../../layouts/components/codeblock';
-import { DefaultLayout } from '../../layouts/default';
+import { CodeBlock } from '../../../layouts/components/codeblock';
+import { DefaultLayout } from '../../../layouts/default';
 
 export const WhyPage: React.FC<any> = (props) => {
     // TODO: Move to constants

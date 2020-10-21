@@ -20,9 +20,8 @@ import '../layouts/components/sidebar/index.scss';
 import '../layouts/components/toc/index.scss';
 
 /* PAGE STYLES */
-import './index/index.scss';
-import '../pages/playground/index.scss';
-import '../pages/getting-started/examples/'
+import '../src/views/index/index.scss';
+import '../src/views/playground/index.scss';
 
 import '../static/css/cirrus.min.css';
 
@@ -31,8 +30,7 @@ const App = ({ Component, pageProps }) => {
     library.add(fab);
     return (
         <>
-
-<Head>
+            <Head>
                 <meta charSet="utf-8" />
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
@@ -66,8 +64,9 @@ const App = ({ Component, pageProps }) => {
                 <meta name="msapplication-TileImage" content="/ms-icon-310x310.png" />
                 <link rel="manifest" href="/manifest.json" />
             </Head>
-    <LayoutTree Component={Component} pageProps={pageProps} />
-        </>);
+            <LayoutTree Component={Component} pageProps={pageProps} />
+        </>
+    );
 };
 
 export default App;

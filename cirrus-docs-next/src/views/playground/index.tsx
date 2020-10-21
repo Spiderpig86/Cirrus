@@ -5,20 +5,20 @@ import { ControlledEditor } from '@monaco-editor/react';
 import SplitPane from 'react-split-pane';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { IFrame } from '../../layouts/components/iframe';
-import { BlankLayout } from '../../layouts/blank';
+import { IFrame } from '../../../layouts/components/iframe';
+import { BlankLayout } from '../../../layouts/blank';
 import {
     CIRRUS_DEFAULT_PLAYGROUND_CODE,
     CIRRUS_PLAYGROUND_KEY,
     PLAYGROUND_ENDPOINT_MAP,
     PLAYGROUND_VERSIONS,
-} from '../../constants/playground';
+} from '../../../constants/playground';
 
-import initializeHeaderToggle from '../../static/js/header-toggle.js';
+import initializeHeaderToggle from '../../../static/js/header-toggle.js';
 
-import PlaygroundFullscreenSVG from '../../static/vectors/playground-fullscreen.svg';
-import PlaygroundHalfscreenSVG from '../../static/vectors/playground-half.svg';
-import PlaygroundCodeSVG from '../../static/vectors/playground-code.svg';
+import PlaygroundFullscreenSVG from '../../../static/svg/playground-fullscreen.svg';
+import PlaygroundHalfscreenSVG from '../../../static/svg/playground-half.svg';
+import PlaygroundCodeSVG from '../../../static/svg/playground-code.svg';
 
 export const PlaygroundPage: React.FC<any> = () => {
     const editorRef = useRef<any>();

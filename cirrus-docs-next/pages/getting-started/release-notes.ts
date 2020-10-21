@@ -1,0 +1,1 @@
+export { default } from '../../src/views/getting-started/release-notes';

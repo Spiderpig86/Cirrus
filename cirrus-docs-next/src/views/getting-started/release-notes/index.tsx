@@ -2,17 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { withLayout } from '@moxy/next-layout';
 import ReactMarkdown from 'react-markdown';
 
-import { TableOfContents, TableOfContentsEntry } from '../../../layouts/components/toc';
-import { Headline } from '../../../layouts/components/headline';
-import { Pagination } from '../../../layouts/components/pagination';
+import { TableOfContents, TableOfContentsEntry } from '../../../../layouts/components/toc';
+import { Headline } from '../../../../layouts/components/headline';
+import { Pagination } from '../../../../layouts/components/pagination';
 
-import {toc as t} from './toc'
-import { ReplaceAll } from '../../../utils/string';
-import { DefaultLayout } from '../../../layouts/default';
+import { ReplaceAll } from '../../../../utils/string';
+import { DefaultLayout } from '../../../../layouts/default';
 
 // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
 const importAll = (r: any) => r.keys().map(r);
-const releaseNotesMd = importAll(require.context('../../../static/markdown', false, /\.md$/)).sort().reverse();
+const releaseNotesMd = importAll(require.context('../../../../static/markdown', false, /\.md$/)).sort().reverse();
 
 export const ReleaseNotesPage: React.FC<any> = (props) => {
     // TODO: move to constants

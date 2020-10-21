@@ -4,16 +4,12 @@ import { withLayout } from '@moxy/next-layout';
 import Axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { LandingLayout } from '../../layouts/landing';
+import { LandingLayout } from '../../../layouts/landing';
 import { ExampleCard } from '../getting-started/examples/example-card';
-import { CodeBlock } from '../../layouts/components/codeblock';
+import { CodeBlock } from '../../../layouts/components/codeblock';
 
-import { DOC_EXAMPLES } from '../../constants/examples';
+import { DOC_EXAMPLES } from '../../../constants/examples';
 
-import ComponentSVG from '../../static/svg/component.svg';
-import UtilitySVG from '../../static/svg/utility.svg';
-import PatronImage from '../../static/img/become_a_patron_button.png';
-import PayPalImage from '../../static/img/paypal.jpg';
 
 const Landing: React.FC<any> = () => {
     // const pageAtTop = useSelector((state: any) => state.docReducer.pageAtTop);
@@ -136,12 +132,12 @@ const Landing: React.FC<any> = () => {
                             </div>
                         </div>
                         <div className="col">
-                            <img src={ComponentSVG} />
+                            <img src="/img/component.svg" />
                         </div>
                     </div>
                     <div className="row mb-2">
                         <div className="col">
-                            <img src={UtilitySVG} />
+                            <img src="/img/utility.svg" />
                         </div>
                         <div className="col u-flex u-flex-column u-justify-center">
                             <h5 className="lead uppercase mb-1 font-bold text-gray-700">Granular Control</h5>
@@ -198,7 +194,7 @@ const Landing: React.FC<any> = () => {
                                 target="_blank"
                                 className="u-no-padding u-inline-block"
                             >
-                                <img src={PayPalImage} className="_shadow" />
+                                <img src="/img/become_a_patron_button.png" className="_shadow" />
                             </a>
                         </div>
                         <div className="col-6">
@@ -210,7 +206,7 @@ const Landing: React.FC<any> = () => {
                                 target="_blank"
                                 className="u-no-padding u-inline-block"
                             >
-                                <img src={PatronImage} className="_shadow" />
+                                <img src="/img/paypal.jpg" className="_shadow" />
                             </a>
                         </div>
                     </div>

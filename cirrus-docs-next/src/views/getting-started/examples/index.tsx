@@ -1,12 +1,12 @@
 import React from 'react';
 import { withLayout } from '@moxy/next-layout';
 
-import { TableOfContents } from '../../../layouts/components/toc';
-import { Headline } from '../../../layouts/components/headline';
-import { Pagination } from '../../../layouts/components/pagination';
-import { DOC_EXAMPLES } from '../../../constants/examples';
+import { TableOfContents } from '../../../../layouts/components/toc';
+import { Headline } from '../../../../layouts/components/headline';
+import { Pagination } from '../../../../layouts/components/pagination';
+import { DOC_EXAMPLES } from '../../../../constants/examples';
 import { ExampleCard } from './example-card';
-import { DefaultLayout } from '../../../layouts/default';
+import { DefaultLayout } from '../../../../layouts/default';
 
 import { toc } from './toc';
 

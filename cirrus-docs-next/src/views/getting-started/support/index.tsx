@@ -1,13 +1,13 @@
 import React from 'react';
 import { withLayout } from '@moxy/next-layout';
 
-import { TableOfContents } from '../../../layouts/components/toc';
-import { Headline } from '../../../layouts/components/headline';
+import { TableOfContents } from '../../../../layouts/components/toc';
+import { Headline } from '../../../../layouts/components/headline';
 import { toc } from './toc';
-import { CodeBlock } from '../../../layouts/components/codeblock';
-import { Pagination } from '../../../layouts/components/pagination';
-import { TableWrapper } from '../../../layouts/components/table-wrapper';
-import { DefaultLayout } from '../../../layouts/default';
+import { CodeBlock } from '../../../../layouts/components/codeblock';
+import { Pagination } from '../../../../layouts/components/pagination';
+import { TableWrapper } from '../../../../layouts/components/table-wrapper';
+import { DefaultLayout } from '../../../../layouts/default';
 
 export const BrowserSupportPage: React.FC<any> = (props) => {
     return (
