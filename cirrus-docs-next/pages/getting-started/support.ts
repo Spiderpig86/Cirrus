@@ -1,1 +1,1 @@
-export { default } from '../../src/views/getting-started/support';
+export { default } from '../../src/getting-started/support';

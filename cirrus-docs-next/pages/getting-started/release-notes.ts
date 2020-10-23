@@ -1,1 +1,1 @@
-export { default } from '../../src/views/getting-started/release-notes';
+export { default } from '../../src/getting-started/release-notes';

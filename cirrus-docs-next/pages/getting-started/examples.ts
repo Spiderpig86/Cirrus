@@ -1,1 +1,1 @@
-export { default } from '../../src/views/getting-started/examples';
+export { default } from '../../src/getting-started/examples';

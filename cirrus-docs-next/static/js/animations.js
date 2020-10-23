@@ -23,7 +23,7 @@ module.exports = function () {
             const elementId = toggle.replace('toggle-', '');
 
             document.querySelector(toggle).addEventListener('click', () => {
-                console.log(document.querySelector(elementId), elementId);
+                // console.log(document.querySelector(elementId), elementId, animation.class);
                 document.querySelector(elementId).classList.toggle(animation.class);
             });
         });

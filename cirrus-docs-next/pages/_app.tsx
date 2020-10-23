@@ -20,8 +20,10 @@ import '../layouts/components/sidebar/index.scss';
 import '../layouts/components/toc/index.scss';
 
 /* PAGE STYLES */
-import '../src/views/index/index.scss';
-import '../src/views/playground/index.scss';
+import '../src/index/index.scss';
+import '../src/playground/index.scss';
+
+import '../src/fundamentals/typography/index.scss';
 
 import '../static/css/cirrus.min.css';
 
