@@ -239,7 +239,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                         </p>
 
                         <h6>Blockquote</h6>
-                        <blockquote cite="http://www.worldwildlife.org/who/index.html" className="example">
+                        <blockquote cite="https://www.worldwildlife.org/who/index.html" className="example">
                             <p>
                                 For 50 years, WWF has been protecting the future of nature. The world's leading
                                 conservation organization, WWF works in 100 countries and is supported by 1.2 million

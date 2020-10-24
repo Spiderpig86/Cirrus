@@ -43,7 +43,7 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <a href="http://godban.github.io/browsers-support-badges/">
+                                            <a href="https://godban.github.io/browsers-support-badges/">
                                                 <img
                                                     src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png"
                                                     alt="Edge"
@@ -55,7 +55,7 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                                             Edge
                                         </td>
                                         <td>
-                                            <a href="http://godban.github.io/browsers-support-badges/">
+                                            <a href="https://godban.github.io/browsers-support-badges/">
                                                 <img
                                                     src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png"
                                                     alt="Firefox"
@@ -67,7 +67,7 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                                             Firefox
                                         </td>
                                         <td>
-                                            <a href="http://godban.github.io/browsers-support-badges/">
+                                            <a href="https://godban.github.io/browsers-support-badges/">
                                                 <img
                                                     src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png"
                                                     alt="Chrome"
@@ -79,7 +79,7 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                                             Chrome
                                         </td>
                                         <td>
-                                            <a href="http://godban.github.io/browsers-support-badges/">
+                                            <a href="https://godban.github.io/browsers-support-badges/">
                                                 <img
                                                     src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png"
                                                     alt="Safari"
@@ -91,7 +91,7 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                                             Safari
                                         </td>
                                         <td>
-                                            <a href="http://godban.github.io/browsers-support-badges/">
+                                            <a href="https://godban.github.io/browsers-support-badges/">
                                                 <img
                                                     src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png"
                                                     alt="Opera"
@@ -103,7 +103,7 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                                             Opera
                                         </td>
                                         <td>
-                                            <a href="http://godban.github.io/browsers-support-badges/">
+                                            <a href="https://godban.github.io/browsers-support-badges/">
                                                 <img
                                                     src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png"
                                                     alt="Electron"

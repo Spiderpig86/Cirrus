@@ -432,7 +432,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                                 <div className="tile__icon">
                                                     <figure className="avatar">
                                                         <img
-                                                            src="http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"
+                                                            src="https://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"
                                                             alt="Person"
                                                         />
                                                     </figure>

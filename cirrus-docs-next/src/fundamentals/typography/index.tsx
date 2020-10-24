@@ -18,7 +18,7 @@ export const TypographyPage: React.FC<any> = (props) => {
                         <p>
                             <b>Cirrus</b> incorporates beautiful typography to make your website stand out from the
                             rest. Nunito Sans, by{' '}
-                            <a href="http://sansoxygen.com/" className="u u-LR">
+                            <a href="https://sansoxygen.com/" className="u u-LR">
                                 <b>Vernon Adams</b>
                             </a>{' '}
                             is chosen for the default typography for most elements such as <code>paragraphs</code>,{' '}

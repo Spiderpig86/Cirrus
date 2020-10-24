@@ -152,7 +152,7 @@ export const WhyPage: React.FC<any> = (props) => {
                         <div className="frame mb-3" style={{ height: '30rem' }}>
                             <div className="frame__header">
                                 <div className="avatar">
-                                    <img src="http://i.imgur.com/sbKJVxr.png" />
+                                    <img src="https://i.imgur.com/sbKJVxr.png" />
                                 </div>
                                 <p className="u-text-center frame__title">John Doe</p>
                                 <p className="u-text-center frame__subtitle">Former youngest person on Earth</p>
@@ -231,7 +231,7 @@ export const WhyPage: React.FC<any> = (props) => {
                         <CodeBlock
                             code={`<div class="frame" style="height: 30rem;">
     <div class="frame__header">
-        <div class="avatar"><img src="http://i.imgur.com/sbKJVxr.png"/></div>
+        <div class="avatar"><img src="https://i.imgur.com/sbKJVxr.png"/></div>
         <p class="u-text-center frame__title">John Doe</p>
         <p class="u-text-center frame__subtitle">Former youngest person on Earth</p>
         <div class="tab-container tabs-fill">
