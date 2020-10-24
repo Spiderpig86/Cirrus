@@ -351,8 +351,8 @@
 //     overflow: visible;
 // }
 
-[class^='btn-']:not(.btn-container),
-[class*=' btn-']:not(.btn-container) {
+[class^='btn-']:not(.btn-container):not(.btn-close),
+[class*=' btn-']:not(.btn-container):not(.btn-close) {
     background-color: var(--btn-color);
     border: 1px solid var(--btn-border-color);
     color: var(--btn-fg);
