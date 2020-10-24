@@ -1,0 +1,1 @@
+export { default } from '../../../src/grid/span'

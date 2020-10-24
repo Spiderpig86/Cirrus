@@ -25,6 +25,10 @@ import '../src/playground/index.scss';
 
 import '../src/fundamentals/typography/index.scss';
 
+import '../src/grid/templates/index.scss';
+
+import '../src/layout/columns/index.scss';
+
 import '../static/css/cirrus.min.css';
 
 const App = ({ Component, pageProps }) => {
