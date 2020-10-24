@@ -33,7 +33,7 @@ export const PlaygroundPage: React.FC<any> = () => {
 
     useEffect(() => {
         initializeHeaderToggle();
-        setCode(localStorage.getItem(CIRRUS_PLAYGROUND_KEY));
+        setCode(localStorage.getItem(CIRRUS_PLAYGROUND_KEY) ?? CIRRUS_DEFAULT_PLAYGROUND_CODE);
     }, []);
 
     useEffect(() => {
