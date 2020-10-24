@@ -278,8 +278,8 @@ export const SetUpPage: React.FC<any> = (props) => {
 
                 <Pagination
                     nextLink={{
-                        name: 'Update Guide',
-                        link: './update',
+                        name: 'Support',
+                        link: './support',
                     }}
                 />
             </div>
