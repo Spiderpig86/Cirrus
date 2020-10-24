@@ -1,0 +1,4 @@
+[build]
+    base = "cirrus-docs-next"
+    publish = "./out"
+    command = "CI= yarn build"
