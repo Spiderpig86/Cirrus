@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ControlledEditor } from '@monaco-editor/react';
 import SplitPane from 'react-split-pane';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import _ from 'lodash';
 
 import { IFrame } from '../../layouts/components/iframe';
 import { BlankLayout } from '../../layouts/blank';
@@ -22,7 +23,7 @@ import PlaygroundCodeSVG from '../../static/svg/playground-code.svg';
 
 export const PlaygroundPage: React.FC<any> = () => {
     const editorRef = useRef<any>();
-    const [code, setCode] = useState(CIRRUS_DEFAULT_PLAYGROUND_CODE);
+    const [code, setCode] = useState(``);
     const [isDragging, setDragging] = useState(false); // Hacky workaround https://github.com/tomkp/react-split-pane/issues/30
     const [isEditorHorizontal, setEditorHorizontal] = useState(false);
     const [playgroundCdn, setPlaygroundCdn] = useState(PLAYGROUND_VERSIONS[0]);
@@ -95,9 +96,9 @@ export const PlaygroundPage: React.FC<any> = () => {
     // TODO: Refactor code, make template dynamic so we can swap out different versions of the framework
     function constructTemplate(code: string) {
         let template = `<link href="${PLAYGROUND_ENDPOINT_MAP.get(playgroundCdn)}" rel="stylesheet" />
-<body>${code}</body>
-<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">`;
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<body>${code}</body>`;
         return template;
     }
 
@@ -250,7 +251,10 @@ export const PlaygroundPage: React.FC<any> = () => {
                             height="100%"
                             width="100%"
                             editorDidMount={handleEditorMounted}
-                            onChange={(_, value) => setCode(value ?? '')}
+                            onChange={
+                                _.debounce((obj, value) => {
+                                    setCode(value ?? '');
+                                }, 500)}
                             options={{
                                 acceptSuggestionOnCommitCharacter: true,
                                 acceptSuggestionOnEnter: 'on',
@@ -316,7 +320,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                         />
                     </div>
                     <div className={`h-100` + (isDragging ? ` is-dragging` : ``)}>
-                        <IFrame key={iframeKey} content={constructTemplate(code)} />
+                        {code && <IFrame key={iframeKey} content={constructTemplate(code)} />}
                     </div>
                 </SplitPane>
             </div>

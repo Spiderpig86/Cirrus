@@ -104,7 +104,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                     code={`<div class="frame">
     <div class="frame__header u-text-center">
         <div>
-            <figure class="avatar"><img src="http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"></figure>
+            <figure class="avatar"><img src="https://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"></figure>
         </div>
         <div>
             <div class="frame__title">John Doe</div>
@@ -147,7 +147,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                     <div className="frame__header u-text-center">
                                         <div>
                                             <figure className="avatar">
-                                                <img src="http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg" />
+                                                <img src="https://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg" />
                                             </figure>
                                         </div>
                                         <div>
@@ -201,7 +201,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                     code={`<div class="frame">
     <div class="frame__header u-text-center">
         <div>
-            <figure class="avatar"><img src="http://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"></figure>
+            <figure class="avatar"><img src="https://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"></figure>
         </div>
         <div>
             <div class="frame__title">John Doe</div>
@@ -410,7 +410,7 @@ export const FramesPage: React.FC<any> = (props) => {
     </div>
     <div class="frame__footer">
         <div class="form-group input-control">
-            <input type="text" class="form-group-input input-small input-contains-icon" placeholder="Send a message"><span class="icon"><a href="#"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-wrapper small" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></a></span>
+            <input type="text" class="form-group-input input-small input-contains-icon" placeholder="Send a message"><span class="icon"><a href="#"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-wrapper small" role="img" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></a></span>
             <button class="btn-primary form-group-btn btn-small">Send</button>
         </div>
     </div>
@@ -427,7 +427,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                 <div className="frame" style={{ height: '30rem' }}>
                                     <div className="frame__header">
                                         <div className="avatar">
-                                            <img src="http://i.imgur.com/sbKJVxr.png" />
+                                            <img src="https://i.imgur.com/sbKJVxr.png" />
                                         </div>
                                         <p className="u-text-center frame__title">John Doe</p>
                                         <p className="u-text-center frame__subtitle">Former youngest person on Earth</p>
@@ -508,7 +508,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                 <CodeBlock
                                     code={`<div class="frame" style="height: 30rem;">
     <div class="frame__header">
-        <div class="avatar"><img src="http://i.imgur.com/sbKJVxr.png"></div>
+        <div class="avatar"><img src="https://i.imgur.com/sbKJVxr.png"></div>
         <p class="u-text-center frame__title">John Doe</p>
         <p class="u-text-center frame__subtitle">Former youngest person on Earth</p>
         <div class="tab-container tabs-fill">
