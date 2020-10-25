@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -8,6 +8,8 @@ export interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = (props) => {
+    const [menuShown, setMenuShown] = useState(false);
+
     useEffect(() => {
         const hamburgerButtonClick = (e: any) => {
             const headerMenu = document.querySelector('#header-menu');
@@ -17,6 +19,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
             headerMenu?.classList.toggle('active');
             navButton?.classList.toggle('active');
             header?.classList.toggle('translucent');
+
+            setMenuShown(navButton.classList.contains('active'));
         };
         const hamburgerButton = document.querySelector('#header-btn')!;
         hamburgerButton.addEventListener('click', hamburgerButtonClick);
@@ -25,7 +29,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
     }, []);
 
     return (
-        <div id="header" className={`header header-fixed unselectable header-animated ${props.extraClasses ?? ''}`}>
+        <div id="header" className={`header header-fixed unselectable header-animated ${menuShown ? 'translucent' : ''} ${props.extraClasses ?? ''}`}>
             <div className="w-100">
                 <div className="header__contents mx-auto">
                     <div className="header-brand">

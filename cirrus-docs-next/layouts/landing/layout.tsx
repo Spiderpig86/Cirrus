@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { useDispatch, useSelector } from 'react-redux';
 
 import { Header } from '../components/header';
 import { Footer } from '../components/footer';
+import { Context } from '../../store/store';
+import { setPageAtTop } from '../../store/reducer';
 
 // import { setPageAtTop } from '../../store';
 
@@ -11,6 +12,7 @@ export const LandingLayout = ({ children, ...rest }: any) => {
     // Bind Redux Store
     // const dispatch = useDispatch();
     // const pageAtTop = useSelector((state: any) => state.pageAtTop);
+    const {state, dispatch} = useContext(Context);
 
     const [scrollTop, setScrollTop] = useState(0);
 
@@ -20,8 +22,8 @@ export const LandingLayout = ({ children, ...rest }: any) => {
             const scrollOffset = e.target.documentElement.scrollTop;
             setScrollTop(scrollOffset);
             console.log(scrollOffset);
-            
-            // dispatch(setPageAtTop(scrollOffset <= 10));
+
+            setPageAtTop(scrollOffset <= 10, dispatch);
         };
         window.addEventListener('scroll', onScroll);
 
@@ -78,7 +80,10 @@ export const LandingLayout = ({ children, ...rest }: any) => {
 
     return (
         <div>
-            <Header extraClasses={scrollTop <= 10 ? 'header-clear header-landing' : 'header-dark'} rightNavChildren={rightNavContent} />
+            <Header
+                extraClasses={scrollTop <= 10 ? 'header-clear header-landing' : 'header-dark'}
+                rightNavChildren={rightNavContent}
+            />
             {children}
             <Footer />
         </div>

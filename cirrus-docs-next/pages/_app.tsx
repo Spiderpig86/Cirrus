@@ -5,6 +5,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { LayoutTree } from '@moxy/next-layout';
 
+import { Store } from '../store/store';
+
 /* SCSS Imports */
 /* Next.js please add support for simple css rendering without having to use the tedious modules */
 /* Migrating from CRA is really a pain */
@@ -35,7 +37,7 @@ const App = ({ Component, pageProps }) => {
     library.add(fas);
     library.add(fab);
     return (
-        <>
+        <Store>
             <Head>
                 <meta charSet="utf-8" />
                 <link rel="icon" href="/favicon.ico" />
@@ -71,7 +73,7 @@ const App = ({ Component, pageProps }) => {
                 <link rel="manifest" href="/manifest.json" />
             </Head>
             <LayoutTree Component={Component} pageProps={pageProps} />
-        </>
+        </Store>
     );
 };
 

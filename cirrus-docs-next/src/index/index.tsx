@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
 import Axios from 'axios';
@@ -7,12 +7,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { LandingLayout } from '../../layouts/landing';
 import { ExampleCard } from '../getting-started/examples/example-card';
 import { CodeBlock } from '../../layouts/components/codeblock';
+import { Context } from '../../store/store';
 
 import { DOC_EXAMPLES } from '../../constants/examples';
 
 
 const Landing: React.FC<any> = () => {
-    // const pageAtTop = useSelector((state: any) => state.docReducer.pageAtTop);
+    const pageAtTop = useState(true);
+    const {state, dispatch} = useContext(Context);
 
     const [stars, setStars] = useState(0);
     const [forks, setForks] = useState(0);
@@ -40,7 +42,7 @@ const Landing: React.FC<any> = () => {
                             </h5>
 
                             <p className="white">
-                                <b>0.6.0 Preview</b> / Coming Soon
+                                <b>Version 0.6.0</b> / Gamma II
                             </p>
 
                             <Link href="/getting-started/setup">
@@ -48,7 +50,7 @@ const Landing: React.FC<any> = () => {
                             </Link>
                         </div>
                     </div>
-                    {/* <div className={`transition ` + (pageAtTop ? `` : `transition--visible`)}></div> */}
+                    <div className={`transition ` + (state.pageAtTop ? `` : `transition--visible`)}></div>
                 </div>
             </section>
             <section className="py-8">

@@ -69,15 +69,17 @@ export const WhyPage: React.FC<any> = (props) => {
 
                         {/* TODO MOVE TO NEW FILE */}
                         <div
+                            className="mx-auto"
                             style={{
                                 height: '400px',
+                                maxWidth: '600px',
                             }}
                         >
                             <ResponsiveBar
                                 data={data}
                                 keys={['memory']}
                                 indexBy="id"
-                                margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+                                margin={{ top: 50, right: 10, bottom: 50, left: 10 }}
                                 padding={0.3}
                                 groupMode="grouped"
                                 layout="vertical"
