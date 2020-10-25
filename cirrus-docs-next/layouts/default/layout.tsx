@@ -10,7 +10,7 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
         <div>
             <Header extraClasses="header--docs-theme" />
             <div className="default-layout tree-nav-body mx-auto mb-0">
-                <div className="tree-nav-header">
+                <div className="tree-nav-header u-items-center">
                     <a href="#sidebar" className="u-hide-tablet u-shadow-none">
                         <span className="icon">
                             <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'chevron-right']} />

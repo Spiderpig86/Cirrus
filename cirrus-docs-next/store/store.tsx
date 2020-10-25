@@ -6,7 +6,7 @@ export interface DocState {
 }
 
 const initialState: DocState = {
-    pageAtTop: false,
+    pageAtTop: true,
 };
 
 export const Context = createContext<{

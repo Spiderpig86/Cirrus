@@ -83,7 +83,9 @@ export const ListsPage: React.FC<any> = (props) => {
                         </div>
 
                         <p className="title">Plain</p>
-                        <p className="subtitle">A list with no item decorations using the <code>no-bullets</code> class.</p>
+                        <p className="subtitle">
+                            A list with no item decorations using the <code>no-bullets</code> class.
+                        </p>
                         <div className="row u-items-center">
                             <div className="col-6">
                                 <ul className="no-bullets">
@@ -517,10 +519,10 @@ export const ListsPage: React.FC<any> = (props) => {
                                             <li className="menu-item">
                                                 <a href="!#">
                                                     <span className="icon">
-                                                        <i
-                                                            className="fa fa-wrapper fa-check small"
-                                                            aria-hidden="true"
-                                                        ></i>
+                                                        <FontAwesomeIcon
+                                                            className="fa-wrapper small"
+                                                            icon={['fas', 'check']}
+                                                        />
                                                     </span>
                                                     Yes
                                                 </a>
@@ -528,10 +530,10 @@ export const ListsPage: React.FC<any> = (props) => {
                                             <li className="menu-item">
                                                 <a href="!#">
                                                     <span className="icon">
-                                                        <i
-                                                            className="fa fa-wrapper fa-times small"
-                                                            aria-hidden="true"
-                                                        ></i>
+                                                        <FontAwesomeIcon
+                                                            className="fa-wrapper small"
+                                                            icon={['fas', 'times']}
+                                                        />
                                                     </span>
                                                     No
                                                 </a>
@@ -580,10 +582,10 @@ export const ListsPage: React.FC<any> = (props) => {
                                             <li className="menu-item selected">
                                                 <div className="menu-addon">
                                                     <span className="icon">
-                                                        <i
-                                                            className="fa fa-wrapper fa-folder small"
-                                                            aria-hidden="true"
-                                                        ></i>
+                                                        <FontAwesomeIcon
+                                                            className="fa-wrapper small"
+                                                            icon={['fas', 'folder']}
+                                                        />
                                                     </span>
                                                 </div>
                                                 <a href="!#">Tech News</a>
@@ -650,7 +652,12 @@ export const ListsPage: React.FC<any> = (props) => {
                                     <li className="menu-item">
                                         <div className="menu-addon">
                                             <span className="icon">
-                                                <i className="fa fa-wrapper fa-clock-o" aria-hidden="true"></i>
+                                                <span className="icon">
+                                                    <FontAwesomeIcon
+                                                        className="fa-wrapper small"
+                                                        icon={['fas', 'clock']}
+                                                    />
+                                                </span>
                                             </span>
                                         </div>
                                         <a href="!#">Real-Time</a>
@@ -658,7 +665,7 @@ export const ListsPage: React.FC<any> = (props) => {
                                     <li className="menu-item selected">
                                         <div className="menu-addon">
                                             <span className="icon">
-                                                <i className="fa fa-wrapper fa-user" aria-hidden="true"></i>
+                                                <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'user']} />
                                             </span>
                                         </div>
                                         <a href="!#">Audience</a>
@@ -684,7 +691,12 @@ export const ListsPage: React.FC<any> = (props) => {
                                     <li className="menu-item">
                                         <div className="menu-addon">
                                             <span className="icon">
-                                                <i className="fa fa-wrapper fa-share-alt" aria-hidden="true"></i>
+                                                <span className="icon">
+                                                    <FontAwesomeIcon
+                                                        className="fa-wrapper small"
+                                                        icon={['fas', 'share']}
+                                                    />
+                                                </span>
                                             </span>
                                         </div>
                                         <a href="!#">Acquisition</a>
@@ -715,7 +727,10 @@ export const ListsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Links', link: './links' }} nextLink={{ name: 'Modals', link: './modals' }} />
+                <Pagination
+                    prevLink={{ name: 'Links', link: './links' }}
+                    nextLink={{ name: 'Modals', link: './modals' }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>

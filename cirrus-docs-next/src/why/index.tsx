@@ -5,16 +5,18 @@ import { ResponsiveBar } from '@nivo/bar';
 
 import { TableOfContents } from '../../layouts/components/toc';
 import { Headline } from '../../layouts/components/headline';
-import { toc } from './toc';
 import { CodeBlock } from '../../layouts/components/codeblock';
 import { DefaultLayout } from '../../layouts/default';
+import { TableWrapper } from '../../layouts/components/table-wrapper';
+
+import { toc } from './toc';
 
 export const WhyPage: React.FC<any> = (props) => {
     // TODO: Move to constants
     const data = [
         {
             id: 'Cirrus',
-            memory: 21.4,
+            memory: 17.2,
             color: '#f03d4d',
         },
         {
@@ -64,7 +66,7 @@ export const WhyPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>
                             Cirrus comes with lots of functionality in a small package. Coming in at{' '}
-                            <b>21.4 KB gzipped</b>, page loads are fast and data caps are not breached.
+                            <b>17.2 KB gzipped</b>, page loads are fast and data caps are not breached.
                         </p>
 
                         {/* TODO MOVE TO NEW FILE */}
@@ -79,7 +81,7 @@ export const WhyPage: React.FC<any> = (props) => {
                                 data={data}
                                 keys={['memory']}
                                 indexBy="id"
-                                margin={{ top: 50, right: 10, bottom: 50, left: 10 }}
+                                margin={{ top: 50, right: 10, bottom: 50, left: 60 }}
                                 padding={0.3}
                                 groupMode="grouped"
                                 layout="vertical"
@@ -137,6 +139,12 @@ export const WhyPage: React.FC<any> = (props) => {
                             instance, all the tag related classes can be found inside <code>tag.scss</code>. This
                             modular design makes it easier for anyone who wants to make modifications to the framework
                             and rebuild their own version of it.
+                        </p>
+
+                        <p>
+                            In addition to being able to import the features you want, Cirrus comes in two flavors,{' '}
+                            <b>core</b> and <b>extended</b>, that contain the main features and the full framework
+                            respectively. More about that <Link href="./developing"><a className="u u-LR">here</a></Link>.
                         </p>
                     </div>
                 </section>

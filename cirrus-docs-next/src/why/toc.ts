@@ -12,6 +12,11 @@ export const toc: TableOfContentsEntry[] = [
         children: null,
     },
     {
+        name: 'Modular',
+        anchor: '#modular',
+        children: null,
+    },
+    {
         name: 'Rapid Prototyping',
         anchor: '#prototype',
         children: null,

@@ -164,8 +164,8 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
                         link: './setup',
                     }}
                     nextLink={{
-                        name: 'Examples',
-                        link: './examples',
+                        name: 'Developing',
+                        link: './developing',
                     }}
                 />
             </div>

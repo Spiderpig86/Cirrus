@@ -10,11 +10,11 @@ import { CodeBlock } from '../../layouts/components/codeblock';
 import { Context } from '../../store/store';
 
 import { DOC_EXAMPLES } from '../../constants/examples';
-
+import { Preview } from './preview';
 
 const Landing: React.FC<any> = () => {
     const pageAtTop = useState(true);
-    const {state, dispatch} = useContext(Context);
+    const { state, dispatch } = useContext(Context);
 
     const [stars, setStars] = useState(0);
     const [forks, setForks] = useState(0);
@@ -66,7 +66,7 @@ const Landing: React.FC<any> = () => {
                     <div className="content">
                         <div className="row">
                             <div className="col">
-                                <h6 className="lead uppercase mb-1 font-bold text-gray-700">21.4 KB</h6>
+                                <h6 className="lead uppercase mb-1 font-bold text-gray-700">17.2 KB</h6>
                                 <div className="uppercase font-bold text-gray-700">Gzipped</div>
                             </div>
                             <div className="col">
@@ -80,7 +80,40 @@ const Landing: React.FC<any> = () => {
                         </div>
                     </div>
 
-                    <CodeBlock code={`$ yarn add cirrus-ui`} language="text" />
+                    <div
+                        className="hero bg-red-100"
+                        style={{
+                            borderRadius: '.25rem',
+                        }}
+                    >
+                        <div className="hero-body u-text-left">
+                            <div className="row u-items-center">
+                                <div className="col">
+                                    <h3 className="title text-gray-800">Newsletter.</h3>
+                                    <h6 className="subtitle font-normal font-alt text-gray-600">
+                                        Subscribe for feature previews, bug fixes, and tutorials.
+                                    </h6>
+                                </div>
+                                <div className="col">
+                                    <form action="https://stanleylim.us2.list-manage.com/subscribe/post">
+                                        <div className="form-group">
+                                            <input type="email" className="form-group-input" autoCapitalize="off" autoCorrect="off" name="MERGE0" id="MERGE0" placeholder="Email" defaultValue="" />
+                                            <input type="hidden" name="u" defaultValue="c29a21f0dd7ce0561ec3adb9f" />
+                                            <input type="hidden" name="id" defaultValue="f783a43c04" />{' '}
+                                            <input
+                                                type="hidden"
+                                                name="ht"
+                                                defaultValue="ed00e8c36ca669627ce34a5802d7c3f956e35fa7:MTYwMzYxNzkyNy40MzE0"
+                                            />
+                                            <button type="submit" className="form-group-btn btn-primary">
+                                                Subscribe
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section className="py-8 bg-indigo-200">
@@ -117,7 +150,7 @@ const Landing: React.FC<any> = () => {
                             />
                             <h6 className="lead uppercase mb-1 font-bold text-gray-700">Compact</h6>
                             <div className="text-gray-700">
-                                Cirrus packs a lot of features with only a 21.4 KB payload gzipped.
+                                Cirrus packs a lot of features with only a 17.2 KB payload gzipped.
                             </div>
                         </div>
                     </div>
@@ -151,6 +184,8 @@ const Landing: React.FC<any> = () => {
                     </div>
                 </div>
             </section>
+
+            <Preview />
 
             <section
                 className="py-8"
@@ -196,7 +231,7 @@ const Landing: React.FC<any> = () => {
                                 target="_blank"
                                 className="u-no-padding u-inline-block"
                             >
-                                <img src="/img/become_a_patron_button.png" className="_shadow" />
+                                <img src="/img/paypal.jpg" className="_shadow" />
                             </a>
                         </div>
                         <div className="col-6">
@@ -208,7 +243,7 @@ const Landing: React.FC<any> = () => {
                                 target="_blank"
                                 className="u-no-padding u-inline-block"
                             >
-                                <img src="/img/paypal.jpg" className="_shadow" />
+                                <img src="/img/become_a_patron_button.png" className="_shadow" />
                             </a>
                         </div>
                     </div>

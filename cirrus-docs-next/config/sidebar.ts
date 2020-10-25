@@ -54,6 +54,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Developing',
+                url: '/getting-started/developing'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Examples',
                 url: '/getting-started/examples'
             },

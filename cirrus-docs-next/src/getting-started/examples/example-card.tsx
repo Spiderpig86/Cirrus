@@ -14,7 +14,7 @@ export interface ExampleCardProps {
 
 export const ExampleCard: React.FC<ExampleCardProps> = (props) => {
     return (
-        <div className="col-lg-4 mb-2">
+        <div className="col-md-4 mb-2">
             <div className="card h-100 u-flex u-flex-column">
                 <div className="card-container">
                     <div

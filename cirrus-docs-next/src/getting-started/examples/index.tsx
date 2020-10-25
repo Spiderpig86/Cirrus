@@ -30,8 +30,8 @@ export const ExamplesPage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{
-                        name: 'Browser Support',
-                        link: './browser-support',
+                        name: 'Developing',
+                        link: './developing',
                     }}
                     nextLink={{
                         name: 'Release Notes',

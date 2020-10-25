@@ -3,3 +3,23 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.btn-primary.hover,
+.btn-primary.focus {
+    --btn-color: #d62939;
+}
+
+.btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(240, 61, 76, .5)
+}
+
+#menu-list-addon:hover {
+    background-color: rgba(60,60,60,.25);
+}
+
+#tooltips button {
+    text-align: center;
+}
+.demo-tooltip {
+    width: 100%;
+}
