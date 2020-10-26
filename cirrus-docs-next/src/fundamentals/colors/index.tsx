@@ -50,9 +50,9 @@ export const ColorsPage: React.FC<any> = (props) => {
                             Cirrus has an extensive color palette that has been updated with <b>0.6.0</b> to make them
                             more accessible to all page elements.
                         </p>
-                        {v2Colors.map((color) => {
+                        {v2Colors.map((color, index) => {
                             return (
-                                <section id={color}>
+                                <section key={index} id={color}>
                                     <h6>{color}</h6>
                                     <Display swatches={v2.get(color)!} />
                                 </section>

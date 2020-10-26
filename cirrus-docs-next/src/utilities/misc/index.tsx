@@ -117,8 +117,8 @@ position: absolute;`,
                                 </tr>
                             </thead>
                             <tbody>
-                                {classTable.map((row) => (
-                                    <tr>
+                                {classTable.map((row, index) => (
+                                    <tr key={index}>
                                         <td
                                             style={{
                                                 width: '200px',

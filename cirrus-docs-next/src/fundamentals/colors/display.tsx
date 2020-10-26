@@ -11,9 +11,9 @@ export interface Swatch {
 }
 
 export const Display: React.FC<DisplayProps> = (props) => {
-    const swatches = props.swatches.map((swatch: Swatch) => {
+    const swatches = props.swatches.map((swatch: Swatch, index: number) => {
         return (
-            <div className="col-4 mb-2">
+            <div key={index} className="col-4 mb-2">
                 <div className="frame">
                     <div
                         className={`frame__body m-0 ${swatch.class}`}

@@ -21,8 +21,8 @@ export const ExamplesPage: React.FC<any> = (props) => {
                         <p>Here are a couple of examples to help you discover what is possible with Cirrus.</p>
 
                         <div className="row">
-                            {DOC_EXAMPLES.map((example) => (
-                                <ExampleCard data={example} />
+                            {DOC_EXAMPLES.map((example, index) => (
+                                <ExampleCard key={index} data={example} />
                             ))}
                         </div>
                     </div>

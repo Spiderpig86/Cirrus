@@ -52,7 +52,6 @@ export const MarginPage: React.FC<any> = (props) => {
                 };
             });
         });
-        console.log(rows);
         setClassTable(([] as any).concat(...rows));
     }, []);
 
@@ -94,8 +93,8 @@ export const MarginPage: React.FC<any> = (props) => {
                                     height: '500px',
                                 }}
                             >
-                                {classTable.map((row) => (
-                                    <tr>
+                                {classTable.map((row, index) => (
+                                    <tr key={index}>
                                         <td
                                             style={{
                                                 width: '200px',

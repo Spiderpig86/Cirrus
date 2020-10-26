@@ -204,8 +204,8 @@ const Landing: React.FC<any> = () => {
                             maxWidth: '960px',
                         }}
                     >
-                        {DOC_EXAMPLES.slice(0, 3).map((example) => (
-                            <ExampleCard data={example} />
+                        {DOC_EXAMPLES.slice(0, 3).map((example, index) => (
+                            <ExampleCard key={index} data={example} />
                         ))}
                     </div>
 

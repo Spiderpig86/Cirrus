@@ -26,8 +26,8 @@ export const ExampleCard: React.FC<ExampleCardProps> = (props) => {
                     <div className="title-container">
                         <p className="title">{props.data.title}</p>
                         <div className="subtitle u-no-margin">
-                            {props.data.tags.map((tag) => (
-                                <div className="tag tag--info">{tag}</div>
+                            {props.data.tags.map((tag, index) => (
+                                <div key={index} className="tag tag--info">{tag}</div>
                             ))}
                         </div>
                     </div>

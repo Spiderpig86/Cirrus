@@ -33,7 +33,6 @@ export const ReleaseNotesPage: React.FC<any> = (props) => {
                 anchor: '#release-notes',
                 children: [] as TableOfContentsEntry[],
             };
-            console.log(releaseNotesMd);
             
             const map: Map<string, string> = new Map();
             for (let i = 0; i < versions.length; i++) {
@@ -50,8 +49,6 @@ export const ReleaseNotesPage: React.FC<any> = (props) => {
             }
 
             setReleaseNotes(map);
-            console.log(releaseNotes);
-            
             setToc([contents]);
         }
 

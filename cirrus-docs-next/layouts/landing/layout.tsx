@@ -21,7 +21,6 @@ export const LandingLayout = ({ children, ...rest }: any) => {
         const onScroll = (e: any) => {
             const scrollOffset = e.target.documentElement.scrollTop;
             setScrollTop(scrollOffset);
-            console.log(scrollOffset);
 
             setPageAtTop(scrollOffset <= 10, dispatch);
         };

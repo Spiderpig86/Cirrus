@@ -1,8 +1,22 @@
 import React from 'react';
+import Link from 'next/link';
+import { v2 } from '../fundamentals/colors/color-config';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+const ColorSquare = (props: any) => (
+    <div
+        className={`mr-2 mb-2 ${props.className}`}
+        style={{
+            borderRadius: '.25rem',
+            height: '4rem',
+            width: '4rem',
+        }}
+    ></div>
+);
 
 export const Preview: React.FC<any> = (props) => {
     return (
-        <div>
+        <div className="preview">
             <link
                 rel="stylesheet"
                 href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -14,84 +28,30 @@ export const Preview: React.FC<any> = (props) => {
                     <div className="u-text-center content">
                         <h5 className="uppercase">Colors</h5>
                         <p className="lead">
-                            Choose from a number of vibrant colors from Cirrus's palette to make your website {' '}
-                            <b>pop</b>.
+                            Choose from a number of vibrant colors from Cirrus's palette to make your website <b>pop</b>
+                            .
                         </p>
                     </div>
-                    <div className="space xlarge" />
-                    <div className="row">
-                        <div className="col-3">
-                            <div className="frame color-panel">
-                                <div className="frame__header bg-primary">
-                                    <div className="frame__title u-text-center white">.bg-primary</div>
-                                    <div className="frame__subtitle u-text-center white">#f03d4d</div>
-                                </div>
-                                <div className="frame__footer u-text-center text-primary">.text-primary</div>
+
+                    {['red', 'yellow', 'green', 'blue', 'purple'].map((color) => {
+                        return (
+                            <div className="row u-justify-center">
+                                {v2.get(color).map((className, index) => (
+                                    <ColorSquare key={color + className.class + index} className={className.class} />
+                                ))}
                             </div>
-                        </div>
-                        <div className="col-3">
-                            <div className="frame color-panel">
-                                <div className="frame__header bg-info">
-                                    <div className="frame__title u-text-center white">.bg-info</div>
-                                    <div className="frame__subtitle u-text-center white">#2972fa</div>
-                                </div>
-                                <div className="frame__footer u-text-center text-info">.text-info</div>
-                            </div>
-                        </div>
-                        <div className="col-3">
-                            <div className="frame color-panel">
-                                <div className="frame__header bg-link">
-                                    <div className="frame__title u-text-center white">.bg-link</div>
-                                    <div className="frame__subtitle u-text-center white">#5e5cc7</div>
-                                </div>
-                                <div className="frame__footer u-text-center text-link">.text-link</div>
-                            </div>
-                        </div>
-                        <div className="col-3">
-                            <div className="frame color-panel">
-                                <div className="frame__header bg-dark">
-                                    <div className="frame__title u-text-center white">.bg-dark</div>
-                                    <div className="frame__subtitle u-text-center white">#363636</div>
-                                </div>
-                                <div className="frame__footer u-text-center text-dark background-light">.text-dark</div>
-                            </div>
-                        </div>
-                        <div className="col-3">
-                            <div className="frame color-panel">
-                                <div className="frame__header bg-success">
-                                    <div className="frame__title u-text-center white">.bg-success</div>
-                                    <div className="frame__subtitle u-text-center white">#0dd157</div>
-                                </div>
-                                <div className="frame__footer u-text-center text-success">.text-success</div>
-                            </div>
-                        </div>
-                        <div className="col-3">
-                            <div className="frame color-panel">
-                                <div className="frame__header bg-warning">
-                                    <div className="frame__title u-text-center white">.bg-warning</div>
-                                    <div className="frame__subtitle u-text-center white">#fab633</div>
-                                </div>
-                                <div className="frame__footer u-text-center text-warning">.text-warning</div>
-                            </div>
-                        </div>
-                        <div className="col-3">
-                            <div className="frame color-panel">
-                                <div className="frame__header bg-danger">
-                                    <div className="frame__title u-text-center white">.bg-danger</div>
-                                    <div className="frame__subtitle u-text-center white">#fb4143</div>
-                                </div>
-                                <div className="frame__footer u-text-center text-danger">.text-danger</div>
-                            </div>
-                        </div>
-                        <div className="col-3">
-                            <div className="frame color-panel">
-                                <div className="frame__header bg-light">
-                                    <div className="frame__title u-text-center">.bg-light</div>
-                                    <div className="frame__subtitle u-text-center">#f6f9fc</div>
-                                </div>
-                                <div className="frame__footer u-text-center text-light bg-dark">.text-light</div>
-                            </div>
-                        </div>
+                        );
+                    })}
+
+                    <div className="u-text-center mt-2">
+                        <Link href="/fundamentals/colors">
+                            <button className="btn-link outline">
+                                View All Colors
+                                <span className="icon">
+                                    <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'chevron-circle-right']} />
+                                </span>
+                            </button>
+                        </Link>
                     </div>
                     <div className="space xlarge" />
                     <div className="divider" />
@@ -106,7 +66,7 @@ export const Preview: React.FC<any> = (props) => {
                             <a className="u u-LR" href="#">
                                 Montserrat
                             </a>{' '}
-                            and
+                            and{' '}
                             <a className="u u-LR" href="#">
                                 Nunito Sans
                             </a>{' '}
@@ -1315,7 +1275,9 @@ export const Preview: React.FC<any> = (props) => {
                                     <p className="tile__title m-0 u-text-ellipsis">
                                         Robert Downey Jr. shared a post from <b>Stark Industries</b>.
                                     </p>
-                                    <p className="tile__subtitle m-0 u-text-ellipsis">Robert shared: 'Stark Industries is...'</p>
+                                    <p className="tile__subtitle m-0 u-text-ellipsis">
+                                        Robert shared: 'Stark Industries is...'
+                                    </p>
                                     <span className="info">23 minutes ago</span>
                                 </div>
                                 <div className="tile__buttons">
@@ -1603,80 +1565,54 @@ export const Preview: React.FC<any> = (props) => {
                                     </a>
                                 </div>
                                 <div className="pagination-item short selected">
-                                    <a href="#">
-                                        1
-                                    </a>
+                                    <a href="#">1</a>
                                 </div>
                                 <div className="pagination-item short">
-                                    <a href="#">
-                                        2
-                                    </a>
+                                    <a href="#">2</a>
                                 </div>
                                 <div className="pagination-item short">
-                                    <a href="#">
-                                        3
-                                    </a>
+                                    <a href="#">3</a>
                                 </div>
                                 <div className="pagination-item short">
-                                    <a href="#">
-                                        4
-                                    </a>
+                                    <a href="#">4</a>
                                 </div>
                                 <div className="pagination-item short">
                                     <a>...</a>
                                 </div>
                                 <div className="pagination-item short">
-                                    <a href="#">
-                                        13
-                                    </a>
+                                    <a href="#">13</a>
                                 </div>
                                 <div className="pagination-item short">
-                                    <a href="#">
-                                        Next
-                                    </a>
+                                    <a href="#">Next</a>
                                 </div>
                             </div>
                             <div className="col-6 pagination pagination-bordered">
                                 <div className="pagination-item short">
-                                    <a href="#">
-                                        Prev
-                                    </a>
+                                    <a href="#">Prev</a>
                                 </div>
                                 <div className="pagination-item short">
-                                    <a href="#">
-                                        1
-                                    </a>
+                                    <a href="#">1</a>
                                 </div>
                                 <div className="pagination-item short">
                                     <a>...</a>
                                 </div>
                                 <div className="pagination-item short">
-                                    <a href="#">
-                                        3
-                                    </a>
+                                    <a href="#">3</a>
                                 </div>
                                 <div className="pagination-item short">
-                                    <a href="#">
-                                        4
-                                    </a>
+                                    <a href="#">4</a>
                                 </div>
                                 <div className="pagination-item short selected">
-                                    <a href="#">
-                                        5
-                                    </a>
+                                    <a href="#">5</a>
                                 </div>
                                 <div className="pagination-item short">
                                     <a>...</a>
                                 </div>
                                 <div className="pagination-item short">
-                                    <a href="#">
-                                        23
-                                    </a>
+                                    <a href="#">23</a>
                                 </div>
                                 <div className="pagination-item short">
-                                    <a href="#">
-                                        Next
-                                    </a>
+                                    <a href="#">Next</a>
                                 </div>
                             </div>
                         </div>

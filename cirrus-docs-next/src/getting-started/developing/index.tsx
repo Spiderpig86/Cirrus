@@ -270,7 +270,7 @@ export const DevelopingPage: React.FC<any> = (props) => {
                             <a
                                 rel="noopener noreferrer"
                                 target="_blank"
-                                href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/theme.css"
+                                href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/theme.scss"
                             >
                                 theme.css
                             </a>
