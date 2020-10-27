@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { withLayout } from '@moxy/next-layout';
+import Head from 'next/head';
 import Link from 'next/link';
+import { withLayout } from '@moxy/next-layout';
 import { ControlledEditor } from '@monaco-editor/react';
 import SplitPane from 'react-split-pane';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,6 +21,7 @@ import initializeHeaderToggle from '../../static/js/header-toggle.js';
 import PlaygroundFullscreenSVG from '../../static/svg/playground-fullscreen.svg';
 import PlaygroundHalfscreenSVG from '../../static/svg/playground-half.svg';
 import PlaygroundCodeSVG from '../../static/svg/playground-code.svg';
+import { PAGE_TITLE_PREFIX } from '../../constants';
 
 export const PlaygroundPage: React.FC<any> = () => {
     const editorRef = useRef<any>();
@@ -108,6 +110,9 @@ export const PlaygroundPage: React.FC<any> = () => {
 
     return (
         <div className="u-hide-overflow">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Playground</title>
+            </Head>
             <div
                 className="header header-dark header-fixed u-unselectable header-animated mb-0"
                 style={{
@@ -251,10 +256,9 @@ export const PlaygroundPage: React.FC<any> = () => {
                             height="100%"
                             width="100%"
                             editorDidMount={handleEditorMounted}
-                            onChange={
-                                _.debounce((obj, value) => {
-                                    setCode(value ?? '');
-                                }, 500)}
+                            onChange={_.debounce((obj, value) => {
+                                setCode(value ?? '');
+                            }, 500)}
                             options={{
                                 acceptSuggestionOnCommitCharacter: true,
                                 acceptSuggestionOnEnter: 'on',

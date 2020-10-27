@@ -1,19 +1,24 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
-import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { Modal } from './components/modal';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ExternalLink } from '../../../layouts/components/link';
 import { DefaultLayout } from '../../../layouts/default';
+import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const ModalsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Modals</title>
+            </Head>
             <div>
                 <Modal id="example-modal" />
                 <Modal id="structure-modal">

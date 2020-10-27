@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 import LazyLoad from 'react-lazyload';
 
@@ -6,11 +7,12 @@ import { TableOfContents } from '../../../layouts/components/toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
+import { DefaultLayout } from '../../../layouts/default';
 
 import { toc } from './toc';
 
 import initializeTabs from '../../../static/js/tabs.js';
-import { DefaultLayout } from '../../../layouts/default';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const SetUpPage: React.FC<any> = (props) => {
     useEffect(() => {
@@ -26,6 +28,9 @@ export const SetUpPage: React.FC<any> = (props) => {
 
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Setup</title>
+            </Head>
             <div>
                 <section id="setup" className="padtop">
                     <div className="content">

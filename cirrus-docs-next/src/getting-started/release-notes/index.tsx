@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 import ReactMarkdown from 'react-markdown';
 
@@ -8,6 +9,7 @@ import { Pagination } from '../../../layouts/components/pagination';
 
 import { ReplaceAll } from '../../../utils/string';
 import { DefaultLayout } from '../../../layouts/default';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
 const importAll = (r: any) => r.keys().map(r);
@@ -15,7 +17,7 @@ const releaseNotesMd = importAll(require.context('../../../static/markdown', fal
 
 export const ReleaseNotesPage: React.FC<any> = (props) => {
     // TODO: move to constants
-    const versions = ["0.6.0", "0.5.5", "0.5.4", "0.5.3", "0.4.0"];
+    const versions = ['0.6.0', '0.5.5', '0.5.4', '0.5.3', '0.4.0'];
 
     const [releaseNotes, setReleaseNotes] = useState<Map<string, string>>(new Map());
     const [toc, setToc] = useState<TableOfContentsEntry[]>([
@@ -33,7 +35,7 @@ export const ReleaseNotesPage: React.FC<any> = (props) => {
                 anchor: '#release-notes',
                 children: [] as TableOfContentsEntry[],
             };
-            
+
             const map: Map<string, string> = new Map();
             for (let i = 0; i < versions.length; i++) {
                 const key = /\d+\.\d+\.\d+/.exec(versions[i]);
@@ -57,6 +59,9 @@ export const ReleaseNotesPage: React.FC<any> = (props) => {
 
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Release Notes</title>
+            </Head>
             <div>
                 <section id="release-notes" className="padtop">
                     <div className="content">

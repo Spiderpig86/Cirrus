@@ -1,16 +1,21 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
-import { toc } from './toc';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
+import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const VariantsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Button Variants</title>
+            </Head>
             <div>
                 <section className="padtop" id="variants">
                     <div className="content">
@@ -179,13 +184,22 @@ export const VariantsPage: React.FC<any> = (props) => {
                             The <code>btn--circle</code> class turns a button into a circle. The circle size will scale
                             based on the contents of the button.
                         </p>
-                        <button className="btn-danger btn--circle"><b>Small</b></button>
-                        <button className="btn-warning btn--circle"><h6 className="px-2">Bigger</h6></button>
-                        <button className="btn-success btn--circle"><h3 className="px-2">Biggest</h3></button>
+                        <button className="btn-danger btn--circle">
+                            <b>Small</b>
+                        </button>
+                        <button className="btn-warning btn--circle">
+                            <h6 className="px-2">Bigger</h6>
+                        </button>
+                        <button className="btn-success btn--circle">
+                            <h3 className="px-2">Biggest</h3>
+                        </button>
 
-                        <CodeBlock code={`<button class="btn-danger btn--circle"><b>Small</b></button>
+                        <CodeBlock
+                            code={`<button class="btn-danger btn--circle"><b>Small</b></button>
 <button class="btn-warning btn--circle"><h6 class="px-2">Bigger</h6></button>
-<button class="btn-success btn--circle"><h3 class="px-2">Biggest</h3></button>`} language="htmlbars" />
+<button class="btn-success btn--circle"><h3 class="px-2">Biggest</h3></button>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 

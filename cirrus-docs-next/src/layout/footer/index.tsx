@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 import LazyLoad from 'react-lazyload';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,13 +7,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
-import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
+import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const FootersPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Footer</title>
+            </Head>
             <div>
                 <section className="padtop" id="footer">
                     <div className="content">
@@ -64,7 +69,8 @@ export const FootersPage: React.FC<any> = (props) => {
                             />
                         </LazyLoad>
                         <div className="space"></div>
-                        <CodeBlock code={`<footer class="footer">
+                        <CodeBlock
+                            code={`<footer class="footer">
     <h6 class="footer__title white uppercase">Logo</h6>
     <div class="content">
         <div class="divider"></div>
@@ -118,7 +124,9 @@ export const FootersPage: React.FC<any> = (props) => {
         </div>
     </div>
     <p class="subtitle">Company © 2018.</p>
-</footer>`} language="htmlbars" />
+</footer>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -130,7 +138,7 @@ export const FootersPage: React.FC<any> = (props) => {
                             Static footers are designed to stick to the bottom of a page. To make a static footer, add
                             the <code>footer--fixed</code> class to the footer.
                         </p>
-                        
+
                         <LazyLoad height="200">
                             <iframe
                                 className="w-100"
@@ -139,7 +147,8 @@ export const FootersPage: React.FC<any> = (props) => {
                             />
                         </LazyLoad>
                         <div className="space"></div>
-                        <CodeBlock code={`<footer class="footer footer--fixed" style="padding: 2rem 0; opacity: 0.95;">
+                        <CodeBlock
+                            code={`<footer class="footer footer--fixed" style="padding: 2rem 0; opacity: 0.95;">
     <h6 class="footer__title white uppercase">Footer</h6>
     <div class="content u-text-center">
         <p class="m-0">Sign up to hear about the latest updates via email</p>
@@ -155,7 +164,9 @@ export const FootersPage: React.FC<any> = (props) => {
             </div>
         </div>
     </div>
-</footer>`} language='htmlbars' />
+</footer>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 

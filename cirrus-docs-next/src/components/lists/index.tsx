@@ -1,17 +1,22 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
-import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { DefaultLayout } from '../../../layouts/default';
+import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const ListsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+        <Head>
+            <title>{PAGE_TITLE_PREFIX} Lists</title>
+        </Head>
             <div>
                 <section className="padtop" id="lists">
                     <div className="content">

@@ -1,12 +1,14 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
-import { toc } from './toc';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
+import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const ButtonPage: React.FC<any> = (props) => {
     const btnColors = [
@@ -25,6 +27,9 @@ export const ButtonPage: React.FC<any> = (props) => {
 
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Button Basics</title>
+            </Head>
             <div>
                 <section className="padtop" id="buttons">
                     <div className="content">
@@ -71,7 +76,7 @@ export const ButtonPage: React.FC<any> = (props) => {
 
                 <section className="padtop" id="colors">
                     <div className="content">
-                        <Headline title="Colors" link="#colors" size='4' />
+                        <Headline title="Colors" link="#colors" size="4" />
                         <div className="divider"></div>
                         <p>
                             Cirrus comes in quite a few different shades of colors. Below are some of the preset styles
@@ -137,7 +142,7 @@ export const ButtonPage: React.FC<any> = (props) => {
 
                 <section className="padtop" id="sizes">
                     <div className="content">
-                        <Headline title="Sizes" link="#sizes" size='4' />
+                        <Headline title="Sizes" link="#sizes" size="4" />
                         <div className="divider"></div>
                         <p>
                             Buttons can have alternative sizes of <code>xsmall</code>, <code>small</code>,{' '}
@@ -157,10 +162,13 @@ export const ButtonPage: React.FC<any> = (props) => {
                             <button className="text-blue-600 bg-blue-100 btn-xlarge">Xlarge</button>
                         </div>
 
-                        <CodeBlock code={`<button class="text-blue-600 bg-blue-100 btn-xsmall">Xsmall</button>
+                        <CodeBlock
+                            code={`<button class="text-blue-600 bg-blue-100 btn-xsmall">Xsmall</button>
 <button class="text-blue-600 bg-blue-100 btn-small">Small</button>
 <button class="text-blue-600 bg-blue-100 btn-large">Large</button>
-<button class="text-blue-600 bg-blue-100 btn-xlarge">Xlarge</button>`} language='htmlbars' />
+<button class="text-blue-600 bg-blue-100 btn-xlarge">Xlarge</button>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 

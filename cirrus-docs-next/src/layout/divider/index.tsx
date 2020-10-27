@@ -1,16 +1,21 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
-import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
+import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const DividerPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Divider</title>
+            </Head>
             <div>
                 <section className="padtop" id="dividers">
                     <div className="content">
@@ -55,7 +60,7 @@ export const DividerPage: React.FC<any> = (props) => {
                                 </div>
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<div className="divider--v" />`} language='htmlbars' />
+                                <CodeBlock code={`<div className="divider--v" />`} language="htmlbars" />
                             </div>
                         </div>
 
@@ -73,7 +78,10 @@ export const DividerPage: React.FC<any> = (props) => {
                                 <div className="divider" data-content="Label"></div>
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<div class="divider" data-content="Label"></div>`} language='htmlbars' />
+                                <CodeBlock
+                                    code={`<div class="divider" data-content="Label"></div>`}
+                                    language="htmlbars"
+                                />
                             </div>
                         </div>
 
@@ -87,7 +95,10 @@ export const DividerPage: React.FC<any> = (props) => {
                                 </div>
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<div class="divider--v h-100" data-content="Label" />`} language='htmlbars' />
+                                <CodeBlock
+                                    code={`<div class="divider--v h-100" data-content="Label" />`}
+                                    language="htmlbars"
+                                />
                             </div>
                         </div>
                     </div>

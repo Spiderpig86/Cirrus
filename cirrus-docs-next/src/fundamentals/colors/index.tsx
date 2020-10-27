@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
@@ -8,10 +9,14 @@ import { Display } from './display';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { v1, v2Colors, v2 } from './color-config';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const ColorsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+        <Head>
+            <title>{PAGE_TITLE_PREFIX} Colors</title>
+        </Head>
             <div>
                 <section className="padtop" id="colors">
                     <div className="content">

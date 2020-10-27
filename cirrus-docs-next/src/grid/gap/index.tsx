@@ -1,16 +1,21 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
-import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
+import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const GridGapPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Grid Gap</title>
+            </Head>
             <div>
                 <section className="padtop" id="gap">
                     <div className="content">
@@ -31,7 +36,10 @@ export const GridGapPage: React.FC<any> = (props) => {
                             from 1 through 12 inclusive.
                         </p>
 
-                        <p>Below is an example of usages of the classes. Notice that the <code>grid-gap-*</code> is applied on the <code>grid</code> itself.</p>
+                        <p>
+                            Below is an example of usages of the classes. Notice that the <code>grid-gap-*</code> is
+                            applied on the <code>grid</code> itself.
+                        </p>
 
                         <div className="grid grid-cols-6 grid-gap-8">
                             <div className="grid-c-2 py-4 bg-green-200"></div>
@@ -54,7 +62,8 @@ export const GridGapPage: React.FC<any> = (props) => {
                             <div className="grid-c-2 py-4 bg-green-800"></div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="grid grid-cols-6 grid-gap-8">
+                        <CodeBlock
+                            code={`<div class="grid grid-cols-6 grid-gap-8">
     <div class="grid-c-2 py-4 bg-green-200"></div>
     <div class="grid-c-2 py-4 bg-green-200"></div>
     <div class="grid-c-2 py-4 bg-green-200"></div>
@@ -73,7 +82,9 @@ export const GridGapPage: React.FC<any> = (props) => {
     <div class="grid-c-2 py-4 bg-green-800"></div>
     <div class="grid-c-2 py-4 bg-green-800"></div>
     <div class="grid-c-2 py-4 bg-green-800"></div>
-</div>`} language='htmlbars' />
+</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
                 <Pagination prevLink={{ name: 'Grid Span', link: './span' }} />

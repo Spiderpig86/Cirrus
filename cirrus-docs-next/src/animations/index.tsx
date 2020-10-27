@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { CodeBlock } from '../../layouts/components/codeblock';
 import { TableOfContents } from '../../layouts/components/toc';
 import { Headline } from '../../layouts/components/headline';
+import { DefaultLayout } from '../../layouts/default';
 import { toc } from './toc';
 
 import initializeAnimations from '../../static/js/animations.js';
-import { DefaultLayout } from '../../layouts/default';
+import { PAGE_TITLE_PREFIX } from '../../constants';
 
 export const AnimationsPage: React.FC<any> = (props) => {
     useEffect(() => {
@@ -17,6 +19,9 @@ export const AnimationsPage: React.FC<any> = (props) => {
 
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Animations</title>
+            </Head>
             <div>
                 <section className="padtop" id="animations">
                     <div className="content">

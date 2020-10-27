@@ -1,16 +1,21 @@
 import React from 'react';
 import { withLayout } from '@moxy/next-layout';
+import Head from 'next/head';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
-import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
+import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const AvatarPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Avatar</title>
+            </Head>
             <div>
                 <section className="padtop" id="avatars">
                     <div className="content">
@@ -200,7 +205,10 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure className="avatar avatar--xsmall">
-                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"alt="avatar" />
+                                            <img
+                                                src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"
+                                                alt="avatar"
+                                            />
                                         </figure>
                                     </div>
                                     <div className="tile__container">
@@ -216,7 +224,10 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure className="avatar avatar--small">
-                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"alt="avatar" />
+                                            <img
+                                                src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"
+                                                alt="avatar"
+                                            />
                                         </figure>
                                     </div>
                                     <div className="tile__container">
@@ -232,7 +243,10 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure className="avatar">
-                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"alt="avatar" />
+                                            <img
+                                                src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"
+                                                alt="avatar"
+                                            />
                                         </figure>
                                     </div>
                                     <div className="tile__container">
@@ -248,7 +262,10 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure className="avatar avatar--large">
-                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"alt="avatar" />
+                                            <img
+                                                src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"
+                                                alt="avatar"
+                                            />
                                         </figure>
                                     </div>
                                     <div className="tile__container">
@@ -264,7 +281,10 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure className="avatar avatar--xlarge">
-                                            <img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"alt="avatar" />
+                                            <img
+                                                src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"
+                                                alt="avatar"
+                                            />
                                         </figure>
                                     </div>
                                     <div className="tile__container">

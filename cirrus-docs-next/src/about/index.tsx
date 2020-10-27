@@ -1,11 +1,16 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
 import { DefaultLayout } from '../../layouts/default';
+import { PAGE_TITLE_PREFIX } from '../../constants';
 
 export const AboutPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} About</title>
+            </Head>
             <div>
                 <section className="padtop">
                     <div className="content u-text-center">

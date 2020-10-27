@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
@@ -8,10 +9,14 @@ import { Pagination } from '../../../layouts/components/pagination';
 import { TableWrapper } from '../../../layouts/components/table-wrapper';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const DevelopingPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Developing</title>
+            </Head>
             <div>
                 <section id="developing" className="padtop">
                     <div className="content">
@@ -281,7 +286,8 @@ export const DevelopingPage: React.FC<any> = (props) => {
                             CSS variable value for that specific class. For example, the modification below changes the
                             background color of <b>all buttons</b> for <code>btn--info</code> to <code>#222</code>.
                         </p>
-                        <CodeBlock code={`:root {
+                        <CodeBlock
+                            code={`:root {
     /* v1 Colors */
     --cirrus-fg: #{$cirrus-fg};
     --cirrus-bg: #{$cirrus-bg};
@@ -294,7 +300,9 @@ export const DevelopingPage: React.FC<any> = (props) => {
 
     --my-color-here: '#0066ff';
     /* ... */
-}`} language={'scss'} />
+}`}
+                            language={'scss'}
+                        />
                         <p>
                             The other selectors will still see the original <code>--cirrus-info</code> color instead.
                         </p>

@@ -1,6 +1,6 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
-import Link from 'next/link';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { Capitalize } from '../../../utils/string';
 import { toc } from './toc';
 import { DefaultLayout } from '../../../layouts/default';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 // TODO: Move to models package
 export interface DocExample {
@@ -346,6 +347,9 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
 
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Flexbox</title>
+            </Head>
             <div>
                 <section className="padtop" id="flexbox">
                     <div className="content">

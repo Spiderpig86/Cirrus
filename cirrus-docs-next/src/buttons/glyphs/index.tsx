@@ -1,18 +1,23 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { ExternalLink } from '../../../layouts/components/link';
-import { toc } from './toc';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { DefaultLayout } from '../../../layouts/default';
+import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const ButtonGlyphsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Button Glyphs</title>
+            </Head>
             <div>
                 <section className="padtop" id="glyphs">
                     <div className="content">
@@ -30,7 +35,10 @@ export const ButtonGlyphsPage: React.FC<any> = (props) => {
                             </span>
                             See More
                         </button>
-                        <CodeBlock code={`<button>See More<i class="fa-wrapper fa fa-chevron-right pad-left"></i></button>`} language='htmlbars' />
+                        <CodeBlock
+                            code={`<button>See More<i class="fa-wrapper fa fa-chevron-right pad-left"></i></button>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
 
                         <h6>Glyph on the right</h6>
@@ -40,7 +48,10 @@ export const ButtonGlyphsPage: React.FC<any> = (props) => {
                                 <FontAwesomeIcon className="fa-wrapper pad-left" icon={['fas', 'chevron-right']} />
                             </span>
                         </button>
-                        <CodeBlock code={`<button><i class="fa-wrapper fa fa-chevron-left pad-right"></i>See More</button>`} language='htmlbars' />
+                        <CodeBlock
+                            code={`<button><i class="fa-wrapper fa fa-chevron-left pad-right"></i>See More</button>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
 
                         <h6>Glyph with different sizes</h6>
@@ -84,11 +95,14 @@ export const ButtonGlyphsPage: React.FC<any> = (props) => {
                                 </span>
                             </button>
                         </div>
-                        <CodeBlock code={`<button class="btn-xsmall">XSmall<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button>
+                        <CodeBlock
+                            code={`<button class="btn-xsmall">XSmall<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button>
 <button class="btn-small">Small<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button>
 <button>Normal<i class="fa-wrapper fa fa-chevron-right pad-left"></i></button>
 <button class="btn-large">Large<i class="fa-wrapper fa fa-chevron-right pad-left"></i></button>
-<button class="btn-xlarge">XLarge<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button>`} language='htmlbars' />
+<button class="btn-xlarge">XLarge<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 

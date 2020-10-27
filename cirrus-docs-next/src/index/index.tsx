@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
 import Axios from 'axios';
@@ -8,12 +9,11 @@ import { LandingLayout } from '../../layouts/landing';
 import { ExampleCard } from '../getting-started/examples/example-card';
 import { CodeBlock } from '../../layouts/components/codeblock';
 import { Context } from '../../store/store';
-
-import { DOC_EXAMPLES } from '../../constants/examples';
 import { Preview } from './preview';
 
+import { DOC_EXAMPLES } from '../../constants/examples';
+
 const Landing: React.FC<any> = () => {
-    const pageAtTop = useState(true);
     const { state, dispatch } = useContext(Context);
 
     const [stars, setStars] = useState(0);
@@ -31,6 +31,9 @@ const Landing: React.FC<any> = () => {
 
     return (
         <div>
+            <Head>
+                <title>Cirrus CSS 💎</title>
+            </Head>
             <section id="splash">
                 <div id="splash-img" className="hero fullscreen hero-img parallax-img">
                     <div className="hero-body">
@@ -67,7 +70,7 @@ const Landing: React.FC<any> = () => {
                         <div className="row">
                             <div className="col">
                                 <h6 className="lead uppercase mb-1 font-bold text-gray-700">17.2 KB</h6>
-                                <div className="uppercase font-bold text-gray-700">Gzipped</div>
+                                <div className="uppercase font-bold text-gray-700">Compressed</div>
                             </div>
                             <div className="col">
                                 <h6 className="lead uppercase mb-1 font-bold text-gray-700">{stars}</h6>
@@ -97,7 +100,16 @@ const Landing: React.FC<any> = () => {
                                 <div className="col">
                                     <form action="https://stanleylim.us2.list-manage.com/subscribe/post">
                                         <div className="form-group">
-                                            <input type="email" className="form-group-input" autoCapitalize="off" autoCorrect="off" name="MERGE0" id="MERGE0" placeholder="Email" defaultValue="" />
+                                            <input
+                                                type="email"
+                                                className="form-group-input"
+                                                autoCapitalize="off"
+                                                autoCorrect="off"
+                                                name="MERGE0"
+                                                id="MERGE0"
+                                                placeholder="Email"
+                                                defaultValue=""
+                                            />
                                             <input type="hidden" name="u" defaultValue="c29a21f0dd7ce0561ec3adb9f" />
                                             <input type="hidden" name="id" defaultValue="f783a43c04" />{' '}
                                             <input
@@ -150,7 +162,7 @@ const Landing: React.FC<any> = () => {
                             />
                             <h6 className="lead uppercase mb-1 font-bold text-gray-700">Compact</h6>
                             <div className="text-gray-700">
-                                Cirrus packs a lot of features with only a 17.2 KB payload gzipped.
+                                Cirrus packs a lot of features with only a 17.2 KB payload.
                             </div>
                         </div>
                     </div>

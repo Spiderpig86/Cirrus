@@ -1,18 +1,23 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
-import { DOC_EXAMPLES } from '../../../constants/examples';
 import { ExampleCard } from './example-card';
 import { DefaultLayout } from '../../../layouts/default';
 
 import { toc } from './toc';
+import { DOC_EXAMPLES } from '../../../constants/examples';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const ExamplesPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Examples</title>
+            </Head>
             <div>
                 <section id="examples" className="padtop">
                     <div className="content">

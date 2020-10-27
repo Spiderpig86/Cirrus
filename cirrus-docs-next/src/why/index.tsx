@@ -1,15 +1,16 @@
 import React from 'react';
-import { withLayout } from '@moxy/next-layout';
+import Head from 'next/head';
 import Link from 'next/link';
+import { withLayout } from '@moxy/next-layout';
 import { ResponsiveBar } from '@nivo/bar';
 
 import { TableOfContents } from '../../layouts/components/toc';
 import { Headline } from '../../layouts/components/headline';
 import { CodeBlock } from '../../layouts/components/codeblock';
 import { DefaultLayout } from '../../layouts/default';
-import { TableWrapper } from '../../layouts/components/table-wrapper';
 
 import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../constants';
 
 export const WhyPage: React.FC<any> = (props) => {
     // TODO: Move to constants
@@ -48,6 +49,9 @@ export const WhyPage: React.FC<any> = (props) => {
 
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Why</title>
+            </Head>
             <div>
                 <section id="why" className="padtop">
                     <div className="content">
@@ -66,7 +70,7 @@ export const WhyPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>
                             Cirrus comes with lots of functionality in a small package. Coming in at{' '}
-                            <b>17.2 KB gzipped</b>, page loads are fast and data caps are not breached.
+                            <b>17.2 KB with Brotli compression</b>, page loads are fast and data caps are not breached.
                         </p>
 
                         {/* TODO MOVE TO NEW FILE */}
@@ -144,7 +148,11 @@ export const WhyPage: React.FC<any> = (props) => {
                         <p>
                             In addition to being able to import the features you want, Cirrus comes in two flavors,{' '}
                             <b>core</b> and <b>extended</b>, that contain the main features and the full framework
-                            respectively. More about that <Link href="./developing"><a className="u u-LR">here</a></Link>.
+                            respectively. More about that{' '}
+                            <Link href="/getting-started/developing">
+                                <a className="u u-LR">here</a>
+                            </Link>
+                            .
                         </p>
                     </div>
                 </section>

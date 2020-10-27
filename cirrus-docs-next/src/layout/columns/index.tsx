@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react';
-import { withLayout } from '@moxy/next-layout';
+import Head from 'next/head';
 import Link from 'next/link';
+import { withLayout } from '@moxy/next-layout';
 import LazyLoad from 'react-lazyload';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
-import { toc } from './toc';
+import { DefaultLayout } from '../../../layouts/default';
 import { CodeBlock } from '../../../layouts/components/codeblock';
+import { toc } from './toc';
 
 import initializeExamples from '../../../static/js/fluid-column-example.js';
-
-import { DefaultLayout } from '../../../layouts/default';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const ColumnsPage: React.FC<any> = (props) => {
     useEffect(() => {
@@ -20,6 +21,9 @@ export const ColumnsPage: React.FC<any> = (props) => {
 
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Columns</title>
+            </Head>
             <span>
                 <section className="padtop" id="columns">
                     <div className="content">
@@ -729,6 +733,5 @@ margin-right: auto;`}
         </main>
     );
 };
-
 
 export default withLayout(<DefaultLayout />)(ColumnsPage);

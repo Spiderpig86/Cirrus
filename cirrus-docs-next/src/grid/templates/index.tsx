@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
@@ -7,10 +8,14 @@ import { Pagination } from '../../../layouts/components/pagination';
 import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const GridTemplatesPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Grid Templates</title>
+            </Head>
             <div>
                 <section className="padtop" id="templates">
                     <div className="content">
@@ -255,7 +260,8 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                                 </div>
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<div class="grid grid-cols-3 grid-gap-3">
+                                <CodeBlock
+                                    code={`<div class="grid grid-cols-3 grid-gap-3">
     <div>
         <p>1</p>
     </div>
@@ -283,7 +289,9 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
     <div>
         <p>9</p>
     </div>
-</div>`} language="htmlbars" />
+</div>`}
+                                    language="htmlbars"
+                                />
                             </div>
                         </div>
                     </div>
@@ -308,15 +316,33 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
 $grid-columns: 12;`}
                             language="scss"
                         />
-                        <p>The following classes will also be generated to reflect the changes with <code>$grid-columns</code>. For example, if the value was changed to <code>64</code>, Cirrus will generate up to <code>grid-c-64</code>, <code>grid-r-64</code>, etc.</p>
+                        <p>
+                            The following classes will also be generated to reflect the changes with{' '}
+                            <code>$grid-columns</code>. For example, if the value was changed to <code>64</code>, Cirrus
+                            will generate up to <code>grid-c-64</code>, <code>grid-r-64</code>, etc.
+                        </p>
                         <ul>
-                            <li><code>grid-cols</code></li>
-                            <li><code>grid-c</code></li>
-                            <li><code>grid-r</code></li>
-                            <li><code>grid-cs</code></li>
-                            <li><code>grid-ce</code></li>
-                            <li><code>grid-rs</code></li>
-                            <li><code>grid-re</code></li>
+                            <li>
+                                <code>grid-cols</code>
+                            </li>
+                            <li>
+                                <code>grid-c</code>
+                            </li>
+                            <li>
+                                <code>grid-r</code>
+                            </li>
+                            <li>
+                                <code>grid-cs</code>
+                            </li>
+                            <li>
+                                <code>grid-ce</code>
+                            </li>
+                            <li>
+                                <code>grid-rs</code>
+                            </li>
+                            <li>
+                                <code>grid-re</code>
+                            </li>
                         </ul>
                     </div>
                 </section>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
@@ -8,6 +9,7 @@ import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { FormatString } from '../../../utils/string';
 import { DefaultLayout } from '../../../layouts/default';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const PaddingPage: React.FC<any> = (props) => {
     const sizes = [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32];
@@ -57,6 +59,9 @@ export const PaddingPage: React.FC<any> = (props) => {
 
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Padding</title>
+            </Head>
             <div>
                 <section className="padtop" id="padding">
                     <div className="content">
@@ -123,14 +128,15 @@ export const PaddingPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex p-4">
-                                    <span className="bg-indigo-500 p-1 white">
-                                        p-4
-                                    </span>
+                                    <span className="bg-indigo-500 p-1 white">p-4</span>
                                 </div>
                             </div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="bg-indigo-200 u-inline-flex p-4"><span class="bg-indigo-500 p-1 white">p-4</span></div>`} language="htmlbars" />
+                        <CodeBlock
+                            code={`<div class="bg-indigo-200 u-inline-flex p-4"><span class="bg-indigo-500 p-1 white">p-4</span></div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -139,29 +145,28 @@ export const PaddingPage: React.FC<any> = (props) => {
                         <Headline title="Both Sides" link="#both" size="4" />
                         <div className="divider"></div>
                         <p>
-                            Add padding to either left and right or top and bottom with the{' '}
-                            <code>px-&lt;size&gt;</code> and <code>py-&lt;size&gt;</code> classes respectively.
+                            Add padding to either left and right or top and bottom with the <code>px-&lt;size&gt;</code>{' '}
+                            and <code>py-&lt;size&gt;</code> classes respectively.
                         </p>
 
                         <div className="row">
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex px-4">
-                                    <span className="bg-indigo-500 p-1 white">
-                                        px-4
-                                    </span>
+                                    <span className="bg-indigo-500 p-1 white">px-4</span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex py-4">
-                                    <span className="bg-indigo-500 p-1 white">
-                                        py-4
-                                    </span>
+                                    <span className="bg-indigo-500 p-1 white">py-4</span>
                                 </div>
                             </div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="bg-indigo-200 u-inline-flex px-4"><span class="bg-indigo-500 p-1 white">px-4</span></div>
-<div class="bg-indigo-200 u-inline-flex py-4"><span class="bg-indigo-500 p-1 white">py-4</span></div>`} language="htmlbars" />
+                        <CodeBlock
+                            code={`<div class="bg-indigo-200 u-inline-flex px-4"><span class="bg-indigo-500 p-1 white">px-4</span></div>
+<div class="bg-indigo-200 u-inline-flex py-4"><span class="bg-indigo-500 p-1 white">py-4</span></div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -169,44 +174,41 @@ export const PaddingPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Single Side" link="#single" size="4" />
                         <div className="divider"></div>
-                        <p>For adding padding for only a single side, the class follows a convention like <code>p&lt;l|r|t|b&gt;-&lt;size&gt;</code>.</p>
+                        <p>
+                            For adding padding for only a single side, the class follows a convention like{' '}
+                            <code>p&lt;l|r|t|b&gt;-&lt;size&gt;</code>.
+                        </p>
 
-                        
                         <div className="row">
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex pl-4">
-                                    <span className="bg-indigo-500 p-1 white">
-                                        pl-4
-                                    </span>
+                                    <span className="bg-indigo-500 p-1 white">pl-4</span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex pr-4">
-                                    <span className="bg-indigo-500 p-1 white">
-                                        pr-4
-                                    </span>
+                                    <span className="bg-indigo-500 p-1 white">pr-4</span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex pt-4">
-                                    <span className="bg-indigo-500 p-1 white">
-                                        pt-4
-                                    </span>
+                                    <span className="bg-indigo-500 p-1 white">pt-4</span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex pb-4">
-                                    <span className="bg-indigo-500 p-1 white">
-                                        pb-4
-                                    </span>
+                                    <span className="bg-indigo-500 p-1 white">pb-4</span>
                                 </div>
                             </div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="bg-indigo-200 u-inline-flex pl-4"><span class="bg-indigo-500 p-1 white">pl-4</span></div>
+                        <CodeBlock
+                            code={`<div class="bg-indigo-200 u-inline-flex pl-4"><span class="bg-indigo-500 p-1 white">pl-4</span></div>
 <div class="bg-indigo-200 u-inline-flex pr-4"><span class="bg-indigo-500 p-1 white">pr-4</span></div>
 <div class="bg-indigo-200 u-inline-flex pt-4"><span class="bg-indigo-500 p-1 white">pt-4</span></div>
-<div class="bg-indigo-200 u-inline-flex pb-4"><span class="bg-indigo-500 p-1 white">pb-4</span></div>`} language='htmlbars' />
+<div class="bg-indigo-200 u-inline-flex pb-4"><span class="bg-indigo-500 p-1 white">pb-4</span></div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 

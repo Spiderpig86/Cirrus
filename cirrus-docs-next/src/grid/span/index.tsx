@@ -1,16 +1,21 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
-import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
+import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const GridSpanPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Grid Span</title>
+            </Head>
             <div>
                 <section className="padtop" id="span">
                     <div className="content">
@@ -84,7 +89,8 @@ export const GridSpanPage: React.FC<any> = (props) => {
                             </div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="grid grid-gap-3">
+                        <CodeBlock
+                            code={`<div class="grid grid-gap-3">
     <div class="grid-c-1"><span>1</span></div>
     <div class="grid-c-11"></div>
     <div class="grid-c-2"><span>grid-c-2</span></div>
@@ -102,7 +108,9 @@ export const GridSpanPage: React.FC<any> = (props) => {
     <div class="grid-c-10"><span>grid-c-10</span></div>
     <div class="grid-c-11"><span>grid-c-11</span></div>
     <div class="grid-c-12"><span>grid-c-12</span></div>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
 
                         <p>
@@ -119,14 +127,17 @@ export const GridSpanPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space"></div>
 
-                        <CodeBlock code={`<div class="grid grid-cols-3 grid-gap-3">
+                        <CodeBlock
+                            code={`<div class="grid grid-cols-3 grid-gap-3">
     <div class="grid-c-2 py-4 bg-indigo-200"></div>
     <div class="py-4 bg-purple-200"></div>
     <div class="grid-c-3 py-4 bg-purple-200"></div>
     <div class="grid-c-1 py-4 bg-indigo-200"></div>
     <div class="grid-c-1 py-4 bg-purple-200"></div>
     <div class="grid-c-1 py-4 bg-indigo-200"></div>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
 
                         <div className="space large"></div>
 
@@ -180,7 +191,8 @@ export const GridSpanPage: React.FC<any> = (props) => {
                             </div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="grid grid-gap-3" style="height: 500px;">
+                        <CodeBlock
+                            code={`<div class="grid grid-gap-3" style="height: 500px;">
     <div class="grid-r-1 level"><span>grid-r-1</span></div>
     <div class="grid-r-2 level"><span>grid-r-2</span></div>
     <div class="grid-r-3 level"><span>grid-r-3</span></div>
@@ -193,7 +205,9 @@ export const GridSpanPage: React.FC<any> = (props) => {
     <div class="grid-r-10 level"><span>grid-r-10</span></div>
     <div class="grid-r-11 level"><span>grid-r-11</span></div>
     <div class="grid-r-12 level"><span>grid-r-12</span></div>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -228,12 +242,15 @@ export const GridSpanPage: React.FC<any> = (props) => {
                             <div className="grid-cs-6 grid-ce-end _grid-ex">6 - end</div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="grid grid-gap-3">
+                        <CodeBlock
+                            code={`<div class="grid grid-gap-3">
     <div class="grid-cs-2 grid-ce-7">2-7</div>
     <div class="grid-cs-1 grid-ce-4">1-4</div>
     <div class="grid-c-5"></div>
     <div class="grid-cs-6 grid-ce-end">6 - end</div>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
 
                         <p>In addition to these classes, there are also additional helper classes.</p>
                         <table className="table bordered">
@@ -276,7 +293,8 @@ export const GridSpanPage: React.FC<any> = (props) => {
                             <div className="grid-rs-10 grid-re-12 _grid-ex">10-12</div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="grid grid-cols-9 grid-gap-3">
+                        <CodeBlock
+                            code={`<div class="grid grid-cols-9 grid-gap-3">
     <div class="grid-rs-10 grid-re-12">10-12</div>
     <div class="grid-rs-8 grid-re-12">8-12</div>
     <div class="grid-rs-6 grid-re-12">6-12</div>
@@ -286,7 +304,9 @@ export const GridSpanPage: React.FC<any> = (props) => {
     <div class="grid-rs-6 grid-re-12">6-12</div>
     <div class="grid-rs-8 grid-re-12">8-12</div>
     <div class="grid-rs-10 grid-re-12">10-12</div>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
 
                         <p>In addition to these classes, there are also additional helper classes.</p>
                         <table className="table bordered">

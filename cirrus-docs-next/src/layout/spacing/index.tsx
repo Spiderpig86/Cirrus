@@ -1,16 +1,21 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
-import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
+import { toc } from './toc';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const SpacingPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Spacing</title>
+            </Head>
             <div>
                 <section className="padtop" id="spacing">
                     <div className="content">
@@ -28,9 +33,13 @@ export const SpacingPage: React.FC<any> = (props) => {
                         <Headline title="Content" link="#content" size="4" />
                         <div className="divider"></div>
                         <p>
-                            As a convention for displaying content, Cirrus comes with two classes to layout and position content with the <code>section</code> element and <code>content</code> class.
+                            As a convention for displaying content, Cirrus comes with two classes to layout and position
+                            content with the <code>section</code> element and <code>content</code> class.
                         </p>
-                        <p>The <code>content</code> class adds a <b>margin</b> to the left, right, and bottom of the element.</p>
+                        <p>
+                            The <code>content</code> class adds a <b>margin</b> to the left, right, and bottom of the
+                            element.
+                        </p>
 
                         <section className="bg-gray-200">
                             <p>section</p>
@@ -39,12 +48,15 @@ export const SpacingPage: React.FC<any> = (props) => {
                             </div>
                         </section>
                         <div className="space"></div>
-                        <CodeBlock code={`<section class="bg-gray-200">
+                        <CodeBlock
+                            code={`<section class="bg-gray-200">
     <p>section</p>
     <div class="content bg-gray-400">
         <p>content</p>
     </div>
-</section>`} language='htmlbars' />
+</section>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -53,21 +65,24 @@ export const SpacingPage: React.FC<any> = (props) => {
                         <Headline title="Space" link="#space" size="4" />
                         <div className="divider"></div>
                         <p>
-                            A <code>space</code> is an independent element that serves as a buffer between elements. This class comes with different sizes which includes <code>large</code> and <code>xlarge</code>.
+                            A <code>space</code> is an independent element that serves as a buffer between elements.
+                            This class comes with different sizes which includes <code>large</code> and{' '}
+                            <code>xlarge</code>.
                         </p>
                         <div className="space bg-indigo-100 mb-1"></div>
                         <div className="space large bg-indigo-200 mb-1"></div>
                         <div className="space xlarge bg-indigo-300 mb-1"></div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="space bg-indigo-100 mb-1"></div>
+                        <CodeBlock
+                            code={`<div class="space bg-indigo-100 mb-1"></div>
 <div class="space large bg-indigo-200 mb-1"></div>
-<div class="space xlarge bg-indigo-300 mb-1"></div>`} language='htmlbars' />
+<div class="space xlarge bg-indigo-300 mb-1"></div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
-                <Pagination
-                    prevLink={{ name: 'Padding', link: './padding' }}
-                />
+                <Pagination prevLink={{ name: 'Padding', link: './padding' }} />
             </div>
             <TableOfContents entries={toc} />
         </main>

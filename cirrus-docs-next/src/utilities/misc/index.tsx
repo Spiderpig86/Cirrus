@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
@@ -7,6 +8,7 @@ import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { toc } from './toc';
 import { DefaultLayout } from '../../../layouts/default';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const MiscUtilsPage: React.FC<any> = (props) => {
     const classTable = [
@@ -93,6 +95,9 @@ position: absolute;`,
 
     return (
         <main className="page-layout">
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Misc</title>
+            </Head>
             <div>
                 <section className="padtop" id="misc">
                     <div className="content">
@@ -146,9 +151,12 @@ position: absolute;`,
                             Float an element to the left with <code>u-pull-left</code>.
                         </p>
 
-                        <div className="bg-gray-200" style={{
-                            minHeight: '300px'
-                        }}>
+                        <div
+                            className="bg-gray-200"
+                            style={{
+                                minHeight: '300px',
+                            }}
+                        >
                             <div className="p-3">
                                 <ul className="menu u-pull-left w-40 pr-4">
                                     <li className="menu-item selected">
@@ -175,7 +183,8 @@ position: absolute;`,
                             </div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="p-3">
+                        <CodeBlock
+                            code={`<div class="p-3">
     <ul class="menu u-pull-left w-40 pr-4">
         <li class="menu-item selected"><a href="!#">Intro</a></li>
         <li class="menu-item"><a href="!#">Section 1</a></li>
@@ -184,16 +193,21 @@ position: absolute;`,
         <li class="menu-item"><a href="!#">Conclusion</a></li>
     </ul>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                         <div className="space large"></div>
 
                         <h6>Float Right</h6>
                         <p>
                             Float an element to the right with <code>u-pull-right</code>.
                         </p>
-                        <div className="bg-gray-100 u-round" style={{
-                            minHeight: '300px'
-                        }}>
+                        <div
+                            className="bg-gray-100 u-round"
+                            style={{
+                                minHeight: '300px',
+                            }}
+                        >
                             <div className="p-3">
                                 <ul className="menu u-pull-right w-40 pr-4">
                                     <li className="menu-item selected">
@@ -220,7 +234,8 @@ position: absolute;`,
                             </div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="p-3">
+                        <CodeBlock
+                            code={`<div class="p-3">
     <ul class="menu u-pull-right w-40 pr-4">
         <li class="menu-item selected"><a href="!#">Intro</a></li>
         <li class="menu-item"><a href="!#">Section 1</a></li>
@@ -229,7 +244,9 @@ position: absolute;`,
         <li class="menu-item"><a href="!#">Conclusion</a></li>
     </ul>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -364,9 +381,12 @@ position: absolute;`,
                             <p>I am in the middle. 🔥</p>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="bg-gray-100 u-center" style="height: 500px;">
+                        <CodeBlock
+                            code={`<div class="bg-gray-100 u-center" style="height: 500px;">
     <p>I am in the middle. 🔥</p>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                         <div className="space large"></div>
 
                         <h6>Center with Offsets</h6>
@@ -383,9 +403,12 @@ position: absolute;`,
                             <p className="u-center-alt">I am in the middle. 🔥</p>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="bg-gray-100 u-position-relative" style="height: 500px;">
+                        <CodeBlock
+                            code={`<div class="bg-gray-100 u-position-relative" style="height: 500px;">
     <p class="u-center-alt">I am in the middle. 🔥</p>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -416,9 +439,12 @@ position: absolute;`,
                             ></div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="bg-gray-100 u-position-relative" style="height: 200px;">
+                        <CodeBlock
+                            code={`<div class="bg-gray-100 u-position-relative" style="height: 200px;">
     <div class="u-overlay bg-teal-300" style="opacity: 0.5;"></div>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
 
                         <h6>Overflow</h6>
@@ -489,7 +515,8 @@ position: absolute;`,
                             </div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="bg-gray-100 u-overflow-auto u-flex">
+                        <CodeBlock
+                            code={`<div class="bg-gray-100 u-overflow-auto u-flex">
     <div class="col px-3">
         <p>Default Behavior</p>
         <div class="bg-indigo-200" style="max-height: 200px; max-width: 200px;">
@@ -508,7 +535,9 @@ position: absolute;`,
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
     </div>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
 
                         <h6>Disabled</h6>
@@ -530,7 +559,10 @@ position: absolute;`,
                             <p className="u-unselectable">You cannot highlight this sentence.</p>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<p class="u-unselectable">You cannot highlight this sentence.</p>`} language="htmlbars" />
+                        <CodeBlock
+                            code={`<p class="u-unselectable">You cannot highlight this sentence.</p>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
 
                         <h6>Round</h6>
@@ -546,7 +578,10 @@ position: absolute;`,
                             />
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<img src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="cloud" class="u-round">`} language="htmlbars" />
+                        <CodeBlock
+                            code={`<img src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="cloud" class="u-round">`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
 
                         <h6>Circle</h6>
@@ -581,8 +616,11 @@ position: absolute;`,
                                 No outline.
                             </div>
                         </div>
-                        <CodeBlock code={`<div class="p-3" style="outline-color: gray; outline-style: dotted;">With outline.</div>
-<div class="p-3 u-no-outline" style="outline-color: gray; outline-style: dotted;">No outline.</div>`} language="htmlbars" />
+                        <CodeBlock
+                            code={`<div class="p-3" style="outline-color: gray; outline-style: dotted;">With outline.</div>
+<div class="p-3 u-no-outline" style="outline-color: gray; outline-style: dotted;">No outline.</div>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
                     </div>
                 </section>
