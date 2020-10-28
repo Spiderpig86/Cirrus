@@ -12,7 +12,7 @@ export const LandingLayout = ({ children, ...rest }: any) => {
     // Bind Redux Store
     // const dispatch = useDispatch();
     // const pageAtTop = useSelector((state: any) => state.pageAtTop);
-    const {state, dispatch} = useContext(Context);
+    const { state, dispatch } = useContext(Context);
 
     const [scrollTop, setScrollTop] = useState(0);
 

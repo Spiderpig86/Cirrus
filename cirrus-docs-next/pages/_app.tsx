@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -36,6 +36,7 @@ import '../static/css/cirrus.min.css';
 const App = ({ Component, pageProps }) => {
     library.add(fas);
     library.add(fab);
+
     return (
         <Store>
             <Head>
@@ -71,6 +72,8 @@ const App = ({ Component, pageProps }) => {
                 <meta name="msapplication-TileImage" content="/ms-icon-150x150.png" />
                 <meta name="msapplication-TileImage" content="/ms-icon-310x310.png" />
                 <link rel="manifest" href="/manifest.json" />
+
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
             </Head>
             <LayoutTree Component={Component} pageProps={pageProps} />
         </Store>

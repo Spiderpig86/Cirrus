@@ -29,7 +29,12 @@ export const Header: React.FC<HeaderProps> = (props) => {
     }, []);
 
     return (
-        <div id="header" className={`header header-fixed unselectable header-animated ${menuShown ? 'translucent' : ''} ${props.extraClasses ?? ''}`}>
+        <div
+            id="header"
+            className={`header header-fixed unselectable header-animated doc-header ${menuShown ? 'translucent' : ''} ${
+                props.extraClasses ?? ''
+            }`}
+        >
             <div className="w-100">
                 <div className="header__contents mx-auto">
                     <div className="header-brand">

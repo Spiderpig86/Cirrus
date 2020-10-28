@@ -35,7 +35,7 @@ export const Preview: React.FC<any> = (props) => {
 
                     {['red', 'yellow', 'green', 'blue', 'purple'].map((color) => {
                         return (
-                            <div className="row u-justify-center">
+                            <div className="row u-justify-center" key={color}>
                                 {v2.get(color).map((className, index) => (
                                     <ColorSquare key={color + className.class + index} className={className.class} />
                                 ))}

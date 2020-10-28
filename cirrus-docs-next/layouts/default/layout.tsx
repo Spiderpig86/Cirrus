@@ -1,14 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Header } from '../components/header';
 import { Sidebar } from '../components/sidebar';
 import { Footer } from '../components/footer';
 
+import initializeAlgolia from '../../static/js/algolia.js';
+
 export const DefaultLayout = ({ children, ...rest }: any) => {
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.setAttribute('type', 'text/javascript');
+        script.src = "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js";
+        document.head.appendChild(script);
+        initializeAlgolia();
+    }, []);
+
+    // Search bar
+    const rightNavChildren: JSX.Element = (
+        <div className="nav-item">
+            <input type="search" id="cirrus-search" className="input-small" placeholder="Search..." />
+        </div>
+    );
+
     return (
         <div>
-            <Header extraClasses="header--docs-theme" />
+            <Header extraClasses="header--docs-theme" rightNavChildren={rightNavChildren} />
             <div className="default-layout tree-nav-body mx-auto mb-0">
                 <div className="tree-nav-header u-items-center">
                     <a href="#sidebar" className="u-hide-tablet u-shadow-none">
@@ -22,9 +39,14 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
                         <Sidebar {...rest} />
                     </div>
                 </div>
-                <a href="#nonexistent-div" id="sidebar-close" className="tree-nav-close p-0 u-shadow-none" style={{
-                    boxShadow: 'none'
-                }}></a>
+                <a
+                    href="#nonexistent-div"
+                    id="sidebar-close"
+                    className="tree-nav-close p-0 u-shadow-none"
+                    style={{
+                        boxShadow: 'none',
+                    }}
+                ></a>
                 <div
                     className="tree-nav-container h-auto"
                     style={{
@@ -35,6 +57,10 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
                 </div>
             </div>
             <Footer />
+            <script
+                type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+            ></script>
         </div>
     );
 };
