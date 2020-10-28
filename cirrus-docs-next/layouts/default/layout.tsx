@@ -9,11 +9,15 @@ import initializeAlgolia from '../../static/js/algolia.js';
 
 export const DefaultLayout = ({ children, ...rest }: any) => {
     useEffect(() => {
-        const script = document.createElement('script');
-        script.setAttribute('type', 'text/javascript');
-        script.src = "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js";
-        document.head.appendChild(script);
-        initializeAlgolia();
+        new Promise((resolve) => {
+            const script = document.createElement('script');
+            script.setAttribute('type', 'text/javascript');
+            script.src = 'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js';
+            document.head.appendChild(script);
+            script.addEventListener('load', resolve, {
+                once: true,
+            });
+        }).then(() => initializeAlgolia());
     }, []);
 
     // Search bar
