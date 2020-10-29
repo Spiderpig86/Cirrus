@@ -19,7 +19,7 @@
     transition: all var(--animation-duration);
     background-color: var(--btn-color);
     border-color: var(--btn-border-color);
-    color: var(--btn-fg);
+    color: var(--btn-fg) !important; /* Override link forecolor for link with btn class */
     font-size: 0.75rem;
     letter-spacing: 0.03rem;
     text-transform: uppercase;
