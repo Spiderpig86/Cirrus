@@ -283,8 +283,7 @@ export const DevelopingPage: React.FC<any> = (props) => {
                         </p>
                         <p>
                             For more granular control, you can modify the theme for a specific control by changing the
-                            CSS variable value for that specific class. For example, the modification below changes the
-                            background color of <b>all buttons</b> for <code>btn--info</code> to <code>#222</code>.
+                            CSS variable value for that specific class. For example, the modification below changes the color for <code>btn--info</code> to <code>#0066ff</code>.
                         </p>
                         <CodeBlock
                             code={`:root {
@@ -295,10 +294,11 @@ export const DevelopingPage: React.FC<any> = (props) => {
     --cirrus-primary: #{$cirrus-primary};
     --cirrus-primary-rgb: #{hex-to-rgb($cirrus-primary)};
     --cirrus-primary-light: #{$cirrus-primary-light};
-    
+
     /* ... */
 
-    --my-color-here: '#0066ff';
+    --cirrus-info: '#0066ff';
+
     /* ... */
 }`}
                             language={'scss'}

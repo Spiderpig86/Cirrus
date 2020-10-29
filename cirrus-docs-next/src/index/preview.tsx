@@ -430,18 +430,18 @@ export const Preview: React.FC<any> = (props) => {
                         <div className="mx-1">
                             <button className="btn-info">
                                 See More
-                                <i className="fas fa-chevron-right pl-1" aria-hidden="true" />
+                                <FontAwesomeIcon className="fa-wrapper pl-1" icon={['fas', 'chevron-right']} />
                             </button>
                         </div>
                         <div className="mx-1">
                             <button className="btn-info">
-                                <i className="fas fa-chevron-left pr-1" aria-hidden="true" />
+                                <FontAwesomeIcon className="fa-wrapper pr-1" icon={['fas', 'chevron-left']} />
                                 See More
                             </button>
                         </div>
                         <div className="mx-1">
                             <button className="btn-info btn--circle">
-                                <i className="fas fa-comment" aria-hidden="true" />
+                                <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'comment']} />
                             </button>
                         </div>
                     </div>
@@ -528,7 +528,7 @@ export const Preview: React.FC<any> = (props) => {
                                 <div className="input-control">
                                     <input type="email" className="input-contains-icon" placeholder="Left glyph" />
                                     <span className="icon">
-                                        <i className="fas fa-wrapper fa-layer-group small" aria-hidden="true" />
+                                        <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'layer-group']} />
                                     </span>
                                 </div>
                             </div>
@@ -541,7 +541,7 @@ export const Preview: React.FC<any> = (props) => {
                                         placeholder="Right glyph"
                                     />
                                     <span className="icon icon-right">
-                                        <i className="fas fa-wrapper fa-poop small" aria-hidden="true" />
+                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'poop']} />
                                     </span>
                                 </div>
                             </div>
@@ -554,10 +554,10 @@ export const Preview: React.FC<any> = (props) => {
                                         placeholder="Left and right glyphs"
                                     />
                                     <span className="icon">
-                                        <i className="fas fa-wrapper fa-layer-group small" aria-hidden="true" />
+                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'layer-group']} />
                                     </span>
                                     <span className="icon icon-right">
-                                        <i className="fas fa-wrapper fa-poop small" aria-hidden="true" />
+                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'poop']} />
                                     </span>
                                 </div>
                             </div>
@@ -859,7 +859,7 @@ export const Preview: React.FC<any> = (props) => {
                                         placeholder="Left glyph"
                                     />
                                     <span className="icon">
-                                        <i className="fas fa-wrapper fa-layer-group small" aria-hidden="true" />
+                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'layer-group']} />
                                     </span>
                                 </div>
                             </div>
@@ -872,7 +872,7 @@ export const Preview: React.FC<any> = (props) => {
                                         placeholder="Right glyph"
                                     />
                                     <span className="icon icon-right">
-                                        <i className="fas fa-wrapper fa-poop small" aria-hidden="true" />
+                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'poop']} />
                                     </span>
                                 </div>
                             </div>
@@ -885,10 +885,10 @@ export const Preview: React.FC<any> = (props) => {
                                         placeholder="Left and right glyphs"
                                     />
                                     <span className="icon">
-                                        <i className="fas fa-wrapper fa-layer-group small" aria-hidden="true" />
+                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'layer-group']} />
                                     </span>
                                     <span className="icon icon-right">
-                                        <i className="fas fa-wrapper fa-poop small" aria-hidden="true" />
+                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'poop']} />
                                     </span>
                                 </div>
                             </div>
@@ -938,7 +938,7 @@ export const Preview: React.FC<any> = (props) => {
                                 <button className="btn-primary my-1 p-0">
                                     <a href="#" className="white">
                                         <span className="icon">
-                                            <i className="fas fa-wrapper fa-user small" />
+                                            <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'user']} />
                                         </span>
                                         Join
                                     </a>
@@ -963,14 +963,14 @@ export const Preview: React.FC<any> = (props) => {
                             <div className="nav-item u-text-center">
                                 <a href="#">
                                     <span className="icon">
-                                        <i className="fab fa-wrapper fa-github" aria-hidden="true" />
+                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fab', 'github']} />
                                     </span>
                                 </a>
                             </div>
                             <div className="nav-item u-text-center">
                                 <a href="#">
                                     <span className="icon">
-                                        <i className="fab fa-wrapper fa-twitter" aria-hidden="true" />
+                                        <FontAwesomeIcon className="fa-wrapper small" icon={['fab', 'twitter']} />
                                     </span>
                                 </a>
                             </div>
@@ -1311,7 +1311,7 @@ export const Preview: React.FC<any> = (props) => {
                     <div className="modal-header">
                         <a href="#components" className="u-pull-right" aria-label="Close">
                             <span className="icon">
-                                <i className="fa fa-times" />
+                                <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'times']} />
                             </span>
                         </a>
                         <div className="modal-title">Invite</div>
@@ -1329,7 +1329,7 @@ export const Preview: React.FC<any> = (props) => {
                                     placeholder="Search for team members"
                                 />
                                 <span className="icon">
-                                    <i className="fa-wrapper fas fa-search small" aria-hidden="true" />
+                                    <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'search']} />
                                 </span>
                             </div>
                         </div>
@@ -1354,7 +1354,7 @@ export const Preview: React.FC<any> = (props) => {
                                 <div className="tile__buttons">
                                     <button className="btn-success btn-small uppercase">
                                         <span className="icon">
-                                            <i className="fa-wrapper small fas fa-plus" />
+                                            <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'plus']} />
                                         </span>
                                     </button>
                                 </div>
@@ -1382,7 +1382,7 @@ export const Preview: React.FC<any> = (props) => {
                                 <div className="tile__buttons">
                                     <button className="btn-success btn-small uppercase">
                                         <span className="icon">
-                                            <i className="fa-wrapper small fas fa-plus" />
+                                            <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'plus']} />
                                         </span>
                                     </button>
                                 </div>
@@ -1410,7 +1410,7 @@ export const Preview: React.FC<any> = (props) => {
                                 <div className="tile__buttons">
                                     <button className="btn-danger btn-small uppercase">
                                         <span className="icon">
-                                            <i className="fa-wrapper small fas fa-times" />
+                                            <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'times']} />
                                         </span>
                                     </button>
                                 </div>
@@ -1438,7 +1438,7 @@ export const Preview: React.FC<any> = (props) => {
                                 <div className="tile__buttons">
                                     <button className="btn-success btn-small uppercase">
                                         <span className="icon">
-                                            <i className="fa-wrapper small fas fa-plus" />
+                                            <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'plus']} />
                                         </span>
                                     </button>
                                 </div>
@@ -1466,7 +1466,7 @@ export const Preview: React.FC<any> = (props) => {
                                 <div className="tile__buttons">
                                     <button className="btn-success btn-small uppercase">
                                         <span className="icon">
-                                            <i className="fa-wrapper small fas fa-plus" />
+                                            <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'plus']} />
                                         </span>
                                     </button>
                                 </div>

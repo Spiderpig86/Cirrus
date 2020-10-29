@@ -219,6 +219,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                                                 setPlaygroundCdn(version);
                                                 reloadIFrame();
                                             }}
+                                            key={version}
                                         >
                                             <a>{version}</a>
                                         </li>
@@ -279,6 +280,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                                 fixedOverflowWidgets: false,
                                 folding: true,
                                 foldingStrategy: 'auto',
+                                font: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
                                 fontLigatures: true,
                                 fontSize: 14,
                                 formatOnPaste: false,

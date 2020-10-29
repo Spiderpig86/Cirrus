@@ -11,6 +11,7 @@ import { DefaultLayout } from '../../layouts/default';
 
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../constants';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const WhyPage: React.FC<any> = (props) => {
     // TODO: Move to constants
@@ -189,10 +190,10 @@ export const WhyPage: React.FC<any> = (props) => {
                                 </div>
                             </div>
                             <div className="frame__body">
-                                <div className="tile level p-1  ">
+                                <div className="tile level p-1">
                                     <div className="tile-avatar">
                                         <span className="icon">
-                                            <i className="fa fa-wrapper fa-twitter" aria-hidden="true"></i>
+                                            <FontAwesomeIcon className="fa-wrapper small" icon={['fab', 'twitter']} />
                                         </span>
                                     </div>
                                     <div className="tile__container">
@@ -211,7 +212,7 @@ export const WhyPage: React.FC<any> = (props) => {
                                 <div className="tile level p-1">
                                     <div className="tile-avatar">
                                         <span className="icon">
-                                            <i className="fa fa-wrapper fa-instagram" aria-hidden="true"></i>
+                                            <FontAwesomeIcon className="fa-wrapper small" icon={['fab', 'instagram']} />
                                         </span>
                                     </div>
                                     <div className="tile__container">
@@ -223,7 +224,7 @@ export const WhyPage: React.FC<any> = (props) => {
                                 <div className="tile level p-1">
                                     <div className="tile-avatar">
                                         <span className="icon">
-                                            <i className="fa fa-wrapper fa-envelope-o" aria-hidden="true"></i>
+                                            <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'envelope']} />
                                         </span>
                                     </div>
                                     <div className="tile__container">
@@ -235,7 +236,10 @@ export const WhyPage: React.FC<any> = (props) => {
                                 <div className="tile level p-1">
                                     <div className="tile-avatar">
                                         <span className="icon">
-                                            <i className="fa fa-wrapper fa-map-marker" aria-hidden="true"></i>
+                                            <FontAwesomeIcon
+                                                className="fa-wrapper small"
+                                                icon={['fas', 'map-marker']}
+                                            />
                                         </span>
                                     </div>
                                     <div className="tile__container">

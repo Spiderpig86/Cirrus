@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const PlaceholderPage: React.FC<any> = (props) => {
     return (
@@ -61,7 +62,7 @@ export const PlaceholderPage: React.FC<any> = (props) => {
                         <div className="placeholder">
                             <div className="placeholder-icon">
                                 <span className="icon">
-                                    <i className="fa fa-wrapper fa-coffee x-large"></i>
+                                    <FontAwesomeIcon className="fa-wrapper x-large" icon={['fas', 'coffee']} />
                                 </span>
                             </div>
                             <h6 className="placeholder-title">The sever is currently taking a nap.</h6>
@@ -101,7 +102,7 @@ export const PlaceholderPage: React.FC<any> = (props) => {
                         <div className="placeholder">
                             <div className="placeholder-icon">
                                 <span className="icon">
-                                    <i className="fa fa-wrapper fa-envelope x-large"></i>
+                                    <FontAwesomeIcon className="fa-wrapper x-large" icon={['fas', 'envelope']} />
                                 </span>
                             </div>
                             <h6 className="placeholder-title">Don't wait for the latest updates.</h6>

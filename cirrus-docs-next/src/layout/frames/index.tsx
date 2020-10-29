@@ -15,9 +15,9 @@ import { PAGE_TITLE_PREFIX } from '../../../constants';
 export const FramesPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
-        <Head>
-            <title>{PAGE_TITLE_PREFIX} Frames</title>
-        </Head>
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Frames</title>
+            </Head>
             <div>
                 <section className="padtop" id="frames">
                     <div className="content">
@@ -161,16 +161,28 @@ export const FramesPage: React.FC<any> = (props) => {
                                         </div>
                                         <div className="row">
                                             <a className="col" href="!#">
-                                                <i className="fa fa-wrapper fa-facebook link-btn" aria-hidden="true" />
+                                                <FontAwesomeIcon
+                                                    className="fa-wrapper small link-btn"
+                                                    icon={['fab', 'facebook']}
+                                                />
                                             </a>
                                             <a className="col" href="!#">
-                                                <i className="fa fa-wrapper fa-twitter link-btn" aria-hidden="true" />
+                                                <FontAwesomeIcon
+                                                    className="fa-wrapper small link-btn"
+                                                    icon={['fab', 'twitter']}
+                                                />
                                             </a>
                                             <a className="col" href="!#">
-                                                <i className="fa fa-wrapper fa-instagram link-btn" aria-hidden="true" />
+                                                <FontAwesomeIcon
+                                                    className="fa-wrapper small link-btn"
+                                                    icon={['fab', 'instagram']}
+                                                />
                                             </a>
                                             <a className="col" href="!#">
-                                                <i className="fa fa-wrapper fa-medium link-btn" aria-hidden="true" />
+                                                <FontAwesomeIcon
+                                                    className="fa-wrapper small link-btn"
+                                                    icon={['fab', 'medium']}
+                                                />
                                             </a>
                                         </div>
                                     </div>
@@ -454,7 +466,10 @@ export const FramesPage: React.FC<any> = (props) => {
                                         <div className="tile level r">
                                             <div className="tile-avatar">
                                                 <span className="icon">
-                                                    <i className="fa fa-wrapper fa-twitter" aria-hidden="true" />
+                                                    <FontAwesomeIcon
+                                                        className="fa-wrapper small link-btn"
+                                                        icon={['fab', 'twitter']}
+                                                    />
                                                 </span>
                                             </div>
                                             <div className="tile__container">
@@ -475,7 +490,10 @@ export const FramesPage: React.FC<any> = (props) => {
                                         <div className="tile level r">
                                             <div className="tile-avatar">
                                                 <span className="icon">
-                                                    <i className="fa fa-wrapper fa-instagram" aria-hidden="true" />
+                                                    <FontAwesomeIcon
+                                                        className="fa-wrapper small"
+                                                        icon={['fab', 'instagram']}
+                                                    />
                                                 </span>
                                             </div>
                                             <div className="tile__container">
@@ -486,6 +504,10 @@ export const FramesPage: React.FC<any> = (props) => {
                                         <div className="tile level r">
                                             <div className="tile-avatar">
                                                 <span className="icon">
+                                                    <FontAwesomeIcon
+                                                        className="fa-wrapper small"
+                                                        icon={['fas', 'envelope']}
+                                                    />
                                                     <i className="fa fa-wrapper fa-envelope-o" aria-hidden="true" />
                                                 </span>
                                             </div>
@@ -497,7 +519,10 @@ export const FramesPage: React.FC<any> = (props) => {
                                         <div className="tile level r">
                                             <div className="tile-avatar">
                                                 <span className="icon">
-                                                    <i className="fa fa-wrapper fa-map-marker" aria-hidden="true" />
+                                                    <FontAwesomeIcon
+                                                        className="fa-wrapper small"
+                                                        icon={['fas', 'map-marker']}
+                                                    />
                                                 </span>
                                             </div>
                                             <div className="tile__container">
