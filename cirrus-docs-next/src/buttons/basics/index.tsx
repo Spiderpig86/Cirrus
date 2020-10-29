@@ -110,6 +110,8 @@ export const ButtonPage: React.FC<any> = (props) => {
                         />
                         <div className="space"></div>
 
+                        <a href="#" className="btn">Test</a>
+
                         <h6>Outline</h6>
                         <div className="row my-3">
                             {btnColors

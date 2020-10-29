@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
@@ -48,6 +48,8 @@ export const WhyPage: React.FC<any> = (props) => {
         },
     ];
 
+    useEffect(() => {}, []);
+
     return (
         <main className="page-layout">
             <Head>
@@ -58,10 +60,13 @@ export const WhyPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Why Cirrus?" link="#why" />
                         <div className="divider"></div>
-                        <blockquote>
-                            <i>It ain't much, but it's honest work. — Some guy somewhere on a farm.</i>
-                        </blockquote>
-                        <p>Here are some reasons you may want to use Cirrus.</p>
+                        <p>
+                            Cirrus is a modular, responsive, and component focused SCSS framework aimed at bringing a
+                            better developer experience. The framework starts working straight out of the box right by
+                            providing a minimal base style for your web app. You can quickly construct your app by using
+                            many of the framework's pre-built components. Once that is complete, you can use any of the
+                            utility classes to tweak the designs to your liking.{' '}
+                        </p>
                     </div>
                 </section>
 
@@ -165,6 +170,22 @@ export const WhyPage: React.FC<any> = (props) => {
                         <p>
                             Cirrus comes with many different classes that help you quickly construct beautiful looking
                             components quickly without having to come up with your own design.
+                        </p>
+
+                        <p>
+                            The example is constructed using an{' '}
+                            <Link href="/components/avatar">
+                                <a className="u u-LR">avatar</a>
+                            </Link>
+                            ,{' '}
+                            <Link href="/components/tabs">
+                                <a className="u u-LR">tabs</a>
+                            </Link>
+                            , and{' '}
+                            <Link href="/components/tiles">
+                                <a className="u u-LR">tiles</a>
+                            </Link>
+                            .
                         </p>
 
                         <div className="space"></div>
@@ -308,20 +329,83 @@ export const WhyPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>Cirrus now ships with many utility classes to get the exact look you want.</p>
 
+                        <p>
+                            Let's say we want to move the overlayed text on top of our image in the center and move the
+                            image description to the right of the image only for larger screen sizes. The contents must
+                            be vertically aligned.
+                        </p>
+
+                        <p>All of these requirements can be done just with utility classes <b>without any additional CSS.</b></p>
+
                         <div className="space"></div>
 
-                        <div className="u-flex u-justify-center u-items-center bg-orange-200">
-                            <div className="my-2">💎 Centered.</div>
+                        <p className="font-bold">Before</p>
+                        <div>
+                            <div>
+                                <div>
+                                    <p>
+                                        Overlayed text.
+                                    </p>
+                                    <img
+                                        src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80"
+                                        alt="cloud"
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Purus faucibus ornare suspendisse sed
+                                    nisi lacus.
+                                </p>
+                            </div>
                         </div>
+                        <CodeBlock code={`<div>
+    <div>
+        <div>
+            <p>Overlayed text.</p>
+            <img src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="cloud" />
+        </div>
+    </div>
+    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus faucibus ornare suspendisse sed nisi lacus.</p></div>
+</div>
+`} language='htmlbars' />
 
                         <div className="space"></div>
 
-                        <CodeBlock
-                            code={`<div class="u-flex u-justify-center u-items-center bg-orange-200">
-    <div class="my-2">💎 Centered.</div>
-</div>`}
-                            language="htmlbars"
-                        />
+                        <p className="font-bold">After</p>
+                        <div className="row u-items-center">
+                            <div className="col-lg-6">
+                                <div className="u-position-relative u-center">
+                                    <p className="u-position-absolute white font-bold u-center-alt lead">
+                                        Overlayed text.
+                                    </p>
+                                    <img
+                                        src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80"
+                                        alt="cloud"
+                                        className="u-round"
+                                    />
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+                        </div>
+                        <CodeBlock code={`<div class="row u-items-center">
+    <div class="col-lg-6">
+        <div class="u-position-relative u-center">
+            <p class="u-position-absolute white font-bold u-center-alt lead">Overlayed text.</p>
+            <img src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="cloud" class="u-round" />
+        </div>
+    </div>
+    <div class="col-lg-6"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+</div>
+`} language='htmlbars' />
+
+                        <div className="space"></div>
                     </div>
                 </section>
 

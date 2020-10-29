@@ -14,9 +14,9 @@ import { PAGE_TITLE_PREFIX } from '../../../constants';
 export const FormGroupsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
-        <Head>
-            <title>{PAGE_TITLE_PREFIX} Form Groups</title>
-        </Head>
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Form Groups</title>
+            </Head>
             <div>
                 <section className="padtop" id="form-groups">
                     <div className="content">
@@ -59,14 +59,17 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                                 </div>
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<div class="form-group">
+                                <CodeBlock
+                                    code={`<div class="form-group">
     <input type="search" class="form-group-input" placeholder="Search"/>
     <button class="form-group-btn">Go</button>
 </div>
 <div class="form-group">
     <label class="form-group-label">$</label>
     <input type="number" class="form-group-input" placeholder="How much would you like to donate?"/>
-</div>`} language="htmlbars" />
+</div>`}
+                                    language="htmlbars"
+                                />
                             </div>
                         </div>
                         <div className="space"></div>
@@ -83,12 +86,57 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                                 </div>
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<div class="form-group">
+                                <CodeBlock
+                                    code={`<div class="form-group">
     <input type="number" class="form-group-input" placeholder="How about now?"/>
     <label class="form-group-label">$</label>
-</div>`} language="htmlbars" />
+</div>`}
+                                    language="htmlbars"
+                                />
                             </div>
                         </div>
+                        <div className="space"></div>
+
+                        <p>
+                            You can also use a <code>select</code> within a <code>form-group</code>.
+                        </p>
+
+                        <div className="form-group">
+                            <label className="form-group-label">github.com/</label>
+                            <select className="form-group-input w-100" placeholder="Choose one">
+                                <option value="">Select one</option>
+                                <option value="option-1">Option 1</option>
+                                <option value="option-2">Option 2</option>
+                                <option value="option-3">Option 3</option>
+                            </select>
+                            <button className="form-group-btn btn-primary">Go</button>
+                        </div>
+                        <CodeBlock code={`<div class="form-group">
+    <label class="form-group-label">github.com/</label>
+    <select class="form-group-input w-100" placeholder="Choose one">
+        <option value="">Select one</option>
+        <option value="option-1">Option 1</option>
+        <option value="option-2">Option 2</option>
+        <option value="option-3">Option 3</option>
+    </select>
+    <button class="form-group-btn btn-primary">Go</button>
+</div>
+`} language='htmlbars' />
+                        <div className="space large"></div>
+
+                        <p>You can also attach a bunch of these controls together.</p>
+                        <div className="form-group">
+                            <label className="form-group-label">Dimensions</label>
+                            <input type="text" className="form-group-input" placeholder="Width" />
+                            <input type="text" className="form-group-input" placeholder="Height" />
+                            <button className="form-group-btn">Clear</button>
+                            <button className="form-group-btn btn-primary">Submit</button>
+                        </div>
+                        <CodeBlock code={`<div class="form-group">
+    <label class="form-group-label">Dimensions</label><input type="text" class="form-group-input" placeholder="Width" /><input type="text" class="form-group-input" placeholder="Height" /><button class="form-group-btn">Clear</button>
+    <button class="form-group-btn btn-primary">Submit</button>
+</div>
+`} language='htmlbars' />
                     </div>
                 </section>
 
@@ -128,7 +176,8 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                             <button className="form-group-btn btn-primary btn-xlarge">Go</button>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="form-group">
+                        <CodeBlock
+                            code={`<div class="form-group">
     <label class="form-group-label label-xsmall">github.com/</label>
     <input type="text" class="form-group-input input-xsmall" placeholder="Extra Small">
     <button class="form-group-btn btn-primary btn-xsmall">Go</button>
@@ -152,7 +201,9 @@ export const FormGroupsPage: React.FC<any> = (props) => {
     <label class="form-group-label label-xlarge">github.com/</label>
     <input type="text" class="form-group-input input-xlarge" placeholder="Extra Large">
     <button class="form-group-btn btn-primary btn-xlarge">Go</button>
-</div>`} language="htmlbars" />
+</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -226,12 +277,10 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                                     </label>
                                     <div className="section-body">
                                         <label className="radio">
-                                            <input type="radio" name="member" />
-                                            {' '}Yes
+                                            <input type="radio" name="member" /> Yes
                                         </label>
                                         <label className="radio">
-                                            <input type="radio" name="member" />
-                                            {' '}No
+                                            <input type="radio" name="member" /> No
                                         </label>
                                     </div>
                                     <span className="required info">This section is required.</span>
@@ -302,9 +351,7 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination
-                    prevLink={{ name: 'Toggle', link: './toggle' }}
-                />
+                <Pagination prevLink={{ name: 'Toggle', link: './toggle' }} />
             </div>
             <TableOfContents entries={toc} />
         </main>
