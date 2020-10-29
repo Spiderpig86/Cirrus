@@ -19,7 +19,7 @@
     transition: all var(--animation-duration);
     background-color: var(--btn-color);
     border-color: var(--btn-border-color);
-    color: var(--btn-fg) !important; /* Override link forecolor for link with btn class */
+    color: var(--btn-fg);
     font-size: 0.75rem;
     letter-spacing: 0.03rem;
     text-transform: uppercase;
@@ -36,6 +36,7 @@
     &:hover {
         transition: all var(--animation-duration);
         --btn-color: #{map-get($grays, '100')};
+        color: var(--btn-fg);
     }
 
     &:active {
@@ -141,7 +142,7 @@
             --btn-color: rgba(0, 0, 0, 0.1);
         }
         &.outline {
-            color: var(--cirrus-dark);
+            --btn-fg: var(--cirrus-dark);
         }
     }
 

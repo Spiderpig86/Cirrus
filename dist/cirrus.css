@@ -239,8 +239,7 @@ fieldset {
   transition: all var(--animation-duration);
   background-color: var(--btn-color);
   border-color: var(--btn-border-color);
-  color: var(--btn-fg) !important;
-  /* Override link forecolor for link with btn class */
+  color: var(--btn-fg);
   font-size: 0.75rem;
   letter-spacing: 0.03rem;
   text-transform: uppercase;
@@ -267,7 +266,8 @@ fieldset {
   /* Alternatives to pad-left and pad-right */ }
   .btn:hover, button:hover, [type="submit"]:hover, [type="reset"]:hover, [type="button"]:hover {
     transition: all var(--animation-duration);
-    --btn-color: #f1f3f5; }
+    --btn-color: #f1f3f5;
+    color: var(--btn-fg); }
   .btn:active, button:active, [type="submit"]:active, [type="reset"]:active, [type="button"]:active {
     transition: var(--animation-duration) ease; }
   .btn:focus, button:focus, [type="submit"]:focus, [type="reset"]:focus, [type="button"]:focus {
@@ -345,7 +345,7 @@ fieldset {
     .btn.btn-transparent:hover, button.btn-transparent:hover, [type="submit"].btn-transparent:hover, [type="reset"].btn-transparent:hover, [type="button"].btn-transparent:hover {
       --btn-color: rgba(0, 0, 0, 0.1); }
     .btn.btn-transparent.outline, button.btn-transparent.outline, [type="submit"].btn-transparent.outline, [type="reset"].btn-transparent.outline, [type="button"].btn-transparent.outline {
-      color: var(--cirrus-dark); }
+      --btn-fg: var(--cirrus-dark); }
   .btn.btn-light, button.btn-light, [type="submit"].btn-light, [type="reset"].btn-light, [type="button"].btn-light {
     --btn-color: var(--cirrus-light);
     --btn-fg: var(--cirrus-dark);
