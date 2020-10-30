@@ -60,7 +60,7 @@ export const SetUpPage: React.FC<any> = (props) => {
                         <b>JsDelivr</b>
                         <div className="my-2">
                             <CodeBlock
-                                code={`https://cdn.jsdelivr.net/npm/cirrus-ui@0.5.5/dist/cirrus.min.css`}
+                                code={`https://cdn.jsdelivr.net/npm/cirrus-ui@0.6.0/dist/cirrus.min.css`}
                                 language="text"
                             />
                         </div>
@@ -248,15 +248,15 @@ export const SetUpPage: React.FC<any> = (props) => {
          </div>
          <div class="header-nav" id="header-menu">
             <div class="nav-left">
-               <div class="nav-item text-center"> <a href="!#"> <span class="icon"> <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i> </span> </a> </div>
+               <div class="nav-item text-center"> <a href="#"> <span class="icon"> <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i> </span> </a> </div>
             </div>
             <div class="nav-right">
                <div class="nav-item has-sub toggle-hover" id="dropdown">
                   <a class="nav-dropdown-link">Menu</a> 
                   <ul class="dropdown-menu dropdown-animated" role="menu">
-                     <li role="menu-item"><a href="!#">First Item</a></li>
-                     <li role="menu-item"><a href="!#">Second Item</a></li>
-                     <li role="menu-item"><a href="!#">Third Item</a></li>
+                     <li role="menu-item"><a href="#">First Item</a></li>
+                     <li role="menu-item"><a href="#">Second Item</a></li>
+                     <li role="menu-item"><a href="#">Third Item</a></li>
                   </ul>
                </div>
             </div>

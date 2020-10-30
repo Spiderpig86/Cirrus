@@ -40,7 +40,7 @@ const Landing: React.FC<any> = () => {
                         <div className="content">
                             <h1 className="headline-4 white title">Cirrus.CSS</h1>
                             <h5 className="text-gray-300 sub-title font-alt font-normal">
-                                A <b className="white">component</b> and <b className="white">utility focused</b> CSS
+                                A <b className="white">component</b> and <b className="white">utility centric</b> CSS
                                 framework <br /> designed for <b className="white">rapid prototyping</b>.
                             </h5>
 
@@ -84,7 +84,7 @@ const Landing: React.FC<any> = () => {
                     </div>
 
                     <div
-                        className="hero bg-red-100"
+                        className="hero bg-indigo-100"
                         style={{
                             borderRadius: '.25rem',
                         }}
@@ -128,7 +128,7 @@ const Landing: React.FC<any> = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-8 bg-indigo-200">
+            <section className="py-8 bg-gray-200">
                 <div className="content u-text-center">
                     <div className="row">
                         <div className="col mb-2">

@@ -61,11 +61,8 @@ export const WhyPage: React.FC<any> = (props) => {
                         <Headline title="Why Cirrus?" link="#why" />
                         <div className="divider"></div>
                         <p>
-                            Cirrus is a modular, responsive, and component focused SCSS framework aimed at bringing a
-                            better developer experience. The framework starts working straight out of the box right by
-                            providing a minimal base style for your web app. You can quickly construct your app by using
-                            many of the framework's pre-built components. Once that is complete, you can use any of the
-                            utility classes to tweak the designs to your liking.{' '}
+                            Cirrus is a modular, responsive, and component centric SCSS framework aimed at bringing not
+                            only beautiful, hassle-free styling, but also a better developer experience.
                         </p>
                     </div>
                 </section>
@@ -335,7 +332,10 @@ export const WhyPage: React.FC<any> = (props) => {
                             be vertically aligned.
                         </p>
 
-                        <p>All of these requirements can be done just with utility classes <b>without any additional CSS.</b></p>
+                        <p>
+                            All of these requirements can be done just with utility classes{' '}
+                            <b>without any additional CSS.</b>
+                        </p>
 
                         <div className="space"></div>
 
@@ -343,9 +343,7 @@ export const WhyPage: React.FC<any> = (props) => {
                         <div>
                             <div>
                                 <div>
-                                    <p>
-                                        Overlayed text.
-                                    </p>
+                                    <p>Overlayed text.</p>
                                     <img
                                         src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80"
                                         alt="cloud"
@@ -360,7 +358,8 @@ export const WhyPage: React.FC<any> = (props) => {
                                 </p>
                             </div>
                         </div>
-                        <CodeBlock code={`<div>
+                        <CodeBlock
+                            code={`<div>
     <div>
         <div>
             <p>Overlayed text.</p>
@@ -369,7 +368,9 @@ export const WhyPage: React.FC<any> = (props) => {
     </div>
     <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus faucibus ornare suspendisse sed nisi lacus.</p></div>
 </div>
-`} language='htmlbars' />
+`}
+                            language="htmlbars"
+                        />
 
                         <div className="space"></div>
 
@@ -394,7 +395,8 @@ export const WhyPage: React.FC<any> = (props) => {
                                 </p>
                             </div>
                         </div>
-                        <CodeBlock code={`<div class="row u-items-center">
+                        <CodeBlock
+                            code={`<div class="row u-items-center">
     <div class="col-lg-6">
         <div class="u-position-relative u-center">
             <p class="u-position-absolute white font-bold u-center-alt lead">Overlayed text.</p>
@@ -403,9 +405,43 @@ export const WhyPage: React.FC<any> = (props) => {
     </div>
     <div class="col-lg-6"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
 </div>
-`} language='htmlbars' />
+`}
+                            language="htmlbars"
+                        />
 
                         <div className="space"></div>
+                    </div>
+                </section>
+
+                <section className="padtop" id="customize">
+                    <div className="content">
+                        <Headline title="Customize Your Build" link="#customize" />
+                        <div className="divider"></div>
+
+                        <p>Starting with 0.6.0, Cirrus can be more easily customized by editing just a few configuration files within the framework. <code>_size.scss</code> stores all configuration for font sizes, spacing, and breakpoints. <code>theme.scss</code> is the central place to modify any color that is used within the framework.</p>
+
+                        <CodeBlock code={`/* Spacing */
+$spacing-system: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32;
+$space-size: 0.5rem;
+
+/* Fonts */
+$font-size-xs: .7rem;
+$font-size-s: .85rem;
+$font-size-m: 1rem;
+$font-size-l: 1.35rem;
+$font-size-xl: 1.75rem;
+
+/* Grid Count */
+$grid-columns: 12;
+
+/* Grid Percents */
+$grid-width: 1 / $grid-columns;
+
+/* Tab Sizes */
+$tab-sizes: ('xsmall': 0.6rem, 'small': 0.75rem, 'large': 1.25rem, 'xlarge': 1.5rem);
+
+/* ... */`} language='scss' />
+                        <p>Find out how in the <Link href="/getting-started/developing"><a className="u u-LR">developing</a></Link> section.</p>
                     </div>
                 </section>
 

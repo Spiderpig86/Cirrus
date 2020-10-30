@@ -59,7 +59,7 @@ export const DevelopingPage: React.FC<any> = (props) => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>Ext (Full)-core</td>
+                                        <td>Ext (Full)</td>
                                         <td>
                                             <img src="https://img.badgesize.io/Spiderpig86/Cirrus/master/dist/cirrus.min.css.svg?style=flat-square" />
                                         </td>
