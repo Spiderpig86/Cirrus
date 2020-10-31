@@ -72,8 +72,8 @@ export const WhyPage: React.FC<any> = (props) => {
                         <Headline title="Lightweight" link="#lightweight" />
                         <div className="divider"></div>
                         <p>
-                            Cirrus comes with lots of functionality in a small package. Coming in at{' '}
-                            <b>17.2 KB with Brotli compression</b>, page loads are fast and data caps are not breached.
+                            Cirrus comes with lots of functionality in a small package which only consists of a single minified CSS file. <b>No extra JS libraries required</b>. Coming in at{' '}
+                            <b>17.2 KB with Brotli compression</b>, page loads are fast and animations are fluid.
                         </p>
 
                         {/* TODO MOVE TO NEW FILE */}

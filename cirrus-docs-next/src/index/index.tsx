@@ -62,7 +62,7 @@ const Landing: React.FC<any> = () => {
                         Created by <span className="text-primary">Stanley Lim</span>
                     </h6>
                     <p className="lead mb-3">
-                        A fully responsive and comprehensive CSS framework with beautiful controls and simplistic
+                        A fully responsive and comprehensive SCSS framework with beautiful controls and simplistic
                         structure. Integrate it with any existing design or use it to kick start your next project.
                     </p>
 
