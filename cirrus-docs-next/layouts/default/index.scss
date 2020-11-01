@@ -1,8 +1,7 @@
 .page-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr); /* Everything else before that table of contents bar fills width, toc uses 15rem */
-    max-width: 100rem;
-    width: 90%;
+    max-width: 90rem;
     margin: 0 auto;
 }
 

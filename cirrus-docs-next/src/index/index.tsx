@@ -40,7 +40,7 @@ const Landing: React.FC<any> = () => {
                         <div className="content">
                             <h1 className="headline-4 white title">Cirrus.CSS</h1>
                             <h5 className="text-gray-300 sub-title font-alt font-normal">
-                                A <b className="white">component</b> and <b className="white">utility centric</b> CSS
+                                A <b className="white">component</b> and <b className="white">utility centric</b> SCSS
                                 framework <br /> designed for <b className="white">rapid prototyping</b>.
                             </h5>
 
@@ -48,9 +48,14 @@ const Landing: React.FC<any> = () => {
                                 <b>Version 0.6.0</b> / Gamma II
                             </p>
 
-                            <Link href="/getting-started/setup">
-                                <button className="btn-light outline">Get Started</button>
-                            </Link>
+                            <div className="btn-group">
+                                <Link href="/getting-started/setup">
+                                    <button className="btn-light outline">Get Started</button>
+                                </Link>
+                                <Link href="/why">
+                                    <button className="btn-light outline">Why Cirrus</button>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                     <div className={`transition ` + (state.pageAtTop ? `` : `transition--visible`)}></div>

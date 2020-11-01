@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
 import { ResponsiveBar } from '@nivo/bar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { TableOfContents } from '../../layouts/components/toc';
 import { Headline } from '../../layouts/components/headline';
@@ -11,7 +12,6 @@ import { DefaultLayout } from '../../layouts/default';
 
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../constants';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const WhyPage: React.FC<any> = (props) => {
     // TODO: Move to constants
@@ -56,14 +56,44 @@ export const WhyPage: React.FC<any> = (props) => {
                 <title>{PAGE_TITLE_PREFIX} Why</title>
             </Head>
             <div>
-                <section id="why" className="padtop">
+                <section id="introduction" className="padtop">
                     <div className="content">
-                        <Headline title="Why Cirrus?" link="#why" />
+                        <Headline title="Introduction" link="#introduction" />
                         <div className="divider"></div>
                         <p>
-                            Cirrus is a modular, responsive, and component centric SCSS framework aimed at bringing not
-                            only beautiful, hassle-free styling, but also a better developer experience.
+                            Introducing <b>Cirrus</b>, a modular, responsive, and component centric SCSS framework aimed
+                            at bringing not only beautiful, hassle-free styling, but also a better developer experience.
                         </p>
+
+                        <ul>
+                            <li>
+                                🏭 Construct your web app or website using by composing beautifully designed components.
+                            </li>
+                            <li>🎨 Fully customizable themeing.</li>
+                            <li>⚡ The only file you need is the minified CSS file from a CDN.</li>
+                            <li>🌌 Fully open source.</li>
+                        </ul>
+
+                        <img
+                            className="ml-1"
+                            src="https://img.shields.io/badge/cirrus-0.6.0-blue.svg?style=flat-square"
+                            alt="Version"
+                        />
+                        <img
+                            className="ml-1"
+                            src="https://img.shields.io/github/license/Spiderpig86/Cirrus.svg?style=flat-square"
+                            alt="MIT License"
+                        />
+                        <img
+                            className="ml-1"
+                            src="https://img.shields.io/npm/dm/cirrus-ui.svg?style=flat-square"
+                            alt="NPM Downloads"
+                        />
+                        <img
+                            className="ml-1"
+                            src="https://data.jsdelivr.com/v1/package/npm/cirrus-ui/badge"
+                            alt="JsDelivr Downloads"
+                        />
                     </div>
                 </section>
 
@@ -72,7 +102,8 @@ export const WhyPage: React.FC<any> = (props) => {
                         <Headline title="Lightweight" link="#lightweight" />
                         <div className="divider"></div>
                         <p>
-                            Cirrus comes with lots of functionality in a small package which only consists of a single minified CSS file. <b>No extra JS libraries required</b>. Coming in at{' '}
+                            Cirrus comes with lots of functionality in a small package which only consists of a single
+                            minified CSS file. <b>No extra JS libraries required</b>. Coming in at{' '}
                             <b>17.2 KB with Brotli compression</b>, page loads are fast and animations are fluid.
                         </p>
 
@@ -418,9 +449,15 @@ export const WhyPage: React.FC<any> = (props) => {
                         <Headline title="Customize Your Build" link="#customize" />
                         <div className="divider"></div>
 
-                        <p>Starting with 0.6.0, Cirrus can be more easily customized by editing just a few configuration files within the framework. <code>_size.scss</code> stores all configuration for font sizes, spacing, and breakpoints. <code>theme.scss</code> is the central place to modify any color that is used within the framework.</p>
+                        <p>
+                            Starting with 0.6.0, Cirrus can be more easily customized by editing just a few
+                            configuration files within the framework. <code>_size.scss</code> stores all configuration
+                            for font sizes, spacing, and breakpoints. <code>theme.scss</code> is the central place to
+                            modify any color that is used within the framework.
+                        </p>
 
-                        <CodeBlock code={`/* Spacing */
+                        <CodeBlock
+                            code={`/* Spacing */
 $spacing-system: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32;
 $space-size: 0.5rem;
 
@@ -440,8 +477,50 @@ $grid-width: 1 / $grid-columns;
 /* Tab Sizes */
 $tab-sizes: ('xsmall': 0.6rem, 'small': 0.75rem, 'large': 1.25rem, 'xlarge': 1.5rem);
 
-/* ... */`} language='scss' />
-                        <p>Find out how in the <Link href="/getting-started/developing"><a className="u u-LR">developing</a></Link> section.</p>
+/* ... */`}
+                            language="scss"
+                        />
+                        <p>
+                            Find out how in the{' '}
+                            <Link href="/getting-started/developing">
+                                <a className="u u-LR">developing</a>
+                            </Link>{' '}
+                            section.
+                        </p>
+                    </div>
+                </section>
+
+                <section className="padtop u-text-center">
+                    <div className="content">
+                        <h1>Ready to give it a try?</h1>
+                        <div className="space"></div>
+
+                        <p>
+                            Head over to the <i>Setup</i> page to find out how to integrate Cirrus with your project.
+                            There is also a starter template already there just to give you a boost on getting your
+                            project up to speed. If you want to customize Cirrus to suit your needs, head on over to the{' '}
+                            <i>Developing</i> page.
+                        </p>
+
+                        <div className="u-text-center">
+                            <Link href="/getting-started/setup">
+                                <button className="btn-info">
+                                    Setup{' '}
+                                    <span className="icon">
+                                        <FontAwesomeIcon icon={['fas', 'chevron-right']} />
+                                    </span>
+                                </button>
+                            </Link>
+
+                            <Link href="/getting-started/developing">
+                                <button className="btn-info ml-2">
+                                    Developing{' '}
+                                    <span className="icon">
+                                        <FontAwesomeIcon icon={['fas', 'chevron-right']} />
+                                    </span>
+                                </button>
+                            </Link>
+                        </div>
                     </div>
                 </section>
 

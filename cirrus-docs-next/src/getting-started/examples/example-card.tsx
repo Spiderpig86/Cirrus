@@ -20,14 +20,14 @@ export const ExampleCard: React.FC<ExampleCardProps> = (props) => {
                     <div
                         className="card-image"
                         style={{
-                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) , rgba(226, 88, 104, 1)), url(${props.data.imageUrl})`,
+                            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 55%, rgba(226, 88, 104, 1)), url(${props.data.imageUrl})`,
                         }}
                     ></div>
                     <div className="title-container">
                         <p className="title">{props.data.title}</p>
-                        <div className="subtitle u-no-margin">
+                        <div className="subtitle m-0">
                             {props.data.tags.map((tag, index) => (
-                                <div key={index} className="tag tag--info">{tag}</div>
+                                <div key={index} className="tag tag--link">{tag}</div>
                             ))}
                         </div>
                     </div>
