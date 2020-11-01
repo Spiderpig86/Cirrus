@@ -674,6 +674,7 @@ fieldset {
 
 /* CODE */
 code {
+  --cirrus-code-label-fg: #868e96;
   padding: 0.3rem;
   margin: 0.5em 0;
   overflow: auto;
@@ -682,24 +683,29 @@ code {
   border-radius: 3px;
   /* Dark theme for code */ }
   code:before {
-    color: #acb3c2;
+    color: var(--cirrus-code-label-fg);
     content: attr(data-lang);
     font-size: 0.9rem;
     position: absolute;
     right: 1rem;
     top: 0.7rem; }
   code.dark {
-    background-color: #363636;
-    color: #fff; }
+    --cirrus-code-bg: #343a40;
+    --cirrus-code-fg: #f8f9fa;
+    --cirrus-border-left-bg: #212529;
+    --cirrus-code-label-fg: #ced4da; }
 
 pre > code {
-  background-color: #f8f9fa;
+  --cirrus-code-bg: #f8f9fa;
+  --cirrus-code-fg: #343a40;
+  --cirrus-border-left-bg: #e9ecef;
+  background-color: var(--cirrus-code-bg);
   font-size: 14px;
   display: block;
   padding: 1rem;
   white-space: pre-wrap;
   word-wrap: break-word;
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   text-align: left;
   line-height: 1.5;
   -moz-tab-size: 4;
@@ -707,10 +713,10 @@ pre > code {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  border-left: 0.3rem solid #f03d4d;
+  border-left: 0.3rem solid var(--cirrus-border-left-bg);
   margin: 0;
   position: relative;
-  color: #222; }
+  color: var(--cirrus-code-fg); }
   pre > code[data-lang]:not([data-lang='']) {
     padding: 2rem 1.5rem 1rem; }
 
