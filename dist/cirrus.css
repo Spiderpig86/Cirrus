@@ -517,7 +517,7 @@ fieldset {
       /* Style the last child in group > 1 buttons */
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-      margin-left: -0.1rem; }
+      margin-left: -1px; }
     .btn-group .btn:not(:first-child):not(:last-child) {
       /* Style button in middle of group */
       border-radius: 0;
@@ -536,7 +536,7 @@ fieldset {
       /* Style the last child in group > 1 buttons */
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-      margin-left: -0.1rem; }
+      margin-left: -1px; }
     .btn-group button:not(:first-child):not(:last-child) {
       /* Style button in middle of group */
       border-radius: 0;
@@ -555,7 +555,7 @@ fieldset {
       /* Style the last child in group > 1 buttons */
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-      margin-left: -0.1rem; }
+      margin-left: -1px; }
     .btn-group [type="submit"]:not(:first-child):not(:last-child) {
       /* Style button in middle of group */
       border-radius: 0;
@@ -1720,7 +1720,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
     .form-group .form-group-btn:last-child:not(:first-child) {
       border-top-left-radius: 0 !important;
       border-bottom-left-radius: 0 !important;
-      margin-left: -0.1rem;
+      margin-left: -1px;
       z-index: 0; }
   .form-group .form-group-label {
     background-color: var(--cirrus-form-group-bg);
@@ -1745,7 +1745,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
     .form-group .form-group-label:last-child:not(:first-child) {
       border-top-left-radius: 0 !important;
       border-bottom-left-radius: 0 !important;
-      margin-left: -0.1rem;
+      margin-left: -1px;
       z-index: 0; }
     .form-group .form-group-label.label-xsmall {
       font-size: 0.55rem;
@@ -1772,7 +1772,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
     .form-group .form-group-input:last-child:not(:first-child) {
       border-top-left-radius: 0 !important;
       border-bottom-left-radius: 0 !important;
-      margin-left: -0.1rem;
+      margin-left: -1px;
       z-index: 0; }
 
 /* Change place holder color */
@@ -4323,6 +4323,148 @@ video.video-fullscreen {
 
 .u-no-outline {
   outline: 0px !important; }
+
+.u-clear-left {
+  clear: left !important; }
+
+.u-clear-right {
+  clear: right !important; }
+
+.u-clear-both {
+  clear: both !important; }
+
+/*
+   When using floats, clearfix allows the container to automatically resize so that
+   other elements are not blocked by children.
+*/
+.u-clearfix:after {
+  clear: both !important;
+  content: ' ';
+  display: table !important; }
+
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+.u-none {
+  display: none !important; }
+
+.u-inline {
+  display: inline !important; }
+
+.u-inline-block {
+  display: inline-block !important; }
+
+.u-block {
+  display: block !important; }
+
+.u-table {
+  display: table !important; }
+
+.u-table-row {
+  display: table-row !important; }
+
+.u-table-column {
+  display: table-column !important; }
+
+.u-table-cell {
+  display: table-cell !important; }
+
+.u-none {
+  /* Hide elements based on screen size */ }
+  @media screen and (max-width: 639px) {
+    .u-none-xs {
+      display: none !important; } }
+  @media screen and (min-width: 640px) and (max-width: 767px) {
+    .u-none-sm-only {
+      display: none !important; } }
+  @media screen and (min-width: 768px) {
+    .u-none {
+      /* Hide on devices that are tablets or larger */ }
+      .u-none-sm {
+        display: none !important; } }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .u-none-md-only {
+      display: none !important; } }
+  @media screen and (min-width: 1024px) {
+    .u-none {
+      /* Hide element on laptops, desktops, etc */ }
+      .u-none-md {
+        display: none !important; } }
+  @media screen and (min-width: 1280px) {
+    .u-none {
+      /* Hide element on large desktops, etc */ }
+      .u-none-lg {
+        display: none !important; } }
+
+.u-flex {
+  display: flex !important; }
+
+.u-inline-flex {
+  display: inline-flex !important; }
+
+.u-flex-row {
+  flex-direction: row !important; }
+
+.u-flex-row-reverse {
+  flex-direction: row-reverse !important; }
+
+.u-flex-column {
+  flex-direction: column !important; }
+
+.u-flex-column-reverse {
+  flex-direction: column-reverse !important; }
+
+.u-justify-flex-start {
+  justify-content: flex-start !important; }
+
+.u-justify-center {
+  justify-content: center !important; }
+
+.u-justify-flex-end {
+  justify-content: flex-end !important; }
+
+.u-justify-space-between {
+  justify-content: space-between !important; }
+
+.u-justify-space-around {
+  justify-content: space-around !important; }
+
+.u-justify-space-evenly {
+  justify-content: space-evenly !important; }
+
+.u-items-stretch {
+  align-items: stretch !important; }
+
+.u-items-flex-start {
+  align-items: flex-start !important; }
+
+.u-items-center {
+  align-items: center !important; }
+
+.u-items-flex-end {
+  align-items: flex-end !important; }
+
+.u-items-baseline {
+  align-items: baseline !important; }
+
+.u-position-static {
+  position: static !important; }
+
+.u-position-fixed {
+  position: fixed !important; }
+
+.u-position-absolute {
+  position: absolute !important; }
+
+.u-position-relative {
+  position: relative !important; }
+
+.u-position-sticky {
+  position: sticky !important; }
 
 /*
   Functions
@@ -7562,145 +7704,3 @@ a.tag:hover {
     -webkit-transform: translate(-0.5rem, 50%);
     -moz-transform: translate(-0.5rem, 50%);
     -ms-transform: translate(-0.5rem, 50%); }
-
-.u-clear-left {
-  clear: left !important; }
-
-.u-clear-right {
-  clear: right !important; }
-
-.u-clear-both {
-  clear: both !important; }
-
-/*
-   When using floats, clearfix allows the container to automatically resize so that
-   other elements are not blocked by children.
-*/
-.u-clearfix:after {
-  clear: both !important;
-  content: ' ';
-  display: table !important; }
-
-/* Spacing */
-/* Fonts */
-/* Grid Count */
-/* Grid Percents */
-/* Tab Sizes */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-.u-none {
-  display: none !important; }
-
-.u-inline {
-  display: inline !important; }
-
-.u-inline-block {
-  display: inline-block !important; }
-
-.u-block {
-  display: block !important; }
-
-.u-table {
-  display: table !important; }
-
-.u-table-row {
-  display: table-row !important; }
-
-.u-table-column {
-  display: table-column !important; }
-
-.u-table-cell {
-  display: table-cell !important; }
-
-.u-none {
-  /* Hide elements based on screen size */ }
-  @media screen and (max-width: 639px) {
-    .u-none-xs {
-      display: none !important; } }
-  @media screen and (min-width: 640px) and (max-width: 767px) {
-    .u-none-sm-only {
-      display: none !important; } }
-  @media screen and (min-width: 768px) {
-    .u-none {
-      /* Hide on devices that are tablets or larger */ }
-      .u-none-sm {
-        display: none !important; } }
-  @media screen and (min-width: 768px) and (max-width: 1023px) {
-    .u-none-md-only {
-      display: none !important; } }
-  @media screen and (min-width: 1024px) {
-    .u-none {
-      /* Hide element on laptops, desktops, etc */ }
-      .u-none-md {
-        display: none !important; } }
-  @media screen and (min-width: 1280px) {
-    .u-none {
-      /* Hide element on large desktops, etc */ }
-      .u-none-lg {
-        display: none !important; } }
-
-.u-flex {
-  display: flex !important; }
-
-.u-inline-flex {
-  display: inline-flex !important; }
-
-.u-flex-row {
-  flex-direction: row !important; }
-
-.u-flex-row-reverse {
-  flex-direction: row-reverse !important; }
-
-.u-flex-column {
-  flex-direction: column !important; }
-
-.u-flex-column-reverse {
-  flex-direction: column-reverse !important; }
-
-.u-justify-flex-start {
-  justify-content: flex-start !important; }
-
-.u-justify-center {
-  justify-content: center !important; }
-
-.u-justify-flex-end {
-  justify-content: flex-end !important; }
-
-.u-justify-space-between {
-  justify-content: space-between !important; }
-
-.u-justify-space-around {
-  justify-content: space-around !important; }
-
-.u-justify-space-evenly {
-  justify-content: space-evenly !important; }
-
-.u-items-stretch {
-  align-items: stretch !important; }
-
-.u-items-flex-start {
-  align-items: flex-start !important; }
-
-.u-items-center {
-  align-items: center !important; }
-
-.u-items-flex-end {
-  align-items: flex-end !important; }
-
-.u-items-baseline {
-  align-items: baseline !important; }
-
-.u-position-static {
-  position: static !important; }
-
-.u-position-fixed {
-  position: fixed !important; }
-
-.u-position-absolute {
-  position: absolute !important; }
-
-.u-position-relative {
-  position: relative !important; }
-
-.u-position-sticky {
-  position: sticky !important; }

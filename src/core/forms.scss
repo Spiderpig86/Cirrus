@@ -332,7 +332,7 @@ label {
         &:last-child:not(:first-child) {
             border-top-left-radius: 0 !important;
             border-bottom-left-radius: 0 !important;
-            margin-left: -0.1rem;
+            margin-left: -1px;
             z-index: 0;
         }
     }

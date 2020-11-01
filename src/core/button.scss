@@ -428,7 +428,7 @@
                 /* Style the last child in group > 1 buttons */
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
-                margin-left: -0.1rem;
+                margin-left: -1px;
             }
 
             &:not(:first-child):not(:last-child) {
