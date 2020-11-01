@@ -47,10 +47,10 @@ https://unpkg.com/cirrus-ui
 ## :sparkles: Why not other frameworks?
 Even with a multitude of CSS frameworks, some are either too basic to develop more complex websites and some are too bogged down with a lot of styles that don't end up getting used. Cirrus is meant to bridge a gap between boilerplate stylesheets and UI frameworks.
 
-* :zap: **Lightweight** - Cirrus consists of a single minified file using only **9.9kb** and **15.1.kb** respectively.
-* :gift: **Beautiful Components** - Tons of pre-built components to for rapid prototyping.
+* :zap: **Lightweight** - Cirrus consists of a single minified file using only **9.61kb** and **17.2kb** respectively.
+* :gift: **Beautiful Components** - Construct your web app or website using by composing beautifully designed components.
 * :gem: **Clean** - Styles are easy to follow and written using [BEM Notation](http://getbem.com/introduction/).
-* :iphone: **Responsive** - Responsive designs out of the box.
+* :iphone: **Responsive** - Fully responsive by design.
 <br />
 
 ## :dart: Supported Browsers
@@ -63,6 +63,8 @@ Cirrus relies on [What CSS to prefix?](http://shouldiprefix.com/) to determine w
 
 ## :crystal_ball: What's Included
 Framework components are now broken down into `core` and `ext` packages. The `core` package only contains the essentials for basic styling while `core + ext` adds specially designed components.
+
+The `helpers` folder contains configurations, utilities, and other styles shared by both `core` and `ext`.
 
 #### Core
 * [Buttons](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/button.scss "Buttons") - Styles for the button with 3 different variations.
