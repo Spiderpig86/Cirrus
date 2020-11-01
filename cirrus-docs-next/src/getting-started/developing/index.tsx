@@ -10,6 +10,7 @@ import { TableWrapper } from '../../../layouts/components/table-wrapper';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { ExternalLink } from '../../../layouts/components/link';
 
 export const DevelopingPage: React.FC<any> = (props) => {
     return (
@@ -196,7 +197,7 @@ export const DevelopingPage: React.FC<any> = (props) => {
                         </ul>
                         <p>
                             All these styles are combined with the <code>core</code> build in the{' '}
-                            <code>cirrus.min.css</code> file in the <code>/dist</code> folder{' '}
+                            <code>cirrus.min.css</code> file in the <code>dist</code> folder{' '}
                             <a
                                 className="u u-LR"
                                 target="_blank"
@@ -269,21 +270,28 @@ export const DevelopingPage: React.FC<any> = (props) => {
                             </li>
                         </ul>
                         <div className="space" />
+                    </div>
+                </section>
+
+                <section className="padtop" id="customization">
+                    <div className="content">
+                        <Headline title="Customization" link="#customization" size="4" />
+                        <div className="divider"></div>
+
+                        <p>Learn how to customize Cirrus itself.</p>
+
                         <h6>Customizing the Theme</h6>
                         <p>
                             You can find Cirrus's color palette within{' '}
-                            <a
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                href="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/theme.scss"
-                            >
-                                theme.css
-                            </a>
+                            <ExternalLink url="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/theme.scss">
+                                theme.scss
+                            </ExternalLink>
                             . Modify and rebuild the project to use the theme you prefer.
                         </p>
                         <p>
                             For more granular control, you can modify the theme for a specific control by changing the
-                            CSS variable value for that specific class. For example, the modification below changes the color for <code>btn--info</code> to <code>#0066ff</code>.
+                            CSS variable value for that specific class. For example, the modification below changes the
+                            color for all <code>*--info</code> related components to <code>#0066ff</code>.
                         </p>
                         <CodeBlock
                             code={`:root {
@@ -303,29 +311,122 @@ export const DevelopingPage: React.FC<any> = (props) => {
 }`}
                             language={'scss'}
                         />
+
+                        <div className="space" />
+                        <h6>Customizing Dimensions/Sizes</h6>
                         <p>
-                            The other selectors will still see the original <code>--cirrus-info</code> color instead.
+                            You can find Cirrus's sizing configuration within{' '}
+                            <ExternalLink url="https://github.com/Spiderpig86/Cirrus/blob/master/helpers/_size.scss">
+                                _size.scss
+                            </ExternalLink>
+                            . Modify and rebuild the project to use the sizes you prefer.
                         </p>
-                        <div className="space xlarge" />
-                        <h5>Folder Structure</h5>
+                        <p>
+                            The sizes specified in the file include:
+                            <ul>
+                                <li>Spacing for padding/margin.</li>
+                                <li>
+                                    Base size for the <code>space</code> class.
+                                </li>
+                                <li>Font sizes.</li>
+                                <li>Grid column/row count.</li>
+                                <li>Default grid column/row span.</li>
+                                <li>Tab sizes.</li>
+                                <li>Viewport breakpoints.</li>
+                                <li>Viewport Scss utils.</li>
+                            </ul>
+                        </p>
+                        <CodeBlock
+                            code={`/* Spacing */
+$spacing-system: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32;
+$space-size: 0.5rem;
+
+/* Fonts */
+$font-size-xs: .7rem;
+$font-size-s: .85rem;
+$font-size-m: 1rem;
+$font-size-l: 1.35rem;
+$font-size-xl: 1.75rem;
+
+/* Grid Count */
+$grid-columns: 12;
+
+/* Grid Percents */
+$grid-width: 1 / $grid-columns;
+
+/* ... */`}
+                            language={'scss'}
+                        />
+                    </div>
+                </section>
+
+                <section className="padtop" id="folder-structure">
+                    <div className="content">
+                        <Headline title="Folder Structure" link="#folder-structure" size="4" />
+                        <div className="divider"></div>
+
                         <p>The project is organized like this:</p>
                         <CodeBlock
-                            code={`├───dist                    // Dist files (git ignored)
-│   ├───cirrus.css
-│   └───cirrus.min.css
-├───img                     // Docs resources
-│   └───CirrusLogo.png
-├───src                     // CSS source files
-│   ├───core                // Styles for core build
-│   │   └───...
-│   └───ext                 // Extended styles for components
-│       └───...
-├───...
-├───.travis.yml
-├───...
-├───README.md
-├───gulpfile.js             // Build file
-└───...`}
+                            code={`.
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── dist                            // Build files
+│   ├── cirrus-core.css
+│   ├── cirrus-core.min.css
+│   ├── cirrus.css
+│   └── cirrus.min.css
+├── gulpfile.js
+├── helpers                         // Helper Sass files/config
+│   ├── _functions.scss
+│   ├── _mixins.scss
+│   ├── _selectors.scss
+│   └── _size.scss
+├── img
+│   └── CirrusLogo.png
+├── LICENSE
+├── package.json
+├── package-lock.json
+├── README.md
+└── src
+    ├── core                        // Core build
+    │   ├── button.scss
+    │   ├── code.scss
+    │   ├── default.scss
+    │   ├── font.scss
+    │   ├── footer.scss
+    │   ├── forms.scss
+    │   ├── frames.scss
+    │   ├── header.scss
+    │   ├── layout.scss
+    │   ├── links.scss
+    │   ├── lists.scss
+    │   ├── media.scss
+    │   ├── spacing.scss
+    │   ├── table.scss
+    │   ├── theme.scss
+    │   └── utils                   // Utilities
+    │       ├── clearfix.scss
+    │       ├── display.scss
+    │       ├── flex.scss
+    │       ├── misc.scss
+    │       └── position.scss
+    └── ext                         // Extended styles + components
+        ├── animations.scss
+        ├── avatar.scss
+        ├── card.scss
+        ├── form-ext.scss
+        ├── grid.scss
+        ├── link-ext.scss
+        ├── modal.scss
+        ├── modifiers.scss
+        ├── pagination.scss
+        ├── placeholder.scss
+        ├── tabs.scss
+        ├── tags.scss
+        ├── tiles.scss
+        ├── toast.scss
+        └── tooltips.scss
+`}
                             language="text"
                         />
                     </div>

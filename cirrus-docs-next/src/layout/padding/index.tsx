@@ -20,11 +20,13 @@ export const PaddingPage: React.FC<any> = (props) => {
         },
         {
             class: `px-(0)`,
-            style: `padding-left: (0) !important; padding-right: (0) !important;`,
+            style: `padding-left: (0) !important; 
+padding-right: (0) !important;`,
         },
         {
             class: `py-(0)`,
-            style: `padding-top: (0) !important; padding-bottom: (0) !important;`,
+            style: `padding-top: (0) !important; 
+padding-bottom: (0) !important;`,
         },
         {
             class: `pt-(0)`,
@@ -108,7 +110,7 @@ export const PaddingPage: React.FC<any> = (props) => {
                                             <code className="text-blue-600 bg-blue-100">{row.class}</code>
                                         </td>
                                         <td>
-                                            <code>{row.style}</code>
+                                            <pre><code>{row.style}</code></pre>
                                         </td>
                                     </tr>
                                 ))}

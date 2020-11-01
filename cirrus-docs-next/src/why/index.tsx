@@ -67,8 +67,9 @@ export const WhyPage: React.FC<any> = (props) => {
 
                         <ul>
                             <li>
-                                🏭 Construct your web app or website using by composing beautifully designed components.
+                                🎁 Construct your web app or website using by composing beautifully designed components.
                             </li>
+                            <li>📱 Fully responsive by design.</li>
                             <li>🎨 Fully customizable themeing.</li>
                             <li>⚡ The only file you need is the minified CSS file from a CDN.</li>
                             <li>🌌 Fully open source.</li>
@@ -495,31 +496,42 @@ $tab-sizes: ('xsmall': 0.6rem, 'small': 0.75rem, 'large': 1.25rem, 'xlarge': 1.5
                         <h1>Ready to give it a try?</h1>
                         <div className="space"></div>
 
-                        <p>
-                            Head over to the <i>Setup</i> page to find out how to integrate Cirrus with your project.
-                            There is also a starter template already there just to give you a boost on getting your
-                            project up to speed. If you want to customize Cirrus to suit your needs, head on over to the{' '}
-                            <i>Developing</i> page.
-                        </p>
-
-                        <div className="u-text-center">
-                            <Link href="/getting-started/setup">
-                                <button className="btn-info">
-                                    Setup{' '}
-                                    <span className="icon">
-                                        <FontAwesomeIcon icon={['fas', 'chevron-right']} />
-                                    </span>
-                                </button>
-                            </Link>
-
-                            <Link href="/getting-started/developing">
-                                <button className="btn-info ml-2">
-                                    Developing{' '}
-                                    <span className="icon">
-                                        <FontAwesomeIcon icon={['fas', 'chevron-right']} />
-                                    </span>
-                                </button>
-                            </Link>
+                        <div className="row u-items-center">
+                            <div className="col-lg-4">
+                                <p className="lead">
+                                    Learn how to setup Cirrus.
+                                </p>
+                                <Link href="/getting-started/setup">
+                                    <button className="btn-info">
+                                        Setup
+                                        <span className="icon">
+                                            <FontAwesomeIcon icon={['fas', 'chevron-right']} />
+                                        </span>
+                                    </button>
+                                </Link>
+                            </div>
+                            <div className="col-lg-4">
+                                <p className="lead">Learn how to customize Cirrus.</p>
+                                <Link href="/getting-started/developing">
+                                    <button className="btn-link">
+                                        Developing
+                                        <span className="icon">
+                                            <FontAwesomeIcon icon={['fas', 'chevron-right']} />
+                                        </span>
+                                    </button>
+                                </Link>
+                            </div>
+                            <div className="col-lg-4">
+                                <p className="lead">Try out Cirrus without installing.</p>
+                                <Link href="/playground">
+                                    <button className="btn-primary">
+                                        Playground
+                                        <span className="icon">
+                                            <FontAwesomeIcon icon={['fas', 'chevron-right']} />
+                                        </span>
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </section>

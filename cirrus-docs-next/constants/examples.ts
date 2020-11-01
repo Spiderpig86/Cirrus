@@ -39,7 +39,7 @@ export const DOC_EXAMPLES: ExampleCardData[] = [
     {
         title: `More coming soon...`,
         description: ``,
-        tags: [`Forms`, `Layouts`, `Buttons`],
+        tags: [],
         url: `#`,
         imageUrl: ``,
     },
