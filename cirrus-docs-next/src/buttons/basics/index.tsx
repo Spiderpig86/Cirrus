@@ -40,20 +40,18 @@ export const ButtonPage: React.FC<any> = (props) => {
                             of the different variants of buttons shown below or you can use the utility classes to
                             customize it yourself.
                         </p>
-                        <p>
-                            There are three ways to create a button:
-                            <ul>
-                                <li>
-                                    Use the <code>button</code> tag.
-                                </li>
-                                <li>
-                                    Use the <code>btn</code> class.
-                                </li>
-                                <li>
-                                    Use an <code>input</code> with type <code>submit</code>.
-                                </li>
-                            </ul>
-                        </p>
+                        <p>There are three ways to create a button:</p>
+                        <ul>
+                            <li>
+                                Use the <code>button</code> tag.
+                            </li>
+                            <li>
+                                Use the <code>btn</code> class.
+                            </li>
+                            <li>
+                                Use an <code>input</code> with type <code>submit</code>.
+                            </li>
+                        </ul>
 
                         <div className="btn-container">
                             <button>Button</button>
@@ -86,9 +84,9 @@ export const ButtonPage: React.FC<any> = (props) => {
                         <h6>Solid</h6>
 
                         <div className="row my-3">
-                            {btnColors.map((color) => {
+                            {btnColors.map((color, i) => {
                                 return (
-                                    <div className="mx-1">
+                                    <div className="mx-1" key={i}>
                                         <button className={color ? `btn-${color}` : ``}>{color || 'Plain'}</button>
                                     </div>
                                 );
@@ -110,15 +108,13 @@ export const ButtonPage: React.FC<any> = (props) => {
                         />
                         <div className="space"></div>
 
-                        <a href="#" className="btn">Test</a>
-
                         <h6>Outline</h6>
                         <div className="row my-3">
                             {btnColors
                                 .filter((color) => color !== '')
-                                .map((color) => {
+                                .map((color, i) => {
                                     return (
-                                        <div className="mx-1">
+                                        <div className="mx-1" key={i}>
                                             <button className={color ? `outline btn-${color}` : ``}>
                                                 {color || 'Plain'}
                                             </button>

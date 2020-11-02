@@ -111,7 +111,8 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                             </select>
                             <button className="form-group-btn btn-primary">Go</button>
                         </div>
-                        <CodeBlock code={`<div class="form-group">
+                        <CodeBlock
+                            code={`<div class="form-group">
     <label class="form-group-label">github.com/</label>
     <select class="form-group-input w-100" placeholder="Choose one">
         <option value="">Select one</option>
@@ -121,7 +122,9 @@ export const FormGroupsPage: React.FC<any> = (props) => {
     </select>
     <button class="form-group-btn btn-primary">Go</button>
 </div>
-`} language='htmlbars' />
+`}
+                            language="htmlbars"
+                        />
                         <div className="space large"></div>
 
                         <p>You can also attach a bunch of these controls together.</p>
@@ -132,11 +135,14 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                             <button className="form-group-btn">Clear</button>
                             <button className="form-group-btn btn-primary">Submit</button>
                         </div>
-                        <CodeBlock code={`<div class="form-group">
+                        <CodeBlock
+                            code={`<div class="form-group">
     <label class="form-group-label">Dimensions</label><input type="text" class="form-group-input" placeholder="Width" /><input type="text" class="form-group-input" placeholder="Height" /><button class="form-group-btn">Clear</button>
     <button class="form-group-btn btn-primary">Submit</button>
 </div>
-`} language='htmlbars' />
+`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -276,12 +282,30 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                                         Select One <span className="required">*</span>
                                     </label>
                                     <div className="section-body">
-                                        <label className="radio">
-                                            <input type="radio" name="member" /> Yes
-                                        </label>
-                                        <label className="radio">
-                                            <input type="radio" name="member" /> No
-                                        </label>
+                                        <div className="u-flex">
+                                            <div className="form-ext-control form-ext-radio m-0">
+                                                <input
+                                                    id="radio-1"
+                                                    name="member"
+                                                    className="form-ext-input"
+                                                    type="radio"
+                                                />
+                                                <label className="form-ext-label" htmlFor="radio-1">
+                                                    Yes
+                                                </label>
+                                            </div>
+                                            <div className="form-ext-control form-ext-radio m-0">
+                                                <input
+                                                    id="radio-2"
+                                                    name="member"
+                                                    className="form-ext-input"
+                                                    type="radio"
+                                                />
+                                                <label className="form-ext-label" htmlFor="radio-2">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
                                     </div>
                                     <span className="required info">This section is required.</span>
                                 </div>

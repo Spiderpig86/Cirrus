@@ -68,11 +68,23 @@ export const HeroPage: React.FC<any> = (props) => {
                         </p>
                     </div>
 
-                    <div className="hero bg-indigo-600">
+                    <div className="hero bg-indigo-100">
                         <div className="hero-body">
-                            <div className="content">
-                                <h2 className="title white">I am the title.</h2>
-                                <h5 className="subtitle text-gray-300">And I am the subtitle.</h5>
+                            <div className="px-3 w-100">
+                                <div className="u-flex u-justify-space-between u-items-center">
+                                    <div>
+                                        <h2 className="title" style={{
+                                            letterSpacing: '-0.025rem'
+                                        }}>I am the title.</h2>
+                                        <h5 className="subtitle text-gray-500" style={{
+                                            letterSpacing: '-0.025rem'
+                                        }}>And I am the subtitle.</h5>
+                                    </div>
+                                        <div className="u-items-flex-end u-inline-flex">
+                                            <button className="u-shadow btn-link">Button 1</button>
+                                            <button className="u-shadow ml-1">Button 2</button>
+                                        </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -106,7 +118,9 @@ export const HeroPage: React.FC<any> = (props) => {
                         <div className="hero-body">
                             <div className="mx-auto">
                                 <h1 className="title uppercase">Look!</h1>
-                                <h3 className="subtitle text-gray-600">I am tall!</h3>
+                                <h3 className="subtitle text-gray-600" style={{
+                                    letterSpacing: '-.025rem'
+                                }}>I am tall!</h3>
                             </div>
                         </div>
                     </div>
