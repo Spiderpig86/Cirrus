@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  [![v.0.5.5](https://img.shields.io/badge/cirrus-0.5.5-blue.svg?style=flat-square)](https://github.com/Spiderpig86/Cirrus)
+  [![v.0.5.5](https://img.shields.io/badge/cirrus-0.6.0-blue.svg?style=flat-square)](https://github.com/Spiderpig86/Cirrus)
   [![MIT License](https://img.shields.io/github/license/Spiderpig86/Cirrus.svg?style=flat-square)](https://opensource.org/licenses/MIT)
   [![Travis](https://img.shields.io/travis/Spiderpig86/Cirrus.svg?style=flat-square)](https://travis-ci.org/Spiderpig86/Cirrus)
   [![Known Vulnerabilities](https://snyk.io/test/github/Spiderpig86/Cirrus/badge.svg?targetFile=package.json&style=flat-square)](https://snyk.io/test/github/Spiderpig86/Cirrus?targetFile=package.json)
@@ -45,16 +45,17 @@ https://unpkg.com/cirrus-ui
 ```
 
 ## :sparkles: Why not other frameworks?
-Even with a multitude of CSS frameworks, some are either too basic to develop more complex websites and some are too bogged down with a lot of styles that don't end up getting used. Cirrus is meant to bridge a gap between boilerplate stylesheets and UI frameworks.
+Even with a multitude of CSS frameworks, some are either too basic that require lots of custom styling and some are too bogged down with a lot of styles that don't end up getting used. Cirrus is meant to bridge a gap between boilerplate stylesheets and UI frameworks.
 
-* :zap: **Lightweight** - Cirrus consists of a single minified file using only **9.61kb** and **17.2kb** respectively.
+* :zap: **Lightweight** - Cirrus consists of a single minified file using only **10.3kb** and **17.2kb** respectively.
 * :gift: **Beautiful Components** - Construct your web app or website using by composing beautifully designed components.
 * :gem: **Clean** - Styles are easy to follow and written using [BEM Notation](http://getbem.com/introduction/).
 * :iphone: **Responsive** - Fully responsive by design.
+* :ship: **Modular** - Import what you need.
 <br />
 
 ## :dart: Supported Browsers
-Cirrus relies on [What CSS to prefix?](http://shouldiprefix.com/) to determine which selectors need preprocessors.
+Cirrus relies on [What CSS to prefix?](http://shouldiprefix.com/) to determine which selectors need prefixes.
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Electron |
 | --- | --- | --- | --- | --- | --- |
@@ -79,9 +80,10 @@ The `helpers` folder contains configurations, utilities, and other styles shared
 * [Links](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/links.scss "Links") - Link styles with different effects.
 * [Lists](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/lists.scss "Lists") - A simple stylesheet to simplify list UI.
 * [Media](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/media.scss "Media") - Rules for styling images, videos, figures, avatars, and other media components.
+* [Tables](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/spacing.scss "Tables") - Classes for margin/padding.
 * [Tables](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/table.scss "Tables") - Clean designs for tables.
 * [Theme](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/theme.scss "Theme") - Default colors of the framework.
-* [Util](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/util.scss "Utils") - Designed to solve many common headaches with CSS.
+* [Util](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/utils "Utils") - Designed to solve many common headaches with CSS and provide flexibility for modifying existing classes.
 
 #### Ext
 * [Animations](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/animations.scss "Animations") - Consists of animations that will work with the controls.
@@ -100,7 +102,8 @@ The `helpers` folder contains configurations, utilities, and other styles shared
 <br />
 
 ## :pager: jQuery
-* The only component that requires the use of jQuery is the `Header` component for toggling the dropdown menu on mobile.
+* jQuery is **not needed** in order to use this framework.
+* You may use jQuery for adding functionality such as toggling the dropdown menu for the `Header` component on mobile devices, but you can accomplish the same thing with vanilla JavaScript.
 * It is possible to use these components without jQuery in other frameworks like Angular and React by mimicking the behavior of toggling the class.
 <br />
 
