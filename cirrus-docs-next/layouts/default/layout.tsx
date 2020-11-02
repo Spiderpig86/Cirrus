@@ -4,21 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Header } from '../components/header';
 import { Sidebar } from '../components/sidebar';
 import { Footer } from '../components/footer';
+import { loadScripts } from '../../utils/scripts';
 
 import initializeAlgolia from '../../static/js/algolia.js';
 
 export const DefaultLayout = ({ children, ...rest }: any) => {
-    useEffect(() => {
-        new Promise((resolve) => {
-            const script = document.createElement('script');
-            script.setAttribute('type', 'text/javascript');
-            script.src = 'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js';
-            document.head.appendChild(script);
-            script.addEventListener('load', resolve, {
-                once: true,
-            });
-        }).then(() => initializeAlgolia());
-    }, []);
+    loadScripts(
+        ['https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js'],
+        () => initializeAlgolia(),
+        []
+    );
 
     // Search bar
     const rightNavChildren: JSX.Element = (

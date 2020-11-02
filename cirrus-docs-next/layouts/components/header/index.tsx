@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { loadScripts } from '../../../utils/scripts';
 
+import runGtag from '../../../static/js/gtag.js';
 export interface HeaderProps {
     extraClasses?: string;
     rightNavChildren?: JSX.Element;
@@ -9,6 +11,12 @@ export interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = (props) => {
     const [menuShown, setMenuShown] = useState(false);
+
+    loadScripts(['https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js'], () => runGtag(), []);
+
+    useEffect(() => {
+        runGtag();
+    });
 
     useEffect(() => {
         const hamburgerButtonClick = (e: any) => {

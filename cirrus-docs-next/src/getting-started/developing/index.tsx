@@ -321,21 +321,19 @@ export const DevelopingPage: React.FC<any> = (props) => {
                             </ExternalLink>
                             . Modify and rebuild the project to use the sizes you prefer.
                         </p>
-                        <p>
-                            The sizes specified in the file include:
-                            <ul>
-                                <li>Spacing for padding/margin.</li>
-                                <li>
-                                    Base size for the <code>space</code> class.
-                                </li>
-                                <li>Font sizes.</li>
-                                <li>Grid column/row count.</li>
-                                <li>Default grid column/row span.</li>
-                                <li>Tab sizes.</li>
-                                <li>Viewport breakpoints.</li>
-                                <li>Viewport Scss utils.</li>
-                            </ul>
-                        </p>
+                        <p>The sizes specified in the file include:</p>
+                        <ul>
+                            <li>Spacing for padding/margin.</li>
+                            <li>
+                                Base size for the <code>space</code> class.
+                            </li>
+                            <li>Font sizes.</li>
+                            <li>Grid column/row count.</li>
+                            <li>Default grid column/row span.</li>
+                            <li>Tab sizes.</li>
+                            <li>Viewport breakpoints.</li>
+                            <li>Viewport Scss utils.</li>
+                        </ul>
                         <CodeBlock
                             code={`/* Spacing */
 $spacing-system: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32;
