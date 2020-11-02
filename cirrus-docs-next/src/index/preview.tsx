@@ -151,37 +151,37 @@ export const Preview: React.FC<any> = (props) => {
                     <h3 className="font-alt font-normal u-text-center">Headings</h3>
                     <h6 className="uppercase">Standard headings:</h6>
                     <h1>
-                        H1 Heading
+                        H1 Heading{' '}
                         <span className="tag tag--success text-light">H1</span>
                         <span className="desc uppercase">3rem (48px)</span>
                     </h1>
                     <div className="divider" />
                     <h2>
-                        H2 Heading
+                        H2 Heading{' '}
                         <span className="tag tag--success text-light">H2</span>
                         <span className="desc uppercase">2.5rem (40px)</span>
                     </h2>
                     <div className="divider" />
                     <h3>
-                        H3 Heading
+                        H3 Heading{' '}
                         <span className="tag tag--success text-light">H3</span>
                         <span className="desc uppercase">2rem (32px)</span>
                     </h3>
                     <div className="divider" />
                     <h4>
-                        H4 Heading
+                        H4 Heading{' '}
                         <span className="tag tag--success text-light">H4</span>
                         <span className="desc uppercase">1.75rem (28px)</span>
                     </h4>
                     <div className="divider" />
                     <h5>
-                        H5 Heading
+                        H5 Heading{' '}
                         <span className="tag tag--success text-light">H5</span>
                         <span className="desc uppercase">1.5rem (24px)</span>
                     </h5>
                     <div className="divider" />
                     <h6>
-                        H6 Heading
+                        H6 Heading{' '}
                         <span className="tag tag--success text-light">H6</span>
                         <span className="desc uppercase">1.25rem (20px)</span>
                     </h6>
