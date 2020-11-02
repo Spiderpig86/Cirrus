@@ -168,6 +168,10 @@
     outline: 0px !important;
 }
 
+.u-shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.07);
+}
+
 // /* Remove outline or drop shadow when element is focused */ Deprecated 0.6.0
 // .u-no-shadow {
 //     box-shadow: none;

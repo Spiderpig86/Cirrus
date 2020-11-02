@@ -376,6 +376,10 @@
             color: var(--btn-fg);
             transition: all var(--animation-duration);
         }
+
+        &.btn-transparent {
+            color: #{map-get($grays, '700')} !important;
+        }
     }
 }
 

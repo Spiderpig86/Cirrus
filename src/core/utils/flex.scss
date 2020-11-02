@@ -13,7 +13,7 @@ $align-items: 'stretch', 'flex-start', 'center', 'flex-end', 'baseline';
 }
 
 @each $flex-direction in $flex-directions {
-    &.u-flex-#{$flex-direction} {
+    .u-flex-#{$flex-direction} {
         flex-direction: #{$flex-direction} !important;
     }
 }

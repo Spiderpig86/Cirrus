@@ -394,6 +394,9 @@
       background-color: var(--btn-color);
       color: var(--btn-fg);
       transition: all var(--animation-duration); }
+    [class^='btn-']:not(.btn-container):not(.btn-close).outline.btn-transparent,
+    [class*=' btn-']:not(.btn-container):not(.btn-close).outline.btn-transparent {
+      color: #495057 !important; }
 
 /* Make the loader white so it is visible */
 .loading.btn-accent:after {
