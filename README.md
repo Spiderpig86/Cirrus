@@ -15,7 +15,7 @@
 <p align="center">
 A fully responsive and comprehensive CSS framework with beautiful controls and simplistic structure. Cirrus is designed to be adaptable to existing themes or when starting fresh.
 <br />
-<a href="https://spiderpig86.github.io/Cirrus"><strong>Check out the docs »</strong></a>
+<a href="https://cirrus-ui.netlify.app/"><strong>Check out the docs »</strong></a>
 <br />
 <br />
 <a href="https://github.com/Spiderpig86/Cirrus/issues" target="_blank">Request Feature</a>
