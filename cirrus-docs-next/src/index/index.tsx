@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { LandingLayout } from '../../layouts/landing';
 import { ExampleCard } from '../getting-started/examples/example-card';
-import { CodeBlock } from '../../layouts/components/codeblock';
 import { Context } from '../../store/store';
 import { Preview } from './preview';
 
@@ -57,6 +56,23 @@ const Landing: React.FC<any> = () => {
                                 </Link>
                             </div>
                         </div>
+                        <a
+                            href="https://www.producthunt.com/posts/cirrus-v0-6?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-cirrus-v0-6"
+                            target="_blank"
+                        >
+                            <img
+                                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=273275&theme=light"
+                                alt="Cirrus v0.6 - A component centric CSS framework for fast prototyping. | Product Hunt"
+                                style={{
+                                    width: '250px',
+                                    height: '54px',
+                                    position: 'absolute',
+                                    bottom: '6rem',
+                                    right: '3rem',
+                                    zIndex: '99',
+                                }}
+                            />
+                        </a>
                     </div>
                     <div className={`transition ` + (state.pageAtTop ? `` : `transition--visible`)}></div>
                 </div>
@@ -74,7 +90,7 @@ const Landing: React.FC<any> = () => {
                     <div className="content">
                         <div className="row">
                             <div className="col">
-                                <h6 className="lead uppercase mb-1 font-bold text-gray-700">17.2 KB</h6>
+                                <h6 className="lead uppercase mb-1 font-bold text-gray-700">17.3 KB</h6>
                                 <div className="uppercase font-bold text-gray-700">Compressed</div>
                             </div>
                             <div className="col">
@@ -167,7 +183,7 @@ const Landing: React.FC<any> = () => {
                             />
                             <h6 className="lead uppercase mb-1 font-bold text-gray-700">Compact</h6>
                             <div className="text-gray-700">
-                                Cirrus packs a lot of features with only a 17.2 KB payload.
+                                Cirrus packs a lot of features with only a 17.3 KB payload.
                             </div>
                         </div>
                     </div>

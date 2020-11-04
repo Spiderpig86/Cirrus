@@ -48,12 +48,12 @@ const App = ({ Component, pageProps }) => {
                     name="keywords"
                     content="css,css framework,scss,sass,framework,design, website,web design,frontend,components,user interface,interface,ui,user experience,ux,stanley lim,tailwind,bulma,bootstrap,milligram"
                 />
-                <meta name="description" content="The SCSS framework for the modern web." />
+                <meta name="description" content="The SCSS framework for the modern web. It's component based, customizable, and completely open source." />
                 <meta property="og:url" content="http://stanleylim.me/" />
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content="Stanley Lim" />
                 <meta property="og:image" content="/android-icon-192x192.png" />
-                <meta property="og:description" content="The SCSS framework for the modern web." />
+                <meta property="og:description" content="The SCSS framework for the modern web. It's component based, customizable, and completely open source." />
                 <meta property="og:site_name" content="Cirrus" />
                 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
                 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />

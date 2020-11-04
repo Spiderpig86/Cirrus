@@ -1321,7 +1321,7 @@ export const Preview: React.FC<any> = (props) => {
                             <h3 className="font-alt font-light u-text-center">Invite people to project</h3>
                         </div>
                         <div className="space" />
-                        <div className="r u-margin-auto w-80">
+                        <div className="mx-auto w-80">
                             <div className="input-control">
                                 <input
                                     type="text"
