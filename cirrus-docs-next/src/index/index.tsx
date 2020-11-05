@@ -69,7 +69,7 @@ const Landing: React.FC<any> = () => {
                                     position: 'absolute',
                                     bottom: '6rem',
                                     right: '3rem',
-                                    zIndex: '99',
+                                    zIndex: 99,
                                 }}
                             />
                         </a>
