@@ -243,6 +243,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
                             publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                         </p>
+                        <div className="space"></div>
 
                         <h6>Blockquote</h6>
                         <blockquote cite="https://www.worldwildlife.org/who/index.html" className="example">
@@ -252,6 +253,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                                 members in the United States and close to 5 million globally.
                             </p>
                         </blockquote>
+                        <div className="space"></div>
 
                         <h6>Article</h6>
                         <article>
@@ -263,6 +265,24 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             passages, and more recently with desktop publishing software like Aldus PageMaker including
                             versions of Lorem Ipsum.
                         </article>
+                        <div className="space"></div>
+
+                        <h6>Lead</h6>
+                        <p className="lead">
+                            This is a lead. A <code>lead</code> is slightly larger than your average paragraph.
+                        </p>
+                        <div className="space"></div>
+
+                        <h6>Title and Subtitle</h6>
+                        <p>
+                            The <code>title</code> and <code>subtitle</code> helper classes bring two elements
+                            representing a title and a subtitle closer together. The <code>title</code> is bolded by
+                            default.
+                        </p>
+                        <div className="bg-gray-100 u-round p-3">
+                            <h6 className="title">I am the title.</h6>
+                            <p className="subtitle">I am the subtitle.</p>
+                        </div>
                     </div>
                 </section>
 
@@ -402,6 +422,23 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock code={`<p className="caret"></p>`} language="htmlbars" />
+                            </div>
+                            <div className="col-lg-6">
+                                <p className="title mb-0">Right to left</p>
+                                <p className="rtl">right to left</p>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock code={`<p className="rtl"></p>`} language="htmlbars" />
+                            </div>
+                            <div className="col-lg-6">
+                                <p className="title mb-0">Font Alt (Use Nunito Sans with titles)</p>
+                                <h6 className="font-alt">This title uses Nunito Sans.</h6>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<h6 className="font-alt">This title uses Nunito Sans.</h6>`}
+                                    language="htmlbars"
+                                />
                             </div>
                         </div>
                     </div>

@@ -214,7 +214,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
     ];
     const classTable = positionNames.map((position) => {
         return {
-            class: `u-${position}`,
+            class: `u-position-${position}`,
             style: `position: ${position};`,
         };
     });
