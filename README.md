@@ -18,11 +18,11 @@ A fully responsive and comprehensive CSS framework with beautiful controls and s
 <a href="https://cirrus-ui.netlify.app/"><strong>Check out the docs »</strong></a>
 <br />
 <br />
-<a href="https://github.com/Spiderpig86/Cirrus/issues" target="_blank">Request Feature</a>
+<a href="https://github.com/Spiderpig86/Cirrus/issues/new?assignees=&labels=&template=bug-report.md&title=" target="_blank">Request Feature</a>
 /
-<a href="https://github.com/Spiderpig86/Cirrus/issues" target="_blank">Report a Bug</a>
+<a href="https://github.com/Spiderpig86/Cirrus/issues/new?assignees=&labels=&template=bug-report.md&title=" target="_blank">Report a Bug</a>
 /
-<a href="https://spiderpig86.github.io/Cirrus/docs/examples/" target="_blank">Examples</a>
+<a href="https://cirrus-ui.netlify.app/getting-started/examples" target="_blank">Examples</a>
 </p>
 
 ## :hammer: Quick Install
