@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { HotKeys, KeyMap } from 'react-hotkeys';
 
 import { Header } from '../components/header';
 import { Sidebar } from '../components/sidebar';
@@ -9,6 +10,23 @@ import { loadScripts } from '../../utils/scripts';
 import initializeAlgolia from '../../static/js/algolia.js';
 
 export const DefaultLayout = ({ children, ...rest }: any) => {
+    const keyMap: KeyMap = {
+        SEARCH_FOCUS: {
+            sequence: 'shift+s',
+            action: 'keyup',
+        },
+    };
+
+    const keyHandlers = {
+        SEARCH_FOCUS: React.useCallback((e) => {
+            if (document.querySelector('#cirrus-search')) {
+                e.preventDefault();
+                (document.querySelector('#cirrus-search') as HTMLInputElement).focus();
+                (document.querySelector('#cirrus-search') as HTMLInputElement).value = '';
+            }
+        }, []),
+    };
+
     loadScripts(
         ['https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js'],
         () => initializeAlgolia(),
@@ -17,13 +35,15 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
 
     // Search bar
     const rightNavChildren: JSX.Element = (
-        <div className="nav-item">
-            <input type="search" id="cirrus-search" className="input-small" placeholder="Search..." />
+        <div className="nav-item u-justify-flex-end" style={{
+            flexGrow: 1
+        }}>
+            <input type="search" id="cirrus-search" className="input-small" placeholder="Search (Press Shift + S to focus)" />
         </div>
     );
 
     return (
-        <div>
+        <HotKeys keyMap={keyMap} handlers={keyHandlers}>
             <Header extraClasses="header--docs-theme" rightNavChildren={rightNavChildren} />
             <div className="default-layout tree-nav-body mx-auto mb-0">
                 <div className="tree-nav-header u-items-center">
@@ -60,6 +80,6 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
                 type="text/javascript"
                 src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
             ></script>
-        </div>
+        </HotKeys>
     );
 };

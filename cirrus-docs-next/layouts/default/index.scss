@@ -1,6 +1,9 @@
 .page-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr); /* Everything else before that table of contents bar fills width, toc uses 15rem */
+    grid-template-columns: minmax(
+        0,
+        1fr
+    ); /* Everything else before that table of contents bar fills width, toc uses 15rem */
     max-width: 90rem;
     margin: 0 auto;
 }
@@ -11,8 +14,13 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+    .algolia-autocomplete {
+        width: 50%;
+    }
+}
 
+@media screen and (max-width: 768px) {
     .default-layout.tree-nav-body {
         display: block;
     }

@@ -13,9 +13,9 @@ import { PAGE_TITLE_PREFIX } from '../../../constants';
 export const FormsInputsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
-        <Head>
-            <title>{PAGE_TITLE_PREFIX} Form Inputs</title>
-        </Head>
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Form Inputs</title>
+            </Head>
             <span>
                 <section className="padtop" id="inputs">
                     <div className="content">
@@ -551,11 +551,14 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                                 </span>
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<div class="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="col-lg-6">
     <label>Regular Label</label>
     <input type="text" placeholder="The label above is a regular label." />
     <span class="info u-text-center">I am using the <code>info</code> class.</span>
-</div>`} language="htmlbars" />
+</div>`}
+                                    language="htmlbars"
+                                />
                             </div>
                         </div>
 
@@ -566,9 +569,12 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                                 <span className="info u-text-center">We promise we won't spam!</span>
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<label>Email</label>
+                                <CodeBlock
+                                    code={`<label>Email</label>
 <input type="text" placeholder="john.doe@cirrus.io" />
-<span class="info u-text-center">We promise we won't spam!</span>`} language="htmlbars" />
+<span class="info u-text-center">We promise we won't spam!</span>`}
+                                    language="htmlbars"
+                                />
                             </div>
                         </div>
                     </div>
@@ -590,13 +596,13 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
-                                <textarea>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    It has survived not only five centuries, but also the leap into electronic
-                                    typesetting, remaining essentially unchanged.
-                                </textarea>
+                                <textarea
+                                    defaultValue={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen book.
+It has survived not only five centuries, but also the leap into electronic
+typesetting, remaining essentially unchanged.`}
+                                ></textarea>
                                 <input type="submit" className="btn-primary pull-right" />
                             </div>
                             <div className="col-lg-6">
@@ -613,13 +619,14 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
-                                <textarea className="input-focused">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    It has survived not only five centuries, but also the leap into electronic
-                                    typesetting, remaining essentially unchanged.
-                                </textarea>
+                                <textarea
+                                    className="input-focused"
+                                    defaultValue={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen book.
+It has survived not only five centuries, but also the leap into electronic
+typesetting, remaining essentially unchanged.`}
+                                ></textarea>
                                 <input disabled type="submit" className="btn-primary pull-right" />
                             </div>
                             <div className="col-lg-6">
@@ -636,13 +643,14 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
-                                <textarea disabled>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    It has survived not only five centuries, but also the leap into electronic
-                                    typesetting, remaining essentially unchanged.
-                                </textarea>
+                                <textarea
+                                    disabled
+                                    defaultValue={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to make a type specimen book.
+It has survived not only five centuries, but also the leap into electronic
+typesetting, remaining essentially unchanged.`}
+                                ></textarea>
                                 <input disabled type="submit" className="btn-primary pull-right" />
                             </div>
                             <div className="col-lg-6">
