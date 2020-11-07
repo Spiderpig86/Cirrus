@@ -79,6 +79,8 @@ export const TypographyPage: React.FC<any> = (props) => {
                             </div>
                             <div className="frame__footer"></div>
                         </div>
+
+                        <p>This is our alternative/secondary font. This can be set as the font for a given element with the <code>font-alt</code> class.</p>
                         <div className="frame mb-2">
                             <div className="frame__header"></div>
                             <div className="frame__body">

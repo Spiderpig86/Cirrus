@@ -7,6 +7,11 @@ export const toc: TableOfContentsEntry[] = [
         children: null,
     },
     {
+        name: 'Classes',
+        anchor: '#classes',
+        children: null,
+    },
+    {
         name: 'v1',
         anchor: '#v1',
         children: null,
