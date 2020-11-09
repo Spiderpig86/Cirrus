@@ -221,6 +221,10 @@ label {
         margin-top: 0.8rem;
     }
 
+    & + .input-control {
+        margin-top: 0;
+    }
+
     &.label:not(:last-child) {
         margin-bottom: 0;
     }
