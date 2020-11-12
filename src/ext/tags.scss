@@ -152,7 +152,7 @@
 
     /* Used for grouping tags together */
     &.group-tags {
-        /* Round first and last tag in the grouped tags */
+        // Round first and last tag in the grouped tags
         &.group-rounded {
             .tag:first-child {
                 border-radius: 290486px 0 0 290486px;
