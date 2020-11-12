@@ -151,19 +151,31 @@
     }
 
     /* Used for grouping tags together */
-    &.group-tags .tag {
-        margin-right: 0 !important;
+    &.group-tags {
+        /* Round first and last tag in the grouped tags */
+        &.group-rounded {
+            .tag:first-child {
+                border-radius: 290486px 0 0 290486px;
+            }
+            .tag:last-child {
+                border-radius: 0 290486px 290486px 0;
+            }
+        }
 
-        &:first-child {
-            border-radius: 0.25rem 0 0 0.25rem;
-        }
-    
-        &:not(:first-child):not(:last-child) {
-            border-radius: 0;
-        }
-    
-        &:last-child {
-            border-radius: 0 0.25rem 0.25rem 0;
+        .tag {
+            margin-right: 0 !important;
+
+            &:first-child {
+                border-radius: 0.25rem 0 0 0.25rem;
+            }
+        
+            &:not(:first-child):not(:last-child) {
+                border-radius: 0;
+            }
+        
+            &:last-child {
+                border-radius: 0 0.25rem 0.25rem 0;
+            }
         }
     }
 
