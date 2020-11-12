@@ -180,8 +180,9 @@
     outline: none; }
   .btn:disabled, button:disabled, [type="submit"]:disabled, [type="reset"]:disabled, [type="button"]:disabled {
     cursor: not-allowed;
-    opacity: 0.5;
-    pointer-events: none; }
+    opacity: 0.5; }
+    .btn:disabled:active, button:disabled:active, [type="submit"]:disabled:active, [type="reset"]:disabled:active, [type="button"]:disabled:active {
+      pointer-events: none; }
   .btn.outline, button.outline, [type="submit"].outline, [type="reset"].outline, [type="button"].outline {
     --btn-color: transparent; }
     .btn.outline:hover, button.outline:hover, [type="submit"].outline:hover, [type="reset"].outline:hover, [type="button"].outline:hover {
@@ -1644,6 +1645,9 @@ label.label {
   /* changed from block */
   font-weight: bold;
   margin-top: 0.8rem; }
+
+label + .input-control {
+  margin-top: 0; }
 
 label.label:not(:last-child) {
   margin-bottom: 0; }
