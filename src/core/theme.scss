@@ -30,6 +30,7 @@ $cirrus-warning-hover: #f9a90e;
 $cirrus-danger-hover: #f1393c;
 
 $control-themes: (
+    'primary': $cirrus-primary,
     'gray': $cirrus-gray,
     'dark': $cirrus-dark,
     'link': $cirrus-link,
