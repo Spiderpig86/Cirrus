@@ -4,13 +4,13 @@
 /* CARDS */
 .card {
     background-color: #fff;
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s;
     backface-visibility: hidden;
+    border-radius: 5px;
     box-shadow: 0px 5px 12px 0 rgba(42, 51, 83, 0.12), 0px 0px 5px rgba(0, 0, 0, 0.06);
     margin-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
 
     &:hover {
         transition: all 0.3s;
@@ -19,14 +19,44 @@
         .card-image::after {
             opacity: 0;
         }
+    }
 
+    &.slide-up {
+        display: flex;
+        flex-direction: column;
+        max-height: 550px;
+
+        &:hover {
+            .card-body {
+                opacity: 1;
+            }
+            .card-image {
+                transform: translateY(-40px);
+            }
+            .mobile-title {
+                bottom: 35%;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        /* More card components in second example */
         .mobile-title {
-            margin-top: -7rem;
-            transition: all 0.3s ease-in-out;
+            position: absolute;
+            left: 0;
+            bottom: 5rem;
+            background-color: var(--cirrus-bg);
+            -moz-transition: 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            width: 100%;
+            padding: 1.5rem 0 0 0;
+            backface-visibility: hidden;
         }
 
         .card-body {
-            opacity: 1;
+            opacity: 0;
+            overflow: auto;
+            transition: all var(--animation-duration) ease-in-out;
         }
     }
 
@@ -37,10 +67,6 @@
 
     p {
         margin: 1rem 0;
-    }
-
-    .slide-up:hover .card-image {
-        transform: translateY(-40px);
     }
 
     .card-image {
@@ -76,7 +102,7 @@
         display: block;
         position: relative;
         height: 40%;
-        min-height: 332px; /* So it appears in html5 standards mode */
+        min-height: 21rem; /* So it appears in html5 standards mode */
     }
 
     .title-container {
@@ -120,24 +146,6 @@
             padding: 1rem 0;
             border-top: 1px solid map-get($grays, '200');
         }
-    }
-
-    /* More card components in second example */
-    .mobile-title {
-        position: absolute;
-        left: 0;
-        background-color: var(--cirrus-bg);
-        -moz-transition: 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-        transition: 0.3s ease-in-out;
-        width: 100%;
-        padding: 2rem 0 0 0;
-        backface-visibility: hidden;
-    }
-
-    .card-body {
-        opacity: 0;
-        transition: all var(--animation-duration) ease-in-out;
     }
 
     .card-footer {
