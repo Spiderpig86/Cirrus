@@ -15,12 +15,12 @@
 
     &.tag--large {
         font-size: 120%;
-        padding: .25rem .75rem;
+        padding: 0.25rem 0.75rem;
     }
 
     &.tag--xlarge {
         font-size: 150%;
-        padding: .5rem 1.25rem;
+        padding: 0.5rem 1.25rem;
     }
 
     &.tag--rounded {
@@ -127,12 +127,12 @@
             -webkit-transform-origin: center center;
             transform-origin: center center;
         }
-    
+
         &::before {
             height: 1px;
             width: 50%;
         }
-    
+
         &::after {
             height: 50%;
             width: 1px;
@@ -142,9 +142,6 @@
 
 /* TAG CONTAINER */
 .tag-container {
-    display: flex;
-    flex-wrap: wrap;
-
     /* Add margin in between tag containers */
     &:not(:last-child) {
         margin-bottom: 1rem;
@@ -152,12 +149,16 @@
 
     /* Used for grouping tags together */
     &.group-tags {
-        .tag,
-        &--rounded .tag {
+        --tag-first-border-radius: 0.25rem 0 0 0.25rem;
+        --tag-last-border-radius: 0 0.25rem 0.25rem 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        .tag {
             margin-right: 0 !important;
 
             &:first-child {
-                border-radius: 0.25rem 0 0 0.25rem;
+                border-radius: var(--tag-first-border-radius);
             }
 
             &:not(:first-child):not(:last-child) {
@@ -165,31 +166,27 @@
             }
 
             &:last-child {
-                border-radius: 0 0.25rem 0.25rem 0;
+                border-radius: var(--tag-last-border-radius);
             }
         }
 
         // Round first and last tag in the grouped tags
-        &--rounded .tag {
-            &:first-child {
-                border-radius: 290486px 0 0 290486px;
-            }
-
-            &:last-child {
-                border-radius: 0 290486px 290486px 0;
-            }
+        &.group-tags--rounded {
+            --tag-first-border-radius: 290486px 0 0 290486px;
+            --tag-last-border-radius: 0 290486px 290486px 0;
         }
     }
 
-    .tag-container.tag-container--grouped .tag:not(:first-child) {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
+    // Removed 0.6.1, duplicate behavior to group-tags
+    // .tag-container.tag-container--grouped .tag:not(:first-child) {
+    //     border-top-left-radius: 0;
+    //     border-bottom-left-radius: 0;
+    // }
 
-    .tag-container.tag-container--grouped .tag:not(:last-child) {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
+    // .tag-container.tag-container--grouped .tag:not(:last-child) {
+    //     border-top-right-radius: 0;
+    //     border-bottom-right-radius: 0;
+    // }
 
     /* Tag positioning */
     &.tag-container--centered {
