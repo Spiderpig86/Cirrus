@@ -151,19 +151,33 @@
     }
 
     /* Used for grouping tags together */
-    &.group-tags .tag {
-        margin-right: 0 !important;
+    &.group-tags {
+        .tag,
+        &--rounded .tag {
+            margin-right: 0 !important;
 
-        &:first-child {
-            border-radius: 0.25rem 0 0 0.25rem;
+            &:first-child {
+                border-radius: 0.25rem 0 0 0.25rem;
+            }
+
+            &:not(:first-child):not(:last-child) {
+                border-radius: 0;
+            }
+
+            &:last-child {
+                border-radius: 0 0.25rem 0.25rem 0;
+            }
         }
-    
-        &:not(:first-child):not(:last-child) {
-            border-radius: 0;
-        }
-    
-        &:last-child {
-            border-radius: 0 0.25rem 0.25rem 0;
+
+        // Round first and last tag in the grouped tags
+        &--rounded .tag {
+            &:first-child {
+                border-radius: 290486px 0 0 290486px;
+            }
+
+            &:last-child {
+                border-radius: 0 290486px 290486px 0;
+            }
         }
     }
 
