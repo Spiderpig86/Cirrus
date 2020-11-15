@@ -175,28 +175,6 @@ export const TagsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="space"></div>
 
-                        <h6>Grouped Tags</h6>
-                        <p>Group tags with extra buttons like the delete button.</p>
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <div className="tag-container group-tags">
-                                    <div className="tag tag--dark">Version</div>
-                                    <div className="tag tag--info">0.6.0</div>
-                                    <div className="tag tag--warning tag__close-btn"></div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<div class="tag-container group-tags">
-    <div class="tag tag--dark">Version</div>
-    <div class="tag tag--info">0.5.5</div>
-    <div class="tag tag--warning tag__close-btn"></div>
-</div>`}
-                                    language="htmlbars"
-                                />
-                            </div>
-                        </div>
-
                         <h6>Tag Container</h6>
                         <p>
                             The <code>tag-container</code> is a container for different tags.
@@ -219,6 +197,62 @@ export const TagsPage: React.FC<any> = (props) => {
     <div class="tag tag--link">Three</div>
     <div class="tag tag--link">Four</div>
     <div class="tag tag--link">Five</div>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+
+                        <h6>Tag Container Grouped Tags</h6>
+
+                        <p className="m-0">
+                            <b>Normal</b>
+                        </p>
+                        <p>Group tags with extra buttons like the delete button.</p>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <div className="tag-container group-tags">
+                                    <div className="tag tag--dark">Version</div>
+                                    <div className="tag tag--info">0.6.0</div>
+                                    <div className="tag tag--warning tag__close-btn"></div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="tag-container group-tags">
+    <div class="tag tag--dark">Version</div>
+    <div class="tag tag--info">0.6.0</div>
+    <div class="tag tag--warning tag__close-btn"></div>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+
+                        <p className="m-0">
+                            <b>Rounded</b>
+                            <span>
+                                <div className="tag-container group-tags">
+                                    <div className="tag tag--dark">Coming Soon</div>
+                                    <div className="tag tag--info">0.6.1</div>
+                                </div>
+                            </span>
+                        </p>
+                        <p>Group the tags with rounded borders.</p>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <div className="tag-container group-tags group-tags--rounded">
+                                    <div className="tag tag--dark">Version</div>
+                                    <div className="tag tag--info">0.6.0</div>
+                                    <div className="tag tag--warning tag__close-btn"></div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="tag-container group-tags group-tags--rounded">
+    <div class="tag tag--dark">Version</div>
+    <div class="tag tag--info">0.6.0</div>
+    <div class="tag tag--warning tag__close-btn"></div>
 </div>`}
                                     language="htmlbars"
                                 />
