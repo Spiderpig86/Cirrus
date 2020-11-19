@@ -13,7 +13,6 @@ import {
     CIRRUS_DEFAULT_PLAYGROUND_CODE,
     CIRRUS_PLAYGROUND_KEY,
     PLAYGROUND_ENDPOINT_MAP,
-    PLAYGROUND_VERSIONS,
 } from '../../constants/playground';
 
 import initializeHeaderToggle from '../../static/js/header-toggle.js';
@@ -28,7 +27,7 @@ export const PlaygroundPage: React.FC<any> = () => {
     const [code, setCode] = useState(``);
     const [isDragging, setDragging] = useState(false); // Hacky workaround https://github.com/tomkp/react-split-pane/issues/30
     const [isEditorHorizontal, setEditorHorizontal] = useState(false);
-    const [playgroundCdn, setPlaygroundCdn] = useState(PLAYGROUND_VERSIONS[0]);
+    const [playgroundCdn, setPlaygroundCdn] = useState(PLAYGROUND_ENDPOINT_MAP.keys().next().value);
     const [iframeKey, setIFrameKey] = useState(`original`);
     const [splitPaneSize, setSplitPaneSize] = useState<string | number>(`50%`);
 
@@ -211,7 +210,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                         <div className="nav-item has-sub toggle-hover" id="dropdown">
                             <a className="nav-dropdown-link">Version / {playgroundCdn}</a>
                             <ul className="dropdown-menu dropdown-animated" role="menu">
-                                {PLAYGROUND_VERSIONS.map((version) => {
+                                {Array.from(PLAYGROUND_ENDPOINT_MAP.keys()).map((version) => {
                                     return (
                                         <li
                                             role="menu-item"
