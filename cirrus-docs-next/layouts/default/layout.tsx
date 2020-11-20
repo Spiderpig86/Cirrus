@@ -13,7 +13,7 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
     const keyMap: KeyMap = {
         SEARCH_FOCUS: {
             sequence: 'shift+s',
-            action: 'keyup',
+            action: 'keydown',
         },
     };
 
