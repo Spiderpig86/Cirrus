@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { HotKeys, KeyMap } from 'react-hotkeys';
+import { KeyMap, GlobalHotKeys } from 'react-hotkeys';
 
 import { Header } from '../components/header';
 import { Sidebar } from '../components/sidebar';
@@ -43,7 +43,7 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
     );
 
     return (
-        <HotKeys keyMap={keyMap} handlers={keyHandlers}>
+        <GlobalHotKeys keyMap={keyMap} handlers={keyHandlers}>
             <Header extraClasses="header--docs-theme" rightNavChildren={rightNavChildren} />
             <div className="default-layout tree-nav-body mx-auto mb-0">
                 <div className="tree-nav-header u-items-center">
@@ -80,6 +80,6 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
                 type="text/javascript"
                 src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
             ></script>
-        </HotKeys>
+        </GlobalHotKeys>
     );
 };
