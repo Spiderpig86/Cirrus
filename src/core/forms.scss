@@ -328,8 +328,8 @@ label {
         /* Style the middle controls */
         &:not(:first-child):not(:last-child) {
             border-radius: 0 !important;
-            margin-left: -0.1rem;
-            margin-right: -0.1rem; /* Remove spacing in middle controls */
+            margin-left: -1px;
+            margin-right: -1px; /* Remove spacing in middle controls */
         }
 
         /* Handles right most control in form group */
@@ -363,7 +363,6 @@ label {
         margin: 0;
         padding: 0.8rem;
         user-select: none;
-        z-index: 1;
         @include form-group-border-radius-override();
 
         &.label-xsmall {
