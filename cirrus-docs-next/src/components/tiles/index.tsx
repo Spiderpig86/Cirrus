@@ -61,16 +61,16 @@ export const TilesPage: React.FC<any> = (props) => {
                         <div className="space"></div>
 
                         <CodeBlock
-                            code={`<div className="tile">
-    <div className="tile__icon">
-        <figure className="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
+                            code={`<div class="tile">
+    <div class="tile__icon">
+        <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
     </div>
-    <div className="tile__container">
-        <p className="tile__title m-0">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
-        <p className="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span className="info">23 minutes ago</span>
-        <div className="tile__buttons m-0">
-            <button className="btn-primary btn-small uppercase">View</button>
-            <button className="btn-small uppercase">Dismiss</button>
+    <div class="tile__container">
+        <p class="tile__title m-0">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
+        <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span class="info">23 minutes ago</span>
+        <div class="tile__buttons m-0">
+            <button class="btn-primary btn-small uppercase">View</button>
+            <button class="btn-small uppercase">Dismiss</button>
         </div>
     </div>
 </div>`}
@@ -106,16 +106,16 @@ export const TilesPage: React.FC<any> = (props) => {
                         <div className="space"></div>
 
                         <CodeBlock
-                            code={`<div className="tile">
-    <div className="tile__icon">
-        <figure className="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
+                            code={`<div class="tile">
+    <div class="tile__icon">
+        <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
     </div>
-    <div className="tile__container">
-        <p className="tile__title m-0">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
-        <p className="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span className="info">23 minutes ago</span></div>
-    <div className="tile__buttons m-0">
-        <button className="btn-primary btn-small uppercase">View</button>
-        <button className="btn-small uppercase">Dismiss</button>
+    <div class="tile__container">
+        <p class="tile__title m-0">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
+        <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span class="info">23 minutes ago</span></div>
+    <div class="tile__buttons m-0">
+        <button class="btn-primary btn-small uppercase">View</button>
+        <button class="btn-small uppercase">Dismiss</button>
     </div>
 </div>`}
                             language="htmlbars"
@@ -158,16 +158,16 @@ export const TilesPage: React.FC<any> = (props) => {
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div style="max-width: 350px;">
-    <div className="tile">
-        <div className="tile__icon">
-            <figure className="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
+    <div class="tile">
+        <div class="tile__icon">
+            <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
         </div>
-        <div className="tile__container">
-            <p className="tile__title m-0 u-text-no-wrap">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
-            <p className="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span className="info">23 minutes ago</span>
-            <div className="tile__buttons m-0">
-                <button className="btn-primary btn-small uppercase">View</button>
-                <button className="btn-small uppercase">Dismiss</button>
+        <div class="tile__container">
+            <p class="tile__title m-0 u-text-no-wrap">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
+            <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span class="info">23 minutes ago</span>
+            <div class="tile__buttons m-0">
+                <button class="btn-primary btn-small uppercase">View</button>
+                <button class="btn-small uppercase">Dismiss</button>
             </div>
         </div>
     </div>
@@ -207,16 +207,16 @@ export const TilesPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div className="tile u-items-center">
-    <div className="tile__icon">
-        <figure className="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
+                            code={`<div class="tile u-items-center">
+    <div class="tile__icon">
+        <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
     </div>
-    <div className="tile__container">
-        <p className="tile__title m-0 u-text-no-wrap">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
-        <p className="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span className="info">23 minutes ago</span></div>
-    <div className="tile__buttons m-0">
-        <button className="btn-primary btn-small uppercase">View</button>
-        <button className="btn-small uppercase">Dismiss</button>
+    <div class="tile__container">
+        <p class="tile__title m-0 u-text-no-wrap">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
+        <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span class="info">23 minutes ago</span></div>
+    <div class="tile__buttons m-0">
+        <button class="btn-primary btn-small uppercase">View</button>
+        <button class="btn-small uppercase">Dismiss</button>
     </div>
 </div>`}
                             language="htmlbars"
