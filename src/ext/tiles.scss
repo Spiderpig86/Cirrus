@@ -5,7 +5,7 @@
     align-content: space-between; /* Ensure space between child elements of card tile */
     -webkit-align-content: space-between;
     -ms-flex-line-pack: justify; /* Evenly distribute lines */
-    overflow: auto;
+    overflow: inherit; /* Prevent overflowing when unnecessary */
     
     // /* Force elements to align at the center vertical height */ Deprecated in 0.6.0 in favor of u-items-center
     // &.tile.tile--center {
