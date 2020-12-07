@@ -205,13 +205,41 @@ export const TilesPage: React.FC<any> = (props) => {
                                 <button className="btn-small uppercase">Dismiss</button>
                             </div>
                         </div>
-                        <div className="space"></div>
+                        <div className="space large"></div>
+
+                        <p>
+                            In addition, the <code>u-hide-overflow</code> utility class could be used on the{' '}
+                            <code>tile-container</code> to keep the tile height consistent. This prevents wrapping that
+                            would normally occur on smaller screens (decrease browser width to see effect).
+                        </p>
+                        <div className="tile u-items-center">
+                            <div className="tile__icon">
+                                <figure className="avatar">
+                                    <img alt="avatar" src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
+                                </figure>
+                            </div>
+                            <div className="tile__container u-hide-overflow">
+                                <p className="tile__title m-0 u-text-no-wrap">
+                                    Robert Downey Jr. shared a post from <b>Stark Industries</b>.
+                                </p>
+                                <p className="tile__subtitle m-0">
+                                    Robert shared: 'Stark Industries is proud to announce its brand new suit.'
+                                </p>
+                                <span className="info">23 minutes ago</span>
+                            </div>
+                            <div className="tile__buttons m-0">
+                                <button className="btn-primary btn-small uppercase">View</button>
+                                <button className="btn-small uppercase">Dismiss</button>
+                            </div>
+                        </div>
+
+                        <div className="space large"></div>
                         <CodeBlock
                             code={`<div class="tile u-items-center">
     <div class="tile__icon">
         <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
     </div>
-    <div class="tile__container">
+    <div class="tile__container u-hide-overflow">
         <p class="tile__title m-0 u-text-no-wrap">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
         <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span class="info">23 minutes ago</span></div>
     <div class="tile__buttons m-0">
@@ -232,7 +260,7 @@ export const TilesPage: React.FC<any> = (props) => {
 
                         <div className="row u-items-center">
                             <div className="col-lg-6">
-                                <div className="tile tile--center mb-3">
+                                <div className="tile u-items-center mb-3">
                                     <div className="tile__icon">
                                         <figure className="avatar">
                                             <img
@@ -260,7 +288,7 @@ export const TilesPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="tile tile--center mb-3"">
+                                    code={`<div class="tile u-items-center mb-3"">
     <div class="tile__icon">
         <figure class="avatar">
             <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png">
@@ -281,7 +309,7 @@ export const TilesPage: React.FC<any> = (props) => {
                         </div>
                         <div className="row u-items-center">
                             <div className="col-lg-6">
-                                <div className="tile tile--center mb-3">
+                                <div className="tile u-items-center mb-3">
                                     <div className="tile__icon">
                                         <figure className="avatar">
                                             <img
@@ -309,7 +337,7 @@ export const TilesPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="tile tile--center mb-3">
+                                    code={`<div class="tile u-items-center mb-3">
     <div class="tile__icon">
         <figure class="avatar"><img class="padded" src="..."></figure>
     </div>
@@ -327,7 +355,7 @@ export const TilesPage: React.FC<any> = (props) => {
                         </div>
                         <div className="row u-items-center">
                             <div className="col-lg-6">
-                                <div className="tile tile--center mb-3">
+                                <div className="tile u-items-center mb-3">
                                     <div className="tile__icon">
                                         <figure className="avatar">
                                             <img
@@ -357,7 +385,7 @@ export const TilesPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="tile tile--center mb-3">
+                                    code={`<div class="tile u-items-center mb-3">
     <div class="tile__icon">
         <figure class="avatar"><img class="padded" src="..."></figure>
     </div>
@@ -368,6 +396,100 @@ export const TilesPage: React.FC<any> = (props) => {
     <div class="tile__buttons">
         <button class="btn-primary p-0"><span class="icon"><i class="fa fa-wrapper small fa-check" aria-hidden="true"></i></span></button>
         <button class="btn-transparent p-0"><span class="icon"><i class="fa fa-wrapper small fa-times" aria-hidden="true"></i></span></button>
+    </div>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="row u-items-center">
+                            <div className="col-lg-6">
+                                <div className="tile p-1 bg-gray-200 u-round">
+                                    <div className="tile__icon">
+                                        <figure className="avatar">
+                                            <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
+                                        </figure>
+                                    </div>
+                                    <div className="tile__container">
+                                        <p className="tile__title m-0">
+                                            Robert Downey Jr. shared a post from <b>Stark Industries</b>.
+                                        </p>
+                                        <p className="tile__subtitle m-0">
+                                            Robert shared: 'Stark Industries is proud to announce its brand new suit.'
+                                        </p>
+                                        <span className="info">23 minutes ago</span>
+                                    </div>
+                                    <div className="tile__buttons m-0 u-text-right">
+                                        <div className="list-dropdown dropdown-right">
+                                            <button className="btn-transparent btn-small btn-dropdown m-0">
+                                                <FontAwesomeIcon
+                                                    className="fa-wrapper small"
+                                                    icon={['fas', 'ellipsis-v']}
+                                                />
+                                            </button>
+                                            <ul className="menu u-text-left u-position-absolute">
+                                                
+                                            <li className="menu-item">
+                                                    <a href="!#">
+                                                        <FontAwesomeIcon
+                                                            className="fa-wrapper small"
+                                                            icon={['fas', 'folder-open']}
+                                                        />{' '}
+                                                        Open
+                                                    </a>
+                                                </li>
+                                                <li className="menu-item">
+                                                    <a href="!#">
+                                                        <FontAwesomeIcon
+                                                            className="fa-wrapper small"
+                                                            icon={['fas', 'check']}
+                                                        />{' '}
+                                                        Mark as read
+                                                    </a>
+                                                </li>
+                                                <li className="menu-item">
+                                                    <a href="!#">
+                                                        <FontAwesomeIcon
+                                                            className="fa-wrapper small"
+                                                            icon={['fas', 'cog']}
+                                                        />{' '}
+                                                        Notification settings
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="tile p-1 bg-gray-200 u-round">
+    <div class="tile__icon">
+        <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" /></figure>
+    </div>
+    <div class="tile__container">
+        <p class="tile__title m-0">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
+        <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p>
+        <span class="info">23 minutes ago</span>
+    </div>
+    <div class="tile__buttons m-0 u-text-right">
+        <div class="list-dropdown dropdown-right">
+            <button class="btn-transparent btn-dropdown m-0">
+                <i class="icon fad fa-ellipsis-v" aria-hidden="true"></i>
+            </button>
+            <ul class="menu u-text-left u-position-absolute">
+                <li class="menu-item">
+                    <a href="#"><i class="icon fas fa-folder-open" aria-hidden="true"></i> Open</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#"><i class="icon fas fa-check" aria-hidden="true"></i> Mark as read</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#"><i class="icon fas fa-cog" aria-hidden="true"></i> Notification settings</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>`}
                                     language="htmlbars"
