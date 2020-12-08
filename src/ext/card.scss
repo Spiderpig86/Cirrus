@@ -21,26 +21,26 @@
         }
     }
 
-    &.slide-up {
+    &.slide-up, &.card--slide-up {
         display: flex;
         flex-direction: column;
         max-height: 550px;
 
         &:hover {
-            .card-body {
+            .card-body, .card__body {
                 opacity: 1;
             }
-            .card-image {
+            .card-image, .card__image {
                 transform: translateY(-40px);
             }
-            .mobile-title {
+            .mobile-title, .card__mobile-title {
                 bottom: 35%;
                 transition: all 0.3s ease-in-out;
             }
         }
 
         /* More card components in second example */
-        .mobile-title {
+        .mobile-title, .card__mobile-title {
             position: absolute;
             left: 0;
             bottom: 5rem;
@@ -53,7 +53,7 @@
             backface-visibility: hidden;
         }
 
-        .card-body {
+        .card-body, .card__body {
             opacity: 0;
             overflow: auto;
             transition: all var(--animation-duration) ease-in-out;
@@ -69,7 +69,7 @@
         margin: 1rem 0;
     }
 
-    .card-image {
+    .card-image, .card__image {
         bottom: 0;
         left: 0;
         position: absolute;
@@ -98,14 +98,14 @@
         }
     }
 
-    .card-container {
+    .card-container, .card__container {
         display: block;
         position: relative;
         height: 40%;
         min-height: 21rem; /* So it appears in html5 standards mode */
     }
 
-    .title-container {
+    .title-container, .card__title-container {
         position: absolute;
         bottom: 1rem;
         width: 100%;
@@ -125,7 +125,7 @@
         }
     }
 
-    .action-bar {
+    .action-bar, .card__action-bar {
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
@@ -142,13 +142,13 @@
             margin: 0 0.5rem;
         }
 
-        & + .card-footer {
+        & + .card-footer, & + .card__footer {
             padding: 1rem 0;
             border-top: 1px solid map-get($grays, '200');
         }
     }
 
-    .card-footer {
+    .card-footer, .card__footer {
         position: relative;
         font-size: 0.75rem;
         color: map-get($grays, '600');
@@ -159,7 +159,7 @@
 */
 
     /* Card Title Bar */
-    .card-head {
+    .card-head, .card__head {
         align-items: stretch;
         -webkit-box-align: stretch;
         -ms-flex-align: stretch;
@@ -169,17 +169,18 @@
         border-bottom: 1px solid map-get($grays, '200');
     }
 
-    .card-head-title {
-        align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-        flex-grow: 1;
-        font-weight: 700;
-        padding: 0 1rem;
-    }
+    // Deprecated 0.6.0
+    // .card-head-title {
+    //     align-items: center;
+    //     -webkit-box-align: center;
+    //     -ms-flex-align: center;
+    //     display: -webkit-box;
+    //     display: -ms-flexbox;
+    //     display: flex;
+    //     -webkit-box-flex: 1;
+    //     -ms-flex-positive: 1;
+    //     flex-grow: 1;
+    //     font-weight: 700;
+    //     padding: 0 1rem;
+    // }
 }
