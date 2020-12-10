@@ -245,7 +245,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                     onDragFinished={handleSplitPaneDragFinished}
                 >
                     <div
-                        className={`p-2 u-hide-overflow h-100` + (isDragging ? ` is-dragging` : ``)}
+                        className={`u-hide-overflow h-100` + (isDragging ? ` is-dragging` : ``)}
                         style={{
                             backgroundColor: '#202124',
                         }}

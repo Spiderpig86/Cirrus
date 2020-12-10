@@ -837,7 +837,7 @@ export const CardsPage: React.FC<any> = (props) => {
                             <div className="col-lg-6">
                                 <div className="card">
                                     <div className="card-head">
-                                        <p className="card-head-title">This is the title</p>
+                                        <p className="font-bold px-3">This is the title</p>
                                     </div>
                                     <div className="content">
                                         <p>
@@ -859,7 +859,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                 <CodeBlock
                                     code={`<div class="card">
     <div class="card-head">
-        <p class="card-head-title">This is the title</p>
+        <p class="font-bold px-3">This is the title</p>
     </div>
     <div class="content">
         <p>This is some sample text spam spam spam spam spam spam spam. <a href="!#">#place</a><a href="!#">#holder</a><a href="!#">@Cirrus</a></p>
