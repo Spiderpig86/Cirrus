@@ -304,10 +304,10 @@ export const ColumnsPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space"></div>
                         <p>
-                            h To change this behavior, you can use the <code>u-no-wrap</code> utility class.
+                            To change this behavior, you can use the <code>u-no-wrap</code> utility class.
                         </p>
                         <div id="grids">
-                            <div className="row row--no-wrap">
+                            <div className="row u-no-wrap">
                                 <div className="col-10">
                                     <div className="uppercase">col-10</div>
                                 </div>
@@ -315,13 +315,13 @@ export const ColumnsPage: React.FC<any> = (props) => {
                                     <div className="uppercase">col-10</div>
                                 </div>
                                 <div className="col-10">
-                                    <div className="uppercase">col-10</div>
+                                    <div className="uppercase">col-10</div> 
                                 </div>
                             </div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="row row--no-wrap">
+                            code={`<div class="row u-no-wrap">
     <div class="col-10">
         <div class="uppercase">col-10</div>
     </div>
@@ -416,13 +416,19 @@ export const ColumnsPage: React.FC<any> = (props) => {
                                     <td>
                                         <code>col-xs-*</code>
                                     </td>
+                                    <td>No stacking.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>col-sm-*</code>
+                                    </td>
                                     <td>
                                         Stack columns for widths below <code>640px</code>.
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <code>col-*</code>, <code>col-sm-*</code>
+                                        <code>col-*</code>,<code>col-md-*</code>
                                     </td>
                                     <td>
                                         Stack columns for widths below <code>768px</code>.
@@ -430,15 +436,15 @@ export const ColumnsPage: React.FC<any> = (props) => {
                                 </tr>
                                 <tr>
                                     <td>
-                                        <code>col-md-*</code>
+                                        <code>col-lg-*</code>
                                     </td>
                                     <td>
-                                        Stack columns for widths below <code>1023px</code>.
+                                        Stack columns for widths below <code>1024px</code>.
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <code>col-lg-*</code>
+                                        <code>col-xl-*</code>
                                     </td>
                                     <td>
                                         Stack columns for widths below <code>1280px</code>.
@@ -446,6 +452,43 @@ export const ColumnsPage: React.FC<any> = (props) => {
                                 </tr>
                             </tbody>
                         </table>
+
+                        <p>
+                            To get a better idea of how these breakpoints work, take a look at the example below by
+                            resizing your browser window.
+                        </p>
+
+                        <div className="row">
+                            <div className="col-xs-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xs-3</div>
+                            <div className="col-xs-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xs-3</div>
+                            <div className="col-xs-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xs-3</div>
+                        </div>
+                        <div className="row">
+                            <div className="col-sm-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-sm-3</div>
+                            <div className="col-sm-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-sm-3</div>
+                            <div className="col-sm-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-sm-3</div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">
+                                col-md-3 / col-3
+                            </div>
+                            <div className="col-md-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">
+                                col-md-3 / col-3
+                            </div>
+                            <div className="col-md-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">
+                                col-md-3 / col-3
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-lg-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-lg-3</div>
+                            <div className="col-lg-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-lg-3</div>
+                            <div className="col-lg-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-lg-3</div>
+                        </div>
+                        <div className="row">
+                            <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xl-3</div>
+                            <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xl-3</div>
+                            <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xl-3</div>
+                        </div>
 
                         <div className="space large"></div>
                         <h6>Prevent Stacking</h6>
