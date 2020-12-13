@@ -163,21 +163,6 @@ section {
         padding: 0.15rem 0.75rem;
     }
 
-    /* Generate columns */
-    @for $i from 1 through $grid-columns {
-        .col-xs-#{$i},
-        .col-#{$i},
-        .col-sm-#{$i},
-        .col-md-#{$i},
-        .col-lg-#{$i} {
-            width: percentage($number: $grid-width * $i);
-        }
-
-        .offset-#{$i} {
-            margin-left: percentage($number: $grid-width * $i);
-        }
-    }
-
     /* Auto align col to left in row */
     .offset-right {
         margin-left: 0;
@@ -195,57 +180,55 @@ section {
         margin-right: 0;
     }
 
-    /* Some offset values */
-    [class^='col-'],
-    [class*=' col-'] {
-        // float: left; /* Keeps the elements in 1 row  Depercated 0.6.0 */
-        padding: 0 0.5rem;
-    }
-
-    /* Columns with breakpoints */
-    @include screen-below('lg') {
-        [class^='col-lg-']:not(.ignore-screen),
-        [class*=' col-lg-']:not(.ignore-screen) {
-            /* Remove the grid structure for smaller screens */
-            width: 100%;
-            margin-left: 0;
-            padding: 0;
-        }
-    }
-
     /* Dividers for mobile layout */
     &.divided [class^='col'],
     &.divided [class*=' col'] {
         box-shadow: 0 -1px 0 0 transparentize(map-get($grays, '500'), 0.5);
     }
 
-    @include screen-below('md') {
-        [class^='col-md-']:not(.ignore-screen):not([class^='col-lg']),
-        [class*=' col-md-']:not(.ignore-screen):not([class*=' col-lg']) {
-            /* Remove the grid structure for smaller screens */
-            width: 100%;
-            margin-left: 0;
-            padding: 0;
-        }
+    /* Base sizing where everything is 100% width */
+    [class^='col-lg-'],
+    [class*=' col-lg-'],
+    [class^='col-md-'],
+    [class*=' col-md-'],
+    [class^='col-sm-'],
+    [class*=' col-sm-'],
+    [class^='col-'],
+    [class*=' col-']  {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 0.5rem;
     }
 
-    @include screen-below('sm') {
-        [class^='col-']:not(.ignore-screen):not([class^='col-xs']):not([class^='col-md']):not([class^='col-lg']),
-        [class*=' col-']:not(.ignore-screen):not([class^='col-xs']):not([class*=' col-md']):not([class*=' col-lg']) {
-            /* Remove the grid structure for smaller screens */
-            width: 100%;
-            margin-left: 0;
-            padding: 0;
+    /* Column sizes for various viewports */
+    @for $i from 1 through $grid-columns {
+        @include screen-above('lg') {
+            .col-lg-#{$i} {
+                width: percentage($number: $grid-width * $i);
+            }
         }
-    }
 
-    @include screen-below('xs') {
-        [class^='col-xs-']:not(.ignore-screen):not([class^='col-sm']):not([class^='col-md']):not([class^='col-lg']),
-        [class*=' col-xs-']:not(.ignore-screen):not([class^='col-sm']):not([class^='col-md']):not([class^='col-lg']) {
-            /* Remove the grid structure for smaller screens */
-            width: 100%;
-            margin-left: 0;
-            padding: 0;
+        @include screen-above('md') {
+            .col-md-#{$i} {
+                width: percentage($number: $grid-width * $i);
+            }
+        }
+
+        @include screen-above('sm') {
+            .col-sm-#{$i},
+            .col-#{$i} {
+                width: percentage($number: $grid-width * $i);
+            }
+        }
+
+        @include screen-above('xs') {
+            .col-xs-#{$i} {
+                width: percentage($number: $grid-width * $i);
+            }
+        }
+
+        .offset-#{$i} {
+            margin-left: percentage($number: $grid-width * $i);
         }
     }
 
