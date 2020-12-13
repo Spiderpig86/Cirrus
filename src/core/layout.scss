@@ -195,38 +195,47 @@ section {
     }
 
     /* Column sizes for various viewports */
+
     @for $i from 1 through $grid-columns {
-        @include screen-above('lg') {
-            .col-xl-#{$i} {
-                width: percentage($number: $grid-width * $i);
-            }
-        }
-
-        @include screen-above('md') {
-            .col-lg-#{$i} {
-                width: percentage($number: $grid-width * $i);
-            }
-        }
-
-        @include screen-above('sm') {
-            .col-md-#{$i},
-            .col-#{$i} {
-                width: percentage($number: $grid-width * $i);
-            }
-        }
-
-        @include screen-above('xs') {
-            .col-sm-#{$i} {
-                width: percentage($number: $grid-width * $i);
-            }
-        }
-
         .col-xs-#{$i} {
             width: percentage($number: $grid-width * $i);
         }
 
         .offset-#{$i} {
             margin-left: percentage($number: $grid-width * $i);
+        }
+    }
+
+    @for $i from 1 through $grid-columns {
+        @include screen-above('xs') {
+            .col-sm-#{$i} {
+                width: percentage($number: $grid-width * $i);
+            }
+        }
+    }
+
+    @for $i from 1 through $grid-columns {
+        @include screen-above('sm') {
+            .col-md-#{$i},
+            .col-#{$i} {
+                width: percentage($number: $grid-width * $i);
+            }
+        }
+    }
+
+    @for $i from 1 through $grid-columns {
+        @include screen-above('md') {
+            .col-lg-#{$i} {
+                width: percentage($number: $grid-width * $i);
+            }
+        }
+    }
+    
+    @for $i from 1 through $grid-columns {
+        @include screen-above('lg') {
+            .col-xl-#{$i} {
+                width: percentage($number: $grid-width * $i);
+            }
         }
     }
 
