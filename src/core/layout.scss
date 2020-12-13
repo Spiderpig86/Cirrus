@@ -187,14 +187,8 @@ section {
     }
 
     /* Base sizing where everything is 100% width */
-    [class^='col-lg-'],
-    [class*=' col-lg-'],
-    [class^='col-md-'],
-    [class*=' col-md-'],
-    [class^='col-sm-'],
-    [class*=' col-sm-'],
     [class^='col-'],
-    [class*=' col-']  {
+    [class*=' col-'] {
         width: 100%;
         margin-left: 0;
         padding: 0 0.5rem;
@@ -203,28 +197,32 @@ section {
     /* Column sizes for various viewports */
     @for $i from 1 through $grid-columns {
         @include screen-above('lg') {
-            .col-lg-#{$i} {
+            .col-xl-#{$i} {
                 width: percentage($number: $grid-width * $i);
             }
         }
 
         @include screen-above('md') {
-            .col-md-#{$i} {
+            .col-lg-#{$i} {
                 width: percentage($number: $grid-width * $i);
             }
         }
 
         @include screen-above('sm') {
-            .col-sm-#{$i},
+            .col-md-#{$i},
             .col-#{$i} {
                 width: percentage($number: $grid-width * $i);
             }
         }
 
         @include screen-above('xs') {
-            .col-xs-#{$i} {
+            .col-sm-#{$i} {
                 width: percentage($number: $grid-width * $i);
             }
+        }
+
+        .col-xs-#{$i} {
+            width: percentage($number: $grid-width * $i);
         }
 
         .offset-#{$i} {
