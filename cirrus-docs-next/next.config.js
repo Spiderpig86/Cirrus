@@ -1,6 +1,7 @@
 const path = require('path');
+const withWorkbox = require("next-with-workbox");
 
-module.exports = ({
+module.exports = withWorkbox({
     webpack: function (config) {
         config.module.rules.push({
             test: /\.md$/,
@@ -12,5 +13,8 @@ module.exports = ({
         });
     
         return config;
+    },
+    workbox: {
+        // Options...
     },
 });

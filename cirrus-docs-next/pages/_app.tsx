@@ -4,6 +4,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { LayoutTree } from '@moxy/next-layout';
+import { Workbox } from 'workbox-window';
 
 import { Store } from '../store/store';
 
@@ -37,6 +38,17 @@ const App = ({ Component, pageProps }) => {
     library.add(fas);
     library.add(fab);
 
+    useEffect(() => {
+        // Register service worker
+        if (!('serviceWorker' in navigator) || process.env.NODE_ENV !== 'production') {
+            console.warn('Progressive Web App support is disabled');
+            return;
+        }
+
+        const wb = new Workbox('sw.js', { scrope: '/' });
+        wb.register();
+    }, []);
+
     return (
         <Store>
             <Head>
@@ -48,12 +60,18 @@ const App = ({ Component, pageProps }) => {
                     name="keywords"
                     content="css,css framework,scss,sass,framework,design, website,web design,frontend,components,user interface,interface,ui,user experience,ux,stanley lim,tailwind,bulma,bootstrap,milligram"
                 />
-                <meta name="description" content="The SCSS framework for the modern web. It's component based, customizable, and completely open source." />
+                <meta
+                    name="description"
+                    content="The SCSS framework for the modern web. It's component based, customizable, and completely open source."
+                />
                 <meta property="og:url" content="http://stanleylim.me/" />
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content="Stanley Lim" />
                 <meta property="og:image" content="/android-icon-192x192.png" />
-                <meta property="og:description" content="The SCSS framework for the modern web. It's component based, customizable, and completely open source." />
+                <meta
+                    property="og:description"
+                    content="The SCSS framework for the modern web. It's component based, customizable, and completely open source."
+                />
                 <meta property="og:site_name" content="Cirrus" />
                 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
                 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
