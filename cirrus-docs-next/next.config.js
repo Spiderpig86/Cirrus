@@ -1,13 +1,4 @@
-const withReactSvg = require('next-react-svg');
-const withImages = require('next-images');
 const path = require('path');
-
-// module.exports = withReactSvg({
-//     include: path.resolve(__dirname, 'static/svg'),
-//     webpack(config, options) {
-//         return config;
-//     },
-// });
 
 module.exports = ({
     webpack: function (config) {
