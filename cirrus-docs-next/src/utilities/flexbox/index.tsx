@@ -389,7 +389,9 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                                             <code className="text-blue-600 bg-blue-100">{row.class}</code>
                                         </td>
                                         <td>
-                                            <code>{row.style}</code>
+                                            <pre>
+                                                <code>{row.style}</code>
+                                            </pre>
                                         </td>
                                     </tr>
                                 ))}

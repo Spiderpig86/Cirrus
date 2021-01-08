@@ -55,7 +55,6 @@ export const LandingLayout = ({ children, ...rest }: any) => {
                         <li className="menu-item selected">
                             <a className="u-flex u-justify-content-center" href="!#">
                                 <b>0.6.0</b>
-                                <div className="tag tag--info uppercase ml-1">Preview</div>
                             </a>
                         </li>
                         <li className="menu-item">
