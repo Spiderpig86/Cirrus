@@ -492,6 +492,7 @@ export const ColumnsPage: React.FC<any> = (props) => {
 
                         <div className="space large"></div>
                         <h6>Prevent Stacking</h6>
+                        <blockquote>⚠ As of 0.6.1 this is no longer relevant. For 0.6.1+, you can achieve this behavior with <code>col-xs-*</code>.</blockquote>
                         <p>
                             To prevent the default stacking behavior, we can use the <code>ignore-screen</code> class on
                             the column.
