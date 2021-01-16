@@ -224,7 +224,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <code>u-hide-xs</code>
+                                            <code>u-none-xs</code>
                                         </td>
                                         <td>
                                             Hide content for widths below <code>640px</code>.
@@ -232,7 +232,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <code>u-hide-sm</code>
+                                            <code>u-none-sm</code>
                                         </td>
                                         <td>
                                             Hide content for widths <code>641px</code> and above.
@@ -240,7 +240,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <code>u-hide-sm-only</code>
+                                            <code>u-none-sm-only</code>
                                         </td>
                                         <td>
                                             Hide content for widths between <code>641px</code> and <code>768px</code>.
@@ -248,7 +248,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <code>u-hide-md</code>
+                                            <code>u-none-md</code>
                                         </td>
                                         <td>
                                             Hide content for widths <code>768px</code> and above.
@@ -256,7 +256,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <code>u-hide-md-only</code>
+                                            <code>u-none-md-only</code>
                                         </td>
                                         <td>
                                             Hide content for widths between <code>768px</code> and <code>1023px</code>.
@@ -264,7 +264,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <code>u-hide-lg</code>
+                                            <code>u-none-lg</code>
                                         </td>
                                         <td>
                                             Hide content for <code>1024px</code> and above.
