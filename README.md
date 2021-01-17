@@ -152,7 +152,7 @@ https://unpkg.com/cirrus-ui
 ## :sparkles: Why not other frameworks?
 Even with a multitude of CSS frameworks, some are either too basic to develop more complex websites and some are too bogged down with a lot of styles that don't end up getting used. Cirrus is meant to bridge a gap between boilerplate stylesheets and UI frameworks.
 
-* :zap: **Lightweight** - Cirrus consists of a single minified file using only **9.9kb** and **15.1.kb** respectively.
+* :zap: **Lightweight** - Cirrus consists of a single minified file using only **10.4kb** and **17.6kb** respectively.
 * :gift: **Beautiful Components** - Tons of pre-built components to for rapid prototyping.
 * :gem: **Clean** - Styles are easy to follow and written using [BEM Notation](http://getbem.com/introduction/).
 * :iphone: **Responsive** - Responsive designs out of the box.

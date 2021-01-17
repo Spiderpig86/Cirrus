@@ -44,7 +44,7 @@ const Landing: React.FC<any> = () => {
                             </h5>
 
                             <p className="white">
-                                <b>Version 0.6.0</b> / Gamma II
+                                <b>Version 0.6.1</b> / Gamma II
                             </p>
 
                             <div className="btn-group">
@@ -90,7 +90,7 @@ const Landing: React.FC<any> = () => {
                     <div className="content">
                         <div className="row">
                             <div className="col">
-                                <h6 className="lead uppercase mb-1 font-bold text-gray-700">17.3 KB</h6>
+                                <h6 className="lead uppercase mb-1 font-bold text-gray-700">17.6 KB</h6>
                                 <div className="uppercase font-bold text-gray-700">Compressed</div>
                             </div>
                             <div className="col">
@@ -183,7 +183,7 @@ const Landing: React.FC<any> = () => {
                             />
                             <h6 className="lead uppercase mb-1 font-bold text-gray-700">Compact</h6>
                             <div className="text-gray-700">
-                                Cirrus packs a lot of features with only a 17.3 KB payload.
+                                Cirrus packs a lot of features with only a 17.6 KB payload.
                             </div>
                         </div>
                     </div>
