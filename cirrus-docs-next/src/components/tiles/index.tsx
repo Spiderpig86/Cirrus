@@ -25,7 +25,7 @@ export const TilesPage: React.FC<any> = (props) => {
                         <p>
                             Tiles are the flexbox alternative to cards that tile child elements horizontally and more
                             closely resemble horizontal cards in Android. These get displayed in{' '}
-                            <code>card slide-up</code> to show an avatar, text, or buttons.
+                            <code>card card--slide-up</code> to show an avatar, text, or buttons.
                         </p>
                     </div>
                 </section>

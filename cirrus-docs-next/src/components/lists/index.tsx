@@ -505,15 +505,15 @@ export const ListsPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col-lg-5">
                                 <div className="card">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundImage: 'url(https://source.unsplash.com/random/640x480)',
                                             }}
                                         ></div>
 
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Unsplash Viewer</p>
                                             <span className="subtitle">Rate this photo.</span>
                                         </div>
@@ -550,9 +550,9 @@ export const ListsPage: React.FC<any> = (props) => {
                             <div className="col-lg-7">
                                 <CodeBlock
                                     code={`<div class="card">
-    <div class="card-container">
-        <div class="card-image" style="background-image: url(&quot;https://source.unsplash.com/random/640x480&quot;);"></div>
-        <div class="title-container">
+    <div class="card__container">
+        <div class="card__image" style="background-image: url(&quot;https://source.unsplash.com/random/640x480&quot;);"></div>
+        <div class="card__title-container">
             <p class="title">Unsplash Viewer</p><span class="subtitle">Rate this photo.</span></div>
     </div>
     <div class="content">

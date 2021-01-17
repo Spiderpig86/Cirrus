@@ -1177,12 +1177,12 @@ export const Preview: React.FC<any> = (props) => {
                             {/* 3 cards per row */}
                             <div className="col-4">
                                 <div className="card">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{ backgroundImage: 'url(https://placeimg.com/640/480/nature)' }}
                                         />
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Views</p>
                                             <span className="subtitle">By John Doe</span>
                                         </div>
@@ -1193,7 +1193,7 @@ export const Preview: React.FC<any> = (props) => {
                                             his melius ancillae, an essent accusata quaerendum quo.
                                         </p>
                                     </div>
-                                    <div className="action-bar u-text-center">
+                                    <div className="card__action-bar u-text-center">
                                         <button className="btn">SHARE</button>
                                         <button className="btn">LEARN MORE</button>
                                     </div>
@@ -1201,14 +1201,14 @@ export const Preview: React.FC<any> = (props) => {
                             </div>
                             <div className="col-4">
                                 <div className="card">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundImage: 'url(https://source.unsplash.com/random/640x480)',
                                             }}
                                         ></div>
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Views</p>
                                             <span className="subtitle">By John Doe</span>
                                         </div>
@@ -1219,7 +1219,7 @@ export const Preview: React.FC<any> = (props) => {
                                             his melius ancillae, an essent accusata quaerendum quo.
                                         </p>
                                     </div>
-                                    <div className="action-bar u-text-center">
+                                    <div className="card__action-bar u-text-center">
                                         <button className="btn">SHARE</button>
                                         <button className="btn">LEARN MORE</button>
                                     </div>
@@ -1227,15 +1227,15 @@ export const Preview: React.FC<any> = (props) => {
                             </div>
                             <div className="col-4">
                                 <div className="card">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundImage:
                                                     'url(https://source.unsplash.com/category/nature/640x480)',
                                             }}
                                         />
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Views</p>
                                             <span className="subtitle">By John Doe</span>
                                         </div>
@@ -1246,7 +1246,7 @@ export const Preview: React.FC<any> = (props) => {
                                             his melius ancillae, an essent accusata quaerendum quo.
                                         </p>
                                     </div>
-                                    <div className="action-bar u-text-center">
+                                    <div className="card__action-bar u-text-center">
                                         <button className="btn">SHARE</button>
                                         <button className="btn">LEARN MORE</button>
                                     </div>

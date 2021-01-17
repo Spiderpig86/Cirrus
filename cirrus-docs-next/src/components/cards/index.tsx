@@ -45,9 +45,9 @@ export const CardsPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col-lg-5">
                                 <div className="card">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundColor: 'rebeccapurple',
                                                 backgroundImage: `radial-gradient(
@@ -60,7 +60,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                   )`,
                                             }}
                                         ></div>
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Title</p>
                                             <span className="subtitle">Subtitle</span>
                                         </div>
@@ -70,14 +70,14 @@ export const CardsPage: React.FC<any> = (props) => {
                                             Text and other content belong here, inside a <code>content</code> div.
                                         </p>
                                     </div>
-                                    <div className="action-bar u-center">
+                                    <div className="card__action-bar u-center">
                                         <button className="btn-link outline">Buttons</button>
                                         <button className="btn-link outline">Go here</button>
                                     </div>
-                                    <div className="card-footer">
+                                    <div className="card__footer">
                                         <div className="u-text-center">
                                             <span>
-                                                This is additional footer text in <code>card-footer</code>.
+                                                This is additional footer text in <code>card__footer</code>.
                                             </span>
                                         </div>
                                     </div>
@@ -90,16 +90,16 @@ export const CardsPage: React.FC<any> = (props) => {
                                         <code>card</code>
                                         <ul>
                                             <li>
-                                                <code>card-title</code> (alternate title)
+                                                <code>card__header</code> (alternate title)
                                             </li>
                                             <li>
-                                                <code>card-container</code>
+                                                <code>card__container</code>
                                                 <ul>
                                                     <li>
-                                                        <code>card-image</code>
+                                                        <code>card__image</code>
                                                     </li>
                                                     <li>
-                                                        <code>title-container</code>
+                                                        <code>card__title-container</code>
                                                         <ul>
                                                             <li>
                                                                 <code>title</code>
@@ -115,10 +115,10 @@ export const CardsPage: React.FC<any> = (props) => {
                                                 <code>content</code>
                                             </li>
                                             <li>
-                                                <code>action-bar</code>
+                                                <code>card__action-bar</code>
                                             </li>
                                             <li>
-                                                <code>card-footer</code>
+                                                <code>card__footer</code>
                                             </li>
                                         </ul>
                                     </li>
@@ -128,20 +128,20 @@ export const CardsPage: React.FC<any> = (props) => {
 
                         <CodeBlock
                             code={`<div className="card" style="max-width: 350px;">
-    <div className="card-container">
-        <div className="card-image"></div>
-        <div className="title-container">
+    <div className="card__container">
+        <div className="card__image"></div>
+        <div className="card__title-container">
             <p className="title">Title</p><span className="subtitle">Subtitle</span></div>
     </div>
     <div className="content">
         <p>Text and other content belong here, inside a <code>content</code> div.</p>
     </div>
-    <div className="action-bar u-center">
+    <div className="card__action-bar u-center">
         <button className="btn-link outline">Buttons</button>
         <button className="btn-link outline">Go here</button>
     </div>
-    <div className="card-footer">
-        <div className="u-text-center"><span>This is additional footer text in <code>card-footer</code>.</span></div>
+    <div className="card__footer">
+        <div className="u-text-center"><span>This is additional footer text in <code>card__footer</code>.</span></div>
     </div>
 </div>`}
                             language="htmlbars"
@@ -211,20 +211,20 @@ export const CardsPage: React.FC<any> = (props) => {
                         </p>
                         <ul>
                             <li>
-                                An animated card must have the <code>slide-up</code> class along with the{' '}
+                                An animated card must have the <code>card--slide-up</code> class along with the{' '}
                                 <code>card</code> class.
                             </li>
                             <li>
-                                To display an image, it is recommended to create a <code>card-image</code> div nested
-                                inside a <code>card-container</code> div.
+                                To display an image, it is recommended to create a <code>card__image</code> div nested
+                                inside a <code>card__container</code> div.
                             </li>
                             <li>
                                 Unlike the standard card above, the title and subtitle are placed in the{' '}
-                                <code>mobile-title</code> div below the <code>card-container</code>.
+                                <code>card__mobile-title</code> div below the <code>card__container</code>.
                             </li>
                             <li>
                                 The content or text of the card is then placed inside a standard <code>content</code>{' '}
-                                div now with the <code>card-body</code> class.
+                                div now with the <code>card__body</code> class.
                             </li>
                         </ul>
 
@@ -232,16 +232,16 @@ export const CardsPage: React.FC<any> = (props) => {
 
                         <div className="row">
                             <div className="col-lg-5">
-                                <div className="card slide-up">
-                                    <div className="card-container">
+                                <div className="card card--slide-up">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundImage: 'url(https://unsplash.it/640/480?random&blur)',
                                             }}
                                         ></div>
                                     </div>
-                                    <div className="mobile-title">
+                                    <div className="card__mobile-title">
                                         <div className="content">
                                             <div className="tile">
                                                 <div className="tile__container">
@@ -251,22 +251,22 @@ export const CardsPage: React.FC<any> = (props) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="card-body content">
+                                    <div className="card__body content">
                                         <p>
                                             Located two hours south of Sydney in the Southern Highland of New South
                                             Wales...
                                         </p>
                                     </div>
-                                    <div className="card-footer content">2 min. read 22 comments</div>
+                                    <div className="card__footer content">2 min. read 22 comments</div>
                                 </div>
                             </div>
                             <div className="col-lg-7">
                                 <CodeBlock
-                                    code={`<div className="card slide-up">
-    <div className="card-container">
-        <div className="card-image" style="background-image: url(&quot;https://unsplash.it/640/480?random&amp;blur&quot;);"></div>
+                                    code={`<div className="card card--slide-up">
+    <div className="card__container">
+        <div className="card__image" style="background-image: url(&quot;https://unsplash.it/640/480?random&amp;blur&quot;);"></div>
     </div>
-    <div className="mobile-title">
+    <div className="card__mobile-title">
         <div className="content">
             <div className="tile">
                 <div className="tile__container">
@@ -276,10 +276,10 @@ export const CardsPage: React.FC<any> = (props) => {
             </div>
         </div>
     </div>
-    <div className="card-body content">
+    <div className="card__body content">
         <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
     </div>
-    <div className="card-footer content">2 min. read 22 comments</div>
+    <div className="card__footer content">2 min. read 22 comments</div>
 </div>`}
                                     language="htmlbars"
                                 />
@@ -304,15 +304,15 @@ export const CardsPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col-4">
                                 <div className="card">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundImage: 'url(https://placeimg.com/640/480/nature)',
                                             }}
                                         ></div>
 
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Kangaroo Valley Safari</p>
                                             <span className="subtitle">By John Doe</span>
                                         </div>
@@ -323,7 +323,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                             Wales...
                                         </p>
                                     </div>
-                                    <div className="action-bar u-center">
+                                    <div className="card__action-bar u-center">
                                         <button className="btn">SHARE</button>
                                         <button className="btn">LEARN MORE</button>
                                     </div>
@@ -332,16 +332,16 @@ export const CardsPage: React.FC<any> = (props) => {
 
                             <div className="col-4">
                                 <div className="card">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundImage:
                                                     'url(https://source.unsplash.com/category/nature/640x480)',
                                             }}
                                         ></div>
 
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Kangaroo Valley Safari</p>
                                             <span className="subtitle">By John Doe</span>
                                         </div>
@@ -352,7 +352,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                             Wales...
                                         </p>
                                     </div>
-                                    <div className="action-bar u-center">
+                                    <div className="card__action-bar u-center">
                                         <button className="btn">SHARE</button>
                                         <button className="btn">LEARN MORE</button>
                                     </div>
@@ -361,15 +361,15 @@ export const CardsPage: React.FC<any> = (props) => {
 
                             <div className="col-4">
                                 <div className="card">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundImage:
                                                     'url(https://source.unsplash.com/category/nature/640x480)',
                                             }}
                                         ></div>
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Kangaroo Valley Safari</p>
                                             <span className="subtitle">By John Doe</span>
                                         </div>
@@ -380,7 +380,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                             Wales...
                                         </p>
                                     </div>
-                                    <div className="action-bar u-center">
+                                    <div className="card__action-bar u-center">
                                         <button className="btn">SHARE</button>
                                         <button className="btn">LEARN MORE</button>
                                     </div>
@@ -392,16 +392,16 @@ export const CardsPage: React.FC<any> = (props) => {
 
                         <div className="row">
                             <div className="col-4">
-                                <div className="card slide-up">
-                                    <div className="card-container">
+                                <div className="card card--slide-up">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundImage: 'url(https://unsplash.it/640/480?random&amp;blur)',
                                             }}
                                         ></div>
                                     </div>
-                                    <div className="mobile-title">
+                                    <div className="card__mobile-title">
                                         <div className="content">
                                             <div className="tile">
                                                 <div className="tile__container">
@@ -411,27 +411,27 @@ export const CardsPage: React.FC<any> = (props) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="card-body content">
+                                    <div className="card__body content">
                                         <p>
                                             Located two hours south of Sydney in the Southern Highland of New South
                                             Wales...
                                         </p>
                                     </div>
-                                    <div className="card-footer content">2 min. read 22 comments</div>
+                                    <div className="card__footer content">2 min. read 22 comments</div>
                                 </div>
                             </div>
 
                             <div className="col-4">
-                                <div className="card slide-up">
-                                    <div className="card-container">
+                                <div className="card card--slide-up">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundImage: 'url(https://unsplash.it/g/640/480?random)',
                                             }}
                                         ></div>
                                     </div>
-                                    <div className="mobile-title">
+                                    <div className="card__mobile-title">
                                         <div className="content">
                                             <div className="tile tile--center">
                                                 <div className="tile__icon">
@@ -450,27 +450,27 @@ export const CardsPage: React.FC<any> = (props) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="card-body content">
+                                    <div className="card__body content">
                                         <p>
                                             Located two hours south of Sydney in the Southern Highland of New South
                                             Wales...
                                         </p>
                                     </div>
-                                    <div className="card-footer content">2 min. read 22 comments</div>
+                                    <div className="card__footer content">2 min. read 22 comments</div>
                                 </div>
                             </div>
 
                             <div className="col-4">
-                                <div className="card slide-up">
-                                    <div className="card-container">
+                                <div className="card card--slide-up">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundImage: 'url(https://source.unsplash.com/user/erondu/640x480)',
                                             }}
                                         ></div>
                                     </div>
-                                    <div className="mobile-title">
+                                    <div className="card__mobile-title">
                                         <div className="content">
                                             <div className="tile">
                                                 <div className="tile__container">
@@ -480,13 +480,13 @@ export const CardsPage: React.FC<any> = (props) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="card-body content">
+                                    <div className="card__body content">
                                         <p>
                                             Located two hours south of Sydney in the Southern Highland of New South
                                             Wales...
                                         </p>
                                     </div>
-                                    <div className="card-footer content">03:45 - 1 Jan 2017</div>
+                                    <div className="card__footer content">03:45 - 1 Jan 2017</div>
                                 </div>
                             </div>
                         </div>
@@ -511,9 +511,9 @@ export const CardsPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col-4">
                                 <div className="card">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundColor: 'rebeccapurple',
                                                 backgroundImage: `radial-gradient(
@@ -526,7 +526,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                   )`,
                                             }}
                                         ></div>
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Title</p>
                                             <span className="subtitle">Subtitle</span>
                                         </div>
@@ -534,17 +534,17 @@ export const CardsPage: React.FC<any> = (props) => {
                                     <div className="content">
                                         <p>
                                             Text and other content is embedded in the content div here. Embed the{' '}
-                                            <code>card-image</code> in the <code>card-container</code> above.
+                                            <code>card__image</code> in the <code>card__container</code> above.
                                         </p>
                                     </div>
-                                    <div className="action-bar u-center">
+                                    <div className="card__action-bar u-center">
                                         <button className="uppercase">Buttons</button>
                                         <button className="uppercase">Go here</button>
                                     </div>
-                                    <div className="card-footer">
+                                    <div className="card__footer">
                                         <div className="u-text-center">
                                             <span>
-                                                This is additional footer text in <code>card-footer</code>.
+                                                This is additional footer text in <code>card__footer</code>.
                                             </span>
                                         </div>
                                     </div>
@@ -552,9 +552,9 @@ export const CardsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-4">
                                 <div className="card">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundColor: 'rebeccapurple',
                                                 backgroundImage: `radial-gradient(
@@ -567,7 +567,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                   )`,
                                             }}
                                         ></div>
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Title</p>
                                             <span className="subtitle">Subtitle</span>
                                         </div>
@@ -575,16 +575,16 @@ export const CardsPage: React.FC<any> = (props) => {
                                     <div className="content">
                                         <p>
                                             Text and other content is embedded in the content div here. Embed the{' '}
-                                            <code>card-image</code> in the <code>card-container</code> above.
+                                            <code>card__image</code> in the <code>card__container</code> above.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-4">
                                 <div className="card">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundColor: 'rebeccapurple',
                                                 backgroundImage: `radial-gradient(
@@ -597,7 +597,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                   )`,
                                             }}
                                         ></div>
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Title</p>
                                             <span className="subtitle">Subtitle</span>
                                         </div>
@@ -610,9 +610,9 @@ export const CardsPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col-4">
                                 <div className="card h-100 u-flex u-flex-column">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundColor: 'rebeccapurple',
                                                 backgroundImage: `radial-gradient(
@@ -625,7 +625,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                   )`,
                                             }}
                                         ></div>
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Title</p>
                                             <span className="subtitle">Subtitle</span>
                                         </div>
@@ -633,17 +633,17 @@ export const CardsPage: React.FC<any> = (props) => {
                                     <div className="content">
                                         <p>
                                             Text and other content is embedded in the content div here. Embed the{' '}
-                                            <code>card-image</code> in the <code>card-container</code> above.
+                                            <code>card__image</code> in the <code>card__container</code> above.
                                         </p>
                                     </div>
-                                    <div className="action-bar u-center">
+                                    <div className="card__action-bar u-center">
                                         <button className="uppercase">Buttons</button>
                                         <button className="uppercase">Go here</button>
                                     </div>
-                                    <div className="card-footer">
+                                    <div className="card__footer">
                                         <div className="u-text-center">
                                             <span>
-                                                This is additional footer text in <code>card-footer</code>.
+                                                This is additional footer text in <code>card__footer</code>.
                                             </span>
                                         </div>
                                     </div>
@@ -651,9 +651,9 @@ export const CardsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-4">
                                 <div className="card h-100 u-flex u-flex-column">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundColor: 'rebeccapurple',
                                                 backgroundImage: `radial-gradient(
@@ -666,7 +666,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                   )`,
                                             }}
                                         ></div>
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Title</p>
                                             <span className="subtitle">Subtitle</span>
                                         </div>
@@ -674,16 +674,16 @@ export const CardsPage: React.FC<any> = (props) => {
                                     <div className="content">
                                         <p>
                                             Text and other content is embedded in the content div here. Embed the{' '}
-                                            <code>card-image</code> in the <code>card-container</code> above.
+                                            <code>card__image</code> in the <code>card__container</code> above.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-4">
                                 <div className="card h-100 u-flex u-flex-column">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundColor: 'rebeccapurple',
                                                 backgroundImage: `radial-gradient(
@@ -696,7 +696,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                   )`,
                                             }}
                                         ></div>
-                                        <div className="title-container">
+                                        <div className="card__title-container">
                                             <p className="title">Title</p>
                                             <span className="subtitle">Subtitle</span>
                                         </div>
@@ -722,9 +722,9 @@ export const CardsPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col-lg-5">
                                 <div className="card">
-                                    <div className="card-container">
+                                    <div className="card__container">
                                         <div
-                                            className="card-image"
+                                            className="card__image"
                                             style={{
                                                 backgroundImage:
                                                     'url(https://images.unsplash.com/photo-1467952497026-86722ef1916f?dpr=1.25&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=)',
@@ -754,7 +754,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                             Testing my new DSLR. Wow check out that deer! <a href="!#">#nature</a>
                                         </p>
                                     </div>
-                                    <div className="card-footer level content">
+                                    <div className="card__footer level content">
                                         6:32 PM - 3 Jul 18
                                         <div className="u-pull-right">
                                             <div className="level-right ignore-screen">
@@ -790,8 +790,8 @@ export const CardsPage: React.FC<any> = (props) => {
                             <div className="col-lg-7">
                                 <CodeBlock
                                     code={`<div className="card">
-    <div className="card-container">
-        <div className="card-image" style="background-image: url(https://images.unsplash.com/photo-1467952497026-86722ef1916f?dpr=1.25&amp;auto=compress,format&amp;fit=crop&amp;w=1199&amp;h=799&amp;q=80&amp;cs=tinysrgb&amp;crop=)"></div>
+    <div className="card__container">
+        <div className="card__image" style="background-image: url(https://images.unsplash.com/photo-1467952497026-86722ef1916f?dpr=1.25&amp;auto=compress,format&amp;fit=crop&amp;w=1199&amp;h=799&amp;q=80&amp;cs=tinysrgb&amp;crop=)"></div>
     </div>
     <div className="content">
         <div className="space"></div>
@@ -809,7 +809,7 @@ export const CardsPage: React.FC<any> = (props) => {
         </div>
         <p>Testing my new DSLR. Wow check out that deer! <a href="!#">#nature</a></p>
     </div>
-    <div className="card-footer level content">
+    <div className="card__footer level content">
         6:32 PM - 3 Jul 18
         <div className="u-pull-right">
             <div className="level-right ignore-screen">
@@ -836,7 +836,7 @@ export const CardsPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="card">
-                                    <div className="card-head">
+                                    <div className="card__header">
                                         <p className="font-bold px-3">This is the title</p>
                                     </div>
                                     <div className="content">
@@ -847,8 +847,8 @@ export const CardsPage: React.FC<any> = (props) => {
                                             <a href="!#">@Cirrus</a>
                                         </p>
                                     </div>
-                                    <div className="card-footer level content">6:32 PM - 3 Jul 18</div>
-                                    <div className="action-bar u-center">
+                                    <div className="card__footer level content">6:32 PM - 3 Jul 18</div>
+                                    <div className="card__action-bar u-center">
                                         <button className="btn-transparent outline">Cancel</button>
                                         <button className="btn-transparent outline">Save</button>
                                         <button className="btn-transparent outline">Post</button>
@@ -858,14 +858,14 @@ export const CardsPage: React.FC<any> = (props) => {
                             <div className="col-lg-6">
                                 <CodeBlock
                                     code={`<div class="card">
-    <div class="card-head">
+    <div class="card__header">
         <p class="font-bold px-3">This is the title</p>
     </div>
     <div class="content">
         <p>This is some sample text spam spam spam spam spam spam spam. <a href="!#">#place</a><a href="!#">#holder</a><a href="!#">@Cirrus</a></p>
     </div>
-    <div class="card-footer level content">6:32 PM - 3 Jul 18</div>
-    <div class="action-bar u-center">
+    <div class="card__footer level content">6:32 PM - 3 Jul 18</div>
+    <div class="card__action-bar u-center">
         <button class="btn-transparent outline">Cancel</button>
         <button class="btn-transparent outline">Save</button>
         <button class="btn-transparent outline">Post</button>
