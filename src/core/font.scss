@@ -29,16 +29,6 @@ $font-transformations: 'uppercase', 'lowercase', 'capitalize';
     }
 }
 
-/* Silent header Deprecated 0.5.6
-h1 .silent,
-h2 .silent,
-h3 .silent,
-h4 .silent,
-h5 .silent,
-h6 .silent {
-  color: #788196;
-} */
-
 h1 {
     letter-spacing: 0.025rem;
 }
@@ -68,7 +58,6 @@ blockquote {
 
     p {
         margin: 0;
-        // font-size: 0.95rem; Deprecated 0.6.0
     }
 }
 

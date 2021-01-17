@@ -1,6 +1,6 @@
 /*
 * Cirrus 0.6.0
-* Stanley Lim, Copyright 2020
+* Stanley Lim, Copyright 2021
 * https://spiderpig86.github.io/Cirrus
 */
 /* BASE STYLING FOR CIRRUS */
@@ -4624,7 +4624,7 @@ video.video-fullscreen {
     position: relative;
     font-size: 0.75rem;
     color: #868e96; }
-  .card .card-head, .card .card__head {
+  .card .card-head, .card .card__header {
     align-items: stretch;
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
