@@ -44,7 +44,7 @@ const Landing: React.FC<any> = () => {
                             </h5>
 
                             <p className="white">
-                                <b>Version 0.6.1</b> / Gamma II
+                                <b>Version 0.6.1</b> / Gamma III
                             </p>
 
                             <div className="btn-group">
