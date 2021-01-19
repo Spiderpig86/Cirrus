@@ -1,4 +1,4 @@
-$positions: 'static', 'fixed', 'absolute', 'relative', 'sticky';
+$positions: static, fixed, absolute, relative, sticky;
 
 @each $position in $positions {
     .u-position-#{$position} {

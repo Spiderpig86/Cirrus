@@ -58,7 +58,7 @@ button.btn--circle,
 
 /* GLOBAL THEME SELECTORS */
 /* v1 */
-$themes: 'primary', 'success', 'warning', 'danger', 'light', 'dark', 'link', 'link-dark', 'info';
+$themes: primary, success, warning, danger, light, dark, link, link-dark, info;
 
 @each $theme in $themes {
     .bg-#{$theme} {

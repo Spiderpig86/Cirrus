@@ -1,5 +1,5 @@
 /*
-* Cirrus 0.6.0
+* Cirrus 0.6.1
 * Stanley Lim, Copyright 2021
 * https://spiderpig86.github.io/Cirrus
 */
@@ -829,15 +829,6 @@ h6 {
   line-height: 1.2;
   margin-bottom: 1rem; }
 
-/* Silent header Deprecated 0.5.6
-h1 .silent,
-h2 .silent,
-h3 .silent,
-h4 .silent,
-h5 .silent,
-h6 .silent {
-  color: #788196;
-} */
 h1 {
   letter-spacing: 0.025rem; }
 
@@ -951,13 +942,13 @@ mark,
 
 /* Text Transformations */
 .uppercase {
-  text-transform: "uppercase"; }
+  text-transform: uppercase; }
 
 .lowercase {
-  text-transform: "lowercase"; }
+  text-transform: lowercase; }
 
 .capitalize {
-  text-transform: "capitalize"; }
+  text-transform: capitalize; }
 
 .rtl {
   direction: rtl; }

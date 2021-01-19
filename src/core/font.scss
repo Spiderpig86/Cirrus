@@ -16,7 +16,7 @@ $font-weights: (
     'semibold': 600,
     'bold': 700,
 );
-$font-transformations: 'uppercase', 'lowercase', 'capitalize';
+$font-transformations: uppercase, lowercase, capitalize;
 
 /* Headers */
 @for $index from 1 through 6 {

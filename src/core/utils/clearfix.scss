@@ -1,4 +1,4 @@
-$clears: 'left', 'right', 'both';
+$clears: left, right, both;
 
 @each $clear in $clears {
     .u-clear-#{$clear} {

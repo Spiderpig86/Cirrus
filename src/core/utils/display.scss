@@ -1,6 +1,6 @@
 @import '../../../helpers/_size';
 
-$display-utils-config: 'none', 'inline', 'inline-block', 'block', 'table', 'table-row', 'table-column', 'table-cell';
+$display-utils-config: none, inline, inline-block, block, table, table-row, table-column, table-cell;
 
 @each $display in $display-utils-config {
     .u-#{$display} {

@@ -1,8 +1,8 @@
-$flex-directions: 'row', 'row-reverse', 'column', 'column-reverse';
+$flex-directions: row, row-reverse, column, column-reverse;
 
-$justify-content: 'flex-start', 'center', 'flex-end', 'space-between', 'space-around', 'space-evenly';
+$justify-content: flex-start, center, flex-end, space-between, space-around, space-evenly;
 
-$align-items: 'stretch', 'flex-start', 'center', 'flex-end', 'baseline';
+$align-items: stretch, flex-start, center, flex-end, baseline;
 
 .u-flex {
     display: flex !important;
