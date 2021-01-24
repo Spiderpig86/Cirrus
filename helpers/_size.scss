@@ -3,8 +3,8 @@ $spacing-system: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32;
 $space-size: 0.5rem;
 
 /* Fonts */
-$font-size-xs: .7rem;
-$font-size-s: .85rem;
+$font-size-xs: 0.7rem;
+$font-size-s: 0.85rem;
 $font-size-m: 1rem;
 $font-size-l: 1.35rem;
 $font-size-xl: 1.75rem;
@@ -16,7 +16,12 @@ $grid-columns: 12;
 $grid-width: 1 / $grid-columns;
 
 /* Tab Sizes */
-$tab-sizes: ('xsmall': 0.6rem, 'small': 0.75rem, 'large': 1.25rem, 'xlarge': 1.5rem);
+$tab-sizes: (
+    'xsmall': 0.6rem,
+    'small': 0.75rem,
+    'large': 1.25rem,
+    'xlarge': 1.5rem,
+);
 
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
@@ -24,7 +29,14 @@ $breakpoints: (
     'xs': 640px,
     'sm': 768px,
     'md': 1024px,
-    'lg': 1280px
+    'lg': 1280px,
+);
+
+$breakpoint-pairs: (
+    'sm': 'xs',
+    'md': 'sm',
+    'lg': 'md',
+    'xl': 'lg',
 );
 
 @mixin screen-above($breakpoint) {
@@ -58,5 +70,27 @@ $breakpoints: (
 
     @media screen and (max-width: map-get($breakpoints, $breakpoint) - 1) {
         @content;
+    }
+}
+
+// TODO: Once we move to dart-sass, look into using content with variables
+@mixin generate-classes-for-viewport($classes, $property) {
+    // We build in this order since we want larger viewports to have higher precedence
+    // so we can write classes like u-none u-block-md u-none-lg
+
+    @each $class in $classes {
+        .u-#{$class} {
+            #{$property}: $class !important;
+        }
+    }
+
+    @each $suffix, $limit in $breakpoint-pairs {
+        @each $class in $classes {
+            @include screen-above($limit) {
+                .u-#{$class}-#{$suffix} {
+                    #{$property}: $class !important;
+                }
+            }
+        }
     }
 }
