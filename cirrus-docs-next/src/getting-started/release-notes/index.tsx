@@ -10,14 +10,13 @@ import { Pagination } from '../../../layouts/components/pagination';
 import { ReplaceAll } from '../../../utils/string';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { RELEASE_NOTE_VERSIONS } from '../../../constants/release-notes';
 
 // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
 const importAll = (r: any) => r.keys().map(r);
 const releaseNotesMd = importAll(require.context('../../../static/markdown', false, /\.md$/)).sort().reverse();
 
 export const ReleaseNotesPage: React.FC<any> = (props) => {
-    // TODO: move to constants
-    const versions = ['0.6.0', '0.5.5', '0.5.4', '0.5.3', '0.4.0'];
 
     const [releaseNotes, setReleaseNotes] = useState<Map<string, string>>(new Map());
     const [toc, setToc] = useState<TableOfContentsEntry[]>([
@@ -37,8 +36,8 @@ export const ReleaseNotesPage: React.FC<any> = (props) => {
             };
 
             const map: Map<string, string> = new Map();
-            for (let i = 0; i < versions.length; i++) {
-                const key = /\d+\.\d+\.\d+/.exec(versions[i]);
+            for (let i = 0; i < RELEASE_NOTE_VERSIONS.length; i++) {
+                const key = /\d+\.\d+\.\d+/.exec(RELEASE_NOTE_VERSIONS[i]);
                 const notes = releaseNotesMd[i];
                 if (key) {
                     map.set(key.toString(), notes.default);
