@@ -1,54 +1,5 @@
 @import '../../../helpers/_size';
 
-$display-utils-config: none, inline, inline-block, block, table, table-row, table-column, table-cell;
+$display-utils-config: none, inline, inline-block, block, flex, inline-flex, table, table-row, table-column, table-cell;
 
 @include generate-classes-for-viewport($display-utils-config, 'display');
-
-// .u-none {
-//     /* Hide elements based on screen size */
-//     // @include screen-below('xs') {
-//     //     &-xs-only {
-//     //         display: none !important;
-//     //     }
-//     // }
-
-//     // @include screen-between('xs', 'sm') {
-//     //     &-sm-only {
-//     //         display: none !important;
-//     //     }
-//     // }
-
-//     @include screen-above('xs') {
-//         /* Hide on devices that are tablets or larger */
-//         &-sm {
-//             display: none !important;
-//         }
-//     }
-
-//     // @include screen-between('sm', 'md') {
-//     //     &-md-only {
-//     //         display: none !important;
-//     //     }
-//     // }
-
-//     @include screen-above('sm') {
-//         /* Hide element on laptops, desktops, etc */
-//         &-md {
-//             display: none !important;
-//         }
-//     }
-
-//     @include screen-above('md') {
-//         /* Hide element on large desktops, etc */
-//         &-lg {
-//             display: none !important;
-//         }
-//     }
-
-//     @include screen-above('lg') {
-//         /* Hide element on large desktops, etc */
-//         &-xl {
-//             display: none !important;
-//         }
-//     }
-// }

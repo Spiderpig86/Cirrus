@@ -1,7 +1,5 @@
+@import '../../../helpers/_size';
+
 $positions: static, fixed, absolute, relative, sticky;
 
-@each $position in $positions {
-    .u-position-#{$position} {
-        position: #{$position} !important;
-    }
-}
+@include generate-classes-for-viewport($positions, 'position');

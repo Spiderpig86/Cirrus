@@ -1,16 +1,10 @@
+@import '../../../helpers/_size';
+
 $flex-directions: row, row-reverse, column, column-reverse;
 
 $justify-content: flex-start, center, flex-end, space-between, space-around, space-evenly;
 
 $align-items: stretch, flex-start, center, flex-end, baseline;
-
-.u-flex {
-    display: flex !important;
-}
-
-.u-inline-flex {
-    display: inline-flex !important;
-}
 
 @each $flex-direction in $flex-directions {
     .u-flex-#{$flex-direction} {

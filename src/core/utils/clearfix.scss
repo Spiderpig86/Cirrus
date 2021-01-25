@@ -1,10 +1,8 @@
+@import '../../../helpers/_size';
+
 $clears: left, right, both;
 
-@each $clear in $clears {
-    .u-clear-#{$clear} {
-        clear: #{$clear} !important;
-    }
-}
+@include generate-classes-for-viewport($clears, 'clear');
 
 /*
    When using floats, clearfix allows the container to automatically resize so that
