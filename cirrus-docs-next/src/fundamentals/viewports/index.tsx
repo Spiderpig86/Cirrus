@@ -62,7 +62,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <span className="tag-container group-tags">
                             <div className="tag tag--dark">Updated</div>
-                            <div className="tag tag--info">0.6.0</div>
+                            <div className="tag tag--info">0.6.2</div>
                         </span>
                         <p>
                             The standard breakpoints used in Cirrus are <code>xs</code>, <code>sm</code>,{' '}
@@ -107,9 +107,18 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>xl</td>
+                                        <td>lg</td>
                                         <td>
                                             <code>1024</code>
+                                        </td>
+                                        <td>
+                                            <code>1279</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>xl</td>
+                                        <td>
+                                            <code>1280</code>
                                         </td>
                                         <td>-</td>
                                     </tr>
@@ -131,37 +140,39 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                         <th>
                                             sm
                                             <br />
-                                            Between <code>641px</code> and <code>768px</code>
+                                            Between <code>641px</code> and {' '}<code>768px</code>
                                         </th>
 
                                         <th>
                                             md
                                             <br />
-                                            Between <code>769px</code> and <code>1023px</code>
+                                            Between <code>769px</code> and {' '}<code>1023px</code>
                                         </th>
                                         <th>
                                             lg
                                             <br />
-                                            <code>1024px</code> and above
+                                            Between <code>1024px</code> and {' '}<code>1279px</code>
+                                        </th>
+                                        <th>
+                                            xl
+                                            <br />
+                                            <code>1280px</code> and above
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>
+                                        <td colSpan={5}>
                                             <p className="toast toast--info" style={{ width: 'auto' }}>
-                                                *-xs
+                                                Regular class (eg. <code>u-none</code>)
                                             </p>
-                                        </td>
-                                        <td colSpan={3}>
-                                            <p>-</p>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <p>-</p>
                                         </td>
-                                        <td colSpan={3}>
+                                        <td colSpan={4}>
                                             <p className="toast toast--info" style={{ width: 'auto' }}>
                                                 *-sm
                                             </p>
@@ -171,7 +182,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                         <td colSpan={2}>
                                             <p>-</p>
                                         </td>
-                                        <td colSpan={2}>
+                                        <td colSpan={3}>
                                             <p className="toast toast--info" style={{ width: 'auto' }}>
                                                 *-md
                                             </p>
@@ -181,13 +192,23 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                         <td colSpan={3}>
                                             <p>-</p>
                                         </td>
-                                        <td colSpan={1}>
+                                        <td colSpan={2}>
                                             <p className="toast toast--info" style={{ width: 'auto' }}>
                                                 *-lg
                                             </p>
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td colSpan={4}>
+                                            <p>-</p>
+                                        </td>
+                                        <td colSpan={1}>
+                                            <p className="toast toast--info" style={{ width: 'auto' }}>
+                                                *-xl
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    {/* <tr>
                                         <td>
                                             <p>-</p>
                                         </td>
@@ -212,7 +233,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                         <td>
                                             <p>-</p>
                                         </td>
-                                    </tr>
+                                    </tr> */}
                                 </tbody>
                             </table>
                         </TableWrapper>
@@ -224,10 +245,10 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <code>u-none-xs</code>
+                                            <code>u-none</code>
                                         </td>
                                         <td>
-                                            Hide content for widths below <code>640px</code>.
+                                            Hide content for all widths.
                                         </td>
                                     </tr>
                                     <tr>
@@ -240,14 +261,6 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <code>u-none-sm-only</code>
-                                        </td>
-                                        <td>
-                                            Hide content for widths between <code>641px</code> and <code>768px</code>.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
                                             <code>u-none-md</code>
                                         </td>
                                         <td>
@@ -256,23 +269,25 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                     </tr>
                                     <tr>
                                         <td>
-                                            <code>u-none-md-only</code>
+                                            <code>u-none-lg</code>
                                         </td>
                                         <td>
-                                            Hide content for widths between <code>768px</code> and <code>1023px</code>.
+                                        Hide content for widths <code>1024px</code> and <code>1279px</code>.
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <code>u-none-lg</code>
+                                            <code>u-none-xl</code>
                                         </td>
                                         <td>
-                                            Hide content for <code>1024px</code> and above.
+                                            Hide content for <code>1280px</code> and above.
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </TableWrapper>
+
+                        
                     </div>
                 </section>
 

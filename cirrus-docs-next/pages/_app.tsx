@@ -27,6 +27,7 @@ import '../src/index/index.scss';
 import '../src/playground/index.scss';
 
 import '../src/fundamentals/typography/index.scss';
+import '../src/fundamentals/viewports/index.scss';
 
 import '../src/grid/templates/index.scss';
 
