@@ -102,7 +102,7 @@ export const ListsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-6">
                                 <CodeBlock
-                                    code={`<ul className="no-bullets">
+                                    code={`<ul class="no-bullets">
     <li>Apple</li>
     <li>Google</li>
     <li>Facebook</li>

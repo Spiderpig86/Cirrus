@@ -60,7 +60,7 @@ export const DividerPage: React.FC<any> = (props) => {
                                 </div>
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<div className="divider--v" />`} language="htmlbars" />
+                                <CodeBlock code={`<div class="divider--v" />`} language="htmlbars" />
                             </div>
                         </div>
 

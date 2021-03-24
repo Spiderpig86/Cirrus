@@ -166,60 +166,60 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                             <div className="col-lg-6">
                                 <CodeBlock
                                     code={`<!-- Name -->
-<div className="row ignore-screen level">
-    <div className="col-3 ignore-screen level-item"><p className="m-0">Name:</span></div>
-    <div className="col-9 ignore-screen level-item"><input type="name" value="John Doe"></div>
+<div class="row ignore-screen level">
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Name:</span></div>
+    <div class="col-9 ignore-screen level-item"><input type="name" value="John Doe"></div>
 </div>
 <!-- Email -->
-<div className="row ignore-screen level">
-    <div className="col-3 ignore-screen level-item"><p className="m-0">Email:</span></div>
-    <div className="col-9 ignore-screen level-item"><input type="email" value="john.doe@cirrus.io"></div>
+<div class="row ignore-screen level">
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Email:</span></div>
+    <div class="col-9 ignore-screen level-item"><input type="email" value="john.doe@cirrus.io"></div>
 </div>
 <!-- Url -->
-<div className="row ignore-screen level">
-    <div className="col-3 ignore-screen level-item"><p className="m-0">URL:</span></div>
-    <div className="col-9 ignore-screen level-item"><input type="url" value="https://spiderpig86.github.io/Cirrus"></div>
+<div class="row ignore-screen level">
+    <div class="col-3 ignore-screen level-item"><p class="m-0">URL:</span></div>
+    <div class="col-9 ignore-screen level-item"><input type="url" value="https://spiderpig86.github.io/Cirrus"></div>
 </div>
 <!-- Search -->
-<div className="row ignore-screen level">
-    <div className="col-3 ignore-screen level-item"><p className="m-0">Search:</span></div>
-    <div className="col-9 ignore-screen level-item"><input type="search" placeholder="Search"></div>
+<div class="row ignore-screen level">
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Search:</span></div>
+    <div class="col-9 ignore-screen level-item"><input type="search" placeholder="Search"></div>
 </div>
 <!-- Tel -->
-<div className="row ignore-screen level">
-    <div className="col-3 ignore-screen level-item"><p className="m-0">Telephone:</span></div>
-    <div className="col-9 ignore-screen level-item"><input type="tel" value="1-(800)-777-7777"></div>
+<div class="row ignore-screen level">
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Telephone:</span></div>
+    <div class="col-9 ignore-screen level-item"><input type="tel" value="1-(800)-777-7777"></div>
 </div>
 <!-- Password -->
-<div className="row ignore-screen level">
-    <div className="col-3 ignore-screen level-item"><p className="m-0">Password:</span></div>
-    <div className="col-9 ignore-screen level-item"><input type="password" value="password"></div>
+<div class="row ignore-screen level">
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Password:</span></div>
+    <div class="col-9 ignore-screen level-item"><input type="password" value="password"></div>
 </div>
 <!-- Number -->
-<div className="row ignore-screen level">
-    <div className="col-3 ignore-screen level-item"><p className="m-0">Number:</span></div>
-    <div className="col-9 ignore-screen level-item"><input type="number" value="420"></div>
+<div class="row ignore-screen level">
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Number:</span></div>
+    <div class="col-9 ignore-screen level-item"><input type="number" value="420"></div>
 </div>
 <!-- Date -->
-<div className="row ignore-screen level">
-    <div className="col-3 ignore-screen level-item"><p className="m-0">Date:</span></div>
-    <div className="col-9 ignore-screen level-item"><input type="date" value="2017-3-21"></div>
+<div class="row ignore-screen level">
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Date:</span></div>
+    <div class="col-9 ignore-screen level-item"><input type="date" value="2017-3-21"></div>
 </div>
 <!-- Color -->
-<div className="row ignore-screen level">
-    <div className="col-3 ignore-screen level-item"><p className="m-0">Color:</span></div>
-    <div className="col-9 ignore-screen level-item"><input type="color" value="#f03d4d"></div>
+<div class="row ignore-screen level">
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Color:</span></div>
+    <div class="col-9 ignore-screen level-item"><input type="color" value="#f03d4d"></div>
 </div>
 <!-- File -->
-<div className="row ignore-screen level">
-    <div className="col-3 ignore-screen level-item"><p className="m-0">File:</span></div>
-    <div className="col-9 ignore-screen level-item"><input type="file"></div>
+<div class="row ignore-screen level">
+    <div class="col-3 ignore-screen level-item"><p class="m-0">File:</span></div>
+    <div class="col-9 ignore-screen level-item"><input type="file"></div>
 </div>
 <!-- Select -->
-<div className="row ignore-screen level">
-    <div className="col-3 ignore-screen level-item"><p className="m-0">Select:</p></div>
-    <div className="col-9 ignore-screen level-item input-control">
-        <select className="select" placeholder="Choose one">
+<div class="row ignore-screen level">
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Select:</p></div>
+    <div class="col-9 ignore-screen level-item input-control">
+        <select class="select" placeholder="Choose one">
             <option>Shibe</option>
             <option>Doggo</option>
             <option>Pupper</option>
@@ -227,10 +227,10 @@ export const FormsInputsPage: React.FC<any> = (props) => {
     </div>
 </div>
 <!-- Select (Multiple) -->
-<div className="row ignore-screen level">
-    <div className="col-3 ignore-screen level-item"><p className="m-0">Select (Multiple):</p></div>
-    <div className="col-9 ignore-screen level-item input-control">
-        <select className="select" multiple>
+<div class="row ignore-screen level">
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Select (Multiple):</p></div>
+    <div class="col-9 ignore-screen level-item input-control">
+        <select class="select" multiple>
             <option>Shibe</option>
             <option>Doggo</option>
             <option>Pupper</option>

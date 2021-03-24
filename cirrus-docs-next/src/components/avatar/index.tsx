@@ -68,11 +68,11 @@ export const AvatarPage: React.FC<any> = (props) => {
                         </div>
 
                         <CodeBlock
-                            code={`<div className="avatar"><img src="..." alt="avatar"></div>
-<div className="avatar"><img src="..." alt="avatar"></div>
-<div className="avatar"><img src="..." alt="avatar"></div>
-<div className="avatar"><img src="..." alt="avatar"></div>
-<div className="avatar"><img src="..." alt="avatar"></div>`}
+                            code={`<div class="avatar"><img src="..." alt="avatar"></div>
+<div class="avatar"><img src="..." alt="avatar"></div>
+<div class="avatar"><img src="..." alt="avatar"></div>
+<div class="avatar"><img src="..." alt="avatar"></div>
+<div class="avatar"><img src="..." alt="avatar"></div>`}
                             language="htmlbars"
                         />
                     </div>
@@ -94,9 +94,9 @@ export const AvatarPage: React.FC<any> = (props) => {
                         </div>
 
                         <CodeBlock
-                            code={`<div className="avatar" data-text='Aa'></div>
-<div className="avatar" data-text='Bb'></div>
-<div className="avatar" data-text='Cc'></div>`}
+                            code={`<div class="avatar" data-text='Aa'></div>
+<div class="avatar" data-text='Bb'></div>
+<div class="avatar" data-text='Cc'></div>`}
                             language="htmlbars"
                         />
                     </div>

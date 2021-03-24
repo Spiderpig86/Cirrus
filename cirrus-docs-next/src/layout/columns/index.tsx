@@ -659,28 +659,28 @@ margin-right: auto;`}
                         </table>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div className="row">
-    <div className="col-2">
-        <div className="uppercase">col-2</div>
+                            code={`<div class="row">
+    <div class="col-2">
+        <div class="uppercase">col-2</div>
     </div>
-    <div className="col-3 offset-center">
-        <div className="uppercase"> col-3 offset-center</div>
-    </div>
-</div>
-<div className="row">
-    <div className="col-5 offset-1">
-        <div className="uppercase">col-3 offset-1</div>
-    </div>
-    <div className="col-3 offset-left">
-        <div className="uppercase">col-3 offset-left</div>
+    <div class="col-3 offset-center">
+        <div class="uppercase"> col-3 offset-center</div>
     </div>
 </div>
-<div className="row">
-    <div className="col-5 offset-1">
-        <div className="uppercase">col-3 offset-1</div>
+<div class="row">
+    <div class="col-5 offset-1">
+        <div class="uppercase">col-3 offset-1</div>
     </div>
-    <div className="col-4 offset-right offset-6">
-        <div className="uppercase">col-4 offset-right</div>
+    <div class="col-3 offset-left">
+        <div class="uppercase">col-3 offset-left</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 offset-1">
+        <div class="uppercase">col-3 offset-1</div>
+    </div>
+    <div class="col-4 offset-right offset-6">
+        <div class="uppercase">col-4 offset-right</div>
     </div>
 </div>`}
                             language="htmlbars"

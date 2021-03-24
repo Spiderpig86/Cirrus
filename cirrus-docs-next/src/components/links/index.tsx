@@ -72,7 +72,7 @@ export const LinksPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-6">
                                 <CodeBlock
-                                    code={`<a href="!#" className="underline">Underline</a>`}
+                                    code={`<a href="!#" class="underline">Underline</a>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -88,7 +88,7 @@ export const LinksPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-6">
                                 <CodeBlock
-                                    code={`<a href="!#" classname="u u-LR">Left to Right</a>`}
+                                    code={`<a href="!#" class="u u-LR">Left to Right</a>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -104,7 +104,7 @@ export const LinksPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-6">
                                 <CodeBlock
-                                    code={`<a href="!#" classname="u u-RL">Right to Left</a>`}
+                                    code={`<a href="!#" class="u u-RL">Right to Left</a>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -119,7 +119,7 @@ export const LinksPage: React.FC<any> = (props) => {
                                 </a>
                             </div>
                             <div className="col-6">
-                                <CodeBlock code={`<a href="!#" classname="u u-C">Center</a>`} language="htmlbars" />
+                                <CodeBlock code={`<a href="!#" class="u u-C">Center</a>`} language="htmlbars" />
                             </div>
                         </div>
 
@@ -133,7 +133,7 @@ export const LinksPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-6">
                                 <CodeBlock
-                                    code={`<a href="!#" classname="utb utb-LR">Left to Right</a>`}
+                                    code={`<a href="!#" class="utb utb-LR">Left to Right</a>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -149,7 +149,7 @@ export const LinksPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-6">
                                 <CodeBlock
-                                    code={`<a href="!#" classname="utb utb-RL">Right to Left</a>`}
+                                    code={`<a href="!#" class="utb utb-RL">Right to Left</a>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -164,7 +164,7 @@ export const LinksPage: React.FC<any> = (props) => {
                                 </a>
                             </div>
                             <div className="col-6">
-                                <CodeBlock code={`<a href="!#" classname="utb utb-C">Center</a>`} language="htmlbars" />
+                                <CodeBlock code={`<a href="!#" class="utb utb-C">Center</a>`} language="htmlbars" />
                             </div>
                         </div>
 
@@ -182,7 +182,7 @@ export const LinksPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-6">
                                 <CodeBlock
-                                    code={`<a href="!#" classname="utb utb-OLR">Look at me</a>`}
+                                    code={`<a href="!#" class="utb utb-OLR">Look at me</a>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -202,7 +202,7 @@ export const LinksPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-6">
                                 <CodeBlock
-                                    code={`<a href="!#" classname="utb utb-ORL">Crisscross</a>`}
+                                    code={`<a href="!#" class="utb utb-ORL">Crisscross</a>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -220,7 +220,7 @@ export const LinksPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-6">
                                 <CodeBlock
-                                    code={`<a href="!#" classname="utb utb-OLR">I am a square</a>`}
+                                    code={`<a href="!#" class="utb utb-OLR">I am a square</a>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -238,7 +238,7 @@ export const LinksPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-6">
                                 <CodeBlock
-                                    code={`<a href="!#" classname="utb utb-OLR">I am a square</a>`}
+                                    code={`<a href="!#" class="utb utb-OLR">I am a square</a>`}
                                     language="htmlbars"
                                 />
                             </div>

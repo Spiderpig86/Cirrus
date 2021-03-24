@@ -127,21 +127,21 @@ export const CardsPage: React.FC<any> = (props) => {
                         </div>
 
                         <CodeBlock
-                            code={`<div className="card" style="max-width: 350px;">
-    <div className="card__container">
-        <div className="card__image"></div>
-        <div className="card__title-container">
-            <p className="title">Title</p><span className="subtitle">Subtitle</span></div>
+                            code={`<div class="card" style="max-width: 350px;">
+    <div class="card__container">
+        <div class="card__image"></div>
+        <div class="card__title-container">
+            <p class="title">Title</p><span class="subtitle">Subtitle</span></div>
     </div>
-    <div className="content">
+    <div class="content">
         <p>Text and other content belong here, inside a <code>content</code> div.</p>
     </div>
-    <div className="card__action-bar u-center">
-        <button className="btn-link outline">Buttons</button>
-        <button className="btn-link outline">Go here</button>
+    <div class="card__action-bar u-center">
+        <button class="btn-link outline">Buttons</button>
+        <button class="btn-link outline">Go here</button>
     </div>
-    <div className="card__footer">
-        <div className="u-text-center"><span>This is additional footer text in <code>card__footer</code>.</span></div>
+    <div class="card__footer">
+        <div class="u-text-center"><span>This is additional footer text in <code>card__footer</code>.</span></div>
     </div>
 </div>`}
                             language="htmlbars"
@@ -183,12 +183,12 @@ export const CardsPage: React.FC<any> = (props) => {
                         </div>
 
                         <CodeBlock
-                            code={`<div className="card" style="max-width: 250px;">
-    <div className="content u-text-center pt-3">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bolt" className="svg-inline--fa fa-bolt fa-w-10 fa-wrapper text-blue-600 bg-blue-100 p-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="border-radius: 100%; height: 4.75rem; width: 4.75rem;">
+                            code={`<div class="card" style="max-width: 250px;">
+    <div class="content u-text-center pt-3">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bolt" class="svg-inline--fa fa-bolt fa-w-10 fa-wrapper text-blue-600 bg-blue-100 p-3" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="border-radius: 100%; height: 4.75rem; width: 4.75rem;">
             <path fill="currentColor" d="M296 160H180.6l42.6-129.8C227.2 15 215.7 0 200 0H56C44 0 33.8 8.9 32.2 20.8l-32 240C-1.7 275.2 9.5 288 24 288h118.7L96.6 482.5c-3.6 15.2 8 29.5 23.3 29.5 8.4 0 16.4-4.4 20.8-12l176-304c9.3-15.9-2.2-36-20.7-36z"></path>
         </svg>
-        <p id="projectname" className="title mt-2 mb-0">Fast. Very fast.</p>
+        <p id="projectname" class="title mt-2 mb-0">Fast. Very fast.</p>
         <p>Blazing fast speed you can rely on.</p>
     </div>
 </div>`}
@@ -262,24 +262,24 @@ export const CardsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-7">
                                 <CodeBlock
-                                    code={`<div className="card card--slide-up">
-    <div className="card__container">
-        <div className="card__image" style="background-image: url(&quot;https://unsplash.it/640/480?random&amp;blur&quot;);"></div>
+                                    code={`<div class="card card--slide-up">
+    <div class="card__container">
+        <div class="card__image" style="background-image: url(&quot;https://unsplash.it/640/480?random&amp;blur&quot;);"></div>
     </div>
-    <div className="card__mobile-title">
-        <div className="content">
-            <div className="tile">
-                <div className="tile__container">
-                    <p className="tile__title">Kangaroo Valley Safari</p>
-                    <p className="tile__subtitle">By John Doe</p>
+    <div class="card__mobile-title">
+        <div class="content">
+            <div class="tile">
+                <div class="tile__container">
+                    <p class="tile__title">Kangaroo Valley Safari</p>
+                    <p class="tile__subtitle">By John Doe</p>
                 </div>
             </div>
         </div>
     </div>
-    <div className="card__body content">
+    <div class="card__body content">
         <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
     </div>
-    <div className="card__footer content">2 min. read 22 comments</div>
+    <div class="card__footer content">2 min. read 22 comments</div>
 </div>`}
                                     language="htmlbars"
                                 />
@@ -789,38 +789,38 @@ export const CardsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-7">
                                 <CodeBlock
-                                    code={`<div className="card">
-    <div className="card__container">
-        <div className="card__image" style="background-image: url(https://images.unsplash.com/photo-1467952497026-86722ef1916f?dpr=1.25&amp;auto=compress,format&amp;fit=crop&amp;w=1199&amp;h=799&amp;q=80&amp;cs=tinysrgb&amp;crop=)"></div>
+                                    code={`<div class="card">
+    <div class="card__container">
+        <div class="card__image" style="background-image: url(https://images.unsplash.com/photo-1467952497026-86722ef1916f?dpr=1.25&amp;auto=compress,format&amp;fit=crop&amp;w=1199&amp;h=799&amp;q=80&amp;cs=tinysrgb&amp;crop=)"></div>
     </div>
-    <div className="content">
-        <div className="space"></div>
-        <div className="tile tile--center">
-            <div className="tile__icon">
-                <figure className="avatar">
+    <div class="content">
+        <div class="space"></div>
+        <div class="tile tile--center">
+            <div class="tile__icon">
+                <figure class="avatar">
                     <img src="https://organicthemes.com/demo/profile/files/2018/05/profile-pic-132x132.jpg" alt="Person">
                 </figure>
             </div>
 
-            <div className="tile__container">
-                <p className="tile__title">Joanne Doe</p>
-                <p className="tile__subtitle"><a>@jdoe</a></p>
+            <div class="tile__container">
+                <p class="tile__title">Joanne Doe</p>
+                <p class="tile__subtitle"><a>@jdoe</a></p>
             </div>
         </div>
         <p>Testing my new DSLR. Wow check out that deer! <a href="!#">#nature</a></p>
     </div>
-    <div className="card__footer level content">
+    <div class="card__footer level content">
         6:32 PM - 3 Jul 18
-        <div className="u-pull-right">
-            <div className="level-right ignore-screen">
-                <a className="level-item">
-                    <span className="icon"><i className="fa fa-wrapper small fa-reply" aria-hidden="true"></i></span>
+        <div class="u-pull-right">
+            <div class="level-right ignore-screen">
+                <a class="level-item">
+                    <span class="icon"><i class="fa fa-wrapper small fa-reply" aria-hidden="true"></i></span>
                 </a>
-                <a className="level-item">
-                    <span className="icon"><i className="fa fa-wrapper small fa-retweet" aria-hidden="true"></i></span>
+                <a class="level-item">
+                    <span class="icon"><i class="fa fa-wrapper small fa-retweet" aria-hidden="true"></i></span>
                 </a>
-                <a className="level-item">
-                    <span className="icon"><i className="fa fa-wrapper small fa-heart" aria-hidden="true"></i></span>
+                <a class="level-item">
+                    <span class="icon"><i class="fa fa-wrapper small fa-heart" aria-hidden="true"></i></span>
                 </a>
             </div>
         </div>

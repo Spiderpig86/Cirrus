@@ -155,7 +155,7 @@ export const TagsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div className="tag tag--success">
+                                    code={`<div class="tag tag--success">
     Close Me
     <div class="tag tag__delete"></div>
 </div>`}

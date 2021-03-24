@@ -128,7 +128,7 @@ export const TablePage: React.FC<any> = (props) => {
                         </div>
 
                         <CodeBlock
-                            code={`<table className="table">
+                            code={`<table class="table">
     <thead>
         <tr>
             <th><abbr title="Title1">T1</abbr></th>
@@ -281,7 +281,7 @@ export const TablePage: React.FC<any> = (props) => {
                         <div className="space"></div>
 
                         <CodeBlock
-                            code={`<table className="table">
+                            code={`<table class="table">
     <thead>
         <tr>
             <th><abbr title="Title1">T1</abbr></th>
@@ -323,7 +323,7 @@ export const TablePage: React.FC<any> = (props) => {
             <td>S</td>
             <td>Row:2 Cell:5</td>
         </tr>
-        <tr className="selected">
+        <tr class="selected">
             <th>3</th>
             <td>Row:3 Cell:1</td>
             <td>Row:3 Cell:2</td>

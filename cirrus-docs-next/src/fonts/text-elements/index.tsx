@@ -302,7 +302,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<p><a href="#" className="subtitle">
+                                    code={`<p><a href="#" class="subtitle">
     The quick brown fox jumps over the lazy dog.
 </a></p>`}
                                     language="htmlbars"
@@ -362,7 +362,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<p className="uppercase">The quick brown fox jumps over the lazy dog.</p>`}
+                                    code={`<p class="uppercase">The quick brown fox jumps over the lazy dog.</p>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -372,7 +372,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<p className="lowercase">The quick brown fox jumps over the lazy dog.</p>`}
+                                    code={`<p class="lowercase">The quick brown fox jumps over the lazy dog.</p>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -382,7 +382,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<p className="capitalize">The quick brown fox jumps over the lazy dog.</p>`}
+                                    code={`<p class="capitalize">The quick brown fox jumps over the lazy dog.</p>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -392,7 +392,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<p className="capitalize">The quick brown fox jumps over the lazy dog.</p>`}
+                                    code={`<p class="capitalize">The quick brown fox jumps over the lazy dog.</p>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -402,7 +402,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<p className="faded">The quick brown fox jumps over the lazy dog.</p>`}
+                                    code={`<p class="faded">The quick brown fox jumps over the lazy dog.</p>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -412,7 +412,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<p className="italics">The quick brown fox jumps over the lazy dog.</p>`}
+                                    code={`<p class="italics">The quick brown fox jumps over the lazy dog.</p>`}
                                     language="htmlbars"
                                 />
                             </div>
@@ -421,14 +421,14 @@ export const TextElementsPage: React.FC<any> = (props) => {
                                 <p className="caret"></p>
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<p className="caret"></p>`} language="htmlbars" />
+                                <CodeBlock code={`<p class="caret"></p>`} language="htmlbars" />
                             </div>
                             <div className="col-lg-6">
                                 <p className="title mb-0">Right to left</p>
                                 <p className="rtl">right to left</p>
                             </div>
                             <div className="col-lg-6">
-                                <CodeBlock code={`<p className="rtl"></p>`} language="htmlbars" />
+                                <CodeBlock code={`<p class="rtl"></p>`} language="htmlbars" />
                             </div>
                             <div className="col-lg-6">
                                 <p className="title mb-0">Font Alt (Use Nunito Sans with titles)</p>
@@ -436,7 +436,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<h6 className="font-alt">This title uses Nunito Sans.</h6>`}
+                                    code={`<h6 class="font-alt">This title uses Nunito Sans.</h6>`}
                                     language="htmlbars"
                                 />
                             </div>
