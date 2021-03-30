@@ -97,7 +97,7 @@ The `helpers` folder contains configurations, utilities, and other styles shared
 * [Tabs](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tabs.scss "Tabs") - Contains styles for tab controls.
 * [Tags](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tags.scss "Tags") - Chip-like controls that are helpful for listing items.
 * [Tiles](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tiles.scss "Tiles") - Flexible layout used for tiling controls horizontally.
-* [Toast](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/toast.scss "Toast") - A small overaly notification for websites.
+* [Toast](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/toast.scss "Toast") - A small overlay notification for websites.
 * [Tooltips](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tooltips.scss "Tooltips") - Add tooltips to any control for contextual info.
 <br />
 
