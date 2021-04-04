@@ -15,6 +15,16 @@ export const toc: TableOfContentsEntry[] = [
                 anchor: '#build',
                 children: null,
             },
+            {
+                name: 'Customization',
+                anchor: '#customization',
+                children: null,
+            },
+            {
+                name: 'Folder Structure',
+                anchor: '#folder-structure',
+                children: null,
+            },
         ],
     },
 ];
