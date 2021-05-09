@@ -175,12 +175,12 @@ input[type='text'].input-focused,
 
 select {
     @include cirrus-input();
-    $select-sizes: (
-        'xsmall': 0.65rem 0.9rem,
-        'small': 0.75rem 1rem,
-        'large': 0.95rem 1.2rem,
-        'xlarge': 1.05rem 1.3rem,
-    );
+    // $select-sizes: ( Deprecated 0.6.2
+    //     'xsmall': 0.65rem 0.9rem,
+    //     'small': 0.75rem 1rem,
+    //     'large': 0.95rem 1.2rem,
+    //     'xlarge': 1.05rem 1.3rem,
+    // );
 
     background-color: #fff;
     border: 1px solid #ddd;
@@ -197,11 +197,11 @@ select {
     }
 
     /* Select sizes */
-    @each $size, $padding in $select-sizes {
-        &.input-#{$size} {
-            padding: $padding;
-        }
-    }
+    // @each $size, $padding in $select-sizes {
+    //     &.input-#{$size} {
+    //         padding: $padding;
+    //     }
+    // }
 }
 
 input:not([class*='btn-']):disabled,

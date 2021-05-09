@@ -1613,14 +1613,6 @@ select {
   select.select:not([size]):not([multiple]) {
     background: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right 0.85rem center/0.5rem 0.6rem no-repeat;
     -webkit-appearance: none; }
-  select.input-xsmall {
-    padding: 0.65rem 0.9rem; }
-  select.input-small {
-    padding: 0.75rem 1rem; }
-  select.input-large {
-    padding: 0.95rem 1.2rem; }
-  select.input-xlarge {
-    padding: 1.05rem 1.3rem; }
 
 input:not([class*='btn-']):disabled,
 input:not([class*=' btn-']):disabled:hover,
