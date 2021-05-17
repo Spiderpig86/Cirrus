@@ -2,4 +2,5 @@
 
 $positions: static, fixed, absolute, relative, sticky;
 
+// Comment here just for commit.
 @include generate-classes-for-viewport($positions, 'position');

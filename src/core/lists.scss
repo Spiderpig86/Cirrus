@@ -144,9 +144,9 @@ ul {
         padding-left: 0.75rem;
     }
     
-    li.menu-item:last-child {
-        margin-bottom: 0;
-    }
+    // li.menu-item:last-child { Deprecated 0.6.2
+    //     margin-bottom: 0;
+    // }
 
     /* Menu item divider */
     .divider {
