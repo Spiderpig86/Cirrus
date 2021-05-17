@@ -19,10 +19,10 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
         {
             name: 'static',
             example: (
-                <div className="u-round bg-pink-200 u-position-static">
+                <div className="u-round bg-pink-200 u-static">
                     <p className="px-2">Static Parent</p>
                     <div
-                        className="u-round bg-pink-300 u-position-absolute"
+                        className="u-round bg-pink-300 u-absolute"
                         style={{
                             top: '0',
                             right: '0',
@@ -32,15 +32,15 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                     </div>
                 </div>
             ),
-            code: `<div class="u-round bg-pink-200 u-position-static">
+            code: `<div class="u-round bg-pink-200 u-static">
     <p class="px-2">Static Parent</p>
-    <div class="u-round bg-pink-300 u-position-absolute" style="top: 0px; right: 0px;">
+    <div class="u-round bg-pink-300 u-absolute" style="top: 0px; right: 0px;">
         <p class="px-2">Absolute Child</p>
     </div>
 </div>`,
             description: (
                 <p>
-                    Sets the position to <code>static</code> with the <code>u-position-static</code> class. This is the
+                    Sets the position to <code>static</code> with the <code>u-static</code> class. This is the
                     default position for all HTML elements. Elements flow normally and does not serve as a relative
                     position for any child element.
                 </p>
@@ -60,7 +60,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
             code: `<!-- Look up the code in the header docs -->`,
             description: (
                 <p>
-                    Sets the position to <code>fixed</code> with the <code>u-position-fixed</code> class. This positions
+                    Sets the position to <code>fixed</code> with the <code>u-fixed</code> class. This positions
                     the element strictly relative to the location in the screen rather than the location of the page.
                     The perfect example to illustrate is to see how it is used inside the{' '}
                     <Link href="/layout/header">
@@ -73,12 +73,12 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
         {
             name: 'absolute',
             example: (
-                <div className="u-round bg-pink-200 u-position-relative px-2">
+                <div className="u-round bg-pink-200 u-relative px-2">
                     <p>Relative Parent</p>
-                    <div className="u-round bg-pink-300 u-position-static">
+                    <div className="u-round bg-pink-300 u-static">
                         <p className="px-2">Static Parent</p>
                         <div
-                            className="u-round bg-pink-400 u-position-absolute"
+                            className="u-round bg-pink-400 u-absolute"
                             style={{
                                 top: '0',
                                 right: '0',
@@ -92,11 +92,11 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                     </div>
                 </div>
             ),
-            code: `<div class="u-round bg-pink-200 u-position-relative px-2">
+            code: `<div class="u-round bg-pink-200 u-relative px-2">
     <p>Relative Parent</p>
-    <div class="u-round bg-pink-300 u-position-static">
+    <div class="u-round bg-pink-300 u-static">
         <p class="px-2">Static Parent</p>
-        <div class="u-round bg-pink-400 u-position-absolute" style="top: 0px; right: 0px;">
+        <div class="u-round bg-pink-400 u-absolute" style="top: 0px; right: 0px;">
             <p class="px-2">Absolute Child</p>
         </div>
         <div class="u-round bg-pink-400 px-2 u-inline-block">
@@ -107,7 +107,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
             description: (
                 <p>
                     Sets the position to <code>absolute</code> with the <code>u-absolute-fixed</code> class. This makes
-                    the neighboring elements ignore the <code>u-position-absolute</code> element when positioning
+                    the neighboring elements ignore the <code>u-absolute</code> element when positioning
                     themselves.
                 </p>
             ),
@@ -116,14 +116,14 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
             name: 'relative',
             example: (
                 <div
-                    className="u-round bg-pink-200 u-position-relative px-2"
+                    className="u-round bg-pink-200 u-relative px-2"
                     style={{
                         height: '200px',
                     }}
                 >
                     <p>Relative Parent</p>
                     <div
-                        className="u-round bg-pink-300 u-position-absolute"
+                        className="u-round bg-pink-300 u-absolute"
                         style={{
                             bottom: '0',
                             right: '0',
@@ -133,16 +133,16 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                     </div>
                 </div>
             ),
-            code: `<div class="u-round bg-pink-200 u-position-relative px-2" style="height: 200px;">
+            code: `<div class="u-round bg-pink-200 u-relative px-2" style="height: 200px;">
     <p>Relative Parent</p>
-    <div class="u-round bg-pink-300 u-position-absolute" style="bottom: 0px; right: 0px;">
+    <div class="u-round bg-pink-300 u-absolute" style="bottom: 0px; right: 0px;">
         <p class="px-2">Absolute Child</p>
     </div>
 </div>`,
             description: (
                 <p>
                     Sets the position to <code>relative</code> with the <code>u-relative-fixed</code> class. The element
-                    with <code>u-position-relative</code> will serve as the element to calculate offsets from by all of
+                    with <code>u-relative</code> will serve as the element to calculate offsets from by all of
                     its children.
                 </p>
             ),
@@ -160,7 +160,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                         return (
                             <div>
                                 <div
-                                    className="u-position-sticky bg-purple-300"
+                                    className="u-sticky bg-purple-300"
                                     style={{
                                         top: '0',
                                     }}
@@ -179,31 +179,31 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
             ),
             code: `<div style="height: 200px; overflow: auto;">
     <div>
-        <div class="u-position-sticky bg-purple-300" style="top: 0px;">
+        <div class="u-sticky bg-purple-300" style="top: 0px;">
             <p>Heading 1</p>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     </div>
     <div>
-        <div class="u-position-sticky bg-purple-300" style="top: 0px;">
+        <div class="u-sticky bg-purple-300" style="top: 0px;">
             <p>Heading 2</p>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     </div>
     <div>
-        <div class="u-position-sticky bg-purple-300" style="top: 0px;">
+        <div class="u-sticky bg-purple-300" style="top: 0px;">
             <p>Heading 3</p>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     </div>
     <div>
-        <div class="u-position-sticky bg-purple-300" style="top: 0px;">
+        <div class="u-sticky bg-purple-300" style="top: 0px;">
             <p>Heading 4</p>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
     </div>
     <div>
-        <div class="u-position-sticky bg-purple-300" style="top: 0px;">
+        <div class="u-sticky bg-purple-300" style="top: 0px;">
             <p>Heading 5</p>
         </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -214,7 +214,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
     ];
     const classTable = positionNames.map((position) => {
         return {
-            class: `u-position-${position}`,
+            class: `u-${position}`,
             style: `position: ${position};`,
         };
     });
@@ -287,7 +287,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                                         </p>
                                     )}
 
-                                    <div className="p-3 bg-pink-100 u-round u-position-relative">{display.example}</div>
+                                    <div className="p-3 bg-pink-100 u-round u-relative">{display.example}</div>
                                     <div className="space"></div>
                                     <CodeBlock code={display.code} language="htmlbars" />
                                     <div className="space large"></div>

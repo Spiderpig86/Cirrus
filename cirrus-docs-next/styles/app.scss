@@ -59,6 +59,11 @@ table tbody {
     min-width: 17rem !important;
 }
 
+/* Code */
+code {
+    font-size: 13px !important;
+}
+
 ::-webkit-scrollbar {
     background-color: var(--scrollbar-bg);
     color: var(--scrollbar-color);

@@ -150,9 +150,9 @@ export const HeroPage: React.FC<any> = (props) => {
                         </p>
                     </div>
 
-                    <div className="u-position-relative">
+                    <div className="u-relative">
                         <div
-                            className="header unselectable header-animated header-clear u-position-absolute py-2"
+                            className="header unselectable header-animated header-clear u-absolute py-2"
                             style={{ zIndex: 1 }}
                         >
                             <div className="header-brand">

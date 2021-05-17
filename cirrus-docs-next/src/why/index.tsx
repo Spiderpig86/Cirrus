@@ -409,8 +409,8 @@ export const WhyPage: React.FC<any> = (props) => {
                         <p className="font-bold">After</p>
                         <div className="row u-items-center">
                             <div className="col-lg-6">
-                                <div className="u-position-relative u-center">
-                                    <p className="u-position-absolute white font-bold u-center-alt lead">
+                                <div className="u-relative u-center">
+                                    <p className="u-absolute white font-bold u-center-alt lead">
                                         Overlayed text.
                                     </p>
                                     <img
@@ -430,8 +430,8 @@ export const WhyPage: React.FC<any> = (props) => {
                         <CodeBlock
                             code={`<div class="row u-items-center">
     <div class="col-lg-6">
-        <div class="u-position-relative u-center">
-            <p class="u-position-absolute white font-bold u-center-alt lead">Overlayed text.</p>
+        <div class="u-relative u-center">
+            <p class="u-absolute white font-bold u-center-alt lead">Overlayed text.</p>
             <img src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="cloud" class="u-round" />
         </div>
     </div>

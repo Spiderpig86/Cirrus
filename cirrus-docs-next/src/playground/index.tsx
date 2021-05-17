@@ -230,7 +230,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                 </div>
             </div>
             <div
-                className="u-position-relative"
+                className="u-relative"
                 style={{
                     minHeight: 'calc(100vh - 3.5rem)',
                     marginTop: '3.5rem',

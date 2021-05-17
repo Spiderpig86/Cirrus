@@ -14,7 +14,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
     const [copied, setCopied] = useState(false);
 
     return (
-        <div className="u-position-relative mb-2">
+        <div className="u-relative mb-2">
             <SyntaxHighlighter className={`codeblock pl-2 pr-3 py-1 ${(props.breakAll ? `break-all` : ``)}`} language={props.language} style={gruvboxDark}>
                 {props.code}
             </SyntaxHighlighter>
@@ -27,7 +27,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
                 }}
             >
                 <FontAwesomeIcon
-                    className="fa-wrapper u-position-absolute text-gray-200"
+                    className="fa-wrapper u-absolute text-gray-200"
                     icon={['fas', copied ? 'clipboard-check' : 'clipboard']}
                     style={{
                         cursor: 'pointer',

@@ -398,10 +398,10 @@ position: absolute;`,
                         <h6>Center with Offsets</h6>
                         <p>
                             Unlike the flexbox variant, this is applied on the class you want centered itself. Parent
-                            class must use <code>u-position-relative</code>.
+                            class must use <code>u-relative</code>.
                         </p>
                         <div
-                            className="bg-gray-100 u-position-relative"
+                            className="bg-gray-100 u-relative"
                             style={{
                                 height: '500px',
                             }}
@@ -410,7 +410,7 @@ position: absolute;`,
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="bg-gray-100 u-position-relative" style="height: 500px;">
+                            code={`<div class="bg-gray-100 u-relative" style="height: 500px;">
     <p class="u-center-alt">I am in the middle. 🔥</p>
 </div>`}
                             language="htmlbars"
@@ -432,7 +432,7 @@ position: absolute;`,
                             of the gray parent.
                         </p>
                         <div
-                            className="bg-gray-100 u-position-relative"
+                            className="bg-gray-100 u-relative"
                             style={{
                                 height: '200px',
                             }}
@@ -446,7 +446,7 @@ position: absolute;`,
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="bg-gray-100 u-position-relative" style="height: 200px;">
+                            code={`<div class="bg-gray-100 u-relative" style="height: 200px;">
     <div class="u-overlay bg-teal-300" style="opacity: 0.5;"></div>
 </div>`}
                             language="htmlbars"

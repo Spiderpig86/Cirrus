@@ -428,7 +428,7 @@ export const TilesPage: React.FC<any> = (props) => {
                                                     icon={['fas', 'ellipsis-v']}
                                                 />
                                             </button>
-                                            <ul className="menu u-text-left u-position-absolute">
+                                            <ul className="menu u-text-left u-absolute">
                                                 
                                             <li className="menu-item">
                                                     <a href="!#">
@@ -478,7 +478,7 @@ export const TilesPage: React.FC<any> = (props) => {
             <button class="btn-transparent btn-dropdown m-0">
                 <i class="icon fad fa-ellipsis-v" aria-hidden="true"></i>
             </button>
-            <ul class="menu u-text-left u-position-absolute">
+            <ul class="menu u-text-left u-absolute">
                 <li class="menu-item">
                     <a href="#"><i class="icon fas fa-folder-open" aria-hidden="true"></i> Open</a>
                 </li>

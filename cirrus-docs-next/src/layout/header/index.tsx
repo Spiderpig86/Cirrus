@@ -225,7 +225,7 @@ export const HeaderPage: React.FC<any> = (props) => {
                         <p>
                             The <code>header-btn</code> is used to style a <code>div</code> or <code>button</code> as a
                             hamburger button that will show a dropdown menu when clicked. This only appears for touch
-                            enabled devices <code>(&lt;= 768px)</code> and is automatically hidden for larger scree
+                            enabled devices <code>(&lt;= 768px)</code> and is automatically hidden for larger screen
                             sizes.
                             <span className="info">
                                 The area used by <code>header-btn</code> is indicated in light pink.
