@@ -32,7 +32,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
 
                 <section className="padtop" id="behavior">
                     <div className="content">
-                        <Headline title="Behavior" link="#behavior" size="4" />
+                        <Headline title="Default Behavior" link="#behavior" size="4" />
                         <div className="divider"></div>
                         <p>Some default behavior to expect when elements get resized are:</p>
                         <ul>
@@ -140,18 +140,18 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                         <th>
                                             sm
                                             <br />
-                                            Between <code>641px</code> and {' '}<code>768px</code>
+                                            Between <code>641px</code> and <code>768px</code>
                                         </th>
 
                                         <th>
                                             md
                                             <br />
-                                            Between <code>769px</code> and {' '}<code>1023px</code>
+                                            Between <code>769px</code> and <code>1023px</code>
                                         </th>
                                         <th>
                                             lg
                                             <br />
-                                            Between <code>1024px</code> and {' '}<code>1279px</code>
+                                            Between <code>1024px</code> and <code>1279px</code>
                                         </th>
                                         <th>
                                             xl
@@ -208,32 +208,6 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                             </p>
                                         </td>
                                     </tr>
-                                    {/* <tr>
-                                        <td>
-                                            <p>-</p>
-                                        </td>
-                                        <td>
-                                            <p className="toast toast--info" style={{ width: 'auto' }}>
-                                                *-sm-only
-                                            </p>
-                                        </td>
-                                        <td colSpan={2}>
-                                            <p>-</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colSpan={2}>
-                                            <p>-</p>
-                                        </td>
-                                        <td>
-                                            <p className="toast toast--info" style={{ width: 'auto' }}>
-                                                *-md-only
-                                            </p>
-                                        </td>
-                                        <td>
-                                            <p>-</p>
-                                        </td>
-                                    </tr> */}
                                 </tbody>
                             </table>
                         </TableWrapper>
@@ -247,9 +221,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                         <td>
                                             <code>u-none</code>
                                         </td>
-                                        <td>
-                                            Hide content for all widths.
-                                        </td>
+                                        <td>Hide content for all widths.</td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -272,7 +244,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                             <code>u-none-lg</code>
                                         </td>
                                         <td>
-                                        Hide content for widths <code>1024px</code> and <code>1279px</code>.
+                                            Hide content for widths <code>1024px</code> and <code>1279px</code>.
                                         </td>
                                     </tr>
                                     <tr>
@@ -286,8 +258,60 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                 </tbody>
                             </table>
                         </TableWrapper>
+                    </div>
+                </section>
 
-                        
+                <section className="padtop" id="usage">
+                    <div className="content">
+                        <Headline title="Usage" link="#usage" size="4" />
+                        <div className="divider"></div>
+                        <span className="tag-container group-tags">
+                            <div className="tag tag--dark">New</div>
+                            <div className="tag tag--info">0.6.2</div>
+                        </span>
+                        <p>
+                            When applying classes viewport supported classes, note that the framework assumes you are
+                            designing for a mobile device <b>first</b>. This means that applying <code>u-none</code> on
+                            some given div will apply for all screen sizes.
+                        </p>
+                        <div className="space"></div>
+
+                        <h6 className="font-light">Design For Mobile First</h6>
+                        <p>
+                            If you then set <code>u-flex-md</code> on the div, it will then apply a flexbox layout
+                            starting at the <code>md</code> breakpoint and higher.
+                        </p>
+
+                        <CodeBlock
+                            code={`<div class="u-none u-flex-md">
+<!-- -->
+/>`}
+                            language="html"
+                        />
+                        <div className="space"></div>
+
+                        <h6 className="font-light">Modify Specific Viewport</h6>
+                        <p>
+                            To apply a class for a specific screen size, we can easily set this behavior using multiple
+                            declarations of the classes we need for each viewport.
+                        </p>
+                        <p>
+                            As an example, let's say we want to position a <code>sticky</code> div to be{' '}
+                            <code>relative</code> <b>only</b> for <code>sm</code> to <code>md</code>. We can use achieve
+                            this with the class declarations shown above.
+                        </p>
+
+                        <CodeBlock
+                            code={`<div class="u-sticky u-relative-sm u-sticky-md">
+<!-- -->
+/>`}
+                            language="html"
+                        />
+                        <div className="space"></div>
+
+                        <div className="divider"></div>
+
+                        <p>Note that not all classes support application by viewport. You can see if a given group of classes support this by checking if the documentation contains a 'Responsive' section detailing how to use the classes with different viewports.</p>
                     </div>
                 </section>
 
