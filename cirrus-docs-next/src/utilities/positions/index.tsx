@@ -40,9 +40,9 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
 </div>`,
             description: (
                 <p>
-                    Sets the position to <code>static</code> with the <code>u-static</code> class. This is the
-                    default position for all HTML elements. Elements flow normally and does not serve as a relative
-                    position for any child element.
+                    Sets the position to <code>static</code> with the <code>u-static</code> class. This is the default
+                    position for all HTML elements. Elements flow normally and does not serve as a relative position for
+                    any child element.
                 </p>
             ),
         },
@@ -60,9 +60,9 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
             code: `<!-- Look up the code in the header docs -->`,
             description: (
                 <p>
-                    Sets the position to <code>fixed</code> with the <code>u-fixed</code> class. This positions
-                    the element strictly relative to the location in the screen rather than the location of the page.
-                    The perfect example to illustrate is to see how it is used inside the{' '}
+                    Sets the position to <code>fixed</code> with the <code>u-fixed</code> class. This positions the
+                    element strictly relative to the location in the screen rather than the location of the page. The
+                    perfect example to illustrate is to see how it is used inside the{' '}
                     <Link href="/layout/header">
                         <a className="u u-LR">header</a>
                     </Link>
@@ -107,8 +107,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
             description: (
                 <p>
                     Sets the position to <code>absolute</code> with the <code>u-absolute-fixed</code> class. This makes
-                    the neighboring elements ignore the <code>u-absolute</code> element when positioning
-                    themselves.
+                    the neighboring elements ignore the <code>u-absolute</code> element when positioning themselves.
                 </p>
             ),
         },
@@ -142,8 +141,8 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
             description: (
                 <p>
                     Sets the position to <code>relative</code> with the <code>u-relative-fixed</code> class. The element
-                    with <code>u-relative</code> will serve as the element to calculate offsets from by all of
-                    its children.
+                    with <code>u-relative</code> will serve as the element to calculate offsets from by all of its
+                    children.
                 </p>
             ),
         },
@@ -294,6 +293,37 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                                 </>
                             );
                         })}
+                    </div>
+                </section>
+
+                <section className="padtop" id="responsive">
+                    <div className="content">
+                        <Headline title="Responsive" link="#responsive" size="4" />
+                        <div className="divider"></div>
+                        <span className="tag-container group-tags">
+                            <div className="tag tag--dark">New</div>
+                            <div className="tag tag--info">0.6.2</div>
+                        </span>
+                        <p>
+                            All utility classes mentioned here support viewport based application. All you need to do is
+                            add a <code>-&lt;viewport&gt;</code> at the end of the class(es) you are using. For example,
+                            use <code>u-relative-md</code> to apply <code>u-relative</code> on medium screens and above.
+                        </p>
+
+                        <CodeBlock
+                            code={`<div class="u-absolute u-relative-md">
+    <!-- ... -->
+</div>`}
+                            language="html"
+                        />
+
+                        <p>
+                            For more information, visit the{' '}
+                            <Link href="/fundamentals/viewports">
+                                <a className="u u-LR">Viewports</a>
+                            </Link>{' '}
+                            documentation.
+                        </p>
                     </div>
                 </section>
 

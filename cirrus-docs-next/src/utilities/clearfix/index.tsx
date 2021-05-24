@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
@@ -225,6 +226,38 @@ display: table !important;`,
 </div>`}
                             language="htmlbars"
                         />
+                    </div>
+                </section>
+
+                <section className="padtop" id="responsive">
+                    <div className="content">
+                        <Headline title="Responsive" link="#responsive" size="4" />
+                        <div className="divider"></div>
+                        <span className="tag-container group-tags">
+                            <div className="tag tag--dark">New</div>
+                            <div className="tag tag--info">0.6.2</div>
+                        </span>
+                        <p>
+                            All utility classes mentioned here support viewport based application. All you need to do is
+                            add a <code>-&lt;viewport&gt;</code> at the end of the class(es) you are using. For example,
+                            use <code>u-clear-both-md</code> to apply <code>u-clear-both</code> on medium screens and
+                            above.
+                        </p>
+
+                        <CodeBlock
+                            code={`<div class="u-clear-left u-clear-both-md">
+    <!-- ... -->
+</div>`}
+                            language="html"
+                        />
+
+                        <p>
+                            For more information, visit the{' '}
+                            <Link href="/fundamentals/viewports">
+                                <a className="u u-LR">Viewports</a>
+                            </Link>{' '}
+                            documentation.
+                        </p>
                     </div>
                 </section>
 

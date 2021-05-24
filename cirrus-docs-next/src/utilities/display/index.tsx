@@ -202,6 +202,37 @@ export const DisplayUtilsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
+                <section className="padtop" id="responsive">
+                    <div className="content">
+                        <Headline title="Responsive" link="#responsive" size="4" />
+                        <div className="divider"></div>
+                        <span className="tag-container group-tags">
+                            <div className="tag tag--dark">New</div>
+                            <div className="tag tag--info">0.6.2</div>
+                        </span>
+                        <p>
+                            All utility classes mentioned here support viewport based application. All you need to do is
+                            add a <code>-&lt;viewport&gt;</code> at the end of the class(es) you are using. For example,
+                            use <code>u-none-md</code> to apply <code>u-none</code> on medium screens and above.
+                        </p>
+
+                        <CodeBlock
+                            code={`<div class="u-block u-none-md">
+    <!-- ... -->
+</div>`}
+                            language="html"
+                        />
+
+                        <p>
+                            For more information, visit the{' '}
+                            <Link href="/fundamentals/viewports">
+                                <a className="u u-LR">Viewports</a>
+                            </Link>{' '}
+                            documentation.
+                        </p>
+                    </div>
+                </section>
+
                 <Pagination
                     prevLink={{ name: 'Clearfix', link: './clearfix' }}
                     nextLink={{ name: 'Flexbox', link: './flexbox' }}

@@ -10,6 +10,11 @@ export const toc: TableOfContentsEntry[] = [
                 anchor: '#examples',
                 children: null,
             },
+            {
+                name: 'Responsive',
+                anchor: '#responsive',
+                children: null,
+            },
         ],
     },
 ];

@@ -284,7 +284,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
 
                         <CodeBlock
                             code={`<div class="u-none u-flex-md">
-<!-- -->
+    <!-- ... -->
 />`}
                             language="html"
                         />
@@ -303,7 +303,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
 
                         <CodeBlock
                             code={`<div class="u-sticky u-relative-sm u-sticky-md">
-<!-- -->
+    <!-- ... -->
 />`}
                             language="html"
                         />
