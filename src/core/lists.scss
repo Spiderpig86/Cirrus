@@ -52,11 +52,6 @@ dd {
 
 li {
     margin: 0.25rem 0;
-
-    // /* Exclude margin in menus */ Deprecated 0.5.6
-    // &:not(.dropdown-menu > li):last-child {
-    //     margin-bottom: 1rem;
-    // }
 }
 
 /* MISC */

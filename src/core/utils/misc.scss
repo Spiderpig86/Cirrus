@@ -9,10 +9,6 @@
     float: right !important;
 }
 
-.u-text-justify {
-    text-align: justify !important;
-}
-
 .u-text-ellipsis {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -23,6 +19,10 @@
     hyphens: auto;
     word-break: break-word;
     word-wrap: break-word;
+}
+
+.u-text-justify {
+    text-align: justify !important;
 }
 
 .u-text-center {
@@ -62,26 +62,6 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-
-// .u-vertical-center { Deprecated 0.6.0
-//     display: -webkit-box;
-//     display: -ms-flexbox;
-//     display: flex;
-//     -webkit-box-pack: center;
-//     -ms-flex-pack: center;
-//     justify-content: center;
-//     align-items: center;
-//     vertical-align: middle;
-// }
-
-// .u-horizontal-center {
-//     display: -webkit-box;
-//     display: -ms-flexbox;
-//     display: flex;
-//     -webkit-box-align: center;
-//     -ms-flex-align: center;
-//     align-items: center;
-// }
 
 .u-overlay {
     bottom: 0;
@@ -126,5 +106,5 @@
 }
 
 .u-shadow {
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.07) !important;
 }

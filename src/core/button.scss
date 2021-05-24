@@ -349,13 +349,6 @@
     }
 }
 
-/* Deprecated 0.5.6, use m-1 instead */
-// /* Adds small margin around buttons */
-// .btn-container {
-//     margin: 0.5rem;
-//     overflow: visible;
-// }
-
 [class^='btn-']:not(.btn-container):not(.btn-close),
 [class*=' btn-']:not(.btn-container):not(.btn-close) {
     background-color: var(--btn-color);
@@ -386,18 +379,6 @@
     }
 }
 
-// Deprecated 0.5.6 -- unpopular
-// /* Right of input */
-// .has-controls.input:not([class*='left action']) > button:last-child,
-// .has-controls.input:not([class*='left action']) > .btn:last-child {
-//     border-radius: 0 0.28571429rem 0.28571429rem 0;
-// }
-
-// .has-controls.input:not([class*='right action']) > button:last-child,
-// .has-controls.input:not([class*='right action']) > .btn:last-child {
-//     border-radius: 0.28571429rem 0 0 0.28571429rem;
-// }
-
 /* Make the loader white so it is visible */
 .loading.btn-accent:after {
     border: 2px solid #fff;
@@ -411,8 +392,6 @@
 .btn-group {
     $child-elements: '.btn', 'button', '[type="submit"]';
 
-    /* -ms-flex-wrap: wrap; Deprecated 0.5.6, allow for overflow
-    flex-wrap: wrap; Wrap contents to next row on overflow */
     display: -webkit-inline-box;
     display: inline-flex;
     display: -ms-inline-flexbox;

@@ -373,7 +373,6 @@
   .btn span:last-child, button span:last-child, [type="submit"] span:last-child, [type="reset"] span:last-child, [type="button"] span:last-child {
     margin-left: 0.2rem; }
 
-/* Deprecated 0.5.6, use m-1 instead */
 [class^='btn-']:not(.btn-container):not(.btn-close),
 [class*=' btn-']:not(.btn-container):not(.btn-close) {
   background-color: var(--btn-color);
@@ -408,8 +407,6 @@
 /* BUTTON GROUPS */
 /* Will group buttons with components in a single component */
 .btn-group {
-  /* -ms-flex-wrap: wrap; Deprecated 0.5.6, allow for overflow
-    flex-wrap: wrap; Wrap contents to next row on overflow */
   display: -webkit-inline-box;
   display: inline-flex;
   display: -ms-inline-flexbox;
@@ -878,7 +875,6 @@ mark,
   font-size: 5.5rem;
   letter-spacing: 0.05rem; }
 
-/* Deprecated, use font-bold */
 .font-alt {
   font-family: 'Nunito Sans'; }
 
@@ -1685,7 +1681,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
   width: 3rem;
   z-index: 1; }
 
-/* Form section just adds extra spacing between form elements tiled vertically */
 /* Form groups that group inputs with other controls. */
 .form-group {
   /* This is just an extended portion of an input which is just like a label and is read only */
@@ -2171,10 +2166,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
     /* Align items to the left */
     /* Align items to the right */
     /* Centering items, best used when nav-brand is not used to prevent offset */
-    /* Hide hamburger button */
-    /* .nav-item {
-        position: relative; /* Include for helping dropdown menu positioning  Deprecated 0.5.6
-      } */ }
+    /* Hide hamburger button */ }
     .header .header-nav {
       -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -2452,11 +2444,6 @@ section {
   bottom: 0;
   left: 0;
   height: 100vh; }
-
-/* Deprecated 0.5.6
-// .panel {
-//     padding: 2.5em 0;
-// }
 
 /* This works well with spans and maybe even hr */
 .divider {
@@ -2797,54 +2784,6 @@ section {
   max-width: 100%;
   padding: 0.5rem; }
 
-/* Use in parent div of fluid col Deprecated in 0.5.6, use .row
-.fluid-container {
-    display: flex;
-    overflow: auto;
-}
-
-/* Wrap controls instead on overflow 
-.fluid-container.wrap {
-    -webkit-align-items: center;
-    align-items: center;
-    display: flex;
-    display: -ms-flexbox;
-    -ms-flex-align: center;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-/* Resizes elements in a row equally given the number of elements located in it 
-.fluid-container .col-fluid {
-    display: block;
-    -ms-flex-preferred-size: 0;
-    flex-basis: 0;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-negative: 1;
-    flex-shrink: 1;
-}
-
-/* No expansion for specific col-fluid columns 
-.fluid-container .col-fluid.no-flex {
-    flex-grow: 0;
-    flex-shrink: 0;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
-    -ms-flex-negative: 0;
-} */
-/* Divider for multiple elements in a div */
-/* .divided > .fluid-container:not(.row),
-.divided > .row [class^="col-"], .divided > .row [class*=" col-"] { DEPRECATED 0.5.5
-    box-shadow: -1px 0 0 0 rgba(34, 36, 38, 0.15);
-} */
-/* Remove border in first child */
-/* .divided > .row [class^="col-"]:first-child,
-.divided > .row [class*=" col-"]:first-child {
-    box-shadow: none; DEPRECATED 0.5.5
-} */
 .level {
   -webkit-box-align: center;
   -ms-flex-align: center;

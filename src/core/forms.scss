@@ -288,31 +288,6 @@ label {
     z-index: 1;
 }
 
-/* Form section just adds extra spacing between form elements tiled vertically */
-// .form-section { Deprecated 0.6.0
-//     &:not(:last-child) {
-//         margin-bottom: 0.5rem;
-//     }
-
-//     /* A flexbox version of form-section for inline forms */
-//     &.section-inline {
-//         display: flex;
-//     }
-
-//     button {
-//         align-items: center;
-//         flex-grow: 0; /* Keep it from taking up extra space */
-//         display: flex;
-//         flex-shrink: 0;
-//     }
-
-//     input,
-//     .section-body {
-//         align-items: center;
-//         flex-grow: 1;
-//     }
-// }
-
 /* Form groups that group inputs with other controls. */
 .form-group {
     /* This is just an extended portion of an input which is just like a label and is read only */
@@ -397,11 +372,4 @@ label {
 
 ::-webkit-input-placeholder {
     color: #a9a9a9; /* Lighter than the default */
-}
-
-@media screen and (max-width: 768px) {
-    // /* Remove flex in form-section */ Deprecated 0.6.0
-    // .form-section.section-inline {
-    //     display: inherit;
-    // }
 }

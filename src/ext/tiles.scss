@@ -6,22 +6,7 @@
     -webkit-align-content: space-between;
     -ms-flex-line-pack: justify; /* Evenly distribute lines */
     overflow: inherit; /* Prevent overflowing when unnecessary */
-    
-    // /* Force elements to align at the center vertical height */ Deprecated in 0.6.0 in favor of u-items-center
-    // &.tile.tile--center {
-    //     align-items: center;
-    //     -webkit-align-items: center;
-    //     -ms-flex-align: center;
-    // }
-    
-    // /* Keep the text from overflowing */ Moved to utils in 0.6.0
-    // &.tile--center .tile__title,
-    // &.tile--center .tile__subtitle.no-wrap { /* TODO: Do something about no-wrap for row and no-wrap for text */
-    //     white-space: nowrap;
-    //     text-overflow: ellipsis;
-    //     overflow: hidden;
-    // }
-    
+
     p {
         font-size: 0.95rem; /* Base font size is 1rem */
     }

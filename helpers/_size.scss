@@ -74,12 +74,12 @@ $breakpoint-pairs: (
 }
 
 // TODO: Once we move to dart-sass, look into using content with variables
-@mixin generate-classes-for-viewport($classes, $property) {
+@mixin generate-classes-for-viewport($classes, $property, $prefix: '-') {
     // We build in this order since we want larger viewports to have higher precedence
     // so we can write classes like u-none u-block-md u-none-lg
 
     @each $class in $classes {
-        .u-#{$class} {
+        .u#{$prefix}#{$class} {
             #{$property}: $class !important;
         }
     }
@@ -87,7 +87,7 @@ $breakpoint-pairs: (
     @each $suffix, $limit in $breakpoint-pairs {
         @each $class in $classes {
             @include screen-above($limit) {
-                .u-#{$class}-#{$suffix} {
+                .u#{$prefix}#{$class}-#{$suffix} {
                     #{$property}: $class !important;
                 }
             }
