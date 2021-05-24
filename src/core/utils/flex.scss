@@ -6,20 +6,6 @@ $justify-content: flex-start, center, flex-end, space-between, space-around, spa
 
 $align-items: stretch, flex-start, center, flex-end, baseline;
 
-@each $flex-direction in $flex-directions {
-    .u-flex-#{$flex-direction} {
-        flex-direction: #{$flex-direction} !important;
-    }
-}
-
-@each $justify in $justify-content {
-    .u-justify-#{$justify} {
-        justify-content: #{$justify} !important;
-    }
-}
-
-@each $align in $align-items {
-    .u-items-#{$align} {
-        align-items: #{$align} !important;
-    }
-}
+@include generate-classes-for-viewport($flex-directions, 'flex-direction', '-flex-');
+@include generate-classes-for-viewport($justify-content, 'justify-content', '-justify-');
+@include generate-classes-for-viewport($align-items, 'align-items', '-items-');
