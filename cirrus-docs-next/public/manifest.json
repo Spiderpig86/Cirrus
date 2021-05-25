@@ -10,55 +10,65 @@
     {
       "src": "apple-icon.png",
       "sizes": "57x57",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose":"maskable any"
     },
     {
       "src": "apple-icon.png",
       "sizes": "60x60",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose":"maskable any"
     },
     {
       "src": "apple-icon.png",
       "sizes": "72x72",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose":"maskable any"
     },
     {
       "src": "apple-icon.png",
       "sizes": "76x76",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose":"maskable any"
     },
     {
       "src": "apple-icon.png",
       "sizes": "114x114",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose":"maskable any"
     },
     {
       "src": "apple-icon.png",
       "sizes": "120x120",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose":"maskable any"
     },
     {
       "src": "apple-icon.png",
       "sizes": "144x144",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose":"maskable any"
     },
     {
       "src": "apple-icon.png",
       "sizes": "152x152",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose":"maskable any"
     },
     {
       "src": "apple-icon.png",
       "sizes": "180x180",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose":"maskable any"
     },
     {
       "src": "android-icon-192x192.png",
       "type": "image/png",
+      "purpose":"maskable any",
       "sizes": "192x192"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#f03d4d",
   "background_color": "#ffffff"
