@@ -627,15 +627,6 @@ position: absolute;`,
 <div class="p-3 u-no-outline" style="outline-color: gray; outline-style: dotted;">No outline.</div>`}
                             language="htmlbars"
                         />
-                        <div className="space"></div>
-                        <h6>Circle</h6>
-                        <p>Make an element circular (or ovular) with a 50% border radius.</p>
-                        <div className="p-3 u-center">
-                            <button className="btn-info u-circle">sl</button>
-                        </div>
-                        <CodeBlock code={`<button class="btn-info u-circle">sl</button>`} language="htmlbars" />
-                        <div className="space"></div>
-
                         <h6>Shadow</h6>
                         <p>
                             Add a subtle shadow for any element using <code>u-shadow</code>.
