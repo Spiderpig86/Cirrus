@@ -1,5 +1,5 @@
-@import "../../helpers/_size.scss";
-@import "../core/theme.scss";
+@import '../../helpers/_size.scss';
+@import '../core/theme.scss';
 
 /* The base of the modal dialog, which is an overlay of the webpage */
 .modal {
@@ -172,7 +172,7 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@include screen-below('md') {
     .modal-content {
         max-width: 90%;
     }

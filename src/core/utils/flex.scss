@@ -1,3 +1,4 @@
+@import '../../../helpers/_functions';
 @import '../../../helpers/_size';
 
 $flex-directions: row, row-reverse, column, column-reverse;
@@ -6,6 +7,6 @@ $justify-content: flex-start, center, flex-end, space-between, space-around, spa
 
 $align-items: stretch, flex-start, center, flex-end, baseline;
 
-@include generate-classes-for-viewport($flex-directions, 'flex-direction', '-flex-');
-@include generate-classes-for-viewport($justify-content, 'justify-content', '-justify-');
-@include generate-classes-for-viewport($align-items, 'align-items', '-items-');
+@include generate-classes-for-viewport($flex-directions, 'flex-direction', delimitize('flex'));
+@include generate-classes-for-viewport($justify-content, 'justify-content', delimitize('justify'));
+@include generate-classes-for-viewport($align-items, 'align-items', delimitize('items'));

@@ -310,10 +310,7 @@ section {
     }
 }
 
-@media screen and (min-width: 769px) {
-    // .row {
-    //     display: flex;
-    // }
+@include screen-below('md') {
 
     .level-right {
         margin-left: 1rem;
@@ -331,7 +328,7 @@ section {
 }
 
 /* MOBILE */
-@media screen and (max-width: 768px) {
+@include screen-below('md') {
     .container {
         width: 100%;
     }

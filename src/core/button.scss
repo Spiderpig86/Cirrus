@@ -1,7 +1,8 @@
-@import '../core/theme.scss';
-@import '../../helpers/_functions';
+@import '../../helpers/_functions.scss';
 @import '../../helpers/_mixins.scss';
-@import '../../helpers/_selectors';
+@import '../../helpers/_selectors.scss';
+@import '../../helpers/_size.scss';
+@import '../core/theme.scss';
 
 /* BUTTONS */
 
@@ -390,38 +391,34 @@
 /* Will group buttons with components in a single component */
 
 .btn-group {
-    $child-elements: '.btn', 'button', '[type="submit"]';
-
     display: -webkit-inline-box;
     display: inline-flex;
     display: -ms-inline-flexbox;
     display: -webkit-inline-flex;
 
-    @each $child in $child-elements {
-        #{$child} {
-            -ms-flex: 1 0 auto;
-            -webkit-box-flex: 1;
-            flex: 1 0 auto;
-            margin: 0;
+    #{$button-selectors} {
+        -ms-flex: 1 0 auto;
+        -webkit-box-flex: 1;
+        flex: 1 0 auto;
+        margin: 0;
 
-            &:first-child:not(:last-child) {
-                /* Style the first child in group > 1 buttons */
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-            }
+        &:first-child:not(:last-child) {
+            /* Style the first child in group > 1 buttons */
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
 
-            &:last-child:not(:first-child) {
-                /* Style the last child in group > 1 buttons */
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-                margin-left: -1px;
-            }
+        &:last-child:not(:first-child) {
+            /* Style the last child in group > 1 buttons */
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            margin-left: -1px;
+        }
 
-            &:not(:first-child):not(:last-child) {
-                /* Style button in middle of group */
-                border-radius: 0; /* Remove roundness from center buttons */
-                margin-left: -0.1rem;
-            }
+        &:not(:first-child):not(:last-child) {
+            /* Style button in middle of group */
+            border-radius: 0; /* Remove roundness from center buttons */
+            margin-left: -0.1rem;
         }
     }
 
@@ -431,39 +428,33 @@
         display: flex;
         display: -ms-flexbox;
 
-        @each $child in $child-elements {
-            #{$child} {
-                -ms-flex: 1 0;
-                -webkit-box-flex: 1;
-                flex: 1 0; /* Make the buttons fill the available width and proportion themselves */
-            }
+        #{$button-selectors} {
+            -ms-flex: 1 0;
+            -webkit-box-flex: 1;
+            flex: 1 0; /* Make the buttons fill the available width and proportion themselves */
         }
     }
 }
 
-@media screen and (max-width: 768px) {
-    $child-elements: '.btn', 'button', '[type="submit"]';
-
+@include screen-below('md') {
     .btn-group {
         display: flex;
         flex-direction: column;
 
-        @each $child in $child-elements {
-            #{$child} {
-                margin-bottom: -1px;
+        #{$button-selectors} {
+            margin-bottom: -1px;
 
-                &:first-child:not(:last-child) {
-                    border-radius: 0.25rem 0.25rem 0 0;
-                }
+            &:first-child:not(:last-child) {
+                border-radius: 0.25rem 0.25rem 0 0;
+            }
 
-                &:not(:first-child):not(:last-child) {
-                    margin-left: 0;
-                }
+            &:not(:first-child):not(:last-child) {
+                margin-left: 0;
+            }
 
-                &:last-child:not(:first-child) {
-                    border-radius: 0 0 0.25rem 0.25rem;
-                    margin-left: 0;
-                }
+            &:last-child:not(:first-child) {
+                border-radius: 0 0 0.25rem 0.25rem;
+                margin-left: 0;
             }
         }
     }

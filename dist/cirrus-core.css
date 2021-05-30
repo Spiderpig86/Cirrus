@@ -9,69 +9,17 @@
 /*
     Converts a given hex value to RGB.
 */
-/* Spacing */
-/* Fonts */
-/* Grid Count */
-/* Grid Percents */
-/* Tab Sizes */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-/* Color scheme for Cirrus */
-/* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /*
-  Functions
-*/
-/*
-    Converts a given hex value to RGB.
+    Generates delimited class name prefix.
 */
 /*
   Functions
 */
 /*
     Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
 */
 /* Spacing */
 /* Fonts */
@@ -131,6 +79,74 @@
 /*
     Group selectors that share common styling.
 */
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Color scheme for Cirrus */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 /* BUTTONS */
 /* Button styling */
 /* Un-themed */
@@ -411,59 +427,21 @@
   display: inline-flex;
   display: -ms-inline-flexbox;
   display: -webkit-inline-flex; }
-  .btn-group .btn {
+  .btn-group .btn, .btn-group button, .btn-group [type="submit"], .btn-group [type="reset"], .btn-group [type="button"] {
     -ms-flex: 1 0 auto;
     -webkit-box-flex: 1;
     flex: 1 0 auto;
     margin: 0; }
-    .btn-group .btn:first-child:not(:last-child) {
+    .btn-group .btn:first-child:not(:last-child), .btn-group button:first-child:not(:last-child), .btn-group [type="submit"]:first-child:not(:last-child), .btn-group [type="reset"]:first-child:not(:last-child), .btn-group [type="button"]:first-child:not(:last-child) {
       /* Style the first child in group > 1 buttons */
       border-top-right-radius: 0;
       border-bottom-right-radius: 0; }
-    .btn-group .btn:last-child:not(:first-child) {
+    .btn-group .btn:last-child:not(:first-child), .btn-group button:last-child:not(:first-child), .btn-group [type="submit"]:last-child:not(:first-child), .btn-group [type="reset"]:last-child:not(:first-child), .btn-group [type="button"]:last-child:not(:first-child) {
       /* Style the last child in group > 1 buttons */
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
       margin-left: -1px; }
-    .btn-group .btn:not(:first-child):not(:last-child) {
-      /* Style button in middle of group */
-      border-radius: 0;
-      /* Remove roundness from center buttons */
-      margin-left: -0.1rem; }
-  .btn-group button {
-    -ms-flex: 1 0 auto;
-    -webkit-box-flex: 1;
-    flex: 1 0 auto;
-    margin: 0; }
-    .btn-group button:first-child:not(:last-child) {
-      /* Style the first child in group > 1 buttons */
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0; }
-    .btn-group button:last-child:not(:first-child) {
-      /* Style the last child in group > 1 buttons */
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      margin-left: -1px; }
-    .btn-group button:not(:first-child):not(:last-child) {
-      /* Style button in middle of group */
-      border-radius: 0;
-      /* Remove roundness from center buttons */
-      margin-left: -0.1rem; }
-  .btn-group [type="submit"] {
-    -ms-flex: 1 0 auto;
-    -webkit-box-flex: 1;
-    flex: 1 0 auto;
-    margin: 0; }
-    .btn-group [type="submit"]:first-child:not(:last-child) {
-      /* Style the first child in group > 1 buttons */
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0; }
-    .btn-group [type="submit"]:last-child:not(:first-child) {
-      /* Style the last child in group > 1 buttons */
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      margin-left: -1px; }
-    .btn-group [type="submit"]:not(:first-child):not(:last-child) {
+    .btn-group .btn:not(:first-child):not(:last-child), .btn-group button:not(:first-child):not(:last-child), .btn-group [type="submit"]:not(:first-child):not(:last-child), .btn-group [type="reset"]:not(:first-child):not(:last-child), .btn-group [type="button"]:not(:first-child):not(:last-child) {
       /* Style button in middle of group */
       border-radius: 0;
       /* Remove roundness from center buttons */
@@ -473,51 +451,23 @@
     display: -webkit-box;
     display: flex;
     display: -ms-flexbox; }
-    .btn-group.btn-group-fill .btn {
-      -ms-flex: 1 0;
-      -webkit-box-flex: 1;
-      flex: 1 0;
-      /* Make the buttons fill the available width and proportion themselves */ }
-    .btn-group.btn-group-fill button {
-      -ms-flex: 1 0;
-      -webkit-box-flex: 1;
-      flex: 1 0;
-      /* Make the buttons fill the available width and proportion themselves */ }
-    .btn-group.btn-group-fill [type="submit"] {
+    .btn-group.btn-group-fill .btn, .btn-group.btn-group-fill button, .btn-group.btn-group-fill [type="submit"], .btn-group.btn-group-fill [type="reset"], .btn-group.btn-group-fill [type="button"] {
       -ms-flex: 1 0;
       -webkit-box-flex: 1;
       flex: 1 0;
       /* Make the buttons fill the available width and proportion themselves */ }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   .btn-group {
     display: flex;
     flex-direction: column; }
-    .btn-group .btn {
+    .btn-group .btn, .btn-group button, .btn-group [type="submit"], .btn-group [type="reset"], .btn-group [type="button"] {
       margin-bottom: -1px; }
-      .btn-group .btn:first-child:not(:last-child) {
+      .btn-group .btn:first-child:not(:last-child), .btn-group button:first-child:not(:last-child), .btn-group [type="submit"]:first-child:not(:last-child), .btn-group [type="reset"]:first-child:not(:last-child), .btn-group [type="button"]:first-child:not(:last-child) {
         border-radius: 0.25rem 0.25rem 0 0; }
-      .btn-group .btn:not(:first-child):not(:last-child) {
+      .btn-group .btn:not(:first-child):not(:last-child), .btn-group button:not(:first-child):not(:last-child), .btn-group [type="submit"]:not(:first-child):not(:last-child), .btn-group [type="reset"]:not(:first-child):not(:last-child), .btn-group [type="button"]:not(:first-child):not(:last-child) {
         margin-left: 0; }
-      .btn-group .btn:last-child:not(:first-child) {
-        border-radius: 0 0 0.25rem 0.25rem;
-        margin-left: 0; }
-    .btn-group button {
-      margin-bottom: -1px; }
-      .btn-group button:first-child:not(:last-child) {
-        border-radius: 0.25rem 0.25rem 0 0; }
-      .btn-group button:not(:first-child):not(:last-child) {
-        margin-left: 0; }
-      .btn-group button:last-child:not(:first-child) {
-        border-radius: 0 0 0.25rem 0.25rem;
-        margin-left: 0; }
-    .btn-group [type="submit"] {
-      margin-bottom: -1px; }
-      .btn-group [type="submit"]:first-child:not(:last-child) {
-        border-radius: 0.25rem 0.25rem 0 0; }
-      .btn-group [type="submit"]:not(:first-child):not(:last-child) {
-        margin-left: 0; }
-      .btn-group [type="submit"]:last-child:not(:first-child) {
+      .btn-group .btn:last-child:not(:first-child), .btn-group button:last-child:not(:first-child), .btn-group [type="submit"]:last-child:not(:first-child), .btn-group [type="reset"]:last-child:not(:first-child), .btn-group [type="button"]:last-child:not(:first-child) {
         border-radius: 0 0 0.25rem 0.25rem;
         margin-left: 0; } }
 
@@ -526,6 +476,9 @@
 */
 /*
     Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
 */
 /* Spacing */
 /* Fonts */
@@ -721,11 +674,21 @@ fieldset {
   box-shadow: 0 0 0.1rem 0.15rem rgba(240, 61, 77, 0.13);
   outline: none; }
 
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /*
   Functions
 */
 /*
     Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
 */
 /* Spacing */
 /* Fonts */
@@ -955,9 +918,6 @@ mark,
 .faded {
   opacity: 0.75; }
 
-.font-italic {
-  font-style: italic; }
-
 /* Font Awesome */
 .icon {
   /* Usually used in spans */
@@ -1011,7 +971,7 @@ kbd {
   vertical-align: baseline; }
 
 /* MOBILE */
-@media (max-width: 650px) {
+@media screen and (max-width: 767px) {
   h1 {
     font-size: 2.25rem; }
   h2 {
@@ -1042,6 +1002,9 @@ kbd {
 */
 /*
     Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
 */
 /* Spacing */
 /* Fonts */
@@ -1146,6 +1109,9 @@ kbd {
 /*
     Converts a given hex value to RGB.
 */
+/*
+    Generates delimited class name prefix.
+*/
 /* Spacing */
 /* Fonts */
 /* Grid Count */
@@ -1203,6 +1169,9 @@ kbd {
 */
 /*
     Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
 */
 /* Spacing */
 /* Fonts */
@@ -1780,6 +1749,9 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /*
     Converts a given hex value to RGB.
 */
+/*
+    Generates delimited class name prefix.
+*/
 /* Spacing */
 /* Fonts */
 /* Grid Count */
@@ -1871,10 +1843,23 @@ label:last-child:not(:first-child):not(.form-group-label) {
     margin: 0 auto .75rem; }
 
 /*
+    Group selectors that share common styling.
+*/
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/*
   Functions
 */
 /*
     Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
 */
 /* Spacing */
 /* Fonts */
@@ -1928,9 +1913,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
   --font-size-l: 1.35rem;
   --font-size-xl: 1.75rem; }
 
-/*
-    Group selectors that share common styling.
-*/
 /* HEADER */
 .header {
   -webkit-box-flex: 1;
@@ -1983,17 +1965,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
     .header.header-clear .nav-item .dropdown-menu {
       border-radius: 4px; }
   .header.header-animated .header-nav {
-    -webkit-transition: background 0.4s ease, height 0.4s ease;
-    transition: background 0.4s ease, height 0.4s ease;
-    -webkit-transition-property: background, height;
-    transition-property: background, height;
-    -webkit-transition-duration: 0.4s, 0.4s;
-    transition-duration: 0.4s, 0.4s;
-    -webkit-transition-timing-function: ease, ease;
-    transition-timing-function: ease, ease;
-    -webkit-transition-delay: initial, initial;
-    transition-delay: initial, initial;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s; }
   .header .header-nav {
     /* Flex display 768px and higher */
@@ -2019,7 +1990,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
   .header:not(.header-clear) .nav-item:not(.no-hover):hover,
   .header:not(.header-clear) .nav-item:not(.no-hover).hovered {
     background-color: rgba(216, 216, 216, 0.15);
-    -webkit-transition: all 0.3s;
     transition: all 0.3s; }
   .header:not(.header-clear) .nav-item.active,
   .header:not(.header-clear) .nav-item.active:hover {
@@ -2035,7 +2005,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
 
 /* Styles for header menu (aka the nav bar) */
 .nav-menu {
-  -webkit-transition: all 0.3s;
   transition: all 0.3s; }
   .nav-menu .has-sub {
     position: relative; }
@@ -2064,7 +2033,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   padding: 0 0.3rem;
   cursor: pointer;
@@ -2092,7 +2060,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
     box-shadow: 0 0.5rem 1rem rgba(10, 10, 10, 0.1);
     /* Just add a transition in general */ }
     .nav-item .dropdown-menu.dropdown-animated {
-      -webkit-transition: all var(--animation-duration);
       transition: all var(--animation-duration); }
     .nav-item .dropdown-menu > li > a {
       display: block;
@@ -2102,14 +2069,11 @@ label:last-child:not(:first-child):not(.form-group-label) {
       white-space: nowrap; }
     .nav-item .dropdown-menu > li {
       margin: 0;
-      -webkit-transition: all 0.3s;
       transition: all 0.3s; }
     .nav-item .dropdown-menu > li:hover {
-      -webkit-transition: all 0.3s;
       transition: all 0.3s;
       background-color: rgba(216, 216, 216, 0.15); }
     .nav-item .dropdown-menu > li:active {
-      -webkit-transition: all 0.3s;
       transition: all 0.3s;
       background-color: rgba(216, 216, 216, 0.25); }
     .nav-item .dropdown-menu > li:last-child {
@@ -2267,7 +2231,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
         transform: none;
         pointer-events: auto; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   /* Add scrolling support in header */
   .header {
     flex-direction: column;
@@ -2322,12 +2286,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
       margin-left: -7px;
       position: absolute;
       top: 50%;
-      -webkit-transition: none 86ms ease-out;
       transition: none 86ms ease-out;
-      -webkit-transition-property: background, left, opacity, -webkit-transform;
-      transition-property: background, left, opacity, -webkit-transform;
-      transition-property: background, left, opacity, transform;
-      transition-property: background, left, opacity, transform, -webkit-transform;
       width: 15px;
       /* Line spacing in hamburger button */ }
       .nav-btn span:nth-child(1) {
@@ -2368,6 +2327,9 @@ label:last-child:not(:first-child):not(.form-group-label) {
 */
 /*
     Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
 */
 /* Spacing */
 /* Fonts */
@@ -2898,7 +2860,7 @@ section {
     display: -ms-flexbox;
     display: flex; } }
 
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 1023px) {
   .level-right {
     margin-left: 1rem; }
   /* Keep all level children the same height */
@@ -2912,7 +2874,7 @@ section {
     display: flex; } }
 
 /* MOBILE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   .container {
     width: 100%; }
   .row {
@@ -2972,6 +2934,9 @@ a button,
 */
 /*
     Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
 */
 /* Spacing */
 /* Fonts */
@@ -3097,12 +3062,10 @@ ul {
     border-radius: 3px;
     font-size: var(--font-size-s);
     cursor: pointer;
-    -webkit-transition: all var(--animation-duration);
     transition: all var(--animation-duration); }
   ul .menu-item:hover > a {
     background-color: rgba(208, 208, 208, 0.3);
     color: var(--cirrus-primary);
-    -webkit-transition: all var(--animation-duration);
     transition: all var(--animation-duration); }
   ul .menu-item.selected > a {
     color: #fff;
@@ -3115,13 +3078,11 @@ ul {
     cursor: pointer;
     float: left;
     margin-right: 0.1rem;
-    -webkit-transition: all var(--animation-duration);
     transition: all var(--animation-duration); }
   ul .menu-item .menu-addon .icon {
     font-size: inherit;
     vertical-align: auto; }
   ul .menu-item .menu-addon:hover {
-    -webkit-transition: all var(--animation-duration);
     transition: all var(--animation-duration); }
   ul .menu-item .menu-addon.right {
     float: right;
@@ -3173,7 +3134,6 @@ ul {
     pointer-events: none;
     /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
     overflow: hidden;
-    -webkit-transition: all var(--animation-duration);
     transition: all var(--animation-duration); }
     @media screen and (max-width: 767px) {
       .list-dropdown .menu {
@@ -3193,7 +3153,6 @@ ul {
     pointer-events: auto;
     /* Restore pointer events */
     height: auto;
-    -webkit-transition: all var(--animation-duration);
     transition: all var(--animation-duration); }
   .list-dropdown .btn-group .btn-dropdown:nth-last-child(2) {
     border-bottom-right-radius: 3px;
@@ -3216,7 +3175,6 @@ ul {
       font-weight: 700;
       /* Keep styling consistent with menu-items */ }
     .tree .tree-item .tree-item-header .icon {
-      -webkit-transition: all var(--animation-duration);
       transition: all var(--animation-duration); }
     .tree .tree-item input:checked ~ .tree-item-body {
       max-height: 100vh; }
@@ -3228,7 +3186,6 @@ ul {
       /* Hidden at first */
       margin-left: 1.5rem;
       overflow: hidden;
-      -webkit-transition: all var(--animation-duration);
       transition: all var(--animation-duration); }
 
 /* The body that will encompass the tree-nav and tree-nav-content */
@@ -3275,7 +3232,7 @@ ul {
     margin: 0;
     padding: 2rem; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   /* Hide the menu to the side by default */
   .tree-nav {
     height: 100%;
@@ -3287,9 +3244,6 @@ ul {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
     transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
-    -webkit-transition: -webkit-transform var(--animation-duration) ease;
-    transition: transform var(--animation-duration) ease;
-    transition: -webkit-transform var(--animation-duration) ease;
     z-index: 400;
     /* Open the menu from the side */
     /* Use a link and add the id of this element as the url */
@@ -3299,7 +3253,6 @@ ul {
       -webkit-transform: translateX(0);
       transform: translateX(0);
       transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
-      -webkit-transition: -webkit-transform var(--animation-duration) ease;
       transition: -webkit-transform var(--animation-duration) ease;
       transition: transform var(--animation-duration) ease;
       /* Show the darkened area when the tree nav menu is clicked */ }
@@ -3886,6 +3839,9 @@ video.video-fullscreen {
 /*
     Converts a given hex value to RGB.
 */
+/*
+    Generates delimited class name prefix.
+*/
 /* Spacing */
 /* Fonts */
 /* Grid Count */
@@ -4024,6 +3980,9 @@ video.video-fullscreen {
 */
 /*
     Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
 */
 /* Spacing */
 /* Fonts */

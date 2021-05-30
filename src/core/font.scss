@@ -1,4 +1,6 @@
+@import '../../helpers/_size.scss';
 @import './theme.scss';
+
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
@@ -140,9 +142,10 @@ mark,
     opacity: 0.75;
 }
 
-.font-italic {
-    font-style: italic;
-}
+// Deprecating 0.6.2, use <i> or <em> instead
+// .font-italic {
+//     font-style: italic;
+// }
 
 /* Font Awesome */
 .icon {
@@ -211,7 +214,7 @@ kbd {
 
 /* MOBILE */
 
-@media (max-width: 650px) {
+@include screen-below('sm') {
     $base-header-size: 1rem;
     $header-size-diff: 0.25rem;
     $base-headline-size: 2.5rem;

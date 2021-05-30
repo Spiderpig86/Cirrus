@@ -1,5 +1,6 @@
-@import './theme.scss';
 @import '../../helpers/_selectors';
+@import '../../helpers/_size.scss';
+@import './theme.scss';
 
 @mixin mobile-dropdown-menu-show {
     border-radius: 0;
@@ -71,17 +72,6 @@
 
     /* Add transition to nav menu when it drops down */
     &.header-animated .header-nav {
-        -webkit-transition: background 0.4s ease, height 0.4s ease;
-        transition: background 0.4s ease, height 0.4s ease;
-        -webkit-transition-property: background, height;
-        transition-property: background, height;
-        -webkit-transition-duration: 0.4s, 0.4s;
-        transition-duration: 0.4s, 0.4s;
-        -webkit-transition-timing-function: ease, ease;
-        transition-timing-function: ease, ease;
-        -webkit-transition-delay: initial, initial;
-        transition-delay: initial, initial;
-        -webkit-transition: all 0.3s;
         transition: all 0.3s;
     }
 
@@ -117,7 +107,6 @@
     &:not(.header-clear) .nav-item:not(.no-hover):hover,
     &:not(.header-clear) .nav-item:not(.no-hover).hovered {
         background-color: rgba(216, 216, 216, 0.15);
-        -webkit-transition: all 0.3s;
         transition: all 0.3s;
     }
 
@@ -141,7 +130,6 @@
 
 /* Styles for header menu (aka the nav bar) */
 .nav-menu {
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
 
     .has-sub {
@@ -174,7 +162,6 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     padding: 0 0.3rem;
     cursor: pointer;
@@ -205,7 +192,6 @@
 
         /* Just add a transition in general */
         &.dropdown-animated {
-            -webkit-transition: all var(--animation-duration);
             transition: all var(--animation-duration);
         }
 
@@ -219,18 +205,15 @@
 
         & > li {
             margin: 0;
-            -webkit-transition: all 0.3s;
             transition: all 0.3s;
         }
 
         & > li:hover {
-            -webkit-transition: all 0.3s;
             transition: all 0.3s;
             background-color: rgba(216, 216, 216, 0.15);
         }
 
         & > li:active {
-            -webkit-transition: all 0.3s;
             transition: all 0.3s;
             background-color: rgba(216, 216, 216, 0.25);
         }
@@ -408,7 +391,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@include screen-below('md') {
     /* Add scrolling support in header */
     .header {
         flex-direction: column;
@@ -473,12 +456,7 @@
             margin-left: -7px;
             position: absolute;
             top: 50%;
-            -webkit-transition: none 86ms ease-out;
             transition: none 86ms ease-out;
-            -webkit-transition-property: background, left, opacity, -webkit-transform;
-            transition-property: background, left, opacity, -webkit-transform;
-            transition-property: background, left, opacity, transform;
-            transition-property: background, left, opacity, transform, -webkit-transform;
             width: 15px;
 
             /* Line spacing in hamburger button */

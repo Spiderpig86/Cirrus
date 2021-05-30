@@ -83,17 +83,6 @@
         grid-row-end: auto;
     }
 
-    /* Styling grid cells */
-    // .c {
-    //     grid-column-start: var(--grid-column-start);
-    //     grid-column-end: var(--grid-column-end);
-    // }
-
-    // .r {
-    //     grid-row-start: var(--grid-column-start);
-    //     grid-row-end: var(--grid-column-end);
-    // }
-
     @include screen-below('sm') {
         --grid-template-column: repeat(1, minmax(0, 1fr));
     }

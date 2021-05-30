@@ -2,32 +2,36 @@
 @import '../../helpers/_selectors';
 
 /* A collection of modifiers that extend control styling */
-#{$button-selectors}.btn--pilled {
-    border-radius: 6.25rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+#{$button-selectors} {
+    .btn--pilled {
+        border-radius: 6.25rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
 }
 
 /* btn--circle: contents must be placed inside child element */
-#{$button-selectors}.btn--circle {
-    border-radius: 100%;
-    min-width: 60px;
-    overflow: hidden;
-    padding: 0;
-    text-align: center;
+#{$button-selectors} {
+    &.btn--circle {
+        border-radius: 100%;
+        min-width: 60px;
+        overflow: hidden;
+        padding: 0;
+        text-align: center;
 
-    &:before {
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        padding-top: 100%;
-    }
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            padding-top: 100%;
+        }
 
-    * {
-        display: inline;
-        max-width: 90%;
-        vertical-align: middle;
-        white-space: pre-wrap;
+        * {
+            display: inline;
+            max-width: 90%;
+            vertical-align: middle;
+            white-space: pre-wrap;
+        }
     }
 }
 

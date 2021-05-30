@@ -367,9 +367,9 @@ label {
 
 /* Change place holder color */
 ::-moz-placeholder {
-    color: #a9a9a9; /* Lighter than the default */
+    color: $placeholder-fg; /* Lighter than the default */
 }
 
 ::-webkit-input-placeholder {
-    color: #a9a9a9; /* Lighter than the default */
+    color: $placeholder-fg; /* Lighter than the default */
 }

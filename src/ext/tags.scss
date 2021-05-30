@@ -177,17 +177,6 @@
         }
     }
 
-    // Removed 0.6.1, duplicate behavior to group-tags
-    // .tag-container.tag-container--grouped .tag:not(:first-child) {
-    //     border-top-left-radius: 0;
-    //     border-bottom-left-radius: 0;
-    // }
-
-    // .tag-container.tag-container--grouped .tag:not(:last-child) {
-    //     border-top-right-radius: 0;
-    //     border-bottom-right-radius: 0;
-    // }
-
     /* Tag positioning */
     &.tag-container--centered {
         justify-content: center;

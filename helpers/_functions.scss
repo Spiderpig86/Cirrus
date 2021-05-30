@@ -2,6 +2,8 @@
   Functions
 */
 
+$DELIMETER: '-';
+
 /*
     Converts a given hex value to RGB.
 */
@@ -9,6 +11,9 @@
   @return red($hex), green($hex), blue($hex);
 }
 
+/*
+    Generates delimited class name prefix.
+*/
 @function delimitize($name) {
-  @return '-' + $name + '-'; // Move '-' to constant
+  @return $DELIMETER + $name + $DELIMETER;
 }

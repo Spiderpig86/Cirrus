@@ -84,14 +84,12 @@ ul {
         border-radius: 3px;
         font-size: var(--font-size-s);
         cursor: pointer;
-        -webkit-transition: all var(--animation-duration);
         transition: all var(--animation-duration);
     }
 
     .menu-item:hover > a {
         background-color: rgba(208, 208, 208, 0.3);
         color: var(--cirrus-primary);
-        -webkit-transition: all var(--animation-duration);
         transition: all var(--animation-duration);
     }
 
@@ -108,7 +106,6 @@ ul {
         cursor: pointer;
         float: left;
         margin-right: 0.1rem;
-        -webkit-transition: all var(--animation-duration);
         transition: all var(--animation-duration);
     }
 
@@ -118,7 +115,6 @@ ul {
     }
 
     .menu-item .menu-addon:hover {
-        -webkit-transition: all var(--animation-duration);
         transition: all var(--animation-duration);
     }
 
@@ -187,7 +183,6 @@ ul {
         z-index: 10;
         pointer-events: none; /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
         overflow: hidden;
-        -webkit-transition: all var(--animation-duration);
         transition: all var(--animation-duration);
 
         @include screen-below('sm') {
@@ -212,7 +207,6 @@ ul {
         z-index: 100;
         pointer-events: auto; /* Restore pointer events */
         height: auto;
-        -webkit-transition: all var(--animation-duration);
         transition: all var(--animation-duration);
     }
     
@@ -239,7 +233,6 @@ ul {
         
         /* The dropdown glyph of the tree menu */
         .tree-item-header .icon {
-            -webkit-transition: all var(--animation-duration);
             transition: all var(--animation-duration);
         }
         
@@ -259,7 +252,6 @@ ul {
             max-height: 0; /* Hidden at first */
             margin-left: 1.5rem;
             overflow: hidden;
-            -webkit-transition: all var(--animation-duration);
             transition: all var(--animation-duration);
         }
     }
@@ -319,7 +311,7 @@ ul {
     }
 }
 
-@media screen and (max-width: 768px) {
+@include screen-below('sm') {
     /* Hide the menu to the side by default */
     .tree-nav {
         height: 100%;
@@ -331,9 +323,6 @@ ul {
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
         transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
-        -webkit-transition: -webkit-transform var(--animation-duration) ease;
-        transition: transform var(--animation-duration) ease;
-        transition: -webkit-transform var(--animation-duration) ease;
         z-index: 400;
 
         /* Open the menu from the side */
@@ -342,7 +331,6 @@ ul {
             -webkit-transform: translateX(0);
             transform: translateX(0);
             transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
-            -webkit-transition: -webkit-transform var(--animation-duration) ease;
             transition: -webkit-transform var(--animation-duration) ease;
             transition: transform var(--animation-duration) ease;
 
