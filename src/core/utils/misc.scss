@@ -1,13 +1,18 @@
+@import '../../../helpers/_functions';
+@import '../../../helpers/_size';
+
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
 
-.u-pull-left {
-    float: left !important;
-}
+$pull-directions: ('left', 'right');
+@include generate-classes-for-viewport($pull-directions, 'float', delimitize('pull'), false);
 
-.u-pull-right {
-    float: right !important;
-}
+$text-directions: ('justify', 'left', 'right', 'center');
+@include generate-classes-for-viewport($text-directions, 'text-align', delimitize('text'), false);
+
+$overflow: ('auto', 'hidden');
+@include generate-classes-for-viewport($overflow, 'overflow', delimitize('overflow'), false);
+// NOTE: We have now changed u-hide-overflow to u-overflow-hidden
 
 .u-text-ellipsis {
     text-overflow: ellipsis;
@@ -19,22 +24,6 @@
     hyphens: auto;
     word-break: break-word;
     word-wrap: break-word;
-}
-
-.u-text-justify {
-    text-align: justify !important;
-}
-
-.u-text-center {
-    text-align: center !important;
-}
-
-.u-text-left {
-    text-align: left !important;
-}
-
-.u-text-right {
-    text-align: right !important;
 }
 
 /* Center element - best used for hero bodies or text */
@@ -69,14 +58,6 @@
     right: 0;
     top: 0;
     position: absolute;
-}
-
-.u-hide-overflow {
-    overflow: hidden !important;
-}
-
-.u-overflow-auto {
-    overflow: auto !important;
 }
 
 .u-disabled {

@@ -7895,13 +7895,44 @@ a.tag:hover {
   .u-items-baseline-xl {
     align-items: baseline !important; } }
 
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/* Spacing */
+/* Fonts */
+/* Grid Count */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
 .u-pull-left {
-  float: left !important; }
+  float: "left" !important; }
 
 .u-pull-right {
-  float: right !important; }
+  float: "right" !important; }
+
+.u-text-justify {
+  text-align: "justify" !important; }
+
+.u-text-left {
+  text-align: "left" !important; }
+
+.u-text-right {
+  text-align: "right" !important; }
+
+.u-text-center {
+  text-align: "center" !important; }
+
+.u-overflow-auto {
+  overflow: "auto" !important; }
+
+.u-overflow-hidden {
+  overflow: "hidden" !important; }
 
 .u-text-ellipsis {
   text-overflow: ellipsis;
@@ -7912,18 +7943,6 @@ a.tag:hover {
   hyphens: auto;
   word-break: break-word;
   word-wrap: break-word; }
-
-.u-text-justify {
-  text-align: justify !important; }
-
-.u-text-center {
-  text-align: center !important; }
-
-.u-text-left {
-  text-align: left !important; }
-
-.u-text-right {
-  text-align: right !important; }
 
 /* Center element - best used for hero bodies or text */
 .u-center {
@@ -7955,12 +7974,6 @@ a.tag:hover {
   right: 0;
   top: 0;
   position: absolute; }
-
-.u-hide-overflow {
-  overflow: hidden !important; }
-
-.u-overflow-auto {
-  overflow: auto !important; }
 
 .u-disabled {
   cursor: not-allowed !important;
