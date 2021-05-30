@@ -138,7 +138,7 @@
         transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
         /* Add some padding to the buttons */
-        #{$input-selectors} {
+        #{$button-selectors} {
             margin: 0 0.5rem;
         }
 

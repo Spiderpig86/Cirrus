@@ -2,22 +2,14 @@
 @import '../../helpers/_selectors';
 
 /* A collection of modifiers that extend control styling */
-button.btn--pilled,
-.btn.btn--pilled,
-[type="submit"].btn--pilled,
-[class^='btn-'].btn--pilled,
-[class*=' btn-'].btn--pilled {
+#{$button-selectors}.btn--pilled {
     border-radius: 6.25rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
 
 /* btn--circle: contents must be placed inside child element */
-button.btn--circle,
-.btn.btn--circle,
-[type="submit"].btn--circle,
-[class^='btn-'].btn--circle,
-[class*=' btn-'].btn--circle {
+#{$button-selectors}.btn--circle {
     border-radius: 100%;
     min-width: 60px;
     overflow: hidden;
