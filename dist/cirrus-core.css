@@ -466,7 +466,7 @@
       flex: 1 0;
       /* Make the buttons fill the available width and proportion themselves */ }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .btn-group {
     display: flex;
     flex-direction: column; }

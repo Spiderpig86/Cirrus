@@ -436,7 +436,7 @@
     }
 }
 
-@include screen-below('md') {
+@include screen-below('sm') {
     .btn-group {
         display: flex;
         flex-direction: column;
