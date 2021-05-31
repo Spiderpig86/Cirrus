@@ -58,7 +58,7 @@
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -132,7 +132,7 @@
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -517,7 +517,7 @@
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -729,7 +729,7 @@ fieldset {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -1043,7 +1043,7 @@ kbd {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -1149,7 +1149,7 @@ kbd {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -1210,7 +1210,7 @@ kbd {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -1789,7 +1789,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -1898,7 +1898,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -2368,7 +2368,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -2851,6 +2851,12 @@ section {
 .h-auto {
   height: auto !important; }
 
+.w-screen {
+  width: 100vw; }
+
+.h-screen {
+  height: 100vh; }
+
 /* Do the actual balancing only on larger screens */
 @media screen and (min-width: 768px) {
   .level,
@@ -2975,7 +2981,7 @@ a button,
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -3879,7 +3885,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -4021,7 +4027,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: $cirrus-select-bg;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);

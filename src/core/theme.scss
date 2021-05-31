@@ -211,7 +211,7 @@ $grays: (
     --cirrus-warning-hover: #{darken($cirrus-warning, 5%)};
     --cirrus-danger-hover: #{darken($cirrus-danger, 15%)};
 
-    --cirrus-select-bg: $cirrus-select-bg;
+    --cirrus-select-bg: #{$cirrus-select-bg};
 
     --cirrus-code-bg: var(--cirrus-primary-light);
     --cirrus-code-fg: #{$cirrus-code-fg};

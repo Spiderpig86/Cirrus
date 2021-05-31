@@ -299,6 +299,14 @@ section {
     height: auto !important;
 }
 
+.w-screen {
+    width: 100vw;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
 /* Do the actual balancing only on larger screens */
 .level,
 .level-left,
