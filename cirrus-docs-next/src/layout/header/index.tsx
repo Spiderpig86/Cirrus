@@ -888,7 +888,7 @@ $('.dropdown-menu li').on('click', function(e) {
 
                 <Pagination
                     prevLink={{ name: 'Frames', link: './frames' }}
-                    nextLink={{ name: 'Hero', link: './hero' }}
+                    nextLink={{ name: 'Height', link: './height' }}
                 />
             </div>
             <TableOfContents entries={toc} />
