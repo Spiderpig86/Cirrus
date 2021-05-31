@@ -10,9 +10,14 @@ $pull-directions: ('left', 'right');
 $text-directions: ('justify', 'left', 'right', 'center');
 @include generate-classes-for-viewport($text-directions, 'text-align', delimitize('text'), false);
 
-$overflow: ('auto', 'hidden');
+$overflow: ('auto', 'hidden', 'overlay', 'revert', 'visible');
 @include generate-classes-for-viewport($overflow, 'overflow', delimitize('overflow'), false);
 // NOTE: We have now changed u-hide-overflow to u-overflow-hidden
+
+$overflow: ('scroll');
+@include generate-classes-for-viewport($overflow, 'overflow-x', delimitize('overflow-x'), false);
+$overflow: ('scroll');
+@include generate-classes-for-viewport($overflow, 'overflow-y', delimitize('overflow-y'), false);
 
 .u-text-ellipsis {
     text-overflow: ellipsis;

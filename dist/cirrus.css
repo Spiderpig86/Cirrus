@@ -7999,6 +7999,21 @@ a.tag:hover {
 .u-overflow-hidden {
   overflow: "hidden" !important; }
 
+.u-overflow-overlay {
+  overflow: "overlay" !important; }
+
+.u-overflow-revert {
+  overflow: "revert" !important; }
+
+.u-overflow-visible {
+  overflow: "visible" !important; }
+
+.u-overflow-x-scroll {
+  overflow-x: "scroll" !important; }
+
+.u-overflow-y-scroll {
+  overflow-y: "scroll" !important; }
+
 .u-text-ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
