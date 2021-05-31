@@ -84,7 +84,7 @@ $breakpoint-pairs: (
         }
     }
 
-    @if $generate-viewports {
+    @if $generate-viewports == 'true' {
         @each $suffix, $limit in $breakpoint-pairs {
             @each $class in $classes {
                 @include screen-above($limit) {

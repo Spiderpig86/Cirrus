@@ -1,0 +1,11 @@
+
+// Turn on/off generating viewport classes to save on size.
+$_VIEWPORT_CLASS_FLAGS: (
+    'CLEARFIX': true,
+    'DISPLAY': true,
+    'FLEX': true,
+    'FLOAT': false,
+    'OVERFLOW': false,
+    'POSITION': true,
+    'TEXT': false,
+);

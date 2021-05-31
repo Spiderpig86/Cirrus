@@ -1,6 +1,7 @@
+@import '../../../helpers/_functions';
 @import '../../../helpers/_size';
 
 $positions: static, fixed, absolute, relative, sticky;
 
 // Comment here just for commit.
-@include generate-classes-for-viewport($positions, 'position');
+@include generate-classes-for-viewport($positions, 'position', $generate-viewports: #{get-viewport-flag('POSITION')});

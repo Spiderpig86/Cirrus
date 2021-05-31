@@ -1,8 +1,9 @@
+@import '../../../helpers/_functions';
 @import '../../../helpers/_size';
 
 $clears: left, right, both;
 
-@include generate-classes-for-viewport($clears, 'clear');
+@include generate-classes-for-viewport($clears, 'clear', $generate-viewports: #{get-viewport-flag('CLEARFIX')});
 
 /*
    When using floats, clearfix allows the container to automatically resize so that

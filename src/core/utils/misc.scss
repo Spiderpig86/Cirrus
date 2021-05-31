@@ -5,19 +5,19 @@
 /* Utility classes to help solve some very annoying issues */
 
 $pull-directions: ('left', 'right');
-@include generate-classes-for-viewport($pull-directions, 'float', delimitize('pull'), false);
+@include generate-classes-for-viewport($pull-directions, 'float', delimitize('pull'), $generate-viewports: #{get-viewport-flag('FLOAT')});
 
 $text-directions: ('justify', 'left', 'right', 'center');
-@include generate-classes-for-viewport($text-directions, 'text-align', delimitize('text'), false);
+@include generate-classes-for-viewport($text-directions, 'text-align', delimitize('text'), $generate-viewports: #{get-viewport-flag('TEXT')});
 
 $overflow: ('auto', 'hidden', 'overlay', 'revert', 'visible');
-@include generate-classes-for-viewport($overflow, 'overflow', delimitize('overflow'), false);
+@include generate-classes-for-viewport($overflow, 'overflow', delimitize('overflow'), $generate-viewports: #{get-viewport-flag('OVERFLOW')});
 // NOTE: We have now changed u-hide-overflow to u-overflow-hidden
 
 $overflow: ('scroll');
-@include generate-classes-for-viewport($overflow, 'overflow-x', delimitize('overflow-x'), false);
+@include generate-classes-for-viewport($overflow, 'overflow-x', delimitize('overflow-x'), $generate-viewports: #{get-viewport-flag('OVERFLOW')});
 $overflow: ('scroll');
-@include generate-classes-for-viewport($overflow, 'overflow-y', delimitize('overflow-y'), false);
+@include generate-classes-for-viewport($overflow, 'overflow-y', delimitize('overflow-y'), $generate-viewports: #{get-viewport-flag('OVERFLOW')});
 
 .u-text-ellipsis {
     text-overflow: ellipsis;
