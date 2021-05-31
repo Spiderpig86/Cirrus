@@ -82,7 +82,10 @@ export const SpacingPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Padding', link: './padding' }} />
+                <Pagination
+                    prevLink={{ name: 'Padding', link: './padding' }}
+                    nextLink={{ name: 'Width', link: './width' }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>

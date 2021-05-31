@@ -352,6 +352,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Height',
+                url: '/layout/height'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Hero',
                 url: '/layout/hero'
             },
@@ -384,6 +390,12 @@ export const sidebarConfig: SidebarConfig[] = [
                 glyph: null,
                 text: 'Spacing',
                 url: '/layout/spacing'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Width',
+                url: '/layout/width'
             },
         ],
     },

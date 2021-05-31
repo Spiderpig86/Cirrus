@@ -11,38 +11,38 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 
-export const HeightPage: React.FC<any> = (props) => {
-    const heightClasses = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'];
+export const WidthPage: React.FC<any> = (props) => {
+    const widthClasses = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'];
 
-    let classTable = heightClasses.map((value) => {
+    let classTable = widthClasses.map((value) => {
         return {
-            class: `h-${value}`,
-            style: `height: ${value}%;`,
+            class: `w-${value}`,
+            style: `width: ${value}%;`,
         };
     });
     classTable = classTable.concat([
         {
-            class: `h-auto`,
-            style: `height: auto;`,
+            class: `w-auto`,
+            style: `width: auto;`,
         },
         {
-            class: `h-screen`,
-            style: `height: 100vh;`,
+            class: `w-screen`,
+            style: `width: 100vh;`,
         },
     ]);
 
     return (
         <main className="page-layout">
             <Head>
-                <title>{PAGE_TITLE_PREFIX} Height</title>
+                <title>{PAGE_TITLE_PREFIX} Width</title>
             </Head>
 
             <div>
-                <section className="padtop" id="height">
+                <section className="padtop" id="width">
                     <div className="content">
-                        <Headline title="Height" link="#height" />
+                        <Headline title="Width" link="#width" />
                         <div className="divider"></div>
-                        <p>Classes to set the height of an element.</p>
+                        <p>Classes to set the width of an element.</p>
 
                         <table className="table fixed-head u-text-left">
                             <thead>
@@ -85,39 +85,36 @@ export const HeightPage: React.FC<any> = (props) => {
 
                 <section className="padtop" id="scaled">
                     <div className="content">
-                        <Headline title="Scaled Heights" link="#scaled" size="4" />
+                        <Headline title="Scaled Widths" link="#scaled" size="4" />
                         <div className="divider"></div>
                         <p>
-                            The <code>{`h-{{value}}`}</code> classes gives an element a percentage based height.
+                            The <code>{`w-{{value}}`}</code> classes gives an element a percentage based width.
                         </p>
 
                         <div
-                            className="u-flex u-items-flex-end u-justify-space-evenly p-6 bg-teal-100 mb-2"
-                            style={{
-                                minHeight: '400px',
-                            }}
+                            className="u-flex u-flex-column u-justify-space-evenly p-6 bg-orange-100 mb-2"
                         >
-                            <div className="h-30 bg-teal-500 u-round p-1">
-                                <p className="text-gray-000">h-30</p>
+                            <div className="w-20 bg-orange-500 u-round p-1 mb-2">
+                                <span className="text-gray-000">w-20</span>
                             </div>
-                            <div className="h-50 bg-teal-500 u-round p-1">
-                                <p className="text-gray-000">h-50</p>
+                            <div className="w-40 bg-orange-500 u-round p-1 mb-2">
+                                <span className="text-gray-000">w-40</span>
                             </div>
-                            <div className="h-70 bg-teal-500 u-round p-1">
-                                <p className="text-gray-000">h-70</p>
+                            <div className="w-60 bg-orange-500 u-round p-1 mb-2">
+                                <span className="text-gray-000">w-60</span>
                             </div>
-                            <div className="h-90 bg-teal-500 u-round p-1">
-                                <p className="text-gray-000">h-90</p>
+                            <div className="w-80 bg-orange-500 u-round p-1 mb-2">
+                                <span className="text-gray-000">w-80</span>
                             </div>
                         </div>
 
                         <CodeBlock
                             language="htmlbars"
                             code={`<div>
-    <div class="h-30">...</div>
-    <div class="h-50">...</div>
-    <div class="h-70">...</div>
-    <div class="h-90">...</div>
+    <div class="w-20">...</div>
+    <div class="w-40">...</div>
+    <div class="w-60">...</div>
+    <div class="w-80">...</div>
 </div>`}
                         />
                     </div>
@@ -125,27 +122,24 @@ export const HeightPage: React.FC<any> = (props) => {
 
                 <section className="padtop" id="screen">
                     <div className="content">
-                        <Headline title="Screen Height" link="#screen" size="4" />
+                        <Headline title="Screen Width" link="#screen" size="4" />
                         <div className="divider"></div>
                         <p>
-                            The <code>{`h-screen`}</code> class makes an element span the entire viewport.
+                            The <code>{`w-screen`}</code> class makes an element span the entire viewport.
                         </p>
 
                         <div
-                            className="u-relative p-6 bg-purple-100 mb-2"
-                            style={{
-                                minHeight: '400px',
-                            }}
+                            className="u-relative u-overflow-x-scroll p-6 bg-pink-100 mb-2"
                         >
-                            <div className="h-screen bg-purple-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round">
-                                <p>h-screen</p>
+                            <div className="w-screen bg-pink-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round">
+                                <p>w-screen</p>
                             </div>
                         </div>
 
                         <CodeBlock
                             language="htmlbars"
                             code={`<div>
-    <div class="h-screen">...</div>
+    <div class="w-screen">...</div>
 </div>`}
                         />
                     </div>
@@ -156,33 +150,29 @@ export const HeightPage: React.FC<any> = (props) => {
                         <Headline title="Auto" link="#auto" size="4" />
                         <div className="divider"></div>
                         <p>
-                            The <code>{`h-auto`}</code> class makes an element use a browser determined height. This is
-                            commonly used to unset a previously set height.
+                            The <code>{`w-auto`}</code> class makes an element use a browser determined width. This is
+                            commonly used to unset a previously set width.
                         </p>
 
                         <div
-                            className="u-relative p-6 bg-red-100 mb-2"
-                            style={{
-                                minHeight: '200px',
-                            }}
+                            className="u-relative p-6 bg-indigo-100 mb-2"
                         >
-                            <div className="h-auto bg-red-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round">
-                                <p>h-auto</p>
+                            <div className="w-auto bg-indigo-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round">
+                                <p>w-auto</p>
                             </div>
                         </div>
 
                         <CodeBlock
                             language="htmlbars"
                             code={`<div>
-    <div class="h-auto">...</div>
+    <div class="w-auto">...</div>
 </div>`}
                         />
                     </div>
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Header', link: './header' }}
-                    nextLink={{ name: 'Hero', link: './hero' }}
+                    prevLink={{ name: 'Spacing', link: './spacing' }}
                 />
             </div>
 
@@ -191,4 +181,4 @@ export const HeightPage: React.FC<any> = (props) => {
     );
 };
 
-export default withLayout(<DefaultLayout />)(HeightPage);
+export default withLayout(<DefaultLayout />)(WidthPage);
