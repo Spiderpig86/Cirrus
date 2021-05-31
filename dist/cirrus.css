@@ -152,7 +152,7 @@ fieldset {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -226,7 +226,7 @@ fieldset {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -611,7 +611,7 @@ fieldset {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -729,7 +729,7 @@ pre > code {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -971,7 +971,7 @@ kbd {
   vertical-align: baseline; }
 
 /* MOBILE */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 639px) {
   h1 {
     font-size: 2.25rem; }
   h2 {
@@ -1043,7 +1043,7 @@ kbd {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -1149,7 +1149,7 @@ kbd {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -1210,7 +1210,7 @@ kbd {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -1789,7 +1789,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -1898,7 +1898,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -2231,7 +2231,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
         transform: none;
         pointer-events: auto; } }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   /* Add scrolling support in header */
   .header {
     flex-direction: column;
@@ -2368,7 +2368,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -2860,7 +2860,7 @@ section {
     display: -ms-flexbox;
     display: flex; } }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .level-right {
     margin-left: 1rem; }
   /* Keep all level children the same height */
@@ -2874,7 +2874,7 @@ section {
     display: flex; } }
 
 /* MOBILE */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .container {
     width: 100%; }
   .row {
@@ -2975,7 +2975,7 @@ a button,
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -3879,7 +3879,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -4021,7 +4021,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -4082,7 +4082,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -4374,7 +4374,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -4559,7 +4559,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -5401,7 +5401,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -5554,7 +5554,7 @@ video.video-fullscreen {
     -webkit-transform: translateY(0);
     transform: translateY(0); } }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .modal-content {
     max-width: 90%; } }
 
@@ -5604,7 +5604,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -6400,7 +6400,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -6537,7 +6537,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -6620,7 +6620,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -6823,7 +6823,7 @@ video.video-fullscreen {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -7121,7 +7121,7 @@ a.tag:hover {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);
@@ -7240,7 +7240,7 @@ a.tag:hover {
   --cirrus-success-hover: #0cb94d;
   --cirrus-warning-hover: #f9ad1a;
   --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-select-bg: $cirrus-select-bg;
   --cirrus-code-bg: var(--cirrus-primary-light);
   --cirrus-code-fg: #dc4753;
   --cirrus-form-group-bg: var(--cirrus-light-gray);

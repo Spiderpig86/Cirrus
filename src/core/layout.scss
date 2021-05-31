@@ -310,7 +310,7 @@ section {
     }
 }
 
-@include screen-below('md') {
+@include screen-below('sm') {
 
     .level-right {
         margin-left: 1rem;
@@ -328,7 +328,7 @@ section {
 }
 
 /* MOBILE */
-@include screen-below('md') {
+@include screen-below('sm') {
     .container {
         width: 100%;
     }

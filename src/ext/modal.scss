@@ -172,7 +172,7 @@
     }
 }
 
-@include screen-below('md') {
+@include screen-below('sm') {
     .modal-content {
         max-width: 90%;
     }

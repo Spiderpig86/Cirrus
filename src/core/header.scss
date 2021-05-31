@@ -391,7 +391,7 @@
     }
 }
 
-@include screen-below('md') {
+@include screen-below('sm') {
     /* Add scrolling support in header */
     .header {
         flex-direction: column;
