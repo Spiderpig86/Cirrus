@@ -2901,6 +2901,9 @@ section {
   .hero-body {
     padding: 0; } }
 
+/*
+    Group selectors that share common styling.
+*/
 /* LINKS */
 a {
   color: var(--cirrus-link);
@@ -2918,15 +2921,9 @@ a {
   padding: 0;
   /* Removes weird offset in subtitle links */ }
 
-p a,
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a,
-blockquote a,
-article a {
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+article a,
+blockquote a {
   display: inline; }
 
 /* Remove uneeded space since buttons have their own padding */
@@ -5354,6 +5351,9 @@ video.video-fullscreen {
     .usquare a::after {
       right: 0; }
 
+/*
+    Group selectors that share common styling.
+*/
 /* Spacing */
 /* Fonts */
 /* Grid Count */
@@ -5492,12 +5492,7 @@ video.video-fullscreen {
     /* Restrict width  */ }
     .modal .modal-content.small {
       max-width: 32rem; }
-    .modal .modal-content h1,
-    .modal .modal-content h2,
-    .modal .modal-content h3,
-    .modal .modal-content h4,
-    .modal .modal-content h5,
-    .modal .modal-content h6 {
+    .modal .modal-content h1, .modal .modal-content h2, .modal .modal-content h3, .modal .modal-content h4, .modal .modal-content h5, .modal .modal-content h6 {
       color: var(--cirrus-fg); }
     .modal .modal-content .modal-header {
       padding: 1rem 2.5rem; }
@@ -6361,6 +6356,9 @@ video.video-fullscreen {
   color: #212529 !important; }
 
 /*
+    Group selectors that share common styling.
+*/
+/*
   Functions
 */
 /*
@@ -6438,12 +6436,7 @@ video.video-fullscreen {
     /* Pagination Item */
     /* Used to display many pagination items */ }
     .pagination .pagination-item:hover p,
-    .pagination .pagination-item:hover h1,
-    .pagination .pagination-item:hover h2,
-    .pagination .pagination-item:hover h3,
-    .pagination .pagination-item:hover h4,
-    .pagination .pagination-item:hover h5,
-    .pagination .pagination-item:hover h6 {
+    .pagination .pagination-item:hover h1, .pagination .pagination-item:hover h2, .pagination .pagination-item:hover h3, .pagination .pagination-item:hover h4, .pagination .pagination-item:hover h5, .pagination .pagination-item:hover h6 {
       transition: all 0.3s;
       color: var(--cirrus-primary); }
     .pagination .pagination-item:not(.selected):hover *:not([disabled]):not(.disabled):not(.ellipses) {

@@ -1,3 +1,5 @@
+@import '../../helpers/_selectors.scss';
+
 /* LINKS */
 
 a {
@@ -21,16 +23,12 @@ a {
     padding: 0; /* Removes weird offset in subtitle links */
 }
 
-p a,
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a,
-blockquote a,
-article a {
-    display: inline;
+#{$header-selectors},
+article,
+blockquote {
+    & a {
+        display: inline;
+    }
 }
 
 /* Remove uneeded space since buttons have their own padding */

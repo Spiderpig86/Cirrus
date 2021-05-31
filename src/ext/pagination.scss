@@ -1,4 +1,5 @@
-@import "../core/theme.scss";
+@import '../../helpers/_selectors.scss';
+@import '../core/theme.scss';
 
 /* PAGINATION */
 /* Parent contianer for page navigation */
@@ -16,12 +17,7 @@
 
         &:hover {
             p,
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
+            #{$header-selectors} {
                 transition: all 0.3s;
                 color: var(--cirrus-primary);
             }

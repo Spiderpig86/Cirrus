@@ -1,3 +1,4 @@
+@import '../../helpers/_selectors.scss';
 @import '../../helpers/_size.scss';
 @import '../core/theme.scss';
 
@@ -73,12 +74,7 @@
             max-width: 32rem;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
+        #{$header-selectors} {
             color: var(--cirrus-fg);
         }
 

@@ -2901,6 +2901,9 @@ section {
   .hero-body {
     padding: 0; } }
 
+/*
+    Group selectors that share common styling.
+*/
 /* LINKS */
 a {
   color: var(--cirrus-link);
@@ -2918,15 +2921,9 @@ a {
   padding: 0;
   /* Removes weird offset in subtitle links */ }
 
-p a,
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a,
-blockquote a,
-article a {
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+article a,
+blockquote a {
   display: inline; }
 
 /* Remove uneeded space since buttons have their own padding */
