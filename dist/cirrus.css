@@ -8184,17 +8184,32 @@ a.tag:hover {
 .u-overflow-hidden {
   overflow: "hidden" !important; }
 
-.u-overflow-overlay {
-  overflow: "overlay" !important; }
-
-.u-overflow-revert {
-  overflow: "revert" !important; }
-
 .u-overflow-visible {
   overflow: "visible" !important; }
 
+.u-overflow-scroll {
+  overflow: "scroll" !important; }
+
+.u-overflow-x-auto {
+  overflow-x: "auto" !important; }
+
+.u-overflow-x-hidden {
+  overflow-x: "hidden" !important; }
+
+.u-overflow-x-visible {
+  overflow-x: "visible" !important; }
+
 .u-overflow-x-scroll {
   overflow-x: "scroll" !important; }
+
+.u-overflow-y-auto {
+  overflow-y: "auto" !important; }
+
+.u-overflow-y-hidden {
+  overflow-y: "hidden" !important; }
+
+.u-overflow-y-visible {
+  overflow-y: "visible" !important; }
 
 .u-overflow-y-scroll {
   overflow-y: "scroll" !important; }
