@@ -429,6 +429,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Overflow',
+                url: '/utils/overflow'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Positions',
                 url: '/utils/positions'
             },

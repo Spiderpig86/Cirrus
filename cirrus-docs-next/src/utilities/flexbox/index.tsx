@@ -11,14 +11,7 @@ import { Capitalize } from '../../../utils/string';
 import { toc } from './toc';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
-
-// TODO: Move to models package
-export interface DocExample {
-    name: string;
-    example: JSX.Element;
-    code: string;
-    description?: JSX.Element;
-}
+import { DocExample } from '../../../models/doc-example';
 
 export const FlexboxUtilsPage: React.FC<any> = (props) => {
     const flexDirectionNames = ['row', 'row-reverse', 'column', 'column-reverse'];

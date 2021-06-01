@@ -2,22 +2,22 @@ import { TableOfContentsEntry } from '../../../layouts/components/toc';
 
 export const toc: TableOfContentsEntry[] = [
     {
-        name: 'Columns',
-        anchor: '#columns',
+        name: 'Overflow',
+        anchor: '#overflow',
         children: [
             {
-                name: 'Basics',
-                anchor: '#basics',
+                name: 'Both',
+                anchor: '#both',
                 children: null,
             },
             {
-                name: 'Viewports',
-                anchor: '#viewports',
+                name: 'Overflow X',
+                anchor: '#overflowX',
                 children: null,
             },
             {
-                name: 'Offset',
-                anchor: '#offset',
+                name: 'Overflow Y',
+                anchor: '#overflowY',
                 children: null,
             },
         ],

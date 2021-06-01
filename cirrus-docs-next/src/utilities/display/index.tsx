@@ -11,10 +11,11 @@ import { Capitalize } from '../../../utils/string';
 import { toc } from './toc';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { DocExample } from '../../../models/doc-example';
 
 export const DisplayUtilsPage: React.FC<any> = (props) => {
     const displayNames = ['none', 'inline', 'inline-block', 'block', 'table', 'table-row', 'table-cell'];
-    const docExamples = [
+    const docExamples: DocExample[] = [
         {
             name: 'none',
             example: (

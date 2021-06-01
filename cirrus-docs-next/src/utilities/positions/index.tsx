@@ -12,10 +12,11 @@ import { DefaultLayout } from '../../../layouts/default';
 import { Capitalize } from '../../../utils/string';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { DocExample } from '../../../models/doc-example';
 
 export const PositionUtilsPage: React.FC<any> = (props) => {
     const positionNames = ['static', 'fixed', 'absolute', 'relative', 'sticky'];
-    const docExamples = [
+    const docExamples: DocExample[] = [
         {
             name: 'static',
             example: (
@@ -327,7 +328,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Misc', link: './misc' }} />
+                <Pagination prevLink={{ name: 'Overflow', link: './overflow' }} />
             </div>
             <TableOfContents entries={toc} />
         </main>

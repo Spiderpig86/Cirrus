@@ -108,7 +108,7 @@ export const PlaygroundPage: React.FC<any> = () => {
     }
 
     return (
-        <div className="u-hide-overflow">
+        <div className="u-overflow-hidden">
             <Head>
                 <title>{PAGE_TITLE_PREFIX} Playground</title>
             </Head>
@@ -245,7 +245,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                     onDragFinished={handleSplitPaneDragFinished}
                 >
                     <div
-                        className={`u-hide-overflow h-100` + (isDragging ? ` is-dragging` : ``)}
+                        className={`u-overflow-hidden h-100` + (isDragging ? ` is-dragging` : ``)}
                         style={{
                             backgroundColor: '#202124',
                         }}

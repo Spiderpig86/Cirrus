@@ -208,7 +208,7 @@ export const TilesPage: React.FC<any> = (props) => {
                         <div className="space large"></div>
 
                         <p>
-                            In addition, the <code>u-hide-overflow</code> utility class could be used on the{' '}
+                            In addition, the <code>u-overflow-hidden</code> utility class could be used on the{' '}
                             <code>tile-container</code> to keep the tile height consistent. This prevents wrapping that
                             would normally occur on smaller screens (decrease browser width to see effect).
                         </p>
@@ -218,7 +218,7 @@ export const TilesPage: React.FC<any> = (props) => {
                                     <img alt="avatar" src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
                                 </figure>
                             </div>
-                            <div className="tile__container u-hide-overflow">
+                            <div className="tile__container u-overflow-hidden">
                                 <p className="tile__title m-0 u-text-no-wrap">
                                     Robert Downey Jr. shared a post from <b>Stark Industries</b>.
                                 </p>
@@ -239,7 +239,7 @@ export const TilesPage: React.FC<any> = (props) => {
     <div class="tile__icon">
         <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
     </div>
-    <div class="tile__container u-hide-overflow">
+    <div class="tile__container u-overflow-hidden">
         <p class="tile__title m-0 u-text-no-wrap">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
         <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span class="info">23 minutes ago</span></div>
     <div class="tile__buttons m-0">

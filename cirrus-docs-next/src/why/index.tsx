@@ -18,7 +18,7 @@ export const WhyPage: React.FC<any> = (props) => {
     const data = [
         {
             id: 'Cirrus',
-            memory: 17.7,
+            memory: 17.8,
             color: '#f03d4d',
         },
         {
@@ -105,7 +105,7 @@ export const WhyPage: React.FC<any> = (props) => {
                         <p>
                             Cirrus comes with lots of functionality in a small package which only consists of a single
                             minified CSS file. <b>No extra JS libraries required</b>. Coming in at{' '}
-                            <b>17.7 KB with Brotli compression</b>, page loads are fast and animations are fluid.
+                            <b>17.8 KB with Brotli compression</b>, page loads are fast and animations are fluid.
                         </p>
 
                         {/* TODO MOVE TO NEW FILE */}

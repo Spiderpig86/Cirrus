@@ -94,7 +94,7 @@ export const HeightPage: React.FC<any> = (props) => {
                         <div
                             className="u-flex u-items-flex-end u-justify-space-evenly p-6 bg-teal-100 mb-2"
                             style={{
-                                minHeight: '400px',
+                                height: '400px',
                             }}
                         >
                             <div className="h-30 bg-teal-500 u-round p-1">

@@ -19,28 +19,14 @@ export const MiscUtilsPage: React.FC<any> = (props) => {
             };
         }),
         {
-            class: `u-text-justify`,
-            style: `text-align: justify;`,
-        },
-        {
             class: `u-text-ellipsis`,
             style: `text-overflow: ellipsis;`,
-        },
-        {
-            class: `u-text-ellipsis`,
-            style: `text-align: justify;`,
         },
         {
             class: `u-text-break`,
             style: `hyphens: auto;
 word-break: break-word;
 word-wrap: break-word;`,
-        },
-        {
-            class: `u-text-no-wrap`,
-            style: `white-space: nowrap;
-text-overflow: ellipsis;
-overflow: hidden;`,
         },
         {
             class: `u-center`,
@@ -61,11 +47,7 @@ right: 0;
 top: 0;
 position: absolute;`,
         },
-        {
-            class: `u-hide-overflow`,
-            style: `overflow: hidden;`,
-        },
-        ...['left', 'right', 'center'].map((name) => {
+        ...['justify', 'left', 'right', 'center'].map((name) => {
             return {
                 class: `u-text-${name}`,
                 style: `text-align: ${name};`,
@@ -301,7 +283,7 @@ position: absolute;`,
                         <CodeBlock code={`<p class="u-text-right">This is some text.</p>`} language="htmlbars" />
                         <div className="space large"></div>
 
-                        <h6>Text Right</h6>
+                        <h6>Text Justify</h6>
                         <p>
                             Stretch your text each line using <code>u-text-justify</code>.
                         </p>
@@ -453,99 +435,6 @@ position: absolute;`,
                         />
                         <div className="space"></div>
 
-                        <h6>Overflow</h6>
-                        <p>
-                            To hide overflow where the child is larger than the parent, use the{' '}
-                            <code>u-hide-overflow</code> class on the parent.
-                        </p>
-                        <p>
-                            To scroll when there is an overflow, use the <code>u-overflow-auto</code> class on the
-                            parent.
-                        </p>
-                        <div className="bg-gray-100 u-overflow-auto u-flex">
-                            <div className="col px-3">
-                                <p>Default Behavior</p>
-
-                                <div
-                                    className="bg-indigo-200"
-                                    style={{
-                                        maxHeight: '200px',
-                                        maxWidth: '200px',
-                                    }}
-                                >
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="col px-3">
-                                <p>Hide Overflow</p>
-                                <div
-                                    className="bg-indigo-200 u-hide-overflow"
-                                    style={{
-                                        maxHeight: '200px',
-                                        maxWidth: '200px',
-                                    }}
-                                >
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="col px-3">
-                                <p>Overflow Auto</p>
-                                <div
-                                    className="bg-indigo-200 u-overflow-auto"
-                                    style={{
-                                        maxHeight: '200px',
-                                        maxWidth: '200px',
-                                    }}
-                                >
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                        fugiat nulla pariatur.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="space"></div>
-                        <CodeBlock
-                            code={`<div class="bg-gray-100 u-overflow-auto u-flex">
-    <div class="col px-3">
-        <p>Default Behavior</p>
-        <div class="bg-indigo-200" style="max-height: 200px; max-width: 200px;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-    </div>
-    <div class="col px-3">
-        <p>Hide Overflow</p>
-        <div class="bg-indigo-200 u-hide-overflow" style="max-height: 200px; max-width: 200px;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-    </div>
-    <div class="col px-3">
-        <p>Overflow Auto</p>
-        <div class="bg-indigo-200 u-overflow-auto" style="max-height: 200px; max-width: 200px;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-    </div>
-</div>`}
-                            language="htmlbars"
-                        />
-                        <div className="space"></div>
-
                         <h6>Disabled</h6>
                         <p>
                             Make an element disabled with <code>u-disabled</code>.
@@ -646,8 +535,8 @@ position: absolute;`,
                 <Pagination
                     prevLink={{ name: 'Flexbox', link: './flexbox' }}
                     nextLink={{
-                        name: 'Positions',
-                        link: './positions',
+                        name: 'Overflow',
+                        link: './overflow',
                     }}
                 />
             </div>

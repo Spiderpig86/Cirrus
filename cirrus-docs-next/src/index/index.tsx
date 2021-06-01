@@ -90,7 +90,7 @@ const Landing: React.FC<any> = () => {
                     <div className="content">
                         <div className="row">
                             <div className="col">
-                                <h6 className="lead uppercase mb-1 font-bold text-gray-700">17.7 KB</h6>
+                                <h6 className="lead uppercase mb-1 font-bold text-gray-700">17.8 KB</h6>
                                 <div className="uppercase font-bold text-gray-700">Compressed</div>
                             </div>
                             <div className="col">
@@ -183,7 +183,7 @@ const Landing: React.FC<any> = () => {
                             />
                             <h6 className="lead uppercase mb-1 font-bold text-gray-700">Compact</h6>
                             <div className="text-gray-700">
-                                Cirrus packs a lot of features with only a 17.7 KB payload.
+                                Cirrus packs a lot of features with only a 17.8 KB payload.
                             </div>
                         </div>
                     </div>
