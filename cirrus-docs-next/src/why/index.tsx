@@ -77,7 +77,7 @@ export const WhyPage: React.FC<any> = (props) => {
 
                         <img
                             className="ml-1"
-                            src="https://img.shields.io/badge/cirrus-0.6.1-blue.svg?style=flat-square"
+                            src="https://img.shields.io/badge/cirrus-0.6.2-blue.svg?style=flat-square"
                             alt="Version"
                         />
                         <img
