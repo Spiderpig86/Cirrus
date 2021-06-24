@@ -219,7 +219,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                     <div className="bg-orange-200 px-2 py-1 m-1 u-round">c</div>
                 </div>
             ),
-            code: `<div class="u-flex u-justify-flex-center">
+            code: `<div class="u-flex u-justify-center">
     <div class="bg-orange-200 px-2 py-1 m-1 u-round">a</div>
     <div class="bg-orange-200 px-2 py-1 m-1 u-round">b</div>
     <div class="bg-orange-200 px-2 py-1 m-1 u-round">c</div>
