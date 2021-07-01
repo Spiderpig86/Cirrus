@@ -4,10 +4,10 @@
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
 
-$pull-directions: ('left', 'right');
+$pull-directions: (left, right);
 @include generate-classes-for-viewport($pull-directions, 'float', delimitize('pull'), $generate-viewports: #{get-viewport-flag('FLOAT')});
 
-$text-directions: ('justify', 'left', 'right', 'center');
+$text-directions: (justify, left, right, center);
 @include generate-classes-for-viewport($text-directions, 'text-align', delimitize('text'), $generate-viewports: #{get-viewport-flag('TEXT')});
 
 .u-text-ellipsis {
