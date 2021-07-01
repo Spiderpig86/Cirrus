@@ -1,5 +1,5 @@
 /*
-* Cirrus 0.6.2
+* Cirrus 0.6.2.1
 * Stanley Lim, Copyright 2021
 * https://spiderpig86.github.io/Cirrus
 */
@@ -618,7 +618,9 @@ body {
   /* Globally adjust line height */
   font-size: 1rem;
   font-weight: 400;
-  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+ "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+ "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: 0.01rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
   color: var(--cirrus-fg); }
