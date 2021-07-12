@@ -278,8 +278,8 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
 </div>`,
             description: (
                 <p>
-                    Sets the item justification to be <code>space-between</code> using the{' '}
-                    <code>u-justify-space-between</code> class. This class ensures equal spacing among the elements and
+                    Sets the item justification to be <code>space-around</code> using the{' '}
+                    <code>u-justify-space-around</code> class. This class ensures equal spacing among the elements and
                     outside of it.
                 </p>
             ),
@@ -300,8 +300,8 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
 </div>`,
             description: (
                 <p>
-                    Sets the item justification to be <code>space-between</code> using the{' '}
-                    <code>u-justify-space-between</code> class. This class ensures equal spacing among the elements, but
+                    Sets the item justification to be <code>space-evenly</code> using the{' '}
+                    <code>u-justify-space-evenly</code> class. This class ensures equal spacing among the elements, but
                     doubles the space outside of it.
                 </p>
             ),
