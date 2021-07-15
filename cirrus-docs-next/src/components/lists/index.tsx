@@ -289,7 +289,7 @@ export const ListsPage: React.FC<any> = (props) => {
                             Drop down menus are easy to configure in Cirrus using lists. Simply wrap the button and the
                             menu in a <code>list-dropdown</code> container and Cirrus will automatically style all the
                             components for the dropdown menu. To display the menu on the right side, just add the{' '}
-                            <code>menu-right</code> class to the <code>list-dropdown</code> container. These dropdown
+                            <code>dropdown-right</code> class to the <code>list-dropdown</code> container. These dropdown
                             menus can work straight out of the box and also support JavaScript events when needed.
                         </p>
 
