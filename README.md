@@ -80,7 +80,7 @@ The `helpers` folder contains configurations, utilities, and other styles shared
 * [Links](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/links.scss "Links") - Link styles with different effects.
 * [Lists](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/lists.scss "Lists") - A simple stylesheet to simplify list UI.
 * [Media](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/media.scss "Media") - Rules for styling images, videos, figures, avatars, and other media components.
-* [Tables](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/spacing.scss "Tables") - Classes for margin/padding.
+* [Spacing](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/spacing.scss "Spacing") - Classes for margin/padding.
 * [Tables](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/table.scss "Tables") - Clean designs for tables.
 * [Theme](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/theme.scss "Theme") - Default colors of the framework.
 * [Util](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/utils "Utils") - Designed to solve many common headaches with CSS and provide flexibility for modifying existing classes.
