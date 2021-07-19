@@ -62,7 +62,7 @@ export const Preview: React.FC<any> = (props) => {
                     <div className="u-text-center content">
                         <h5 className="uppercase">Typography</h5>
                         <p className="lead">
-                            Cirrus primarily uses
+                            Cirrus primarily uses{' '}
                             <a className="u u-LR" href="#">
                                 Montserrat
                             </a>{' '}
