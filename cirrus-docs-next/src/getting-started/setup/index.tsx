@@ -244,7 +244,7 @@ export const SetUpPage: React.FC<any> = (props) => {
                         
                         <div className="divider w-30 mx-auto"></div>
 
-                        <p>With some layout styles in place, now you specify a <Link href="/layout/header"><a className="u u-LR">header</a></Link> and <Link href="/grid/footer"><a className="u u-LR">footer</a></Link>.</p>
+                        <p>With some layout styles in place, now you specify a <Link href="/layout/header"><a className="u u-LR">header</a></Link> and <Link href="/layout/footer"><a className="u u-LR">footer</a></Link>.</p>
 
                         <p>This pretty much sums up the few pages that would help getting a base layout up and running. You can find more styles to modify the layout under <i>Layout</i> or <i>Utilities</i>.</p>
                         <div className="space"></div>
