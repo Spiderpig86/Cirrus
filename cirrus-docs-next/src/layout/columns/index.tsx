@@ -31,11 +31,20 @@ export const ColumnsPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
 
                         <p>
-                            Perhaps the most annoying part of designing a website is ensuring that column widths are
-                            consistent throughout the website. Cirrus aims to solve this issue with a simple 12-column
-                            grid system powered by <b>Flexbox</b> to provide an easy to maintain and scalable framework.
-                            If 12 columns are not enough, there is a flexible column that will automatically adjust
-                            according to the browser's width and its neighboring columns.
+                            Classes for using Cirrus' column system powered by Flexbox. By default, 12 columns are
+                            created. However, this can be modified to any number you'd like by modifying a
+                            <Link href="/grid/templates#customization">
+                                <a className="u u-LR">single variable</a>
+                            </Link>{' '}
+                            and rebuilding the project.
+                        </p>
+
+                        <p>
+                            Also check out
+                            <Link href="/grid/template">
+                                <a className="u u-LR">Grid</a>
+                            </Link>{' '}
+                            for an alternate way to lay out elements on the page.
                         </p>
                     </div>
                 </section>
@@ -315,7 +324,7 @@ export const ColumnsPage: React.FC<any> = (props) => {
                                     <div className="uppercase">col-10</div>
                                 </div>
                                 <div className="col-10">
-                                    <div className="uppercase">col-10</div> 
+                                    <div className="uppercase">col-10</div>
                                 </div>
                             </div>
                         </div>
@@ -492,7 +501,10 @@ export const ColumnsPage: React.FC<any> = (props) => {
 
                         <div className="space large"></div>
                         <h6>Prevent Stacking</h6>
-                        <blockquote>⚠ As of 0.6.1 this is no longer relevant. For 0.6.1+, you can achieve this behavior with <code>col-xs-*</code>.</blockquote>
+                        <blockquote>
+                            ⚠ As of 0.6.1 this is no longer relevant. For 0.6.1+, you can achieve this behavior with{' '}
+                            <code>col-xs-*</code>.
+                        </blockquote>
                         <p>
                             To prevent the default stacking behavior, we can use the <code>ignore-screen</code> class on
                             the column.

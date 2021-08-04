@@ -312,7 +312,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                         </p>
 
                         <CodeBlock
-                            code={`/* Grid Count */
+                            code={`/* Grid Count (Columns + Grid) */
 $grid-columns: 12;`}
                             language="scss"
                         />

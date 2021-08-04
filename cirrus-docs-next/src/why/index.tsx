@@ -469,7 +469,7 @@ $font-size-m: 1rem;
 $font-size-l: 1.35rem;
 $font-size-xl: 1.75rem;
 
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 $grid-columns: 12;
 
 /* Grid Percents */
