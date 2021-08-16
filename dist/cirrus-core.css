@@ -2003,7 +2003,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
   .header .header-brand {
     -webkit-overflow-scrolling: touch;
     -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2050,7 +2049,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Wrapper to vertically center header items */
 .nav-item {
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2153,7 +2151,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
   .header {
     -webkit-box-align: stretch;
     /* Box Align and align items to stretch to make nav-items fill up parent height */
-    -ms-flex-align: stretch;
     align-items: stretch;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2167,7 +2164,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
       flex-grow: 1;
       -ms-flex-negative: 0;
       -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
       align-items: stretch;
       /* Make items fill up all available space regardless of width https://drafts.csswg.org/css-align/ */
       display: -webkit-box;
@@ -2181,7 +2177,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
       /* Only visible for showing dropdown menus, hidden for mobile */ }
     .header .nav-left {
       -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
       -ms-grid-row-align: stretch;
       align-items: stretch;
       -ms-flex-preferred-size: 0;
@@ -2202,7 +2197,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
         right: auto; }
     .header .nav-right {
       -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
       -ms-grid-row-align: stretch;
       align-items: stretch;
       -ms-flex-preferred-size: 0;
@@ -2223,7 +2217,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
         right: 0; }
     .header .nav-center {
       -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
       align-items: stretch;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2488,7 +2481,6 @@ section {
 .hero {
   /* Parent of hero-body */
   -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2781,7 +2773,6 @@ section {
 
 .level {
   -webkit-box-align: center;
-  -ms-flex-align: center;
   -ms-grid-row-align: center;
   align-items: center;
   -webkit-box-pack: justify;
@@ -2791,7 +2782,6 @@ section {
   .level .level-item {
     /* Centers items */
     -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2906,7 +2896,6 @@ section {
   .level.fill-height {
     -webkit-box-align: stretch;
     /* Box Align and align items to stretch to make nav-items fill up parent height */
-    -ms-flex-align: stretch;
     align-items: stretch;
     display: -webkit-box;
     display: -ms-flexbox;

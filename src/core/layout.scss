@@ -83,7 +83,6 @@ section {
 .hero {
     /* Parent of hero-body */
     -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
     align-items: stretch;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -239,7 +238,6 @@ section {
 
 .level {
     -webkit-box-align: center;
-    -ms-flex-align: center;
     -ms-grid-row-align: center;
     align-items: center;
     -webkit-box-pack: justify;
@@ -249,7 +247,6 @@ section {
     .level-item {
         /* Centers items */
         -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -327,7 +324,6 @@ section {
     /* Keep all level children the same height */
     .level.fill-height {
         -webkit-box-align: stretch; /* Box Align and align items to stretch to make nav-items fill up parent height */
-        -ms-flex-align: stretch;
         align-items: stretch;
         display: -webkit-box;
         display: -ms-flexbox;
