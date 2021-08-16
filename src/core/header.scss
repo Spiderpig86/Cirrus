@@ -14,6 +14,27 @@
     margin-bottom: 1rem;
 }
 
+/* These styles can also be used on menus in the body */
+@mixin nav-bar-position($position) {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-items: stretch;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: flex;
+
+    -webkit-box-pack: #{$position};
+    -ms-flex-pack: #{$position};
+    justify-content: flex-#{$position};
+    white-space: nowrap;
+}
+
 /* HEADER */
 .header {
     -webkit-box-flex: 1;
@@ -269,7 +290,7 @@
     opacity: 1;
 }
 
-@media screen and (min-width: 769px) {
+@include screen-above('sm') {
     .header {
         -webkit-box-align: stretch; /* Box Align and align items to stretch to make nav-items fill up parent height */
         -ms-flex-align: stretch;
@@ -293,27 +314,6 @@
             width: 100%;
             top: 0;
             overflow: visible; /* Only visible for showing dropdown menus, hidden for mobile */
-        }
-
-        /* These styles can also be used on menus in the body */
-        @mixin nav-bar-position($position) {
-            -webkit-box-align: stretch;
-            -ms-flex-align: stretch;
-            -ms-grid-row-align: stretch;
-            align-items: stretch;
-            -ms-flex-preferred-size: 0;
-            flex-basis: 0;
-            -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-            flex-grow: 1;
-            -ms-flex-negative: 0;
-            flex-shrink: 0;
-            display: flex;
-
-            -webkit-box-pack: #{$position};
-            -ms-flex-pack: #{$position};
-            justify-content: flex-#{$position};
-            white-space: nowrap;
         }
 
         /* Align items to the left */

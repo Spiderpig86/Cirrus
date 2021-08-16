@@ -29,7 +29,7 @@
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -87,7 +87,7 @@
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -106,7 +106,7 @@
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -494,7 +494,7 @@
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -688,7 +688,7 @@ fieldset {
 
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -707,7 +707,7 @@ fieldset {
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -1026,7 +1026,7 @@ kbd {
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -1135,7 +1135,7 @@ kbd {
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -1199,7 +1199,7 @@ kbd {
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -1781,7 +1781,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -1874,7 +1874,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -1893,7 +1893,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -1943,6 +1943,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   --font-size-l: 1.35rem;
   --font-size-xl: 1.75rem; }
 
+/* These styles can also be used on menus in the body */
 /* HEADER */
 .header {
   -webkit-box-flex: 1;
@@ -2148,7 +2149,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 .nav-item.active {
   opacity: 1; }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .header {
     -webkit-box-align: stretch;
     /* Box Align and align items to stretch to make nav-items fill up parent height */
@@ -2156,7 +2157,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
     align-items: stretch;
     display: -webkit-box;
     display: -ms-flexbox;
-    /* These styles can also be used on menus in the body */
     /* Align items to the left */
     /* Align items to the right */
     /* Centering items, best used when nav-brand is not used to prevent offset */
@@ -2366,7 +2366,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -2418,7 +2418,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -2979,7 +2979,7 @@ a button,
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -3031,7 +3031,7 @@ a button,
 
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -3407,7 +3407,7 @@ video.video-fullscreen {
 
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -3886,7 +3886,7 @@ video.video-fullscreen {
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
@@ -4031,7 +4031,7 @@ video.video-fullscreen {
 */
 /* Spacing */
 /* Fonts */
-/* Grid Count */
+/* Grid Count (Columns + Grid) */
 /* Grid Percents */
 /* Tab Sizes */
 /* Media Queries */
