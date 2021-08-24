@@ -167,7 +167,7 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                                 <CodeBlock
                                     code={`<!-- Name -->
 <div class="row ignore-screen level">
-    <div class="col-3 ignore-screen level-item"><p class="m-0">Name:</span></div>
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Name:</p></div>
     <div class="col-9 ignore-screen level-item"><input type="name" value="John Doe"></div>
 </div>
 <!-- Email -->
