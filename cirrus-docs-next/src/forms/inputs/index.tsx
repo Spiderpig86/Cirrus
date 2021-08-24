@@ -172,47 +172,47 @@ export const FormsInputsPage: React.FC<any> = (props) => {
 </div>
 <!-- Email -->
 <div class="row ignore-screen level">
-    <div class="col-3 ignore-screen level-item"><p class="m-0">Email:</span></div>
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Email:</p></div>
     <div class="col-9 ignore-screen level-item"><input type="email" value="john.doe@cirrus.io"></div>
 </div>
 <!-- Url -->
 <div class="row ignore-screen level">
-    <div class="col-3 ignore-screen level-item"><p class="m-0">URL:</span></div>
+    <div class="col-3 ignore-screen level-item"><p class="m-0">URL:</p></div>
     <div class="col-9 ignore-screen level-item"><input type="url" value="https://spiderpig86.github.io/Cirrus"></div>
 </div>
 <!-- Search -->
 <div class="row ignore-screen level">
-    <div class="col-3 ignore-screen level-item"><p class="m-0">Search:</span></div>
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Search:</p></div>
     <div class="col-9 ignore-screen level-item"><input type="search" placeholder="Search"></div>
 </div>
 <!-- Tel -->
 <div class="row ignore-screen level">
-    <div class="col-3 ignore-screen level-item"><p class="m-0">Telephone:</span></div>
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Telephone:</p></div>
     <div class="col-9 ignore-screen level-item"><input type="tel" value="1-(800)-777-7777"></div>
 </div>
 <!-- Password -->
 <div class="row ignore-screen level">
-    <div class="col-3 ignore-screen level-item"><p class="m-0">Password:</span></div>
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Password:</p></div>
     <div class="col-9 ignore-screen level-item"><input type="password" value="password"></div>
 </div>
 <!-- Number -->
 <div class="row ignore-screen level">
-    <div class="col-3 ignore-screen level-item"><p class="m-0">Number:</span></div>
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Number:</p></div>
     <div class="col-9 ignore-screen level-item"><input type="number" value="420"></div>
 </div>
 <!-- Date -->
 <div class="row ignore-screen level">
-    <div class="col-3 ignore-screen level-item"><p class="m-0">Date:</span></div>
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Date:</p></div>
     <div class="col-9 ignore-screen level-item"><input type="date" value="2017-3-21"></div>
 </div>
 <!-- Color -->
 <div class="row ignore-screen level">
-    <div class="col-3 ignore-screen level-item"><p class="m-0">Color:</span></div>
+    <div class="col-3 ignore-screen level-item"><p class="m-0">Color:</p></div>
     <div class="col-9 ignore-screen level-item"><input type="color" value="#f03d4d"></div>
 </div>
 <!-- File -->
 <div class="row ignore-screen level">
-    <div class="col-3 ignore-screen level-item"><p class="m-0">File:</span></div>
+    <div class="col-3 ignore-screen level-item"><p class="m-0">File:</p></div>
     <div class="col-9 ignore-screen level-item"><input type="file"></div>
 </div>
 <!-- Select -->
