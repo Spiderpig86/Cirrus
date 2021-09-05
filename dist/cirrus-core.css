@@ -2911,12 +2911,6 @@ section {
   .divided > .row [class^='col-'],
   .divided > .row [class*=' col-'] {
     box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15); }
-  .level.ignore-screen,
-  .level-left.ignore-screen,
-  .level-right.ignore-screen {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
   .level.fill-height {
     display: inherit;
     /* Allow children to expand */ }
