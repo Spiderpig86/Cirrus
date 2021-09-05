@@ -501,13 +501,9 @@ export const ColumnsPage: React.FC<any> = (props) => {
 
                         <div className="space large"></div>
                         <h6>Prevent Stacking</h6>
-                        <blockquote>
-                            ⚠ As of 0.6.1 this is no longer relevant. For 0.6.1+, you can achieve this behavior with{' '}
-                            <code>col-xs-*</code>.
-                        </blockquote>
                         <p>
-                            To prevent the default stacking behavior, we can use the <code>ignore-screen</code> class on
-                            the column.
+                            To prevent the default stacking behavior, we can use the <code>col-xs-*</code> class on
+                            the column, where '*' indicates any number from 1 to 12 (or however many columns you configured your Cirrus build with).
                         </p>
 
                         <p className="title">Before</p>
@@ -530,11 +526,11 @@ export const ColumnsPage: React.FC<any> = (props) => {
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div class="row">
-    <div class="col-6 ignore-screen">
-        <div class="uppercase">col-6</div>
+    <div class="col-xs-6">
+        <div class="uppercase">col-xs-6</div>
     </div>
-    <div class="col-6 ignore-screen">
-        <div class="uppercase">col-6</div>
+    <div class="col-xs-6">
+        <div class="uppercase">col-xs-6</div>
     </div>
 </div>`}
                             language="htmlbars"

@@ -757,7 +757,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                     <div className="card__footer level content">
                                         6:32 PM - 3 Jul 18
                                         <div className="u-pull-right">
-                                            <div className="level-right ignore-screen">
+                                            <div className="level-right">
                                                 <a className="level-item" href="!#">
                                                     <span className="icon">
                                                         <i
@@ -812,7 +812,7 @@ export const CardsPage: React.FC<any> = (props) => {
     <div class="card__footer level content">
         6:32 PM - 3 Jul 18
         <div class="u-pull-right">
-            <div class="level-right ignore-screen">
+            <div class="level-right">
                 <a class="level-item">
                     <span class="icon"><i class="fa fa-wrapper small fa-reply" aria-hidden="true"></i></span>
                 </a>
