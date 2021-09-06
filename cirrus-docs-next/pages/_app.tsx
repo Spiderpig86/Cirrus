@@ -65,9 +65,9 @@ const App = ({ Component, pageProps }) => {
                     name="description"
                     content="The SCSS framework for the modern web. It's component based, customizable, and completely open source."
                 />
-                <meta property="og:url" content="http://stanleylim.me/" />
+                <meta property="og:url" content="https://cirrus-ui.netlify.app" />
                 <meta property="og:type" content="article" />
-                <meta property="og:title" content="Stanley Lim" />
+                <meta property="og:title" content="Cirrus CSS" />
                 <meta property="og:image" content="https://cirrus-ui.netlify.app/img/preview.png" />
                 <meta
                     property="og:description"
