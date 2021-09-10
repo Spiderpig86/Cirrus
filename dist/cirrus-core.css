@@ -454,7 +454,7 @@
       /* Style button in middle of group */
       border-radius: 0;
       /* Remove roundness from center buttons */
-      margin-left: -0.1rem; }
+      margin-left: -1px; }
   .btn-group.btn-group-fill {
     /* Makes the button group fill the width and proportion the buttons to fill the space */
     display: -webkit-box;
