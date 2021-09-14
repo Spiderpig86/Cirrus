@@ -83,6 +83,9 @@
     Global Mixins
 */
 /*
+    Bring to front on focus.
+*/
+/*
     Group selectors that share common styling.
 */
 /* Spacing */
@@ -1256,6 +1259,9 @@ kbd {
 /*
     Global Mixins
 */
+/*
+    Bring to front on focus.
+*/
 /* FORMS */
 /*
     Mixins
@@ -1274,7 +1280,6 @@ select {
   transition: all 0.3s;
   outline: none;
   padding: 0.85rem 1.1rem;
-  z-index: 1;
   /* Input Field Sizes */
   /* Hold Font Awesome glyphs inside input fields */
   /* More sizes coming soon */
@@ -1405,7 +1410,6 @@ textarea[type='text'] {
   transition: all 0.3s;
   outline: none;
   padding: 0.85rem 1.1rem;
-  z-index: 1;
   /* Input Field Sizes */
   /* Hold Font Awesome glyphs inside input fields */
   /* More sizes coming soon */
@@ -1544,7 +1548,6 @@ select {
   transition: all 0.3s;
   outline: none;
   padding: 0.85rem 1.1rem;
-  z-index: 1;
   /* Input Field Sizes */
   /* Hold Font Awesome glyphs inside input fields */
   /* More sizes coming soon */
@@ -1710,6 +1713,8 @@ label:last-child:not(:first-child):not(.form-group-label) {
       border-bottom-left-radius: 0 !important;
       margin-left: -1px;
       z-index: 0; }
+    .form-group .form-group-btn:focus {
+      z-index: 1; }
   .form-group .form-group-label {
     background-color: var(--cirrus-form-group-bg);
     border: 1px solid #dee2e6;
@@ -1761,6 +1766,8 @@ label:last-child:not(:first-child):not(.form-group-label) {
       border-bottom-left-radius: 0 !important;
       margin-left: -1px;
       z-index: 0; }
+    .form-group .form-group-input:focus {
+      z-index: 1; }
 
 /* Change place holder color */
 ::-moz-placeholder {

@@ -421,9 +421,7 @@
             margin-left: -1px;
         }
 
-        &:focus {
-            z-index: 1;
-        }
+        @include elevate-on-focus();
     }
 
     &.btn-group-fill {

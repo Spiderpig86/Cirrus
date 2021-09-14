@@ -16,7 +16,6 @@
     transition: all 0.3s;
     outline: none;
     padding: 0.85rem 1.1rem;
-    z-index: 1;
 
     /* Input Field Sizes */
     &.input-xsmall,
@@ -327,6 +326,7 @@ label {
         flex: 1 0 auto;
         margin-bottom: 0;
         @include form-group-border-radius-override();
+        @include elevate-on-focus();
     }
 
     /* Form group controls */
@@ -362,6 +362,7 @@ label {
     /* Keeps inputs in form group above other components */
     .form-group-input {
         @include form-group-border-radius-override();
+        @include elevate-on-focus();
     }
 }
 

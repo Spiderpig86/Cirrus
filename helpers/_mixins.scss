@@ -18,3 +18,12 @@
         box-shadow: 0 0 0 0.2rem transparentize($cirrus-danger, 1 - $focus-opacity), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
     }
 }
+
+/*
+    Bring to front on focus.
+*/
+@mixin elevate-on-focus {
+    &:focus {
+        z-index: 1;
+    }
+}
