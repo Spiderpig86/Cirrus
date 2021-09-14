@@ -420,6 +420,10 @@
             border-radius: 0; /* Remove roundness from center buttons */
             margin-left: -1px;
         }
+
+        &:focus {
+            z-index: 1;
+        }
     }
 
     &.btn-group-fill {
@@ -432,6 +436,10 @@
             -ms-flex: 1 0;
             -webkit-box-flex: 1;
             flex: 1 0; /* Make the buttons fill the available width and proportion themselves */
+        }
+
+        &:focus {
+            z-index: 1;
         }
     }
 }

@@ -455,6 +455,8 @@
       border-radius: 0;
       /* Remove roundness from center buttons */
       margin-left: -1px; }
+    .btn-group .btn:focus, .btn-group button:focus, .btn-group [type="submit"]:focus, .btn-group [type="reset"]:focus, .btn-group [type="button"]:focus {
+      z-index: 1; }
   .btn-group.btn-group-fill {
     /* Makes the button group fill the width and proportion the buttons to fill the space */
     display: -webkit-box;
@@ -465,6 +467,8 @@
       -webkit-box-flex: 1;
       flex: 1 0;
       /* Make the buttons fill the available width and proportion themselves */ }
+    .btn-group.btn-group-fill:focus {
+      z-index: 1; }
 
 @media screen and (max-width: 767px) {
   .btn-group {
