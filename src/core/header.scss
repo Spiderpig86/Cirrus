@@ -308,7 +308,7 @@
             text-align: center;
             width: 100%;
             top: 0;
-            overflow: visible; /* Only visible for showing dropdown menus, hidden for mobile */
+            overflow: auto; /* Only visible for showing dropdown menus, hidden for mobile */
         }
 
         /* Align items to the left */
