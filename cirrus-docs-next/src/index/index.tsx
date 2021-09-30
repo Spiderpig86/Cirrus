@@ -37,7 +37,7 @@ const Landing: React.FC<any> = () => {
                 <div id="splash-img" className="hero fullscreen hero-img parallax-img">
                     <div className="hero-body">
                         <div className="content">
-                            <h1 className="headline-4 white title">Cirrus.CSS</h1>
+                            <h1 className="headline-2 white title">Cirrus.CSS</h1>
                             <h5 className="text-gray-300 sub-title font-alt font-normal">
                                 A <b className="white">component</b> and <b className="white">utility centric</b> SCSS
                                 framework <br /> designed for <b className="white">rapid prototyping</b>.

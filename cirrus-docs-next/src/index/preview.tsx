@@ -77,7 +77,7 @@ export const Preview: React.FC<any> = (props) => {
                         <div className="col frame">
                             <div className="frame__header" />
                             <div className="frame__body">
-                                <h1 className="title headline-3">Aa</h1>
+                                <h1 className="title headline-1">Aa</h1>
                                 <h4 className="subtitle font-normal">Montserrat</h4>
                                 <div className="space" />
                                 <div className="row">
@@ -111,7 +111,7 @@ export const Preview: React.FC<any> = (props) => {
                         <div className="col frame">
                             <div className="frame__header" />
                             <div className="frame__body">
-                                <h1 className="font-alt title headline-3 font-light">Aa</h1>
+                                <h1 className="font-alt title headline-1 font-light">Aa</h1>
                                 <h4 className="font-alt subtitle font-normal">Nunito Sans</h4>
                                 <div className="space" />
                                 <div className="row">
