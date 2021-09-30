@@ -76,7 +76,7 @@ mark,
 /* Headlines (for larger titles) */
 @for $index from 1 through 4 {
     .headline-#{$index} {
-        font-size: $base-headline-size + $headline-size-diff * (6 - $index);
+        font-size: $base-headline-size + $headline-size-diff * (4 - $index);
         letter-spacing: 0.05rem;
     }
 }

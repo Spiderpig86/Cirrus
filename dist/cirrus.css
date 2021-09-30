@@ -845,19 +845,19 @@ mark,
 
 /* Headlines (for larger titles) */
 .headline-1 {
-  font-size: 8.5rem;
-  letter-spacing: 0.05rem; }
-
-.headline-2 {
-  font-size: 7.5rem;
-  letter-spacing: 0.05rem; }
-
-.headline-3 {
   font-size: 6.5rem;
   letter-spacing: 0.05rem; }
 
-.headline-4 {
+.headline-2 {
   font-size: 5.5rem;
+  letter-spacing: 0.05rem; }
+
+.headline-3 {
+  font-size: 4.5rem;
+  letter-spacing: 0.05rem; }
+
+.headline-4 {
+  font-size: 3.5rem;
   letter-spacing: 0.05rem; }
 
 .font-alt {
