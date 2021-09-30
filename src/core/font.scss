@@ -9,6 +9,7 @@
 /* Constants */
 $base-header-size: 1.25rem;
 $header-size-diff: 0.25rem;
+$header-size-diff-lg: 0.5rem;
 $base-headline-size: 3.5rem;
 $headline-size-diff: 1rem;
 $font-weights: (
@@ -23,8 +24,16 @@ $font-transformations: uppercase, lowercase, capitalize;
 /* Headers */
 @for $index from 1 through 6 {
     h#{$index} {
+        $diff: $header-size-diff;
+        $offset: 0;
+
+        @if $index < 3 {
+            $diff: $header-size-diff-lg;
+            $offset: .75;
+        }
+
         font-family: 'Montserrat', sans-serif;
-        font-size: $base-header-size + $header-size-diff * (6 - $index);
+        font-size: $base-header-size + $diff * (6 - $index) - $offset;
         font-weight: 700;
         line-height: 1.2;
         margin-bottom: 1rem;
