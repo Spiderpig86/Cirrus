@@ -2184,7 +2184,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
       text-align: center;
       width: 100%;
       top: 0;
-      overflow: auto;
+      overflow: visible;
       /* Only visible for showing dropdown menus, hidden for mobile */ }
     .header .nav-left {
       -webkit-box-align: stretch;
@@ -7326,7 +7326,7 @@ a.tag:hover {
 .tooltip {
   position: relative;
   /* let's the pseudoelement that we are displaying relative to the button. */
-  overflow: auto;
+  overflow: visible;
   /* Allows the pseudoelement to be shown */
   white-space: nowrap;
   /* Keeps the button text from wrapping and getting too large */

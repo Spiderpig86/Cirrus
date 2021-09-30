@@ -3,7 +3,7 @@
 /* TOOLTIPS */
 .tooltip {
     position: relative; /* let's the pseudoelement that we are displaying relative to the button. */
-    overflow: auto; /* Allows the pseudoelement to be shown */
+    overflow: visible; /* Allows the pseudoelement to be shown */
     white-space: nowrap; /* Keeps the button text from wrapping and getting too large */
 
     /* This is the psuedoelement that creates the tooltip */

@@ -2184,7 +2184,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
       text-align: center;
       width: 100%;
       top: 0;
-      overflow: auto;
+      overflow: visible;
       /* Only visible for showing dropdown menus, hidden for mobile */ }
     .header .nav-left {
       -webkit-box-align: stretch;
