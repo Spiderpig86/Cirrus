@@ -123,6 +123,14 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                                 </div>
                                 <div className="row level">
                                     <div className="col-xs-3 level-item">
+                                        <p className="m-0">Time:</p>
+                                    </div>
+                                    <div className="col-xs-9 level-item">
+                                        <input type="time" />
+                                    </div>
+                                </div>
+                                <div className="row level">
+                                    <div className="col-xs-3 level-item">
                                         <p className="m-0">Color:</p>
                                     </div>
                                     <div className="col-xs-9 level-item">
@@ -219,6 +227,13 @@ export const FormsInputsPage: React.FC<any> = (props) => {
         <p class="m-0">Date:</p>
     </div>
     <div class="col-xs-9 level-item"><input type="date" value="2017-3-21"></div>
+</div>
+<!-- Time -->
+<div class="row level">
+    <div class="col-xs-3 level-item">
+        <p class="m-0">Time:</p>
+    </div>
+    <div class="col-xs-9 level-item"><input type="time"></div>
 </div>
 <!-- Color -->
 <div class="row level">
