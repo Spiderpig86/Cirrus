@@ -23,7 +23,7 @@ jobs:
           - ubuntu
           # - windows
 
-    name: build (${{ matrix.os }}/go-${{ matrix.node_version }})
+    name: build (${{ matrix.os }}/node-${{ matrix.node_version }})
     runs-on: ${{ matrix.os }}-latest
     steps:
       - name: Checkout
