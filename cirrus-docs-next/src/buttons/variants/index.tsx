@@ -75,9 +75,7 @@ export const VariantsPage: React.FC<any> = (props) => {
                         <button disabled>Disabled</button>
 
                         <CodeBlock
-                            code={`<button class="btn-animated">Button</button>
-<div class="btn btn-animated">Button</div>
-<input class="btn-animated" type="submit" value="Submit" />`}
+                            code={`<button disabled>Disabled</button>`}
                             language="htmlbars"
                         />
                     </div>
@@ -97,9 +95,7 @@ export const VariantsPage: React.FC<any> = (props) => {
                         <button className="animated loading hide-text">123</button>
 
                         <CodeBlock
-                            code={`<button class="btn-animated">Button</button>
-<div class="btn btn-animated">Button</div>
-<input class="btn-animated" type="submit" value="Submit" />`}
+                            code={`<button class="animated loading hide-text">123</button>`}
                             language="htmlbars"
                         />
 
