@@ -3,7 +3,7 @@
 
 /* A collection of modifiers that extend control styling */
 #{$button-selectors} {
-    .btn--pilled {
+    &.btn--pilled {
         border-radius: 6.25rem;
         padding-left: 1.25rem;
         padding-right: 1.25rem;
