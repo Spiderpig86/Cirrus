@@ -267,7 +267,7 @@ position: absolute;`,
                         </div>
 
                         <div className="space"></div>
-                        <CodeBlock code={`<p class="text-center">This is some text.</p>`} language="htmlbars" />
+                        <CodeBlock code={`<p class="u-text-center">This is some text.</p>`} language="htmlbars" />
                         <div className="space large"></div>
 
                         <h6>Text Right</h6>
