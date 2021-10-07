@@ -1,5 +1,59 @@
 /* BASE STYLING FOR CIRRUS */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito+Sans:400,700");
+@import 'theme.scss';
+
+:root {
+    /* v1 Colors */
+    --cirrus-fg: #{$cirrus-fg};
+    --cirrus-bg: #{$cirrus-bg};
+
+    --cirrus-primary: #{$cirrus-primary};
+    --cirrus-primary-rgb: #{hex-to-rgb($cirrus-primary)};
+    --cirrus-primary-light: #{$cirrus-primary-light};
+    --cirrus-accent-hover: #{$cirrus-accent-hover};
+    --cirrus-accent-border: #{$cirrus-accent-border};
+    --cirrus-light: #{$cirrus-light};
+    --cirrus-light-gray: #{$cirrus-light-gray};
+    --cirrus-gray: #{$cirrus-gray};
+    --cirrus-dark-gray: #{$cirrus-dark-gray};
+    --cirrus-dark: #{$cirrus-dark};
+    --cirrus-link: #{$cirrus-link};
+    --cirrus-link-dark: #{$cirrus-link-dark};
+    --cirrus-info: #{$cirrus-info};
+    --cirrus-success: #{$cirrus-success};
+    --cirrus-success-rgb: #{hex-to-rgb($cirrus-success)};
+    --cirrus-warning: #{$cirrus-warning};
+    --cirrus-danger: #{$cirrus-danger};
+
+    --cirrus-light-hover: #{darken($cirrus-light, 10%)};
+    --cirrus-dark-hover: #{lighten($cirrus-dark, 10%)};
+    --cirrus-info-hover: #{darken($cirrus-info, 5%)};
+    --cirrus-link-hover: #{$cirrus-link-hover};
+    --cirrus-success-hover: #{darken($cirrus-success, 5%)};
+    --cirrus-warning-hover: #{darken($cirrus-warning, 5%)};
+    --cirrus-danger-hover: #{darken($cirrus-danger, 15%)};
+
+    --cirrus-select-bg: #{$cirrus-select-bg};
+
+    --cirrus-code-bg: var(--cirrus-primary-light);
+    --cirrus-code-fg: #{$cirrus-code-fg};
+
+    --cirrus-form-group-bg: var(--cirrus-light-gray);
+    --cirrus-form-group-fg: var(--cirrus-dark-gray);
+
+    --toast-primary-bg: #{$toast-primary-bg};
+
+    --animation-duration: #{$animation-duration};
+    --focus-opacity: #{$focus-opacity};
+
+    --space-size: #{$space-size};
+
+    --font-size-xs: #{$font-size-xs};
+    --font-size-s: #{$font-size-s};
+    --font-size-m: #{$font-size-m};
+    --font-size-l: #{$font-size-l};
+    --font-size-xl: #{$font-size-xl};
+}
 
 * {
     margin: 0;

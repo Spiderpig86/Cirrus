@@ -1,4 +1,4 @@
-@import "./theme.scss";
+@import './theme.scss';
 /* Separate CSS file, but same part as Layout */
 
 /* The base container that is similar in structure to a card but more flexible */
@@ -26,7 +26,7 @@
         -webkit-flex: 0 0 auto;
         -ms-flex: 0 0 auto;
     }
-    
+
     .frame__body {
         flex: 1 1 auto;
         -webkit-flex: 1 1 auto;
@@ -34,16 +34,16 @@
         overflow-y: auto; /* Show the scrollbar when needed */
         padding: 0 1rem;
     }
-    
+
     .frame__title {
         color: $cirrus-fg;
         font-size: $font-size-m;
-        margin: .75rem auto 0;
+        margin: 0.75rem auto 0;
     }
-    
+
     .frame__subtitle {
-        color: transparentize($cirrus-fg, .4);
+        color: transparentize($cirrus-fg, 0.4);
         font-size: $font-size-m;
-        margin: 0 auto .75rem;
+        margin: 0 auto 0.75rem;
     }
 }

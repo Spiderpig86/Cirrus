@@ -36,49 +36,6 @@
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /*
     Global Mixins
 */
@@ -116,49 +73,6 @@
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /* BUTTONS */
 /* Button styling */
 /* Un-themed */
@@ -508,49 +422,6 @@
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /* CODE */
 code {
   --cirrus-code-label-fg: #868e96;
@@ -601,6 +472,70 @@ pre > code {
 
 /* BASE STYLING FOR CIRRUS */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito+Sans:400,700");
+/*
+  Functions
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/* Spacing */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Color scheme for Cirrus */
+/* v2 Colors */
+:root {
+  /* v1 Colors */
+  --cirrus-fg: #374054;
+  --cirrus-bg: #fff;
+  --cirrus-primary: #f03d4d;
+  --cirrus-primary-rgb: 240, 61, 77;
+  --cirrus-primary-light: #ffdadd;
+  --cirrus-accent-hover: #d62939;
+  --cirrus-accent-border: #c21b2b;
+  --cirrus-light: #f6f9fc;
+  --cirrus-light-gray: #f8f9fa;
+  --cirrus-gray: #d5d7dc;
+  --cirrus-dark-gray: #909090;
+  --cirrus-dark: #363636;
+  --cirrus-link: #5e5cc7;
+  --cirrus-link-dark: #4643e2;
+  --cirrus-info: #2972fa;
+  --cirrus-success: #0dd157;
+  --cirrus-success-rgb: 13, 209, 87;
+  --cirrus-warning: #fab633;
+  --cirrus-danger: #fb4143;
+  --cirrus-light-hover: #d0e0ef;
+  --cirrus-dark-hover: #505050;
+  --cirrus-info-hover: #1062f9;
+  --cirrus-link-hover: #f8f7ff;
+  --cirrus-success-hover: #0cb94d;
+  --cirrus-warning-hover: #f9ad1a;
+  --cirrus-danger-hover: #eb0507;
+  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
+  --cirrus-code-bg: var(--cirrus-primary-light);
+  --cirrus-code-fg: #dc4753;
+  --cirrus-form-group-bg: var(--cirrus-light-gray);
+  --cirrus-form-group-fg: var(--cirrus-dark-gray);
+  --toast-primary-bg: rgba(49, 59, 80, 0.9);
+  --animation-duration: 0.2s;
+  --focus-opacity: 0.55;
+  --space-size: 0.5rem;
+  --font-size-xs: 0.7rem;
+  --font-size-s: 0.85rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.35rem;
+  --font-size-xl: 1.75rem; }
+
 * {
   margin: 0;
   padding: 0;
@@ -723,49 +658,6 @@ fieldset {
 /* v2 Colors */
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /* FONT */
 /* Constants */
 /* Headers */
@@ -1040,49 +932,6 @@ kbd {
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /* FOOTER */
 .footer {
   background-color: #343a40;
@@ -1149,49 +998,6 @@ kbd {
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /*
   Functions
 */
@@ -1213,49 +1019,6 @@ kbd {
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /*
     Global Mixins
 */
@@ -1646,7 +1409,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   position: relative;
   top: 1px;
   font-weight: bold;
-  color: #B31E1D;
+  color: #b31e1d;
   padding-left: 0.1rem; }
 
 /* Used for when the input controls have another control adjacent to it but we want to position it inside the input field like font-awesome glyphs. As of 0.5.2, it is the default container for input fields. */
@@ -1799,49 +1562,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /* Separate CSS file, but same part as Layout */
 /* The base container that is similar in structure to a card but more flexible */
 .frame {
@@ -1874,11 +1594,11 @@ label:last-child:not(:first-child):not(.form-group-label) {
   .frame .frame__title {
     color: #374054;
     font-size: 1rem;
-    margin: .75rem auto 0; }
+    margin: 0.75rem auto 0; }
   .frame .frame__subtitle {
     color: rgba(55, 64, 84, 0.6);
     font-size: 1rem;
-    margin: 0 auto .75rem; }
+    margin: 0 auto 0.75rem; }
 
 /*
     Group selectors that share common styling.
@@ -1911,49 +1631,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /* These styles can also be used on menus in the body */
 /* HEADER */
 .header {
@@ -2377,49 +2054,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /* Spacing */
 /* Fonts */
 /* Grid Count (Columns + Grid) */
@@ -2980,49 +2614,6 @@ a button,
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /* Spacing */
 /* Fonts */
 /* Grid Count (Columns + Grid) */
@@ -3887,49 +3478,6 @@ video.video-fullscreen {
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }
-
 /* TABLE */
 .table {
   margin-bottom: 1.5rem;
@@ -4032,45 +3580,3 @@ video.video-fullscreen {
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Color scheme for Cirrus */
 /* v2 Colors */
-:root {
-  /* v1 Colors */
-  --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
-  --cirrus-primary: #f03d4d;
-  --cirrus-primary-rgb: 240, 61, 77;
-  --cirrus-primary-light: #ffdadd;
-  --cirrus-accent-hover: #d62939;
-  --cirrus-accent-border: #c21b2b;
-  --cirrus-light: #f6f9fc;
-  --cirrus-light-gray: #f8f9fa;
-  --cirrus-gray: #d5d7dc;
-  --cirrus-dark-gray: #909090;
-  --cirrus-dark: #363636;
-  --cirrus-link: #5e5cc7;
-  --cirrus-link-dark: #4643e2;
-  --cirrus-info: #2972fa;
-  --cirrus-success: #0dd157;
-  --cirrus-success-rgb: 13, 209, 87;
-  --cirrus-warning: #fab633;
-  --cirrus-danger: #fb4143;
-  --cirrus-light-hover: #d0e0ef;
-  --cirrus-dark-hover: #505050;
-  --cirrus-info-hover: #1062f9;
-  --cirrus-link-hover: #f8f7ff;
-  --cirrus-success-hover: #0cb94d;
-  --cirrus-warning-hover: #f9ad1a;
-  --cirrus-danger-hover: #eb0507;
-  --cirrus-select-bg: rgba(0, 161, 255, 0.2);
-  --cirrus-code-bg: var(--cirrus-primary-light);
-  --cirrus-code-fg: #dc4753;
-  --cirrus-form-group-bg: var(--cirrus-light-gray);
-  --cirrus-form-group-fg: var(--cirrus-dark-gray);
-  --toast-primary-bg: rgba(49, 59, 80, 0.9);
-  --animation-duration: 0.2s;
-  --focus-opacity: 0.55;
-  --space-size: 0.5rem;
-  --font-size-xs: 0.7rem;
-  --font-size-s: 0.85rem;
-  --font-size-m: 1rem;
-  --font-size-l: 1.35rem;
-  --font-size-xl: 1.75rem; }

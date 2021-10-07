@@ -1,5 +1,5 @@
-@import "../../helpers/_functions";
-@import "../../helpers/_size";
+@import '../../helpers/_functions';
+@import '../../helpers/_size';
 
 /* Color scheme for Cirrus */
 $cirrus-fg: #374054;
@@ -55,116 +55,116 @@ $tooltip-primary-bg: rgba(69, 77, 93, 0.9);
 
 $placeholder-fg: #a9a9a9;
 
-$animation-duration: .2s;
+$animation-duration: 0.2s;
 $focus-opacity: 0.55;
 
 /* v2 Colors */
 $pinks: (
-    '100': #F8E7F1,
-    '200': #F3D2E3,
-    '300': #ECB7D3,
-    '400': #EB8CBC,
-    '500': #DD5A9C,
-    '600': #D12E81,
-    '700': #A21F61,
-    '800': #831B50,
-    '900': #741648
+    '100': #f8e7f1,
+    '200': #f3d2e3,
+    '300': #ecb7d3,
+    '400': #eb8cbc,
+    '500': #dd5a9c,
+    '600': #d12e81,
+    '700': #a21f61,
+    '800': #831b50,
+    '900': #741648,
 );
 
 $reds: (
-    '100': #FDE7E9,
-    '200': #FBD4D5,
-    '300': #F7B1B1,
-    '400': #F19393,
-    '500': #E85C61,
-    '600': #DB3839,
-    '700': #B31E1D,
-    '800': #9B1313,
-    '900': #890E10
+    '100': #fde7e9,
+    '200': #fbd4d5,
+    '300': #f7b1b1,
+    '400': #f19393,
+    '500': #e85c61,
+    '600': #db3839,
+    '700': #b31e1d,
+    '800': #9b1313,
+    '900': #890e10,
 );
 
 $oranges: (
-    '100': #FDEED1,
-    '200': #FBDBAA,
-    '300': #F6B65C,
-    '400': #F19736,
-    '500': #E4771C,
-    '600': #C45307,
-    '700': #9B3908,
-    '800': #842B09,
-    '900': #890E10
+    '100': #fdeed1,
+    '200': #fbdbaa,
+    '300': #f6b65c,
+    '400': #f19736,
+    '500': #e4771c,
+    '600': #c45307,
+    '700': #9b3908,
+    '800': #842b09,
+    '900': #890e10,
 );
 
 $yellows: (
-    '100': #FFFDE4,
-    '200': #F9E978,
-    '300': #F6DA52,
-    '400': #E8BB24,
-    '500': #D29507,
-    '600': #9D6B0C,
-    '700': #7C4D09,
-    '800': #6C3E0C,
-    '900': #5D320F
+    '100': #fffde4,
+    '200': #f9e978,
+    '300': #f6da52,
+    '400': #e8bb24,
+    '500': #d29507,
+    '600': #9d6b0c,
+    '700': #7c4d09,
+    '800': #6c3e0c,
+    '900': #5d320f,
 );
 
 $greens: (
-    '100': #E1F7EB,
-    '200': #C2ECD6,
-    '300': #98D9B7,
-    '400': #64C192,
-    '500': #44A675,
-    '600': #33855D,
-    '700': #27684A,
+    '100': #e1f7eb,
+    '200': #c2ecd6,
+    '300': #98d9b7,
+    '400': #64c192,
+    '500': #44a675,
+    '600': #33855d,
+    '700': #27684a,
     '800': #275440,
-    '900': #234535
+    '900': #234535,
 );
 
 $teals: (
-    '100': #DDF2F5,
-    '200': #B5E6EB,
-    '300': #7FCED5,
-    '400': #59BAC3,
-    '500': #1E9CA8,
-    '600': #0F7D8A,
-    '700': #0A616A,
+    '100': #ddf2f5,
+    '200': #b5e6eb,
+    '300': #7fced5,
+    '400': #59bac3,
+    '500': #1e9ca8,
+    '600': #0f7d8a,
+    '700': #0a616a,
     '800': #105157,
-    '900': #114448
+    '900': #114448,
 );
 
 $blues: (
-    '100': #E1EFFC,
-    '200': #BFDCFC,
-    '300': #8BC2F8,
-    '400': #5FA7F3,
-    '500': #3C91EC,
-    '600': #1B74D9,
-    '700': #1E5898,
-    '800': #1E4C80,
-    '900': #1C3C63
+    '100': #e1effc,
+    '200': #bfdcfc,
+    '300': #8bc2f8,
+    '400': #5fa7f3,
+    '500': #3c91ec,
+    '600': #1b74d9,
+    '700': #1e5898,
+    '800': #1e4c80,
+    '900': #1c3c63,
 );
 
 $indigos: (
-    '100': #E2EFFF,
-    '200': #C4DBFD,
-    '300': #A1BEFA,
-    '400': #89A3F7,
-    '500': #6C83E9,
-    '600': #5966D9,
-    '700': #4C4F9E,
-    '800': #42417B,
-    '900': #3A3462
+    '100': #e2efff,
+    '200': #c4dbfd,
+    '300': #a1befa,
+    '400': #89a3f7,
+    '500': #6c83e9,
+    '600': #5966d9,
+    '700': #4c4f9e,
+    '800': #42417b,
+    '900': #3a3462,
 );
 
 $purples: (
-    '100': #F0E9FB,
-    '200': #E2D4F8,
-    '300': #CBB2F6,
-    '400': #B89AF4,
-    '500': #9C73ED,
-    '600': #8256E1,
-    '700': #6340B6,
-    '800': #50388E,
-    '900': #413170
+    '100': #f0e9fb,
+    '200': #e2d4f8,
+    '300': #cbb2f6,
+    '400': #b89af4,
+    '500': #9c73ed,
+    '600': #8256e1,
+    '700': #6340b6,
+    '800': #50388e,
+    '900': #413170,
 );
 
 $grays: (
@@ -177,58 +177,5 @@ $grays: (
     '600': #868e96,
     '700': #495057,
     '800': #343a40,
-    '900': #212529
+    '900': #212529,
 );
-
-:root {
-    /* v1 Colors */
-    --cirrus-fg: #{$cirrus-fg};
-    --cirrus-bg: #{$cirrus-bg};
-
-    --cirrus-primary: #{$cirrus-primary};
-    --cirrus-primary-rgb: #{hex-to-rgb($cirrus-primary)};
-    --cirrus-primary-light: #{$cirrus-primary-light};
-    --cirrus-accent-hover: #{$cirrus-accent-hover};
-    --cirrus-accent-border: #{$cirrus-accent-border};
-    --cirrus-light: #{$cirrus-light};
-    --cirrus-light-gray: #{$cirrus-light-gray};
-    --cirrus-gray: #{$cirrus-gray};
-    --cirrus-dark-gray: #{$cirrus-dark-gray};
-    --cirrus-dark: #{$cirrus-dark};
-    --cirrus-link: #{$cirrus-link};
-    --cirrus-link-dark: #{$cirrus-link-dark};
-    --cirrus-info: #{$cirrus-info};
-    --cirrus-success: #{$cirrus-success};
-    --cirrus-success-rgb: #{hex-to-rgb($cirrus-success)};
-    --cirrus-warning: #{$cirrus-warning};
-    --cirrus-danger: #{$cirrus-danger};
-
-    --cirrus-light-hover: #{darken($cirrus-light, 10%)};
-    --cirrus-dark-hover: #{lighten($cirrus-dark, 10%)};
-    --cirrus-info-hover: #{darken($cirrus-info, 5%)};
-    --cirrus-link-hover: #{$cirrus-link-hover};
-    --cirrus-success-hover: #{darken($cirrus-success, 5%)};
-    --cirrus-warning-hover: #{darken($cirrus-warning, 5%)};
-    --cirrus-danger-hover: #{darken($cirrus-danger, 15%)};
-
-    --cirrus-select-bg: #{$cirrus-select-bg};
-
-    --cirrus-code-bg: var(--cirrus-primary-light);
-    --cirrus-code-fg: #{$cirrus-code-fg};
-
-    --cirrus-form-group-bg: var(--cirrus-light-gray);
-    --cirrus-form-group-fg: var(--cirrus-dark-gray);
-
-    --toast-primary-bg: #{$toast-primary-bg};
-
-    --animation-duration: #{$animation-duration};
-    --focus-opacity: #{$focus-opacity};
-
-    --space-size: #{$space-size};
-
-    --font-size-xs: #{$font-size-xs};
-    --font-size-s: #{$font-size-s};
-    --font-size-m: #{$font-size-m};
-    --font-size-l: #{$font-size-l};
-    --font-size-xl: #{$font-size-xl};
-}
