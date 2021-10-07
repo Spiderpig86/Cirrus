@@ -3,11 +3,20 @@ $spacing-system: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32;
 $space-size: 0.5rem;
 
 /* Fonts */
+// TODO Need to standardize these around a base font size for $font-size-m
 $font-size-xs: 0.7rem;
 $font-size-s: 0.85rem;
 $font-size-m: 1rem;
 $font-size-l: 1.35rem;
 $font-size-xl: 1.75rem;
+$font-sizes: (
+    'xs': $font-size-xs,
+    'sm': $font-size-s,
+    'md': $font-size-m,
+    'lg': $font-size-l,
+    'xl': $font-size-xl
+);
+
 
 /* Grid Count (Columns + Grid) */
 $grid-columns: 12;

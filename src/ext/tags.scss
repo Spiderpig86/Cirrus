@@ -1,26 +1,35 @@
 @import '../core/theme.scss';
 
+$TAG_PADDING_DIFF: 0.25;
+$TAG_BASE_PADDING_X: $TAG_PADDING_DIFF; // .25rem;
+$TAG_BASE_PADDING_Y: 0; // 0rem;
+
 /* TAGS */
 .tag {
+    $padding_x: #{$TAG_BASE_PADDING_X + 1 * $TAG_PADDING_DIFF};
+    $padding_y: #{$TAG_BASE_PADDING_Y + 1 * $TAG_PADDING_DIFF};
+
     align-items: center;
     background-color: var(--cirrus-light);
     border-radius: 0.25rem;
-    color: var(--cirrus-fg);
+    color: currentColor;
     display: inline-flex;
-    font-size: 75%;
+    height: 2em;
     line-height: 1.5;
-    min-height: 1.5rem;
-    padding: 0 0.5rem;
+    font-size: $font-size-s;
+    padding: #{$padding_y}rem #{$padding_x}rem;
     white-space: nowrap;
 
-    &.tag--large {
-        font-size: 120%;
-        padding: 0.25rem 0.75rem;
-    }
+    $multiplier: 0;
+    @each $name, $size in $font-sizes {
+        &.tag--#{$name} {
+            $padding_x: #{$TAG_BASE_PADDING_X + $multiplier * $TAG_PADDING_DIFF};
+            $padding_y: #{$TAG_BASE_PADDING_Y + $multiplier * $TAG_PADDING_DIFF};
 
-    &.tag--xlarge {
-        font-size: 150%;
-        padding: 0.5rem 1.25rem;
+            font-size: $size;
+            padding: #{$padding_y}rem #{$padding_x}rem;
+            $multiplier: $multiplier + 1;
+        }
     }
 
     &.tag--rounded {
@@ -29,17 +38,15 @@
 
     /* Delete button for tag */
     &.tag__delete {
+        aspect-ratio: 1/1;
         background-color: rgba(10, 10, 10, 0.2);
         border-radius: 290486px;
         cursor: pointer;
         pointer-events: auto;
         display: inline-block;
-        height: 16px;
-        max-height: 16px;
-        max-width: 16px;
-        min-height: 16px;
-        min-width: 16px;
+        height: auto;
         position: relative;
+        width: auto;
     }
 
     &.tag__delete:hover {
@@ -55,9 +62,7 @@
         left: 50%;
         position: absolute;
         top: 50%;
-        -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
         transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        -webkit-transform-origin: center center;
         transform-origin: center center;
     }
 
@@ -110,21 +115,18 @@
 
     /* Tag close button */
     &.tag__close-btn {
-        padding: 0;
         position: relative;
-        width: 1.5rem;
+        width: 2em;
 
         &::before,
         &::after {
-            background-color: var(--cirrus-fg);
+            background-color: currentColor;
             content: '';
             display: block;
             left: 50%;
             top: 50%;
             position: absolute;
-            -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
             transform: translateX(-50%) translateY(-50%) rotate(45deg);
-            -webkit-transform-origin: center center;
             transform-origin: center center;
         }
 
@@ -151,6 +153,7 @@
     &.group-tags {
         --tag-first-border-radius: 0.25rem 0 0 0.25rem;
         --tag-last-border-radius: 0 0.25rem 0.25rem 0;
+        align-items: center;
         display: flex;
         flex-wrap: wrap;
 
