@@ -40,8 +40,8 @@ export const LinksPage: React.FC<any> = (props) => {
                         <Headline title="Styles" link="#styles" size="4" />
                         <div className="divider"></div>
                         <div className="tag-container group-tags">
-                            <div className="tag tag--dark">Extended</div>
-                            <div className="tag tag--info">Style</div>
+                            <div className="tag tag--sm tag--dark">Extended</div>
+                            <div className="tag tag--sm tag--info">Style</div>
                         </div>
 
                         <p>

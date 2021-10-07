@@ -93,29 +93,40 @@ export const TagsPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Sizes" link="#sizes" size="4" />
                         <div className="divider"></div>
+                        <span>
+                            <div className="tag-container group-tags">
+                                <div className="tag tag--dark">Updated</div>
+                                <div className="tag tag--info">0.6.3</div>
+                            </div>
+                        </span>
                         <p>
                             Tags also come two sizes larger with the <code>tag--large</code> and{' '}
                             <code>tag--xlarge</code> modifiers. Tags can also be more rounded with the{' '}
                             <code>tag--rounded</code> class.
                         </p>
+                        <p>
+                            To maintain backwards compatability with the old sizes before 0.6.3, the default size will
+                            be the same as <code>tag--sm</code>.
+                        </p>
 
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <div className="tag tag--info">Normal</div>
-                                <div className="tag tag--link tag--large">Large</div>
-                                <div className="tag tag--danger tag--xlarge">Extra Large</div>
-                            </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<div class="col-6">
-    <div class="tag tag--info">Normal</div>
-    <div class="tag tag--link tag--large">Large</div>
-    <div class="tag tag--danger tag--xlarge">Extra Large</div>
-</div>`}
-                                    language="htmlbars"
-                                />
-                            </div>
+                        <div className="py-2 u-text-center">
+                            <div className="tag tag--xs bg-orange-100">Extra Small</div>
+                            <div className="tag tag--sm bg-orange-200">Small</div>
+                            <div className="tag tag--md bg-orange-300">Medium</div>
+                            <div className="tag tag--lg bg-orange-400">Large</div>
+                            <div className="tag tag--xl bg-orange-500 white">Extra Large</div>
                         </div>
+
+                        <CodeBlock
+                            code={`<div class="py-2 u-text-center">
+    <div class="tag tag--xs bg-orange-100">Extra Small</div>
+    <div class="tag tag--sm bg-orange-200">Small</div>
+    <div class="tag tag--md bg-orange-300">Medium</div>
+    <div class="tag tag--lg bg-orange-400">Large</div>
+    <div class="tag tag--xl bg-orange-500">Extra Large</div>
+</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -146,22 +157,36 @@ export const TagsPage: React.FC<any> = (props) => {
                             This is embedded within the tag itself unlike the close button to the side. Create a new{' '}
                             <code>div</code> inside the <code>tag</code> with the <code>tag__delete</code> class.
                         </p>
-                        <div className="row">
-                            <div className="col-lg-6">
-                                <div className="tag tag--success">
-                                    Close Me
-                                    <div className="tag tag__delete"></div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<div class="tag tag--success">
+
+                        <div className="tag tag--xs tag--success">
+                            Close Me
+                            <div className="tag tag--xs tag__delete"></div>
+                        </div>
+                        <div className="tag tag--sm tag--success">
+                            Close Me
+                            <div className="tag tag--sm tag__delete"></div>
+                        </div>
+                        <div className="tag tag--md tag--success">
+                            Close Me
+                            <div className="tag tag--md tag__delete"></div>
+                        </div>
+                        <div className="tag tag--lg tag--success">
+                            Close Me
+                            <div className="tag tag--lg tag__delete"></div>
+                        </div>
+                        <div className="tag tag--xl tag--success">
+                            Close Me
+                            <div className="tag tag--xl tag__delete"></div>
+                        </div>
+
+                        <div className="my-2">
+                            <CodeBlock
+                                code={`<div class="tag tag--success">
     Close Me
     <div class="tag tag__delete"></div>
 </div>`}
-                                    language="htmlbars"
-                                />
-                            </div>
+                                language="htmlbars"
+                            />
                         </div>
                     </div>
                 </section>
@@ -204,6 +229,12 @@ export const TagsPage: React.FC<any> = (props) => {
                         </div>
 
                         <h6>Tag Container Grouped Tags</h6>
+                        <span>
+                            <div className="tag-container group-tags">
+                                <div className="tag tag--dark">Updated</div>
+                                <div className="tag tag--info">0.6.3</div>
+                            </div>
+                        </span>
 
                         <p className="m-0">
                             <b>Normal</b>
@@ -212,17 +243,57 @@ export const TagsPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="tag-container group-tags">
-                                    <div className="tag tag--dark">Version</div>
-                                    <div className="tag tag--info">0.6.0</div>
-                                    <div className="tag tag--warning tag__close-btn"></div>
+                                    <div className="tag tag--xs tag--dark">xs</div>
+                                    <div className="tag tag--xs tag--info">0.6.0</div>
+                                    <div className="tag tag--xs tag--warning tag__close-btn"></div>
+                                </div>
+                                <div className="tag-container group-tags">
+                                    <div className="tag tag--sm tag--dark">sm</div>
+                                    <div className="tag tag--sm tag--info">0.6.0</div>
+                                    <div className="tag tag--sm tag--warning tag__close-btn"></div>
+                                </div>
+                                <div className="tag-container group-tags">
+                                    <div className="tag tag--md tag--dark">md</div>
+                                    <div className="tag tag--md tag--info">0.6.0</div>
+                                    <div className="tag tag--md tag--warning tag__close-btn"></div>
+                                </div>
+                                <div className="tag-container group-tags">
+                                    <div className="tag tag--lg tag--dark">lg</div>
+                                    <div className="tag tag--lg tag--info">0.6.0</div>
+                                    <div className="tag tag--lg tag--warning tag__close-btn"></div>
+                                </div>
+                                <div className="tag-container group-tags">
+                                    <div className="tag tag--xl tag--dark">xl</div>
+                                    <div className="tag tag--xl tag--info">0.6.0</div>
+                                    <div className="tag tag--xl tag--warning tag__close-btn"></div>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
                                     code={`<div class="tag-container group-tags">
-    <div class="tag tag--dark">Version</div>
-    <div class="tag tag--info">0.6.0</div>
-    <div class="tag tag--warning tag__close-btn"></div>
+    <div class="tag tag--xs tag--dark">xs</div>
+    <div class="tag tag--xs tag--info">0.6.0</div>
+    <div class="tag tag--xs tag--warning tag__close-btn"></div>
+</div>
+<div class="tag-container group-tags">
+    <div class="tag tag--sm tag--dark">sm</div>
+    <div class="tag tag--sm tag--info">0.6.0</div>
+    <div class="tag tag--sm tag--warning tag__close-btn"></div>
+</div>
+<div class="tag-container group-tags">
+    <div class="tag tag--md tag--dark">md</div>
+    <div class="tag tag--md tag--info">0.6.0</div>
+    <div class="tag tag--md tag--warning tag__close-btn"></div>
+</div>
+<div class="tag-container group-tags">
+    <div class="tag tag--lg tag--dark">lg</div>
+    <div class="tag tag--lg tag--info">0.6.0</div>
+    <div class="tag tag--lg tag--warning tag__close-btn"></div>
+</div>
+<div class="tag-container group-tags">
+    <div class="tag tag--xl tag--dark">xl</div>
+    <div class="tag tag--xl tag--info">0.6.0</div>
+    <div class="tag tag--xl tag--warning tag__close-btn"></div>
 </div>`}
                                     language="htmlbars"
                                 />
@@ -231,12 +302,6 @@ export const TagsPage: React.FC<any> = (props) => {
 
                         <p className="m-0">
                             <b>Rounded</b>
-                            <span>
-                                <div className="tag-container group-tags">
-                                    <div className="tag tag--dark">Coming Soon</div>
-                                    <div className="tag tag--info">0.6.1</div>
-                                </div>
-                            </span>
                         </p>
                         <p>Group the tags with rounded borders.</p>
                         <div className="row">

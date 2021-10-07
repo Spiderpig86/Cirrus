@@ -292,37 +292,37 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="input-control">
-                                    <input type="text" className="input-xsmall" placeholder="Extra small (0.65rem)" />
+                                    <input type="text" className="input-xsmall" placeholder="Extra small (0.75rem)" />
                                 </div>
                                 <div className="input-control">
-                                    <input type="text" className="input-small" placeholder="Small (0.75rem)" />
+                                    <input type="text" className="input-small" placeholder="Small (0.875rem)" />
                                 </div>
                                 <div className="input-control">
-                                    <input type="text" placeholder="Normal (0.85rem)" />
+                                    <input type="text" placeholder="Normal (1rem)" />
                                 </div>
                                 <div className="input-control">
-                                    <input type="text" className="input-large" placeholder="Large (1.5rem)" />
+                                    <input type="text" className="input-large" placeholder="Large (1.25rem)" />
                                 </div>
                                 <div className="input-control">
-                                    <input type="text" className="input-xlarge" placeholder="Extra large (2rem)" />
+                                    <input type="text" className="input-xlarge" placeholder="Extra large (1.5rem)" />
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
                                     code={`<div class="input-control">
-    <input type="text" class="input-xsmall" placeholder="Extra small (0.65rem)">
+    <input type="text" class="input-xsmall" placeholder="Extra small (0.75rem)">
 </div>
 <div class="input-control">
-    <input type="text" class="input-small" placeholder="Small (0.75rem)">
+    <input type="text" class="input-small" placeholder="Small (0.875rem)">
 </div>
 <div class="input-control">
-    <input type="text" placeholder="Normal (0.85rem)">
+    <input type="text" placeholder="Normal (1rem)">
 </div>
 <div class="input-control">
-    <input type="text" class="input-large" placeholder="Large (1.5rem)">
+    <input type="text" class="input-large" placeholder="Large (1.25rem)">
 </div>
 <div class="input-control">
-    <input type="text" class="input-xlarge" placeholder="Extra large (2rem)">
+    <input type="text" class="input-xlarge" placeholder="Extra large (1.5rem)">
 </div>`}
                                     language="htmlbars"
                                 />
