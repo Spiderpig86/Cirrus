@@ -9924,6 +9924,38 @@ a.tag:hover {
 .u-pull-right {
   float: right !important; }
 
+@media screen and (min-width: 640px) {
+  .u-pull-left-sm {
+    float: left !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-pull-right-sm {
+    float: right !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-pull-left-md {
+    float: left !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-pull-right-md {
+    float: right !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-pull-left-lg {
+    float: left !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-pull-right-lg {
+    float: right !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-pull-left-xl {
+    float: left !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-pull-right-xl {
+    float: right !important; } }
+
 .u-text-justify {
   text-align: justify !important; }
 
@@ -9935,6 +9967,70 @@ a.tag:hover {
 
 .u-text-center {
   text-align: center !important; }
+
+@media screen and (min-width: 640px) {
+  .u-text-justify-sm {
+    text-align: justify !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-text-left-sm {
+    text-align: left !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-text-right-sm {
+    text-align: right !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-text-center-sm {
+    text-align: center !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-text-justify-md {
+    text-align: justify !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-text-left-md {
+    text-align: left !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-text-right-md {
+    text-align: right !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-text-center-md {
+    text-align: center !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-text-justify-lg {
+    text-align: justify !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-text-left-lg {
+    text-align: left !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-text-right-lg {
+    text-align: right !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-text-center-lg {
+    text-align: center !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-text-justify-xl {
+    text-align: justify !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-text-left-xl {
+    text-align: left !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-text-right-xl {
+    text-align: right !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-text-center-xl {
+    text-align: center !important; } }
 
 .u-text-ellipsis {
   text-overflow: ellipsis;
@@ -10031,6 +10127,70 @@ a.tag:hover {
 .u-overflow-scroll {
   overflow: scroll !important; }
 
+@media screen and (min-width: 640px) {
+  .u-overflow-auto-sm {
+    overflow: auto !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-overflow-hidden-sm {
+    overflow: hidden !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-overflow-visible-sm {
+    overflow: visible !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-overflow-scroll-sm {
+    overflow: scroll !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-overflow-auto-md {
+    overflow: auto !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-overflow-hidden-md {
+    overflow: hidden !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-overflow-visible-md {
+    overflow: visible !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-overflow-scroll-md {
+    overflow: scroll !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-overflow-auto-lg {
+    overflow: auto !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-overflow-hidden-lg {
+    overflow: hidden !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-overflow-visible-lg {
+    overflow: visible !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-overflow-scroll-lg {
+    overflow: scroll !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-overflow-auto-xl {
+    overflow: auto !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-overflow-hidden-xl {
+    overflow: hidden !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-overflow-visible-xl {
+    overflow: visible !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-overflow-scroll-xl {
+    overflow: scroll !important; } }
+
 .u-overflow-x-auto {
   overflow-x: auto !important; }
 
@@ -10043,6 +10203,70 @@ a.tag:hover {
 .u-overflow-x-scroll {
   overflow-x: scroll !important; }
 
+@media screen and (min-width: 640px) {
+  .u-overflow-x-auto-sm {
+    overflow-x: auto !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-overflow-x-hidden-sm {
+    overflow-x: hidden !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-overflow-x-visible-sm {
+    overflow-x: visible !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-overflow-x-scroll-sm {
+    overflow-x: scroll !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-overflow-x-auto-md {
+    overflow-x: auto !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-overflow-x-hidden-md {
+    overflow-x: hidden !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-overflow-x-visible-md {
+    overflow-x: visible !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-overflow-x-scroll-md {
+    overflow-x: scroll !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-overflow-x-auto-lg {
+    overflow-x: auto !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-overflow-x-hidden-lg {
+    overflow-x: hidden !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-overflow-x-visible-lg {
+    overflow-x: visible !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-overflow-x-scroll-lg {
+    overflow-x: scroll !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-overflow-x-auto-xl {
+    overflow-x: auto !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-overflow-x-hidden-xl {
+    overflow-x: hidden !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-overflow-x-visible-xl {
+    overflow-x: visible !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-overflow-x-scroll-xl {
+    overflow-x: scroll !important; } }
+
 .u-overflow-y-auto {
   overflow-y: auto !important; }
 
@@ -10054,6 +10278,70 @@ a.tag:hover {
 
 .u-overflow-y-scroll {
   overflow-y: scroll !important; }
+
+@media screen and (min-width: 640px) {
+  .u-overflow-y-auto-sm {
+    overflow-y: auto !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-overflow-y-hidden-sm {
+    overflow-y: hidden !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-overflow-y-visible-sm {
+    overflow-y: visible !important; } }
+
+@media screen and (min-width: 640px) {
+  .u-overflow-y-scroll-sm {
+    overflow-y: scroll !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-overflow-y-auto-md {
+    overflow-y: auto !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-overflow-y-hidden-md {
+    overflow-y: hidden !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-overflow-y-visible-md {
+    overflow-y: visible !important; } }
+
+@media screen and (min-width: 768px) {
+  .u-overflow-y-scroll-md {
+    overflow-y: scroll !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-overflow-y-auto-lg {
+    overflow-y: auto !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-overflow-y-hidden-lg {
+    overflow-y: hidden !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-overflow-y-visible-lg {
+    overflow-y: visible !important; } }
+
+@media screen and (min-width: 1024px) {
+  .u-overflow-y-scroll-lg {
+    overflow-y: scroll !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-overflow-y-auto-xl {
+    overflow-y: auto !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-overflow-y-hidden-xl {
+    overflow-y: hidden !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-overflow-y-visible-xl {
+    overflow-y: visible !important; } }
+
+@media screen and (min-width: 1280px) {
+  .u-overflow-y-scroll-xl {
+    overflow-y: scroll !important; } }
 
 /*
   Functions

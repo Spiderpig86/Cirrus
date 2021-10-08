@@ -69,7 +69,6 @@
     margin-bottom: auto !important;
 }
 
-@debug get-viewport-flag('MARGIN_PADDING');
 @if get-viewport-flag('MARGIN_PADDING') == true {
     // TODO: Maybe in future versions of Sass, we can pass mixins as a parameter to another mixin. For now, we just have to write what we want it to generate
     @each $suffix, $limit in $breakpoint-pairs {
