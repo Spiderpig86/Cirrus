@@ -226,11 +226,11 @@ export const MarginPage: React.FC<any> = (props) => {
                         <p>
                             The margin classes mentioned here support viewport based application. All you need to do is
                             add a <code>-&lt;viewport&gt;</code> at the end of the class(es) you are using. For example,
-                            use <code>u-flex-row-md</code> to apply <code>u-flex-row</code> on medium screens and above.
+                            use <code>m-3-md</code> to apply <code>m-3</code> on medium screens and above.
                         </p>
 
                         <CodeBlock
-                            code={`<div class="u-flex u-flex-column u-flex-row-md">
+                            code={`<div class="mr-1 mr-5-sm mr-10-md">
     <!-- ... -->
 </div>`}
                             language="html"

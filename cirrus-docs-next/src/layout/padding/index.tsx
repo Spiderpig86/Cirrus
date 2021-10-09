@@ -10,6 +10,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { FormatString } from '../../../utils/string';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import Link from 'next/link';
 
 export const PaddingPage: React.FC<any> = (props) => {
     const sizes = [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32];
@@ -110,7 +111,9 @@ padding-bottom: (0) !important;`,
                                             <code className="text-blue-600 bg-blue-100">{row.class}</code>
                                         </td>
                                         <td>
-                                            <pre><code>{row.style}</code></pre>
+                                            <pre>
+                                                <code>{row.style}</code>
+                                            </pre>
                                         </td>
                                     </tr>
                                 ))}
@@ -211,6 +214,54 @@ padding-bottom: (0) !important;`,
 <div class="bg-indigo-200 u-inline-flex pb-4"><span class="bg-indigo-500 p-1 white">pb-4</span></div>`}
                             language="htmlbars"
                         />
+                    </div>
+                </section>
+
+                <section className="padtop" id="responsive">
+                    <div className="content">
+                        <Headline title="Responsive" link="#responsive" size="4" />
+                        <div className="divider"></div>
+                        <span className="tag-container group-tags">
+                            <div className="tag tag--dark">New</div>
+                            <div className="tag tag--info">0.6.3</div>
+                        </span>
+                        <p>
+                            The margin classes mentioned here support viewport based application. All you need to do is
+                            add a <code>-&lt;viewport&gt;</code> at the end of the class(es) you are using. For example,
+                            use <code>p-3-md</code> to apply <code>p-3</code> on medium screens and above.
+                        </p>
+
+                        <CodeBlock
+                            code={`<div class="px-1 px-10-sm px-20-md">
+    <!-- ... -->
+</div>`}
+                            language="html"
+                        />
+
+                        <p>Try out the example below yourself by resizing your browser window.</p>
+
+                        <div className="mb-1">
+                            <div className="bg-purple-100 p-2 u-round u-flex u-justify-center u-items-center">
+                                <p className="bg-purple-300 p-3 u-round py-1 px-1 px-10-sm px-20-md">
+                                    I grow with the window.
+                                </p>
+                            </div>
+                        </div>
+
+                        <CodeBlock
+                            code={`<div class="bg-purple-100 p-2 u-round u-flex u-justify-center u-items-center">
+    <p class="bg-purple-300 p-3 u-round py-1 px-1 px-10-sm px-20-md">I grow with the window.</p>
+</div>`}
+                            language="htmlbars"
+                        />
+
+                        <p>
+                            For more information, visit the{' '}
+                            <Link href="/fundamentals/viewports">
+                                <a className="u u-LR">Viewports</a>
+                            </Link>{' '}
+                            documentation.
+                        </p>
                     </div>
                 </section>
 
