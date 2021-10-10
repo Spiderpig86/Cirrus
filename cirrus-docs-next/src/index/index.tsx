@@ -11,6 +11,7 @@ import { Context } from '../../store/store';
 import { Preview } from './preview';
 
 import { DOC_EXAMPLES } from '../../constants/examples';
+import { VERSION, VERSION_NAME } from '../../constants';
 
 const Landing: React.FC<any> = () => {
     const { state, dispatch } = useContext(Context);
@@ -44,7 +45,7 @@ const Landing: React.FC<any> = () => {
                             </h5>
 
                             <p className="white">
-                                <b>Version 0.6.3</b> / Gamma V
+                                <b>Version {VERSION}</b> / {VERSION_NAME}
                             </p>
 
                             <div className="btn-group">

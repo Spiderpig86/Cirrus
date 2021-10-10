@@ -11,7 +11,7 @@ import { CodeBlock } from '../../layouts/components/codeblock';
 import { DefaultLayout } from '../../layouts/default';
 
 import { toc } from './toc';
-import { PAGE_TITLE_PREFIX } from '../../constants';
+import { PAGE_TITLE_PREFIX, VERSION } from '../../constants';
 
 export const WhyPage: React.FC<any> = (props) => {
     // TODO: Move to constants
@@ -77,7 +77,7 @@ export const WhyPage: React.FC<any> = (props) => {
 
                         <img
                             className="ml-1"
-                            src="https://img.shields.io/badge/cirrus-0.6.2-blue.svg?style=flat-square"
+                            src={`https://img.shields.io/badge/cirrus-${VERSION}-blue.svg?style=flat-square"
                             alt="Version"
                         />
                         <img

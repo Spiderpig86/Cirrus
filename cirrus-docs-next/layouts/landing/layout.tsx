@@ -5,6 +5,7 @@ import { Header } from '../components/header';
 import { Footer } from '../components/footer';
 import { Context } from '../../store/store';
 import { setPageAtTop } from '../../store/reducer';
+import { VERSION } from '../../constants';
 
 // import { setPageAtTop } from '../../store';
 
@@ -54,7 +55,7 @@ export const LandingLayout = ({ children, ...rest }: any) => {
                     <ul className="menu">
                         <li className="menu-item selected">
                             <a className="u-flex u-justify-content-center" href="!#">
-                                <b>0.6.3</b>
+                                <b>{VERSION}</b>
                             </a>
                         </li>
                         <li className="menu-item">
