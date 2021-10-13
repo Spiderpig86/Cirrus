@@ -77,7 +77,7 @@ export const WhyPage: React.FC<any> = (props) => {
 
                         <img
                             className="ml-1"
-                            src={`https://img.shields.io/badge/cirrus-${VERSION}-blue.svg?style=flat-square"
+                            src={`https://img.shields.io/badge/cirrus-${VERSION}-blue.svg?style=flat-square`}
                             alt="Version"
                         />
                         <img
@@ -165,9 +165,7 @@ export const WhyPage: React.FC<any> = (props) => {
                         </p>
 
                         <CodeBlock
-                            code={`@import '../node_modules/cirrus-ui/src/core/button.scss';
-
-.my-button {
+                            code={`.my-button {
     @extend .btn;
 }`}
                             language="scss"
@@ -410,9 +408,7 @@ export const WhyPage: React.FC<any> = (props) => {
                         <div className="row u-items-center">
                             <div className="col-lg-6">
                                 <div className="u-relative u-center">
-                                    <p className="u-absolute white font-bold u-center-alt lead">
-                                        Overlayed text.
-                                    </p>
+                                    <p className="u-absolute white font-bold u-center-alt lead">Overlayed text.</p>
                                     <img
                                         src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80"
                                         alt="cloud"
@@ -498,9 +494,7 @@ $tab-sizes: ('xsmall': 0.6rem, 'small': 0.75rem, 'large': 1.25rem, 'xlarge': 1.5
 
                         <div className="row u-items-center">
                             <div className="col-lg-4">
-                                <p className="lead">
-                                    Learn how to setup Cirrus.
-                                </p>
+                                <p className="lead">Learn how to setup Cirrus.</p>
                                 <Link href="/getting-started/setup">
                                     <button className="btn-info">
                                         Setup
