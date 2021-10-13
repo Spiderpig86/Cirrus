@@ -22,7 +22,7 @@ $avatar-sizes: (
   /* Draw text on image just like in Gmail */
   &::before {
     content: attr(data-text);
-    color: #fff;
+    color:currentColor;
     left: 50%;
     top: 50%;
     position: absolute;

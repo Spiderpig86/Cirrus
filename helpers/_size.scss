@@ -93,7 +93,6 @@ $breakpoint-pairs: (
         }
     }
 
-    @debug $generate-viewports;
     @if $generate-viewports == 'true' {
         @each $suffix, $limit in $breakpoint-pairs {
             @each $class in $classes {

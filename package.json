@@ -65,8 +65,8 @@
     "Opera >= 30"
   ],
   "dependencies": {
-    "node-sass": "^6.0.1",
-    "@snyk/protect": "1.707.0"
+    "@snyk/protect": "^1.707.0",
+    "node-sass": "^6.0.1"
   },
   "snyk": true
 }
