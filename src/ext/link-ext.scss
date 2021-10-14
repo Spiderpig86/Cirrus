@@ -14,7 +14,7 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         position: absolute;
-        height: 0.1rem;
+        height: 2px;
         width: 0;
         background: var(--cirrus-link-dark);
         bottom: -0.25em;
@@ -62,7 +62,7 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         position: absolute;
-        height: 0.1rem;
+        height: 2px;
         width: 0;
         background: var(--cirrus-link-dark);
     }
