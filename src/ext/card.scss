@@ -144,7 +144,7 @@
 
     .card-footer, .card__footer {
         position: relative;
-        font-size: 0.75rem;
+        font-size: $font-size-s;
         color: map-get($grays, '600');
     }
 
