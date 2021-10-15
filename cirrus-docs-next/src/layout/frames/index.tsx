@@ -48,7 +48,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                 <code>frame</code>
                                 <ul>
                                     <li>
-                                        <code>frame-header</code>
+                                        <code>frame__header</code>
                                         <ul>
                                             <li>
                                                 <code>frame__title</code>
@@ -71,7 +71,7 @@ export const FramesPage: React.FC<any> = (props) => {
                             <div className="col-lg-6">
                                 <div className="frame">
                                     <div
-                                        className="frame-header"
+                                        className="frame__header"
                                         style={{ background: '#eee', padding: '1rem', margin: '1rem' }}
                                     >
                                         <div className="frame__title u-text-center">Frame Title</div>
