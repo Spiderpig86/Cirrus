@@ -11,6 +11,7 @@ import { Store } from '../store/store';
 /* SCSS Imports */
 /* Next.js please add support for simple css rendering without having to use the tedious modules */
 /* Migrating from CRA is really a pain */
+import '../static/css/cirrus.min.css';
 import '../styles/app.scss';
 
 /* LAYOUT STYLES */
@@ -32,8 +33,6 @@ import '../src/fundamentals/viewports/index.scss';
 import '../src/grid/templates/index.scss';
 
 import '../src/layout/columns/index.scss';
-
-import '../static/css/cirrus.min.css';
 
 const App = ({ Component, pageProps }) => {
     library.add(fas);
