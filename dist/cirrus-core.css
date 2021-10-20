@@ -2067,9 +2067,18 @@ section {
   display: block; }
 
 .content {
-  max-width: 60em;
+  max-width: 48em;
   margin: 0 auto 1.5em;
-  width: 80%; }
+  width: 100%; }
+  @media screen and (min-width: 1024px) {
+    .content {
+      max-width: 64em; } }
+  @media screen and (min-width: 1280px) {
+    .content {
+      max-width: 80em; } }
+  @media screen and (min-width: 1536px) {
+    .content {
+      max-width: 96em; } }
 
 .fullscreen {
   top: 0;
