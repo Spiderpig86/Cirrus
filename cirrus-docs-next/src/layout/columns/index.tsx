@@ -40,8 +40,8 @@ export const ColumnsPage: React.FC<any> = (props) => {
                         </p>
 
                         <p>
-                            Also check out
-                            <Link href="/grid/template">
+                            Also check out{' '}
+                            <Link href="/grid/templates">
                                 <a className="u u-LR">Grid</a>
                             </Link>{' '}
                             for an alternate way to lay out elements on the page.
