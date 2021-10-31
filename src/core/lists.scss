@@ -181,7 +181,7 @@ ul {
         overflow: hidden;
         transition: all var(--animation-duration);
 
-        @include screen-below('sm') {
+        @include screen-below($sm) {
             height: 0;
             padding: 0 !important;
             position: relative;
@@ -307,7 +307,7 @@ ul {
     }
 }
 
-@include screen-below('sm') {
+@include screen-below($sm) {
     /* Hide the menu to the side by default */
     .tree-nav {
         height: 100%;

@@ -97,7 +97,7 @@
             padding: 1rem 2.5rem;
         }
 
-        @include screen-below('sm') {
+        @include screen-below($sm) {
             max-width: 90%;
         }
     }
@@ -167,7 +167,7 @@
     }
 }
 
-@include screen-below('sm') {
+@include screen-below($sm) {
     .modal-content {
         max-width: 90%;
     }

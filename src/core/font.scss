@@ -219,7 +219,7 @@ kbd {
 
 /* MOBILE */
 
-@include screen-below('xs') {
+@include screen-below($xs) {
     $base-header-size: 1rem;
     $header-size-diff: 0.25rem;
     $base-headline-size: 2.5rem;

@@ -12,15 +12,15 @@ section {
     margin: 0 auto 1.5em;
     width: 100%;
 
-    @include screen-above('md') {
+    @include screen-above($md) {
         max-width: 64em;
     }
 
-    @include screen-above('lg') {
+    @include screen-above($lg) {
         max-width: 80em;
     }
 
-    @include screen-above('xl') {
+    @include screen-above($xl) {
         max-width: 96em;
     }
 }
@@ -203,7 +203,7 @@ section {
     }
 
     @for $i from 1 through $grid-columns {
-        @include screen-above('xs') {
+        @include screen-above($xs) {
             .col-sm-#{$i} {
                 width: percentage($number: $grid-width * $i);
             }
@@ -211,7 +211,7 @@ section {
     }
 
     @for $i from 1 through $grid-columns {
-        @include screen-above('sm') {
+        @include screen-above($sm) {
             .col-md-#{$i},
             .col-#{$i} {
                 width: percentage($number: $grid-width * $i);
@@ -220,7 +220,7 @@ section {
     }
 
     @for $i from 1 through $grid-columns {
-        @include screen-above('md') {
+        @include screen-above($md) {
             .col-lg-#{$i} {
                 width: percentage($number: $grid-width * $i);
             }
@@ -228,7 +228,7 @@ section {
     }
 
     @for $i from 1 through $grid-columns {
-        @include screen-above('lg') {
+        @include screen-above($lg) {
             .col-xl-#{$i} {
                 width: percentage($number: $grid-width * $i);
             }
@@ -320,14 +320,14 @@ section {
 .level,
 .level-left,
 .level-right {
-    @include screen-above('sm') {
+    @include screen-above($sm) {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
     }
 }
 
-@include screen-below('sm') {
+@include screen-below($sm) {
     .level-right {
         margin-left: 1rem;
     }
@@ -343,7 +343,7 @@ section {
 }
 
 /* MOBILE */
-@include screen-below('sm') {
+@include screen-below($sm) {
     .container {
         width: 100%;
     }

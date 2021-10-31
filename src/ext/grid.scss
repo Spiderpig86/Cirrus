@@ -83,7 +83,7 @@
         grid-row-end: auto;
     }
 
-    @include screen-below('sm') {
+    @include screen-below($sm) {
         --grid-template-column: repeat(1, minmax(0, 1fr));
     }
 }

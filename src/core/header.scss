@@ -287,7 +287,7 @@
     opacity: 1;
 }
 
-@include screen-above('sm') {
+@include screen-above($sm) {
     .header {
         -webkit-box-align: stretch; /* Box Align and align items to stretch to make nav-items fill up parent height */
         align-items: stretch;
@@ -385,7 +385,7 @@
     }
 }
 
-@include screen-below('sm') {
+@include screen-below($sm) {
     /* Add scrolling support in header */
     .header {
         flex-direction: column;
