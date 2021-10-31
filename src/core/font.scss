@@ -147,13 +147,9 @@ mark,
     color: #fff !important;
 }
 
-.faded {
-    opacity: 0.75;
-}
-
-// Deprecating 0.6.2, use <i> or <em> instead
-// .font-italic {
-//     font-style: italic;
+// Deprecated 0.6.5, use u-opacity-x
+// .faded {
+//     opacity: 0.75;
 // }
 
 /* Font Awesome */

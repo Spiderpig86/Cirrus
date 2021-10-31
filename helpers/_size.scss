@@ -106,3 +106,25 @@ $breakpoint-pairs: (
         }
     }
 }
+
+/* Variant of mixin that takes in mapping of class name to value */
+@mixin generate-classes-for-viewport-with-map($class-value-pairs, $property, $prefix: '-', $generate-viewports: 'true') {
+
+    @each $class, $value in $class-value-pairs {
+        .u#{$prefix}#{$class} {
+            #{$property}: $value !important;
+        }
+    }
+
+    @if $generate-viewports == 'true' {
+        @each $suffix, $limit in $breakpoint-pairs {
+            @each $class, $value in $class-value-pairs {
+                @include screen-above($limit) {
+                    .u#{$prefix}#{$class}-#{$suffix} {
+                        #{$property}: $value !important;
+                    }
+                }
+            }
+        }
+    }
+}

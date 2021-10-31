@@ -34,6 +34,7 @@
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 /*
@@ -52,6 +53,7 @@
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /*
   Functions
 */
@@ -71,6 +73,7 @@
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 /* BUTTONS */
@@ -420,6 +423,7 @@
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 /* CODE */
@@ -491,6 +495,7 @@ pre > code {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -635,6 +640,7 @@ fieldset {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /*
   Functions
 */
@@ -654,6 +660,7 @@ fieldset {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
@@ -829,9 +836,6 @@ mark,
 .white {
   color: #fff !important; }
 
-.faded {
-  opacity: 0.75; }
-
 /* Font Awesome */
 .icon {
   /* Usually used in spans */
@@ -930,6 +934,7 @@ kbd {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 /* FOOTER */
@@ -996,6 +1001,7 @@ kbd {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 /*
@@ -1017,6 +1023,7 @@ kbd {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 /*
@@ -1560,6 +1567,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 /* Separate CSS file, but same part as Layout */
@@ -1610,6 +1618,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /*
   Functions
 */
@@ -1629,6 +1638,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 /* These styles can also be used on menus in the body */
@@ -2052,6 +2062,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 /* Spacing */
@@ -2061,6 +2072,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* HEADER */
 /* This works well with panel */
 section {
@@ -2621,6 +2633,7 @@ a button,
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 /* Spacing */
@@ -2630,6 +2643,7 @@ a button,
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* LISTS */
 ul,
 ol {
@@ -3006,6 +3020,7 @@ video.video-fullscreen {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /*
   Functions
 */
@@ -6301,6 +6316,7 @@ video.video-fullscreen {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
 /* TABLE */
@@ -6403,5 +6419,6 @@ video.video-fullscreen {
 /* Tab Sizes */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* Color scheme for Cirrus */
 /* v2 Colors */
