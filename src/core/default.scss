@@ -24,6 +24,8 @@
     --cirrus-success-rgb: #{hex-to-rgb($cirrus-success)};
     --cirrus-warning: #{$cirrus-warning};
     --cirrus-danger: #{$cirrus-danger};
+    --cirrus-black: #{$cirrus-black};
+    --cirrus-white: #{$cirrus-white};
 
     --cirrus-light-hover: #{darken($cirrus-light, 10%)};
     --cirrus-dark-hover: #{lighten($cirrus-dark, 10%)};

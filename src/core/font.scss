@@ -143,9 +143,9 @@ mark,
     direction: rtl;
 }
 
-.white {
-    color: #fff !important;
-}
+// .white { Deprecated 0.6.5, use text-white instead
+//     color: #fff !important;
+// }
 
 // Deprecated 0.6.5, use u-opacity-x
 // .faded {

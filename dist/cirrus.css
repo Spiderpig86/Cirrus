@@ -26,12 +26,12 @@
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 :root {
   /* v1 Colors */
   --cirrus-fg: #374054;
-  --cirrus-bg: #fff;
+  --cirrus-bg: #ffffff;
   --cirrus-primary: #f03d4d;
   --cirrus-primary-rgb: 240, 61, 77;
   --cirrus-primary-light: #ffdadd;
@@ -49,6 +49,8 @@
   --cirrus-success-rgb: 13, 209, 87;
   --cirrus-warning: #fab633;
   --cirrus-danger: #fb4143;
+  --cirrus-black: #000000;
+  --cirrus-white: #ffffff;
   --cirrus-light-hover: #d0e0ef;
   --cirrus-dark-hover: #505050;
   --cirrus-info-hover: #1062f9;
@@ -95,7 +97,9 @@ body {
   /* Globally adjust line height */
   font-size: 1rem;
   font-weight: 400;
-  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+ "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+ "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: 0.01rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
   color: var(--cirrus-fg); }
@@ -196,7 +200,7 @@ fieldset {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /*
     Global Mixins
@@ -237,7 +241,7 @@ fieldset {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* BUTTONS */
 /* Button styling */
@@ -588,7 +592,7 @@ fieldset {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* CODE */
 code {
@@ -668,7 +672,7 @@ pre > code {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
@@ -840,9 +844,6 @@ mark,
 .rtl {
   direction: rtl; }
 
-.white {
-  color: #fff !important; }
-
 /* Font Awesome */
 .icon {
   /* Usually used in spans */
@@ -943,7 +944,7 @@ kbd {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* FOOTER */
 .footer {
@@ -1011,7 +1012,7 @@ kbd {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /*
   Functions
@@ -1034,7 +1035,7 @@ kbd {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /*
     Global Mixins
@@ -1579,7 +1580,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* Separate CSS file, but same part as Layout */
 /* The base container that is similar in structure to a card but more flexible */
@@ -1652,7 +1653,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* These styles can also be used on menus in the body */
 /* HEADER */
@@ -2077,7 +2078,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* Spacing */
 /* Breakpoints */
@@ -2650,7 +2651,7 @@ a button,
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* Spacing */
 /* Breakpoints */
@@ -6336,7 +6337,7 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* TABLE */
 .table {
@@ -6440,7 +6441,7 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 
 /*
@@ -6464,7 +6465,7 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* ANIMATIONS */
 /* Keyframes */
@@ -6724,7 +6725,7 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /*
     Group selectors that share common styling.
@@ -6870,7 +6871,7 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /*
   Functions
@@ -7684,7 +7685,7 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* The base of the modal dialog, which is an overlay of the webpage */
 .modal {
@@ -7843,7 +7844,7 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /*
     Group selectors that share common styling.
@@ -7941,6 +7942,20 @@ video.video-fullscreen {
 .text-info {
   border-color: var(--cirrus-info) !important;
   color: var(--cirrus-info) !important; }
+
+.bg-black {
+  background-color: var(--cirrus-black) !important; }
+
+.text-black {
+  border-color: var(--cirrus-black) !important;
+  color: var(--cirrus-black) !important; }
+
+.bg-white {
+  background-color: var(--cirrus-white) !important; }
+
+.text-white {
+  border-color: var(--cirrus-white) !important;
+  color: var(--cirrus-white) !important; }
 
 /* v2 */
 .bg-pink-100 {
@@ -8604,7 +8619,7 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* PAGINATION */
 /* Parent contianer for page navigation */
@@ -8698,7 +8713,7 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* PLACEHOLDER */
 /* Designed to be embedded in any parent container as placeholder when content is absent. */
@@ -8743,7 +8758,7 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* Spacing */
 /* Breakpoints */
@@ -8908,7 +8923,7 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* TAGS */
 .tag {
@@ -9171,7 +9186,7 @@ a.tag:hover {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 .toast {
   display: block;
@@ -9252,7 +9267,7 @@ a.tag:hover {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
-/* Color scheme for Cirrus */
+/* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* TOOLTIPS */
 .tooltip {

@@ -1,10 +1,10 @@
 @import '../../helpers/_functions';
 @import '../../helpers/_size';
 
-/* Color scheme for Cirrus */
-$cirrus-fg: #374054;
-$cirrus-bg: #fff;
+/* v1 Color scheme for Cirrus */
 
+$cirrus-black: #000000;
+$cirrus-white: #ffffff;
 $cirrus-primary: #f03d4d;
 $cirrus-primary-light: #ffdadd;
 $cirrus-accent-hover: #d62939;
@@ -28,6 +28,9 @@ $cirrus-link-hover: #f8f7ff;
 $cirrus-success-hover: #00b147;
 $cirrus-warning-hover: #f9a90e;
 $cirrus-danger-hover: #f1393c;
+
+$cirrus-fg: #374054;
+$cirrus-bg: $cirrus-white;
 
 $control-themes: (
     'primary': $cirrus-primary,
@@ -178,4 +181,19 @@ $grays: (
     '700': #495057,
     '800': #343a40,
     '900': #212529,
+);
+
+$v1Palettes: primary, success, warning, danger, light, dark, link, link-dark, info, black, white;
+
+$v2Palettes: (
+    'pink': $pinks,
+    'red': $reds,
+    'orange': $oranges,
+    'yellow': $yellows,
+    'green': $greens,
+    'teal': $teals,
+    'blue': $blues,
+    'indigo': $indigos,
+    'purple': $purples,
+    'gray': $grays,
 );

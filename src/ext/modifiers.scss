@@ -44,34 +44,21 @@
 
 /* GLOBAL THEME SELECTORS */
 /* v1 */
-$themes: primary, success, warning, danger, light, dark, link, link-dark, info;
 
-@each $theme in $themes {
-    .bg-#{$theme} {
-        background-color: var(--cirrus-#{$theme}) !important;
+@each $palette in $v1Palettes {
+    .bg-#{$palette} {
+        background-color: var(--cirrus-#{$palette}) !important;
     }
 
-    .text-#{$theme} {
-        border-color: var(--cirrus-#{$theme}) !important;
-        color: var(--cirrus-#{$theme}) !important;
+    .text-#{$palette} {
+        border-color: var(--cirrus-#{$palette}) !important;
+        color: var(--cirrus-#{$palette}) !important;
     }
 }
 
 /* v2 */
-$palettes: (
-    'pink': $pinks,
-    'red': $reds,
-    'orange': $oranges,
-    'yellow': $yellows,
-    'green': $greens,
-    'teal': $teals,
-    'blue': $blues,
-    'indigo': $indigos,
-    'purple': $purples,
-    'gray': $grays,
-);
 
-@each $name, $palette in $palettes {
+@each $name, $palette in $v2Palettes {
     @each $level, $color in $palette {
         .bg-#{$name}-#{$level} {
             background-color: #{$color} !important;
