@@ -1,4 +1,4 @@
-/* BASE STYLING FOR CIRRUS */
+/* BASE STYLING + RESET FOR CIRRUS */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito+Sans:400,700");
 @import '../../internal/_theme.scss';
 
@@ -86,7 +86,6 @@ body {
         "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
         "Segoe UI Emoji", "Segoe UI Symbol";
     letter-spacing: 0.01rem;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
     color: var(--cirrus-fg);
 }
 
