@@ -1,6 +1,6 @@
 @import '../../helpers/_selectors';
 @import '../../helpers/_size.scss';
-@import './theme.scss';
+@import '../../helpers/_theme.scss';
 
 @mixin mobile-dropdown-menu-show {
     border-radius: 0;

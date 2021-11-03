@@ -6417,27 +6417,3 @@ video.video-fullscreen {
   .table.borderless th,
   .table.borderless td {
     border: none; }
-
-/*
-  Functions
-*/
-/*
-    Converts a given hex value to RGB.
-*/
-/*
-    Generates delimited class name prefix.
-*/
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
-*/
-/* Spacing */
-/* Breakpoints */
-/* Fonts */
-/* Grid Count (Columns + Grid) */
-/* Grid Percents */
-/* Tab Sizes */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-/* Variant of mixin that takes in mapping of class name to value */
-/* v1 Color scheme for Cirrus */
-/* v2 Colors */
