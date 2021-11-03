@@ -1,5 +1,5 @@
-@import '../../helpers/_theme.scss';
-@import '../../helpers/_selectors';
+@import '../../internal/_theme.scss';
+@import '../../internal/_selectors';
 
 /* A collection of modifiers that extend control styling */
 #{$button-selectors} {

@@ -1,5 +1,5 @@
-@import '../../helpers/_size';
-@import '../../helpers/_functions';
+@import '../../internal/_size';
+@import '../../internal/_functions';
 
 @each $size in $spacing-system {
     /* Margin */
