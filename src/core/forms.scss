@@ -174,13 +174,7 @@ input[type='text'].input-focused,
 
 select {
     @include cirrus-input();
-    // $select-sizes: ( Deprecated 0.6.2
-    //     'xsmall': 0.65rem 0.9rem,
-    //     'small': 0.75rem 1rem,
-    //     'large': 0.95rem 1.2rem,
-    //     'xlarge': 1.05rem 1.3rem,
-    // );
-
+    
     background-color: #fff;
     border: 1px solid #ddd;
 
@@ -194,13 +188,6 @@ select {
             no-repeat right 0.85rem center/.5rem 0.6rem no-repeat;
         -webkit-appearance: none;
     }
-
-    /* Select sizes */
-    // @each $size, $padding in $select-sizes {
-    //     &.input-#{$size} {
-    //         padding: $padding;
-    //     }
-    // }
 }
 
 input:not([class*='btn-']):disabled,
@@ -321,8 +308,6 @@ label {
 
     /* Fixes the text width being cut off */
     .form-group-btn {
-        -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
         flex: 1 0 auto;
         margin-bottom: 0;
         @include form-group-border-radius-override();

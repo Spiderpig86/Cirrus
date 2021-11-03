@@ -63,8 +63,6 @@
     /* Prevent setting borders from increasing the size of an elrement */
     box-sizing: border-box;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: transparent;
 }
 

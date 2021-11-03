@@ -6,31 +6,22 @@
     border-radius: 3px;
     box-shadow: 0 0.2rem 1.25rem 0 rgba(27, 30, 36, 0.07);
     display: flex;
-    display: -ms-flexbox;
     flex-direction: column;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
 
     /* For the frame header and footer, use flex display */
     .frame__header,
     .frame__footer {
         flex: 0 0 auto;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
         padding: 1rem;
     }
 
     /* The frame navbar can be used with level or header classes to create a navigation menu */
     .frame__nav {
         flex: 0 0 auto;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
     }
 
     .frame__body {
         flex: 1 1 auto;
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
         overflow-y: auto; /* Show the scrollbar when needed */
         padding: 0 1rem;
     }

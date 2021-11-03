@@ -16,20 +16,12 @@
 
 /* These styles can also be used on menus in the body */
 @mixin nav-bar-position($position) {
-    -webkit-box-align: stretch;
-    -ms-grid-row-align: stretch;
     align-items: stretch;
-    -ms-flex-preferred-size: 0;
     flex-basis: 0;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
-    -ms-flex-negative: 0;
     flex-shrink: 0;
     display: flex;
-
-    -webkit-box-pack: #{$position};
-    -ms-flex-pack: #{$position};
+    
     justify-content: flex-#{$position};
     white-space: nowrap;
 }

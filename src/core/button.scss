@@ -79,7 +79,6 @@
         transition: calc(var(--animation-duration) / 2) ease;
 
         &:active {
-            -webkit-transform: scale(0.95);
             transform: scale(0.95);
             transition: calc(var(--animation-duration) / 2) ease;
         }
@@ -115,9 +114,7 @@
             left: 50%;
             position: absolute;
             top: 50%;
-            -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
             transform: translateX(-50%) translateY(-50%) rotate(45deg);
-            -webkit-transform-origin: center center;
             transform-origin: center center;
             height: $height;
             width: $width;
@@ -391,14 +388,9 @@
 /* Will group buttons with components in a single component */
 
 .btn-group {
-    display: -webkit-inline-box;
     display: inline-flex;
-    display: -ms-inline-flexbox;
-    display: -webkit-inline-flex;
 
     #{$button-selectors} {
-        -ms-flex: 1 0 auto;
-        -webkit-box-flex: 1;
         flex: 1 0 auto;
         margin: 0;
 
@@ -426,13 +418,9 @@
 
     &.btn-group-fill {
         /* Makes the button group fill the width and proportion the buttons to fill the space */
-        display: -webkit-box;
         display: flex;
-        display: -ms-flexbox;
 
         #{$button-selectors} {
-            -ms-flex: 1 0;
-            -webkit-box-flex: 1;
             flex: 1 0; /* Make the buttons fill the available width and proportion themselves */
         }
 

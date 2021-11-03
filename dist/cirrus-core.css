@@ -153,7 +153,6 @@
   transition: calc(var(--animation-duration) / 2) ease;
 }
 .btn.btn-animated:active, button.btn-animated:active, [type=submit].btn-animated:active, [type=reset].btn-animated:active, [type=button].btn-animated:active {
-  -webkit-transform: scale(0.95);
   transform: scale(0.95);
   transition: calc(var(--animation-duration) / 2) ease;
 }
@@ -185,9 +184,7 @@
   left: 50%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
-  -webkit-transform-origin: center center;
   transform-origin: center center;
   height: 2px;
   width: 50%;
@@ -199,9 +196,7 @@
   left: 50%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
-  -webkit-transform-origin: center center;
   transform-origin: center center;
   height: 50%;
   width: 2px;
@@ -427,14 +422,9 @@
 /* BUTTON GROUPS */
 /* Will group buttons with components in a single component */
 .btn-group {
-  display: -webkit-inline-box;
   display: inline-flex;
-  display: -ms-inline-flexbox;
-  display: -webkit-inline-flex;
 }
 .btn-group .btn, .btn-group button, .btn-group [type=submit], .btn-group [type=reset], .btn-group [type=button] {
-  -ms-flex: 1 0 auto;
-  -webkit-box-flex: 1;
   flex: 1 0 auto;
   margin: 0;
 }
@@ -460,13 +450,9 @@
 }
 .btn-group.btn-group-fill {
   /* Makes the button group fill the width and proportion the buttons to fill the space */
-  display: -webkit-box;
   display: flex;
-  display: -ms-flexbox;
 }
 .btn-group.btn-group-fill .btn, .btn-group.btn-group-fill button, .btn-group.btn-group-fill [type=submit], .btn-group.btn-group-fill [type=reset], .btn-group.btn-group-fill [type=button] {
-  -ms-flex: 1 0;
-  -webkit-box-flex: 1;
   flex: 1 0;
   /* Make the buttons fill the available width and proportion themselves */
 }
@@ -645,8 +631,6 @@ pre > code[data-lang]:not([data-lang=""]) {
   /* Prevent setting borders from increasing the size of an elrement */
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -1534,7 +1518,6 @@ select {
   background-color: #fff;
   border: 1px solid #ddd;
   /* Fixes for Safari and other browsers for consistent UI */
-  /* Select sizes */
 }
 select.input-xsmall,
 select select.input-xsmall {
@@ -1690,8 +1673,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
   /* Keeps inputs in form group above other components */
 }
 .form-group .form-group-btn {
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   margin-bottom: 0;
   /* Style the front controls */
@@ -1823,29 +1804,20 @@ label:last-child:not(:first-child):not(.form-group-label) {
   border-radius: 3px;
   box-shadow: 0 0.2rem 1.25rem 0 rgba(27, 30, 36, 0.07);
   display: flex;
-  display: -ms-flexbox;
   flex-direction: column;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   /* For the frame header and footer, use flex display */
   /* The frame navbar can be used with level or header classes to create a navigation menu */
 }
 .frame .frame__header,
 .frame .frame__footer {
   flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
   padding: 1rem;
 }
 .frame .frame__nav {
   flex: 0 0 auto;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
 }
 .frame .frame__body {
   flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   overflow-y: auto;
   /* Show the scrollbar when needed */
   padding: 0 1rem;
@@ -2165,19 +2137,11 @@ label:last-child:not(:first-child):not(.form-group-label) {
     /* Only visible for showing dropdown menus, hidden for mobile */
   }
   .header .nav-left {
-    -webkit-box-align: stretch;
-    -ms-grid-row-align: stretch;
     align-items: stretch;
-    -ms-flex-preferred-size: 0;
     flex-basis: 0;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
-    -ms-flex-negative: 0;
     flex-shrink: 0;
     display: flex;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
     white-space: nowrap;
     /* Align dropdown menu to the left side of the parent nav-item for header-left */
@@ -2187,19 +2151,11 @@ label:last-child:not(:first-child):not(.form-group-label) {
     right: auto;
   }
   .header .nav-right {
-    -webkit-box-align: stretch;
-    -ms-grid-row-align: stretch;
     align-items: stretch;
-    -ms-flex-preferred-size: 0;
     flex-basis: 0;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
-    -ms-flex-negative: 0;
     flex-shrink: 0;
     display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
     white-space: nowrap;
     /* Align dropdown menu to the right side of the parent nav-item for header-right */
