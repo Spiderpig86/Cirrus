@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /* Spacing */
 $spacing-system: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32;
 $space-size: 0.5rem;
@@ -29,7 +31,7 @@ $font-sizes: (
 $grid-columns: 12;
 
 /* Grid Percents */
-$grid-width: 1 / $grid-columns;
+$grid-width: math.div(1, $grid-columns);
 
 /* Tab Sizes */
 $tab-sizes: (

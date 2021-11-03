@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const prop = require('./package.json');
 const minify = require('gulp-clean-css');
 const sass = require('gulp-sass');
+sass.compiler = require('sass'); // Use Dart Sass
 const $ = require('gulp-load-plugins')();
 const head =
     '/*\r\n* Cirrus ' +

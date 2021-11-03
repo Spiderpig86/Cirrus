@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import '../../internal/_theme.scss';
 @import '../../internal/_size';
 /* HEADER */
@@ -292,11 +294,11 @@ section {
 /* Width/Height CSS */
 @for $value from 1 through 10 {
     .w-#{$value * 10} {
-        width: percentage($value / 10);
+        width: percentage(math.div($value, 10));
     }
 
     .h-#{$value * 10} {
-        height: percentage($value / 10);
+        height: percentage(math.div($value, 10));
     }
 }
 
