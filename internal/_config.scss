@@ -16,6 +16,30 @@ $default-config: (
         $xl: (3rem, 6.4rem)
     ),
 
+    // Button sizes
+    button-sizes: (
+        $xs: (
+            padding: 0 0.5rem,
+            font-size: 50%,
+        ),
+        $sm: (
+            padding: 0.25rem 1rem,
+            font-size: 70%,
+        ),
+        $md: (
+            padding: 0.5rem 1.5rem,
+            font-size: 90%,
+        ),
+        $lg: (
+            padding: 0.75rem 2rem,
+            font-size: 110%,
+        ),
+        $xl: (
+            padding: 1rem 2.5rem,
+            font-size: 130%,
+        ),
+    ),
+
     // Form label sizes
     form-label-sizes: (
         $xs: $font-size-xs,
@@ -30,4 +54,5 @@ $default-config: (
 // ==================================================
 
 $avatar-sizes: map.get($default-config, avatar-sizes);
+$button-sizes: map.get($default-config, button-sizes);
 $font-label-sizes: map.get($default-config, form-label-sizes);

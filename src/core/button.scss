@@ -3,6 +3,7 @@
 @import '../../internal/_selectors.scss';
 @import '../../internal/_size.scss';
 @import '../../internal/_theme.scss';
+@import '../../internal/_config.scss';
 
 /* BUTTONS */
 
@@ -291,36 +292,10 @@
         }
     }
 
-    /* Extra small button */
-    &.btn-xsmall {
-        padding: 0 0.5rem;
-        font-size: 50%;
-    }
-
-    /* Small button */
-    &.btn-small {
-        padding: 0.25rem 1rem;
-        font-size: 70%;
-    }
-
-    /* Big button */
-    &.btn-large {
-        padding: 0.75rem 2rem;
-        font-size: 90%;
-    }
-
-    &.btn-xlarge {
-        padding: 1rem 2.5rem;
-        font-size: 110%;
-    }
-
-    /* STATES */
-    &.btn-success {
-        @include input-success();
-    }
-
-    &.btn-error {
-        @include input-error();
+    @each $size, $property-map in $button-sizes {
+        &.btn--#{$size} {
+            @include explode-properties($property-map);
+        }
     }
 
     /* GLYPHS */

@@ -42,6 +42,16 @@
     Global Mixins
 */
 /*
+    Mixin that returns a property map as a series of CSS class properties.
+
+    E.g. $xs: (color: #fff, opacity: 0.5), $sm... =>
+
+    <class>--xs {
+        color: #fff;
+        opacity: 0.5;
+    }
+*/
+/*
     Bring to front on focus.
 */
 /*
@@ -79,6 +89,15 @@
 /* Variant of mixin that takes in mapping of class name to value */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /* BUTTONS */
 /* Button styling */
 /* Un-themed */
@@ -112,10 +131,6 @@
   /* Close Button */
   /* BUTTON STYLES */
   /* Regular */
-  /* Extra small button */
-  /* Small button */
-  /* Big button */
-  /* STATES */
   /* GLYPHS */
   /* Alternatives to pad-left and pad-right */
 }
@@ -341,33 +356,25 @@
 .btn.btn-danger.outline:hover, button.btn-danger.outline:hover, [type=submit].btn-danger.outline:hover, [type=reset].btn-danger.outline:hover, [type=button].btn-danger.outline:hover {
   --btn-color: var(--cirrus-danger);
 }
-.btn.btn-xsmall, button.btn-xsmall, [type=submit].btn-xsmall, [type=reset].btn-xsmall, [type=button].btn-xsmall {
+.btn.btn--xs, button.btn--xs, [type=submit].btn--xs, [type=reset].btn--xs, [type=button].btn--xs {
   padding: 0 0.5rem;
   font-size: 50%;
 }
-.btn.btn-small, button.btn-small, [type=submit].btn-small, [type=reset].btn-small, [type=button].btn-small {
+.btn.btn--sm, button.btn--sm, [type=submit].btn--sm, [type=reset].btn--sm, [type=button].btn--sm {
   padding: 0.25rem 1rem;
   font-size: 70%;
 }
-.btn.btn-large, button.btn-large, [type=submit].btn-large, [type=reset].btn-large, [type=button].btn-large {
-  padding: 0.75rem 2rem;
+.btn.btn--md, button.btn--md, [type=submit].btn--md, [type=reset].btn--md, [type=button].btn--md {
+  padding: 0.5rem 1.5rem;
   font-size: 90%;
 }
-.btn.btn-xlarge, button.btn-xlarge, [type=submit].btn-xlarge, [type=reset].btn-xlarge, [type=button].btn-xlarge {
-  padding: 1rem 2.5rem;
+.btn.btn--lg, button.btn--lg, [type=submit].btn--lg, [type=reset].btn--lg, [type=button].btn--lg {
+  padding: 0.75rem 2rem;
   font-size: 110%;
 }
-.btn.btn-success, button.btn-success, [type=submit].btn-success, [type=reset].btn-success, [type=button].btn-success {
-  border-color: var(--cirrus-success);
-}
-.btn.btn-success:focus, button.btn-success:focus, [type=submit].btn-success:focus, [type=reset].btn-success:focus, [type=button].btn-success:focus {
-  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-}
-.btn.btn-error, button.btn-error, [type=submit].btn-error, [type=reset].btn-error, [type=button].btn-error {
-  border-color: var(--cirrus-danger);
-}
-.btn.btn-error:focus, button.btn-error:focus, [type=submit].btn-error:focus, [type=reset].btn-error:focus, [type=button].btn-error:focus {
-  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+.btn.btn--xl, button.btn--xl, [type=submit].btn--xl, [type=reset].btn--xl, [type=button].btn--xl {
+  padding: 1rem 2.5rem;
+  font-size: 130%;
 }
 .btn .fa-wrapper.pad-right, button .fa-wrapper.pad-right, [type=submit] .fa-wrapper.pad-right, [type=reset] .fa-wrapper.pad-right, [type=button] .fa-wrapper.pad-right {
   margin-right: 0.4rem;
@@ -1206,6 +1213,16 @@ blockquote {
 /* v2 Colors */
 /*
     Global Mixins
+*/
+/*
+    Mixin that returns a property map as a series of CSS class properties.
+
+    E.g. $xs: (color: #fff, opacity: 0.5), $sm... =>
+
+    <class>--xs {
+        color: #fff;
+        opacity: 0.5;
+    }
 */
 /*
     Bring to front on focus.
