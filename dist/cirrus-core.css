@@ -1172,6 +1172,15 @@ blockquote {
 /* Variant of mixin that takes in mapping of class name to value */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Tab Sizes */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
 /*
   Functions
 */
@@ -1726,19 +1735,17 @@ label:last-child:not(:first-child):not(.form-group-label) {
   margin-left: -1px;
   z-index: 0;
 }
-.form-group .form-group-label.label-xsmall {
-  font-size: 0.55rem;
-  padding: 0.5rem 0.9rem;
-}
-.form-group .form-group-label.label-small {
+.form-group .form-group-label.label--xs {
   font-size: 0.75rem;
-  padding: 0.55rem 1rem;
 }
-.form-group .form-group-label.label-large {
+.form-group .form-group-label.label--sm {
+  font-size: 0.875rem;
+}
+.form-group .form-group-label.label--lg {
+  font-size: 1.25rem;
+}
+.form-group .form-group-label.label--xl {
   font-size: 1.5rem;
-}
-.form-group .form-group-label.label-xlarge {
-  font-size: 2rem;
 }
 .form-group .form-group-input {
   /* Style the front controls */

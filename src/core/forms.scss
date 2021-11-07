@@ -1,4 +1,5 @@
 @import '../../internal/_theme.scss';
+@import '../../internal/_config.scss';
 @import '../../internal/_mixins';
 
 /* FORMS */
@@ -325,22 +326,10 @@ label {
         user-select: none;
         @include form-group-border-radius-override();
 
-        &.label-xsmall {
-            font-size: 0.55rem;
-            padding: 0.5rem 0.9rem;
-        }
-
-        &.label-small {
-            font-size: 0.75rem;
-            padding: 0.55rem 1rem;
-        }
-
-        &.label-large {
-            font-size: 1.5rem;
-        }
-
-        &.label-xlarge {
-            font-size: 2rem;
+        @each $size, $font-size in $font-label-sizes {
+            &.label--#{$size} {
+                font-size: $font-size;
+            }
         }
     }
 
