@@ -1,5 +1,6 @@
 @import '../../internal/_size';
 @import '../../internal/_config';
+@import '../../internal/_mixins';
 
 /* Avatar */
 
@@ -25,11 +26,9 @@
     transform: translate(-50%, -50%);
   }
 
-  @each $class, $values in $avatar-sizes {
-    &.avatar--#{$class} {
-      font-size: nth($list: $values, $n: 1);
-      width: nth($list: $values, $n: 2);
-      height: nth($list: $values, $n: 2);
+  @each $size, $property-map in $avatar-sizes {
+    &.avatar--#{$size} {
+      @include explode-properties($property-map);
     }
   }
   

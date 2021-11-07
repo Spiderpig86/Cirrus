@@ -10,10 +10,10 @@ $default-config: (
     
     // Avatar sizes
     avatar-sizes: (
-        $xs: (0.8rem, 1.6rem),
-        $sm: (1rem, 2.4rem),
-        $lg: (2rem, 4.8rem),
-        $xl: (3rem, 6.4rem)
+        $xs: (font-size: 0.8rem, width: 1.6rem, height: 1.6rem),
+        $sm: (font-size: 1rem, width: 2.4rem, height: 2.4rem),
+        $lg: (font-size: 2rem, width: 4.8rem, height: 4.8rem),
+        $xl: (font-size: 3rem, width: 6.4rem, height: 6.4rem)
     ),
 
     // Button sizes
