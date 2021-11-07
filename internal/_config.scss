@@ -8,6 +8,14 @@
 $default-config: (
     // COMPONENTS //
     
+    // Avatar sizes
+    avatar-sizes: (
+        $xs: (0.8rem, 1.6rem),
+        $sm: (1rem, 2.4rem),
+        $lg: (2rem, 4.8rem),
+        $xl: (3rem, 6.4rem)
+    ),
+
     // Form label sizes
     form-label-sizes: (
         $xs: $font-size-xs,
@@ -20,4 +28,6 @@ $default-config: (
 // ==================================================
 // Exported values
 // ==================================================
+
+$avatar-sizes: map.get($default-config, avatar-sizes);
 $font-label-sizes: map.get($default-config, form-label-sizes);

@@ -1,13 +1,7 @@
 @import '../../internal/_size';
+@import '../../internal/_config';
 
 /* Avatar */
-
-$avatar-sizes: (
-  $xs: (0.8rem, 1.6rem),
-  $sm: (1rem, 2.4rem),
-  $lg: (2rem, 4.8rem),
-  $xl: (3rem, 6.4rem)
-);
 
 .avatar {
   border-radius: 50%;
