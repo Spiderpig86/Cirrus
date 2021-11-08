@@ -19,26 +19,10 @@
     padding: 0.85rem 1.1rem;
 
     /* Input Field Sizes */
-    &.input-xsmall,
-    select.input-xsmall {
-        font-size: var(--font-size-xs);
-        padding: 0.35rem 0.9rem;
-    }
-
-    &.input-small,
-    select.input-small {
-        font-size: var(--font-size-s);
-        padding: 0.55rem 1rem;
-    }
-
-    &.input-large,
-    select.input-large {
-        font-size: var(--font-size-l);
-    }
-
-    &.input-xlarge,
-    select.input-xlarge {
-        font-size: var(--font-size-xl);
+    @each $size, $property-map in $input-sizes {
+        &.input--#{$size} {
+            @include explode-properties($property-map);
+        }
     }
 
     /* Hold Font Awesome glyphs inside input fields */
@@ -52,55 +36,20 @@
         padding-right: 2.75rem;
     }
 
-    &.input-contains-icon.input-xsmall,
-    &.input-contains-icon-right.input-xsmall {
-        padding-left: 2rem;
+    // Left side padding for input with glyph
+    @each $size, $value in $input-contains-icon-padding {
+        &.input-contains-icon.input--#{$size},
+        &.input-contains-icon-right.input-#{$size} {
+            padding-left: $value;
+        }
     }
 
-    &.input-contains-icon.input-xsmall ~ .icon,
-    &.input-contains-icon-left.input-xsmall ~ .icon,
-    &.input-contains-icon-right.input-xsmall ~ .icon.icon-right {
-        line-height: 1.75rem;
-        width: 1.75rem;
-        font-size: 7px;
-    }
-
-    &.input-contains-icon.input-small,
-    &.input-contains-icon-right.input-small {
-        padding-left: 2.5rem;
-    }
-
-    &.input-contains-icon.input-small ~ .icon,
-    &.input-contains-icon-left.input-small ~ .icon,
-    &.input-contains-icon-right.input-small ~ .icon.icon-right {
-        width: 2.5rem;
-        font-size: 14px;
-    }
-
-    &.input-contains-icon.input-large,
-    &.input-contains-icon-right.input-large {
-        padding-left: 3.5rem;
-    }
-
-    &.input-contains-icon.input-large ~ .icon,
-    &.input-contains-icon-left.input-large ~ .icon,
-    &.input-contains-icon-right.input-large ~ .icon.icon-right {
-        line-height: 3.5rem;
-        width: 3.5rem;
-        font-size: 28px;
-    }
-
-    &.input-contains-icon.input-xlarge,
-    &.input-contains-icon-right.input-xlarge {
-        padding-left: 4rem;
-    }
-
-    &.input-contains-icon.input-xlarge ~ .icon,
-    &.input-contains-icon-left.input-xlarge ~ .icon,
-    &.input-contains-icon-right.input-xlarge ~ .icon.icon-right {
-        line-height: 2.5rem;
-        width: 3.75rem;
-        font-size: 35px;
+    @each $size, $property-map in $input-icon-sizes {
+        &.input-contains-icon.input--#{$size} ~ .icon,
+        &.input-contains-icon-left.input--#{$size} ~ .icon,
+        &.input-contains-icon-right.input--#{$size} ~ .icon.icon-right {
+            @include explode-properties($property-map);
+        }
     }
 }
 
@@ -175,7 +124,7 @@ input[type='text'].input-focused,
 
 select {
     @include cirrus-input();
-    
+
     background-color: #fff;
     border: 1px solid #ddd;
 
@@ -280,7 +229,6 @@ label {
     /* This is just an extended portion of an input which is just like a label and is read only */
     /* This will style the controls if they are the leftmost control in the form group for labels, inputs, and buttons. */
     @mixin form-group-border-radius-override {
-        
         /* Style the front controls */
         &:first-child:not(:last-child) {
             border-top-right-radius: 0 !important;

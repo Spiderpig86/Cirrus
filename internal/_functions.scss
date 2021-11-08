@@ -1,7 +1,11 @@
+@use 'sass:string';
+@use 'sass:list';
+
 @import './_flags.scss';
 
 /*
   Functions
+  TODO Refactor to different categories
 */
 
 $DELIMETER: '-';
@@ -10,23 +14,66 @@ $DELIMETER: '-';
     Converts a given hex value to RGB.
 */
 @function hex-to-rgb($hex) {
-  @return red($hex), green($hex), blue($hex);
+    @return red($hex), green($hex), blue($hex);
 }
 
 /*
     Generates delimited class name prefix.
 */
 @function delimitize($name) {
-  @return $DELIMETER + $name + $DELIMETER;
+    @return $DELIMETER + $name + $DELIMETER;
 }
 
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
 */
 @function get-viewport-flag($name) {
-  @if not map-has-key($_VIEWPORT_CLASS_FLAGS, $name) {
-    @error '[get-viewport-flag] Unknown constant `#{$name}`.';
-  }
+    @if not map-has-key($_VIEWPORT_CLASS_FLAGS, $name) {
+        @error '[get-viewport-flag] Unknown constant `#{$name}`.';
+    }
 
-  @return map-get($_VIEWPORT_CLASS_FLAGS, $name);
+    @return map-get($_VIEWPORT_CLASS_FLAGS, $name);
+}
+
+@function string-split($string, $delimiter) {
+    $result: ();
+
+    // Find first occurence of delimiter
+    $index: string.index($string, $delimiter);
+
+    // Loop to parse string
+    @while $index != null {
+        // Get substring left of delimiter
+        $substring: string.slice($string, 1, $index - 1);
+        $result: append($result, $substring);
+
+        // Remove delimiter from string
+        $string: string.slice($string, $index + 1);
+
+        // Find next delimiter
+        $index: string.index($string, $delimiter);
+    }
+
+    // Add last substring to the result
+    $result: append($result, $string);
+    @return $result;
+}
+
+@function map-get-deep($map, $query) {
+    $query-list: string-split($query, '.');
+
+    $result: $map;
+    @each $query in $query-list {
+        $result: map-get-strict($result, $query);
+    }
+
+    @return $result;
+}
+
+@function map-get-strict($map, $key) {
+    @if map-has-key($map, $key) {
+        @return map-get($map, $key);
+    } @else {
+        @error "ERROR: Specified query #{$key} does not exist in the mapping";
+    }
 }

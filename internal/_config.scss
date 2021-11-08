@@ -1,6 +1,7 @@
 @use 'sass:map';
 
 @import './_size.scss';
+@import './_functions.scss';
 
 // ==================================================
 // Default config
@@ -47,6 +48,52 @@ $default-config: (
         $lg: $font-size-l,
         $xl: $font-size-xl,
     ),
+
+    form-sizes: (
+        input-sizes: (
+            $xs: (
+                font-size: $font-size-xs,
+                padding: 0.35rem 0.9rem,
+            ),
+            $sm: (
+                font-size: $font-size-s,
+                padding: 0.55rem 1rem,
+            ),
+            $lg: (
+                font-size: $font-size-l,
+            ),
+            $xl: (
+                font-size: $font-size-xl,
+            ),
+        ),
+        input-contains-icon-padding: (
+            $xs: 2rem,
+            $sm: 2.5rem,
+            $lg: 3.5rem,
+            $xl: 4rem,
+        ),
+        input-icon-sizes: (
+            $xs: (
+                line-height: 1.75rem,
+                width: 1.75rem,
+                font-size: 7px,
+            ),
+            $sm: (
+                width: 2.5rem,
+                font-size: 14px,
+            ),
+            $lg: (
+                line-height: 3.5rem,
+                width: 3.5rem,
+                font-size: 28px,
+            ),
+            $xl: (
+                line-height: 2.5rem,
+                width: 3.75rem,
+                font-size: 35px,
+            )
+        )
+    ),
     
     // Space sizes
     space-sizes: (
@@ -70,5 +117,11 @@ $default-config: (
 $avatar-sizes: map.get($default-config, avatar-sizes);
 $button-sizes: map.get($default-config, button-sizes);
 $font-label-sizes: map.get($default-config, form-label-sizes);
+
+// Form sizes
+$input-sizes: map-get-deep($default-config, 'form-sizes.input-sizes');
+$input-contains-icon-padding: map-get-deep($default-config, 'form-sizes.input-contains-icon-padding');
+$input-icon-sizes: map-get-deep($default-config, 'form-sizes.input-icon-sizes');
+
 $space-sizes: map.get($default-config, space-sizes);
 $tab-font-sizes: map.get($default-config, tab-sizes);
