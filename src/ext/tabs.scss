@@ -1,13 +1,10 @@
 @import '../../internal/_theme.scss';
 @import '../../internal/_size.scss';
+@import '../../internal/_config.scss';
 
 /* TABS AND TAB CONTAINER */
 .tab-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     overflow: hidden;
     overflow-x: auto; /* Allow scrollbar to be visible if the width of the tabs exceeds container */
@@ -15,7 +12,7 @@
     white-space: nowrap;
     -webkit-box-align: stretch;
     align-items: stretch;
-    font-size: var(--font-size-s);
+    font-size: $font-size-m;
 
     /* Shift tabs to the center */
     &.tabs-center ul {
@@ -90,7 +87,7 @@
     }
 
     /* Different tab sizes */
-    @each $name, $size in $tab-sizes {
+    @each $name, $size in $tab-font-sizes {
         &.tabs-#{$name} {
             font-size: #{$size};
         }

@@ -47,6 +47,14 @@ $default-config: (
         $lg: $font-size-l,
         $xl: $font-size-xl,
     ),
+
+    // Tab font sizes
+    tab-sizes: (
+        $xs: $font-size-xs,
+        $sm: $font-size-s,
+        $lg: $font-size-l,
+        $xl: $font-size-xl,
+    )
 ) !default;
 
 // ==================================================
@@ -56,3 +64,4 @@ $default-config: (
 $avatar-sizes: map.get($default-config, avatar-sizes);
 $button-sizes: map.get($default-config, button-sizes);
 $font-label-sizes: map.get($default-config, form-label-sizes);
+$tab-font-sizes: map.get($default-config, tab-sizes);

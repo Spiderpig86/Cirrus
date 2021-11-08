@@ -33,14 +33,6 @@ $grid-columns: 12;
 /* Grid Percents */
 $grid-width: math.div(1, $grid-columns);
 
-/* Tab Sizes */
-$tab-sizes: (
-    'xsmall': 0.6rem,
-    'small': 0.75rem,
-    'large': 1.25rem,
-    'xlarge': 1.5rem,
-);
-
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 $breakpoints: (
