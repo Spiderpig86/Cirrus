@@ -2,6 +2,8 @@
 
 @import '../../internal/_theme.scss';
 @import '../../internal/_size';
+@import '../../internal/_config';
+@import '../../internal/_mixin';
 /* HEADER */
 
 /* This works well with panel */
@@ -123,13 +125,11 @@ section {
     display: block;
     width: 100%;
     height: 1rem;
-
-    &.large {
-        padding: 1rem 0;
-    }
-
-    &.xlarge {
-        padding: 2rem 0;
+    
+    @each $size, $property-map in $space-sizes {
+        &.space--#{$size} {
+            @include explode-properties($property-map);
+        }
     }
 }
 
