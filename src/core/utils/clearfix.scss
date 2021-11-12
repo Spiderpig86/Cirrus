@@ -3,7 +3,7 @@
 
 $clears: left, right, both;
 
-@include generate-classes-for-viewport($clears, 'clear', $generate-viewports: #{get-viewport-flag('CLEARFIX')});
+@include generate-classes-for-viewport($clears, 'clear', 'u-clear-', $generate-viewports: #{get-viewport-flag('CLEARFIX')});
 
 /*
    When using floats, clearfix allows the container to automatically resize so that

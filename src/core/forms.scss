@@ -272,7 +272,7 @@ label {
         user-select: none;
         @include form-group-border-radius-override();
 
-        @each $size, $font-size in $font-label-sizes {
+        @each $size, $font-size in $form-label-sizes {
             &.label--#{$size} {
                 font-size: $font-size;
             }

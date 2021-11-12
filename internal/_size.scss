@@ -85,12 +85,12 @@ $breakpoint-pairs: (
 }
 
 // TODO: Once we move to dart-sass, look into using content with variables
-@mixin generate-classes-for-viewport($classes, $property, $prefix: '-', $generate-viewports: 'true') {
+@mixin generate-classes-for-viewport($classes, $property, $prefix: 'u-', $generate-viewports: 'true') {
     // We build in this order since we want larger viewports to have higher precedence
     // so we can write classes like u-none u-block-md u-none-lg
 
     @each $class in $classes {
-        .u#{$prefix}#{$class} {
+        .#{$prefix}#{$class} {
             #{$property}: $class !important;
         }
     }
@@ -99,7 +99,7 @@ $breakpoint-pairs: (
         @each $suffix, $limit in $breakpoint-pairs {
             @each $class in $classes {
                 @include screen-above($limit) {
-                    .u#{$prefix}#{$class}-#{$suffix} {
+                    .#{$prefix}#{$class}-#{$suffix} {
                         #{$property}: $class !important;
                     }
                 }
@@ -109,10 +109,10 @@ $breakpoint-pairs: (
 }
 
 /* Variant of mixin that takes in mapping of class name to value */
-@mixin generate-classes-for-viewport-with-map($class-value-pairs, $property, $prefix: '-', $generate-viewports: 'true') {
+@mixin generate-classes-for-viewport-with-map($class-value-pairs, $property, $prefix: 'u-', $generate-viewports: 'true') {
 
     @each $class, $value in $class-value-pairs {
-        .u#{$prefix}#{$class} {
+        .#{$prefix}#{$class} {
             #{$property}: $value !important;
         }
     }
@@ -121,7 +121,7 @@ $breakpoint-pairs: (
         @each $suffix, $limit in $breakpoint-pairs {
             @each $class, $value in $class-value-pairs {
                 @include screen-above($limit) {
-                    .u#{$prefix}#{$class}-#{$suffix} {
+                    .#{$prefix}#{$class}-#{$suffix} {
                         #{$property}: $value !important;
                     }
                 }

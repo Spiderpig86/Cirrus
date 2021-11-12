@@ -18,6 +18,6 @@ $opacity: (
 @include generate-classes-for-viewport-with-map(
     $opacity,
     'opacity',
-    delimitize('opacity'),
+    'u-opacity-',
     $generate-viewports: #{get-viewport-flag('OPACITY')}
 );

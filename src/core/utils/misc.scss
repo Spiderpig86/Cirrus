@@ -8,7 +8,7 @@ $pull-directions: (left, right);
 @include generate-classes-for-viewport(
     $pull-directions,
     'float',
-    delimitize('pull'),
+    'u#{delimitize('pull')}',
     $generate-viewports: #{get-viewport-flag('FLOAT')}
 );
 
@@ -16,7 +16,7 @@ $text-directions: (justify, left, right, center);
 @include generate-classes-for-viewport(
     $text-directions,
     'text-align',
-    delimitize('text'),
+    'u#{delimitize('text')}',
     $generate-viewports: #{get-viewport-flag('TEXT')}
 );
 

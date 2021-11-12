@@ -116,7 +116,7 @@ $default-config: (
 
 $avatar-sizes: map.get($default-config, avatar-sizes);
 $button-sizes: map.get($default-config, button-sizes);
-$font-label-sizes: map.get($default-config, form-label-sizes);
+$form-label-sizes: map.get($default-config, form-label-sizes);
 
 // Form sizes
 $input-sizes: map-get-deep($default-config, 'form-sizes.input-sizes');
