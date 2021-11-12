@@ -321,8 +321,8 @@ $heights: (
     screen: 100vh
 );
 
-@include generate-classes-for-viewport-with-map($heights, 'height', 'h-', false);
-@include generate-classes-for-viewport-with-map($widths, 'width', 'w-', false);
+@include generate-classes-for-viewport-with-map($heights, 'height', 'h-', #{get-viewport-flag('HEIGHTS')});
+@include generate-classes-for-viewport-with-map($widths, 'width', 'w-', #{get-viewport-flag('WIDTHS')});
 
 /* Do the actual balancing only on larger screens */
 .level,
