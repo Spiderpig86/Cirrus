@@ -10,6 +10,7 @@ $sm: 'sm';
 $md: 'md';
 $lg: 'lg';
 $xl: 'xl';
+$viewports: ($xs, $sm, $md, $lg, $xl);
 
 /* Fonts */
 // TODO Need to standardize these around a base font size for $font-size-m
