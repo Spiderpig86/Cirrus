@@ -14437,3 +14437,72 @@ video.video-fullscreen {
     position: sticky !important;
   }
 }
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+.u-z-0 {
+  z-index: 0 !important;
+}
+
+.u-z-10 {
+  z-index: 10 !important;
+}
+
+.u-z-20 {
+  z-index: 20 !important;
+}
+
+.u-z-30 {
+  z-index: 30 !important;
+}
+
+.u-z-40 {
+  z-index: 40 !important;
+}
+
+.u-z-50 {
+  z-index: 50 !important;
+}
+
+.u-z-auto {
+  z-index: auto !important;
+}

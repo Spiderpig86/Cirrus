@@ -167,6 +167,15 @@ $default-config: (
         100: 100%,
         auto: auto,
         screen: 100vw,
+    ),
+    z-index: (
+        0: 0,
+        10: 10,
+        20: 20,
+        30: 30,
+        40: 40,
+        50: 50,
+        auto: auto,
     )
 ) !default;
 
@@ -190,3 +199,4 @@ $heights: map.get($default-config, heights);
 $widths: map.get($default-config, widths);
 
 $opacities: map.get($default-config, opacity);
+$z-indexes: map.get($default-config, z-index);
