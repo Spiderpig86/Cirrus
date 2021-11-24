@@ -274,35 +274,6 @@ section {
 }
 
 /* Width/Height CSS */
-$widths: (
-    10: 10%,
-    20: 20%,
-    30: 30%,
-    40: 40%,
-    50: 50%,
-    60: 60%,
-    70: 70%,
-    80: 80%,
-    90: 90%,
-    100: 100%,
-    auto: auto,
-    screen: 100vw,
-);
-$heights: (
-    10: 10%,
-    20: 20%,
-    30: 30%,
-    40: 40%,
-    50: 50%,
-    60: 60%,
-    70: 70%,
-    80: 80%,
-    90: 90%,
-    100: 100%,
-    auto: auto,
-    screen: 100vh,
-);
-
 @include generate-classes-for-viewport-with-map($heights, 'height', 'h-', #{get-viewport-flag('HEIGHTS')});
 @include generate-classes-for-viewport-with-map($widths, 'width', 'w-', #{get-viewport-flag('WIDTHS')});
 

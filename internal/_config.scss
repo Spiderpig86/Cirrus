@@ -8,47 +8,62 @@
 // ==================================================
 $default-config: (
     // COMPONENTS //
-    
     // Avatar sizes
-    avatar-sizes: (
-        $xs: (font-size: 0.8rem, width: 1.6rem, height: 1.6rem),
-        $sm: (font-size: 1rem, width: 2.4rem, height: 2.4rem),
-        $lg: (font-size: 2rem, width: 4.8rem, height: 4.8rem),
-        $xl: (font-size: 3rem, width: 6.4rem, height: 6.4rem)
-    ),
-
+    avatar-sizes:
+        (
+            $xs: (
+                font-size: 0.8rem,
+                width: 1.6rem,
+                height: 1.6rem,
+            ),
+            $sm: (
+                font-size: 1rem,
+                width: 2.4rem,
+                height: 2.4rem,
+            ),
+            $lg: (
+                font-size: 2rem,
+                width: 4.8rem,
+                height: 4.8rem,
+            ),
+            $xl: (
+                font-size: 3rem,
+                width: 6.4rem,
+                height: 6.4rem,
+            ),
+        ),
     // Button sizes
-    button-sizes: (
-        $xs: (
-            padding: 0 0.5rem,
-            font-size: 50%,
+    button-sizes:
+        (
+            $xs: (
+                padding: 0 0.5rem,
+                font-size: 50%,
+            ),
+            $sm: (
+                padding: 0.25rem 1rem,
+                font-size: 70%,
+            ),
+            $md: (
+                padding: 0.5rem 1.5rem,
+                font-size: 90%,
+            ),
+            $lg: (
+                padding: 0.75rem 2rem,
+                font-size: 110%,
+            ),
+            $xl: (
+                padding: 1rem 2.5rem,
+                font-size: 130%,
+            ),
         ),
-        $sm: (
-            padding: 0.25rem 1rem,
-            font-size: 70%,
-        ),
-        $md: (
-            padding: 0.5rem 1.5rem,
-            font-size: 90%,
-        ),
-        $lg: (
-            padding: 0.75rem 2rem,
-            font-size: 110%,
-        ),
-        $xl: (
-            padding: 1rem 2.5rem,
-            font-size: 130%,
-        ),
-    ),
-
     // Form label sizes
-    form-label-sizes: (
-        $xs: $font-size-xs,
-        $sm: $font-size-s,
-        $lg: $font-size-l,
-        $xl: $font-size-xl,
-    ),
-
+    form-label-sizes:
+        (
+            $xs: $font-size-xs,
+            $sm: $font-size-s,
+            $lg: $font-size-l,
+            $xl: $font-size-xl,
+        ),
     form-sizes: (
         input-sizes: (
             $xs: (
@@ -91,23 +106,55 @@ $default-config: (
                 line-height: 2.5rem,
                 width: 3.75rem,
                 font-size: 35px,
-            )
-        )
+            ),
+        ),
     ),
-    
+    heights: (
+        10: 10%,
+        20: 20%,
+        30: 30%,
+        40: 40%,
+        50: 50%,
+        60: 60%,
+        70: 70%,
+        80: 80%,
+        90: 90%,
+        100: 100%,
+        auto: auto,
+        screen: 100vh,
+    ),
     // Space sizes
-    space-sizes: (
-        $lg: (padding: 1rem 0),
-        $xl: (padding: 2rem 0),
-    ),
-
+    space-sizes:
+        (
+            $lg: (
+                padding: 1rem 0,
+            ),
+            $xl: (
+                padding: 2rem 0,
+            ),
+        ),
     // Tab font sizes
-    tab-sizes: (
-        $xs: $font-size-xs,
-        $sm: $font-size-s,
-        $lg: $font-size-l,
-        $xl: $font-size-xl,
-    ),
+    tab-sizes:
+        (
+            $xs: $font-size-xs,
+            $sm: $font-size-s,
+            $lg: $font-size-l,
+            $xl: $font-size-xl,
+        ),
+    widths: (
+        10: 10%,
+        20: 20%,
+        30: 30%,
+        40: 40%,
+        50: 50%,
+        60: 60%,
+        70: 70%,
+        80: 80%,
+        90: 90%,
+        100: 100%,
+        auto: auto,
+        screen: 100vw,
+    )
 ) !default;
 
 // ==================================================
@@ -125,3 +172,6 @@ $input-icon-sizes: map-get-deep($default-config, 'form-sizes.input-icon-sizes');
 
 $space-sizes: map.get($default-config, space-sizes);
 $tab-font-sizes: map.get($default-config, tab-sizes);
+
+$heights: map.get($default-config, heights);
+$widths: map.get($default-config, widths);
