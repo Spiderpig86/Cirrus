@@ -34,13 +34,8 @@ $text-directions: (justify, left, right, center);
 
 /* Center element - best used for hero bodies or text */
 .u-center {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -53,7 +48,6 @@ $text-directions: (justify, left, right, center);
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -71,9 +65,6 @@ $text-directions: (justify, left, right, center);
 }
 
 .u-unselectable {
-    -webkit-touch-callout: none !important;
-    -webkit-user-select: none !important;
-    -moz-user-select: none !important;
     user-select: none !important;
 }
 
