@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         node_version:
-          - 12
+          # - 12
           - 14
           # - 16 NOTE Does not work until we move to Gulp 5
         os:
@@ -38,5 +38,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Run Gulp
+      - name: Unit Tests
+        run: npm test
+
+      - name: Build
         run: gulp
