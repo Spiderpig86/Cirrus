@@ -1,0 +1,125 @@
+// _functions.scss unit tests
+@import 'true';
+@import '../test_utils';
+
+@import '../../internal/_functions';
+
+/****************
+ * hex-to-rgb() *
+ ****************/
+@include describe('hex-to-rgb()') {
+    @include it('should return corresponding rgb color given a hex color') {
+        @include assert-equal(hex-to-rgb(#fff), (255, 255, 255));
+    }
+}
+
+/****************
+ * delimitize() *
+ ****************/
+@include describe('hex-to-rgb()') {
+    @include it('should return a string surrounded by the delimiter "-"') {
+        @include assert-equal(delimitize('opacity'), '-opacity-');
+    }
+}
+
+/***********************
+ * get-viewport-flag() *
+ ***********************/
+@include describe('get-viewport-flag()') {
+    @include it('should return if flag is enabled or not given valid flag "OPACITY"') {
+        @include assert-equal(get-viewport-flag('OPACITY'), true);
+    }
+    @include it('should throw an error if the given flag is invalid') {
+        @include assert-equal(
+            get-viewport-flag('UNKNOWN'),
+            build-true-error-string('get-viewport-flag()', '[get-viewport-flag] Unknown constant `UNKNOWN`.')
+        );
+    }
+}
+
+/******************
+ * string-split() *
+ ******************/
+@include describe('string-split()') {
+    @include it('should return input string split using delimiter ","') {
+        @include assert-equal(string-split('apples,oranges,bananas', ','), ('apples' 'oranges' 'bananas'));
+    }
+    @include it('should return input string split using delimiter "123"') {
+        @include assert-equal(string-split('abc123def', '123'), ('abc' 'def'));
+    }
+}
+
+/******************
+ * map-get-deep() *
+ ******************/
+@include describe('map-get-deep()') {
+    @include it('should return value for key "foo" which is nested 1 level deep') {
+        @include assert-equal(
+            map-get-deep(
+                (
+                    foo: bar,
+                ),
+                'foo'
+            ),
+            'bar'
+        );
+    }
+    @include it('should return value for key "a.b.c" which is nested 2 levels deep') {
+        @include assert-equal(
+            map-get-deep(
+                (
+                    a: (
+                        b: (
+                            c: 1,
+                        ),
+                    ),
+                ),
+                'a.b.c'
+            ),
+            1
+        );
+    }
+    @include it('should throw error if key does not exist') {
+        @include assert-equal(
+            map-get-deep(
+                (
+                    a: (
+                        b: (
+                            c: 1,
+                        ),
+                    ),
+                ),
+                'a.d'
+            ),
+            build-true-error-string('map-get-strict()', 'ERROR: Specified key "d" does not exist in the mapping')
+        );
+    }
+}
+
+/******************
+ * map-get-strict() *
+ ******************/
+@include describe('map-get-strict()') {
+    @include it('should return value for key "foo"') {
+        @include assert-equal(
+            map-get-strict(
+                (
+                    foo: bar,
+                ),
+                'foo'
+            ),
+            'bar'
+        );
+    }
+    @include it('should throw error if key does not exist') {
+        @include assert-equal(
+            map-get-strict(
+                (
+                    foo: bar,
+                ),
+                'baz'
+            ),
+            build-true-error-string('map-get-strict()', 'ERROR: Specified key "baz" does not exist in the mapping')
+        );
+    }
+}

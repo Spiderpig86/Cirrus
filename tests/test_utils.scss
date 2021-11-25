@@ -1,0 +1,3 @@
+@function build-true-error-string($source, $message) {
+    @return 'ERROR [#{$source}]: #{$message}'
+}

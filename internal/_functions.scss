@@ -1,5 +1,7 @@
 @use 'sass:string';
 @use 'sass:list';
+@use 'throw';
+@use 'true' as *;
 
 @import './_flags.scss';
 
@@ -29,7 +31,11 @@ $DELIMETER: '-';
 */
 @function get-viewport-flag($name) {
     @if not map-has-key($_VIEWPORT_CLASS_FLAGS, $name) {
-        @error '[get-viewport-flag] Unknown constant `#{$name}`.';
+        @return throw.error(
+            $message: '[get-viewport-flag] Unknown constant `#{$name}`.',
+            $source: 'get-viewport-flag()',
+            $catch: true
+        );
     }
 
     @return map-get($_VIEWPORT_CLASS_FLAGS, $name);
@@ -48,7 +54,7 @@ $DELIMETER: '-';
         $result: append($result, $substring);
 
         // Remove delimiter from string
-        $string: string.slice($string, $index + 1);
+        $string: string.slice($string, $index + string.length($delimiter));
 
         // Find next delimiter
         $index: string.index($string, $delimiter);
@@ -74,6 +80,11 @@ $DELIMETER: '-';
     @if map-has-key($map, $key) {
         @return map-get($map, $key);
     } @else {
-        @error "ERROR: Specified query #{$key} does not exist in the mapping";
+        @return throw.error(
+            $message: 'ERROR: Specified key "#{$key}" does not exist in the mapping',
+            $source: 'map-get-strict()',
+            $catch: true
+        );
     }
 }
+

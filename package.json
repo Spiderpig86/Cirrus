@@ -8,7 +8,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "gulp minify",
     "prepare": "npm run snyk-protect",
     "snyk-protect": "snyk-protect"
@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "clipboard": "^2.0.6",
+    "glob": "^7.2.0",
     "global": "^4.3.1",
     "gulp": "^4.0.2",
     "gulp-build": "^0.5.3",
@@ -51,7 +52,9 @@
     "gulp-minify-css": "^1.2.4",
     "gulp-sass": "^4.1.1",
     "gulp-size": "^3.0.0",
-    "sass": "^1.43.4"
+    "jest": "^27.3.1",
+    "sass": "^1.43.4",
+    "sass-true": "^6.0.1"
   },
   "browserslist": [
     "last 1 major version",
