@@ -9,14 +9,29 @@ const head =
     prop.version +
     `\r\n* Stanley Lim, Copyright ${new Date().getFullYear()}\r\n* https://spiderpig86.github.io/Cirrus\r\n*/\r\n`;
 
+const environment = {
+    isCi: process.env.CI ?? false, // Github actions default variable is always set to true
+}
+
 gulp.task('compile', () => {
     return gulp
         .src(['src/core/default.scss', './src/**/*.scss'])
-        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(sass.sync().on('error', function (err) {
+            sass.logError.call(this, err);
+
+            // Fail job if in CI
+            if (environment.isCi) {
+                throw err;
+            }
+        }))
         .pipe($.concat('cirrus.css'))
         .pipe($.header(head))
         .pipe($.size())
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./dist/'))
+        .on('error', (err) => {
+            console.error(err);
+            process.exit(1);
+        });
 });
 
 gulp.task(
@@ -57,7 +72,11 @@ gulp.task(
             .pipe($.header(head))
             .pipe($.size())
             .pipe($.concat('cirrus.min.css'))
-            .pipe(gulp.dest('./dist/'));
+            .pipe(gulp.dest('./dist/'))
+            .on('error', (err) => {
+                console.error('Error encountered during build. Failing.');
+                process.exit(1);
+            });
     })
 );
 

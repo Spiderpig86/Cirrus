@@ -1,7 +1,7 @@
 @use 'sass:string';
 @use 'sass:list';
-@use 'throw';
-@use 'true' as *;
+@use '../node_modules/sass-true/sass/config/throw';
+@use '../node_modules/sass-true/sass/true' as *;
 
 @import './_flags.scss';
 
