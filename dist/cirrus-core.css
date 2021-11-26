@@ -780,59 +780,163 @@ fieldset legend {
 /* Variant of mixin that takes in mapping of class name to value */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/* v1 Color scheme for Cirrus */
+/* v2 Colors */
+/*
+    Global Mixins
+*/
+/*
+    Mixin that returns a property map as a series of CSS class properties.
+
+    E.g. $xs: (color: #fff, opacity: 0.5), $sm... =>
+
+    <class>--xs {
+        color: #fff;
+        opacity: 0.5;
+    }
+*/
+/*
+    Bring to front on focus.
+*/
 /* FONT */
 /* Constants */
 /* Headers */
-h1 {
+h6 {
+  font-size: 1.25rem;
   font-family: "Montserrat", sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-h2 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-h4 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 h5 {
-  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
-h6 {
+h4 {
+  font-size: 1.75rem;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 h1 {
+  font-size: 3rem;
   letter-spacing: 0.025rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* Headlines (for larger titles) */
+.headline-4 {
+  font-size: 3.5rem;
+  letter-spacing: 0.05rem;
+}
+
+.headline-3 {
+  font-size: 4.5rem;
+  letter-spacing: 0.05rem;
+}
+
+.headline-2 {
+  font-size: 5.5rem;
+  letter-spacing: 0.05rem;
+}
+
+.headline-1 {
+  font-size: 6.5rem;
+  letter-spacing: 0.05rem;
+}
+
+/* Regular text sizes */
+.text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+}
+
+.text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+
+.text-md {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+}
+
+.text-lg {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+}
+
+.text-xl {
+  font-size: 1.5rem !important;
+  line-height: 1.75rem !important;
 }
 
 p,
@@ -869,27 +973,6 @@ mark,
 .mark {
   padding: 0.2em;
   background-color: #f0e8c4;
-}
-
-/* Headlines (for larger titles) */
-.headline-1 {
-  font-size: 6.5rem;
-  letter-spacing: 0.05rem;
-}
-
-.headline-2 {
-  font-size: 5.5rem;
-  letter-spacing: 0.05rem;
-}
-
-.headline-3 {
-  font-size: 4.5rem;
-  letter-spacing: 0.05rem;
-}
-
-.headline-4 {
-  font-size: 3.5rem;
-  letter-spacing: 0.05rem;
 }
 
 .font-alt {
@@ -1044,44 +1127,45 @@ kbd {
 
 /* MOBILE */
 @media screen and (max-width: 639px) {
-  h1 {
-    font-size: 2.25rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.75rem;
-  }
-
-  h4 {
-    font-size: 1.5rem;
+  h6 {
+    font-size: 1rem;
   }
 
   h5 {
     font-size: 1.25rem;
   }
 
-  h6 {
-    font-size: 1rem;
+  h4 {
+    font-size: 1.5rem;
   }
 
-  .headline-1 {
-    font-size: 3.75rem;
+  h3 {
+    font-size: 1.75rem;
   }
 
-  .headline-2 {
-    font-size: 3.5rem;
+  h2 {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  /* Headlines (for larger titles) */
+  .headline-4 {
+    font-size: 3rem;
   }
 
   .headline-3 {
     font-size: 3.25rem;
   }
 
-  .headline-4 {
-    font-size: 3rem;
+  .headline-2 {
+    font-size: 3.5rem;
+  }
+
+  .headline-1 {
+    font-size: 3.75rem;
   }
 
   p,

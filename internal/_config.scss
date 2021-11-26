@@ -56,6 +56,115 @@ $default-config: (
                 font-size: 130%,
             ),
         ),
+    font-sizes: (
+        heading: (
+            h6: (
+                default: (
+                    font-size: $font-size-m,
+                ),
+                sm-above: (
+                    font-size: $font-size-l,
+                ),
+            ),
+            h5: (
+                default: (
+                    font-size: 1.25rem,
+                ),
+                sm-above: (
+                    font-size: $font-size-xl,
+                ),
+            ),
+            h4: (
+                default: (
+                    font-size: 1.5rem,
+                ),
+                sm-above: (
+                    font-size: 1.75rem,
+                ),
+            ),
+            h3: (
+                default: (
+                    font-size: 1.75rem,
+                ),
+                sm-above: (
+                    font-size: 2rem,
+                ),
+            ),
+            h2: (
+                default: (
+                    font-size: 2rem,
+                ),
+                sm-above: (
+                    font-size: 2.5rem,
+                ),
+            ),
+            h1: (
+                default: (
+                    font-size: 2.25rem,
+                ),
+                sm-above: (
+                    font-size: 3rem,
+                    letter-spacing: 0.025rem,
+                ),
+            ),
+        ),
+        headline: (
+            headline-4: (
+                default: (
+                    font-size: 3rem,
+                ),
+                sm-above: (
+                    font-size: 3.5rem,
+                ),
+            ),
+            headline-3: (
+                default: (
+                    font-size: 3.25rem,
+                ),
+                sm-above: (
+                    font-size: 4.5rem,
+                ),
+            ),
+            headline-2: (
+                default: (
+                    font-size: 3.5rem,
+                ),
+                sm-above: (
+                    font-size: 5.5rem,
+                ),
+            ),
+            headline-1: (
+                default: (
+                    font-size: 3.75rem,
+                ),
+                sm-above: (
+                    font-size: 6.5rem,
+                ),
+            ),
+        ),
+        text: (
+            $xs: (
+                font-size: $font-size-xs !important,
+                line-height: 1rem !important,
+            ),
+            $sm: (
+                font-size: $font-size-s !important,
+                line-height: 1.25rem !important,
+            ),
+            $md: (
+                font-size: $font-size-m !important,
+                line-height: 1.5rem !important,
+            ),
+            $lg: (
+                font-size: $font-size-l !important,
+                line-height: 1.75rem !important,
+            ),
+            $xl: (
+                font-size: $font-size-xl !important,
+                line-height: 1.75rem !important,
+            ),
+        ),
+    ),
     // Form label sizes
     form-label-sizes:
         (
@@ -197,6 +306,9 @@ $default-config: (
 $avatar-sizes: map.get($default-config, avatar-sizes);
 $button-sizes: map.get($default-config, button-sizes);
 $form-label-sizes: map.get($default-config, form-label-sizes);
+$font-heading-sizes: map-get-deep($default-config, 'font-sizes.heading');
+$font-headline-sizes: map-get-deep($default-config, 'font-sizes.headline');
+$font-text-sizes: map-get-deep($default-config, 'font-sizes.text');
 
 // Form sizes
 $input-sizes: map-get-deep($default-config, 'form-sizes.input-sizes');

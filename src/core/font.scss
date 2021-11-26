@@ -1,5 +1,9 @@
+@use 'sass:map';
+
 @import '../../internal/_size.scss';
 @import '../../internal/_theme.scss';
+@import '../../internal/_config.scss';
+@import '../../internal/_mixins.scss';
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
@@ -7,11 +11,6 @@
 /* FONT */
 
 /* Constants */
-$base-header-size: 1.25rem;
-$header-size-diff: 0.25rem;
-$header-size-diff-lg: 0.5rem;
-$base-headline-size: 3.5rem;
-$headline-size-diff: 1rem;
 $font-weights: (
     'thin': 200,
     'light': 300,
@@ -22,32 +21,35 @@ $font-weights: (
 $font-transformations: uppercase, lowercase, capitalize;
 
 /* Headers */
-@for $index from 1 through 6 {
-    h#{$index} {
-        $diff: $header-size-diff;
-        $offset: 0;
-
-        @if $index < 3 {
-            $diff: $header-size-diff-lg;
-            $offset: .75;
-        }
-
+@each $class, $property-map in $font-heading-sizes {
+    #{$class} {
+        @include explode-properties(map.get($property-map, 'sm-above'));
         font-family: 'Montserrat', sans-serif;
-        font-size: $base-header-size + $diff * (6 - $index) - $offset;
         font-weight: 700;
         line-height: 1.2;
         margin-bottom: 1rem;
     }
 }
 
-h1 {
-    letter-spacing: 0.025rem;
+/* Headlines (for larger titles) */
+@each $class, $property-map in $font-headline-sizes {
+    .#{$class} {
+        @include explode-properties(map.get($property-map, 'sm-above'));
+        letter-spacing: 0.05rem;
+    }
+}
+
+/* Regular text sizes */
+@each $class, $property-map in $font-text-sizes {
+    .text-#{$class} {
+        @include explode-properties($property-map);
+    }
 }
 
 p,
 article,
 blockquote {
-    font-size: 1rem;
+    font-size: $font-size-m;
     line-height: 2;
     margin-bottom: 1rem;
 }
@@ -80,14 +82,6 @@ mark,
 .mark {
     padding: 0.2em;
     background-color: #f0e8c4;
-}
-
-/* Headlines (for larger titles) */
-@for $index from 1 through 4 {
-    .headline-#{$index} {
-        font-size: $base-headline-size + $headline-size-diff * (4 - $index);
-        letter-spacing: 0.05rem;
-    }
 }
 
 .font-alt {
@@ -220,20 +214,17 @@ kbd {
 /* MOBILE */
 
 @include screen-below($xs) {
-    $base-header-size: 1rem;
-    $header-size-diff: 0.25rem;
-    $base-headline-size: 2.5rem;
-    $headline-size-diff: 0.25rem;
 
-    @for $index from 1 through 6 {
-        h#{$index} {
-            font-size: $base-header-size + $header-size-diff * (6 - $index);
+    @each $class, $property-map in $font-heading-sizes {
+        #{$class} {
+            @include explode-properties(map.get($property-map, 'default'));
         }
     }
 
-    @for $index from 1 through 4 {
-        .headline-#{$index} {
-            font-size: $base-headline-size + $headline-size-diff * (6 - $index);
+    /* Headlines (for larger titles) */
+    @each $class, $property-map in $font-headline-sizes {
+        .#{$class} {
+            @include explode-properties(map.get($property-map, 'default'));
         }
     }
 
