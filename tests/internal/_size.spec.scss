@@ -1,0 +1,808 @@
+// _mixins.scss unit tests
+@import 'true';
+@import '../test_utils';
+
+@import '../../internal/_functions';
+@import '../../internal/_size';
+
+/******************
+ * screen-above() *
+ ******************/
+@include describe('screen-above()') {
+    @include it('should return screen-above 640px given $xs') {
+        @include assert {
+            @include output {
+                .test {
+                    @include screen-above($xs) {
+                        color: #fff;
+                    }
+                }
+            }
+            @include expect {
+                @media screen and (min-width: 640px) {
+                    .test {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    @include it('should return screen-above 768px given $sm') {
+        @include assert {
+            @include output {
+                .test {
+                    @include screen-above($sm) {
+                        color: #fff;
+                    }
+                }
+            }
+            @include expect {
+                @media screen and (min-width: 768px) {
+                    .test {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    @include it('should return screen-above 1024px given $md') {
+        @include assert {
+            @include output {
+                .test {
+                    @include screen-above($md) {
+                        color: #fff;
+                    }
+                }
+            }
+            @include expect {
+                @media screen and (min-width: 1024px) {
+                    .test {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    @include it('should return screen-above 1280px given $lg') {
+        @include assert {
+            @include output {
+                .test {
+                    @include screen-above($lg) {
+                        color: #fff;
+                    }
+                }
+            }
+            @include expect {
+                @media screen and (min-width: 1280px) {
+                    .test {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    @include it('should return screen-above 1536px given $xl') {
+        @include assert {
+            @include output {
+                .test {
+                    @include screen-above($xl) {
+                        color: #fff;
+                    }
+                }
+            }
+            @include expect {
+                @media screen and (min-width: 1536px) {
+                    .test {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/********************
+ * screen-between() *
+ ********************/
+@include describe('screen-between()') {
+    @include it('should return screen-above 768px and screen-below 1279px given $sm and $lg') {
+        @include assert {
+            @include output {
+                .test {
+                    @include screen-between($sm, $lg) {
+                        color: #fff;
+                    }
+                }
+            }
+            @include expect {
+                @media screen and (min-width: 768px) and (max-width: 1279px) {
+                    .test {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/******************
+ * screen-below() *
+ ******************/
+@include describe('screen-below()') {
+    @include it('should return screen-below 639px given $xs') {
+        @include assert {
+            @include output {
+                .test {
+                    @include screen-below($xs) {
+                        color: #fff;
+                    }
+                }
+            }
+            @include expect {
+                @media screen and (max-width: 639px) {
+                    .test {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    @include it('should return screen-below 767px given $sm') {
+        @include assert {
+            @include output {
+                .test {
+                    @include screen-below($sm) {
+                        color: #fff;
+                    }
+                }
+            }
+            @include expect {
+                @media screen and (max-width: 767px) {
+                    .test {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    @include it('should return screen-below 1023px given $md') {
+        @include assert {
+            @include output {
+                .test {
+                    @include screen-below($md) {
+                        color: #fff;
+                    }
+                }
+            }
+            @include expect {
+                @media screen and (max-width: 1023px) {
+                    .test {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    @include it('should return screen-below 1279px given $lg') {
+        @include assert {
+            @include output {
+                .test {
+                    @include screen-below($lg) {
+                        color: #fff;
+                    }
+                }
+            }
+            @include expect {
+                @media screen and (max-width: 1279px) {
+                    .test {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    @include it('should return screen-below 1535px given $xl') {
+        @include assert {
+            @include output {
+                .test {
+                    @include screen-below($xl) {
+                        color: #fff;
+                    }
+                }
+            }
+            @include expect {
+                @media screen and (max-width: 1535px) {
+                    .test {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/***********************************
+ * generate-classes-for-viewport() *
+ ***********************************/
+$generate-classes-for-viewport-classes: row, row-reverse, column, column-reverse;
+$generate-classes-for-viewport-property: 'flex-direction';
+$generate-classes-for-viewport-prefix: 'u#{delimitize('flex')}';
+@include describe('generate-classes-for-viewport()') {
+    @include it('should return classes without viewport variants') {
+        @include assert {
+            @include output {
+                @include generate-classes-for-viewport(
+                    $generate-classes-for-viewport-classes,
+                    $generate-classes-for-viewport-property,
+                    $generate-classes-for-viewport-prefix,
+                    false
+                );
+            }
+            @include expect {
+                .u-flex-row {
+                    flex-direction: row !important;
+                }
+
+                .u-flex-row-reverse {
+                    flex-direction: row-reverse !important;
+                }
+
+                .u-flex-column {
+                    flex-direction: column !important;
+                }
+
+                .u-flex-column-reverse {
+                    flex-direction: column-reverse !important;
+                }
+            }
+        }
+    }
+    @include it('should return classes with viewport variants') {
+        @include assert {
+            @include output {
+                @include generate-classes-for-viewport(
+                    $generate-classes-for-viewport-classes,
+                    $generate-classes-for-viewport-property,
+                    $generate-classes-for-viewport-prefix,
+                    $generate-viewports: 'true'
+                );
+            }
+            @include expect {
+                .u-flex-row {
+                    flex-direction: row !important;
+                }
+
+                .u-flex-row-reverse {
+                    flex-direction: row-reverse !important;
+                }
+
+                .u-flex-column {
+                    flex-direction: column !important;
+                }
+
+                .u-flex-column-reverse {
+                    flex-direction: column-reverse !important;
+                }
+
+                @media screen and (min-width: 640px) {
+                    .u-flex-row-sm {
+                        flex-direction: row !important;
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    .u-flex-row-reverse-sm {
+                        flex-direction: row-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    .u-flex-column-sm {
+                        flex-direction: column !important;
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    .u-flex-column-reverse-sm {
+                        flex-direction: column-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .u-flex-row-md {
+                        flex-direction: row !important;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .u-flex-row-reverse-md {
+                        flex-direction: row-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .u-flex-column-md {
+                        flex-direction: column !important;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .u-flex-column-reverse-md {
+                        flex-direction: column-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .u-flex-row-lg {
+                        flex-direction: row !important;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .u-flex-row-reverse-lg {
+                        flex-direction: row-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .u-flex-column-lg {
+                        flex-direction: column !important;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .u-flex-column-reverse-lg {
+                        flex-direction: column-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .u-flex-row-xl {
+                        flex-direction: row !important;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .u-flex-row-reverse-xl {
+                        flex-direction: row-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .u-flex-column-xl {
+                        flex-direction: column !important;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .u-flex-column-reverse-xl {
+                        flex-direction: column-reverse !important;
+                    }
+                }
+            }
+        }
+    }
+    @include it('should return classes with viewport variants with a custom prefix') {
+        @include assert {
+            @include output {
+                @include generate-classes-for-viewport(
+                    $generate-classes-for-viewport-classes,
+                    $generate-classes-for-viewport-property,
+                    'flex-',
+                    $generate-viewports: 'true',
+                );
+            }
+            @include expect {
+                
+                .flex-row {
+                    flex-direction: row !important;
+                }
+
+                .flex-row-reverse {
+                    flex-direction: row-reverse !important;
+                }
+
+                .flex-column {
+                    flex-direction: column !important;
+                }
+
+                .flex-column-reverse {
+                    flex-direction: column-reverse !important;
+                }
+
+                @media screen and (min-width: 640px) {
+                    .flex-row-sm {
+                        flex-direction: row !important;
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    .flex-row-reverse-sm {
+                        flex-direction: row-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    .flex-column-sm {
+                        flex-direction: column !important;
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    .flex-column-reverse-sm {
+                        flex-direction: column-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .flex-row-md {
+                        flex-direction: row !important;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .flex-row-reverse-md {
+                        flex-direction: row-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .flex-column-md {
+                        flex-direction: column !important;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .flex-column-reverse-md {
+                        flex-direction: column-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .flex-row-lg {
+                        flex-direction: row !important;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .flex-row-reverse-lg {
+                        flex-direction: row-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .flex-column-lg {
+                        flex-direction: column !important;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .flex-column-reverse-lg {
+                        flex-direction: column-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .flex-row-xl {
+                        flex-direction: row !important;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .flex-row-reverse-xl {
+                        flex-direction: row-reverse !important;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .flex-column-xl {
+                        flex-direction: column !important;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .flex-column-reverse-xl {
+                        flex-direction: column-reverse !important;
+                    }
+                }
+            }
+        }
+    }
+    @include it(
+        'should return classes with viewport variants without important! if $include-important is set to false'
+    ) {
+        @include assert {
+            
+            @include output {
+                @include generate-classes-for-viewport(
+                    $generate-classes-for-viewport-classes,
+                    $generate-classes-for-viewport-property,
+                    $generate-classes-for-viewport-prefix,
+                    $generate-viewports: 'true',
+                    $include-important: 'false'
+                );
+            }
+            @include expect {
+                
+                .u-flex-row {
+                    flex-direction: row;
+                }
+
+                .u-flex-row-reverse {
+                    flex-direction: row-reverse;
+                }
+
+                .u-flex-column {
+                    flex-direction: column;
+                }
+
+                .u-flex-column-reverse {
+                    flex-direction: column-reverse;
+                }
+
+                @media screen and (min-width: 640px) {
+                    .u-flex-row-sm {
+                        flex-direction: row;
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    .u-flex-row-reverse-sm {
+                        flex-direction: row-reverse;
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    .u-flex-column-sm {
+                        flex-direction: column;
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    .u-flex-column-reverse-sm {
+                        flex-direction: column-reverse;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .u-flex-row-md {
+                        flex-direction: row;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .u-flex-row-reverse-md {
+                        flex-direction: row-reverse;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .u-flex-column-md {
+                        flex-direction: column;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .u-flex-column-reverse-md {
+                        flex-direction: column-reverse;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .u-flex-row-lg {
+                        flex-direction: row;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .u-flex-row-reverse-lg {
+                        flex-direction: row-reverse;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .u-flex-column-lg {
+                        flex-direction: column;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .u-flex-column-reverse-lg {
+                        flex-direction: column-reverse;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .u-flex-row-xl {
+                        flex-direction: row;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .u-flex-row-reverse-xl {
+                        flex-direction: row-reverse;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .u-flex-column-xl {
+                        flex-direction: column;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .u-flex-column-reverse-xl {
+                        flex-direction: column-reverse;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/********************************************
+ * generate-classes-for-viewport-with-map() *
+ ********************************************/
+$generate-classes-for-viewport-with-map-classes: ('0': 0, '10': 0.1);
+$generate-classes-for-viewport-with-map-property: 'opacity';
+$generate-classes-for-viewport-with-map-prefix: 'u#{delimitize('opacity')}';
+@include describe('generate-classes-for-viewport-with-map()') {
+    @include it('should return classes without viewport variants') {
+        @include assert {
+            @include output {
+                @include generate-classes-for-viewport-with-map(
+                    $generate-classes-for-viewport-with-map-classes,
+                    $generate-classes-for-viewport-with-map-property,
+                    $generate-classes-for-viewport-with-map-prefix,
+                    'false'
+                );
+            }
+            @include expect {
+                .u-opacity-0 {
+                    opacity: 0 !important;
+                }
+                .u-opacity-10 {
+                    opacity: 0.1 !important;
+                }
+            }
+        }
+    }
+    @include it('should return classes with viewport variants') {
+        @include assert {
+            @include output {
+                @include generate-classes-for-viewport-with-map(
+                    $generate-classes-for-viewport-with-map-classes,
+                    $generate-classes-for-viewport-with-map-property,
+                    $generate-classes-for-viewport-with-map-prefix,
+                    'true'
+                );
+            }
+            @include expect {
+                .u-opacity-0 {
+                    opacity: 0 !important;
+                }
+                .u-opacity-10 {
+                    opacity: 0.1 !important;
+                }
+                @media screen and (min-width: 640px) {
+                    .u-opacity-0-sm {
+                        opacity: 0 !important;
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    .u-opacity-10-sm {
+                        opacity: 0.1 !important;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .u-opacity-0-md {
+                        opacity: 0 !important;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .u-opacity-10-md {
+                        opacity: 0.1 !important;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .u-opacity-0-lg {
+                        opacity: 0 !important;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .u-opacity-10-lg {
+                        opacity: 0.1 !important;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .u-opacity-0-xl {
+                        opacity: 0 !important;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .u-opacity-10-xl {
+                        opacity: 0.1 !important;
+                    }
+                }
+            }
+        }
+    }
+    @include it('should return classes with viewport variants with a custom prefix') {
+        @include assert {
+            @include output {
+                @include generate-classes-for-viewport-with-map(
+                    $generate-classes-for-viewport-with-map-classes,
+                    $generate-classes-for-viewport-with-map-property,
+                    'opacity-',
+                    'true'
+                );
+            }
+            @include expect {
+                .opacity-0 {
+                    opacity: 0 !important;
+                }
+                .opacity-10 {
+                    opacity: 0.1 !important;
+                }
+                @media screen and (min-width: 640px) {
+                    .opacity-0-sm {
+                        opacity: 0 !important;
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    .opacity-10-sm {
+                        opacity: 0.1 !important;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .opacity-0-md {
+                        opacity: 0 !important;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .opacity-10-md {
+                        opacity: 0.1 !important;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .opacity-0-lg {
+                        opacity: 0 !important;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .opacity-10-lg {
+                        opacity: 0.1 !important;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .opacity-0-xl {
+                        opacity: 0 !important;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .opacity-10-xl {
+                        opacity: 0.1 !important;
+                    }
+                }
+            }
+        }
+    }
+    @include it(
+        'should return classes with viewport variants without important! if $include-important is set to false'
+    ) {
+        @include assert {
+            @include output {
+                @include generate-classes-for-viewport-with-map(
+                    $generate-classes-for-viewport-with-map-classes,
+                    $generate-classes-for-viewport-with-map-property,
+                    $generate-classes-for-viewport-with-map-prefix,
+                    'true',
+                    'false'
+                );
+            }
+            @include expect {
+                .u-opacity-0 {
+                    opacity: 0;
+                }
+                .u-opacity-10 {
+                    opacity: 0.1;
+                }
+                @media screen and (min-width: 640px) {
+                    .u-opacity-0-sm {
+                        opacity: 0;
+                    }
+                }
+                @media screen and (min-width: 640px) {
+                    .u-opacity-10-sm {
+                        opacity: 0.1;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .u-opacity-0-md {
+                        opacity: 0;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .u-opacity-10-md {
+                        opacity: 0.1;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .u-opacity-0-lg {
+                        opacity: 0;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .u-opacity-10-lg {
+                        opacity: 0.1;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .u-opacity-0-xl {
+                        opacity: 0;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .u-opacity-10-xl {
+                        opacity: 0.1;
+                    }
+                }
+            }
+        }
+    }
+}
