@@ -276,6 +276,10 @@ section {
 /* Width/Height CSS */
 @include generate-classes-for-viewport-with-map($heights, 'height', 'h-', #{get-viewport-flag('HEIGHTS')});
 @include generate-classes-for-viewport-with-map($widths, 'width', 'w-', #{get-viewport-flag('WIDTHS')});
+@include generate-classes-for-viewport-with-map($minmax-heights, 'min-height', 'min-h-', #{get-viewport-flag('MIN-HEIGHT')});
+@include generate-classes-for-viewport-with-map($minmax-widths, 'min-width', 'min-w-', #{get-viewport-flag('MIN-WIDTH')});
+@include generate-classes-for-viewport-with-map($minmax-heights, 'max-height', 'max-h-', #{get-viewport-flag('MAX-HEIGHT')});
+@include generate-classes-for-viewport-with-map($minmax-widths, 'max-width', 'max-w-', #{get-viewport-flag('MAX-WIDTH')});
 
 /* Do the actual balancing only on larger screens */
 .level,

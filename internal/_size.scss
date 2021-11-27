@@ -112,11 +112,11 @@ $breakpoint-pairs: (
 /* Variant of mixin that takes in mapping of class name to value */
 @mixin generate-classes-for-viewport-with-map($class-value-pairs, $property, $prefix: 'u-', $generate-viewports: 'true', $include-important: true) {
 
-    $suffix: if($include-important == true, '!important', '');
+    $important: if($include-important == true, '!important', '');
 
     @each $class, $value in $class-value-pairs {
         .#{$prefix}#{$class} {
-            #{$property}: $value#{$suffix};
+            #{$property}: $value#{$important};
         }
     }
 
@@ -125,7 +125,7 @@ $breakpoint-pairs: (
             @each $class, $value in $class-value-pairs {
                 @include screen-above($limit) {
                     .#{$prefix}#{$class}-#{$suffix} {
-                        #{$property}: $value#{$suffix};
+                        #{$property}: $value#{$important};
                     }
                 }
             }
