@@ -119,26 +119,26 @@
                 .px-#{$size}-#{$suffix} {
                     padding-right: calc(var(--space-size) * #{$size}) !important;
                 }
-            }
 
-            .ml-auto-#{$suffix},
-            .mx-auto-#{$suffix} {
-                margin-left: auto !important;
-            }
-
-            .mr-auto-#{$suffix},
-            .mx-auto-#{$suffix} {
-                margin-right: auto !important;
-            }
-
-            .mt-auto-#{$suffix},
-            .my-auto-#{$suffix} {
-                margin-top: auto !important;
-            }
-
-            .mb-auto-#{$suffix},
-            .my-auto-#{$suffix} {
-                margin-bottom: auto !important;
+                .ml-auto-#{$suffix},
+                .mx-auto-#{$suffix} {
+                    margin-left: auto !important;
+                }
+    
+                .mr-auto-#{$suffix},
+                .mx-auto-#{$suffix} {
+                    margin-right: auto !important;
+                }
+    
+                .mt-auto-#{$suffix},
+                .my-auto-#{$suffix} {
+                    margin-top: auto !important;
+                }
+    
+                .mb-auto-#{$suffix},
+                .my-auto-#{$suffix} {
+                    margin-bottom: auto !important;
+                }
             }
         }
     }
