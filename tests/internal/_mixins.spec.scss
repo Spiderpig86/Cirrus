@@ -1,0 +1,103 @@
+// _mixins.scss unit tests
+@import 'true';
+@import '../test_utils';
+
+@import '../../internal/_mixins';
+
+/************************
+ * explode-properties() *
+ ************************/
+@include describe('explode-properties()') {
+    @include it('should return map of CSS properties and values as CSS') {
+        @include assert {
+            @include output {
+                .avatar {
+                    @include explode-properties(
+                        (
+                            border-radius: 50%,
+                            padding: 1rem,
+                        )
+                    );
+                    background-color: #fff;
+                }
+            }
+            @include expect {
+                .avatar {
+                    border-radius: 50%;
+                    padding: 1rem;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+/*******************
+ * input-success() *
+ *******************/
+@include describe('input-success()') {
+    @include it('should return styles for input with success state') {
+        @include assert {
+            @include output {
+                .input--success {
+                    @include input-success();
+                }
+            }
+            @include expect {
+                .input--success {
+                    border-color: var(--cirrus-success);
+                
+                    &:focus {
+                        box-shadow: 0 0 0 0.2rem transparentize($cirrus-success, 1 - $focus-opacity), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/***************
+ * input-error() *
+ ***************/
+@include describe('input-error()') {
+    @include it('should return styles for input in error state') {
+        @include assert {
+            @include output {
+                .input--error {
+                    @include input-error();
+                }
+            }
+            @include expect {
+                .input--error {
+                    border-color: var(--cirrus-danger);
+                
+                    &:focus {
+                        box-shadow: 0 0 0 0.2rem transparentize($cirrus-danger, 1 - $focus-opacity), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**********************
+ * elevate-on-focus() *
+ **********************/
+@include describe('elevate-on-focus()') {
+    @include it('should return styles to bring class to front on focus') {
+        @include assert {
+            @include output {
+                .test {
+                    @include elevate-on-focus();
+                }
+            }
+            @include expect {
+                .test {
+                    &:focus {
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}
