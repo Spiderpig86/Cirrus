@@ -7,6 +7,35 @@ $justify-content: flex-start, center, flex-end, space-between, space-around, spa
 
 $align-items: stretch, flex-start, center, flex-end, baseline;
 
-@include generate-classes-for-viewport($flex-directions, 'flex-direction', 'u#{delimitize('flex')}', $generate-viewports: #{get-viewport-flag('FLEX')});
-@include generate-classes-for-viewport($justify-content, 'justify-content', 'u#{delimitize('justify')}', $generate-viewports: #{get-viewport-flag('FLEX')});
-@include generate-classes-for-viewport($align-items, 'align-items', 'u#{delimitize('items')}', $generate-viewports: #{get-viewport-flag('FLEX')});
+@include generate-classes-for-viewport(
+    $flex-directions,
+    'flex-direction',
+    'u#{delimitize('flex')}',
+    $generate-viewports: #{get-viewport-flag('FLEX')}
+);
+@include generate-classes-for-viewport(
+    $justify-content,
+    'justify-content',
+    'u#{delimitize('justify')}',
+    $generate-viewports: #{get-viewport-flag('FLEX')}
+);
+@include generate-classes-for-viewport(
+    $align-items,
+    'align-items',
+    'u#{delimitize('items')}',
+    $generate-viewports: #{get-viewport-flag('FLEX')}
+);
+
+// Generate flex gap class map
+$flex-gaps-both: ();
+// TODO: Consider if we need to generate for row and col only
+@each $size in $spacing-system {
+    $flex-gaps-both: map-merge(
+        $flex-gaps-both,
+        (
+            'gap-#{$size}': calc(#{$space-size} * #{$size}),
+        )
+    );
+}
+
+@include generate-classes-for-viewport-with-map($flex-gaps-both, 'gap', $generate-viewports: #{get-viewport-flag('FLEX-GAP')});

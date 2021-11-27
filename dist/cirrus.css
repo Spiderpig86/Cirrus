@@ -13662,6 +13662,61 @@ a.tag:hover {
     align-items: baseline !important;
   }
 }
+.u-gap-0 {
+  gap: calc(0.5rem * 0) !important;
+}
+
+.u-gap-1 {
+  gap: calc(0.5rem * 1) !important;
+}
+
+.u-gap-2 {
+  gap: calc(0.5rem * 2) !important;
+}
+
+.u-gap-3 {
+  gap: calc(0.5rem * 3) !important;
+}
+
+.u-gap-4 {
+  gap: calc(0.5rem * 4) !important;
+}
+
+.u-gap-5 {
+  gap: calc(0.5rem * 5) !important;
+}
+
+.u-gap-6 {
+  gap: calc(0.5rem * 6) !important;
+}
+
+.u-gap-8 {
+  gap: calc(0.5rem * 8) !important;
+}
+
+.u-gap-10 {
+  gap: calc(0.5rem * 10) !important;
+}
+
+.u-gap-12 {
+  gap: calc(0.5rem * 12) !important;
+}
+
+.u-gap-16 {
+  gap: calc(0.5rem * 16) !important;
+}
+
+.u-gap-20 {
+  gap: calc(0.5rem * 20) !important;
+}
+
+.u-gap-24 {
+  gap: calc(0.5rem * 24) !important;
+}
+
+.u-gap-32 {
+  gap: calc(0.5rem * 32) !important;
+}
 /*
   Functions
   TODO Refactor to different categories
