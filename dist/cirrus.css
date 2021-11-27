@@ -13662,6 +13662,54 @@ a.tag:hover {
     align-items: baseline !important;
   }
 }
+.u-flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.u-flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+@media screen and (min-width: 640px) {
+  .u-flex-grow-0-sm {
+    flex-grow: 0 !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-flex-grow-1-sm {
+    flex-grow: 1 !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-flex-grow-0-md {
+    flex-grow: 0 !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-flex-grow-1-md {
+    flex-grow: 1 !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-flex-grow-0-lg {
+    flex-grow: 0 !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-flex-grow-1-lg {
+    flex-grow: 1 !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-flex-grow-0-xl {
+    flex-grow: 0 !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-flex-grow-1-xl {
+    flex-grow: 1 !important;
+  }
+}
 .u-gap-0 {
   gap: calc(0.5rem * 0) !important;
 }

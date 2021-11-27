@@ -7,6 +7,8 @@ $justify-content: flex-start, center, flex-end, space-between, space-around, spa
 
 $align-items: stretch, flex-start, center, flex-end, baseline;
 
+$flex-grow: 0, 1;
+
 @include generate-classes-for-viewport(
     $flex-directions,
     'flex-direction',
@@ -23,6 +25,14 @@ $align-items: stretch, flex-start, center, flex-end, baseline;
     $align-items,
     'align-items',
     'u#{delimitize('items')}',
+    $generate-viewports: #{get-viewport-flag('FLEX')}
+);
+
+// Flex grow/shrink utils
+@include generate-classes-for-viewport(
+    $flex-grow,
+    'flex-grow',
+    'u#{delimitize('flex-grow')}',
     $generate-viewports: #{get-viewport-flag('FLEX')}
 );
 
