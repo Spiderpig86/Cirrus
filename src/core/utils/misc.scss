@@ -68,16 +68,6 @@ $text-directions: (justify, left, right, center);
     user-select: none !important;
 }
 
-/* Round the corners of the element */
-.u-round {
-    border-radius: 0.25rem !important;
-}
-
-/* Turns element into a circle */
-.u-circle {
-    border-radius: 50% !important;
-}
-
 .u-no-outline {
     outline: 0px !important;
 }

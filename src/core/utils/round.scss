@@ -1,0 +1,12 @@
+// Utility classes for round
+@import '../../../internal/_functions';
+@import '../../../internal/_mixins';
+@import '../../../internal/_config';
+
+@each $class, $value in $round {
+    .u-round-#{$class} {
+        border-radius: #{$value};
+    }
+}
+
+// TODO: Do we need corner specific variants?

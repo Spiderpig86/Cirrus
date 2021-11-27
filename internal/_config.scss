@@ -311,6 +311,15 @@ $default-config: (
         '90': 0.9,
         '100': 1,
     ),
+    round: (
+        'none': 0px,
+        $xs: .25rem,
+        $sm: .5rem,
+        $md: .75rem,
+        $lg: 1rem,
+        $xl: 1.25rem,
+        'full': 9001px,
+    ),
     shadows: (
         'none': (
             --cirrus-shadow: 0 0 #000,
@@ -392,5 +401,6 @@ $minmax-heights: map.get($default-config, minmax-heights);
 $minmax-widths: map.get($default-config, minmax-widths);
 
 $opacities: map.get($default-config, opacity);
+$round: map.get($default-config, round);
 $shadows: map.get($default-config, shadows);
 $z-indexes: map.get($default-config, z-index);

@@ -15094,6 +15094,106 @@ a.tag:hover {
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
 */
+.u-round-none {
+  border-radius: 0px;
+}
+
+.u-round-xs {
+  border-radius: 0.25rem;
+}
+
+.u-round-sm {
+  border-radius: 0.5rem;
+}
+
+.u-round-md {
+  border-radius: 0.75rem;
+}
+
+.u-round-lg {
+  border-radius: 1rem;
+}
+
+.u-round-xl {
+  border-radius: 1.25rem;
+}
+
+.u-round-full {
+  border-radius: 9001px;
+}
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/* v1 Color scheme for Cirrus */
+/* v2 Colors */
+/*
+    Global Mixins
+*/
+/*
+    Mixin that returns a property map as a series of CSS class properties.
+
+    E.g. $xs: (color: #fff, opacity: 0.5), $sm... =>
+
+    <class>--xs {
+        color: #fff;
+        opacity: 0.5;
+    }
+*/
+/*
+    Bring to front on focus.
+*/
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
 .u-shadow-none {
   --cirrus-shadow: 0 0 #000;
   box-shadow: var(--cirrus-shadow);
