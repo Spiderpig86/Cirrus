@@ -916,27 +916,27 @@ h1 {
 /* Regular text sizes */
 .text-xs {
   font-size: 0.75rem !important;
-  line-height: 1rem !important;
+  line-height: 1.5rem !important;
 }
 
 .text-sm {
   font-size: 0.875rem !important;
-  line-height: 1.25rem !important;
+  line-height: 1.75rem !important;
 }
 
 .text-md {
   font-size: 1rem !important;
-  line-height: 1.5rem !important;
+  line-height: 2rem !important;
 }
 
 .text-lg {
   font-size: 1.25rem !important;
-  line-height: 1.75rem !important;
+  line-height: 2.25rem !important;
 }
 
 .text-xl {
   font-size: 1.5rem !important;
-  line-height: 1.75rem !important;
+  line-height: 2.25rem !important;
 }
 
 p,

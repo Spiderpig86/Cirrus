@@ -145,23 +145,23 @@ $default-config: (
         text: (
             $xs: (
                 font-size: $font-size-xs !important,
-                line-height: 1rem !important,
+                line-height: 1.5rem !important,
             ),
             $sm: (
                 font-size: $font-size-s !important,
-                line-height: 1.25rem !important,
+                line-height: 1.75rem !important,
             ),
             $md: (
                 font-size: $font-size-m !important,
-                line-height: 1.5rem !important,
+                line-height: 2rem !important,
             ),
             $lg: (
                 font-size: $font-size-l !important,
-                line-height: 1.75rem !important,
+                line-height: 2.25rem !important,
             ),
             $xl: (
                 font-size: $font-size-xl !important,
-                line-height: 1.75rem !important,
+                line-height: 2.25rem !important,
             ),
         ),
     ),
