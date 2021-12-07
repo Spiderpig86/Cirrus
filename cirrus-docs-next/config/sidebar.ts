@@ -437,7 +437,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 glyph: null,
                 text: 'Positions',
                 url: '/utils/positions'
-            },
+            }
         ],
     },
 ];
