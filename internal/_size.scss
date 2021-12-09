@@ -24,9 +24,8 @@ $font-sizes: (
     $sm: $font-size-s,
     $md: $font-size-m,
     $lg: $font-size-l,
-    $xl: $font-size-xl
+    $xl: $font-size-xl,
 );
-
 
 /* Grid Count (Columns + Grid) */
 $grid-columns: 12;
@@ -86,7 +85,13 @@ $breakpoint-pairs: (
 }
 
 // TODO: Once we move to dart-sass, look into using content with variables
-@mixin generate-classes-for-viewport($classes, $property, $prefix: 'u-', $generate-viewports: 'true', $include-important: 'true') {
+@mixin generate-classes-for-viewport(
+    $classes,
+    $property,
+    $prefix: 'u-',
+    $generate-viewports: 'true',
+    $include-important: 'true'
+) {
     // We build in this order since we want larger viewports to have higher precedence
     // so we can write classes like u-none u-block-md u-none-lg
     $important: if($include-important == 'true', '!important', '');
@@ -111,8 +116,13 @@ $breakpoint-pairs: (
 }
 
 /* Variant of mixin that takes in mapping of class name to value */
-@mixin generate-classes-for-viewport-with-map($class-value-pairs, $property, $prefix: 'u-', $generate-viewports: 'true', $include-important: 'true') {
-
+@mixin generate-classes-for-viewport-with-map(
+    $class-value-pairs,
+    $property,
+    $prefix: 'u-',
+    $generate-viewports: 'true',
+    $include-important: 'true'
+) {
     $important: if($include-important == 'true', '!important', '');
 
     @each $class, $value in $class-value-pairs {
@@ -129,6 +139,35 @@ $breakpoint-pairs: (
                         #{$property}: $value#{$important};
                     }
                 }
+            }
+        }
+    }
+}
+
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-#{\viewport}', '');
+ *           .outer#{\suffix} {
+ *               background: #222;
+ *               .inner#{\suffix} {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+@mixin generate-styles-with-viewports($generate-viewports: 'true') {
+    @content ('');
+
+    @if $generate-viewports == 'true' {
+        @each $suffix, $limit in $breakpoint-pairs {
+            @include screen-above($limit) {
+                @content ($suffix);
             }
         }
     }

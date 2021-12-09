@@ -374,11 +374,10 @@ $generate-classes-for-viewport-prefix: 'u#{delimitize('flex')}';
                     $generate-classes-for-viewport-classes,
                     $generate-classes-for-viewport-property,
                     'flex-',
-                    $generate-viewports: 'true',
+                    $generate-viewports: 'true'
                 );
             }
             @include expect {
-                
                 .flex-row {
                     flex-direction: row !important;
                 }
@@ -482,7 +481,6 @@ $generate-classes-for-viewport-prefix: 'u#{delimitize('flex')}';
         'should return classes with viewport variants without important! if $include-important is set to false'
     ) {
         @include assert {
-            
             @include output {
                 @include generate-classes-for-viewport(
                     $generate-classes-for-viewport-classes,
@@ -493,7 +491,6 @@ $generate-classes-for-viewport-prefix: 'u#{delimitize('flex')}';
                 );
             }
             @include expect {
-                
                 .u-flex-row {
                     flex-direction: row;
                 }
@@ -598,7 +595,10 @@ $generate-classes-for-viewport-prefix: 'u#{delimitize('flex')}';
 /********************************************
  * generate-classes-for-viewport-with-map() *
  ********************************************/
-$generate-classes-for-viewport-with-map-classes: ('0': 0, '10': 0.1);
+$generate-classes-for-viewport-with-map-classes: (
+    '0': 0,
+    '10': 0.1,
+);
 $generate-classes-for-viewport-with-map-property: 'opacity';
 $generate-classes-for-viewport-with-map-prefix: 'u#{delimitize('opacity')}';
 @include describe('generate-classes-for-viewport-with-map()') {
@@ -800,6 +800,67 @@ $generate-classes-for-viewport-with-map-prefix: 'u#{delimitize('opacity')}';
                 @media screen and (min-width: 1280px) {
                     .u-opacity-10-xl {
                         opacity: 0.1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**********************************
+ * generate-styles-with-viewports() *
+ **********************************/
+@include describe('generate-styles-with-viewports()') {
+    @include it('should return CSS suffixed with viewports given a valid CSS block') {
+        @include assert {
+            @include output {
+                @include generate-styles-with-viewports('true') using ($viewport) {
+                    $suffix: if($viewport != '', '-#{$viewport}', '');
+                    .outer#{$suffix} {
+                        background: #222;
+                        .inner#{$suffix} {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            @include expect {
+                .outer {
+                    background: #222;
+                }
+                .outer .inner {
+                    color: #fff;
+                }
+                @media screen and (min-width: 640px) {
+                    .outer-sm {
+                        background: #222;
+                    }
+                    .outer-sm .inner-sm {
+                        color: #fff;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    .outer-md {
+                        background: #222;
+                    }
+                    .outer-md .inner-md {
+                        color: #fff;
+                    }
+                }
+                @media screen and (min-width: 1024px) {
+                    .outer-lg {
+                        background: #222;
+                    }
+                    .outer-lg .inner-lg {
+                        color: #fff;
+                    }
+                }
+                @media screen and (min-width: 1280px) {
+                    .outer-xl {
+                        background: #222;
+                    }
+                    .outer-xl .inner-xl {
+                        color: #fff;
                     }
                 }
             }
