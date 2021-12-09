@@ -42,7 +42,7 @@
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -88,7 +88,7 @@
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -126,7 +126,7 @@
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -153,7 +153,7 @@
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -592,7 +592,7 @@
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -686,7 +686,7 @@ pre > code[data-lang]:not([data-lang=""]) {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -864,7 +864,7 @@ fieldset legend {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -902,7 +902,7 @@ fieldset legend {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -929,7 +929,7 @@ fieldset legend {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -980,7 +980,7 @@ fieldset legend {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -1370,7 +1370,7 @@ blockquote {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -1464,7 +1464,7 @@ blockquote {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -1491,7 +1491,7 @@ blockquote {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -1542,7 +1542,7 @@ blockquote {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -2148,7 +2148,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -2212,7 +2212,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -2250,7 +2250,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -2747,7 +2747,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -2774,7 +2774,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -2799,7 +2799,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -2850,7 +2850,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -4492,7 +4492,7 @@ a button,
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -4519,7 +4519,7 @@ a button,
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -4983,7 +4983,7 @@ video.video-fullscreen {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');
@@ -9730,7 +9730,7 @@ video.video-fullscreen {
  * 
  * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
  * 
- * Example usage:
+ * Example usage (pretend \ is $):
  *      
  *       @include generate-styles-with-viewports('true') using ($viewport) {
  *           $suffix: if($viewport != '', '-viewport', '');

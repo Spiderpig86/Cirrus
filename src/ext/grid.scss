@@ -17,19 +17,19 @@
     --gap-10: 7rem;
     --gap-11: 9rem;
     --gap-12: 12rem;
+
+    --grid-gap: --gap-2;
+    --grid-template-column: repeat(#{$grid-columns}, minmax(0, 1fr));
+    --grid-column-start: auto;
+    --grid-column-end: auto;
+    --grid-row-start: auto;
+    --grid-row-end: auto;
 }
 
 @include generate-styles-with-viewports($generate-viewports: #{get-viewport-flag('GRID')}) using ($viewport) {
     $suffix: if($viewport != '', '-#{$viewport}', '');
 
     .grid#{$suffix} {
-        --grid-gap: --gap-2;
-        --grid-template-column: repeat(#{$grid-columns}, minmax(0, 1fr));
-        --grid-column-start: auto;
-        --grid-column-end: auto;
-        --grid-row-start: auto;
-        --grid-row-end: auto;
-
         display: grid;
         grid-gap: var(--grid-gap);
         grid-template-columns: var(--grid-template-column);
