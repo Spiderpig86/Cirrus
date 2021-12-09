@@ -37,6 +37,23 @@
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /*
@@ -66,6 +83,23 @@
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /*
   Functions
   TODO Refactor to different categories
@@ -87,6 +121,23 @@
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* Spacing */
@@ -97,6 +148,23 @@
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /*
   Functions
   TODO Refactor to different categories
@@ -519,6 +587,23 @@
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* CODE */
@@ -596,6 +681,23 @@ pre > code[data-lang]:not([data-lang=""]) {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 :root {
@@ -757,6 +859,23 @@ fieldset legend {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /*
   Functions
   TODO Refactor to different categories
@@ -778,6 +897,23 @@ fieldset legend {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* Spacing */
@@ -788,6 +924,23 @@ fieldset legend {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /*
   Functions
   TODO Refactor to different categories
@@ -822,6 +975,23 @@ fieldset legend {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /*
@@ -1195,6 +1365,23 @@ blockquote {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* FOOTER */
@@ -1272,6 +1459,23 @@ blockquote {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* Spacing */
@@ -1282,6 +1486,23 @@ blockquote {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /*
   Functions
   TODO Refactor to different categories
@@ -1316,6 +1537,23 @@ blockquote {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /*
@@ -1905,6 +2143,23 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* Separate CSS file, but same part as Layout */
@@ -1952,6 +2207,23 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /*
   Functions
   TODO Refactor to different categories
@@ -1973,6 +2245,23 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* These styles can also be used on menus in the body */
@@ -2453,6 +2742,23 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* Spacing */
@@ -2463,6 +2769,23 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* Spacing */
 /* Breakpoints */
 /* Fonts */
@@ -2471,6 +2794,23 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /*
   Functions
   TODO Refactor to different categories
@@ -2505,6 +2845,23 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /*
@@ -4130,6 +4487,23 @@ a button,
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* Spacing */
@@ -4140,6 +4514,23 @@ a button,
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* LISTS */
 ul,
 ol {
@@ -4587,6 +4978,23 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /*
   Functions
   TODO Refactor to different categories
@@ -9317,6 +9725,23 @@ video.video-fullscreen {
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage:
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /* TABLE */

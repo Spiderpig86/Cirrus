@@ -1,4 +1,5 @@
 @import '../../internal/_size.scss';
+@import '../../internal/_functions.scss';
 
 /* GRID */
 
@@ -18,72 +19,76 @@
     --gap-12: 12rem;
 }
 
-.grid {
-    --grid-gap: --gap-2;
-    --grid-template-column: repeat(#{$grid-columns}, minmax(0, 1fr));
-    --grid-column-start: auto;
-    --grid-column-end: auto;
-    --grid-row-start: auto;
-    --grid-row-end: auto;
+@include generate-styles-with-viewports($generate-viewports: #{get-viewport-flag('GRID')}) using ($viewport) {
+    $suffix: if($viewport != '', '-#{$viewport}', '');
 
-    display: grid;
-    grid-gap: var(--grid-gap);
-    grid-template-columns: var(--grid-template-column);
+    .grid#{$suffix} {
+        --grid-gap: --gap-2;
+        --grid-template-column: repeat(#{$grid-columns}, minmax(0, 1fr));
+        --grid-column-start: auto;
+        --grid-column-end: auto;
+        --grid-row-start: auto;
+        --grid-row-end: auto;
 
-    @for $i from 1 through 12 {
-        /* Gap */
-        &.grid-gap-#{$i} {
-            --grid-gap: var(--gap-#{$i});
-        }
-    }
+        display: grid;
+        grid-gap: var(--grid-gap);
+        grid-template-columns: var(--grid-template-column);
 
-    @for $i from 1 through $grid-columns {
-        /* Templates */
-        &.grid-cols-#{$i} {
-            --grid-template-column: repeat(#{$i}, minmax(0, 1fr));
+        @for $i from 1 through 12 {
+            /* Gap */
+            &.grid-gap-#{$i}#{$suffix} {
+                --grid-gap: var(--gap-#{$i});
+            }
         }
 
-        /* Column expansion */
-        .grid-c-#{$i} {
-            grid-column: span #{$i} / span #{$i};
+        @for $i from 1 through $grid-columns {
+            /* Templates */
+            &.grid-cols-#{$i}#{$suffix} {
+                --grid-template-column: repeat(#{$i}, minmax(0, 1fr));
+            }
+
+            /* Column expansion */
+            .grid-c-#{$i}#{$suffix} {
+                grid-column: span #{$i} / span #{$i};
+            }
+
+            /* Row expansion */
+            .grid-r-#{$i}#{$suffix} {
+                grid-row: span #{$i} / span #{$i};
+            }
+
+            /* Cell Column Start/End */
+            .grid-cs-#{$i}#{$suffix} {
+                grid-column-start: #{$i};
+            }
+            .grid-ce-#{$i}#{$suffix} {
+                grid-column-end: #{$i + 1};
+            }
+
+            /* Cell Row Start/End */
+            .grid-rs-#{$i}#{$suffix} {
+                grid-row-start: #{$i};
+            }
+            .grid-re-#{$i}#{$suffix} {
+                grid-row-end: #{$i + 1};
+            }
         }
 
-        /* Row expansion */
-        .grid-r-#{$i} {
-            grid-row: span #{$i} / span #{$i};
+        .grid-ce-end#{$suffix} {
+            grid-column-end: -1;
+        }
+        .grid-re-end#{$suffix} {
+            grid-row-end: -1;
+        }
+        .grid-ce-auto#{$suffix} {
+            grid-column-end: auto;
+        }
+        .grid-re-auto#{$suffix} {
+            grid-row-end: auto;
         }
 
-        /* Cell Column Start/End */
-        .grid-cs-#{$i} {
-            grid-column-start: #{$i};
+        @include screen-below($sm) {
+            --grid-template-column: repeat(1, minmax(0, 1fr));
         }
-        .grid-ce-#{$i} {
-            grid-column-end: #{$i + 1};
-        }
-
-        /* Cell Row Start/End */
-        .grid-rs-#{$i} {
-            grid-row-start: #{$i};
-        }
-        .grid-re-#{$i} {
-            grid-row-end: #{$i + 1};
-        }
-    }
-
-    .grid-ce-end {
-        grid-column-end: -1;
-    }
-    .grid-re-end {
-        grid-row-end: -1;
-    }
-    .grid-ce-auto {
-        grid-column-end: auto;
-    }
-    .grid-re-auto {
-        grid-row-end: auto;
-    }
-
-    @include screen-below($sm) {
-        --grid-template-column: repeat(1, minmax(0, 1fr));
     }
 }
