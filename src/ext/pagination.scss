@@ -9,9 +9,7 @@
 
     /* Use for the major pagination meant to display about 2 items */
     .pagination-item {
-        -webkit-flex: 1 0 50%; /* Flex to fill */
-        -ms-flex: 1 0 50%;
-        flex: 1 0 50%;
+        flex: 1 0 50%; /* Flex to fill */
         margin: 1rem 0.1rem;
         transition: all 0.3s;
 
@@ -58,9 +56,7 @@
         &.short {
             border-radius: 0.1rem;
             margin: 0.2rem 0;
-            -webkit-flex: 0; /* Flex to fill */
-            -ms-flex: 0;
-            flex: 0;
+            flex: 0; /* Flex to fill */
 
             &:first-child a {
                 border-top-left-radius: 0.25rem;

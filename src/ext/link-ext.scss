@@ -11,7 +11,6 @@
     &::after {
         content: "";
         transition: all 0.3s;
-        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         position: absolute;
         height: 2px;
@@ -47,19 +46,16 @@
     &.u-C::after {
         /* Center Outwards */
         left: 50%;
-        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
     }
 }
 
 /* Underline top and bottom */
 .utb {
-
     &::before,
     &::after {
         content: "";
         transition: all 0.3s;
-        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         position: absolute;
         height: 2px;
@@ -93,7 +89,6 @@
     &.utb-C::before,
     &.utb-C::after {
         left: 50%;
-        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
     }
 
@@ -129,7 +124,6 @@
     &::after {
         content: "";
         transition: 0.25s all ease;
-        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         position: absolute;
         width: 2px;

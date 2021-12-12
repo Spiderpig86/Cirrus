@@ -237,14 +237,6 @@ fieldset legend {
 /* ANIMATIONS */
 /* Keyframes */
 /* Spinning loading animation */
-@-webkit-keyframes loading {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
 @keyframes loading {
   from {
     transform: rotate(0deg);
@@ -254,64 +246,26 @@ fieldset legend {
   }
 }
 /* Heart animation */
-@-webkit-keyframes pound {
-  to {
-    transform: scale(1.1);
-  }
-}
 @keyframes pound {
   to {
     transform: scale(1.1);
   }
 }
 /* Bounce animations */
-@-webkit-keyframes bounce {
-  from, 20%, 53%, 80%, to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    /* Ease-out based on power of four */
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  40%, 43% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -webkit-transform: translate3d(0, -30px, 0);
-    transform: translate3d(0, -30px, 0);
-  }
-  70% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -webkit-transform: translate3d(0, -15px, 0);
-    transform: translate3d(0, -15px, 0);
-  }
-  90% {
-    -webkit-transform: translate3d(0, -4px, 0);
-    transform: translate3d(0, -4px, 0);
-  }
-}
 @keyframes bounce {
   from, 20%, 53%, 80%, to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    /* Ease-out based on power of four */
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
   40%, 43% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -webkit-transform: translate3d(0, -30px, 0);
     transform: translate3d(0, -30px, 0);
   }
   70% {
-    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
     animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-    -webkit-transform: translate3d(0, -15px, 0);
     transform: translate3d(0, -15px, 0);
   }
   90% {
-    -webkit-transform: translate3d(0, -4px, 0);
     transform: translate3d(0, -4px, 0);
   }
 }
@@ -341,14 +295,6 @@ fieldset legend {
     transform: scale3d(1, 1, 1);
   }
 }
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -369,9 +315,7 @@ fieldset legend {
 }
 
 .animated {
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   /* Loading button position relatively for loading spinner location */
 }
@@ -393,7 +337,6 @@ fieldset legend {
   left: calc(50% - 0.8em);
   top: calc(50% - 0.7407407407em);
   position: absolute;
-  -webkit-animation: loading 500ms infinite linear;
   animation: loading 500ms infinite linear;
 }
 .animated.loading.loading-white::after {
@@ -421,32 +364,25 @@ fieldset legend {
 }
 .animated.pulse {
   animation: pound 0.35s infinite alternate;
-  -webkit-animation: pound 0.35s infinite alternate;
   vertical-align: baseline;
 }
 .animated.bounce {
   animation-name: bounce;
-  -webkit-animation-name: bounce;
   transform-origin: center bottom;
-  -webkit-transform-origin: center bottom;
 }
 .animated.bounceIn {
   animation-name: bounceIn;
 }
 .animated.fadeIn {
-  -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
 .animated.infinite {
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 .animated.infinite.alternate {
   animation-direction: alternate;
 }
 .animated.paused {
-  -webkit-animation-play-state: paused !important;
-  /* Safari 4.0 - 8.0 */
   animation-play-state: paused !important;
 }
 /* Spacing */
@@ -767,9 +703,6 @@ fieldset legend {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 .card .action-bar, .card .card__action-bar {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   padding: 0.5rem;
   margin: 0;
@@ -792,10 +725,7 @@ fieldset legend {
 }
 .card .card-head, .card .card__header {
   align-items: stretch;
-  -webkit-box-align: stretch;
   display: flex;
-  display: -webkit-box;
-  display: -ms-flexbox;
   border-bottom: 1px solid #e9ecef;
 }
 /*
@@ -3241,7 +3171,6 @@ fieldset legend {
 .u::after {
   content: "";
   transition: all 0.3s;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   height: 2px;
@@ -3270,7 +3199,6 @@ fieldset legend {
 .u.u-C::after {
   /* Center Outwards */
   left: 50%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -3281,7 +3209,6 @@ fieldset legend {
 .utb::before, .utb::after {
   content: "";
   transition: all 0.3s;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   height: 2px;
@@ -3305,7 +3232,6 @@ fieldset legend {
 }
 .utb.utb-C::before, .utb.utb-C::after {
   left: 50%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .utb.utb-OLR::before {
@@ -3332,7 +3258,6 @@ fieldset legend {
 .usquare::before, .usquare::after {
   content: "";
   transition: 0.25s all ease;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: absolute;
   width: 2px;
@@ -3457,10 +3382,7 @@ fieldset legend {
   padding: 1rem;
   display: none;
   /* Doesn't block the elements underneath */
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   /* Vertical centering */
   pointer-events: none;
@@ -3472,8 +3394,6 @@ fieldset legend {
   /* Visible state */
 }
 .modal:target, .modal.shown {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   opacity: 1;
   z-index: 999;
@@ -3494,7 +3414,6 @@ fieldset legend {
 .modal:target .modal-container,
 .modal:target .modal-container, .modal.shown .modal-container,
 .modal.shown .modal-container {
-  -webkit-animation: slide-down var(--animation-duration) ease 1;
   animation: slide-down var(--animation-duration) ease 1;
   z-index: 1;
 }
@@ -3547,13 +3466,9 @@ fieldset legend {
   }
 }
 .modal.modal-animated--dropdown {
-  -webkit-animation: slide-down var(--animation-duration) ease 1;
   animation: slide-down var(--animation-duration) ease 1;
 }
 .modal.modal-animated--zoom-in, .modal.modal-animated--zoom-out {
-  display: -webkit-box;
-  /* Force dialog to appear in the center */
-  display: -ms-flexbox;
   display: flex;
   opacity: 0;
   transition: 300ms all ease;
@@ -3576,27 +3491,13 @@ fieldset legend {
 }
 
 /* Keyframes for slide down animation */
-@-webkit-keyframes slide-down {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-3rem);
-    transform: translateY(-3rem);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
 @keyframes slide-down {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-3rem);
     transform: translateY(-3rem);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -4654,10 +4555,8 @@ fieldset legend {
   /* Bordered pagination */
 }
 .pagination .pagination-item {
-  -webkit-flex: 1 0 50%;
-  /* Flex to fill */
-  -ms-flex: 1 0 50%;
   flex: 1 0 50%;
+  /* Flex to fill */
   margin: 1rem 0.1rem;
   transition: all 0.3s;
   /* Pagination Item */
@@ -4695,10 +4594,8 @@ fieldset legend {
 .pagination .pagination-item.short {
   border-radius: 0.1rem;
   margin: 0.2rem 0;
-  -webkit-flex: 0;
-  /* Flex to fill */
-  -ms-flex: 0;
   flex: 0;
+  /* Flex to fill */
   /* Color the selected pagination item with accent color */
 }
 .pagination .pagination-item.short:first-child a {
@@ -4911,7 +4808,6 @@ fieldset legend {
   /* Allow scrollbar to be visible if the width of the tabs exceeds container */
   user-select: none;
   white-space: nowrap;
-  -webkit-box-align: stretch;
   align-items: stretch;
   font-size: 1rem;
   /* Shift tabs to the center */
@@ -4927,12 +4823,8 @@ fieldset legend {
 }
 .tab-container.tabs-center ul {
   justify-content: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
 }
 .tab-container.tabs-right ul {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 .tab-container.tabs-depth ul {
@@ -4972,10 +4864,7 @@ fieldset legend {
   /* Equal size tabs */
 }
 .tab-container.tabs-fill li {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   /* Disable shrinking to original width */
   flex-basis: 0;
@@ -4994,8 +4883,6 @@ fieldset legend {
 }
 .tab-container ul {
   display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   /* Move tab items to left side */
   margin: 0.5rem;
@@ -5025,14 +4912,9 @@ fieldset legend {
 }
 .tab-container li a,
 .tab-container li .tab-item-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
   border-bottom: 1px solid #e9ecef;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding: 0.5rem 1rem;
   transition: all 0.3s;
@@ -5351,9 +5233,6 @@ a.tag:hover {
   display: -ms-flexbox;
   align-content: space-between;
   /* Ensure space between child elements of card tile */
-  -webkit-align-content: space-between;
-  -ms-flex-line-pack: justify;
-  /* Evenly distribute lines */
   overflow: inherit;
   /* Prevent overflowing when unnecessary */
   /* Override the default behavior where buttons display as blocks */
@@ -5376,8 +5255,6 @@ a.tag:hover {
 }
 .tile .tile__container {
   flex: 1 1 auto;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
 }
 .tile .tile__container:not(:first-child) {
   padding-left: 1rem;
@@ -5568,8 +5445,6 @@ a.tag:hover {
   /* Tooltip Left */
 }
 .tooltip::after {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   position: absolute;
   color: #fff;
   font-size: 0.6rem;
@@ -5585,7 +5460,6 @@ a.tag:hover {
   /* Hide the element */
   text-overflow: ellipsis;
   max-width: 15rem;
-  -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   transition: all var(--animation-duration) ease;
   z-index: 200;
@@ -5598,81 +5472,60 @@ a.tag:hover {
 }
 .tooltip:focus::after, .tooltip:hover::after {
   opacity: 1;
-  -webkit-transform: translate(-50%, -0.5rem);
   transform: translate(-50%, -0.5rem);
   transition: all var(--animation-duration) ease;
 }
 .tooltip.tooltip--top-left::after {
-  -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
 .tooltip.tooltip--top-left:hover::after, .tooltip.tooltip--top-left:focus::after {
   left: 0;
-  -webkit-transform: translate(-100%, -0.5rem);
   transform: translate(-100%, -0.5rem);
 }
 .tooltip.tooltip--top-right::after {
   left: auto;
-  -webkit-transform: translate(15%, 0);
   transform: translate(15%, 0);
 }
 .tooltip.tooltip--top-right:hover::after, .tooltip.tooltip--top-right:focus::after {
   right: 0;
-  -webkit-transform: translate(100%, -0.5rem);
   transform: translate(100%, -0.5rem);
 }
 .tooltip.tooltip--bottom::after {
   top: 100%;
   transform: translate(-50%, -1rem);
   /* Moves tooltip to the center horizontally and shifts tooltip down */
-  -webkit-transform: translate(-50%, -1rem);
-  -moz-transform: translate(-50%, -1rem);
-  -ms-transform: translate(-50%, -1rem);
   bottom: auto;
 }
 .tooltip.tooltip--bottom:hover::after, .tooltip.tooltip--bottom:focus::after {
   transform: translate(-50%, 0.5rem);
-  -webkit-transform: translate(-50%, 0.5rem);
-  -moz-transform: translate(-50%, 0.5rem);
-  -ms-transform: translate(-50%, 0.5rem);
   bottom: auto;
 }
 .tooltip.tooltip--bottom-left::after {
   top: 100%;
-  -webkit-transform: translate(-65%, -1rem);
   transform: translate(-65%, -1rem);
   bottom: auto;
 }
 .tooltip.tooltip--bottom-left:hover::after, .tooltip.tooltip--bottom-left:focus::after {
   left: 0;
-  -webkit-transform: translate(-100%, 0.5rem);
   transform: translate(-100%, 0.5rem);
 }
 .tooltip.tooltip--bottom-right::after {
   left: auto;
   top: 100%;
-  -webkit-transform: translate(0%, -1rem);
   transform: translate(0%, -1rem);
   bottom: auto;
 }
 .tooltip.tooltip--bottom-right:hover::after, .tooltip.tooltip--bottom-right:focus::after {
   right: 0;
-  -webkit-transform: translate(100%, 0.5rem);
   transform: translate(100%, 0.5rem);
 }
 .tooltip.tooltip--right::after {
   left: 100%;
   bottom: 50%;
   transform: translate(-1rem, 50%);
-  -webkit-transform: translate(-1rem, 50%);
-  -moz-transform: translate(-1rem, 50%);
-  -ms-transform: translate(-1rem, 50%);
 }
 .tooltip.tooltip--right:hover::after, .tooltip.tooltip--right:focus::after {
   transform: translate(0.5rem, 50%);
-  -webkit-transform: translate(0.5rem, 50%);
-  -moz-transform: translate(0.5rem, 50%);
-  -ms-transform: translate(0.5rem, 50%);
 }
 .tooltip.tooltip--left::after {
   right: 100%;
@@ -5680,15 +5533,9 @@ a.tag:hover {
   left: auto;
   /* Needed to work */
   transform: translate(1rem, 50%);
-  -webkit-transform: translate(1rem, 50%);
-  -moz-transform: translate(1rem, 50%);
-  -ms-transform: translate(1rem, 50%);
 }
 .tooltip.tooltip--left:hover::after, .tooltip.tooltip--left:focus::after {
   transform: translate(-0.5rem, 50%);
-  -webkit-transform: translate(-0.5rem, 50%);
-  -moz-transform: translate(-0.5rem, 50%);
-  -ms-transform: translate(-0.5rem, 50%);
 }
 /*
   Functions
@@ -7763,10 +7610,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* These styles can also be used on menus in the body */
 /* HEADER */
 .header {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
-  -ms-flex-negative: 0;
   width: 100%;
   z-index: 100;
   margin-bottom: 20px;
@@ -7832,13 +7676,8 @@ label:last-child:not(:first-child):not(.form-group-label) {
   overflow: auto;
 }
 .header .header-brand {
-  -webkit-overflow-scrolling: touch;
-  -webkit-box-align: stretch;
   align-items: stretch;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   max-width: 100vw;
   min-height: 3.25rem;
@@ -7878,27 +7717,17 @@ label:last-child:not(:first-child):not(.form-group-label) {
 
 /* Allow the user to scroll through navbar items if it exceeds nav-left, nav-center, or nav-right widths */
 .nav-overflow-x {
-  -webkit-box-pack: inherit;
-  -ms-flex-pack: inherit;
   justify-content: inherit;
   overflow-x: scroll;
 }
 
 /* Wrapper to vertically center header items */
 .nav-item {
-  -webkit-box-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
   flex-grow: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   transition: all 0.3s;
   padding: 0 0.3rem;
@@ -7977,7 +7806,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
   height: 0.5em;
   width: 0.5em;
   content: " ";
-  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   pointer-events: none;
   margin-top: -0.435em;
@@ -8001,26 +7829,17 @@ label:last-child:not(:first-child):not(.form-group-label) {
 
 @media screen and (min-width: 768px) {
   .header {
-    -webkit-box-align: stretch;
-    /* Box Align and align items to stretch to make nav-items fill up parent height */
     align-items: stretch;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    display: flex;
     /* Align items to the left */
     /* Align items to the right */
     /* Centering items, best used when nav-brand is not used to prevent offset */
     /* Hide hamburger button */
   }
   .header .header-nav {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
-    -ms-flex-negative: 0;
-    -webkit-box-align: stretch;
     align-items: stretch;
     /* Make items fill up all available space regardless of width https://drafts.csswg.org/css-align/ */
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: relative;
     text-align: center;
@@ -8058,18 +7877,10 @@ label:last-child:not(:first-child):not(.form-group-label) {
     right: 0;
   }
   .header .nav-center {
-    -webkit-box-align: stretch;
     align-items: stretch;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
     flex-grow: 0;
-    -ms-flex-negative: 0;
     flex-shrink: 0;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -8089,15 +7900,11 @@ label:last-child:not(:first-child):not(.form-group-label) {
     /* Make cursor not respond to menu links when not displayed */
   }
   .header .nav-item .dropdown-menu.dropdown-animated {
-    -webkit-transform: translateY(-5px);
-    /* Used for transitional drop down effect */
     transform: translateY(-5px);
   }
   .header .nav-item .dropdown-menu.dropdown-shown, .header .nav-item.toggle-hover:hover .dropdown-menu,
 .header .nav-item .dropdown-menu.dropdown-animated.dropdown-shown {
     opacity: 1;
-    -webkit-transform: none;
-    /* Used for transitional drop down effect */
     transform: none;
     pointer-events: auto;
   }
@@ -8466,26 +8273,17 @@ section {
 
 .hero {
   /* Parent of hero-body */
-  -webkit-box-align: stretch;
   align-items: stretch;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   /* Important to stretch height of hero-body */
-  -webkit-box-orient: vertical;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .hero .hero-body {
-  -ms-flex-positive: 1;
   flex-grow: 1;
   /* Tells the hero-body to take up the entire space */
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   padding: 3rem 1.5rem;
   align-items: center;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -8524,9 +8322,6 @@ section {
   display: table;
 }
 .row.row--no-wrap {
-  -webkit-flex-wrap: nowrap;
-  /* Remove wrapping of the columns by default */
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   overflow-x: auto;
   /* Can be disabled to remove scroll bar */
@@ -8988,39 +8783,23 @@ section {
 }
 
 .level {
-  -webkit-box-align: center;
-  -ms-grid-row-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   /* Used to stretch the contents of div in level to fill */
 }
 .level .level-item {
   /* Centers items */
-  -webkit-box-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
   flex-grow: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 .level .level-content {
-  -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
-  -ms-flex-negative: 1;
   flex-shrink: 1;
   text-align: left;
   width: 100%;
@@ -9880,8 +9659,6 @@ section {
   .level,
 .level-left,
 .level-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -9893,11 +9670,7 @@ section {
 
   /* Keep all level children the same height */
   .level.fill-height {
-    -webkit-box-align: stretch;
-    /* Box Align and align items to stretch to make nav-items fill up parent height */
     align-items: stretch;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -10162,7 +9935,6 @@ ul .divider::after {
   padding: 0 0.7rem;
   margin: 0.5rem;
   font-size: 0.7rem;
-  -webkit-transform: translateY(-1.1rem);
   transform: translateY(-1.1rem);
 }
 
@@ -10176,8 +9948,7 @@ ul .divider::after {
   position: absolute;
   top: 75%;
   left: 0;
-  -webkit-animation: slide-down var(--animation-duration) ease 1;
-  animation: slide-down 0.1s ease 1;
+  animation: slide-down var(--animation-duration) ease 1;
   background-color: var(--cirrus-bg);
   border-radius: 0.2rem;
   box-shadow: 0 1rem 3rem rgba(149, 157, 165, 0.3);
@@ -10185,7 +9956,6 @@ ul .divider::after {
   opacity: 0;
   min-width: 15rem;
   padding: 0.25rem 0.5rem;
-  -webkit-transform: translateY(0.5rem);
   transform: translateY(0.5rem);
   z-index: 10;
   pointer-events: none;
@@ -10247,7 +10017,6 @@ ul .divider::after {
   max-height: 100vh;
 }
 .tree .tree-item input:checked ~ .tree-item-header .icon {
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .tree .tree-item .tree-item-body {
@@ -10260,11 +10029,8 @@ ul .divider::after {
 
 /* The body that will encompass the tree-nav and tree-nav-content */
 .tree-nav-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   /* A fixed menu on the side with a tree component */
   /* The container for the tree component to prevent it from overflowing */
@@ -10273,10 +10039,7 @@ ul .divider::after {
   /* The body where all other HTML components are entered if a tree-nav is used */
 }
 .tree-nav-body .tree-nav {
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
   flex-grow: 0;
-  -ms-flex-negative: 1;
   flex-shrink: 1;
   padding: 2rem 1rem 2rem 2rem;
   min-width: 15rem;
@@ -10295,8 +10058,6 @@ ul .divider::after {
 .tree-nav-body + .tree-nav-content {
   max-width: 100%;
   padding: 2rem;
-  -ms-flex: 1 0 auto;
-  -webkit-box-flex: 1;
   flex: 1 0 auto;
   overflow: auto;
   margin: 0;
@@ -10317,9 +10078,8 @@ ul .divider::after {
     padding: 3rem 1.5rem;
     position: fixed;
     top: 0;
-    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
-    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
     z-index: 400;
     /* Open the menu from the side */
     /* Use a link and add the id of this element as the url */
@@ -10327,10 +10087,7 @@ ul .divider::after {
     /* Reset max-width in mobile */
   }
   .tree-nav:target {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
-    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
-    transition: -webkit-transform var(--animation-duration) ease;
     transition: transform var(--animation-duration) ease;
     /* Show the darkened area when the tree nav menu is clicked */
   }
@@ -17813,14 +17570,6 @@ video.video-fullscreen {
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
 */
-.u-z-50 {
-  z-index: 60 !important;
-}
-
-.u-z-60 {
-  z-index: 60 !important;
-}
-
 .u-z-0 {
   z-index: 0 !important;
 }
@@ -17839,6 +17588,10 @@ video.video-fullscreen {
 
 .u-z-40 {
   z-index: 40 !important;
+}
+
+.u-z-50 {
+  z-index: 50 !important;
 }
 
 .u-z-auto {

@@ -151,7 +151,6 @@ ul {
         padding: 0 0.7rem;
         margin: 0.5rem;
         font-size: 0.7rem;
-        -webkit-transform: translateY(-1.1rem);
         transform: translateY(-1.1rem);
     }
 }
@@ -165,8 +164,7 @@ ul {
         position: absolute;
         top: 75%;
         left: 0;
-        -webkit-animation: slide-down var(--animation-duration) ease 1;
-        animation: slide-down 0.1s ease 1;
+        animation: slide-down var(--animation-duration) ease 1;
         background-color: var(--cirrus-bg);
         border-radius: 0.2rem;
         box-shadow: 0 1rem 3rem rgba(149, 157, 165, 0.3);
@@ -174,7 +172,6 @@ ul {
         opacity: 0;
         min-width: 15rem;
         padding: 0.25rem 0.5rem;
-        -webkit-transform: translateY(0.5rem);
         transform: translateY(0.5rem);
         z-index: 10;
         pointer-events: none; /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
@@ -239,7 +236,6 @@ ul {
         
         /* Rotate the dropdown glyph */
         input:checked ~ .tree-item-header .icon {
-            -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
         }
         
@@ -255,19 +251,13 @@ ul {
 
 /* The body that will encompass the tree-nav and tree-nav-content */
 .tree-nav-body {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     height: 100vh;
-    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
 
     /* A fixed menu on the side with a tree component */
     .tree-nav {
-        -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
         flex-grow: 0;
-        -ms-flex-negative: 1;
         flex-shrink: 1;
         padding: 2rem 1rem 2rem 2rem;
         min-width: 15rem;
@@ -291,8 +281,6 @@ ul {
     & + .tree-nav-content {
         max-width: 100%;
         padding: 2rem;
-        -ms-flex: 1 0 auto;
-        -webkit-box-flex: 1;
         flex: 1 0 auto;
         overflow: auto;
         margin: 0;
@@ -316,18 +304,14 @@ ul {
         padding: 3rem 1.5rem;
         position: fixed;
         top: 0;
-        -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
-        transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+        transition: transform var(--animation-duration) ease;
         z-index: 400;
 
         /* Open the menu from the side */
         /* Use a link and add the id of this element as the url */
         &:target {
-            -webkit-transform: translateX(0);
             transform: translateX(0);
-            transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
-            transition: -webkit-transform var(--animation-duration) ease;
             transition: transform var(--animation-duration) ease;
 
             /* Show the darkened area when the tree nav menu is clicked */

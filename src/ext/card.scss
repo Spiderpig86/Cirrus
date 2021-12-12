@@ -121,9 +121,6 @@
     }
 
     .action-bar, .card__action-bar {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
         user-select: none;
         padding: 0.5rem;
         margin: 0;
@@ -155,10 +152,7 @@
     /* Card Title Bar */
     .card-head, .card__header {
         align-items: stretch;
-        -webkit-box-align: stretch;
         display: flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
         border-bottom: 1px solid map-get($grays, '200');
     }
 }

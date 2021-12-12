@@ -8,8 +8,6 @@
 
     /* This is the psuedoelement that creates the tooltip */
     &::after {
-        -webkit-appearance: none;
-        -moz-appearance: none;
         position: absolute;
         color: #fff;
         font-size: 0.6rem;
@@ -23,7 +21,6 @@
         opacity: 0; /* Hide the element */
         text-overflow: ellipsis;
         max-width: 15rem;
-        -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
         transition: all var(--animation-duration) ease;
         z-index: 200;
@@ -37,35 +34,30 @@
     &:focus::after,
     &:hover::after {
         opacity: 1;
-        -webkit-transform: translate(-50%, -0.5rem);
         transform: translate(-50%, -0.5rem);
         transition: all var(--animation-duration) ease;
     }
 
     /* Tooltip top left */
     &.tooltip--top-left::after {
-        -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
     }
 
     &.tooltip--top-left:hover::after,
     &.tooltip--top-left:focus::after {
         left: 0;
-        -webkit-transform: translate(-100%, -0.5rem);
         transform: translate(-100%, -0.5rem);
     }
 
     /* Tooltip top right */
     &.tooltip--top-right::after {
         left: auto;
-        -webkit-transform: translate(15%, 0);
         transform: translate(15%, 0);
     }
 
     &.tooltip--top-right:hover::after,
     &.tooltip--top-right:focus::after {
         right: 0;
-        -webkit-transform: translate(100%, -0.5rem);
         transform: translate(100%, -0.5rem);
     }
 
@@ -73,25 +65,18 @@
     &.tooltip--bottom::after {
         top: 100%;
         transform: translate(-50%, -1rem); /* Moves tooltip to the center horizontally and shifts tooltip down */
-        -webkit-transform: translate(-50%, -1rem);
-        -moz-transform: translate(-50%, -1rem);
-        -ms-transform: translate(-50%, -1rem);
         bottom: auto;
     }
 
     &.tooltip--bottom:hover::after,
     &.tooltip--bottom:focus::after {
         transform: translate(-50%, 0.5rem);
-        -webkit-transform: translate(-50%, 0.5rem);
-        -moz-transform: translate(-50%, 0.5rem);
-        -ms-transform: translate(-50%, 0.5rem);
         bottom: auto;
     }
 
     /* Tooltip bottom left */
     &.tooltip--bottom-left::after {
         top: 100%;
-        -webkit-transform: translate(-65%, -1rem);
         transform: translate(-65%, -1rem);
         bottom: auto;
     }
@@ -99,7 +84,6 @@
     &.tooltip--bottom-left:hover::after,
     &.tooltip--bottom-left:focus::after {
         left: 0;
-        -webkit-transform: translate(-100%, 0.5rem);
         transform: translate(-100%, 0.5rem);
     }
 
@@ -107,7 +91,6 @@
     &.tooltip--bottom-right::after {
         left: auto;
         top: 100%;
-        -webkit-transform: translate(0%, -1rem);
         transform: translate(0%, -1rem);
         bottom: auto;
     }
@@ -115,7 +98,6 @@
     &.tooltip--bottom-right:hover::after,
     &.tooltip--bottom-right:focus::after {
         right: 0;
-        -webkit-transform: translate(100%, 0.5rem);
         transform: translate(100%, 0.5rem);
     }
 
@@ -124,17 +106,11 @@
         left: 100%;
         bottom: 50%;
         transform: translate(-1rem, 50%);
-        -webkit-transform: translate(-1rem, 50%);
-        -moz-transform: translate(-1rem, 50%);
-        -ms-transform: translate(-1rem, 50%);
     }
 
     &.tooltip--right:hover::after,
     &.tooltip--right:focus::after {
         transform: translate(0.5rem, 50%);
-        -webkit-transform: translate(0.5rem, 50%);
-        -moz-transform: translate(0.5rem, 50%);
-        -ms-transform: translate(0.5rem, 50%);
     }
 
     /* Tooltip Left */
@@ -143,16 +119,10 @@
         bottom: 50%;
         left: auto; /* Needed to work */
         transform: translate(1rem, 50%);
-        -webkit-transform: translate(1rem, 50%);
-        -moz-transform: translate(1rem, 50%);
-        -ms-transform: translate(1rem, 50%);
     }
 
     &.tooltip--left:hover::after,
     &.tooltip--left:focus::after {
         transform: translate(-0.5rem, 50%);
-        -webkit-transform: translate(-0.5rem, 50%);
-        -moz-transform: translate(-0.5rem, 50%);
-        -ms-transform: translate(-0.5rem, 50%);
     }
 }

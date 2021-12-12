@@ -12,18 +12,13 @@
     opacity: 0; /* Initially hidden */
     padding: 1rem;
     display: none; /* Doesn't block the elements underneath */
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center; /* Vertical centering */
     pointer-events: none; /* Prevent any pointer events made to modal while hidden */
 
     /* When the modal dialog is visible */
     &:target,
     &.shown {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         opacity: 1;
         z-index: 999;
@@ -42,7 +37,6 @@
 
         .modal-container,
         .modal-container {
-            -webkit-animation: slide-down var(--animation-duration) ease 1;
             animation: slide-down var(--animation-duration) ease 1;
             z-index: 1;
         }
@@ -104,15 +98,12 @@
 
     /* MODAL ANIMATIONS */
     &.modal-animated--dropdown {
-        -webkit-animation: slide-down var(--animation-duration) ease 1;
         animation: slide-down var(--animation-duration) ease 1;
     }
 
     /* Visible state */
     &.modal-animated--zoom-in,
     &.modal-animated--zoom-out {
-        display: -webkit-box; /* Force dialog to appear in the center */
-        display: -ms-flexbox;
         display: flex;
         opacity: 0;
         transition: 300ms all ease;
@@ -142,27 +133,13 @@
 }
 
 /* Keyframes for slide down animation */
-@-webkit-keyframes slide-down {
-    0% {
-        opacity: 0;
-        -webkit-transform: translateY(-3rem);
-        transform: translateY(-3rem);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
 @keyframes slide-down {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(-3rem);
         transform: translateY(-3rem);
     }
     100% {
         opacity: 1;
-        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 }

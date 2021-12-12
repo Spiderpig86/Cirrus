@@ -2267,10 +2267,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* These styles can also be used on menus in the body */
 /* HEADER */
 .header {
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
-  -ms-flex-negative: 0;
   width: 100%;
   z-index: 100;
   margin-bottom: 20px;
@@ -2336,13 +2333,8 @@ label:last-child:not(:first-child):not(.form-group-label) {
   overflow: auto;
 }
 .header .header-brand {
-  -webkit-overflow-scrolling: touch;
-  -webkit-box-align: stretch;
   align-items: stretch;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   max-width: 100vw;
   min-height: 3.25rem;
@@ -2382,27 +2374,17 @@ label:last-child:not(:first-child):not(.form-group-label) {
 
 /* Allow the user to scroll through navbar items if it exceeds nav-left, nav-center, or nav-right widths */
 .nav-overflow-x {
-  -webkit-box-pack: inherit;
-  -ms-flex-pack: inherit;
   justify-content: inherit;
   overflow-x: scroll;
 }
 
 /* Wrapper to vertically center header items */
 .nav-item {
-  -webkit-box-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
   flex-grow: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   transition: all 0.3s;
   padding: 0 0.3rem;
@@ -2481,7 +2463,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
   height: 0.5em;
   width: 0.5em;
   content: " ";
-  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   pointer-events: none;
   margin-top: -0.435em;
@@ -2505,26 +2486,17 @@ label:last-child:not(:first-child):not(.form-group-label) {
 
 @media screen and (min-width: 768px) {
   .header {
-    -webkit-box-align: stretch;
-    /* Box Align and align items to stretch to make nav-items fill up parent height */
     align-items: stretch;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    display: flex;
     /* Align items to the left */
     /* Align items to the right */
     /* Centering items, best used when nav-brand is not used to prevent offset */
     /* Hide hamburger button */
   }
   .header .header-nav {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
-    -ms-flex-negative: 0;
-    -webkit-box-align: stretch;
     align-items: stretch;
     /* Make items fill up all available space regardless of width https://drafts.csswg.org/css-align/ */
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     position: relative;
     text-align: center;
@@ -2562,18 +2534,10 @@ label:last-child:not(:first-child):not(.form-group-label) {
     right: 0;
   }
   .header .nav-center {
-    -webkit-box-align: stretch;
     align-items: stretch;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
     flex-grow: 0;
-    -ms-flex-negative: 0;
     flex-shrink: 0;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
@@ -2593,15 +2557,11 @@ label:last-child:not(:first-child):not(.form-group-label) {
     /* Make cursor not respond to menu links when not displayed */
   }
   .header .nav-item .dropdown-menu.dropdown-animated {
-    -webkit-transform: translateY(-5px);
-    /* Used for transitional drop down effect */
     transform: translateY(-5px);
   }
   .header .nav-item .dropdown-menu.dropdown-shown, .header .nav-item.toggle-hover:hover .dropdown-menu,
 .header .nav-item .dropdown-menu.dropdown-animated.dropdown-shown {
     opacity: 1;
-    -webkit-transform: none;
-    /* Used for transitional drop down effect */
     transform: none;
     pointer-events: auto;
   }
@@ -2970,26 +2930,17 @@ section {
 
 .hero {
   /* Parent of hero-body */
-  -webkit-box-align: stretch;
   align-items: stretch;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   /* Important to stretch height of hero-body */
-  -webkit-box-orient: vertical;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .hero .hero-body {
-  -ms-flex-positive: 1;
   flex-grow: 1;
   /* Tells the hero-body to take up the entire space */
-  -ms-flex-negative: 0;
   flex-shrink: 0;
   padding: 3rem 1.5rem;
   align-items: center;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -3028,9 +2979,6 @@ section {
   display: table;
 }
 .row.row--no-wrap {
-  -webkit-flex-wrap: nowrap;
-  /* Remove wrapping of the columns by default */
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   overflow-x: auto;
   /* Can be disabled to remove scroll bar */
@@ -3492,39 +3440,23 @@ section {
 }
 
 .level {
-  -webkit-box-align: center;
-  -ms-grid-row-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   /* Used to stretch the contents of div in level to fill */
 }
 .level .level-item {
   /* Centers items */
-  -webkit-box-align: center;
   align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
   flex-grow: 0;
-  -ms-flex-negative: 0;
   flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 .level .level-content {
-  -ms-flex-preferred-size: auto;
   flex-basis: auto;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
-  -ms-flex-negative: 1;
   flex-shrink: 1;
   text-align: left;
   width: 100%;
@@ -4384,8 +4316,6 @@ section {
   .level,
 .level-left,
 .level-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -4397,11 +4327,7 @@ section {
 
   /* Keep all level children the same height */
   .level.fill-height {
-    -webkit-box-align: stretch;
-    /* Box Align and align items to stretch to make nav-items fill up parent height */
     align-items: stretch;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -4666,7 +4592,6 @@ ul .divider::after {
   padding: 0 0.7rem;
   margin: 0.5rem;
   font-size: 0.7rem;
-  -webkit-transform: translateY(-1.1rem);
   transform: translateY(-1.1rem);
 }
 
@@ -4680,8 +4605,7 @@ ul .divider::after {
   position: absolute;
   top: 75%;
   left: 0;
-  -webkit-animation: slide-down var(--animation-duration) ease 1;
-  animation: slide-down 0.1s ease 1;
+  animation: slide-down var(--animation-duration) ease 1;
   background-color: var(--cirrus-bg);
   border-radius: 0.2rem;
   box-shadow: 0 1rem 3rem rgba(149, 157, 165, 0.3);
@@ -4689,7 +4613,6 @@ ul .divider::after {
   opacity: 0;
   min-width: 15rem;
   padding: 0.25rem 0.5rem;
-  -webkit-transform: translateY(0.5rem);
   transform: translateY(0.5rem);
   z-index: 10;
   pointer-events: none;
@@ -4751,7 +4674,6 @@ ul .divider::after {
   max-height: 100vh;
 }
 .tree .tree-item input:checked ~ .tree-item-header .icon {
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .tree .tree-item .tree-item-body {
@@ -4764,11 +4686,8 @@ ul .divider::after {
 
 /* The body that will encompass the tree-nav and tree-nav-content */
 .tree-nav-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   /* A fixed menu on the side with a tree component */
   /* The container for the tree component to prevent it from overflowing */
@@ -4777,10 +4696,7 @@ ul .divider::after {
   /* The body where all other HTML components are entered if a tree-nav is used */
 }
 .tree-nav-body .tree-nav {
-  -webkit-box-flex: 0;
-  -ms-flex-positive: 0;
   flex-grow: 0;
-  -ms-flex-negative: 1;
   flex-shrink: 1;
   padding: 2rem 1rem 2rem 2rem;
   min-width: 15rem;
@@ -4799,8 +4715,6 @@ ul .divider::after {
 .tree-nav-body + .tree-nav-content {
   max-width: 100%;
   padding: 2rem;
-  -ms-flex: 1 0 auto;
-  -webkit-box-flex: 1;
   flex: 1 0 auto;
   overflow: auto;
   margin: 0;
@@ -4821,9 +4735,8 @@ ul .divider::after {
     padding: 3rem 1.5rem;
     position: fixed;
     top: 0;
-    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
-    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
+    transition: transform var(--animation-duration) ease;
     z-index: 400;
     /* Open the menu from the side */
     /* Use a link and add the id of this element as the url */
@@ -4831,10 +4744,7 @@ ul .divider::after {
     /* Reset max-width in mobile */
   }
   .tree-nav:target {
-    -webkit-transform: translateX(0);
     transform: translateX(0);
-    transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
-    transition: -webkit-transform var(--animation-duration) ease;
     transition: transform var(--animation-duration) ease;
     /* Show the darkened area when the tree nav menu is clicked */
   }

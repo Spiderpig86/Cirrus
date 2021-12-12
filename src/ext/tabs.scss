@@ -10,21 +10,16 @@
     overflow-x: auto; /* Allow scrollbar to be visible if the width of the tabs exceeds container */
     user-select: none;
     white-space: nowrap;
-    -webkit-box-align: stretch;
     align-items: stretch;
     font-size: $font-size-m;
 
     /* Shift tabs to the center */
     &.tabs-center ul {
         justify-content: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
     }
 
     /* Shift tabs to the right */
     &.tabs-right ul {
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
         justify-content: flex-end;
     }
 
@@ -77,10 +72,7 @@
         }
 
         li {
-            -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
             flex-grow: 1;
-            -ms-flex-negative: 0;
             flex-shrink: 0; /* Disable shrinking to original width */
             flex-basis: 0;
         }
@@ -96,8 +88,6 @@
     /* Tabs are embedded inside an unordered list */
     ul {
         display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
         justify-content: flex-start; /* Move tab items to left side */
         margin: 0.5rem; /* Override the behavior for standard ul and add equal padding */
         border-bottom: 1px solid map-get($grays, '200'); /* Bottom border of tabs */
@@ -128,14 +118,9 @@
 
         a,
         .tab-item-content {
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-align: center;
             align-items: center;
             border-bottom: 1px solid map-get($grays, '200');
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
             justify-content: center;
             padding: 0.5rem 1rem;
             transition: all 0.3s;

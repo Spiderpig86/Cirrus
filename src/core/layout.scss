@@ -98,24 +98,15 @@ section {
 
 .hero {
     /* Parent of hero-body */
-    -webkit-box-align: stretch;
     align-items: stretch;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex; /* Important to stretch height of hero-body */
-    -webkit-box-orient: vertical;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 
     .hero-body {
-        -ms-flex-positive: 1;
         flex-grow: 1; /* Tells the hero-body to take up the entire space */
-        -ms-flex-negative: 0;
         flex-shrink: 0;
         padding: 3rem 1.5rem;
         align-items: center;
-        display: -ms-flexbox;
         display: flex;
         width: 100%;
     }
@@ -148,8 +139,6 @@ section {
     }
 
     &.row--no-wrap {
-        -webkit-flex-wrap: nowrap; /* Remove wrapping of the columns by default */
-        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
         overflow-x: auto; /* Can be disabled to remove scroll bar */
     }
@@ -233,40 +222,24 @@ section {
 }
 
 .level {
-    -webkit-box-align: center;
-    -ms-grid-row-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
 
     .level-item {
         /* Centers items */
-        -webkit-box-align: center;
         align-items: center;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         -ms-flex-preferred-size: auto;
         flex-basis: auto;
-        -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
         flex-grow: 0;
-        -ms-flex-negative: 0;
         flex-shrink: 0;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
     }
 
     /* Used to stretch the contents of div in level to fill */
     .level-content {
-        -ms-flex-preferred-size: auto;
         flex-basis: auto;
-        -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
         flex-grow: 1;
-        -ms-flex-negative: 1;
         flex-shrink: 1;
         text-align: left;
         width: 100%;
@@ -286,8 +259,6 @@ section {
 .level-left,
 .level-right {
     @include screen-above($sm) {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
     }
 }
@@ -299,10 +270,7 @@ section {
 
     /* Keep all level children the same height */
     .level.fill-height {
-        -webkit-box-align: stretch; /* Box Align and align items to stretch to make nav-items fill up parent height */
         align-items: stretch;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
     }
 }
