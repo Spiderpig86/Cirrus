@@ -17813,6 +17813,14 @@ video.video-fullscreen {
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
 */
+.u-z-50 {
+  z-index: 60 !important;
+}
+
+.u-z-60 {
+  z-index: 60 !important;
+}
+
 .u-z-0 {
   z-index: 0 !important;
 }
@@ -17831,10 +17839,6 @@ video.video-fullscreen {
 
 .u-z-40 {
   z-index: 40 !important;
-}
-
-.u-z-50 {
-  z-index: 50 !important;
 }
 
 .u-z-auto {

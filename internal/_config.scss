@@ -4,6 +4,14 @@
 @import './_functions.scss';
 
 // ==================================================
+// User config
+// ==================================================
+// Deep merged with the default config. This means that this will override existing keys and append new key value pairs.
+$config: (
+    
+) !default;
+
+// ==================================================
 // Default config
 // ==================================================
 $default-config: (
@@ -375,32 +383,37 @@ $default-config: (
 // ==================================================
 // Exported values
 // ==================================================
+$all-config: map.deep-merge($default-config, $config);
+
+// ==================================================
+// Exported values
+// ==================================================
 
 // COMPONENTS
-$avatar-sizes: map.get($default-config, avatar-sizes);
-$button-sizes: map.get($default-config, button-sizes);
-$form-label-sizes: map.get($default-config, form-label-sizes);
-$font-heading-sizes: map-get-deep($default-config, 'font-sizes.heading');
-$font-headline-sizes: map-get-deep($default-config, 'font-sizes.headline');
-$font-text-sizes: map-get-deep($default-config, 'font-sizes.text');
+$avatar-sizes: map.get($all-config, avatar-sizes);
+$button-sizes: map.get($all-config, button-sizes);
+$form-label-sizes: map.get($all-config, form-label-sizes);
+$font-heading-sizes: map-get-deep($all-config, 'font-sizes.heading');
+$font-headline-sizes: map-get-deep($all-config, 'font-sizes.headline');
+$font-text-sizes: map-get-deep($all-config, 'font-sizes.text');
 
 // Form sizes
-$input-sizes: map-get-deep($default-config, 'form-sizes.input-sizes');
-$input-contains-icon-padding: map-get-deep($default-config, 'form-sizes.input-contains-icon-padding');
-$input-icon-sizes: map-get-deep($default-config, 'form-sizes.input-icon-sizes');
+$input-sizes: map-get-deep($all-config, 'form-sizes.input-sizes');
+$input-contains-icon-padding: map-get-deep($all-config, 'form-sizes.input-contains-icon-padding');
+$input-icon-sizes: map-get-deep($all-config, 'form-sizes.input-icon-sizes');
 
-$space-sizes: map.get($default-config, space-sizes);
-$tab-font-sizes: map.get($default-config, tab-sizes);
+$space-sizes: map.get($all-config, space-sizes);
+$tab-font-sizes: map.get($all-config, tab-sizes);
 
 // UTILS
-$absolute: map.get($default-config, absolute);
+$absolute: map.get($all-config, absolute);
 
-$heights: map.get($default-config, heights);
-$widths: map.get($default-config, widths);
-$minmax-heights: map.get($default-config, minmax-heights);
-$minmax-widths: map.get($default-config, minmax-widths);
+$heights: map.get($all-config, heights);
+$widths: map.get($all-config, widths);
+$minmax-heights: map.get($all-config, minmax-heights);
+$minmax-widths: map.get($all-config, minmax-widths);
 
-$opacities: map.get($default-config, opacity);
-$round: map.get($default-config, round);
-$shadows: map.get($default-config, shadows);
-$z-indexes: map.get($default-config, z-index);
+$opacities: map.get($all-config, opacity);
+$round: map.get($all-config, round);
+$shadows: map.get($all-config, shadows);
+$z-indexes: map.get($all-config, z-index);
