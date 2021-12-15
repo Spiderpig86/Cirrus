@@ -55,6 +55,9 @@
     --font-size-m: #{$font-size-m};
     --font-size-l: #{$font-size-l};
     --font-size-xl: #{$font-size-xl};
+
+    --cirrus-focus-size: #{$focus-size};
+    --cirrus-focus-color: #{$focus-color};
 }
 
 * {
@@ -159,6 +162,6 @@ fieldset {
 
 /* When focusing any element */
 :focus {
-    box-shadow: 0 0 0.1rem 0.15rem rgba(240, 61, 77, 0.13);
+    box-shadow: var(--cirrus-focus-size) var(--cirrus-focus-color);
     outline: none;
 }

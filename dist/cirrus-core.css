@@ -744,6 +744,8 @@ pre > code[data-lang]:not([data-lang=""]) {
   --font-size-m: 1rem;
   --font-size-l: 1.25rem;
   --font-size-xl: 1.5rem;
+  --cirrus-focus-size: 0 0 0.1rem 0.15rem;
+  --cirrus-focus-color: rgba(240, 61, 77, 0.13);
 }
 
 * {
@@ -846,7 +848,7 @@ fieldset legend {
 
 /* When focusing any element */
 :focus {
-  box-shadow: 0 0 0.1rem 0.15rem rgba(240, 61, 77, 0.13);
+  box-shadow: var(--cirrus-focus-size) var(--cirrus-focus-color);
   outline: none;
 }
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
