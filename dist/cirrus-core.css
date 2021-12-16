@@ -194,6 +194,7 @@
   border-color: var(--btn-border-color);
   color: var(--btn-fg);
   font-size: 0.75rem;
+  font-weight: inherit;
   letter-spacing: 0.03rem;
   text-transform: uppercase;
   font-family: Montserrat;
@@ -467,6 +468,11 @@
 }
 .btn span:last-child, button span:last-child, [type=submit] span:last-child, [type=reset] span:last-child, [type=button] span:last-child {
   margin-left: 0.2rem;
+}
+
+/* Links as Buttons */
+a.btn {
+  display: inline-flex;
 }
 
 [class^=btn-]:not(.btn-container):not(.btn-close),
