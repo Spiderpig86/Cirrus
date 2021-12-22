@@ -2,6 +2,7 @@
 
 @import './_size.scss';
 @import './_functions.scss';
+@import './_theme.scss';
 
 // ==================================================
 // User config
@@ -226,6 +227,17 @@ $default-config: (
             ),
         ),
     ),
+    // Progress Bar Heights
+    progress: (
+        sizes: (
+            $xs: (height: 0.25rem),
+            $sm: (height: 0.5rem),
+            $md: (height: 0.75rem),
+            $lg: (height: 1rem),
+            $xl: (height: 1.25rem),
+        ),
+        themes: $control-themes,
+    ),
     // Space sizes
     space-sizes:
         (
@@ -402,6 +414,8 @@ $input-sizes: map-get-deep($all-config, 'form-sizes.input-sizes');
 $input-contains-icon-padding: map-get-deep($all-config, 'form-sizes.input-contains-icon-padding');
 $input-icon-sizes: map-get-deep($all-config, 'form-sizes.input-icon-sizes');
 
+$progress-bar-sizes: map-get-deep($all-config, 'progress.sizes');
+$progress-bar-themes: map-get-deep($all-config, 'progress.themes');
 $space-sizes: map.get($all-config, space-sizes);
 $tab-font-sizes: map.get($all-config, tab-sizes);
 

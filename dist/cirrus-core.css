@@ -178,6 +178,46 @@
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
 */
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/* v1 Color scheme for Cirrus */
+/* v2 Colors */
 /* BUTTONS */
 /* Button styling */
 /* Un-themed */
@@ -1003,6 +1043,46 @@ fieldset legend {
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
 /*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/* v1 Color scheme for Cirrus */
+/* v2 Colors */
+/*
     Global Mixins
 */
 /*
@@ -1524,6 +1604,46 @@ blockquote {
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
 */
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/* v1 Color scheme for Cirrus */
+/* v2 Colors */
 /*
   Functions
   TODO Refactor to different categories
@@ -2792,6 +2912,46 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
 */
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/* v1 Color scheme for Cirrus */
+/* v2 Colors */
 /*
   Functions
   TODO Refactor to different categories
