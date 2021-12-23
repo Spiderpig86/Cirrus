@@ -174,6 +174,20 @@ $default-config: (
             ),
         ),
     ),
+    fonts: (
+        transforms: (uppercase, lowercase, capitalize),
+        weights: (
+            'extrathin': 100,
+            'thin': 200,
+            'light': 300,
+            'normal': 400,
+            'medium': 500,
+            'semibold': 600,
+            'bold': 700,
+            'extrabold': 800,
+            'black': 900,
+        ),
+    ),
     // Form label sizes
     form-label-sizes:
         (
@@ -408,6 +422,8 @@ $form-label-sizes: map.get($all-config, form-label-sizes);
 $font-heading-sizes: map-get-deep($all-config, 'font-sizes.heading');
 $font-headline-sizes: map-get-deep($all-config, 'font-sizes.headline');
 $font-text-sizes: map-get-deep($all-config, 'font-sizes.text');
+$font-transforms: map-get-deep($all-config, 'fonts.transforms');
+$font-weights: map-get-deep($all-config, 'fonts.weights');
 
 // Form sizes
 $input-sizes: map-get-deep($all-config, 'form-sizes.input-sizes');

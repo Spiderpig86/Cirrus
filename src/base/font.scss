@@ -11,14 +11,6 @@
 /* FONT */
 
 /* Constants */
-$font-weights: (
-    'thin': 200,
-    'light': 300,
-    'normal': 400,
-    'semibold': 600,
-    'bold': 700,
-);
-$font-transformations: uppercase, lowercase, capitalize;
 
 /* Headers */
 @each $class, $property-map in $font-heading-sizes {
@@ -127,7 +119,7 @@ mark,
 }
 
 /* Text Transformations */
-@each $transformation in $font-transformations {
+@each $transformation in $font-transforms {
     .#{$transformation} {
         text-transform: $transformation;
     }
