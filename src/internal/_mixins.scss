@@ -1,0 +1,47 @@
+@import "theme";
+
+
+/*
+    Global Mixins
+*/
+
+/*
+    Mixin that returns a property map as a series of CSS class properties.
+
+    E.g. $xs: (color: #fff, opacity: 0.5), $sm... =>
+
+    <class>--xs {
+        color: #fff;
+        opacity: 0.5;
+    }
+*/
+@mixin explode-properties($property-map) {
+    @each $property, $value in $property-map {
+        #{$property}: #{$value};
+    }
+}
+
+@mixin input-success {
+    border-color: var(--cirrus-success);
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem transparentize($cirrus-success, 1 - $focus-opacity), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+    }
+}
+
+@mixin input-error {
+    border-color: var(--cirrus-danger);
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem transparentize($cirrus-danger, 1 - $focus-opacity), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+    }
+}
+
+/*
+    Bring to front on focus.
+*/
+@mixin elevate-on-focus {
+    &:focus {
+        z-index: 1;
+    }
+}

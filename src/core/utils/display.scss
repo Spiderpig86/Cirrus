@@ -1,6 +1,0 @@
-@import '../../../internal/_functions';
-@import '../../../internal/_size';
-
-$display-utils-config: none, inline, inline-block, block, flex, inline-flex, table, table-row, table-column, table-cell;
-
-@include generate-classes-for-viewport($display-utils-config, 'display', $generate-viewports: #{get-viewport-flag('DISPLAY')});

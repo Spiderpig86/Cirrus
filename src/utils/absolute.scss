@@ -1,0 +1,14 @@
+@import '../internal/functions';
+@import '../internal/size';
+@import '../internal/config';
+
+$directions: top, left, right, bottom;
+
+@each $direction in $directions {
+    @include generate-classes-for-viewport-with-map(
+        $absolute,
+        $direction,
+        'u-#{$direction}-',
+        $generate-viewports: #{get-viewport-flag('ABSOLUTE')}
+    );
+}

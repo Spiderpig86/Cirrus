@@ -1,0 +1,16 @@
+@import '../internal/functions';
+@import '../internal/size';
+
+$clears: left, right, both;
+
+@include generate-classes-for-viewport($clears, 'clear', 'u-clear-', $generate-viewports: #{get-viewport-flag('CLEARFIX')});
+
+/*
+   When using floats, clearfix allows the container to automatically resize so that
+   other elements are not blocked by children.
+*/
+.u-clearfix:after {
+    clear: both !important;
+    content: ' ';
+    display: table !important;
+}

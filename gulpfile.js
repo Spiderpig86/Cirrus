@@ -15,7 +15,7 @@ const environment = {
 
 gulp.task('compile', () => {
     return gulp
-        .src(['src/core/default.scss', './src/**/*.scss'])
+        .src(['src/ext.scss'])
         .pipe(sass.sync().on('error', function (err) {
             sass.logError.call(this, err);
 
@@ -82,7 +82,7 @@ gulp.task(
 
 gulp.task('core', () => {
     return gulp
-        .src(['./src/core/*.scss', './src/utils/*.scss'])
+        .src(['src/core.scss'])
         .pipe(sass.sync().on('error', sass.logError))
         .pipe($.concat('cirrus-core.css'))
         .pipe($.header(head))

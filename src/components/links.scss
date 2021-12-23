@@ -1,0 +1,39 @@
+@import '../internal/selectors';
+
+/* LINKS */
+
+a {
+    color: var(--cirrus-link);
+    font-weight: 600;
+    padding: 2px;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+        color: var(--cirrus-link-dark);
+        transition: all 0.3s;
+    }
+
+    &.underline {
+        text-decoration: underline;
+    }
+}
+
+.subtitle a {
+    padding: 0; /* Removes weird offset in subtitle links */
+}
+
+#{$header-selectors},
+article,
+blockquote {
+    & a {
+        display: inline;
+    }
+}
+
+/* Remove uneeded space since buttons have their own padding */
+a .btn,
+a button,
+[type='submit'] a {
+    margin-bottom: 0;
+}

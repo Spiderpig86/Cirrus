@@ -1,0 +1,7 @@
+@import '../internal/functions';
+@import '../internal/size';
+
+$positions: static, fixed, absolute, relative, sticky;
+
+// Comment here just for commit.
+@include generate-classes-for-viewport($positions, 'position', $generate-viewports: #{get-viewport-flag('POSITION')});
