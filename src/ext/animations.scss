@@ -4,7 +4,6 @@
 /* Keyframes */
 
 /* Spinning loading animation */
-
 @keyframes loading {
     from {
         transform: rotate(0deg);
@@ -83,6 +82,20 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes ping {
+    75%,
+    100% {
+        transform: scale(2);
+        opacity: 0;
     }
 }
 
@@ -182,5 +195,14 @@
 
     &.paused {
         animation-play-state: paused !important;
+    }
+
+    // Useful for loaders
+    &.pulse {
+        animation: pulse 1.25s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    &.ping {
+        animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
     }
 }

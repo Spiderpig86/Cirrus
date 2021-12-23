@@ -305,6 +305,17 @@ fieldset legend {
     opacity: 1;
   }
 }
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
 /* Hover animation */
 .hover-grow {
   /* Mouse leave */
@@ -386,6 +397,12 @@ fieldset legend {
 }
 .animated.paused {
   animation-play-state: paused !important;
+}
+.animated.pulse {
+  animation: pulse 1.25s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+.animated.ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 /* Spacing */
 /* Breakpoints */
