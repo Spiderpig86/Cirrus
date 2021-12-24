@@ -9,6 +9,9 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -200,6 +203,9 @@ fieldset legend {
   outline: none;
 }
 
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /*
   Functions
   TODO Refactor to different categories
@@ -435,82 +441,7 @@ fieldset legend {
  *       }
  */
 /*
-  Functions
-  TODO Refactor to different categories
-*/
-/*
-    Converts a given hex value to RGB.
-*/
-/*
-    Generates delimited class name prefix.
-*/
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
-*/
-/* Spacing */
-/* Breakpoints */
-/* Fonts */
-/* Grid Count (Columns + Grid) */
-/* Grid Percents */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-/* Variant of mixin that takes in mapping of class name to value */
-/**
- * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
- * 
- * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
- * 
- * Example usage (pretend \ is $):
- *      
- *       @include generate-styles-with-viewports('true') using ($viewport) {
- *           $suffix: if($viewport != '', '-viewport', '');
- *           .outersuffix {
- *               background: #222;
- *               .innersuffix {
- *                   color: #fff;
- *               }
- *           }
- *       }
- */
-/* v1 Color scheme for Cirrus */
-/* v2 Colors */
-/* Spacing */
-/* Breakpoints */
-/* Fonts */
-/* Grid Count (Columns + Grid) */
-/* Grid Percents */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-/* Variant of mixin that takes in mapping of class name to value */
-/**
- * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
- * 
- * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
- * 
- * Example usage (pretend \ is $):
- *      
- *       @include generate-styles-with-viewports('true') using ($viewport) {
- *           $suffix: if($viewport != '', '-viewport', '');
- *           .outersuffix {
- *               background: #222;
- *               .innersuffix {
- *                   color: #fff;
- *               }
- *           }
- *       }
- */
-/*
-  Functions
-  TODO Refactor to different categories
-*/
-/*
-    Converts a given hex value to RGB.
-*/
-/*
-    Generates delimited class name prefix.
-*/
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -552,6 +483,93 @@ fieldset legend {
  */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/* v1 Color scheme for Cirrus */
+/* v2 Colors */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /*
   Functions
   TODO Refactor to different categories
@@ -984,6 +1002,9 @@ blockquote {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -995,6 +1016,9 @@ blockquote {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /* GRID */
 :root {
@@ -2939,107 +2963,7 @@ blockquote {
   }
 }
 /*
-  Functions
-  TODO Refactor to different categories
-*/
-/*
-    Converts a given hex value to RGB.
-*/
-/*
-    Generates delimited class name prefix.
-*/
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
-*/
-/* Spacing */
-/* Breakpoints */
-/* Fonts */
-/* Grid Count (Columns + Grid) */
-/* Grid Percents */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-/* Variant of mixin that takes in mapping of class name to value */
-/**
- * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
- * 
- * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
- * 
- * Example usage (pretend \ is $):
- *      
- *       @include generate-styles-with-viewports('true') using ($viewport) {
- *           $suffix: if($viewport != '', '-viewport', '');
- *           .outersuffix {
- *               background: #222;
- *               .innersuffix {
- *                   color: #fff;
- *               }
- *           }
- *       }
- */
-/* v1 Color scheme for Cirrus */
-/* v2 Colors */
-/* Spacing */
-/* Breakpoints */
-/* Fonts */
-/* Grid Count (Columns + Grid) */
-/* Grid Percents */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-/* Variant of mixin that takes in mapping of class name to value */
-/**
- * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
- * 
- * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
- * 
- * Example usage (pretend \ is $):
- *      
- *       @include generate-styles-with-viewports('true') using ($viewport) {
- *           $suffix: if($viewport != '', '-viewport', '');
- *           .outersuffix {
- *               background: #222;
- *               .innersuffix {
- *                   color: #fff;
- *               }
- *           }
- *       }
- */
-/* Spacing */
-/* Breakpoints */
-/* Fonts */
-/* Grid Count (Columns + Grid) */
-/* Grid Percents */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-/* Variant of mixin that takes in mapping of class name to value */
-/**
- * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
- * 
- * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
- * 
- * Example usage (pretend \ is $):
- *      
- *       @include generate-styles-with-viewports('true') using ($viewport) {
- *           $suffix: if($viewport != '', '-viewport', '');
- *           .outersuffix {
- *               background: #222;
- *               .innersuffix {
- *                   color: #fff;
- *               }
- *           }
- *       }
- */
-/*
-  Functions
-  TODO Refactor to different categories
-*/
-/*
-    Converts a given hex value to RGB.
-*/
-/*
-    Generates delimited class name prefix.
-*/
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -3081,6 +3005,118 @@ blockquote {
  */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/* v1 Color scheme for Cirrus */
+/* v2 Colors */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /*
   Functions
   TODO Refactor to different categories
@@ -3136,6 +3172,9 @@ blockquote {
 */
 /*
     Bring to front on focus.
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /* HEADER */
 /* This works well with panel */
@@ -4731,6 +4770,9 @@ video.video-fullscreen {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -5754,6 +5796,9 @@ video.video-fullscreen {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -5765,6 +5810,9 @@ video.video-fullscreen {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /* Margin */
 .m-0 {
@@ -10463,6 +10511,9 @@ video.video-fullscreen {
   }
 }
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -10474,6 +10525,9 @@ video.video-fullscreen {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -10560,6 +10614,9 @@ video.video-fullscreen {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -10625,6 +10682,9 @@ video.video-fullscreen {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -10636,6 +10696,9 @@ video.video-fullscreen {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -11072,6 +11135,9 @@ a.btn {
   }
 }
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -11164,6 +11230,9 @@ pre > code[data-lang]:not([data-lang=""]) {
   padding: 2rem 1.5rem 1rem;
 }
 
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /*
   Functions
   TODO Refactor to different categories
@@ -11260,82 +11329,7 @@ pre > code[data-lang]:not([data-lang=""]) {
 }
 
 /*
-  Functions
-  TODO Refactor to different categories
-*/
-/*
-    Converts a given hex value to RGB.
-*/
-/*
-    Generates delimited class name prefix.
-*/
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
-*/
-/* Spacing */
-/* Breakpoints */
-/* Fonts */
-/* Grid Count (Columns + Grid) */
-/* Grid Percents */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-/* Variant of mixin that takes in mapping of class name to value */
-/**
- * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
- * 
- * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
- * 
- * Example usage (pretend \ is $):
- *      
- *       @include generate-styles-with-viewports('true') using ($viewport) {
- *           $suffix: if($viewport != '', '-viewport', '');
- *           .outersuffix {
- *               background: #222;
- *               .innersuffix {
- *                   color: #fff;
- *               }
- *           }
- *       }
- */
-/* v1 Color scheme for Cirrus */
-/* v2 Colors */
-/* Spacing */
-/* Breakpoints */
-/* Fonts */
-/* Grid Count (Columns + Grid) */
-/* Grid Percents */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-/* Variant of mixin that takes in mapping of class name to value */
-/**
- * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
- * 
- * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
- * 
- * Example usage (pretend \ is $):
- *      
- *       @include generate-styles-with-viewports('true') using ($viewport) {
- *           $suffix: if($viewport != '', '-viewport', '');
- *           .outersuffix {
- *               background: #222;
- *               .innersuffix {
- *                   color: #fff;
- *               }
- *           }
- *       }
- */
-/*
-  Functions
-  TODO Refactor to different categories
-*/
-/*
-    Converts a given hex value to RGB.
-*/
-/*
-    Generates delimited class name prefix.
-*/
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -11377,6 +11371,93 @@ pre > code[data-lang]:not([data-lang=""]) {
  */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/* v1 Color scheme for Cirrus */
+/* v2 Colors */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /*
   Functions
   TODO Refactor to different categories
@@ -11985,6 +12066,9 @@ label:last-child:not(:first-child):not(.form-group-label) {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -12087,6 +12171,9 @@ label:last-child:not(:first-child):not(.form-group-label) {
  *           }
  *       }
  */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /*
   Functions
   TODO Refactor to different categories
@@ -12582,6 +12669,9 @@ a button,
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -12994,82 +13084,7 @@ ul .divider::after {
   }
 }
 /*
-  Functions
-  TODO Refactor to different categories
-*/
-/*
-    Converts a given hex value to RGB.
-*/
-/*
-    Generates delimited class name prefix.
-*/
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
-*/
-/* Spacing */
-/* Breakpoints */
-/* Fonts */
-/* Grid Count (Columns + Grid) */
-/* Grid Percents */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-/* Variant of mixin that takes in mapping of class name to value */
-/**
- * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
- * 
- * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
- * 
- * Example usage (pretend \ is $):
- *      
- *       @include generate-styles-with-viewports('true') using ($viewport) {
- *           $suffix: if($viewport != '', '-viewport', '');
- *           .outersuffix {
- *               background: #222;
- *               .innersuffix {
- *                   color: #fff;
- *               }
- *           }
- *       }
- */
-/* v1 Color scheme for Cirrus */
-/* v2 Colors */
-/* Spacing */
-/* Breakpoints */
-/* Fonts */
-/* Grid Count (Columns + Grid) */
-/* Grid Percents */
-/* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-/* Variant of mixin that takes in mapping of class name to value */
-/**
- * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
- * 
- * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
- * 
- * Example usage (pretend \ is $):
- *      
- *       @include generate-styles-with-viewports('true') using ($viewport) {
- *           $suffix: if($viewport != '', '-viewport', '');
- *           .outersuffix {
- *               background: #222;
- *               .innersuffix {
- *                   color: #fff;
- *               }
- *           }
- *       }
- */
-/*
-  Functions
-  TODO Refactor to different categories
-*/
-/*
-    Converts a given hex value to RGB.
-*/
-/*
-    Generates delimited class name prefix.
-*/
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -13111,6 +13126,93 @@ ul .divider::after {
  */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
+  Functions
+  TODO Refactor to different categories
+*/
+/*
+    Converts a given hex value to RGB.
+*/
+/*
+    Generates delimited class name prefix.
+*/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/* Spacing */
+/* Breakpoints */
+/* Fonts */
+/* Grid Count (Columns + Grid) */
+/* Grid Percents */
+/* Media Queries */
+/* Smaller than the defined pixels are the dimensions for that range */
+/* Variant of mixin that takes in mapping of class name to value */
+/**
+ * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
+ * 
+ * When using this mixin, you must follow specify a mixin that takes in the same number of variables that is being passed into @content below -- in this case, 1.
+ * 
+ * Example usage (pretend \ is $):
+ *      
+ *       @include generate-styles-with-viewports('true') using ($viewport) {
+ *           $suffix: if($viewport != '', '-viewport', '');
+ *           .outersuffix {
+ *               background: #222;
+ *               .innersuffix {
+ *                   color: #fff;
+ *               }
+ *           }
+ *       }
+ */
+/* v1 Color scheme for Cirrus */
+/* v2 Colors */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /*
   Functions
   TODO Refactor to different categories
@@ -13334,6 +13436,9 @@ ul .divider::after {
   }
 }
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -13469,6 +13574,9 @@ ul .divider::after {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -13532,6 +13640,9 @@ ul .divider::after {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -13543,6 +13654,9 @@ ul .divider::after {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -13584,6 +13698,9 @@ ul .divider::after {
  */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 .u-top-auto {
   top: auto !important;
 }
@@ -13681,6 +13798,9 @@ ul .divider::after {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -13718,6 +13838,9 @@ ul .divider::after {
  *           }
  *       }
  */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 .u-clear-left {
   clear: left !important;
 }
@@ -13801,6 +13924,9 @@ ul .divider::after {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -13838,6 +13964,9 @@ ul .divider::after {
  *           }
  *       }
  */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 .u-none {
   display: none !important;
 }
@@ -14079,6 +14208,9 @@ ul .divider::after {
   }
 }
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -14116,6 +14248,9 @@ ul .divider::after {
  *           }
  *       }
  */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 .u-flex-row {
   flex-direction: row !important;
 }
@@ -14581,6 +14716,9 @@ ul .divider::after {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -14618,6 +14756,9 @@ ul .divider::after {
  *           }
  *       }
  */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
 .u-pull-left {
@@ -14817,6 +14958,9 @@ ul .divider::after {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -14880,6 +15024,9 @@ ul .divider::after {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -14891,6 +15038,9 @@ ul .divider::after {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -14932,6 +15082,9 @@ ul .divider::after {
  */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 .u-opacity-0 {
   opacity: 0 !important;
 }
@@ -15197,6 +15350,9 @@ ul .divider::after {
   }
 }
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -15234,6 +15390,9 @@ ul .divider::after {
  *           }
  *       }
  */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 .u-overflow-auto {
   overflow: auto !important;
 }
@@ -15523,6 +15682,9 @@ ul .divider::after {
   }
 }
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -15560,6 +15722,9 @@ ul .divider::after {
  *           }
  *       }
  */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 .u-static {
   position: static !important;
 }
@@ -15681,6 +15846,9 @@ ul .divider::after {
   }
 }
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -15692,6 +15860,9 @@ ul .divider::after {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -15775,6 +15946,9 @@ ul .divider::after {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -15786,6 +15960,9 @@ ul .divider::after {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -15827,6 +16004,9 @@ ul .divider::after {
  */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 .u-round-none {
   border-radius: 0px;
 }
@@ -15856,6 +16036,9 @@ ul .divider::after {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -15867,6 +16050,9 @@ ul .divider::after {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -15950,6 +16136,9 @@ ul .divider::after {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -15961,6 +16150,9 @@ ul .divider::after {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -16002,6 +16194,9 @@ ul .divider::after {
  */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 .u-shadow-none {
   --cirrus-shadow: 0 0 #000;
   box-shadow: var(--cirrus-shadow);
@@ -16038,6 +16233,9 @@ ul .divider::after {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -16101,6 +16299,9 @@ ul .divider::after {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -16112,6 +16313,9 @@ ul .divider::after {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -16153,6 +16357,9 @@ ul .divider::after {
  */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 .u-z-0 {
   z-index: 0 !important;
 }
@@ -16232,6 +16439,9 @@ ul .divider::after {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -16243,6 +16453,9 @@ ul .divider::after {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -16284,6 +16497,9 @@ ul .divider::after {
  */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /*
   Functions
   TODO Refactor to different categories
@@ -16413,6 +16629,9 @@ ul .divider::after {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -16424,6 +16643,9 @@ ul .divider::after {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /* Margin */
 .m-0 {
@@ -21122,6 +21344,9 @@ ul .divider::after {
   }
 }
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -21159,6 +21384,9 @@ ul .divider::after {
  *           }
  *       }
  */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 .u-flex-row {
   flex-direction: row !important;
 }
@@ -21662,6 +21890,9 @@ ul .divider::after {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -21841,6 +22072,9 @@ ul .divider::after {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -21880,6 +22114,9 @@ ul .divider::after {
  */
 /* v1 Color scheme for Cirrus */
 /* v2 Colors */
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /*
   Functions
   TODO Refactor to different categories
@@ -22464,6 +22701,9 @@ ul .divider::after {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -22644,6 +22884,9 @@ ul .divider::after {
     Group selectors that share common styling.
 */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -22769,6 +23012,9 @@ ul .divider::after {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -22836,6 +23082,9 @@ ul .divider::after {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -22926,6 +23175,9 @@ ul .divider::after {
  *       }
  */
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -22937,6 +23189,9 @@ ul .divider::after {
 */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /*
   Functions
@@ -23110,6 +23365,9 @@ ul .divider::after {
   margin-left: 0.75rem;
 }
 
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /*
   Functions
   TODO Refactor to different categories
@@ -23455,6 +23713,9 @@ a.tag:hover {
 }
 
 /*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/*
   Functions
   TODO Refactor to different categories
 */
@@ -23569,6 +23830,9 @@ a.tag:hover {
   border-color: #fb4143;
 }
 
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /*
   Functions
   TODO Refactor to different categories

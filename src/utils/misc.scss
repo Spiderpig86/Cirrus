@@ -1,24 +1,32 @@
 @import '../internal/functions';
 @import '../internal/size';
+@import '../internal/flags';
 
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
 
-$pull-directions: (left, right);
-@include generate-classes-for-viewport(
-    $pull-directions,
-    'float',
-    'u#{delimitize('pull')}',
-    $generate-viewports: #{get-viewport-flag('FLOAT')}
-);
+$generate-utility: _should-generate-classes($FLOAT);
+@if $generate-utility {
+    $pull-directions: (left, right);
+    @include generate-classes-for-viewport(
+                    $pull-directions,
+                    'float',
+                    'u#{delimitize('pull')}',
+            $generate-viewports: #{get-viewport-flag($FLOAT)}
+    );
+}
 
-$text-directions: (justify, left, right, center);
-@include generate-classes-for-viewport(
-    $text-directions,
-    'text-align',
-    'u#{delimitize('text')}',
-    $generate-viewports: #{get-viewport-flag('TEXT')}
-);
+
+$generate-utility: _should-generate-classes($TEXT);
+@if $generate-utility {
+    $text-directions: (justify, left, right, center);
+    @include generate-classes-for-viewport(
+                    $text-directions,
+                    'text-align',
+                    'u#{delimitize('text')}',
+            $generate-viewports: #{get-viewport-flag($FLOAT)}
+    );
+}
 
 .u-text-ellipsis {
     text-overflow: ellipsis;

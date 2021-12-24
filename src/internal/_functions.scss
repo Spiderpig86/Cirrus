@@ -30,7 +30,7 @@ $DELIMETER: '-';
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
 */
 @function get-viewport-flag($name) {
-    @if not map-has-key($_VIEWPORT_CLASS_FLAGS, $name) {
+    @if not map-has-key($VIEWPORT_CLASS_FLAGS, $name) {
         @return throw.error(
             $message: '[get-viewport-flag] Unknown constant `#{$name}`.',
             $source: 'get-viewport-flag()',
@@ -38,7 +38,7 @@ $DELIMETER: '-';
         );
     }
 
-    @return map-get($_VIEWPORT_CLASS_FLAGS, $name);
+    @return map-get($VIEWPORT_CLASS_FLAGS, $name);
 }
 
 @function string-split($string, $delimiter) {

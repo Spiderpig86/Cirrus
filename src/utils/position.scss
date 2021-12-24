@@ -1,7 +1,12 @@
 @import '../internal/functions';
 @import '../internal/size';
+@import '../internal/flags';
 
-$positions: static, fixed, absolute, relative, sticky;
+$generate-utility: _should-generate-classes($POSITION);
 
-// Comment here just for commit.
-@include generate-classes-for-viewport($positions, 'position', $generate-viewports: #{get-viewport-flag('POSITION')});
+@if $generate-utility {
+  $positions: static, fixed, absolute, relative, sticky;
+
+  // Comment here just for commit.
+  @include generate-classes-for-viewport($positions, 'position', $generate-viewports: #{get-viewport-flag($POSITION)});
+}

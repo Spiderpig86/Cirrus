@@ -1,5 +1,6 @@
 @import '../internal/_size.scss';
 @import '../internal/functions';
+@import '../internal/flags';
 
 /* GRID */
 
@@ -26,7 +27,7 @@
     --grid-row-end: auto;
 }
 
-@include generate-styles-with-viewports($generate-viewports: #{get-viewport-flag('GRID')}) using ($viewport) {
+@include generate-styles-with-viewports($generate-viewports: #{get-viewport-flag($GRID)}) using ($viewport) {
     $suffix: if($viewport != '', '-#{$viewport}', '');
 
     .grid#{$suffix} {

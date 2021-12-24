@@ -1,5 +1,6 @@
 @import '../internal/_size';
 @import '../internal/_functions';
+@import '../internal/flags';
 
 @each $size in $spacing-system {
     /* Margin */
@@ -69,7 +70,7 @@
     margin-bottom: auto !important;
 }
 
-@if get-viewport-flag('MARGIN_PADDING') == true {
+@if get-viewport-flag($MARGIN-PADDING) == true {
     // TODO: Maybe in future versions of Sass, we can pass mixins as a parameter to another mixin. For now, we just have to write what we want it to generate
     @each $suffix, $limit in $breakpoint-pairs {
         @each $size in $spacing-system {

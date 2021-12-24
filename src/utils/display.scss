@@ -1,6 +1,11 @@
 @import '../internal/functions';
 @import '../internal/size';
+@import '../internal/flags';
 
-$display-utils-config: none, inline, inline-block, block, flex, inline-flex, table, table-row, table-column, table-cell;
+$generate-utility: _should-generate-classes($DISPLAY);
 
-@include generate-classes-for-viewport($display-utils-config, 'display', $generate-viewports: #{get-viewport-flag('DISPLAY')});
+@if $generate-utility {
+  $display-utils-config: none, inline, inline-block, block, flex, inline-flex, table, table-row, table-column, table-cell;
+
+  @include generate-classes-for-viewport($display-utils-config, 'display', $generate-viewports: #{get-viewport-flag($DISPLAY)});
+}
