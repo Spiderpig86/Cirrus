@@ -5,7 +5,7 @@
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
 
-$generate-utility: _should-generate-classes($FLOAT);
+$generate-utility: _should-generate-classes($excludes, $includes, $FLOAT);
 @if $generate-utility {
     $pull-directions: (left, right);
     @include generate-classes-for-viewport(
@@ -17,7 +17,7 @@ $generate-utility: _should-generate-classes($FLOAT);
 }
 
 
-$generate-utility: _should-generate-classes($TEXT);
+$generate-utility: _should-generate-classes($excludes, $includes, $TEXT);
 @if $generate-utility {
     $text-directions: (justify, left, right, center);
     @include generate-classes-for-viewport(

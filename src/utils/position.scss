@@ -2,7 +2,7 @@
 @import '../internal/size';
 @import '../internal/flags';
 
-$generate-utility: _should-generate-classes($POSITION);
+$generate-utility: _should-generate-classes($excludes, $includes, $POSITION);
 
 @if $generate-utility {
   $positions: static, fixed, absolute, relative, sticky;

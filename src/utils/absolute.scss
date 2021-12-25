@@ -3,7 +3,7 @@
 @import '../internal/config';
 @import '../internal/flags';
 
-$generate-utility: _should-generate-classes($ABSOLUTE);
+$generate-utility: _should-generate-classes($excludes, $includes, $ABSOLUTE);
 
 @if $generate-utility {
     $directions: top, left, right, bottom;

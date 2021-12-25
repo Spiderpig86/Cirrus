@@ -2,7 +2,7 @@
 @import '../internal/size';
 @import '../internal/flags';
 
-$generate-utility: _should-generate-classes($CLEARFIX);
+$generate-utility: _should-generate-classes($excludes, $includes, $CLEARFIX);
 
 @if $generate-utility {
     $clears: left, right, both;
