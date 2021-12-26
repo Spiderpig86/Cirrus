@@ -1,9 +1,7 @@
 // _mixins.scss unit tests
-@import 'true';
-@import '../test_utils';
+@use '../test_base' as *;
 
-@import '../../src/internal/_functions';
-@import '../../src/internal/_size';
+@use '../../src/internal/size';
 
 /******************
  * screen-above() *
@@ -13,7 +11,7 @@
         @include assert {
             @include output {
                 .test {
-                    @include screen-above($xs) {
+                    @include size.screen-above($xs) {
                         color: #fff;
                     }
                 }
@@ -31,7 +29,7 @@
         @include assert {
             @include output {
                 .test {
-                    @include screen-above($sm) {
+                    @include size.screen-above($sm) {
                         color: #fff;
                     }
                 }
@@ -49,7 +47,7 @@
         @include assert {
             @include output {
                 .test {
-                    @include screen-above($md) {
+                    @include size.screen-above($md) {
                         color: #fff;
                     }
                 }
@@ -67,7 +65,7 @@
         @include assert {
             @include output {
                 .test {
-                    @include screen-above($lg) {
+                    @include size.screen-above($lg) {
                         color: #fff;
                     }
                 }
@@ -85,7 +83,7 @@
         @include assert {
             @include output {
                 .test {
-                    @include screen-above($xl) {
+                    @include size.screen-above($xl) {
                         color: #fff;
                     }
                 }
@@ -109,7 +107,7 @@
         @include assert {
             @include output {
                 .test {
-                    @include screen-between($sm, $lg) {
+                    @include size.screen-between($sm, $lg) {
                         color: #fff;
                     }
                 }
@@ -133,7 +131,7 @@
         @include assert {
             @include output {
                 .test {
-                    @include screen-below($xs) {
+                    @include size.screen-below($xs) {
                         color: #fff;
                     }
                 }
@@ -151,7 +149,7 @@
         @include assert {
             @include output {
                 .test {
-                    @include screen-below($sm) {
+                    @include size.screen-below($sm) {
                         color: #fff;
                     }
                 }
@@ -169,7 +167,7 @@
         @include assert {
             @include output {
                 .test {
-                    @include screen-below($md) {
+                    @include size.screen-below($md) {
                         color: #fff;
                     }
                 }
@@ -187,7 +185,7 @@
         @include assert {
             @include output {
                 .test {
-                    @include screen-below($lg) {
+                    @include size.screen-below($lg) {
                         color: #fff;
                     }
                 }
@@ -205,7 +203,7 @@
         @include assert {
             @include output {
                 .test {
-                    @include screen-below($xl) {
+                    @include size.screen-below($xl) {
                         color: #fff;
                     }
                 }
@@ -231,7 +229,7 @@ $generate-classes-for-viewport-prefix: 'u#{delimitize('flex')}';
     @include it('should return classes without viewport variants') {
         @include assert {
             @include output {
-                @include generate-classes-for-viewport(
+                @include size.generate-classes-for-viewport(
                     $generate-classes-for-viewport-classes,
                     $generate-classes-for-viewport-property,
                     $generate-classes-for-viewport-prefix,
@@ -260,7 +258,7 @@ $generate-classes-for-viewport-prefix: 'u#{delimitize('flex')}';
     @include it('should return classes with viewport variants') {
         @include assert {
             @include output {
-                @include generate-classes-for-viewport(
+                @include size.generate-classes-for-viewport(
                     $generate-classes-for-viewport-classes,
                     $generate-classes-for-viewport-property,
                     $generate-classes-for-viewport-prefix,
@@ -370,7 +368,7 @@ $generate-classes-for-viewport-prefix: 'u#{delimitize('flex')}';
     @include it('should return classes with viewport variants with a custom prefix') {
         @include assert {
             @include output {
-                @include generate-classes-for-viewport(
+                @include size.generate-classes-for-viewport(
                     $generate-classes-for-viewport-classes,
                     $generate-classes-for-viewport-property,
                     'flex-',
@@ -482,7 +480,7 @@ $generate-classes-for-viewport-prefix: 'u#{delimitize('flex')}';
     ) {
         @include assert {
             @include output {
-                @include generate-classes-for-viewport(
+                @include size.generate-classes-for-viewport(
                     $generate-classes-for-viewport-classes,
                     $generate-classes-for-viewport-property,
                     $generate-classes-for-viewport-prefix,
@@ -605,7 +603,7 @@ $generate-classes-for-viewport-with-map-prefix: 'u#{delimitize('opacity')}';
     @include it('should return classes without viewport variants') {
         @include assert {
             @include output {
-                @include generate-classes-for-viewport-with-map(
+                @include size.generate-classes-for-viewport-with-map(
                     $generate-classes-for-viewport-with-map-classes,
                     $generate-classes-for-viewport-with-map-property,
                     $generate-classes-for-viewport-with-map-prefix,
@@ -625,7 +623,7 @@ $generate-classes-for-viewport-with-map-prefix: 'u#{delimitize('opacity')}';
     @include it('should return classes with viewport variants') {
         @include assert {
             @include output {
-                @include generate-classes-for-viewport-with-map(
+                @include size.generate-classes-for-viewport-with-map(
                     $generate-classes-for-viewport-with-map-classes,
                     $generate-classes-for-viewport-with-map-property,
                     $generate-classes-for-viewport-with-map-prefix,
@@ -685,7 +683,7 @@ $generate-classes-for-viewport-with-map-prefix: 'u#{delimitize('opacity')}';
     @include it('should return classes with viewport variants with a custom prefix') {
         @include assert {
             @include output {
-                @include generate-classes-for-viewport-with-map(
+                @include size.generate-classes-for-viewport-with-map(
                     $generate-classes-for-viewport-with-map-classes,
                     $generate-classes-for-viewport-with-map-property,
                     'opacity-',
@@ -747,7 +745,7 @@ $generate-classes-for-viewport-with-map-prefix: 'u#{delimitize('opacity')}';
     ) {
         @include assert {
             @include output {
-                @include generate-classes-for-viewport-with-map(
+                @include size.generate-classes-for-viewport-with-map(
                     $generate-classes-for-viewport-with-map-classes,
                     $generate-classes-for-viewport-with-map-property,
                     $generate-classes-for-viewport-with-map-prefix,
@@ -814,7 +812,7 @@ $generate-classes-for-viewport-with-map-prefix: 'u#{delimitize('opacity')}';
     @include it('should return CSS suffixed with viewports given a valid CSS block') {
         @include assert {
             @include output {
-                @include generate-styles-with-viewports('true') using ($viewport) {
+                @include size.generate-styles-with-viewports('true') using ($viewport) {
                     $suffix: if($viewport != '', '-#{$viewport}', '');
                     .outer#{$suffix} {
                         background: #222;

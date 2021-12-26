@@ -1,15 +1,13 @@
 // _functions.scss unit tests
-@import 'true';
-@import '../test_utils';
-
-@import '../../src/internal/_functions';
+@use '../test_base' as *;
+@use '../../src/internal/functions';
 
 /****************
  * hex-to-rgb() *
  ****************/
 @include describe('hex-to-rgb()') {
     @include it('should return corresponding rgb color given a hex color') {
-        @include assert-equal(hex-to-rgb(#fff), (255, 255, 255));
+        @include assert-equal(functions.hex-to-rgb(#fff), (255, 255, 255));
     }
 }
 
@@ -18,7 +16,7 @@
  ****************/
 @include describe('hex-to-rgb()') {
     @include it('should return a string surrounded by the delimiter "-"') {
-        @include assert-equal(delimitize('opacity'), '-opacity-');
+        @include assert-equal(functions.delimitize('opacity'), '-opacity-');
     }
 }
 
@@ -27,10 +25,10 @@
  ******************/
 @include describe('string-split()') {
     @include it('should return input string split using delimiter ","') {
-        @include assert-equal(string-split('apples,oranges,bananas', ','), ('apples' 'oranges' 'bananas'));
+        @include assert-equal(functions.string-split('apples,oranges,bananas', ','), ('apples' 'oranges' 'bananas'));
     }
     @include it('should return input string split using delimiter "123"') {
-        @include assert-equal(string-split('abc123def', '123'), ('abc' 'def'));
+        @include assert-equal(functions.string-split('abc123def', '123'), ('abc' 'def'));
     }
 }
 
@@ -40,7 +38,7 @@
 @include describe('map-get-deep()') {
     @include it('should return value for key "foo" which is nested 1 level deep') {
         @include assert-equal(
-            map-get-deep(
+            functions.map-get-deep(
                 (
                     foo: bar,
                 ),
@@ -51,7 +49,7 @@
     }
     @include it('should return value for key "a.b.c" which is nested 2 levels deep') {
         @include assert-equal(
-            map-get-deep(
+            functions.map-get-deep(
                 (
                     a: (
                         b: (
@@ -66,7 +64,7 @@
     }
     @include it('should throw error if key does not exist') {
         @include assert-equal(
-            map-get-deep(
+            functions.map-get-deep(
                 (
                     a: (
                         b: (
@@ -87,7 +85,7 @@
 @include describe('map-get-strict()') {
     @include it('should return value for key "foo"') {
         @include assert-equal(
-            map-get-strict(
+            functions.map-get-strict(
                 (
                     foo: bar,
                 ),
@@ -98,7 +96,7 @@
     }
     @include it('should throw error if key does not exist') {
         @include assert-equal(
-            map-get-strict(
+            functions.map-get-strict(
                 (
                     foo: bar,
                 ),

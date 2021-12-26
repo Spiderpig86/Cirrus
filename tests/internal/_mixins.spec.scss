@@ -1,8 +1,7 @@
 // _mixins.scss unit tests
-@import 'true';
-@import '../test_utils';
+@use '../test_base' as *;
 
-@import '../../src/internal/_mixins';
+@use '../../src/internal/mixins';
 
 /************************
  * explode-properties() *
@@ -12,7 +11,7 @@
         @include assert {
             @include output {
                 .avatar {
-                    @include explode-properties(
+                    @include mixins.explode-properties(
                         (
                             border-radius: 50%,
                             padding: 1rem,
@@ -40,7 +39,7 @@
         @include assert {
             @include output {
                 .input--success {
-                    @include input-success();
+                    @include mixins.input-success();
                 }
             }
             @include expect {
@@ -64,7 +63,7 @@
         @include assert {
             @include output {
                 .input--error {
-                    @include input-error();
+                    @include mixins.input-error();
                 }
             }
             @include expect {
@@ -88,7 +87,7 @@
         @include assert {
             @include output {
                 .test {
-                    @include elevate-on-focus();
+                    @include mixins.elevate-on-focus();
                 }
             }
             @include expect {
