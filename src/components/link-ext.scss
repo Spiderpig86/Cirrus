@@ -1,184 +1,189 @@
-/* EXTENDED LINKS */
-/* Animated links */
-.u,
-.utb {
-    display: inline;
-    position: relative; /* So the psuedo-elements are positioned correctly */
-}
+@use '../internal' as *;
 
-/* Underline */
-.u {
-    &::after {
-        content: "";
-        transition: all 0.3s;
-        backface-visibility: hidden;
-        position: absolute;
-        height: 2px;
-        width: 0;
-        background: var(--cirrus-link-dark);
-        bottom: -0.25em;
+$generate-utility: should-generate-classes($LINKS-EXT);
+
+@if $generate-utility {
+    /* EXTENDED LINKS */
+    /* Animated links */
+    .u,
+    .utb {
+        display: inline;
+        position: relative; /* So the psuedo-elements are positioned correctly */
     }
 
-    &:hover::after {
-        width: 100%;
-    }
-
-    
-    &.u-LR::after {
-        /* Left to Right */
-        left: 0;
-    }
-
-    &.u-LR::after {
-        /* Left to Right */
-        left: 0;
-    }
-    
-    &.u-RL::after {
-        /* Right to Left */
-        right: 0;
-    }
-    
-    &.u-RL:hover::after {
-        width: 100%;
-    }
-    
-    &.u-C::after {
-        /* Center Outwards */
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-/* Underline top and bottom */
-.utb {
-    &::before,
-    &::after {
-        content: "";
-        transition: all 0.3s;
-        backface-visibility: hidden;
-        position: absolute;
-        height: 2px;
-        width: 0;
-        background: var(--cirrus-link-dark);
-    }
-    
-    &::before {
-        top: -0.25em;
-    }
-    
-    &::after {
-        bottom: -0.25em;
-    }
-
-    &:hover::before,
-    &:hover::after {
-        width: 100%;
-    }
-
-    &.utb-LR::before,
-    &.utb-LR::after {
-        left: 0;
-    }
-    
-    &.utb-RL::before,
-    &.utb-RL::after {
-        right: 0;
-    }
-    
-    &.utb-C::before,
-    &.utb-C::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    /* Opposite start */
-    &.utb-OLR::before {
-        /* Suffix denotes border transition direction for the top border (left to right). Bottom border will be the opposite direction */
-        left: 0;
-    }
-    
-    &.utb-OLR::after {
-        right: 0;
-    }
-    
-    &.utb-ORL::before {
-        right: 0;
-    }
-    
-    &.utb-ORL::after {
-        left: 0;
-    }
-}
-
-/* Links with square borders */
-
-/* Please note that usquare is the parent span (not div) which would create the left and right borders. The link (.utb-OLR) gets nested within this */
-
-.usquare {
-    margin-left: 0.4rem;
-    position: relative;
-    overflow: hidden;
-
-    &::before,
-    &::after {
-        content: "";
-        transition: 0.25s all ease;
-        backface-visibility: hidden;
-        position: absolute;
-        width: 2px;
-        width: 0.1 rem;
-        height: 0;
-        background: var(--cirrus-link-dark);
-    }
-
-    &::before {
-        left: 0;
-        bottom: -0.2rem;
-    }
-
-    &::after {
-        right: 0;
-        top: -0.2rem;
-    }
-
-    &:hover {
-        &::before,
+    /* Underline */
+    .u {
         &::after {
-            height: calc(100% + 0.4rem); /* Makes the left and right borders */
+            content: '';
+            transition: all 0.3s;
+            backface-visibility: hidden;
+            position: absolute;
+            height: 2px;
+            width: 0;
+            background: var(--cirrus-link-dark);
+            bottom: -0.25em;
         }
 
-        a::before,
-        a::after {
+        &:hover::after {
             width: 100%;
         }
+
+        &.u-LR::after {
+            /* Left to Right */
+            left: 0;
+        }
+
+        &.u-LR::after {
+            /* Left to Right */
+            left: 0;
+        }
+
+        &.u-RL::after {
+            /* Right to Left */
+            right: 0;
+        }
+
+        &.u-RL:hover::after {
+            width: 100%;
+        }
+
+        &.u-C::after {
+            /* Center Outwards */
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
-    &.delay {
+    /* Underline top and bottom */
+    .utb {
+        &::before,
+        &::after {
+            content: '';
+            transition: all 0.3s;
+            backface-visibility: hidden;
+            position: absolute;
+            height: 2px;
+            width: 0;
+            background: var(--cirrus-link-dark);
+        }
+
         &::before {
-            transition-delay: 0.6s;
+            top: -0.25em;
         }
 
         &::after {
-            transition-delay: var(--animation-duration);
+            bottom: -0.25em;
         }
 
-        a::after {
-            transition: 0.25s all ease 0.4s;
+        &:hover::before,
+        &:hover::after {
+            width: 100%;
+        }
+
+        &.utb-LR::before,
+        &.utb-LR::after {
+            left: 0;
+        }
+
+        &.utb-RL::before,
+        &.utb-RL::after {
+            right: 0;
+        }
+
+        &.utb-C::before,
+        &.utb-C::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Opposite start */
+        &.utb-OLR::before {
+            /* Suffix denotes border transition direction for the top border (left to right). Bottom border will be the opposite direction */
+            left: 0;
+        }
+
+        &.utb-OLR::after {
+            right: 0;
+        }
+
+        &.utb-ORL::before {
+            right: 0;
+        }
+
+        &.utb-ORL::after {
+            left: 0;
         }
     }
 
-    a {
-        position: static;
-        padding: 0.2rem 0.4rem;
-        transition: 0.25s all ease;
+    /* Links with square borders */
+
+    /* Please note that usquare is the parent span (not div) which would create the left and right borders. The link (.utb-OLR) gets nested within this */
+
+    .usquare {
+        margin-left: 0.4rem;
+        position: relative;
+        overflow: hidden;
+
+        &::before,
+        &::after {
+            content: '';
+            transition: 0.25s all ease;
+            backface-visibility: hidden;
+            position: absolute;
+            width: 2px;
+            width: 0.1 rem;
+            height: 0;
+            background: var(--cirrus-link-dark);
+        }
 
         &::before {
             left: 0;
+            bottom: -0.2rem;
         }
-        
+
         &::after {
             right: 0;
+            top: -0.2rem;
+        }
+
+        &:hover {
+            &::before,
+            &::after {
+                height: calc(100% + 0.4rem); /* Makes the left and right borders */
+            }
+
+            a::before,
+            a::after {
+                width: 100%;
+            }
+        }
+
+        &.delay {
+            &::before {
+                transition-delay: 0.6s;
+            }
+
+            &::after {
+                transition-delay: var(--animation-duration);
+            }
+
+            a::after {
+                transition: 0.25s all ease 0.4s;
+            }
+        }
+
+        a {
+            position: static;
+            padding: 0.2rem 0.4rem;
+            transition: 0.25s all ease;
+
+            &::before {
+                left: 0;
+            }
+
+            &::after {
+                right: 0;
+            }
         }
     }
 }

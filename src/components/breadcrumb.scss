@@ -1,53 +1,59 @@
-$separators: (
-    'arrow': '\02192',
-    'bullet': '\02022',
-    'dot': '\000b7',
-    'gt': '\0227B',
-);
+@use '../internal' as *;
 
-.breadcrumb {
-    margin: 0.5rem 0;
-    padding: 0.5rem 0;
+$generate-utility: should-generate-classes($BREADCRUMB);
 
-    align-items: flex-start;
-    display: flex;
-    justify-content: flex-start;
-    list-style: none;
-    white-space: nowrap;
+@if $generate-utility {
+    $separators: (
+        'arrow': '\02192',
+        'bullet': '\02022',
+        'dot': '\000b7',
+        'gt': '\0227B',
+    );
 
-    // Breadcrumb layout
-    &.breadcrumb--center {
-        justify-content: center;
-    }
-    &.breadcrumb--right {
-        justify-content: flex-end;
-    }
+    .breadcrumb {
+        margin: 0.5rem 0;
+        padding: 0.5rem 0;
 
-    // Breadcrumb separators
-    @each $name, $separator in $separators {
-        &.breadcrumb--#{$name} {
-            .breadcrumb__item {
-                &:not(:first-child) {
-                    &::before {
-                        content: $separator;
+        align-items: flex-start;
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+        white-space: nowrap;
+
+        // Breadcrumb layout
+        &.breadcrumb--center {
+            justify-content: center;
+        }
+        &.breadcrumb--right {
+            justify-content: flex-end;
+        }
+
+        // Breadcrumb separators
+        @each $name, $separator in $separators {
+            &.breadcrumb--#{$name} {
+                .breadcrumb__item {
+                    &:not(:first-child) {
+                        &::before {
+                            content: $separator;
+                        }
                     }
                 }
             }
         }
-    }
 
-    .breadcrumb__item {
-        margin: 0;
+        .breadcrumb__item {
+            margin: 0;
 
-        &:not(:last-child) {
-            margin-right: 0.5rem;
-        }
+            &:not(:last-child) {
+                margin-right: 0.5rem;
+            }
 
-        &:not(:first-child) {
-            &::before {
-                content: '/';
+            &:not(:first-child) {
+                &::before {
+                    content: '/';
 
-                padding-right: 0.5rem;
+                    padding-right: 0.5rem;
+                }
             }
         }
     }

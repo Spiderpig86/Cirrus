@@ -513,7 +513,7 @@ $z-indexes: map.get($all-config, z-index);
   Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 @function should-generate-classes($flag) {
-    @return should-generate-classes-internal($excludes, $includes, $flag);
+    @return should-generate-classes-internal($includes, $excludes, $flag);
 }
 @function should-generate-classes-internal($to-include, $to-exclude, $flag) {
     $generate-classes: true;

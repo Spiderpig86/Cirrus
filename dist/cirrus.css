@@ -9927,6 +9927,7 @@ video.video-fullscreen {
     margin-bottom: auto !important;
   }
 }
+/* Render the x in the close button */
 /* BUTTONS */
 /* Button styling */
 /* Un-themed */
@@ -10017,7 +10018,6 @@ video.video-fullscreen {
   width: 20px;
   padding: 0;
   min-width: 20px;
-  /* Render the x in the close button */
 }
 .btn.btn-close:hover, button.btn-close:hover, [type=submit].btn-close:hover, [type=reset].btn-close:hover, [type=button].btn-close:hover {
   background-color: rgba(10, 10, 10, 0.3);
@@ -10429,10 +10429,12 @@ pre > code[data-lang]:not([data-lang=""]) {
   text-transform: uppercase;
 }
 
-/* FORMS */
 /*
     Mixins
 */
+/* This is just an extended portion of an input which is just like a label and is read only */
+/* This will style the controls if they are the leftmost control in the form group for labels, inputs, and buttons. */
+/* FORMS */
 /*
     Styles
 */
@@ -10868,8 +10870,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
 
 /* Form groups that group inputs with other controls. */
 .form-group {
-  /* This is just an extended portion of an input which is just like a label and is read only */
-  /* This will style the controls if they are the leftmost control in the form group for labels, inputs, and buttons. */
   display: flex;
   display: -ms-flexbox;
   margin: 0.5rem 0;
@@ -11432,9 +11432,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
     margin-bottom: 1rem;
   }
 }
-/*
-    Group selectors that share common styling.
-*/
 /* LINKS */
 a {
   color: var(--cirrus-link);
@@ -14009,17 +14006,25 @@ ul .divider::after {
   max-height: 550px;
   /* More card components in second example */
 }
-.card.slide-up:hover .card-body, .card.slide-up:hover .card__body, .card.card--slide-up:hover .card-body, .card.card--slide-up:hover .card__body {
+.card.slide-up:hover .card-body,
+.card.slide-up:hover .card__body, .card.card--slide-up:hover .card-body,
+.card.card--slide-up:hover .card__body {
   opacity: 1;
 }
-.card.slide-up:hover .card-image, .card.slide-up:hover .card__image, .card.card--slide-up:hover .card-image, .card.card--slide-up:hover .card__image {
+.card.slide-up:hover .card-image,
+.card.slide-up:hover .card__image, .card.card--slide-up:hover .card-image,
+.card.card--slide-up:hover .card__image {
   transform: translateY(-40px);
 }
-.card.slide-up:hover .mobile-title, .card.slide-up:hover .card__mobile-title, .card.card--slide-up:hover .mobile-title, .card.card--slide-up:hover .card__mobile-title {
+.card.slide-up:hover .mobile-title,
+.card.slide-up:hover .card__mobile-title, .card.card--slide-up:hover .mobile-title,
+.card.card--slide-up:hover .card__mobile-title {
   bottom: 35%;
   transition: all 0.3s ease-in-out;
 }
-.card.slide-up .mobile-title, .card.slide-up .card__mobile-title, .card.card--slide-up .mobile-title, .card.card--slide-up .card__mobile-title {
+.card.slide-up .mobile-title,
+.card.slide-up .card__mobile-title, .card.card--slide-up .mobile-title,
+.card.card--slide-up .card__mobile-title {
   position: absolute;
   left: 0;
   bottom: 5rem;
@@ -14031,7 +14036,9 @@ ul .divider::after {
   padding: 1.5rem 0 0 0;
   backface-visibility: hidden;
 }
-.card.slide-up .card-body, .card.slide-up .card__body, .card.card--slide-up .card-body, .card.card--slide-up .card__body {
+.card.slide-up .card-body,
+.card.slide-up .card__body, .card.card--slide-up .card-body,
+.card.card--slide-up .card__body {
   opacity: 0;
   overflow: auto;
   transition: all var(--animation-duration) ease-in-out;
@@ -14042,7 +14049,8 @@ ul .divider::after {
 .card p {
   margin: 1rem 0;
 }
-.card .card-image, .card .card__image {
+.card .card-image,
+.card .card__image {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -14053,7 +14061,8 @@ ul .divider::after {
   background-repeat: no-repeat;
   transition: all 0.3s ease-in-out;
 }
-.card .card-image::after, .card .card__image::after {
+.card .card-image::after,
+.card .card__image::after {
   content: "";
   display: block;
   position: absolute;
@@ -14064,32 +14073,37 @@ ul .divider::after {
   transition: all 500ms;
   bottom: 0;
 }
-.card .card-container, .card .card__container {
+.card .card-container,
+.card .card__container {
   display: block;
   position: relative;
   height: 40%;
   min-height: 21rem;
   /* So it appears in html5 standards mode */
 }
-.card .title-container, .card .card__title-container {
+.card .title-container,
+.card .card__title-container {
   position: absolute;
   bottom: 1rem;
   width: 100%;
   padding: 0 1rem;
 }
 .card .title-container .title,
-.card .title-container .subtitle, .card .card__title-container .title,
+.card .title-container .subtitle,
+.card .card__title-container .title,
 .card .card__title-container .subtitle {
   color: #fff;
   margin: 1rem auto;
 }
-.card .title-container .title, .card .card__title-container .title {
+.card .title-container .title,
+.card .card__title-container .title {
   font-weight: 300;
   font-size: 1.5rem;
   margin-bottom: 0;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
-.card .action-bar, .card .card__action-bar {
+.card .action-bar,
+.card .card__action-bar {
   user-select: none;
   padding: 0.5rem;
   margin: 0;
@@ -14098,26 +14112,35 @@ ul .divider::after {
   transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
   /* Add some padding to the buttons */
 }
-.card .action-bar .btn, .card .action-bar button, .card .action-bar [type=submit], .card .action-bar [type=reset], .card .action-bar [type=button], .card .card__action-bar .btn, .card .card__action-bar button, .card .card__action-bar [type=submit], .card .card__action-bar [type=reset], .card .card__action-bar [type=button] {
+.card .action-bar .btn, .card .action-bar button, .card .action-bar [type=submit], .card .action-bar [type=reset], .card .action-bar [type=button],
+.card .card__action-bar .btn,
+.card .card__action-bar button,
+.card .card__action-bar [type=submit],
+.card .card__action-bar [type=reset],
+.card .card__action-bar [type=button] {
   margin: 0 0.5rem;
 }
-.card .action-bar + .card-footer, .card .action-bar + .card__footer, .card .card__action-bar + .card-footer, .card .card__action-bar + .card__footer {
+.card .action-bar + .card-footer, .card .action-bar + .card__footer,
+.card .card__action-bar + .card-footer,
+.card .card__action-bar + .card__footer {
   padding: 1rem 0;
   border-top: 1px solid #e9ecef;
 }
-.card .card-footer, .card .card__footer {
+.card .card-footer,
+.card .card__footer {
   position: relative;
   font-size: 0.875rem;
   color: #868e96;
 }
-.card .card-head, .card .card__header {
+.card .card-head,
+.card .card__header {
   align-items: stretch;
   display: flex;
   border-bottom: 1px solid #e9ecef;
 }
 
-/* EXTENDED FORM */
 /* Mixins */
+/* EXTENDED FORM */
 /* Base class layout for extended form */
 .form-ext-control {
   padding-left: 1.5rem;
@@ -14244,29 +14267,29 @@ ul .divider::after {
   position: relative;
   /* Toggle themes */
   /**
-   * Accessibility
-   */
+  * Accessibility
+  */
   /**
-   * Accessibility
-   */
+  * Accessibility
+  */
   /**
-   * Accessibility
-   */
+  * Accessibility
+  */
   /**
-   * Accessibility
-   */
+  * Accessibility
+  */
   /**
-   * Accessibility
-   */
+  * Accessibility
+  */
   /**
-   * Accessibility
-   */
+  * Accessibility
+  */
   /**
-   * Accessibility
-   */
+  * Accessibility
+  */
   /**
-   * Accessibility
-   */
+  * Accessibility
+  */
 }
 .form-ext-control .form-ext-toggle input[type=checkbox],
 .form-ext-control .form-ext-toggle input[type=radio] {

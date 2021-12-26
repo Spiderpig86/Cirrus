@@ -1,5 +1,9 @@
 @use '../internal' as *;
 
+$generate-utility: should-generate-classes($TAGS);
+
+@if $generate-utility {
+
 $TAG_PADDING_DIFF: 0.125;
 $TAG_BASE_PADDING_X: 0.5; // .5rem;
 $TAG_BASE_PADDING_Y: 0.5; // .5rem;
@@ -213,4 +217,5 @@ $TAG_BASE_PADDING_Y: 0.5; // .5rem;
 /* MISC */
 a.tag:hover {
     text-decoration: underline;
+}
 }

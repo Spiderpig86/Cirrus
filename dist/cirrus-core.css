@@ -9926,6 +9926,7 @@ video.video-fullscreen {
     margin-bottom: auto !important;
   }
 }
+/* Render the x in the close button */
 /* BUTTONS */
 /* Button styling */
 /* Un-themed */
@@ -10016,7 +10017,6 @@ video.video-fullscreen {
   width: 20px;
   padding: 0;
   min-width: 20px;
-  /* Render the x in the close button */
 }
 .btn.btn-close:hover, button.btn-close:hover, [type=submit].btn-close:hover, [type=reset].btn-close:hover, [type=button].btn-close:hover {
   background-color: rgba(10, 10, 10, 0.3);
@@ -10428,10 +10428,12 @@ pre > code[data-lang]:not([data-lang=""]) {
   text-transform: uppercase;
 }
 
-/* FORMS */
 /*
     Mixins
 */
+/* This is just an extended portion of an input which is just like a label and is read only */
+/* This will style the controls if they are the leftmost control in the form group for labels, inputs, and buttons. */
+/* FORMS */
 /*
     Styles
 */
@@ -10867,8 +10869,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
 
 /* Form groups that group inputs with other controls. */
 .form-group {
-  /* This is just an extended portion of an input which is just like a label and is read only */
-  /* This will style the controls if they are the leftmost control in the form group for labels, inputs, and buttons. */
   display: flex;
   display: -ms-flexbox;
   margin: 0.5rem 0;
@@ -11431,9 +11431,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
     margin-bottom: 1rem;
   }
 }
-/*
-    Group selectors that share common styling.
-*/
 /* LINKS */
 a {
   color: var(--cirrus-link);
