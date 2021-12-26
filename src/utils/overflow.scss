@@ -1,6 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: _should-generate-classes($OVERFLOW);
+$generate-utility: should-generate-classes($OVERFLOW);
 
 @if $generate-utility {
     $overflow: (auto, hidden, visible, scroll);

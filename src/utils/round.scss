@@ -1,7 +1,7 @@
 // Utility classes for round
 @use '../internal' as *;
 
-$generate-utility: _should-generate-classes($ROUND);
+$generate-utility: should-generate-classes($ROUND);
 
 @if $generate-utility {
     @each $class, $value in $round {

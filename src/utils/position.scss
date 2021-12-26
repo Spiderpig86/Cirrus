@@ -1,6 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: _should-generate-classes($POSITION);
+$generate-utility: should-generate-classes($POSITION);
 
 @if $generate-utility {
   $positions: static, fixed, absolute, relative, sticky;

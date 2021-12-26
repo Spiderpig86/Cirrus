@@ -1,7 +1,7 @@
 // Utility classes for shadows
 @use '../internal' as *;
 
-$generate-utility: _should-generate-classes($SHADOWS);
+$generate-utility: should-generate-classes($SHADOWS);
 
 @if $generate-utility {
     @each $class, $property-map in $shadows {
