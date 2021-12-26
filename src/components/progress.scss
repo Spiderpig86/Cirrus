@@ -1,9 +1,5 @@
 @use 'sass:map';
-
-@import '../internal/_theme.scss';
-@import '../internal/_config.scss';
-@import '../internal/_mixins.scss';
-@import '../internal/_size.scss';
+@use '../internal' as *;
 
 $progress-primary: $cirrus-primary;
 $progress-background: map-get(

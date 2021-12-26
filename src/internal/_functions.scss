@@ -3,8 +3,6 @@
 @use '../../node_modules/sass-true/sass/config/throw';
 @use '../../node_modules/sass-true/sass/true' as *;
 
-@import 'config';
-
 /*
   Functions
   TODO Refactor to different categories
@@ -24,21 +22,6 @@ $DELIMETER: '-';
 */
 @function delimitize($name) {
     @return $DELIMETER + $name + $DELIMETER;
-}
-
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
-*/
-@function get-viewport-flag($name) {
-    @if not map-has-key($viewport-flags, $name) {
-        @return throw.error(
-            $message: '[get-viewport-flag] Unknown constant `#{$name}`.',
-            $source: 'get-viewport-flag()',
-            $catch: true
-        );
-    }
-
-    @return map-get($viewport-flags, $name);
 }
 
 @function string-split($string, $delimiter) {

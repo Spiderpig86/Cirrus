@@ -1,8 +1,6 @@
-@use '../internal/functions';
-@use '../internal/size';
-@use '../internal/flags';
+@use '../internal' as *;
 
-$generate-utility: _should-generate-classes($excludes, $includes, $FLEX);
+$generate-utility: _should-generate-classes($FLEX);
 
 @if $generate-utility {
     $flex-directions: row, row-reverse, column, column-reverse;
@@ -39,7 +37,7 @@ $generate-utility: _should-generate-classes($excludes, $includes, $FLEX);
 }
 
 
-$generate-utility: _should-generate-classes($excludes, $includes, $FLEX-GAP);
+$generate-utility: _should-generate-classes($FLEX-GAP);
 
 @if $generate-utility {
     // Generate flex gap class map

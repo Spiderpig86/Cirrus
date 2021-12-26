@@ -1,10 +1,7 @@
 // Utility classes for round
-@import '../internal/functions';
-@import '../internal/mixins';
-@import '../internal/config';
-@import '../internal/flags';
+@use '../internal' as *;
 
-$generate-utility: _should-generate-classes($excludes, $includes, $ROUND);
+$generate-utility: _should-generate-classes($ROUND);
 
 @if $generate-utility {
     @each $class, $value in $round {

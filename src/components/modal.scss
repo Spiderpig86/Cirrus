@@ -1,6 +1,4 @@
-@import '../internal/_selectors.scss';
-@import '../internal/size';
-@import '../internal/theme';
+@use '../internal' as *;
 
 /* The base of the modal dialog, which is an overlay of the webpage */
 .modal {

@@ -1,6 +1,4 @@
-@import '../internal/_size';
-@import '../internal/_functions';
-@import '../internal/flags';
+@use '../internal' as *;
 
 @each $size in $spacing-system {
     /* Margin */

@@ -1,9 +1,4 @@
-@import '../internal/functions';
-@import '../internal/mixins';
-@import '../internal/selectors';
-@import '../internal/size';
-@import '../internal/theme';
-@import '../internal/config';
+@use '../internal' as *;
 
 /* BUTTONS */
 

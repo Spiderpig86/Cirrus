@@ -1,5 +1,5 @@
-@import "../internal/theme";
-@import "../internal/size";
+@use '../internal' as *;
+
 /* LISTS */
 
 ul,

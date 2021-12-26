@@ -1,9 +1,6 @@
-@import '../internal/functions';
-@import '../internal/size';
-@import '../internal/config';
-@import '../internal/flags';
+@use '../internal' as *;
 
-$generate-utility: _should-generate-classes($excludes, $includes, $OPACITY);
+$generate-utility: _should-generate-classes($OPACITY);
 
 @if $generate-utility {
     @include generate-classes-for-viewport-with-map(

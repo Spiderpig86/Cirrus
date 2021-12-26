@@ -1,4 +1,4 @@
-@import '../internal/theme';
+@use '../internal' as *;
 /* Separate CSS file, but same part as Layout */
 
 /* The base container that is similar in structure to a card but more flexible */

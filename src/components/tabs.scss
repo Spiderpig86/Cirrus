@@ -1,6 +1,4 @@
-@import '../internal/_theme.scss';
-@import '../internal/_size.scss';
-@import '../internal/_config.scss';
+@use '../internal' as *;
 
 /* TABS AND TAB CONTAINER */
 .tab-container {

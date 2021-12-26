@@ -1,5 +1,4 @@
-@import '../internal/theme';
-@import '../internal/selectors';
+@use '../internal' as *;
 
 /* A collection of modifiers that extend control styling */
 #{$button-selectors} {

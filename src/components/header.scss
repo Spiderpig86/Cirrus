@@ -1,6 +1,4 @@
-@import '../internal/selectors';
-@import '../internal/size';
-@import '../internal/theme';
+@use '../internal' as *;
 
 @mixin mobile-dropdown-menu-show {
     border-radius: 0;

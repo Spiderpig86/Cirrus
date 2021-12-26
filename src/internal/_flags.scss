@@ -24,21 +24,3 @@ $MAX-WIDTH: 'MAX-WIDTH';
 $GRID: 'GRID';
 $ROUND: 'ROUND';
 $SHADOWS: 'SHADOWS';
-
-/*
-  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
-*/
-@function _should-generate-classes($excludes, $includes, $flag) {
-  $generate-classes: true;
-  @if list.index($excludes, $ALL) {
-    $generate-classes: false;
-  }
-  @if list.index($includes, $flag) {
-    $generate-classes: false;
-  }
-  @if list.index($includes, $flag) {
-    $generate-classes: true;
-  }
-
-  @return $generate-classes;
-}

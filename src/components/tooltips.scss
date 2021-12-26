@@ -1,4 +1,4 @@
-@import '../internal/_theme.scss';
+@use '../internal' as *;
 
 /* TOOLTIPS */
 .tooltip {

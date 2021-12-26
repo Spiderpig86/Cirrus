@@ -1,5 +1,4 @@
-@import '../internal/theme';
-@import '../internal/selectors';
+@use '../internal' as *;
 
 /* CARDS */
 .card {

@@ -1,5 +1,4 @@
-@import '../internal/_selectors.scss';
-@import '../internal/theme';
+@use '../internal' as *;
 
 /* PAGINATION */
 /* Parent contianer for page navigation */

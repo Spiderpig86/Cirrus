@@ -1,10 +1,5 @@
 @use "sass:math";
-
-@import '../internal/theme';
-@import '../internal/size';
-@import '../internal/config';
-@import '../internal/mixins';
-@import '../internal/flags';
+@use '../internal' as *;
 
 /* HEADER */
 

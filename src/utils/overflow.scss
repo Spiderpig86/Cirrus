@@ -1,8 +1,6 @@
-@import '../internal/functions';
-@import '../internal/size';
-@import '../internal/flags';
+@use '../internal' as *;
 
-$generate-utility: _should-generate-classes($excludes, $includes, $OVERFLOW);
+$generate-utility: _should-generate-classes($OVERFLOW);
 
 @if $generate-utility {
     $overflow: (auto, hidden, visible, scroll);

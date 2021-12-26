@@ -1,6 +1,4 @@
-@import '../internal/_size.scss';
-@import '../internal/functions';
-@import '../internal/flags';
+@use '../internal' as *;
 
 /* GRID */
 
