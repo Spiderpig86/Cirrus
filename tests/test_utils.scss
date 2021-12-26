@@ -1,3 +1,12 @@
+@forward 'true';
+@forward '../src/internal/theme';
+@forward '../src/internal/functions';
+@forward '../src/internal/config';
+@forward '../src/internal/flags';
+@forward '../src/internal/selectors';
+@forward '../src/internal/size';
+@forward '../src/internal/mixins';
+
 @function build-true-error-string($source, $message) {
     @return 'ERROR [#{$source}]: #{$message}'
 }

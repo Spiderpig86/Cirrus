@@ -1,0 +1,18 @@
+// _config.scss unit tests
+@use '../test_utils' as *;
+@use '../../src/internal/config';
+
+/***********************
+ * get-viewport-flag() *
+ ***********************/
+@include describe('get-viewport-flag()') {
+    @include it('should return if flag is enabled or not given valid flag "OPACITY"') {
+        @include assert-equal(config.get-viewport-flag('OPACITY'), true);
+    }
+    @include it('should throw an error if the given flag is invalid') {
+        @include assert-equal(
+            config.get-viewport-flag('UNKNOWN'),
+            build-true-error-string('get-viewport-flag()', '[get-viewport-flag] Unknown constant `UNKNOWN`.')
+        );
+    }
+}
