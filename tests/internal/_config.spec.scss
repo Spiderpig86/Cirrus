@@ -3,16 +3,45 @@
 @use '../../src/internal/config';
 
 /***********************
- * get-viewport-flag() *
+ * get-viewport-flag-internal() *
  ***********************/
-@include describe('get-viewport-flag()') {
+@include describe('get-viewport-flag-internal()') {
     @include it('should return if flag is enabled or not given valid flag "OPACITY"') {
-        @include assert-equal(config.get-viewport-flag('OPACITY'), true);
+        @include assert-equal(
+            config.get-viewport-flag-internal(
+                (
+                    $OPACITY: false,
+                ),
+                $OPACITY
+            ),
+            false
+        );
     }
     @include it('should throw an error if the given flag is invalid') {
         @include assert-equal(
             config.get-viewport-flag('UNKNOWN'),
             build-true-error-string('get-viewport-flag()', '[get-viewport-flag] Unknown constant `UNKNOWN`.')
         );
+    }
+}
+
+/************************************
+ * should-generate-classes-internal() *
+ ************************************/
+@include describe('should-generate-classes-internal()') {
+    @include it('should return true if includes: () and excludes: ()  for flag: OPACITY"') {
+        @include assert-equal(config.should-generate-classes-internal((), (), $OPACITY), true);
+    }
+    @include it('should return false if includes: () and excludes: (ALL) for flag: OPACITY') {
+        @include assert-equal(config.should-generate-classes-internal((), ($ALL), $OPACITY), false);
+    }
+    @include it('should return false if includes: () and excludes: (OPACITY) for flag: OPACITY') {
+        @include assert-equal(config.should-generate-classes-internal((), ($OPACITY), $OPACITY), false);
+    }
+    @include it('should return true if includes: (OPACITY) and excludes: (OPACITY) for flag: OPACITY') {
+        @include assert-equal(config.should-generate-classes-internal(($OPACITY), ($OPACITY), $OPACITY), true);
+    }
+    @include it('should return false if includes: () and excludes: () for unknown flag: TEST') {
+        @include assert-equal(config.should-generate-classes-internal((), (), TEST), true);
     }
 }

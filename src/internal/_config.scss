@@ -495,7 +495,10 @@ $z-indexes: map.get($all-config, z-index);
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
 */
 @function get-viewport-flag($name) {
-    @if not map-has-key($viewport-flags, $name) {
+    @return get-viewport-flag-internal($viewport-flags, $name);
+}
+@function get-viewport-flag-internal($flag-map, $name) {
+    @if not map-has-key($flag-map, $name) {
         @return throw.error(
             $message: '[get-viewport-flag] Unknown constant `#{$name}`.',
             $source: 'get-viewport-flag()',
@@ -503,21 +506,24 @@ $z-indexes: map.get($all-config, z-index);
         );
     }
 
-    @return map.get($viewport-flags, $name);
+    @return map.get($flag-map, $name);
 }
 
 /*
   Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 @function should-generate-classes($flag) {
+    @return should-generate-classes-internal($excludes, $includes, $flag);
+}
+@function should-generate-classes-internal($to-include, $to-exclude, $flag) {
     $generate-classes: true;
-    @if list.index($excludes, flags.$ALL) {
+    @if list.index($to-exclude, flags.$ALL) {
       $generate-classes: false;
     }
-    @if list.index($excludes, $flag) {
+    @if list.index($to-exclude, $flag) {
       $generate-classes: false;
     }
-    @if list.index($includes, $flag) {
+    @if list.index($to-include, $flag) {
       $generate-classes: true;
     }
 
