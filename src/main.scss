@@ -25,11 +25,6 @@
 //         .src(['src/main.scss'])
 //         .pipe(sass.sync().on('error', function (err) {
 //             sass.logError.call(this, err);
-
-//             // Fail job if in CI
-//             if (environment.isCi) {
-//                 throw err;
-//             }
 //         }))
 //         .pipe($.concat('cirrus.css'))
 //         .pipe($.header(head))

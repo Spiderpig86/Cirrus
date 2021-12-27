@@ -5,6 +5,12 @@ $generate-utility: should-generate-classes($TABLE);
 @if $generate-utility {
     /* TABLE */
 
+    .table-container {
+        overflow: auto;
+        overflow-y: hidden;
+        max-width: 100%;
+    }
+
     .table {
         margin-bottom: 1.5rem;
         width: 100%;

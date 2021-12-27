@@ -11954,6 +11954,12 @@ ul .divider::after {
   }
 }
 /* TABLE */
+.table-container {
+  overflow: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
 .table {
   margin-bottom: 1.5rem;
   width: 100%;
