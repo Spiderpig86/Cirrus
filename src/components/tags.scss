@@ -14,7 +14,7 @@ $TAG_BASE_PADDING_Y: 0.5; // .5rem;
     $padding_y: #{$TAG_BASE_PADDING_Y + 1 * $TAG_PADDING_DIFF};
 
     align-items: center;
-    background-color: var(--cirrus-light);
+    background-color: $cirrus-light;
     border-radius: 0.25rem;
     color: currentColor;
     display: inline-flex;
@@ -60,7 +60,7 @@ $TAG_BASE_PADDING_Y: 0.5; // .5rem;
     /* Draw the delete button */
     &.tag__delete::before,
     &.tag__delete::after {
-        background-color: var(--cirrus-light);
+        background-color: $cirrus-light;
         content: '';
         display: block;
         left: 50%;
@@ -88,7 +88,7 @@ $TAG_BASE_PADDING_Y: 0.5; // .5rem;
     /* TAG THEMES */
     &.tag--white {
         background-color: #fff;
-        color: var(--cirrus-dark);
+        color: $cirrus-dark;
     }
 
     &.tag--black {
@@ -97,7 +97,7 @@ $TAG_BASE_PADDING_Y: 0.5; // .5rem;
     }
 
     &.tag--primary {
-        background-color: var(--cirrus-primary);
+        background-color: $cirrus-primary;
         color: #fff;
     }
 

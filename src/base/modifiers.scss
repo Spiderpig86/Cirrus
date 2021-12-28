@@ -44,14 +44,14 @@
 /* GLOBAL THEME SELECTORS */
 /* v1 */
 
-@each $palette in $v1Palettes {
-    .bg-#{$palette} {
-        background-color: rgba(var(--cirrus-#{$palette}), var(--color-opacity)) !important;
+@each $name, $color in $v1Palettes {
+    .bg-#{$name} {
+        background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
     }
 
-    .text-#{$palette} {
-        border-color: rgba(var(--cirrus-#{$palette}), var(--color-opacity)) !important;
-        color: rgba(var(--cirrus-#{$palette}), var(--color-opacity)) !important;
+    .text-#{$name} {
+        border-color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+        color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
     }
 }
 

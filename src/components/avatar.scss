@@ -13,7 +13,7 @@ $generate-utility: should-generate-classes($AVATAR);
         font-weight: lighter;
         width: 3.2rem;
         height: 3.2rem;
-        background-color: var(--cirrus-primary);
+        background-color: $cirrus-primary;
         overflow: hidden;
 
         /* Draw text on image just like in Gmail */

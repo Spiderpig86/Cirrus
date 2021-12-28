@@ -1,10 +1,6 @@
 @use '../internal' as *;
 
 /* Mixins */
-@mixin themed-toggle-mixin($theme-color) {
-    background-color: var(--cirrus-#{$theme-color});
-    border-color: var(--cirrus-#{$theme-color});
-}
 
 $generate-utility: should-generate-classes($FORMS-EXT);
 
@@ -51,15 +47,15 @@ $generate-utility: should-generate-classes($FORMS-EXT);
 
             /* Checked state */
             &:checked ~ .form-ext-label:before {
-                background-color: var(--cirrus-primary);
+                background-color: $cirrus-primary;
             }
 
             @each $color, $value in $control-themes {
                 &.form-ext-input--#{$color}:checked ~ .form-ext-label {
-                    color: var(--cirrus-#{$color});
+                    color: $value;
 
                     &:before {
-                        background-color: var(--cirrus-#{$color});
+                        background-color: $value;
                     }
                 }
                 &.form-ext-input--#{$color}:focus ~ .form-ext-label:before {
@@ -94,9 +90,9 @@ $generate-utility: should-generate-classes($FORMS-EXT);
             }
 
             .form-ext-toggle__toggler {
-                border: 1px solid var(--cirrus-gray);
+                border: 1px solid $cirrus-gray;
                 border-radius: 6.25rem;
-                color: var(--cirrus-gray);
+                color: $cirrus-gray;
                 display: block;
                 font-size: 9px;
                 height: 1.5rem;
@@ -112,8 +108,8 @@ $generate-utility: should-generate-classes($FORMS-EXT);
             input[type='checkbox']:checked + * .form-ext-toggle__toggler,
             input[type='radio']:checked + .form-ext-toggle__toggler,
             input[type='radio']:checked + * .form-ext-toggle__toggler {
-                background-color: var(--cirrus-primary);
-                border-color: var(--cirrus-primary);
+                background-color: $cirrus-primary;
+                border-color: $cirrus-primary;
                 color: #fff;
                 position: relative;
                 transition: all 0.4s ease;
@@ -136,17 +132,17 @@ $generate-utility: should-generate-classes($FORMS-EXT);
                 &.form-ext-toggle--#{$color} input[type='checkbox']:checked + * .form-ext-toggle__toggler,
                 &.form-ext-toggle--#{$color} input[type='radio']:checked + .form-ext-toggle__toggler,
                 &.form-ext-toggle--#{$color} input[type='radio']:checked + * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-#{$color});
-                    border-color: var(--cirrus-#{$color});
+                    background-color: $value;
+                    border-color: $value;
                 }
 
                 .form-ext-toggle--#{$color} .form-ext-toggle__toggler {
-                    border-color: var(--cirrus-#{$color});
-                    color: var(--cirrus-#{$color});
+                    border-color: $value;
+                    color: $value;
                 }
 
                 .form-ext-toggle--#{$color} .form-ext-toggle__toggler i::after {
-                    background-color: var(--cirrus-#{$color});
+                    background-color: $value;
                 }
 
                 /**
@@ -182,7 +178,7 @@ $generate-utility: should-generate-classes($FORMS-EXT);
             }
 
             .form-ext-toggle__toggler i::after {
-                background-color: var(--cirrus-gray);
+                background-color: $cirrus-gray;
                 border-radius: 50%;
                 height: 16px;
                 left: 4px;
@@ -211,7 +207,7 @@ $generate-utility: should-generate-classes($FORMS-EXT);
             }
 
             &:before {
-                background-color: var(--cirrus-light);
+                background-color: $cirrus-light;
                 border: 1px solid map-get($grays, '300');
                 border-radius: 0.25rem;
                 pointer-events: none;

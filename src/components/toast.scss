@@ -27,7 +27,7 @@ $generate-utility: should-generate-classes($TOAST);
         }
 
         a {
-            color: var(--cirrus-light);
+            color: $cirrus-light;
             transition: all 0.3s;
 
             &:hover {
@@ -50,8 +50,8 @@ $generate-utility: should-generate-classes($TOAST);
         /* TOAST TYPES */
 
         &.toast--primary {
-            background-color: var(--cirrus-primary);
-            border-color: var(--cirrus-primary);
+            background-color: $cirrus-primary;
+            border-color: $cirrus-primary;
         }
 
         @each $color, $value in $control-themes {

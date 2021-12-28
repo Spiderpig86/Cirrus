@@ -92,13 +92,13 @@ $generate-utility: should-generate-classes($LISTS);
 
         .menu-item:hover > a {
             background-color: rgba(208, 208, 208, 0.3);
-            color: var(--cirrus-primary);
+            color: $cirrus-primary;
             transition: all var(--animation-duration);
         }
 
         .menu-item.selected > a {
             color: #fff;
-            background-color: var(--cirrus-primary);
+            background-color: $cirrus-primary;
         }
 
         .menu-item .menu-addon {

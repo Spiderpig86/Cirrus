@@ -60,6 +60,18 @@ $animation-duration: 0.2s;
 $focus-opacity: 0.55;
 
 $focus-size: 0 0 0.1rem 0.15rem;
-$focus-color: rgba(240, 61, 77, .13);
+$focus-color: rgba(240, 61, 77, 0.13);
 
-$v1Palettes: primary, success, warning, danger, light, dark, link, link-dark, info, 'black', 'white';
+$v1Palettes: (
+    'primary': $cirrus-primary,
+    'success': $cirrus-success,
+    'warning': $cirrus-warning,
+    'danger': $cirrus-danger,
+    'light': $cirrus-light,
+    'dark': $cirrus-dark,
+    'link': $cirrus-link,
+    'link-dark': $cirrus-link-dark,
+    'info': $cirrus-info,
+    'black': $cirrus-black,
+    'white': $cirrus-white,
+);

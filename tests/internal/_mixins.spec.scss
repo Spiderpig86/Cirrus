@@ -44,7 +44,7 @@
             }
             @include expect {
                 .input--success {
-                    border-color: var(--cirrus-success);
+                    border-color: #0dd157;
                 
                     &:focus {
                         box-shadow: 0 0 0 0.2rem transparentize($cirrus-success, 1 - $focus-opacity), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
@@ -68,7 +68,7 @@
             }
             @include expect {
                 .input--error {
-                    border-color: var(--cirrus-danger);
+                    border-color: #fb4143;
                 
                     &:focus {
                         box-shadow: 0 0 0 0.2rem transparentize($cirrus-danger, 1 - $focus-opacity), inset 0px 1px 8px rgba(0, 0, 0, 0.07);

@@ -48,7 +48,7 @@ $generate-utility: should-generate-classes($TABS);
 
                     &.selected a,
                     &.selected .tab-item-content {
-                        color: var(--cirrus-primary);
+                        color: $cirrus-primary;
                         border-color: map-get($grays, '300');
                         border-bottom-color: transparent !important;
                     }
@@ -111,8 +111,8 @@ $generate-utility: should-generate-classes($TABS);
 
             &.selected a,
             &.selected .tab-item-content {
-                border-bottom-color: var(--cirrus-primary);
-                color: var(--cirrus-primary);
+                border-bottom-color: $cirrus-primary;
+                color: $cirrus-primary;
                 border-width: 2px;
                 transition: all 0.3s;
             }

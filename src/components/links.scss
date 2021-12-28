@@ -6,14 +6,14 @@ $generate-utility: should-generate-classes($LINKS);
     /* LINKS */
 
     a {
-        color: var(--cirrus-link);
+        color: $cirrus-link;
         font-weight: 600;
         padding: 2px;
         text-decoration: none;
         transition: all 0.3s;
 
         &:hover {
-            color: var(--cirrus-link-dark);
+            color: $cirrus-link-dark;
             transition: all 0.3s;
         }
 

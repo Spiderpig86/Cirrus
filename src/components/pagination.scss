@@ -19,13 +19,13 @@ $generate-utility: should-generate-classes($PAGINATION);
                 p,
                 #{$header-selectors} {
                     transition: all 0.3s;
-                    color: var(--cirrus-primary);
+                    color: $cirrus-primary;
                 }
             }
 
             &:not(.selected):hover *:not([disabled]):not(.disabled):not(.ellipses) {
                 transition: all 0.3s;
-                color: var(--cirrus-primary);
+                color: $cirrus-primary;
             }
 
             &.pagination-next {
@@ -76,7 +76,7 @@ $generate-utility: should-generate-classes($PAGINATION);
 
                 /* Color the selected pagination item with accent color */
                 &.selected {
-                    background-color: var(--cirrus-primary);
+                    background-color: $cirrus-primary;
                     color: #fff;
                     a {
                         color: #fff;

@@ -33,7 +33,7 @@ $generate-utility: should-generate-classes($TABLE);
 
             &.selected {
                 /* Style a selected row */
-                background-color: var(--cirrus-primary);
+                background-color: $cirrus-primary;
                 color: #fff;
             }
         }
