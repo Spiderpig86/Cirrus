@@ -1,12 +1,23 @@
 @use '../internal' as *;
 
 $generate-utility: should-generate-classes($OPACITY);
-
 @if $generate-utility {
     @include generate-classes-for-viewport-with-map(
-                    $opacities,
-                    'opacity',
-                    'u-opacity-',
-            $generate-viewports: #{get-viewport-flag($OPACITY)}
+        $opacities,
+        'opacity',
+        'u-opacity-',
+        $generate-viewports: #{get-viewport-flag($OPACITY)}
     );
 }
+
+$generate-utility: should-generate-classes($BACKGROUND-OPACITY);
+@if $generate-utility {
+    @include generate-classes-for-viewport-with-map(
+        $opacities,
+        '--bg-opacity',
+        'u-bg-opacity-',
+        $generate-viewports: #{get-viewport-flag($BACKGROUND-OPACITY)},
+        $include-important: false
+    );
+}
+

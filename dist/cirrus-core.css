@@ -8,7 +8,6 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 /* v1 Color scheme for Cirrus */
-/* v2 Colors */
 /*
   Functions
   TODO Refactor to different categories
@@ -18,6 +17,9 @@
 */
 /*
     Generates delimited class name prefix.
+*/
+/*
+    Group selectors that share common styling.
 */
 /* Spacing */
 /* Breakpoints */
@@ -45,15 +47,6 @@
  *       }
  */
 /*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
-*/
-/*
-  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
-*/
-/*
-    Group selectors that share common styling.
-*/
-/*
     Global Mixins
 */
 /*
@@ -68,6 +61,13 @@
 */
 /*
     Bring to front on focus.
+*/
+/* v2 Colors */
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 :root {
   /* v1 Colors */
