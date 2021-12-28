@@ -13,6 +13,8 @@
 // Deep merged with the default config. This means that this will override existing keys and append new key value pairs.
 $config: (
     
+    // Please define all these using hex
+    colors: (),
 ) !default;
 
 // ==================================================
@@ -32,6 +34,8 @@ $default-config: (
         flags.$TEXT: true,
         flags.$MARGIN-PADDING: true,
         flags.$OPACITY: true,
+        flags.$BACKGROUND-OPACITY: false,
+        flags.$COLOR-OPACITY: false,
         flags.$WIDTHS: true,
         flags.$HEIGHTS: true,
         flags.$ZINDEX: false,
@@ -484,17 +488,17 @@ $default-config: (
         screen: 100vh,
     ),
     opacity: (
-        '0': 0,
-        '10': 0.1,
-        '20': 0.2,
-        '30': 0.3,
-        '40': 0.4,
-        '50': 0.5,
-        '60': 0.6,
-        '70': 0.7,
-        '80': 0.8,
-        '90': 0.9,
-        '100': 1,
+        0: 0,
+        10: 0.1,
+        20: 0.2,
+        30: 0.3,
+        40: 0.4,
+        50: 0.5,
+        60: 0.6,
+        70: 0.7,
+        80: 0.8,
+        90: 0.9,
+        100: 1,
     ),
     round: (
         'none': 0px,

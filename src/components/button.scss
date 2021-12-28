@@ -31,9 +31,9 @@ $generate-utility: should-generate-classes($BUTTON);
         cursor: pointer;
         text-align: center;
         transition: all var(--animation-duration);
-        background-color: var(--btn-color);
-        border-color: var(--btn-border-color);
-        color: var(--btn-fg);
+        background-color: rgba(var(--btn-color), var(--bg-opacity));
+        border-color: rgba(var(--btn-border-color), var(--color-opacity));
+        color: rgba(var(--btn-fg), var(--color-opacity));
         font-size: $font-size-xs;
         font-weight: inherit; // Reset button if used in <a> tag
         letter-spacing: 0.03rem;
@@ -43,15 +43,15 @@ $generate-utility: should-generate-classes($BUTTON);
         user-select: none;
         margin-bottom: 1rem;
         outline: none;
-        --btn-color: #{map-get($grays, '000')};
-        --btn-fg: #{map-get($grays, '700')};
-        --btn-border-color: #{map-get($grays, '200')};
+        --btn-color: #{hex-to-rgb(map-get($grays, '000'))};
+        --btn-fg: #{hex-to-rgb(map-get($grays, '700'))};
+        --btn-border-color: #{hex-to-rgb(map-get($grays, '200'))};
 
         /* Base States */
         &:hover {
             transition: all var(--animation-duration);
-            --btn-color: #{map-get($grays, '100')};
-            color: var(--btn-fg);
+            --btn-color: #{hex-to-rgb(map-get($grays, '100'))};
+            color: rgba(var(--btn-fg), var(--color-opacity));
         }
 
         &:active {
@@ -75,7 +75,7 @@ $generate-utility: should-generate-classes($BUTTON);
             --btn-color: transparent;
 
             &:hover {
-                --btn-color: #{map-get($grays, '200')};
+                --btn-color: #{hex-to-rgb(map-get($grays, '200'))};
             }
         }
 
@@ -140,7 +140,8 @@ $generate-utility: should-generate-classes($BUTTON);
                 box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
             }
             &:hover {
-                --btn-color: rgba(0, 0, 0, 0.1);
+                --bg-opacity: 0.1;
+                --btn-color: 0, 0, 0;
             }
             &.outline {
                 --btn-fg: var(--cirrus-dark);
@@ -177,15 +178,15 @@ $generate-utility: should-generate-classes($BUTTON);
         }
 
         &.btn-black {
-            --btn-color: #000;
+            --btn-color: 0, 0, 0;
             --btn-fg: var(--cirrus-light);
-            --btn-border-color: #000;
+            --btn-border-color: 0, 0, 0;
 
             &:focus {
                 box-shadow: 0 0 0 0.2rem transparentize($cirrus-dark, 0.5);
             }
             &:hover {
-                --btn-color: #000;
+                --btn-color: 0, 0, 0;
             }
         }
 
@@ -328,30 +329,30 @@ $generate-utility: should-generate-classes($BUTTON);
 
     [class^='btn-']:not(.btn-container):not(.btn-close),
     [class*=' btn-']:not(.btn-container):not(.btn-close) {
-        background-color: var(--btn-color);
-        border: 1px solid var(--btn-border-color);
-        color: var(--btn-fg);
+        background-color: rgba(var(--btn-color), var(--bg-opacity));
+        border: 1px solid rgba(var(--btn-border-color), var(--color-opacity));
+        color: rgba(var(--btn-fg), var(--color-opacity));
         transition: all var(--animation-duration);
 
         &:hover {
-            background-color: var(--btn-color);
-            border-color: var(--btn-border-color);
+            background-color: rgba(var(--btn-color), var(--bg-opacity));
+            border-color: rgba(var(--btn-border-color), var(--color-opacity));
             transition: all var(--animation-duration);
         }
 
         /* Outline Variants */
         &.outline {
             background-color: transparent;
-            color: var(--btn-color);
+            color: rgba(var(--btn-color), var(--color-opacity));
 
             &:hover {
-                background-color: var(--btn-color);
-                color: var(--btn-fg);
+                background-color: rgba(var(--btn-color), var(--bg-opacity));
+                color: rgba(var(--btn-fg), var(--color-opacity));
                 transition: all var(--animation-duration);
             }
 
             &.btn-transparent {
-                color: #{map-get($grays, '700')} !important;
+                color: #{hex-to-rgb(map-get($grays, '700'))} !important;
             }
         }
     }

@@ -46,12 +46,12 @@
 
 @each $palette in $v1Palettes {
     .bg-#{$palette} {
-        background-color: var(--cirrus-#{$palette}) !important;
+        background-color: rgba(var(--cirrus-#{$palette}), var(--color-opacity)) !important;
     }
 
     .text-#{$palette} {
-        border-color: var(--cirrus-#{$palette}) !important;
-        color: var(--cirrus-#{$palette}) !important;
+        border-color: rgba(var(--cirrus-#{$palette}), var(--color-opacity)) !important;
+        color: rgba(var(--cirrus-#{$palette}), var(--color-opacity)) !important;
     }
 }
 
@@ -60,12 +60,12 @@
 @each $name, $palette in $v2Palettes {
     @each $level, $color in $palette {
         .bg-#{$name}-#{$level} {
-            background-color: #{$color} !important;
+            background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
         }
 
         .text-#{$name}-#{$level} {
-            border-color: #{$color} !important;
-            color: #{$color} !important;
+            border-color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+            color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
         }
     }
 }

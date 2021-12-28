@@ -1,5 +1,6 @@
 @use 'sass:string';
 @use 'sass:list';
+@use 'sass:map';
 @use '../../node_modules/sass-true/sass/config/throw';
 @use '../../node_modules/sass-true/sass/true' as *;
 
@@ -70,4 +71,3 @@ $DELIMETER: '-';
         );
     }
 }
-

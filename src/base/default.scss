@@ -7,41 +7,41 @@
     --cirrus-fg: #{$cirrus-fg};
     --cirrus-bg: #{$cirrus-bg};
 
-    --cirrus-primary: #{$cirrus-primary};
+    --cirrus-primary: #{hex-to-rgb($cirrus-primary)};
     --cirrus-primary-rgb: #{hex-to-rgb($cirrus-primary)};
-    --cirrus-primary-light: #{$cirrus-primary-light};
-    --cirrus-accent-hover: #{$cirrus-accent-hover};
-    --cirrus-accent-border: #{$cirrus-accent-border};
-    --cirrus-light: #{$cirrus-light};
-    --cirrus-light-gray: #{$cirrus-light-gray};
-    --cirrus-gray: #{$cirrus-gray};
-    --cirrus-dark-gray: #{$cirrus-dark-gray};
-    --cirrus-dark: #{$cirrus-dark};
-    --cirrus-link: #{$cirrus-link};
-    --cirrus-link-dark: #{$cirrus-link-dark};
-    --cirrus-info: #{$cirrus-info};
-    --cirrus-success: #{$cirrus-success};
+    --cirrus-primary-light: #{hex-to-rgb($cirrus-primary-light)};
+    --cirrus-accent-hover: #{hex-to-rgb($cirrus-accent-hover)};
+    --cirrus-accent-border: #{hex-to-rgb($cirrus-accent-border)};
+    --cirrus-light: #{hex-to-rgb($cirrus-light)};
+    --cirrus-light-gray: #{hex-to-rgb($cirrus-light-gray)};
+    --cirrus-gray: #{hex-to-rgb($cirrus-gray)};
+    --cirrus-dark-gray: #{hex-to-rgb($cirrus-dark-gray)};
+    --cirrus-dark: #{hex-to-rgb($cirrus-dark)};
+    --cirrus-link: #{hex-to-rgb($cirrus-link)};
+    --cirrus-link-dark: #{hex-to-rgb($cirrus-link-dark)};
+    --cirrus-info: #{hex-to-rgb($cirrus-info)};
+    --cirrus-success: #{hex-to-rgb($cirrus-success)};
     --cirrus-success-rgb: #{hex-to-rgb($cirrus-success)};
-    --cirrus-warning: #{$cirrus-warning};
-    --cirrus-danger: #{$cirrus-danger};
-    --cirrus-black: #{$cirrus-black};
-    --cirrus-white: #{$cirrus-white};
+    --cirrus-warning: #{hex-to-rgb($cirrus-warning)};
+    --cirrus-danger: #{hex-to-rgb($cirrus-danger)};
+    --cirrus-black: #{hex-to-rgb($cirrus-black)};
+    --cirrus-white: #{hex-to-rgb($cirrus-white)};
 
-    --cirrus-light-hover: #{darken($cirrus-light, 10%)};
-    --cirrus-dark-hover: #{lighten($cirrus-dark, 10%)};
-    --cirrus-info-hover: #{darken($cirrus-info, 5%)};
-    --cirrus-link-hover: #{$cirrus-link-hover};
-    --cirrus-success-hover: #{darken($cirrus-success, 5%)};
-    --cirrus-warning-hover: #{darken($cirrus-warning, 5%)};
-    --cirrus-danger-hover: #{darken($cirrus-danger, 15%)};
+    --cirrus-light-hover: #{hex-to-rgb(darken($cirrus-light, 10%))};
+    --cirrus-dark-hover: #{hex-to-rgb(lighten($cirrus-dark, 10%))};
+    --cirrus-info-hover: #{hex-to-rgb(darken($cirrus-info, 5%))};
+    --cirrus-link-hover: #{hex-to-rgb($cirrus-link-hover)};
+    --cirrus-success-hover: #{hex-to-rgb(darken($cirrus-success, 5%))};
+    --cirrus-warning-hover: #{hex-to-rgb(darken($cirrus-warning, 5%))};
+    --cirrus-danger-hover: #{hex-to-rgb(darken($cirrus-danger, 15%))};
 
     --cirrus-select-bg: #{$cirrus-select-bg};
 
-    --cirrus-code-bg: var(--cirrus-primary-light);
+    --cirrus-code-bg: rgba(var(--cirrus-primary-light), 1);
     --cirrus-code-fg: #{$cirrus-code-fg};
 
-    --cirrus-form-group-bg: var(--cirrus-light-gray);
-    --cirrus-form-group-fg: var(--cirrus-dark-gray);
+    --cirrus-form-group-bg: rgba(var(--cirrus-light-gray), 1);
+    --cirrus-form-group-fg: rgba(var(--cirrus-dark-gray), 1);
 
     --toast-primary-bg: #{$toast-primary-bg};
 
@@ -58,6 +58,10 @@
 
     --cirrus-focus-size: #{$focus-size};
     --cirrus-focus-color: #{$focus-color};
+
+    // Global var defaults
+    --bg-opacity: 1;
+    --color-opacity: 1;
 }
 
 * {
