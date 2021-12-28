@@ -88,15 +88,15 @@ export const AvatarPage: React.FC<any> = (props) => {
                             similar to what you see in Gmail.
                         </p>
                         <div className="row mb-2">
-                            <div className="avatar" data-text="Aa"></div>
-                            <div className="avatar" data-text="Bb"></div>
-                            <div className="avatar" data-text="Cc"></div>
+                            <div className="avatar text-gray-000" data-text="Aa"></div>
+                            <div className="avatar text-gray-000" data-text="Bb"></div>
+                            <div className="avatar text-gray-000" data-text="Cc"></div>
                         </div>
 
                         <CodeBlock
-                            code={`<div class="avatar" data-text='Aa'></div>
-<div class="avatar" data-text='Bb'></div>
-<div class="avatar" data-text='Cc'></div>`}
+                            code={`<div class="avatar text-gray-000" data-text='Aa'></div>
+<div class="avatar text-gray-000" data-text='Bb'></div>
+<div class="avatar text-gray-000" data-text='Cc'></div>`}
                             language="htmlbars"
                         />
                     </div>
@@ -119,7 +119,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                             <div className="col-6">
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
-                                        <figure className="avatar avatar--xsmall" data-text="Jz"></figure>
+                                        <figure className="avatar avatar--xsmall text-gray-000" data-text="Jz"></figure>
                                     </div>
                                     <div className="tile__container">
                                         <p className="tile__title m-0">Jenelle Zaynab</p>
@@ -134,7 +134,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure
-                                            className="avatar avatar--small"
+                                            className="avatar avatar--small text-gray-000"
                                             data-text="Jz"
                                             style={{ background: '#a3d39c' }}
                                         ></figure>
@@ -152,7 +152,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure
-                                            className="avatar"
+                                            className="avatar text-gray-000"
                                             data-text="Jz"
                                             style={{ background: '#7accc8' }}
                                         ></figure>
@@ -170,7 +170,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure
-                                            className="avatar avatar--large"
+                                            className="avatar avatar--large text-gray-000"
                                             data-text="Jz"
                                             style={{ background: '#4aaaa5' }}
                                         ></figure>
@@ -188,7 +188,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure
-                                            className="avatar avatar--xlarge"
+                                            className="avatar avatar--xlarge text-gray-000"
                                             data-text="Jz"
                                             style={{ background: '#35404f' }}
                                         ></figure>
