@@ -113,7 +113,7 @@ export const FormsGlyphsPage: React.FC<any> = (props) => {
                         <div className="input-control">
                             <input
                                 type="email"
-                                className="input-contains-icon input-contains-icon-right input-xsmall"
+                                className="input-contains-icon input-contains-icon-right input--xs"
                                 placeholder="Extra Small"
                             />
                             <span className="icon">
@@ -126,7 +126,7 @@ export const FormsGlyphsPage: React.FC<any> = (props) => {
                         <div className="input-control">
                             <input
                                 type="email"
-                                className="input-contains-icon input-contains-icon-right input-small"
+                                className="input-contains-icon input-contains-icon-right input--sm"
                                 placeholder="Small"
                             />
                             <span className="icon">
@@ -152,7 +152,7 @@ export const FormsGlyphsPage: React.FC<any> = (props) => {
                         <div className="input-control">
                             <input
                                 type="email"
-                                className="input-contains-icon input-contains-icon-right input-large"
+                                className="input-contains-icon input-contains-icon-right input--lg"
                                 placeholder="Large"
                             />
                             <span className="icon">
@@ -165,7 +165,7 @@ export const FormsGlyphsPage: React.FC<any> = (props) => {
                         <div className="input-control">
                             <input
                                 type="email"
-                                className="input-contains-icon input-contains-icon-right input-xlarge"
+                                className="input-contains-icon input-contains-icon-right input--xl"
                                 placeholder="Extra Large"
                             />
                             <span className="icon">
@@ -178,12 +178,12 @@ export const FormsGlyphsPage: React.FC<any> = (props) => {
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div class="input-control">
-    <input type="email" class="input-contains-icon input-contains-icon-right input-xsmall" placeholder="Extra Small"/>
+    <input type="email" class="input-contains-icon input-contains-icon-right input--xs" placeholder="Extra Small"/>
     <span class="icon"><i class="fa fa-wrapper fa-envelope"></i></span>
     <span class="icon icon-right"><i class="fa fa-wrapper fa-chevron-right" aria-hidden="true"></i></span>
 </div>
 <div class="input-control">
-    <input type="email" class="input-contains-icon input-contains-icon-right input-small" placeholder="Small"/>
+    <input type="email" class="input-contains-icon input-contains-icon-right input--sm" placeholder="Small"/>
     <span class="icon"><i class="fa fa-wrapper fa-envelope"></i></span>
     <span class="icon icon-right"><i class="fa fa-wrapper fa-chevron-right" aria-hidden="true"></i></span>
 </div>
@@ -193,12 +193,12 @@ export const FormsGlyphsPage: React.FC<any> = (props) => {
     <span class="icon icon-right"><i class="fa fa-wrapper fa-chevron-right" aria-hidden="true"></i></span>
 </div>
 <div class="input-control">
-    <input type="email" class="input-contains-icon input-contains-icon-right input-large" placeholder="Large"/>
+    <input type="email" class="input-contains-icon input-contains-icon-right input--lg" placeholder="Large"/>
     <span class="icon"><i class="fa fa-wrapper fa-envelope"></i></span>
     <span class="icon icon-right"><i class="fa fa-wrapper fa-chevron-right" aria-hidden="true"></i></span>
 </div>
 <div class="input-control">
-    <input type="email" class="input-contains-icon input-contains-icon-right input-xlarge" placeholder="Extra Large"/>
+    <input type="email" class="input-contains-icon input-contains-icon-right input--xl" placeholder="Extra Large"/>
     <span class="icon"><i class="fa fa-wrapper fa-envelope"></i></span>
     <span class="icon icon-right"><i class="fa fa-wrapper fa-chevron-right" aria-hidden="true"></i></span>
 </div>`}

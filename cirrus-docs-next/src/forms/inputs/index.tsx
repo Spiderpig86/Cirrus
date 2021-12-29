@@ -292,37 +292,37 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="input-control">
-                                    <input type="text" className="input-xsmall" placeholder="Extra small (0.75rem)" />
+                                    <input type="text" className="input--xs" placeholder="Extra small (0.75rem)" />
                                 </div>
                                 <div className="input-control">
-                                    <input type="text" className="input-small" placeholder="Small (0.875rem)" />
+                                    <input type="text" className="input--sm" placeholder="Small (0.875rem)" />
                                 </div>
                                 <div className="input-control">
                                     <input type="text" placeholder="Normal (1rem)" />
                                 </div>
                                 <div className="input-control">
-                                    <input type="text" className="input-large" placeholder="Large (1.25rem)" />
+                                    <input type="text" className="input--lg" placeholder="Large (1.25rem)" />
                                 </div>
                                 <div className="input-control">
-                                    <input type="text" className="input-xlarge" placeholder="Extra large (1.5rem)" />
+                                    <input type="text" className="input--xl" placeholder="Extra large (1.5rem)" />
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
                                     code={`<div class="input-control">
-    <input type="text" class="input-xsmall" placeholder="Extra small (0.75rem)">
+    <input type="text" class="input--xs" placeholder="Extra small (0.75rem)">
 </div>
 <div class="input-control">
-    <input type="text" class="input-small" placeholder="Small (0.875rem)">
+    <input type="text" class="input--sm" placeholder="Small (0.875rem)">
 </div>
 <div class="input-control">
     <input type="text" placeholder="Normal (1rem)">
 </div>
 <div class="input-control">
-    <input type="text" class="input-large" placeholder="Large (1.25rem)">
+    <input type="text" class="input--lg" placeholder="Large (1.25rem)">
 </div>
 <div class="input-control">
-    <input type="text" class="input-xlarge" placeholder="Extra large (1.5rem)">
+    <input type="text" class="input--xl" placeholder="Extra large (1.5rem)">
 </div>`}
                                     language="htmlbars"
                                 />
@@ -330,18 +330,18 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                         </div>
                         <p>
                             The same sizing principle also applies to select controls. Select also uses the classes{' '}
-                            <code>input-xsmall, input-small, input-large, and input-xlarge</code>.
+                            <code>input--xs, input--sm, input--lg, and input--xl</code>.
                         </p>
 
                         <div className="input-control">
-                            <select className="select input-xsmall" placeholder="Dropdown Xsmall">
-                                <option value="1">Dropdown Xsmall</option>
+                            <select className="select input--xs" placeholder="Dropdown Xs">
+                                <option value="1">Dropdown Xs</option>
                                 <option value="2">2</option>
                             </select>
                         </div>
                         <div className="input-control">
-                            <select className="select input-small" placeholder="Dropdown Small">
-                                <option value="1">Dropdown Small</option>
+                            <select className="select input--sm" placeholder="Dropdown Sm">
+                                <option value="1">Dropdown Sm</option>
                                 <option value="2">2</option>
                             </select>
                         </div>
@@ -352,28 +352,28 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                             </select>
                         </div>
                         <div className="input-control">
-                            <select className="select input-large" placeholder="Dropdown Large">
-                                <option value="1">Dropdown Large</option>
+                            <select className="select input--lg" placeholder="Dropdown Lg">
+                                <option value="1">Dropdown Lg</option>
                                 <option value="2">2</option>
                             </select>
                         </div>
                         <div className="input-control">
-                            <select className="select input-xlarge" placeholder="Dropdown Xlarge">
-                                <option value="1">Dropdown Xlarge</option>
+                            <select className="select input--xl" placeholder="Dropdown Xl">
+                                <option value="1">Dropdown Xl</option>
                                 <option value="2">2</option>
                             </select>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div class="input-control">
-    <select class="select input-xsmall" placeholder="Dropdown Xsmall">
-        <option value="1">Dropdown Xsmall</option>
+    <select class="select input--xs" placeholder="Dropdown Xs">
+        <option value="1">Dropdown Xs</option>
         <option value="2">2</option>
     </select>
 </div>
 <div class="input-control">
-    <select class="select input-small" placeholder="Dropdown Small">
-        <option value="1">Dropdown Small</option>
+    <select class="select input--sm" placeholder="Dropdown Small">
+        <option value="1">Dropdown Sm</option>
         <option value="2">2</option>
     </select>
 </div>
@@ -384,14 +384,14 @@ export const FormsInputsPage: React.FC<any> = (props) => {
     </select>
 </div>
 <div class="input-control">
-    <select class="select input-large" placeholder="Dropdown Large">
-        <option value="1">Dropdown Large</option>
+    <select class="select input--lg" placeholder="Dropdown Large">
+        <option value="1">Dropdown Lg</option>
         <option value="2">2</option>
     </select>
 </div>
 <div class="input-control">
-    <select class="select input-xlarge" placeholder="Dropdown Xlarge">
-        <option value="1">Dropdown Xlarge</option>
+    <select class="select input--xl" placeholder="Dropdown Xlarge">
+        <option value="1">Dropdown Xl</option>
         <option value="2">2</option>
     </select>
 </div>`}

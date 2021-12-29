@@ -158,12 +158,12 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="form-group">
                             <label className="form-group-label label-xsmall">github.com/</label>
-                            <input type="text" className="form-group-input input-xsmall" placeholder="Extra Small" />
+                            <input type="text" className="form-group-input input--xs" placeholder="Extra Small" />
                             <button className="form-group-btn btn-primary btn-xsmall">Go</button>
                         </div>
                         <div className="form-group">
                             <label className="form-group-label label-small">github.com/</label>
-                            <input type="text" className="form-group-input input-small" placeholder="Small" />
+                            <input type="text" className="form-group-input input--sm" placeholder="Small" />
                             <button className="form-group-btn btn-primary btn-small">Go</button>
                         </div>
                         <div className="form-group">
@@ -173,24 +173,24 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                         </div>
                         <div className="form-group">
                             <label className="form-group-label label-large">github.com/</label>
-                            <input type="text" className="form-group-input input-large" placeholder="Large" />
+                            <input type="text" className="form-group-input input--lg" placeholder="Large" />
                             <button className="form-group-btn btn-primary btn-large">Go</button>
                         </div>
                         <div className="form-group">
                             <label className="form-group-label label-xlarge">github.com/</label>
-                            <input type="text" className="form-group-input input-xlarge" placeholder="Extra Large" />
+                            <input type="text" className="form-group-input input--xl" placeholder="Extra Large" />
                             <button className="form-group-btn btn-primary btn-xlarge">Go</button>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div class="form-group">
     <label class="form-group-label label-xsmall">github.com/</label>
-    <input type="text" class="form-group-input input-xsmall" placeholder="Extra Small">
+    <input type="text" class="form-group-input input--xs" placeholder="Extra Small">
     <button class="form-group-btn btn-primary btn-xsmall">Go</button>
 </div>
 <div class="form-group">
     <label class="form-group-label label-small">github.com/</label>
-    <input type="text" class="form-group-input input-small" placeholder="Small">
+    <input type="text" class="form-group-input input--sm" placeholder="Small">
     <button class="form-group-btn btn-primary btn-small">Go</button>
 </div>
 <div class="form-group">
@@ -200,12 +200,12 @@ export const FormGroupsPage: React.FC<any> = (props) => {
 </div>
 <div class="form-group">
     <label class="form-group-label label-large">github.com/</label>
-    <input type="text" class="form-group-input input-large" placeholder="Large">
+    <input type="text" class="form-group-input input--lg" placeholder="Large">
     <button class="form-group-btn btn-primary btn-large">Go</button>
 </div>
 <div class="form-group">
     <label class="form-group-label label-xlarge">github.com/</label>
-    <input type="text" class="form-group-input input-xlarge" placeholder="Extra Large">
+    <input type="text" class="form-group-input input--xl" placeholder="Extra Large">
     <button class="form-group-btn btn-primary btn-xlarge">Go</button>
 </div>`}
                             language="htmlbars"

@@ -154,10 +154,10 @@ export const FootersPage: React.FC<any> = (props) => {
         <p class="m-0">Sign up to hear about the latest updates via email</p>
         <div class="row">
             <div class="col-5">
-                <input class="input-small" type="text" placeholder="Name">
+                <input class="input--sm" type="text" placeholder="Name">
             </div>
             <div class="col-5">
-                <input class="input-small" type="text" placeholder="Email">
+                <input class="input--sm" type="text" placeholder="Email">
             </div>
             <div class="col-2">
                 <button class="btn btn-small">Sign Up</button>

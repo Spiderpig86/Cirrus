@@ -38,7 +38,7 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
         <div className="nav-item u-justify-flex-end" style={{
             flexGrow: 1
         }}>
-            <input type="search" id="cirrus-search" className="input-small" placeholder="Search (Press Shift + S to focus)" />
+            <input type="search" id="cirrus-search" className="input--sm" placeholder="Search (Press Shift + S to focus)" />
         </div>
     );
 
