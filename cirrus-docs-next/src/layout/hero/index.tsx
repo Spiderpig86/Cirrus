@@ -241,7 +241,7 @@ export const HeroPage: React.FC<any> = (props) => {
                             <div className="hero-body">
                                 <div className="content u-text-center">
                                     <h1 className="uppercase text-white title">Easily create beautiful splash screens</h1>
-                                    <h3 className="uppercase text-white sub-title faded">
+                                    <h3 className="uppercase text-white sub-title u-opacity-70">
                                         Only 6 lines needed and no additional CSS
                                     </h3>
                                 </div>
@@ -256,7 +256,7 @@ export const HeroPage: React.FC<any> = (props) => {
     <div class="hero-body">
         <div class="content u-text-center">
             <h1 class="uppercase text-white title">Easily create beautiful splash screens</h1>
-            <h3 class="uppercase text-white sub-title faded">Only 6 lines needed and no additional CSS</h3></div>
+            <h3 class="uppercase text-white sub-title u-opacity-70">Only 6 lines needed and no additional CSS</h3></div>
     </div>
 </div>`}
                             language="htmlbars"
