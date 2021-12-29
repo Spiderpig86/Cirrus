@@ -936,7 +936,7 @@ export const Preview: React.FC<any> = (props) => {
                         <div className="nav-right">
                             <div className="nav-item">
                                 <button className="btn-primary my-1 p-0">
-                                    <a href="#" className="white">
+                                    <a href="#" className="text-white">
                                         <span className="icon">
                                             <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'user']} />
                                         </span>

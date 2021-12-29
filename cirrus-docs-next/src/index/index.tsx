@@ -38,13 +38,13 @@ const Landing: React.FC<any> = () => {
                 <div id="splash-img" className="hero fullscreen hero-img parallax-img">
                     <div className="hero-body">
                         <div className="content">
-                            <h1 className="headline-2 white title">Cirrus.CSS</h1>
+                            <h1 className="headline-2 text-white title">Cirrus.CSS</h1>
                             <h5 className="text-gray-300 sub-title font-alt font-normal">
-                                A <b className="white">component</b> and <b className="white">utility centric</b> SCSS
-                                framework <br /> designed for <b className="white">rapid prototyping</b>.
+                                A <b className="text-white">component</b> and <b className="text-white">utility centric</b> SCSS
+                                framework <br /> designed for <b className="text-white">rapid prototyping</b>.
                             </h5>
 
-                            <p className="white">
+                            <p className="text-white">
                                 <b>Version {VERSION}</b> / {VERSION_NAME}
                             </p>
 
@@ -228,8 +228,8 @@ const Landing: React.FC<any> = () => {
                 }}
             >
                 <div className="content">
-                    <h3 className="white uppercase u-text-center">Examples</h3>
-                    <p className="white lead u-text-center">
+                    <h3 className="text-white uppercase u-text-center">Examples</h3>
+                    <p className="text-white lead u-text-center">
                         Start off with a few examples and a few complete templates completely powered by Cirrus.
                     </p>
                     <div

@@ -37,7 +37,7 @@ export const _404: React.FC<any> = (props) => {
                 >
                     404
                 </h1>
-                <h6 className="white">
+                <h6 className="text-text-white">
                     Looks like you hit the wrong turn.{' '}
                     <Link href="/">
                         <a className="u u-LR text-indigo-500">Click to head home</a>

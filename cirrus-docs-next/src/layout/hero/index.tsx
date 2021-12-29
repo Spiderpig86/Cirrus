@@ -53,7 +53,7 @@ export const HeroPage: React.FC<any> = (props) => {
                         <div className="hero bg-teal-500 p-2 u-flex u-flex-column">
                             <p className="p-1 white">hero (padding shown for clarity)</p>
                             <div className="hero-body bg-teal-700">
-                                <p className="white">hero-body</p>
+                                <p className="text-white">hero-body</p>
                             </div>
                         </div>
                     </div>
@@ -207,12 +207,12 @@ export const HeroPage: React.FC<any> = (props) => {
                                 </div>
                                 <div className="nav-right">
                                     <div className="nav-item active">
-                                        <a className="white" href="!#">
+                                        <a className="text-white" href="!#">
                                             Active
                                         </a>
                                     </div>
                                     <div className="nav-item">
-                                        <a className="white" href="!#">
+                                        <a className="text-white" href="!#">
                                             Link 1
                                         </a>
                                     </div>
@@ -240,8 +240,8 @@ export const HeroPage: React.FC<any> = (props) => {
                         <div id="splash-img" className="hero fullscreen hero-img parallax-img">
                             <div className="hero-body">
                                 <div className="content u-text-center">
-                                    <h1 className="uppercase white title">Easily create beautiful splash screens</h1>
-                                    <h3 className="uppercase white sub-title faded">
+                                    <h1 className="uppercase text-white title">Easily create beautiful splash screens</h1>
+                                    <h3 className="uppercase text-white sub-title faded">
                                         Only 6 lines needed and no additional CSS
                                     </h3>
                                 </div>
@@ -255,8 +255,8 @@ export const HeroPage: React.FC<any> = (props) => {
                             code={`<div id="splash-img" class="hero fullscreen hero-img parallax-img">
     <div class="hero-body">
         <div class="content u-text-center">
-            <h1 class="uppercase white title">Easily create beautiful splash screens</h1>
-            <h3 class="uppercase white sub-title faded">Only 6 lines needed and no additional CSS</h3></div>
+            <h1 class="uppercase text-white title">Easily create beautiful splash screens</h1>
+            <h3 class="uppercase text-white sub-title faded">Only 6 lines needed and no additional CSS</h3></div>
     </div>
 </div>`}
                             language="htmlbars"

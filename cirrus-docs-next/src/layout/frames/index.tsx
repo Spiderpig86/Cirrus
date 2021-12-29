@@ -89,7 +89,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                             is set, a scrollbar will appear to take care of overflow.
                                         </div>
                                         <blockquote className="u-text-center">
-                                            The white margins bettween the gray boxes is to demonstrate how the frame
+                                            The white margins between the gray boxes is to demonstrate how the frame
                                             sub sections are separated.
                                         </blockquote>
                                     </div>

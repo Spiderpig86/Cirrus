@@ -138,7 +138,7 @@ export const AnimationsPage: React.FC<any> = (props) => {
                                         background: 'linear-gradient(to right, #ff5858, #f857a6)',
                                     }}
                                 >
-                                    <div className="animated loading loading-right loading-white white u-text-right">
+                                    <div className="animated loading loading-right loading-white text-white u-text-right">
                                         <p>loading-right</p>
                                     </div>
                                 </div>
@@ -146,7 +146,7 @@ export const AnimationsPage: React.FC<any> = (props) => {
                             <div className="col-lg-6">
                                 <CodeBlock
                                     code={`<div class="card" style="background: linear-gradient(to right, rgb(255, 88, 88), rgb(248, 87, 166));">
-    <div class="animated loading loading-right loading-white white u-text-right">
+    <div class="animated loading loading-right loading-white text-white u-text-right">
         <p>loading-right</p>
     </div>
 </div>`}
@@ -219,13 +219,13 @@ export const AnimationsPage: React.FC<any> = (props) => {
                         <p>Bouncing animation with a div.</p>
                         <div className="row">
                             <div className="col-lg-6 u-text-center">
-                                <div className="bg-orange-400 white u-text-center animated" id="bounce-div">
+                                <div className="bg-orange-400 text-white u-text-center animated" id="bounce-div">
                                     <p>This is a div!</p>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="bg-orange-400 white u-text-center animated bounce">
+                                    code={`<div class="bg-orange-400 text-white u-text-center animated bounce">
     <p>This is a div!</p>
 </div>`}
                                     language="htmlbars"
@@ -286,13 +286,13 @@ export const AnimationsPage: React.FC<any> = (props) => {
                         <p>Bounce in animation with a div.</p>
                         <div className="row">
                             <div className="col-lg-6 u-text-center">
-                                <div className="bg-orange-400 white u-text-center animated" id="bounce-in-div">
+                                <div className="bg-orange-400 text-white u-text-center animated" id="bounce-in-div">
                                     <p>This is a div!</p>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="bg-orange-400 white u-text-center animated bounceIn">
+                                    code={`<div class="bg-orange-400 text-white u-text-center animated bounceIn">
     <p>This is a div!</p>
 </div>`}
                                     language="htmlbars"
@@ -353,13 +353,13 @@ export const AnimationsPage: React.FC<any> = (props) => {
                         <p>Fade in animation with a div.</p>
                         <div className="row">
                             <div className="col-lg-6 u-text-center">
-                                <div className="bg-orange-400 white u-text-center animated" id="fade-in-div">
+                                <div className="bg-orange-400 text-white u-text-center animated" id="fade-in-div">
                                     <p>This is a div!</p>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="bg-orange-400 white u-text-center animated fadeIn">
+                                    code={`<div class="bg-orange-400 text-white u-text-center animated fadeIn">
     <p>This is a div!</p>
 </div>`}
                                     language="htmlbars"
@@ -428,13 +428,13 @@ export const AnimationsPage: React.FC<any> = (props) => {
                         <p>Pulse animation with a div.</p>
                         <div className="row">
                             <div className="col-lg-6 u-text-center">
-                                <div className="bg-orange-400 white u-text-center animated paused pulse" id="pulse-div">
+                                <div className="bg-orange-400 text-white u-text-center animated paused pulse" id="pulse-div">
                                     <p>This is a div!</p>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="bg-orange-400 white u-text-center animated pulse">
+                                    code={`<div class="bg-orange-400 text-white u-text-center animated pulse">
     <p>This is a div!</p>
 </div>`}
                                     language="htmlbars"

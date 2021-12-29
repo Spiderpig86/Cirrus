@@ -388,7 +388,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <p className="title mb-0">White</p>
-                                <p className="white bg-gray-900">The quick brown fox jumps over the lazy dog.</p>
+                                <p className="text-white bg-gray-900">The quick brown fox jumps over the lazy dog.</p>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock

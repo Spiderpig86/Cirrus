@@ -71,7 +71,7 @@ export const FootersPage: React.FC<any> = (props) => {
                         <div className="space"></div>
                         <CodeBlock
                             code={`<footer class="footer">
-    <h6 class="footer__title white uppercase">Logo</h6>
+    <h6 class="footer__title text-white uppercase">Logo</h6>
     <div class="content">
         <div class="divider"></div>
 
@@ -149,7 +149,7 @@ export const FootersPage: React.FC<any> = (props) => {
                         <div className="space"></div>
                         <CodeBlock
                             code={`<footer class="footer footer--fixed" style="padding: 2rem 0; opacity: 0.95;">
-    <h6 class="footer__title white uppercase">Footer</h6>
+    <h6 class="footer__title text-white uppercase">Footer</h6>
     <div class="content u-text-center">
         <p class="m-0">Sign up to hear about the latest updates via email</p>
         <div class="row">
