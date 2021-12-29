@@ -108,8 +108,8 @@ export const AvatarPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>
                             As with many other components in Cirrus, <code>avatar</code> comes with 4 other size
-                            modifiers including <code>avatar--xsmall</code>, <code>avatar--small</code>,{' '}
-                            <code>avatar--large</code>, and <code>avatar--xlarge</code>.
+                            modifiers including <code>avatar--xs</code>, <code>avatar--sm</code>,{' '}
+                            <code>avatar--lg</code>, and <code>avatar--xl</code>.
                         </p>
                         <p>
                             The example below shows how <code>avatars</code> can be used with <code>tiles</code>.
@@ -119,7 +119,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                             <div className="col-6">
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
-                                        <figure className="avatar avatar--xsmall text-gray-000" data-text="Jz"></figure>
+                                        <figure className="avatar avatar--xs text-gray-000" data-text="Jz"></figure>
                                     </div>
                                     <div className="tile__container">
                                         <p className="tile__title m-0">Jenelle Zaynab</p>
@@ -134,7 +134,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure
-                                            className="avatar avatar--small text-gray-000"
+                                            className="avatar avatar--sm text-gray-000"
                                             data-text="Jz"
                                             style={{ background: '#a3d39c' }}
                                         ></figure>
@@ -170,7 +170,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure
-                                            className="avatar avatar--large text-gray-000"
+                                            className="avatar avatar--lg text-gray-000"
                                             data-text="Jz"
                                             style={{ background: '#4aaaa5' }}
                                         ></figure>
@@ -188,7 +188,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
                                         <figure
-                                            className="avatar avatar--xlarge text-gray-000"
+                                            className="avatar avatar--xl text-gray-000"
                                             data-text="Jz"
                                             style={{ background: '#35404f' }}
                                         ></figure>
@@ -204,7 +204,7 @@ export const AvatarPage: React.FC<any> = (props) => {
                             <div className="col-6">
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
-                                        <figure className="avatar avatar--xsmall">
+                                        <figure className="avatar avatar--xs">
                                             <img
                                                 src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"
                                                 alt="avatar"
@@ -223,7 +223,7 @@ export const AvatarPage: React.FC<any> = (props) => {
 
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
-                                        <figure className="avatar avatar--small">
+                                        <figure className="avatar avatar--sm">
                                             <img
                                                 src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"
                                                 alt="avatar"
@@ -261,7 +261,7 @@ export const AvatarPage: React.FC<any> = (props) => {
 
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
-                                        <figure className="avatar avatar--large">
+                                        <figure className="avatar avatar--lg">
                                             <img
                                                 src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"
                                                 alt="avatar"
@@ -280,7 +280,7 @@ export const AvatarPage: React.FC<any> = (props) => {
 
                                 <div className="tile m-0 level">
                                     <div className="tile__icon">
-                                        <figure className="avatar avatar--xlarge">
+                                        <figure className="avatar avatar--xl">
                                             <img
                                                 src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"
                                                 alt="avatar"
@@ -302,7 +302,7 @@ export const AvatarPage: React.FC<any> = (props) => {
     <div class="col-6">
         <div class="tile m-0 level">
             <div class="tile__icon">
-                <figure class="avatar avatar--xsmall" data-text="Jz"></figure>
+                <figure class="avatar avatar--xs" data-text="Jz"></figure>
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Jenelle Zaynab</p>
@@ -312,7 +312,7 @@ export const AvatarPage: React.FC<any> = (props) => {
         <div class="space"></div>
         <div class="tile m-0 level">
             <div class="tile__icon">
-                <figure class="avatar avatar--small" data-text="Jz" style="background: rgb(163, 211, 156);"></figure>
+                <figure class="avatar avatar--sm" data-text="Jz" style="background: rgb(163, 211, 156);"></figure>
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Jenelle Zaynab</p>
@@ -332,7 +332,7 @@ export const AvatarPage: React.FC<any> = (props) => {
         <div class="space"></div>
         <div class="tile m-0 level">
             <div class="tile__icon">
-                <figure class="avatar avatar--large" data-text="Jz" style="background: rgb(74, 170, 165);"></figure>
+                <figure class="avatar avatar--lg" data-text="Jz" style="background: rgb(74, 170, 165);"></figure>
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Jenelle Zaynab</p>
@@ -342,7 +342,7 @@ export const AvatarPage: React.FC<any> = (props) => {
         <div class="space"></div>
         <div class="tile m-0 level">
             <div class="tile__icon">
-                <figure class="avatar avatar--xlarge" data-text="Jz" style="background: rgb(53, 64, 79);"></figure>
+                <figure class="avatar avatar--xl" data-text="Jz" style="background: rgb(53, 64, 79);"></figure>
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Jenelle Zaynab</p>
@@ -353,7 +353,7 @@ export const AvatarPage: React.FC<any> = (props) => {
     <div class="col-6">
         <div class="tile m-0 level">
             <div class="tile__icon">
-                <figure class="avatar avatar--xsmall"><img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"></figure>
+                <figure class="avatar avatar--xs"><img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"></figure>
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Nathan Dumlao</p>
@@ -363,7 +363,7 @@ export const AvatarPage: React.FC<any> = (props) => {
         <div class="space"></div>
         <div class="tile m-0 level">
             <div class="tile__icon">
-                <figure class="avatar avatar--small"><img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"></figure>
+                <figure class="avatar avatar--sm"><img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=64&amp;h=64&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"></figure>
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Nathan Dumlao</p>
@@ -383,7 +383,7 @@ export const AvatarPage: React.FC<any> = (props) => {
         <div class="space"></div>
         <div class="tile m-0 level">
             <div class="tile__icon">
-                <figure class="avatar avatar--large"><img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"></figure>
+                <figure class="avatar avatar--lg"><img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"></figure>
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Nathan Dumlao</p>
@@ -393,7 +393,7 @@ export const AvatarPage: React.FC<any> = (props) => {
         <div class="space"></div>
         <div class="tile m-0 level">
             <div class="tile__icon">
-                <figure class="avatar avatar--xlarge"><img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"></figure>
+                <figure class="avatar avatar--xl"><img src="https://images.unsplash.com/profile-1495427732560-fe5248ad6638?dpr=1&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=60&amp;cs=tinysrgb&amp;crop=faces&amp;bg=fff"></figure>
             </div>
             <div class="tile__container">
                 <p class="tile__title m-0">Nathan Dumlao</p>

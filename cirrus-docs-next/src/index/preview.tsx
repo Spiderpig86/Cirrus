@@ -1041,7 +1041,7 @@ export const Preview: React.FC<any> = (props) => {
                             </div>
                             <div className="nav-right">
                                 <div className="nav-item has-sub toggle-hover" id="dropdown">
-                                    <figure className="avatar avatar--small" data-text="JD" />
+                                    <figure className="avatar avatar--sm" data-text="JD" />
                                     <a className="nav-dropdown-link">John Doe</a>
                                     <ul className="dropdown-menu dropdown-animated" role="menu">
                                         <li role="menu-item">
