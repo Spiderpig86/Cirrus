@@ -15075,16 +15075,16 @@ ul .divider::after {
   /* Disable shrinking to original width */
   flex-basis: 0;
 }
-.tab-container.tabs-xs {
+.tab-container.tabs--xs {
   font-size: 0.75rem;
 }
-.tab-container.tabs-sm {
+.tab-container.tabs--sm {
   font-size: 0.875rem;
 }
-.tab-container.tabs-lg {
+.tab-container.tabs--lg {
   font-size: 1.25rem;
 }
-.tab-container.tabs-xl {
+.tab-container.tabs--xl {
   font-size: 1.5rem;
 }
 .tab-container ul {

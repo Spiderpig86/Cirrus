@@ -86,7 +86,7 @@ $generate-utility: should-generate-classes($TABS);
 
         /* Different tab sizes */
         @each $name, $size in $tab-font-sizes {
-            &.tabs-#{$name} {
+            &.tabs--#{$name} {
                 font-size: #{$size};
             }
         }
