@@ -245,7 +245,7 @@ const Landing: React.FC<any> = () => {
 
                     <div className="u-text-center">
                         <a href="./getting-started/examples" target="_blank">
-                            <button className="btn-info btn-large">See More</button>
+                            <button className="btn-info btn--lg">See More</button>
                         </a>
                     </div>
                 </div>

@@ -448,19 +448,19 @@ export const Preview: React.FC<any> = (props) => {
                     <p className="title">Sizes</p>
                     <div className="row">
                         <div className="mx-1">
-                            <button className="btn-link btn-xsmall">XSmall</button>
+                            <button className="btn-link btn--xs">XSmall</button>
                         </div>
                         <div className="mx-1">
-                            <button className="btn-link btn-small">Small</button>
+                            <button className="btn-link btn--sm">Small</button>
                         </div>
                         <div className="mx-1">
                             <button className="btn-link">Normal</button>
                         </div>
                         <div className="mx-1">
-                            <button className="btn-link btn-large">Large</button>
+                            <button className="btn-link btn--lg">Large</button>
                         </div>
                         <div className="mx-1">
-                            <button className="btn-link btn-xlarge">Extra Large</button>
+                            <button className="btn-link btn--xl">Extra Large</button>
                         </div>
                     </div>
                     <p className="title">States</p>
@@ -1281,8 +1281,8 @@ export const Preview: React.FC<any> = (props) => {
                                     <span className="info">23 minutes ago</span>
                                 </div>
                                 <div className="tile__buttons">
-                                    <button className="btn-primary btn-small uppercase">View</button>
-                                    <button className="btn-small uppercase">Dismiss</button>
+                                    <button className="btn-primary btn--sm uppercase">View</button>
+                                    <button className="btn--sm uppercase">Dismiss</button>
                                 </div>
                             </div>
                         </div>
@@ -1352,7 +1352,7 @@ export const Preview: React.FC<any> = (props) => {
                                     <p className="tile__subtitle m-0">jnewman@gmail.com</p>
                                 </div>
                                 <div className="tile__buttons">
-                                    <button className="btn-success btn-small uppercase">
+                                    <button className="btn-success btn--sm uppercase">
                                         <span className="icon">
                                             <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'plus']} />
                                         </span>
@@ -1380,7 +1380,7 @@ export const Preview: React.FC<any> = (props) => {
                                     <p className="tile__subtitle m-0">fwatsonm@gmail.com</p>
                                 </div>
                                 <div className="tile__buttons">
-                                    <button className="btn-success btn-small uppercase">
+                                    <button className="btn-success btn--sm uppercase">
                                         <span className="icon">
                                             <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'plus']} />
                                         </span>
@@ -1408,7 +1408,7 @@ export const Preview: React.FC<any> = (props) => {
                                     <p className="tile__subtitle m-0">croberts@outlook.com</p>
                                 </div>
                                 <div className="tile__buttons">
-                                    <button className="btn-danger btn-small uppercase">
+                                    <button className="btn-danger btn--sm uppercase">
                                         <span className="icon">
                                             <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'times']} />
                                         </span>
@@ -1436,7 +1436,7 @@ export const Preview: React.FC<any> = (props) => {
                                     <p className="tile__subtitle m-0">dalvarado@yahoo.com</p>
                                 </div>
                                 <div className="tile__buttons">
-                                    <button className="btn-success btn-small uppercase">
+                                    <button className="btn-success btn--sm uppercase">
                                         <span className="icon">
                                             <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'plus']} />
                                         </span>
@@ -1464,7 +1464,7 @@ export const Preview: React.FC<any> = (props) => {
                                     <p className="tile__subtitle m-0">slim@stanleylim.me</p>
                                 </div>
                                 <div className="tile__buttons">
-                                    <button className="btn-success btn-small uppercase">
+                                    <button className="btn-success btn--sm uppercase">
                                         <span className="icon">
                                             <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'plus']} />
                                         </span>
@@ -1476,10 +1476,10 @@ export const Preview: React.FC<any> = (props) => {
                     <div className="modal-footer">
                         <div className="form-section u-text-right">
                             <a href="#components">
-                                <button className="btn btn-small u-inline-block">Cancel</button>
+                                <button className="btn btn--sm u-inline-block">Cancel</button>
                             </a>
                             <a href="#components">
-                                <button className="btn-info btn-small u-inline-block">Confirm</button>
+                                <button className="btn-info btn--sm u-inline-block">Confirm</button>
                             </a>
                         </div>
                     </div>

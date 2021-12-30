@@ -53,10 +53,10 @@ export const Modal: React.FC<ModalProps> = (props) => {
                         </div>
                         <div className="modal-footer u-text-right">
                             <a href="#components" className="u-inline-block">
-                                <button className="btn-small">Cancel</button>
+                                <button className="btn--sm">Cancel</button>
                             </a>
                             <a href="#components" className="u-inline-block">
-                                <button className="btn-primary btn-small">Share</button>
+                                <button className="btn-primary btn--sm">Share</button>
                             </a>
                         </div>
                     </>

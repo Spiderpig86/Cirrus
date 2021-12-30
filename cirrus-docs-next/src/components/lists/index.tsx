@@ -299,7 +299,7 @@ export const ListsPage: React.FC<any> = (props) => {
                                 <div className="list-dropdown">
                                     <div className="btn-group">
                                         <button className="btn-primary">Dropdown</button>
-                                        <button className="btn-primary btn-small btn-dropdown">
+                                        <button className="btn-primary btn--sm btn-dropdown">
                                             <FontAwesomeIcon icon={['fas', 'caret-down']} />
                                         </button>
                                         <ul className="menu">
@@ -321,7 +321,7 @@ export const ListsPage: React.FC<any> = (props) => {
                                     code={`<div class="list-dropdown">
     <div class="btn-group">
         <button class="btn-primary">Dropdown</button>
-        <button class="btn-primary btn-small btn-dropdown"><i class="fa fa-wrapper fa-caret-down" aria-hidden="true"></i>
+        <button class="btn-primary btn--sm btn-dropdown"><i class="fa fa-wrapper fa-caret-down" aria-hidden="true"></i>
         </button>
         <ul class="menu">
             <li class="menu-item"><a href="!#">Google Chrome</a></li>

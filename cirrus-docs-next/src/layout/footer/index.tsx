@@ -160,7 +160,7 @@ export const FootersPage: React.FC<any> = (props) => {
                 <input class="input--sm" type="text" placeholder="Email">
             </div>
             <div class="col-2">
-                <button class="btn btn-small">Sign Up</button>
+                <button class="btn btn--sm">Sign Up</button>
             </div>
         </div>
     </div>

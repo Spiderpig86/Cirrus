@@ -56,7 +56,7 @@ export const ButtonGlyphsPage: React.FC<any> = (props) => {
 
                         <h6>Glyph with different sizes</h6>
                         <div className="btn-container">
-                            <button className="btn-xsmall">
+                            <button className="btn--xs">
                                 Xsmall
                                 <span className="icon">
                                     <FontAwesomeIcon className="fa-wrapper pad-left" icon={['fas', 'chevron-right']} />
@@ -64,7 +64,7 @@ export const ButtonGlyphsPage: React.FC<any> = (props) => {
                             </button>
                         </div>
                         <div className="btn-container">
-                            <button className="btn-small">
+                            <button className="btn--sm">
                                 Small
                                 <span className="icon">
                                     <FontAwesomeIcon className="fa-wrapper pad-left" icon={['fas', 'chevron-right']} />
@@ -80,7 +80,7 @@ export const ButtonGlyphsPage: React.FC<any> = (props) => {
                             </button>
                         </div>
                         <div className="btn-container">
-                            <button className="btn-large">
+                            <button className="btn--lg">
                                 Large
                                 <span className="icon">
                                     <FontAwesomeIcon className="fa-wrapper pad-left" icon={['fas', 'chevron-right']} />
@@ -88,7 +88,7 @@ export const ButtonGlyphsPage: React.FC<any> = (props) => {
                             </button>
                         </div>
                         <div className="btn-container">
-                            <button className="btn-xlarge">
+                            <button className="btn--xl">
                                 XLarge
                                 <span className="icon">
                                     <FontAwesomeIcon className="fa-wrapper pad-left" icon={['fas', 'chevron-right']} />
@@ -96,11 +96,11 @@ export const ButtonGlyphsPage: React.FC<any> = (props) => {
                             </button>
                         </div>
                         <CodeBlock
-                            code={`<button class="btn-xsmall">XSmall<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button>
-<button class="btn-small">Small<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button>
+                            code={`<button class="btn--xs">XSmall<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button>
+<button class="btn--sm">Small<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button>
 <button>Normal<i class="fa-wrapper fa fa-chevron-right pad-left"></i></button>
-<button class="btn-large">Large<i class="fa-wrapper fa fa-chevron-right pad-left"></i></button>
-<button class="btn-xlarge">XLarge<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button>`}
+<button class="btn--lg">Large<i class="fa-wrapper fa fa-chevron-right pad-left"></i></button>
+<button class="btn--xl">XLarge<i class="fa-wrapper fa fa-chevron-right pad-left "></i></button>`}
                             language="htmlbars"
                         />
                     </div>

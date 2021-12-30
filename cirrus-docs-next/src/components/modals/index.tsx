@@ -69,7 +69,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                                     <p className="tile__subtitle m-0">jnewman@gmail.com</p>
                                 </div>
                                 <div className="tile__buttons">
-                                    <button className="btn-success btn-small uppercase">
+                                    <button className="btn-success btn--sm uppercase">
                                         <span className="icon">
                                             <FontAwesomeIcon
                                                 className="fa-wrapper small"
@@ -94,7 +94,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                                     <p className="tile__subtitle m-0">fwatsonm@gmail.com</p>
                                 </div>
                                 <div className="tile__buttons">
-                                    <button className="btn-success btn-small uppercase">
+                                    <button className="btn-success btn--sm uppercase">
                                         <span className="icon">
                                             <FontAwesomeIcon
                                                 className="fa-wrapper small"
@@ -119,7 +119,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                                     <p className="tile__subtitle m-0">croberts@outlook.com</p>
                                 </div>
                                 <div className="tile__buttons">
-                                    <button className="btn-danger btn-small uppercase">
+                                    <button className="btn-danger btn--sm uppercase">
                                         <span className="icon">
                                             <FontAwesomeIcon
                                                 className="fa-wrapper small"
@@ -144,7 +144,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                                     <p className="tile__subtitle m-0">dalvarado@yahoo.com</p>
                                 </div>
                                 <div className="tile__buttons">
-                                    <button className="btn-success btn-small uppercase">
+                                    <button className="btn-success btn--sm uppercase">
                                         <span className="icon">
                                             <FontAwesomeIcon
                                                 className="fa-wrapper small"
@@ -169,7 +169,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                                     <p className="tile__subtitle m-0">slim@stanleylim.me</p>
                                 </div>
                                 <div className="tile__buttons">
-                                    <button className="btn-success btn-small uppercase">
+                                    <button className="btn-success btn--sm uppercase">
                                         <span className="icon">
                                             <FontAwesomeIcon
                                                 className="fa-wrapper small"
@@ -184,10 +184,10 @@ export const ModalsPage: React.FC<any> = (props) => {
                     <div className="modal-footer">
                         <div className="form-section u-text-right">
                             <a href="#components">
-                                <button className="btn btn-small u-inline-block">Cancel</button>
+                                <button className="btn btn--sm u-inline-block">Cancel</button>
                             </a>
                             <a href="#components">
-                                <button className="btn-info btn-small u-inline-block">Confirm</button>
+                                <button className="btn-info btn--sm u-inline-block">Confirm</button>
                             </a>
                         </div>
                     </div>
@@ -356,7 +356,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                         <p class="tile__subtitle m-0">jnewman@gmail.com</p>
                     </div>
                     <div class="tile__buttons">
-                        <button class="btn-success btn-small uppercase"><span class="icon"></span></button>
+                        <button class="btn-success btn--sm uppercase"><span class="icon"></span></button>
                     </div>
                 </div>
                 <div class="tile tile--center py-1 px-2 my-1" style="box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 6px, rgba(0, 0, 0, 0.03) 0px 3px 6px;">
@@ -368,7 +368,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                         <p class="tile__subtitle m-0">fwatsonm@gmail.com</p>
                     </div>
                     <div class="tile__buttons">
-                        <button class="btn-success btn-small uppercase"><span class="icon"></span></button>
+                        <button class="btn-success btn--sm uppercase"><span class="icon"></span></button>
                     </div>
                 </div>
                 <div class="tile tile--center py-1 px-2 my-1" style="box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 6px, rgba(0, 0, 0, 0.03) 0px 3px 6px;">
@@ -380,7 +380,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                         <p class="tile__subtitle m-0">croberts@outlook.com</p>
                     </div>
                     <div class="tile__buttons">
-                        <button class="btn-danger btn-small uppercase"><span class="icon"></span></button>
+                        <button class="btn-danger btn--sm uppercase"><span class="icon"></span></button>
                     </div>
                 </div>
                 <div class="tile tile--center py-1 px-2 my-1" style="box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 6px, rgba(0, 0, 0, 0.03) 0px 3px 6px;">
@@ -392,7 +392,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                         <p class="tile__subtitle m-0">dalvarado@yahoo.com</p>
                     </div>
                     <div class="tile__buttons">
-                        <button class="btn-success btn-small uppercase"><span class="icon"></span></button>
+                        <button class="btn-success btn--sm uppercase"><span class="icon"></span></button>
                     </div>
                 </div>
                 <div class="tile tile--center py-1 px-2 my-1" style="box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 6px, rgba(0, 0, 0, 0.03) 0px 3px 6px;">
@@ -404,7 +404,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                         <p class="tile__subtitle m-0">slim@stanleylim.me</p>
                     </div>
                     <div class="tile__buttons">
-                        <button class="btn-success btn-small uppercase"><span class="icon"></span></button>
+                        <button class="btn-success btn--sm uppercase"><span class="icon"></span></button>
                     </div>
                 </div>
             </div>
@@ -412,10 +412,10 @@ export const ModalsPage: React.FC<any> = (props) => {
         <div class="modal-footer">
             <div class="form-section u-text-right">
                 <a href="#components">
-                    <button class="btn btn-small u-inline-block">Cancel</button>
+                    <button class="btn btn--sm u-inline-block">Cancel</button>
                 </a>
                 <a href="#components">
-                    <button class="btn-info btn-small u-inline-block">Confirm</button>
+                    <button class="btn-info btn--sm u-inline-block">Confirm</button>
                 </a>
             </div>
         </div>

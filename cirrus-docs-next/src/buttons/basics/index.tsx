@@ -143,28 +143,28 @@ export const ButtonPage: React.FC<any> = (props) => {
                         <Headline title="Sizes" link="#sizes" size="4" />
                         <div className="divider"></div>
                         <p>
-                            Buttons can have alternative sizes of <code>xsmall</code>, <code>small</code>,{' '}
-                            <code>large</code>, and <code>xlarge</code>.
+                            Buttons can have alternative sizes of <code>xs</code>, <code>sm</code>,{' '}
+                            <code>lg</code>, and <code>xl</code>.
                         </p>
 
                         <div className="btn-container">
-                            <button className="text-blue-600 bg-blue-100 btn-xsmall">Xsmall</button>
+                            <button className="text-blue-600 bg-blue-100 btn--xs">Extra Small</button>
                         </div>
                         <div className="btn-container">
-                            <button className="text-blue-600 bg-blue-100 btn-small">Small</button>
+                            <button className="text-blue-600 bg-blue-100 btn--sm">Small</button>
                         </div>
                         <div className="btn-container">
-                            <button className="text-blue-600 bg-blue-100 btn-large">Large</button>
+                            <button className="text-blue-600 bg-blue-100 btn--lg">Large</button>
                         </div>
                         <div className="btn-container">
-                            <button className="text-blue-600 bg-blue-100 btn-xlarge">Xlarge</button>
+                            <button className="text-blue-600 bg-blue-100 btn--xl">Extra Large</button>
                         </div>
 
                         <CodeBlock
-                            code={`<button class="text-blue-600 bg-blue-100 btn-xsmall">Xsmall</button>
-<button class="text-blue-600 bg-blue-100 btn-small">Small</button>
-<button class="text-blue-600 bg-blue-100 btn-large">Large</button>
-<button class="text-blue-600 bg-blue-100 btn-xlarge">Xlarge</button>`}
+                            code={`<button class="text-blue-600 bg-blue-100 btn--xs">Extra Small</button>
+<button class="text-blue-600 bg-blue-100 btn--sm">Small</button>
+<button class="text-blue-600 bg-blue-100 btn--lg">Large</button>
+<button class="text-blue-600 bg-blue-100 btn--xl">Extra Large</button>`}
                             language="htmlbars"
                         />
                     </div>

@@ -47,7 +47,7 @@ export const LandingLayout = ({ children, ...rest }: any) => {
                             <span>Download</span>
                         </a>
                     </button>
-                    <button className="btn-primary btn-small btn-dropdown u-no-shadow">
+                    <button className="btn-primary btn--sm btn-dropdown u-no-shadow">
                         <span className="icon">
                             <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'caret-down']} />
                         </span>

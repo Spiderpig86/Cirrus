@@ -53,8 +53,8 @@ export const TilesPage: React.FC<any> = (props) => {
                                 </p>
                                 <span className="info">23 minutes ago</span>
                                 <div className="tile__buttons m-0">
-                                    <button className="btn-primary btn-small uppercase">View</button>
-                                    <button className="btn-small uppercase">Dismiss</button>
+                                    <button className="btn-primary btn--sm uppercase">View</button>
+                                    <button className="btn--sm uppercase">Dismiss</button>
                                 </div>
                             </div>
                         </div>
@@ -69,8 +69,8 @@ export const TilesPage: React.FC<any> = (props) => {
         <p class="tile__title m-0">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
         <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span class="info">23 minutes ago</span>
         <div class="tile__buttons m-0">
-            <button class="btn-primary btn-small uppercase">View</button>
-            <button class="btn-small uppercase">Dismiss</button>
+            <button class="btn-primary btn--sm uppercase">View</button>
+            <button class="btn--sm uppercase">Dismiss</button>
         </div>
     </div>
 </div>`}
@@ -99,8 +99,8 @@ export const TilesPage: React.FC<any> = (props) => {
                                 <span className="info">23 minutes ago</span>
                             </div>
                             <div className="tile__buttons m-0">
-                                <button className="btn-primary btn-small uppercase">View</button>
-                                <button className="btn-small uppercase">Dismiss</button>
+                                <button className="btn-primary btn--sm uppercase">View</button>
+                                <button className="btn--sm uppercase">Dismiss</button>
                             </div>
                         </div>
                         <div className="space"></div>
@@ -114,8 +114,8 @@ export const TilesPage: React.FC<any> = (props) => {
         <p class="tile__title m-0">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
         <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span class="info">23 minutes ago</span></div>
     <div class="tile__buttons m-0">
-        <button class="btn-primary btn-small uppercase">View</button>
-        <button class="btn-small uppercase">Dismiss</button>
+        <button class="btn-primary btn--sm uppercase">View</button>
+        <button class="btn--sm uppercase">Dismiss</button>
     </div>
 </div>`}
                             language="htmlbars"
@@ -149,8 +149,8 @@ export const TilesPage: React.FC<any> = (props) => {
                                     </p>
                                     <span className="info">23 minutes ago</span>
                                     <div className="tile__buttons m-0">
-                                        <button className="btn-primary btn-small uppercase">View</button>
-                                        <button className="btn-small uppercase">Dismiss</button>
+                                        <button className="btn-primary btn--sm uppercase">View</button>
+                                        <button className="btn--sm uppercase">Dismiss</button>
                                     </div>
                                 </div>
                             </div>
@@ -166,8 +166,8 @@ export const TilesPage: React.FC<any> = (props) => {
             <p class="tile__title m-0 u-text-no-wrap">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
             <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span class="info">23 minutes ago</span>
             <div class="tile__buttons m-0">
-                <button class="btn-primary btn-small uppercase">View</button>
-                <button class="btn-small uppercase">Dismiss</button>
+                <button class="btn-primary btn--sm uppercase">View</button>
+                <button class="btn--sm uppercase">Dismiss</button>
             </div>
         </div>
     </div>
@@ -201,8 +201,8 @@ export const TilesPage: React.FC<any> = (props) => {
                                 <span className="info">23 minutes ago</span>
                             </div>
                             <div className="tile__buttons m-0">
-                                <button className="btn-primary btn-small uppercase">View</button>
-                                <button className="btn-small uppercase">Dismiss</button>
+                                <button className="btn-primary btn--sm uppercase">View</button>
+                                <button className="btn--sm uppercase">Dismiss</button>
                             </div>
                         </div>
                         <div className="space large"></div>
@@ -228,8 +228,8 @@ export const TilesPage: React.FC<any> = (props) => {
                                 <span className="info">23 minutes ago</span>
                             </div>
                             <div className="tile__buttons m-0">
-                                <button className="btn-primary btn-small uppercase">View</button>
-                                <button className="btn-small uppercase">Dismiss</button>
+                                <button className="btn-primary btn--sm uppercase">View</button>
+                                <button className="btn--sm uppercase">Dismiss</button>
                             </div>
                         </div>
 
@@ -243,8 +243,8 @@ export const TilesPage: React.FC<any> = (props) => {
         <p class="tile__title m-0 u-text-no-wrap">Robert Downey Jr. shared a post from <b>Stark Industries</b>.</p>
         <p class="tile__subtitle m-0">Robert shared: 'Stark Industries is proud to announce its brand new suit.'</p><span class="info">23 minutes ago</span></div>
     <div class="tile__buttons m-0">
-        <button class="btn-primary btn-small uppercase">View</button>
-        <button class="btn-small uppercase">Dismiss</button>
+        <button class="btn-primary btn--sm uppercase">View</button>
+        <button class="btn--sm uppercase">Dismiss</button>
     </div>
 </div>`}
                             language="htmlbars"
@@ -422,7 +422,7 @@ export const TilesPage: React.FC<any> = (props) => {
                                     </div>
                                     <div className="tile__buttons m-0 u-text-right">
                                         <div className="list-dropdown dropdown-right">
-                                            <button className="btn-transparent btn-small btn-dropdown m-0">
+                                            <button className="btn-transparent btn--sm btn-dropdown m-0">
                                                 <FontAwesomeIcon
                                                     className="fa-wrapper small"
                                                     icon={['fas', 'ellipsis-v']}
