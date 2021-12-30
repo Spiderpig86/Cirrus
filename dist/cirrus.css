@@ -15012,6 +15012,7 @@ ul .divider::after {
   white-space: nowrap;
   align-items: stretch;
   font-size: 1rem;
+  /* Shift tabs to the left */
   /* Shift tabs to the center */
   /* Shift tabs to the right */
   /* Depth tab styles */
@@ -15023,10 +15024,13 @@ ul .divider::after {
   /* Left icon */
   /* Right icon */
 }
-.tab-container.tabs-center ul {
+.tab-container.tabs--left ul {
+  justify-content: flex-start;
+}
+.tab-container.tabs--center ul {
   justify-content: center;
 }
-.tab-container.tabs-right ul {
+.tab-container.tabs--right ul {
   justify-content: flex-end;
 }
 .tab-container.tabs-depth ul {

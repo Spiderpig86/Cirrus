@@ -13,14 +13,19 @@ $generate-utility: should-generate-classes($TABS);
         white-space: nowrap;
         align-items: stretch;
         font-size: $font-size-m;
+        
+        /* Shift tabs to the left */
+        &.tabs--left ul {
+            justify-content: flex-start;
+        }
 
         /* Shift tabs to the center */
-        &.tabs-center ul {
+        &.tabs--center ul {
             justify-content: center;
         }
 
         /* Shift tabs to the right */
-        &.tabs-right ul {
+        &.tabs--right ul {
             justify-content: flex-end;
         }
 
