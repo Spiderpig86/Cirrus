@@ -113,8 +113,8 @@ export const TabsPage: React.FC<any> = (props) => {
                         <Headline title="Sizes" link="#sizes" size="4" />
                         <div className="divider"></div>
                         <p>
-                            Modify the size of the <code>tab-container</code> using the <code>tabs-xsmall</code>,{' '}
-                            <code>tabs-small</code>, <code>tabs-large</code>, and <code>tabs-xlarge</code> classes.
+                            Modify the size of the <code>tab-container</code> using the <code>tabs--xs</code>,{' '}
+                            <code>tabs--sm</code>, <code>tabs--lg</code>, and <code>tabs--xl</code> classes.
                         </p>
                         <div className="space"></div>
 
@@ -123,7 +123,7 @@ export const TabsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
-                                <div className="tab-container tabs-xsmall">
+                                <div className="tab-container tabs--xs">
                                     <ul>
                                         <li>
                                             <div className="tab-item-content">Home</div>
@@ -142,7 +142,7 @@ export const TabsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="tab-container tabs-xsmall">
+                                    code={`<div class="tab-container tabs--xs">
     <ul>
         <!-- Tab Items -->
     </ul>
@@ -157,7 +157,7 @@ export const TabsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
-                                <div className="tab-container tabs-small">
+                                <div className="tab-container tabs--sm">
                                     <ul>
                                         <li>
                                             <div className="tab-item-content">Home</div>
@@ -176,7 +176,7 @@ export const TabsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="tab-container tabs-small">
+                                    code={`<div class="tab-container tabs--sm">
     <ul>
         <!-- Tab Items -->
     </ul>
@@ -191,7 +191,7 @@ export const TabsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
-                                <div className="tab-container tabs-large">
+                                <div className="tab-container tabs--lg">
                                     <ul>
                                         <li>
                                             <div className="tab-item-content">Home</div>
@@ -210,7 +210,7 @@ export const TabsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="tab-container tabs-large">
+                                    code={`<div class="tab-container tabs--lg">
     <ul>
         <!-- Tab Items -->
     </ul>
@@ -225,7 +225,7 @@ export const TabsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
-                                <div className="tab-container tabs-xlarge">
+                                <div className="tab-container tabs--xl">
                                     <ul>
                                         <li>
                                             <div className="tab-item-content">Home</div>
@@ -244,7 +244,7 @@ export const TabsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="tab-container tabs-xlarge">
+                                    code={`<div class="tab-container tabs--xl">
     <ul>
         <!-- Tab Items -->
     </ul>
@@ -261,8 +261,8 @@ export const TabsPage: React.FC<any> = (props) => {
                         <Headline title="Alignment" link="#alignment" size="4" />
                         <div className="divider"></div>
                         <p>
-                            Easily change the alignment on the tabs with <code>tabs-center</code>,{' '}
-                            <code>tabs-right</code>, and <code>tabs-fill</code>. Note that tabs are left-justified by
+                            Easily change the alignment on the tabs with <code>tabs--center</code>,{' '}
+                            <code>tabs--right</code>, and <code>tabs-fill</code>. Note that tabs are left-justified by
                             default.
                         </p>
                         <div className="space"></div>
@@ -272,7 +272,7 @@ export const TabsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
-                                <div className="tab-container tabs-center">
+                                <div className="tab-container tabs--center">
                                     <ul>
                                         <li>
                                             <div className="tab-item-content">Home</div>
@@ -291,7 +291,7 @@ export const TabsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="tab-container tabs-center">
+                                    code={`<div class="tab-container tabs--center">
     <ul>
         <!-- Tab Items -->
     </ul>
@@ -306,7 +306,7 @@ export const TabsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
-                                <div className="tab-container tabs-right">
+                                <div className="tab-container tabs--right">
                                     <ul>
                                         <li>
                                             <div className="tab-item-content">Home</div>
@@ -325,7 +325,7 @@ export const TabsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="tab-container tabs-right">
+                                    code={`<div class="tab-container tabs--right">
     <ul>
         <!-- Tab Items -->
     </ul>
@@ -416,7 +416,7 @@ export const TabsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
-                                <div className="tab-container tabs-classic tabs-center">
+                                <div className="tab-container tabs-classic tabs--center">
                                     <ul>
                                         <li>
                                             <div className="tab-item-content">Home</div>
@@ -435,7 +435,7 @@ export const TabsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="tab-container tabs-classic tabs-center">
+                                    code={`<div class="tab-container tabs-classic tabs--center">
     <ul>
         <!-- Tab Items -->
     </ul>
@@ -461,7 +461,7 @@ export const TabsPage: React.FC<any> = (props) => {
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
-                                <div className="tab-container tabs-classic tabs-center">
+                                <div className="tab-container tabs-classic tabs--center">
                                     <ul>
                                         <li>
                                             <a>
@@ -498,7 +498,7 @@ export const TabsPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="tab-container tabs-classic tabs-center">
+                                    code={`<div class="tab-container tabs-classic tabs--center">
     <ul>
         <li><a><span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10 fa-wrapper" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;"></path></svg></span><span>Back</span></a></li>
         <li class="selected">
