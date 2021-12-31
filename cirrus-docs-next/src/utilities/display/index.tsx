@@ -187,7 +187,7 @@ export const DisplayUtilsPage: React.FC<any> = (props) => {
                                     <div className="p-3 bg-indigo-100 u-round">{display.example}</div>
                                     <div className="space"></div>
                                     <CodeBlock code={display.code} language="htmlbars" />
-                                    <div className="space large"></div>
+                                    <div className="space space--lg"></div>
                                 </>
                             );
                         })}

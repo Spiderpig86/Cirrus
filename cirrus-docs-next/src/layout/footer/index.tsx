@@ -194,7 +194,7 @@ export const FootersPage: React.FC<any> = (props) => {
 }`}
                             language="css"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Minimal Footer</h6>
                         <p>
@@ -208,7 +208,7 @@ export const FootersPage: React.FC<any> = (props) => {
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-minimal.html"
                             />
                         </LazyLoad>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Site Footer</h6>
                         <p>
@@ -222,7 +222,7 @@ export const FootersPage: React.FC<any> = (props) => {
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-map.html"
                             />
                         </LazyLoad>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Newsletter</h6>
                         <p>
@@ -236,7 +236,7 @@ export const FootersPage: React.FC<any> = (props) => {
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-newsletter.html"
                             />
                         </LazyLoad>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Newsletter</h6>
                         <p>
@@ -250,7 +250,7 @@ export const FootersPage: React.FC<any> = (props) => {
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-social.html"
                             />
                         </LazyLoad>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
                         <div className="placeholder">
                             <div className="placeholder-icon">
                                 <span className="icon">

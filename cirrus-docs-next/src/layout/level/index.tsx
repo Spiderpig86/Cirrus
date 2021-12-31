@@ -149,7 +149,7 @@ export const LevelPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space"></div>
                         <blockquote>Tl;dr: For navbars, check out the header menu documentation.</blockquote>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Fill Height</h6>
 

@@ -119,7 +119,7 @@ export const FormsCheckboxPage: React.FC<any> = (props) => {
                                 />
                             </div>
                         </div>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <p>
                             For disabled forms, just add the <code>disabled</code> property.
@@ -153,7 +153,7 @@ export const FormsCheckboxPage: React.FC<any> = (props) => {
                                 />
                             </div>
                         </div>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <p>
                             The existing variants for checkboxes consists of all the{' '}

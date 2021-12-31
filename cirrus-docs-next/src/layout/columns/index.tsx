@@ -250,7 +250,7 @@ export const ColumnsPage: React.FC<any> = (props) => {
 </div>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
                         <h6>No Space</h6>
                         <p>
                             By default, columns come with <code>1 rem</code> of space between the columns. To remove it,
@@ -278,7 +278,7 @@ export const ColumnsPage: React.FC<any> = (props) => {
 </div>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
                         <h6>Automatic Overflow</h6>
                         <p>
                             If there is not enough space in a given row for all the column elements, elements will
@@ -343,7 +343,7 @@ export const ColumnsPage: React.FC<any> = (props) => {
 </div>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
                         <h6>Auto Columns</h6>
                         <p>
                             These are columns denoted with the <code>col</code> class. The elements will automatically
@@ -499,7 +499,7 @@ export const ColumnsPage: React.FC<any> = (props) => {
                             <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xl-3</div>
                         </div>
 
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
                         <h6>Prevent Stacking</h6>
                         <p>
                             To prevent the default stacking behavior, we can use the <code>col-xs-*</code> class on

@@ -76,7 +76,7 @@ export const TilesPage: React.FC<any> = (props) => {
 </div>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Right Side Buttons</h6>
                         <p>
@@ -120,7 +120,7 @@ export const TilesPage: React.FC<any> = (props) => {
 </div>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Text Ellipsis</h6>
                         <p>
@@ -174,7 +174,7 @@ export const TilesPage: React.FC<any> = (props) => {
 </div>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Vertical Centering</h6>
                         <span className="tag-container group-tags">
@@ -205,7 +205,7 @@ export const TilesPage: React.FC<any> = (props) => {
                                 <button className="btn--sm uppercase">Dismiss</button>
                             </div>
                         </div>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <p>
                             In addition, the <code>u-overflow-hidden</code> utility class could be used on the{' '}
@@ -233,7 +233,7 @@ export const TilesPage: React.FC<any> = (props) => {
                             </div>
                         </div>
 
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
                         <CodeBlock
                             code={`<div class="tile u-items-center">
     <div class="tile__icon">

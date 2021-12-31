@@ -139,7 +139,7 @@ export const ListsPage: React.FC<any> = (props) => {
                                 />
                             </div>
                         </div>
-                        <div className="space xlarge"></div>
+                        <div className="space space--xl"></div>
 
                         <h6>Nested Lists</h6>
                         <p>

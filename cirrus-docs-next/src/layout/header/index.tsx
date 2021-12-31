@@ -420,7 +420,7 @@ $('.dropdown-menu li').on('click', function(e) {
                                 style={{ height: '200px' }}
                             />
                         </LazyLoad>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Nav Left</h6>
                         <p>
@@ -470,7 +470,7 @@ $('.dropdown-menu li').on('click', function(e) {
                                 style={{ height: '200px' }}
                             />
                         </LazyLoad>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
                     </div>
                 </section>
 

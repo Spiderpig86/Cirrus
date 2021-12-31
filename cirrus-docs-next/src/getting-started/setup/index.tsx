@@ -268,7 +268,7 @@ export const SetUpPage: React.FC<any> = (props) => {
                         <a href="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html" target="_blank">
                             Full Page
                         </a>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
                         <CodeBlock
                             code={`<!DOCTYPE html>
 <html id="page">

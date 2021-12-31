@@ -246,7 +246,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                 />
                             </div>
                         </div>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <p>
                             This one demonstrates overflow on the y-axis with{' '}
@@ -436,7 +436,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                 />
                             </div>
                         </div>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <p>This one uses different components (tabcontrol, card tiles, etc...) inside the frame.</p>
                         <div className="row">

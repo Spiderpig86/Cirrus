@@ -66,17 +66,17 @@ export const SpacingPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>
                             A <code>space</code> is an independent element that serves as a buffer between elements.
-                            This class comes with different sizes which includes <code>large</code> and{' '}
-                            <code>xlarge</code>.
+                            This class comes with different sizes which includes <code>space--lg</code> and{' '}
+                            <code>space--xl</code>.
                         </p>
                         <div className="space bg-indigo-100 mb-1"></div>
-                        <div className="space large bg-indigo-200 mb-1"></div>
-                        <div className="space xlarge bg-indigo-300 mb-1"></div>
+                        <div className="space space--lg bg-indigo-200 mb-1"></div>
+                        <div className="space space--xl bg-indigo-300 mb-1"></div>
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div class="space bg-indigo-100 mb-1"></div>
-<div class="space large bg-indigo-200 mb-1"></div>
-<div class="space xlarge bg-indigo-300 mb-1"></div>`}
+<div class="space space--lg bg-indigo-200 mb-1"></div>
+<div class="space space--xl bg-indigo-300 mb-1"></div>`}
                             language="htmlbars"
                         />
                     </div>

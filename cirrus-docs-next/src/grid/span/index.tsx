@@ -139,7 +139,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                             language="htmlbars"
                         />
 
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6 className="font-alt">Rows</h6>
                         <p>
@@ -233,7 +233,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                         </p>
 
                         <p>As stated prior, the '*' represents any number from 1 to 12 inclusive.</p>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <div className="grid grid-gap-3">
                             <div className="grid-cs-2 grid-ce-7 _grid-ex">2-7</div>
@@ -270,7 +270,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                             </tbody>
                         </table>
 
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6 className="font-alt">Rows</h6>
                         <p>

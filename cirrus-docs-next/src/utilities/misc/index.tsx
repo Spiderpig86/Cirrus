@@ -184,7 +184,7 @@ position: absolute;`,
 </div>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Float Right</h6>
                         <p>
@@ -255,7 +255,7 @@ position: absolute;`,
 
                         <div className="space"></div>
                         <CodeBlock code={`<p class="u-text-left">This is some text.</p>`} language="htmlbars" />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Text Center</h6>
                         <p>
@@ -268,7 +268,7 @@ position: absolute;`,
 
                         <div className="space"></div>
                         <CodeBlock code={`<p class="u-text-center">This is some text.</p>`} language="htmlbars" />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Text Right</h6>
                         <p>
@@ -281,7 +281,7 @@ position: absolute;`,
 
                         <div className="space"></div>
                         <CodeBlock code={`<p class="u-text-right">This is some text.</p>`} language="htmlbars" />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Text Justify</h6>
                         <p>
@@ -302,7 +302,7 @@ position: absolute;`,
                             language="htmlbars"
                             breakAll
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Text Ellipsis</h6>
                         <p>
@@ -329,7 +329,7 @@ position: absolute;`,
                             language="htmlbars"
                             breakAll
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Break On Word</h6>
                         <p>
@@ -375,7 +375,7 @@ position: absolute;`,
 </div>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Center with Offsets</h6>
                         <p>

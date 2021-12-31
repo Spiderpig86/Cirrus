@@ -125,7 +125,7 @@ export const FormGroupsPage: React.FC<any> = (props) => {
 `}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <p>You can also attach a bunch of these controls together.</p>
                         <div className="form-group">

@@ -830,7 +830,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                 />
                             </div>
                         </div>
-                        <div className="space xlarge"></div>
+                        <div className="space space--xl"></div>
 
                         <h6>Simple Tweet Card</h6>
                         <div className="row">

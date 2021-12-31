@@ -46,7 +46,7 @@ export const MediaPage: React.FC<any> = (props) => {
                             language="htmlbars"
                             breakAll={true}
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <p>
                             Having the image cover a parent element or just being contained in it can be achived by

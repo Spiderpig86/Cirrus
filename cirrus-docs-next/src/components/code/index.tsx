@@ -43,7 +43,7 @@ export const CodePage: React.FC<any> = (props) => {
                         <div className="space"></div>
 
                         <CodeBlock code={`<pre><code>console.log('hello 👋');</code></pre>`} language="htmlbars" />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Language Specification</h6>
                         <p>
@@ -59,7 +59,7 @@ export const CodePage: React.FC<any> = (props) => {
                             code={`<pre><code data-lang="JavaScript">console.log('hello 👋');</code></pre>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Dark Mode</h6>
                         <p>
@@ -76,7 +76,7 @@ export const CodePage: React.FC<any> = (props) => {
                             code={`<pre><code class="dark" data-lang="JavaScript">console.log('hello 👋');</code></pre>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Inline</h6>
                         <p>
@@ -90,7 +90,7 @@ export const CodePage: React.FC<any> = (props) => {
                             code={`<p class="lead">In order to speed up your computer, make sure you try running <code>sudo rm -rf /</code>.</p>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
                     </div>
                 </section>
 

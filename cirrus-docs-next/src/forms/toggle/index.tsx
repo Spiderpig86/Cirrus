@@ -203,7 +203,7 @@ export const FormsTogglePage: React.FC<any> = (props) => {
                                 />
                             </div>
                         </div>
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <p>
                             The existing variants for checkboxes consists of all the{' '}

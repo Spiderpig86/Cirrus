@@ -290,7 +290,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                                     <div className="p-3 bg-pink-100 u-round u-relative">{display.example}</div>
                                     <div className="space"></div>
                                     <CodeBlock code={display.code} language="htmlbars" />
-                                    <div className="space large"></div>
+                                    <div className="space space--lg"></div>
                                 </>
                             );
                         })}

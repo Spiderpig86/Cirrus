@@ -135,7 +135,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
 </div>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <p>
                             Before diving into how templates work, let's take a look at the building blocks of CSS grid.

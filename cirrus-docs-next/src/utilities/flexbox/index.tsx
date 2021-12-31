@@ -421,7 +421,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
 </div>`}
                             language="htmlbars"
                         />
-                        <div className="space large"></div>
+                        <div className="space space--lg"></div>
 
                         <h6>Inline Flex</h6>
                         <p>
@@ -464,7 +464,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                                     <div className="bg-orange-100 u-round">{flexDirection.example}</div>
                                     <div className="space"></div>
                                     <CodeBlock code={flexDirection.code} language="htmlbars" />
-                                    <div className="space large"></div>
+                                    <div className="space space--lg"></div>
                                 </>
                             );
                         })}
@@ -492,7 +492,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                                     <div className="bg-orange-100 u-round">{alignDocs.example}</div>
                                     <div className="space"></div>
                                     <CodeBlock code={alignDocs.code} language="htmlbars" />
-                                    <div className="space large"></div>
+                                    <div className="space space--lg"></div>
                                 </>
                             );
                         })}
@@ -520,7 +520,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                                     <div className="bg-orange-100 u-round">{justifyDocs.example}</div>
                                     <div className="space"></div>
                                     <CodeBlock code={justifyDocs.code} language="htmlbars" />
-                                    <div className="space large"></div>
+                                    <div className="space space--lg"></div>
                                 </>
                             );
                         })}

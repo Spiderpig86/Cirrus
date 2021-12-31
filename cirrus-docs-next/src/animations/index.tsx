@@ -259,7 +259,7 @@ export const AnimationsPage: React.FC<any> = (props) => {
                             </span>
                             Play
                         </button>
-                        <div className="space xlarge"></div>
+                        <div className="space space--xl"></div>
 
                         <h6>Bounce In</h6>
                         <p>Bounce in animation with a glyph.</p>
@@ -326,7 +326,7 @@ export const AnimationsPage: React.FC<any> = (props) => {
                             </span>
                             Play
                         </button>
-                        <div className="space xlarge"></div>
+                        <div className="space space--xl"></div>
 
                         <h6>Fade In</h6>
                         <p>Fade in animation with a glyph.</p>

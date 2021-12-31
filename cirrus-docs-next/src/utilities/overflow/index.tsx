@@ -470,7 +470,7 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
                                     {display.example}
                                     <div className="space"></div>
                                     <CodeBlock code={display.code} language="htmlbars" />
-                                    <div className="space large"></div>
+                                    <div className="space space--lg"></div>
                                 </>
                             );
                         })}
@@ -496,7 +496,7 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
                                     {display.example}
                                     <div className="space"></div>
                                     <CodeBlock code={display.code} language="htmlbars" />
-                                    <div className="space large"></div>
+                                    <div className="space space--lg"></div>
                                 </>
                             );
                         })}
@@ -522,7 +522,7 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
                                     {display.example}
                                     <div className="space"></div>
                                     <CodeBlock code={display.code} language="htmlbars" />
-                                    <div className="space large"></div>
+                                    <div className="space space--lg"></div>
                                 </>
                             );
                         })}

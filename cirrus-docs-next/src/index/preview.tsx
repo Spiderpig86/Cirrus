@@ -53,7 +53,7 @@ export const Preview: React.FC<any> = (props) => {
                             </button>
                         </Link>
                     </div>
-                    <div className="space xlarge" />
+                    <div className="space space--xl" />
                     <div className="divider" />
                 </div>
             </section>
@@ -147,7 +147,7 @@ export const Preview: React.FC<any> = (props) => {
                             <div className="frame__footer" />
                         </div>
                     </div>
-                    <div className="space xlarge" />
+                    <div className="space space--xl" />
                     <h3 className="font-alt font-normal u-text-center">Headings</h3>
                     <h6 className="uppercase">Standard headings:</h6>
                     <h1>
@@ -201,7 +201,7 @@ export const Preview: React.FC<any> = (props) => {
                         voluptatem.
                         <br /> -<em>John Doe</em>
                     </blockquote>
-                    <div className="space xlarge" />
+                    <div className="space space--xl" />
                     <div className="divider" />
                 </div>
             </section>
@@ -213,7 +213,7 @@ export const Preview: React.FC<any> = (props) => {
                             Cirrus makes creating layouts easy with <b>flexbox</b> and <b>grid</b> support.
                         </p>
                     </div>
-                    <div className="space xlarge" />
+                    <div className="space space--xl" />
                     <p className="title">Flexbox</p>
                     <div id="grids">
                         <div className="row">
@@ -331,7 +331,7 @@ export const Preview: React.FC<any> = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="space xlarge" />
+                    <div className="space space--xl" />
                     <div className="divider" />
                 </div>
             </section>
@@ -484,7 +484,7 @@ export const Preview: React.FC<any> = (props) => {
                             </button>
                         </div>
                     </div>
-                    <div className="space xlarge" />
+                    <div className="space space--xl" />
                     <div className="divider" />
                 </div>
             </section>
@@ -895,7 +895,7 @@ export const Preview: React.FC<any> = (props) => {
                         </div>
                         <div className="frame__footer"></div>
                     </div>
-                    <div className="space xlarge" />
+                    <div className="space space--xl" />
                     <div className="divider" />
                 </div>
             </section>
@@ -906,7 +906,7 @@ export const Preview: React.FC<any> = (props) => {
                         <p className="lead">Dead simple responsive navigation menus for any webpage.</p>
                     </div>
                 </div>
-                <div className="space xlarge" />
+                <div className="space space--xl" />
                 <div className="header unselectable header-animated">
                     <div className="header-brand">
                         <div className="nav-item no-hover">
@@ -1060,10 +1060,10 @@ export const Preview: React.FC<any> = (props) => {
                         </div>
                     </div>
                     <div className="content">
-                        <div className="space xlarge" />
-                        <div className="space xlarge" />
-                        <div className="space xlarge" />
-                        <div className="space xlarge" />
+                        <div className="space space--xl" />
+                        <div className="space space--xl" />
+                        <div className="space space--xl" />
+                        <div className="space space--xl" />
                         <div className="divider" />
                     </div>
                 </div>
