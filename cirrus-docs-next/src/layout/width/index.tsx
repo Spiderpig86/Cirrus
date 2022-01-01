@@ -94,16 +94,16 @@ export const WidthPage: React.FC<any> = (props) => {
                         <div
                             className="u-flex u-flex-column u-justify-space-evenly p-6 bg-orange-100 mb-2"
                         >
-                            <div className="w-20 bg-orange-500 u-round p-1 mb-2">
+                            <div className="w-20 bg-orange-500 u-round-xs p-1 mb-2">
                                 <span className="text-gray-000">w-20</span>
                             </div>
-                            <div className="w-40 bg-orange-500 u-round p-1 mb-2">
+                            <div className="w-40 bg-orange-500 u-round-xs p-1 mb-2">
                                 <span className="text-gray-000">w-40</span>
                             </div>
-                            <div className="w-60 bg-orange-500 u-round p-1 mb-2">
+                            <div className="w-60 bg-orange-500 u-round-xs p-1 mb-2">
                                 <span className="text-gray-000">w-60</span>
                             </div>
-                            <div className="w-80 bg-orange-500 u-round p-1 mb-2">
+                            <div className="w-80 bg-orange-500 u-round-xs p-1 mb-2">
                                 <span className="text-gray-000">w-80</span>
                             </div>
                         </div>
@@ -131,7 +131,7 @@ export const WidthPage: React.FC<any> = (props) => {
                         <div
                             className="u-relative u-overflow-x-scroll p-6 bg-pink-100 mb-2"
                         >
-                            <div className="w-screen bg-pink-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round">
+                            <div className="w-screen bg-pink-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs">
                                 <p>w-screen</p>
                             </div>
                         </div>
@@ -157,7 +157,7 @@ export const WidthPage: React.FC<any> = (props) => {
                         <div
                             className="u-relative p-6 bg-indigo-100 mb-2"
                         >
-                            <div className="w-auto bg-indigo-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round">
+                            <div className="w-auto bg-indigo-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs">
                                 <p>w-auto</p>
                             </div>
                         </div>

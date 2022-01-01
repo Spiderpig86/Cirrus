@@ -20,53 +20,53 @@ export const DisplayUtilsPage: React.FC<any> = (props) => {
             name: 'none',
             example: (
                 <div className="u-text-center">
-                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round">a</div>
-                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round u-none">b</div>
-                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round">c</div>
+                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-none">b</div>
+                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
-            code: `<div class="bg-indigo-200 px-2 py-1 m-1 u-round">a</div>
-<div class="bg-indigo-200 px-2 py-1 m-1 u-round u-none">b</div>
-<div class="bg-indigo-200 px-2 py-1 m-1 u-round">c</div>`,
+            code: `<div class="bg-indigo-200 px-2 py-1 m-1 u-round-xs">a</div>
+<div class="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-none">b</div>
+<div class="bg-indigo-200 px-2 py-1 m-1 u-round-xs">c</div>`,
         },
         {
             name: 'inline',
             example: (
                 <div className="bg-red-200">
-                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round u-inline">a</div>
-                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round u-inline">b</div>
-                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round u-inline">c</div>
+                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-inline">a</div>
+                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-inline">b</div>
+                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-inline">c</div>
                 </div>
             ),
-            code: `<div class="bg-indigo-200 px-2 py-1 m-1 u-round u-inline">a</div>
-<div class="bg-indigo-200 px-2 py-1 m-1 u-round u-inline">b</div>
-<div class="bg-indigo-200 px-2 py-1 m-1 u-round u-inline">c</div>`,
+            code: `<div class="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-inline">a</div>
+<div class="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-inline">b</div>
+<div class="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-inline">c</div>`,
         },
         {
             name: 'inline-block',
             example: (
                 <div>
-                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round u-inline-block">a</div>
-                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round u-inline-block">b</div>
-                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round u-inline-block">c</div>
+                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-inline-block">a</div>
+                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-inline-block">b</div>
+                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-inline-block">c</div>
                 </div>
             ),
-            code: `<div class="bg-indigo-200 px-2 py-1 m-1 u-round u-inline-block">a</div>
-<div class="bg-indigo-200 px-2 py-1 m-1 u-round u-inline-block">b</div>
-<div class="bg-indigo-200 px-2 py-1 m-1 u-round u-inline-block">c</div>`,
+            code: `<div class="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-inline-block">a</div>
+<div class="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-inline-block">b</div>
+<div class="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-inline-block">c</div>`,
         },
         {
             name: 'block',
             example: (
                 <div>
-                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round u-block">a</div>
-                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round u-block">b</div>
-                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round u-block">c</div>
+                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-block">a</div>
+                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-block">b</div>
+                    <div className="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-block">c</div>
                 </div>
             ),
-            code: `<div class="bg-indigo-200 px-2 py-1 m-1 u-round u-block">a</div>
-<div class="bg-indigo-200 px-2 py-1 m-1 u-round u-block">b</div>
-<div class="bg-indigo-200 px-2 py-1 m-1 u-round u-block">c</div>`,
+            code: `<div class="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-block">a</div>
+<div class="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-block">b</div>
+<div class="bg-indigo-200 px-2 py-1 m-1 u-round-xs u-block">c</div>`,
         },
         {
             name: 'table',
@@ -184,7 +184,7 @@ export const DisplayUtilsPage: React.FC<any> = (props) => {
                                         </p>
                                     )}
 
-                                    <div className="p-3 bg-indigo-100 u-round">{display.example}</div>
+                                    <div className="p-3 bg-indigo-100 u-round-xs">{display.example}</div>
                                     <div className="space"></div>
                                     <CodeBlock code={display.code} language="htmlbars" />
                                     <div className="space space--lg"></div>

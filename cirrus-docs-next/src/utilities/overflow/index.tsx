@@ -41,10 +41,10 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
         {
             name: 'auto',
             example: (
-                <div className="p-3 bg-purple-100 u-round u-relative">
+                <div className="p-3 bg-purple-100 u-round-xs u-relative">
                     <p className="font-bold">Auto</p>
                     <div
-                        className="u-round bg-purple-200 u-overflow-auto"
+                        className="u-round-xs bg-purple-200 u-overflow-auto"
                         style={{
                             height: '200px',
                         }}
@@ -74,10 +74,10 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
         {
             name: 'hidden',
             example: (
-                <div className="p-3 bg-blue-100 u-round u-relative">
+                <div className="p-3 bg-blue-100 u-round-xs u-relative">
                     <p className="font-bold">Hidden</p>
                     <div
-                        className="u-round bg-blue-200 u-overflow-hidden"
+                        className="u-round-xs bg-blue-200 u-overflow-hidden"
                         style={{
                             height: '200px',
                         }}
@@ -107,10 +107,10 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
         {
             name: 'visible',
             example: (
-                <div className="p-3 bg-green-100 u-round u-relative u-overflow-y-auto">
+                <div className="p-3 bg-green-100 u-round-xs u-relative u-overflow-y-auto">
                     <p className="font-bold">Visible</p>
                     <div
-                        className="u-round bg-green-200 u-overflow-visible"
+                        className="u-round-xs bg-green-200 u-overflow-visible"
                         style={{
                             height: '200px',
                         }}
@@ -140,10 +140,10 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
         {
             name: 'scroll',
             example: (
-                <div className="p-3 bg-orange-100 u-round u-relative">
+                <div className="p-3 bg-orange-100 u-round-xs u-relative">
                     <p className="font-bold">Scroll</p>
                     <div
-                        className="u-round bg-orange-200 u-overflow-scroll"
+                        className="u-round-xs bg-orange-200 u-overflow-scroll"
                         style={{
                             height: '200px',
                         }}
@@ -176,10 +176,10 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
         {
             name: 'auto',
             example: (
-                <div className="p-3 bg-purple-100 u-round u-relative">
+                <div className="p-3 bg-purple-100 u-round-xs u-relative">
                     <p className="font-bold">Auto</p>
                     <div
-                        className="u-round bg-purple-200 u-overflow-x-auto w-50"
+                        className="u-round-xs bg-purple-200 u-overflow-x-auto w-50"
                     >
                         <p className="px-2 text-purple-700" style={{ width: '500px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -201,10 +201,10 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
         {
             name: 'hidden',
             example: (
-                <div className="p-3 bg-blue-100 u-round u-relative">
+                <div className="p-3 bg-blue-100 u-round-xs u-relative">
                     <p className="font-bold">Hidden</p>
                     <div
-                        className="u-round bg-blue-200 u-overflow-x-hidden w-50"
+                        className="u-round-xs bg-blue-200 u-overflow-x-hidden w-50"
                     >
                         <p className="px-2 text-blue-700" style={{ width: '500px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -226,10 +226,10 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
         {
             name: 'visible',
             example: (
-                <div className="p-3 bg-green-100 u-round u-relative u-overflow-y-auto">
+                <div className="p-3 bg-green-100 u-round-xs u-relative u-overflow-y-auto">
                     <p className="font-bold">Visible</p>
                     <div
-                        className="u-round bg-green-200 u-overflow-x-visible w-50"
+                        className="u-round-xs bg-green-200 u-overflow-x-visible w-50"
                     >
                         <p className="px-2 text-green-700" style={{ width: '500px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -251,10 +251,10 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
         {
             name: 'scroll',
             example: (
-                <div className="p-3 bg-orange-100 u-round u-relative">
+                <div className="p-3 bg-orange-100 u-round-xs u-relative">
                     <p className="font-bold">Scroll</p>
                     <div
-                        className="u-round bg-orange-200 u-overflow-x-scroll"
+                        className="u-round-xs bg-orange-200 u-overflow-x-scroll"
                     >
                         <p className="px-2 text-orange-700" style={{ width: '500px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -280,10 +280,10 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
         {
             name: 'auto',
             example: (
-                <div className="p-3 bg-purple-100 u-round u-relative">
+                <div className="p-3 bg-purple-100 u-round-xs u-relative">
                     <p className="font-bold">Auto</p>
                     <div
-                        className="u-round bg-purple-200 u-overflow-auto"
+                        className="u-round-xs bg-purple-200 u-overflow-auto"
                         style={{ height: '200px'}}
                     >
                         <p className="px-2 text-purple-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -311,10 +311,10 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
         {
             name: 'hidden',
             example: (
-                <div className="p-3 bg-blue-100 u-round u-relative">
+                <div className="p-3 bg-blue-100 u-round-xs u-relative">
                     <p className="font-bold">Hidden</p>
                     <div
-                        className="u-round bg-blue-200 u-overflow-y-hidden"
+                        className="u-round-xs bg-blue-200 u-overflow-y-hidden"
                         style={{ height: '200px'}}
                     >
                         <p className="px-2 text-blue-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -342,10 +342,10 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
         {
             name: 'visible',
             example: (
-                <div className="p-3 bg-green-100 u-round u-relative u-overflow-y-auto">
+                <div className="p-3 bg-green-100 u-round-xs u-relative u-overflow-y-auto">
                     <p className="font-bold">Visible</p>
                     <div
-                        className="u-round bg-green-200 u-overflow-y-visible"
+                        className="u-round-xs bg-green-200 u-overflow-y-visible"
                         style={{ height: '200px'}}
                     >
                         <p className="px-2 text-green-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -373,10 +373,10 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
         {
             name: 'scroll',
             example: (
-                <div className="p-3 bg-orange-100 u-round u-relative">
+                <div className="p-3 bg-orange-100 u-round-xs u-relative">
                     <p className="font-bold">Scroll</p>
                     <div
-                        className="u-round bg-orange-200 u-overflow-y-scroll"
+                        className="u-round-xs bg-orange-200 u-overflow-y-scroll"
                         style={{ height: '350px'}}
                     >
                         <p className="px-2 text-orange-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

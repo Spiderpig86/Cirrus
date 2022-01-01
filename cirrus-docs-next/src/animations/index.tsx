@@ -404,65 +404,65 @@ export const AnimationsPage: React.FC<any> = (props) => {
                         <p>These are animations that only run continuously.</p>
                         <div className="space"></div>
 
-                        <h6>Pulse</h6>
-                        <p>Pulse animation with a glyph.</p>
+                        <h6>Pound</h6>
+                        <p>Pound animation with a glyph.</p>
                         <div className="row">
                             <div className="col-lg-6 u-text-center">
-                                <span className="icon animated paused pulse" id="pulse-heart">
+                                <span className="icon animated paused pound" id="pound-heart">
                                     <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
                                 </span>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated pulse" aria-hidden="true"></i></span>`}
+                                    code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated pound" aria-hidden="true"></i></span>`}
                                     language="htmlbars"
                                 />
                             </div>
                         </div>
-                        <button className="docs-btn-play" id="toggle-pulse-heart">
+                        <button className="docs-btn-play" id="toggle-pound-heart">
                             <span className="icon">
                                 <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
                             </span>
                             Play
                         </button>
-                        <p>Pulse animation with a div.</p>
+                        <p>Pound animation with a div.</p>
                         <div className="row">
                             <div className="col-lg-6 u-text-center">
-                                <div className="bg-orange-400 text-white u-text-center animated paused pulse" id="pulse-div">
+                                <div className="bg-orange-400 text-white u-text-center animated paused pound" id="pound-div">
                                     <p>This is a div!</p>
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="bg-orange-400 text-white u-text-center animated pulse">
+                                    code={`<div class="bg-orange-400 text-white u-text-center animated pound">
     <p>This is a div!</p>
 </div>`}
                                     language="htmlbars"
                                 />
                             </div>
                         </div>
-                        <button className="docs-btn-play" id="toggle-pulse-div">
+                        <button className="docs-btn-play" id="toggle-pound-div">
                             <span className="icon">
                                 <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
                             </span>
                             Play
                         </button>
                         <div className="space"></div>
-                        <p>Pulse animation with a button.</p>
+                        <p>Pound animation with a button.</p>
                         <div className="row">
                             <div className="col-lg-6 u-text-center">
-                                <button className="btn-info animated paused pulse" id="pulse-btn">
+                                <button className="btn-info animated paused pound" id="pound-btn">
                                     Button
                                 </button>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<button class="btn-info animated pulse">Button</button>`}
+                                    code={`<button class="btn-info animated pound">Button</button>`}
                                     language="htmlbars"
                                 />
                             </div>
                         </div>
-                        <button className="docs-btn-play" id="toggle-pulse-btn">
+                        <button className="docs-btn-play" id="toggle-pound-btn">
                             <span className="icon">
                                 <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
                             </span>

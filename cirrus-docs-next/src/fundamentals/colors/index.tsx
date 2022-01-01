@@ -68,12 +68,12 @@ export const ColorsPage: React.FC<any> = (props) => {
                                         height: '50px',
                                         width: '50px',
                                     }}
-                                    className="u-round bg-info mx-auto"
+                                    className="u-round-xs bg-info mx-auto"
                                 ></div>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="bg-info u-round mx-auto" style="height: 50px; width: 50px;"></div>`}
+                                    code={`<div class="bg-info u-round-xs mx-auto" style="height: 50px; width: 50px;"></div>`}
                                     language="htmlbars"
                                 />
                             </div>

@@ -15,7 +15,7 @@ export const Footer: React.FC<any> = () => {
             </p>
             <p>
                 Made with {' '}
-                <FontAwesomeIcon className="fa-wrapper fa-heart animated pulse text-red-500" icon={['fas', 'heart']} /> by{' '}
+                <FontAwesomeIcon className="fa-wrapper fa-heart animated pound text-red-500" icon={['fas', 'heart']} /> by{' '}
                 <a href="http://stanleylim.me" target="_blank">
                     Stanley Lim
                 </a>

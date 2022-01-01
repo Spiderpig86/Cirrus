@@ -239,16 +239,16 @@ export const MarginPage: React.FC<any> = (props) => {
                         <p>Try out the example below yourself by resizing your browser window.</p>
 
                         <div className="mb-1">
-                            <div className="bg-orange-100 p-2 u-round u-flex u-justify-center u-items-center">
-                                <p className="bg-orange-300 p-3 u-round my-1 mr-1 mr-5-sm mr-10-md">Shrink</p>
-                                <p className="bg-orange-300 p-3 u-round my-1 ml-1 ml-5-sm ml-10-md">Window</p>
+                            <div className="bg-orange-100 p-2 u-round-xs u-flex u-justify-center u-items-center">
+                                <p className="bg-orange-300 p-3 u-round-xs my-1 mr-1 mr-5-sm mr-10-md">Shrink</p>
+                                <p className="bg-orange-300 p-3 u-round-xs my-1 ml-1 ml-5-sm ml-10-md">Window</p>
                             </div>
                         </div>
 
                         <CodeBlock
-                            code={`<div class="bg-orange-100 p-2 u-round u-flex u-justify-center u-items-center">
-    <p class="bg-orange-300 p-3 u-round my-1 mr-1 mr-5-sm mr-10-md">Shrink</p>
-    <p class="bg-orange-300 p-3 u-round my-1 ml-1 ml-5-sm ml-10-md">Window</p>
+                            code={`<div class="bg-orange-100 p-2 u-round-xs u-flex u-justify-center u-items-center">
+    <p class="bg-orange-300 p-3 u-round-xs my-1 mr-1 mr-5-sm mr-10-md">Shrink</p>
+    <p class="bg-orange-300 p-3 u-round-xs my-1 ml-1 ml-5-sm ml-10-md">Window</p>
 </div>`}
                             language="htmlbars"
                         />

@@ -279,7 +279,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             representing a title and a subtitle closer together. The <code>title</code> is bolded by
                             default.
                         </p>
-                        <div className="bg-gray-100 u-round p-3">
+                        <div className="bg-gray-100 u-round-xs p-3">
                             <h6 className="title">I am the title.</h6>
                             <p className="subtitle">I am the subtitle.</p>
                         </div>

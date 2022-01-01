@@ -405,7 +405,7 @@ export const TilesPage: React.FC<any> = (props) => {
 
                         <div className="row u-items-center">
                             <div className="col-lg-6">
-                                <div className="tile p-1 bg-gray-200 u-round">
+                                <div className="tile p-1 bg-gray-200 u-round-xs">
                                     <div className="tile__icon">
                                         <figure className="avatar">
                                             <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
@@ -464,7 +464,7 @@ export const TilesPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="tile p-1 bg-gray-200 u-round">
+                                    code={`<div class="tile p-1 bg-gray-200 u-round-xs">
     <div class="tile__icon">
         <figure class="avatar"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" /></figure>
     </div>

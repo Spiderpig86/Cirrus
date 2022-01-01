@@ -94,7 +94,7 @@ display: table !important;`,
                             Use the <code>u-clear-left</code> class to have elements avoid overlapping other elements
                             floated to the left.
                         </p>
-                        <div className="py-3 bg-orange-100 u-round">
+                        <div className="py-3 bg-orange-100 u-round-xs">
                             <div className="content">
                                 <img
                                     className="u-pull-left"
@@ -130,7 +130,7 @@ display: table !important;`,
                             Use the <code>u-clear-right</code> class to have elements avoid overlapping other elements
                             floated to the right.
                         </p>
-                        <div className="py-3 bg-orange-100 u-round">
+                        <div className="py-3 bg-orange-100 u-round-xs">
                             <div className="content">
                                 <img
                                     className="u-pull-left"
@@ -166,7 +166,7 @@ display: table !important;`,
                             Use the <code>u-clear-both</code> class to have elements avoid overlapping other elements
                             floated to the left or right.
                         </p>
-                        <div className="py-3 bg-orange-100 u-round">
+                        <div className="py-3 bg-orange-100 u-round-xs">
                             <div className="content">
                                 <img
                                     className="u-pull-left"
@@ -203,7 +203,7 @@ display: table !important;`,
                             float. Without this class, the following image will be overflowing outside of the shaded
                             area.
                         </p>
-                        <div className="py-3 bg-orange-100 u-round">
+                        <div className="py-3 bg-orange-100 u-round-xs">
                             <div className="content">
                                 <div className="u-clearfix">
                                     <p>

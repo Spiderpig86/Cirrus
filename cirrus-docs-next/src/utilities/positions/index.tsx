@@ -20,10 +20,10 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
         {
             name: 'static',
             example: (
-                <div className="u-round bg-pink-200 u-static">
+                <div className="u-round-xs bg-pink-200 u-static">
                     <p className="px-2">Static Parent</p>
                     <div
-                        className="u-round bg-pink-300 u-absolute"
+                        className="u-round-xs bg-pink-300 u-absolute"
                         style={{
                             top: '0',
                             right: '0',
@@ -33,9 +33,9 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                     </div>
                 </div>
             ),
-            code: `<div class="u-round bg-pink-200 u-static">
+            code: `<div class="u-round-xs bg-pink-200 u-static">
     <p class="px-2">Static Parent</p>
-    <div class="u-round bg-pink-300 u-absolute" style="top: 0px; right: 0px;">
+    <div class="u-round-xs bg-pink-300 u-absolute" style="top: 0px; right: 0px;">
         <p class="px-2">Absolute Child</p>
     </div>
 </div>`,
@@ -74,12 +74,12 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
         {
             name: 'absolute',
             example: (
-                <div className="u-round bg-pink-200 u-relative px-2">
+                <div className="u-round-xs bg-pink-200 u-relative px-2">
                     <p>Relative Parent</p>
-                    <div className="u-round bg-pink-300 u-static">
+                    <div className="u-round-xs bg-pink-300 u-static">
                         <p className="px-2">Static Parent</p>
                         <div
-                            className="u-round bg-pink-400 u-absolute"
+                            className="u-round-xs bg-pink-400 u-absolute"
                             style={{
                                 top: '0',
                                 right: '0',
@@ -87,20 +87,20 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                         >
                             <p className="px-2">Absolute Child</p>
                         </div>
-                        <div className="u-round bg-pink-400 px-2 u-inline-block">
+                        <div className="u-round-xs bg-pink-400 px-2 u-inline-block">
                             <p>Static Child</p>
                         </div>
                     </div>
                 </div>
             ),
-            code: `<div class="u-round bg-pink-200 u-relative px-2">
+            code: `<div class="u-round-xs bg-pink-200 u-relative px-2">
     <p>Relative Parent</p>
-    <div class="u-round bg-pink-300 u-static">
+    <div class="u-round-xs bg-pink-300 u-static">
         <p class="px-2">Static Parent</p>
-        <div class="u-round bg-pink-400 u-absolute" style="top: 0px; right: 0px;">
+        <div class="u-round-xs bg-pink-400 u-absolute" style="top: 0px; right: 0px;">
             <p class="px-2">Absolute Child</p>
         </div>
-        <div class="u-round bg-pink-400 px-2 u-inline-block">
+        <div class="u-round-xs bg-pink-400 px-2 u-inline-block">
             <p>Static Child</p>
         </div>
     </div>
@@ -116,14 +116,14 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
             name: 'relative',
             example: (
                 <div
-                    className="u-round bg-pink-200 u-relative px-2"
+                    className="u-round-xs bg-pink-200 u-relative px-2"
                     style={{
                         height: '200px',
                     }}
                 >
                     <p>Relative Parent</p>
                     <div
-                        className="u-round bg-pink-300 u-absolute"
+                        className="u-round-xs bg-pink-300 u-absolute"
                         style={{
                             bottom: '0',
                             right: '0',
@@ -133,9 +133,9 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                     </div>
                 </div>
             ),
-            code: `<div class="u-round bg-pink-200 u-relative px-2" style="height: 200px;">
+            code: `<div class="u-round-xs bg-pink-200 u-relative px-2" style="height: 200px;">
     <p>Relative Parent</p>
-    <div class="u-round bg-pink-300 u-absolute" style="bottom: 0px; right: 0px;">
+    <div class="u-round-xs bg-pink-300 u-absolute" style="bottom: 0px; right: 0px;">
         <p class="px-2">Absolute Child</p>
     </div>
 </div>`,
@@ -287,7 +287,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                                         </p>
                                     )}
 
-                                    <div className="p-3 bg-pink-100 u-round u-relative">{display.example}</div>
+                                    <div className="p-3 bg-pink-100 u-round-xs u-relative">{display.example}</div>
                                     <div className="space"></div>
                                     <CodeBlock code={display.code} language="htmlbars" />
                                     <div className="space space--lg"></div>

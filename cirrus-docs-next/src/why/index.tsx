@@ -412,7 +412,7 @@ export const WhyPage: React.FC<any> = (props) => {
                                     <img
                                         src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80"
                                         alt="cloud"
-                                        className="u-round"
+                                        className="u-round-xs"
                                     />
                                 </div>
                             </div>
@@ -428,7 +428,7 @@ export const WhyPage: React.FC<any> = (props) => {
     <div class="col-lg-6">
         <div class="u-relative u-center">
             <p class="u-absolute text-white font-bold u-center-alt lead">Overlayed text.</p>
-            <img src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="cloud" class="u-round" />
+            <img src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="cloud" class="u-round-xs" />
         </div>
     </div>
     <div class="col-lg-6"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>

@@ -90,35 +90,35 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
                         <p>Below is a demo of all supported z-index utility classes.</p>
 
                         <div className="bg-teal-100 u-flex u-flex-column p-4">
-                            <div className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-50">
+                            <div className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-50">
                                 <h3 className="my-1">50</h3>
                             </div>
                             <div
-                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-40"
+                                className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-40"
                                 style={{ transform: 'translateY(-0.75rem)' }}
                             >
                                 <h3 className="my-1">40</h3>
                             </div>
                             <div
-                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-30"
+                                className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-30"
                                 style={{ transform: 'translateY(-1.25rem)' }}
                             >
                                 <h3 className="my-1">30</h3>
                             </div>
                             <div
-                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-20"
+                                className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-20"
                                 style={{ transform: 'translateY(-2rem)' }}
                             >
                                 <h3 className="my-1">20</h3>
                             </div>
                             <div
-                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-10"
+                                className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-10"
                                 style={{ transform: 'translateY(-2.75rem)' }}
                             >
                                 <h3 className="my-1">10</h3>
                             </div>
                             <div
-                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-0"
+                                className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-0"
                                 style={{ transform: 'translateY(-3.5rem)' }}
                             >
                                 <h3 className="my-1">0</h3>
@@ -126,7 +126,7 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
                             <div className="u-text-center text-teal-500">
                                 <p>And of course...</p>
                             </div>
-                            <div className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-auto">
+                            <div className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-auto">
                                 <h3 className="my-0">auto</h3>
                             </div>
                         </div>

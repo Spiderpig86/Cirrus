@@ -468,35 +468,35 @@ export const ColumnsPage: React.FC<any> = (props) => {
                         </p>
 
                         <div className="row">
-                            <div className="col-xs-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xs-3</div>
-                            <div className="col-xs-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xs-3</div>
-                            <div className="col-xs-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xs-3</div>
+                            <div className="col-xs-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-xs-3</div>
+                            <div className="col-xs-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-xs-3</div>
+                            <div className="col-xs-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-xs-3</div>
                         </div>
                         <div className="row">
-                            <div className="col-sm-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-sm-3</div>
-                            <div className="col-sm-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-sm-3</div>
-                            <div className="col-sm-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-sm-3</div>
+                            <div className="col-sm-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-sm-3</div>
+                            <div className="col-sm-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-sm-3</div>
+                            <div className="col-sm-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-sm-3</div>
                         </div>
                         <div className="row">
-                            <div className="col-md-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">
+                            <div className="col-md-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">
                                 col-md-3 / col-3
                             </div>
-                            <div className="col-md-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">
+                            <div className="col-md-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">
                                 col-md-3 / col-3
                             </div>
-                            <div className="col-md-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">
+                            <div className="col-md-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">
                                 col-md-3 / col-3
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-lg-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-lg-3</div>
-                            <div className="col-lg-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-lg-3</div>
-                            <div className="col-lg-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-lg-3</div>
+                            <div className="col-lg-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-lg-3</div>
+                            <div className="col-lg-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-lg-3</div>
+                            <div className="col-lg-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-lg-3</div>
                         </div>
                         <div className="row">
-                            <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xl-3</div>
-                            <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xl-3</div>
-                            <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round m-1 p-4">col-xl-3</div>
+                            <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-xl-3</div>
+                            <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-xl-3</div>
+                            <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-xl-3</div>
                         </div>
 
                         <div className="space space--lg"></div>

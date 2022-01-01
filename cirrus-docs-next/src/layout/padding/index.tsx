@@ -241,16 +241,16 @@ padding-bottom: (0) !important;`,
                         <p>Try out the example below yourself by resizing your browser window.</p>
 
                         <div className="mb-1">
-                            <div className="bg-purple-100 p-2 u-round u-flex u-justify-center u-items-center">
-                                <p className="bg-purple-300 p-3 u-round py-1 px-1 px-10-sm px-20-md">
+                            <div className="bg-purple-100 p-2 u-round-xs u-flex u-justify-center u-items-center">
+                                <p className="bg-purple-300 p-3 u-round-xs py-1 px-1 px-10-sm px-20-md">
                                     I grow with the window.
                                 </p>
                             </div>
                         </div>
 
                         <CodeBlock
-                            code={`<div class="bg-purple-100 p-2 u-round u-flex u-justify-center u-items-center">
-    <p class="bg-purple-300 p-3 u-round py-1 px-1 px-10-sm px-20-md">I grow with the window.</p>
+                            code={`<div class="bg-purple-100 p-2 u-round-xs u-flex u-justify-center u-items-center">
+    <p class="bg-purple-300 p-3 u-round-xs py-1 px-1 px-10-sm px-20-md">I grow with the window.</p>
 </div>`}
                             language="htmlbars"
                         />

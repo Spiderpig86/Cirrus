@@ -97,16 +97,16 @@ export const HeightPage: React.FC<any> = (props) => {
                                 height: '400px',
                             }}
                         >
-                            <div className="h-30 bg-teal-500 u-round p-1">
+                            <div className="h-30 bg-teal-500 u-round-xs p-1">
                                 <p className="text-gray-000">h-30</p>
                             </div>
-                            <div className="h-50 bg-teal-500 u-round p-1">
+                            <div className="h-50 bg-teal-500 u-round-xs p-1">
                                 <p className="text-gray-000">h-50</p>
                             </div>
-                            <div className="h-70 bg-teal-500 u-round p-1">
+                            <div className="h-70 bg-teal-500 u-round-xs p-1">
                                 <p className="text-gray-000">h-70</p>
                             </div>
-                            <div className="h-90 bg-teal-500 u-round p-1">
+                            <div className="h-90 bg-teal-500 u-round-xs p-1">
                                 <p className="text-gray-000">h-90</p>
                             </div>
                         </div>
@@ -137,7 +137,7 @@ export const HeightPage: React.FC<any> = (props) => {
                                 minHeight: '400px',
                             }}
                         >
-                            <div className="h-screen bg-purple-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round">
+                            <div className="h-screen bg-purple-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs">
                                 <p>h-screen</p>
                             </div>
                         </div>
@@ -166,7 +166,7 @@ export const HeightPage: React.FC<any> = (props) => {
                                 minHeight: '200px',
                             }}
                         >
-                            <div className="h-auto bg-red-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round">
+                            <div className="h-auto bg-red-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs">
                                 <p>h-auto</p>
                             </div>
                         </div>

@@ -62,11 +62,11 @@ position: absolute;`,
             style: `user-select: none;`,
         },
         {
-            class: `u-round`,
+            class: `u-round-xs`,
             style: `border-radius: 0.25rem;`,
         },
         {
-            class: `u-circle`,
+            class: `u-round-full`,
             style: `border-radius: 50%;`,
         },
         {
@@ -191,7 +191,7 @@ position: absolute;`,
                             Float an element to the right with <code>u-pull-right</code>.
                         </p>
                         <div
-                            className="bg-gray-100 u-round"
+                            className="bg-gray-100 u-round-xs"
                             style={{
                                 minHeight: '300px',
                             }}
@@ -249,7 +249,7 @@ position: absolute;`,
                             Align text to the left with <code>u-text-left</code>.
                         </p>
 
-                        <div className="bg-gray-100 u-round">
+                        <div className="bg-gray-100 u-round-xs">
                             <p className="u-text-left">This is some text.</p>
                         </div>
 
@@ -262,7 +262,7 @@ position: absolute;`,
                             Align text to the center with <code>u-text-center</code>.
                         </p>
 
-                        <div className="bg-gray-100 u-round">
+                        <div className="bg-gray-100 u-round-xs">
                             <p className="u-text-center">This is some text.</p>
                         </div>
 
@@ -275,7 +275,7 @@ position: absolute;`,
                             Align text to the right with <code>u-text-right</code>.
                         </p>
 
-                        <div className="bg-gray-100 u-round">
+                        <div className="bg-gray-100 u-round-xs">
                             <p className="u-text-right">This is some text.</p>
                         </div>
 
@@ -288,7 +288,7 @@ position: absolute;`,
                             Stretch your text each line using <code>u-text-justify</code>.
                         </p>
 
-                        <div className="bg-gray-100 u-round">
+                        <div className="bg-gray-100 u-round-xs">
                             <p className="u-text-justify p-1">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Gravida in fermentum et sollicitudin ac
@@ -310,7 +310,7 @@ position: absolute;`,
                             <code>u-text-ellipsis</code>.
                         </p>
 
-                        <div className="bg-gray-100 u-round">
+                        <div className="bg-gray-100 u-round-xs">
                             <p
                                 className="u-text-ellipsis p-1"
                                 style={{
@@ -336,7 +336,7 @@ position: absolute;`,
                             Break text on word with <code>u-text-break</code>.
                         </p>
 
-                        <div className="bg-gray-100 u-round">
+                        <div className="bg-gray-100 u-round-xs">
                             <p className="u-text-break p-1">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Gravida in fermentum et sollicitudin ac
@@ -450,7 +450,7 @@ position: absolute;`,
                         <p>
                             Make anything unselectable with the <code>u-unselectable</code> class.
                         </p>
-                        <div className="bg-gray-200 px-1 u-round">
+                        <div className="bg-gray-200 px-1 u-round-xs">
                             <p className="u-unselectable">You cannot highlight this sentence.</p>
                         </div>
                         <div className="space"></div>
@@ -458,33 +458,6 @@ position: absolute;`,
                             code={`<p class="u-unselectable">You cannot highlight this sentence.</p>`}
                             language="htmlbars"
                         />
-                        <div className="space"></div>
-
-                        <h6>Round</h6>
-                        <p>
-                            Use the <code>u-round</code> class to round the edges of any element by <code>0.25rem</code>
-                            .
-                        </p>
-                        <div className="p-3 u-center">
-                            <img
-                                src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80"
-                                alt="cloud"
-                                className="u-round"
-                            />
-                        </div>
-                        <div className="space"></div>
-                        <CodeBlock
-                            code={`<img src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="cloud" class="u-round">`}
-                            language="htmlbars"
-                        />
-                        <div className="space"></div>
-
-                        <h6>Circle</h6>
-                        <p>Make an element circular (or ovular) with a 50% border radius.</p>
-                        <div className="p-3 u-center">
-                            <button className="btn-info u-circle">sl</button>
-                        </div>
-                        <CodeBlock code={`<button class="btn-info u-circle">sl</button>`} language="htmlbars" />
                         <div className="space"></div>
 
                         <h6>No Outline</h6>
