@@ -879,7 +879,7 @@ export const CardsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Avatar', link: './avatar' }}
+                    prevLink={{ name: 'Breadcrumb', link: './breadcrumb' }}
                     nextLink={{ name: 'Code', link: './code' }}
                 />
             </div>

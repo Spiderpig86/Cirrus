@@ -90,35 +90,38 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
                         <p>Below is a demo of all supported z-index utility classes.</p>
 
                         <div className="bg-teal-100 u-flex u-flex-column p-4">
-                            <div className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-50">
+                            <div
+                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-50"
+                                style={{ marginLeft: '5rem' }}
+                            >
                                 <h3 className="my-1">50</h3>
                             </div>
                             <div
-                                className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-40"
-                                style={{ transform: 'translateY(-0.75rem)' }}
+                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-40"
+                                style={{ transform: 'translateY(-0.75rem)', marginLeft: '4rem' }}
                             >
                                 <h3 className="my-1">40</h3>
                             </div>
                             <div
-                                className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-30"
-                                style={{ transform: 'translateY(-1.25rem)' }}
+                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-30"
+                                style={{ transform: 'translateY(-1.25rem)', marginLeft: '3rem' }}
                             >
                                 <h3 className="my-1">30</h3>
                             </div>
                             <div
-                                className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-20"
-                                style={{ transform: 'translateY(-2rem)' }}
+                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-20"
+                                style={{ transform: 'translateY(-2rem)', marginLeft: '2rem' }}
                             >
                                 <h3 className="my-1">20</h3>
                             </div>
                             <div
-                                className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-10"
-                                style={{ transform: 'translateY(-2.75rem)' }}
+                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-10"
+                                style={{ transform: 'translateY(-2.75rem)', marginLeft: '1rem' }}
                             >
                                 <h3 className="my-1">10</h3>
                             </div>
                             <div
-                                className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-0"
+                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-0"
                                 style={{ transform: 'translateY(-3.5rem)' }}
                             >
                                 <h3 className="my-1">0</h3>
@@ -126,19 +129,22 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
                             <div className="u-text-center text-teal-500">
                                 <p>And of course...</p>
                             </div>
-                            <div className="square u-round-xs-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-auto">
+                            <div className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-auto">
                                 <h3 className="my-0">auto</h3>
                             </div>
                         </div>
 
                         <div className="space space--lg"></div>
-                        <CodeBlock code={`<div class="u-z-50 ...">50</div>
+                        <CodeBlock
+                            code={`<div class="u-z-50 ...">50</div>
 <div class="u-z-40 ...">40</div>
 <div class="u-z-30 ...">30</div>
 <div class="u-z-20 ...">20</div>
 <div class="u-z-10 ...">10</div>
 <div class="u-z-0 ...">0</div>
-<div class="u-z-auto ...">auto</div>`} language="htmlbars" />
+<div class="u-z-auto ...">auto</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -146,22 +152,31 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Responsive" link="#responsive" size="4" />
                         <div className="divider"></div>
-                        
+
                         <Blockquote accentColor={'#fcd9bd'}>
-                            <p>⚠ Note that the viewport variants are disabled from the default build of Cirrus. To enable, you must enable it yourself in <code>_flags.scss</code> and create a custom build.</p>
+                            <p>
+                                ⚠ Note that the viewport variants are disabled from the default build of Cirrus. To
+                                enable, you must enable it yourself in <code>_flags.scss</code> and create a custom
+                                build.
+                            </p>
 
                             <div className="space"></div>
-                            <CodeBlock code={`//_flags.scss
+                            <CodeBlock
+                                code={`//_flags.scss
 $_VIEWPORT_CLASS_FLAGS: (
     //...
     /* 'ZINDEX': false, */
     'ZINDEX': true,
     //...
-);`} language="scss"/>
+);`}
+                                language="scss"
+                            />
                         </Blockquote>
 
                         <p>
-                            To use the viewport variant of a given class, you just need to suffix each class with a viewport selector. For example, if I only want <code>u-z-20</code> to be applied to some element for <code>lg</code> and above, then I would use the <code>u-z-20-lg</code> class.
+                            To use the viewport variant of a given class, you just need to suffix each class with a
+                            viewport selector. For example, if I only want <code>u-z-20</code> to be applied to some
+                            element for <code>lg</code> and above, then I would use the <code>u-z-20-lg</code> class.
                         </p>
 
                         <CodeBlock
@@ -185,29 +200,38 @@ $_VIEWPORT_CLASS_FLAGS: (
                     <div className="content">
                         <Headline title="Variants" link="#variants" size="4" />
                         <div className="divider"></div>
-                        
-                        <p>The classes specified above are the default utility classes for setting z-indexes. You can add, change, or remove classes within the <code>_config.scss</code> file of Cirrus.</p>
+
+                        <p>
+                            The classes specified above are the default utility classes for setting z-indexes. You can
+                            add, change, or remove classes within the <code>_config.scss</code> file of Cirrus.
+                        </p>
 
                         <div className="space"></div>
 
-                        <CodeBlock code={`// _config.scss
+                        <CodeBlock
+                            code={`// _config.scss
 $config: (
     z-index: (
         25: 25,
         75: 75,
     )
-);`} language="scss" />
+);`}
+                            language="scss"
+                        />
                         <p>This would generate the following classes.</p>
-                        <CodeBlock code={`.u-z-25 {
+                        <CodeBlock
+                            code={`.u-z-25 {
     z-index: 25 !important;
 }
 .u-z-75 {
     z-index: 75 !important;
-}`} language="css" />
+}`}
+                            language="css"
+                        />
                     </div>
                 </section>
             </div>
-            
+
             <TableOfContents entries={toc} />
         </main>
     );

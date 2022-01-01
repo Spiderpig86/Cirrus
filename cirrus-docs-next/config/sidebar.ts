@@ -146,6 +146,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Breadcrumbs',
+                url: '/components/breadcrumbs'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Card',
                 url: '/components/cards'
             },
@@ -437,6 +443,12 @@ export const sidebarConfig: SidebarConfig[] = [
                 glyph: null,
                 text: 'Positions',
                 url: '/utils/positions'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Z-Index',
+                url: '/utils/zindex'
             }
         ],
     },
