@@ -1,4 +1,5 @@
 @use '../internal' as *;
+@use '../base/spacing.scss';
 
 $generate-utility: should-generate-classes($TABS);
 

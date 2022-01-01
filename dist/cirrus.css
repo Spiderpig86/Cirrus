@@ -14047,6 +14047,13 @@ ul .divider::after {
   content: "/";
   padding-right: 0.5rem;
 }
+.breadcrumb .breadcrumb__item.breadcrumb__item--active {
+  cursor: default;
+  pointer-events: none;
+}
+.breadcrumb .breadcrumb__item.breadcrumb__item--active a {
+  color: #374054;
+}
 
 /* CARDS */
 .card {
