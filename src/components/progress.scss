@@ -12,6 +12,8 @@ $generate-utility: should-generate-classes($PROGRESS);
     $progress-border-radius: 0.25rem;
 
     .progress {
+        --progress-color: #{$progress-primary};
+
         -moz-appearance: none;
         -webkit-appearance: none;
         background-color: $progress-background;
@@ -27,35 +29,14 @@ $generate-utility: should-generate-classes($PROGRESS);
             background-color: transparent;
         }
         &::-webkit-progress-value {
-            background-color: $progress-primary;
+            background-color: var(--progress-color);
         }
         &::-moz-progress-bar {
-            background-color: $progress-primary;
+            background-color: var(--progress-color);
         }
         &::-ms-fill {
-            background-color: $progress-primary;
+            background-color: var(--progress-color);
             border: none;
-        }
-
-        &:indeterminate {
-            animation: progress-indeterminate 1.5s linear infinite;
-            background: $progress-background
-                linear-gradient(to right, $progress-primary 30%, $progress-background 30%)
-                top
-                left /
-                150%
-                150%
-                no-repeat;
-
-            &::-webkit-progress-bar {
-                background-color: transparent;
-            }
-            &::-moz-progress-bar {
-                background-color: transparent;
-            }
-            &::-ms-fill {
-                animation-name: none;
-            }
         }
 
         // Sizes
@@ -68,16 +49,28 @@ $generate-utility: should-generate-classes($PROGRESS);
         // Themes
         @each $class, $color in $progress-bar-themes {
             &.progress--#{$class} {
-                &::-webkit-progress-value {
-                    background-color: $color;
-                }
-                &::-moz-progress-bar {
-                    background-color: $color;
-                }
-                &::-ms-fill {
-                    background-color: $color;
-                    border: none;
-                }
+                --progress-color: #{$color};
+            }
+        }
+
+        &:indeterminate {
+            animation: progress-indeterminate 1.5s linear infinite;
+            background: $progress-background
+                linear-gradient(to right, var(--progress-color) 30%, $progress-background 30%)
+                top
+                left /
+                150%
+                150%
+                no-repeat;
+
+            &::-webkit-progress-bar {
+                --progress-color: transparent;
+            }
+            &::-moz-progress-bar {
+                --progress-color: transparent;
+            }
+            &::-ms-fill {
+                animation-name: none;
             }
         }
     }

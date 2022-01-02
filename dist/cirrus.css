@@ -11791,6 +11791,7 @@ ul .divider::after {
   }
 }
 .progress {
+  --progress-color: #f03d4d;
   -moz-appearance: none;
   -webkit-appearance: none;
   background-color: #e9ecef;
@@ -11805,27 +11806,14 @@ ul .divider::after {
   background-color: transparent;
 }
 .progress::-webkit-progress-value {
-  background-color: #f03d4d;
+  background-color: var(--progress-color);
 }
 .progress::-moz-progress-bar {
-  background-color: #f03d4d;
+  background-color: var(--progress-color);
 }
 .progress::-ms-fill {
-  background-color: #f03d4d;
+  background-color: var(--progress-color);
   border: none;
-}
-.progress:indeterminate {
-  animation: progress-indeterminate 1.5s linear infinite;
-  background: #e9ecef linear-gradient(to right, #f03d4d 30%, #e9ecef 30%) top left/150% 150% no-repeat;
-}
-.progress:indeterminate::-webkit-progress-bar {
-  background-color: transparent;
-}
-.progress:indeterminate::-moz-progress-bar {
-  background-color: transparent;
-}
-.progress:indeterminate::-ms-fill {
-  animation-name: none;
 }
 .progress.progress--xs {
   height: 0.25rem;
@@ -11842,85 +11830,42 @@ ul .divider::after {
 .progress.progress--xl {
   height: 1.25rem;
 }
-.progress.progress--primary::-webkit-progress-value {
-  background-color: #f03d4d;
+.progress.progress--primary {
+  --progress-color: #f03d4d;
 }
-.progress.progress--primary::-moz-progress-bar {
-  background-color: #f03d4d;
+.progress.progress--gray {
+  --progress-color: #d5d7dc;
 }
-.progress.progress--primary::-ms-fill {
-  background-color: #f03d4d;
-  border: none;
+.progress.progress--dark {
+  --progress-color: #363636;
 }
-.progress.progress--gray::-webkit-progress-value {
-  background-color: #d5d7dc;
+.progress.progress--link {
+  --progress-color: #5e5cc7;
 }
-.progress.progress--gray::-moz-progress-bar {
-  background-color: #d5d7dc;
+.progress.progress--info {
+  --progress-color: #2972fa;
 }
-.progress.progress--gray::-ms-fill {
-  background-color: #d5d7dc;
-  border: none;
+.progress.progress--success {
+  --progress-color: #0dd157;
 }
-.progress.progress--dark::-webkit-progress-value {
-  background-color: #363636;
+.progress.progress--warning {
+  --progress-color: #fab633;
 }
-.progress.progress--dark::-moz-progress-bar {
-  background-color: #363636;
+.progress.progress--danger {
+  --progress-color: #fb4143;
 }
-.progress.progress--dark::-ms-fill {
-  background-color: #363636;
-  border: none;
+.progress:indeterminate {
+  animation: progress-indeterminate 1.5s linear infinite;
+  background: #e9ecef linear-gradient(to right, var(--progress-color) 30%, #e9ecef 30%) top left/150% 150% no-repeat;
 }
-.progress.progress--link::-webkit-progress-value {
-  background-color: #5e5cc7;
+.progress:indeterminate::-webkit-progress-bar {
+  --progress-color: transparent;
 }
-.progress.progress--link::-moz-progress-bar {
-  background-color: #5e5cc7;
+.progress:indeterminate::-moz-progress-bar {
+  --progress-color: transparent;
 }
-.progress.progress--link::-ms-fill {
-  background-color: #5e5cc7;
-  border: none;
-}
-.progress.progress--info::-webkit-progress-value {
-  background-color: #2972fa;
-}
-.progress.progress--info::-moz-progress-bar {
-  background-color: #2972fa;
-}
-.progress.progress--info::-ms-fill {
-  background-color: #2972fa;
-  border: none;
-}
-.progress.progress--success::-webkit-progress-value {
-  background-color: #0dd157;
-}
-.progress.progress--success::-moz-progress-bar {
-  background-color: #0dd157;
-}
-.progress.progress--success::-ms-fill {
-  background-color: #0dd157;
-  border: none;
-}
-.progress.progress--warning::-webkit-progress-value {
-  background-color: #fab633;
-}
-.progress.progress--warning::-moz-progress-bar {
-  background-color: #fab633;
-}
-.progress.progress--warning::-ms-fill {
-  background-color: #fab633;
-  border: none;
-}
-.progress.progress--danger::-webkit-progress-value {
-  background-color: #fb4143;
-}
-.progress.progress--danger::-moz-progress-bar {
-  background-color: #fb4143;
-}
-.progress.progress--danger::-ms-fill {
-  background-color: #fb4143;
-  border: none;
+.progress:indeterminate::-ms-fill {
+  animation-name: none;
 }
 
 @keyframes progress-indeterminate {
