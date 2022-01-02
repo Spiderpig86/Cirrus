@@ -551,7 +551,7 @@ export const TablePage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Placeholder', link: './placeholder' }}
+                    prevLink={{ name: 'Progress', link: './progress' }}
                     nextLink={{ name: 'Tabs', link: './tabs' }}
                 />
             </div>

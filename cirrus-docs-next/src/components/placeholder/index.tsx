@@ -136,7 +136,7 @@ export const PlaceholderPage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{ name: 'Pagination', link: './pagination' }}
-                    nextLink={{ name: 'Table', link: './table' }}
+                    nextLink={{ name: 'Progress', link: './progress' }}
                 />
             </div>
             <TableOfContents entries={toc} />

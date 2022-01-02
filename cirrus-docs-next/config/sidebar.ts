@@ -194,6 +194,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Progress',
+                url: '/components/progress'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Table',
                 url: '/components/table'
             },

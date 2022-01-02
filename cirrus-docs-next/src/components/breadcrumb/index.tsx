@@ -50,6 +50,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
                             to style the entire component and each navigation item is wrapped using the{' '}
                             <code>breadcrumb__item</code> class.
                         </p>
+                        <p>To set a breadcrumb item's active state, just add the <code>breadcrumb__item--active</code> to the <code>breadcrumb__item</code>.</p>
                         <p>With a few lines of HTML, we can get the default breadcrumb which looks like this:</p>
 
                         <div className="space"></div>
@@ -61,8 +62,8 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
                             <li className="breadcrumb__item">
                                 <a href="#">Settings</a>
                             </li>
-                            <li className="breadcrumb__item">
-                                <a href="#">Change Avatar</a>
+                            <li className="breadcrumb__item breadcrumb__item--active">
+                                <a href="#">Search: "account"</a>
                             </li>
                         </ul>
                         <div className="space"></div>
@@ -74,8 +75,8 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
     <li class="breadcrumb__item">
         <a href="#">Settings</a>
     </li>
-    <li class="breadcrumb__item">
-        <a href="#">Change Avatar</a>
+    <li class="breadcrumb__item breadcrumb__item--active">
+        <a href="#">Search: "account"</a>
     </li>
 </ul>`}
                             language={'htmlbars'}
@@ -104,7 +105,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
                             <li className="breadcrumb__item">
                                 <a href="#">Settings</a>
                             </li>
-                            <li className="breadcrumb__item">
+                            <li className="breadcrumb__item breadcrumb__item--active">
                                 <a href="#">Change Avatar</a>
                             </li>
                         </ul>
@@ -117,7 +118,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
     <li class="breadcrumb__item">
         <a href="#">Settings</a>
     </li>
-    <li class="breadcrumb__item">
+    <li class="breadcrumb__item breadcrumb__item--active">
         <a href="#">Change Avatar</a>
     </li>
 </ul>`}
@@ -134,7 +135,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
                             <li className="breadcrumb__item">
                                 <a href="#">Settings</a>
                             </li>
-                            <li className="breadcrumb__item">
+                            <li className="breadcrumb__item breadcrumb__item--active">
                                 <a href="#">Change Avatar</a>
                             </li>
                         </ul>
@@ -147,7 +148,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
     <li class="breadcrumb__item">
         <a href="#">Settings</a>
     </li>
-    <li class="breadcrumb__item">
+    <li class="breadcrumb__item breadcrumb__item--active">
         <a href="#">Change Avatar</a>
     </li>
 </ul>`}
@@ -174,7 +175,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
                             <li className="breadcrumb__item">
                                 <a href="#">Settings</a>
                             </li>
-                            <li className="breadcrumb__item">
+                            <li className="breadcrumb__item breadcrumb__item--active">
                                 <a href="#">Change Avatar</a>
                             </li>
                         </ul>
@@ -187,7 +188,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
     <li class="breadcrumb__item">
         <a href="#">Settings</a>
     </li>
-    <li class="breadcrumb__item">
+    <li class="breadcrumb__item breadcrumb__item--active">
         <a href="#">Change Avatar</a>
     </li>
 </ul>`}
@@ -203,7 +204,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
                             <li className="breadcrumb__item">
                                 <a href="#">Settings</a>
                             </li>
-                            <li className="breadcrumb__item">
+                            <li className="breadcrumb__item breadcrumb__item--active">
                                 <a href="#">Change Avatar</a>
                             </li>
                         </ul>
@@ -216,7 +217,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
     <li class="breadcrumb__item">
         <a href="#">Settings</a>
     </li>
-    <li class="breadcrumb__item">
+    <li class="breadcrumb__item breadcrumb__item--active">
         <a href="#">Change Avatar</a>
     </li>
 </ul>`}
@@ -232,7 +233,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
                             <li className="breadcrumb__item">
                                 <a href="#">Settings</a>
                             </li>
-                            <li className="breadcrumb__item">
+                            <li className="breadcrumb__item breadcrumb__item--active">
                                 <a href="#">Change Avatar</a>
                             </li>
                         </ul>
@@ -245,7 +246,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
     <li class="breadcrumb__item">
         <a href="#">Settings</a>
     </li>
-    <li class="breadcrumb__item">
+    <li class="breadcrumb__item breadcrumb__item--active">
         <a href="#">Change Avatar</a>
     </li>
 </ul>`}
@@ -261,7 +262,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
                             <li className="breadcrumb__item">
                                 <a href="#">Settings</a>
                             </li>
-                            <li className="breadcrumb__item">
+                            <li className="breadcrumb__item breadcrumb__item--active">
                                 <a href="#">Change Avatar</a>
                             </li>
                         </ul>
@@ -274,7 +275,7 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
     <li class="breadcrumb__item">
         <a href="#">Settings</a>
     </li>
-    <li class="breadcrumb__item">
+    <li class="breadcrumb__item breadcrumb__item--active">
         <a href="#">Change Avatar</a>
     </li>
 </ul>`}

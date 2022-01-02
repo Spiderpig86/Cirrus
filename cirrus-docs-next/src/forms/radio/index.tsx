@@ -9,11 +9,9 @@ import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
-import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { PAGE_TITLE_PREFIX, v1Colors } from '../../../constants';
 
 export const FormsRadioPage: React.FC<any> = (props) => {
-    // TODO: Create constants
-    const v1Colors = ['dark', 'primary', 'link', 'info', 'success', 'warning', 'danger'];
     return (
         <main className="page-layout">
         <Head>
