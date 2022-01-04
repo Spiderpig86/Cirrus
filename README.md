@@ -68,37 +68,37 @@ Framework components are now broken down into `core` and `ext` packages. The `co
 The `helpers` folder contains configurations, utilities, and other styles shared by both `core` and `ext`.
 
 #### Core
-* [Buttons](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/button.scss "Buttons") - Styles for the button with 3 different variations.
-* [Code](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/code.scss "Code") - Style for code markup blocks.
-* [Default (Base)](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/default.scss "Default") - The core of this framework.
-* [Font](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/font.scss "Font") - All text styles for this framework for headers, articles, blockquotes, and paragraphs.
-* [Footer](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/footer.scss "Footer") - Basic styles for setting up a page footer.
-* [Forms](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/forms.scss "Forms") - Form styles for textboxes, textfields, selects, and layout.
-* [Frames](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/frames.scss "Frames") - Flexible panel with header, body, and footer for layouts.
-* [Header](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/header.scss "Header") - Styles for header elements including drop down menus.
-* [Layout](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/layout.scss "Layout") - Rules for grids, item alignment, and layout borders.
-* [Links](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/links.scss "Links") - Link styles with different effects.
-* [Lists](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/lists.scss "Lists") - A simple stylesheet to simplify list UI.
-* [Media](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/media.scss "Media") - Rules for styling images, videos, figures, avatars, and other media components.
-* [Spacing](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/spacing.scss "Spacing") - Classes for margin/padding.
-* [Tables](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/table.scss "Tables") - Clean designs for tables.
-* [Theme](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/theme.scss "Theme") - Default colors of the framework.
-* [Util](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/utils "Utils") - Designed to solve many common headaches with CSS and provide flexibility for modifying existing classes.
+* [Buttons](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/button.scss "Buttons") - Styles for the button with 3 different variations.
+* [Code](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/code.scss "Code") - Style for code markup blocks.
+* [Default (Base)](https://github.com/Spiderpig86/Cirrus/blob/master/src/base/default.scss "Default") - The core of this framework.
+* [Font](https://github.com/Spiderpig86/Cirrus/blob/master/src/base/font.scss "Font") - All text styles for this framework for headers, articles, blockquotes, and paragraphs.
+* [Footer](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/footer.scss "Footer") - Basic styles for setting up a page footer.
+* [Forms](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/forms.scss "Forms") - Form styles for textboxes, textfields, selects, and layout.
+* [Frames](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/frames.scss "Frames") - Flexible panel with header, body, and footer for layouts.
+* [Header](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/header.scss "Header") - Styles for header elements including drop down menus.
+* [Layout](https://github.com/Spiderpig86/Cirrus/blob/master/src/base/layout.scss "Layout") - Rules for grids, item alignment, and layout borders.
+* [Links](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/links.scss "Links") - Link styles with different effects.
+* [Lists](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/lists.scss "Lists") - A simple stylesheet to simplify list UI.
+* [Media](https://github.com/Spiderpig86/Cirrus/blob/master/src/base/media.scss "Media") - Rules for styling images, videos, figures, avatars, and other media components.
+* [Spacing](https://github.com/Spiderpig86/Cirrus/blob/master/src/base/spacing.scss "Spacing") - Classes for margin/padding.
+* [Tables](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/table.scss "Tables") - Clean designs for tables.
+* [Theme](https://github.com/Spiderpig86/Cirrus/blob/master/src/internal/_theme.scss "Theme") - Default colors of the framework.
+* [Util](https://github.com/Spiderpig86/Cirrus/blob/master/src/utils "Utils") - Designed to solve many common headaches with CSS and provide flexibility for modifying existing classes.
 
 #### Ext
-* [Animations](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/animations.scss "Animations") - Consists of animations that will work with the controls.
-* [Avatar](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/avatar.scss "Avatar") - Styles for user avatars.
-* [Cards](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/card.scss "Cards") - Base for card controls.
-* [Grid](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/card.scss "Grid") - Experimental implementation of CSS Grid standard.
-* [Modal](https://github.com/Spiderpig86/Cirrus/blob/master/src/core/modal.scss "Modal") - Styles for a pop up modal dialog.
-* [Modifiers](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/modifiers.scss "Modifiers") - Classes designed for modifying text and backgrounds.
-* [Pagination](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/pagination.scss "Pagination") - Design for pagination and pagination navigation links.
-* [Placeholder](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/placeholder.scss "Placeholder") - Styles for a control designed to be a placeholder such as "Coming Soon" panels and so on.
-* [Tabs](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tabs.scss "Tabs") - Contains styles for tab controls.
-* [Tags](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tags.scss "Tags") - Chip-like controls that are helpful for listing items.
-* [Tiles](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tiles.scss "Tiles") - Flexible layout used for tiling controls horizontally.
-* [Toast](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/toast.scss "Toast") - A small overlay notification for websites.
-* [Tooltips](https://github.com/Spiderpig86/Cirrus/blob/master/src/ext/tooltips.scss "Tooltips") - Add tooltips to any control for contextual info.
+* [Animations](https://github.com/Spiderpig86/Cirrus/blob/master/src/base/animations.scss "Animations") - Consists of animations that will work with the controls.
+* [Avatar](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/avatar.scss "Avatar") - Styles for user avatars.
+* [Cards](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/card.scss "Cards") - Base for card controls.
+* [Grid](https://github.com/Spiderpig86/Cirrus/blob/master/src/base/grid.scss "Grid") - Experimental implementation of CSS Grid standard.
+* [Modal](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/modal.scss "Modal") - Styles for a pop up modal dialog.
+* [Modifiers](https://github.com/Spiderpig86/Cirrus/blob/master/src/base/modifiers.scss "Modifiers") - Classes designed for modifying text and backgrounds.
+* [Pagination](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/pagination.scss "Pagination") - Design for pagination and pagination navigation links.
+* [Placeholder](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/placeholder.scss "Placeholder") - Styles for a control designed to be a placeholder such as "Coming Soon" panels and so on.
+* [Tabs](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/tabs.scss "Tabs") - Contains styles for tab controls.
+* [Tags](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/tags.scss "Tags") - Chip-like controls that are helpful for listing items.
+* [Tiles](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/tiles.scss "Tiles") - Flexible layout used for tiling controls horizontally.
+* [Toast](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/toast.scss "Toast") - A small overlay notification for websites.
+* [Tooltips](https://github.com/Spiderpig86/Cirrus/blob/master/src/components/tooltips.scss "Tooltips") - Add tooltips to any control for contextual info.
 <br />
 
 ## :pager: jQuery
