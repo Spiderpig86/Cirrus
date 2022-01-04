@@ -16,15 +16,6 @@ $generate-utility: should-generate-classes($FOOTER);
             position: fixed;
         }
 
-        a {
-            color: map-get($grays, '200');
-            font-weight: bolder;
-        }
-
-        a:hover {
-            color: map-get($grays, '400');
-        }
-
         p {
             color: map-get($grays, '600');
         }
