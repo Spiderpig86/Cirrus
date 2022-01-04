@@ -55,6 +55,15 @@
     }
 }
 
+.bg-transparent {
+    background-color: transparent;
+}
+
+.text-transparent {
+    border-color: transparent;
+    color: transparent;
+}
+
 /* v2 */
 
 @each $name, $palette in $v2Palettes {

@@ -4386,6 +4386,15 @@ video.video-fullscreen {
   color: rgba(255, 255, 255, var(--color-opacity)) !important;
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
+.text-transparent {
+  border-color: transparent;
+  color: transparent;
+}
+
 /* v2 */
 .bg-pink-100 {
   background-color: rgba(252, 232, 243, var(--bg-opacity)) !important;
