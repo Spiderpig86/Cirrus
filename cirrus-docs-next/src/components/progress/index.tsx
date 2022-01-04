@@ -68,7 +68,7 @@ export const ProgressPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop" id="Sizes">
+                <section className="padtop" id="sizes">
                     <div className="content">
                         <Headline title="Sizes" link="#sizes" size="4" />
                         <div className="divider"></div>

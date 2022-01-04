@@ -508,8 +508,8 @@ position: absolute;`,
                 <Pagination
                     prevLink={{ name: 'Flexbox', link: './flexbox' }}
                     nextLink={{
-                        name: 'Overflow',
-                        link: './overflow',
+                        name: 'Opacity',
+                        link: './opacity',
                     }}
                 />
             </div>

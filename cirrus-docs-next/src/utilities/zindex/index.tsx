@@ -23,7 +23,6 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
             style: `z-index: ${zIndex} !important`,
         };
     });
-    const docExamples: DocExample[] = [];
 
     return (
         <main className="page-layout">
@@ -161,14 +160,14 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
                             </p>
 
                             <div className="space"></div>
+                            
                             <CodeBlock
-                                code={`//_flags.scss
-$_VIEWPORT_CLASS_FLAGS: (
-    //...
-    /* 'ZINDEX': false, */
-    'ZINDEX': true,
-    //...
-);`}
+                                code={`//_configs.scss
+$config: (
+    viewports: (
+        flags.$ZINDEX: true,
+    )
+) !default;`}
                                 language="scss"
                             />
                         </Blockquote>
@@ -228,8 +227,19 @@ $config: (
 }`}
                             language="css"
                         />
+                        <p>
+                            Learn more about how to extend Cirrus to support your use cases in the{' '}
+                            <Link href="/fundamentals/configuration">
+                                <a className="u u-LR">Configuration</a>
+                            </Link>{' '}
+                            documentation.
+                        </p>
                     </div>
                 </section>
+                
+                <Pagination
+                    prevLink={{ name: 'Positions', link: './positions' }}
+                />
             </div>
 
             <TableOfContents entries={toc} />

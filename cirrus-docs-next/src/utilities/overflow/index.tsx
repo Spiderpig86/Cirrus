@@ -530,7 +530,7 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Misc', link: './misc' }}
+                    prevLink={{ name: 'Opacity', link: './opacity' }}
                     nextLink={{
                         name: 'Positions',
                         link: './positions',

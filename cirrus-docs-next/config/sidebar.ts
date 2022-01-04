@@ -441,6 +441,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Opacity',
+                url: '/utils/opacity'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Overflow',
                 url: '/utils/overflow'
             },
