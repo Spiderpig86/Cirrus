@@ -6,6 +6,7 @@ import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
+import { ClassTable } from '../../../layouts/components/class-table';
 import { toc } from './toc';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
@@ -94,38 +95,7 @@ position: absolute;`,
                             standalone category.
                         </p>
 
-                        <table className="table fixed-head u-text-left">
-                            <thead>
-                                <tr>
-                                    <th
-                                        style={{
-                                            width: '200px',
-                                        }}
-                                    >
-                                        Class
-                                    </th>
-                                    <th>Styles</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {classTable.map((row, index) => (
-                                    <tr key={index}>
-                                        <td
-                                            style={{
-                                                width: '200px',
-                                            }}
-                                        >
-                                            <code className="text-blue-600 bg-blue-100">{row.class}</code>
-                                        </td>
-                                        <td>
-                                            <pre>
-                                                <code>{row.style}</code>
-                                            </pre>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                        <ClassTable classTable={classTable} />
                     </div>
                 </section>
 

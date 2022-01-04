@@ -61,6 +61,11 @@ table tbody {
 }
 
 /* Code */
+.class-table pre > code {
+    border-left: none;
+    padding: 0;
+}
+
 code {
     font-size: 14px !important;
 }

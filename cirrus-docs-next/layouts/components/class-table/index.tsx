@@ -11,7 +11,7 @@ export interface ClassTableProps {
 
 export const ClassTable: React.FC<ClassTableProps> = (props) => {
     return (
-        <table className="table fixed-head u-text-left">
+        <table className="class-table table fixed-head u-text-left">
             <thead>
                 <tr>
                     <th
@@ -35,7 +35,9 @@ export const ClassTable: React.FC<ClassTableProps> = (props) => {
                             <code className="text-blue-600 bg-blue-100">{row.class}</code>
                         </td>
                         <td>
-                            <code className="text-purple-600 bg-transparent">{row.style}</code>
+                            <pre>
+                                <code className="text-purple-600 bg-transparent">{row.style}</code>
+                            </pre>
                         </td>
                     </tr>
                 ))}
