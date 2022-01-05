@@ -185,11 +185,11 @@ $config: (
                         <p>This would generate the following <b>gap</b> classes.</p>
                         <CodeBlock
                             code={`.u-gap-0 {
-    gap: calc(0.25rem * 0)rem !important
+    gap: calc(0.25rem * 0) !important
 }
 /* ... */
 .u-gap-72 {
-    gap: calc(0.25rem * 72)rem !important;
+    gap: calc(0.25rem * 72) !important;
 }`}
                             language="css"
                         />
