@@ -435,6 +435,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Gap',
+                url: '/utils/gap'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Misc',
                 url: '/utils/misc'
             },

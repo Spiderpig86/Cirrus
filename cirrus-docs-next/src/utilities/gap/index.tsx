@@ -7,33 +7,30 @@ import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
-import { ClassTable } from '../../../layouts/components/class-table';
 import { Tag } from '../../../layouts/components/tag';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
-import { DocExample } from '../../../models/doc-example';
-import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { DEFAULT_SIZING_SYSTEM, PAGE_TITLE_PREFIX } from '../../../constants';
+import { ClassTable } from '../../../layouts/components/class-table';
 import { Blockquote } from '../../../layouts/components/blockquote';
 
-export const ZIndexUtilsPage: React.FC<any> = (props) => {
-    const DEFAULT_Z_INDEX_CLASSES = ['0', '10', '20', '30', '40', '50', 'auto'];
-
-    const classTable = DEFAULT_Z_INDEX_CLASSES.map((zIndex) => {
+export const GapUtilsPage: React.FC<any> = (props) => {
+    const classTable = DEFAULT_SIZING_SYSTEM.map((size) => {
         return {
-            class: `u-z-${zIndex}`,
-            style: `z-index: ${zIndex} !important`,
+            class: `u-gap-${size}`,
+            style: `gap: calc([space-size] * ${size}) !important`,
         };
     });
 
     return (
         <main className="page-layout">
             <Head>
-                <title>{PAGE_TITLE_PREFIX} Z-Indexes</title>
+                <title>{PAGE_TITLE_PREFIX} Gap</title>
             </Head>
             <div>
-                <section className="padtop" id="z-index">
+                <section className="padtop" id="gap">
                     <div className="content">
-                        <Headline title="Z-Index" link="#z-index" />
+                        <Headline title="Gap" link="#gap" />
                         <div className="divider"></div>
                         <Tag
                             leftProps={{
@@ -45,7 +42,17 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
                                 text: `0.7.0`,
                             }}
                         />
-                        <p>These are utility classes that specify the z-index of elements.</p>
+                        <p>
+                            Define gutters between{' '}
+                            <Link href="/utilities/flexbox">
+                                <a className="u u-LR">Flexbox</a>
+                            </Link>{' '}
+                            and{' '}
+                            <Link href="/grid/templates">
+                                <a className="u u-LR">Grid</a>
+                            </Link>{' '}
+                            items.
+                        </p>
 
                         <ClassTable classTable={classTable} />
                     </div>
@@ -56,62 +63,51 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
                         <Headline title="Examples" link="#examples" size="4" />
                         <div className="divider"></div>
 
-                        <p>Below is a demo of all supported z-index utility classes.</p>
+                        <p>
+                            Use <code>u-gap-[size]</code> to change the gap between rows and columns in both flexbox and
+                            grid layouts.
+                        </p>
+                        <p>Learn more about Cirrus's sizing system to see what values can be used for <code>u-gap-[size]</code>.</p>
 
-                        <div className="bg-teal-100 u-flex u-flex-column p-4">
-                            <div
-                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-50"
-                                style={{ marginLeft: '5rem' }}
-                            >
-                                <h3 className="my-1">50</h3>
-                            </div>
-                            <div
-                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-40"
-                                style={{ transform: 'translateY(-0.75rem)', marginLeft: '4rem' }}
-                            >
-                                <h3 className="my-1">40</h3>
-                            </div>
-                            <div
-                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-30"
-                                style={{ transform: 'translateY(-1.25rem)', marginLeft: '3rem' }}
-                            >
-                                <h3 className="my-1">30</h3>
-                            </div>
-                            <div
-                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-20"
-                                style={{ transform: 'translateY(-2rem)', marginLeft: '2rem' }}
-                            >
-                                <h3 className="my-1">20</h3>
-                            </div>
-                            <div
-                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-10"
-                                style={{ transform: 'translateY(-2.75rem)', marginLeft: '1rem' }}
-                            >
-                                <h3 className="my-1">10</h3>
-                            </div>
-                            <div
-                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-0"
-                                style={{ transform: 'translateY(-3.5rem)' }}
-                            >
-                                <h3 className="my-1">0</h3>
-                            </div>
-                            <div className="u-text-center text-teal-500">
-                                <p>And of course...</p>
-                            </div>
-                            <div className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-auto">
-                                <h3 className="my-0">auto</h3>
-                            </div>
+                        <div className="p-2 u-round-sm bg-indigo-100 u-flex u-gap-4 text-white font-bold u-text-center">
+                            <div className="p-4 u-round-sm w-100 bg-indigo-500">1</div>
+                            <div className="p-4 u-round-sm w-100 bg-indigo-500">2</div>
+                            <div className="p-4 u-round-sm w-100 bg-indigo-500">3</div>
+                            <div className="p-4 u-round-sm w-100 bg-indigo-500">4</div>
                         </div>
 
-                        <div className="space space--lg"></div>
+                        <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="u-z-50 ...">50</div>
-<div class="u-z-40 ...">40</div>
-<div class="u-z-30 ...">30</div>
-<div class="u-z-20 ...">20</div>
-<div class="u-z-10 ...">10</div>
-<div class="u-z-0 ...">0</div>
-<div class="u-z-auto ...">auto</div>`}
+                            code={`<div class="p-2 u-round-sm bg-indigo-100 u-flex u-gap-4 text-white font-bold u-text-center">
+    <div class="p-4 u-round-sm w-100 bg-indigo-500">1</div>
+    <div class="p-4 u-round-sm w-100 bg-indigo-500">2</div>
+    <div class="p-4 u-round-sm w-100 bg-indigo-500">3</div>
+    <div class="p-4 u-round-sm w-100 bg-indigo-500">4</div>
+</div>`}
+                            language="htmlbars"
+                        />
+
+                        <div className="space space--lg"></div>
+    
+                        <p>Another example using a grid layout.</p>
+    
+                        <div className="p-2 u-round-sm bg-pink-100 grid grid-cols-3 u-gap-3 text-white font-bold u-text-center">
+                            <div className="p-4 u-round-sm w-100 bg-pink-500">1</div>
+                            <div className="p-4 u-round-sm w-100 bg-pink-500">2</div>
+                            <div className="p-4 u-round-sm w-100 bg-pink-500">3</div>
+                            <div className="p-4 u-round-sm w-100 bg-pink-500">4</div>
+                            <div className="p-4 u-round-sm w-100 bg-pink-500">5</div>
+                            <div className="p-4 u-round-sm w-100 bg-pink-500">6</div>
+                        </div>
+                        <CodeBlock
+                            code={`<div class="p-2 u-round-sm bg-pink-100 grid grid-cols-3 u-gap-3 text-white font-bold u-text-center">
+    <div class="p-4 u-round-sm w-100 bg-pink-500">1</div>
+    <div class="p-4 u-round-sm w-100 bg-pink-500">2</div>
+    <div class="p-4 u-round-sm w-100 bg-pink-500">3</div>
+    <div class="p-4 u-round-sm w-100 bg-pink-500">4</div>
+    <div class="p-4 u-round-sm w-100 bg-pink-500">5</div>
+    <div class="p-4 u-round-sm w-100 bg-pink-500">6</div>
+</div>`}
                             language="htmlbars"
                         />
                     </div>
@@ -135,7 +131,7 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
                                 code={`//_configs.scss
 $config: (
     viewports: (
-        flags.$ZINDEX: true,
+        flags.$GAP: true,
     )
 ) !default;`}
                                 language="scss"
@@ -144,12 +140,12 @@ $config: (
 
                         <p>
                             To use the viewport variant of a given class, you just need to suffix each class with a
-                            viewport selector. For example, if I only want <code>u-z-20</code> to be applied to some
-                            element for <code>lg</code> and above, then I would use the <code>u-z-20-lg</code> class.
+                            viewport selector. For example, use <code>u-gap-3-md</code> to apply{' '}
+                            <code>gap: calc(0.5rem * 3)</code> to an element only at medium screen sizes and above.
                         </p>
 
                         <CodeBlock
-                            code={`<div class="u-z-20-md">
+                            code={`<div class="u-gap-3-md">
     <!-- ... -->
 </div>`}
                             language="html"
@@ -171,8 +167,7 @@ $config: (
                         <div className="divider"></div>
 
                         <p>
-                            The classes specified above are the default utility classes for setting z-indexes. You can
-                            add, change, or remove classes within the <code>_config.scss</code> file of Cirrus.
+                            The classes specified above are the default utility classes for defining gaps and it is dependent on the sizing used within the framework. You can add, change, or remove sizes in <code>_config.scss</code> in your own build.
                         </p>
 
                         <div className="space"></div>
@@ -180,23 +175,25 @@ $config: (
                         <CodeBlock
                             code={`// _config.scss
 $config: (
-    z-index: (
-        25: 25,
-        75: 75,
+    sizing-system: (
+        base-size: 0.25rem,
+        steps: (0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 60, 72)
     )
 );`}
                             language="scss"
                         />
-                        <p>This would generate the following classes.</p>
+                        <p>This would generate the following <b>gap</b> classes.</p>
                         <CodeBlock
-                            code={`.u-z-25 {
-    z-index: 25 !important;
+                            code={`.u-gap-0 {
+    gap: calc(0.25rem * 0)rem !important
 }
-.u-z-75 {
-    z-index: 75 !important;
+/* ... */
+.u-gap-72 {
+    gap: calc(0.25rem * 72)rem !important;
 }`}
                             language="css"
                         />
+
                         <p>
                             Learn more about how to extend Cirrus to support your use cases in the{' '}
                             <Link href="/fundamentals/configuration">
@@ -206,9 +203,10 @@ $config: (
                         </p>
                     </div>
                 </section>
-                
+
                 <Pagination
-                    prevLink={{ name: 'Positions', link: './positions' }}
+                    prevLink={{ name: 'Flexbox', link: './flexbox' }}
+                    nextLink={{ name: 'Misc', link: './misc' }}
                 />
             </div>
 
@@ -217,4 +215,4 @@ $config: (
     );
 };
 
-export default withLayout(<DefaultLayout />)(ZIndexUtilsPage);
+export default withLayout(<DefaultLayout />)(GapUtilsPage);

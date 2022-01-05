@@ -527,7 +527,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{ name: 'Display', link: './display' }}
-                    nextLink={{ name: 'Misc', link: './misc' }}
+                    nextLink={{ name: 'Gap', link: './gap' }}
                 />
             </div>
             <TableOfContents entries={toc} />

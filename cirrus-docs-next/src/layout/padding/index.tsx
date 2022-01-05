@@ -9,11 +9,10 @@ import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { FormatString } from '../../../utils/string';
 import { DefaultLayout } from '../../../layouts/default';
-import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { DEFAULT_SIZING_SYSTEM, PAGE_TITLE_PREFIX } from '../../../constants';
 import Link from 'next/link';
 
 export const PaddingPage: React.FC<any> = (props) => {
-    const sizes = [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32];
     const types = [
         {
             class: `p-(0)`,
@@ -50,7 +49,7 @@ padding-bottom: (0) !important;`,
 
     useEffect(() => {
         const rows = types.map((type) => {
-            return sizes.map((size) => {
+            return DEFAULT_SIZING_SYSTEM.map((size) => {
                 return {
                     class: FormatString(type.class, size.toString()),
                     style: FormatString(type.style, `${0.5 * size}rem`),

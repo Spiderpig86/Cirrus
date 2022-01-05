@@ -476,7 +476,7 @@ position: absolute;`,
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Flexbox', link: './flexbox' }}
+                    prevLink={{ name: 'Gap', link: './gap' }}
                     nextLink={{
                         name: 'Opacity',
                         link: './opacity',
