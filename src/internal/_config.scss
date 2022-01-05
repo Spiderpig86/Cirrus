@@ -40,7 +40,7 @@ $default-config: (
         flags.$HEIGHTS: true,
         flags.$ZINDEX: false,
         flags.$ABSOLUTE: false,
-        flags.$FLEX-GAP: false,
+        flags.$GAP: false,
         flags.$MIN-HEIGHT: false,
         flags.$MAX-HEIGHT: false,
         flags.$MIN-WIDTH: false,
@@ -509,6 +509,10 @@ $default-config: (
         size.$xl: 1.25rem,
         'full': 9001px,
     ),
+    sizing-system: (
+        base-size: 0.5rem,
+        steps: (0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32)
+    ),
     shadows: (
         'none': (
             --cirrus-shadow: 0 0 #000,
@@ -631,6 +635,8 @@ $minmax-widths: map.get($all-config, minmax-widths);
 $opacities: map.get($all-config, opacity);
 $round: map.get($all-config, round);
 $shadows: map.get($all-config, shadows);
+$space-size: functions.map-get-deep($all-config, 'sizing-system.base-size');
+$spacing-system: functions.map-get-deep($all-config, 'sizing-system.steps');
 $z-indexes: map.get($all-config, z-index);
 
 /*

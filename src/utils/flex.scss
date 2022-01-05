@@ -37,20 +37,20 @@ $generate-utility: should-generate-classes($FLEX);
 }
 
 
-$generate-utility: should-generate-classes($FLEX-GAP);
+$generate-utility: should-generate-classes($GAP);
 
 @if $generate-utility {
     // Generate flex gap class map
-    $flex-gaps-both: ();
+    $gaps-both: ();
     // TODO: Consider if we need to generate for row and col only
     @each $size in $spacing-system {
-        $flex-gaps-both: map-merge(
-                        $flex-gaps-both,
+        $gaps-both: map-merge(
+                        $gaps-both,
                         (
                                 'gap-#{$size}': calc(#{$space-size} * #{$size}),
                         )
         );
     }
 
-    @include generate-classes-for-viewport-with-map($flex-gaps-both, 'gap', $generate-viewports: #{get-viewport-flag($FLEX-GAP)});
+    @include generate-classes-for-viewport-with-map($gaps-both, 'gap', $generate-viewports: #{get-viewport-flag($GAP)});
 }
