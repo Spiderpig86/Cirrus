@@ -32,62 +32,58 @@
         display: grid;
         grid-gap: var(--grid-gap);
         grid-template-columns: var(--grid-template-column);
+    }
 
-        @for $i from 1 through 12 {
-            /* Gap */
-            &.grid-gap-#{$i}#{$suffix} {
-                --grid-gap: var(--gap-#{$i});
-            }
+    @for $i from 1 through 12 {
+        /* Gap */
+        .grid-gap-#{$i}#{$suffix} {
+            --grid-gap: var(--gap-#{$i});
+        }
+    }
+
+    @for $i from 1 through $grid-columns {
+        /* Templates */
+        .grid-cols-#{$i}#{$suffix} {
+            --grid-template-column: repeat(#{$i}, minmax(0, 1fr));
         }
 
-        @for $i from 1 through $grid-columns {
-            /* Templates */
-            &.grid-cols-#{$i}#{$suffix} {
-                --grid-template-column: repeat(#{$i}, minmax(0, 1fr));
-            }
-
-            /* Column expansion */
-            .grid-c-#{$i}#{$suffix} {
-                grid-column: span #{$i} / span #{$i};
-            }
-
-            /* Row expansion */
-            .grid-r-#{$i}#{$suffix} {
-                grid-row: span #{$i} / span #{$i};
-            }
-
-            /* Cell Column Start/End */
-            .grid-cs-#{$i}#{$suffix} {
-                grid-column-start: #{$i};
-            }
-            .grid-ce-#{$i}#{$suffix} {
-                grid-column-end: #{$i + 1};
-            }
-
-            /* Cell Row Start/End */
-            .grid-rs-#{$i}#{$suffix} {
-                grid-row-start: #{$i};
-            }
-            .grid-re-#{$i}#{$suffix} {
-                grid-row-end: #{$i + 1};
-            }
+        /* Column expansion */
+        .grid-c-#{$i}#{$suffix} {
+            grid-column: span #{$i} / span #{$i};
         }
 
-        .grid-ce-end#{$suffix} {
-            grid-column-end: -1;
-        }
-        .grid-re-end#{$suffix} {
-            grid-row-end: -1;
-        }
-        .grid-ce-auto#{$suffix} {
-            grid-column-end: auto;
-        }
-        .grid-re-auto#{$suffix} {
-            grid-row-end: auto;
+        /* Row expansion */
+        .grid-r-#{$i}#{$suffix} {
+            grid-row: span #{$i} / span #{$i};
         }
 
-        @include screen-below($sm) {
-            --grid-template-column: repeat(1, minmax(0, 1fr));
+        /* Cell Column Start/End */
+        .grid-cs-#{$i}#{$suffix} {
+            grid-column-start: #{$i};
         }
+        .grid-ce-#{$i}#{$suffix} {
+            grid-column-end: #{$i + 1};
+        }
+
+        /* Cell Row Start/End */
+        .grid-rs-#{$i}#{$suffix} {
+            grid-row-start: #{$i};
+        }
+        .grid-re-#{$i}#{$suffix} {
+            grid-row-end: #{$i + 1};
+        }
+    }
+
+    .grid-ce-end#{$suffix} {
+        grid-column-end: -1;
+    }
+    .grid-re-end#{$suffix} {
+        grid-row-end: -1;
+    }
+    .grid-ce-auto#{$suffix} {
+        grid-column-end: auto;
+    }
+    .grid-re-auto#{$suffix} {
+        grid-row-end: auto;
     }
 }

@@ -8,7 +8,7 @@
 @use "internal/config" as * with (
     $config: (
         excludes: (
-            flags.$ABSOLUTE,
+            flags.$ABSOLUTES,
         )
     ),
 );

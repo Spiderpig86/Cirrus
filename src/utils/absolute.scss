@@ -1,6 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($ABSOLUTE);
+$generate-utility: should-generate-classes($ABSOLUTES);
 
 @if $generate-utility {
     $directions: top, left, right, bottom;
@@ -10,7 +10,7 @@ $generate-utility: should-generate-classes($ABSOLUTE);
                         $absolute,
                         $direction,
                         'u-#{$direction}-',
-                $generate-viewports: #{get-viewport-flag($ABSOLUTE)}
+                $generate-viewports: #{get-viewport-flag($ABSOLUTES)}
         );
     }
 }
