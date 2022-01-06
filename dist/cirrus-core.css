@@ -13880,8 +13880,16 @@ ul .divider::after {
   box-shadow: var(--cirrus-shadow);
 }
 
+.u-z-n1 {
+  z-index: -1 !important;
+}
+
 .u-z-0 {
   z-index: 0 !important;
+}
+
+.u-z-1 {
+  z-index: 1 !important;
 }
 
 .u-z-10 {
