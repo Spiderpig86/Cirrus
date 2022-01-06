@@ -16,12 +16,21 @@ import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { Blockquote } from '../../../layouts/components/blockquote';
 
 export const ZIndexUtilsPage: React.FC<any> = (props) => {
-    const DEFAULT_Z_INDEX_CLASSES = ['0', '10', '20', '30', '40', '50', 'auto'];
+    const DEFAULT_Z_INDEX_CLASSES = {
+        'n1': -1,
+        0: 0,
+        1: 1,
+        10: 10,
+        20: 20,
+        30: 30,
+        40: 40,
+        50: 50,
+    };
 
-    const classTable = DEFAULT_Z_INDEX_CLASSES.map((zIndex) => {
+    const classTable = Object.entries(DEFAULT_Z_INDEX_CLASSES).map((entry) => {
         return {
-            class: `u-z-${zIndex}`,
-            style: `z-index: ${zIndex} !important`,
+            class: `u-z-${entry[0]}`,
+            style: `z-index: ${entry[1]} !important`,
         };
     });
 
@@ -58,44 +67,57 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
 
                         <p>Below is a demo of all supported z-index utility classes.</p>
 
-                        <div className="bg-teal-100 u-flex u-flex-column p-4">
+                        <div className="bg-teal-100 u-flex u-flex-column p-4" style={{zIndex: -2}}>
                             <div
                                 className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-50"
-                                style={{ marginLeft: '5rem' }}
+                                style={{ marginLeft: '7rem' }}
                             >
                                 <h3 className="my-1">50</h3>
                             </div>
                             <div
                                 className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-40"
-                                style={{ transform: 'translateY(-0.75rem)', marginLeft: '4rem' }}
+                                style={{ transform: 'translateY(-0.75rem)', marginLeft: '6rem' }}
                             >
                                 <h3 className="my-1">40</h3>
                             </div>
                             <div
                                 className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-30"
-                                style={{ transform: 'translateY(-1.25rem)', marginLeft: '3rem' }}
+                                style={{ transform: 'translateY(-1.25rem)', marginLeft: '5rem' }}
                             >
                                 <h3 className="my-1">30</h3>
                             </div>
                             <div
                                 className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-20"
-                                style={{ transform: 'translateY(-2rem)', marginLeft: '2rem' }}
+                                style={{ transform: 'translateY(-2rem)', marginLeft: '4rem' }}
                             >
                                 <h3 className="my-1">20</h3>
                             </div>
                             <div
                                 className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-10"
-                                style={{ transform: 'translateY(-2.75rem)', marginLeft: '1rem' }}
+                                style={{ transform: 'translateY(-2.75rem)', marginLeft: '3rem' }}
                             >
                                 <h3 className="my-1">10</h3>
                             </div>
                             <div
+                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-1"
+                                style={{ transform: 'translateY(-3.5rem)', marginLeft: '2rem' }}
+                            >
+                                <h3 className="my-1">1</h3>
+                            </div>
+                            <div
                                 className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-0"
-                                style={{ transform: 'translateY(-3.5rem)' }}
+                                style={{ transform: 'translateY(-4.25rem)', marginLeft: '1rem' }}
                             >
                                 <h3 className="my-1">0</h3>
                             </div>
+                            <div
+                                className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-n1"
+                                style={{ transform: 'translateY(-5rem)' }}
+                            >
+                                <h3 className="my-1">-1</h3>
+                            </div>
                             <div className="u-text-center text-teal-500">
+                                <p>The div with <code>u-z-n1</code> is up there somewhere.</p>
                                 <p>And of course...</p>
                             </div>
                             <div className="square u-round-sm bg-teal-500 text-white p-3 u-shadow-xl u-z-auto">
@@ -110,7 +132,9 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
 <div class="u-z-30 ...">30</div>
 <div class="u-z-20 ...">20</div>
 <div class="u-z-10 ...">10</div>
+<div class="u-z-1 ...">1</div>
 <div class="u-z-0 ...">0</div>
+<div class="u-z-n1 ...">-1</div>
 <div class="u-z-auto ...">auto</div>`}
                             language="htmlbars"
                         />
