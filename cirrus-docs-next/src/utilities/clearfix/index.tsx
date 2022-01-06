@@ -231,7 +231,10 @@ display: table !important;`,
                     </div>
                 </section>
 
-                <Pagination nextLink={{ name: 'Display', link: './display' }} />
+                <Pagination
+                    prevLink={{ name: 'Absolute', link: './absolute' }}
+                    nextLink={{ name: 'Display', link: './display' }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>

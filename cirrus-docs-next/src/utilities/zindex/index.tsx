@@ -148,7 +148,7 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
 
                         <Blockquote accentColor={'#fcd9bd'}>
                             <p>
-                                ⚠ Note that the viewport variants are disabled from the default build of Cirrus. To
+                                ⚠ Note that the viewport variants are disabled in the default build of Cirrus. To
                                 enable, you must enable it yourself in <code>_configs.scss</code> and create a custom
                                 build.
                             </p>
@@ -173,7 +173,7 @@ $config: (
                         </p>
 
                         <CodeBlock
-                            code={`<div class="u-z-20-md">
+                            code={`<div class="u-z-20-lg">
     <!-- ... -->
 </div>`}
                             language="html"

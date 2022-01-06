@@ -417,6 +417,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Absolutes',
+                url: '/utils/absolutes'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Clearfix',
                 url: '/utils/clearfix'
             },
