@@ -374,7 +374,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         <p>
                             The standard flex layout with the <code>u-flex</code> class.
                         </p>
-                        <div className="u-flex bg-green-100">
+                        <div className="u-flex bg-green-100 u-round-xs">
                             <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
                             <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
                             <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
@@ -394,7 +394,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         <p>
                             The inline flex layout with the <code>u-inline-flex</code> class.
                         </p>
-                        <div className="u-inline-flex bg-green-100">
+                        <div className="u-inline-flex bg-green-100 u-round-xs">
                             <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
                             <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
                             <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>

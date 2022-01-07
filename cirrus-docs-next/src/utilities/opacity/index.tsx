@@ -56,7 +56,7 @@ export const OpacityUtilsPage: React.FC<any> = (props) => {
 
                         <p>Below is a demo of all supported opacity utility classes.</p>
 
-                        <div className="py-2">
+                        <div className="py-2 u-center">
                             {DEFAULT_OPACITY_CLASSES.map((opacity) => (
                                 <button className={`btn-info mx-1 u-opacity-${opacity}`}>{`${opacity}%`}</button>
                             ))}

@@ -90,7 +90,12 @@ export const AbsolutesUtilsPage: React.FC<any> = (props) => {
                         </p>
 
                         <div className="space"></div>
-                        <div className="grid u-gap-3 grid-cols-2 grid-cols-3-sm">
+                        <div
+                            className="grid u-gap-3 grid-cols-2 grid-cols-3-sm"
+                            style={{
+                                justifyItems: 'center',
+                            }}
+                        >
                             <div
                                 className="u-relative bg-indigo-100 u-round-sm"
                                 style={{
@@ -230,9 +235,12 @@ export const AbsolutesUtilsPage: React.FC<any> = (props) => {
                             ></div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="u-relative bg-indigo-100 u-round-sm" style="height: 8rem; width: 8rem;">
+                        <CodeBlock
+                            code={`<div class="u-relative bg-indigo-100 u-round-sm" style="height: 8rem; width: 8rem;">
     <div class="u-absolute u-top-n50p u-right-n50p bg-indigo-500 u-round-sm u-shadow-xl" style="height: 8rem; width: 8rem;"></div>
-</div>`} language='htmlbars' />
+</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 

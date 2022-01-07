@@ -11,6 +11,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { DEFAULT_SIZING_SYSTEM, PAGE_TITLE_PREFIX } from '../../../constants';
 import Link from 'next/link';
+import { ClassTable } from '../../../layouts/components/class-table';
 
 export const MarginPage: React.FC<any> = (props) => {
     const types = [
@@ -77,45 +78,10 @@ export const MarginPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>
                             These are the different sizes supported for margins. Note that all calculations are based
-                            around <code>0.5rem</code> or <code>8px</code>.
+                            around <code>0.5rem</code> or <code>8px</code>. You can also modify it to use a different base size other than <code>0.5rem</code> within <code>_config.scss</code>.
                         </p>
 
-                        <table className="table fixed-head u-text-left">
-                            <thead>
-                                <tr>
-                                    <th
-                                        style={{
-                                            width: '200px',
-                                        }}
-                                    >
-                                        Class
-                                    </th>
-                                    <th>Styles</th>
-                                </tr>
-                            </thead>
-                            <tbody
-                                style={{
-                                    height: '500px',
-                                }}
-                            >
-                                {classTable.map((row, index) => (
-                                    <tr key={index}>
-                                        <td
-                                            style={{
-                                                width: '200px',
-                                            }}
-                                        >
-                                            <code className="text-blue-600 bg-blue-100">{row.class}</code>
-                                        </td>
-                                        <td>
-                                            <pre>
-                                                <code>{row.style}</code>
-                                            </pre>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                        <ClassTable classTable={classTable} />
                     </div>
                 </section>
 
@@ -129,14 +95,14 @@ export const MarginPage: React.FC<any> = (props) => {
 
                         <div className="row">
                             <div className="col u-flex u-justify-center">
-                                <div className="bg-indigo-200 u-inline-flex">
-                                    <span className="bg-indigo-500 p-1 m-4 white">m-4</span>
+                                <div className="bg-indigo-100 u-inline-flex u-round-xs text-white">
+                                    <span className="bg-indigo-500 p-1 m-4 text-white u-round-xs u-shadow-lg">m-4</span>
                                 </div>
                             </div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="bg-indigo-200 u-inline-flex"><span class="bg-indigo-500 p-1 m-4 white">m-4</span></div>`}
+                            code={`<div class="bg-indigo-100 u-inline-flex u-round-xs text-white"><span class="bg-indigo-500 p-1 m-4 text-white u-round-xs u-shadow-lg">m-4</span></div>`}
                             language="htmlbars"
                         />
                     </div>
@@ -153,20 +119,28 @@ export const MarginPage: React.FC<any> = (props) => {
 
                         <div className="row">
                             <div className="col u-flex u-justify-center">
-                                <div className="bg-indigo-200 u-inline-flex">
-                                    <span className="bg-indigo-500 p-1 mx-4 white">mx-4</span>
+                                <div className="bg-indigo-100 u-inline-flex u-round-xs">
+                                    <span className="bg-indigo-500 p-1 mx-4 text-white u-round-xs u-shadow-lg">mx-4</span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
-                                <div className="bg-indigo-200 u-inline-flex">
-                                    <span className="bg-indigo-500 p-1 my-4 white">my-4</span>
+                                <div className="bg-indigo-100 u-inline-flex u-round-xs">
+                                    <span className="bg-indigo-500 p-1 my-4 text-white u-round-xs u-shadow-lg">my-4</span>
                                 </div>
                             </div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="bg-indigo-200 u-inline-flex"><span class="bg-indigo-500 p-1 mx-4 white">mx-4</span></div>
-<div class="bg-indigo-200 u-inline-flex"><span class="bg-indigo-500 p-1 my-4 white">my-4</span></div>`}
+                            code={`<div class="col u-flex u-justify-center">
+    <div class="bg-indigo-100 u-inline-flex u-round-xs">
+        <span class="bg-indigo-500 p-1 mx-4 text-white u-round-xs u-shadow-lg">mx-4</span>
+    </div>
+</div>
+<div class="col u-flex u-justify-center">
+    <div class="bg-indigo-100 u-inline-flex u-round-xs">
+        <span class="bg-indigo-500 p-1 my-4 text-white u-round-xs u-shadow-lg">my-4</span>
+    </div>
+</div>`}
                             language="htmlbars"
                         />
                     </div>
@@ -183,32 +157,48 @@ export const MarginPage: React.FC<any> = (props) => {
 
                         <div className="row">
                             <div className="col u-flex u-justify-center">
-                                <div className="bg-indigo-200 u-inline-flex">
-                                    <span className="bg-indigo-500 p-1 ml-4 white">ml-4</span>
+                                <div className="bg-indigo-100 u-inline-flex u-round-xs">
+                                    <span className="bg-indigo-500 p-1 ml-4 text-white u-round-xs u-shadow-lg">ml-4</span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
-                                <div className="bg-indigo-200 u-inline-flex">
-                                    <span className="bg-indigo-500 p-1 mr-4 white">mr-4</span>
+                                <div className="bg-indigo-100 u-inline-flex u-round-xs">
+                                    <span className="bg-indigo-500 p-1 mr-4 text-white u-round-xs u-shadow-lg">mr-4</span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
-                                <div className="bg-indigo-200 u-inline-flex">
-                                    <span className="bg-indigo-500 p-1 mt-4 white">mt-4</span>
+                                <div className="bg-indigo-100 u-inline-flex u-round-xs">
+                                    <span className="bg-indigo-500 p-1 mt-4 text-white u-round-xs u-shadow-lg">mt-4</span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
-                                <div className="bg-indigo-200 u-inline-flex">
-                                    <span className="bg-indigo-500 p-1 mb-4 white">mb-4</span>
+                                <div className="bg-indigo-100 u-inline-flex u-round-xs">
+                                    <span className="bg-indigo-500 p-1 mb-4 text-white u-round-xs u-shadow-lg">mb-4</span>
                                 </div>
                             </div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="bg-indigo-200 u-inline-flex"><span class="bg-indigo-500 p-1 ml-4 white">ml-4</span></div>
-<div class="bg-indigo-200 u-inline-flex"><span class="bg-indigo-500 p-1 mr-4 white">mr-4</span></div>
-<div class="bg-indigo-200 u-inline-flex"><span class="bg-indigo-500 p-1 mt-4 white">mt-4</span></div>
-<div class="bg-indigo-200 u-inline-flex"><span class="bg-indigo-500 p-1 mb-4 white">mb-4</span></div>`}
+                            code={`<div class="col u-flex u-justify-center">
+    <div class="bg-indigo-100 u-inline-flex u-round-xs">
+        <span class="bg-indigo-500 p-1 ml-4 text-white u-round-xs u-shadow-lg">ml-4</span>
+    </div>
+</div>
+<div class="col u-flex u-justify-center">
+    <div class="bg-indigo-100 u-inline-flex u-round-xs">
+        <span class="bg-indigo-500 p-1 mr-4 text-white u-round-xs u-shadow-lg">mr-4</span>
+    </div>
+</div>
+<div class="col u-flex u-justify-center">
+    <div class="bg-indigo-100 u-inline-flex u-round-xs">
+        <span class="bg-indigo-500 p-1 mt-4 text-white u-round-xs u-shadow-lg">mt-4</span>
+    </div>
+</div>
+<div class="col u-flex u-justify-center">
+    <div class="bg-indigo-100 u-inline-flex u-round-xs">
+        <span class="bg-indigo-500 p-1 mb-4 text-white u-round-xs u-shadow-lg">mb-4</span>
+    </div>
+</div>`}
                             language="htmlbars"
                         />
                     </div>
@@ -237,17 +227,17 @@ export const MarginPage: React.FC<any> = (props) => {
 
                         <p>Try out the example below yourself by resizing your browser window.</p>
 
-                        <div className="mb-1">
+                        <div className="mb-1 text-white">
                             <div className="bg-orange-100 p-2 u-round-xs u-flex u-justify-center u-items-center">
-                                <p className="bg-orange-300 p-3 u-round-xs my-1 mr-1 mr-5-sm mr-10-md">Shrink</p>
-                                <p className="bg-orange-300 p-3 u-round-xs my-1 ml-1 ml-5-sm ml-10-md">Window</p>
+                                <p className="bg-orange-400 p-3 u-round-xs my-1 mr-1 mr-5-sm mr-10-md u-shadow-lg">Shrink</p>
+                                <p className="bg-orange-400 p-3 u-round-xs my-1 ml-1 ml-5-sm ml-10-md u-shadow-lg">Window</p>
                             </div>
                         </div>
 
                         <CodeBlock
                             code={`<div class="bg-orange-100 p-2 u-round-xs u-flex u-justify-center u-items-center">
-    <p class="bg-orange-300 p-3 u-round-xs my-1 mr-1 mr-5-sm mr-10-md">Shrink</p>
-    <p class="bg-orange-300 p-3 u-round-xs my-1 ml-1 ml-5-sm ml-10-md">Window</p>
+    <p class="bg-orange-400 p-3 u-round-xs my-1 mr-1 mr-5-sm mr-10-md u-shadow-lg">Shrink</p>
+    <p class="bg-orange-400 p-3 u-round-xs my-1 ml-1 ml-5-sm ml-10-md u-shadow-lg">Window</p>
 </div>`}
                             language="htmlbars"
                         />
@@ -256,6 +246,56 @@ export const MarginPage: React.FC<any> = (props) => {
                             For more information, visit the{' '}
                             <Link href="/fundamentals/viewports">
                                 <a className="u u-LR">Viewports</a>
+                            </Link>{' '}
+                            documentation.
+                        </p>
+                    </div>
+                </section>
+                
+                <section className="padtop" id="variants">
+                    <div className="content">
+                        <Headline title="Variants" link="#variants" size="4" />
+                        <div className="divider"></div>
+
+                        <p>
+                            The classes specified above are the default utility classes for setting margins. You can
+                            add, change, or remove classes within the <code>_config.scss</code> file of Cirrus.
+                            The generated values are dependent on the values set for the <code>base-size</code> and <code>steps</code> fields in the config.
+                        </p>
+                        <p>Below is an example of what gets generated when the <code>base-size</code> is set to <code>1rem</code> and we add <code>64</code> to the list of <code>steps</code>.</p>
+                        <p>Recall that these configs are merged with the <code>$default-config</code> map.</p>
+
+                        <div className="space"></div>
+
+                        <CodeBlock
+                            code={`// _config.scss
+$config: (
+    sizing-system: (
+        base-size: 1rem,
+        steps: (64)
+    )
+);`}
+                            language="scss"
+                        />
+                        <p>This would generate the following classes.</p>
+                        <CodeBlock
+                            code={`:root {
+    --space-size: 1rem;
+}
+.m-0 {
+    margin: calc(var(--space-size) * 0) !important;
+}
+/* ... */
+.m-64 {
+    margin: calc(var(--space-size) * 64) !important;
+}
+/* Other viewport variants for margin... */`}
+                            language="css"
+                        />
+                        <p>
+                            Learn more about how to extend Cirrus to support your use cases in the{' '}
+                            <Link href="/fundamentals/configuration">
+                                <a className="u u-LR">Configuration</a>
                             </Link>{' '}
                             documentation.
                         </p>
