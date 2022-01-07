@@ -69,7 +69,7 @@ export const AnimationsPage: React.FC<any> = (props) => {
                         <div className="space"></div>
 
                         <p>
-                            The spinner's color could also be changed to white with the <code>loading-white</code>{' '}
+                            The spinner's color could also be changed to text-white with the <code>loading-white</code>{' '}
                             class.
                         </p>
                         <div className="row">
@@ -109,7 +109,7 @@ export const AnimationsPage: React.FC<any> = (props) => {
                                         background: 'linear-gradient(to right, #EC6EAD, #3494E6)',
                                     }}
                                 >
-                                    <div className="animated loading loading-left loading-white white">
+                                    <div className="animated loading loading-left loading-white text-white">
                                         <p>loading-left</p>
                                     </div>
                                 </div>

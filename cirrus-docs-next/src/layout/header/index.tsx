@@ -804,7 +804,7 @@ $('.dropdown-menu li').on('click', function(e) {
 
                         <h6>Default</h6>
                         <p>
-                            By default, the <code>header</code> is designed with a white background with a drop shadow.
+                            By default, the <code>header</code> is designed with a text-white background with a drop shadow.
                             Text elements have the default text color of the framework <code>(#374054)</code> and links
                             have the default link color of the framework <code>(#8292a2)</code>.
                         </p>
@@ -861,7 +861,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         <h6>Clear</h6>
                         <p>
                             The clear theme is based on the default theme, but with a few minor changes. The background
-                            is transparent instead of white, the box-shadow is removed, and the{' '}
+                            is transparent instead of text-white, the box-shadow is removed, and the{' '}
                             <code>dropdown-menu</code> is rounded on all sides.
                         </p>
                         <ul>

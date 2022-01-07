@@ -132,13 +132,13 @@ padding-bottom: (0) !important;`,
                         <div className="row">
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex p-4">
-                                    <span className="bg-indigo-500 p-1 white">p-4</span>
+                                    <span className="bg-indigo-500 p-1 text-white">p-4</span>
                                 </div>
                             </div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="bg-indigo-200 u-inline-flex p-4"><span class="bg-indigo-500 p-1 white">p-4</span></div>`}
+                            code={`<div class="bg-indigo-200 u-inline-flex p-4"><span class="bg-indigo-500 p-1 text-white">p-4</span></div>`}
                             language="htmlbars"
                         />
                     </div>
@@ -156,19 +156,19 @@ padding-bottom: (0) !important;`,
                         <div className="row">
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex px-4">
-                                    <span className="bg-indigo-500 p-1 white">px-4</span>
+                                    <span className="bg-indigo-500 p-1 text-white">px-4</span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex py-4">
-                                    <span className="bg-indigo-500 p-1 white">py-4</span>
+                                    <span className="bg-indigo-500 p-1 text-white">py-4</span>
                                 </div>
                             </div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="bg-indigo-200 u-inline-flex px-4"><span class="bg-indigo-500 p-1 white">px-4</span></div>
-<div class="bg-indigo-200 u-inline-flex py-4"><span class="bg-indigo-500 p-1 white">py-4</span></div>`}
+                            code={`<div class="bg-indigo-200 u-inline-flex px-4"><span class="bg-indigo-500 p-1 text-white">px-4</span></div>
+<div class="bg-indigo-200 u-inline-flex py-4"><span class="bg-indigo-500 p-1 text-white">py-4</span></div>`}
                             language="htmlbars"
                         />
                     </div>
@@ -186,31 +186,31 @@ padding-bottom: (0) !important;`,
                         <div className="row">
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex pl-4">
-                                    <span className="bg-indigo-500 p-1 white">pl-4</span>
+                                    <span className="bg-indigo-500 p-1 text-white">pl-4</span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex pr-4">
-                                    <span className="bg-indigo-500 p-1 white">pr-4</span>
+                                    <span className="bg-indigo-500 p-1 text-white">pr-4</span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex pt-4">
-                                    <span className="bg-indigo-500 p-1 white">pt-4</span>
+                                    <span className="bg-indigo-500 p-1 text-white">pt-4</span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-200 u-inline-flex pb-4">
-                                    <span className="bg-indigo-500 p-1 white">pb-4</span>
+                                    <span className="bg-indigo-500 p-1 text-white">pb-4</span>
                                 </div>
                             </div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="bg-indigo-200 u-inline-flex pl-4"><span class="bg-indigo-500 p-1 white">pl-4</span></div>
-<div class="bg-indigo-200 u-inline-flex pr-4"><span class="bg-indigo-500 p-1 white">pr-4</span></div>
-<div class="bg-indigo-200 u-inline-flex pt-4"><span class="bg-indigo-500 p-1 white">pt-4</span></div>
-<div class="bg-indigo-200 u-inline-flex pb-4"><span class="bg-indigo-500 p-1 white">pb-4</span></div>`}
+                            code={`<div class="bg-indigo-200 u-inline-flex pl-4"><span class="bg-indigo-500 p-1 text-white">pl-4</span></div>
+<div class="bg-indigo-200 u-inline-flex pr-4"><span class="bg-indigo-500 p-1 text-white">pr-4</span></div>
+<div class="bg-indigo-200 u-inline-flex pt-4"><span class="bg-indigo-500 p-1 text-white">pt-4</span></div>
+<div class="bg-indigo-200 u-inline-flex pb-4"><span class="bg-indigo-500 p-1 text-white">pb-4</span></div>`}
                             language="htmlbars"
                         />
                     </div>

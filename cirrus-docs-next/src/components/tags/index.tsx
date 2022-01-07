@@ -114,7 +114,7 @@ export const TagsPage: React.FC<any> = (props) => {
                             <div className="tag tag--sm bg-orange-200">Small</div>
                             <div className="tag tag--md bg-orange-300">Medium</div>
                             <div className="tag tag--lg bg-orange-400">Large</div>
-                            <div className="tag tag--xl bg-orange-500 white">Extra Large</div>
+                            <div className="tag tag--xl bg-orange-500 text-white">Extra Large</div>
                         </div>
 
                         <CodeBlock

@@ -51,7 +51,7 @@ export const HeroPage: React.FC<any> = (props) => {
                         </ul>
 
                         <div className="hero bg-teal-500 p-2 u-flex u-flex-column">
-                            <p className="p-1 white">hero (padding shown for clarity)</p>
+                            <p className="p-1 text-white">hero (padding shown for clarity)</p>
                             <div className="hero-body bg-teal-700">
                                 <p className="text-white">hero-body</p>
                             </div>
@@ -94,7 +94,7 @@ export const HeroPage: React.FC<any> = (props) => {
                             code={`<div class="hero bg-indigo-600">
     <div class="hero-body">
         <div class="content">
-            <h2 class="title white">I am the title.</h2>
+            <h2 class="title text-white">I am the title.</h2>
             <h5 class="subtitle text-gray-300">And I am the subtitle.</h5></div>
     </div>
 </div>`}
@@ -158,7 +158,7 @@ export const HeroPage: React.FC<any> = (props) => {
                             <div className="header-brand">
                                 <div className="nav-item no-hover">
                                     <a href="!#">
-                                        <h6 className="title white">Logo</h6>
+                                        <h6 className="title text-white">Logo</h6>
                                     </a>
                                 </div>
                                 <div className="nav-item nav-btn" id="header-btn">
@@ -171,27 +171,27 @@ export const HeroPage: React.FC<any> = (props) => {
                                 <div className="nav-left">
                                     <div className="nav-item text-center">
                                         <a href="!#">
-                                            <span className="icon white">
+                                            <span className="icon text-white">
                                                 <FontAwesomeIcon className="fa-wrapper" icon={['fab', 'github']} />
                                             </span>
                                         </a>
                                     </div>
                                     <div className="nav-item text-center">
                                         <a href="!#">
-                                            <span className="icon white">
+                                            <span className="icon text-white">
                                                 <FontAwesomeIcon className="fa-wrapper" icon={['fab', 'slack']} />
                                             </span>
                                         </a>
                                     </div>
                                     <div className="nav-item text-center">
                                         <a href="!#">
-                                            <span className="icon white">
+                                            <span className="icon text-white">
                                                 <FontAwesomeIcon className="fa-wrapper" icon={['fab', 'twitter']} />
                                             </span>
                                         </a>
                                     </div>
                                     <div className="nav-item has-sub toggle-hover" id="dropdown">
-                                        <a className="nav-dropdown-link white">Animated</a>
+                                        <a className="nav-dropdown-link text-white">Animated</a>
                                         <ul className="dropdown-menu dropdown-animated" role="menu">
                                             <li role="menu-item">
                                                 <a href="!#">First Item</a>
@@ -217,7 +217,7 @@ export const HeroPage: React.FC<any> = (props) => {
                                         </a>
                                     </div>
                                     <div className="nav-item has-sub" id="dropdown">
-                                        <a className="nav-dropdown-link white">Click Me</a>
+                                        <a className="nav-dropdown-link text-white">Click Me</a>
                                         <ul className="dropdown-menu" role="menu">
                                             <li role="menu-item">
                                                 <a href="!#">First Item</a>
