@@ -72,8 +72,22 @@ export const AbsolutesUtilsPage: React.FC<any> = (props) => {
                         <Headline title="Examples" link="#examples" size="4" />
                         <div className="divider"></div>
 
-                        <p>Cirrus comes with utility classes that allow you to anchor any element in any of the 4 directions with both positive and negative offsets. The utility classes generally follow this form: <code>u-[top|left|right|bottom]-[0|50p|100p|n50p|n100p|auto]</code>.</p>
-                        <p>These utilities can be used with both <Link href="/layout/margin/"><a className="u u-LR">Margin</a></Link> and <Link href="/layout/padding/"><a className="u u-LR">Padding</a></Link> utility classes to help size and position elements.</p>
+                        <p>
+                            Cirrus comes with utility classes that allow you to anchor any element in any of the 4
+                            directions with both positive and negative offsets. The utility classes generally follow
+                            this form: <code>u-[top|left|right|bottom]-[0|50p|100p|n50p|n100p|auto]</code>.
+                        </p>
+                        <p>
+                            These utilities can be used with both{' '}
+                            <Link href="/layout/margin/">
+                                <a className="u u-LR">Margin</a>
+                            </Link>{' '}
+                            and{' '}
+                            <Link href="/layout/padding/">
+                                <a className="u u-LR">Padding</a>
+                            </Link>{' '}
+                            utility classes to help size and position elements.
+                        </p>
 
                         <div className="space"></div>
                         <div className="grid u-gap-3 grid-cols-2 grid-cols-3-sm">
@@ -160,7 +174,8 @@ export const AbsolutesUtilsPage: React.FC<any> = (props) => {
                             </div>
                         </div>
                         <div className="space"></div>
-                        <CodeBlock code={`<div class="grid u-gap-3 grid-cols-2 grid-cols-3-sm">
+                        <CodeBlock
+                            code={`<div class="grid u-gap-3 grid-cols-2 grid-cols-3-sm">
     <div class="u-relative">
         <div class="u-absolute u-left-0 u-top-0 u-right-50p u-bottom-50p"></div>
     </div>
@@ -189,7 +204,35 @@ export const AbsolutesUtilsPage: React.FC<any> = (props) => {
         <div class="u-absolute u-top-50p u-right-0 u-bottom-0 u-left-50p"></div>
     </div>
 </div>
-`} language='htmlbars' />
+`}
+                            language="htmlbars"
+                        />
+
+                        <div className="space space--lg"></div>
+
+                        <h6>Negative Offsets</h6>
+                        <p>
+                            By convention, negative values are prefixed with an <i>n</i> before numerical value. For
+                            example, <code>u-left-n50p</code> will set a left offset of -50%.
+                        </p>
+                        <div className="space space--xl"></div>
+
+                        <div
+                            className="u-relative bg-indigo-100 u-round-sm"
+                            style={{
+                                height: '8rem',
+                                width: '8rem',
+                            }}
+                        >
+                            <div
+                                className="u-absolute u-top-n50p u-right-n50p bg-indigo-500 u-round-sm u-shadow-xl"
+                                style={{ height: '8rem', width: '8rem' }}
+                            ></div>
+                        </div>
+                        <div className="space"></div>
+                        <CodeBlock code={`<div class="u-relative bg-indigo-100 u-round-sm" style="height: 8rem; width: 8rem;">
+    <div class="u-absolute u-top-n50p u-right-n50p bg-indigo-500 u-round-sm u-shadow-xl" style="height: 8rem; width: 8rem;"></div>
+</div>`} language='htmlbars' />
                     </div>
                 </section>
 
