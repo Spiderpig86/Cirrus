@@ -423,6 +423,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Box Shadow',
+                url: '/utils/box-shadow'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Clearfix',
                 url: '/utils/clearfix'
             },

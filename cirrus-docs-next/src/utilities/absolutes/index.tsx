@@ -310,7 +310,7 @@ $config: (
     absolute: (
         '10px': 10px
     )
-);`}
+) !default;`}
                             language="scss"
                         />
                         <p>This would generate the following additonal classes.</p>

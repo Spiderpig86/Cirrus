@@ -265,7 +265,7 @@ $config: (
         base-size: 1rem,
         steps: (64)
     )
-);`}
+) !default;`}
                             language="scss"
                         />
                         <p>This would generate the following classes.</p>

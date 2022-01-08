@@ -128,7 +128,7 @@ $config: (
         25: .25,
         75: .75,
     )
-);`}
+) !default;`}
                             language="scss"
                         />
                         <p>This would generate the following classes.</p>

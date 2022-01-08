@@ -179,7 +179,7 @@ $config: (
         base-size: 0.25rem,
         steps: (0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 60, 72)
     )
-);`}
+) !default;`}
                             language="scss"
                         />
                         <p>This would generate the following <b>gap</b> classes.</p>
