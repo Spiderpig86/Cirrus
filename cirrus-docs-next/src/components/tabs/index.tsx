@@ -10,6 +10,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { Tag } from '../../../layouts/components/tag';
 
 export const TabsPage: React.FC<any> = (props) => {
     return (
@@ -119,7 +120,7 @@ export const TabsPage: React.FC<any> = (props) => {
                         <div className="space"></div>
 
                         <p>
-                            <b>X-Small</b>
+                            <b>Extra Small</b>
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
@@ -221,7 +222,7 @@ export const TabsPage: React.FC<any> = (props) => {
                         </div>
 
                         <p>
-                            <b>X-Large</b>
+                            <b>Extra Large</b>
                         </p>
                         <div className="row">
                             <div className="col-lg-6">
@@ -266,6 +267,50 @@ export const TabsPage: React.FC<any> = (props) => {
                             default.
                         </p>
                         <div className="space"></div>
+                        
+                        <p>
+                            <b>Left</b>
+                        </p>
+                        <Tag
+                            leftProps={{
+                                classes: `tag--dark`,
+                                text: `New`,
+                            }}
+                            rightProps={{
+                                classes: `tag--info`,
+                                text: `0.7.0`,
+                            }}
+                        />
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <div className="tab-container tabs--left">
+                                    <ul>
+                                        <li>
+                                            <div className="tab-item-content">Home</div>
+                                        </li>
+                                        <li>
+                                            <div className="tab-item-content">Group</div>
+                                        </li>
+                                        <li>
+                                            <div className="tab-item-content">Shop</div>
+                                        </li>
+                                        <li className="selected">
+                                            <div className="tab-item-content">Me</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="tab-container tabs--center">
+    <ul>
+        <!-- Tab Items -->
+    </ul>
+</div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
 
                         <p>
                             <b>Centered</b>
