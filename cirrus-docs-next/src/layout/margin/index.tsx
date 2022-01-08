@@ -12,6 +12,7 @@ import { toc } from './toc';
 import { DEFAULT_SIZING_SYSTEM, PAGE_TITLE_PREFIX } from '../../../constants';
 import Link from 'next/link';
 import { ClassTable } from '../../../layouts/components/class-table';
+import { Tag } from '../../../layouts/components/tag';
 
 export const MarginPage: React.FC<any> = (props) => {
     const types = [
@@ -78,7 +79,7 @@ export const MarginPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>
                             These are the different sizes supported for margins. Note that all calculations are based
-                            around <code>0.5rem</code> or <code>8px</code>. You can also modify it to use a different base size other than <code>0.5rem</code> within <code>_config.scss</code>.
+                            around <code>0.5rem</code> or <code>8px</code>. You can also modify it to use a different base size other than <code>0.5rem</code> within <code>_config.scss</code> -- see <Link href="#variants"><a className="u u-LR">Variants</a></Link> below.
                         </p>
 
                         <ClassTable classTable={classTable} />
@@ -256,6 +257,17 @@ export const MarginPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Variants" link="#variants" size="4" />
                         <div className="divider"></div>
+                        
+                        <Tag
+                            leftProps={{
+                                classes: `tag--dark`,
+                                text: `New`,
+                            }}
+                            rightProps={{
+                                classes: `tag--info`,
+                                text: `0.7.0`,
+                            }}
+                        />
 
                         <p>
                             The classes specified above are the default utility classes for setting margins. You can

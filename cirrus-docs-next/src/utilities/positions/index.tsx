@@ -231,7 +231,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                         <Headline title="Position" link="#position" />
                         <div className="divider"></div>
                         <span className="tag-container group-tags">
-                            <div className="tag tag--dark">Added</div>
+                            <div className="tag tag--dark">New</div>
                             <div className="tag tag--info">0.6.0</div>
                         </span>
                         <p>These are utility classes that control the position of elements.</p>

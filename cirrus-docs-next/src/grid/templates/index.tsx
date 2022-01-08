@@ -22,7 +22,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                         <Headline title="Grid Templates" link="#templates" />
                         <div className="divider"></div>
                         <span className="tag-container group-tags">
-                            <div className="tag tag--dark">Added</div>
+                            <div className="tag tag--dark">New</div>
                             <div className="tag tag--info">0.5.5</div>
                         </span>
 
@@ -302,7 +302,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                         <Headline title="Customization" link="#customization" size="4" />
                         <div className="divider"></div>
                         <span className="tag-container group-tags">
-                            <div className="tag tag--dark">Added</div>
+                            <div className="tag tag--dark">New</div>
                             <div className="tag tag--info">0.6.0</div>
                         </span>
                         <p>

@@ -178,7 +178,7 @@ export const TilesPage: React.FC<any> = (props) => {
 
                         <h6>Vertical Centering</h6>
                         <span className="tag-container group-tags">
-                            <div className="tag tag--dark">Added</div>
+                            <div className="tag tag--dark">New</div>
                             <div className="tag tag--info">0.6.0</div>
                         </span>
                         <p>

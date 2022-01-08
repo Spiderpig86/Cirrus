@@ -22,7 +22,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                         <Headline title="Grid Span" link="#span" />
                         <div className="divider"></div>
                         <span className="tag-container group-tags">
-                            <div className="tag tag--dark">Added</div>
+                            <div className="tag tag--dark">New</div>
                             <div className="tag tag--info">0.5.5</div>
                         </span>
 

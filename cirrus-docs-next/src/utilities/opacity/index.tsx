@@ -36,7 +36,7 @@ export const OpacityUtilsPage: React.FC<any> = (props) => {
                         <Tag
                             leftProps={{
                                 classes: `tag--dark`,
-                                text: `Added`,
+                                text: `New`,
                             }}
                             rightProps={{
                                 classes: `tag--info`,

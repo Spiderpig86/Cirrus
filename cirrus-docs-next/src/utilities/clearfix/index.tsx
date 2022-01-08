@@ -45,7 +45,7 @@ display: table !important;`,
                         <Headline title="Clearfix" link="#clearfix" />
                         <div className="divider"></div>
                         <span className="tag-container group-tags">
-                            <div className="tag tag--dark">Added</div>
+                            <div className="tag tag--dark">New</div>
                             <div className="tag tag--info">0.6.0</div>
                         </span>
                         <p>These are utility classes that control object clearfix.</p>

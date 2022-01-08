@@ -47,7 +47,7 @@ export const ZIndexUtilsPage: React.FC<any> = (props) => {
                         <Tag
                             leftProps={{
                                 classes: `tag--dark`,
-                                text: `Added`,
+                                text: `New`,
                             }}
                             rightProps={{
                                 classes: `tag--info`,
