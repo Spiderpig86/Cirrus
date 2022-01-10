@@ -6,8 +6,18 @@ export const toc: TableOfContentsEntry[] = [
         anchor: '#box-shadow',
         children: [
             {
-                name: 'Examples',
-                anchor: '#examples',
+                name: 'Outer Shadow',
+                anchor: '#outer-shadow',
+                children: null,
+            },
+            {
+                name: 'Inner Shadow',
+                anchor: '#inner-shadow',
+                children: null,
+            },
+            {
+                name: 'No Shadow',
+                anchor: '#no-shadow',
                 children: null,
             },
             {

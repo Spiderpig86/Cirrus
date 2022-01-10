@@ -12,8 +12,6 @@ import { Tag } from '../../../layouts/components/tag';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
-import { Blockquote } from '../../../layouts/components/blockquote';
-import { ExternalLink } from '../../../layouts/components/link';
 
 export const BoxShadowUtilsPage: React.FC<any> = (props) => {
     const DEFAULT_BOX_SHADOW_CLASSES = {
@@ -58,24 +56,26 @@ export const BoxShadowUtilsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop" id="examples">
+                <section className="padtop" id="outer-shadow">
                     <div className="content">
-                        <Headline title="Examples" link="#examples" size="4" />
+                        <Headline title="Outer Shadow" link="#outer-shadow" size="4" />
                         <div className="divider"></div>
 
                         <p>
                             Easily add a box shadow to any element using the box shadow utility classes to add extra
-                            depth. The utility classes generally follow this form:{' '}
-                            <code>u-shadow-[none|xs|sm|md|lg|xl|inset]</code>.
+                            depth. The utility classes for outer shadows generally follow this form:{' '}
+                            <code>u-shadow-[xs|sm|md|lg|xl]</code>.
                         </p>
 
                         <div className="space"></div>
                         <div className="bg-gray-000 u-round-xs row u-gap-2 p-4 u-justify-center">
-                            {Object.entries(DEFAULT_BOX_SHADOW_CLASSES).map((entry) => (
-                                <div className={`bg-gray-200 u-round-xs p-4 u-shadow-${entry[0]} u-text-center`}>
-                                    <span className="font-bold">{entry[0]}</span>
-                                </div>
-                            ))}
+                            {Object.entries(DEFAULT_BOX_SHADOW_CLASSES)
+                                .filter((entry) => entry[0] !== 'none' && entry[0] !== 'inset')
+                                .map((entry) => (
+                                    <div className={`bg-gray-200 u-round-xs p-4 u-shadow-${entry[0]} u-text-center`}>
+                                        <span className="font-bold">{entry[0]}</span>
+                                    </div>
+                                ))}
                         </div>
                         <div className="space"></div>
                         <CodeBlock
@@ -86,7 +86,56 @@ export const BoxShadowUtilsPage: React.FC<any> = (props) => {
     <div class="bg-gray-200 u-round-xs p-4 u-shadow-md u-text-center"><span class="font-bold">md</span></div>
     <div class="bg-gray-200 u-round-xs p-4 u-shadow-lg u-text-center"><span class="font-bold">lg</span></div>
     <div class="bg-gray-200 u-round-xs p-4 u-shadow-xl u-text-center"><span class="font-bold">xl</span></div>
+</div>`}
+                            language="htmlbars"
+                        />
+                    </div>
+                </section>
+
+                <section className="padtop" id="inner-shadow">
+                    <div className="content">
+                        <Headline title="Inner Shadow" link="#inner-shadow" size="4" />
+                        <div className="divider"></div>
+
+                        <p>
+                            To add an inner shadow, you can use the <code>u-shadow-inset</code> class.
+                        </p>
+
+                        <div className="space"></div>
+                        <div className="bg-gray-000 u-round-xs row u-gap-2 p-4 u-justify-center">
+                            <div className="bg-gray-200 u-round-xs p-4 u-shadow-inset u-text-center">
+                                <span className="font-bold">inset</span>
+                            </div>
+                        </div>
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<div class="bg-gray-000 u-round-xs row u-gap-2 p-4 u-justify-center">
     <div class="bg-gray-200 u-round-xs p-4 u-shadow-inset u-text-center"><span class="font-bold">inset</span></div>
+</div>`}
+                            language="htmlbars"
+                        />
+                    </div>
+                </section>
+
+                <section className="padtop" id="no-shadow">
+                    <div className="content">
+                        <Headline title="No Shadow" link="#no-shadow" size="4" />
+                        <div className="divider"></div>
+
+                        <p>
+                            To remove all shadows, use the <code>u-shadow-none</code> class.
+                        </p>
+
+                        <div className="space"></div>
+                        <div className="bg-gray-000 u-round-xs row u-gap-2 p-4 u-justify-center">
+                            <div className="bg-gray-200 u-round-xs p-4 u-shadow-none u-text-center">
+                                <span className="font-bold">none</span>
+                            </div>
+                        </div>
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<div class="bg-gray-000 u-round-xs row u-gap-2 p-4 u-justify-center">
+    <div class="bg-gray-200 u-round-xs p-4 u-shadow-none u-text-center"><span class="font-bold">none</span></div>
 </div>`}
                             language="htmlbars"
                         />
