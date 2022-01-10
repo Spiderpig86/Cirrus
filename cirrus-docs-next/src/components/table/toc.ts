@@ -15,6 +15,11 @@ export const toc: TableOfContentsEntry[] = [
                 anchor: '#styles',
                 children: null,
             },
+            {
+                name: 'Table Container',
+                anchor: '#table-container',
+                children: null,
+            },
         ],
     },
 ];

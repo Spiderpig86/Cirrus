@@ -550,6 +550,104 @@ export const TablePage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
+                <section className="padtop" id="table-container">
+                    <div className="content">
+                        <Headline title="Table Container" link="#table-container" size="4" />
+                        <div className="divider"></div>
+
+                        <p>
+                            Tables with lots of columns can get cluttered very quickly, especially on smaller devices.
+                            You can wrap your table using the <code>table-container</code> class to make your table
+                            horizontally scrollable so large tables don't explode out of your current layout.
+                        </p>
+
+                        <div className="table-container">
+                            <table className="table bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<div class="table-container">
+    <table>
+        <!-- content -->
+    </table>
+</div>`}
+                            language="htmlbars"
+                        />
+                    </div>
+                </section>
+
                 <Pagination
                     prevLink={{ name: 'Progress', link: './progress' }}
                     nextLink={{ name: 'Tabs', link: './tabs' }}
