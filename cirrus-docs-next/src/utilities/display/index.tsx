@@ -136,7 +136,7 @@ export const DisplayUtilsPage: React.FC<any> = (props) => {
                         <Headline title="Display" link="#display" />
                         <div className="divider"></div>
                         <span className="tag-container group-tags">
-                            <div className="tag tag--dark">Newdiv>
+                            <div className="tag tag--dark">New</div>
                             <div className="tag tag--info">0.6.0</div>
                         </span>
                         <p>These are utility classes that control the display of elements.</p>
