@@ -423,6 +423,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Border Radius',
+                url: '/utils/border-radius'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Box Shadow',
                 url: '/utils/box-shadow'
             },

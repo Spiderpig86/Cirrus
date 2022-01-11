@@ -339,7 +339,7 @@ $config: (
                     </div>
                 </section>
 
-                <Pagination nextLink={{ name: 'Clearfix', link: './clearfix' }} />
+                <Pagination nextLink={{ name: 'Border Radius', link: './border-radius' }} />
             </div>
 
             <TableOfContents entries={toc} />

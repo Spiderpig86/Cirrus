@@ -11,6 +11,7 @@ import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { ClassTable } from '../../../layouts/components/class-table';
 import { Capitalize } from '../../../utils/string';
+import { Tag } from '../../../layouts/components/tag';
 
 export const FontWeightsPage: React.FC<any> = (props) => {
     const DEFAULT_FONT_WEIGHT_CLASSES = {
@@ -42,6 +43,16 @@ export const FontWeightsPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Font Weights" link="#font-weights" />
                         <div className="divider"></div>
+                        <Tag
+                            leftProps={{
+                                classes: `tag--dark`,
+                                text: `Updated`,
+                            }}
+                            rightProps={{
+                                classes: `tag--info`,
+                                text: `0.7.0`,
+                            }}
+                        />
 
                         <p>These are classes that set the font weight of an element.</p>
 
