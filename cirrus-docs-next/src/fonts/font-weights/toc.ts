@@ -4,6 +4,12 @@ export const toc: TableOfContentsEntry[] = [
     {
         name: 'Font Weights',
         anchor: '#font-weights',
-        children: [],
+        children: [
+            {
+                name: 'Examples',
+                anchor: '#examples',
+                children: []
+            }
+        ],
     },
 ];
