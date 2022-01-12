@@ -394,6 +394,18 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Min Height',
+                url: '/layout/min-height'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Min Width',
+                url: '/layout/min-width'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Padding',
                 url: '/layout/padding'
             },

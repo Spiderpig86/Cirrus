@@ -10,6 +10,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { ClassTable } from '../../../layouts/components/class-table';
 
 export const HeightPage: React.FC<any> = (props) => {
     const heightClasses = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'];
@@ -44,42 +45,7 @@ export const HeightPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>Classes to set the height of an element.</p>
 
-                        <table className="table fixed-head u-text-left">
-                            <thead>
-                                <tr>
-                                    <th
-                                        style={{
-                                            width: '200px',
-                                        }}
-                                    >
-                                        Class
-                                    </th>
-                                    <th>Styles</th>
-                                </tr>
-                            </thead>
-                            <tbody
-                                style={{
-                                    height: '400px',
-                                }}
-                            >
-                                {classTable.map((row, index) => (
-                                    <tr key={index}>
-                                        <td
-                                            style={{
-                                                width: '200px',
-                                            }}
-                                        >
-                                            <code className="text-blue-600 bg-blue-100">{row.class}</code>
-                                        </td>
-                                        <td>
-                                            <pre>
-                                                <code>{row.style}</code>
-                                            </pre>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                        <ClassTable classTable={classTable} />
                     </div>
                 </section>
 
@@ -97,16 +63,16 @@ export const HeightPage: React.FC<any> = (props) => {
                                 height: '400px',
                             }}
                         >
-                            <div className="h-30 bg-teal-500 u-round-xs p-1">
+                            <div className="h-30 bg-teal-500 u-round-xs p-1 u-shadow-lg">
                                 <p className="text-gray-000">h-30</p>
                             </div>
-                            <div className="h-50 bg-teal-500 u-round-xs p-1">
+                            <div className="h-50 bg-teal-500 u-round-xs p-1 u-shadow-lg">
                                 <p className="text-gray-000">h-50</p>
                             </div>
-                            <div className="h-70 bg-teal-500 u-round-xs p-1">
+                            <div className="h-70 bg-teal-500 u-round-xs p-1 u-shadow-lg">
                                 <p className="text-gray-000">h-70</p>
                             </div>
-                            <div className="h-90 bg-teal-500 u-round-xs p-1">
+                            <div className="h-90 bg-teal-500 u-round-xs p-1 u-shadow-lg">
                                 <p className="text-gray-000">h-90</p>
                             </div>
                         </div>
@@ -137,7 +103,7 @@ export const HeightPage: React.FC<any> = (props) => {
                                 minHeight: '400px',
                             }}
                         >
-                            <div className="h-screen bg-purple-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs">
+                            <div className="h-screen bg-purple-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
                                 <p>h-screen</p>
                             </div>
                         </div>
@@ -166,7 +132,7 @@ export const HeightPage: React.FC<any> = (props) => {
                                 minHeight: '200px',
                             }}
                         >
-                            <div className="h-auto bg-red-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs">
+                            <div className="h-auto bg-red-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
                                 <p>h-auto</p>
                             </div>
                         </div>

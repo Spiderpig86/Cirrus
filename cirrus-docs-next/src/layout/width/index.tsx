@@ -10,6 +10,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { ClassTable } from '../../../layouts/components/class-table';
 
 export const WidthPage: React.FC<any> = (props) => {
     const widthClasses = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'];
@@ -44,42 +45,7 @@ export const WidthPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>Classes to set the width of an element.</p>
 
-                        <table className="table fixed-head u-text-left">
-                            <thead>
-                                <tr>
-                                    <th
-                                        style={{
-                                            width: '200px',
-                                        }}
-                                    >
-                                        Class
-                                    </th>
-                                    <th>Styles</th>
-                                </tr>
-                            </thead>
-                            <tbody
-                                style={{
-                                    height: '400px',
-                                }}
-                            >
-                                {classTable.map((row, index) => (
-                                    <tr key={index}>
-                                        <td
-                                            style={{
-                                                width: '200px',
-                                            }}
-                                        >
-                                            <code className="text-blue-600 bg-blue-100">{row.class}</code>
-                                        </td>
-                                        <td>
-                                            <pre>
-                                                <code>{row.style}</code>
-                                            </pre>
-                                        </td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
+                        <ClassTable classTable={classTable} />
                     </div>
                 </section>
 
@@ -94,16 +60,16 @@ export const WidthPage: React.FC<any> = (props) => {
                         <div
                             className="u-flex u-flex-column u-justify-space-evenly p-6 bg-orange-100 mb-2"
                         >
-                            <div className="w-20 bg-orange-500 u-round-xs p-1 mb-2">
+                            <div className="w-20 bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
                                 <span className="text-gray-000">w-20</span>
                             </div>
-                            <div className="w-40 bg-orange-500 u-round-xs p-1 mb-2">
+                            <div className="w-40 bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
                                 <span className="text-gray-000">w-40</span>
                             </div>
-                            <div className="w-60 bg-orange-500 u-round-xs p-1 mb-2">
+                            <div className="w-60 bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
                                 <span className="text-gray-000">w-60</span>
                             </div>
-                            <div className="w-80 bg-orange-500 u-round-xs p-1 mb-2">
+                            <div className="w-80 bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
                                 <span className="text-gray-000">w-80</span>
                             </div>
                         </div>
@@ -131,7 +97,7 @@ export const WidthPage: React.FC<any> = (props) => {
                         <div
                             className="u-relative u-overflow-x-scroll p-6 bg-pink-100 mb-2"
                         >
-                            <div className="w-screen bg-pink-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs">
+                            <div className="w-screen bg-pink-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
                                 <p>w-screen</p>
                             </div>
                         </div>
@@ -157,7 +123,7 @@ export const WidthPage: React.FC<any> = (props) => {
                         <div
                             className="u-relative p-6 bg-indigo-100 mb-2"
                         >
-                            <div className="w-auto bg-indigo-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs">
+                            <div className="w-auto bg-indigo-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
                                 <p>w-auto</p>
                             </div>
                         </div>
