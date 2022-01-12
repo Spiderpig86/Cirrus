@@ -316,7 +316,7 @@ $config: (
 
                 <Pagination
                     prevLink={{ name: 'Level', link: './level' }}
-                    nextLink={{ name: 'Media', link: './media' }}
+                    nextLink={{ name: 'Max', link: './max-height' }}
                 />
             </div>
             <TableOfContents entries={toc} />
