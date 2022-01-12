@@ -294,7 +294,7 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Media', link: './media' }}
+                    prevLink={{ name: 'Min Width', link: './min-width' }}
                     nextLink={{ name: 'Spacing', link: './spacing' }}
                 />
             </div>

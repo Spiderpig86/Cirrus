@@ -64,7 +64,7 @@ export const MinWidthPage: React.FC<any> = (props) => {
                         <Headline title="Examples" link="#examples" size="4" />
                         <div className="divider"></div>
 
-                        <p>Using these classes it quite simple to control the minimum width an element should have. You can either use a percentage based class or use a class to span the whole screen.</p>
+                        <p>Using these classes it quite simple to control the minimum width an element should have. You can either use a percentage based class or use a class to span the whole screen using the <code>min-w-[size]</code> syntax.</p>
 
                         <div className="p-4 bg-indigo-100 u-round-xs text-white font-bold u-text-center u-flex">
                             <div className="min-w-50 p-2 bg-indigo-500 u-round-xs">

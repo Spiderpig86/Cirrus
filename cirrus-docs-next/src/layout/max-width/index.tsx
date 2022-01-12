@@ -14,7 +14,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 
-export const MinHeightPage: React.FC<any> = (props) => {
+export const MaxWidthPage: React.FC<any> = (props) => {
     const DEFAULT_CLASSES = {
         none: 'none',
         xs: '640px',
@@ -32,28 +32,28 @@ export const MinHeightPage: React.FC<any> = (props) => {
         '80': '80%',
         '90': '90%',
         '100': '100%',
-        screen: '100vh',
+        screen: '100vw',
     };
 
     let classTable = Object.entries(DEFAULT_CLASSES).map((entry) => {
         return {
-            class: `min-h-${entry[0]}`,
-            style: `min-height: ${entry[1]};`,
+            class: `max-w-${entry[0]}`,
+            style: `max-width: ${entry[1]};`,
         };
     });
 
     return (
         <main className="page-layout">
             <Head>
-                <title>{PAGE_TITLE_PREFIX} Min Height</title>
+                <title>{PAGE_TITLE_PREFIX} Max Width</title>
             </Head>
 
             <div>
-                <section className="padtop" id="min-height">
+                <section className="padtop" id="max-width">
                     <div className="content">
-                        <Headline title="Min Height" link="#min-height" />
+                        <Headline title="Max Width" link="#max-width" />
                         <div className="divider"></div>
-                        <p>Classes to set the minimum height of an element.</p>
+                        <p>Classes to set the maximum width of an element.</p>
 
                         <ClassTable classTable={classTable} />
                     </div>
@@ -64,17 +64,22 @@ export const MinHeightPage: React.FC<any> = (props) => {
                         <Headline title="Examples" link="#examples" size="4" />
                         <div className="divider"></div>
 
-                        <p>Using these classes it quite simple to control the minimum height an element should have. You can either use a percentage based class or use a class to span the whole screen using the <code>min-h-[size]</code> syntax.</p>
+                        <p>Using these classes it quite simple to control the maximum width an element should have. You can either use a percentage based class or use a class to span the whole screen using the <code>max-w-[size]</code> syntax.</p>
 
-                        <div className="p-4 bg-pink-100 u-round-xs text-white font-bold u-text-center">
-                            <div className="min-h-100 p-2 bg-pink-500 u-round-xs">
-                                min-h-100
+                        <div className="p-4 bg-teal-100 u-round-xs text-white font-bold u-text-center">
+                            <div className="max-w-xs p-2 bg-teal-500 u-round-xs mb-2">
+                                max-w-xs (640px)
+                            </div>
+                            
+                            <div className="max-w-sm p-2 bg-teal-500 u-round-xs">
+                                max-w-sm (768px)
                             </div>
                         </div>
                         <div className="space"></div>
 
-                        <CodeBlock code={`<div class="p-4 bg-pink-100 u-round-xs text-white font-bold u-text-center">
-    <div class="min-h-100 p-2 bg-pink-500 u-round-xs">min-h-100</div>
+                        <CodeBlock code={`<div class="p-4 bg-teal-100 u-round-xs text-white font-bold u-text-center">
+    <div class="max-w-xs p-2 bg-teal-500 u-round-xs mb-2">max-w-xs (640px)</div>
+    <div class="max-w-sm p-2 bg-teal-500 u-round-xs">max-w-sm (768px)</div>
 </div>`} language='htmlbars' />
 
                     </div>
@@ -98,7 +103,7 @@ export const MinHeightPage: React.FC<any> = (props) => {
                                 code={`//_configs.scss
 $config: (
     viewports: (
-        flags.$MIN-HEIGHT: true,
+        flags.$MAX-WIDTH: true,
     )
 ) !default;`}
                                 language="scss"
@@ -107,12 +112,12 @@ $config: (
 
                         <p>
                             To use the viewport variant of a given class, you just need to suffix each class with a
-                            viewport selector. For example, if I only want <code>min-h-0</code> to be applied to some
-                            element for <code>lg</code> and above, then I would use the <code>min-h-0-lg</code> class.
+                            viewport selector. For example, if I only want <code>max-w-0</code> to be applied to some
+                            element for <code>lg</code> and above, then I would use the <code>max-w-0-lg</code> class.
                         </p>
 
                         <CodeBlock
-                            code={`<div class="min-h-0-lg">
+                            code={`<div class="max-w-0-lg">
     <!-- ... -->
 </div>`}
                             language="html"
@@ -134,7 +139,7 @@ $config: (
                         <div className="divider"></div>
 
                         <p>
-                            The classes specified above are the default utility classes for setting minimum heights. You can
+                            The classes specified above are the default utility classes for setting maximum widths. You can
                             add, change, or remove classes within the <code>_config.scss</code> file of Cirrus.
                         </p>
 
@@ -143,16 +148,16 @@ $config: (
                         <CodeBlock
                             code={`// _config.scss
 $config: (
-    minmax-heights: (
-        '25': '25%',
+    minmax-widths: (
+        'fit': 'fit-content',
     )
 ) !default;`}
                             language="scss"
                         />
                         <p>This would generate the following additonal classes.</p>
                         <CodeBlock
-                            code={`.min-h-25 {
-    min-height: 25% !important;
+                            code={`.max-w-fit {
+    max-width: fit-content !important;
 }`}
                             language="css"
                         />
@@ -167,8 +172,8 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Media', link: './media' }}
-                    nextLink={{ name: 'Min Width', link: './min-width' }}
+                    prevLink={{ name: 'Max Height', link: './max-height' }}
+                    nextLink={{ name: 'Media', link: './media' }}
                 />
             </div>
 
@@ -177,4 +182,4 @@ $config: (
     );
 };
 
-export default withLayout(<DefaultLayout />)(MinHeightPage);
+export default withLayout(<DefaultLayout />)(MaxWidthPage);

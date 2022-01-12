@@ -213,7 +213,10 @@ export const MediaPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Hero', link: './hero' }} nextLink={{ name: 'Media', link: './media' }} />
+                <Pagination
+                    prevLink={{ name: 'Max Width', link: './max-width' }}
+                    nextLink={{ name: 'Min Height', link: './min-height' }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>

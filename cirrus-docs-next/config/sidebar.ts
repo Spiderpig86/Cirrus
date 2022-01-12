@@ -388,6 +388,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Max Width',
+                url: '/layout/max-width'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Media',
                 url: '/layout/media'
             },
