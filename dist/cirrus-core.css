@@ -4464,7 +4464,7 @@ section {
 }
 
 .min-w-screen {
-  min-width: 100vh !important;
+  min-width: 100vw !important;
 }
 
 .max-h-none {
@@ -4600,7 +4600,7 @@ section {
 }
 
 .max-w-screen {
-  max-width: 100vh !important;
+  max-width: 100vw !important;
 }
 
 /* Do the actual balancing only on larger screens */

@@ -45,13 +45,15 @@
 /* v1 */
 
 @each $name, $color in $v1Palettes {
-    .bg-#{$name} {
-        background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
-    }
+    @if $color != null {
+        .bg-#{$name} {
+            background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
+        }
 
-    .text-#{$name} {
-        border-color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
-        color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+        .text-#{$name} {
+            border-color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+            color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+        }
     }
 }
 
@@ -68,13 +70,15 @@
 
 @each $name, $palette in $v2Palettes {
     @each $level, $color in $palette {
-        .bg-#{$name}-#{$level} {
-            background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
-        }
+        @if $color != null {
+            .bg-#{$name}-#{$level} {
+                background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
+            }
 
-        .text-#{$name}-#{$level} {
-            border-color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
-            color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+            .text-#{$name}-#{$level} {
+                border-color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+                color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+            }
         }
     }
 }

@@ -9,6 +9,15 @@
     $config: (
         excludes: (
             flags.$ABSOLUTES,
+        ),
+        opacity: null, // Disable default opacity classes
+        extend: (
+            // Add your own
+            opacity: (
+                25: .25,
+                50: .5,
+                75: .75,
+            )
         )
     ),
 );
