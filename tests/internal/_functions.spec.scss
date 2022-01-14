@@ -106,3 +106,86 @@
         );
     }
 }
+
+/***********************
+ * get-with-extended() *
+ ***********************/
+@include describe('get-with-extend()') {
+    @include it('should return default settings for opacity if extend.opacity is empty.') {
+        @include assert-equal(
+            functions.get-with-extend(
+                (
+                    opacity: (
+                        0: 0,
+                        100: 1,
+                    ),
+                    extend: (
+                        opacity: (),
+                    ),
+                ),
+                opacity
+            ),
+            (
+                0: 0,
+                100: 1,
+            )
+        );
+    }
+    @include it(
+        'should return extended settings for opacity if config.opacity is set to null and extended settings is not null.'
+    ) {
+        @include assert-equal(
+            functions.get-with-extend(
+                (
+                    opacity: null,
+                    extend: (
+                        opacity: (
+                            50: 0.5,
+                        ),
+                    ),
+                ),
+                opacity
+            ),
+            (
+                50: 0.5,
+            )
+        );
+    }
+    @include it('should return merged original and extended settings if both are not null.') {
+        @include assert-equal(
+            functions.get-with-extend(
+                (
+                    opacity: (
+                        0: 0,
+                        100: 1,
+                    ),
+                    extend: (
+                        opacity: (
+                            50: 0.5,
+                        ),
+                    ),
+                ),
+                opacity
+            ),
+            (
+                0: 0,
+                50: 0.5,
+                100: 1,
+            )
+        );
+    }
+    @include it('should return empty list if original and extended are null and empty (default) respectively.') {
+        @include assert-equal(
+            functions.get-with-extend(
+                (
+                    opacity: null,
+                    extend: (
+                        opacity: (),
+                    ),
+                ),
+                opacity
+            ),
+            ()
+        );
+    }
+}

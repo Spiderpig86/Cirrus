@@ -71,3 +71,32 @@ $DELIMETER: '-';
         );
     }
 }
+
+/*
+    Gets entry from given config by key and will merge with extended properties inside the extend map. This function also exists because merging with a null map does not work.
+    Use case is that if we have somthing like this:
+
+    $config: (
+        opacity: null, // Disable default opacity classes
+        extends: (
+            // Framework will now extend with your config and generate .u-opacity-42
+            opacity: (
+                42: .42
+            )
+        )
+    );
+
+*/
+@function get-with-extend($all-config, $keys...) {
+    $result: ();
+
+    @if map.get($all-config, $keys...) != null {
+        $result: map.deep-merge($result, map.get($all-config, $keys...));
+    }
+
+    @if map.get($all-config, extend, $keys...) != null {
+        $result: map.deep-merge($result, map.get($all-config, extend, $keys...));
+    }
+
+    @return $result;
+}

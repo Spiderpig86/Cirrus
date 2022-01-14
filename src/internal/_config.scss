@@ -19,11 +19,9 @@
 //          )
 //      );
 // 
-// This will disable all blues from being generated.
+// This will disable all blues defined in $default-config from being generated.
 $config: (
-    
-    // Please define all these using hex
-    colors: (),
+    extend: ()
 ) !default;
 
 // ==================================================
@@ -61,6 +59,7 @@ $default-config: (
     extend: (
         avatar-sizes: (),
         button-sizes: (),
+        // Please define all these using hex
         colors: (
             pinks: (),
             reds: (),
@@ -389,7 +388,7 @@ $default-config: (
                 ),
             ),
         ),
-        transforms: (uppercase, lowercase, capitalize),
+        transforms: (uppercase: uppercase, lowercase: lowercase, capitalize: capitalize),
         weights: (
             'extrathin': 100,
             'thin': 200,
@@ -569,8 +568,20 @@ $default-config: (
         'full': 9001px,
     ),
     sizing-system: (
-        base-size: 0.5rem,
-        steps: (0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32)
+        0: 0rem,
+        1: 0.5rem,
+        2: 1rem,
+        3: 1.5rem,
+        4: 2rem,
+        5: 2.5rem,
+        6: 3rem,
+        8: 4rem,
+        10: 5rem,
+        12: 6rem,
+        16: 8rem,
+        20: 10rem,
+        24: 12rem,
+        32: 16rem,
     ),
     shadows: (
         'none': (
@@ -631,6 +642,7 @@ $default-config: (
 // ==================================================
 $all-config: map.deep-merge($default-config, $config);
 
+
 // ==================================================
 // Exported values
 // ==================================================
@@ -642,16 +654,16 @@ $includes: map.get($all-config, includes);
 
 // COLORS
 /* v2 Colors */
-$pinks: map.get($all-config, colors, pinks);
-$reds: map.get($all-config, colors, reds);
-$oranges: map.get($all-config, colors, oranges);
-$yellows: map.get($all-config, colors, yellows);
-$greens: map.get($all-config, colors, greens);
-$teals: map.get($all-config, colors, teals);
-$blues: map.get($all-config, colors, blues);
-$indigos: map.get($all-config, colors, indigos);
-$purples: map.get($all-config, colors, purples);
-$grays: map.get($all-config, colors, grays);
+$pinks: functions.get-with-extend($all-config, colors, pinks);
+$reds: functions.get-with-extend($all-config, colors, reds);
+$oranges: functions.get-with-extend($all-config, colors, oranges);
+$yellows: functions.get-with-extend($all-config, colors, yellows);
+$greens: functions.get-with-extend($all-config, colors, greens);
+$teals: functions.get-with-extend($all-config, colors, teals);
+$blues: functions.get-with-extend($all-config, colors, blues);
+$indigos: functions.get-with-extend($all-config, colors, indigos);
+$purples: functions.get-with-extend($all-config, colors, purples);
+$grays: functions.get-with-extend($all-config, colors, grays);
 $v2Palettes: (
     'pink': $pinks,
     'red': $reds,
@@ -666,39 +678,38 @@ $v2Palettes: (
 );
 
 // COMPONENTS
-$avatar-sizes: map.get($all-config, avatar-sizes);
-$button-sizes: map.get($all-config, button-sizes);
-$form-label-sizes: map.get($all-config, form-label-sizes);
-$font-heading-sizes: map.get($all-config, fonts, sizes, heading);
-$font-headline-sizes: map.get($all-config, fonts, sizes, headline);
-$font-text-sizes: map.get($all-config, fonts, sizes, text);
-$font-transforms: map.get($all-config, fonts, transforms);
-$font-weights: map.get($all-config, fonts, weights);
+$avatar-sizes: functions.get-with-extend($all-config, avatar-sizes);
+$button-sizes: functions.get-with-extend($all-config, button-sizes);
+$form-label-sizes: functions.get-with-extend($all-config, form-label-sizes);
+$font-heading-sizes: functions.get-with-extend($all-config, fonts, sizes, heading);
+$font-headline-sizes: functions.get-with-extend($all-config, fonts, sizes, headline);
+$font-text-sizes: functions.get-with-extend($all-config, fonts, sizes, text);
+$font-transforms: functions.get-with-extend($all-config, fonts, transforms);
+$font-weights: functions.get-with-extend($all-config, fonts, weights);
 
 // Form sizes
-$input-sizes: map.get($all-config, form-sizes, input-sizes);
-$input-contains-icon-padding: map.get($all-config, form-sizes, input-contains-icon-padding);
-$input-icon-sizes: map.get($all-config, form-sizes, input-icon-sizes);
+$input-sizes: functions.get-with-extend($all-config, form-sizes, input-sizes);
+$input-contains-icon-padding: functions.get-with-extend($all-config, form-sizes, input-contains-icon-padding);
+$input-icon-sizes: functions.get-with-extend($all-config, form-sizes, input-icon-sizes);
 
-$progress-bar-sizes: map.get($all-config, progress, sizes);
-$progress-bar-themes: map.get($all-config, progress, themes);
-$space-sizes: map.get($all-config, space-sizes);
-$tab-font-sizes: map.get($all-config, tab-sizes);
+$progress-bar-sizes: functions.get-with-extend($all-config, progress, sizes);
+$progress-bar-themes: functions.get-with-extend($all-config, progress, themes);
+$space-sizes: functions.get-with-extend($all-config, space-sizes);
+$tab-font-sizes: functions.get-with-extend($all-config, tab-sizes);
 
 // UTILS
-$absolute: map.get($all-config, absolute);
+$absolute: functions.get-with-extend($all-config, absolute);
 
-$heights: map.get($all-config, heights);
-$widths: map.get($all-config, widths);
-$minmax-heights: map.get($all-config, minmax-heights);
-$minmax-widths: map.get($all-config, minmax-widths);
+$heights: functions.get-with-extend($all-config, heights);
+$widths: functions.get-with-extend($all-config, widths);
+$minmax-heights: functions.get-with-extend($all-config, minmax-heights);
+$minmax-widths: functions.get-with-extend($all-config, minmax-widths);
 
-$opacities: map.get($all-config, opacity);
-$round: map.get($all-config, round);
-$shadows: map.get($all-config, shadows);
-$space-size: map.get($all-config, sizing-system, base-size);
-$spacing-system: map.get($all-config, sizing-system, steps);
-$z-indexes: map.get($all-config, z-index);
+$opacities: functions.get-with-extend($all-config, opacity);
+$round: functions.get-with-extend($all-config, round);
+$shadows: functions.get-with-extend($all-config, shadows);
+$spacing-system: functions.get-with-extend($all-config, sizing-system);
+$z-indexes: functions.get-with-extend($all-config, z-index);
 
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).

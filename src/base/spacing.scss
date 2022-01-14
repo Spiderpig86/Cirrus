@@ -1,50 +1,50 @@
 @use '../internal' as *;
 
-@each $size in $spacing-system {
+@each $class, $size in $spacing-system {
     /* Margin */
-    .m-#{$size} {
-        margin: calc(var(--space-size) * #{$size}) !important;
+    .m-#{$class} {
+        margin: $size !important;
     }
 
-    .mt-#{$size},
-    .my-#{$size} {
-        margin-top: calc(var(--space-size) * #{$size}) !important;
+    .mt-#{$class},
+    .my-#{$class} {
+        margin-top: $size !important;
     }
-    .mb-#{$size},
-    .my-#{$size} {
-        margin-bottom: calc(var(--space-size) * #{$size}) !important;
+    .mb-#{$class},
+    .my-#{$class} {
+        margin-bottom: $size !important;
     }
 
-    .ml-#{$size},
-    .mx-#{$size} {
-        margin-left: calc(var(--space-size) * #{$size}) !important;
+    .ml-#{$class},
+    .mx-#{$class} {
+        margin-left: $size !important;
     }
-    .mr-#{$size},
-    .mx-#{$size} {
-        margin-right: calc(var(--space-size) * #{$size}) !important;
+    .mr-#{$class},
+    .mx-#{$class} {
+        margin-right: $size !important;
     }
 
     /* Spacing */
-    .p-#{$size} {
-        padding: calc(var(--space-size) * #{$size}) !important;
+    .p-#{$class} {
+        padding: $size !important;
     }
 
-    .pt-#{$size},
-    .py-#{$size} {
-        padding-top: calc(var(--space-size) * #{$size}) !important;
+    .pt-#{$class},
+    .py-#{$class} {
+        padding-top: $size !important;
     }
-    .pb-#{$size},
-    .py-#{$size} {
-        padding-bottom: calc(var(--space-size) * #{$size}) !important;
+    .pb-#{$class},
+    .py-#{$class} {
+        padding-bottom: $size !important;
     }
 
-    .pl-#{$size},
-    .px-#{$size} {
-        padding-left: calc(var(--space-size) * #{$size}) !important;
+    .pl-#{$class},
+    .px-#{$class} {
+        padding-left: $size !important;
     }
-    .pr-#{$size},
-    .px-#{$size} {
-        padding-right: calc(var(--space-size) * #{$size}) !important;
+    .pr-#{$class},
+    .px-#{$class} {
+        padding-right: $size !important;
     }
 }
 
@@ -71,52 +71,52 @@
 @if get-viewport-flag($MARGIN-PADDING) == true {
     // TODO: Maybe in future versions of Sass, we can pass mixins as a parameter to another mixin. For now, we just have to write what we want it to generate
     @each $suffix, $limit in $breakpoint-pairs {
-        @each $size in $spacing-system {
+        @each $class, $size in $spacing-system {
             @include screen-above($limit) {
                 /* Margin */
-                .m-#{$size}-#{$suffix} {
-                    margin: calc(var(--space-size) * #{$size}) !important;
+                .m-#{$class}-#{$suffix} {
+                    margin: $size !important;
                 }
 
-                .mt-#{$size}-#{$suffix},
-                .my-#{$size}-#{$suffix} {
-                    margin-top: calc(var(--space-size) * #{$size}) !important;
+                .mt-#{$class}-#{$suffix},
+                .my-#{$class}-#{$suffix} {
+                    margin-top: $size !important;
                 }
-                .mb-#{$size}-#{$suffix},
-                .my-#{$size}-#{$suffix} {
-                    margin-bottom: calc(var(--space-size) * #{$size}) !important;
+                .mb-#{$class}-#{$suffix},
+                .my-#{$class}-#{$suffix} {
+                    margin-bottom: $size !important;
                 }
 
-                .ml-#{$size}-#{$suffix},
-                .mx-#{$size}-#{$suffix} {
-                    margin-left: calc(var(--space-size) * #{$size}) !important;
+                .ml-#{$class}-#{$suffix},
+                .mx-#{$class}-#{$suffix} {
+                    margin-left: $size !important;
                 }
-                .mr-#{$size}-#{$suffix},
-                .mx-#{$size}-#{$suffix} {
-                    margin-right: calc(var(--space-size) * #{$size}) !important;
+                .mr-#{$class}-#{$suffix},
+                .mx-#{$class}-#{$suffix} {
+                    margin-right: $size !important;
                 }
 
                 /* Spacing */
-                .p-#{$size}-#{$suffix} {
-                    padding: calc(var(--space-size) * #{$size}) !important;
+                .p-#{$class}-#{$suffix} {
+                    padding: $size !important;
                 }
 
-                .pt-#{$size}-#{$suffix},
-                .py-#{$size}-#{$suffix} {
-                    padding-top: calc(var(--space-size) * #{$size}) !important;
+                .pt-#{$class}-#{$suffix},
+                .py-#{$class}-#{$suffix} {
+                    padding-top: $size !important;
                 }
-                .pb-#{$size}-#{$suffix},
-                .py-#{$size}-#{$suffix} {
-                    padding-bottom: calc(var(--space-size) * #{$size}) !important;
+                .pb-#{$class}-#{$suffix},
+                .py-#{$class}-#{$suffix} {
+                    padding-bottom: $size !important;
                 }
 
-                .pl-#{$size}-#{$suffix},
-                .px-#{$size}-#{$suffix} {
-                    padding-left: calc(var(--space-size) * #{$size}) !important;
+                .pl-#{$class}-#{$suffix},
+                .px-#{$class}-#{$suffix} {
+                    padding-left: $size !important;
                 }
-                .pr-#{$size}-#{$suffix},
-                .px-#{$size}-#{$suffix} {
-                    padding-right: calc(var(--space-size) * #{$size}) !important;
+                .pr-#{$class}-#{$suffix},
+                .px-#{$class}-#{$suffix} {
+                    padding-right: $size !important;
                 }
 
                 .ml-auto-#{$suffix},

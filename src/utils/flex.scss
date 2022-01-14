@@ -43,11 +43,11 @@ $generate-utility: should-generate-classes($GAP);
     // Generate flex gap class map
     $gaps-both: ();
     // TODO: Consider if we need to generate for row and col only
-    @each $size in $spacing-system {
+    @each $class, $size in $spacing-system {
         $gaps-both: map-merge(
                         $gaps-both,
                         (
-                                'gap-#{$size}': calc(#{$space-size} * #{$size}),
+                                'gap-#{$class}': $size,
                         )
         );
     }
