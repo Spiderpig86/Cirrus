@@ -261,9 +261,11 @@ padding-bottom: (0) !important;`,
                         <CodeBlock
                             code={`// _config.scss
 $config: (
-    sizing-system: (
-        base-size: 1rem,
-        steps: (64)
+    extend: (
+        sizing-system: (
+            base-size: 1rem,
+            steps: (64)
+        )
     )
 ) !default;`}
                             language="scss"

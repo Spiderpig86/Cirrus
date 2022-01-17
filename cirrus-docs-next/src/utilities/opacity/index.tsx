@@ -124,9 +124,11 @@ export const OpacityUtilsPage: React.FC<any> = (props) => {
                         <CodeBlock
                             code={`// _config.scss
 $config: (
-    opacity: (
-        25: .25,
-        75: .75,
+    extend: (
+        opacity: (
+            25: .25,
+            75: .75,
+        )
     )
 ) !default;`}
                             language="scss"

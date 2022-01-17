@@ -203,9 +203,11 @@ $config: (
                         <CodeBlock
                             code={`// _config.scss
 $config: (
-    z-index: (
-        25: 25,
-        75: 75,
+    extend: (
+        z-index: (
+            25: 25,
+            75: 75,
+        )
     )
 ) !default;`}
                             language="scss"

@@ -307,8 +307,10 @@ $config: (
                         <CodeBlock
                             code={`// _config.scss
 $config: (
-    absolute: (
-        '10px': 10px
+    extend: (
+        absolute: (
+            '10px': 10px
+        )
     )
 ) !default;`}
                             language="scss"

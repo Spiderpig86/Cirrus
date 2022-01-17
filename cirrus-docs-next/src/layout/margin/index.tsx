@@ -282,9 +282,11 @@ export const MarginPage: React.FC<any> = (props) => {
                         <CodeBlock
                             code={`// _config.scss
 $config: (
-    sizing-system: (
-        base-size: 1rem,
-        steps: (64)
+    extend: (
+        sizing-system: (
+            base-size: 1rem,
+            steps: (64)
+        )
     )
 ) !default;`}
                             language="scss"

@@ -158,9 +158,11 @@ export const BorderRadiusUtilsPage: React.FC<any> = (props) => {
                         <CodeBlock
                             code={`// _config.scss
 $config: (
-    round: (
-        '2xl': 1.5rem,
-        '3xl': 1.75rem
+    extend: (
+        round: (
+            '2xl': 1.5rem,
+            '3xl': 1.75rem
+        )
     )
 ) !default;`}
                             language="scss"

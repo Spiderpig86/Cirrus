@@ -157,10 +157,12 @@ export const BoxShadowUtilsPage: React.FC<any> = (props) => {
                         <CodeBlock
                             code={`// _config.scss
 $config: (
-    shadows: (
-        '2xl': (
-            --cirrus-shadow: (0 25px 30px -10px rgba(0, 0, 0, 0.1),
-            0 15px 15px -10px rgba(0, 0, 0, 0.04))
+    extend: (
+        shadows: (
+            '2xl': (
+                --cirrus-shadow: (0 25px 30px -10px rgba(0, 0, 0, 0.1),
+                0 15px 15px -10px rgba(0, 0, 0, 0.04))
+            )
         )
     )
 ) !default;`}

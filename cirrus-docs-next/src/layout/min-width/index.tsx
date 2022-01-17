@@ -143,9 +143,11 @@ $config: (
                         <CodeBlock
                             code={`// _config.scss
 $config: (
-    minmax-widths: (
-        'min': 'min-content',
-        'max': 'max-content',
+    extend: (
+        minmax-widths: (
+            'min': 'min-content',
+            'max': 'max-content',
+        )
     )
 ) !default;`}
                             language="scss"

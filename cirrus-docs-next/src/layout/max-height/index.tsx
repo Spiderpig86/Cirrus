@@ -143,8 +143,10 @@ $config: (
                         <CodeBlock
                             code={`// _config.scss
 $config: (
-    minmax-heights: (
-        '25': '25%',
+    extend: (
+        minmax-heights: (
+            '25': '25%',
+        )
     )
 ) !default;`}
                             language="scss"
