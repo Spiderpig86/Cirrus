@@ -59,7 +59,8 @@ $default-config: (
     extend: (
         avatar-sizes: (),
         button-sizes: (),
-        // Please define all these using hex
+        // Please define all colors using hex
+        // Omitting some colors may break Cirrus builds
         colors: (
             pinks: (),
             reds: (),

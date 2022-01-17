@@ -34,6 +34,13 @@ $generate-utility: should-generate-classes($FLEX);
                     'u#{delimitize('flex-grow')}',
             $generate-viewports: #{get-viewport-flag($FLEX)}
     );
+
+    @include generate-classes-for-viewport(
+                    $flex-grow,
+                    'flex-shrink',
+                    'u#{delimitize('flex-shrink')}',
+            $generate-viewports: #{get-viewport-flag($FLEX)}
+    );
 }
 
 
