@@ -1,10 +1,15 @@
 import React from 'react';
-import {Resizable} from 're-resizable';
+import { Resizable } from 're-resizable';
 
-export const ResizableInternal: React.FC<any> = (props) => (
+export interface ResizableInternalProps {
+    children: any;
+    minWidth?: string;
+}
+
+export const ResizableInternal: React.FC<ResizableInternalProps> = (props: ResizableInternalProps) => (
     <Resizable
         bounds="parent"
-        minWidth="200px"
+        minWidth={props.minWidth ?? '200px'}
         handleStyles={{
             right: {
                 backgroundColor: 'rgb(153 160 185)',

@@ -26,60 +26,60 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
             name: 'row',
             example: (
                 <div className="u-flex u-flex-row">
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-flex-row">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
         },
         {
             name: 'row-reverse',
             example: (
                 <div className="u-flex u-flex-row-reverse">
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-flex-row-reverse">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
         },
         {
             name: 'column',
             example: (
                 <div className="u-flex u-flex-column">
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-flex-column">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
         },
         {
             name: 'column-reverse',
             example: (
                 <div className="u-flex u-flex-column-reverse">
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-flex-column-reverse">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
         },
     ];
@@ -93,15 +93,15 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         height: '150px',
                     }}
                 >
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-items-stretch" style="height: 150px;">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
         },
         {
@@ -113,15 +113,15 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         height: '150px',
                     }}
                 >
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-items-flex-start" style="height: 150px;">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
         },
         {
@@ -133,15 +133,15 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         height: '150px',
                     }}
                 >
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-items-center" style="height: 150px;">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
         },
         {
@@ -153,15 +153,15 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         height: '150px',
                     }}
                 >
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-items-flex-end" style="height: 150px;">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
         },
         {
@@ -173,21 +173,21 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         height: '150px',
                     }}
                 >
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">
                         <h3>a</h3>
                     </div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">
                         <h6>b</h6>
                     </div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-items-baseline" style="height: 150px;">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">
         <h3>a</h3></div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">
         <h6>b</h6></div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
             description: (
                 <p>
@@ -202,60 +202,60 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
             name: 'flex-start',
             example: (
                 <div className="u-flex u-justify-flex-start">
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-justify-flex-start">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
         },
         {
             name: 'center',
             example: (
                 <div className="u-flex u-justify-center">
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-justify-center">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
         },
         {
             name: 'flex-end',
             example: (
                 <div className="u-flex u-justify-flex-end">
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-justify-flex-end">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
         },
         {
             name: 'space-between',
             example: (
                 <div className="u-flex u-justify-space-between">
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-justify-space-between">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
             description: (
                 <p>
@@ -269,15 +269,15 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
             name: 'space-around',
             example: (
                 <div className="u-flex u-justify-space-around">
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-justify-space-around">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
             description: (
                 <p>
@@ -291,15 +291,15 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
             name: 'space-evenly',
             example: (
                 <div className="u-flex u-justify-space-evenly">
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                    <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                    <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                 </div>
             ),
             code: `<div class="u-flex u-justify-space-evenly">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`,
             description: (
                 <p>
@@ -388,16 +388,16 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                             The standard flex layout with the <code>u-flex</code> class.
                         </p>
                         <div className="u-flex bg-green-100 u-round-xs">
-                            <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                            <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                            <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                            <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                            <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                            <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div class="u-flex bg-green-100">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`}
                             language="htmlbars"
                         />
@@ -408,16 +408,16 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                             The inline flex layout with the <code>u-inline-flex</code> class.
                         </p>
                         <div className="u-inline-flex bg-green-100 u-round-xs">
-                            <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-                            <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-                            <div className="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+                            <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+                            <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+                            <div className="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div class="u-inline-flex bg-green-100">
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">a</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">b</div>
-    <div class="bg-green-500 text-white px-2 py-1 m-1 u-round-xs">c</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">a</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">b</div>
+    <div class="bg-green-500 u-shadow-lg text-white px-2 py-1 m-1 u-round-xs">c</div>
 </div>`}
                             language="htmlbars"
                         />
@@ -550,7 +550,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         <div className="space space--xl"></div>
 
                         <p>
-                            Use <code>u-flex-grow-1</code> to allow a flex item to grow relative to the parent and
+                            Use <code>u-flex-grow-0</code> to prevnt a flex item from growing relative to the parent and
                             sibling elements.
                         </p>
 
@@ -562,18 +562,102 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         >
                             <ResizableInternal>
                                 <div className="u-flex u-gap-2 u-round-xs bg-pink-100 p-3 text-white font-bold u-text-center">
-                                    <div className="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-grow-0">0</div>
-                                    <div className="u-round-xs u-shadow-lg bg-pink-500 p-2 u-flex-grow-1">1</div>
-                                    <div className="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-grow-0">0</div>
+                                    <div className="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-grow-1">1</div>
+                                    <div className="u-round-xs u-shadow-lg bg-pink-500 p-2 u-flex-grow-0">0</div>
+                                    <div className="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-grow-1">1</div>
+                                </div>
+                            </ResizableInternal>
+                        </div>
+                        <div className="space space--lg"></div>
+                        <CodeBlock
+                            code={`<div class="u-flex u-gap-2 u-round-xs bg-blue-100 p-3 text-white font-bold u-text-center">
+    <div class="u-round-xs u-shadow-lg bg-blue-300 p-2">0</div>
+    <div class="u-round-xs u-shadow-lg bg-blue-500 p-2 u-flex-shrink-1 w-100">1</div>
+    <div class="u-round-xs u-shadow-lg bg-blue-300 p-2">0</div>
+</div>`}
+                            language="htmlbars"
+                        />
+                    </div>
+                </section>
+
+                <section className="padtop" id="flex-shrink">
+                    <div className="content">
+                        <Headline title="Flex Shrink" link="#flex-shrink" size="4" />
+                        <div className="divider"></div>
+                        <p>
+                            Flex shrink utilities control how elements will shrink in a flex display. Classes follow the
+                            form of <code>u-flex-shrink-[0|1]</code>.
+                        </p>
+
+                        <div className="space space--xl"></div>
+
+                        <p>
+                            Use <code>u-flex-shrink-1</code> to allow a flex item to shrink relative to the parent and
+                            sibling elements.
+                        </p>
+
+                        <div
+                            style={{
+                                height: '100px',
+                                width: '100%',
+                            }}
+                        >
+                            <ResizableInternal>
+                                <div className="u-flex u-gap-2 u-round-xs bg-blue-100 p-3 text-white font-bold u-text-center">
+                                    <div className="u-round-xs u-shadow-lg bg-blue-300 p-2">0</div>
+                                    <div className="u-round-xs u-shadow-lg bg-blue-500 p-2 u-flex-shrink-1 w-100">
+                                        1
+                                    </div>
+                                    <div className="u-round-xs u-shadow-lg bg-blue-300 p-2">0</div>
+                                </div>
+                            </ResizableInternal>
+                        </div>
+                        <div className="space space--lg"></div>
+                        <CodeBlock
+                            code={`<div class="u-flex u-gap-2 u-round-xs bg-orange-100 p-3 text-white font-bold u-text-center">
+    <div class="u-round-xs u-shadow-lg bg-orange-300 p-2 u-flex-grow-1 u-flex-shrink-1">1</div>
+    <div class="u-round-xs u-shadow-lg bg-orange-500 p-2 u-flex-shrink-0" style="width: 8rem;">0</div>
+    <div class="u-round-xs u-shadow-lg bg-orange-300 p-2 u-flex-grow-1 u-flex-shrink-1">1</div>
+</div>`}
+                            language="htmlbars"
+                        />
+
+                        <div className="space space--xl"></div>
+
+                        <p>
+                            Use <code>u-flex-shrink-0</code> to allow a flex item to shrink relative to the parent and
+                            sibling elements.
+                        </p>
+
+                        <div
+                            style={{
+                                height: '100px',
+                                width: '100%',
+                            }}
+                        >
+                            <ResizableInternal minWidth='300px'>
+                                <div className="u-flex u-gap-2 u-round-xs bg-orange-100 p-3 text-white font-bold u-text-center">
+                                    <div className="u-round-xs u-shadow-lg bg-orange-300 p-2 u-flex-grow-1 u-flex-shrink-1">
+                                        1
+                                    </div>
+                                    <div
+                                        className="u-round-xs u-shadow-lg bg-orange-500 p-2 u-flex-shrink-0"
+                                        style={{ width: '8rem' }}
+                                    >
+                                        0
+                                    </div>
+                                    <div className="u-round-xs u-shadow-lg bg-orange-300 p-2 u-flex-grow-1 u-flex-shrink-1">
+                                        1
+                                    </div>
                                 </div>
                             </ResizableInternal>
                         </div>
                         <div className="space space--lg"></div>
                         <CodeBlock
                             code={`<div class="u-flex u-gap-2 u-round-xs bg-pink-100 p-3 text-white font-bold u-text-center">
-    <div class="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-grow-0">0</div>
-    <div class="u-round-xs u-shadow-lg bg-pink-500 p-2 u-flex-grow-1">1</div>
-    <div class="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-grow-0">0</div>
+    <div class="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-shrink-0">0</div>
+    <div class="u-round-xs u-shadow-lg bg-pink-500 p-2 u-flex-shrink-1">1</div>
+    <div class="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-shrink-0">0</div>
 </div>`}
                             language="htmlbars"
                         />
