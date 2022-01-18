@@ -26,6 +26,11 @@ export const toc: TableOfContentsEntry[] = [
                 children: null,
             },
             {
+                name: 'Flex Grow',
+                anchor: '#flex-grow',
+                children: null,
+            },
+            {
                 name: 'Responsive',
                 anchor: '#responsive',
                 children: null,

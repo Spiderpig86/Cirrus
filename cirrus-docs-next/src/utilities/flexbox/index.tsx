@@ -8,6 +8,7 @@ import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { ClassTable } from '../../../layouts/components/class-table';
+import { ResizableInternal } from '../../../layouts/components/resizable';
 import { Capitalize } from '../../../utils/string';
 import { toc } from './toc';
 import { DefaultLayout } from '../../../layouts/default';
@@ -18,6 +19,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
     const flexDirectionNames = ['row', 'row-reverse', 'column', 'column-reverse'];
     const justifyContentNames = ['flex-start', 'center', 'flex-end', 'space-between', 'space-around', 'space-evenly'];
     const alignItemNames = ['stretch', 'flex-start', 'center', 'flex-end', 'baseline'];
+    const flexGrowShrinkNames = ['0', '1'];
 
     const flexDocExamples: DocExample[] = [
         {
@@ -323,19 +325,31 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
         flexDirectionNames.map((display) => {
             return {
                 class: `u-flex-${display}`,
-                style: `display: ${display};`,
+                style: `display: ${display} !important;`,
             };
         }),
         alignItemNames.map((align) => {
             return {
                 class: `u-align-${align}`,
-                style: `align-items: ${align};`,
+                style: `align-items: ${align} !important;`,
             };
         }),
         justifyContentNames.map((justify) => {
             return {
                 class: `u-justify-${justify}`,
-                style: `justify-content: ${justify};`,
+                style: `justify-content: ${justify} !important;`,
+            };
+        }),
+        flexGrowShrinkNames.map((size) => {
+            return {
+                class: `u-flex-grow-${size}`,
+                style: `flex-grow: ${size} !important;`,
+            };
+        }),
+        flexGrowShrinkNames.map((size) => {
+            return {
+                class: `u-flex-shrink-${size}`,
+                style: `flex-shrink: ${size} !important;`,
             };
         })
     );
@@ -356,7 +370,6 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         </span>
                         <p>These are utility classes that are related to flexbox.</p>
 
-                        
                         <ClassTable classTable={classTable} />
                     </div>
                 </section>
@@ -491,6 +504,79 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                                 </>
                             );
                         })}
+                    </div>
+                </section>
+
+                <section className="padtop" id="flex-grow">
+                    <div className="content">
+                        <Headline title="Flex Grow" link="#flex-grow" size="4" />
+                        <div className="divider"></div>
+                        <p>
+                            Flex grow utilities control how elements will grow in a flex display. Classes follow the
+                            form of <code>u-flex-grow-[0|1]</code>.
+                        </p>
+
+                        <div className="space space--xl"></div>
+
+                        <p>
+                            Use <code>u-flex-grow-1</code> to allow a flex item to grow relative to the parent and
+                            sibling elements.
+                        </p>
+
+                        <div
+                            style={{
+                                height: '100px',
+                                width: '100%',
+                            }}
+                        >
+                            <ResizableInternal>
+                                <div className="u-flex u-gap-2 u-round-xs bg-indigo-100 p-3 text-white font-bold u-text-center">
+                                    <div className="u-round-xs u-shadow-lg bg-indigo-300 p-2 u-flex-grow-0">0</div>
+                                    <div className="u-round-xs u-shadow-lg bg-indigo-500 p-2 u-flex-grow-1">1</div>
+                                    <div className="u-round-xs u-shadow-lg bg-indigo-300 p-2 u-flex-grow-0">0</div>
+                                </div>
+                            </ResizableInternal>
+                        </div>
+                        <div className="space space--lg"></div>
+                        <CodeBlock
+                            code={`<div class="u-flex u-gap-2 u-round-xs bg-indigo-100 p-3 text-white font-bold u-text-center">
+    <div class="u-round-xs u-shadow-lg bg-indigo-300 p-2 u-flex-grow-0">0</div>
+    <div class="u-round-xs u-shadow-lg bg-indigo-500 p-2 u-flex-grow-1">1</div>
+    <div class="u-round-xs u-shadow-lg bg-indigo-300 p-2 u-flex-grow-0">0</div>
+</div>`}
+                            language="htmlbars"
+                        />
+
+                        <div className="space space--xl"></div>
+
+                        <p>
+                            Use <code>u-flex-grow-1</code> to allow a flex item to grow relative to the parent and
+                            sibling elements.
+                        </p>
+
+                        <div
+                            style={{
+                                height: '100px',
+                                width: '100%',
+                            }}
+                        >
+                            <ResizableInternal>
+                                <div className="u-flex u-gap-2 u-round-xs bg-pink-100 p-3 text-white font-bold u-text-center">
+                                    <div className="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-grow-0">0</div>
+                                    <div className="u-round-xs u-shadow-lg bg-pink-500 p-2 u-flex-grow-1">1</div>
+                                    <div className="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-grow-0">0</div>
+                                </div>
+                            </ResizableInternal>
+                        </div>
+                        <div className="space space--lg"></div>
+                        <CodeBlock
+                            code={`<div class="u-flex u-gap-2 u-round-xs bg-pink-100 p-3 text-white font-bold u-text-center">
+    <div class="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-grow-0">0</div>
+    <div class="u-round-xs u-shadow-lg bg-pink-500 p-2 u-flex-grow-1">1</div>
+    <div class="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-grow-0">0</div>
+</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
