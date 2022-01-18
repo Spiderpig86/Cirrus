@@ -115,7 +115,7 @@ export const FontGlyphsPage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{ name: 'Font Weights', link: './font-weights' }}
-                    nextLink={{ name: 'Text Elements', link: './text-elements' }}
+                    nextLink={{ name: 'Size', link: './size' }}
                 />
             </span>
             <TableOfContents entries={toc} />

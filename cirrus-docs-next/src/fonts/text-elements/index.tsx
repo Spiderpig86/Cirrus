@@ -541,7 +541,7 @@ export const TextElementsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Glyphs', link: './glyphs' }} />
+                <Pagination prevLink={{ name: 'Size', link: './size' }} />
             </span>
             <TableOfContents entries={toc} />
         </main>
