@@ -259,6 +259,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Headings',
+                url: '/fonts/headings'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Size',
                 url: '/fonts/size'
             },

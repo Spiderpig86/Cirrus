@@ -56,7 +56,7 @@ line-height: 2.25rem !important;`,
                             }}
                         />
 
-                        <p>These utility classes control the font size of a specific element.</p>
+                        <p>These classes control the font size of a specific element.</p>
 
                         <ClassTable classTable={classTable} />
                     </div>
@@ -138,7 +138,7 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Glyphs', link: './glyphs' }}
+                    prevLink={{ name: 'Headings', link: './headings' }}
                     nextLink={{ name: 'Text Elements', link: './text-elements' }}
                 />
             </span>

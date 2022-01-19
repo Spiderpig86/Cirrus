@@ -6,11 +6,6 @@ export const toc: TableOfContentsEntry[] = [
         anchor: '#text-elements',
         children: [
             {
-                name: 'Headings',
-                anchor: '#headings',
-                children: null,
-            },
-            {
                 name: 'Headline',
                 anchor: '#headline',
                 children: null,
