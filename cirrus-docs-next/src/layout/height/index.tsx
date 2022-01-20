@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 import { withLayout } from '@moxy/next-layout';
 
@@ -133,7 +134,7 @@ export const HeightPage: React.FC<any> = (props) => {
                             }}
                         >
                             <div className="h-auto bg-red-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
-                                <p>h-auto</p>
+                                <p className="mb-0">h-auto</p>
                             </div>
                         </div>
 
@@ -143,6 +144,37 @@ export const HeightPage: React.FC<any> = (props) => {
     <div class="h-auto">...</div>
 </div>`}
                         />
+                    </div>
+                </section>
+
+                <section className="padtop" id="responsive">
+                    <div className="content">
+                        <Headline title="Responsive" link="#responsive" size="4" />
+                        <div className="divider"></div>
+                        <span className="tag-container group-tags">
+                            <div className="tag tag--dark">New</div>
+                            <div className="tag tag--info">0.7.0</div>
+                        </span>
+                        <p>
+                            All utility classes mentioned here support viewport based application. All you need to do is
+                            add a <code>-&lt;viewport&gt;</code> at the end of the class(es) you are using. For example,
+                            use <code>h-30-md</code> to apply <code>h-30</code> on medium screens and above.
+                        </p>
+
+                        <CodeBlock
+                            code={`<div class="h-30-md">
+    <!-- ... -->
+</div>`}
+                            language="html"
+                        />
+
+                        <p>
+                            For more information, visit the{' '}
+                            <Link href="/fundamentals/viewports">
+                                <a className="u u-LR">Viewports</a>
+                            </Link>{' '}
+                            documentation.
+                        </p>
                     </div>
                 </section>
 

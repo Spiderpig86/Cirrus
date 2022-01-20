@@ -17,9 +17,9 @@ export const TablePage: React.FC<any> = (props) => {
                 <title>{PAGE_TITLE_PREFIX} Table</title>
             </Head>
             <div>
-                <section className="padtop" id="placeholder">
+                <section className="padtop" id="table">
                     <div className="content">
-                        <Headline title="Placeholder" link="#placeholder" />
+                        <Headline title="Table" link="#table" />
                         <div className="divider"></div>
 
                         <p>
