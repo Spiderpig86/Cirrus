@@ -96,6 +96,10 @@ $default-config: (
         tab-sizes: (),
 
         absolute: (),
+        grid: (
+            grid-gaps: (),
+            properties: (),
+        ),
         heights: (),
         minmax-heights: (),
         minmax-widths: (),
