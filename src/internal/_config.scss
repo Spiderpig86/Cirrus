@@ -494,6 +494,27 @@ $default-config: (
             n50p: -50%,
             n100p: -100%,
         ),
+    grid: (
+        grid-gaps: (
+            0: 0,
+            1: 0.25rem,
+            2: 0.5rem,
+            3: 1rem,
+            4: 1.25rem,
+            5: 1.5rem,
+            6: 2rem,
+            7: 3rem,
+            8: 4rem,
+            9: 5rem,
+            10: 7rem,
+            11: 9rem,
+            12: 12rem,
+        ),
+        properties: (
+            default-grid-gap: 2,
+            grid-columns: 12,
+        )
+    ),
     heights: (
         10: 10%,
         20: 20%,
@@ -705,6 +726,11 @@ $heights: functions.get-with-extend($all-config, heights);
 $widths: functions.get-with-extend($all-config, widths);
 $minmax-heights: functions.get-with-extend($all-config, minmax-heights);
 $minmax-widths: functions.get-with-extend($all-config, minmax-widths);
+
+$grid-gaps: functions.get-with-extend($all-config, grid, grid-gaps);
+$grid-properties: functions.get-with-extend($all-config, grid, properties);
+$grid-columns: map.get($grid-properties, grid-columns);
+$default-grid-gap: map.get($grid-properties, default-grid-gap);
 
 $opacities: functions.get-with-extend($all-config, opacity);
 $round: functions.get-with-extend($all-config, round);

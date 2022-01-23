@@ -23,11 +23,11 @@ $font-sizes: (
     $xl: $font-size-xl,
 );
 
-/* Grid Count (Columns + Grid) */
-$grid-columns: 12;
+/* Flex Columns */
+$flex-columns: 12;
 
 /* Grid Percents */
-$grid-width: math.div(1, $grid-columns);
+$flex-width: math.div(1, $flex-columns);
 
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
