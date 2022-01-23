@@ -5,7 +5,6 @@
 /* GRID */
 
 :root {
-    --grid-gap: #{map.get($grid-gaps, $default-grid-gap)};
     --grid-template-column: repeat(#{$grid-columns}, minmax(0, 1fr));
     --grid-column-start: auto;
     --grid-column-end: auto;
@@ -20,13 +19,6 @@
         display: grid;
         grid-gap: var(--grid-gap);
         grid-template-columns: var(--grid-template-column);
-    }
-
-    @each $class, $size in $grid-gaps {
-        /* Gap */
-        .grid-gap-#{$class}#{$suffix} {
-            --grid-gap: #{$size};
-        }
     }
 
     @for $i from 1 through $grid-columns {
