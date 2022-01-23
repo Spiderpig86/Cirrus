@@ -256,7 +256,7 @@ export const Preview: React.FC<any> = (props) => {
                     </div>
                     <p className="title">Grid</p>
                     <div className="r">
-                        <div className="grid grid-gap-3 u-text-center">
+                        <div className="grid u-gap-2text-center">
                             <div
                                 className="grid-c-12"
                                 style={{

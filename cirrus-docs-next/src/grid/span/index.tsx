@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import Link from 'next/link';
 
 export const GridSpanPage: React.FC<any> = (props) => {
     return (
@@ -45,7 +46,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                             how many columns an element should span.
                         </p>
 
-                        <div className="grid grid-gap-3">
+                        <div className="grid u-gap-2">
                             <div className="grid-c-1 _grid-ex">
                                 <span>1</span>
                             </div>
@@ -90,7 +91,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="grid grid-gap-3">
+                            code={`<div class="grid u-gap-2">
     <div class="grid-c-1"><span>1</span></div>
     <div class="grid-c-11"></div>
     <div class="grid-c-2"><span>grid-c-2</span></div>
@@ -117,7 +118,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                             Let's use a small example with a <code>grid</code> of 3 columns.
                         </p>
 
-                        <div className="grid grid-cols-3 grid-gap-3">
+                        <div className="grid grid-cols-3 u-gap-2">
                             <div className="grid-c-2 py-4 bg-indigo-200"></div>
                             <div className="py-4 bg-purple-200"></div>
                             <div className="grid-c-3 py-4 bg-purple-200"></div>
@@ -128,7 +129,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                         <div className="space"></div>
 
                         <CodeBlock
-                            code={`<div class="grid grid-cols-3 grid-gap-3">
+                            code={`<div class="grid grid-cols-3 u-gap-2">
     <div class="grid-c-2 py-4 bg-indigo-200"></div>
     <div class="py-4 bg-purple-200"></div>
     <div class="grid-c-3 py-4 bg-purple-200"></div>
@@ -148,7 +149,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                         </p>
 
                         <div
-                            className="grid grid-gap-3"
+                            className="grid u-gap-2"
                             style={{
                                 height: '500px',
                             }}
@@ -192,7 +193,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="grid grid-gap-3" style="height: 500px;">
+                            code={`<div class="grid u-gap-2" style="height: 500px;">
     <div class="grid-r-1 level"><span>grid-r-1</span></div>
     <div class="grid-r-2 level"><span>grid-r-2</span></div>
     <div class="grid-r-3 level"><span>grid-r-3</span></div>
@@ -235,7 +236,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                         <p>As stated prior, the '*' represents any number from 1 to 12 inclusive.</p>
                         <div className="space space--lg"></div>
 
-                        <div className="grid grid-gap-3">
+                        <div className="grid u-gap-2">
                             <div className="grid-cs-2 grid-ce-7 _grid-ex">2-7</div>
                             <div className="grid-cs-1 grid-ce-4 _grid-ex">1-4</div>
                             <div className="grid-c-5" />
@@ -243,7 +244,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="grid grid-gap-3">
+                            code={`<div class="grid u-gap-2">
     <div class="grid-cs-2 grid-ce-7">2-7</div>
     <div class="grid-cs-1 grid-ce-4">1-4</div>
     <div class="grid-c-5"></div>
@@ -281,7 +282,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                             To specify the starting column position for an element, use the <code>grid-re-*</code>{' '}
                             class. The <i>cs</i> stands for <i>row end</i>.
                         </p>
-                        <div className="grid grid-cols-9 grid-gap-3">
+                        <div className="grid grid-cols-9 u-gap-2">
                             <div className="grid-rs-10 grid-re-12 _grid-ex">10-12</div>
                             <div className="grid-rs-8 grid-re-12 _grid-ex">8-12</div>
                             <div className="grid-rs-6 grid-re-12 _grid-ex">6-12</div>
@@ -294,7 +295,7 @@ export const GridSpanPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="grid grid-cols-9 grid-gap-3">
+                            code={`<div class="grid grid-cols-9 u-gap-2">
     <div class="grid-rs-10 grid-re-12">10-12</div>
     <div class="grid-rs-8 grid-re-12">8-12</div>
     <div class="grid-rs-6 grid-re-12">6-12</div>
@@ -325,6 +326,25 @@ export const GridSpanPage: React.FC<any> = (props) => {
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </section>
+
+                
+                <section className="padtop" id="variants">
+                    <div className="content">
+                        <Headline title="Variants" link="#variants" size="4" />
+                        <div className="divider"></div>
+                        <span className="tag-container group-tags">
+                            <div className="tag tag--dark">Updated</div>
+                            <div className="tag tag--info">0.7.0</div>
+                        </span>
+                        <p>
+                            By default, <code>grid</code> is preset with 12 individual columns horizontally with a
+                            variable amount of rows. This value can be changed in the framework as well by modifying the
+                            grid count inside <code>_config.scss</code>.
+                        </p>
+                        <p>To learn more about how to configure what clases are generated for grid spans, refer to the <Link href="/grid/templates#variants"><a className="u u-LR">Grid Variants</a></Link> docs.</p>
+
                     </div>
                 </section>
 

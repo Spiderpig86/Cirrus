@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
@@ -9,6 +10,7 @@ import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { Tag } from '../../../layouts/components/tag';
 
 export const GridTemplatesPage: React.FC<any> = (props) => {
     return (
@@ -37,7 +39,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                         <Headline title="Basics" link="#basics" size="4" />
                         <div className="divider"></div>
                         <p>The basic idea of CSS grid is to use it as a way to lay out elements on a page, like so.</p>
-                        <div className="grid grid-gap-3 u-text-center">
+                        <div className="grid u-gap-2 u-text-center">
                             <div
                                 className="grid-c-12"
                                 style={{
@@ -113,7 +115,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="grid grid-gap-3 u-text-center">
+                            code={`<div class="grid u-gap-2 u-text-center">
     <div class="grid-c-12" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
         <p><b>Header</b></p>
     </div>
@@ -150,7 +152,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                             use slot 2 of 2. Adding any more will just overflow onto the next row.
                         </p>
 
-                        <div className="grid grid-gap-4 grid-cols-2">
+                        <div className="grid u-gap-2 grid-cols-2">
                             <div className="_grid-ex">
                                 <p>grid-cols-2</p>
                             </div>
@@ -177,13 +179,13 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                             from 1 through 12 inclusive.
                         </p>
 
-                        <div className="grid grid-gap-3 grid-cols-1">
+                        <div className="grid u-gap-2 grid-cols-1">
                             <div className="_grid-ex">
                                 <p>grid-cols-1</p>
                             </div>
                         </div>
 
-                        <div className="grid grid-gap-3 grid-cols-2">
+                        <div className="grid u-gap-2 grid-cols-2">
                             <div className="_grid-ex">
                                 <p>grid-cols-2</p>
                             </div>
@@ -192,7 +194,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                             </div>
                         </div>
 
-                        <div className="grid grid-gap-3 grid-cols-3">
+                        <div className="grid u-gap-2 grid-cols-3">
                             <div className="_grid-ex">
                                 <p>grid-cols-3</p>
                             </div>
@@ -204,7 +206,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                             </div>
                         </div>
 
-                        <div className="grid grid-gap-4 grid-cols-4">
+                        <div className="grid u-gap-2 grid-cols-4">
                             <div className="_grid-ex">
                                 <p>grid-cols-4</p>
                             </div>
@@ -229,7 +231,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                         <div className="space"></div>
                         <div className="row">
                             <div className="col-lg-6">
-                                <div className="grid grid-cols-3 grid-gap-3">
+                                <div className="grid grid-cols-3 u-gap-2">
                                     <div className=" _grid-ex">
                                         <p>1</p>
                                     </div>
@@ -261,7 +263,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="grid grid-cols-3 grid-gap-3">
+                                    code={`<div class="grid grid-cols-3 u-gap-2">
     <div>
         <p>1</p>
     </div>
@@ -297,29 +299,67 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop" id="customization">
+                <section className="padtop" id="responsive">
                     <div className="content">
-                        <Headline title="Customization" link="#customization" size="4" />
+                        <Headline title="Responsive" link="#responsive" size="4" />
                         <div className="divider"></div>
-                        <span className="tag-container group-tags">
-                            <div className="tag tag--dark">New</div>
-                            <div className="tag tag--info">0.6.0</div>
-                        </span>
+                        <Tag
+                            leftProps={{ classes: 'tag tag--dark', text: 'New' }}
+                            rightProps={{ classes: 'tag tag--info', text: '0.7.0' }}
+                        />
                         <p>
-                            By default, <code>grid</code> is preset with 12 individual columns horizontally with a
-                            variable amount of rows. This value can be changed in the framework as well by modifying the
-                            grid count inside <code>_size.scss</code>.
+                            To use the viewport variant of a given class, you just need to suffix each class with a
+                            viewport selector. For example, if I only want <code>grid</code> to be applied to some
+                            contaner for <code>lg</code> and above, then I would use the <code>grid-lg</code> class.
                         </p>
 
                         <CodeBlock
-                            code={`/* Grid Count (Columns + Grid) */
-$grid-columns: 12;`}
+                            code={`<div class="grid-lg">
+    <!-- ... -->
+</div>`}
+                            language="html"
+                        />
+
+                        <p>
+                            For more information, visit the{' '}
+                            <Link href="/fundamentals/viewports">
+                                <a className="u u-LR">Viewports</a>
+                            </Link>{' '}
+                            documentation.
+                        </p>
+                    </div>
+                </section>
+
+                <section className="padtop" id="variants">
+                    <div className="content">
+                        <Headline title="Variants" link="#variants" size="4" />
+                        <div className="divider"></div>
+                        <Tag
+                            leftProps={{ classes: 'tag tag--dark', text: 'Updated' }}
+                            rightProps={{ classes: 'tag tag--info', text: '0.7.0' }}
+                        />
+                        <p>
+                            By default, <code>grid</code> is preset with 12 individual columns horizontally with a
+                            variable amount of rows. This value can be changed in the framework as well by modifying the
+                            grid count inside <code>_config.scss</code>.
+                        </p>
+
+                        <CodeBlock
+                            code={`$config: (
+    extend: (
+        grid: (
+            properties: (
+                grid-columns: 64, // Default is 12
+            )
+        )
+    )
+) !default;`}
                             language="scss"
                         />
                         <p>
                             The following classes will also be generated to reflect the changes with{' '}
                             <code>$grid-columns</code>. For example, if the value was changed to <code>64</code>, Cirrus
-                            will generate up to <code>grid-c-64</code>, <code>grid-r-64</code>, etc.
+                            will generate up to <code>grid-c-64</code>, <code>grid-r-64</code>, etc. for these classes:
                         </p>
                         <ul>
                             <li>
