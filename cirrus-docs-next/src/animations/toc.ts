@@ -11,9 +11,15 @@ export const toc: TableOfContentsEntry[] = [
                 children: null,
             },
             {
-                name: 'Hover Grow',
-                anchor: '#hover-grow',
-                children: null,
+                name: 'Effects',
+                anchor: '#effects',
+                children: [
+                    {
+                        name: 'Hover Grow',
+                        anchor: '#hover-grow',
+                        children: null,
+                    },
+                ],
             },
             {
                 name: 'Entrance Animations',
@@ -23,7 +29,23 @@ export const toc: TableOfContentsEntry[] = [
             {
                 name: 'Infinite Animations',
                 anchor: '#infinite-animations',
-                children: null,
+                children: [
+                    {
+                        name: 'Pound',
+                        anchor: '#pound',
+                        children: null,
+                    },
+                    {
+                        name: 'Pulse',
+                        anchor: '#pulse',
+                        children: null,
+                    },
+                    {
+                        name: 'Ping',
+                        anchor: '#ping',
+                        children: null,
+                    },
+                ],
             },
             {
                 name: 'Animation Utils',

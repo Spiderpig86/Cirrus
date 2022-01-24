@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { CodeBlock } from '../../layouts/components/codeblock';
 import { TableOfContents } from '../../layouts/components/toc';
 import { Headline } from '../../layouts/components/headline';
+import { Tag } from '../../layouts/components/tag';
 import { DefaultLayout } from '../../layouts/default';
 import { toc } from './toc';
 
@@ -157,32 +158,40 @@ export const AnimationsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop" id="hover-grow">
+                <section className="padtop" id="effects">
                     <div className="content">
-                        <Headline title="Hover Grow" link="#hover-grow" size="4" />
+                        <Headline title="Effects" link="#effects" size="4" />
                         <div className="divider"></div>
 
                         <p>
-                            This is a subtle animation that enlarges a given element on hover. Just add the{' '}
-                            <code>hover-grow</code> class to your element.
+                            Effects are animations that respond to a specific user interaction, such as a user hovering
+                            over an element.
                         </p>
 
-                        <div className="row">
-                            <div className="col-lg-4">
-                                <div className="hover-grow">
-                                    <img src="/img/credit-card.svg" />
+                        <section className="pt-4" id="hover-grow">
+                            <Headline title="Hover Grow" link="#hover-grow" size="6" />
+                            <p>
+                                This is a subtle animation that enlarges a given element on hover. Just add the{' '}
+                                <code>hover-grow</code> class to your element.
+                            </p>
+
+                            <div className="row">
+                                <div className="col-lg-4">
+                                    <div className="hover-grow">
+                                        <img src="/img/credit-card.svg" />
+                                    </div>
+                                    <div className="u-text-center">Hover me.</div>
                                 </div>
-                                <div className="u-text-center">Hover me.</div>
-                            </div>
-                            <div className="col-lg-8">
-                                <CodeBlock
-                                    code={`<div class="hover-grow">
+                                <div className="col-lg-8">
+                                    <CodeBlock
+                                        code={`<div class="hover-grow">
     <img src="../../card.svg" />
 </div>`}
-                                    language="htmlbars"
-                                />
+                                        language="htmlbars"
+                                    />
+                                </div>
                             </div>
-                        </div>
+                        </section>
                     </div>
                 </section>
 
@@ -401,73 +410,180 @@ export const AnimationsPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Infinite Animations" link="#infinite-animations" size="4" />
                         <div className="divider"></div>
+                        <Tag
+                            leftProps={{
+                                classes: `tag--dark`,
+                                text: `New`,
+                            }}
+                            rightProps={{
+                                classes: `tag--info`,
+                                text: `0.7.0`,
+                            }}
+                        />
                         <p>These are animations that only run continuously.</p>
                         <div className="space"></div>
 
-                        <h6>Pound</h6>
-                        <p>Pound animation with a glyph.</p>
-                        <div className="row">
-                            <div className="col-lg-6 u-text-center">
-                                <span className="icon animated paused pound" id="pound-heart">
-                                    <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
-                                </span>
-                            </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated pound" aria-hidden="true"></i></span>`}
-                                    language="htmlbars"
-                                />
-                            </div>
-                        </div>
-                        <button className="docs-btn-play" id="toggle-pound-heart">
-                            <span className="icon">
-                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
-                            </span>
-                            Play
-                        </button>
-                        <p>Pound animation with a div.</p>
-                        <div className="row">
-                            <div className="col-lg-6 u-text-center">
-                                <div className="bg-orange-400 text-white u-text-center animated paused pound" id="pound-div">
-                                    <p>This is a div!</p>
+                        <section className="pt-4" id="pound">
+                            <Headline title="Pound" link="#pound" size="6" />
+                            <p>Pound animation with a glyph.</p>
+                            <div className="row">
+                                <div className="col-lg-6 u-text-center">
+                                    <span className="icon animated paused pound" id="pound-heart">
+                                        <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
+                                    </span>
+                                </div>
+                                <div className="col-lg-6">
+                                    <CodeBlock
+                                        code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated pound" aria-hidden="true"></i></span>`}
+                                        language="htmlbars"
+                                    />
                                 </div>
                             </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<div class="bg-orange-400 text-white u-text-center animated pound">
+                            <button className="docs-btn-play" id="toggle-pound-heart">
+                                <span className="icon">
+                                    <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                                </span>
+                                Play
+                            </button>
+                            <p>Pound animation with a div.</p>
+                            <div className="row">
+                                <div className="col-lg-6 u-text-center">
+                                    <div
+                                        className="bg-orange-400 text-white u-text-center animated paused pound"
+                                        id="pound-div"
+                                    >
+                                        <p>This is a div!</p>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <CodeBlock
+                                        code={`<div class="bg-orange-400 text-white u-text-center animated pound">
     <p>This is a div!</p>
 </div>`}
-                                    language="htmlbars"
-                                />
+                                        language="htmlbars"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <button className="docs-btn-play" id="toggle-pound-div">
-                            <span className="icon">
-                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
-                            </span>
-                            Play
-                        </button>
-                        <div className="space"></div>
-                        <p>Pound animation with a button.</p>
-                        <div className="row">
-                            <div className="col-lg-6 u-text-center">
-                                <button className="btn-info animated paused pound" id="pound-btn">
-                                    Button
-                                </button>
+                            <button className="docs-btn-play" id="toggle-pound-div">
+                                <span className="icon">
+                                    <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                                </span>
+                                Play
+                            </button>
+                            <div className="space"></div>
+                            <p>Pound animation with a button.</p>
+                            <div className="row">
+                                <div className="col-lg-6 u-text-center">
+                                    <button className="btn-info animated paused pound" id="pound-btn">
+                                        Button
+                                    </button>
+                                </div>
+                                <div className="col-lg-6">
+                                    <CodeBlock
+                                        code={`<button class="btn-info animated pound">Button</button>`}
+                                        language="htmlbars"
+                                    />
+                                </div>
                             </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<button class="btn-info animated pound">Button</button>`}
-                                    language="htmlbars"
-                                />
+                            <button className="docs-btn-play" id="toggle-pound-btn">
+                                <span className="icon">
+                                    <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                                </span>
+                                Play
+                            </button>
+                        </section>
+
+                        <section className="pt-4" id="pulse">
+                            <Headline title="Pulse" link="#pulse" size="6" />
+                            <p>
+                                Add the <code>pulse</code> animation to simulate pulsing in an out by oscillating the
+                                element's opacity. This is a great animation for skeleton loaders as seen below.
+                            </p>
+
+                            <div className="card px-4 py-3">
+                                <div className="u-flex u-gap-3 animated pulse">
+                                    <div>
+                                        <div className="bg-gray-300 u-round-full p-4"></div>
+                                    </div>
+                                    <div className="u-flex-grow-1">
+                                        <div className="line bg-gray-300 w-100 u-round-xs"></div>
+                                        <div className="space"></div>
+                                        <div className="line bg-gray-300 w-100 u-round-xs"></div>
+                                        <div className="grid u-gap-1 mb-0">
+                                            <div className="line bg-gray-300 grid-c-3 u-round-xs"></div>
+                                            <div className="line bg-gray-300 grid-c-9 u-round-xs"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <button className="docs-btn-play" id="toggle-pound-btn">
-                            <span className="icon">
-                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
-                            </span>
-                            Play
-                        </button>
+                            <div className="space"></div>
+
+                            <CodeBlock
+                                code={`<div class="card px-4 py-3">
+    <div class="u-flex u-gap-3 animated pulse">
+        <div>
+            <div class="bg-gray-300 u-round-full p-4"></div>
+        </div>
+        <div class="u-flex-grow-1">
+            <div class="line bg-gray-300 w-100 u-round-xs"></div>
+            <div class="space"></div>
+            <div class="line bg-gray-300 w-100 u-round-xs"></div>
+            <div class="grid u-gap-1 mb-0">
+                <div class="line bg-gray-300 grid-c-3 u-round-xs"></div>
+                <div class="line bg-gray-300 grid-c-9 u-round-xs"></div>
+            </div>
+        </div>
+    </div>
+</div>`}
+                                language="htmlbars"
+                            />
+                        </section>
+
+                        <section className="pt-4" id="ping">
+                            <Headline title="Ping" link="#ping" size="6" />
+                            <p>
+                                Add the <code>pulse</code> animation to simulate pulsing in an out by oscillating the
+                                element's opacity. This is a great animation for skeleton loaders as seen below.
+                            </p>
+                            <div className="u-relative u-inline-flex">
+                                <div className="u-round-xs u-shadow-lg p-3 bg-blue-100">
+                                    <div className="u-flex u-items-center u-gap-2">
+                                        <div>
+                                            <div className="avatar">
+                                                <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=128" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <b>3 new unopened messages in the last hour.</b>
+                                            <div className="text-gray-600">
+                                                @johndoe sent "About your PR, it's mostly good but..."
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span className="notification u-inline-flex u-absolute u-top-0 u-right-0">
+                                    <span className="h-100 w-100 u-absolute u-inline-flex animated ping bg-blue-400 u-round-full"></span>
+                                    <span className="h-100 w-100 u-inline-flex bg-blue-400 u-round-full"></span>
+                                </span>
+                            </div>
+                            <div className="space"></div>
+
+                            <CodeBlock
+                                code={`<div class="u-relative u-inline-flex">
+    <div class="u-round-xs u-shadow-lg p-3 bg-blue-100">
+        <div class="u-flex u-items-center u-gap-2">
+            <div>
+                <div class="avatar"><img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=128"></div>
+            </div>
+            <div><b>3 new unopened messages in the last hour.</b>
+                <div class="text-gray-600">@johndoe sent "About your PR, it's mostly good but..."</div>
+            </div>
+        </div>
+    </div><span class="notification u-inline-flex u-absolute u-top-0 u-right-0"><span class="h-100 w-100 u-absolute u-inline-flex animated ping bg-blue-400 u-round-full"></span><span class="h-100 w-100 u-inline-flex bg-blue-400 u-round-full"></span></span>
+</div>`}
+                                language="htmlbars"
+                            />
+                        </section>
                     </div>
                 </section>
 

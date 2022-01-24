@@ -26,6 +26,8 @@ import '../layouts/components/toc/index.scss';
 import '../src/index/index.scss';
 import '../src/playground/index.scss';
 
+import '../src/animations/index.scss';
+
 import '../src/fundamentals/typography/index.scss';
 import '../src/fundamentals/viewports/index.scss';
 
