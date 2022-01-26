@@ -37,7 +37,7 @@ $generate-utility: should-generate-classes($PAGINATION);
             }
 
             a {
-                color: map-get($grays, '700');
+                color: fill('gray', '700');
 
                 &[disabled],
                 &.disabled {
@@ -84,7 +84,7 @@ $generate-utility: should-generate-classes($PAGINATION);
                 }
 
                 &.ellipses {
-                    color: map-get($grays, '500');
+                    color: fill('gray', '500');
                     pointer-events: none;
                 }
 
@@ -98,7 +98,7 @@ $generate-utility: should-generate-classes($PAGINATION);
 
         /* Bordered pagination */
         &.pagination-bordered .pagination-item.short a {
-            border: 1px solid map-get($grays, '300');
+            border: 1px solid fill('gray', '300');
             border-radius: 0;
             margin-left: -1px;
         }

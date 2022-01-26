@@ -5,7 +5,7 @@
 */
 @mixin cirrus-input {
     width: 100%;
-    border: 1px solid map-get($grays, '300');
+    border: 1px solid fill('gray', '300');
     border-radius: 3px;
     font-family: 'Nunito Sans';
     font-size: var(--font-size-m);
@@ -175,14 +175,14 @@ $generate-utility: should-generate-classes($FORMS);
     input:not([class*=' btn-']):disabled:hover,
     select:disabled,
     textarea:disabled {
-        background-color: map-get($grays, '100');
+        background-color: fill('gray', '100');
         cursor: not-allowed;
-        border: 1px solid map-get($grays, '100');
+        border: 1px solid fill('gray', '100');
     }
 
     label {
         &.label {
-            color: map-get($grays, '700');
+            color: fill('gray', '700');
             display: inline-block; /* changed from block */
             font-weight: bold;
             margin-top: 0.8rem;
@@ -215,7 +215,7 @@ $generate-utility: should-generate-classes($FORMS);
         position: relative;
         top: 1px;
         font-weight: bold;
-        color: map-get($reds, '700');
+        color: fill('red', '700');
         padding-left: 0.1rem;
     }
 
@@ -272,7 +272,7 @@ $generate-utility: should-generate-classes($FORMS);
         /* Form group controls */
         .form-group-label {
             background-color: var(--cirrus-form-group-bg);
-            border: 1px solid map-get($grays, '300');
+            border: 1px solid fill('gray', '300');
             border-radius: 0.2rem;
             color: var(--cirrus-form-group-fg);
             margin: 0;

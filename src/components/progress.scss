@@ -5,10 +5,7 @@ $generate-utility: should-generate-classes($PROGRESS);
 
 @if $generate-utility {
     $progress-primary: $cirrus-primary;
-    $progress-background: map-get(
-        $map: $grays,
-        $key: '200',
-    );
+    $progress-background: fill('gray', '200');
     $progress-border-radius: 0.25rem;
 
     .progress {

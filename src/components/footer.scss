@@ -5,7 +5,7 @@ $generate-utility: should-generate-classes($FOOTER);
 @if $generate-utility {
     /* FOOTER */
     .footer {
-        background-color: map-get($grays, '800');
+        background-color: fill('gray', '800');
         padding: 6rem 0;
         text-align: center;
         margin-top: 5rem;
@@ -17,7 +17,7 @@ $generate-utility: should-generate-classes($FOOTER);
         }
 
         p {
-            color: map-get($grays, '600');
+            color: fill('gray', '600');
         }
 
         ul {
@@ -32,7 +32,7 @@ $generate-utility: should-generate-classes($FOOTER);
         }
 
         .footer__list-title {
-            color: map-get($map: $grays, $key: '400');
+            color: fill('gray', '400');
             font-size: 75%;
             text-transform: uppercase;
             font-weight: bolder;
@@ -50,7 +50,7 @@ $generate-utility: should-generate-classes($FOOTER);
         ul a .footer__list-item,
         .footer__list-item {
             margin: 0.1rem;
-            color: map-get($grays, '600');
+            color: fill('gray', '600');
             transition: all var(--animation-duration);
             font-size: 75%;
             text-transform: uppercase;

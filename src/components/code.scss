@@ -5,7 +5,7 @@ $generate-utility: should-generate-classes($CODE);
 @if $generate-utility {
     /* CODE */
     code {
-        --cirrus-code-label-fg: #{map-get($grays, '600')};
+        --cirrus-code-label-fg: #{fill('gray', '600')};
         padding: 0.3rem;
         margin: 0.5em 0;
         overflow: auto;
@@ -24,17 +24,17 @@ $generate-utility: should-generate-classes($CODE);
 
         /* Dark theme for code */
         &.dark {
-            --cirrus-code-bg: #{map-get($grays, '800')};
-            --cirrus-code-fg: #{map-get($grays, '000')};
-            --cirrus-border-left-bg: #{map-get($grays, '900')};
-            --cirrus-code-label-fg: #{map-get($grays, '400')};
+            --cirrus-code-bg: #{fill('gray', '800')};
+            --cirrus-code-fg: #{fill('gray', '000')};
+            --cirrus-border-left-bg: #{fill('gray', '900')};
+            --cirrus-code-label-fg: #{fill('gray', '400')};
         }
     }
 
     pre > code {
-        --cirrus-code-bg: #{map-get($grays, '000')};
-        --cirrus-code-fg: #{map-get($grays, '800')};
-        --cirrus-border-left-bg: #{map-get($grays, '200')};
+        --cirrus-code-bg: #{fill('gray', '000')};
+        --cirrus-code-fg: #{fill('gray', '800')};
+        --cirrus-border-left-bg: #{fill('gray', '200')};
         background-color: var(--cirrus-code-bg);
         font-size: 14px;
         display: block;

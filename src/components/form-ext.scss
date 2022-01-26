@@ -208,7 +208,7 @@ $generate-utility: should-generate-classes($FORMS-EXT);
 
             &:before {
                 background-color: $cirrus-light;
-                border: 1px solid map-get($grays, '300');
+                border: 1px solid fill('gray', '300');
                 border-radius: 0.25rem;
                 pointer-events: none;
                 user-select: none;

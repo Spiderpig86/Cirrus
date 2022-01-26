@@ -62,16 +62,16 @@ $default-config: (
         // Please define all colors using hex
         // Omitting some colors may break Cirrus builds
         colors: (
-            pinks: (),
-            reds: (),
-            oranges: (),
-            yellows: (),
-            greens: (),
-            teals: (),
-            blues: (),
-            indigos: (),
-            purples: (),
-            grays: (),
+            pink: (),
+            red: (),
+            orange: (),
+            yellow: (),
+            green: (),
+            teal: (),
+            blue: (),
+            indigo: (),
+            purple: (),
+            gray: (),
         ),
         fonts: (
             sizes: (
@@ -170,7 +170,7 @@ $default-config: (
             ),
         ),
     colors: (
-        pinks: (
+        'pink': (
             '100': #fce8f3,
             '200': #fad1e8,
             '300': #f8b4d9,
@@ -181,7 +181,7 @@ $default-config: (
             '800': #99154b,
             '900': #751a3d,
         ),
-        reds: (
+        'red': (
             '100': #fde8e8,
             '200': #fbd5d5,
             '300': #f8b4b4,
@@ -192,7 +192,7 @@ $default-config: (
             '800': #9b1c1c,
             '900': #771d1d,
         ),
-        oranges: (
+        'orange': (
             '100': #feecdc,
             '200': #fcd9bd,
             '300': #fdba8c,
@@ -203,7 +203,7 @@ $default-config: (
             '800': #8a2c0d,
             '900': #73230d,
         ),
-        yellows: (
+        'yellow': (
             '100': #fdf6b2,
             '200': #fce96a,
             '300': #faca15,
@@ -214,7 +214,7 @@ $default-config: (
             '800': #723b13,
             '900': #633112,
         ),
-        greens: (
+        'green': (
             '100': #def7ec,
             '200': #bcf0da,
             '300': #84e1bc,
@@ -225,7 +225,7 @@ $default-config: (
             '800': #03543f,
             '900': #014737,
         ),
-        teals: (
+        'teal': (
             '100': #d5f5f6,
             '200': #afecef,
             '300': #7edce2,
@@ -236,7 +236,7 @@ $default-config: (
             '800': #05505c,
             '900': #014451,
         ),
-        blues: (
+        'blue': (
             '100': #e1effe,
             '200': #c3ddfd,
             '300': #a4cafe,
@@ -247,7 +247,7 @@ $default-config: (
             '800': #1e429f,
             '900': #233876,
         ),
-        indigos: (
+        'indigo': (
             '100': #e5edff,
             '200': #cddbfe,
             '300': #b4c6fc,
@@ -258,7 +258,7 @@ $default-config: (
             '800': #42389d,
             '900': #362f78,
         ),
-        purples: (
+        'purple': (
             '100': #edebfe,
             '200': #dcd7fe,
             '300': #cabffd,
@@ -269,7 +269,7 @@ $default-config: (
             '800': #5521b5,
             '900': #4a1d96,
         ),
-        grays: (
+        'gray': (
             '000': #f8f9fa,
             '100': #f1f3f5,
             '200': #e9ecef,
@@ -664,28 +664,7 @@ $includes: map.get($all-config, includes);
 
 // COLORS
 /* v2 Colors */
-$pinks: functions.get-with-extend($all-config, colors, pinks);
-$reds: functions.get-with-extend($all-config, colors, reds);
-$oranges: functions.get-with-extend($all-config, colors, oranges);
-$yellows: functions.get-with-extend($all-config, colors, yellows);
-$greens: functions.get-with-extend($all-config, colors, greens);
-$teals: functions.get-with-extend($all-config, colors, teals);
-$blues: functions.get-with-extend($all-config, colors, blues);
-$indigos: functions.get-with-extend($all-config, colors, indigos);
-$purples: functions.get-with-extend($all-config, colors, purples);
-$grays: functions.get-with-extend($all-config, colors, grays);
-$v2Palettes: (
-    'pink': $pinks,
-    'red': $reds,
-    'orange': $oranges,
-    'yellow': $yellows,
-    'green': $greens,
-    'teal': $teals,
-    'blue': $blues,
-    'indigo': $indigos,
-    'purple': $purples,
-    'gray': $grays,
-);
+$v2Colors: functions.get-with-extend($all-config, colors);
 
 // COMPONENTS
 $avatar-sizes: functions.get-with-extend($all-config, avatar-sizes);
@@ -724,6 +703,18 @@ $round: functions.get-with-extend($all-config, round);
 $shadows: functions.get-with-extend($all-config, shadows);
 $spacing-system: functions.get-with-extend($all-config, sizing-system);
 $z-indexes: functions.get-with-extend($all-config, z-index);
+
+@function fill($color, $level, $opacity: 1) {
+    @if map.has-key($v2Colors, $color, $level) {
+        @return map.get($v2Colors, $color, $level);
+    } @else {
+        @return throw.error(
+            $message: '[fill] Unknown color key `#{$color + ' ' + $level}`.',
+            $source: 'fill()',
+            $catch: true
+        );
+    }
+}
 
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).

@@ -68,7 +68,7 @@
 
 /* v2 */
 
-@each $name, $palette in $v2Palettes {
+@each $name, $palette in $v2Colors {
     @each $level, $color in $palette {
         @if $color != null {
             .bg-#{$name}-#{$level} {

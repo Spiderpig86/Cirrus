@@ -43,14 +43,14 @@ $generate-utility: should-generate-classes($BUTTON);
         user-select: none;
         margin-bottom: 1rem;
         outline: none;
-        --btn-color: #{hex-to-rgb(map-get($grays, '000'))};
-        --btn-fg: #{hex-to-rgb(map-get($grays, '700'))};
-        --btn-border-color: #{hex-to-rgb(map-get($grays, '200'))};
+        --btn-color: #{hex-to-rgb(fill('gray', '000'))};
+        --btn-fg: #{hex-to-rgb(fill('gray', '700'))};
+        --btn-border-color: #{hex-to-rgb(fill('gray', '200'))};
 
         /* Base States */
         &:hover {
             transition: all var(--animation-duration);
-            --btn-color: #{hex-to-rgb(map-get($grays, '100'))};
+            --btn-color: #{hex-to-rgb(fill('gray', '100'))};
             color: rgba(var(--btn-fg), var(--color-opacity));
         }
 
@@ -75,7 +75,7 @@ $generate-utility: should-generate-classes($BUTTON);
             --btn-color: transparent;
 
             &:hover {
-                --btn-color: #{hex-to-rgb(map-get($grays, '200'))};
+                --btn-color: #{hex-to-rgb(fill('gray', '200'))};
             }
         }
 
@@ -352,7 +352,7 @@ $generate-utility: should-generate-classes($BUTTON);
             }
 
             &.btn-transparent {
-                color: #{hex-to-rgb(map-get($grays, '700'))} !important;
+                color: #{hex-to-rgb(fill('gray', '700'))} !important;
             }
         }
     }

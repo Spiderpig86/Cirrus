@@ -36,7 +36,7 @@ section {
 
 /* This works well with spans and maybe even hr */
 .divider {
-    border-top: 0.05rem solid transparentize(map-get($grays, '500'), 0.5);
+    border-top: 0.05rem solid transparentize(fill('gray', '500'), 0.5);
     height: 0.1rem;
     margin: 1.8rem 0 1.6rem;
     position: relative;
@@ -48,7 +48,7 @@ section {
     &--v[data-content]::after,
     &[data-content]::after {
         background: #fff;
-        color: map-get($grays, '500');
+        color: fill('gray', '500');
         content: attr(data-content);
         left: 50%;
         display: inline-block;
@@ -64,7 +64,7 @@ section {
         padding: 0.8rem;
 
         &::before {
-            border-left: 0.05rem solid transparentize(map-get($grays, '500'), 0.5);
+            border-left: 0.05rem solid transparentize(fill('gray', '500'), 0.5);
             bottom: 0.4rem;
             content: '';
             display: block;
@@ -167,7 +167,7 @@ section {
     /* Dividers for mobile layout */
     &.divided [class^='col'],
     &.divided [class*=' col'] {
-        box-shadow: 0 -1px 0 0 transparentize(map-get($grays, '500'), 0.5);
+        box-shadow: 0 -1px 0 0 transparentize(fill('gray', '500'), 0.5);
     }
 
     /* Base sizing where everything is 100% width */

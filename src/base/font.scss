@@ -48,8 +48,8 @@ p.lead {
 }
 
 blockquote {
-    background-color: map-get($grays, '000');
-    border-left: 5px solid map-get($grays, '200');
+    background-color: fill('gray', '000');
+    border-left: 5px solid fill('gray', '200');
     border-radius: 3px;
     margin-bottom: 1rem;
     padding: 1rem 2rem;
@@ -162,7 +162,7 @@ mark,
     display: block;
     font-size: var(--font-size-s);
     margin-top: 0.25rem;
-    color: map-get($grays, '600');
+    color: fill('gray', '600');
 
     &.inline {
         /* Keeps the extra info inline */
