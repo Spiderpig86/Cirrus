@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface ClassTableEntry {
     class: string;
-    style: string;
+    style?: string;
 }
 
 export interface ClassTableProps {

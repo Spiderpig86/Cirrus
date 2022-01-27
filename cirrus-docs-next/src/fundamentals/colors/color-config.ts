@@ -10,6 +10,8 @@ const v1Colors = [
     ['success', '0dd157'],
     ['warning', 'fab633'],
     ['danger', 'fb4143'],
+    ['white', 'ffffff'],
+    ['black', '000000'],
 ];
 
 export const v2Colors = ['pink', 'red', 'orange', 'yellow', 'green', 'teal', 'blue', 'indigo', 'purple', 'gray'];
@@ -34,6 +36,24 @@ export const v2: Map<string, Swatch[]> = new Map([
     ['purple', generateV2Swatches('purple', ['100', '200', '300', '400', '500', '600', '700', '800', '900'])],
     ['gray', generateV2Swatches('gray', ['000', '100', '200', '300', '400', '500', '600', '700', '800', '900'])],
 ]);
+
+export const DEFAULT_LEVELS = {
+    gray: ['000', '100', '200', '300', '400', '500', '600', '700', '800', '900'],
+    others: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+};
+export const DEFAULT_SEMANTIC_COLORS = [
+    'primary',
+    'white',
+    'black',
+    'light',
+    'dark',
+    'link',
+    'link-dark',
+    'info',
+    'success',
+    'warning',
+    'danger',
+];
 
 function generateV2Swatches(name: string, levels: string[]): Swatch[] {
     return levels.map((level: string) => {

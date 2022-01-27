@@ -81,7 +81,7 @@ export const SetUpPage: React.FC<any> = (props) => {
 
                 <section id="project-config" className="padtop">
                     <div className="content">
-                        <Headline title="Project Configuration" link="#project-config" />
+                        <Headline title="Project Configuration" link="#project-config" size='4' />
                         <div className="divider"></div>
 
                         <p>
@@ -212,7 +212,7 @@ export const SetUpPage: React.FC<any> = (props) => {
 
                 <section className="padtop" id="designing">
                     <div className="content">
-                        <Headline title="Designing with Cirrus" link="#designing" />
+                        <Headline title="Designing with Cirrus" link="#designing" size='4' />
                         <div className="divider"></div>
                         <p>Using a new framework can be slightly overwhelming, so this section is to help point out common areas in the documentation to help you get up to speed.</p>
                         <div className="space"></div>
@@ -256,7 +256,7 @@ export const SetUpPage: React.FC<any> = (props) => {
 
                 <section className="padtop" id="starter">
                     <div className="content">
-                        <Headline title="Starter Template" link="#starter" />
+                        <Headline title="Starter Template" link="#starter" size='4' />
                         <div className="divider"></div>
                         <p>To help you get started, feel free to use the example page created below.</p>
                         <LazyLoad height={200} once>

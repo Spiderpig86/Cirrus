@@ -22,13 +22,13 @@ export const ModalsPage: React.FC<any> = (props) => {
             <div>
                 <Modal id="example-modal" />
                 <Modal id="structure-modal">
-                    <div className="modal-header">
+                    <div className="modal-header bg-gray-100">
                         <p className="font-bold">modal-header</p>
                     </div>
-                    <div className="modal-body">
+                    <div className="modal-body bg-gray-200">
                         <p className="font-bold">modal-body</p>
                     </div>
-                    <div className="modal-footer">
+                    <div className="modal-footer bg-gray-300">
                         <p className="font-bold">modal-footer</p>
                     </div>
                 </Modal>
@@ -62,7 +62,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                                 }}
                             >
                                 <div className="tile__icon">
-                                    <figure className="avatar bg-teal-400" data-text="Jn"></figure>
+                                    <figure className="avatar text-white bg-teal-400" data-text="Jn"></figure>
                                 </div>
                                 <div className="tile__container">
                                     <p className="tile__title m-0">John Newman</p>
@@ -87,7 +87,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                                 }}
                             >
                                 <div className="tile__icon">
-                                    <figure className="avatar bg-teal-500" data-text="Fw"></figure>
+                                    <figure className="avatar text-white bg-teal-500" data-text="Fw"></figure>
                                 </div>
                                 <div className="tile__container">
                                     <p className="tile__title m-0">Franklin Watson</p>
@@ -112,7 +112,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                                 }}
                             >
                                 <div className="tile__icon">
-                                    <figure className="avatar bg-teal-600" data-text="Cr"></figure>
+                                    <figure className="avatar text-white bg-teal-600" data-text="Cr"></figure>
                                 </div>
                                 <div className="tile__container">
                                     <p className="tile__title m-0">Cornelia Roberts</p>
@@ -137,7 +137,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                                 }}
                             >
                                 <div className="tile__icon">
-                                    <figure className="avatar bg-teal-700" data-text="Da"></figure>
+                                    <figure className="avatar text-white bg-teal-700" data-text="Da"></figure>
                                 </div>
                                 <div className="tile__container">
                                     <p className="tile__title m-0">Dominic Alvarado</p>
@@ -162,7 +162,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                                 }}
                             >
                                 <div className="tile__icon">
-                                    <figure className="avatar bg-teal-800" data-text="Sl"></figure>
+                                    <figure className="avatar text-white bg-teal-800" data-text="Sl"></figure>
                                 </div>
                                 <div className="tile__container">
                                     <p className="tile__title m-0">Stanley Lim</p>
@@ -349,7 +349,7 @@ export const ModalsPage: React.FC<any> = (props) => {
             <div class="my-1">
                 <div class="tile tile--center py-1 px-2 my-1" style="box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 6px, rgba(0, 0, 0, 0.03) 0px 3px 6px;">
                     <div class="tile__icon">
-                        <figure class="avatar bg-teal-400" data-text="Jn"></figure>
+                        <figure class="avatar text-white bg-teal-400" data-text="Jn"></figure>
                     </div>
                     <div class="tile__container">
                         <p class="tile__title m-0">John Newman</p>
@@ -361,7 +361,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                 </div>
                 <div class="tile tile--center py-1 px-2 my-1" style="box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 6px, rgba(0, 0, 0, 0.03) 0px 3px 6px;">
                     <div class="tile__icon">
-                        <figure class="avatar bg-teal-500" data-text="Fw"></figure>
+                        <figure class="avatar text-white bg-teal-500" data-text="Fw"></figure>
                     </div>
                     <div class="tile__container">
                         <p class="tile__title m-0">Franklin Watson</p>
@@ -373,7 +373,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                 </div>
                 <div class="tile tile--center py-1 px-2 my-1" style="box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 6px, rgba(0, 0, 0, 0.03) 0px 3px 6px;">
                     <div class="tile__icon">
-                        <figure class="avatar bg-teal-600" data-text="Cr"></figure>
+                        <figure class="avatar text-white bg-teal-600" data-text="Cr"></figure>
                     </div>
                     <div class="tile__container">
                         <p class="tile__title m-0">Cornelia Roberts</p>
@@ -385,7 +385,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                 </div>
                 <div class="tile tile--center py-1 px-2 my-1" style="box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 6px, rgba(0, 0, 0, 0.03) 0px 3px 6px;">
                     <div class="tile__icon">
-                        <figure class="avatar bg-teal-700" data-text="Da"></figure>
+                        <figure class="avatar text-white bg-teal-700" data-text="Da"></figure>
                     </div>
                     <div class="tile__container">
                         <p class="tile__title m-0">Dominic Alvarado</p>
@@ -397,7 +397,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                 </div>
                 <div class="tile tile--center py-1 px-2 my-1" style="box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 6px, rgba(0, 0, 0, 0.03) 0px 3px 6px;">
                     <div class="tile__icon">
-                        <figure class="avatar bg-teal-800" data-text="Sl"></figure>
+                        <figure class="avatar text-white bg-teal-800" data-text="Sl"></figure>
                     </div>
                     <div class="tile__container">
                         <p class="tile__title m-0">Stanley Lim</p>

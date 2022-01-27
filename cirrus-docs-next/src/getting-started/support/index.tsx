@@ -136,7 +136,7 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
 
                 <section id="oldbrowsers" className="padtop">
                     <div className="content">
-                        <Headline title="Working with Older Browsers" link="#oldbrowsers" />
+                        <Headline title="Working with Older Browsers" link="#oldbrowsers" size='4' />
                         <div className="divider"></div>
                         <p>
                             As stated above, there is partial support for older browsers such as Internet Explorer or

@@ -2,8 +2,8 @@ import { TableOfContentsEntry } from '../../../layouts/components/toc';
 
 export const toc: TableOfContentsEntry[] = [
     {
-        name: 'Z-Index',
-        anchor: '#z-index',
+        name: 'Border Radius',
+        anchor: '#border-radius',
         children: [
             {
                 name: 'Examples',
@@ -11,8 +11,8 @@ export const toc: TableOfContentsEntry[] = [
                 children: null,
             },
             {
-                name: 'Responsive',
-                anchor: '#responsive',
+                name: 'No Border Radius',
+                anchor: '#no-border-radius',
                 children: null,
             },
             {

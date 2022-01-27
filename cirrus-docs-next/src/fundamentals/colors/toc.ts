@@ -12,64 +12,74 @@ export const toc: TableOfContentsEntry[] = [
         children: null,
     },
     {
-        name: 'v1',
+        name: 'v1 (Semantic)',
         anchor: '#v1',
         children: null,
     },
     {
-        name: 'v2',
+        name: 'v2 (Expanded)',
         anchor: '#v2',
         children: [
             {
-                name: 'pink',
+                name: 'Pink',
                 anchor: '#pink',
                 children: null,
             },
             {
-                name: 'red',
+                name: 'Red',
                 anchor: '#red',
                 children: null,
             },
             {
-                name: 'orange',
+                name: 'Orange',
                 anchor: '#orange',
                 children: null,
             },
             {
-                name: 'yellow',
+                name: 'Yellow',
                 anchor: '#yellow',
                 children: null,
             },
             {
-                name: 'green',
+                name: 'Green',
                 anchor: '#green',
                 children: null,
             },
             {
-                name: 'teal',
+                name: 'Teal',
                 anchor: '#teal',
                 children: null,
             },
             {
-                name: 'blue',
+                name: 'Blue',
                 anchor: '#blue',
                 children: null,
             },
             {
-                name: 'indigo',
+                name: 'Indigo',
                 anchor: '#indigo',
                 children: null,
             },
             {
-                name: 'purple',
+                name: 'Purple',
                 anchor: '#purple',
                 children: null,
             },
             {
-                name: 'gray',
+                name: 'Gray',
                 anchor: '#gray',
                 children: null,
             },
         ],
+    },
+    {
+        name: 'Extending Colors',
+        anchor: '#extending-colors',
+        children: null,
+    },
+    {
+        name: 'Disabling Colors',
+        anchor: '#disabling-colors',
+        children: null,
     },
 ];

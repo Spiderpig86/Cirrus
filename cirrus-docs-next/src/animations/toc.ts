@@ -24,7 +24,23 @@ export const toc: TableOfContentsEntry[] = [
             {
                 name: 'Entrance Animations',
                 anchor: '#entrance-animations',
-                children: null,
+                children: [
+                    {
+                        name: 'Bounce',
+                        anchor: '#bounce',
+                        children: null,
+                    },
+                    {
+                        name: 'Bounce In',
+                        anchor: '#bounce-in',
+                        children: null,
+                    },
+                    {
+                        name: 'Fade In',
+                        anchor: '#fade-in',
+                        children: null,
+                    },
+                ],
             },
             {
                 name: 'Infinite Animations',

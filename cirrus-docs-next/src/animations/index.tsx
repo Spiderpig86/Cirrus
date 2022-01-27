@@ -202,207 +202,210 @@ export const AnimationsPage: React.FC<any> = (props) => {
                         <p>These are animations that only run once when the page is loaded or the class is toggled.</p>
                         <div className="space"></div>
 
-                        <h6>Bounce</h6>
-                        <p>Bouncing animation with a glyph.</p>
-                        <div className="row">
-                            <div className="col-lg-6 u-text-center">
-                                <span className="icon animated" id="bounce-heart">
-                                    <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
-                                </span>
-                            </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated bounce" aria-hidden="true"></i></span>`}
-                                    language="htmlbars"
-                                />
-                            </div>
-                        </div>
-
-                        <button className="docs-btn-play" id="toggle-bounce-heart">
-                            <span className="icon">
-                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
-                            </span>
-                            Play
-                        </button>
-                        <div className="space"></div>
-                        <p>Bouncing animation with a div.</p>
-                        <div className="row">
-                            <div className="col-lg-6 u-text-center">
-                                <div className="bg-orange-400 text-white u-text-center animated" id="bounce-div">
-                                    <p>This is a div!</p>
+                        <section className="pt-4" id="bounce">
+                            <Headline title="Bounce" link="#bounce" size="6" />
+                            <p>Bouncing animation with a glyph.</p>
+                            <div className="row">
+                                <div className="col-lg-6 u-text-center">
+                                    <span className="icon animated" id="bounce-heart">
+                                        <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
+                                    </span>
+                                </div>
+                                <div className="col-lg-6">
+                                    <CodeBlock
+                                        code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated bounce" aria-hidden="true"></i></span>`}
+                                        language="htmlbars"
+                                    />
                                 </div>
                             </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<div class="bg-orange-400 text-white u-text-center animated bounce">
+
+                            <button className="docs-btn-play" id="toggle-bounce-heart">
+                                <span className="icon">
+                                    <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                                </span>
+                                Play
+                            </button>
+                            <div className="space"></div>
+                            <p>Bouncing animation with a div.</p>
+                            <div className="row">
+                                <div className="col-lg-6 u-text-center">
+                                    <div className="bg-orange-400 text-white u-text-center animated" id="bounce-div">
+                                        <p>This is a div!</p>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <CodeBlock
+                                        code={`<div class="bg-orange-400 text-white u-text-center animated bounce">
     <p>This is a div!</p>
 </div>`}
-                                    language="htmlbars"
-                                />
-                            </div>
-                        </div>
-                        <button className="docs-btn-play" id="toggle-bounce-div">
-                            <span className="icon">
-                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
-                            </span>
-                            Play
-                        </button>
-                        <div className="space"></div>
-                        <p>Bouncing animation with a button.</p>
-                        <div className="row">
-                            <div className="col-lg-6 u-text-center">
-                                <button className="btn-info animated" id="bounce-btn">
-                                    Button
-                                </button>
-                            </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<button class="btn-info animated bounce">Button</button>`}
-                                    language="htmlbars"
-                                />
-                            </div>
-                        </div>
-                        <button className="docs-btn-play" id="toggle-bounce-btn">
-                            <span className="icon">
-                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
-                            </span>
-                            Play
-                        </button>
-                        <div className="space space--xl"></div>
-
-                        <h6>Bounce In</h6>
-                        <p>Bounce in animation with a glyph.</p>
-                        <div className="row">
-                            <div className="col-lg-6 u-text-center">
-                                <span className="icon animated" id="bounce-in-heart">
-                                    <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
-                                </span>
-                            </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated bounceIn" aria-hidden="true"></i></span>`}
-                                    language="htmlbars"
-                                />
-                            </div>
-                        </div>
-                        <button className="docs-btn-play" id="toggle-bounce-in-heart">
-                            <span className="icon">
-                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
-                            </span>
-                            Play
-                        </button>
-                        <div className="space"></div>
-                        <p>Bounce in animation with a div.</p>
-                        <div className="row">
-                            <div className="col-lg-6 u-text-center">
-                                <div className="bg-orange-400 text-white u-text-center animated" id="bounce-in-div">
-                                    <p>This is a div!</p>
+                                        language="htmlbars"
+                                    />
                                 </div>
                             </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<div class="bg-orange-400 text-white u-text-center animated bounceIn">
-    <p>This is a div!</p>
-</div>`}
-                                    language="htmlbars"
-                                />
-                            </div>
-                        </div>
-                        <button className="docs-btn-play" id="toggle-bounce-in-div">
-                            <span className="icon ">
-                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
-                            </span>
-                            Play
-                        </button>
-                        <div className="space"></div>
-                        <p>Bounce in animation with a button.</p>
-                        <div className="row">
-                            <div className="col-lg-6 u-text-center">
-                                <button className="btn-info animated" id="bounce-in-btn">
-                                    Button
-                                </button>
-                            </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<button class="btn-info animated bounceIn">Button</button>`}
-                                    language="htmlbars"
-                                />
-                            </div>
-                        </div>
-                        <button className="docs-btn-play" id="toggle-bounce-in-btn">
-                            <span className="icon">
-                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
-                            </span>
-                            Play
-                        </button>
-                        <div className="space space--xl"></div>
-
-                        <h6>Fade In</h6>
-                        <p>Fade in animation with a glyph.</p>
-                        <div className="row">
-                            <div className="col-lg-6 u-text-center">
-                                <span className="icon animated" id="fade-in-heart">
-                                    <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
+                            <button className="docs-btn-play" id="toggle-bounce-div">
+                                <span className="icon">
+                                    <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
                                 </span>
-                            </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated fadeIn" aria-hidden="true"></i></span>`}
-                                    language="htmlbars"
-                                />
-                            </div>
-                        </div>
-                        <button className="docs-btn-play" id="toggle-fade-in-heart">
-                            <span className="icon">
-                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
-                            </span>
-                            Play
-                        </button>
-                        <div className="space"></div>
-                        <p>Fade in animation with a div.</p>
-                        <div className="row">
-                            <div className="col-lg-6 u-text-center">
-                                <div className="bg-orange-400 text-white u-text-center animated" id="fade-in-div">
-                                    <p>This is a div!</p>
+                                Play
+                            </button>
+                            <div className="space"></div>
+                            <p>Bouncing animation with a button.</p>
+                            <div className="row">
+                                <div className="col-lg-6 u-text-center">
+                                    <button className="btn-info animated" id="bounce-btn">
+                                        Button
+                                    </button>
+                                </div>
+                                <div className="col-lg-6">
+                                    <CodeBlock
+                                        code={`<button class="btn-info animated bounce">Button</button>`}
+                                        language="htmlbars"
+                                    />
                                 </div>
                             </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<div class="bg-orange-400 text-white u-text-center animated fadeIn">
+                            <button className="docs-btn-play" id="toggle-bounce-btn">
+                                <span className="icon">
+                                    <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                                </span>
+                                Play
+                            </button>
+                        </section>
+
+                        <section className="pt-4" id="bounce-in">
+                            <Headline title="Bounce In" link="#bounce-in" size="6" />
+                            <p>Bounce in animation with a glyph.</p>
+                            <div className="row">
+                                <div className="col-lg-6 u-text-center">
+                                    <span className="icon animated" id="bounce-in-heart">
+                                        <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
+                                    </span>
+                                </div>
+                                <div className="col-lg-6">
+                                    <CodeBlock
+                                        code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated bounceIn" aria-hidden="true"></i></span>`}
+                                        language="htmlbars"
+                                    />
+                                </div>
+                            </div>
+                            <button className="docs-btn-play" id="toggle-bounce-in-heart">
+                                <span className="icon">
+                                    <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                                </span>
+                                Play
+                            </button>
+                            <div className="space"></div>
+                            <p>Bounce in animation with a div.</p>
+                            <div className="row">
+                                <div className="col-lg-6 u-text-center">
+                                    <div className="bg-orange-400 text-white u-text-center animated" id="bounce-in-div">
+                                        <p>This is a div!</p>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <CodeBlock
+                                        code={`<div class="bg-orange-400 text-white u-text-center animated bounceIn">
     <p>This is a div!</p>
 </div>`}
-                                    language="htmlbars"
-                                />
+                                        language="htmlbars"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <button className="docs-btn-play" id="toggle-fade-in-div">
-                            <span className="icon">
-                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
-                            </span>
-                            Play
-                        </button>
-                        <div className="space"></div>
-                        <p>Fade in animation with a button.</p>
-                        <div className="row">
-                            <div className="col-lg-6 u-text-center">
-                                <button className="btn-info animated" id="fade-in-btn">
-                                    Button
-                                </button>
+                            <button className="docs-btn-play" id="toggle-bounce-in-div">
+                                <span className="icon ">
+                                    <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                                </span>
+                                Play
+                            </button>
+                            <div className="space"></div>
+                            <p>Bounce in animation with a button.</p>
+                            <div className="row">
+                                <div className="col-lg-6 u-text-center">
+                                    <button className="btn-info animated" id="bounce-in-btn">
+                                        Button
+                                    </button>
+                                </div>
+                                <div className="col-lg-6">
+                                    <CodeBlock
+                                        code={`<button class="btn-info animated bounceIn">Button</button>`}
+                                        language="htmlbars"
+                                    />
+                                </div>
                             </div>
-                            <div className="col-lg-6">
-                                <CodeBlock
-                                    code={`<button class="btn-info animated fadeIn">Button</button>`}
-                                    language="htmlbars"
-                                />
+                            <button className="docs-btn-play" id="toggle-bounce-in-btn">
+                                <span className="icon">
+                                    <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                                </span>
+                                Play
+                            </button>
+                        </section>
+
+                        <section className="pt-4" id="fade-in">
+                            <Headline title="Fade In" link="#fade-in" size="6" />
+                            <p>Fade in animation with a glyph.</p>
+                            <div className="row">
+                                <div className="col-lg-6 u-text-center">
+                                    <span className="icon animated" id="fade-in-heart">
+                                        <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'heart']} />
+                                    </span>
+                                </div>
+                                <div className="col-lg-6">
+                                    <CodeBlock
+                                        code={`<span class="icon"><i class="fa fa-wrapper fa-heart animated fadeIn" aria-hidden="true"></i></span>`}
+                                        language="htmlbars"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <button className="docs-btn-play" id="toggle-fade-in-btn">
-                            <span className="icon">
-                                <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
-                            </span>
-                            Play
-                        </button>
-                        <div className="space"></div>
+                            <button className="docs-btn-play" id="toggle-fade-in-heart">
+                                <span className="icon">
+                                    <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                                </span>
+                                Play
+                            </button>
+                            <div className="space"></div>
+                            <p>Fade in animation with a div.</p>
+                            <div className="row">
+                                <div className="col-lg-6 u-text-center">
+                                    <div className="bg-orange-400 text-white u-text-center animated" id="fade-in-div">
+                                        <p>This is a div!</p>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <CodeBlock
+                                        code={`<div class="bg-orange-400 text-white u-text-center animated fadeIn">
+    <p>This is a div!</p>
+</div>`}
+                                        language="htmlbars"
+                                    />
+                                </div>
+                            </div>
+                            <button className="docs-btn-play" id="toggle-fade-in-div">
+                                <span className="icon">
+                                    <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                                </span>
+                                Play
+                            </button>
+                            <div className="space"></div>
+                            <p>Fade in animation with a button.</p>
+                            <div className="row">
+                                <div className="col-lg-6 u-text-center">
+                                    <button className="btn-info animated" id="fade-in-btn">
+                                        Button
+                                    </button>
+                                </div>
+                                <div className="col-lg-6">
+                                    <CodeBlock
+                                        code={`<button class="btn-info animated fadeIn">Button</button>`}
+                                        language="htmlbars"
+                                    />
+                                </div>
+                            </div>
+                            <button className="docs-btn-play" id="toggle-fade-in-btn">
+                                <span className="icon">
+                                    <FontAwesomeIcon className="fa-wrapper pad-right" icon={['fas', 'play']} />
+                                </span>
+                                Play
+                            </button>
+                        </section>
                     </div>
                 </section>
 
