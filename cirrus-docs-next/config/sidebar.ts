@@ -18,15 +18,27 @@ export const sidebarConfig: SidebarConfig[] = [
         sidebarItems: [
             {
                 fontWeight: 'bold',
-                glyph: ['fas', 'clock'],
-                text: 'Why Cirrus?',
+                glyph: ['fas', 'book'],
+                text: 'Documentation',
                 url: '/why'
+            },
+            {
+                fontWeight: 'bold',
+                glyph: ['fas', 'cubes'],
+                text: 'Components',
+                url: '/components'
             },
             {
                 fontWeight: 'bold',
                 glyph: ['fas', 'pencil-ruler'],
                 text: 'Playground',
                 url: '/playground'
+            },
+            {
+                fontWeight: 'bold',
+                glyph: ['fas', 'users'],
+                text: 'Community',
+                url: 'https://github.com/Spiderpig86/Cirrus/discussions'
             },
             {
                 fontWeight: 'bold',
@@ -60,6 +72,18 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Configuration',
+                url: '/getting-started/configuration'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Managing Build Size',
+                url: '/getting-started/build-size'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Examples',
                 url: '/getting-started/examples'
             },
@@ -74,6 +98,12 @@ export const sidebarConfig: SidebarConfig[] = [
     {
         title: 'Fundamentals',
         sidebarItems: [
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Default Styles',
+                url: '/fundamentals/defaults'
+            },
             {
                 fontWeight: 'semibold',
                 glyph: null,
