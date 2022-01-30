@@ -6,6 +6,7 @@ import { loadScripts } from '../../../utils/scripts';
 import runGtag from '../../../static/js/gtag.js';
 export interface HeaderProps {
     extraClasses?: string;
+    centerNavChildren?: JSX.Element;
     rightNavChildren?: JSX.Element;
 }
 
@@ -94,6 +95,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                             </div>
                         </div>
 
+                        {props.centerNavChildren && <div className="nav-center">{props.centerNavChildren}</div>}
                         {props.rightNavChildren && <div className="nav-right">{props.rightNavChildren}</div>}
                     </div>
                 </div>

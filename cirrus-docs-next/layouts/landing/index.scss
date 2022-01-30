@@ -1,16 +1,25 @@
 .header {
     &.header-landing {
         padding: 1.5rem;
-        --header-link-color: #fff;
-        --header-link-color-hover: #ddd;
+        // --header-link-color: #fff;
+        // --header-link-color-hover: #ddd;
 
         &.translucent {
             background: rgba(0, 0, 0, 0.87) !important;
         }
     }
 
-    &.header-dark {
+    &.header-light {
+        background-color: rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(8px);
+    }
+    button, a {
+        color: inherit;
+    }
+
+    button a {
+        color: inherit;
+        font-weight: semibold;
     }
 }
 

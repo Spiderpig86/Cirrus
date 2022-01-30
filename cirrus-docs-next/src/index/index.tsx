@@ -35,25 +35,46 @@ const Landing: React.FC<any> = () => {
                 <title>Cirrus CSS 💎</title>
             </Head>
             <section id="splash">
+                <div
+                    className="u-absolute hero fullscreen hero-img u-z-0"
+                    style={{
+                        backgroundColor: '#e5e5f7',
+                        opacity: '0.1',
+                        backgroundImage:
+                            'linear-gradient(#d73277 2px, transparent 2px), linear-gradient(90deg, #d73277 2px, transparent 2px), linear-gradient(#444cf7 1px, transparent 1px), linear-gradient(90deg, #444cf7 1px, #e5e5f7 1px)',
+                        backgroundSize: '50px 50px, 50px 50px, 10px 10px, 10px 10px',
+                        backgroundPosition: '-2px -2px, -2px -2px, -1px -1px, -1px -1px',
+                    }}
+                ></div>
                 <div id="splash-img" className="hero fullscreen hero-img parallax-img">
-                    <div className="hero-body">
-                        <div className="content">
-                            <h1 className="headline-2 text-white title">Cirrus.CSS</h1>
-                            <h5 className="text-gray-300 sub-title font-alt font-normal">
-                                A <b className="text-white">component</b> and <b className="text-white">utility centric</b> SCSS
-                                framework <br /> designed for <b className="text-white">rapid prototyping</b>.
-                            </h5>
+                    <div className="hero-body u-z-1">
+                        <div className="content w-100 w-80-md u-text-center">
+                            <h1
+                                className="headline-3 title"
+                                style={{
+                                    letterSpacing: '-.05em',
+                                }}
+                            >
+                                Spend more time building <br />
+                                <span className="font-bold text-pink-600">and less time worrying about CSS.</span>
+                            </h1>
+                            <div className="space"></div>
+                            <p className="sub-title lead font-alt font-normal mx-auto w-60-md">
+                                A <b className="">component</b> and <b className="">utility centric</b> SCSS framework{' '}
+                                designed for <b className="">rapid prototyping</b>. Use beautiful pre-built components
+                                to bootstrap your next project and utility classes to polish your final design.
+                            </p>
 
-                            <p className="text-white">
+                            <p>
                                 <b>Version {VERSION}</b> / {VERSION_NAME}
                             </p>
 
                             <div className="btn-group">
                                 <Link href="/getting-started/setup">
-                                    <button className="btn-light outline">Get Started</button>
+                                    <button className="btn-dark outline">Get Started</button>
                                 </Link>
                                 <Link href="/why">
-                                    <button className="btn-light outline">Why Cirrus</button>
+                                    <button className="btn-dark outline">Why Cirrus</button>
                                 </Link>
                             </div>
                         </div>
