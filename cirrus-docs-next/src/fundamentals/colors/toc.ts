@@ -73,6 +73,11 @@ export const toc: TableOfContentsEntry[] = [
         ],
     },
     {
+        name: 'Changing Opacity',
+        anchor: '#changing-opacity',
+        children: null,
+    },
+    {
         name: 'Extending Colors',
         anchor: '#extending-colors',
         children: null,

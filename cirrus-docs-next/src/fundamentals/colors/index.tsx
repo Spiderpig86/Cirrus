@@ -206,6 +206,87 @@ export const ColorsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
+                <section className="padtop" id="changing-opacity">
+                    <div className="content">
+                        <Headline title="Changing Opacity" link="#changing-opacity" size="4" />
+                        <div className="divider"></div>
+                        <Tag
+                            leftProps={{
+                                classes: `tag--dark`,
+                                text: `New`,
+                            }}
+                            rightProps={{
+                                classes: `tag--info`,
+                                text: `0.7.0`,
+                            }}
+                        />
+
+                        <p>With the new color opacity modifiers, you can now modify color opacity for background colors and text colors.</p>
+
+                        <div className="space"></div>
+
+                        <h6>Changing Background Opacity</h6>
+                        <p>Use the background opacity utility classes to control an element's background color opacity. You can use any opacity value that is defined in the <Link href="/utils/opacity"><a className="u u-LR">opacity scale</a></Link>.</p>
+
+                        <div className="py-2 u-round-xs bg-gray-000 u-shadow-md u-flex u-items-center u-justify-space-around">
+                            <button className="btn-warning mb-0 u-bg-opacity-100">100%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-90">90%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-80">80%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-70">70%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-60">60%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-50">50%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-40">40%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-30">30%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-20">20%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-10">10%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-0">0%</button>
+                        </div>
+                        <div className="space"></div>
+                        <CodeBlock code={`<button class="u-bg-opacity-100 ...">100%</button>
+<button class="u-bg-opacity-90 ...">90%</button>
+<button class="u-bg-opacity-80 ...">80%</button>
+<button class="u-bg-opacity-70 ...">70%</button>
+<button class="u-bg-opacity-60 ...">60%</button>
+<button class="u-bg-opacity-50 ...">50%</button>
+<button class="u-bg-opacity-40 ...">40%</button>
+<button class="u-bg-opacity-30 ...">30%</button>
+<button class="u-bg-opacity-20 ...">20%</button>
+<button class="u-bg-opacity-10 ...">10%</button>
+<button class="u-bg-opacity-0 ...">0%</button>`} language='htmlbars' />
+
+                        <div className="space space--lg"></div>
+
+                        <h6>Changing Color Opacity</h6>
+                        <p>Use the color opacity utility classes to control an element's color opacity (text, border, etc.). You can use any opacity value that is defined in the <Link href="/utils/opacity"><a className="u u-LR">opacity scale</a></Link>.</p>
+                        
+                        <p className="text-teal-600 text-xl u-color-opacity-100">The quick brown fox jumps over the lazy dog.</p>
+                        <p className="text-teal-600 text-xl u-color-opacity-90">The quick brown fox jumps over the lazy dog.</p>
+                        <p className="text-teal-600 text-xl u-color-opacity-80">The quick brown fox jumps over the lazy dog.</p>
+                        <p className="text-teal-600 text-xl u-color-opacity-70">The quick brown fox jumps over the lazy dog.</p>
+                        <p className="text-teal-600 text-xl u-color-opacity-60">The quick brown fox jumps over the lazy dog.</p>
+                        <p className="text-teal-600 text-xl u-color-opacity-50">The quick brown fox jumps over the lazy dog.</p>
+                        <p className="text-teal-600 text-xl u-color-opacity-40">The quick brown fox jumps over the lazy dog.</p>
+                        <p className="text-teal-600 text-xl u-color-opacity-30">The quick brown fox jumps over the lazy dog.</p>
+                        <p className="text-teal-600 text-xl u-color-opacity-20">The quick brown fox jumps over the lazy dog.</p>
+                        <p className="text-teal-600 text-xl u-color-opacity-10">The quick brown fox jumps over the lazy dog.</p>
+                        <p className="text-teal-600 text-xl u-color-opacity-0">The quick brown fox jumps over the lazy dog.</p>
+
+                        <div className="space"></div>
+                        <CodeBlock code={`<p class="u-color-opacity-100 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-90 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-80 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-70 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-60 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-50 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-40 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-30 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-20 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-10 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-0 ...">The quick brown fox jumps over the lazy dog.</p>`} language='htmlbars' />
+
+                    </div>
+                </section>
+
                 <section className="padtop" id="extending-colors">
                     <div className="content">
                         <Headline title="Extending Colors" link="#extending-colors" size="4" />
@@ -324,8 +405,9 @@ export const ColorsPage: React.FC<any> = (props) => {
                         />
 
                     <Blockquote accentColor="#fcd9bd">
-                        <h6>Warning</h6>
+                        <h6>⚠ Warning</h6>
                         <p>Note that disabling certain colors can lead to build errors! These colors are relied on by other parts of the framework.</p>
+                        <div className="space"></div>
                         <CodeBlock
                             code={`@use "internal/config" as * with (
     $config: (
