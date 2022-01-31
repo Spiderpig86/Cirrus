@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { pojoaque, nord } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { pojoaque } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 export interface CodeBlockProps {
     code: string;
     language: string;
     breakAll?: boolean;
+    style?: any;
 }
 
 export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
@@ -15,7 +16,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
 
     return (
         <div className="u-relative mb-2">
-            <SyntaxHighlighter className={`codeblock pl-2 pr-3 py-1 u-shadow-lg ${(props.breakAll ? `break-all` : ``)}`} language={props.language} style={pojoaque}>
+            <SyntaxHighlighter className={`codeblock pl-2 pr-3 py-1 u-shadow-lg ${(props.breakAll ? `break-all` : ``)}`} language={props.language} style={props.style ?? pojoaque}>
                 {props.code}
             </SyntaxHighlighter>
             

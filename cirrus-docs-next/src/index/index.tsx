@@ -4,11 +4,14 @@ import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
 import Axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import TextLoop from 'react-text-loop';
+import { nord } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 import { LandingLayout } from '../../layouts/landing';
 import { ExampleCard } from '../getting-started/examples/example-card';
 import { Context } from '../../store/store';
 import { Preview } from './preview';
+import { CodeBlock } from '../../layouts/components/codeblock';
 
 import { DOC_EXAMPLES } from '../../constants/examples';
 import { VERSION, VERSION_NAME } from '../../constants';
@@ -55,11 +58,17 @@ const Landing: React.FC<any> = () => {
                                     letterSpacing: '-.05em',
                                 }}
                             >
-                                Spend more time building <br />
+                                Spend more time{' '}
+                                <TextLoop>
+                                    <span className="text-indigo-600">building</span>
+                                    <span className="text-indigo-600">crafting</span>
+                                    <span className="text-indigo-600">designing</span>
+                                </TextLoop>{' '}
+                                <br />
                                 <span className="font-bold text-pink-600">and less time worrying about CSS.</span>
                             </h1>
                             <div className="space"></div>
-                            <p className="sub-title lead font-alt font-normal mx-auto w-60-md">
+                            <p className="sub-title lead font-alt font-normal mx-auto w-60-md u-none u-block-lg">
                                 A <b className="">component</b> and <b className="">utility centric</b> SCSS framework{' '}
                                 designed for <b className="">rapid prototyping</b>. Use beautiful pre-built components
                                 to bootstrap your next project and utility classes to polish your final design.
@@ -69,13 +78,11 @@ const Landing: React.FC<any> = () => {
                                 <b>Version {VERSION}</b> / {VERSION_NAME}
                             </p>
 
-                            <div className="btn-group">
+                            <div className="u-flex u-gap-1 u-items-center u-justify-center">
                                 <Link href="/getting-started/setup">
-                                    <button className="btn-dark outline">Get Started</button>
+                                    <button className="btn-dark outline font-bold mb-2">Get Started</button>
                                 </Link>
-                                <Link href="/why">
-                                    <button className="btn-dark outline">Why Cirrus</button>
-                                </Link>
+                                <CodeBlock code={`$ yarn add cirrus-ui`} language="shell" style={nord} />
                             </div>
                         </div>
                         <a

@@ -65,15 +65,18 @@ export const LandingLayout = ({ children, ...rest }: any) => {
                 <input
                     type="search"
                     id="cirrus-search"
-                    className="input--sm"
+                    className="input--sm bg-gray-000 u-bg-opacity-60"
                     placeholder="Search (Press Shift + S to focus)"
+                    style={{
+                        // minWidth: '300px'
+                    }}
                 />
             </div>
             <div className="nav-item has-sub p-1">
                 <div className="list-dropdown dropdown-right">
                     <div className="btn-group">
                         <button className="btn-transparent p-0">
-                            <ExternalLink link="https://github.com/Spiderpig86/Cirrus/releases">Download</ExternalLink>
+                            <ExternalLink url="https://github.com/Spiderpig86/Cirrus/releases">Download</ExternalLink>
                         </button>
                         <button className="btn-transparent btn--sm btn-dropdown u-no-shadow p-0">
                             <span className="icon">
