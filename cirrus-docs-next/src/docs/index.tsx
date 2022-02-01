@@ -13,7 +13,7 @@ import { DefaultLayout } from '../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX, VERSION } from '../../constants';
 
-export const WhyPage: React.FC<any> = (props) => {
+export const DocsPage: React.FC<any> = (props) => {
     // TODO: Move to constants
     const data = [
         {
@@ -53,16 +53,57 @@ export const WhyPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
             <Head>
-                <title>{PAGE_TITLE_PREFIX} Why</title>
+                <title>{PAGE_TITLE_PREFIX} Documentation</title>
             </Head>
             <div>
                 <section id="introduction" className="padtop">
                     <div className="content">
                         <Headline title="Introduction" link="#introduction" />
+                        <p className="lead">Hit the ground running with Cirrus at your own pace.</p>
                         <div className="divider"></div>
+
+                        <div className="grid grid-cols-1 u-gap-1 grid-cols-3-lg">
+                            <div className="u-round-sm p-2 u-shadow-lg bg-orange-500">
+                                <h6 className="text-white font-alt">Dive into the docs.</h6>
+                                <p className="text-white u-color-opacity-80">
+                                    Learn how to get started with Cirrus one step at a time.
+                                </p>
+                                <Link href="">
+                                    <button className="btn-dark mt-4">Start reading</button>
+                                </Link>
+                            </div>
+                            <div className="u-round-sm p-2 u-shadow-lg bg-pink-600">
+                                <h6 className="text-white font-alt">Try it on the browser.</h6>
+                                <p className="text-white u-color-opacity-80">
+                                    Try out the framework in the playground without any setup or installation.
+                                </p>
+                                <Link href="/playground">
+                                    <button className="btn-dark">Start coding</button>
+                                </Link>
+                            </div>
+                            <div className="u-round-sm p-2 u-shadow-lg bg-purple-600 u-opacity-50">
+                                <h6 className="text-white font-alt">Grab some components.</h6>
+                                <p className="text-white u-color-opacity-80">
+                                    Build your project with beautifully pre-built components now.
+                                </p>
+                                <Link href="">
+                                    <button disabled className="btn-dark mt-4">
+                                        Coming soon
+                                    </button>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="why" className="padtop">
+                    <div className="content">
+                        <Headline title="Why Cirrus?" link="#why" size="3" />
+                        <div className="divider"></div>
+
                         <p>
                             Introducing <b>Cirrus</b>, a modular, responsive, and component centric SCSS framework aimed
-                            at bringing not only beautiful, hassle-free styling, but also a better developer experience.
+                            at bringing not only beautiful, hassle-free styling, but also a better developer experience. Almost all generated styles can be modified via its config style so you can mold the framework to whatever you want.
                         </p>
 
                         <ul>
@@ -100,7 +141,7 @@ export const WhyPage: React.FC<any> = (props) => {
 
                 <section id="lightweight" className="padtop">
                     <div className="content">
-                        <Headline title="Lightweight" link="#lightweight" />
+                        <Headline title="Lightweight" link="#lightweight" size="4" />
                         <div className="divider"></div>
                         <p>
                             Cirrus comes with lots of functionality in a small package which only consists of a single
@@ -157,7 +198,7 @@ export const WhyPage: React.FC<any> = (props) => {
 
                 <section id="modular" className="padtop">
                     <div className="content">
-                        <Headline title="Modular" link="#modular" />
+                        <Headline title="Modular" link="#modular" size="4" />
                         <div className="divider"></div>
                         <p>
                             As of <b>0.6.0</b>, Cirrus was re-engineered from the ground up to use Sass. This means you
@@ -192,7 +233,7 @@ export const WhyPage: React.FC<any> = (props) => {
 
                 <section id="prototype" className="padtop">
                     <div className="content">
-                        <Headline title="Rapid Prototyping" link="#why" />
+                        <Headline title="Rapid Prototyping" link="#prototype" size="4" />
                         <div className="divider"></div>
                         <p>
                             Cirrus comes with many different classes that help you quickly construct beautiful looking
@@ -352,7 +393,7 @@ export const WhyPage: React.FC<any> = (props) => {
 
                 <section id="control" className="padtop">
                     <div className="content">
-                        <Headline title="Granular Control" link="#why" />
+                        <Headline title="Granular Control" link="#control" size="4" />
                         <div className="divider"></div>
                         <p>Cirrus now ships with many utility classes to get the exact look you want.</p>
 
@@ -443,7 +484,7 @@ export const WhyPage: React.FC<any> = (props) => {
 
                 <section className="padtop" id="customize">
                     <div className="content">
-                        <Headline title="Customize Your Build" link="#customize" />
+                        <Headline title="Customize Your Build" link="#customize" size="4" />
                         <div className="divider"></div>
 
                         <p>
@@ -551,4 +592,4 @@ $tab-sizes: ('xsmall': 0.6rem, 'small': 0.75rem, 'large': 1.25rem, 'xlarge': 1.5
     );
 };
 
-export default withLayout(<DefaultLayout />)(WhyPage);
+export default withLayout(<DefaultLayout />)(DocsPage);

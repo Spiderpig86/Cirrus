@@ -20,7 +20,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'bold',
                 glyph: ['fas', 'book'],
                 text: 'Documentation',
-                url: '/why'
+                url: '/docs'
             },
             {
                 fontWeight: 'bold',
