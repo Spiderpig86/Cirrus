@@ -16,6 +16,12 @@
 
 @media screen and (min-width: 1024px) {
     .algolia-autocomplete {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .algolia-autocomplete {
         width: 50%;
     }
 }

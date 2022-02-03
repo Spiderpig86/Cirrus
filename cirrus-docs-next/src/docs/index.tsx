@@ -12,6 +12,7 @@ import { DefaultLayout } from '../../layouts/default';
 
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX, VERSION } from '../../constants';
+import { Preview } from './preview';
 
 export const DocsPage: React.FC<any> = (props) => {
     // TODO: Move to constants
@@ -62,32 +63,50 @@ export const DocsPage: React.FC<any> = (props) => {
                         <p className="lead">Hit the ground running with Cirrus at your own pace.</p>
                         <div className="divider"></div>
 
-                        <div className="grid grid-cols-1 u-gap-1 grid-cols-3-lg">
-                            <div className="u-round-sm p-2 u-shadow-lg bg-orange-500">
+                        <div className="grid grid-cols-1 u-gap-1 grid-cols-3-xl">
+                            <div
+                                className="u-round-sm p-2 u-shadow-lg bg-orange-500"
+                                style={{
+                                    backgroundImage:
+                                        'linear-gradient(to bottom right,rgba(208,56,1,1),rgba(227,160,8,1))',
+                                }}
+                            >
                                 <h6 className="text-white font-alt">Dive into the docs.</h6>
                                 <p className="text-white u-color-opacity-80">
                                     Learn how to get started with Cirrus one step at a time.
                                 </p>
-                                <Link href="">
-                                    <button className="btn-dark mt-4">Start reading</button>
+                                <Link href="/getting-started/setup">
+                                    <button className="btn-dark u-bg-opacity-40 mt-4">Start reading</button>
                                 </Link>
                             </div>
-                            <div className="u-round-sm p-2 u-shadow-lg bg-pink-600">
+                            <div
+                                className="u-round-sm p-2 u-shadow-lg bg-pink-600"
+                                style={{
+                                    backgroundImage:
+                                        'linear-gradient(to bottom right,rgba(214,31,105,1),rgba(240,82,82,1))',
+                                }}
+                            >
                                 <h6 className="text-white font-alt">Try it on the browser.</h6>
                                 <p className="text-white u-color-opacity-80">
                                     Try out the framework in the playground without any setup or installation.
                                 </p>
                                 <Link href="/playground">
-                                    <button className="btn-dark">Start coding</button>
+                                    <button className="btn-dark u-bg-opacity-40">Start coding</button>
                                 </Link>
                             </div>
-                            <div className="u-round-sm p-2 u-shadow-lg bg-purple-600 u-opacity-50">
+                            <div
+                                className="u-round-sm p-2 u-shadow-lg bg-purple-600 u-opacity-50"
+                                style={{
+                                    backgroundImage:
+                                        'linear-gradient(to bottom right,rgba(104,117,245,1),rgba(126,58,242,1))',
+                                }}
+                            >
                                 <h6 className="text-white font-alt">Grab some components.</h6>
                                 <p className="text-white u-color-opacity-80">
                                     Build your project with beautifully pre-built components now.
                                 </p>
                                 <Link href="">
-                                    <button disabled className="btn-dark mt-4">
+                                    <button disabled className="btn-dark u-bg-opacity-40 mt-4">
                                         Coming soon
                                     </button>
                                 </Link>
@@ -96,6 +115,8 @@ export const DocsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
+                {/* <Preview /> */}
+
                 <section id="why" className="padtop">
                     <div className="content">
                         <Headline title="Why Cirrus?" link="#why" size="3" />
@@ -103,7 +124,9 @@ export const DocsPage: React.FC<any> = (props) => {
 
                         <p>
                             Introducing <b>Cirrus</b>, a modular, responsive, and component centric SCSS framework aimed
-                            at bringing not only beautiful, hassle-free styling, but also a better developer experience. Almost all generated styles can be modified via its config style so you can mold the framework to whatever you want.
+                            at bringing not only beautiful, hassle-free styling, but also a better developer experience.
+                            Almost all generated styles can be modified via its config style so you can mold the
+                            framework to whatever you want.
                         </p>
 
                         <ul>

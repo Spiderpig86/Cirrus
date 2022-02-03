@@ -67,9 +67,6 @@ export const LandingLayout = ({ children, ...rest }: any) => {
                     id="cirrus-search"
                     className="input--sm bg-gray-000 u-bg-opacity-60"
                     placeholder="Search (Press Shift + S to focus)"
-                    style={{
-                        // minWidth: '300px'
-                    }}
                 />
             </div>
             <div className="nav-item has-sub p-1">

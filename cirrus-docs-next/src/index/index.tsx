@@ -3,18 +3,17 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
 import Axios from 'axios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import TextLoop from 'react-text-loop';
 import { nord } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 import { LandingLayout } from '../../layouts/landing';
 import { ExampleCard } from '../getting-started/examples/example-card';
 import { Context } from '../../store/store';
-import { Preview } from './preview';
 import { CodeBlock } from '../../layouts/components/codeblock';
 
 import { DOC_EXAMPLES } from '../../constants/examples';
 import { VERSION, VERSION_NAME } from '../../constants';
+import { Frame, Card, MenuList, Pagination, Panel, Tabs } from './components';
 
 const Landing: React.FC<any> = () => {
     const { state, dispatch } = useContext(Context);
@@ -79,7 +78,7 @@ const Landing: React.FC<any> = () => {
                             </p>
 
                             <div className="u-flex u-gap-1 u-items-center u-justify-center">
-                                <Link href="/getting-started/setup">
+                                <Link href="/docs">
                                     <button className="btn-dark outline font-bold mb-2">Get Started</button>
                                 </Link>
                                 <CodeBlock code={`$ yarn add cirrus-ui`} language="shell" style={nord} />
@@ -133,13 +132,8 @@ const Landing: React.FC<any> = () => {
                         </div>
                     </div>
 
-                    <div
-                        className="hero bg-indigo-100"
-                        style={{
-                            borderRadius: '.25rem',
-                        }}
-                    >
-                        <div className="hero-body u-text-left">
+                    <div className="newsletter hero u-round-sm">
+                        <div className="hero-body u-text-left u-shadow-xl">
                             <div className="row u-items-center">
                                 <div className="col">
                                     <h3 className="title text-gray-800">Newsletter.</h3>
@@ -178,137 +172,98 @@ const Landing: React.FC<any> = () => {
                     </div>
                 </div>
             </section>
-            <section className="py-8 bg-gray-200">
-                <div className="content u-text-center">
-                    <div className="row">
-                        <div className="col mb-2">
-                            <FontAwesomeIcon
-                                className="fa-wrapper small"
-                                icon={['fas', 'boxes']}
-                                style={{ fontSize: '2rem' }}
-                            />
-                            <h6 className="lead uppercase mb-1 font-bold text-gray-700">Modular</h6>
-                            <div className="text-gray-700">
-                                Separate files with separate responsibilities. Compartmentalized and easy to use in your
-                                projects.{' '}
-                            </div>
-                        </div>
-                        <div className="col mb-2">
-                            <FontAwesomeIcon
-                                className="fa-wrapper small"
-                                icon={['fas', 'bolt']}
-                                style={{ fontSize: '2rem' }}
-                            />
-                            <h6 className="lead uppercase mb-1 font-bold text-gray-700">Modern</h6>
-                            <div className="text-gray-700">
-                                Supports the latest standards including <b>flexbox</b> and <b>CSS grid</b>.{' '}
-                            </div>
-                        </div>
-                        <div className="col mb-2">
-                            <FontAwesomeIcon
-                                className="fa-wrapper small"
-                                icon={['fas', 'compress-alt']}
-                                style={{ fontSize: '2rem' }}
-                            />
-                            <h6 className="lead uppercase mb-1 font-bold text-gray-700">Compact</h6>
-                            <div className="text-gray-700">
-                                Cirrus packs a lot of features with only a 17.8 KB payload.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <section className="py-8">
-                <div className="content">
-                    <div className="row mb-2">
-                        <div className="col u-flex u-flex-column u-justify-center">
-                            <h5 className="lead uppercase mb-1 font-bold text-gray-700">Component-Based</h5>
-                            <div className="text-gray-700">
-                                Beautiful pre-built components and styling for quick prototyping.
-                            </div>
-                        </div>
-                        <div className="col">
-                            <img src="/img/component.svg" />
-                        </div>
-                    </div>
-                    <div className="row mb-2">
-                        <div className="col">
-                            <img src="/img/utility.svg" />
-                        </div>
-                        <div className="col u-flex u-flex-column u-justify-center">
-                            <h5 className="lead uppercase mb-1 font-bold text-gray-700">Granular Control</h5>
-                            <div className="text-gray-700">
-                                Need some quick way to adjust something? Something not looking quite right? Our utility
-                                classes will come in handy.{' '}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <Preview />
-
-            <section
-                className="py-8"
-                style={{
-                    backgroundColor: '#1c222b',
-                }}
-            >
-                <div className="content">
-                    <h3 className="text-white uppercase u-text-center">Examples</h3>
-                    <p className="text-white lead u-text-center">
-                        Start off with a few examples and a few complete templates completely powered by Cirrus.
-                    </p>
-                    <div
-                        className="row mx-auto"
+                <div className="content u-text-center">
+                    <h1
+                        className="headline-4"
                         style={{
-                            maxWidth: '960px',
+                            letterSpacing: '-.025em',
                         }}
                     >
-                        {DOC_EXAMPLES.slice(0, 3).map((example, index) => (
-                            <ExampleCard key={index} data={example} />
-                        ))}
-                    </div>
+                        Dead simple setup.
+                    </h1>
+                </div>
+            </section>
 
-                    <div className="u-text-center">
-                        <a href="./getting-started/examples" target="_blank">
-                            <button className="btn-info btn--lg">See More</button>
-                        </a>
+            <section className="py-8">
+                <div className="content u-text-center">
+                    <h1
+                        className="headline-4"
+                        style={{
+                            letterSpacing: '-.025em',
+                        }}
+                    >
+                        No need to start from square one.
+                    </h1>
+
+                    <div className="u-relative">
+                        <div className="content mx-auto grid u-text-left u-gap-3 grid-cols-1 grid-cols-3-lg">
+                            <div className="grid-c-1 grid-r-6 u-flex u-gap-3 u-flex-column">
+                                <MenuList />
+                                <Card />
+                            </div>
+                            <div className="grid-c-2 grid-r-1">
+                                <Panel />
+                            </div>
+                            <div className="grid-c-2">
+                                <Pagination />
+                            </div>
+                            <div className="grid-c-2">
+                                <Tabs />
+                            </div>
+                            <div className="grid-c-2 grid-r-2">
+                                <Frame />
+                            </div>
+                        </div>
+                        <div className="transition transition--tall transition--visible"></div>
                     </div>
                 </div>
             </section>
 
             <section className="py-8">
-                <div className="content">
-                    <h3 className="uppercase u-text-center">Support the Project :)</h3>
-                    <p className="lead u-text-center">Feeling generous? Support the project.</p>
-                    <div className="row u-text-center">
-                        <div className="col-6">
-                            <h4 className="font-alt font-light">
-                                Donate <b>once</b>.
-                            </h4>
-                            <a
-                                href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5JW89TNNHB4JL&currency_code=USD&source=url"
-                                target="_blank"
-                                className="u-no-padding u-inline-block"
-                            >
-                                <img src="/img/paypal.jpg" className="_shadow" />
-                            </a>
-                        </div>
-                        <div className="col-6">
-                            <h4 className="font-alt font-light">
-                                Donate <b>monthly</b>.
-                            </h4>
-                            <a
-                                href="https://www.patreon.com/bePatron?u=20654861"
-                                target="_blank"
-                                className="u-no-padding u-inline-block"
-                            >
-                                <img src="/img/become_a_patron_button.png" className="_shadow" />
-                            </a>
-                        </div>
-                    </div>
+                <div className="content u-text-center">
+                    <h1
+                        className="headline-4"
+                        style={{
+                            letterSpacing: '-.025em',
+                        }}
+                    >
+                        Mobile first design.
+                    </h1>
+                </div>
+            </section>
+
+            <section className="py-8">
+                <div className="content u-text-center">
+                    <h1
+                        className="headline-4"
+                        style={{
+                            letterSpacing: '-.025em',
+                        }}
+                    >
+                        Tweak everything.
+                    </h1>
+
+                    <p>
+                        Utils are also so powerful you can build your own components using these classes as building
+                        blocks.
+                    </p>
+                </div>
+            </section>
+
+            <section className="py-8">
+                <div className="content u-text-center">
+                    <h1
+                        className="headline-4"
+                        style={{
+                            letterSpacing: '-.025em',
+                        }}
+                    >
+                        Make Cirrus your own.
+                    </h1>
+
+                    <p className="lead"></p>
                 </div>
             </section>
         </div>

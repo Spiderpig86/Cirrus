@@ -47,9 +47,6 @@ export const Preview: React.FC<any> = (props) => {
                         <Link href="/fundamentals/colors">
                             <button className="btn-link outline">
                                 View All Colors
-                                <span className="icon">
-                                    <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'chevron-circle-right']} />
-                                </span>
                             </button>
                         </Link>
                     </div>
@@ -254,9 +251,9 @@ export const Preview: React.FC<any> = (props) => {
                             </div>
                         </div>
                     </div>
-                    <p className="title">Grid</p>
+                    <p className="title mt-4">Grid</p>
                     <div className="r">
-                        <div className="grid u-gap-2text-center">
+                        <div className="grid u-gap-1 text-center">
                             <div
                                 className="grid-c-12"
                                 style={{
@@ -998,7 +995,7 @@ export const Preview: React.FC<any> = (props) => {
                         <div className="nav-right">
                             <div className="form-group">
                                 <input type="search" className="form-group-input" placeholder="Search" />
-                                <button className="form-group-btn">Go</button>
+                                <button className="btn-primary form-group-btn">Go</button>
                             </div>
                         </div>
                     </div>
@@ -1041,7 +1038,7 @@ export const Preview: React.FC<any> = (props) => {
                             </div>
                             <div className="nav-right">
                                 <div className="nav-item has-sub toggle-hover" id="dropdown">
-                                    <figure className="avatar avatar--sm" data-text="JD" />
+                                    <figure className="avatar avatar--sm text-white" data-text="JD" />
                                     <a className="nav-dropdown-link">John Doe</a>
                                     <ul className="dropdown-menu dropdown-animated" role="menu">
                                         <li role="menu-item">
@@ -1321,7 +1318,7 @@ export const Preview: React.FC<any> = (props) => {
                             <h3 className="font-alt font-light u-text-center">Invite people to project</h3>
                         </div>
                         <div className="space" />
-                        <div className="mx-auto w-80">
+                        <div className="mx-auto">
                             <div className="input-control">
                                 <input
                                     type="text"
@@ -1345,7 +1342,7 @@ export const Preview: React.FC<any> = (props) => {
                                 }}
                             >
                                 <div className="tile__icon">
-                                    <figure className="avatar" data-text="Jn"></figure>
+                                    <figure className="avatar text-white" data-text="Jn"></figure>
                                 </div>
                                 <div className="tile__container">
                                     <p className="tile__title m-0">John Newman</p>
@@ -1370,7 +1367,7 @@ export const Preview: React.FC<any> = (props) => {
                             >
                                 <div className="tile__icon">
                                     <figure
-                                        className="avatar"
+                                        className="avatar text-white"
                                         style={{ backgroundColor: '#8D91C7' }}
                                         data-text="Fw"
                                     ></figure>
@@ -1398,7 +1395,7 @@ export const Preview: React.FC<any> = (props) => {
                             >
                                 <div className="tile__icon">
                                     <figure
-                                        className="avatar"
+                                        className="avatar text-white"
                                         style={{ backgroundColor: '#6E75A8' }}
                                         data-text="Cr"
                                     ></figure>
@@ -1426,7 +1423,7 @@ export const Preview: React.FC<any> = (props) => {
                             >
                                 <div className="tile__icon">
                                     <figure
-                                        className="avatar"
+                                        className="avatar text-white"
                                         style={{ backgroundColor: '#3E1929' }}
                                         data-text="Da"
                                     ></figure>
@@ -1454,7 +1451,7 @@ export const Preview: React.FC<any> = (props) => {
                             >
                                 <div className="tile__icon">
                                     <figure
-                                        className="avatar"
+                                        className="avatar text-white"
                                         style={{ backgroundColor: '#845A6D' }}
                                         data-text="Sl"
                                     ></figure>

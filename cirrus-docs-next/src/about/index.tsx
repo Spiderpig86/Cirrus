@@ -33,6 +33,39 @@ export const AboutPage: React.FC<any> = (props) => {
 
                 <section className="padtop">
                     <div className="content">
+                        <h3 className="uppercase u-text-center">Support the Project :)</h3>
+                        <p className="lead u-text-center">Feeling generous? Support the project.</p>
+                        <div className="row u-text-center">
+                            <div className="col-6">
+                                <h4 className="font-alt font-light">
+                                    Donate <b>once</b>.
+                                </h4>
+                                <a
+                                    href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=5JW89TNNHB4JL&currency_code=USD&source=url"
+                                    target="_blank"
+                                    className="u-no-padding u-inline-block"
+                                >
+                                    <img src="/img/paypal.jpg" className="_shadow" />
+                                </a>
+                            </div>
+                            <div className="col-6">
+                                <h4 className="font-alt font-light">
+                                    Donate <b>monthly</b>.
+                                </h4>
+                                <a
+                                    href="https://www.patreon.com/bePatron?u=20654861"
+                                    target="_blank"
+                                    className="u-no-padding u-inline-block"
+                                >
+                                    <img src="/img/become_a_patron_button.png" className="_shadow" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="padtop">
+                    <div className="content">
                         <div className="divider"></div>
                         <ul className="pagination no-bullets">
                             <li className="pagination-item pagination-prev">
