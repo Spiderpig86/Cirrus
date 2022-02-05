@@ -14,6 +14,7 @@ import { CodeBlock } from '../../layouts/components/codeblock';
 import { DOC_EXAMPLES } from '../../constants/examples';
 import { VERSION, VERSION_NAME } from '../../constants';
 import { Frame, Card, MenuList, Pagination, Panel, Tabs } from './components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Landing: React.FC<any> = () => {
     const { state, dispatch } = useContext(Context);
@@ -183,6 +184,69 @@ const Landing: React.FC<any> = () => {
                     >
                         Dead simple setup.
                     </h1>
+
+                    <div className="content">
+                        <p className="lead text-gray-600">
+                            Getting started with Cirrus is a single command or line of HTML away (depending on how you
+                            want to import it). The framework is designed to be pluggable into any new or existing
+                            projects.
+                        </p>
+
+                        <Link href="">
+                            <a className="u u-LR text-lg u-inline-flex u-justify-center u-items-center">
+                                Learn more
+                                <FontAwesomeIcon className="ml-1" icon={['fas', 'chevron-right']} />
+                            </a>
+                        </Link>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-8">
+                <div className="content u-text-center">
+                    <h1
+                        className="headline-4"
+                        style={{
+                            letterSpacing: '-.025em',
+                        }}
+                    >
+                        Decision fatigue free design system.
+                    </h1>
+
+                    <div className="content">
+                        <p className="lead text-gray-600">
+                            Sitting at the core of Cirrus is its <b>design system</b>. Every aspect of the design system
+                            is exposed via utility functions which allows you to develop consistent user interfaces.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-8">
+                <div className="content u-text-center">
+                    <h1
+                        className="headline-4"
+                        style={{
+                            letterSpacing: '-.025em',
+                        }}
+                    >
+                        Responsive at its core.
+                    </h1>
+
+                    <div className="content">
+                        <p className="lead text-gray-600">
+                            Cirrus enables you to design for mobile right out of the box. With its responsive components
+                            and utility classes, controlling how your design scales with width and height can be done{' '}
+                            <b>inline</b> inside the HTML without requiring extra media queries.
+                        </p>
+
+                        <Link href="">
+                            <a className="u u-LR text-lg u-inline-flex u-justify-center u-items-center">
+                                Learn more
+                                <FontAwesomeIcon className="ml-1" icon={['fas', 'chevron-right']} />
+                            </a>
+                        </Link>
+                    </div>
                 </div>
             </section>
 
@@ -196,6 +260,14 @@ const Landing: React.FC<any> = () => {
                     >
                         No need to start from square one.
                     </h1>
+
+                    <div className="content">
+                        <p className="lead text-gray-600">
+                            Starting a new project or business shouldn't always mean designing your UI from scratch.
+                            Save time by using Cirrus's fully responsive components.
+                        </p>
+                    </div>
+                    <div className="space space--lg"></div>
 
                     <div className="u-relative">
                         <div className="content mx-auto grid u-text-left u-gap-3 grid-cols-1 grid-cols-3-lg">
@@ -218,37 +290,15 @@ const Landing: React.FC<any> = () => {
                         </div>
                         <div className="transition transition--tall transition--visible"></div>
                     </div>
-                </div>
-            </section>
 
-            <section className="py-8">
-                <div className="content u-text-center">
-                    <h1
-                        className="headline-4"
-                        style={{
-                            letterSpacing: '-.025em',
-                        }}
-                    >
-                        Mobile first design.
-                    </h1>
-                </div>
-            </section>
+                    <div className="content">
+                        <p className="lead text-gray-600">
+                            Or if you do want to start from scatch, build and extend from existing components to fit
+                            your use cases.
+                        </p>
+                    </div>
 
-            <section className="py-8">
-                <div className="content u-text-center">
-                    <h1
-                        className="headline-4"
-                        style={{
-                            letterSpacing: '-.025em',
-                        }}
-                    >
-                        Tweak everything.
-                    </h1>
-
-                    <p>
-                        Utils are also so powerful you can build your own components using these classes as building
-                        blocks.
-                    </p>
+                    <p>TODO MORE COMPONENTS</p>
                 </div>
             </section>
 
@@ -263,7 +313,19 @@ const Landing: React.FC<any> = () => {
                         Make Cirrus your own.
                     </h1>
 
-                    <p className="lead"></p>
+                    <div className="content">
+                        <p className="lead text-gray-600">
+                            Customize Cirrus to make it yours. Toss out default font sizes, modify existing colors, add
+                            new animations, etc. You can do all this right from the framework's config file.
+                        </p>
+                    </div>
+
+                    <Link href="">
+                        <a className="u u-LR text-lg u-inline-flex u-justify-center u-items-center">
+                            Learn more
+                            <FontAwesomeIcon className="ml-1" icon={['fas', 'chevron-right']} />
+                        </a>
+                    </Link>
                 </div>
             </section>
         </div>
