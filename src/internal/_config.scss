@@ -62,16 +62,17 @@ $default-config: (
         // Please define all colors using hex
         // Omitting some colors may break Cirrus builds
         colors: (
-            pink: (),
-            red: (),
-            orange: (),
-            yellow: (),
-            green: (),
-            teal: (),
-            blue: (),
-            indigo: (),
-            purple: (),
-            gray: (),
+            // Note: The quotes matter!
+            'pink': (),
+            'red': (),
+            'orange': (),
+            'yellow': (),
+            'green': (),
+            'teal': (),
+            'blue': (),
+            'indigo': (),
+            'purple': (),
+            'gray': (),
         ),
         fonts: (
             sizes: (
