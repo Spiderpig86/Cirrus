@@ -61,7 +61,7 @@ export const SetUpPage: React.FC<any> = (props) => {
                         <b>JsDelivr</b>
                         <div className="my-2">
                             <CodeBlock
-                                code={`https://cdn.jsdelivr.net/npm/cirrus-ui@0.6.2/dist/cirrus.min.css`}
+                                code={`https://cdn.jsdelivr.net/npm/cirrus-ui/dist/cirrus.min.css`}
                                 language="text"
                             />
                         </div>

@@ -15,6 +15,7 @@ import { DOC_EXAMPLES } from '../../constants/examples';
 import { VERSION, VERSION_NAME } from '../../constants';
 import { Frame, Card, MenuList, Pagination, Panel, Tabs } from './components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { TabContainer } from '../../layouts/components/tabs/tab-container';
 
 const Landing: React.FC<any> = () => {
     const { state, dispatch } = useContext(Context);
@@ -187,7 +188,7 @@ const Landing: React.FC<any> = () => {
 
                     <div className="content">
                         <p className="lead text-gray-600">
-                            Getting started with Cirrus is a single command or line of HTML away (depending on how you
+                            Getting started with Cirrus is a few commands or lines of HTML away (depending on how you
                             want to import it). The framework is designed to be pluggable into any new or existing
                             projects.
                         </p>
@@ -198,6 +199,34 @@ const Landing: React.FC<any> = () => {
                                 <FontAwesomeIcon className="ml-1" icon={['fas', 'chevron-right']} />
                             </a>
                         </Link>
+                        <div className="space space--lg"></div>
+
+                        <div className="">
+                            <p className="lead font-bold">Integate to any HTML page.</p>
+                            <div className="u-text-left pb-4">
+                                <CodeBlock
+                                    code={`<!-- Import Cirrus from CDN with relevant fonts -->
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cirrus-ui/dist/cirrus.min.css">`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                            <p className="lead font-bold">Import into any node project.</p>
+                            <div className="u-text-left">
+                                <p>Install the package.</p>
+                                <CodeBlock code={`$ yarn add cirrus-ui`} language="shell" />
+                                <p>Import into project.</p>
+                                <CodeBlock
+                                    code={`// index.js
+import 'cirrus-ui';`}
+                                    language="javascript"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -219,6 +248,33 @@ const Landing: React.FC<any> = () => {
                             is exposed via utility functions which allows you to develop consistent user interfaces.
                         </p>
                     </div>
+
+                    <TabContainer
+                        id="#decision-free-tabs"
+                        selectedIndex={0}
+                        tabs={[
+                            {
+                                title: 'Typography',
+                                children: <div>Test</div>,
+                            },
+                            {
+                                title: 'Colors',
+                                children: <div>Test</div>,
+                            },
+                            {
+                                title: 'Sizes',
+                                children: <div>Test</div>,
+                            },
+                            {
+                                title: 'Opacity',
+                                children: <div>Test</div>,
+                            },
+                            {
+                                title: 'Shadow',
+                                children: <div>Test</div>,
+                            },
+                        ]}
+                    />
                 </div>
             </section>
 
@@ -258,7 +314,7 @@ const Landing: React.FC<any> = () => {
                             letterSpacing: '-.025em',
                         }}
                     >
-                        No need to start from square one.
+                        A solid foundation for any idea.
                     </h1>
 
                     <div className="content">
