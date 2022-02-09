@@ -1,7 +1,21 @@
 #splash-img, .newsletter {
-    background: url(https://products.ls.graphics/mesh-gradients/images/72.-Sazerac.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+
+    // https://www.fourkitchens.com/blog/article/fix-scrolling-performance-css-will-change-property/
+    &::before {
+        content: ' ';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        background: url(https://raw.githubusercontent.com/Spiderpig86/Cirrus/gh-pages/cirrus-docs-next/static/img/gradient.jpg) no-repeat center center;
+        background-size: cover;
+        will-change: transform; // creates a new paint layer
+        z-index: -1;
+      }
 }
 
 .btn-primary.hover,

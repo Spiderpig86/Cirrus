@@ -31,7 +31,7 @@ export const TabContainer: React.FC<TabContainerProps> = (props) => {
 
     return (
         <div id={props.id.substring(1)}>
-            <div className="tab-container mb-3">
+            <div className="tab-container tabs-depth tabs-fill mb-3">
                 <ul>
                     {props.tabs.map((tab, index) => {
                         return props.generateTabDesign

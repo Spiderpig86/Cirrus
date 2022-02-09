@@ -1,9 +1,13 @@
+.codeblock-wrapper {
+    max-height: 500px;
+}
+
 .codeblock {
     border-radius: 0.25rem;
     max-height: 500px;
 
     code {
-        font-size: inherit;
+        font-size: 1.25rem;
         display: inherit;
         padding: inherit;
         white-space: pre;

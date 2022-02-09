@@ -255,23 +255,349 @@ import 'cirrus-ui';`}
                         tabs={[
                             {
                                 title: 'Typography',
-                                children: <div>Test</div>,
+                                children: (
+                                    <div className="u-text-left">
+                                        <div className="frame">
+                                            <div className="frame__body">
+                                                <div className="row u-items-center">
+                                                    <div className="col">
+                                                        <h1 className="title headline-1">Aa</h1>
+                                                        <h4 className="subtitle font-normal">Montserrat</h4>
+
+                                                        <div className="pt-2">
+                                                            <div className="">
+                                                                <h6 className="title font-normal">Normal</h6>
+                                                                <h2 className="subtitle font-normal">AaBbCcDd</h2>
+                                                            </div>
+                                                            <div className="">
+                                                                <h6 className="title font-bold">Bold</h6>
+                                                                <h2 className="subtitle font-bold">AaBbCcDd</h2>
+                                                            </div>
+                                                            <div className="">
+                                                                <h6 className="title font-light">Numbers (Light)</h6>
+                                                                <h2 className="subtitle font-light">0123456789</h2>
+                                                            </div>
+                                                        </div>
+
+                                                        <p className="font-bold">Used In</p>
+                                                        <div className="tags">
+                                                            <span className="tag tag--info text-light mb-1">h1</span>
+                                                            <span className="tag tag--info text-light mb-1">h2</span>
+                                                            <span className="tag tag--info text-light mb-1">h3</span>
+                                                            <span className="tag tag--info text-light mb-1">h4</span>
+                                                            <span className="tag tag--info text-light mb-1">h5</span>
+                                                            <span className="tag tag--info text-light mb-1">h6</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col">
+                                                        <h1 className="font-alt title headline-1 font-light">Aa</h1>
+                                                        <h4 className="font-alt subtitle font-normal">Nunito Sans</h4>
+
+                                                        <div className="pt-2">
+                                                            <div className="">
+                                                                <h6 className="font-alt title font-normal">Normal</h6>
+                                                                <h2 className="font-alt subtitle font-normal">
+                                                                    AaBbCcDd
+                                                                </h2>
+                                                            </div>
+                                                            <div className="">
+                                                                <h6 className="font-alt title font-bold">Bold</h6>
+                                                                <h2 className="font-alt subtitle font-bold">
+                                                                    AaBbCcDd
+                                                                </h2>
+                                                            </div>
+                                                            <div className="">
+                                                                <h6 className="font-alt title font-light">
+                                                                    Numbers (Light)
+                                                                </h6>
+                                                                <h2 className="font-alt subtitle font-light">
+                                                                    0123456789
+                                                                </h2>
+                                                            </div>
+                                                        </div>
+
+                                                        <p className="font-bold">Used In</p>
+                                                        <div className="tags">
+                                                            <span className="tag tag--info text-light mb-1">p</span>
+                                                            <span className="tag tag--info text-light mb-1">label</span>
+                                                            <span className="tag tag--info text-light mb-1">span</span>
+                                                            <span className="tag tag--info text-light mb-1">blockquote</span>
+                                                            <span className="tag tag--info text-light mb-1">code</span>
+                                                            <span className="tag tag--info text-light mb-1">article</span>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col w-100 pt-4 u-flex u-flex-column">
+                                                        <CodeBlock
+                                                            code={`<h1 class="title headline-1">Aa</h1>
+<h4 class="subtitle font-normal">Montserrat</h4>
+<div class="pt-2">
+    <h6 class="title font-normal">Normal</h6>
+    <h2 class="subtitle font-normal">AaBbCcDd</h2>
+    <h6 class="title font-bold">Bold</h6>
+    <h2 class="subtitle font-bold">AaBbCcDd</h2>
+    <h6 class="title font-light">Numbers (Light)</h6>
+    <h2 class="subtitle font-light">0123456789</h2>
+</div>
+
+<h1 class="font-alt title headline-1 font-light">Aa</h1>
+<h4 class="font-alt subtitle font-normal">Nunito Sans</h4>
+<div class="pt-2">
+    <h6 class="font-alt title font-normal">Normal</h6>
+    <h2 class="font-alt subtitle font-normal">AaBbCcDd</h2>
+    <h6 class="font-alt title font-bold">Bold</h6>
+    <h2 class="font-alt subtitle font-bold">AaBbCcDd</h2>
+    <h6 class="font-alt title font-light">Numbers (Light)</h6>
+    <h2 class="font-alt subtitle font-light">0123456789</h2>
+</div>`}
+                                                            language="htmlbars"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="frame__footer" />
+                                        </div>
+                                    </div>
+                                ),
                             },
                             {
                                 title: 'Colors',
-                                children: <div>Test</div>,
+                                children: (
+                                    <div className="u-text-left">
+                                        <div className="frame bg-gray-000 u-shadow-lg">
+                                            <div className="frame__body">
+                                                <div className="row u-items-center">
+                                                    <div className="col-6">
+                                                        {['blue', 'indigo', 'pink', 'orange'].map((color) => {
+                                                            return (
+                                                                <div className="p-2 my-2 bg-white u-round-sm u-shadow-sm">
+                                                                    <div className="u-flex u-gap-1 u-flex-wrap">
+                                                                        {[
+                                                                            100,
+                                                                            200,
+                                                                            300,
+                                                                            400,
+                                                                            500,
+                                                                            600,
+                                                                            700,
+                                                                            800,
+                                                                            900,
+                                                                        ].map((level) => {
+                                                                            return (
+                                                                                <div
+                                                                                    className={`p-3 u-round-full u-shadow-md bg-${color}-${level}`}
+                                                                                ></div>
+                                                                            );
+                                                                        })}
+                                                                    </div>
+                                                                    <p className="text-gray-700 font-bold uppercase my-0 mt-1 text-sm">
+                                                                        {color} (100 - 900)
+                                                                    </p>
+                                                                </div>
+                                                            );
+                                                        })}
+                                                    </div>
+                                                    <div className="col-6 pt-2">
+                                                        <CodeBlock
+                                                            code={`<div class="p-2 my-2 bg-white u-round-sm u-shadow-sm">
+    <div class="u-flex u-gap-1 u-flex-wrap">
+        <div class="p-3 u-round-full u-shadow-md bg-blue-100"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-blue-200"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-blue-300"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-blue-400"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-blue-500"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-blue-600"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-blue-700"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-blue-800"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-blue-900"></div>
+    </div>
+</div>
+<div class="p-2 my-2 bg-white u-round-sm u-shadow-sm">
+    <div class="u-flex u-gap-1 u-flex-wrap">
+        <div class="p-3 u-round-full u-shadow-md bg-indigo-100"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-indigo-200"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-indigo-300"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-indigo-400"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-indigo-500"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-indigo-600"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-indigo-700"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-indigo-800"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-indigo-900"></div>
+    </div>
+</div>
+<div class="p-2 my-2 bg-white u-round-sm u-shadow-sm">
+    <div class="u-flex u-gap-1 u-flex-wrap">
+        <div class="p-3 u-round-full u-shadow-md bg-pink-100"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-pink-200"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-pink-300"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-pink-400"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-pink-500"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-pink-600"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-pink-700"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-pink-800"></div>
+        <div class="p-3 u-round-full u-shadow-md bg-pink-900"></div>
+    </div>
+</div>
+
+<!-- ... -->`}
+                                                            language="htmlbars"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ),
                             },
                             {
                                 title: 'Sizes',
-                                children: <div>Test</div>,
+                                children: (
+                                    <div className="u-text-left">
+                                        <div className="frame bg-indigo-100">
+                                            <div className="frame__body">
+                                                <div className="row u-items-center">
+                                                    <div className="col-4">
+                                                        {[32, 24, 20, 16, 12, 10, 8].map((size) => {
+                                                            return (
+                                                                <div className="w-100">
+                                                                    <div
+                                                                        className={`bg-indigo-500 text-white my-2 pl-2 pr-${size} py-1 u-round-sm u-inline-block u-shadow-lg`}
+                                                                    >
+                                                                        <span className="font-bold">px-{size}</span>
+                                                                    </div>
+                                                                </div>
+                                                            );
+                                                        })}
+                                                    </div>
+                                                    <div className="col-8 pt-2">
+                                                        <CodeBlock
+                                                            code={`<div class="w-100">
+    <div class="bg-indigo-500 text-white my-2 pl-2 pr-32 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-32</span></div>
+</div>
+<div class="w-100">
+    <div class="bg-indigo-500 text-white my-2 pl-2 pr-24 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-24</span></div>
+</div>
+<div class="w-100">
+    <div class="bg-indigo-500 text-white my-2 pl-2 pr-20 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-20</span></div>
+</div>
+<div class="w-100">
+    <div class="bg-indigo-500 text-white my-2 pl-2 pr-16 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-16</span></div>
+</div>
+<div class="w-100">
+    <div class="bg-indigo-500 text-white my-2 pl-2 pr-12 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-12</span></div>
+</div>
+<div class="w-100">
+    <div class="bg-indigo-500 text-white my-2 pl-2 pr-10 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-10</span></div>
+</div>
+<div class="w-100">
+    <div class="bg-indigo-500 text-white my-2 pl-2 pr-8 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-8</span></div>
+</div>`}
+                                                            language="htmlbars"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ),
                             },
                             {
                                 title: 'Opacity',
-                                children: <div>Test</div>,
+                                children: (
+                                    <div className="u-text-left">
+                                        <div className="frame bg-green-100">
+                                            <div className="frame__body">
+                                                <div className="row u-items-center py-2">
+                                                    <div className="col-4">
+                                                        {[100, 90, 80, 70, 60, 50, 40, 30, 20, 10].map((opacity) => {
+                                                            return (
+                                                                <div
+                                                                    className={`u-opacity-${opacity} bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg`}
+                                                                >
+                                                                    <div className="font-bold">u-opacity-{opacity}</div>
+                                                                </div>
+                                                            );
+                                                        })}
+                                                    </div>
+                                                    <div className="col-8">
+                                                        <CodeBlock
+                                                            code={`<div class="u-opacity-100 bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
+    <div class="font-bold">u-opacity-100</div>
+</div>
+<div class="u-opacity-90 bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
+    <div class="font-bold">u-opacity-90</div>
+</div>
+<div class="u-opacity-80 bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
+    <div class="font-bold">u-opacity-80</div>
+</div>
+<div class="u-opacity-70 bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
+    <div class="font-bold">u-opacity-70</div>
+</div>
+<div class="u-opacity-60 bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
+    <div class="font-bold">u-opacity-60</div>
+</div>
+<div class="u-opacity-50 bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
+    <div class="font-bold">u-opacity-50</div>
+</div>
+
+<!-- ... -->`}
+                                                            language="htmlbars"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ),
                             },
                             {
                                 title: 'Shadow',
-                                children: <div>Test</div>,
+                                children: (
+                                    <div className="u-text-left">
+                                        <div className="frame">
+                                            <div className="frame__body">
+                                                <div className="row u-items-center py-2">
+                                                    <div className="col-6">
+                                                        <div className="grid-md grid-cols-2">
+                                                            {['none', 'xs', 'sm', 'md', 'lg', 'xl'].map((level) => {
+                                                                return (
+                                                                    <div
+                                                                        className={`bg-gray-000 u-round-xs u-shadow-${level} px-4 py-3 m-2`}
+                                                                    >
+                                                                        <div className="font-bold">
+                                                                            {`u-shadow-${level}`}
+                                                                        </div>
+                                                                    </div>
+                                                                );
+                                                            })}
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-6">
+                                                        <CodeBlock
+                                                            code={`<div class="bg-gray-000 u-round-xs u-shadow-none px-4 py-3 m-2">
+    <div class="font-bold">u-shadow-none</div>
+</div>
+<div class="bg-gray-000 u-round-xs u-shadow-xs px-4 py-3 m-2">
+    <div class="font-bold">u-shadow-xs</div>
+</div>
+<div class="bg-gray-000 u-round-xs u-shadow-sm px-4 py-3 m-2">
+    <div class="font-bold">u-shadow-sm</div>
+</div>
+<div class="bg-gray-000 u-round-xs u-shadow-md px-4 py-3 m-2">
+    <div class="font-bold">u-shadow-md</div>
+</div>
+<div class="bg-gray-000 u-round-xs u-shadow-lg px-4 py-3 m-2">
+    <div class="font-bold">u-shadow-lg</div>
+</div>
+<div class="bg-gray-000 u-round-xs u-shadow-xl px-4 py-3 m-2">
+    <div class="font-bold">u-shadow-xl</div>
+</div>`}
+                                                            language="htmlbars"
+                                                        /></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ),
                             },
                         ]}
                     />
