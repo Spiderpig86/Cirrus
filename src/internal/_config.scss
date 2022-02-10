@@ -80,6 +80,7 @@ $default-config: (
                 headline: (),
                 text: (),
             ),
+            letter-spacing: (),
             transforms: (),
             weights: (),
         ),
@@ -393,6 +394,15 @@ $default-config: (
                 ),
             ),
         ),
+        letter-spacing: (
+            tightest: -.075em,
+            tighter: -.05em,
+            tight: -.025em,
+            normal: 0,
+            loose: .025em,
+            looser: .05em,
+            loosest: .1em,
+        ),
         transforms: (uppercase: uppercase, lowercase: lowercase, capitalize: capitalize),
         weights: (
             'extrathin': 100,
@@ -674,6 +684,7 @@ $form-label-sizes: functions.get-with-extend($all-config, form-label-sizes);
 $font-heading-sizes: functions.get-with-extend($all-config, fonts, sizes, heading);
 $font-headline-sizes: functions.get-with-extend($all-config, fonts, sizes, headline);
 $font-text-sizes: functions.get-with-extend($all-config, fonts, sizes, text);
+$font-letter-spacing: functions.get-with-extend($all-config, fonts, letter-spacing);
 $font-transforms: functions.get-with-extend($all-config, fonts, transforms);
 $font-weights: functions.get-with-extend($all-config, fonts, weights);
 

@@ -200,10 +200,21 @@ kbd {
     vertical-align: baseline;
 }
 
+/* Letter spacing */
+$generate-utility: should-generate-classes($LETTER-SPACING);
+
+@if $generate-utility {
+    @include generate-classes-for-viewport-with-map(
+        $font-letter-spacing,
+        'letter-spacing',
+        'tracking-',
+        #{get-viewport-flag($LETTER-SPACING)}
+    );
+}
+
 /* MOBILE */
 
 @include screen-below($xs) {
-
     @each $class, $property-map in $font-heading-sizes {
         #{$class} {
             @include explode-properties(map.get($property-map, 'default'));

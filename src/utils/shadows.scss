@@ -4,7 +4,7 @@
 $generate-utility: should-generate-classes($SHADOWS);
 
 @if $generate-utility {
-    @include generate-styles-with-viewports($generate-viewports: false) using ($viewport) {
+    @include generate-styles-with-viewports($generate-viewports: #{get-viewport-flag($SHADOWS)}) using ($viewport) {
         $suffix: if($viewport != '', '-#{$viewport}', '');
 
         @each $class, $property-map in $shadows {

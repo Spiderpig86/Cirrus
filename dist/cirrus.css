@@ -681,6 +681,35 @@ kbd {
   vertical-align: baseline;
 }
 
+/* Letter spacing */
+.tracking-tightest {
+  letter-spacing: -0.075em !important;
+}
+
+.tracking-tighter {
+  letter-spacing: -0.05em !important;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em !important;
+}
+
+.tracking-normal {
+  letter-spacing: 0 !important;
+}
+
+.tracking-loose {
+  letter-spacing: 0.025em !important;
+}
+
+.tracking-looser {
+  letter-spacing: 0.05em !important;
+}
+
+.tracking-loosest {
+  letter-spacing: 0.1em !important;
+}
+
 /* MOBILE */
 @media screen and (max-width: 639px) {
   h6 {
