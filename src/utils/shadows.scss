@@ -4,10 +4,14 @@
 $generate-utility: should-generate-classes($SHADOWS);
 
 @if $generate-utility {
-    @each $class, $property-map in $shadows {
-        .u-shadow-#{$class} {
-            @include explode-properties($property-map);
-            box-shadow: var(--cirrus-shadow);
+    @include generate-styles-with-viewports($generate-viewports: false) using ($viewport) {
+        $suffix: if($viewport != '', '-#{$viewport}', '');
+
+        @each $class, $property-map in $shadows {
+            .u-shadow-#{$class}#{$suffix} {
+                @include explode-properties($property-map);
+                box-shadow: var(--cirrus-shadow);
+            }
         }
     }
 }
