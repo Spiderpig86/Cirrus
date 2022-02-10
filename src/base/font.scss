@@ -73,7 +73,11 @@ mark,
     background-color: #f0e8c4;
 }
 
-.font-alt {
+.font-primary {
+    font-family: 'Montserrat';
+}
+
+.font-alt, .font-secondary {
     font-family: 'Nunito Sans';
 }
 
