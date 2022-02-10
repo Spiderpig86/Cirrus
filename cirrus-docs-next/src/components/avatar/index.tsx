@@ -37,31 +37,31 @@ export const AvatarPage: React.FC<any> = (props) => {
                         <div className="row mb-2">
                             <div className="avatar">
                                 <img
-                                    src="https://pickaface.net/gallery/avatar/unr_jeroen_200821_1825_36edp.png"
+                                    src="https://4501-enterprise.demo.design.infor.com/images/11.jpg"
                                     alt="avatar"
                                 />
                             </div>
                             <div className="avatar">
                                 <img
-                                    src="https://pickaface.net/gallery/avatar/unr_alla_200821_1831_vlmqx.png"
+                                    src="https://4501-enterprise.demo.design.infor.com/images/12.jpg"
                                     alt="avatar"
                                 />
                             </div>
                             <div className="avatar">
                                 <img
-                                    src="https://pickaface.net/gallery/avatar/unr_moly_200823_1016_w9c78.png"
+                                    src="https://4501-enterprise.demo.design.infor.com/images/13.jpg"
                                     alt="avatar"
                                 />
                             </div>
                             <div className="avatar">
                                 <img
-                                    src="https://pickaface.net/gallery/avatar/unr_dione_200821_1821_vvz43.png"
+                                    src="https://4501-enterprise.demo.design.infor.com/images/14.jpg"
                                     alt="avatar"
                                 />
                             </div>
                             <div className="avatar">
                                 <img
-                                    src="https://pickaface.net/gallery/avatar/unr_jeroen_200821_1818_bj17.png"
+                                    src="https://4501-enterprise.demo.design.infor.com/images/15.jpg"
                                     alt="avatar"
                                 />
                             </div>

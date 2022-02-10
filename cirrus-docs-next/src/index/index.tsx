@@ -13,7 +13,7 @@ import { CodeBlock } from '../../layouts/components/codeblock';
 
 import { DOC_EXAMPLES } from '../../constants/examples';
 import { VERSION, VERSION_NAME } from '../../constants';
-import { Frame, Card, MenuList, Pagination, Panel, Tabs } from './components';
+import { Frame, Card, MenuList, Pagination, Panel, Tabs, FancyBuyCard, LoginCard, PersonCard, ECommerceCard } from './components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { TabContainer } from '../../layouts/components/tabs/tab-container';
 
@@ -70,9 +70,9 @@ const Landing: React.FC<any> = () => {
                             </h1>
                             <div className="space"></div>
                             <p className="sub-title lead font-alt font-normal mx-auto w-60-md u-none u-block-lg">
-                                A <b className="">component</b> and <b className="">utility centric</b> SCSS framework{' '}
-                                designed for <b className="">rapid prototyping</b>. Use beautiful pre-built components
-                                to bootstrap your next project and utility classes to polish your final design.
+                                A <b className="">component-and-utility-centric</b> SCSS framework designed for{' '}
+                                <b className="">rapid prototyping</b>. Use beautiful pre-built components to bootstrap
+                                your next project and utility classes to polish your final design.
                             </p>
 
                             <p>
@@ -239,7 +239,7 @@ import 'cirrus-ui';`}
                             letterSpacing: '-.025em',
                         }}
                     >
-                        Decision fatigue free design system.
+                        Decision-fatigue-free design system.
                     </h1>
 
                     <div className="content">
@@ -321,9 +321,13 @@ import 'cirrus-ui';`}
                                                             <span className="tag tag--info text-light mb-1">p</span>
                                                             <span className="tag tag--info text-light mb-1">label</span>
                                                             <span className="tag tag--info text-light mb-1">span</span>
-                                                            <span className="tag tag--info text-light mb-1">blockquote</span>
+                                                            <span className="tag tag--info text-light mb-1">
+                                                                blockquote
+                                                            </span>
                                                             <span className="tag tag--info text-light mb-1">code</span>
-                                                            <span className="tag tag--info text-light mb-1">article</span>
+                                                            <span className="tag tag--info text-light mb-1">
+                                                                article
+                                                            </span>
                                                         </div>
                                                     </div>
                                                     <div className="col w-100 pt-4 u-flex u-flex-column">
@@ -462,7 +466,7 @@ import 'cirrus-ui';`}
                                                                     <div
                                                                         className={`bg-indigo-500 text-white my-2 pl-2 pr-${size} py-1 u-round-sm u-inline-block u-shadow-lg`}
                                                                     >
-                                                                        <span className="font-bold">px-{size}</span>
+                                                                        <span className="font-bold">pr-{size}</span>
                                                                     </div>
                                                                 </div>
                                                             );
@@ -592,7 +596,8 @@ import 'cirrus-ui';`}
     <div class="font-bold">u-shadow-xl</div>
 </div>`}
                                                             language="htmlbars"
-                                                        /></div>
+                                                        />
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -680,7 +685,12 @@ import 'cirrus-ui';`}
                         </p>
                     </div>
 
-                    <p>TODO MORE COMPONENTS</p>
+                    <div className="u-flex u-flex-column u-flex-row-lg u-gap-2 u-items-center u-justify-center">
+                        <FancyBuyCard />
+                        <LoginCard />
+                        <PersonCard />
+                        <ECommerceCard />
+                    </div>
                 </div>
             </section>
 

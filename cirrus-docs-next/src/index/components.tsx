@@ -215,3 +215,208 @@ export const Frame: React.FC<any> = (props) => {
         </div>
     );
 };
+
+export const FancyBuyCard: React.FC<any> = (props) => {
+    return (
+        <div className="bg-white u-round-sm u-shadow-sm p-3 text-center">
+            <p className="text-gray-600 uppercase font-bold text-xs">Purchased by 10 of your friends</p>
+            <div className="avatar-container u-flex u-justify-center u-items-center mb-2">
+                {[11, 12, 13, 14].map((img) => (
+                    <div
+                        className="avatar avatar--sm"
+                        style={{
+                            background: 'transparent',
+                            border: '2px solid #fff',
+                            margin: '0 -4px',
+                        }}
+                    >
+                        <img
+                            src={`https://raw.githubusercontent.com/Spiderpig86/Cirrus/gh-pages/cirrus-docs-next/static/img/avatars/${img}.jpg`}
+                            alt="avatar"
+                        />
+                    </div>
+                ))}
+                <div
+                    className="avatar avatar--sm u-relative"
+                    style={{
+                        background: 'transparent',
+                        border: '2px solid #fff',
+                        margin: '0 -4px',
+                    }}
+                >
+                    <div className="u-absolute u-top-0 u-left-0 w-100 h-100 u-flex u-items-center u-justify-center bg-gray-900 u-bg-opacity-50 text-white font-bold text-sm">
+                        +5
+                    </div>
+                    <img
+                        src="https://raw.githubusercontent.com/Spiderpig86/Cirrus/gh-pages/cirrus-docs-next/static/img/avatars/15.jpg"
+                        alt="avatar"
+                    />
+                </div>
+            </div>
+            <button className="btn-link btn--sm w-100 mb-0 bg-indigo-500 text-indigo-100 font-bold capitalize">
+                Buy this course
+                <span className="text-indigo-200 font-normal">$4.99</span>
+            </button>
+        </div>
+    );
+};
+
+export const LoginCard: React.FC<any> = (props) => {
+    return (
+        <div className="bg-black u-round-sm u-shadow-sm p-3 u-text-center">
+            <h6 className="text-white tracking-tight my-0">Sign in to Cirrus</h6>
+            <p className="text-gray-600 text-sm">Enter your username and password.</p>
+            <div className="u-text-left text-white mb-2">
+                <div className="input-control">
+                    <input
+                        type="email"
+                        className="input-contains-icon bg-gray-900 text-white"
+                        placeholder="Email"
+                        style={{
+                            border: '1px solid transparent !important',
+                        }}
+                    />
+                    <span className="icon">
+                        <FontAwesomeIcon icon={['fas', 'envelope']} />
+                    </span>
+                </div>
+                <div className="input-control">
+                    <input
+                        type="password"
+                        className="input-contains-icon bg-gray-900 text-white"
+                        placeholder="Password"
+                        style={{
+                            border: '1px solid transparent !important',
+                        }}
+                    />
+                    <span className="icon">
+                        <FontAwesomeIcon icon={['fas', 'lock']} />
+                    </span>
+                </div>
+                <div className="form-ext-control form-ext-checkbox">
+                    <input id="check2" className="form-ext-input" type="checkbox" defaultChecked />
+                    <label className="form-ext-label text-sm" htmlFor="check2">
+                        Remember me
+                    </label>
+                </div>
+            </div>
+            <button className="btn-primary mb-0 w-100 btn--sm">Sign In</button>
+        </div>
+    );
+};
+
+export const PersonCard: React.FC<any> = (props) => {
+    return (
+        <div className="bg-gray u-round-sm u-shadow-sm p-3 u-text-center">
+            <div className="u-flex u-gap-2 u-center">
+                <div className="avatar">
+                    <img src="https://raw.githubusercontent.com/Spiderpig86/Cirrus/gh-pages/cirrus-docs-next/static/img/avatars/12.jpg" />
+                </div>
+                <div className="u-text-left">
+                    <div className="m-0 font-bold text-lg font-primary tracking-tight">Robbie Roger</div>
+                    <div className="m-0 font-normal text-gray-600 text-xs">Software Engineer at Reddit</div>
+                </div>
+            </div>
+            <div className="divider my-2 text-sm" data-content="Stats"></div>
+
+            <div className="grid grid-cols-3 u-items-center u-text-left">
+                <div className="text-gray-600 text-sm">Memeing</div>
+                <progress className="progress progress--info grid-c-2" value=".95"></progress>
+                <div className="text-gray-600 text-sm">Snacking</div>
+                <progress className="progress progress--link grid-c-2" value=".85"></progress>
+                <div className="text-gray-600 text-sm">Redditing</div>
+                <progress className="progress progress--warning grid-c-2" value="1"></progress>
+                <div className="text-gray-600 text-sm">Sleeping</div>
+                <progress className="progress progress--danger grid-c-2" value=".75"></progress>
+            </div>
+        </div>
+    );
+};
+
+export const ECommerceCard: React.FC<any> = (props) => {
+    return (
+        <div className="bg-white u-round-sm u-shadow-lg u-overflow-hidden">
+            <div className="u-flex">
+                <div className="p-3">
+                    <p className="m-0 lead font-bold text-black tracking-tight">SuperRepo Go Volt</p>
+                    <div className="tag bg-green-200 text-green-600 text-xs font-bold uppercase">In-Stock</div>
+                    <div className="u-flex u-gap-1 mt-2">
+                        <a
+                            href="#"
+                            className="size bg-gray-100 text-gray-800 text-xs u-round-sm font-bold u-flex u-items-center u-justify-center"
+                            style={{
+                                height: '2rem',
+                                width: '2rem',
+                            }}
+                        >
+                            7
+                        </a>
+                        <a
+                            href="#"
+                            className="size bg-gray-100 text-gray-800 text-xs u-round-sm font-bold u-flex u-items-center u-justify-center"
+                            style={{
+                                height: '2rem',
+                                width: '2rem',
+                            }}
+                        >
+                            8
+                        </a>
+                        <a
+                            href="#"
+                            className="size bg-gray-100 text-gray-800 text-xs u-round-sm font-bold u-flex u-items-center u-justify-center"
+                            style={{
+                                height: '2rem',
+                                width: '2rem',
+                            }}
+                        >
+                            9
+                        </a>
+                        <a
+                            href="#"
+                            className="size bg-gray-100 text-gray-800 text-xs u-round-sm font-bold u-flex u-items-center u-justify-center"
+                            style={{
+                                height: '2rem',
+                                width: '2rem',
+                            }}
+                        >
+                            10
+                        </a>
+                        <a
+                            href="#"
+                            className="size bg-black text-white text-xs u-round-sm font-bold u-flex u-items-center u-justify-center"
+                            style={{
+                                height: '2rem',
+                                width: '2rem',
+                            }}
+                        >
+                            11
+                        </a>
+                        <a
+                            href="#"
+                            className="size bg-gray-100 text-gray-800 text-xs u-round-sm font-bold u-flex u-items-center u-justify-center"
+                            style={{
+                                height: '2rem',
+                                width: '2rem',
+                            }}
+                        >
+                            12
+                        </a>
+                    </div>
+                    <div className="divider" />
+                    <div className="u-flex u-gap-1">
+                        <button className="btn-black btn--sm mb-0 u-shadow-sm">Buy Now</button>
+                        <button className="bg-white btn--sm mb-0">Add to Cart</button>
+                        <button className="bg-white btn--sm mb-0">♥</button>
+                    </div>
+                    <p className="mb-0 mt-2 text-sm tracking-tight text-gray-600">Free shipping on orders over $25.</p>
+                </div>
+                <div>
+                    <img
+                        className="h-100 img-cover"
+                        src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+                    />
+                </div>
+            </div>
+        </div>
+    );
+};
