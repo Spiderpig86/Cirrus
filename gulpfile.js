@@ -11,127 +11,84 @@ const head =
 
 const environment = {
     isCi: process.env.CI ?? false, // Github actions default variable is always set to true
-}
+};
 
-gulp.task('compile', () => {
-    return gulp
-        .src(['src/ext.scss'])
-        .pipe(sass.sync().on('error', function (err) {
-            sass.logError.call(this, err);
+generateGulpBuild(`ext`, `src/ext.scss`, `cirrus`);
+generateGulpBuild(`core`, `src/core.scss`, `cirrus-core`);
+generateGulpBuild(`all`, `src/all.scss`, `cirrus-all`);
 
-            // Fail job if in CI
-            if (environment.isCi) {
-                throw err;
-            }
-        }))
-        .pipe($.concat('cirrus.css'))
-        .pipe($.header(head))
-        .pipe($.size())
-        .pipe(gulp.dest('./dist/'))
-        .on('error', (err) => {
-            console.error(err);
-            process.exit(1);
-        });
-});
-
-gulp.task(
-    'minify',
-    gulp.series('compile', () => {
+// source file name
+// file name
+function generateGulpBuild(taskName, sassFilePath, outputName) {
+    gulp.task(taskName, () => {
         return gulp
-            .src(['./dist/cirrus.css'])
+            .src([sassFilePath])
             .pipe(
-                minify(
-                    {
-                        level: {
-                            1: {
-                                all: true,
-                                normalizeUrls: false,
-                            },
-                            2: {
-                                all: false,
-                                removeDuplicateRules: true,
-                                reduceNonAdjacentRules: true,
-                                removeDuplicateFontRules: true,
-                                removeDuplicateMediaBlocks: true,
-                                mergeAdjacentRules: true,
-                                mergeIntoShorthands: true,
-                                mergeMedia: true,
-                                mergeNonAdjacentRules: true,
-                                mergeSemantically: false,
-                                removeEmpty: true,
-                            },
-                        },
-                    },
-                    (details) => {
-                        console.log('FULL');
-                        console.log(details.name + ': ' + details.stats.originalSize);
-                        console.log(details.name + '-min: ' + details.stats.minifiedSize);
+                sass.sync().on('error', function(err) {
+                    sass.logError.call(this, err);
+
+                    // Fail job if in CI
+                    if (environment.isCi) {
+                        throw err;
                     }
-                )
+                })
             )
+            .pipe($.concat(`${outputName}.css`))
             .pipe($.header(head))
             .pipe($.size())
-            .pipe($.concat('cirrus.min.css'))
             .pipe(gulp.dest('./dist/'))
             .on('error', (err) => {
-                console.error('Error encountered during build. Failing.');
+                console.error(err);
                 process.exit(1);
             });
-    })
-);
+    });
 
-gulp.task('core', () => {
-    return gulp
-        .src(['src/core.scss'])
-        .pipe(sass.sync().on('error', sass.logError))
-        .pipe($.concat('cirrus-core.css'))
-        .pipe($.header(head))
-        .pipe($.size())
-        .pipe(gulp.dest('./dist/'));
-});
-
-gulp.task(
-    'minify-core',
-    gulp.series('core', () => {
-        return gulp
-            .src(['./dist/cirrus-core.css'])
-            .pipe(
-                minify(
-                    {
-                        level: {
-                            1: {
-                                all: true,
-                                normalizeUrls: false,
-                            },
-                            2: {
-                                all: false,
-                                removeDuplicateRules: true,
-                                reduceNonAdjacentRules: true,
-                                removeDuplicateFontRules: true,
-                                removeDuplicateMediaBlocks: true,
-                                mergeAdjacentRules: true,
-                                mergeIntoShorthands: true,
-                                mergeMedia: true,
-                                mergeNonAdjacentRules: true,
-                                mergeSemantically: false,
-                                removeEmpty: true,
+    gulp.task(
+        `minify-${taskName}`,
+        gulp.series(taskName, () => {
+            return gulp
+                .src([`./dist/${outputName}.css`])
+                .pipe(
+                    minify({
+                            level: {
+                                1: {
+                                    all: true,
+                                    normalizeUrls: false,
+                                },
+                                2: {
+                                    all: false,
+                                    removeDuplicateRules: true,
+                                    reduceNonAdjacentRules: true,
+                                    removeDuplicateFontRules: true,
+                                    removeDuplicateMediaBlocks: true,
+                                    mergeAdjacentRules: true,
+                                    mergeIntoShorthands: true,
+                                    mergeMedia: true,
+                                    mergeNonAdjacentRules: true,
+                                    mergeSemantically: false,
+                                    removeEmpty: true,
+                                },
                             },
                         },
-                    },
-                    (details) => {
-                        console.log('CORE');
-                        console.log(details.name + ': ' + details.stats.originalSize);
-                        console.log(details.name + '-min: ' + details.stats.minifiedSize);
-                    }
+                        (details) => {
+                            console.log('FULL');
+                            console.log(details.name + ': ' + details.stats.originalSize);
+                            console.log(`${outputName}.min.css ${details.stats.minifiedSize}`);
+                        }
+                    )
                 )
-            )
-            .pipe($.header(head))
-            .pipe($.size())
-            .pipe($.concat('cirrus-core.min.css'))
-            .pipe(gulp.dest('./dist/'));
-    })
-);
+                .pipe($.header(head))
+                .pipe($.size())
+                .pipe($.concat(`${outputName}.min.css`))
+                .pipe(gulp.dest('./dist/'))
+                .on('error', (err) => {
+                    console.error(`Error encountered for task ${taskName}. Failing.`);
+                    process.exit(1);
+                });
+        })
+    );
+}
 
-gulp.task('watch', () => gulp.watch('./src/**/*.scss', gulp.parallel('minify', 'minify-core')));
+gulp.task('watch', () => gulp.watch('./src/**/*.scss', gulp.parallel('minify-ext', 'minify-core', 'minify-all')));
 
-gulp.task('default', gulp.parallel('minify', 'minify-core'));
+gulp.task('default', gulp.parallel('minify-ext', 'minify-core', 'minify-all'));
