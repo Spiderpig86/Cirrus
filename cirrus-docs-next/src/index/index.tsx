@@ -13,9 +13,24 @@ import { CodeBlock } from '../../layouts/components/codeblock';
 
 import { DOC_EXAMPLES } from '../../constants/examples';
 import { VERSION, VERSION_NAME } from '../../constants';
-import { Frame, Card, MenuList, Pagination, Panel, Tabs, FancyBuyCard, LoginCard, PersonCard, ECommerceCard } from './components';
+import {
+    Frame,
+    Card,
+    MenuList,
+    Pagination,
+    Panel,
+    Tabs,
+    FancyBuyCard,
+    LoginCard,
+    PersonCard,
+    ECommerceCard,
+    ResponsiveLandingHTML,
+} from './components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { TabContainer } from '../../layouts/components/tabs/tab-container';
+import { ResizableInternal } from '../../layouts/components/resizable';
+import { IFrame } from '../../layouts/components/iframe';
+import { PLAYGROUND_ENDPOINT_MAP } from '../../constants/playground';
 
 const Landing: React.FC<any> = () => {
     const { state, dispatch } = useContext(Context);
@@ -634,6 +649,24 @@ import 'cirrus-ui';`}
                             </a>
                         </Link>
                     </div>
+                    <div className="space space--lg"></div>
+
+                    <ResizableInternal height="800px" top="50%">
+                        <div
+                            style={{
+                                height: '800px',
+                            }}
+                        >
+                            <IFrame
+                                content={`<link href="${PLAYGROUND_ENDPOINT_MAP.get(
+                                    PLAYGROUND_ENDPOINT_MAP.keys().next().value
+                                )}" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<body>${ResponsiveLandingHTML}</body>`}
+                            />
+                        </div>
+                    </ResizableInternal>
                 </div>
             </section>
 
@@ -685,11 +718,19 @@ import 'cirrus-ui';`}
                         </p>
                     </div>
 
-                    <div className="u-flex u-flex-column u-flex-row-lg u-gap-2 u-items-center u-justify-center">
-                        <FancyBuyCard />
-                        <LoginCard />
-                        <PersonCard />
-                        <ECommerceCard />
+                    <div className="row u-gap">
+                        <div className="p-1 u-flex u-items-center u-justify-center col-6 col-lg-4 col-xl-2">
+                            <FancyBuyCard />
+                        </div>
+                        <div className="p-1 u-flex u-items-center u-justify-center col-6 col-lg-4 col-xl-3">
+                            <LoginCard />
+                        </div>
+                        <div className="p-1 u-flex u-items-center u-justify-center col-6 col-lg-4 col-xl-2">
+                            <PersonCard />
+                        </div>
+                        <div className="p-1 u-flex u-items-center u-justify-center col-6 col-lg-6 col-xl-5">
+                            <ECommerceCard />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -718,6 +759,24 @@ import 'cirrus-ui';`}
                             <FontAwesomeIcon className="ml-1" icon={['fas', 'chevron-right']} />
                         </a>
                     </Link>
+                    <div className="u-text-left my-4">
+                        <CodeBlock
+                            code={`@use "internal/config" as * with (
+  $config: (
+    extend: (
+      opacity: (
+        25: 0.25,
+        50: 0.5,
+        75: 0.75
+      )
+    )
+  )
+);
+
+@use "ext";`}
+                            language={'scss'}
+                        />
+                    </div>
                 </div>
             </section>
         </div>

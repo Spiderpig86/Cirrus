@@ -625,7 +625,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         <div className="space space--xl"></div>
 
                         <p>
-                            Use <code>u-flex-shrink-0</code> to allow a flex item to shrink relative to the parent and
+                            Use <code>u-flex-shrink-0</code> to prevent a flex item to shrink relative to the parent and
                             sibling elements.
                         </p>
 
