@@ -16,7 +16,7 @@ import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const MinWidthPage: React.FC<any> = (props) => {
     const DEFAULT_CLASSES = {
-        none: 'none',
+        0: '0',
         xs: '640px',
         sm: '768px',
         md: '1024px',
