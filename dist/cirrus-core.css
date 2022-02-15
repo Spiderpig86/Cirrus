@@ -4064,8 +4064,8 @@ section {
     width: 100vw !important;
   }
 }
-.min-h-none {
-  min-height: none !important;
+.min-h-0 {
+  min-height: 0 !important;
 }
 
 .min-h-xs {
@@ -4132,8 +4132,8 @@ section {
   min-height: 100vh !important;
 }
 
-.min-w-none {
-  min-width: none !important;
+.min-w-0 {
+  min-width: 0 !important;
 }
 
 .min-w-xs {

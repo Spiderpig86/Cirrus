@@ -4065,8 +4065,8 @@ section {
     width: 100vw !important;
   }
 }
-.min-h-none {
-  min-height: none !important;
+.min-h-0 {
+  min-height: 0 !important;
 }
 
 .min-h-xs {
@@ -4134,8 +4134,8 @@ section {
 }
 
 @media screen and (min-width: 640px) {
-  .min-h-none-sm {
-    min-height: none !important;
+  .min-h-0-sm {
+    min-height: 0 !important;
   }
 }
 @media screen and (min-width: 640px) {
@@ -4219,8 +4219,8 @@ section {
   }
 }
 @media screen and (min-width: 768px) {
-  .min-h-none-md {
-    min-height: none !important;
+  .min-h-0-md {
+    min-height: 0 !important;
   }
 }
 @media screen and (min-width: 768px) {
@@ -4304,8 +4304,8 @@ section {
   }
 }
 @media screen and (min-width: 1024px) {
-  .min-h-none-lg {
-    min-height: none !important;
+  .min-h-0-lg {
+    min-height: 0 !important;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -4389,8 +4389,8 @@ section {
   }
 }
 @media screen and (min-width: 1280px) {
-  .min-h-none-xl {
-    min-height: none !important;
+  .min-h-0-xl {
+    min-height: 0 !important;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -4473,8 +4473,8 @@ section {
     min-height: 100vh !important;
   }
 }
-.min-w-none {
-  min-width: none !important;
+.min-w-0 {
+  min-width: 0 !important;
 }
 
 .min-w-xs {
@@ -4542,8 +4542,8 @@ section {
 }
 
 @media screen and (min-width: 640px) {
-  .min-w-none-sm {
-    min-width: none !important;
+  .min-w-0-sm {
+    min-width: 0 !important;
   }
 }
 @media screen and (min-width: 640px) {
@@ -4627,8 +4627,8 @@ section {
   }
 }
 @media screen and (min-width: 768px) {
-  .min-w-none-md {
-    min-width: none !important;
+  .min-w-0-md {
+    min-width: 0 !important;
   }
 }
 @media screen and (min-width: 768px) {
@@ -4712,8 +4712,8 @@ section {
   }
 }
 @media screen and (min-width: 1024px) {
-  .min-w-none-lg {
-    min-width: none !important;
+  .min-w-0-lg {
+    min-width: 0 !important;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -4797,8 +4797,8 @@ section {
   }
 }
 @media screen and (min-width: 1280px) {
-  .min-w-none-xl {
-    min-width: none !important;
+  .min-w-0-xl {
+    min-width: 0 !important;
   }
 }
 @media screen and (min-width: 1280px) {
