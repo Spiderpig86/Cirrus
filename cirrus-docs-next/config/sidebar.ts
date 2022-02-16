@@ -295,6 +295,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Letter Spacing',
+                url: '/fonts/letter-spacing'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Size',
                 url: '/fonts/size'
             },

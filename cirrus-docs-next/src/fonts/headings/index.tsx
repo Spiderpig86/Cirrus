@@ -344,7 +344,7 @@ $config: (
 
                 <Pagination
                     prevLink={{ name: 'Glyphs', link: './glyphs' }}
-                    nextLink={{ name: 'Size', link: './size' }}
+                    nextLink={{ name: 'Letter Spacing', link: './letter-spacing' }}
                 />
             </span>
             <TableOfContents entries={toc} />

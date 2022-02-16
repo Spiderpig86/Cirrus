@@ -138,7 +138,7 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Headings', link: './headings' }}
+                    prevLink={{ name: 'Letter Spacing', link: './letter-spacing' }}
                     nextLink={{ name: 'Text Elements', link: './text-elements' }}
                 />
             </span>
