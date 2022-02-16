@@ -36,6 +36,11 @@ export const toc: TableOfContentsEntry[] = [
                 children: null,
             },
             {
+                name: 'Flex Wraps',
+                anchor: '#flex-wraps',
+                children: null,
+            },
+            {
                 name: 'Responsive',
                 anchor: '#responsive',
                 children: null,

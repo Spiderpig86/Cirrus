@@ -635,7 +635,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                                 width: '100%',
                             }}
                         >
-                            <ResizableInternal minWidth='300px'>
+                            <ResizableInternal minWidth="300px">
                                 <div className="u-flex u-gap-2 u-round-xs bg-orange-100 p-3 text-white font-bold u-text-center">
                                     <div className="u-round-xs u-shadow-lg bg-orange-300 p-2 u-flex-grow-1 u-flex-shrink-1">
                                         1
@@ -660,6 +660,81 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
     <div class="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-shrink-0">0</div>
 </div>`}
                             language="htmlbars"
+                        />
+                    </div>
+                </section>
+
+                <section className="padtop" id="flex-wraps">
+                    <div className="content">
+                        <Headline title="Flex Wrap" link="#flex-wraps" size="4" />
+                        <div className="divider"></div>
+                        <p>
+                            Flex wrap utilities control how flex elements wrap inside the parent container. Classes
+                            follow the form of <code>u-flex-[wrap|nowrap|wrap-reverse]</code>.
+                        </p>
+
+                        <div className="space space--xl"></div>
+
+                        <Headline size="6" title="Wrap" link="#flex-wrap" />
+                        <p>
+                            Use <code>u-flex-wrap</code> to allow flex elements to wrap in the parent.
+                        </p>
+
+                        <div className="u-flex u-flex-wrap u-gap-2 u-round-xs bg-pink-100 p-3 text-white font-bold u-text-center">
+                            <div className="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40">1</div>
+                            <div className="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40">2</div>
+                            <div className="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40">3</div>
+                        </div>
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<div classname="u-flex u-flex-wrap u-gap-2 u-round-xs bg-pink-100 p-3 text-white font-bold u-text-center">
+    <div classname="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40">1</div>
+    <div classname="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40">2</div>
+    <div classname="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40">3</div>
+</div>`}
+                            language="html"
+                        />
+                        <div className="space space--lg"></div>
+                        
+                        <Headline size="6" title="No Wrap" link="#flex-nowrap" />
+                        <p>
+                            Use <code>u-flex-nowrap</code> to prevent flex elements from wrapping in the parent.
+                        </p>
+
+                        <div className="u-flex u-flex-nowrap u-gap-2 u-round-xs bg-teal-100 p-3 text-white font-bold u-text-center">
+                            <div className="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40">1</div>
+                            <div className="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40">2</div>
+                            <div className="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40">3</div>
+                        </div>
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<div classname="u-flex u-flex-nowrap u-gap-2 u-round-xs bg-teal-100 p-3 text-white font-bold u-text-center">
+    <div classname="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40">1</div>
+    <div classname="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40">2</div>
+    <div classname="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40">3</div>
+</div>`}
+                            language="html"
+                        />
+                        <div className="space space--lg"></div>
+                        
+                        <Headline size="6" title="Wrap Reverse" link="#flex-wrap-reverse" />
+                        <p>
+                            Use <code>u-flex-wrap-reverse</code> wrap elements in reverse.
+                        </p>
+
+                        <div className="u-flex u-flex-wrap-reverse u-gap-2 u-round-xs bg-indigo-100 p-3 text-white font-bold u-text-center">
+                            <div className="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40">1</div>
+                            <div className="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40">2</div>
+                            <div className="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40">3</div>
+                        </div>
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<div classname="u-flex u-flex-wrap-reverse u-gap-2 u-round-xs bg-indigo-100 p-3 text-white font-bold u-text-center">
+    <div classname="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40">1</div>
+    <div classname="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40">2</div>
+    <div classname="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40">3</div>
+</div>`}
+                            language="html"
                         />
                     </div>
                 </section>
