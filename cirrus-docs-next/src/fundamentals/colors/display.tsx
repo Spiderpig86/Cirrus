@@ -13,7 +13,7 @@ export interface Swatch {
 export const Display: React.FC<DisplayProps> = (props) => {
     const swatches = props.swatches.map((swatch: Swatch, index: number) => {
         return (
-            <div key={index} className="col-4 mb-2">
+            <div key={index} className="mb-2">
                 <div className={`frame u-round-xs u-shadow-lg ${swatch.class}`}>
                     <div className="frame__body py-8"></div>
                     <div className="frame__footer bg-white py-1 u-bg-opacity-80">
@@ -27,5 +27,5 @@ export const Display: React.FC<DisplayProps> = (props) => {
         );
     });
 
-    return <div className="row">{swatches}</div>;
+    return <div className="grid grid-cols-3 u-gap-1">{swatches}</div>;
 };

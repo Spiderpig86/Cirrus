@@ -87,7 +87,7 @@ export const ColorsPage: React.FC<any> = (props) => {
                             Square using a <b>info</b> background.
                         </p>
                         <div className="row">
-                            <div className="col-lg-6">
+                            <div className="col-lg-6 mb-1">
                                 <div
                                     style={{
                                         height: '50px',
@@ -228,7 +228,7 @@ export const ColorsPage: React.FC<any> = (props) => {
                         <h6>Changing Background Opacity</h6>
                         <p>Use the background opacity utility classes to control an element's background color opacity. You can use any opacity value that is defined in the <Link href="/utils/opacity"><a className="u u-LR">opacity scale</a></Link>.</p>
 
-                        <div className="py-2 u-round-xs bg-gray-000 u-shadow-md u-flex u-items-center u-justify-space-around">
+                        <div className="py-2 u-round-xs bg-gray-000 u-shadow-md u-flex u-items-center u-justify-space-around u-flex-wrap u-flex-nowrap-md">
                             <button className="btn-warning mb-0 u-bg-opacity-100">100%</button>
                             <button className="btn-warning mb-0 u-bg-opacity-90">90%</button>
                             <button className="btn-warning mb-0 u-bg-opacity-80">80%</button>

@@ -29,8 +29,7 @@ table tbody {
 }
 
 .content {
-    // max-width: 80rem !important;
-    width: 80%;
+    width: 95%;
 }
 
 .padtop {
@@ -42,7 +41,7 @@ table tbody {
 }
 
 .tag {
-    margin-right: .25rem;
+    margin-right: 0.25rem;
 }
 
 .tabpage.tabpage--shown {
@@ -71,7 +70,7 @@ table tbody {
 }
 
 code {
-    font-size: 15px !important;
+    font-size: 14px !important;
     line-height: 1.5 !important;
 }
 
@@ -86,4 +85,10 @@ code {
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--scrollbar-thumb-bg);
+}
+
+@media screen and (min-width: 768px) {
+    .content {
+        width: 80%;
+    }
 }

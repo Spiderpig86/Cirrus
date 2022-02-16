@@ -650,23 +650,27 @@ import 'cirrus-ui';`}
                         </Link>
                     </div>
                     <div className="space space--lg"></div>
+                </div>
 
-                    <ResizableInternal height="800px" top="50%">
-                        <div
-                            style={{
-                                height: '800px',
-                            }}
-                        >
-                            <IFrame
-                                content={`<link href="${PLAYGROUND_ENDPOINT_MAP.get(
-                                    PLAYGROUND_ENDPOINT_MAP.keys().next().value
-                                )}" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+                <div>
+                    <div className="w-90 mx-auto">
+                        <ResizableInternal height="800px" top="50%">
+                            <div
+                                style={{
+                                    height: '800px',
+                                }}
+                            >
+                                <IFrame
+                                    content={`<link href="${PLAYGROUND_ENDPOINT_MAP.get(
+                                        PLAYGROUND_ENDPOINT_MAP.keys().next().value
+                                    )}" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 <body>${ResponsiveLandingHTML}</body>`}
-                            />
-                        </div>
-                    </ResizableInternal>
+                                />
+                            </div>
+                        </ResizableInternal>
+                    </div>
                 </div>
             </section>
 
@@ -718,7 +722,7 @@ import 'cirrus-ui';`}
                         </p>
                     </div>
 
-                    <div className="row u-gap">
+                    <div className="row">
                         <div className="p-1 u-flex u-items-center u-justify-center col-6 col-lg-4 col-xl-2">
                             <FancyBuyCard />
                         </div>
