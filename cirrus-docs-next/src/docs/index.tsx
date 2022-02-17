@@ -13,38 +13,39 @@ import { DefaultLayout } from '../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX, VERSION } from '../../constants';
 import { Preview } from './preview';
+import { ECommerceCard } from '../index/components';
 
 export const DocsPage: React.FC<any> = (props) => {
     // TODO: Move to constants
     const data = [
         {
             id: 'Cirrus',
-            memory: 17.8,
+            memory: 20.6,
             color: '#f03d4d',
         },
         {
             id: 'Bootstrap',
-            memory: 23.5,
+            memory: 22.4,
             color: '#7952b3',
         },
         {
-            id: 'FlatUI',
-            memory: 24.1,
-            color: '#8fd3ff',
-        },
-        {
             id: 'Bulma',
-            memory: 26.0,
+            memory: 26.9,
             color: '#01d1b2',
         },
         {
-            id: 'Material',
-            memory: 32.5,
+            id: 'Foundation',
+            memory: 32.1,
+            color: '#8fd3ff',
+        },
+        {
+            id: 'Tailwind',
+            memory: 74.3,
             color: '#9c27b0',
         },
         {
             id: 'Semantic UI',
-            memory: 101,
+            memory: 79.6,
             color: '#35bdb2',
         },
     ];
@@ -65,7 +66,7 @@ export const DocsPage: React.FC<any> = (props) => {
 
                         <div className="grid grid-cols-1 u-gap-1 grid-cols-3-xl">
                             <div
-                                className="u-round-sm p-2 u-shadow-lg bg-orange-500"
+                                className="u-relative u-round-sm p-2 u-shadow-lg bg-orange-500 u-overflow-hidden"
                                 style={{
                                     backgroundImage:
                                         'linear-gradient(to bottom right,rgba(208,56,1,1),rgba(227,160,8,1))',
@@ -75,12 +76,21 @@ export const DocsPage: React.FC<any> = (props) => {
                                 <p className="text-white u-color-opacity-80">
                                     Learn how to get started with Cirrus one step at a time.
                                 </p>
+                                <img
+                                    className="u-absolute u-left-0 u-opacity-50"
+                                    src="img/docs-placeholder.png"
+                                    style={{
+                                        objectFit: 'cover',
+                                        mixBlendMode: 'soft-light',
+                                    }}
+                                ></img>
+                                <div className="space space--xl"></div>
                                 <Link href="/getting-started/setup">
-                                    <button className="btn-dark u-bg-opacity-40 mt-4">Start reading</button>
+                                    <button className="btn-dark u-relative u-bg-opacity-80 mt-4">Start reading</button>
                                 </Link>
                             </div>
                             <div
-                                className="u-round-sm p-2 u-shadow-lg bg-pink-600"
+                                className="u-relative u-overflow-hidden u-round-sm p-2 u-shadow-lg bg-pink-600"
                                 style={{
                                     backgroundImage:
                                         'linear-gradient(to bottom right,rgba(214,31,105,1),rgba(240,82,82,1))',
@@ -90,8 +100,17 @@ export const DocsPage: React.FC<any> = (props) => {
                                 <p className="text-white u-color-opacity-80">
                                     Try out the framework in the playground without any setup or installation.
                                 </p>
+                                <img
+                                    className="u-absolute u-left-0 u-opacity-50"
+                                    src="img/docs-placeholder2.png"
+                                    style={{
+                                        objectFit: 'cover',
+                                        mixBlendMode: 'hard-light',
+                                    }}
+                                ></img>
+                                <div className="space space--xl"></div>
                                 <Link href="/playground">
-                                    <button className="btn-dark u-bg-opacity-40">Start coding</button>
+                                    <button className="btn-dark u-relative u-bg-opacity-80">Start coding</button>
                                 </Link>
                             </div>
                             <div
@@ -105,6 +124,7 @@ export const DocsPage: React.FC<any> = (props) => {
                                 <p className="text-white u-color-opacity-80">
                                     Build your project with beautifully pre-built components now.
                                 </p>
+                                <div className="space space--xl"></div>
                                 <Link href="">
                                     <button disabled className="btn-dark u-bg-opacity-40 mt-4">
                                         Coming soon
@@ -117,9 +137,9 @@ export const DocsPage: React.FC<any> = (props) => {
 
                 {/* <Preview /> */}
 
-                <section id="why" className="padtop">
+                <section id="what" className="padtop">
                     <div className="content">
-                        <Headline title="Why Cirrus?" link="#why" size="3" />
+                        <Headline title="What is Cirrus?" link="#what" size="3" />
                         <div className="divider"></div>
 
                         <p>
@@ -130,11 +150,10 @@ export const DocsPage: React.FC<any> = (props) => {
                         </p>
 
                         <ul>
-                            <li>
-                                🎁 Construct your web app or website using by composing beautifully designed components.
-                            </li>
+                            <li>🎁 Construct your web app or website by composing beautifully designed components.</li>
+                            <li>🛠 Shipped with utility classes to design with scale.</li>
                             <li>📱 Fully responsive by design.</li>
-                            <li>🎨 Fully customizable themeing.</li>
+                            <li>🎨 Almost fully customizable styles and classes.</li>
                             <li>⚡ The only file you need is the minified CSS file from a CDN.</li>
                             <li>🌌 Fully open source.</li>
                         </ul>
@@ -162,208 +181,134 @@ export const DocsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section id="lightweight" className="padtop">
+                <section id="why" className="padtop">
                     <div className="content">
-                        <Headline title="Lightweight" link="#lightweight" size="4" />
+                        <Headline title="Why Cirrus?" link="#lightweight" size="3" />
                         <div className="divider"></div>
                         <p>
-                            Cirrus comes with lots of functionality in a small package which only consists of a single
-                            minified CSS file. <b>No extra JS libraries required</b>. Coming in at{' '}
-                            <b>17.8 KB with Brotli compression</b>, page loads are fast and animations are fluid.
+                            Here are a couple of reasons why <b>you should</b> consider Cirrus for your next project.
                         </p>
-
-                        {/* TODO MOVE TO NEW FILE */}
-                        <div
-                            className="mx-auto"
-                            style={{
-                                height: '400px',
-                                maxWidth: '600px',
-                            }}
-                        >
-                            <ResponsiveBar
-                                data={data}
-                                keys={['memory']}
-                                indexBy="id"
-                                margin={{ top: 50, right: 10, bottom: 50, left: 60 }}
-                                padding={0.3}
-                                groupMode="grouped"
-                                layout="vertical"
-                                colors={(data) => data.data.color}
-                                borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
-                                axisTop={null}
-                                axisRight={null}
-                                axisBottom={{
-                                    tickSize: 5,
-                                    tickPadding: 5,
-                                    tickRotation: 0,
-                                    legend: 'Framework',
-                                    legendPosition: 'middle',
-                                    legendOffset: 32,
-                                }}
-                                axisLeft={{
-                                    tickSize: 5,
-                                    tickPadding: 5,
-                                    tickRotation: 0,
-                                    legend: 'KB',
-                                    legendPosition: 'middle',
-                                    legendOffset: -50,
-                                }}
-                                labelSkipWidth={12}
-                                labelSkipHeight={12}
-                                labelTextColor="#fff"
-                                animate={true}
-                                motionStiffness={90}
-                                motionDamping={15}
-                            />
-                        </div>
-                    </div>
-                </section>
-
-                <section id="modular" className="padtop">
-                    <div className="content">
-                        <Headline title="Modular" link="#modular" size="4" />
-                        <div className="divider"></div>
-                        <p>
-                            As of <b>0.6.0</b>, Cirrus was re-engineered from the ground up to use Sass. This means you
-                            can just import the modules that you need in your Sass files.
-                        </p>
-
-                        <CodeBlock
-                            code={`.my-button {
-    @extend .btn;
-}`}
-                            language="scss"
-                        />
-
-                        <p className="mt-3">
-                            Each file contains classes that only correspond to a component or functionality. For
-                            instance, all the tag related classes can be found inside <code>tag.scss</code>. This
-                            modular design makes it easier for anyone who wants to make modifications to the framework
-                            and rebuild their own version of it.
-                        </p>
-
-                        <p>
-                            In addition to being able to import the features you want, Cirrus comes in two flavors,{' '}
-                            <b>core</b> and <b>extended</b>, that contain the main features and the full framework
-                            respectively. More about that{' '}
-                            <Link href="/getting-started/developing">
-                                <a className="u u-LR">here</a>
-                            </Link>
-                            .
-                        </p>
-                    </div>
-                </section>
-
-                <section id="prototype" className="padtop">
-                    <div className="content">
-                        <Headline title="Rapid Prototyping" link="#prototype" size="4" />
-                        <div className="divider"></div>
-                        <p>
-                            Cirrus comes with many different classes that help you quickly construct beautiful looking
-                            components quickly without having to come up with your own design.
-                        </p>
-
-                        <p>
-                            The example is constructed using an{' '}
-                            <Link href="/components/avatar">
-                                <a className="u u-LR">avatar</a>
-                            </Link>
-                            ,{' '}
-                            <Link href="/components/tabs">
-                                <a className="u u-LR">tabs</a>
-                            </Link>
-                            , and{' '}
-                            <Link href="/components/tiles">
-                                <a className="u u-LR">tiles</a>
-                            </Link>
-                            .
-                        </p>
-
                         <div className="space"></div>
-                        <div className="frame mb-3" style={{ height: '30rem' }}>
-                            <div className="frame__header">
-                                <div className="avatar">
-                                    <img src="https://i.imgur.com/sbKJVxr.png" />
-                                </div>
-                                <p className="u-text-center frame__title">John Doe</p>
-                                <p className="u-text-center frame__subtitle">Former youngest person on Earth</p>
-                                <div className="tab-container tabs-fill">
-                                    <ul>
-                                        <li className="tab-item">
-                                            <a>Favorites</a>
-                                        </li>
-                                        <li className="tab-item selected">
-                                            <a>Profile</a>
-                                        </li>
-                                        <li className="tab-item">
-                                            <a>Pins</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="frame__body">
-                                <div className="tile level p-1">
-                                    <div className="tile-avatar">
-                                        <span className="icon">
-                                            <FontAwesomeIcon className="fa-wrapper small" icon={['fab', 'twitter']} />
-                                        </span>
+
+                        <section id="prototype" className="">
+                            <Headline title="1. Built for Rapid Iteration" link="#prototype" size="5" />
+                            <div className="divider"></div>
+                            <p>
+                                Cirrus was built to remove all the overhead associated with designing any app. The
+                                framework comes with many different classes that help you quickly construct beautiful
+                                looking components quickly without having to come up with your own design.
+                            </p>
+
+                            <p>
+                                The example below is constructed using an{' '}
+                                <Link href="/components/avatar">
+                                    <a className="u u-LR">avatar</a>
+                                </Link>
+                                ,{' '}
+                                <Link href="/components/tabs">
+                                    <a className="u u-LR">tabs</a>
+                                </Link>
+                                , and{' '}
+                                <Link href="/components/tiles">
+                                    <a className="u u-LR">tiles</a>
+                                </Link>
+                                .
+                            </p>
+
+                            <div className="space"></div>
+                            <div className="frame mb-3" style={{ height: '30rem' }}>
+                                <div className="frame__header">
+                                    <div className="avatar">
+                                        <img src="https://i.imgur.com/sbKJVxr.png" />
                                     </div>
-                                    <div className="tile__container">
-                                        <p className="tile__title">Twitter</p>
-                                        <p className="tile__subtitle">@johndoe</p>
+                                    <p className="u-text-center frame__title">John Doe</p>
+                                    <p className="u-text-center frame__subtitle">Former youngest person on Earth</p>
+                                    <div className="tab-container tabs-fill">
+                                        <ul>
+                                            <li className="tab-item">
+                                                <a>Favorites</a>
+                                            </li>
+                                            <li className="tab-item selected">
+                                                <a>Profile</a>
+                                            </li>
+                                            <li className="tab-item">
+                                                <a>Pins</a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div className="tile__buttons">
-                                        <a href="!#" className="link-btn">
+                                </div>
+                                <div className="frame__body">
+                                    <div className="tile level p-1">
+                                        <div className="tile-avatar">
                                             <span className="icon">
-                                                <i className="fa fa-wrapper fa-pencil small" aria-hidden="true"></i>
+                                                <FontAwesomeIcon
+                                                    className="fa-wrapper small"
+                                                    icon={['fab', 'twitter']}
+                                                />
                                             </span>
-                                        </a>
+                                        </div>
+                                        <div className="tile__container">
+                                            <p className="tile__title">Twitter</p>
+                                            <p className="tile__subtitle">@johndoe</p>
+                                        </div>
+                                        <div className="tile__buttons">
+                                            <a href="!#" className="link-btn">
+                                                <span className="icon">
+                                                    <i className="fa fa-wrapper fa-pencil small" aria-hidden="true"></i>
+                                                </span>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div className="tile level p-1">
-                                    <div className="tile-avatar">
-                                        <span className="icon">
-                                            <FontAwesomeIcon className="fa-wrapper small" icon={['fab', 'instagram']} />
-                                        </span>
+                                    <div className="tile level p-1">
+                                        <div className="tile-avatar">
+                                            <span className="icon">
+                                                <FontAwesomeIcon
+                                                    className="fa-wrapper small"
+                                                    icon={['fab', 'instagram']}
+                                                />
+                                            </span>
+                                        </div>
+                                        <div className="tile__container">
+                                            <p className="tile__title">Instagram</p>
+                                            <p className="tile__subtitle">@johndoe</p>
+                                        </div>
                                     </div>
-                                    <div className="tile__container">
-                                        <p className="tile__title">Instagram</p>
-                                        <p className="tile__subtitle">@johndoe</p>
-                                    </div>
-                                </div>
 
-                                <div className="tile level p-1">
-                                    <div className="tile-avatar">
-                                        <span className="icon">
-                                            <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'envelope']} />
-                                        </span>
+                                    <div className="tile level p-1">
+                                        <div className="tile-avatar">
+                                            <span className="icon">
+                                                <FontAwesomeIcon
+                                                    className="fa-wrapper small"
+                                                    icon={['fas', 'envelope']}
+                                                />
+                                            </span>
+                                        </div>
+                                        <div className="tile__container">
+                                            <p className="tile__title">Email</p>
+                                            <p className="tile__subtitle">johndoe@github.com</p>
+                                        </div>
                                     </div>
-                                    <div className="tile__container">
-                                        <p className="tile__title">Email</p>
-                                        <p className="tile__subtitle">johndoe@github.com</p>
-                                    </div>
-                                </div>
 
-                                <div className="tile level p-1">
-                                    <div className="tile-avatar">
-                                        <span className="icon">
-                                            <FontAwesomeIcon
-                                                className="fa-wrapper small"
-                                                icon={['fas', 'map-marker']}
-                                            />
-                                        </span>
-                                    </div>
-                                    <div className="tile__container">
-                                        <p className="tile__title">Location</p>
-                                        <p className="tile__subtitle">Toronto, Ontario</p>
+                                    <div className="tile level p-1">
+                                        <div className="tile-avatar">
+                                            <span className="icon">
+                                                <FontAwesomeIcon
+                                                    className="fa-wrapper small"
+                                                    icon={['fas', 'map-marker']}
+                                                />
+                                            </span>
+                                        </div>
+                                        <div className="tile__container">
+                                            <p className="tile__title">Location</p>
+                                            <p className="tile__subtitle">Toronto, Ontario</p>
+                                        </div>
                                     </div>
                                 </div>
+                                <div className="frame__footer"></div>
                             </div>
-                            <div className="frame__footer"></div>
-                        </div>
-                        <CodeBlock
-                            code={`<div class="frame" style="height: 30rem;">
+                            <CodeBlock
+                                code={`<div class="frame" style="height: 30rem;">
     <div class="frame__header">
         <div class="avatar"><img src="https://i.imgur.com/sbKJVxr.png"/></div>
         <p class="u-text-center frame__title">John Doe</p>
@@ -409,116 +354,232 @@ export const DocsPage: React.FC<any> = (props) => {
     </div>
     <div class="frame__footer"></div>
 </div>`}
-                            language="htmlbars"
-                        />
-                    </div>
-                </section>
+                                language="htmlbars"
+                            />
+                        </section>
 
-                <section id="control" className="padtop">
-                    <div className="content">
-                        <Headline title="Granular Control" link="#control" size="4" />
-                        <div className="divider"></div>
-                        <p>Cirrus now ships with many utility classes to get the exact look you want.</p>
+                        <section id="utilities" className="padtop">
+                            <Headline title="2. Faster Iteration with Utilities" link="#utilities" size="5" />
+                            <div className="divider"></div>
+                            <p>
+                                Starting with a full suite of prebuilt components doesn't mean sacrificing control over
+                                your design. Cirrus comes with a variety of utility classes to make your idea a reality.
+                            </p>
+                            <p>These utility classes help with:</p>
 
-                        <p>
-                            Let's say we want to move the overlayed text on top of our image in the center and move the
-                            image description to the right of the image only for larger screen sizes. The contents must
-                            be vertically aligned.
-                        </p>
+                            <ul>
+                                <li>
+                                    Designing components in a bottom up fashion{' '}
+                                    <b>writing little to no additional CSS</b>.
+                                </li>
+                                <li>
+                                    Sticking to a consistent design system <b>(which you can customize yourself!)</b>.
+                                </li>
+                                <li>
+                                    <b>Reducing overhead</b> of class naming, organization, and structuring within your
+                                    project.
+                                </li>
+                                <li>Tweaking existing components to your liking.</li>
+                            </ul>
 
-                        <p>
-                            All of these requirements can be done just with utility classes{' '}
-                            <b>without any additional CSS.</b>
-                        </p>
-
-                        <div className="space"></div>
-
-                        <p className="font-bold">Before</p>
-                        <div>
-                            <div>
-                                <div>
-                                    <p>Overlayed text.</p>
-                                    <img
-                                        src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80"
-                                        alt="cloud"
-                                    />
-                                </div>
+                            <div className="u-center p-8 bg-gray-100 u-shadow-sm">
+                                <ECommerceCard />
                             </div>
-                            <div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Purus faucibus ornare suspendisse sed
-                                    nisi lacus.
-                                </p>
-                            </div>
-                        </div>
-                        <CodeBlock
-                            code={`<div>
+                            <div className="space"></div>
+
+                            <CodeBlock
+                                code={`<div class="bg-white u-round-sm u-shadow-lg u-overflow-hidden">
+  <div class="u-flex">
+    <div class="p-3">
+      <div class="u-flex u-justify-space-between u-gap-2 u-items-center">
+        <div class="u-text-left">
+          <p class="m-0 lead font-bold text-black tracking-tight">SuperRepo Go Volt</p>
+          <div class="tag bg-green-200 text-green-600 text-xs font-bold uppercase">In-Stock</div>
+        </div>
+        <p class="lead mb-0 font-bold text-black">$90</p>
+      </div>
+      <div class="u-flex u-gap-1 mt-2">
+        <a href="#" class="size bg-gray-100 text-gray-800 text-xs u-round-sm font-bold u-flex u-items-center u-justify-center" style="height: 2rem; width: 2rem;">7</a>
+        <a href="#" class="size bg-gray-100 text-gray-800 text-xs u-round-sm font-bold u-flex u-items-center u-justify-center" style="height: 2rem; width: 2rem;">8</a>
+        <a href="#" class="size bg-gray-100 text-gray-800 text-xs u-round-sm font-bold u-flex u-items-center u-justify-center" style="height: 2rem; width: 2rem;">9</a>
+        <a href="#" class="size bg-gray-100 text-gray-800 text-xs u-round-sm font-bold u-flex u-items-center u-justify-center" style="height: 2rem; width: 2rem;">10</a>
+        <a href="#" class="size bg-black text-white text-xs u-round-sm font-bold u-flex u-items-center u-justify-center" style="height: 2rem; width: 2rem;">11</a>
+        <a href="#" class="size bg-gray-100 text-gray-800 text-xs u-round-sm font-bold u-flex u-items-center u-justify-center" style="height: 2rem; width: 2rem;">12</a>
+      </div>
+      <div class="divider"></div>
+      <div class="u-flex u-gap-1">
+        <button class="btn-black btn--sm mb-0 u-shadow-sm">Buy Now</button>
+        <button class="bg-white btn--sm mb-0">Add to Cart</button>
+        <button class="bg-white btn--sm mb-0">♥</button>
+      </div>
+      <p class="mb-0 mt-2 text-sm tracking-tight text-gray-600">Free shipping on orders over $25.</p>
+    </div>
     <div>
-        <div>
-            <p>Overlayed text.</p>
-            <img src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="cloud" />
-        </div>
+      <img class="h-100 img-cover" src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=200&amp;q=80">
     </div>
-    <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus faucibus ornare suspendisse sed nisi lacus.</p></div>
-</div>
-`}
-                            language="htmlbars"
-                        />
+  </div>
+</div>`}
+                                language="htmlbars"
+                            />
+                        </section>
 
-                        <div className="space"></div>
+                        <section id="lightweight" className="padtop">
+                            <Headline title="3. Lightweight" link="#lightweight" size="5" />
+                            <div className="divider"></div>
+                            <p>
+                                Cirrus comes with lots of functionality in a small package which only consists of a
+                                single minified CSS file. <b>No extra JS libraries required</b>. Coming in at{' '}
+                                <b>20.6 KB with Brotli compression</b>, page loads are fast and data usage is minimal.
+                            </p>
 
-                        <p className="font-bold">After</p>
-                        <div className="row u-items-center">
-                            <div className="col-lg-6">
-                                <div className="u-relative u-center">
-                                    <p className="u-absolute text-white font-bold u-center-alt lead">Overlayed text.</p>
-                                    <img
-                                        src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80"
-                                        alt="cloud"
-                                        className="u-round-xs"
-                                    />
-                                </div>
+                            {/* TODO MOVE TO NEW FILE */}
+                            <div
+                                className="mx-auto"
+                                style={{
+                                    height: '400px',
+                                    maxWidth: '600px',
+                                }}
+                            >
+                                <ResponsiveBar
+                                    data={data}
+                                    keys={['memory']}
+                                    indexBy="id"
+                                    margin={{ top: 50, right: 10, bottom: 50, left: 60 }}
+                                    padding={0.3}
+                                    groupMode="grouped"
+                                    layout="vertical"
+                                    colors={(data) => data.data.color}
+                                    borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+                                    axisTop={null}
+                                    axisRight={null}
+                                    axisBottom={{
+                                        tickSize: 5,
+                                        tickPadding: 5,
+                                        tickRotation: 0,
+                                        legend: 'Framework',
+                                        legendPosition: 'middle',
+                                        legendOffset: 32,
+                                    }}
+                                    axisLeft={{
+                                        tickSize: 5,
+                                        tickPadding: 5,
+                                        tickRotation: 0,
+                                        legend: 'KB',
+                                        legendPosition: 'middle',
+                                        legendOffset: -50,
+                                    }}
+                                    labelSkipWidth={12}
+                                    labelSkipHeight={12}
+                                    labelTextColor="#fff"
+                                    animate={true}
+                                    motionStiffness={90}
+                                    motionDamping={15}
+                                />
                             </div>
-                            <div className="col-lg-6">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                        </div>
-                        <CodeBlock
-                            code={`<div class="row u-items-center">
-    <div class="col-lg-6">
-        <div class="u-relative u-center">
-            <p class="u-absolute text-white font-bold u-center-alt lead">Overlayed text.</p>
-            <img src="https://images.unsplash.com/photo-1569428034239-f9565e32e224?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=300&amp;q=80" alt="cloud" class="u-round-xs" />
-        </div>
-    </div>
-    <div class="col-lg-6"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
-</div>
-`}
-                            language="htmlbars"
-                        />
+                            <table className="table bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Framework</th>
+                                        <th>Minified</th>
+                                        <th>Gzip</th>
+                                        <th>Brotli</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Semantic UI</td>
+                                        <td>628.5kb</td>
+                                        <td>102.3kb</td>
+                                        <td className="bg-green-100">79.6kb</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tailwind</td>
+                                        <td>2927.5kb</td>
+                                        <td>297.4kb</td>
+                                        <td className="bg-green-200">74.3kb</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Foundation</td>
+                                        <td>182.0kb</td>
+                                        <td>38.5kb</td>
+                                        <td className="bg-green-300">32.1kb</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bulma</td>
+                                        <td>206.6kb</td>
+                                        <td>27.5kb</td>
+                                        <td className="bg-green-400">26.9kb</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bootstrap</td>
+                                        <td>155.6kb</td>
+                                        <td>23kb</td>
+                                        <td className="bg-green-500">22.4kb</td>
+                                    </tr>
+                                    <tr className="">
+                                        <td>
+                                            <b>Cirrus</b>
+                                        </td>
+                                        <td>
+                                            <b>198kb</b>
+                                        </td>
+                                        <td>
+                                            <b>30.4kb</b>
+                                        </td>
+                                        <td className="bg-green-600 text-white">
+                                            <b>20.6kb</b>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
 
-                        <div className="space"></div>
-                    </div>
-                </section>
+                        <section id="sass" className="padtop">
+                            <Headline title="4. Sass First [TODO]" link="#sass" size="5" />
+                            <div className="divider"></div>
+                            <p>
+                                As of <b>0.6.0</b>, Cirrus was re-engineered from the ground up to use Sass. This means
+                                you can just import the modules that you need in your Sass files.
+                            </p>
 
-                <section className="padtop" id="customize">
-                    <div className="content">
-                        <Headline title="Customize Your Build" link="#customize" size="4" />
-                        <div className="divider"></div>
+                            <CodeBlock
+                                code={`.my-button {
+    @extend .btn;
+}`}
+                                language="scss"
+                            />
 
-                        <p>
-                            Starting with 0.6.0, Cirrus can be more easily customized by editing just a few
-                            configuration files within the framework. <code>_size.scss</code> stores all configuration
-                            for font sizes, spacing, and breakpoints. <code>theme.scss</code> is the central place to
-                            modify any color that is used within the framework.
-                        </p>
+                            <p className="mt-3">
+                                Each file contains classes that only correspond to a component or functionality. For
+                                instance, all the tag related classes can be found inside <code>tag.scss</code>. This
+                                modular design makes it easier for anyone who wants to make modifications to the
+                                framework and rebuild their own version of it.
+                            </p>
 
-                        <CodeBlock
-                            code={`/* Spacing */
+                            <p>
+                                In addition to being able to import the features you want, Cirrus comes in two flavors,{' '}
+                                <b>core</b> and <b>extended</b>, that contain the main features and the full framework
+                                respectively. More about that{' '}
+                                <Link href="/getting-started/developing">
+                                    <a className="u u-LR">here</a>
+                                </Link>
+                                .
+                            </p>
+                        </section>
+
+                        <section className="padtop" id="customize">
+                            <Headline title="5. Customize it for You [TODO]" link="#customize" size="5" />
+                            <div className="divider"></div>
+
+                            <p>
+                                Starting with 0.6.0, Cirrus can be more easily customized by editing just a few
+                                configuration files within the framework. <code>_size.scss</code> stores all
+                                configuration for font sizes, spacing, and breakpoints. <code>theme.scss</code> is the
+                                central place to modify any color that is used within the framework.
+                            </p>
+
+                            <CodeBlock
+                                code={`/* Spacing */
 $spacing-system: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32;
 $space-size: 0.5rem;
 
@@ -539,58 +600,16 @@ $grid-width: 1 / $grid-columns;
 $tab-sizes: ('xsmall': 0.6rem, 'small': 0.75rem, 'large': 1.25rem, 'xlarge': 1.5rem);
 
 /* ... */`}
-                            language="scss"
-                        />
-                        <p>
-                            Find out how in the{' '}
-                            <Link href="/getting-started/developing">
-                                <a className="u u-LR">developing</a>
-                            </Link>{' '}
-                            section.
-                        </p>
-                    </div>
-                </section>
-
-                <section className="padtop u-text-center">
-                    <div className="content">
-                        <h1>Ready to give it a try?</h1>
-                        <div className="space"></div>
-
-                        <div className="row u-items-center">
-                            <div className="col-lg-4">
-                                <p className="lead">Learn how to setup Cirrus.</p>
-                                <Link href="/getting-started/setup">
-                                    <button className="btn-info">
-                                        Setup
-                                        <span className="icon">
-                                            <FontAwesomeIcon icon={['fas', 'chevron-right']} />
-                                        </span>
-                                    </button>
-                                </Link>
-                            </div>
-                            <div className="col-lg-4">
-                                <p className="lead">Learn how to customize Cirrus.</p>
+                                language="scss"
+                            />
+                            <p>
+                                Find out how in the{' '}
                                 <Link href="/getting-started/developing">
-                                    <button className="btn-link">
-                                        Developing
-                                        <span className="icon">
-                                            <FontAwesomeIcon icon={['fas', 'chevron-right']} />
-                                        </span>
-                                    </button>
-                                </Link>
-                            </div>
-                            <div className="col-lg-4">
-                                <p className="lead">Try out Cirrus without installing.</p>
-                                <Link href="/playground">
-                                    <button className="btn-primary">
-                                        Playground
-                                        <span className="icon">
-                                            <FontAwesomeIcon icon={['fas', 'chevron-right']} />
-                                        </span>
-                                    </button>
-                                </Link>
-                            </div>
-                        </div>
+                                    <a className="u u-LR">developing</a>
+                                </Link>{' '}
+                                section.
+                            </p>
+                        </section>
                     </div>
                 </section>
 

@@ -765,7 +765,8 @@ import 'cirrus-ui';`}
                     </Link>
                     <div className="u-text-left my-4">
                         <CodeBlock
-                            code={`@use "internal/config" as * with (
+                            code={`/* main.scss */
+@use "internal/config" as * with (
   $config: (
     extend: (
       opacity: (
