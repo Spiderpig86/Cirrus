@@ -1,5 +1,5 @@
 // Build file that enables all features/viewports
-@use "cirrus-ext" as * with (
+@use "cirrus-ext" with (
     $config: (
         viewports: (
             CLEARFIX: true,
@@ -29,3 +29,5 @@
         ),
     ),
 );
+
+@forward "cirrus-ext";

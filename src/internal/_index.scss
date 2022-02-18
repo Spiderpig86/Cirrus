@@ -1,8 +1,8 @@
 // Main dependencies
-@forward 'internal/_theme.scss';
-@forward 'internal/functions';
-@forward 'internal/flags';
-@forward 'internal/selectors';
-@forward 'internal/size';
-@forward 'internal/mixins';
-@forward 'internal/config';
+@forward 'src/internal/_theme.scss';
+@forward 'src/internal/functions';
+@forward 'src/internal/flags';
+@forward 'src/internal/selectors';
+@forward 'src/internal/size';
+@forward 'src/internal/mixins';
+@forward 'src/internal/config';
