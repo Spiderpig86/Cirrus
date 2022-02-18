@@ -191,7 +191,7 @@ export const DocsPage: React.FC<any> = (props) => {
                         <div className="space"></div>
 
                         <section id="prototype" className="">
-                            <Headline title="1. Built for Rapid Iteration" link="#prototype" size="5" />
+                            <Headline title="1. Built for Rapid Prototyping" link="#prototype" size="5" />
                             <div className="divider"></div>
                             <p>
                                 Cirrus was built to remove all the overhead associated with designing any app. The
@@ -535,73 +535,110 @@ export const DocsPage: React.FC<any> = (props) => {
                         </section>
 
                         <section id="sass" className="padtop">
-                            <Headline title="4. Sass First [TODO]" link="#sass" size="5" />
+                            <Headline title="4. Sass First" link="#sass" size="5" />
                             <div className="divider"></div>
-                            <p>
-                                As of <b>0.6.0</b>, Cirrus was re-engineered from the ground up to use Sass. This means
-                                you can just import the modules that you need in your Sass files.
-                            </p>
 
+                            <p>
+                                Cirrus is written in Sass, meaning you can leverage the power of Sass right inside your
+                                project out of the box. Importing Cirrus into your project is quite simple.
+                            </p>
+                            <p>
+                                Once imported, you can use Cirrus's mixins, variables, and functions right in your
+                                project.
+                            </p>
                             <CodeBlock
-                                code={`.my-button {
-    @extend .btn;
+                                code={`// main.scss
+@use "cirrus-ui/cirrus-core" as *; // Core build OR
+@use "cirrus-ui/cirrus-ext" as *; // Extended build
+
+@screen-above($md) {
+    .my-class {
+        background-color: rgba(#{hex-to-rgb(fill('blue', '600'))}, .25);
+    }
 }`}
                                 language="scss"
                             />
-
-                            <p className="mt-3">
-                                Each file contains classes that only correspond to a component or functionality. For
-                                instance, all the tag related classes can be found inside <code>tag.scss</code>. This
-                                modular design makes it easier for anyone who wants to make modifications to the
-                                framework and rebuild their own version of it.
-                            </p>
-
-                            <p>
-                                In addition to being able to import the features you want, Cirrus comes in two flavors,{' '}
-                                <b>core</b> and <b>extended</b>, that contain the main features and the full framework
-                                respectively. More about that{' '}
-                                <Link href="/getting-started/developing">
-                                    <a className="u u-LR">here</a>
-                                </Link>
-                                .
-                            </p>
                         </section>
 
                         <section className="padtop" id="customize">
-                            <Headline title="5. Customize it for You [TODO]" link="#customize" size="5" />
+                            <Headline title="5. Customize it for You" link="#customize" size="5" />
                             <div className="divider"></div>
 
                             <p>
-                                Starting with 0.6.0, Cirrus can be more easily customized by editing just a few
-                                configuration files within the framework. <code>_size.scss</code> stores all
-                                configuration for font sizes, spacing, and breakpoints. <code>theme.scss</code> is the
-                                central place to modify any color that is used within the framework.
+                                Cirrus is a framework that is designed to be customized. At its core is a powerful
+                                config object that dictates which classes should be generated. This mechanism makes it
+                                easy to...
                             </p>
 
+                            <p>...add additional styles.</p>
                             <CodeBlock
-                                code={`/* Spacing */
-$spacing-system: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32;
-$space-size: 0.5rem;
-
-/* Fonts */
-$font-size-xs: .7rem;
-$font-size-s: .85rem;
-$font-size-m: 1rem;
-$font-size-l: 1.35rem;
-$font-size-xl: 1.75rem;
-
-/* Grid Count (Columns + Grid) */
-$grid-columns: 12;
-
-/* Grid Percents */
-$grid-width: 1 / $grid-columns;
-
-/* Tab Sizes */
-$tab-sizes: ('xsmall': 0.6rem, 'small': 0.75rem, 'large': 1.25rem, 'xlarge': 1.5rem);
-
-/* ... */`}
+                                code={`// main.scss
+@use "cirrus-ui/cirrus-ext" as * with (
+    $config: (
+        extend: (
+            opacity: (
+                25: .25,
+                75: .75,
+            ),
+            round: (
+                50: 50%,
+            ),
+        ),
+    )
+)`}
                                 language="scss"
                             />
+
+                            <p>...turn off features.</p>
+                            <CodeBlock
+                                code={`// main.scss
+@use "cirrus-ui/cirrus-ext" as * with (
+    $config: (
+        excludes: (
+            AVATAR,
+            MODAL,
+            PAGINATION,
+
+            CLEARFIX,
+            OPACITY,
+        )
+    )
+)`}
+                                language="scss"
+                            />
+
+                            <p>...toggle viewport variants for classes.</p>
+                            <CodeBlock
+                                code={`// main.scss
+@use "cirrus-ui/cirrus-ext" as * with (
+    $config: (
+        viewports: (
+            FLOAT: false,
+            GAP: true,
+        )
+    )
+)`}
+                                language="scss"
+                            />
+
+                            <p>...overwrite defaults.</p>
+                            <CodeBlock
+                                code={`// main.scss
+// Note that I am not using the extend keyword
+@use "cirrus-ui/cirrus-ext" as * with (
+    $config: (
+        letter-spacing: (
+            tightest: -.3rem,
+            tighter: -.2rem,
+            tight: -.1rem,
+        )
+    )
+)`}
+                                language="scss"
+                            />
+
+                            <p>And a lot more.</p>
+
                             <p>
                                 Find out how in the{' '}
                                 <Link href="/getting-started/developing">

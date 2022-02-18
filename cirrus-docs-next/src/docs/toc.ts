@@ -7,13 +7,8 @@ export const toc: TableOfContentsEntry[] = [
         children: null,
     },
     {
-        name: "What's New?",
-        anchor: '#new',
-        children: null,
-    },
-    {
-        name: 'Preview',
-        anchor: '#preview',
+        name: 'What is Cirrus?',
+        anchor: '#what',
         children: null,
     },
     {
@@ -21,27 +16,27 @@ export const toc: TableOfContentsEntry[] = [
         anchor: '#why',
         children: [
             {
+                name: 'Built for Rapid Prototyping',
+                anchor: '#prototype',
+                children: null,
+            },
+            {
+                name: 'Faster Iteration with Utilities',
+                anchor: '#utilities',
+                children: null,
+            },
+            {
                 name: 'Lightweight',
                 anchor: '#lightweight',
                 children: null,
             },
             {
-                name: 'Modular',
-                anchor: '#modular',
+                name: 'Sass First',
+                anchor: '#sass',
                 children: null,
             },
             {
-                name: 'Rapid Prototyping',
-                anchor: '#prototype',
-                children: null,
-            },
-            {
-                name: 'Granular Control',
-                anchor: '#control',
-                children: null,
-            },
-            {
-                name: 'Customize Your Build',
+                name: 'Customize it for You',
                 anchor: '#customize',
                 children: null,
             },
