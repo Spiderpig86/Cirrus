@@ -1,14 +1,13 @@
 // Example main file used to configure Cirrus.
-// You can either use this for your Sass project or configure it to generate the classes you want instead (view step 3).
+// You can either use this for your Sass project or configure it to generate the classes you want instead (view step 2).
 
-// 1. (Optional) Override a specific internal file you need. 
+// 1. Import Cirrus with config.
 // For example, here I want to exclude all absolute positioning classes from being generated.
 // Import any dependencies you need and then initialize the config with the overrided file
-@use "internal/flags";
-@use "internal/config" as * with (
+@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         excludes: (
-            flags.$ABSOLUTES,
+            ABSOLUTES,
         ),
         opacity: null, // Disable default opacity classes
         extend: (
@@ -22,11 +21,7 @@
     ),
 );
 
-// 2. Import the framework build you want.
-// "ext" is usually the default that comes with every style, but you can also specify "core" here instead.
-@use "ext";
-
-// 3. (Optional) Add a new build to the Gulp file.
+// 2. (Optional) Add a new build to the Gulp file.
 // If you want to generate class files using Gulp, you can specify a new task like this with `main.scss` as a source.
 
 // gulp.task('test', () => {

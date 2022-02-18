@@ -13,9 +13,9 @@ const environment = {
     isCi: process.env.CI ?? false, // Github actions default variable is always set to true
 };
 
-generateGulpBuild(`ext`, `src/ext.scss`, `cirrus`);
-generateGulpBuild(`core`, `src/core.scss`, `cirrus-core`);
-generateGulpBuild(`all`, `src/all.scss`, `cirrus-all`);
+generateGulpBuild(`ext`, `src/cirrus-ext.scss`, `cirrus-ext`);
+generateGulpBuild(`core`, `src/cirrus-core.scss`, `cirrus-core`);
+generateGulpBuild(`all`, `src/cirrus-all.scss`, `cirrus-all`);
 
 // source file name
 // file name
