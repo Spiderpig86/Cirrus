@@ -835,13 +835,13 @@ $z-indexes: functions.get-with-extend($all-config, z-index);
 }
 @function should-generate-classes-internal($to-include, $to-exclude, $flag) {
     $generate-classes: true;
-    @if list.index($to-exclude, flags.$ALL) {
+    @if list.index($to-exclude, flags.$ALL) or list.index($to-exclude, 'ALL') {
         $generate-classes: false;
     }
     @if list.index($to-exclude, $flag) {
         $generate-classes: false;
     }
-    @if list.index($to-include, $flag) {
+    @if list.index($to-include, $flag) or list.index($to-include, flags.$ALL) or list.index($to-include, 'ALL') {
         $generate-classes: true;
     }
 
