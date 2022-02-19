@@ -64,6 +64,7 @@ $default-config: (
             colors:
                 (
                     semantic: (),
+                    control-themes: (),
                     extended: (
                         // Note: The quotes matter!
                         'pink': (),
@@ -78,17 +79,16 @@ $default-config: (
                         'gray': (),
                     ),
                 ),
-                fonts:
-                (
-                    sizes: (
-                        heading: (),
-                        headline: (),
-                        text: (),
-                    ),
-                    letter-spacing: (),
-                    transforms: (),
-                    weights: (),
+            fonts: (
+                sizes: (
+                    heading: (),
+                    headline: (),
+                    text: (),
                 ),
+                letter-spacing: (),
+                transforms: (),
+                weights: (),
+            ),
             form-label-sizes: (),
             form-sizes: (
                 input-sizes: (),
@@ -181,6 +181,15 @@ $default-config: (
             'info': theme.$cirrus-info,
             'black': theme.$cirrus-black,
             'white': theme.$cirrus-white,
+        ),
+        control-themes: (
+            'primary': theme.$cirrus-primary,
+            'dark': theme.$cirrus-dark,
+            'link': theme.$cirrus-link,
+            'info': theme.$cirrus-info,
+            'success': theme.$cirrus-success,
+            'warning': theme.$cirrus-warning,
+            'danger': theme.$cirrus-danger,
         ),
         extended: (
             'pink': (
@@ -746,16 +755,8 @@ $includes: map.get($all-config, includes);
 
 // COLORS
 $semantic-colors: functions.get-with-extend($all-config, colors, semantic);
+$control-themes: functions.get-with-extend($all-config, colors, control-themes);
 $v2Colors: functions.get-with-extend($all-config, colors, extended);
-$control-themes: (
-    'primary': map.get($semantic-colors, 'primary'),
-    'dark': map.get($semantic-colors, 'dark'),
-    'link': map.get($semantic-colors, 'link'),
-    'info': map.get($semantic-colors, 'info'),
-    'success': map.get($semantic-colors, 'success'),
-    'warning': map.get($semantic-colors, 'warning'),
-    'danger': map.get($semantic-colors, 'danger'),
-);
 
 // COMPONENTS
 $avatar-sizes: functions.get-with-extend($all-config, avatar-sizes);
@@ -841,6 +842,8 @@ $z-indexes: functions.get-with-extend($all-config, z-index);
     @if list.index($to-exclude, $flag) {
         $generate-classes: false;
     }
+
+    // TODO: Unit test
     @if list.index($to-include, $flag) or list.index($to-include, flags.$ALL) or list.index($to-include, 'ALL') {
         $generate-classes: true;
     }
