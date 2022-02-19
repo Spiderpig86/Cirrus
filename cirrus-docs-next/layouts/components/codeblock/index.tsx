@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { pojoaque, gruvboxDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import SyntaxHighlighter, { Prism } from 'react-syntax-highlighter';
+import { duotoneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 export interface CodeBlockProps {
     code: string;
@@ -17,10 +17,16 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
 
     return (
         <div className={`codeblock-wrapper u-relative mb-2`}>
-            <SyntaxHighlighter className={`codeblock pl-2 pr-3 py-1 u-shadow-lg h-100 ${props.classes ?? ''} ${(props.breakAll ? `break-all` : ``)}`} language={props.language} style={props.style ?? pojoaque}>
+            <Prism
+                className={`codeblock pl-2 pr-3 py-1 u-shadow-lg h-100 ${props.classes ?? ''} ${
+                    props.breakAll ? `break-all` : ``
+                }`}
+                language={props.language === 'htmlbars' ? 'html' : props.language}
+                style={props.style ?? duotoneDark}
+            >
                 {props.code}
-            </SyntaxHighlighter>
-            
+            </Prism>
+
             <CopyToClipboard
                 text={props.code}
                 onCopy={() => {

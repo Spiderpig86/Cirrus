@@ -436,8 +436,8 @@ $grid-width: 1 / $grid-columns;
                         link: './support',
                     }}
                     nextLink={{
-                        name: 'Examples',
-                        link: './examples',
+                        name: 'Configuration',
+                        link: './configuration',
                     }}
                 />
             </div>

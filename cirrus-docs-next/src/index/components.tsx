@@ -253,9 +253,9 @@ export const FancyBuyCard: React.FC<any> = (props) => {
                     />
                 </div>
             </div>
-            <button className="btn-link btn--sm w-100 mb-0 bg-indigo-500 text-indigo-100 font-bold capitalize">
+            <button className="btn-info btn--sm w-100 mb-0 bg-blue-500 text-blue-100 font-bold capitalize">
                 Buy this course
-                <span className="text-indigo-200 font-normal">$4.99</span>
+                <span className="text-blue-200 font-normal">$4.99</span>
             </button>
         </div>
     );

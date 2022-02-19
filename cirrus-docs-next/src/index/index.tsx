@@ -764,9 +764,11 @@ import 'cirrus-ui';`}
                         </a>
                     </Link>
                     <div className="u-text-left my-4">
-                        <CodeBlock
-                            code={`/* main.scss */
-@use "internal/config" as * with (
+                        <div className="row">
+                            <div className="col-6">
+                                <CodeBlock
+                                    code={`/* main.scss */
+@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
   $config: (
     extend: (
       opacity: (
@@ -776,11 +778,27 @@ import 'cirrus-ui';`}
       )
     )
   )
-);
-
-@use "ext";`}
-                            language={'scss'}
-                        />
+);`}
+                                    language={'scss'}
+                                />
+                            </div>
+                            <div className="col-6">
+                                <CodeBlock
+                                    code={`/* out.css */
+...
+.u-opacity-25 {
+    opacity: .25 !important;
+}
+.u-opacity-50 {
+    opacity: .5 !important;
+}
+.u-opacity-75 {
+    opacity: .75 !important;
+}`}
+                                    language={'css'}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
