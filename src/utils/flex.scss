@@ -52,7 +52,7 @@ $generate-utility: should-generate-classes($FLEX);
     );
 }
 
-
+// TODO: Move to gap.scss
 $generate-utility: should-generate-classes($GAP);
 
 @if $generate-utility {

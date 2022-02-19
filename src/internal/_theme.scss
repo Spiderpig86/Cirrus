@@ -29,17 +29,6 @@ $cirrus-danger-hover: #f1393c;
 $cirrus-fg: #374054;
 $cirrus-bg: $cirrus-white;
 
-$control-themes: (
-    'primary': $cirrus-primary,
-    'gray': $cirrus-gray,
-    'dark': $cirrus-dark,
-    'link': $cirrus-link,
-    'info': $cirrus-info,
-    'success': $cirrus-success,
-    'warning': $cirrus-warning,
-    'danger': $cirrus-danger,
-);
-
 $cirrus-select-bg: rgba(0, 161, 255, 0.2);
 $cirrus-input-border: rgb(61, 171, 240);
 
@@ -60,17 +49,3 @@ $focus-opacity: 0.55;
 
 $focus-size: 0 0 0.1rem 0.15rem;
 $focus-color: rgba(240, 61, 77, 0.13);
-
-$v1Palettes: (
-    'primary': $cirrus-primary,
-    'success': $cirrus-success,
-    'warning': $cirrus-warning,
-    'danger': $cirrus-danger,
-    'light': $cirrus-light,
-    'dark': $cirrus-dark,
-    'link': $cirrus-link,
-    'link-dark': $cirrus-link-dark,
-    'info': $cirrus-info,
-    'black': $cirrus-black,
-    'white': $cirrus-white,
-);

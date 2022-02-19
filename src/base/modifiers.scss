@@ -44,7 +44,7 @@
 /* GLOBAL THEME SELECTORS */
 /* v1 */
 
-@each $name, $color in $v1Palettes {
+@each $name, $color in $semantic-colors {
     @if $color != null {
         .bg-#{$name} {
             background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;

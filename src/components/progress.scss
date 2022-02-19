@@ -44,7 +44,7 @@ $generate-utility: should-generate-classes($PROGRESS);
         }
 
         // Themes
-        @each $class, $color in $progress-bar-themes {
+        @each $class, $color in $control-themes {
             &.progress--#{$class} {
                 --progress-color: #{$color};
             }
