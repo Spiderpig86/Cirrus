@@ -79,7 +79,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Managing Build Size',
-                url: '/getting-started/build-size'
+                url: '/getting-started/managing-build-size'
             },
             {
                 fontWeight: 'semibold',

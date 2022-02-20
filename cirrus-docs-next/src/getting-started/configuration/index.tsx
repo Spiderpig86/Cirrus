@@ -12,7 +12,6 @@ import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { ExternalLink, InternalLink } from '../../../layouts/components/link';
-import Link from 'next/link';
 
 export const ConfigurationPage: React.FC<any> = (props) => {
     return (

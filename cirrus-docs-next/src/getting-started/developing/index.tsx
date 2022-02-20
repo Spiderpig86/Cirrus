@@ -11,6 +11,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { ExternalLink } from '../../../layouts/components/link';
+import { BuildSizeTable } from '../../../layouts/components/build-size-table';
 
 export const DevelopingPage: React.FC<any> = (props) => {
     return (
@@ -37,43 +38,7 @@ export const DevelopingPage: React.FC<any> = (props) => {
                         <p>
                             The framework builds into two different flavors: <b>core</b> and <b>ext (or full)</b>.
                         </p>
-
-                        <TableWrapper>
-                            <table className="table bordered">
-                                <tbody>
-                                    <tr>
-                                        <th>Flavor</th>
-                                        <th>Normal</th>
-                                        <th>Gzip</th>
-                                        <th>Brotli</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Core</td>
-                                        <td>
-                                            <img src="https://img.badgesize.io/Spiderpig86/Cirrus/master/dist/cirrus-core.min.css.svg?style=flat-square" />
-                                        </td>
-                                        <td>
-                                            <img src="https://img.badgesize.io/Spiderpig86/Cirrus/master/dist/cirrus-core.min.css.svg?compression=gzip&style=flat-square" />
-                                        </td>
-                                        <td>
-                                            <img src="https://img.badgesize.io/Spiderpig86/Cirrus/master/dist/cirrus-core.min.css.svg?compression=brotli&style=flat-square" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Ext (Full)</td>
-                                        <td>
-                                            <img src="https://img.badgesize.io/Spiderpig86/Cirrus/master/dist/cirrus.min.css.svg?style=flat-square" />
-                                        </td>
-                                        <td>
-                                            <img src="https://img.badgesize.io/Spiderpig86/Cirrus/master/dist/cirrus.min.css.svg?compression=gzip&style=flat-square" />
-                                        </td>
-                                        <td>
-                                            <img src="https://img.badgesize.io/Spiderpig86/Cirrus/master/dist/cirrus.min.css.svg?compression=brotli&style=flat-square" />
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </TableWrapper>
+                        <BuildSizeTable />
                         <div className="space"></div>
 
                         <h6 className="m-0">Core</h6>
