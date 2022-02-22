@@ -30,11 +30,6 @@ export const toc: TableOfContentsEntry[] = [
                 anchor: '#limiting-color-palette',
                 children: null,
             },
-            {
-                name: 'Removing Unused Breakpoints',
-                anchor: '#removing-unused-breakpoints',
-                children: null,
-            },
         ],
     },
 ];

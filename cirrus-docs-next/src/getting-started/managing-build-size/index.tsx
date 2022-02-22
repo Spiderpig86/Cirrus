@@ -127,6 +127,67 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Disabling Features" size="4" link="#disabling-features" />
                         <div className="divider"></div>
+
+                        <p>
+                            This is perhaps one of the quickest ways to reduce your Cirrus build size. Cirrus comes with
+                            different configurations with different features enabled, but you can optimize even further
+                            by selecting the ones you know you will use. All of the available configuration can be
+                            easily found in the <code>_config.scss</code> file.
+                        </p>
+                        <p>
+                            In your project, import the Cirrus library and specify the enabled and disabled features
+                            similar to what's shown below:
+                        </p>
+
+                        <CodeBlock
+                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+    $config: (
+        excludes: (
+            'ABSOLUTES',
+            'OVERFLOW',
+            'POSITION',
+        ),
+    ),
+);`}
+                            language="scss"
+                        />
+
+                        <p>
+                            Currently, every type of class found inside the <code>components</code> and{' '}
+                            <code>utils</code> folders in the{' '}
+                            <ExternalLink url="https://github.com/Spiderpig86/Cirrus/tree/master/src">
+                                repository
+                            </ExternalLink>{' '}
+                            can be used inside the <code>includes</code> and <code>excludes</code> lists. The only
+                            exception is the letter spacing util classes found inside <code>base/fonts.scss</code> which
+                            can also be used in these lists.
+                        </p>
+                        <p>
+                            Below is how reducing the number of enabled features will affect build size (with all
+                            viewports enabled).
+                        </p>
+                        <table className="table bordered">
+                            <tr>
+                                <th>Disabled Features</th>
+                                <th>Original Size</th>
+                                <th>Minified Size</th>
+                            </tr>
+                            <tr>
+                                <td>Components Only</td>
+                                <td>253.31kB</td>
+                                <td>136.58kB</td>
+                            </tr>
+                            <tr>
+                                <td>Utilities Only</td>
+                                <td>294.58kB</td>
+                                <td>186.07kB</td>
+                            </tr>
+                            <tr>
+                                <td>Components and Utilities</td>
+                                <td>184.00kB</td>
+                                <td>101.65kB</td>
+                            </tr>
+                        </table>
                     </div>
                 </section>
 
@@ -134,6 +195,54 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Disabling Viewport Variants" size="4" link="#disabling-viewport-variants" />
                         <div className="divider"></div>
+
+                        <p>
+                            Some classes support viewport variants where it behaves differently depending on the current
+                            screen size. This
+                        </p>
+                        <p>
+                            In your project, import the Cirrus library and specify the enabled and disabled viewports
+                            similar to what's shown below:
+                        </p>
+
+                        <CodeBlock
+                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+    $config: (
+        viewports: (
+            CLEARFIX: false,
+            DISPLAY: false,
+            FLEX: false,
+        )
+    ),
+);`}
+                            language="scss"
+                        />
+
+                        <p>
+                            All supported viewport flags can be found in the <code>cirrus-all</code> build configuration{' '}
+                            <ExternalLink url="https://github.com/Spiderpig86/Cirrus/blob/master/src/cirrus-all.scss#L4">
+                                here
+                            </ExternalLink>
+                            .
+                        </p>
+                        <p>Below is how reducing the number of enabled viewport variants will affect build size.</p>
+                        <table className="table bordered">
+                            <tr>
+                                <th>Viewport Configuration</th>
+                                <th>Original Size</th>
+                                <th>Minified Size</th>
+                            </tr>
+                            <tr>
+                                <td>None Disabled</td>
+                                <td>363.75kB</td>
+                                <td>220.79kB</td>
+                            </tr>
+                            <tr>
+                                <td>All Disabled</td>
+                                <td>189.86kB</td>
+                                <td>139.09kB</td>
+                            </tr>
+                        </table>
                     </div>
                 </section>
 
@@ -141,13 +250,60 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Limiting Color Palette" size="4" link="#limiting-color-palette" />
                         <div className="divider"></div>
-                    </div>
-                </section>
 
-                <section className="padtop" id="removing-unused-breakpoints">
-                    <div className="content">
-                        <Headline title="Removing Unused Breakpoints" size="4" link="#removing-unused-breakpoints" />
-                        <div className="divider"></div>
+                        <p>
+                            Some classes support viewport variants where it behaves differently depending on the current
+                            screen size. This
+                        </p>
+                        <p>
+                            In your project, import the Cirrus library and specify the enabled and disabled viewports
+                            similar to what's shown below:
+                        </p>
+
+                        <CodeBlock
+                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+    $config: (
+        colors: (
+            extended: (
+                'teal': null,
+                'indigo': null,
+            )
+        )
+    ),
+);`}
+                            language="scss"
+                        />
+
+                        <p>
+                            All supported viewport flags can be found in the <code>cirrus-all</code> build configuration{' '}
+                            <ExternalLink url="https://github.com/Spiderpig86/Cirrus/blob/master/src/cirrus-all.scss#L4">
+                                here
+                            </ExternalLink>
+                            .
+                        </p>
+                        <p>Below is how reducing the number of colors will affect build size (with all viewports and features enabled). Note that there are 12 semantic colors and 91 extended colors.</p>
+                        <table className="table bordered">
+                            <tr>
+                                <th>Number of Colors Classes</th>
+                                <th>Original Size</th>
+                                <th>Minified Size</th>
+                            </tr>
+                            <tr>
+                                <td>112 <i>(Default)</i></td>
+                                <td>363.75kB</td>
+                                <td>220.79kB</td>
+                            </tr>
+                            <tr>
+                                <td>71</td>
+                                <td>352.93kB</td>
+                                <td>211.50kB</td>
+                            </tr>
+                            <tr>
+                                <td>31</td>
+                                <td>344.16kB</td>
+                                <td>204.98kB</td>
+                            </tr>
+                        </table>
                     </div>
                 </section>
 
