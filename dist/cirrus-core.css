@@ -38,8 +38,6 @@
 */
 /* Breakpoints */
 /* Fonts */
-/* Flex Columns */
-/* Grid Percents */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
@@ -4458,13 +4456,14 @@ video.video-fullscreen {
 }
 
 /* A collection of modifiers that extend control styling */
+.btn, button, [type=submit], [type=reset], [type=button] {
+  /* btn--circle: contents must be placed inside child element */
+}
 .btn.btn--pilled, button.btn--pilled, [type=submit].btn--pilled, [type=reset].btn--pilled, [type=button].btn--pilled {
   border-radius: 6.25rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
-
-/* btn--circle: contents must be placed inside child element */
 .btn.btn--circle, button.btn--circle, [type=submit].btn--circle, [type=reset].btn--circle, [type=button].btn--circle {
   border-radius: 100%;
   min-width: 60px;

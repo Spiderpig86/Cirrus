@@ -8,6 +8,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito+Sans:400,700");
 @import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+/* v1 Color scheme for Cirrus */
 /*
   Functions
   TODO Refactor to different categories
@@ -33,14 +34,11 @@
     );
 
 */
-/* v1 Color scheme for Cirrus */
 /*
     Group selectors that share common styling.
 */
 /* Breakpoints */
 /* Fonts */
-/* Flex Columns */
-/* Grid Percents */
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
@@ -77,7 +75,6 @@
 /*
     Bring to front on focus.
 */
-/* v2 Colors */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
 */
@@ -4460,13 +4457,14 @@ video.video-fullscreen {
 }
 
 /* A collection of modifiers that extend control styling */
+.btn, button, [type=submit], [type=reset], [type=button] {
+  /* btn--circle: contents must be placed inside child element */
+}
 .btn.btn--pilled, button.btn--pilled, [type=submit].btn--pilled, [type=reset].btn--pilled, [type=button].btn--pilled {
   border-radius: 6.25rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
-
-/* btn--circle: contents must be placed inside child element */
 .btn.btn--circle, button.btn--circle, [type=submit].btn--circle, [type=reset].btn--circle, [type=button].btn--circle {
   border-radius: 100%;
   min-width: 60px;
@@ -12042,9 +12040,6 @@ ul .divider::after {
 .progress.progress--primary {
   --progress-color: #f03d4d;
 }
-.progress.progress--gray {
-  --progress-color: #d5d7dc;
-}
 .progress.progress--dark {
   --progress-color: #363636;
 }
@@ -14544,16 +14539,6 @@ ul .divider::after {
   border-color: inherit;
   box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
 }
-.form-ext-control .form-ext-input.form-ext-input--gray:checked ~ .form-ext-label {
-  color: #d5d7dc;
-}
-.form-ext-control .form-ext-input.form-ext-input--gray:checked ~ .form-ext-label:before {
-  background-color: #d5d7dc;
-}
-.form-ext-control .form-ext-input.form-ext-input--gray:focus ~ .form-ext-label:before {
-  border-color: inherit;
-  box-shadow: 0 0 0 0.2rem rgba(213, 215, 220, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-}
 .form-ext-control .form-ext-input.form-ext-input--dark:checked ~ .form-ext-label {
   color: #363636;
 }
@@ -14647,9 +14632,6 @@ ul .divider::after {
   /**
   * Accessibility
   */
-  /**
-  * Accessibility
-  */
 }
 .form-ext-control .form-ext-toggle input[type=checkbox],
 .form-ext-control .form-ext-toggle input[type=radio] {
@@ -14712,24 +14694,6 @@ ul .divider::after {
 }
 .form-ext-control .form-ext-toggle.form-ext-toggle--primary .form-ext-input:focus + .form-ext-toggle__toggler {
   box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-}
-.form-ext-control .form-ext-toggle.form-ext-toggle--gray input[type=checkbox]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--gray input[type=checkbox]:checked + * .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--gray input[type=radio]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--gray input[type=radio]:checked + * .form-ext-toggle__toggler {
-  background-color: #d5d7dc;
-  border-color: #d5d7dc;
-}
-.form-ext-control .form-ext-toggle .form-ext-toggle--gray .form-ext-toggle__toggler {
-  border-color: #d5d7dc;
-  color: #d5d7dc;
-}
-.form-ext-control .form-ext-toggle .form-ext-toggle--gray .form-ext-toggle__toggler i::after {
-  background-color: #d5d7dc;
-}
-.form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
-.form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
-  box-shadow: 0 0 0 0.2rem rgba(213, 215, 220, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-}
-.form-ext-control .form-ext-toggle.form-ext-toggle--gray .form-ext-input:focus + .form-ext-toggle__toggler {
-  box-shadow: 0 0 0 0.2rem rgba(213, 215, 220, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
 }
 .form-ext-control .form-ext-toggle.form-ext-toggle--dark input[type=checkbox]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--dark input[type=checkbox]:checked + * .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--dark input[type=radio]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--dark input[type=radio]:checked + * .form-ext-toggle__toggler {
   background-color: #363636;
@@ -15525,17 +15489,6 @@ ul .divider::after {
 .tag.tag--primary.tag__close-btn:active {
   background-color: #e81225;
 }
-.tag.tag--gray {
-  background-color: #d5d7dc;
-  color: #fff;
-  cursor: pointer;
-}
-.tag.tag--gray.tag__close-btn:hover {
-  background-color: #c7cad0;
-}
-.tag.tag--gray.tag__close-btn:active {
-  background-color: #b9bdc5;
-}
 .tag.tag--dark {
   background-color: #363636;
   color: #fff;
@@ -15775,10 +15728,6 @@ a.tag:hover {
 .toast.toast--primary {
   background-color: #f03d4d;
   border-color: #f03d4d;
-}
-.toast.toast--gray {
-  background-color: #d5d7dc;
-  border-color: #d5d7dc;
 }
 .toast.toast--dark {
   background-color: #363636;

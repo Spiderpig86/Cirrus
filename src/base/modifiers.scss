@@ -7,10 +7,8 @@
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
-}
 
-/* btn--circle: contents must be placed inside child element */
-#{$button-selectors} {
+    /* btn--circle: contents must be placed inside child element */
     &.btn--circle {
         border-radius: 100%;
         min-width: 60px;

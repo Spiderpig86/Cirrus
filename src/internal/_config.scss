@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'sass:math';
 @use 'sass:list';
 @use '../../node_modules/sass-true/sass/config/throw';
 
@@ -102,6 +103,10 @@ $default-config: (
             space-sizes: (),
             tab-sizes: (),
             absolute: (),
+            absolute: (),
+                properties: ()
+            ),
+            grid: (
             grid: (
                 properties: (),
             ),
@@ -543,6 +548,11 @@ $default-config: (
             n50p: -50%,
             n100p: -100%,
         ),
+        properties: (
+            flex-columns: 12,
+        )
+    ),
+    grid: (
     grid: (
         properties: (
             default-grid-gap: 2,
@@ -788,6 +798,10 @@ $max-heights: functions.get-with-extend($all-config, max-heights);
 $min-widths: functions.get-with-extend($all-config, min-widths);
 $max-widths: functions.get-with-extend($all-config, max-widths);
 
+$flex-columns: map.get($flex-properties, flex-columns);
+$flex-width: math.div(1, $flex-columns);
+
+$grid-properties: functions.get-with-extend($all-config, grid, properties);
 $grid-properties: functions.get-with-extend($all-config, grid, properties);
 $grid-columns: map.get($grid-properties, grid-columns);
 $default-grid-gap: map.get($grid-properties, default-grid-gap);

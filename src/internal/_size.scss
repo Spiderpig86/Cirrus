@@ -1,4 +1,4 @@
-@use "sass:math";
+// TODO: Move all vars below into config in future release. This file should only be left with mixins.
 
 /* Breakpoints */
 $xs: 'xs';
@@ -22,12 +22,6 @@ $font-sizes: (
     $lg: $font-size-l,
     $xl: $font-size-xl,
 );
-
-/* Flex Columns */
-$flex-columns: 12;
-
-/* Grid Percents */
-$flex-width: math.div(1, $flex-columns);
 
 /* Media Queries */
 /* Smaller than the defined pixels are the dimensions for that range */
