@@ -103,10 +103,9 @@ $default-config: (
             space-sizes: (),
             tab-sizes: (),
             absolute: (),
-            absolute: (),
+            flex: (
                 properties: ()
             ),
-            grid: (
             grid: (
                 properties: (),
             ),
@@ -446,14 +445,6 @@ $default-config: (
             'black': 900,
         ),
     ),
-    // Form label sizes
-    form-label-sizes:
-        (
-            size.$xs: size.$font-size-xs,
-            size.$sm: size.$font-size-s,
-            size.$lg: size.$font-size-l,
-            size.$xl: size.$font-size-xl,
-        ),
     form-sizes: (
         input-sizes: (
             size.$xs: (
@@ -497,6 +488,12 @@ $default-config: (
                 width: 3.75rem,
                 font-size: 35px,
             ),
+        ),
+        label-sizes: (
+            size.$xs: size.$font-size-xs,
+            size.$sm: size.$font-size-s,
+            size.$lg: size.$font-size-l,
+            size.$xl: size.$font-size-xl,
         ),
     ),
     // Progress Bar Heights
@@ -548,11 +545,11 @@ $default-config: (
             n50p: -50%,
             n100p: -100%,
         ),
+    flex: (
         properties: (
             flex-columns: 12,
-        )
+        ),
     ),
-    grid: (
     grid: (
         properties: (
             default-grid-gap: 2,
@@ -771,7 +768,7 @@ $v2Colors: functions.get-with-extend($all-config, colors, extended);
 // COMPONENTS
 $avatar-sizes: functions.get-with-extend($all-config, avatar-sizes);
 $button-sizes: functions.get-with-extend($all-config, button-sizes);
-$form-label-sizes: functions.get-with-extend($all-config, form-label-sizes);
+$form-label-sizes: functions.get-with-extend($all-config, form-sizes, label-sizes);
 $font-heading-sizes: functions.get-with-extend($all-config, fonts, sizes, heading);
 $font-headline-sizes: functions.get-with-extend($all-config, fonts, sizes, headline);
 $font-text-sizes: functions.get-with-extend($all-config, fonts, sizes, text);
@@ -798,10 +795,10 @@ $max-heights: functions.get-with-extend($all-config, max-heights);
 $min-widths: functions.get-with-extend($all-config, min-widths);
 $max-widths: functions.get-with-extend($all-config, max-widths);
 
+$flex-properties: functions.get-with-extend($all-config, flex, properties);
 $flex-columns: map.get($flex-properties, flex-columns);
 $flex-width: math.div(1, $flex-columns);
 
-$grid-properties: functions.get-with-extend($all-config, grid, properties);
 $grid-properties: functions.get-with-extend($all-config, grid, properties);
 $grid-columns: map.get($grid-properties, grid-columns);
 $default-grid-gap: map.get($grid-properties, default-grid-gap);
