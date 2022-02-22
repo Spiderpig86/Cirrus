@@ -527,14 +527,27 @@ $default-config: (
                 padding: 2rem 0,
             ),
         ),
-    // Tab font sizes
-    tab-sizes:
+    // Tabs
+    tab-sizes: (
+        font-sizes: 
         (
             size.$xs: size.$font-size-xs,
             size.$sm: size.$font-size-s,
             size.$lg: size.$font-size-l,
             size.$xl: size.$font-size-xl,
         ),
+    ),
+    // Tags
+    tags: (
+        font-sizes: (
+            size.$xs: size.$font-size-xs,
+            size.$sm: size.$font-size-s,
+            size.$md: size.$font-size-m,
+            size.$lg: size.$font-size-l,
+            size.$xl: size.$font-size-xl,
+        )
+    ),
+
     // UTILITIES //
     absolute:
         (
@@ -783,7 +796,8 @@ $input-icon-sizes: functions.get-with-extend($all-config, form-sizes, input-icon
 
 $progress-bar-sizes: functions.get-with-extend($all-config, progress, sizes);
 $space-sizes: functions.get-with-extend($all-config, space-sizes);
-$tab-font-sizes: functions.get-with-extend($all-config, tab-sizes);
+$tab-font-sizes: functions.get-with-extend($all-config, tabs, font-sizes);
+$tag-font-sizes: functions.get-with-extend($all-config, tags, font-sizes);
 
 // UTILS
 $absolute: functions.get-with-extend($all-config, absolute);
