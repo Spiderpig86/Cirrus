@@ -9,6 +9,14 @@ video.video-fullscreen {
   z-index: -1;
 }
 
+.hero.fullscreen video {
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
 /* Add to parent container to make media child fill container */
 .media-stretch {
     display: block;

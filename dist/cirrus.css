@@ -104,19 +104,48 @@
   --color-opacity: 1;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  /* Prevent setting borders from increasing the size of an elrement */
+/* RESET */
+/* Box Sizing */
+*,
+*::before,
+*::after {
+  /* Prevent setting borders from increasing the size of an element */
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Remove default margin and padding */
 html,
-body {
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
+}
+
+/* Allow % styles to work on page */
+html,
+body {
   border: none;
   height: 100%;
 }
@@ -129,7 +158,6 @@ body {
   font-size: 1rem;
   font-weight: 400;
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  letter-spacing: 0.01rem;
   color: var(--cirrus-fg);
 }
 
@@ -139,20 +167,17 @@ ul {
 }
 
 /* Setting up embedded content */
+audio,
+canvas,
+iframe,
 img,
 embed,
 object,
+svg,
 video {
+  display: block;
   max-width: 100%;
   height: auto;
-}
-
-.hero.fullscreen video {
-  height: 100%;
-  object-fit: fill;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
 }
 
 iframe {
@@ -162,6 +187,7 @@ iframe {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+/* Page sections set to block */
 article,
 aside,
 figure,
@@ -172,6 +198,7 @@ section {
   display: block;
 }
 
+button,
 input,
 optgroup,
 select,
@@ -181,11 +208,13 @@ textarea {
   font-size: inherit;
 }
 
+/* Base styling for labels */
 label {
   display: inline-block;
   margin: 0.25rem 0;
 }
 
+/* Base styling for fieldsets */
 fieldset {
   padding: 1rem;
 }
@@ -193,6 +222,7 @@ fieldset legend {
   font-weight: bold;
 }
 
+/* Hidden elements must not show */
 [hidden] {
   display: none !important;
 }
@@ -208,6 +238,21 @@ fieldset legend {
   outline: none;
 }
 
+/* Remove all animations based on preference */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 /* ANIMATIONS */
 /* Keyframes */
 /* Spinning loading animation */
@@ -4385,6 +4430,14 @@ video.video-fullscreen {
   position: absolute;
   height: 100vh;
   object-fit: cover;
+  width: 100%;
+  z-index: -1;
+}
+
+.hero.fullscreen video {
+  height: 100%;
+  object-fit: fill;
+  position: absolute;
   width: 100%;
   z-index: -1;
 }
