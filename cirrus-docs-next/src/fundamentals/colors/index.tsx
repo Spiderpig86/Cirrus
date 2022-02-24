@@ -454,6 +454,10 @@ Error: $color: "ERROR [fill()]: [fill] Unknown color key \`gray 500\`." is not a
                 </section>
 
                 <Pagination
+                    prevLink={{
+                        name: 'Default Styles',
+                        link: './default-styles',
+                    }}
                     nextLink={{
                         name: 'Typography',
                         link: './typography',

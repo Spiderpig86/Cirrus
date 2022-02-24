@@ -284,7 +284,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         <p>Below is how reducing the number of colors will affect build size (with all viewports and features enabled). Note that there are 12 semantic colors and 91 extended colors.</p>
                         <table className="table bordered">
                             <tr>
-                                <th>Number of Colors Classes</th>
+                                <th>Number of Color Classes</th>
                                 <th>Original Size</th>
                                 <th>Minified Size</th>
                             </tr>
@@ -309,12 +309,12 @@ export const ConfigurationPage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{
-                        name: 'Developing',
+                        name: 'Configuration',
                         link: './developing',
                     }}
                     nextLink={{
-                        name: 'Managing Build Size',
-                        link: './managing-build-size',
+                        name: 'Release Notes',
+                        link: './release-notes',
                     }}
                 />
             </div>

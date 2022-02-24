@@ -102,7 +102,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Default Styles',
-                url: '/fundamentals/defaults'
+                url: '/fundamentals/default-styles'
             },
             {
                 fontWeight: 'semibold',
