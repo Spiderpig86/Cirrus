@@ -12,6 +12,7 @@ const v1Colors = [
     ['danger', 'fb4143'],
     ['white', 'ffffff'],
     ['black', '000000'],
+    ['transparent', 'transparent'],
 ];
 
 export const v2Colors = ['pink', 'red', 'orange', 'yellow', 'green', 'teal', 'blue', 'indigo', 'purple', 'gray'];
@@ -53,6 +54,7 @@ export const DEFAULT_SEMANTIC_COLORS = [
     'success',
     'warning',
     'danger',
+    'transparent',
 ];
 
 function generateV2Swatches(name: string, levels: string[]): Swatch[] {

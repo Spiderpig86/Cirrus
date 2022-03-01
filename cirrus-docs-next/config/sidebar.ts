@@ -90,6 +90,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Start Guide',
+                url: '/getting-started/start-guide'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Release Notes',
                 url: '/getting-started/release-notes'
             },
@@ -165,109 +171,109 @@ export const sidebarConfig: SidebarConfig[] = [
         ],
     },
     {
-        title: 'Components',
+        title: 'Elements',
         sidebarItems: [
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Avatar',
-                url: '/components/avatar'
+                url: '/elements/avatar'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Breadcrumbs',
-                url: '/components/breadcrumbs'
+                url: '/elements/breadcrumbs'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Card',
-                url: '/components/cards'
+                url: '/elements/cards'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Code',
-                url: '/components/code'
+                url: '/elements/code'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Links',
-                url: '/components/links'
+                url: '/elements/links'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Lists',
-                url: '/components/lists'
+                url: '/elements/lists'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Modal',
-                url: '/components/modal'
+                url: '/elements/modal'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Pagination',
-                url: '/components/pagination'
+                url: '/elements/pagination'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Placeholder',
-                url: '/components/placeholder'
+                url: '/elements/placeholder'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Progress',
-                url: '/components/progress'
+                url: '/elements/progress'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Table',
-                url: '/components/table'
+                url: '/elements/table'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Tabs',
-                url: '/components/tabs'
+                url: '/elements/tabs'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Tags',
-                url: '/components/tags'
+                url: '/elements/tags'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Tiles',
-                url: '/components/tiles'
+                url: '/elements/tiles'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Toast',
-                url: '/components/toast'
+                url: '/elements/toast'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Tooltips',
-                url: '/components/tooltips'
+                url: '/elements/tooltips'
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Trees',
-                url: '/components/trees'
+                url: '/elements/trees'
             },
         ],
     },

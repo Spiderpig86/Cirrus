@@ -1,0 +1,1 @@
+export { default } from '../../src/getting-started/start-guide';
