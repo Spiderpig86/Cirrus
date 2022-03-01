@@ -12,8 +12,8 @@
     --cirrus-code-bg: rgba(#{hex-to-rgb($cirrus-primary-light)}, 1);
     --cirrus-code-fg: #{$cirrus-code-fg};
 
-    --cirrus-form-group-bg: rgba(#{$cirrus-light-gray}, 1);
-    --cirrus-form-group-fg: rgba(#{$cirrus-dark-gray}, 1);
+    --cirrus-form-group-bg: rgba(#{hex-to-rgb($cirrus-light-gray)}, 1);
+    --cirrus-form-group-fg: rgba(#{hex-to-rgb($cirrus-dark-gray)}, 1);
 
     --toast-primary-bg: #{$toast-primary-bg};
 
