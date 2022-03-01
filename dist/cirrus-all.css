@@ -83,7 +83,7 @@
 */
 :root {
   /* v1 Colors */
-  --cirrus-fg: #374054;
+  --cirrus-fg: #0f172a;
   --cirrus-bg: #ffffff;
   --cirrus-select-bg: rgba(0, 161, 255, 0.2);
   --cirrus-code-bg: rgba(255, 218, 221, 1);
@@ -6146,12 +6146,12 @@ video.video-fullscreen {
 }
 
 .bg-transparent {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 .text-transparent {
-  border-color: transparent;
-  color: transparent;
+  border-color: transparent !important;
+  color: transparent !important;
 }
 
 /* v2 */
@@ -12742,12 +12742,12 @@ label:last-child:not(:first-child):not(.form-group-label) {
   padding: 0 1rem;
 }
 .frame .frame__title {
-  color: #374054;
+  color: #0f172a;
   font-size: 1rem;
   margin: 0.75rem auto 0;
 }
 .frame .frame__subtitle {
-  color: rgba(55, 64, 84, 0.6);
+  color: rgba(15, 23, 42, 0.6);
   font-size: 1rem;
   margin: 0 auto 0.75rem;
 }
@@ -17406,7 +17406,7 @@ ul .divider::after {
   pointer-events: none;
 }
 .breadcrumb .breadcrumb__item.breadcrumb__item--active a {
-  color: #374054;
+  color: #0f172a;
 }
 
 /* CARDS */
