@@ -89,8 +89,8 @@ export const FramesPage: React.FC<any> = (props) => {
                                             is set, a scrollbar will appear to take care of overflow.
                                         </div>
                                         <blockquote className="u-text-center">
-                                            The text-white margins between the gray boxes is to demonstrate how the frame
-                                            sub sections are separated.
+                                            The text-white margins between the gray boxes is to demonstrate how the
+                                            frame sub sections are separated.
                                         </blockquote>
                                     </div>
                                     <div
@@ -107,30 +107,25 @@ export const FramesPage: React.FC<any> = (props) => {
                             <div className="col-lg-6">
                                 <CodeBlock
                                     code={`<div class="frame">
-    <div class="frame__header u-text-center">
-        <div>
-            <figure class="avatar"><img src="https://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"></figure>
+    <div class="frame__header" style="background: #eee; padding: 1rem; margin: 1rem">
+        <div class="frame__title u-text-center">Frame Title</div>
+        <div class="frame__subtitle u-text-center">Frame Subtitle</div>
+        <div class="frame__subtitle u-text-center">This is the frame header.</div>
+    </div>
+    <div class="frame__body" style="background: #eee; padding: 1rem; margin: 1rem">
+        <div class="frame__title u-text-center">Frame Body</div>
+        <div class="frame__subtitle u-text-center">
+            Insert any component here, including a frame navigation menu using<!-- -->
+            <code>frame-nav</code>. The frame will auto-expand and if a specific height is set, a scrollbar will appear
+            to take care of overflow.
         </div>
-        <div>
-            <div class="frame__title">John Doe</div>
-            <div class="frame__subtitle">Freelance Photographer</div>
-        </div>
-        <div class="row"><a class="col" href="!#"><i class="fa fa-wrapper fa-facebook link-btn" aria-hidden="true"></i></a><a class="col" href="#"><i class="fa fa-wrapper fa-twitter link-btn" aria-hidden="true"></i></a><a class="col" href="#"><i class="fa fa-wrapper fa-instagram link-btn" aria-hidden="true"></i></a><a class="col" href="#"><i class="fa fa-wrapper fa-medium link-btn" aria-hidden="true"></i></a></div>
+        <blockquote class="u-text-center">
+            The text-white margins between the gray boxes is to demonstrate how the frame sub sections are separated.
+        </blockquote>
     </div>
-    <div class="content-no-padding">
-        <div class="divider m-0"></div>
-    </div>
-    <div class="frame__body">
-        <div class="content u-text-center">
-            <h5>Lorem! Ipsum!</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-    </div>
-    <div class="content-no-padding">
-        <div class="divider m-0"></div>
-    </div>
-    <div class="frame__footer">
-        <div class="frame__subtitle u-text-center"><i>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i></div>
+    <div class="frame__footer" style="background: #eee; padding: 1rem; margin: 1rem">
+        <div class="frame__title u-text-center">Frame Footer</div>
+        <div class="frame__subtitle u-text-center">Takes up the bottom of the frame.</div>
     </div>
 </div>`}
                                     language="htmlbars"
@@ -156,7 +151,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                             </figure>
                                         </div>
                                         <div>
-                                            <div className="frame__title">John Doe</div>
+                                            <h6 className="frame__title">John Doe</h6>
                                             <div className="frame__subtitle">Freelance Photographer</div>
                                         </div>
                                         <div className="row">
@@ -186,9 +181,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                             </a>
                                         </div>
                                     </div>
-                                    <div className="content-no-padding">
-                                        <div className="divider m-0" />
-                                    </div>
+                                    <div className="divider m-0" />
                                     <div className="frame__body">
                                         <div className="content u-text-center">
                                             <h5>Lorem! Ipsum!</h5>
@@ -200,9 +193,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="content-no-padding">
-                                        <div className="divider m-0" />
-                                    </div>
+                                    <div className="divider m-0" />
                                     <div className="frame__footer">
                                         <div className="frame__subtitle u-text-center">
                                             <i>
@@ -218,28 +209,42 @@ export const FramesPage: React.FC<any> = (props) => {
                                     code={`<div class="frame">
     <div class="frame__header u-text-center">
         <div>
-            <figure class="avatar"><img src="https://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"></figure>
+            <figure class="avatar">
+                <img
+                    src="https://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"
+                />
+            </figure>
         </div>
         <div>
-            <div class="frame__title">John Doe</div>
+            <h6 class="frame__title">John Doe</h6>
             <div class="frame__subtitle">Freelance Photographer</div>
         </div>
-        <div class="row"><a class="col" href="#"><i class="fa fa-wrapper fa-facebook link-btn" aria-hidden="true"></i></a><a class="col" href="#"><i class="fa fa-wrapper fa-twitter link-btn" aria-hidden="true"></i></a><a class="col" href="#"><i class="fa fa-wrapper fa-instagram link-btn" aria-hidden="true"></i></a><a class="col" href="#"><i class="fa fa-wrapper fa-medium link-btn" aria-hidden="true"></i></a></div>
+        <div class="row">
+            <a class="col" href="#"><i class="fa fa-wrapper fa-facebook link-btn" aria-hidden="true"></i></a
+            ><a class="col" href="#"><i class="fa fa-wrapper fa-twitter link-btn" aria-hidden="true"></i></a
+            ><a class="col" href="#"><i class="fa fa-wrapper fa-instagram link-btn" aria-hidden="true"></i></a
+            ><a class="col" href="#"><i class="fa fa-wrapper fa-medium link-btn" aria-hidden="true"></i></a>
+        </div>
     </div>
-    <div class="content-no-padding">
-        <div class="divider m-0"></div>
-    </div>
+    <div class="divider m-0"></div>
     <div class="frame__body">
         <div class="content u-text-center">
             <h5>Lorem! Ipsum!</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+            </p>
         </div>
     </div>
-    <div class="content-no-padding">
-        <div class="divider m-0"></div>
-    </div>
+    <div class="divider m-0"></div>
     <div class="frame__footer">
-        <div class="frame__subtitle u-text-center"><i>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i></div>
+        <div class="frame__subtitle u-text-center">
+            <i
+                >Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum.</i
+            >
+        </div>
     </div>
 </div>`}
                                     language="htmlbars"
@@ -267,10 +272,10 @@ export const FramesPage: React.FC<any> = (props) => {
                                     </div>
                                     <div className="frame__body">
                                         <div className="space" />
-                                        <div className="my-1">
+                                        <div className="my-2">
                                             <div className="tile tile--center m-0">
                                                 <div className="tile-icon">
-                                                    <figure className="avatar img-small" data-text="El" />
+                                                    <figure className="avatar img-small text-white" data-text="El" />
                                                 </div>
                                                 <div className="tile__container">
                                                     <p className="tile__title m-0">Elk</p>
@@ -278,7 +283,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="my-1">
+                                        <div className="my-2">
                                             <div className="tile tile--center m-0">
                                                 <figure className="avatar img-small">
                                                     <img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png" />
@@ -289,10 +294,10 @@ export const FramesPage: React.FC<any> = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="my-1">
+                                        <div className="my-2">
                                             <div className="tile tile--center m-0">
                                                 <div className="tile-icon">
-                                                    <figure className="avatar img-small" data-text="El" />
+                                                    <figure className="avatar img-small text-white" data-text="El" />
                                                 </div>
                                                 <div className="tile__container">
                                                     <p className="tile__title m-0">Elk</p>
@@ -304,7 +309,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="my-1">
+                                        <div className="my-2">
                                             <div className="tile tile--center m-0">
                                                 <div className="tile-icon">
                                                     <figure className="avatar img-small">
@@ -322,10 +327,10 @@ export const FramesPage: React.FC<any> = (props) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="my-1">
+                                        <div className="my-2">
                                             <div className="tile tile--center m-0">
                                                 <div className="tile-icon">
-                                                    <figure className="avatar img-small" data-text="El" />
+                                                    <figure className="avatar img-small text-white" data-text="El" />
                                                 </div>
                                                 <div className="tile__container">
                                                     <p className="tile__title m-0">Elk</p>
@@ -370,18 +375,18 @@ export const FramesPage: React.FC<any> = (props) => {
     </div>
     <div class="frame__body">
         <div class="space"></div>
-        <div class="my-1">
+        <div class="my-2">
             <div class="tile tile--center m-0">
                 <div class="tile-icon">
                     <figure class="avatar img-small" data-text="El"></figure>
                 </div>
                 <div class="tile__container">
-                    <p class="tile__title m-0">Elk</p>
+                    <p class="tile__title m-0 text-white">Elk</p>
                     <p class="tile__subtitle m-0">Hey guys.</p>
                 </div>
             </div>
         </div>
-        <div class="my-1">
+        <div class="my-2">
             <div class="tile tile--center m-0">
                 <figure class="avatar img-small"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
                 <div class="tile__container">
@@ -390,18 +395,18 @@ export const FramesPage: React.FC<any> = (props) => {
                 </div>
             </div>
         </div>
-        <div class="my-1">
+        <div class="my-2">
             <div class="tile tile--center m-0">
                 <div class="tile-icon">
                     <figure class="avatar img-small" data-text="El"></figure>
                 </div>
                 <div class="tile__container">
-                    <p class="tile__title m-0">Elk</p>
+                    <p class="tile__title m-0 text-white">Elk</p>
                     <p class="tile__subtitle m-0">I started working on a new webapp. However I'm pretty lazy when it comes to designing from the ground up. Anyone know any good CSS frameworks for rapid prototyping?</p>
                 </div>
             </div>
         </div>
-        <div class="my-1">
+        <div class="my-2">
             <div class="tile tile--center m-0">
                 <div class="tile-icon">
                     <figure class="avatar img-small"><img src="https://www.seoclerk.com/pics/319222-1IvI0s1421931178.png"></figure>
@@ -412,13 +417,13 @@ export const FramesPage: React.FC<any> = (props) => {
                 </div>
             </div>
         </div>
-        <div class="my-1">
+        <div class="my-2">
             <div class="tile tile--center m-0">
                 <div class="tile-icon">
                     <figure class="avatar img-small" data-text="El"></figure>
                 </div>
                 <div class="tile__container">
-                    <p class="tile__title m-0">Elk</p>
+                    <p class="tile__title m-0 text-white">Elk</p>
                     <p class="tile__subtitle m-0">Just what I needed.</p>
                 </div>
                 <div class="tile__buttons"><a href="#"><i class="fa fa-wrapper fa-ellipsis-v small" aria-hidden="true"></i></a></div>
@@ -446,7 +451,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                         <div className="avatar">
                                             <img src="https://i.imgur.com/sbKJVxr.png" />
                                         </div>
-                                        <p className="u-text-center frame__title">John Doe</p>
+                                        <h6 className="u-text-center frame__title">John Doe</h6>
                                         <p className="u-text-center frame__subtitle">Former youngest person on Earth</p>
                                         <div className="tab-container tabs-fill">
                                             <ul>
@@ -539,7 +544,7 @@ export const FramesPage: React.FC<any> = (props) => {
                                     code={`<div class="frame" style="height: 30rem;">
     <div class="frame__header">
         <div class="avatar"><img src="https://i.imgur.com/sbKJVxr.png"></div>
-        <p class="u-text-center frame__title">John Doe</p>
+        <h6 class="u-text-center frame__title">John Doe</h6>
         <p class="u-text-center frame__subtitle">Former youngest person on Earth</p>
         <div class="tab-container tabs-fill">
             <ul>

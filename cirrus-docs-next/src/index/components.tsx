@@ -170,7 +170,7 @@ export const Frame: React.FC<any> = (props) => {
                     </figure>
                 </div>
                 <div>
-                    <div className="frame__title">John Doe</div>
+                    <h6 className="frame__title">John Doe</h6>
                     <div className="frame__subtitle">Freelance Photographer</div>
                 </div>
                 <div className="row">
@@ -188,9 +188,7 @@ export const Frame: React.FC<any> = (props) => {
                     </a>
                 </div>
             </div>
-            <div className="content-no-padding">
-                <div className="divider m-0" />
-            </div>
+            <div className="divider m-0" />
             <div className="frame__body">
                 <div className="content u-text-center">
                     <h5>Lorem! Ipsum!</h5>
@@ -201,9 +199,7 @@ export const Frame: React.FC<any> = (props) => {
                     </p>
                 </div>
             </div>
-            <div className="content-no-padding">
-                <div className="divider m-0" />
-            </div>
+            <div className="divider m-0" />
             <div className="frame__footer">
                 <div className="frame__subtitle u-text-center">
                     <i>
