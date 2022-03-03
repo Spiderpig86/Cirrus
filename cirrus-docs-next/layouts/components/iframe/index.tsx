@@ -29,5 +29,5 @@ export const IFrame = memo((props: IFrameProps) => {
         document.innerHTML = props.content;
     };
 
-    return <iframe className="h-100 w-100" style={{ border: '0' }} srcDoc={iframeSrc} frameBorder="0" ref={writeHtml} />;
+    return <iframe className="w-100 h-100" style={{ border: '0' }} srcDoc={iframeSrc} frameBorder="0" ref={writeHtml} />;
 });

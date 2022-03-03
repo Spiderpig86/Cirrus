@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import LazyLoad from 'react-lazyload';
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
@@ -12,6 +13,9 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { ResizableInternal } from '../../../layouts/components/resizable';
+import { TutorialBase, TutorialComplete } from './tutorial-components';
+import { IFrame } from '../../../layouts/components/iframe';
 
 export const StartGuidePage: React.FC<any> = (props) => {
     return (
@@ -29,30 +33,170 @@ export const StartGuidePage: React.FC<any> = (props) => {
                             understanding what types of classes to use and integrate with super simple to get you up to
                             speed quickly.
                         </p>
-                        <p>At a high level, the framework is broken down into 3 separate types of stylesheets that are often used together:</p>
+                        <p>
+                            At a high level, the framework is broken down into 3 separate types of stylesheets that are
+                            often used together:
+                        </p>
 
                         <ul>
-                            <li><b>Base</b> — consists of fonts, colors, layout/positioning, and other essential classes.</li>
-                            <li><b>Component</b> — consists of prebuilt components that can be added to any project right away.</li>
-                            <li><b>Utilities</b> — consists of atomic classes to modify specific styles of elements.</li>
+                            <li>
+                                <b>Base</b> — consists of fonts, colors, layout/positioning, and other essential
+                                classes.
+                            </li>
+                            <li>
+                                <b>Component</b> — consists of prebuilt components that can be added to any project
+                                right away.
+                            </li>
+                            <li>
+                                <b>Utilities</b> — consists of atomic classes to modify specific styles of elements.
+                            </li>
                         </ul>
+
+                        <p>
+                            To help you better understand what each type of styles are used for, we will be building an
+                            example portfolio page. The final result is shown below.
+                        </p>
                     </div>
+
+                    <ResizableInternal height="750px" top="50%">
+                        <IFrame content={TutorialComplete} />
+                    </ResizableInternal>
                 </section>
 
                 <section className="padtop" id="base">
                     <div className="content">
                         <Headline title="Base" link="#base" size="4" />
                         <div className="divider"></div>
+
+                        <p>
+                            The foundation of any page styled with Cirrus starts with its base styles. The base styles
+                            of Cirrus consist of:
+                        </p>
+                        <ul>
+                            <li>
+                                <b>Reset and base stying.</b>
+                            </li>
+                            <li>
+                                <b>Animations</b> — transitions and animation related styles.
+                            </li>
+                            <li>
+                                <b>Fonts</b> — font sizes, font families, textual elements, etc.
+                            </li>
+                            <li>
+                                <b>Grid</b> — CSS grid utility classes.
+                            </li>
+                            <li>
+                                <b>Layout</b> — content, divider, heroes, level, heights, widths, etc.
+                            </li>
+                            <li>
+                                <b>Media</b> — videos, figures, images, etc.
+                            </li>
+                            <li>
+                                <b>Modifiers</b> — input variants, text and background color classes.
+                            </li>
+                            <li>
+                                <b>Spacing</b> — margin and padding.
+                            </li>
+                        </ul>
+
+                        <p>
+                            Much of the styling here is minimal and won't require much effort on your end to use in your
+                            project. Its main goal is to reset the page and style only what's necessary to setup the
+                            foundation for Cirrus components.
+                        </p>
+
+                        <p>
+                            To setup our portfolio page, we will start with the base structure. We will start with a div
+                            with <code>min-h-100</code> to allow it to span the height of the screen and a background
+                            color of <code>bg-gray-100</code>. Inside of it will have 3 <code>section</code> tags, each
+                            for the landing, stats, and contact form.
+                        </p>
+
+                        <CodeBlock
+                            code={`<div class="bg-gray-100 min-h-100">
+  <section>
+    <div class="hero">
+      <div class="hero-body">
+        <div class="content px-12-lg px-24-xl">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>`}
+                            language="html"
+                        />
+
+                        <p>
+                            Starting with the first section, we will start by defining a <code>hero</code> with content
+                            inside the <code>hero-body</code> to vertically and horizontally the text and image. Inside
+                            of <code>hero-body</code>, we'll add another <code>content</code> class to further pad the
+                            text
+                        </p>
+                        <CodeBlock
+                            code={`...
+<div class="hero">
+  <div class="hero-body">
+    <div class="content px-12-lg px-24-xl">
+      <div class="">
+        <div>
+          <img class="w-100 w-60-sm w-auto-md" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" />
+        </div>
+        <div>
+          <h1 class="headline-3">hey!</h1>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+...`}
+                            language="html"
+                        />
+                        <p>
+                            The <code>content</code> class is one of the most essential classes used in Cirrus to add
+                            responsiveness and center alignment to any group of elements on a page.
+                        </p>
+
+                        <p>For the stats and forms section, we'll just add in the other base classes used.</p>
+                        <CodeBlock
+                            code={`...
+<section class="mb-12">
+  <div class="content px-2 px-12-lg px-24-xl">
+    <h2>My Stats</h2>
+  </div>
+</section>
+<section class="mb-12">
+  <div class="content px-2 px-12-lg px-24-xl">
+    <h3>Want to work together?</h3>
+    <p>Drop me a line!</p>
+  </div>
+</section>
+...`}
+                            language="html"
+                        />
+
+                        <div className="space space--lg"></div>
+
+                        <p>At this point, we should get a page that looks like this:</p>
                     </div>
+
+                    <ResizableInternal height="750px" top="50%">
+                        <IFrame content={TutorialBase} />
+                    </ResizableInternal>
                 </section>
-                
+
                 <section className="padtop" id="components">
                     <div className="content">
                         <Headline title="Components" link="#components" size="4" />
                         <div className="divider"></div>
+
+                        <p>
+                            Not too shabby with only the base styling. Here, we will add in components to really bring
+                            the page to life.
+                        </p>
                     </div>
                 </section>
-                
+
                 <section className="padtop" id="utilities">
                     <div className="content">
                         <Headline title="Utilities" link="#utilities" size="4" />

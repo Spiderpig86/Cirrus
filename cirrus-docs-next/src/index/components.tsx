@@ -437,7 +437,7 @@ export const ResponsiveLandingHTML = `<section class="min-h-100 w-100 u-flex u-j
                     We're <b class="text-white">revolutionizing</b>, <b class="text-white">democratizing</b>, <b class="text-white">disrupting</b>, and [insert buzzword here]-ing to empower creatives around the world.
 				</p>
 				<div class="u-flex u-gap-1 u-flex-column u-justify-center mt-5 u-flex-row-sm mb-8 mt-8-lg">
-					<input type="text" id="input-field-top" class="u-flex-grow-1 w-auto min-w-none px-3 font-semibold text-gray-300 bg-transparent" placeholder="Enter Username">
+					<input type="text" id="input-field-top" class="u-flex-grow-1 w-auto min-w-0 px-3 font-semibold text-gray-300 bg-transparent" placeholder="Enter Username">
 					<button
 					class="btn--sm btn-link mb-0">
 					Get Started
