@@ -14,8 +14,10 @@ import { toc } from './toc';
 
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { ResizableInternal } from '../../../layouts/components/resizable';
-import { TutorialBase, TutorialComplete } from './tutorial-components';
+import { TutorialBase, TutorialComplete, TutorialComponents } from './tutorial-components';
 import { IFrame } from '../../../layouts/components/iframe';
+import { InternalLink } from '../../../layouts/components/link';
+import { Blockquote } from '../../../layouts/components/blockquote';
 
 export const StartGuidePage: React.FC<any> = (props) => {
     return (
@@ -56,6 +58,14 @@ export const StartGuidePage: React.FC<any> = (props) => {
                             To help you better understand what each type of styles are used for, we will be building an
                             example portfolio page. The final result is shown below.
                         </p>
+
+                        <Blockquote accentColor="#fcd9bd">
+                            <p>
+                                Note that this tutorial mainly focuses on styling a page and does not include any
+                                functionality. Feel free to extend and modify it on your own and see what you can come
+                                up with. 😊
+                            </p>
+                        </Blockquote>
                     </div>
 
                     <ResizableInternal height="750px" top="50%">
@@ -86,7 +96,7 @@ export const StartGuidePage: React.FC<any> = (props) => {
                                 <b>Grid</b> — CSS grid utility classes.
                             </li>
                             <li>
-                                <b>Layout</b> — content, divider, heroes, level, heights, widths, etc.
+                                <b>Layout</b> — content, rows, columns, level, heights, widths, etc.
                             </li>
                             <li>
                                 <b>Media</b> — videos, figures, images, etc.
@@ -191,106 +201,360 @@ export const StartGuidePage: React.FC<any> = (props) => {
                         <div className="divider"></div>
 
                         <p>
-                            Not too shabby with only the base styling. Here, we will add in components to really bring
-                            the page to life.
+                            Not too shabby with only the base styling. We can use component styles to quickly add
+                            crucial parts to our portfolio without much effort. Component styles are a majority of the
+                            styles you see on the left sidebar, which include:
                         </p>
+                        <ul>
+                            <li>Buttons</li>
+                            <li>Elements</li>
+                            <li>Forms</li>
+                        </ul>
+
+                        <p>
+                            Here, we will add in components to really bring the page to life. Let's start by adding the{' '}
+                            <InternalLink url="/layout/header">Header</InternalLink> layout component to provide
+                            navigation to our portfolio.
+                        </p>
+
+                        <CodeBlock
+                            code={`...
+  <div class="header header-clear u-unselectable header-animated px-0 px-2-md">
+    <div class="header-brand">
+      <div class="nav-item no-hover">
+        <a>
+          <h6 class="tracking-tight">John Doe</h6>
+        </a>
+      </div>
+      <div class="nav-item nav-btn" id="header-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="header-nav" id="header-menu">
+      <div class="nav-right text-sm">
+        <div class="nav-item">
+          <a href="#">Dribbble</a>
+        </div>
+        <div class="nav-item">
+          <a href="#">LinkedIn</a>
+        </div>
+        <div class="nav-item">
+          <a href="#">About</a>
+        </div>
+        <div class="nav-item">
+          <a href="#">Contact</a>
+        </div>
+        <div class="nav-item">
+          <a class="btn btn-black btn--sm py-0" href="#">View Work</a>
+        </div>
+      </div>
+    </div>
+  </div>
+...`}
+                            language="html"
+                        />
+
+                        <p>
+                            Next, we will fill out the stats section to showcase some testimonials, skills, etc. A great
+                            component we can use is a <InternalLink url="/layout/frame">Frame</InternalLink> which
+                            provides a structured way to layout components in a panel with a shadow. Inside the frame,
+                            we can throw in an avatar, some stats, and some buttons for viewing work and hiring.
+                        </p>
+                        <p>
+                            To showcase a list of skills, we can use a group of{' '}
+                            <InternalLink url="/elements/tags">Tags</InternalLink>. To fit the overall design language,
+                            let's set all of them to <code>uppercase</code> and with a background of{' '}
+                            <code>bg-black</code>.
+                        </p>
+
+                        <CodeBlock
+                            code={`...
+<section class="mb-12">
+  <div class="content px-2 px-12-lg px-24-xl">
+    <h2>My Stats</h2>
+    <div>
+      <div>
+        <div class="frame bg-white">
+          <div class="frame__header">
+            <div>
+              <figure class="avatar bg-transparent">
+                <img src="https://images.unsplash.com/photo-1524135220673-c731600a1a50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&q=80">
+              </figure>
+              <div>
+                <h6 class="frame__title">John Doe</h6>
+                <div class="frame__subtitle">Freelance Dev + Photographer</div>
+              </div>
+            </div>
+          </div>
+          <div class="frame__body">
+            <div class="px-2 py-2 bg-black">
+              <div class="text-white">
+                <div>
+                  <div>
+                    <h6 class="mb-0">56</h6>
+                    <p class="uppercase font-bold text-sm">Clients</p>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">100%</h6>
+                    <p class="uppercase font-bold text-sm">On Time</p>
+                  </div>
+                  <div>
+                    <h6 class="mb-0">4.8</h6>
+                    <p class="uppercase font-bold text-sm">Stars</p>
+                  </div>
+                </div>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </div>
+            </div>
+          </div>
+          <div class="frame__footer">
+            <div class="space"></div>
+            <div>
+              <button class="btn-black outline">View Work</button>
+              <button class="btn-black">Hire Me</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="tag-container">
+          <div class="tag px-2 py-1 bg-black text-white text-md font-bold uppercase">Adobe Suite</div>
+          <div class="tag px-2 py-1 bg-black text-white text-md font-bold uppercase">Figma</div>
+          <div class="tag px-2 py-1 bg-black text-white text-md font-bold uppercase">Invision</div>
+          <div class="tag px-2 py-1 bg-black text-white text-md font-bold uppercase">UI Design</div>
+          <div class="tag px-2 py-1 bg-black text-white text-md font-bold uppercase">UX Design</div>
+          <div class="tag px-2 py-1 bg-black text-white text-md font-bold uppercase">Typography</div>
+          <div class="tag px-2 py-1 bg-black text-white text-md font-bold uppercase">HTML</div>
+          <div class="tag px-2 py-1 bg-black text-white text-md font-bold uppercase">CSS</div>
+          <div class="tag px-2 py-1 bg-black text-white text-md font-bold uppercase">JavaScript</div>
+          <div class="tag px-2 py-1 bg-black text-white text-md font-bold uppercase">TypeScript</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+...`}
+                            language="html"
+                        />
+
+                        <p>
+                            Finally, what use is a portfolio if no one can contact us to collaborate on some awesome
+                            projects? We can simply get a form going just by inserting some{' '}
+                            <InternalLink url="/forms/inputs">Inputs</InternalLink> and{' '}
+                            <InternalLink url="/forms/groups">grouping them</InternalLink>.
+                        </p>
+                        <p>
+                            At the bottom we can add <InternalLink url="/layout/spacing">Spacing</InternalLink> to add
+                            some padding at the bottom.
+                        </p>
+
+                        <CodeBlock
+                            code={`...
+<section class="mb-12">
+<div class="content px-2 px-12-lg px-24-xl">
+  <h3>Want to work together?</h3>
+  <p>Drop me a line!</p>
+  <div class="mb-1">
+    <label class="m-0 mb-1">
+      <b>Contact Info</b>
+    </label>
+    <div>
+      <input placeholder="Name" />
+      <input placeholder="Email" />
+    </div>
+  </div>
+  <div class="mb-1">
+    <label class="m-0 mb-1">
+      <b>Message</b>
+    </label>
+    <textarea placeholder="Enter your message"></textarea>
+  </div>
+  <button class="btn-black">Submit</button>
+</div>
+</section>
+<div class="space"></div>
+...`}
+                            language="html"
+                        />
+
+                        <p>With the components added in, our portfolio should look much better.</p>
                     </div>
+                    <ResizableInternal height="750px" top="50%">
+                        <IFrame content={TutorialComponents} />
+                    </ResizableInternal>
                 </section>
 
                 <section className="padtop" id="utilities">
                     <div className="content">
                         <Headline title="Utilities" link="#utilities" size="4" />
                         <div className="divider"></div>
-                    </div>
-                </section>
 
-                <section className="padtop" id="designing">
-                    <div className="content">
-                        <Headline title="Designing with Cirrus" link="#designing" size="4" />
-                        <div className="divider"></div>
                         <p>
-                            Using a new framework can be slightly overwhelming, so this section is to help point out
-                            common areas in the documentation to help you get up to speed.
+                            The portfolio looks good, but it can definitely be better. There are a couple things we
+                            would want to lay out differently such as the landing section, rounding images, shadows,
+                            etc.
                         </p>
-                        <div className="space"></div>
-
-                        <h6>Layout</h6>
+                        <p>
+                            This is where utility classes come in -- which can be found on the left sidebar. New classes
+                            are added quite frequently so be sure to be on the lookout for when they are released.
+                        </p>
 
                         <p>
-                            Spacing is an important part of designing a page not just with Cirrus, but in general. This
-                            can be accomplished by following some hierarchy for a layout, such as <code>section</code>,{' '}
-                            <code>content</code>, and <code>row</code>. The <code>section</code> HTML tag semantically
-                            spearates the content on the page, the <code>content</code> class adds the needed spacing,
-                            and the <code>row</code> class can be used to position the child elements.
+                            First, let's use the <code>u-flex</code> utility to get the image in the landing section to
+                            the left of the text. We can then add <code>u-round-xs u-shadow-lg</code> to round the image
+                            a bit and add a shadow.
                         </p>
 
                         <CodeBlock
-                            code={`<section>
-    <div class="content">
-        <p>Some text</p>
-        <div class="row">
-            <div class="col">Child 1</div>
-            <div class="col">Child 2</div>
+                            code={`...
+  <div class="hero">
+    <div class="hero-body">
+      <div class="content px-12-lg px-24-xl">
+        <div class="u-flex u-items-center u-gap-4 u-flex-column u-gap-8-lg u-flex-row-md">
+          <div>
+            <img class="u-round-xs w-100 w-60-sm w-auto-md u-shadow-lg" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" />
+          </div>
+          <div>
+            <h1 class="headline-3">hey!</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
         </div>
+      </div>
     </div>
-</section>`}
-                            language="htmlbars"
+  </div>
+...`}
+                            language="html"
                         />
 
                         <p>
-                            More info can be found in the{' '}
-                            <Link href="/layout/spacing">
-                                <a className="u u-LR">Spacing</a>
-                            </Link>{' '}
-                            docs.
+                            For the stats frame, let's center the text with <code>u-text-center</code>. We should also
+                            tidy up the body by adding <code>u-round-sm u-shadow-lg</code> to the div outside of the
+                            text. For the div with the text, use <code>u-text-center</code> to center the text. The
+                            avatar can stand out more if we add <code>u-shadow-lg</code>.
                         </p>
 
-                        <div className="divider w-30 mx-auto"></div>
+                        <CodeBlock
+                            code={`...
+  <div class="frame__header u-text-center">
+    <div>
+      <figure class="avatar bg-transparent u-shadow-lg">
+        <img src="https://images.unsplash.com/photo-1524135220673-c731600a1a50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&q=80"></figure>
+        <div>
+          <h6 class="frame__title">John Doe</h6>
+          <div class="frame__subtitle">Freelance Dev + Photographer</div>
+        </div>
+    </div>
+  </div>
+...`}
+                            language="html"
+                        />
 
                         <p>
-                            If you are looking to tile elements in a specific form, then I recommend getting started
-                            with the following two pages.
+                            The stats should be adjacent to each other. We can do this with the flexbox utils{' '}
+                            <code>u-flex u-justify-center u-gap-3</code>. The flexbox classes set the stats divs
+                            adjacent to each other and we make them centered horizontally separated by 1.5rem from each
+                            other.
                         </p>
 
-                        <ul>
-                            <li>
-                                <Link href="/layout/columns">
-                                    <a className="u u-LR">Columns (Flexbox)</a>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/grid/templates">
-                                    <a className="u u-LR">Grid</a>
-                                </Link>
-                            </li>
-                        </ul>
-
-                        <div className="divider w-30 mx-auto"></div>
+                        <CodeBlock
+                            code={`...
+  <div class="frame__body">
+    <div class="px-2 py-2 bg-black u-round-sm u-shadow-lg">
+      <div class="u-text-center text-white">
+        <div class="u-flex u-justify-center u-gap-3">
+          <div>
+            <h6 class="mb-0">56</h6>
+            <p class="uppercase font-bold text-sm">Clients</p>
+          </div>
+          <div>
+            <h6 class="mb-0">100%</h6>
+            <p class="uppercase font-bold text-sm">On Time</p>
+          </div>
+          <div>
+            <h6 class="mb-0">4.8</h6>
+            <p class="uppercase font-bold text-sm">Stars</p>
+          </div>
+        </div>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat
+          nulla pariatur.</p>
+      </div>
+    </div>
+  </div>
+...`}
+                            language="html"
+                        />
 
                         <p>
-                            With some layout styles in place, now you specify a{' '}
-                            <Link href="/layout/header">
-                                <a className="u u-LR">header</a>
-                            </Link>{' '}
-                            and{' '}
-                            <Link href="/layout/footer">
-                                <a className="u u-LR">footer</a>
-                            </Link>
-                            .
+                            The buttons should also fill the bottom and be adjacent to each other. We can use the{' '}
+                            <code>u-flex u-gap-1</code> classes on the button containing div. For the "Hire Me" button,
+                            we can stretch it by setting its flex-grow to 1 with <code>u-flex-grow-1</code>.
                         </p>
 
-                        <p>
-                            This pretty much sums up the few pages that would help getting a base layout up and running.
-                            You can find more styles to modify the layout under <i>Layout</i> or <i>Utilities</i>.
-                        </p>
-                        <div className="space"></div>
+                        <CodeBlock
+                            code={`...
+  <div class="frame__footer">
+    <div class="space"></div>
+    <div class="u-flex u-gap-1">
+      <button class="btn-black outline">View Work</button>
+      <button class="btn-black u-flex-grow-1">Hire Me</button>
+    </div>
+  </div>
+...`}
+                            language="html"
+                        />
 
-                        <h6>Components</h6>
                         <p>
-                            There are lots of components that already come with the framework. I do not have any
-                            specific recommendations other than to pick the ones you want to use. Each page has plenty
-                            of examples to cover many possible use cases.
+                            For the form, we can align the <i>Contact Info</i> inputs next to each other using{' '}
+                            <code>u-flex u-gap-1</code>. The submit button should also be on the right using the{' '}
+                            <code>u-pull-right</code> class.
                         </p>
+
+                        <CodeBlock
+                            code={`...
+<section class="mb-12">
+  <div class="content px-2 px-12-lg px-24-xl">
+    <h3>Want to work together?</h3>
+    <p>Drop me a line!</p>
+    <div class="mb-1">
+      <label class="m-0 mb-1">
+        <b>Contact Info</b>
+      </label>
+      <div class="u-flex u-gap-1">
+        <input placeholder="Name" />
+        <input placeholder="Email" />
+      </div>
+    </div>
+    <div class="mb-1">
+      <label class="m-0 mb-1">
+        <b>Message</b>
+      </label>
+      <textarea placeholder="Enter your message"></textarea>
+    </div>
+    <button class="btn-black u-pull-right">Submit</button>
+  </div>
+</section>
+...`}
+                            language="html"
+                        />
+
+                        <p>After these changes, you should be left with the final product.</p>
+                    </div>
+
+                    <ResizableInternal height="750px" top="50%">
+                        <IFrame content={TutorialComplete} />
+                    </ResizableInternal>
+                </section>
+
+                <section className="padtop" id="wrapping-up">
+                    <div className="content">
+                        <Headline title="Wrapping Up" link="#wrapping-up" size="4" />
+                        <div className="divider"></div>
+
+                        <p>I hope that guide was a useful introduction to developing your project with Cirrus. The portfolio here is by no means a finished product. There are many other things you can add such as more pages, a working dropdown hamburger menu, a working form, etc.</p>
+                        <p>To give you a small hint, you can get a working dropdown hamburger menu using a small JavaScript snippet you can find <InternalLink url="/layout/header#dropdown">here</InternalLink>.</p>
                     </div>
                 </section>
 

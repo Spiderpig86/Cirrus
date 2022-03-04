@@ -12,8 +12,7 @@ export const ResizableInternal: React.FC<ResizableInternalProps> = (props: Resiz
     <Resizable
         bounds="parent"
         minWidth={props.minWidth ?? '200px'}
-        // minHeight={props.height ?? 'auto'}
-        size={{ height: props.height ?? 'auto', width: '100%' }}
+        defaultSize={{ height: props.height ?? 'auto', width: '100%' }}
         handleStyles={{
             right: {
                 backgroundColor: 'rgb(153 160 185)',

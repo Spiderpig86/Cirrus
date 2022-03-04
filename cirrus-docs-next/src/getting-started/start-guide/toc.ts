@@ -20,6 +20,11 @@ export const toc: TableOfContentsEntry[] = [
                 anchor: '#utilities',
                 children: null,
             },
+            {
+                name: 'Wrapping Up',
+                anchor: '#wrapping-up',
+                children: null,
+            },
         ],
     },
 ];

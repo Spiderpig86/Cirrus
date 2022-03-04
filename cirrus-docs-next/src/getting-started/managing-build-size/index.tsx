@@ -313,8 +313,8 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         link: './developing',
                     }}
                     nextLink={{
-                        name: 'Release Notes',
-                        link: './release-notes',
+                        name: 'Start Guide',
+                        link: './start-guide',
                     }}
                 />
             </div>

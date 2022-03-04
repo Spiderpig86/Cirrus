@@ -84,8 +84,8 @@ export const ReleaseNotesPage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{
-                        name: 'Examples',
-                        link: './examples',
+                        name: 'Start Guide',
+                        link: './start-guide',
                     }}
                 />
             </div>
