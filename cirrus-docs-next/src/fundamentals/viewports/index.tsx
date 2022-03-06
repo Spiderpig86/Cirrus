@@ -346,9 +346,6 @@ export const ViewportsPage: React.FC<any> = (props) => {
                             language="html"
                         />
                         <div className="space"></div>
-
-                        <div className="divider"></div>
-
                         <p>
                             Note that not all classes support application by viewport. You can see if a given group of
                             classes support this by checking if the documentation contains a 'Responsive' section
@@ -361,20 +358,52 @@ export const ViewportsPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Customization" link="#customization" size="4" />
                         <div className="divider"></div>
-                        <span className="tag-container group-tags">
-                            <div className="tag tag--dark">Updated</div>
-                            <div className="tag tag--info">0.6.0</div>
-                        </span>
+                        <VersionTag version="0.7.0" />
                         <p>
-                            You can now modify the breakpoints used in Cirrus within the new configuration file for
-                            sizing. Just edit the values stored inside <code>_size.scss</code>.
+                            You can now modify the breakpoints used within the framework just by modifying the
+                            configuration when importing Cirrus.
+                        </p>
+                        <div className="space"></div>
+
+                        <h6 className="font-light">Adding/Overriding More Breakpoints</h6>
+                        <p>
+                            To add a breakpoint pair, add a new with entry in the <code>extend</code> configuration and
+                            add the corresponding breakpoint pair. Note that this can also be used for overriding
+                            existing breakpoints.
                         </p>
                         <CodeBlock
-                            code={`$breakpoints: (
-    'xs': 640px,
-    'sm': 768px,
-    'md': 1024px,
-    'lg': 1280px
+                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+    $config: (
+        extend: (
+            breakpoints: (
+                // 1. Add the width of the new breakpoint
+                widths: (
+                    '2xl': 2506px,
+                ),
+                // 2. Add the breakpoint pair
+                breakpoint-pairs: (
+                    '2xl': 'lg',
+                )
+            )
+        )
+    ),
+);`}
+                            language="scss"
+                        />
+                        <div className="space"></div>
+
+                        <h6 className="font-light">Removing Default Breakpoints</h6>
+                        <p>
+                            To remove the default breakpoints, just set the settings to null. Note that this may break some existing builds, so be sure to resolve them and add in the corresponding breakpoints as needed.
+                        </p>
+                        <CodeBlock
+                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+    $config: (
+        breakpoints: (
+            widths: null,
+            breakpoint-pairs: null,
+        )
+    ),
 );`}
                             language="scss"
                         />
