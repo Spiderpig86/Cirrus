@@ -559,9 +559,13 @@ export const StartGuidePage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
+                    prevLink={{
+                        name: 'Managing Build Size',
+                        link: './managing-build-size',
+                    }}
                     nextLink={{
-                        name: 'Support',
-                        link: './support',
+                        name: 'Release Notes',
+                        link: './release-notes',
                     }}
                 />
             </div>

@@ -549,7 +549,7 @@ export const DocsPage: React.FC<any> = (props) => {
                             <CodeBlock
                                 code={`// main.scss
 @use "cirrus-ui/cirrus-core" as *; // Core build OR
-@use "cirrus-ui/cirrus-ext" as *; // Extended build
+@use "node_modules/cirrus-ui/src/cirrus-ext" as *; // Extended build
 
 @screen-above($md) {
     .my-class {
@@ -573,7 +573,7 @@ export const DocsPage: React.FC<any> = (props) => {
                             <p>...add additional styles.</p>
                             <CodeBlock
                                 code={`// main.scss
-@use "cirrus-ui/cirrus-ext" as * with (
+@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         extend: (
             opacity: (
@@ -592,7 +592,7 @@ export const DocsPage: React.FC<any> = (props) => {
                             <p>...turn off features.</p>
                             <CodeBlock
                                 code={`// main.scss
-@use "cirrus-ui/cirrus-ext" as * with (
+@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         excludes: (
             AVATAR,
@@ -610,7 +610,7 @@ export const DocsPage: React.FC<any> = (props) => {
                             <p>...toggle viewport variants for classes.</p>
                             <CodeBlock
                                 code={`// main.scss
-@use "cirrus-ui/cirrus-ext" as * with (
+@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         viewports: (
             FLOAT: false,
@@ -625,7 +625,7 @@ export const DocsPage: React.FC<any> = (props) => {
                             <CodeBlock
                                 code={`// main.scss
 // Note that I am not using the extend keyword
-@use "cirrus-ui/cirrus-ext" as * with (
+@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         letter-spacing: (
             tightest: -.3rem,

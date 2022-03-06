@@ -308,7 +308,7 @@ export const ColorsPage: React.FC<any> = (props) => {
                         </p>
                         <p>Below is an example of adding a new magenta color:</p>
                         <CodeBlock
-                            code={`@use "internal/config" as * with (
+                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         extend: (
             colors: (
@@ -345,7 +345,7 @@ export const ColorsPage: React.FC<any> = (props) => {
                         <p>The <code>extend</code> map can also be used for <b>overriding existing values</b>. For example, the following config will override <code>bg-blue-500</code> and <code>text-blue-500</code> to use <kbd>#fff</kbd>.</p>
                         
                         <CodeBlock
-                            code={`@use "internal/config" as * with (
+                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         extend: (
             colors: (
@@ -384,7 +384,7 @@ export const ColorsPage: React.FC<any> = (props) => {
 
                         <p>If you would like to remove a default color, you can simply set any of the color maps of the extended palette to <code>null</code>. Cirrus will not generate any of these colors in the final build.</p>
                         <CodeBlock
-                            code={`@use "internal/config" as * with (
+                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         colors: (
             // Note: The quotes matter!
@@ -409,7 +409,7 @@ export const ColorsPage: React.FC<any> = (props) => {
                         <p>Note that disabling certain colors can lead to build errors! These colors are relied on by other parts of the framework.</p>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`@use "internal/config" as * with (
+                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         colors: (
             'gray': null,
@@ -432,7 +432,7 @@ Error: $color: "ERROR [fill()]: [fill] Unknown color key \`gray 500\`." is not a
   src\main.scss 30:1          root stylesheet`} language='sh' />
                         <p>Be sure to supply your own replacement color under the <code>extend</code> section.</p>
                         <CodeBlock
-                            code={`@use "internal/config" as * with (
+                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         colors: (
             'gray': null,

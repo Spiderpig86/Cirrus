@@ -31,6 +31,7 @@ import { TabContainer } from '../../layouts/components/tabs/tab-container';
 import { ResizableInternal } from '../../layouts/components/resizable';
 import { IFrame } from '../../layouts/components/iframe';
 import { PLAYGROUND_ENDPOINT_MAP } from '../../constants/playground';
+import { InternalLink } from '../../layouts/components/link';
 
 const Landing: React.FC<any> = () => {
     const { state, dispatch } = useContext(Context);
@@ -208,12 +209,12 @@ const Landing: React.FC<any> = () => {
                             projects.
                         </p>
 
-                        <Link href="">
-                            <a className="u u-LR text-lg u-inline-flex u-justify-center u-items-center">
+                        <InternalLink url="/getting-started/setup">
+                            <span className="text-lg">
                                 Learn more
                                 <FontAwesomeIcon className="ml-1" icon={['fas', 'chevron-right']} />
-                            </a>
-                        </Link>
+                            </span>
+                        </InternalLink>
                         <div className="space space--lg"></div>
 
                         <div className="">
@@ -642,12 +643,12 @@ import 'cirrus-ui';`}
                             <b>inline</b> inside the HTML without requiring extra media queries.
                         </p>
 
-                        <Link href="">
-                            <a className="u u-LR text-lg u-inline-flex u-justify-center u-items-center">
+                        <InternalLink url="/fundamentals/viewports">
+                            <span className="text-lg">
                                 Learn more
                                 <FontAwesomeIcon className="ml-1" icon={['fas', 'chevron-right']} />
-                            </a>
-                        </Link>
+                            </span>
+                        </InternalLink>
                     </div>
                     <div className="space space--lg"></div>
                 </div>
@@ -757,12 +758,12 @@ import 'cirrus-ui';`}
                         </p>
                     </div>
 
-                    <Link href="">
-                        <a className="u u-LR text-lg u-inline-flex u-justify-center u-items-center">
+                    <InternalLink url="/getting-started/configuration">
+                        <span className="text-lg">
                             Learn more
                             <FontAwesomeIcon className="ml-1" icon={['fas', 'chevron-right']} />
-                        </a>
-                    </Link>
+                        </span>
+                    </InternalLink>
                     <div className="u-text-left my-4">
                         <div className="row">
                             <div className="col-6">

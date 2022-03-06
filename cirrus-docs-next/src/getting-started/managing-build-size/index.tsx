@@ -88,7 +88,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                             To find out how to integrate this into Cirrus and your project, check out the{' '}
                             <ExternalLink url="https://purgecss.com/">PurgeCSS docs</ExternalLink>.
                         </p>
-                        <div className="space space--lg"></div>
+                        <div className="space"></div>
 
                         <h6 className="font-alt font-normal">Note Before Use</h6>
                         <p>
