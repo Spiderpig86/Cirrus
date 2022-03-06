@@ -19,3 +19,22 @@ export const Tag: React.FC<any> = (props: TagProps) => {
         </span>
     );
 };
+
+export interface VersionTagProps {
+    version: string;
+}
+
+export const VersionTag: React.FC<VersionTagProps> = (props: VersionTagProps) => {
+    return (
+        <Tag
+            leftProps={{
+                classes: `tag--dark`,
+                text: `New`,
+            }}
+            rightProps={{
+                classes: `tag--info`,
+                text: props.version,
+            }}
+        />
+    );
+};

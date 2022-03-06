@@ -17,6 +17,7 @@ export const AboutPage: React.FC<any> = (props) => {
                         <img
                             src="https://raw.githubusercontent.com/Spiderpig86/Cirrus/master/img/CirrusLogo.png"
                             style={{ maxWidth: '150px' }}
+                            className="mx-auto"
                             alt="logo"
                         />
                         <h1>About.</h1>
@@ -69,10 +70,10 @@ export const AboutPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <ul className="pagination no-bullets">
                             <li className="pagination-item pagination-prev">
-                                <Link href="../playground">
+                                <Link href="https://github.com/Spiderpig86/Cirrus/discussions">
                                     <a className="u-block">
                                         <p className="pagination-item-subtitle">Prev</p>
-                                        <h5 className="font-alt font-light m-0">Playground</h5>
+                                        <h5 className="font-alt font-light m-0">Community</h5>
                                     </a>
                                 </Link>
                             </li>

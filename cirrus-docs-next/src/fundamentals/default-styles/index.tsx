@@ -14,7 +14,7 @@ export const DefaultStylesPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
             <Head>
-                <title>{PAGE_TITLE_PREFIX} Default styles</title>
+                <title>{PAGE_TITLE_PREFIX} Default Styles</title>
             </Head>
             <div>
                 <section className="padtop" id="default-styles">

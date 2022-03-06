@@ -28,6 +28,7 @@ import '../src/playground/index.scss';
 
 import '../src/animations/index.scss';
 
+import '../src/fundamentals/sizes/index.scss';
 import '../src/fundamentals/typography/index.scss';
 import '../src/fundamentals/viewports/index.scss';
 

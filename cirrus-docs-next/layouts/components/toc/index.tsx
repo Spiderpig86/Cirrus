@@ -62,7 +62,7 @@ export const TableOfContents: React.FC<TableOfContentsProps> = (props) => {
 
     return (
         <nav className="toc__nav">
-            <span className="uppercase text-gray-600 font-bold" style={{ fontSize: '80%' }}>
+            <span className="uppercase text-gray-600 font-bold text-xs">
                 Contents
             </span>
             {constructList(props.entries)}
