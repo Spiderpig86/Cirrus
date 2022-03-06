@@ -187,7 +187,7 @@ section {
         }
     }
 
-    @each $viewport in $viewports {
+    @each $viewport in $breakpoint-keys {
         @for $i from 1 through $flex-columns {
             @include screen-above($viewport) {
                 .col-#{$viewport}-#{$i} {

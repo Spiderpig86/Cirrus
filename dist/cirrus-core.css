@@ -36,10 +36,32 @@
 /*
     Group selectors that share common styling.
 */
+/*
+    Global Mixins
+*/
+/*
+    Mixin that returns a property map as a series of CSS class properties.
+
+    E.g. $xs: (color: #fff, opacity: 0.5), $sm... =>
+
+    <class>--xs {
+        color: #fff;
+        opacity: 0.5;
+    }
+*/
+/*
+    Bring to front on focus.
+*/
 /* Breakpoints */
 /* Fonts */
+/* VALUE APIS */
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
 /* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
 /* Variant of mixin that takes in mapping of class name to value */
 /**
  * DART SASS ONLY: Generates viewport classes given styles in a @content mixin
@@ -58,28 +80,6 @@
  *           }
  *       }
  */
-/*
-    Global Mixins
-*/
-/*
-    Mixin that returns a property map as a series of CSS class properties.
-
-    E.g. $xs: (color: #fff, opacity: 0.5), $sm... =>
-
-    <class>--xs {
-        color: #fff;
-        opacity: 0.5;
-    }
-*/
-/*
-    Bring to front on focus.
-*/
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
-*/
-/*
-  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
-*/
 :root {
   /* v1 Colors */
   --cirrus-fg: #0f172a;

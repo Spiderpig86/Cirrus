@@ -1,68 +1,37 @@
-// TODO: Move all vars below into config in future release. This file should only be left with mixins.
-
-/* Breakpoints */
-$xs: 'xs';
-$sm: 'sm';
-$md: 'md';
-$lg: 'lg';
-$xl: 'xl';
-$viewports: ($xs, $sm, $md, $lg, $xl);
-
-/* Fonts */
-// TODO Need to standardize these around a base font size for $font-size-m
-$font-size-xs: 0.75rem;
-$font-size-s: 0.875rem;
-$font-size-m: 1rem;
-$font-size-l: 1.25rem;
-$font-size-xl: 1.5rem;
+@use 'config';
 
 /* Media Queries */
-/* Smaller than the defined pixels are the dimensions for that range */
-$breakpoints: (
-    $xs: 640px,
-    $sm: 768px,
-    $md: 1024px,
-    $lg: 1280px,
-    $xl: 1536px,
-);
-
-$breakpoint-pairs: (
-    $sm: $xs,
-    $md: $sm,
-    $lg: $md,
-    $xl: $lg,
-);
 
 @mixin screen-above($breakpoint) {
-    @if not map-has-key($map: $breakpoints, $key: $breakpoint) {
+    @if not map-has-key($map: config.$breakpoints, $key: $breakpoint) {
         @error 'The given breakpoint #{$breakpoint} for @screen-above does not exist.';
     }
 
-    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @media screen and (min-width: map-get(config.$breakpoints, $breakpoint)) {
         @content;
     }
 }
 
 @mixin screen-between($lower, $higher) {
-    @if not map-has-key($map: $breakpoints, $key: $lower) {
+    @if not map-has-key($map: config.$breakpoints, $key: $lower) {
         @error 'The given breakpoint #{$lower} ($lower) for @screen-between does not exist.';
     }
 
-    @if not map-has-key($map: $breakpoints, $key: $higher) {
+    @if not map-has-key($map: config.$breakpoints, $key: $higher) {
         @error 'The given breakpoint #{$higher} ($higher) for @screen-between does not exist.';
     }
 
-    @media screen and (min-width: map-get($breakpoints, $lower)) and (max-width: map-get($breakpoints, $higher) - 1) {
+    @media screen and (min-width: map-get(config.$breakpoints, $lower)) and (max-width: map-get(config.$breakpoints, $higher) - 1) {
         @content;
     }
 }
 
 @mixin screen-below($breakpoint) {
-    @if not map-has-key($map: $breakpoints, $key: $breakpoint) {
+    @if not map-has-key($map: config.$breakpoints, $key: $breakpoint) {
         @error 'The given breakpoint #{$breakpoint} for @screen-below does not exist.';
     }
 
-    @media screen and (max-width: map-get($breakpoints, $breakpoint) - 1) {
+    @media screen and (max-width: map-get(config.$breakpoints, $breakpoint) - 1) {
         @content;
     }
 }
@@ -86,7 +55,7 @@ $breakpoint-pairs: (
     }
 
     @if $generate-viewports == 'true' {
-        @each $suffix, $limit in $breakpoint-pairs {
+        @each $suffix, $limit in config.$breakpoint-pairs {
             @each $class in $classes {
                 @include screen-above($limit) {
                     .#{$prefix}#{$class}-#{$suffix} {
@@ -115,7 +84,7 @@ $breakpoint-pairs: (
     }
 
     @if $generate-viewports == 'true' {
-        @each $suffix, $limit in $breakpoint-pairs {
+        @each $suffix, $limit in config.$breakpoint-pairs {
             @each $class, $value in $class-value-pairs {
                 @include screen-above($limit) {
                     .#{$prefix}#{$class}-#{$suffix} {
@@ -148,7 +117,7 @@ $breakpoint-pairs: (
     @content ('');
 
     @if $generate-viewports == 'true' {
-        @each $suffix, $limit in $breakpoint-pairs {
+        @each $suffix, $limit in config.$breakpoint-pairs {
             @include screen-above($limit) {
                 @content ($suffix);
             }

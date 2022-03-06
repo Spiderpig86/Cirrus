@@ -4,9 +4,9 @@
 @use '../../node_modules/sass-true/sass/config/throw';
 
 @use 'flags';
-@use 'size';
 @use 'theme';
 @use 'functions';
+@use 'constants';
 
 // ==================================================
 // User config
@@ -59,6 +59,7 @@ $default-config: (
     extend:
         (
             avatar-sizes: (),
+            breakpoints: (),
             button-sizes: (),
             // Please define all colors using hex
             // Omitting some colors may break Cirrus builds
@@ -104,7 +105,7 @@ $default-config: (
             tab-sizes: (),
             absolute: (),
             flex: (
-                properties: ()
+                properties: (),
             ),
             grid: (
                 properties: (),
@@ -127,47 +128,63 @@ $default-config: (
     // Avatar sizes
     avatar-sizes:
         (
-            size.$xs: (
+            constants.$xs: (
                 font-size: 0.8rem,
                 width: 1.6rem,
                 height: 1.6rem,
             ),
-            size.$sm: (
+            constants.$sm: (
                 font-size: 1rem,
                 width: 2.4rem,
                 height: 2.4rem,
             ),
-            size.$lg: (
+            constants.$lg: (
                 font-size: 2rem,
                 width: 4.8rem,
                 height: 4.8rem,
             ),
-            size.$xl: (
+            constants.$xl: (
                 font-size: 3rem,
                 width: 6.4rem,
                 height: 6.4rem,
             ),
         ),
+    breakpoints: (
+        widths: (
+            constants.$xs: 640px,
+            constants.$sm: 768px,
+            constants.$md: 1024px,
+            constants.$lg: 1280px,
+            constants.$xl: 1536px,
+        ),
+        // Pairs for generating viewport media queries. Pairs are (current viewport: viewport that is 1 smaller)
+        breakpoint-pairs: (
+            constants.$sm: constants.$xs,
+            constants.$md: constants.$sm,
+            constants.$lg: constants.$md,
+            constants.$xl: constants.$lg,
+        ),
+    ),
     // Button sizes
     button-sizes:
         (
-            size.$xs: (
+            constants.$xs: (
                 padding: 0 0.5rem,
                 font-size: 50%,
             ),
-            size.$sm: (
+            constants.$sm: (
                 padding: 0.25rem 1rem,
                 font-size: 70%,
             ),
-            size.$md: (
+            constants.$md: (
                 padding: 0.5rem 1.5rem,
                 font-size: 90%,
             ),
-            size.$lg: (
+            constants.$lg: (
                 padding: 0.75rem 2rem,
                 font-size: 110%,
             ),
-            size.$xl: (
+            constants.$xl: (
                 padding: 1rem 2.5rem,
                 font-size: 130%,
             ),
@@ -314,10 +331,10 @@ $default-config: (
             heading: (
                 h6: (
                     default: (
-                        font-size: size.$font-size-m,
+                        font-size: constants.$font-size-m,
                     ),
                     sm-above: (
-                        font-size: size.$font-size-l,
+                        font-size: constants.$font-size-l,
                     ),
                 ),
                 h5: (
@@ -325,7 +342,7 @@ $default-config: (
                         font-size: 1.25rem,
                     ),
                     sm-above: (
-                        font-size: size.$font-size-xl,
+                        font-size: constants.$font-size-xl,
                     ),
                 ),
                 h4: (
@@ -397,24 +414,24 @@ $default-config: (
                 ),
             ),
             text: (
-                size.$xs: (
-                    font-size: size.$font-size-xs !important,
+                constants.$xs: (
+                    font-size: constants.$font-size-xs !important,
                     line-height: 1.5rem !important,
                 ),
-                size.$sm: (
-                    font-size: size.$font-size-s !important,
+                constants.$sm: (
+                    font-size: constants.$font-size-s !important,
                     line-height: 1.75rem !important,
                 ),
-                size.$md: (
-                    font-size: size.$font-size-m !important,
+                constants.$md: (
+                    font-size: constants.$font-size-m !important,
                     line-height: 2rem !important,
                 ),
-                size.$lg: (
-                    font-size: size.$font-size-l !important,
+                constants.$lg: (
+                    font-size: constants.$font-size-l !important,
                     line-height: 2.25rem !important,
                 ),
-                size.$xl: (
-                    font-size: size.$font-size-xl !important,
+                constants.$xl: (
+                    font-size: constants.$font-size-xl !important,
                     line-height: 2.25rem !important,
                 ),
             ),
@@ -447,72 +464,72 @@ $default-config: (
     ),
     form-sizes: (
         input-sizes: (
-            size.$xs: (
-                font-size: size.$font-size-xs,
+            constants.$xs: (
+                font-size: constants.$font-size-xs,
                 padding: 0.35rem 0.9rem,
             ),
-            size.$sm: (
-                font-size: size.$font-size-s,
+            constants.$sm: (
+                font-size: constants.$font-size-s,
                 padding: 0.55rem 1rem,
             ),
-            size.$lg: (
-                font-size: size.$font-size-l,
+            constants.$lg: (
+                font-size: constants.$font-size-l,
             ),
-            size.$xl: (
-                font-size: size.$font-size-xl,
+            constants.$xl: (
+                font-size: constants.$font-size-xl,
             ),
         ),
         input-contains-icon-padding: (
-            size.$xs: 2rem,
-            size.$sm: 2.5rem,
-            size.$lg: 3.5rem,
-            size.$xl: 4rem,
+            constants.$xs: 2rem,
+            constants.$sm: 2.5rem,
+            constants.$lg: 3.5rem,
+            constants.$xl: 4rem,
         ),
         input-icon-sizes: (
-            size.$xs: (
+            constants.$xs: (
                 line-height: 1.75rem,
                 width: 1.75rem,
                 font-size: 7px,
             ),
-            size.$sm: (
+            constants.$sm: (
                 width: 2.5rem,
                 font-size: 14px,
             ),
-            size.$lg: (
+            constants.$lg: (
                 line-height: 3.5rem,
                 width: 3.5rem,
                 font-size: 28px,
             ),
-            size.$xl: (
+            constants.$xl: (
                 line-height: 2.5rem,
                 width: 3.75rem,
                 font-size: 35px,
             ),
         ),
         label-sizes: (
-            size.$xs: size.$font-size-xs,
-            size.$sm: size.$font-size-s,
-            size.$lg: size.$font-size-l,
-            size.$xl: size.$font-size-xl,
+            constants.$xs: constants.$font-size-xs,
+            constants.$sm: constants.$font-size-s,
+            constants.$lg: constants.$font-size-l,
+            constants.$xl: constants.$font-size-xl,
         ),
     ),
     // Progress Bar Heights
     progress:
         (
             sizes: (
-                size.$xs: (
+                constants.$xs: (
                     height: 0.25rem,
                 ),
-                size.$sm: (
+                constants.$sm: (
                     height: 0.5rem,
                 ),
-                size.$md: (
+                constants.$md: (
                     height: 0.75rem,
                 ),
-                size.$lg: (
+                constants.$lg: (
                     height: 1rem,
                 ),
-                size.$xl: (
+                constants.$xl: (
                     height: 1.25rem,
                 ),
             ),
@@ -520,34 +537,34 @@ $default-config: (
     // Space sizes
     space-sizes:
         (
-            size.$lg: (
+            constants.$lg: (
                 padding: 1rem 0,
             ),
-            size.$xl: (
+            constants.$xl: (
                 padding: 2rem 0,
             ),
         ),
     // Tabs
-    tab-sizes: (
-        font-sizes: 
+    tab-sizes:
         (
-            size.$xs: size.$font-size-xs,
-            size.$sm: size.$font-size-s,
-            size.$lg: size.$font-size-l,
-            size.$xl: size.$font-size-xl,
+            font-sizes: (
+                constants.$xs: constants.$font-size-xs,
+                constants.$sm: constants.$font-size-s,
+                constants.$lg: constants.$font-size-l,
+                constants.$xl: constants.$font-size-xl,
+            ),
         ),
-    ),
     // Tags
-    tags: (
-        font-sizes: (
-            size.$xs: size.$font-size-xs,
-            size.$sm: size.$font-size-s,
-            size.$md: size.$font-size-m,
-            size.$lg: size.$font-size-l,
-            size.$xl: size.$font-size-xl,
-        )
-    ),
-
+    tags:
+        (
+            font-sizes: (
+                constants.$xs: constants.$font-size-xs,
+                constants.$sm: constants.$font-size-s,
+                constants.$md: constants.$font-size-m,
+                constants.$lg: constants.$font-size-l,
+                constants.$xl: constants.$font-size-xl,
+            ),
+        ),
     // UTILITIES //
     absolute:
         (
@@ -655,11 +672,11 @@ $default-config: (
     ),
     round: (
         'none': 0px,
-        size.$xs: 0.25rem,
-        size.$sm: 0.5rem,
-        size.$md: 0.75rem,
-        size.$lg: 1rem,
-        size.$xl: 1.25rem,
+        constants.$xs: 0.25rem,
+        constants.$sm: 0.5rem,
+        constants.$md: 0.75rem,
+        constants.$lg: 1rem,
+        constants.$xl: 1.25rem,
         'full': 9001px,
     ),
     sizing-system: (
@@ -682,28 +699,28 @@ $default-config: (
         'none': (
             --cirrus-shadow: 0 0 #000,
         ),
-        size.$xs: (
+        constants.$xs: (
             --cirrus-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05),
         ),
-        size.$sm: (
+        constants.$sm: (
             --cirrus-shadow: (
                 0 1px 3px 0 rgba(0, 0, 0, 0.1),
                 0 1px 2px 0 rgba(0, 0, 0, 0.06),
             ),
         ),
-        size.$md: (
+        constants.$md: (
             --cirrus-shadow: (
                 0 4px 6px -1px rgba(0, 0, 0, 0.1),
                 0 2px 4px -1px rgba(0, 0, 0, 0.06),
             ),
         ),
-        size.$lg: (
+        constants.$lg: (
             --cirrus-shadow: (
                 0 10px 15px -3px rgba(0, 0, 0, 0.1),
                 0 4px 6px -2px rgba(0, 0, 0, 0.05),
             ),
         ),
-        size.$xl: (
+        constants.$xl: (
             --cirrus-shadow: (
                 0 20px 25px -5px rgba(0, 0, 0, 0.1),
                 0 10px 10px -5px rgba(0, 0, 0, 0.04),
@@ -755,6 +772,11 @@ $viewport-flags: map.get($all-config, viewports);
 $excludes: map.get($all-config, excludes);
 $includes: map.get($all-config, includes);
 
+// BREAKPOINTS
+$breakpoints: functions.get-with-extend($all-config, breakpoints, widths);
+$breakpoint-pairs: functions.get-with-extend($all-config, breakpoints, breakpoint-pairs);
+$breakpoint-keys: map-keys($breakpoints);
+
 // COLORS
 $semantic-colors: functions.get-with-extend($all-config, colors, semantic);
 $control-themes: functions.get-with-extend($all-config, colors, control-themes);
@@ -804,6 +826,8 @@ $round: functions.get-with-extend($all-config, round);
 $shadows: functions.get-with-extend($all-config, shadows);
 $spacing-system: functions.get-with-extend($all-config, sizing-system);
 $z-indexes: functions.get-with-extend($all-config, z-index);
+
+/* VALUE APIS */
 
 @function fill($color, $level, $opacity: 1) {
     @if map.has-key($v2Colors, $color, $level) {
