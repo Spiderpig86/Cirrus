@@ -22,16 +22,16 @@ export const MinHeightPage: React.FC<any> = (props) => {
         md: '1024px',
         lg: '1280px',
         xl: '1536px',
-        '10': '10%',
-        '20': '20%',
-        '30': '30%',
-        '40': '40%',
-        '50': '50%',
-        '60': '60%',
-        '70': '70%',
-        '80': '80%',
-        '90': '90%',
-        '100': '100%',
+        '10p': '10%',
+        '20p': '20%',
+        '30p': '30%',
+        '40p': '40%',
+        '50p': '50%',
+        '60p': '60%',
+        '70p': '70%',
+        '80p': '80%',
+        '90p': '90%',
+        '100p': '100%',
         screen: '100vh',
     };
 
@@ -67,14 +67,14 @@ export const MinHeightPage: React.FC<any> = (props) => {
                         <p>Using these classes it quite simple to control the minimum height an element should have. You can either use a percentage based class or use a class to span the whole screen using the <code>min-h-[size]</code> syntax.</p>
 
                         <div className="p-4 bg-pink-100 u-round-xs text-white font-bold u-text-center">
-                            <div className="min-h-100 p-2 bg-pink-500 u-round-xs">
-                                min-h-100
+                            <div className="min-h-100p p-2 bg-pink-500 u-round-xs">
+                                min-h-100p
                             </div>
                         </div>
                         <div className="space"></div>
 
                         <CodeBlock code={`<div class="p-4 bg-pink-100 u-round-xs text-white font-bold u-text-center">
-    <div class="min-h-100 p-2 bg-pink-500 u-round-xs">min-h-100</div>
+    <div class="min-h-100p p-2 bg-pink-500 u-round-xs">min-h-100p</div>
 </div>`} language='htmlbars' />
 
                     </div>
@@ -144,8 +144,8 @@ $config: (
                             code={`// _config.scss
 $config: (
     extend: (
-        minmax-heights: (
-            '25': '25%',
+        min-heights: (
+            '25p': '25%',
         )
     )
 ) !default;`}
@@ -153,7 +153,7 @@ $config: (
                         />
                         <p>This would generate the following additonal classes.</p>
                         <CodeBlock
-                            code={`.min-h-25 {
+                            code={`.min-h-25p {
     min-height: 25% !important;
 }`}
                             language="css"

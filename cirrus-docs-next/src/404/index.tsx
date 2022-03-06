@@ -23,7 +23,7 @@ export const _404: React.FC<any> = (props) => {
                 }}
             />
             <div
-                className="w-100 u-flex u-flex-column u-text-center u-items-center u-justify-center"
+                className="w-100p u-flex u-flex-column u-text-center u-items-center u-justify-center"
                 style={{
                     height: '100vh',
                 }}

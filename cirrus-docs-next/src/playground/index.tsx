@@ -245,7 +245,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                     onDragFinished={handleSplitPaneDragFinished}
                 >
                     <div
-                        className={`u-overflow-hidden h-100` + (isDragging ? ` is-dragging` : ``)}
+                        className={`u-overflow-hidden h-100p` + (isDragging ? ` is-dragging` : ``)}
                         style={{
                             backgroundColor: '#202124',
                         }}
@@ -324,7 +324,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                             }}
                         />
                     </div>
-                    <div className={`h-100` + (isDragging ? ` is-dragging` : ``)}>
+                    <div className={`h-100p` + (isDragging ? ` is-dragging` : ``)}>
                         {code && <IFrame key={iframeKey} content={constructTemplate(code)} />}
                     </div>
                 </SplitPane>

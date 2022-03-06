@@ -22,16 +22,16 @@ export const MinWidthPage: React.FC<any> = (props) => {
         md: '1024px',
         lg: '1280px',
         xl: '1536px',
-        '10': '10%',
-        '20': '20%',
-        '30': '30%',
-        '40': '40%',
-        '50': '50%',
-        '60': '60%',
-        '70': '70%',
-        '80': '80%',
-        '90': '90%',
-        '100': '100%',
+        '10p': '10%',
+        '20p': '20%',
+        '30p': '30%',
+        '40p': '40%',
+        '50p': '50%',
+        '60p': '60%',
+        '70p': '70%',
+        '80p': '80%',
+        '90p': '90%',
+        '100p': '100%',
         screen: '100vw',
     };
 
@@ -67,14 +67,14 @@ export const MinWidthPage: React.FC<any> = (props) => {
                         <p>Using these classes it quite simple to control the minimum width an element should have. You can either use a percentage based class or use a class to span the whole screen using the <code>min-w-[size]</code> syntax.</p>
 
                         <div className="p-4 bg-indigo-100 u-round-xs text-white font-bold u-text-center u-flex">
-                            <div className="min-w-50 p-2 bg-indigo-500 u-round-xs">
-                                min-w-50
+                            <div className="min-w-50p p-2 bg-indigo-500 u-round-xs">
+                                min-w-50p
                             </div>
                         </div>
                         <div className="space"></div>
 
                         <CodeBlock code={`<div class="p-4 bg-indigo-100 u-round-xs text-white font-bold u-text-center u-flex" style="">
-    <div class="min-w-50 p-2 bg-indigo-500 u-round-xs">min-w-50</div>
+    <div class="min-w-50p p-2 bg-indigo-500 u-round-xs">min-w-50p</div>
 </div>`} language='htmlbars' />
 
                     </div>
@@ -144,7 +144,7 @@ $config: (
                             code={`// _config.scss
 $config: (
     extend: (
-        minmax-widths: (
+        min-widths: (
             'min': 'min-content',
             'max': 'max-content',
         )

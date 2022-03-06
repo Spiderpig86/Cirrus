@@ -415,7 +415,7 @@ export const DocsPage: React.FC<any> = (props) => {
       <p class="mb-0 mt-2 text-sm tracking-tight text-gray-600">Free shipping on orders over $25.</p>
     </div>
     <div>
-      <img class="h-100 img-cover" src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=200&amp;q=80">
+      <img class="h-100p img-cover" src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=200&amp;q=80">
     </div>
   </div>
 </div>`}

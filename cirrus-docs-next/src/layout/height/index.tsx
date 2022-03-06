@@ -18,11 +18,15 @@ export const HeightPage: React.FC<any> = (props) => {
 
     let classTable = heightClasses.map((value) => {
         return {
-            class: `h-${value}`,
+            class: `h-${value}p`,
             style: `height: ${value}%;`,
         };
     });
     classTable = classTable.concat([
+        {
+            class: `h-0`,
+            style: `height: 0;`,
+        },
         {
             class: `h-auto`,
             style: `height: auto;`,
@@ -64,27 +68,27 @@ export const HeightPage: React.FC<any> = (props) => {
                                 height: '400px',
                             }}
                         >
-                            <div className="h-30 bg-teal-500 u-round-xs p-1 u-shadow-lg">
-                                <p className="text-gray-000">h-30</p>
+                            <div className="h-30p bg-teal-500 u-round-xs p-1 u-shadow-lg">
+                                <p className="text-gray-000">h-30p</p>
                             </div>
-                            <div className="h-50 bg-teal-500 u-round-xs p-1 u-shadow-lg">
-                                <p className="text-gray-000">h-50</p>
+                            <div className="h-50p bg-teal-500 u-round-xs p-1 u-shadow-lg">
+                                <p className="text-gray-000">h-50p</p>
                             </div>
-                            <div className="h-70 bg-teal-500 u-round-xs p-1 u-shadow-lg">
-                                <p className="text-gray-000">h-70</p>
+                            <div className="h-70p bg-teal-500 u-round-xs p-1 u-shadow-lg">
+                                <p className="text-gray-000">h-70p</p>
                             </div>
-                            <div className="h-90 bg-teal-500 u-round-xs p-1 u-shadow-lg">
-                                <p className="text-gray-000">h-90</p>
+                            <div className="h-90p bg-teal-500 u-round-xs p-1 u-shadow-lg">
+                                <p className="text-gray-000">h-90p</p>
                             </div>
                         </div>
 
                         <CodeBlock
                             language="htmlbars"
                             code={`<div>
-    <div class="h-30">...</div>
-    <div class="h-50">...</div>
-    <div class="h-70">...</div>
-    <div class="h-90">...</div>
+    <div class="h-30p">...</div>
+    <div class="h-50p">...</div>
+    <div class="h-70p">...</div>
+    <div class="h-90p">...</div>
 </div>`}
                         />
                     </div>
@@ -104,7 +108,7 @@ export const HeightPage: React.FC<any> = (props) => {
                                 minHeight: '400px',
                             }}
                         >
-                            <div className="h-screen bg-purple-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
+                            <div className="h-screen bg-purple-500 text-gray-000 p-3 w-100p u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
                                 <p>h-screen</p>
                             </div>
                         </div>
@@ -133,7 +137,7 @@ export const HeightPage: React.FC<any> = (props) => {
                                 minHeight: '200px',
                             }}
                         >
-                            <div className="h-auto bg-red-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
+                            <div className="h-auto bg-red-500 text-gray-000 p-3 w-100p u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
                                 <p className="mb-0">h-auto</p>
                             </div>
                         </div>
@@ -158,11 +162,11 @@ export const HeightPage: React.FC<any> = (props) => {
                         <p>
                             All utility classes mentioned here support viewport based application. All you need to do is
                             add a <code>-&lt;viewport&gt;</code> at the end of the class(es) you are using. For example,
-                            use <code>h-30-md</code> to apply <code>h-30</code> on medium screens and above.
+                            use <code>h-30p-md</code> to apply <code>h-30p</code> on medium screens and above.
                         </p>
 
                         <CodeBlock
-                            code={`<div class="h-30-md">
+                            code={`<div class="h-30p-md">
     <!-- ... -->
 </div>`}
                             language="html"

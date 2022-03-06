@@ -18,11 +18,15 @@ export const WidthPage: React.FC<any> = (props) => {
 
     let classTable = widthClasses.map((value) => {
         return {
-            class: `w-${value}`,
+            class: `w-${value}p`,
             style: `width: ${value}%;`,
         };
     });
     classTable = classTable.concat([
+        {
+            class: `w-0`,
+            style: `width: 0;`,
+        },
         {
             class: `w-auto`,
             style: `width: auto;`,
@@ -61,27 +65,27 @@ export const WidthPage: React.FC<any> = (props) => {
                         <div
                             className="u-flex u-flex-column u-justify-space-evenly p-6 bg-orange-100 mb-2"
                         >
-                            <div className="w-20 bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
-                                <span className="text-gray-000">w-20</span>
+                            <div className="w-20p bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
+                                <span className="text-gray-000">w-20p</span>
                             </div>
-                            <div className="w-40 bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
-                                <span className="text-gray-000">w-40</span>
+                            <div className="w-40p bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
+                                <span className="text-gray-000">w-40p</span>
                             </div>
-                            <div className="w-60 bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
-                                <span className="text-gray-000">w-60</span>
+                            <div className="w-60p bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
+                                <span className="text-gray-000">w-60p</span>
                             </div>
-                            <div className="w-80 bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
-                                <span className="text-gray-000">w-80</span>
+                            <div className="w-80p bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
+                                <span className="text-gray-000">w-80p</span>
                             </div>
                         </div>
 
                         <CodeBlock
                             language="htmlbars"
                             code={`<div>
-    <div class="w-20">...</div>
-    <div class="w-40">...</div>
-    <div class="w-60">...</div>
-    <div class="w-80">...</div>
+    <div class="w-20p">...</div>
+    <div class="w-40p">...</div>
+    <div class="w-60p">...</div>
+    <div class="w-80p">...</div>
 </div>`}
                         />
                     </div>
@@ -98,7 +102,7 @@ export const WidthPage: React.FC<any> = (props) => {
                         <div
                             className="u-relative u-overflow-x-scroll p-6 bg-pink-100 mb-2"
                         >
-                            <div className="w-screen bg-pink-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
+                            <div className="w-screen bg-pink-500 text-gray-000 p-3 w-100p u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
                                 <p>w-screen</p>
                             </div>
                         </div>
@@ -124,7 +128,7 @@ export const WidthPage: React.FC<any> = (props) => {
                         <div
                             className="u-relative p-6 bg-indigo-100 mb-2"
                         >
-                            <div className="w-auto bg-indigo-500 text-gray-000 p-3 w-100 u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
+                            <div className="w-auto bg-indigo-500 text-gray-000 p-3 w-100p u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
                                 <p className="mb-0">w-auto</p>
                             </div>
                         </div>
@@ -149,11 +153,11 @@ export const WidthPage: React.FC<any> = (props) => {
                         <p>
                             All utility classes mentioned here support viewport based application. All you need to do is
                             add a <code>-&lt;viewport&gt;</code> at the end of the class(es) you are using. For example,
-                            use <code>w-50-md</code> to apply <code>w-50</code> on medium screens and above.
+                            use <code>w-50p-md</code> to apply <code>w-50p</code> on medium screens and above.
                         </p>
 
                         <CodeBlock
-                            code={`<div class="w-50-md">
+                            code={`<div class="w-50p-md">
     <!-- ... -->
 </div>`}
                             language="html"

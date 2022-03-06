@@ -70,7 +70,7 @@ export const HeroPage: React.FC<any> = (props) => {
 
                     <div className="hero bg-indigo-100">
                         <div className="hero-body">
-                            <div className="px-3 w-100">
+                            <div className="px-3 w-100p">
                                 <div className="u-flex u-justify-space-between u-items-center">
                                     <div>
                                         <h2 className="title" style={{

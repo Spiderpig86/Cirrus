@@ -94,7 +94,7 @@ export const HeaderPage: React.FC<any> = (props) => {
 
                         <LazyLoad height={200}>
                             <iframe
-                                className="w-100"
+                                className="w-100p"
                                 title="Header Demo"
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head.html"
                             />

@@ -47,7 +47,7 @@ export const CIRRUS_DEFAULT_PLAYGROUND_CODE = `<!--
         width: 150px
     }
 </style>
-<div class="u-flex u-center h-100">
+<div class="u-flex u-center h-100p">
     <div class="intro-card frame px-3 py-4">
         <div class="frame__body">
             <div class="u-flex u-center">

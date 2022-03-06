@@ -44,7 +44,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 props.extraClasses ?? ''
             }`}
         >
-            <div className="w-100">
+            <div className="w-100p">
                 <div className="header__contents mx-auto">
                     <div className="header-brand">
                         <div className="nav-item no-hover">

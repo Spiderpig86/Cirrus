@@ -117,13 +117,13 @@ export const StartGuidePage: React.FC<any> = (props) => {
 
                         <p>
                             To setup our portfolio page, we will start with the base structure. We will start with a div
-                            with <code>min-h-100</code> to allow it to span the height of the screen and a background
+                            with <code>min-h-100p</code> to allow it to span the height of the screen and a background
                             color of <code>bg-gray-100</code>. Inside of it will have 3 <code>section</code> tags, each
                             for the landing, stats, and contact form.
                         </p>
 
                         <CodeBlock
-                            code={`<div class="bg-gray-100 min-h-100">
+                            code={`<div class="bg-gray-100 min-h-100p">
   <section>
     <div class="hero">
       <div class="hero-body">
@@ -149,7 +149,7 @@ export const StartGuidePage: React.FC<any> = (props) => {
     <div class="content px-12-lg px-24-xl">
       <div class="">
         <div>
-          <img class="w-100 w-60-sm w-auto-md" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" />
+          <img class="w-100p w-60p-sm w-auto-md" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" />
         </div>
         <div>
           <h1 class="headline-3">hey!</h1>
@@ -414,7 +414,7 @@ export const StartGuidePage: React.FC<any> = (props) => {
       <div class="content px-12-lg px-24-xl">
         <div class="u-flex u-items-center u-gap-4 u-flex-column u-gap-8-lg u-flex-row-md">
           <div>
-            <img class="u-round-xs w-100 w-60-sm w-auto-md u-shadow-lg" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" />
+            <img class="u-round-xs w-100p w-60p-sm w-auto-md u-shadow-lg" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" />
           </div>
           <div>
             <h1 class="headline-3">hey!</h1>

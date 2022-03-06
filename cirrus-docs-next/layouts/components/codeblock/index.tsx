@@ -18,7 +18,7 @@ export const CodeBlock: React.FC<CodeBlockProps> = (props) => {
     return (
         <div className={`codeblock-wrapper u-relative mb-2`}>
             <Prism
-                className={`codeblock pl-2 pr-3 py-1 u-shadow-lg h-100 ${props.classes ?? ''} ${
+                className={`codeblock pl-2 pr-3 py-1 u-shadow-lg h-100p ${props.classes ?? ''} ${
                     props.breakAll ? `break-all` : ``
                 }`}
                 language={props.language === 'htmlbars' ? 'html' : props.language}

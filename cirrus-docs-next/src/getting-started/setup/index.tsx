@@ -218,7 +218,7 @@ export const SetUpPage: React.FC<any> = (props) => {
                         <LazyLoad height={200} once>
                             <iframe
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html"
-                                className="w-100"
+                                className="w-100p"
                             />
                         </LazyLoad>
                         <a href="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html" target="_blank">

@@ -180,7 +180,7 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
                 <div className="p-3 bg-purple-100 u-round-xs u-relative">
                     <p className="font-bold">Auto</p>
                     <div
-                        className="u-round-xs bg-purple-200 u-overflow-x-auto w-50"
+                        className="u-round-xs bg-purple-200 u-overflow-x-auto w-50p"
                     >
                         <p className="px-2 text-purple-700" style={{ width: '500px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -205,7 +205,7 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
                 <div className="p-3 bg-blue-100 u-round-xs u-relative">
                     <p className="font-bold">Hidden</p>
                     <div
-                        className="u-round-xs bg-blue-200 u-overflow-x-hidden w-50"
+                        className="u-round-xs bg-blue-200 u-overflow-x-hidden w-50p"
                     >
                         <p className="px-2 text-blue-700" style={{ width: '500px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -230,7 +230,7 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
                 <div className="p-3 bg-green-100 u-round-xs u-relative u-overflow-y-auto">
                     <p className="font-bold">Visible</p>
                     <div
-                        className="u-round-xs bg-green-200 u-overflow-x-visible w-50"
+                        className="u-round-xs bg-green-200 u-overflow-x-visible w-50p"
                     >
                         <p className="px-2 text-green-700" style={{ width: '500px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

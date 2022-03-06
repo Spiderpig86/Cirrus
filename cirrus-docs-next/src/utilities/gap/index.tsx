@@ -70,19 +70,19 @@ export const GapUtilsPage: React.FC<any> = (props) => {
                         <p>Learn more about Cirrus's sizing system to see what values can be used for <code>u-gap-[size]</code>.</p>
 
                         <div className="p-2 u-round-sm bg-indigo-100 u-flex u-gap-4 text-white font-bold u-text-center">
-                            <div className="p-4 u-round-sm w-100 bg-indigo-500">1</div>
-                            <div className="p-4 u-round-sm w-100 bg-indigo-500">2</div>
-                            <div className="p-4 u-round-sm w-100 bg-indigo-500">3</div>
-                            <div className="p-4 u-round-sm w-100 bg-indigo-500">4</div>
+                            <div className="p-4 u-round-sm w-100p bg-indigo-500">1</div>
+                            <div className="p-4 u-round-sm w-100p bg-indigo-500">2</div>
+                            <div className="p-4 u-round-sm w-100p bg-indigo-500">3</div>
+                            <div className="p-4 u-round-sm w-100p bg-indigo-500">4</div>
                         </div>
 
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div class="p-2 u-round-sm bg-indigo-100 u-flex u-gap-4 text-white font-bold u-text-center">
-    <div class="p-4 u-round-sm w-100 bg-indigo-500">1</div>
-    <div class="p-4 u-round-sm w-100 bg-indigo-500">2</div>
-    <div class="p-4 u-round-sm w-100 bg-indigo-500">3</div>
-    <div class="p-4 u-round-sm w-100 bg-indigo-500">4</div>
+    <div class="p-4 u-round-sm w-100p bg-indigo-500">1</div>
+    <div class="p-4 u-round-sm w-100p bg-indigo-500">2</div>
+    <div class="p-4 u-round-sm w-100p bg-indigo-500">3</div>
+    <div class="p-4 u-round-sm w-100p bg-indigo-500">4</div>
 </div>`}
                             language="htmlbars"
                         />
@@ -92,21 +92,21 @@ export const GapUtilsPage: React.FC<any> = (props) => {
                         <p>Another example using a grid layout.</p>
     
                         <div className="p-2 u-round-sm bg-pink-100 grid grid-cols-3 u-gap-3 text-white font-bold u-text-center">
-                            <div className="p-4 u-round-sm w-100 bg-pink-500">1</div>
-                            <div className="p-4 u-round-sm w-100 bg-pink-500">2</div>
-                            <div className="p-4 u-round-sm w-100 bg-pink-500">3</div>
-                            <div className="p-4 u-round-sm w-100 bg-pink-500">4</div>
-                            <div className="p-4 u-round-sm w-100 bg-pink-500">5</div>
-                            <div className="p-4 u-round-sm w-100 bg-pink-500">6</div>
+                            <div className="p-4 u-round-sm w-100p bg-pink-500">1</div>
+                            <div className="p-4 u-round-sm w-100p bg-pink-500">2</div>
+                            <div className="p-4 u-round-sm w-100p bg-pink-500">3</div>
+                            <div className="p-4 u-round-sm w-100p bg-pink-500">4</div>
+                            <div className="p-4 u-round-sm w-100p bg-pink-500">5</div>
+                            <div className="p-4 u-round-sm w-100p bg-pink-500">6</div>
                         </div>
                         <CodeBlock
                             code={`<div class="p-2 u-round-sm bg-pink-100 grid grid-cols-3 u-gap-3 text-white font-bold u-text-center">
-    <div class="p-4 u-round-sm w-100 bg-pink-500">1</div>
-    <div class="p-4 u-round-sm w-100 bg-pink-500">2</div>
-    <div class="p-4 u-round-sm w-100 bg-pink-500">3</div>
-    <div class="p-4 u-round-sm w-100 bg-pink-500">4</div>
-    <div class="p-4 u-round-sm w-100 bg-pink-500">5</div>
-    <div class="p-4 u-round-sm w-100 bg-pink-500">6</div>
+    <div class="p-4 u-round-sm w-100p bg-pink-500">1</div>
+    <div class="p-4 u-round-sm w-100p bg-pink-500">2</div>
+    <div class="p-4 u-round-sm w-100p bg-pink-500">3</div>
+    <div class="p-4 u-round-sm w-100p bg-pink-500">4</div>
+    <div class="p-4 u-round-sm w-100p bg-pink-500">5</div>
+    <div class="p-4 u-round-sm w-100p bg-pink-500">6</div>
 </div>`}
                             language="htmlbars"
                         />

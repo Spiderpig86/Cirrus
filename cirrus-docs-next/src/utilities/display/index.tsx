@@ -69,13 +69,13 @@ export const DisplayUtilsPage: React.FC<any> = (props) => {
         {
             name: 'block',
             example: (
-                <div className="p-3 bg-yellow-100 text-white u-round-xs">
+                <div className="p-3 bg-yellow-100p text-white u-round-xs">
                     <div className="bg-yellow-400 px-2 py-1 m-1 u-round-xs u-block">a</div>
                     <div className="bg-yellow-400 px-2 py-1 m-1 u-round-xs u-block">b</div>
                     <div className="bg-yellow-400 px-2 py-1 m-1 u-round-xs u-block">c</div>
                 </div>
             ),
-            code: `<div class="p-3 bg-yellow-100 text-white u-round-xs">
+            code: `<div class="p-3 bg-yellow-100p text-white u-round-xs">
     <div class="bg-yellow-400 px-2 py-1 m-1 u-round-xs u-block">a</div>
     <div class="bg-yellow-400 px-2 py-1 m-1 u-round-xs u-block">b</div>
     <div class="bg-yellow-400 px-2 py-1 m-1 u-round-xs u-block">c</div>
@@ -84,7 +84,7 @@ export const DisplayUtilsPage: React.FC<any> = (props) => {
         {
             name: 'table',
             example: (
-                <div className="u-table w-100 text-white">
+                <div className="u-table w-100p text-white">
                     <div className="u-table-row">
                         <div className="u-table-cell bg-indigo-400 px-4 py-2">1</div>
                         <div className="u-table-cell bg-indigo-500 px-4 py-2">2</div>
@@ -97,7 +97,7 @@ export const DisplayUtilsPage: React.FC<any> = (props) => {
                     </div>
                 </div>
             ),
-            code: `<div class="u-table w-100 text-white">
+            code: `<div class="u-table w-100p text-white">
     <div class="u-table-row">
         <div class="u-table-cell bg-indigo-400 px-4 py-2">1</div>
         <div class="u-table-cell bg-indigo-500 px-4 py-2">2</div>

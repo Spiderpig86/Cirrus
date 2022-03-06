@@ -572,7 +572,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         <CodeBlock
                             code={`<div class="u-flex u-gap-2 u-round-xs bg-blue-100 p-3 text-white font-bold u-text-center">
     <div class="u-round-xs u-shadow-lg bg-blue-300 p-2">0</div>
-    <div class="u-round-xs u-shadow-lg bg-blue-500 p-2 u-flex-shrink-1 w-100">1</div>
+    <div class="u-round-xs u-shadow-lg bg-blue-500 p-2 u-flex-shrink-1 w-100p">1</div>
     <div class="u-round-xs u-shadow-lg bg-blue-300 p-2">0</div>
 </div>`}
                             language="htmlbars"
@@ -605,7 +605,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                             <ResizableInternal>
                                 <div className="u-flex u-gap-2 u-round-xs bg-blue-100 p-3 text-white font-bold u-text-center">
                                     <div className="u-round-xs u-shadow-lg bg-blue-300 p-2">0</div>
-                                    <div className="u-round-xs u-shadow-lg bg-blue-500 p-2 u-flex-shrink-1 w-100">
+                                    <div className="u-round-xs u-shadow-lg bg-blue-500 p-2 u-flex-shrink-1 w-100p">
                                         1
                                     </div>
                                     <div className="u-round-xs u-shadow-lg bg-blue-300 p-2">0</div>
@@ -681,16 +681,16 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         </p>
 
                         <div className="u-flex u-flex-wrap u-gap-2 u-round-xs bg-pink-100 p-3 text-white font-bold u-text-center">
-                            <div className="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40">1</div>
-                            <div className="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40">2</div>
-                            <div className="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40">3</div>
+                            <div className="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40p">1</div>
+                            <div className="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40p">2</div>
+                            <div className="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40p">3</div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div classname="u-flex u-flex-wrap u-gap-2 u-round-xs bg-pink-100 p-3 text-white font-bold u-text-center">
-    <div classname="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40">1</div>
-    <div classname="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40">2</div>
-    <div classname="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40">3</div>
+    <div classname="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40p">1</div>
+    <div classname="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40p">2</div>
+    <div classname="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40p">3</div>
 </div>`}
                             language="html"
                         />
@@ -702,16 +702,16 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         </p>
 
                         <div className="u-flex u-flex-nowrap u-gap-2 u-round-xs bg-teal-100 p-3 text-white font-bold u-text-center">
-                            <div className="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40">1</div>
-                            <div className="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40">2</div>
-                            <div className="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40">3</div>
+                            <div className="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40p">1</div>
+                            <div className="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40p">2</div>
+                            <div className="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40p">3</div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div classname="u-flex u-flex-nowrap u-gap-2 u-round-xs bg-teal-100 p-3 text-white font-bold u-text-center">
-    <div classname="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40">1</div>
-    <div classname="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40">2</div>
-    <div classname="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40">3</div>
+    <div classname="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40p">1</div>
+    <div classname="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40p">2</div>
+    <div classname="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40p">3</div>
 </div>`}
                             language="html"
                         />
@@ -723,16 +723,16 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         </p>
 
                         <div className="u-flex u-flex-wrap-reverse u-gap-2 u-round-xs bg-indigo-100 p-3 text-white font-bold u-text-center">
-                            <div className="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40">1</div>
-                            <div className="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40">2</div>
-                            <div className="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40">3</div>
+                            <div className="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40p">1</div>
+                            <div className="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40p">2</div>
+                            <div className="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40p">3</div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div classname="u-flex u-flex-wrap-reverse u-gap-2 u-round-xs bg-indigo-100 p-3 text-white font-bold u-text-center">
-    <div classname="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40">1</div>
-    <div classname="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40">2</div>
-    <div classname="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40">3</div>
+    <div classname="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40p">1</div>
+    <div classname="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40p">2</div>
+    <div classname="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40p">3</div>
 </div>`}
                             language="html"
                         />

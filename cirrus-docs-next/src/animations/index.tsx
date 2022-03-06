@@ -509,9 +509,9 @@ export const AnimationsPage: React.FC<any> = (props) => {
                                         <div className="bg-gray-300 u-round-full p-4"></div>
                                     </div>
                                     <div className="u-flex-grow-1">
-                                        <div className="line bg-gray-300 w-100 u-round-xs"></div>
+                                        <div className="line bg-gray-300 w-100p u-round-xs"></div>
                                         <div className="space"></div>
-                                        <div className="line bg-gray-300 w-100 u-round-xs"></div>
+                                        <div className="line bg-gray-300 w-100p u-round-xs"></div>
                                         <div className="grid u-gap-1 mb-0">
                                             <div className="line bg-gray-300 grid-c-3 u-round-xs"></div>
                                             <div className="line bg-gray-300 grid-c-9 u-round-xs"></div>
@@ -528,9 +528,9 @@ export const AnimationsPage: React.FC<any> = (props) => {
             <div class="bg-gray-300 u-round-full p-4"></div>
         </div>
         <div class="u-flex-grow-1">
-            <div class="line bg-gray-300 w-100 u-round-xs"></div>
+            <div class="line bg-gray-300 w-100p u-round-xs"></div>
             <div class="space"></div>
-            <div class="line bg-gray-300 w-100 u-round-xs"></div>
+            <div class="line bg-gray-300 w-100p u-round-xs"></div>
             <div class="grid u-gap-1 mb-0">
                 <div class="line bg-gray-300 grid-c-3 u-round-xs"></div>
                 <div class="line bg-gray-300 grid-c-9 u-round-xs"></div>
@@ -565,8 +565,8 @@ export const AnimationsPage: React.FC<any> = (props) => {
                                     </div>
                                 </div>
                                 <span className="notification u-inline-flex u-absolute u-top-0 u-right-0">
-                                    <span className="h-100 w-100 u-absolute u-inline-flex animated ping bg-blue-400 u-round-full"></span>
-                                    <span className="h-100 w-100 u-inline-flex bg-blue-400 u-round-full"></span>
+                                    <span className="h-100p w-100p u-absolute u-inline-flex animated ping bg-blue-400 u-round-full"></span>
+                                    <span className="h-100p w-100p u-inline-flex bg-blue-400 u-round-full"></span>
                                 </span>
                             </div>
                             <div className="space"></div>
@@ -582,7 +582,7 @@ export const AnimationsPage: React.FC<any> = (props) => {
                 <div class="text-gray-600">@johndoe sent "About your PR, it's mostly good but..."</div>
             </div>
         </div>
-    </div><span class="notification u-inline-flex u-absolute u-top-0 u-right-0"><span class="h-100 w-100 u-absolute u-inline-flex animated ping bg-blue-400 u-round-full"></span><span class="h-100 w-100 u-inline-flex bg-blue-400 u-round-full"></span></span>
+    </div><span class="notification u-inline-flex u-absolute u-top-0 u-right-0"><span class="h-100p w-100p u-absolute u-inline-flex animated ping bg-blue-400 u-round-full"></span><span class="h-100p w-100p u-inline-flex bg-blue-400 u-round-full"></span></span>
 </div>`}
                                 language="htmlbars"
                             />

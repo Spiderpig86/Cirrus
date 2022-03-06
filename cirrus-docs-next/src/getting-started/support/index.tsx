@@ -151,9 +151,9 @@ export const BrowserSupportPage: React.FC<any> = (props) => {
 
                         <CodeBlock
                             code={`<div class="u-clearfix">
-    <div class="w-50 u-pull-left">test</div>
-    <div class="w-50 u-pull-left">test</div>
-    <div class="w-50 u-pull-left">test</div>
+    <div class="w-50p u-pull-left">test</div>
+    <div class="w-50p u-pull-left">test</div>
+    <div class="w-50p u-pull-left">test</div>
     ...
 </div>`}
                             language={'htmlbars'}

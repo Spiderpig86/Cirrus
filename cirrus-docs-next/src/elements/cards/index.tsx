@@ -500,7 +500,7 @@ export const CardsPage: React.FC<any> = (props) => {
 
                         <p>
                             You may have noticed that the heights of the cards are not the same if the length of the
-                            content is different. To fix this, you can add the <code>h-100 u-flex u-flex-column</code>{' '}
+                            content is different. To fix this, you can add the <code>h-100p u-flex u-flex-column</code>{' '}
                             classes to <code>card</code>.
                         </p>
                         <p>
@@ -609,7 +609,7 @@ export const CardsPage: React.FC<any> = (props) => {
                         <h6>After</h6>
                         <div className="row">
                             <div className="col-4">
-                                <div className="card h-100 u-flex u-flex-column">
+                                <div className="card h-100p u-flex u-flex-column">
                                     <div className="card__container">
                                         <div
                                             className="card__image"
@@ -650,7 +650,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                 </div>
                             </div>
                             <div className="col-4">
-                                <div className="card h-100 u-flex u-flex-column">
+                                <div className="card h-100p u-flex u-flex-column">
                                     <div className="card__container">
                                         <div
                                             className="card__image"
@@ -680,7 +680,7 @@ export const CardsPage: React.FC<any> = (props) => {
                                 </div>
                             </div>
                             <div className="col-4">
-                                <div className="card h-100 u-flex u-flex-column">
+                                <div className="card h-100p u-flex u-flex-column">
                                     <div className="card__container">
                                         <div
                                             className="card__image"

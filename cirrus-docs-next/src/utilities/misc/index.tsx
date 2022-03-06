@@ -116,7 +116,7 @@ position: absolute;`,
                             }}
                         >
                             <div className="p-3">
-                                <ul className="menu u-pull-left w-40 pr-4">
+                                <ul className="menu u-pull-left w-40p pr-4">
                                     <li className="menu-item selected">
                                         <a href="!#">Intro</a>
                                     </li>
@@ -143,7 +143,7 @@ position: absolute;`,
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div class="p-3">
-    <ul class="menu u-pull-left w-40 pr-4">
+    <ul class="menu u-pull-left w-40p pr-4">
         <li class="menu-item selected"><a href="!#">Intro</a></li>
         <li class="menu-item"><a href="!#">Section 1</a></li>
         <li class="menu-item"><a href="!#">Section 2</a></li>
@@ -167,7 +167,7 @@ position: absolute;`,
                             }}
                         >
                             <div className="p-3">
-                                <ul className="menu u-pull-right w-40 pr-4">
+                                <ul className="menu u-pull-right w-40p pr-4">
                                     <li className="menu-item selected">
                                         <a href="!#">Intro</a>
                                     </li>
@@ -194,7 +194,7 @@ position: absolute;`,
                         <div className="space"></div>
                         <CodeBlock
                             code={`<div class="p-3">
-    <ul class="menu u-pull-right w-40 pr-4">
+    <ul class="menu u-pull-right w-40p pr-4">
         <li class="menu-item selected"><a href="!#">Intro</a></li>
         <li class="menu-item"><a href="!#">Section 1</a></li>
         <li class="menu-item"><a href="!#">Section 2</a></li>

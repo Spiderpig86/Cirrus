@@ -511,7 +511,7 @@ export const ColumnsPage: React.FC<any> = (props) => {
                             <iframe
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/layout/width-ignore-before.html"
                                 style={{ height: '250px', width: '100%', maxWidth: '700px' }}
-                                className="w-100 p-1"
+                                className="w-100p p-1"
                             />
                         </LazyLoad>
                         <div className="space"></div>
@@ -520,7 +520,7 @@ export const ColumnsPage: React.FC<any> = (props) => {
                             <iframe
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/layout/width-ignore-after.html"
                                 style={{ height: '250px', width: '100%', maxWidth: '700px' }}
-                                className="w-100 p-1"
+                                className="w-100p p-1"
                             />
                         </LazyLoad>
                         <div className="space"></div>

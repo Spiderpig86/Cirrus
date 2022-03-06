@@ -240,7 +240,7 @@ export const FancyBuyCard: React.FC<any> = (props) => {
                         margin: '0 -4px',
                     }}
                 >
-                    <div className="u-absolute u-top-0 u-left-0 w-100 h-100 u-flex u-items-center u-justify-center bg-gray-900 u-bg-opacity-50 text-white font-bold text-sm">
+                    <div className="u-absolute u-top-0 u-left-0 w-100p h-100p u-flex u-items-center u-justify-center bg-gray-900 u-bg-opacity-50 text-white font-bold text-sm">
                         +5
                     </div>
                     <img
@@ -249,7 +249,7 @@ export const FancyBuyCard: React.FC<any> = (props) => {
                     />
                 </div>
             </div>
-            <button className="btn-info btn--sm w-100 mb-0 bg-blue-500 text-blue-100 font-bold capitalize">
+            <button className="btn-info btn--sm w-100p mb-0 bg-blue-500 text-blue-100 font-bold capitalize">
                 Buy this course
                 <span className="text-blue-200 font-normal">$4.99</span>
             </button>
@@ -296,7 +296,7 @@ export const LoginCard: React.FC<any> = (props) => {
                     </label>
                 </div>
             </div>
-            <button className="btn-primary mb-0 w-100 btn--sm">Sign In</button>
+            <button className="btn-primary mb-0 w-100p btn--sm">Sign In</button>
         </div>
     );
 };
@@ -414,7 +414,7 @@ export const ECommerceCard: React.FC<any> = (props) => {
                 </div>
                 <div>
                     <img
-                        className="h-100 img-cover"
+                        className="h-100p img-cover"
                         src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
                     />
                 </div>
@@ -423,8 +423,8 @@ export const ECommerceCard: React.FC<any> = (props) => {
     );
 };
 
-export const ResponsiveLandingHTML = `<section class="min-h-100 w-100 u-flex u-justify-center u-items-center" style="background: linear-gradient(to top, #141e30, #243b55);">
-	<div class="content w-80">
+export const ResponsiveLandingHTML = `<section class="min-h-100p w-100p u-flex u-justify-center u-items-center" style="background: linear-gradient(to top, #141e30, #243b55);">
+	<div class="content w-80p">
 		<div
 			class="u-flex u-flex-column u-items-flex-start u-justify-flex-start u-relative u-flex-row-md u-items-stretch-md">
 			<div class="pt-6 mx-auto w-50-md mx-0-md pb-4-md pr-4-md">
@@ -445,11 +445,11 @@ export const ResponsiveLandingHTML = `<section class="min-h-100 w-100 u-flex u-j
 				</div>
 			</div>
 			<div
-				class="u-relative u-flex u-items-center u-justify-center w-80 mx-auto mt-8 h-80 w-50-md h-auto-md u-block-md">
-				<img src="https://cdn.dribbble.com/users/1722951/screenshots/15954834/media/7eee2181141576534bed5954fc1645f3.png" class="u-left-0 u-z-0 img-cover w-100 h-100 mx-auto u-round-xl mx-0-md w-100-md u-absolute-md u-top-0-md" alt="image">
+				class="u-relative u-flex u-items-center u-justify-center w-80p mx-auto mt-8 h-80p w-50-md h-auto-md u-block-md">
+				<img src="https://cdn.dribbble.com/users/1722951/screenshots/15954834/media/7eee2181141576534bed5954fc1645f3.png" class="u-left-0 u-z-0 img-cover w-100p h-100p mx-auto u-round-xl mx-0-md w-100p-md u-absolute-md u-top-0-md" alt="image">
 				<div class="u-absolute u-top-0 u-right-0 u-overflow-hidden u-shadow-xl u-right-0-md u-round-lg"
 					style="height: 8rem; width: 8rem; margin-top: -2.5rem; margin-right: -1.5rem;">
-					<img src="https://images.unsplash.com/photo-1489289827069-adf270f4f417?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" class="u-absolute u-z-0 img-cover w-100 h-100" alt="image">
+					<img src="https://images.unsplash.com/photo-1489289827069-adf270f4f417?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" class="u-absolute u-z-0 img-cover w-100p h-100p" alt="image">
             </div>
 					<div class="u-absolute u-bottom-0 u-z-20 px-4 animated hover-grow u-left-0-md px-0-md"
 						style="margin-left: -7rem; margin-bottom: -3rem;">
@@ -457,7 +457,7 @@ export const ResponsiveLandingHTML = `<section class="min-h-100 w-100 u-flex u-j
 							class="u-flex u-items-stretch u-justify-flex-start u-overflow-hidden bg-gray-900 u-shadow-xl u-round-xl p-0">
 							<div class="u-relative u-flex u-items-center u-justify-center"
 								style="height: 6rem; width: 7rem;">
-								<img src="https://cdn.devdojo.com/images/september2021/graphic-color.jpeg" class="u-absolute u-top-0 u-left-0 u-right-0 u-bottom-0 u-z-0 img-cover w-100 h-100 u-opacity-80" alt="image" style="object-fit: cover; object-position: center;">
+								<img src="https://cdn.devdojo.com/images/september2021/graphic-color.jpeg" class="u-absolute u-top-0 u-left-0 u-right-0 u-bottom-0 u-z-0 img-cover w-100p h-100p u-opacity-80" alt="image" style="object-fit: cover; object-position: center;">
                 </div>
 								<div
 									class="u-flex u-flex-column u-items-flex-start u-justify-center px-4 bg-blue-900 text-gray-400 u-shadow-xl">
@@ -473,11 +473,11 @@ export const ResponsiveLandingHTML = `<section class="min-h-100 w-100 u-flex u-j
 
 			<div class="u-relative u-z-0 u-flex u-items-center u-justify-flex-start py-12 py-0-md">
 				<div
-					class="u-relative u-none u-block-md u-z-10 w-100 max-w-lg px-8 pt-12 pb-12 mx-auto bg-indigo-500 w-50-md mx-0-md mt-0-md pt-2-md pb-4-md u-round-md">
+					class="u-relative u-none u-block-md u-z-10 w-100p max-w-lg px-8 pt-12 pb-12 mx-auto bg-indigo-500 w-50-md mx-0-md mt-0-md pt-2-md pb-4-md u-round-md">
 					<h3 class="text-xl font-bold text-white mx-0 my-1">
 						Built for All Creators
 					</h3>
-					<div class="u-flex u-items-start u-justify-center w-100 u-gap-2 text-white u-justify-flex-start-md">
+					<div class="u-flex u-items-start u-justify-center w-100p u-gap-2 text-white u-justify-flex-start-md">
 						<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="32" height="32"
 							viewBox="0 0 172 172" style=" fill:#000000;">
 							<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"

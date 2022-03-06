@@ -67,7 +67,7 @@ const Landing: React.FC<any> = () => {
                 ></div>
                 <div id="splash-img" className="hero fullscreen hero-img parallax-img">
                     <div className="hero-body u-z-1">
-                        <div className="content w-100 w-80-md u-text-center">
+                        <div className="content w-100p w-80p-md u-text-center">
                             <h1
                                 className="headline-3 title"
                                 style={{
@@ -84,7 +84,7 @@ const Landing: React.FC<any> = () => {
                                 <span className="font-bold text-pink-600">and less time worrying about CSS.</span>
                             </h1>
                             <div className="space"></div>
-                            <p className="sub-title lead font-alt font-normal mx-auto w-60-md u-none u-block-lg">
+                            <p className="sub-title lead font-alt font-normal mx-auto w-60p-md u-none u-block-lg">
                                 A <b className="">component-and-utility-centric</b> SCSS framework designed for{' '}
                                 <b className="">rapid prototyping</b>. Use beautiful pre-built components to bootstrap
                                 your next project and utility classes to polish your final design.
@@ -345,7 +345,7 @@ import 'cirrus-ui';`}
                                                             </span>
                                                         </div>
                                                     </div>
-                                                    <div className="col w-100 pt-4 u-flex u-flex-column">
+                                                    <div className="col w-100p pt-4 u-flex u-flex-column">
                                                         <CodeBlock
                                                             code={`<h1 class="title headline-1">Aa</h1>
 <h4 class="subtitle font-normal">Montserrat</h4>
@@ -477,7 +477,7 @@ import 'cirrus-ui';`}
                                                     <div className="col-4">
                                                         {[32, 24, 20, 16, 12, 10, 8].map((size) => {
                                                             return (
-                                                                <div className="w-100">
+                                                                <div className="w-100p">
                                                                     <div
                                                                         className={`bg-indigo-500 text-white my-2 pl-2 pr-${size} py-1 u-round-sm u-inline-block u-shadow-lg`}
                                                                     >
@@ -489,25 +489,25 @@ import 'cirrus-ui';`}
                                                     </div>
                                                     <div className="col-8 pt-2">
                                                         <CodeBlock
-                                                            code={`<div class="w-100">
+                                                            code={`<div class="w-100p">
     <div class="bg-indigo-500 text-white my-2 pl-2 pr-32 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-32</span></div>
 </div>
-<div class="w-100">
+<div class="w-100p">
     <div class="bg-indigo-500 text-white my-2 pl-2 pr-24 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-24</span></div>
 </div>
-<div class="w-100">
+<div class="w-100p">
     <div class="bg-indigo-500 text-white my-2 pl-2 pr-20 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-20</span></div>
 </div>
-<div class="w-100">
+<div class="w-100p">
     <div class="bg-indigo-500 text-white my-2 pl-2 pr-16 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-16</span></div>
 </div>
-<div class="w-100">
+<div class="w-100p">
     <div class="bg-indigo-500 text-white my-2 pl-2 pr-12 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-12</span></div>
 </div>
-<div class="w-100">
+<div class="w-100p">
     <div class="bg-indigo-500 text-white my-2 pl-2 pr-10 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-10</span></div>
 </div>
-<div class="w-100">
+<div class="w-100p">
     <div class="bg-indigo-500 text-white my-2 pl-2 pr-8 py-1 u-round-sm u-inline-block u-shadow-lg"><span class="font-bold">px-8</span></div>
 </div>`}
                                                             language="htmlbars"
@@ -530,7 +530,7 @@ import 'cirrus-ui';`}
                                                         {[100, 90, 80, 70, 60, 50, 40, 30, 20, 10].map((opacity) => {
                                                             return (
                                                                 <div
-                                                                    className={`u-opacity-${opacity} bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg`}
+                                                                    className={`u-opacity-${opacity} bg-green-500 text-white w-100p mb-1 pl-2 py-1 u-round-sm u-shadow-lg`}
                                                                 >
                                                                     <div className="font-bold">u-opacity-{opacity}</div>
                                                                 </div>
@@ -539,22 +539,22 @@ import 'cirrus-ui';`}
                                                     </div>
                                                     <div className="col-8">
                                                         <CodeBlock
-                                                            code={`<div class="u-opacity-100 bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
+                                                            code={`<div class="u-opacity-100 bg-green-500 text-white w-100p mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
     <div class="font-bold">u-opacity-100</div>
 </div>
-<div class="u-opacity-90 bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
+<div class="u-opacity-90 bg-green-500 text-white w-100p mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
     <div class="font-bold">u-opacity-90</div>
 </div>
-<div class="u-opacity-80 bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
+<div class="u-opacity-80 bg-green-500 text-white w-100p mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
     <div class="font-bold">u-opacity-80</div>
 </div>
-<div class="u-opacity-70 bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
+<div class="u-opacity-70 bg-green-500 text-white w-100p mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
     <div class="font-bold">u-opacity-70</div>
 </div>
-<div class="u-opacity-60 bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
+<div class="u-opacity-60 bg-green-500 text-white w-100p mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
     <div class="font-bold">u-opacity-60</div>
 </div>
-<div class="u-opacity-50 bg-green-500 text-white w-100 mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
+<div class="u-opacity-50 bg-green-500 text-white w-100p mb-1 pl-2 py-1 u-round-sm u-shadow-lg">
     <div class="font-bold">u-opacity-50</div>
 </div>
 
@@ -653,7 +653,7 @@ import 'cirrus-ui';`}
                 </div>
 
                 <div>
-                    <div className="w-90 mx-auto">
+                    <div className="w-90p mx-auto">
                         <ResizableInternal height="800px" top="50%">
                             <div
                                 style={{

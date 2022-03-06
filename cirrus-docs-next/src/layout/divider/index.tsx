@@ -91,12 +91,12 @@ export const DividerPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div style={{ position: 'relative', height: '300px' }}>
-                                    <div className="divider--v h-100" data-content="Label" />
+                                    <div className="divider--v h-100pp" data-content="Label" />
                                 </div>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
-                                    code={`<div class="divider--v h-100" data-content="Label" />`}
+                                    code={`<div class="divider--v h-100pp" data-content="Label" />`}
                                     language="htmlbars"
                                 />
                             </div>

@@ -103,7 +103,7 @@ export const FormGroupsPage: React.FC<any> = (props) => {
 
                         <div className="form-group">
                             <label className="form-group-label">github.com/</label>
-                            <select className="form-group-input w-100" placeholder="Choose one">
+                            <select className="form-group-input w-100p" placeholder="Choose one">
                                 <option value="">Select one</option>
                                 <option value="option-1">Option 1</option>
                                 <option value="option-2">Option 2</option>
@@ -114,7 +114,7 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                         <CodeBlock
                             code={`<div class="form-group">
     <label class="form-group-label">github.com/</label>
-    <select class="form-group-input w-100" placeholder="Choose one">
+    <select class="form-group-input w-100p" placeholder="Choose one">
         <option value="">Select one</option>
         <option value="option-1">Option 1</option>
         <option value="option-2">Option 2</option>
