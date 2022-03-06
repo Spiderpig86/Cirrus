@@ -6,6 +6,7 @@
 @forward '../src/internal/selectors';
 @forward '../src/internal/size';
 @forward '../src/internal/mixins';
+@forward '../src/internal/constants';
 
 @function build-true-error-string($source, $message) {
     @return 'ERROR [#{$source}]: #{$message}'
