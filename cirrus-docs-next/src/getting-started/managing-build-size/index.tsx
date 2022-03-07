@@ -234,8 +234,8 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                             </tr>
                             <tr>
                                 <td>None Disabled</td>
-                                <td>363.75kB</td>
-                                <td>220.79kB</td>
+                                <td>356.59kB</td>
+                                <td>217.63kB</td>
                             </tr>
                             <tr>
                                 <td>All Disabled</td>
@@ -264,10 +264,8 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                             code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         colors: (
-            extended: (
-                'teal': null,
-                'indigo': null,
-            )
+            'teal': null,
+            'indigo': null,
         )
     ),
 );`}
@@ -290,8 +288,8 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                             </tr>
                             <tr>
                                 <td>112 <i>(Default)</i></td>
-                                <td>363.75kB</td>
-                                <td>220.79kB</td>
+                                <td>356.59kB</td>
+                                <td>217.63kB</td>
                             </tr>
                             <tr>
                                 <td>71</td>
@@ -302,6 +300,64 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                                 <td>31</td>
                                 <td>344.16kB</td>
                                 <td>204.98kB</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                
+                <section className="padtop" id="limiting-viewports">
+                    <div className="content">
+                        <Headline title="Limiting Viewports" size="4" link="#limiting-viewports" />
+                        <div className="divider"></div>
+
+                        <p>
+                            We can limit the build size by removing some of the breakpoints that we generate classes for entirely. Note that removing too many may break some of the styles that relied on existing breakpoints to work. Therefore this is not as recommended of a setting to toggle if you're looking to save on build size.
+                        </p>
+                        <p>
+                            In your project, import the Cirrus library and disable viewports by setting the existing viewport widths and pairs to null and specifying the ones you want in the extend section:
+                        </p>
+
+                        <CodeBlock
+                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+    $config: (
+        breakpoints: (
+            widths: null,
+            breakpoint-pairs: null,
+        ),
+        extend: (
+            breakpoints: (
+                widths: (
+                    'tablets': '640px',
+                    'laptops': '1024px',
+                )
+            )
+        )
+    ),
+);`}
+                            language="scss"
+                        />
+
+                        <p>Below is how reducing the number of breakpoints would affect the build size. By default Cirrus comes with 4 breakpoints specified.</p>
+                        <table className="table bordered">
+                            <tr>
+                                <th>Number of Breakpoints</th>
+                                <th>Original Size</th>
+                                <th>Minified Size</th>
+                            </tr>
+                            <tr>
+                                <td>4 <i>(Default)</i></td>
+                                <td>356.59kB</td>
+                                <td>217.63kB</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>259.43kB</td>
+                                <td>170.64kB</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>173.44kB</td>
+                                <td>130.38kB</td>
                             </tr>
                         </table>
                     </div>

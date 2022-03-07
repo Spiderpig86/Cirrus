@@ -30,6 +30,11 @@ export const toc: TableOfContentsEntry[] = [
                 anchor: '#limiting-color-palette',
                 children: null,
             },
+            {
+                name: 'Limiting Viewports',
+                anchor: '#limiting-viewports',
+                children: null,
+            },
         ],
     },
 ];
