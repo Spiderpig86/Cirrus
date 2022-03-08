@@ -44,4 +44,10 @@
     @include it('should return false if includes: () and excludes: () for unknown flag: TEST') {
         @include assert-equal(config.should-generate-classes-internal((), (), TEST), true);
     }
+    @include it('should return false if includes: ($ALL) and excludes: () for flag: OPACITY') {
+        @include assert-equal(config.should-generate-classes-internal(($ALL), (), $OPACITY), true);
+    }
+    @include it('should return false if includes: (\'ALL\') and excludes: () for flag: OPACITY') {
+        @include assert-equal(config.should-generate-classes-internal(('ALL'), (), $OPACITY), true);
+    }
 }
