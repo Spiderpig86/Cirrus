@@ -1,0 +1,27 @@
+// _api.scss unit tests
+@use '../test_base' as *;
+@use '../../src/internal/api';
+
+/**********
+ * fill() *
+ **********/
+@include describe('fill()') {
+    @include it('should return hex of valid semantic (v1) color') {
+        @include assert-equal(api.fill('primary'), #f03d4d);
+    }
+    @include it('should throw an error if the request semantic (v1) color does not exist') {
+        @include assert-equal(
+            api.fill('test'),
+            build-true-error-string('fill()', '[fill] Unknown color key `test`.')
+        );
+    }
+    @include it('should return hex of valid extended (v2) color') {
+        @include assert-equal(api.fill('gray', '300'), #dee2e6);
+    }
+    @include it('should throw an error if the request extended (v2) color does not exist') {
+        @include assert-equal(
+            api.fill('blorange', '300'),
+            build-true-error-string('fill()', '[fill] Unknown color key `blorange 300`.')
+        );
+    }
+}

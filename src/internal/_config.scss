@@ -827,20 +827,6 @@ $shadows: functions.get-with-extend($all-config, shadows);
 $spacing-system: functions.get-with-extend($all-config, sizing-system);
 $z-indexes: functions.get-with-extend($all-config, z-index);
 
-/* VALUE APIS */
-
-@function fill($color, $level, $opacity: 1) {
-    @if map.has-key($v2Colors, $color, $level) {
-        @return map.get($v2Colors, $color, $level);
-    } @else {
-        @return throw.error(
-            $message: '[fill] Unknown color key `#{$color + ' ' + $level}`.',
-            $source: 'fill()',
-            $catch: true
-        );
-    }
-}
-
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
 */

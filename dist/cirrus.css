@@ -55,7 +55,6 @@
 */
 /* Breakpoints */
 /* Fonts */
-/* VALUE APIS */
 /*
     Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
 */
@@ -81,6 +80,7 @@
  *           }
  *       }
  */
+/* VALUE APIS */
 :root {
   /* v1 Colors */
   --cirrus-fg: #0f172a;

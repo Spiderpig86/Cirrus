@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use '../../node_modules/sass-true/sass/config/throw';
+
+@use "config";
+
+/* VALUE APIS */
+
+@function fill($color, $level: null) {
+    // v1 Color
+    @if $level == null {
+        @if map.has-key(config.$semantic-colors, $color) {
+            @return map.get(config.$semantic-colors, $color);
+        } @else {
+            @return throw.error(
+                $message: '[fill] Unknown color key `#{$color}`.',
+                $source: 'fill()',
+                $catch: true
+            );
+        }
+    }
+
+    // v2 Color
+    @if map.has-key(config.$v2Colors, $color, $level) {
+        @return map.get(config.$v2Colors, $color, $level);
+    } @else {
+        @return throw.error(
+            $message: '[fill] Unknown color key `#{$color + ' ' + $level}`.',
+            $source: 'fill()',
+            $catch: true
+        );
+    }
+}
