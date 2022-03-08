@@ -1,7 +1,7 @@
 @use 'config';
 
 /* Media Queries */
-
+// TODO: For viewport mixins, future option to not fail if key not found and to ignore instead?
 @mixin screen-above($breakpoint) {
     @if not map-has-key($map: config.$breakpoints, $key: $breakpoint) {
         @error 'The given breakpoint #{$breakpoint} for @screen-above does not exist.';
