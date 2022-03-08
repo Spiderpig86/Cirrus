@@ -14,18 +14,20 @@ import { toc } from './toc';
 
 import initializeTabs from '../../../static/js/tabs.js';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TabContainer } from '../../../layouts/components/tabs/tab-container';
+import { InternalLink } from '../../../layouts/components/link';
 
 export const SetUpPage: React.FC<any> = (props) => {
-    useEffect(() => {
-        initializeTabs();
-        eval(`
-        const installationTabs = tabs({
-            el: '#installationTabs',
-            tabNavigationLinks: '.tab-item',
-            tabContentContainers: '.tabpage'
-        });
-        installationTabs.init();`);
-    });
+    // useEffect(() => {
+    //     initializeTabs();
+    //     eval(`
+    //     const installationTabs = tabs({
+    //         el: '#installationTabs',
+    //         tabNavigationLinks: '.tab-item',
+    //         tabContentContainers: '.tabpage'
+    //     });
+    //     installationTabs.init();`);
+    // });
 
     return (
         <main className="page-layout">
@@ -43,12 +45,12 @@ export const SetUpPage: React.FC<any> = (props) => {
                         <h6>1. Use a Package Manager (Recommended)</h6>
                         <b>Npm</b>
                         <div className="my-2">
-                            <CodeBlock code={`npm i cirrus-ui --save`} language="sh" />
+                            <CodeBlock code={`npm i cirrus-ui --save`} language="bash" />
                         </div>
                         <div className="space"></div>
                         <b>Yarn</b>
                         <div className="my-2">
-                            <CodeBlock code={`yarn add cirrus-ui`} language="sh" />
+                            <CodeBlock code={`yarn add cirrus-ui`} language="bash" />
                         </div>
 
                         <div className="space"></div>
@@ -81,7 +83,7 @@ export const SetUpPage: React.FC<any> = (props) => {
 
                 <section id="project-config" className="padtop">
                     <div className="content">
-                        <Headline title="Project Configuration" link="#project-config" size='4' />
+                        <Headline title="Project Configuration" link="#project-config" size="4" />
                         <div className="divider"></div>
 
                         <p>
@@ -99,94 +101,104 @@ export const SetUpPage: React.FC<any> = (props) => {
                             .
                         </p>
 
-                        <div id="installationTabs">
-                            <div className="tab-container mb-3">
-                                <ul>
-                                    <li className="tab-item selected">
-                                        <a>Webpage</a>
-                                    </li>
-                                    <li className="tab-item">
-                                        <a>Node</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="tabpage tabpage--shown">
-                                <p className="lead">Traditional Webpage</p>
-                                <p className="font-bold title">Add the HTML5 DocType. This is <b>required</b>.</p>
-                                <div className="mb-3">
-                                    <CodeBlock code={`<!DOCTYPE html>`} language="html" />
-                                </div>
+                        <TabContainer
+                            id="#installationTabs"
+                            selectedIndex={0}
+                            tabs={[
+                                {
+                                    title: 'Webpage',
+                                    children: (
+                                        <>
+                                            <p className="lead">Traditional Webpage</p>
+                                            <p className="font-bold mb-0">
+                                                Add the HTML5 DocType. This is <b>required</b>.
+                                            </p>
+                                            <div className="mb-3">
+                                                <CodeBlock code={`<!DOCTYPE html>`} language="html" />
+                                            </div>
 
-                                <p className="font-bold title">Add the responsive viewport meta tag</p>
-                                <div className="mb-3">
-                                    <CodeBlock
-                                        code={`<meta name="viewport" content="width=device-width, initial-scale=1">`}
-                                        language="html"
-                                    />
-                                </div>
+                                            <p className="font-bold mb-0">Add the responsive viewport meta tag</p>
+                                            <div className="mb-3">
+                                                <CodeBlock
+                                                    code={`<meta name="viewport" content="width=device-width, initial-scale=1">`}
+                                                    language="html"
+                                                />
+                                            </div>
 
-                                <p className="font-bold title">Font Awesome</p>
-                                <p className="subtitle">
-                                    To use glyphs, you must include the <b>Font Awesome</b> library.
-                                </p>
-                                <div className="mb-3">
-                                    <CodeBlock
-                                        code={`<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">`}
-                                        language="html"
-                                    />
-                                </div>
-                                <p>
-                                    Please visit{' '}
-                                    <a
-                                        className="u u-LR"
-                                        rel="noopener noreferrer"
-                                        href="https://fontawesome.com/start"
-                                        target="_blank"
-                                    >
-                                        FontAwesome
-                                    </a>{' '}
-                                    and sign up to get your developer kit to get started. The CDN above is just a
-                                    sample.
-                                </p>
+                                            <p className="font-bold mb-0">Font Awesome</p>
+                                            <p className="subtitle">
+                                                To use glyphs, you must include the <b>Font Awesome</b> library.
+                                            </p>
+                                            <div className="mb-3">
+                                                <CodeBlock
+                                                    code={`<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">`}
+                                                    language="html"
+                                                />
+                                            </div>
+                                            <p>
+                                                Please visit{' '}
+                                                <a
+                                                    className="u u-LR"
+                                                    rel="noopener noreferrer"
+                                                    href="https://fontawesome.com/start"
+                                                    target="_blank"
+                                                >
+                                                    FontAwesome
+                                                </a>{' '}
+                                                and sign up to get your developer kit to get started. The CDN above is
+                                                just a sample.
+                                            </p>
 
-                                <p className="font-bold title">Required Fonts</p>
-                                <p className="subtitle">Don't forget to include the required fonts.</p>
+                                            <p className="font-bold mb-0">Required Fonts</p>
+                                            <p className="subtitle">Don't forget to include the required fonts.</p>
 
-                                <div className="mb-3">
-                                    <CodeBlock
-                                        code={`<!-- Google Fonts -->
+                                            <div className="mb-3">
+                                                <CodeBlock
+                                                    code={`<!-- Google Fonts -->
 
 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">`}
+                                                    language="html"
+                                                />
+                                            </div>
 
-<!-- Minified Cirrus CSS -->
+                                            <p className="font-bold">Add Cirrus Link Import and Other Dependencies</p>
 
-<link rel="stylesheet" href="../css/cirrus.min.css">
+                                            <div className="mb-3">
+                                                <CodeBlock
+                                                    code={`<!-- Minified Cirrus CSS -->
+
+<link rel="stylesheet" href="../css/cirrus.min.css"> <!-- Or use CDN link -->
 <!-- Import your other dependencies -->`}
-                                        language="html"
-                                    />
-                                </div>
-                            </div>
-                            <div className="tabpage">
-                                <p className="lead">Node App</p>
-                                <p className="font-bold title">Import cirrus-ui</p>
+                                                    language="html"
+                                                />
+                                            </div>
+                                        </>
+                                    ),
+                                },
+                                {
+                                    title: 'Node',
+                                    children: (
+                                        <>
+                                            <p className="lead">Node App</p>
+                                            <p className="font-bold mb-0">Import cirrus-ui</p>
 
-                                <div className="mb-3">
-                                    <CodeBlock
-                                        code={`import 'cirrus-ui'; 
+                                            <div className="mb-3">
+                                                <CodeBlock
+                                                    code={`import 'cirrus-ui'; 
 // Your other framework code`}
-                                        language="javascript"
-                                    />
-                                </div>
+                                                    language="javascript"
+                                                />
+                                            </div>
 
-                                <p className="font-bold title">Setup Template</p>
-                                <p>
-                                    In your main <code>index.html</code> page, make sure that the following dependencies
-                                    are also included. For example, it would be in the <code>index.html</code> file in
-                                    your React project.
-                                </p>
-                                <CodeBlock
-                                    code={`<!DOCTYPE html>
+                                            <p className="font-bold mb-0">Setup Template</p>
+                                            <p>
+                                                In your main <code>index.html</code> page, make sure that the following
+                                                dependencies are also included. For example, it would be in the{' '}
+                                                <code>index.html</code> file in your React project.
+                                            </p>
+                                            <CodeBlock
+                                                code={`<!DOCTYPE html>
 <html>
 
 <head>
@@ -203,16 +215,116 @@ export const SetUpPage: React.FC<any> = (props) => {
 <!-- More content -->
 
 </html>`}
-                                    language="html"
-                                />
-                            </div>
-                        </div>
+                                                language="html"
+                                            />
+                                        </>
+                                    ),
+                                },
+                                {
+                                    title: 'React',
+                                    children: (
+                                        <>
+                                            <p className="lead">React App</p>
+                                            <p className="font-bold mb-0">Import cirrus-ui</p>
+
+                                            <div className="mb-3">
+                                                <CodeBlock
+                                                    code={`import 'cirrus-ui'; 
+// Your other framework code`}
+                                                    language="javascript"
+                                                />
+                                            </div>
+
+                                            <p className="font-bold mb-0">Write Your App</p>
+                                            <p>There's nothing left to do but to start your React app.</p>
+                                            <CodeBlock
+                                                code={`import { StrictMode } from "react";
+import ReactDOM from "react-dom";
+
+import App from "./App";
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+    <StrictMode>
+        <App />
+    </StrictMode>,
+    rootElement
+);`}
+                                                language="jsx"
+                                            />
+                                        </>
+                                    ),
+                                },
+                                {
+                                    title: 'Sass/Scss',
+                                    children: (
+                                        <>
+                                            <p className="lead">Sass/Scss Project</p>
+                                            <p className="font-bold mb-0">Import the variant of Cirrus</p>
+
+                                            <div className="mb-3">
+                                                <CodeBlock
+                                                    code={`/* Core Build */
+@use "node_modules/cirrus-ui/src/cirrus-core" as *;
+
+/* Extended Build */
+@use "node_modules/cirrus-ui/src/cirrus-ext" as *;
+
+/* All Build */
+@use "node_modules/cirrus-ui/src/cirrus-all" as *;`}
+                                                    language="scss"
+                                                />
+                                            </div>
+
+                                            <p className="font-bold mb-0">(Optional) Configure Cirrus</p>
+                                            <p>
+                                                If you want to change classes that Cirrus generates or how it behaves,
+                                                you can pass in configuration values to override or extend defaults.
+                                                Read more in the{' '}
+                                                <InternalLink url="/getting-started/configuration">
+                                                    configuration docs
+                                                </InternalLink>
+                                                . Below is just an example of customizing Cirrus.
+                                            </p>
+                                            <CodeBlock
+                                                code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+    $config: (
+        excludes: (
+            ABSOLUTES,
+        ),
+        opacity: null, // Disable default opacity classes
+        extend: (
+            // Add your own
+            opacity: (
+                25: .25,
+                50: .5,
+                75: .75,
+            )
+        )
+    ),
+)`}
+                                                language="jsx"
+                                            />
+
+                                            <p className="font-bold mb-0">Start Your Build Process</p>
+                                            <p>
+                                                Run your build process that builds your Sass project. The output file should also contain the contents of Cirrus. Command here is just a sample.
+                                            </p>
+                                            <CodeBlock
+                                                code={`npm run dev`}
+                                                language="bash"
+                                            />
+                                        </>
+                                    ),
+                                },
+                            ]}
+                        ></TabContainer>
                     </div>
                 </section>
 
                 <section className="padtop" id="starter">
                     <div className="content">
-                        <Headline title="Starter Template" link="#starter" size='4' />
+                        <Headline title="Starter Template" link="#starter" size="4" />
                         <div className="divider"></div>
                         <p>To help you get started, feel free to use the example page created below.</p>
                         <LazyLoad height={200} once>

@@ -138,7 +138,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         <p>
                             The framework uses a primary configuration file in <code>_config.scss</code> to store
                             defaults. Customization is as easy as{' '}
-                            <ExternalLink href="https://sass-lang.com/documentation/at-rules/use#configuration">
+                            <ExternalLink url="https://sass-lang.com/documentation/at-rules/use#configuration">
                                 loading a module with configuration
                             </ExternalLink>{' '}
                             as shown below:
