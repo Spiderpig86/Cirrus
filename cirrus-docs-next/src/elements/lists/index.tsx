@@ -734,7 +734,7 @@ export const ListsPage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{ name: 'Links', link: './links' }}
-                    nextLink={{ name: 'Modals', link: './modals' }}
+                    nextLink={{ name: 'Modal', link: './modal' }}
                 />
             </div>
             <TableOfContents entries={toc} />

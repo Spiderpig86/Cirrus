@@ -295,7 +295,7 @@ export const CardsPage: React.FC<any> = (props) => {
 
                         <p>
                             Cards can be grouped using Cirrus's{' '}
-                            <Link href="../grid/">
+                            <Link href="/grid/templates">
                                 <a className="u u-LR">flexbox grid</a>
                             </Link>{' '}
                             system.

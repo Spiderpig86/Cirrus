@@ -96,7 +96,7 @@ export const CodePage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{ name: 'Cards', link: './cards' }}
-                    nextLink={{ name: 'Links', link: './link' }}
+                    nextLink={{ name: 'Links', link: './links' }}
                 />
             </div>
             <TableOfContents entries={toc} />

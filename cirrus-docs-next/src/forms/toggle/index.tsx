@@ -375,7 +375,7 @@ export const FormsTogglePage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{ name: 'Radio', link: './radio' }}
-                    nextLink={{ name: 'Form Groups', link: './form-groups' }}
+                    nextLink={{ name: 'Form Groups', link: './groups' }}
                 />
             </div>
             <TableOfContents entries={toc} />

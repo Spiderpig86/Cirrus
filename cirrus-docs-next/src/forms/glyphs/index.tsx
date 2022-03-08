@@ -209,7 +209,7 @@ export const FormsGlyphsPage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{ name: 'Inputs', link: './inputs' }}
-                    nextLink={{ name: 'Checkboxes', link: './checkboxes' }}
+                    nextLink={{ name: 'Checkbox', link: './checkbox' }}
                 />
             </div>
             <TableOfContents entries={toc} />

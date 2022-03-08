@@ -696,7 +696,7 @@ margin-right: auto;`}
                     </div>
                 </section>
 
-                <Pagination nextLink={{ name: 'Dividers', link: './dividers' }} />
+                <Pagination nextLink={{ name: 'Divider', link: './divider' }} />
             </span>
             <TableOfContents entries={toc} />
         </main>
