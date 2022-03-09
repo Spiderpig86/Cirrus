@@ -158,26 +158,24 @@ export const DocsPage: React.FC<any> = (props) => {
                             <li>🌌 Fully open source.</li>
                         </ul>
 
-                        <img
-                            className="ml-1"
-                            src={`https://img.shields.io/badge/cirrus-${VERSION}-blue.svg?style=flat-square`}
-                            alt="Version"
-                        />
-                        <img
-                            className="ml-1"
-                            src="https://img.shields.io/github/license/Spiderpig86/Cirrus.svg?style=flat-square"
-                            alt="MIT License"
-                        />
-                        <img
-                            className="ml-1"
-                            src="https://img.shields.io/npm/dm/cirrus-ui.svg?style=flat-square"
-                            alt="NPM Downloads"
-                        />
-                        <img
-                            className="ml-1"
-                            src="https://data.jsdelivr.com/v1/package/npm/cirrus-ui/badge"
-                            alt="JsDelivr Downloads"
-                        />
+                        <div className="u-inline-flex u-flex-wrap u-gap-1">
+                            <img
+                                src={`https://img.shields.io/badge/cirrus-${VERSION}-blue.svg?style=flat-square`}
+                                alt="Version"
+                            />
+                            <img
+                                src="https://img.shields.io/github/license/Spiderpig86/Cirrus.svg?style=flat-square"
+                                alt="MIT License"
+                            />
+                            <img
+                                src="https://img.shields.io/npm/dm/cirrus-ui.svg?style=flat-square"
+                                alt="NPM Downloads"
+                            />
+                            <img
+                                src="https://data.jsdelivr.com/v1/package/npm/cirrus-ui/badge"
+                                alt="JsDelivr Downloads"
+                            />
+                        </div>
                     </div>
                 </section>
 
@@ -548,7 +546,7 @@ export const DocsPage: React.FC<any> = (props) => {
                             </p>
                             <CodeBlock
                                 code={`// main.scss
-@use "cirrus-ui/cirrus-core" as *; // Core build OR
+@use "node_modules/cirrus-ui/cirrus-core" as *; // Core build OR
 @use "node_modules/cirrus-ui/src/cirrus-ext" as *; // Extended build
 
 @screen-above($md) {

@@ -1,0 +1,40 @@
+.release-notes-page {
+    pre {
+        font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+            'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
+            'Courier New', Courier, monospace;
+        font-size: 14px;
+        line-height: 1.375;
+        direction: ltr;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        tab-size: 4;
+        hyphens: none;
+        background: rgb(42, 39, 52);
+        color: rgb(154, 134, 253);
+        padding: 1em;
+        margin: 0.5em 0px;
+        overflow: auto;
+        border-radius: .25rem;
+
+        code {
+            font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+                'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono',
+                'Nimbus Mono L', 'Courier New', Courier, monospace;
+            font-size: 14px;
+            line-height: 1.375;
+            direction: ltr;
+            text-align: left;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            tab-size: 4;
+            hyphens: none;
+            background: rgb(42, 39, 52);
+            color: rgb(154, 134, 253);
+            border-left: none;
+        }
+    }
+}

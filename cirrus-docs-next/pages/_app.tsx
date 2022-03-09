@@ -32,6 +32,8 @@ import '../src/fundamentals/sizes/index.scss';
 import '../src/fundamentals/typography/index.scss';
 import '../src/fundamentals/viewports/index.scss';
 
+import '../src/getting-started/release-notes/index.scss';
+
 import '../src/grid/templates/index.scss';
 
 import '../src/layout/columns/index.scss';

@@ -57,7 +57,7 @@ export const ReleaseNotesPage: React.FC<any> = (props) => {
     }, []);
 
     return (
-        <main className="page-layout">
+        <main className="page-layout release-notes-page">
             <Head>
                 <title>{PAGE_TITLE_PREFIX} Release Notes</title>
             </Head>
