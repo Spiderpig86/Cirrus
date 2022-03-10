@@ -12,7 +12,6 @@ import { DefaultLayout } from '../../layouts/default';
 
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX, VERSION } from '../../constants';
-import { Preview } from './preview';
 import { ECommerceCard } from '../index/components';
 
 export const DocsPage: React.FC<any> = (props) => {
@@ -49,8 +48,6 @@ export const DocsPage: React.FC<any> = (props) => {
             color: '#35bdb2',
         },
     ];
-
-    useEffect(() => {}, []);
 
     return (
         <main className="page-layout">

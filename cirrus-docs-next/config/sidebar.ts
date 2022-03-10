@@ -24,6 +24,12 @@ export const sidebarConfig: SidebarConfig[] = [
             },
             {
                 fontWeight: 'bold',
+                glyph: ['fas', 'gem'],
+                text: `What's New`,
+                url: '/new'
+            },
+            {
+                fontWeight: 'bold',
                 glyph: ['fas', 'cubes'],
                 text: 'Components',
                 url: '/components'
