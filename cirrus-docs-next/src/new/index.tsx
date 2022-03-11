@@ -144,7 +144,7 @@ export const NewPage: React.FC<any> = (props) => {
                             colors can be customized via the configuration object as well.
                         </p>
 
-                        {['pink', 'red', 'orange', 'yellow', 'green', 'teal', 'blue', 'indigo', 'purple'].map(
+                        {['pink', 'red', 'orange', 'yellow', 'green', 'teal', 'blue', 'indigo', 'purple', 'gray'].map(
                             (color) => {
                                 return (
                                     <div className="u-flex u-justify-center u-gap-1 mb-1" key={color}>

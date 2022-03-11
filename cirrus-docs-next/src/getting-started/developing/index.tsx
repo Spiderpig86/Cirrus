@@ -48,52 +48,47 @@ export const DevelopingPage: React.FC<any> = (props) => {
                         </p>
                         <ul>
                             <li>
-                                <b>Buttons</b>
+                                <b>Base</b>
+                                <ul>
+                                    <li>Animations</li>
+                                    <li>Font</li>
+                                    <li>Grid</li>
+                                    <li>Layout</li>
+                                    <li>Media</li>
+                                    <li>Modifiers</li>
+                                    <li>Spacing</li>
+                                </ul>
                             </li>
                             <li>
-                                <b>Code</b>
+                                <b>Core Components</b>
+                                <ul>
+                                    <li>Button</li>
+                                    <li>Code</li>
+                                    <li>Footer</li>
+                                    <li>Forms</li>
+                                    <li>Frames</li>
+                                    <li>Header</li>
+                                    <li>Links</li>
+                                    <li>Lists</li>
+                                    <li>Progress</li>
+                                    <li>Table</li>
+                                </ul>
                             </li>
                             <li>
-                                <b>Default (Base)</b>
-                            </li>
-                            <li>
-                                <b>Font</b>
-                            </li>
-                            <li>
-                                <b>Footer</b>
-                            </li>
-                            <li>
-                                <b>Forms</b>
-                            </li>
-                            <li>
-                                <b>Frames</b>
-                            </li>
-                            <li>
-                                <b>Header</b>
-                            </li>
-                            <li>
-                                <b>Layout</b>
-                            </li>
-                            <li>
-                                <b>Links</b>
-                            </li>
-                            <li>
-                                <b>Lists</b>
-                            </li>
-                            <li>
-                                <b>Media</b>
-                            </li>
-                            <li>
-                                <b>Modal</b>
-                            </li>
-                            <li>
-                                <b>Tables</b>
-                            </li>
-                            <li>
-                                <b>Theme</b>
-                            </li>
-                            <li>
-                                <b>Util</b>
+                                <b>Utilities</b>
+                                <ul>
+                                    <li>Absolute</li>
+                                    <li>Clearfix</li>
+                                    <li>Display</li>
+                                    <li>Flex</li>
+                                    <li>Misc</li>
+                                    <li>Opacity</li>
+                                    <li>Overflow</li>
+                                    <li>Position</li>
+                                    <li>Round</li>
+                                    <li>Shadows</li>
+                                    <li>Z-Index</li>
+                                </ul>
                             </li>
                         </ul>
                         <p>
@@ -118,46 +113,25 @@ export const DevelopingPage: React.FC<any> = (props) => {
                         </p>
                         <ul>
                             <li>
-                                <b>Animations</b>
+                                <b>Everything in Core</b>
                             </li>
                             <li>
-                                <b>Avatar</b>
-                            </li>
-                            <li>
-                                <b>Card</b>
-                            </li>
-                            <li>
-                                <b>Form (Extended Styles)</b>
-                            </li>
-                            <li>
-                                <b>Grid</b>
-                            </li>
-                            <li>
-                                <b>Link (Extended Styles)</b>
-                            </li>
-                            <li>
-                                <b>Modifiers</b>
-                            </li>
-                            <li>
-                                <b>Pagination</b>
-                            </li>
-                            <li>
-                                <b>Placeholder</b>
-                            </li>
-                            <li>
-                                <b>Tabs</b>
-                            </li>
-                            <li>
-                                <b>Tags</b>
-                            </li>
-                            <li>
-                                <b>Tiles</b>
-                            </li>
-                            <li>
-                                <b>Toasts</b>
-                            </li>
-                            <li>
-                                <b>Tooltips</b>
+                                <b>Extended Components</b>
+                                <ul>
+                                    <li>Avatar</li>
+                                    <li>Breadcrumb</li>
+                                    <li>Card</li>
+                                    <li>Form Extended</li>
+                                    <li>Link Extended</li>
+                                    <li>Modal</li>
+                                    <li>Pagination</li>
+                                    <li>Placeholder</li>
+                                    <li>Tabs</li>
+                                    <li>Tags</li>
+                                    <li>Tiles</li>
+                                    <li>Toast</li>
+                                    <li>Tooltips</li>
+                                </ul>
                             </li>
                         </ul>
                         <p>
@@ -238,91 +212,6 @@ export const DevelopingPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop" id="customization">
-                    <div className="content">
-                        <Headline title="Customization" link="#customization" size="4" />
-                        <div className="divider"></div>
-
-                        <p>Learn how to customize Cirrus itself.</p>
-
-                        <h6>Customizing the Theme</h6>
-                        <p>
-                            You can find Cirrus's color palette within{' '}
-                            <ExternalLink url="https://github.com/Spiderpig86/Cirrus/blob/master/src/core/theme.scss">
-                                theme.scss
-                            </ExternalLink>
-                            . Modify and rebuild the project to use the theme you prefer.
-                        </p>
-                        <p>
-                            For more granular control, you can modify the theme for a specific control by changing the
-                            CSS variable value for that specific class. For example, the modification below changes the
-                            color for all <code>*--info</code> related components to <code>#0066ff</code>.
-                        </p>
-                        <CodeBlock
-                            code={`:root {
-    /* v1 Colors */
-    --cirrus-fg: #{$cirrus-fg};
-    --cirrus-bg: #{$cirrus-bg};
-
-    --cirrus-primary: #{$cirrus-primary};
-    --cirrus-primary-rgb: #{hex-to-rgb($cirrus-primary)};
-    --cirrus-primary-light: #{$cirrus-primary-light};
-
-    /* ... */
-
-    --cirrus-info: '#0066ff';
-
-    /* ... */
-}`}
-                            language={'scss'}
-                        />
-
-                        <div className="space" />
-                        <h6>Customizing Dimensions/Sizes</h6>
-                        <p>
-                            You can find Cirrus's sizing configuration within{' '}
-                            <ExternalLink url="https://github.com/Spiderpig86/Cirrus/blob/master/helpers/_size.scss">
-                                _size.scss
-                            </ExternalLink>
-                            . Modify and rebuild the project to use the sizes you prefer.
-                        </p>
-                        <p>The sizes specified in the file include:</p>
-                        <ul>
-                            <li>Spacing for padding/margin.</li>
-                            <li>
-                                Base size for the <code>space</code> class.
-                            </li>
-                            <li>Font sizes.</li>
-                            <li>Grid column/row count.</li>
-                            <li>Default grid column/row span.</li>
-                            <li>Tab sizes.</li>
-                            <li>Viewport breakpoints.</li>
-                            <li>Viewport Scss utils.</li>
-                        </ul>
-                        <CodeBlock
-                            code={`/* Spacing */
-$spacing-system: 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32;
-$space-size: 0.5rem;
-
-/* Fonts */
-$font-size-xs: .7rem;
-$font-size-s: .85rem;
-$font-size-m: 1rem;
-$font-size-l: 1.35rem;
-$font-size-xl: 1.75rem;
-
-/* Grid Count (Columns + Grid) */
-$grid-columns: 12;
-
-/* Grid Percents */
-$grid-width: 1 / $grid-columns;
-
-/* ... */`}
-                            language={'scss'}
-                        />
-                    </div>
-                </section>
-
                 <section className="padtop" id="folder-structure">
                     <div className="content">
                         <Headline title="Folder Structure" link="#folder-structure" size="4" />
@@ -330,66 +219,99 @@ $grid-width: 1 / $grid-columns;
 
                         <p>The project is organized like this:</p>
                         <CodeBlock
-                            code={`.
-├── CODE_OF_CONDUCT.md
+                            code={`├── CODE_OF_CONDUCT.md
+├── config
 ├── CONTRIBUTING.md
-├── dist                            // Build files
+├── dist
+│   ├── cirrus-all.css
+│   ├── cirrus-all.min.css
 │   ├── cirrus-core.css
 │   ├── cirrus-core.min.css
 │   ├── cirrus.css
 │   └── cirrus.min.css
 ├── gulpfile.js
-├── helpers                         // Helper Sass files/config
-│   ├── _functions.scss
-│   ├── _mixins.scss
-│   ├── _selectors.scss
-│   └── _size.scss
 ├── img
 │   └── CirrusLogo.png
 ├── LICENSE
+├── main.example.scss
 ├── package.json
 ├── package-lock.json
 ├── README.md
-└── src
-    ├── core                        // Core build
-    │   ├── button.scss
-    │   ├── code.scss
-    │   ├── default.scss
-    │   ├── font.scss
-    │   ├── footer.scss
-    │   ├── forms.scss
-    │   ├── frames.scss
-    │   ├── header.scss
-    │   ├── layout.scss
-    │   ├── links.scss
-    │   ├── lists.scss
-    │   ├── media.scss
-    │   ├── spacing.scss
-    │   ├── table.scss
-    │   ├── theme.scss
-    │   └── utils                   // Utilities
-    │       ├── clearfix.scss
-    │       ├── display.scss
-    │       ├── flex.scss
-    │       ├── misc.scss
-    │       └── position.scss
-    └── ext                         // Extended styles + components
-        ├── animations.scss
-        ├── avatar.scss
-        ├── card.scss
-        ├── form-ext.scss
-        ├── grid.scss
-        ├── link-ext.scss
-        ├── modal.scss
-        ├── modifiers.scss
-        ├── pagination.scss
-        ├── placeholder.scss
-        ├── tabs.scss
-        ├── tags.scss
-        ├── tiles.scss
-        ├── toast.scss
-        └── tooltips.scss
-`}
+├── src
+│   ├── base
+│   │   ├── animations.scss
+│   │   ├── default.scss
+│   │   ├── font.scss
+│   │   ├── grid.scss
+│   │   ├── _index.scss
+│   │   ├── layout.scss
+│   │   ├── media.scss
+│   │   ├── modifiers.scss
+│   │   └── spacing.scss
+│   ├── builds
+│   │   ├── core.scss
+│   │   └── ext.scss
+│   ├── cirrus-all.scss
+│   ├── cirrus-core.scss
+│   ├── cirrus-ext.scss
+│   ├── components
+│   │   ├── avatar.scss
+│   │   ├── breadcrumb.scss
+│   │   ├── button.scss
+│   │   ├── card.scss
+│   │   ├── code.scss
+│   │   ├── footer.scss
+│   │   ├── form-ext.scss
+│   │   ├── forms.scss
+│   │   ├── frames.scss
+│   │   ├── header.scss
+│   │   ├── link-ext.scss
+│   │   ├── links.scss
+│   │   ├── lists.scss
+│   │   ├── modal.scss
+│   │   ├── pagination.scss
+│   │   ├── placeholder.scss
+│   │   ├── progress.scss
+│   │   ├── table.scss
+│   │   ├── tabs.scss
+│   │   ├── tags.scss
+│   │   ├── tiles.scss
+│   │   ├── toast.scss
+│   │   └── tooltips.scss
+│   ├── internal
+│   │   ├── _api.scss
+│   │   ├── _config.scss
+│   │   ├── _constants.scss
+│   │   ├── _flags.scss
+│   │   ├── _functions.scss
+│   │   ├── _index.scss
+│   │   ├── _mixins.scss
+│   │   ├── _selectors.scss
+│   │   ├── _size.scss
+│   │   └── _theme.scss
+│   └── utils
+│       ├── absolute.scss
+│       ├── clearfix.scss
+│       ├── display.scss
+│       ├── flex.scss
+│       ├── misc.scss
+│       ├── opacity.scss
+│       ├── overflow.scss
+│       ├── position.scss
+│       ├── round.scss
+│       ├── shadows.scss
+│       └── zindex.scss
+└── tests
+    ├── internal
+    │   ├── _api.spec.scss
+    │   ├── _config.spec.scss
+    │   ├── _functions.spec.scss
+    │   ├── _mixins.spec.scss
+    │   └── _size.spec.scss
+    ├── scss.spec.js
+    └── test_base.scss
+
+11 directories, 80 files`}
                             language="text"
                         />
                     </div>
