@@ -149,7 +149,7 @@ export const NewPage: React.FC<any> = (props) => {
                                 return (
                                     <div className="u-flex u-justify-center u-gap-1 mb-1" key={color}>
                                         {v2.get(color).map((className, index) => (
-                                            <div
+                                             <div
                                                 key={color + className.class + index}
                                                 className={`${className.class} p-3 u-round-xs p-4-xl`}
                                             />

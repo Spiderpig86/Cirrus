@@ -106,7 +106,7 @@ export const SetUpPage: React.FC<any> = (props) => {
                             selectedIndex={0}
                             tabs={[
                                 {
-                                    title: 'Webpage',
+                                    title: 'Webpage/Template',
                                     children: (
                                         <>
                                             <p className="lead">Traditional Webpage</p>
@@ -177,55 +177,11 @@ export const SetUpPage: React.FC<any> = (props) => {
                                     ),
                                 },
                                 {
-                                    title: 'Node',
-                                    children: (
-                                        <>
-                                            <p className="lead">Node App</p>
-                                            <p className="font-bold mb-0">Import cirrus-ui</p>
-
-                                            <div className="mb-3">
-                                                <CodeBlock
-                                                    code={`import 'cirrus-ui'; 
-// Your other framework code`}
-                                                    language="javascript"
-                                                />
-                                            </div>
-
-                                            <p className="font-bold mb-0">Setup Template</p>
-                                            <p>
-                                                In your main <code>index.html</code> page, make sure that the following
-                                                dependencies are also included. For example, it would be in the{' '}
-                                                <code>index.html</code> file in your React project.
-                                            </p>
-                                            <CodeBlock
-                                                code={`<!DOCTYPE html>
-<html>
-
-<head>
-	<title>Getting Started with Cirrus</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge;" />
-	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-</head>
-<!-- More content -->
-
-</html>`}
-                                                language="html"
-                                            />
-                                        </>
-                                    ),
-                                },
-                                {
                                     title: 'React',
                                     children: (
                                         <>
-                                            <p className="lead">React App</p>
-                                            <p className="font-bold mb-0">Import cirrus-ui</p>
+                                            <p className="lead">React</p>
+                                            <p className="font-bold mb-0">Import cirrus-ui anywhere in your project.</p>
 
                                             <div className="mb-3">
                                                 <CodeBlock
@@ -243,6 +199,8 @@ import ReactDOM from "react-dom";
 
 import App from "./App";
 
+import 'cirrus-ui'; // You can import it here if you want
+
 const rootElement = document.getElementById("root");
 ReactDOM.render(
     <StrictMode>
@@ -251,6 +209,71 @@ ReactDOM.render(
     rootElement
 );`}
                                                 language="jsx"
+                                            />
+                                        </>
+                                    ),
+                                },
+                                {
+                                    title: 'Vue',
+                                    children: (
+                                        <>
+                                            <p className="lead">Vue</p>
+                                            <p className="font-bold mb-0">Import cirrus-ui anywhere in your project (either in a Vue template or JS file).</p>
+
+                                            <div className="mb-3">
+                                                <CodeBlock
+                                                    code={`import 'cirrus-ui'; 
+// Your other framework code`}
+                                                    language="javascript"
+                                                />
+                                            </div>
+
+                                            <p className="font-bold mb-0">Write Your App</p>
+                                            <p>There's nothing left to do but to start your Vue app.</p>
+                                            <CodeBlock
+                                                code={`// Example main.js
+import Vue from 'vue';
+import App from './App.vue';
+
+import 'cirrus-ui';
+
+Vue.config.productionTip = false;
+
+new Vue({
+    render: (h) => h(App),
+}).$mount('#app');`}
+                                                language="javascript"
+                                            />
+                                        </>
+                                    ),
+                                },
+                                {
+                                    title: 'Svelte',
+                                    children: (
+                                        <>
+                                            <p className="lead">Svelte</p>
+                                            <p className="font-bold mb-0">Import cirrus-ui anywhere in your project.</p>
+
+                                            <div className="mb-3">
+                                                <CodeBlock
+                                                    code={`import 'cirrus-ui'; 
+// Your other framework code`}
+                                                    language="javascript"
+                                                />
+                                            </div>
+
+                                            <p className="font-bold mb-0">Write Your App</p>
+                                            <p>There's nothing left to do but to start your Svelte app.</p>
+                                            <CodeBlock
+                                                code={`import App from "./App.svelte";
+import "cirrus-ui";
+
+const app = new App({
+    target: document.body
+});
+
+export default app;`}
+                                                language="javascript"
                                             />
                                         </>
                                     ),
