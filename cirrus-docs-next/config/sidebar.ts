@@ -31,8 +31,8 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'bold',
                 glyph: ['fas', 'cubes'],
-                text: 'Components',
-                url: '/components'
+                text: 'Blocks',
+                url: '/blocks'
             },
             {
                 fontWeight: 'bold',
