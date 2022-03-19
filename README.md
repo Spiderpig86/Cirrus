@@ -42,7 +42,7 @@ Cirrus relies on [What CSS to prefix?](http://shouldiprefix.com/) to determine w
 | --- | --- | --- | --- | --- | --- |
 | IE11, Edge | last 3 versions, ESR | last 3 versions | last 3 versions | last 3 versions | last 3 versions |
 
-## :box: Install
+## 📦 Install
 
 #### Npm
 ```sh
@@ -219,16 +219,30 @@ $ yarn watch
   - Z-Index
 
 ## :clap: Related Projects
-| Project                                                                              | Description                                                                            |
-|--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| [vue-cirrus](https://github.com/FlorianWoelki/vue-cirrus)   | Cirrus components for Vue.js with straightforward syntax                                             |
+| Project                                                     | Description                                                                           |
+|-------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| [vue-cirrus](https://github.com/FlorianWoelki/vue-cirrus)   | Cirrus components for Vue.js with straightforward syntax                              |
+| [cirrus-blocks](https://github.com/Cirrus-UI/Cirrus-Blocks) | A collection of beautiful components built with Cirrus ready to be copied and pasted. |
+| [cirrus-reset](https://github.com/Cirrus-UI/Cirrus-Reset)   | A simple CSS reset from Cirrus.                                                       |
 
-## :gem: Examples that use Cirrus
-* [Polarity 9](http://polarity.x10.mx/browser "Polarity 9 Promo Page")
-* [Phraze](https://phrazes.net "Phraze")
 
 ## :newspaper: License and Attribution
 Cirrus is licensed under the [MIT license](https://github.com/Spiderpig86/Cirrus/blob/master/LICENSE "MIT License"). If this frame work has helped you in any way, attribution in the footer of your website would be much appreciated.
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSpiderpig86%2FCirrus.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSpiderpig86%2FCirrus?ref=badge_large)
 
+## 🤝 Contributing [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+Read our [contributing guide](https://github.com/Spiderpig86/Cirrus/blob/master/.github/CONTRIBUTING.yml) and improve Cirrus together.
+
+We welcome all contributions. Please read our [CONTRIBUTING.md](https://github.com/Spiderpig86/Cirrus/blob/master/.github/CONTRIBUTING.md) first. You can submit any ideas as [pull requests](https://github.com/Spiderpig86/Cirrus/pulls) or as [GitHub issues](https://github.com/Spiderpig86/Cirrus/issues). If you'd like to improve code, check out the [Development Instructions](https://www.cirrus-ui.com/getting-started/developing) and have a good time! :)
+
+When creating issues, please follow the templates provided for the issue type you selected. The added detail and formatting will help me understand and resolve your issue faster.
+
+## ❤️ Sponsors and Backers
+
+I would greatly appreciate any support for the continued development of this project. :smile:
+
+[![](https://opencollective.com/cirrus/tiers/sponsors.svg?avatarHeight=36)](https://opencollective.com/cirrus#support)
+
+[![](https://opencollective.com/cirrus/tiers/backers.svg?avatarHeight=36)](https://opencollective.com/cirrus#support)
