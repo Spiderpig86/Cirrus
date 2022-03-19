@@ -144,7 +144,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                             as shown below:
                         </p>
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         excludes: (
             ABSOLUTES,
@@ -182,7 +182,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         </p>
 
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (...);
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (...);
 
 // Example use of Cirrus internal APIs
 @screen-above($md) {
@@ -214,7 +214,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         </p>
 
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         viewports: (
             'FLEX': true
@@ -256,7 +256,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                             classes I want to generate for <code>colors</code> in this entry.
                         </p>
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         extend: (
             semantic: (
@@ -309,7 +309,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         </p>
 
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         semantic: null,
         extend: (
@@ -351,7 +351,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         </p>
 
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         excludes: (
             'AVATAR'
@@ -371,7 +371,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         </p>
 
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         excludes: (
             'ALL'
@@ -417,7 +417,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                             <code>includes</code> field is applied after Cirrus process <code>excludes</code>.
                         </p>
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         excludes: ( 'ALL' ), // Disable everything not in base folder
         includes: (

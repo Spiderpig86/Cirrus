@@ -205,7 +205,7 @@ fieldset {
 
                         <p>If you would like to disable default styles from being used, you can add them to the <code>excludes</code> lists.</p>
 
-                        <CodeBlock code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                        <CodeBlock code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         excludes: (
             'RESET'

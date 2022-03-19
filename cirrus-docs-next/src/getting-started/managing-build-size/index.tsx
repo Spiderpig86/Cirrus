@@ -140,7 +140,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         </p>
 
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         excludes: (
             'ABSOLUTES',
@@ -206,7 +206,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         </p>
 
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         viewports: (
             CLEARFIX: false,
@@ -261,7 +261,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         </p>
 
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         colors: (
             'teal': null,
@@ -318,7 +318,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         </p>
 
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         breakpoints: (
             widths: null,

@@ -12,6 +12,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { ClassTable } from '../../../layouts/components/class-table';
+import { VersionTag } from '../../../layouts/components/tag';
 
 export const WidthPage: React.FC<any> = (props) => {
     const widthClasses = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'];
@@ -58,6 +59,7 @@ export const WidthPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Scaled Widths" link="#scaled" size="4" />
                         <div className="divider"></div>
+                        <VersionTag version="0.7.0" text="Updated" />
                         <p>
                             The <code>{`w-{{value}}`}</code> classes gives an element a percentage based width.
                         </p>

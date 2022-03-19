@@ -209,6 +209,9 @@ export const DevelopingPage: React.FC<any> = (props) => {
                             </li>
                         </ul>
                         <div className="space" />
+                        <p><b>Testing</b></p>
+                        <p>With 0.7.0, tests have been added to make sure Cirrus's internal APIs are working properly. You can also write your own unit tests to test any new mixins, functions, etc. as you wish.</p>
+                        <p>Run <code>npm test</code> to run all unit tests in the project.</p>
                     </div>
                 </section>
 

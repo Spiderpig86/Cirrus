@@ -12,6 +12,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { ClassTable } from '../../../layouts/components/class-table';
+import { VersionTag } from '../../../layouts/components/tag';
 
 export const HeightPage: React.FC<any> = (props) => {
     const heightClasses = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'];
@@ -48,6 +49,7 @@ export const HeightPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Height" link="#height" />
                         <div className="divider"></div>
+                        <VersionTag version="0.7.0" text="Updated" />
                         <p>Classes to set the height of an element.</p>
 
                         <ClassTable classTable={classTable} />

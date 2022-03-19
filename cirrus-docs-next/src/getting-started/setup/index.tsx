@@ -15,7 +15,7 @@ import { toc } from './toc';
 import initializeTabs from '../../../static/js/tabs.js';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { TabContainer } from '../../../layouts/components/tabs/tab-container';
-import { InternalLink } from '../../../layouts/components/link';
+import { ExternalLink, InternalLink } from '../../../layouts/components/link';
 
 export const SetUpPage: React.FC<any> = (props) => {
     // useEffect(() => {
@@ -288,13 +288,13 @@ export default app;`}
                                             <div className="mb-3">
                                                 <CodeBlock
                                                     code={`/* Core Build */
-@use "node_modules/cirrus-ui/src/cirrus-core" as *;
+@use "cirrus-ui/src/cirrus-core" as *;
 
 /* Extended Build */
-@use "node_modules/cirrus-ui/src/cirrus-ext" as *;
+@use "cirrus-ui/src/cirrus-ext" as *;
 
 /* All Build */
-@use "node_modules/cirrus-ui/src/cirrus-all" as *;`}
+@use "cirrus-ui/src/cirrus-all" as *;`}
                                                     language="scss"
                                                 />
                                             </div>
@@ -310,7 +310,7 @@ export default app;`}
                                                 . Below is just an example of customizing Cirrus.
                                             </p>
                                             <CodeBlock
-                                                code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                                                code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         excludes: (
             ABSOLUTES,
@@ -325,8 +325,8 @@ export default app;`}
             )
         )
     ),
-)`}
-                                                language="jsx"
+);`}
+                                                language="scss"
                                             />
 
                                             <p className="font-bold mb-0">Start Your Build Process</p>
@@ -349,16 +349,13 @@ export default app;`}
                     <div className="content">
                         <Headline title="Starter Template" link="#starter" size="4" />
                         <div className="divider"></div>
-                        <p>To help you get started, feel free to use the example page created below.</p>
+                        <p>To help you get started, feel free to use the example page created below. If you want to see it in the browser, <ExternalLink url="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html">click here</ExternalLink>.</p>
                         <LazyLoad height={200} once>
                             <iframe
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html"
                                 className="w-100p"
                             />
                         </LazyLoad>
-                        <a href="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html" target="_blank">
-                            Full Page
-                        </a>
                         <div className="space space--lg"></div>
                         <CodeBlock
                             code={`<!DOCTYPE html>

@@ -71,8 +71,8 @@ export const NewPage: React.FC<any> = (props) => {
 
                         <CodeBlock
                             code={`// main.scss
-@use "node_modules/cirrus-ui/cirrus-core" as *; // Core build OR
-@use "node_modules/cirrus-ui/src/cirrus-ext" as *; // Extended build
+@use "cirrus-ui/cirrus-core" as *; // Core build OR
+@use "cirrus-ui/src/cirrus-ext" as *; // Extended build
 
 @screen-above($md) {
     .my-class {
@@ -109,7 +109,7 @@ export const NewPage: React.FC<any> = (props) => {
                         </p>
 
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         excludes: (
             ABSOLUTES,
@@ -251,73 +251,6 @@ export const NewPage: React.FC<any> = (props) => {
 <div class="u-z-auto ...">auto</div>`}
                             language="scss"
                         />
-                    </div>
-                </section>
-
-                <section className="padtop" id="components">
-                    <div className="content">
-                        <Headline title="Components" size="4" link="components" />
-                        <div className="divider"></div>
-
-                        <p>
-                            This update wasn't as focused on introducing new components, but it was not forgotten. Some
-                            of the new components styles are:
-                        </p>
-                        <ul>
-                            <li>
-                                <InternalLink url="/elements/breadcrumbs">Breadcrumbs</InternalLink> — a component used
-                                to create a sense of hierarchy when navigating a website.
-                            </li>
-                            <li>
-                                <InternalLink url="/elements/progress">Progress</InternalLink> — Cirrus comes with
-                                styling right out of the box for the progress HTML element.
-                            </li>
-                            <li>
-                                <InternalLink url="/animations">New Animations</InternalLink> — new animation classes
-                                include pulse (skeleton loaders) and ping (notification).
-                            </li>
-                        </ul>
-
-                        <div className="space space--lg"></div>
-
-                        <div className="card px-4 py-3">
-                            <div className="u-flex u-gap-3 animated pulse">
-                                <div>
-                                    <div className="bg-gray-300 u-round-full p-4"></div>
-                                </div>
-                                <div className="u-flex-grow-1">
-                                    <div className="line bg-gray-300 w-100p u-round-xs"></div>
-                                    <div className="space"></div>
-                                    <div className="line bg-gray-300 w-100p u-round-xs"></div>
-                                    <div className="grid u-gap-1 mb-0">
-                                        <div className="line bg-gray-300 grid-c-3 u-round-xs"></div>
-                                        <div className="line bg-gray-300 grid-c-9 u-round-xs"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="u-relative u-inline-flex">
-                            <div className="u-round-xs u-shadow-lg p-3 bg-blue-100">
-                                <div className="u-flex u-items-center u-gap-2">
-                                    <div>
-                                        <div className="avatar">
-                                            <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=128" />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <b>3 new unopened messages in the last hour.</b>
-                                        <div className="text-gray-600">
-                                            @johndoe sent "About your PR, it's mostly good but..."
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <span className="notification u-inline-flex u-absolute u-top-0 u-right-0">
-                                <span className="h-100p w-100p u-absolute u-inline-flex animated ping bg-blue-400 u-round-full"></span>
-                                <span className="h-100p w-100p u-inline-flex bg-blue-400 u-round-full"></span>
-                            </span>
-                        </div>
                     </div>
                 </section>
 

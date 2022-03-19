@@ -372,7 +372,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                             existing breakpoints.
                         </p>
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         extend: (
             breakpoints: (
@@ -397,7 +397,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                             To remove the default breakpoints, just set the settings to null. Note that this may break some existing builds, so be sure to resolve them and add in the corresponding breakpoints as needed.
                         </p>
                         <CodeBlock
-                            code={`@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         breakpoints: (
             widths: null,

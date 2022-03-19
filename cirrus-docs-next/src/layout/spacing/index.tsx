@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { VersionTag } from '../../../layouts/components/tag';
 
 export const SpacingPage: React.FC<any> = (props) => {
     return (
@@ -41,17 +42,17 @@ export const SpacingPage: React.FC<any> = (props) => {
                             element.
                         </p>
 
-                        <section className="bg-gray-200">
-                            <p>section</p>
-                            <div className="content bg-gray-400">
-                                <p>content</p>
+                        <section className="bg-pink-200 u-shadow-lg u-round-sm">
+                            <p className="p-1">section</p>
+                            <div className="content bg-pink-400 u-shadow-lg u-round-sm">
+                                <p className="p-1">content</p>
                             </div>
                         </section>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<section class="bg-gray-200">
+                            code={`<section class="bg-pink-200 u-shadow-lg u-round-sm">
     <p>section</p>
-    <div class="content bg-gray-400">
+    <div class="content bg-pink-400 u-shadow-lg u-round-sm">
         <p>content</p>
     </div>
 </section>`}
@@ -64,19 +65,20 @@ export const SpacingPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Space" link="#space" size="4" />
                         <div className="divider"></div>
+                        <VersionTag version="0.7.0" text="Updated" />
                         <p>
                             A <code>space</code> is an independent element that serves as a buffer between elements.
                             This class comes with different sizes which includes <code>space--lg</code> and{' '}
                             <code>space--xl</code>.
                         </p>
-                        <div className="space bg-indigo-100 mb-1"></div>
-                        <div className="space space--lg bg-indigo-200 mb-1"></div>
-                        <div className="space space--xl bg-indigo-300 mb-1"></div>
+                        <div className="space u-round-sm u-shadow-lg bg-indigo-400 mb-1"></div>
+                        <div className="space u-round-sm u-shadow-lg space--lg bg-indigo-500 mb-1"></div>
+                        <div className="space u-round-sm u-shadow-lg space--xl bg-indigo-600 mb-1"></div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="space bg-indigo-100 mb-1"></div>
-<div class="space space--lg bg-indigo-200 mb-1"></div>
-<div class="space space--xl bg-indigo-300 mb-1"></div>`}
+                            code={`<div class="space ..."></div>
+<div class="space space--lg ..."></div>
+<div class="space space--xl ..."></div>`}
                             language="htmlbars"
                         />
                     </div>

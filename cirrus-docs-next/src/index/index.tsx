@@ -769,7 +769,7 @@ import 'cirrus-ui';`}
                             <div className="col-6">
                                 <CodeBlock
                                     code={`/* main.scss */
-@use "node_modules/cirrus-ui/src/cirrus-ext" as * with (
+@use "cirrus-ui/src/cirrus-ext" as * with (
   $config: (
     extend: (
       opacity: (

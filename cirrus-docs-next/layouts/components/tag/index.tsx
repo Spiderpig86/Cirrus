@@ -22,6 +22,7 @@ export const Tag: React.FC<any> = (props: TagProps) => {
 
 export interface VersionTagProps {
     version: string;
+    text?: string;
 }
 
 export const VersionTag: React.FC<VersionTagProps> = (props: VersionTagProps) => {
@@ -29,7 +30,7 @@ export const VersionTag: React.FC<VersionTagProps> = (props: VersionTagProps) =>
         <Tag
             leftProps={{
                 classes: `tag--dark`,
-                text: `New`,
+                text: props.text ?? `New`,
             }}
             rightProps={{
                 classes: `tag--info`,
