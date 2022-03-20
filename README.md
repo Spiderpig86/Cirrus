@@ -13,7 +13,7 @@
 </div>
 
 <p align="center">
-A fully responsive and comprehensive SCSS framework with beautiful controls and simplistic structure. Cirrus is designed to be adaptable to existing themes or when starting fresh.
+A component-and-utility-centric SCSS framework designed for rapid prototyping. Use beautiful pre-built components to bootstrap your next project and utility classes to polish your final design.
 <br />
 <a href="https://cirrus-ui.netlify.app/"><strong>Check out the docs »</strong></a>
 <br />
