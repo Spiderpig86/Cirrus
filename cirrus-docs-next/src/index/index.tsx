@@ -1,17 +1,17 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
 import Axios from 'axios';
 import TextLoop from 'react-text-loop';
 import { nord } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { useInView } from 'react-intersection-observer';
+import { animate, motion, useMotionValue } from 'framer-motion';
 
 import { LandingLayout } from '../../layouts/landing';
-import { ExampleCard } from '../getting-started/examples/example-card';
 import { Context } from '../../store/store';
 import { CodeBlock } from '../../layouts/components/codeblock';
 
-import { DOC_EXAMPLES } from '../../constants/examples';
 import { VERSION, VERSION_NAME } from '../../constants';
 import {
     Frame,
@@ -32,12 +32,26 @@ import { ResizableInternal } from '../../layouts/components/resizable';
 import { IFrame } from '../../layouts/components/iframe';
 import { PLAYGROUND_ENDPOINT_MAP } from '../../constants/playground';
 import { InternalLink } from '../../layouts/components/link';
+import { Counter } from '../../layouts/components/counter';
+
+const DURATION_SECONDS = 3.75;
+const BASE_RANGE = [0, 5000];
+const FILE_SIZE_START = 218;
+const FILE_SIZE_END = 101.65;
 
 const Landing: React.FC<any> = () => {
     const { state, dispatch } = useContext(Context);
 
     const [stars, setStars] = useState(0);
     const [forks, setForks] = useState(0);
+
+    const progress = useMotionValue(0);
+
+    // TODO: Each page section should have its own view ref when moving everything to its own component
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true,
+    });
 
     useEffect(() => {
         async function fetchGithubData() {
@@ -48,6 +62,16 @@ const Landing: React.FC<any> = () => {
 
         fetchGithubData();
     }, []);
+
+    useEffect(() => {
+        if (!inView) {
+            return;
+        }
+        animate(progress, BASE_RANGE[1], {
+            type: 'spring',
+            damping: 50,
+        });
+    }, [inView]);
 
     return (
         <div>
@@ -799,6 +823,122 @@ import 'cirrus-ui';`}
                                     language={'css'}
                                 />
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-8">
+                <div className="content u-text-center">
+                    <h1
+                        className="headline-4"
+                        style={{
+                            letterSpacing: '-.025em',
+                        }}
+                    >
+                        There when you need it, gone when you don't.
+                    </h1>
+
+                    <div className="content">
+                        <p className="lead text-gray-600">
+                            Don't need a feature? No problem. Disable it right within the config itself. You can also
+                            disable all features and only enable the ones you need. Cirrus is designed to fit your needs
+                            without forcing you to bring in styles you won't use -- drastically reducing file size in
+                            the process.
+                        </p>
+                    </div>
+
+                    <div className="row" ref={ref}>
+                        <div className="col-8">
+                            <div className="my-4">
+                                <CodeBlock
+                                    code={`/* main.scss */
+@use "cirrus-ui/src/cirrus-ext" as * with (
+    $config: (
+        excludes: (
+            // Components
+            'AVATAR',
+            'BUTTON',
+            'CODE',
+            'FORMS',
+            'FORMS-EXT',
+            ...
+
+            // Utils
+            'ABSOLUTES',
+            'OVERFLOW',
+            'POSITION',
+            ...
+        ),
+    ),
+);`}
+                                    language={'scss'}
+                                />
+                            </div>
+                        </div>
+                        <div className="col-4 u-center">
+                            <motion.div
+                                className="u-round-sm my-4 p-8"
+                                animate={inView ? { backgroundColor: '#cbf9e8' } : undefined}
+                                transition={{
+                                    duration: DURATION_SECONDS,
+                                }}
+                            >
+                                <div
+                                    className="u-relative mx-auto"
+                                    style={{
+                                        width: '4rem',
+                                        height: '4rem',
+                                    }}
+                                >
+                                    <svg
+                                        viewBox="0 0 64 64"
+                                        className="u-absolute h-100p w-100p text-green-400"
+                                        transform="rotate(90) scale(1 -1)"
+                                    >
+                                        <motion.path
+                                            d="M6,32a26,26 0 1,0 52,0a26,26 0 1,0 -52,0"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            strokeLinecap="round"
+                                            strokeDasharray="0 1"
+                                            initial={{ pathLength: 0, strokeWidth: 6 }}
+                                            animate={inView ? { pathLength: 1, strokeWidth: 6 } : undefined}
+                                            transition={{
+                                                duration: DURATION_SECONDS,
+                                            }}
+                                        />
+                                    </svg>
+                                    <svg viewBox="0 0 64 64" className="u-absolute h-100p w-100p">
+                                        <motion.path
+                                            d="M22.668 33.333l5.333 5.334 13.334-13.334"
+                                            fill="none"
+                                            stroke="#22C55E"
+                                            strokeWidth="3"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeDasharray="0 1"
+                                            initial={{ pathLength: 0, opacity: 0 }}
+                                            animate={inView ? { pathLength: 1, opacity: 1 } : undefined}
+                                            transition={{
+                                                pathLength: { delay: DURATION_SECONDS - 0.25, duration: 0.3 },
+                                                opacity: { delay: DURATION_SECONDS - 0.25, duration: 0 },
+                                            }}
+                                        />
+                                    </svg>
+                                </div>
+
+                                <div className="headline-4 font-bold">
+                                    <Counter
+                                        from={FILE_SIZE_START}
+                                        to={FILE_SIZE_END}
+                                        round={1}
+                                        progress={progress}
+                                        inputRange={BASE_RANGE}
+                                    />
+                                    <span className="text-xl">KB</span>
+                                </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>

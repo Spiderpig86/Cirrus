@@ -427,7 +427,7 @@ export const ResponsiveLandingHTML = `<section class="min-h-100p w-100p u-flex u
 	<div class="content w-80p">
 		<div
 			class="u-flex u-flex-column u-items-flex-start u-justify-flex-start u-relative u-flex-row-md u-items-stretch-md">
-			<div class="pt-6 mx-auto w-50-md mx-0-md pb-4-md pr-4-md">
+			<div class="pt-6 mx-auto w-50p-md mx-0-md pb-4-md pr-4-md">
 				<h1 class="headline-4 tracking-tighter text-5xl u-text-center text-white u-text-left-md">
 					Building the <br>
 					<span class="text-indigo-500 font-bold">Creator Economy
@@ -445,7 +445,7 @@ export const ResponsiveLandingHTML = `<section class="min-h-100p w-100p u-flex u
 				</div>
 			</div>
 			<div
-				class="u-relative u-flex u-items-center u-justify-center w-80p mx-auto mt-8 h-80p w-50-md h-auto-md u-block-md">
+				class="u-relative u-flex u-items-center u-justify-center w-80p mx-auto mt-8 h-80p w-50p-md h-auto-md u-block-md">
 				<img src="https://cdn.dribbble.com/users/1722951/screenshots/15954834/media/7eee2181141576534bed5954fc1645f3.png" class="u-left-0 u-z-0 img-cover w-100p h-100p mx-auto u-round-xl mx-0-md w-100p-md u-absolute-md u-top-0-md" alt="image">
 				<div class="u-absolute u-top-0 u-right-0 u-overflow-hidden u-shadow-xl u-right-0-md u-round-lg"
 					style="height: 8rem; width: 8rem; margin-top: -2.5rem; margin-right: -1.5rem;">
@@ -473,7 +473,7 @@ export const ResponsiveLandingHTML = `<section class="min-h-100p w-100p u-flex u
 
 			<div class="u-relative u-z-0 u-flex u-items-center u-justify-flex-start py-12 py-0-md">
 				<div
-					class="u-relative u-none u-block-md u-z-10 w-100p max-w-lg px-8 pt-12 pb-12 mx-auto bg-indigo-500 w-50-md mx-0-md mt-0-md pt-2-md pb-4-md u-round-md">
+					class="u-relative u-none u-block-md u-z-10 w-100p max-w-lg px-8 pt-12 pb-12 mx-auto bg-indigo-500 w-50p-md mx-0-md mt-0-md pt-2-md pb-4-md u-round-md">
 					<h3 class="text-xl font-bold text-white mx-0 my-1">
 						Built for All Creators
 					</h3>
