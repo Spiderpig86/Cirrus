@@ -26,7 +26,6 @@ export const Counter: React.FC<CounterProps> = (props) => {
     useEffect(() => {
         return value.onChange((v) => {
             const node = ref.current;
-            console.log(node);
             if (node) {
                 node.firstChild.data = formatNumber(round === 0 ? Math.round(v) : Number(v.toFixed(round)));
             }

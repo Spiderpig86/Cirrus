@@ -46,10 +46,12 @@ export const LandingLayout = ({ children, ...rest }: any) => {
         const onScroll = (e: any) => {
             const scrollOffset = e.target.documentElement.scrollTop;
             setScrollTop(scrollOffset);
-
-            setPageAtTop(scrollOffset <= 10, dispatch);
+            if (scrollOffset % 10 === 0) {
+                // Hopefully there is less lag
+                setPageAtTop(scrollOffset <= 10, dispatch);
+            }
         };
-        window.addEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll, { passive: true });
 
         return () => window.removeEventListener('scroll', onScroll);
     }, [scrollTop]);
