@@ -230,7 +230,7 @@ export const NewPage: React.FC<any> = (props) => {
                                 opacity of an element.
                             </li>
                             <li>
-                                <InternalLink url="/utils/zindex">Opacity</InternalLink> — utilities to control the
+                                <InternalLink url="/utils/zindex">Z-Index</InternalLink> — utilities to control the
                                 z-index of an element.
                             </li>
                         </ul>
