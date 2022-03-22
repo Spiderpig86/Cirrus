@@ -13,7 +13,7 @@ export interface HeaderProps {
 export const Header: React.FC<HeaderProps> = (props) => {
     const [menuShown, setMenuShown] = useState(false);
 
-    loadScripts(['https://www.googletagmanager.com/gtag/js?id=G-EDX1VR130P'], () => runGtag(), []);
+    loadScripts(['https://www.googletagmanager.com/gtag/js?id=G-DZ88T6S3EC'], () => runGtag(), []);
 
     useEffect(() => {
         runGtag();
