@@ -34,10 +34,10 @@ import { PLAYGROUND_ENDPOINT_MAP } from '../../constants/playground';
 import { InternalLink } from '../../layouts/components/link';
 import { Counter } from '../../layouts/components/counter';
 
-const DURATION_SECONDS = 3.75;
+const DURATION_SECONDS = 4.5;
 const BASE_RANGE = [0, 5000];
 const FILE_SIZE_START = 218;
-const FILE_SIZE_END = 101.65;
+const FILE_SIZE_END = 21.4;
 
 const Landing: React.FC<any> = () => {
     const { state, dispatch } = useContext(Context);
@@ -847,6 +847,13 @@ import 'cirrus-ui';`}
                             the process.
                         </p>
                     </div>
+                    
+                    <InternalLink url="/getting-started/managing-build-size">
+                        <span className="text-lg">
+                            Learn more
+                            <FontAwesomeIcon className="ml-1" icon={['fas', 'chevron-right']} />
+                        </span>
+                    </InternalLink>
 
                     <div className="row" ref={ref}>
                         <div className="col-8">
@@ -936,7 +943,7 @@ import 'cirrus-ui';`}
                                         progress={progress}
                                         inputRange={BASE_RANGE}
                                     />
-                                    <span className="text-xl">KB</span>
+                                    <span className="text-xl">KB Brotli</span>
                                 </div>
                             </motion.div>
                         </div>
