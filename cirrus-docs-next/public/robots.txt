@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://cirrus-ui.com
+
+# Sitemaps
+Sitemap: https://cirrus-ui.com/sitemap.xml
