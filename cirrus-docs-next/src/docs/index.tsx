@@ -196,15 +196,15 @@ export const DocsPage: React.FC<any> = (props) => {
 
                             <p>
                                 The example below is constructed using an{' '}
-                                <Link href="/components/avatar">
+                                <Link href="/elements/avatar">
                                     <a className="u u-LR">avatar</a>
                                 </Link>
                                 ,{' '}
-                                <Link href="/components/tabs">
+                                <Link href="/elements/tabs">
                                     <a className="u u-LR">tabs</a>
                                 </Link>
                                 , and{' '}
-                                <Link href="/components/tiles">
+                                <Link href="/elements/tiles">
                                     <a className="u u-LR">tiles</a>
                                 </Link>
                                 .

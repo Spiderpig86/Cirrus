@@ -25,7 +25,7 @@ export const FramesPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>
                             Frames are designed similar to{' '}
-                            <Link href="../components/cards">
+                            <Link href="../elements/cards">
                                 <a className="u u-LR">cards</a>
                             </Link>
                             , but provide more flexibility to the developer to align items in a structured layout.
@@ -255,7 +255,7 @@ export const FramesPage: React.FC<any> = (props) => {
 
                         <p>
                             This one demonstrates overflow on the y-axis with{' '}
-                            <Link href="../components/tiles">
+                            <Link href="../elements/tiles">
                                 <a className="u u-LR">tiles</a>
                             </Link>
                             .

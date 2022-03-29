@@ -232,7 +232,7 @@ display: table !important;`,
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Absolute', link: './absolute' }}
+                    prevLink={{ name: 'Absolute', link: './absolutes' }}
                     nextLink={{ name: 'Display', link: './display' }}
                 />
             </div>

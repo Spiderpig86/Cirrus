@@ -179,7 +179,7 @@ $config: (
                         />
                         <p>
                             Learn more about how to extend Cirrus to support your use cases in the{' '}
-                            <Link href="/fundamentals/configuration">
+                            <Link href="/getting-started/configuration">
                                 <a className="u u-LR">Configuration</a>
                             </Link>{' '}
                             documentation.

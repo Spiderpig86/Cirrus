@@ -44,7 +44,7 @@ export const GapUtilsPage: React.FC<any> = (props) => {
                         />
                         <p>
                             Define gutters between{' '}
-                            <Link href="/utilities/flexbox">
+                            <Link href="/utils/flexbox">
                                 <a className="u u-LR">Flexbox</a>
                             </Link>{' '}
                             and{' '}
@@ -198,7 +198,7 @@ $config: (
 
                         <p>
                             Learn more about how to extend Cirrus to support your use cases in the{' '}
-                            <Link href="/fundamentals/configuration">
+                            <Link href="/getting-started/configuration">
                                 <a className="u u-LR">Configuration</a>
                             </Link>{' '}
                             documentation.

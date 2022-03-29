@@ -258,7 +258,7 @@ export const StartGuidePage: React.FC<any> = (props) => {
 
                         <p>
                             Next, we will fill out the stats section to showcase some testimonials, skills, etc. A great
-                            component we can use is a <InternalLink url="/layout/frame">Frame</InternalLink> which
+                            component we can use is a <InternalLink url="/layout/frames">Frame</InternalLink> which
                             provides a structured way to layout components in a panel with a shadow. Inside the frame,
                             we can throw in an avatar, some stats, and some buttons for viewing work and hiring.
                         </p>

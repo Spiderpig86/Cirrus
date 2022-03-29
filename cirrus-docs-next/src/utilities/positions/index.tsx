@@ -300,7 +300,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
 
                 <Pagination
                     prevLink={{ name: 'Overflow', link: './overflow' }}
-                    nextLink={{ name: 'Z-Index', link: './z-index' }}
+                    nextLink={{ name: 'Z-Index', link: './zindex' }}
                 />
             </div>
             <TableOfContents entries={toc} />
