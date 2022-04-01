@@ -21,7 +21,13 @@ generateGulpBuild(`all`, `src/cirrus-all.scss`, `cirrus-all`);
 function generateGulpBuild(taskName, sassFilePath, outputName) {
     gulp.task(taskName, () => {
         return gulp
-            .src(['node_modules/sass-true/sass/**/*.scss'], [sassFilePath])
+            .src([sassFilePath])
+            .pipe(
+                sass({
+                    includePaths: ['./node_modules'],
+                })
+            )
+            .on('error', sass.logError)
             .pipe(
                 sass.sync().on('error', function (err) {
                     sass.logError.call(this, err);
