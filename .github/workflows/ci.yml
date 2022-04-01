@@ -15,9 +15,7 @@ jobs:
     strategy:
       matrix:
         node_version:
-          # - 12
-          - 14
-          # - 16 NOTE Does not work until we move to Gulp 5
+          - 16
         os:
           # - macos
           - ubuntu
