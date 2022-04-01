@@ -1,9 +1,9 @@
-@forward "src/base/default";
+@forward "./default";
 
-@forward "src/base/animations";
-@forward "src/base/font";
-@forward "src/base/grid";
-@forward "src/base/layout";
-@forward "src/base/media";
-@forward "src/base/modifiers";
-@forward "src/base/spacing";
+@forward "./animations";
+@forward "./font";
+@forward "./grid";
+@forward "./layout";
+@forward "./media";
+@forward "./modifiers";
+@forward "./spacing";

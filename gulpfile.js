@@ -1,8 +1,7 @@
-const gulp = require('gulp');
 const prop = require('./package.json');
 const minify = require('gulp-clean-css');
-const sass = require('gulp-sass');
-sass.compiler = require('sass'); // Use Dart Sass
+const sass = require('gulp-sass')(require('sass')); // Use Dart Sass;
+const gulp = require('gulp');
 const $ = require('gulp-load-plugins')();
 const head =
     '/*\r\n* Cirrus ' +
@@ -22,9 +21,9 @@ generateGulpBuild(`all`, `src/cirrus-all.scss`, `cirrus-all`);
 function generateGulpBuild(taskName, sassFilePath, outputName) {
     gulp.task(taskName, () => {
         return gulp
-            .src([sassFilePath])
+            .src(['node_modules/sass-true/sass/**/*.scss'], [sassFilePath])
             .pipe(
-                sass.sync().on('error', function(err) {
+                sass.sync().on('error', function (err) {
                     sass.logError.call(this, err);
 
                     // Fail job if in CI
@@ -49,7 +48,8 @@ function generateGulpBuild(taskName, sassFilePath, outputName) {
             return gulp
                 .src([`./dist/${outputName}.css`])
                 .pipe(
-                    minify({
+                    minify(
+                        {
                             level: {
                                 1: {
                                     all: true,
