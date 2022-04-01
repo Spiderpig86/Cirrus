@@ -16,6 +16,7 @@ import initializeTabs from '../../../static/js/tabs.js';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { TabContainer } from '../../../layouts/components/tabs/tab-container';
 import { ExternalLink, InternalLink } from '../../../layouts/components/link';
+import { Blockquote } from '../../../layouts/components/blockquote';
 
 export const SetUpPage: React.FC<any> = (props) => {
     // useEffect(() => {
@@ -218,7 +219,10 @@ ReactDOM.render(
                                     children: (
                                         <>
                                             <p className="lead">Vue</p>
-                                            <p className="font-bold mb-0">Import cirrus-ui anywhere in your project (either in a Vue template or JS file).</p>
+                                            <p className="font-bold mb-0">
+                                                Import cirrus-ui anywhere in your project (either in a Vue template or
+                                                JS file).
+                                            </p>
 
                                             <div className="mb-3">
                                                 <CodeBlock
@@ -283,6 +287,15 @@ export default app;`}
                                     children: (
                                         <>
                                             <p className="lead">Sass/Scss Project</p>
+
+                                            <Blockquote accentColor="#fcd9bd">
+                                                <p>
+                                                    Note that this can be used in any Sass/Scss file including in
+                                                    combination with other front-end frameworks such as{' '}
+                                                    <span className="font-bold">React, Angular, Vue, etc.</span>
+                                                </p>
+                                            </Blockquote>
+
                                             <p className="font-bold mb-0">Import the variant of Cirrus</p>
 
                                             <div className="mb-3">
@@ -331,12 +344,11 @@ export default app;`}
 
                                             <p className="font-bold mb-0">Start Your Build Process</p>
                                             <p>
-                                                Run your build process that builds your Sass project. The output file should also contain the contents of Cirrus. Command here is just a sample.
+                                                Run your build process that builds your Sass project. The output file
+                                                should also contain the contents of Cirrus. Command here is just a
+                                                sample.
                                             </p>
-                                            <CodeBlock
-                                                code={`npm run dev`}
-                                                language="bash"
-                                            />
+                                            <CodeBlock code={`npm run dev`} language="bash" />
                                         </>
                                     ),
                                 },
@@ -349,7 +361,14 @@ export default app;`}
                     <div className="content">
                         <Headline title="Starter Template" link="#starter" size="4" />
                         <div className="divider"></div>
-                        <p>To help you get started, feel free to use the example page created below. If you want to see it in the browser, <ExternalLink url="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html">click here</ExternalLink>.</p>
+                        <p>
+                            To help you get started, feel free to use the example page created below. If you want to see
+                            it in the browser,{' '}
+                            <ExternalLink url="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html">
+                                click here
+                            </ExternalLink>
+                            .
+                        </p>
                         <LazyLoad height={200} once>
                             <iframe
                                 src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/start/starter.html"
