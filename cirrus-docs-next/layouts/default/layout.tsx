@@ -28,7 +28,7 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
     };
 
     loadScripts(
-        ['https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js'],
+        ['https://cdn.jsdelivr.net/npm/@docsearch/js@3'],
         () => initializeAlgolia(),
         []
     );
@@ -38,7 +38,8 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
         <div className="nav-item u-justify-flex-end" style={{
             flexGrow: 1
         }}>
-            <input type="search" id="cirrus-search" className="input--sm" placeholder="Search (Press Shift + S to focus)" />
+            {/* <input type="search" id="cirrus-search" className="input--sm" placeholder="Search (Press Shift + S to focus)" /> */}
+            <div id="cirrus-search"></div>
         </div>
     );
 
@@ -78,7 +79,7 @@ export const DefaultLayout = ({ children, ...rest }: any) => {
             <Footer />
             <script
                 type="text/javascript"
-                src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+                src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"
             ></script>
         </GlobalHotKeys>
     );

@@ -35,11 +35,7 @@ export const LandingLayout = ({ children, ...rest }: any) => {
         }, []),
     };
 
-    loadScripts(
-        ['https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js'],
-        () => initializeAlgolia(),
-        []
-    );
+    loadScripts(['https://cdn.jsdelivr.net/npm/@docsearch/js@3'], () => initializeAlgolia(), []);
 
     // Track scroll top
     useEffect(() => {
@@ -64,12 +60,13 @@ export const LandingLayout = ({ children, ...rest }: any) => {
                     flexGrow: 1,
                 }}
             >
-                <input
+                {/* <input
                     type="search"
                     id="cirrus-search"
                     className="input--sm bg-gray-000 u-bg-opacity-60"
                     placeholder="Search (Press Shift + S to focus)"
-                />
+                /> */}
+                <div id="cirrus-search"></div>
             </div>
             <div className="nav-item has-sub p-1">
                 <div className="list-dropdown dropdown-right">
@@ -124,10 +121,7 @@ export const LandingLayout = ({ children, ...rest }: any) => {
             />
             {children}
             <Footer />
-            <script
-                type="text/javascript"
-                src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
-            ></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
         </GlobalHotKeys>
     );
 };

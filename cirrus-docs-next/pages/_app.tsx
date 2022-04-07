@@ -13,6 +13,7 @@ import { Store } from '../store/store';
 /* Migrating from CRA is really a pain */
 import '../static/css/cirrus.min.css';
 import '../styles/app.scss';
+import '../styles/algolia.scss';
 
 /* LAYOUT STYLES */
 import '../layouts/default/index.scss';
@@ -95,7 +96,7 @@ const App = ({ Component, pageProps }) => {
                 <meta name="msapplication-TileImage" content="https://cirrus-ui.netlify.app//ms-icon-310x310.png" />
                 <link rel="manifest" href="/manifest.json" />
 
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
             </Head>
             <LayoutTree Component={Component} pageProps={pageProps} />
         </Store>

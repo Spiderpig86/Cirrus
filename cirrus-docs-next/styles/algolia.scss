@@ -1,0 +1,149 @@
+#cirrus-search {
+    flex-grow: 1;
+    max-width: 100%;
+
+    @media screen and (min-width: 768px) {
+        max-width: 15rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+        max-width: 25rem;
+    }
+}
+
+.DocSearch-Button {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0/0.05);
+    width: 100%;
+
+    .DocSearch-Search-Icon {
+        color: #aaa;
+    }
+
+    .DocSearch-Button-Placeholder {
+        color: #bbb;
+        font-size: 0.85rem;
+        text-transform: capitalize;
+    }
+}
+
+.DocSearch-Container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    background-color: rgb(0 0 0/0.2);
+    backdrop-filter: blur(4px);
+
+    .DocSearch-Modal {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 47.375rem;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
+        background: #fff;
+    }
+
+    .DocSearch-Hit-action-button {
+        background-color: inherit;
+        color: inherit;
+        padding: inherit;
+    }
+
+    .DocSearch-SearchBar {
+        z-index: 1;
+        padding: 0 1rem;
+        position: relative;
+        display: flex;
+        flex: none;
+        align-items: center;
+        border-bottom: 1px solid #e8eff5;
+    }
+
+    .DocSearch-Dropdown {
+        margin-bottom: 2rem;
+    }
+
+    .DocSearch-Form {
+        box-shadow: none;
+    }
+
+    .DocSearch-Input {
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+        height: 3.5rem;
+        font-size: 1rem;
+        color: #0f172a;
+        margin-left: 0.75rem;
+        margin-right: 1rem;
+        flex: auto;
+        min-width: 0;
+        border: none !important;
+        box-shadow: none;
+        background-image: none !important;
+        padding: inherit !important;
+
+        &:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset'])[type='search'] {
+            padding: 0 !important;
+        }
+
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
+
+    .DocSearch-Hits {
+        margin: 0 1rem;
+
+        &:first-child {
+            padding-top: 1.5rem;
+        }
+        mark {
+            padding: inherit;
+        }
+    }
+
+    .DocSearch-Hits .DocSearch-Hit-source {
+        line-height: 1.5rem;
+        font-weight: 600;
+        font-size: 1.25rem;
+        color: #0f172a;
+        background: #fff;
+        margin-bottom: 1rem;
+    }
+
+    .DocSearch-Screen-Icon {
+        svg {
+            margin: auto;
+        }
+    }
+
+    button {
+        background: inherit;
+        border: inherit;
+        margin: inherit;
+        padding: inherit;
+    }
+
+    input {
+        background: inherit;
+        border: inherit;
+        box-shadow: inherit;
+    }
+
+    @media screen and (min-width: 640px) {
+        padding: 1.5rem;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 10vh;
+    }
+}
