@@ -23,4 +23,7 @@ module.exports = withWorkbox({
     workbox: {
         // Options...
     },
+    env: {
+        algoliaApiKey: process.env.ALGOLIA_API_KEY,
+    }
 });

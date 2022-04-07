@@ -61,7 +61,12 @@ export const DocsPage: React.FC<any> = (props) => {
                         <p className="lead">Hit the ground running with Cirrus at your own pace.</p>
                         <div className="divider"></div>
 
-                        <div className="grid grid-cols-1 u-gap-1 grid-cols-3-xl">
+                        <div
+                            className="grid grid-cols-1 u-gap-1 grid-cols-3-xl"
+                            style={{
+                                backdropFilter: 'opacity(1)',
+                            }}
+                        >
                             <div
                                 className="u-relative u-round-sm p-2 u-shadow-lg bg-orange-500 u-overflow-hidden"
                                 style={{

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { GlobalHotKeys, KeyMap } from 'react-hotkeys';
 
 import { Header } from '../components/header';
 import { Footer } from '../components/footer';
@@ -18,22 +17,6 @@ export const LandingLayout = ({ children, ...rest }: any) => {
 
     const [scrollTop, setScrollTop] = useState(0);
 
-    const keyMap: KeyMap = {
-        SEARCH_FOCUS: {
-            sequence: 'shift+s',
-            action: 'keydown',
-        },
-    };
-
-    const keyHandlers = {
-        SEARCH_FOCUS: React.useCallback((e) => {
-            if (document.querySelector('#cirrus-search')) {
-                e.preventDefault();
-                (document.querySelector('#cirrus-search') as HTMLInputElement).focus();
-                (document.querySelector('#cirrus-search') as HTMLInputElement).value = '';
-            }
-        }, []),
-    };
 
     loadScripts(['https://cdn.jsdelivr.net/npm/@docsearch/js@3'], () => initializeAlgolia(), []);
 
@@ -60,12 +43,6 @@ export const LandingLayout = ({ children, ...rest }: any) => {
                     flexGrow: 1,
                 }}
             >
-                {/* <input
-                    type="search"
-                    id="cirrus-search"
-                    className="input--sm bg-gray-000 u-bg-opacity-60"
-                    placeholder="Search (Press Shift + S to focus)"
-                /> */}
                 <div id="cirrus-search"></div>
             </div>
             <div className="nav-item has-sub p-1">
@@ -114,7 +91,7 @@ export const LandingLayout = ({ children, ...rest }: any) => {
     );
 
     return (
-        <GlobalHotKeys keyMap={keyMap} handlers={keyHandlers}>
+        <>
             <Header
                 extraClasses={scrollTop <= 10 ? 'header-clear header-landing' : 'header-light'}
                 rightNavChildren={rightNavContent}
@@ -122,6 +99,6 @@ export const LandingLayout = ({ children, ...rest }: any) => {
             {children}
             <Footer />
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
-        </GlobalHotKeys>
+        </>
     );
 };
