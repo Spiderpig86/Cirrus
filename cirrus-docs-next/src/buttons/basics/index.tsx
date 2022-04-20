@@ -40,7 +40,7 @@ export const ButtonPage: React.FC<any> = (props) => {
                             of the different variants of buttons shown below or you can use the utility classes to
                             customize it yourself.
                         </p>
-                        <p>There are three ways to create a button:</p>
+                        <p>There are 4 ways to create a button:</p>
                         <ul>
                             <li>
                                 Use the <code>button</code> tag.
@@ -50,6 +50,9 @@ export const ButtonPage: React.FC<any> = (props) => {
                             </li>
                             <li>
                                 Use an <code>input</code> with type <code>submit</code>.
+                            </li>
+                            <li>
+                                Use an <code>a</code> tag with the <code>btn</code> class.
                             </li>
                         </ul>
 
@@ -62,11 +65,15 @@ export const ButtonPage: React.FC<any> = (props) => {
                         <div className="btn-container">
                             <input type="submit" value="Submit" />
                         </div>
+                        <div className="btn-container">
+                            <a className="btn">Button</a>
+                        </div>
 
                         <CodeBlock
                             code={`<button>Button</button>
 <div class="btn">Button</div>
-<input type="submit" value="Submit">`}
+<input type="submit" value="Submit">
+<a class="btn">Button</a>`}
                             language="htmlbars"
                         />
                     </div>
