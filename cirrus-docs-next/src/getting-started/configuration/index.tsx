@@ -259,9 +259,11 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                             code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         extend: (
-            semantic: (
-                'primary': #0066FF,
-                'midnight': '#121062',
+            colors: (
+                semantic: (
+                    'primary': #0066FF,
+                    'midnight': #121062,
+                )
             )
         )
     )
@@ -314,15 +316,17 @@ export const ConfigurationPage: React.FC<any> = (props) => {
         semantic: null,
         extend: (
             // Replace with custom colors
-            semantic: (
-                'white': '#ffffff',
-                'purple': '#3f3cbc',
-                'midnight': '#121062',
-                'metal': '#565684',
-                'tahiti': '#3ab7cf',
-                'silver': '#ececff',
-                'bubble-gum': '#ff77d9',
-                'bermuda': '#73dcca',
+            colors: (
+                semantic: (
+                    'white': '#ffffff',
+                    'purple': '#3f3cbc',
+                    'midnight': '#121062',
+                    'metal': '#565684',
+                    'tahiti': '#3ab7cf',
+                    'silver': '#ececff',
+                    'bubble-gum': '#ff77d9',
+                    'bermuda': '#73dcca',
+                )
             )
         )
     )
