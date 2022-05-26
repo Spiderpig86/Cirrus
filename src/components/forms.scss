@@ -7,7 +7,7 @@
     width: 100%;
     border: 1px solid fill('gray', '300');
     border-radius: 3px;
-    font-family: 'Nunito Sans';
+    font-family: map-get($map: $font-families, $key: secondary);
     font-size: var(--font-size-m);
     letter-spacing: 0.02rem;
     transition: all 0.3s;

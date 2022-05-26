@@ -4,10 +4,6 @@
 * https://spiderpig86.github.io/Cirrus
 */
 @charset "UTF-8";
-/* BASE STYLING + RESET FOR CIRRUS */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito+Sans:400,700");
-@import url("https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 /* v1 Color scheme for Cirrus */
 /*
   Functions
@@ -81,6 +77,7 @@
  *       }
  */
 /* VALUE APIS */
+/* BASE STYLING + RESET FOR CIRRUS */
 :root {
   /* v1 Colors */
   --cirrus-fg: #0f172a;
@@ -446,7 +443,7 @@ fieldset legend {
 /* Headers */
 h6 {
   font-size: 1.25rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -454,7 +451,7 @@ h6 {
 
 h5 {
   font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -462,7 +459,7 @@ h5 {
 
 h4 {
   font-size: 1.75rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -470,7 +467,7 @@ h4 {
 
 h3 {
   font-size: 2rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -478,7 +475,7 @@ h3 {
 
 h2 {
   font-size: 2.5rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -487,7 +484,7 @@ h2 {
 h1 {
   font-size: 3rem;
   letter-spacing: 0.025rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -579,11 +576,11 @@ mark,
 }
 
 .font-primary {
-  font-family: "Montserrat";
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .font-alt, .font-secondary {
-  font-family: "Nunito Sans";
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .content h1 {
@@ -10216,7 +10213,7 @@ video.video-fullscreen {
   font-weight: inherit;
   letter-spacing: 0.03rem;
   text-transform: uppercase;
-  font-family: Montserrat;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   min-width: 2rem;
   user-select: none;
   margin-bottom: 1rem;
@@ -10794,7 +10791,7 @@ select {
   width: 100%;
   border: 1px solid #dee2e6;
   border-radius: 3px;
-  font-family: "Nunito Sans";
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: var(--font-size-m);
   letter-spacing: 0.02rem;
   transition: all 0.3s;
@@ -10949,7 +10946,7 @@ textarea[type=text] {
   width: 100%;
   border: 1px solid #dee2e6;
   border-radius: 3px;
-  font-family: "Nunito Sans";
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: var(--font-size-m);
   letter-spacing: 0.02rem;
   transition: all 0.3s;
@@ -11107,7 +11104,7 @@ select {
   width: 100%;
   border: 1px solid #dee2e6;
   border-radius: 3px;
-  font-family: "Nunito Sans";
+  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: var(--font-size-m);
   letter-spacing: 0.02rem;
   transition: all 0.3s;

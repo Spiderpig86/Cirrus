@@ -87,6 +87,7 @@ $default-config: (
                     headline: (),
                     text: (),
                 ),
+                font-families: (),
                 letter-spacing: (),
                 transforms: (),
                 weights: (),
@@ -435,6 +436,12 @@ $default-config: (
                     line-height: 2.25rem !important,
                 ),
             ),
+        ),
+        font-families: (
+            primary: ('Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial,
+            sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'),
+            secondary: ('Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial,
+            sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'),
         ),
         letter-spacing: (
             tightest: -0.075em,
@@ -789,6 +796,7 @@ $form-label-sizes: functions.get-with-extend($all-config, form-sizes, label-size
 $font-heading-sizes: functions.get-with-extend($all-config, fonts, sizes, heading);
 $font-headline-sizes: functions.get-with-extend($all-config, fonts, sizes, headline);
 $font-text-sizes: functions.get-with-extend($all-config, fonts, sizes, text);
+$font-families: functions.get-with-extend($all-config, fonts, font-families);
 $font-letter-spacing: functions.get-with-extend($all-config, fonts, letter-spacing);
 $font-transforms: functions.get-with-extend($all-config, fonts, transforms);
 $font-weights: functions.get-with-extend($all-config, fonts, weights);

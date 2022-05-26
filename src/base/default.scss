@@ -1,6 +1,5 @@
 /* BASE STYLING + RESET FOR CIRRUS */
 @use '../internal' as *;
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito+Sans:400,700');
 
 :root {
     /* v1 Colors */
@@ -89,8 +88,7 @@ $generate-reset: should-generate-classes($RESET);
         line-height: 1.8; /* Globally adjust line height */
         font-size: 1rem;
         font-weight: 400;
-        font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial,
-            sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        font-family: map-get($map: $font-families, $key: secondary);
         color: var(--cirrus-fg);
     }
 
