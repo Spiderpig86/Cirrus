@@ -17946,6 +17946,7 @@ ul .divider::after {
   transform: translateY(-50%);
   transition: left var(--animation-duration) ease;
   text-align: left;
+  top: 50%;
 }
 
 .form-ext-control .form-ext-label {

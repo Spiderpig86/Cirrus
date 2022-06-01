@@ -186,6 +186,7 @@ $generate-utility: should-generate-classes($FORMS-EXT);
                 transform: translateY(-50%);
                 transition: left var(--animation-duration) ease;
                 text-align: left;
+                top: 50%;
             }
         }
 
