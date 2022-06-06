@@ -60,6 +60,10 @@ $generate-utility: should-generate-classes($BUTTON);
 
         &:focus {
             outline: none;
+
+            &:not([disabled]) {
+                box-shadow: var(--btn-shadow);
+            }
         }
 
         &:disabled, &.btn--disabled {
@@ -135,10 +139,8 @@ $generate-utility: should-generate-classes($BUTTON);
             --btn-color: transparent;
             --btn-fg: #{hex-to-rgb($cirrus-dark)};
             --btn-border-color: transparent;
+            --btn-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
 
-            &:focus {
-                box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
-            }
             &:hover {
                 --bg-opacity: 0.1;
                 --btn-color: 0, 0, 0;
@@ -152,12 +154,10 @@ $generate-utility: should-generate-classes($BUTTON);
             --btn-color: #{hex-to-rgb($cirrus-light)};
             --btn-fg: #{hex-to-rgb($cirrus-dark)};
             --btn-border-color: #{hex-to-rgb($cirrus-light)};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-light, 0.5)};
 
             &:hover {
                 --btn-color: #{hex-to-rgb(darken($cirrus-light, 10%))};
-            }
-            &:focus {
-                box-shadow: 0 0 0 0.2rem transparentize($cirrus-light, 0.5);
             }
         }
 
@@ -165,10 +165,8 @@ $generate-utility: should-generate-classes($BUTTON);
             --btn-color: #{hex-to-rgb($cirrus-dark)};
             --btn-fg: #{hex-to-rgb($cirrus-light)};
             --btn-border-color: #{hex-to-rgb($cirrus-dark)};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-dark, 0.5)};
 
-            &:focus {
-                box-shadow: 0 0 0 0.2rem transparentize($cirrus-dark, 0.5);
-            }
             &:hover {
                 --btn-color: #{hex-to-rgb(lighten($cirrus-dark, 10%))};
             }
@@ -181,10 +179,8 @@ $generate-utility: should-generate-classes($BUTTON);
             --btn-color: 0, 0, 0;
             --btn-fg: #{hex-to-rgb($cirrus-light)};
             --btn-border-color: 0, 0, 0;
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-dark, 0.5)};
 
-            &:focus {
-                box-shadow: 0 0 0 0.2rem transparentize($cirrus-dark, 0.5);
-            }
             &:hover {
                 --btn-color: 0, 0, 0;
             }
@@ -194,10 +190,8 @@ $generate-utility: should-generate-classes($BUTTON);
             --btn-color: #{hex-to-rgb($cirrus-primary)};
             --btn-fg: #{hex-to-rgb($cirrus-light)};
             --btn-border-color: #{hex-to-rgb($cirrus-accent-border)};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-primary, 0.5)};
 
-            &:focus {
-                box-shadow: 0 0 0 0.2rem transparentize($cirrus-primary, 0.5);
-            }
             &:hover {
                 --btn-color: #{hex-to-rgb($cirrus-accent-hover)};
             }
@@ -210,10 +204,8 @@ $generate-utility: should-generate-classes($BUTTON);
             --btn-color: #{hex-to-rgb($cirrus-info)};
             --btn-fg: #{hex-to-rgb($cirrus-light)};
             --btn-border-color: #{hex-to-rgb($cirrus-info)};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-info, 0.5)};
 
-            &:focus {
-                box-shadow: 0 0 0 0.2rem transparentize($cirrus-info, 0.5);
-            }
             &:hover {
                 --btn-color: #{hex-to-rgb(darken($cirrus-info, 5%))};
             }
@@ -226,10 +218,8 @@ $generate-utility: should-generate-classes($BUTTON);
             --btn-color: #{hex-to-rgb($cirrus-link)};
             --btn-fg: #{hex-to-rgb($cirrus-light)};
             --btn-border-color: #{hex-to-rgb($cirrus-link)};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-link, 0.5)};
 
-            &:focus {
-                box-shadow: 0 0 0 0.2rem transparentize($cirrus-link, 0.5);
-            }
             &:hover {
                 --btn-color: #{hex-to-rgb($cirrus-link-dark)};
             }
@@ -248,10 +238,8 @@ $generate-utility: should-generate-classes($BUTTON);
             --btn-color: #{hex-to-rgb($cirrus-success)};
             --btn-fg: #{hex-to-rgb($cirrus-light)};
             --btn-border-color: #{hex-to-rgb($cirrus-success)};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-success, 0.5)};
 
-            &:focus {
-                box-shadow: 0 0 0 0.2rem transparentize($cirrus-success, 0.5);
-            }
             &:hover {
                 --btn-color: #{hex-to-rgb(darken($cirrus-success, 5%))};
             }
@@ -264,10 +252,8 @@ $generate-utility: should-generate-classes($BUTTON);
             --btn-color: #{hex-to-rgb($cirrus-warning)};
             --btn-fg: #{hex-to-rgb($cirrus-dark)};
             --btn-border-color: #{hex-to-rgb($cirrus-warning)};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-warning, 0.5)};
 
-            &:focus {
-                box-shadow: 0 0 0 0.2rem transparentize($cirrus-warning, 0.5);
-            }
             &:hover {
                 --btn-color: #{hex-to-rgb(darken($cirrus-warning, 5%))};
             }
@@ -280,10 +266,8 @@ $generate-utility: should-generate-classes($BUTTON);
             --btn-color: #{hex-to-rgb($cirrus-danger)};
             --btn-fg: #{hex-to-rgb($cirrus-light)};
             --btn-border-color: #{hex-to-rgb($cirrus-danger)};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-danger, 0.5)};
 
-            &:focus {
-                box-shadow: 0 0 0 0.2rem transparentize($cirrus-danger, 0.5);
-            }
             &:hover {
                 --btn-color: #{hex-to-rgb(darken($cirrus-danger, 15%))};
             }

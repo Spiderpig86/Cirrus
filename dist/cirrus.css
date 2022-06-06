@@ -10246,6 +10246,10 @@ video.video-fullscreen {
   outline: none;
 }
 
+.btn:focus:not([disabled]), button:focus:not([disabled]), [type=submit]:focus:not([disabled]), [type=reset]:focus:not([disabled]), [type=button]:focus:not([disabled]) {
+  box-shadow: var(--btn-shadow);
+}
+
 .btn:disabled, .btn.btn--disabled, button:disabled, button.btn--disabled, [type=submit]:disabled, [type=submit].btn--disabled, [type=reset]:disabled, [type=reset].btn--disabled, [type=button]:disabled, [type=button].btn--disabled {
   cursor: not-allowed;
   opacity: 0.5;
@@ -10331,10 +10335,7 @@ video.video-fullscreen {
   --btn-color: transparent;
   --btn-fg: 54, 54, 54;
   --btn-border-color: transparent;
-}
-
-.btn.btn-transparent:focus, button.btn-transparent:focus, [type=submit].btn-transparent:focus, [type=reset].btn-transparent:focus, [type=button].btn-transparent:focus {
-  box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
+  --btn-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
 }
 
 .btn.btn-transparent:hover, button.btn-transparent:hover, [type=submit].btn-transparent:hover, [type=reset].btn-transparent:hover, [type=button].btn-transparent:hover {
@@ -10350,24 +10351,18 @@ video.video-fullscreen {
   --btn-color: 246, 249, 252;
   --btn-fg: 54, 54, 54;
   --btn-border-color: 246, 249, 252;
+  --btn-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
 }
 
 .btn.btn-light:hover, button.btn-light:hover, [type=submit].btn-light:hover, [type=reset].btn-light:hover, [type=button].btn-light:hover {
   --btn-color: 208, 224, 239;
 }
 
-.btn.btn-light:focus, button.btn-light:focus, [type=submit].btn-light:focus, [type=reset].btn-light:focus, [type=button].btn-light:focus {
-  box-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
-}
-
 .btn.btn-dark, button.btn-dark, [type=submit].btn-dark, [type=reset].btn-dark, [type=button].btn-dark {
   --btn-color: 54, 54, 54;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 54, 54, 54;
-}
-
-.btn.btn-dark:focus, button.btn-dark:focus, [type=submit].btn-dark:focus, [type=reset].btn-dark:focus, [type=button].btn-dark:focus {
-  box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5);
+  --btn-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5);
 }
 
 .btn.btn-dark:hover, button.btn-dark:hover, [type=submit].btn-dark:hover, [type=reset].btn-dark:hover, [type=button].btn-dark:hover {
@@ -10382,10 +10377,7 @@ video.video-fullscreen {
   --btn-color: 0, 0, 0;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 0, 0, 0;
-}
-
-.btn.btn-black:focus, button.btn-black:focus, [type=submit].btn-black:focus, [type=reset].btn-black:focus, [type=button].btn-black:focus {
-  box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5);
+  --btn-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5);
 }
 
 .btn.btn-black:hover, button.btn-black:hover, [type=submit].btn-black:hover, [type=reset].btn-black:hover, [type=button].btn-black:hover {
@@ -10396,10 +10388,7 @@ video.video-fullscreen {
   --btn-color: 240, 61, 77;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 194, 27, 43;
-}
-
-.btn.btn-primary:focus, button.btn-primary:focus, [type=submit].btn-primary:focus, [type=reset].btn-primary:focus, [type=button].btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.5);
+  --btn-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.5);
 }
 
 .btn.btn-primary:hover, button.btn-primary:hover, [type=submit].btn-primary:hover, [type=reset].btn-primary:hover, [type=button].btn-primary:hover {
@@ -10414,10 +10403,7 @@ video.video-fullscreen {
   --btn-color: 41, 114, 250;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 41, 114, 250;
-}
-
-.btn.btn-info:focus, button.btn-info:focus, [type=submit].btn-info:focus, [type=reset].btn-info:focus, [type=button].btn-info:focus {
-  box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5);
+  --btn-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5);
 }
 
 .btn.btn-info:hover, button.btn-info:hover, [type=submit].btn-info:hover, [type=reset].btn-info:hover, [type=button].btn-info:hover {
@@ -10432,10 +10418,7 @@ video.video-fullscreen {
   --btn-color: 94, 92, 199;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 94, 92, 199;
-}
-
-.btn.btn-link:focus, button.btn-link:focus, [type=submit].btn-link:focus, [type=reset].btn-link:focus, [type=button].btn-link:focus {
-  box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5);
+  --btn-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.5);
 }
 
 .btn.btn-link:hover, button.btn-link:hover, [type=submit].btn-link:hover, [type=reset].btn-link:hover, [type=button].btn-link:hover {
@@ -10457,10 +10440,7 @@ video.video-fullscreen {
   --btn-color: 13, 209, 87;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 13, 209, 87;
-}
-
-.btn.btn-success:focus, button.btn-success:focus, [type=submit].btn-success:focus, [type=reset].btn-success:focus, [type=button].btn-success:focus {
-  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.5);
+  --btn-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.5);
 }
 
 .btn.btn-success:hover, button.btn-success:hover, [type=submit].btn-success:hover, [type=reset].btn-success:hover, [type=button].btn-success:hover {
@@ -10475,10 +10455,7 @@ video.video-fullscreen {
   --btn-color: 250, 182, 51;
   --btn-fg: 54, 54, 54;
   --btn-border-color: 250, 182, 51;
-}
-
-.btn.btn-warning:focus, button.btn-warning:focus, [type=submit].btn-warning:focus, [type=reset].btn-warning:focus, [type=button].btn-warning:focus {
-  box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.5);
+  --btn-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.5);
 }
 
 .btn.btn-warning:hover, button.btn-warning:hover, [type=submit].btn-warning:hover, [type=reset].btn-warning:hover, [type=button].btn-warning:hover {
@@ -10493,10 +10470,7 @@ video.video-fullscreen {
   --btn-color: 251, 65, 67;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 251, 65, 67;
-}
-
-.btn.btn-danger:focus, button.btn-danger:focus, [type=submit].btn-danger:focus, [type=reset].btn-danger:focus, [type=button].btn-danger:focus {
-  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.5);
+  --btn-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.5);
 }
 
 .btn.btn-danger:hover, button.btn-danger:hover, [type=submit].btn-danger:hover, [type=reset].btn-danger:hover, [type=button].btn-danger:hover {
