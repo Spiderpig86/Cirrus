@@ -10246,12 +10246,12 @@ video.video-fullscreen {
   outline: none;
 }
 
-.btn:disabled, button:disabled, [type=submit]:disabled, [type=reset]:disabled, [type=button]:disabled {
+.btn:disabled, .btn.btn--disabled, button:disabled, button.btn--disabled, [type=submit]:disabled, [type=submit].btn--disabled, [type=reset]:disabled, [type=reset].btn--disabled, [type=button]:disabled, [type=button].btn--disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.btn:disabled:active, button:disabled:active, [type=submit]:disabled:active, [type=reset]:disabled:active, [type=button]:disabled:active {
+.btn:disabled:active, .btn.btn--disabled:active, button:disabled:active, button.btn--disabled:active, [type=submit]:disabled:active, [type=submit].btn--disabled:active, [type=reset]:disabled:active, [type=reset].btn--disabled:active, [type=button]:disabled:active, [type=button].btn--disabled:active {
   pointer-events: none;
 }
 

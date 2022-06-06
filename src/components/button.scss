@@ -62,7 +62,7 @@ $generate-utility: should-generate-classes($BUTTON);
             outline: none;
         }
 
-        &:disabled {
+        &:disabled, &.btn--disabled {
             cursor: not-allowed;
             opacity: 0.5;
 
