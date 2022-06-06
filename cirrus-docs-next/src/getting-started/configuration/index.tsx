@@ -291,7 +291,7 @@ export const ConfigurationPage: React.FC<any> = (props) => {
                         />
                         <p>
                             A full list of the supported extend entries can be found{' '}
-                            <ExternalLink url="https://github.com/Spiderpig86/Cirrus/blob/47b672b9f406cba27ca38fa00add9c3c0910206e/src/internal/_config.scss#L59">
+                            <ExternalLink url="https://github.com/Spiderpig86/Cirrus/blob/master/src/internal/_config.scss#L59">
                                 here
                             </ExternalLink>
                             .

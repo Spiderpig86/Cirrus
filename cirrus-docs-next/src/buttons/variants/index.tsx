@@ -60,24 +60,34 @@ export const VariantsPage: React.FC<any> = (props) => {
                         <Headline title="Disabled Button" link="#disabled" size={`4`} />
                         <div className="divider"></div>
                         <p>
-                            Add the <code>disabled</code> keyword to make the button unselectable.
+                            Add the <code>disabled</code> keyword to make the button unselectable. The same effect can also be achieved using the <code>btn--disabled</code> class.
                         </p>
 
                         <blockquote
-                            className="bg-orange-200 text-orange-700"
+                            className="bg-orange-100 text-orange-700"
                             style={{
                                 fontSize: '1rem',
                             }}
                         >
-                            Note that this is not supported for buttons created using <code>div</code> tags.
+                            Note that the <code>disabled</code> attribute is not supported in <code>a</code> and <code>div</code> based buttons according to the HTML spec. You must use the <code>btn--disabled</code> class.
                         </blockquote>
 
-                        <button disabled>Disabled</button>
+                        <div className="u-flex u-gap-1">
+                            <button className="btn-info" disabled>
+                                Disabled
+                            </button>
+                            <button className="btn-info btn--disabled">Disabled</button>
+                            <div className="btn btn-info btn--disabled">Disabled</div>
+                            <input className="btn-info" type="submit" disabled value="Submit Disabled" />
+                            <a href="#" className="btn btn-info btn--disabled">
+                                Disabled
+                            </a>
+                        </div>
 
-                        <CodeBlock
-                            code={`<button disabled>Disabled</button>`}
-                            language="htmlbars"
-                        />
+                        <CodeBlock code={`<button class="btn-info btn--disabled">Disabled</button>
+<div class="btn btn-info btn--disabled">Disabled</div>
+<input class="btn-info" type="submit" disabled value="Submit Disabled" />
+<a href="#" class="btn btn-info btn--disabled">Disabled</a>`} language="htmlbars" />
                     </div>
                 </section>
 
