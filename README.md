@@ -9,6 +9,7 @@
   [![Known Vulnerabilities](https://snyk.io/test/github/Spiderpig86/Cirrus/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Spiderpig86/Cirrus?targetFile=package.json)
   [![Known Vulnerabilities](https://img.shields.io/npm/dm/cirrus-ui.svg)](https://www.npmjs.com/package/cirrus-ui)
   [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
+  [![Featured on Openbase](https://badges.openbase.com/js/featured/cirrus-ui.svg?token=aDr+bdA+d7gMXIHh7XKd6fQiB1OgYBjxxvA2YxyKqP8=)](https://openbase.com/js/cirrus-ui?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge)
 
 </div>
 
