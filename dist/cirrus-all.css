@@ -11458,21 +11458,6 @@ video.video-fullscreen {
   --btn-color: 208, 224, 239;
 }
 
-.btn.btn-dark, button.btn-dark, [type=submit].btn-dark, [type=reset].btn-dark, [type=button].btn-dark {
-  --btn-color: 54, 54, 54;
-  --btn-fg: 246, 249, 252;
-  --btn-border-color: 54, 54, 54;
-  --btn-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5);
-}
-
-.btn.btn-dark:hover, button.btn-dark:hover, [type=submit].btn-dark:hover, [type=reset].btn-dark:hover, [type=button].btn-dark:hover {
-  --btn-color: 80, 80, 80;
-}
-
-.btn.btn-dark.outline:hover, button.btn-dark.outline:hover, [type=submit].btn-dark.outline:hover, [type=reset].btn-dark.outline:hover, [type=button].btn-dark.outline:hover {
-  --btn-color: 54, 54, 54;
-}
-
 .btn.btn-black, button.btn-black, [type=submit].btn-black, [type=reset].btn-black, [type=button].btn-black {
   --btn-color: 0, 0, 0;
   --btn-fg: 246, 249, 252;
@@ -11487,31 +11472,31 @@ video.video-fullscreen {
 .btn.btn-primary, button.btn-primary, [type=submit].btn-primary, [type=reset].btn-primary, [type=button].btn-primary {
   --btn-color: 240, 61, 77;
   --btn-fg: 246, 249, 252;
-  --btn-border-color: 194, 27, 43;
+  --btn-border-color: 240, 61, 77;
   --btn-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.5);
 }
 
 .btn.btn-primary:hover, button.btn-primary:hover, [type=submit].btn-primary:hover, [type=reset].btn-primary:hover, [type=button].btn-primary:hover {
-  --btn-color: 214, 41, 57;
+  --btn-color: 232, 18, 37;
 }
 
 .btn.btn-primary.outline:hover, button.btn-primary.outline:hover, [type=submit].btn-primary.outline:hover, [type=reset].btn-primary.outline:hover, [type=button].btn-primary.outline:hover {
   --btn-color: 240, 61, 77;
 }
 
-.btn.btn-info, button.btn-info, [type=submit].btn-info, [type=reset].btn-info, [type=button].btn-info {
-  --btn-color: 41, 114, 250;
+.btn.btn-dark, button.btn-dark, [type=submit].btn-dark, [type=reset].btn-dark, [type=button].btn-dark {
+  --btn-color: 54, 54, 54;
   --btn-fg: 246, 249, 252;
-  --btn-border-color: 41, 114, 250;
-  --btn-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5);
+  --btn-border-color: 54, 54, 54;
+  --btn-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5);
 }
 
-.btn.btn-info:hover, button.btn-info:hover, [type=submit].btn-info:hover, [type=reset].btn-info:hover, [type=button].btn-info:hover {
-  --btn-color: 16, 98, 249;
+.btn.btn-dark:hover, button.btn-dark:hover, [type=submit].btn-dark:hover, [type=reset].btn-dark:hover, [type=button].btn-dark:hover {
+  --btn-color: 29, 29, 29;
 }
 
-.btn.btn-info.outline:hover, button.btn-info.outline:hover, [type=submit].btn-info.outline:hover, [type=reset].btn-info.outline:hover, [type=button].btn-info.outline:hover {
-  --btn-color: 41, 114, 250;
+.btn.btn-dark.outline:hover, button.btn-dark.outline:hover, [type=submit].btn-dark.outline:hover, [type=reset].btn-dark.outline:hover, [type=button].btn-dark.outline:hover {
+  --btn-color: 54, 54, 54;
 }
 
 .btn.btn-link, button.btn-link, [type=submit].btn-link, [type=reset].btn-link, [type=button].btn-link {
@@ -11522,18 +11507,26 @@ video.video-fullscreen {
 }
 
 .btn.btn-link:hover, button.btn-link:hover, [type=submit].btn-link:hover, [type=reset].btn-link:hover, [type=button].btn-link:hover {
-  --btn-color: 70, 67, 226;
-}
-
-.btn.btn-link.outline, button.btn-link.outline, [type=submit].btn-link.outline, [type=reset].btn-link.outline, [type=button].btn-link.outline {
-  --btn-fg: 94, 92, 199;
-  border: 1px solid transparent;
+  --btn-color: 64, 61, 179;
 }
 
 .btn.btn-link.outline:hover, button.btn-link.outline:hover, [type=submit].btn-link.outline:hover, [type=reset].btn-link.outline:hover, [type=button].btn-link.outline:hover {
-  --btn-color: 248, 247, 255;
-  border: 1px solid transparent;
-  text-decoration: underline;
+  --btn-color: 94, 92, 199;
+}
+
+.btn.btn-info, button.btn-info, [type=submit].btn-info, [type=reset].btn-info, [type=button].btn-info {
+  --btn-color: 41, 114, 250;
+  --btn-fg: 246, 249, 252;
+  --btn-border-color: 41, 114, 250;
+  --btn-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.5);
+}
+
+.btn.btn-info:hover, button.btn-info:hover, [type=submit].btn-info:hover, [type=reset].btn-info:hover, [type=button].btn-info:hover {
+  --btn-color: 5, 85, 235;
+}
+
+.btn.btn-info.outline:hover, button.btn-info.outline:hover, [type=submit].btn-info.outline:hover, [type=reset].btn-info.outline:hover, [type=button].btn-info.outline:hover {
+  --btn-color: 41, 114, 250;
 }
 
 .btn.btn-success, button.btn-success, [type=submit].btn-success, [type=reset].btn-success, [type=button].btn-success {
@@ -11544,7 +11537,7 @@ video.video-fullscreen {
 }
 
 .btn.btn-success:hover, button.btn-success:hover, [type=submit].btn-success:hover, [type=reset].btn-success:hover, [type=button].btn-success:hover {
-  --btn-color: 12, 185, 77;
+  --btn-color: 10, 161, 67;
 }
 
 .btn.btn-success.outline:hover, button.btn-success.outline:hover, [type=submit].btn-success.outline:hover, [type=reset].btn-success.outline:hover, [type=button].btn-success.outline:hover {
@@ -11559,7 +11552,7 @@ video.video-fullscreen {
 }
 
 .btn.btn-warning:hover, button.btn-warning:hover, [type=submit].btn-warning:hover, [type=reset].btn-warning:hover, [type=button].btn-warning:hover {
-  --btn-color: 249, 173, 26;
+  --btn-color: 244, 163, 6;
 }
 
 .btn.btn-warning.outline:hover, button.btn-warning.outline:hover, [type=submit].btn-warning.outline:hover, [type=reset].btn-warning.outline:hover, [type=button].btn-warning.outline:hover {
@@ -11574,7 +11567,7 @@ video.video-fullscreen {
 }
 
 .btn.btn-danger:hover, button.btn-danger:hover, [type=submit].btn-danger:hover, [type=reset].btn-danger:hover, [type=button].btn-danger:hover {
-  --btn-color: 235, 5, 7;
+  --btn-color: 250, 15, 18;
 }
 
 .btn.btn-danger.outline:hover, button.btn-danger.outline:hover, [type=submit].btn-danger.outline:hover, [type=reset].btn-danger.outline:hover, [type=button].btn-danger.outline:hover {

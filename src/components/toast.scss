@@ -56,8 +56,8 @@ $generate-utility: should-generate-classes($TOAST);
 
         @each $color, $value in $control-themes {
             &.toast--#{$color} {
-                background-color: $value;
-                border-color: $value;
+                background-color: map-get($value, bg);
+                border-color: map-get($value, bg);
             }
         }
     }

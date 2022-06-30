@@ -52,15 +52,15 @@ $generate-utility: should-generate-classes($FORMS-EXT);
 
             @each $color, $value in $control-themes {
                 &.form-ext-input--#{$color}:checked ~ .form-ext-label {
-                    color: $value;
+                    color: map-get($value, bg);
 
                     &:before {
-                        background-color: $value;
+                        background-color: map-get($value, bg);
                     }
                 }
                 &.form-ext-input--#{$color}:focus ~ .form-ext-label:before {
                     border-color: inherit;
-                    box-shadow: 0 0 0 0.2rem transparentize($color: $value, $amount: 1 - $focus-opacity),
+                    box-shadow: 0 0 0 0.2rem transparentize($color: map-get($value, bg), $amount: 1 - $focus-opacity),
                         inset 0 1px 8px rgba(0, 0, 0, 0.07);
                 }
             }
@@ -132,17 +132,17 @@ $generate-utility: should-generate-classes($FORMS-EXT);
                 &.form-ext-toggle--#{$color} input[type='checkbox']:checked + * .form-ext-toggle__toggler,
                 &.form-ext-toggle--#{$color} input[type='radio']:checked + .form-ext-toggle__toggler,
                 &.form-ext-toggle--#{$color} input[type='radio']:checked + * .form-ext-toggle__toggler {
-                    background-color: $value;
-                    border-color: $value;
+                    background-color: map-get($value, bg);
+                    border-color: map-get($value, bg);
                 }
 
                 .form-ext-toggle--#{$color} .form-ext-toggle__toggler {
-                    border-color: $value;
-                    color: $value;
+                    border-color: map-get($value, bg);
+                    color: map-get($value, bg);
                 }
 
                 .form-ext-toggle--#{$color} .form-ext-toggle__toggler i::after {
-                    background-color: $value;
+                    background-color: map-get($value, bg);
                 }
 
                 /**
@@ -150,12 +150,12 @@ $generate-utility: should-generate-classes($FORMS-EXT);
              */
                 .form-ext-input:focus + .form-ext-toggle__toggler,
                 .form-ext-input:focus ~ .form-ext-label:before {
-                    box-shadow: 0 0 0 0.2rem transparentize($color: $value, $amount: 1 - $focus-opacity),
+                    box-shadow: 0 0 0 0.2rem transparentize($color: map-get($value, bg), $amount: 1 - $focus-opacity),
                         inset 0 1px 8px rgba(0, 0, 0, 0.07);
                 }
 
                 &.form-ext-toggle--#{$color} .form-ext-input:focus + .form-ext-toggle__toggler {
-                    box-shadow: 0 0 0 0.2rem transparentize($color: $value, $amount: 1 - $focus-opacity),
+                    box-shadow: 0 0 0 0.2rem transparentize($color: map-get($value, bg), $amount: 1 - $focus-opacity),
                         inset 0 1px 8px rgba(0, 0, 0, 0.07);
                 }
             }

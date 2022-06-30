@@ -205,13 +205,34 @@ $default-config: (
             'white': theme.$cirrus-white,
         ),
         control-themes: (
-            'primary': theme.$cirrus-primary,
-            'dark': theme.$cirrus-dark,
-            'link': theme.$cirrus-link,
-            'info': theme.$cirrus-info,
-            'success': theme.$cirrus-success,
-            'warning': theme.$cirrus-warning,
-            'danger': theme.$cirrus-danger,
+            'primary': (
+                bg: theme.$cirrus-primary,
+                fg: theme.$cirrus-light
+            ),
+            'dark': (
+                bg: theme.$cirrus-dark,
+                fg: theme.$cirrus-light
+            ),
+            'link': (
+                bg: theme.$cirrus-link,
+                fg: theme.$cirrus-light
+            ),
+            'info': (
+                bg: theme.$cirrus-info,
+                fg: theme.$cirrus-light
+            ),
+            'success': (
+                bg: theme.$cirrus-success,
+                fg: theme.$cirrus-light
+            ),
+            'warning': (
+                bg: theme.$cirrus-warning,
+                fg: theme.$cirrus-dark
+            ),
+            'danger': (
+                bg: theme.$cirrus-danger,
+                fg: theme.$cirrus-light
+            ),
         ),
         extended: (
             'pink': (

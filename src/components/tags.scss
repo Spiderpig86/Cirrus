@@ -103,16 +103,16 @@ $TAG_BASE_PADDING_Y: 0.5; // .5rem;
 
     @each $color, $value in $control-themes {
         &.tag--#{$color} {
-            background-color: $value;
+            background-color: map-get($value, bg);
             color: #fff;
             cursor: pointer;
 
             &.tag__close-btn:hover {
-                background-color: darken($color: $value, $amount: 5);
+                background-color: darken($color: map-get($value, bg), $amount: 5);
             }
 
             &.tag__close-btn:active {
-                background-color: darken($color: $value, $amount: 10);
+                background-color: darken($color: map-get($value, bg), $amount: 10);
             }
         }
     }

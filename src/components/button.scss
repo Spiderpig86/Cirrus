@@ -66,7 +66,8 @@ $generate-utility: should-generate-classes($BUTTON);
             }
         }
 
-        &:disabled, &.btn--disabled {
+        &:disabled,
+        &.btn--disabled {
             cursor: not-allowed;
             opacity: 0.5;
 
@@ -161,20 +162,6 @@ $generate-utility: should-generate-classes($BUTTON);
             }
         }
 
-        &.btn-dark {
-            --btn-color: #{hex-to-rgb($cirrus-dark)};
-            --btn-fg: #{hex-to-rgb($cirrus-light)};
-            --btn-border-color: #{hex-to-rgb($cirrus-dark)};
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-dark, 0.5)};
-
-            &:hover {
-                --btn-color: #{hex-to-rgb(lighten($cirrus-dark, 10%))};
-            }
-            &.outline:hover {
-                --btn-color: #{hex-to-rgb($cirrus-dark)};
-            }
-        }
-
         &.btn-black {
             --btn-color: 0, 0, 0;
             --btn-fg: #{hex-to-rgb($cirrus-light)};
@@ -185,94 +172,20 @@ $generate-utility: should-generate-classes($BUTTON);
                 --btn-color: 0, 0, 0;
             }
         }
+        
+        @each $color, $value in $control-themes {
+            &.btn-#{$color} {
+                --btn-color: #{hex-to-rgb(map-get($value, bg))};
+                --btn-fg: #{hex-to-rgb(map-get($value, fg))};
+                --btn-border-color: #{hex-to-rgb(map-get($value, bg))};
+                --btn-shadow: 0 0 0 0.2rem #{transparentize(map-get($value, bg), 0.5)};
 
-        &.btn-primary {
-            --btn-color: #{hex-to-rgb($cirrus-primary)};
-            --btn-fg: #{hex-to-rgb($cirrus-light)};
-            --btn-border-color: #{hex-to-rgb($cirrus-accent-border)};
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-primary, 0.5)};
-
-            &:hover {
-                --btn-color: #{hex-to-rgb($cirrus-accent-hover)};
-            }
-            &.outline:hover {
-                --btn-color: #{hex-to-rgb($cirrus-primary)};
-            }
-        }
-
-        &.btn-info {
-            --btn-color: #{hex-to-rgb($cirrus-info)};
-            --btn-fg: #{hex-to-rgb($cirrus-light)};
-            --btn-border-color: #{hex-to-rgb($cirrus-info)};
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-info, 0.5)};
-
-            &:hover {
-                --btn-color: #{hex-to-rgb(darken($cirrus-info, 5%))};
-            }
-            &.outline:hover {
-                --btn-color: #{hex-to-rgb($cirrus-info)};
-            }
-        }
-
-        &.btn-link {
-            --btn-color: #{hex-to-rgb($cirrus-link)};
-            --btn-fg: #{hex-to-rgb($cirrus-light)};
-            --btn-border-color: #{hex-to-rgb($cirrus-link)};
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-link, 0.5)};
-
-            &:hover {
-                --btn-color: #{hex-to-rgb($cirrus-link-dark)};
-            }
-            &.outline {
-                --btn-fg: #{hex-to-rgb($cirrus-link)};
-                border: 1px solid transparent;
-            }
-            &.outline:hover {
-                --btn-color: #{hex-to-rgb($cirrus-link-hover)};
-                border: 1px solid transparent;
-                text-decoration: underline;
-            }
-        }
-
-        &.btn-success {
-            --btn-color: #{hex-to-rgb($cirrus-success)};
-            --btn-fg: #{hex-to-rgb($cirrus-light)};
-            --btn-border-color: #{hex-to-rgb($cirrus-success)};
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-success, 0.5)};
-
-            &:hover {
-                --btn-color: #{hex-to-rgb(darken($cirrus-success, 5%))};
-            }
-            &.outline:hover {
-                --btn-color: #{hex-to-rgb($cirrus-success)};
-            }
-        }
-
-        &.btn-warning {
-            --btn-color: #{hex-to-rgb($cirrus-warning)};
-            --btn-fg: #{hex-to-rgb($cirrus-dark)};
-            --btn-border-color: #{hex-to-rgb($cirrus-warning)};
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-warning, 0.5)};
-
-            &:hover {
-                --btn-color: #{hex-to-rgb(darken($cirrus-warning, 5%))};
-            }
-            &.outline:hover {
-                --btn-color: #{hex-to-rgb($cirrus-warning)};
-            }
-        }
-
-        &.btn-danger {
-            --btn-color: #{hex-to-rgb($cirrus-danger)};
-            --btn-fg: #{hex-to-rgb($cirrus-light)};
-            --btn-border-color: #{hex-to-rgb($cirrus-danger)};
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-danger, 0.5)};
-
-            &:hover {
-                --btn-color: #{hex-to-rgb(darken($cirrus-danger, 15%))};
-            }
-            &.outline:hover {
-                --btn-color: #{hex-to-rgb($cirrus-danger)};
+                &:hover {
+                    --btn-color: #{hex-to-rgb(darken(map-get($value, bg), 10%))};
+                }
+                &.outline:hover {
+                    --btn-color: #{hex-to-rgb(map-get($value, bg))};
+                }
             }
         }
 
