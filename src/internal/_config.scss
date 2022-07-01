@@ -58,9 +58,16 @@ $default-config: (
     // Extend all existing styles here
     extend:
         (
-            avatar-sizes: (),
-            breakpoints: (),
-            button-sizes: (),
+            avatars: (
+                sizes: ()
+            ),
+            breakpoints: (
+                widths: (),
+                breakpoint-pairs: ()
+            ),
+            buttons: (
+                sizes: ()
+            ),
             // Please define all colors using hex
             // Omitting some colors may break Cirrus builds
             colors:
@@ -92,11 +99,11 @@ $default-config: (
                 transforms: (),
                 weights: (),
             ),
-            form-label-sizes: (),
-            form-sizes: (
+            forms: (
                 input-sizes: (),
-                inpuit-contains-icon-padding: (),
+                input-contains-icon-padding: (),
                 input-icon-sizes: (),
+                label-sizes: (),
             ),
             progress: (
                 sizes: (),
@@ -126,9 +133,9 @@ $default-config: (
     // Enable certain classes to be generated. Takes precedence over $EXCLUDE.
     includes: (),
     // COMPONENTS //
-    // Avatar sizes
-    avatar-sizes:
-        (
+    // Avatar
+    avatars: (
+        sizes: (
             constants.$xs: (
                 font-size: 0.8rem,
                 width: 1.6rem,
@@ -149,7 +156,8 @@ $default-config: (
                 width: 6.4rem,
                 height: 6.4rem,
             ),
-        ),
+        )
+    ),
     breakpoints: (
         widths: (
             constants.$xs: 640px,
@@ -166,9 +174,9 @@ $default-config: (
             constants.$xl: constants.$lg,
         ),
     ),
-    // Button sizes
-    button-sizes:
-        (
+    // Button
+    buttons: (
+        sizes: (
             constants.$xs: (
                 padding: 0 0.5rem,
                 font-size: 50%,
@@ -189,7 +197,8 @@ $default-config: (
                 padding: 1rem 2.5rem,
                 font-size: 130%,
             ),
-        ),
+        )
+    ),
     colors: (
         semantic: (
             'primary': theme.$cirrus-primary,
@@ -490,7 +499,7 @@ $default-config: (
             'black': 900,
         ),
     ),
-    form-sizes: (
+    forms: (
         input-sizes: (
             constants.$xs: (
                 font-size: constants.$font-size-xs,
@@ -573,8 +582,7 @@ $default-config: (
             ),
         ),
     // Tabs
-    tab-sizes:
-        (
+    tabs: (
             font-sizes: (
                 constants.$xs: constants.$font-size-xs,
                 constants.$sm: constants.$font-size-s,
@@ -811,9 +819,8 @@ $control-themes: functions.get-with-extend($all-config, colors, control-themes);
 $v2Colors: functions.get-with-extend($all-config, colors, extended);
 
 // COMPONENTS
-$avatar-sizes: functions.get-with-extend($all-config, avatar-sizes);
-$button-sizes: functions.get-with-extend($all-config, button-sizes);
-$form-label-sizes: functions.get-with-extend($all-config, form-sizes, label-sizes);
+$avatar-sizes: functions.get-with-extend($all-config, avatars, sizes);
+$button-sizes: functions.get-with-extend($all-config, buttons, sizes);
 $font-heading-sizes: functions.get-with-extend($all-config, fonts, sizes, heading);
 $font-headline-sizes: functions.get-with-extend($all-config, fonts, sizes, headline);
 $font-text-sizes: functions.get-with-extend($all-config, fonts, sizes, text);
@@ -823,9 +830,10 @@ $font-transforms: functions.get-with-extend($all-config, fonts, transforms);
 $font-weights: functions.get-with-extend($all-config, fonts, weights);
 
 // Form sizes
-$input-sizes: functions.get-with-extend($all-config, form-sizes, input-sizes);
-$input-contains-icon-padding: functions.get-with-extend($all-config, form-sizes, input-contains-icon-padding);
-$input-icon-sizes: functions.get-with-extend($all-config, form-sizes, input-icon-sizes);
+$input-sizes: functions.get-with-extend($all-config, forms, input-sizes);
+$input-contains-icon-padding: functions.get-with-extend($all-config, forms, input-contains-icon-padding);
+$input-icon-sizes: functions.get-with-extend($all-config, forms, input-icon-sizes);
+$form-label-sizes: functions.get-with-extend($all-config, forms, label-sizes);
 
 $progress-bar-sizes: functions.get-with-extend($all-config, progress, sizes);
 $space-sizes: functions.get-with-extend($all-config, space-sizes);
