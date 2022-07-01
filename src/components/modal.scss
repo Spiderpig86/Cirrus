@@ -41,6 +41,19 @@ $generate-utility: should-generate-classes($MODAL);
                 animation: slide-down var(--animation-duration) ease 1;
                 z-index: 1;
             }
+
+            // Animation modifiers
+            &.modal-animated--zoom-in,
+            &.modal-animated--zoom-out {
+                opacity: 1;
+                transition: 300ms all ease;
+            }
+
+            &.modal-animated--zoom-in .modal-content,
+            &.modal-animated--zoom-out .modal-content {
+                transform: scale(1);
+                transition: 300ms all ease;
+            }
         }
 
         /* Different size modals */
@@ -110,20 +123,8 @@ $generate-utility: should-generate-classes($MODAL);
             transition: 300ms all ease;
         }
 
-        &:target.modal-animated--zoom-in,
-        &:target.modal-animated--zoom-out {
-            opacity: 1;
-            transition: 300ms all ease;
-        }
-
         &.modal-animated--zoom-in .modal-content {
             transform: scale(0.8);
-            transition: 300ms all ease;
-        }
-
-        &:target.modal-animated--zoom-in .modal-content,
-        &:target.modal-animated--zoom-out .modal-content {
-            transform: scale(1);
             transition: 300ms all ease;
         }
 

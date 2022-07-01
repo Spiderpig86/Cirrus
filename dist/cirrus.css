@@ -15552,6 +15552,16 @@ ul .divider::after {
   z-index: 1;
 }
 
+.modal:target.modal-animated--zoom-in, .modal:target.modal-animated--zoom-out, .modal.modal--visible.modal-animated--zoom-in, .modal.modal--visible.modal-animated--zoom-out {
+  opacity: 1;
+  transition: 300ms all ease;
+}
+
+.modal:target.modal-animated--zoom-in .modal-content, .modal:target.modal-animated--zoom-out .modal-content, .modal.modal--visible.modal-animated--zoom-in .modal-content, .modal.modal--visible.modal-animated--zoom-out .modal-content {
+  transform: scale(1);
+  transition: 300ms all ease;
+}
+
 .modal.modal-small .modal-content {
   max-width: 20rem;
   /* 320px */
@@ -15619,18 +15629,8 @@ ul .divider::after {
   transition: 300ms all ease;
 }
 
-.modal:target.modal-animated--zoom-in, .modal:target.modal-animated--zoom-out {
-  opacity: 1;
-  transition: 300ms all ease;
-}
-
 .modal.modal-animated--zoom-in .modal-content {
   transform: scale(0.8);
-  transition: 300ms all ease;
-}
-
-.modal:target.modal-animated--zoom-in .modal-content, .modal:target.modal-animated--zoom-out .modal-content {
-  transform: scale(1);
   transition: 300ms all ease;
 }
 
