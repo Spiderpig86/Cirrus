@@ -15525,7 +15525,7 @@ ul .divider::after {
   /* Visible state */
 }
 
-.modal:target, .modal.shown {
+.modal:target, .modal.modal--visible {
   display: flex;
   opacity: 1;
   z-index: 999;
@@ -15534,7 +15534,7 @@ ul .divider::after {
   /* The div in the modal dialpog used to create the translucent background */
 }
 
-.modal:target .modal-overlay, .modal.shown .modal-overlay {
+.modal:target .modal-overlay, .modal.modal--visible .modal-overlay {
   position: absolute;
   /* Absolute inside of the modal container */
   top: 0;
@@ -15546,8 +15546,8 @@ ul .divider::after {
 }
 
 .modal:target .modal-container,
-.modal:target .modal-container, .modal.shown .modal-container,
-.modal.shown .modal-container {
+.modal:target .modal-container, .modal.modal--visible .modal-container,
+.modal.modal--visible .modal-container {
   animation: slide-down var(--animation-duration) ease 1;
   z-index: 1;
 }

@@ -19,7 +19,7 @@ $generate-utility: should-generate-classes($MODAL);
 
         /* When the modal dialog is visible */
         &:target,
-        &.shown {
+        &.modal--visible {
             display: flex;
             opacity: 1;
             z-index: 999;
