@@ -1,5 +1,5 @@
 export const PLAYGROUND_ENDPOINT_MAP: Map<string, string> = new Map([
-    ['Latest Build', 'https://rawcdn.githack.com/Spiderpig86/Cirrus/2c3c6d7ab93a6c18c40dbc4ca140ed1d66c55b9c/dist/cirrus-all.min.css'],
+    ['Latest Build', 'https://raw.githack.com/Spiderpig86/Cirrus/master/dist/cirrus-all.min.css'],
     ['0.7.0', 'https://cdn.jsdelivr.net/npm/cirrus-ui@0.7.0/dist/cirrus-all.min.css'],
     ['0.6.3', 'https://cdn.jsdelivr.net/npm/cirrus-ui@0.6.3/dist/cirrus.min.css'],
     ['0.6.2', 'https://cdn.jsdelivr.net/npm/cirrus-ui@0.6.2/dist/cirrus.min.css'],
