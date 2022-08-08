@@ -82,12 +82,36 @@ const App = ({ Component, pageProps }) => {
                 <link rel="apple-touch-icon" sizes="60x60" href="https://cirrus-ui.netlify.app//apple-icon-60x60.png" />
                 <link rel="apple-touch-icon" sizes="72x72" href="https://cirrus-ui.netlify.app//apple-icon-72x72.png" />
                 <link rel="apple-touch-icon" sizes="76x76" href="https://cirrus-ui.netlify.app//apple-icon-76x76.png" />
-                <link rel="apple-touch-icon" sizes="114x114" href="https://cirrus-ui.netlify.app//apple-icon-114x114.png" />
-                <link rel="apple-touch-icon" sizes="120x120" href="https://cirrus-ui.netlify.app//apple-icon-120x120.png" />
-                <link rel="apple-touch-icon" sizes="144x144" href="https://cirrus-ui.netlify.app//apple-icon-144x144.png" />
-                <link rel="apple-touch-icon" sizes="152x152" href="https://cirrus-ui.netlify.app//apple-icon-152x152.png" />
-                <link rel="apple-touch-icon" sizes="180x180" href="https://cirrus-ui.netlify.app//apple-icon-180x180.png" />
-                <link rel="apple-touch-icon" sizes="192x192" href="https://cirrus-ui.netlify.app//android-icon-192x192.png" />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="114x114"
+                    href="https://cirrus-ui.netlify.app//apple-icon-114x114.png"
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="120x120"
+                    href="https://cirrus-ui.netlify.app//apple-icon-120x120.png"
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="144x144"
+                    href="https://cirrus-ui.netlify.app//apple-icon-144x144.png"
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="152x152"
+                    href="https://cirrus-ui.netlify.app//apple-icon-152x152.png"
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="https://cirrus-ui.netlify.app//apple-icon-180x180.png"
+                />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="192x192"
+                    href="https://cirrus-ui.netlify.app//android-icon-192x192.png"
+                />
                 <link rel="icon" type="image/png" href="/favicon.ico" />
                 <meta name="msapplication-TileColor" content="#f03d4d" />
                 <meta name="msapplication-TileImage" content="https://cirrus-ui.netlify.app//ms-icon-70x70.png" />
@@ -97,6 +121,8 @@ const App = ({ Component, pageProps }) => {
                 <link rel="manifest" href="/manifest.json" />
 
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+
+                <meta name="saashub-verification" content="kDwUpSLf83ov" />
             </Head>
             <LayoutTree Component={Component} pageProps={pageProps} />
         </Store>
