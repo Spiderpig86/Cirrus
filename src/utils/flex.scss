@@ -8,6 +8,7 @@ $generate-utility: should-generate-classes($FLEX);
     $align-items: stretch, flex-start, center, flex-end, baseline;
     $flex-grow: 0, 1;
     $flex-wrap: wrap, wrap-reverse, nowrap;
+    $flex-basis: auto, max-content, min-content, fit-content, content, revert, revert-layer;
 
     @include generate-classes-for-viewport(
                     $flex-directions,
@@ -49,6 +50,14 @@ $generate-utility: should-generate-classes($FLEX);
                     'flex-wrap',
                     'u#{delimitize('flex')}',
             $generate-viewports: #{get-viewport-flag($FLEX)}
+    );
+
+    // Flex basis
+    @include generate-classes-for-viewport(
+            $flex-basis,
+            'flex-basis',
+            'u#{delimitize('basis')}',
+        $generate-viewports: #{get-viewport-flag($FLEX)}
     );
 }
 
