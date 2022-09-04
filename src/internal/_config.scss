@@ -54,6 +54,7 @@ $default-config: (
             flags.$MIN-WIDTH: false,
             flags.$MAX-WIDTH: false,
             flags.$GRID: true,
+            flags.$BLUR: false,
         ),
     // Extend all existing styles here
     extend:
@@ -112,6 +113,7 @@ $default-config: (
             space-sizes: (),
             tab-sizes: (),
             absolute: (),
+            blur: (),
             flex: (
                 properties: (),
             ),
@@ -611,6 +613,26 @@ $default-config: (
             n50p: -50%,
             n100p: -100%,
         ),
+    blurs: (
+        'none': (
+            --cirrus-blur: blur(0),
+        ),
+        constants.$xs: (
+            --cirrus-blur: blur(0.25rem),
+        ),
+        constants.$sm: (
+            --cirrus-blur: blur(0.5rem),
+        ),
+        constants.$md: (
+            --cirrus-blur: blur(1rem),
+        ),
+        constants.$lg: (
+            --cirrus-blur: blur(1.5rem),
+        ),
+        constants.$xl: (
+            --cirrus-blur: blur(3rem),
+        ),
+    ),
     flex: (
         properties: (
             flex-columns: 12,
@@ -842,6 +864,7 @@ $tag-font-sizes: functions.get-with-extend($all-config, tags, font-sizes);
 
 // UTILS
 $absolute: functions.get-with-extend($all-config, absolute);
+$blurs: functions.get-with-extend($all-config, blurs);
 
 $heights: functions.get-with-extend($all-config, heights);
 $widths: functions.get-with-extend($all-config, widths);

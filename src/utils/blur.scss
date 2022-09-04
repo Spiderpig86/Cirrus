@@ -1,0 +1,17 @@
+// Utility classes for shadows
+@use '../internal' as *;
+
+$generate-utility: should-generate-classes($BLUR);
+
+@if $generate-utility {
+    @include generate-styles-with-viewports($generate-viewports: #{get-viewport-flag($BLUR)}) using ($viewport) {
+        $suffix: if($viewport != '', '-#{$viewport}', '');
+
+        @each $class, $property-map in $blurs {
+            .u-blur-#{$class}#{$suffix} {
+                @include explode-properties($property-map);
+                filter: var(--cirrus-blur);
+            }
+        }
+    }
+}
