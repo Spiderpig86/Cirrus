@@ -49,6 +49,9 @@
 /*
     Bring to front on focus.
 */
+/************
+ * DEFAULTS *
+ ************/
 /* Breakpoints */
 /* Fonts */
 /*
@@ -3890,7 +3893,7 @@ section {
   }
 }
 .w-0 {
-  width: 0 !important;
+  width: 0rem !important;
 }
 
 .w-10p {
@@ -3941,9 +3944,61 @@ section {
   width: 100vw !important;
 }
 
+.w-1 {
+  width: 0.5rem !important;
+}
+
+.w-2 {
+  width: 1rem !important;
+}
+
+.w-3 {
+  width: 1.5rem !important;
+}
+
+.w-4 {
+  width: 2rem !important;
+}
+
+.w-5 {
+  width: 2.5rem !important;
+}
+
+.w-6 {
+  width: 3rem !important;
+}
+
+.w-8 {
+  width: 4rem !important;
+}
+
+.w-10 {
+  width: 5rem !important;
+}
+
+.w-12 {
+  width: 6rem !important;
+}
+
+.w-16 {
+  width: 8rem !important;
+}
+
+.w-20 {
+  width: 10rem !important;
+}
+
+.w-24 {
+  width: 12rem !important;
+}
+
+.w-32 {
+  width: 16rem !important;
+}
+
 @media screen and (min-width: 640px) {
   .w-0-sm {
-    width: 0 !important;
+    width: 0rem !important;
   }
 }
 @media screen and (min-width: 640px) {
@@ -4006,9 +4061,74 @@ section {
     width: 100vw !important;
   }
 }
+@media screen and (min-width: 640px) {
+  .w-1-sm {
+    width: 0.5rem !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-2-sm {
+    width: 1rem !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-3-sm {
+    width: 1.5rem !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-4-sm {
+    width: 2rem !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-5-sm {
+    width: 2.5rem !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-6-sm {
+    width: 3rem !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-8-sm {
+    width: 4rem !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-10-sm {
+    width: 5rem !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-12-sm {
+    width: 6rem !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-16-sm {
+    width: 8rem !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-20-sm {
+    width: 10rem !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-24-sm {
+    width: 12rem !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .w-32-sm {
+    width: 16rem !important;
+  }
+}
 @media screen and (min-width: 768px) {
   .w-0-md {
-    width: 0 !important;
+    width: 0rem !important;
   }
 }
 @media screen and (min-width: 768px) {
@@ -4071,9 +4191,74 @@ section {
     width: 100vw !important;
   }
 }
+@media screen and (min-width: 768px) {
+  .w-1-md {
+    width: 0.5rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-2-md {
+    width: 1rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-3-md {
+    width: 1.5rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-4-md {
+    width: 2rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-5-md {
+    width: 2.5rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-6-md {
+    width: 3rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-8-md {
+    width: 4rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-10-md {
+    width: 5rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-12-md {
+    width: 6rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-16-md {
+    width: 8rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-20-md {
+    width: 10rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-24-md {
+    width: 12rem !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .w-32-md {
+    width: 16rem !important;
+  }
+}
 @media screen and (min-width: 1024px) {
   .w-0-lg {
-    width: 0 !important;
+    width: 0rem !important;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -4136,9 +4321,74 @@ section {
     width: 100vw !important;
   }
 }
+@media screen and (min-width: 1024px) {
+  .w-1-lg {
+    width: 0.5rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-2-lg {
+    width: 1rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-3-lg {
+    width: 1.5rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-4-lg {
+    width: 2rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-5-lg {
+    width: 2.5rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-6-lg {
+    width: 3rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-8-lg {
+    width: 4rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-10-lg {
+    width: 5rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-12-lg {
+    width: 6rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-16-lg {
+    width: 8rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-20-lg {
+    width: 10rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-24-lg {
+    width: 12rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .w-32-lg {
+    width: 16rem !important;
+  }
+}
 @media screen and (min-width: 1280px) {
   .w-0-xl {
-    width: 0 !important;
+    width: 0rem !important;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -4199,6 +4449,71 @@ section {
 @media screen and (min-width: 1280px) {
   .w-screen-xl {
     width: 100vw !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-1-xl {
+    width: 0.5rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-2-xl {
+    width: 1rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-3-xl {
+    width: 1.5rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-4-xl {
+    width: 2rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-5-xl {
+    width: 2.5rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-6-xl {
+    width: 3rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-8-xl {
+    width: 4rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-10-xl {
+    width: 5rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-12-xl {
+    width: 6rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-16-xl {
+    width: 8rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-20-xl {
+    width: 10rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-24-xl {
+    width: 12rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .w-32-xl {
+    width: 16rem !important;
   }
 }
 .min-h-0 {

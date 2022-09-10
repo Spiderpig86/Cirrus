@@ -3,6 +3,7 @@
 @use 'sass:list';
 @use 'sass-true/sass/config/throw';
 
+@use 'defaults';
 @use 'flags';
 @use 'theme';
 @use 'functions';
@@ -737,22 +738,7 @@ $default-config: (
         constants.$xl: 1.25rem,
         'full': 9001px,
     ),
-    sizing-system: (
-        0: 0rem,
-        1: 0.5rem,
-        2: 1rem,
-        3: 1.5rem,
-        4: 2rem,
-        5: 2.5rem,
-        6: 3rem,
-        8: 4rem,
-        10: 5rem,
-        12: 6rem,
-        16: 8rem,
-        20: 10rem,
-        24: 12rem,
-        32: 16rem,
-    ),
+    sizing-system: defaults.$default-sizing-system,
     shadows: (
         'none': (
             --cirrus-shadow: 0 0 #000,
@@ -788,7 +774,7 @@ $default-config: (
             --cirrus-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06),
         ),
     ),
-    widths: (
+    widths: map.merge((
         0: 0,
         10p: 10%,
         20p: 20%,
@@ -802,7 +788,7 @@ $default-config: (
         100p: 100%,
         auto: auto,
         screen: 100vw,
-    ),
+    ), defaults.$default-sizing-system),
     z-index: (
         'n1': -1,
         0: 0,
