@@ -7,7 +7,6 @@ $generate-utility: should-generate-classes($PAGINATION);
     /* Parent contianer for page navigation */
     .pagination {
         display: flex;
-        display: -ms-flexbox;
 
         /* Use for the major pagination meant to display about 2 items */
         .pagination-item {

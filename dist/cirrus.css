@@ -16172,7 +16172,6 @@ ul .divider::after {
 /* Parent contianer for page navigation */
 .pagination {
   display: flex;
-  display: -ms-flexbox;
   /* Use for the major pagination meant to display about 2 items */
   /* Bordered pagination */
 }
@@ -16763,7 +16762,6 @@ a.tag:hover {
 /* TILES */
 .tile {
   display: flex;
-  display: -ms-flexbox;
   align-content: space-between;
   /* Ensure space between child elements of card tile */
   overflow: inherit;
