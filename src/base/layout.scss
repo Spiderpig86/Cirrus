@@ -123,7 +123,6 @@ section {
 
 /* Use for spacing out elements vertically */
 .row {
-    -ms-flex: 1;
     flex: 1;
     flex-wrap: wrap;
     padding: 0.5rem 0;
@@ -226,7 +225,6 @@ section {
         /* Centers items */
         align-items: center;
         display: flex;
-        -ms-flex-preferred-size: auto;
         flex-basis: auto;
         flex-grow: 0;
         flex-shrink: 0;

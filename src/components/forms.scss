@@ -258,7 +258,6 @@ $generate-utility: should-generate-classes($FORMS);
     /* Form groups that group inputs with other controls. */
     .form-group {
         display: flex;
-        display: -ms-flexbox;
         margin: 0.5rem 0; /* Add margin to the container since they have been removed from children */
 
         /* Fixes the text width being cut off */

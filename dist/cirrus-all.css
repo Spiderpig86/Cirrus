@@ -3205,7 +3205,6 @@ section {
 
 /* Use for spacing out elements vertically */
 .row {
-  -ms-flex: 1;
   flex: 1;
   flex-wrap: wrap;
   padding: 0.5rem 0;
@@ -3704,7 +3703,6 @@ section {
   /* Centers items */
   align-items: center;
   display: flex;
-  -ms-flex-preferred-size: auto;
   flex-basis: auto;
   flex-grow: 0;
   flex-shrink: 0;
@@ -12089,7 +12087,6 @@ pre > code {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   text-align: left;
   line-height: 1.5;
-  -moz-tab-size: 4;
   tab-size: 4;
   -moz-hyphens: none;
   -ms-hyphens: none;
@@ -12660,7 +12657,6 @@ label:last-child:not(:first-child):not(.form-group-label) {
 /* Form groups that group inputs with other controls. */
 .form-group {
   display: flex;
-  display: -ms-flexbox;
   margin: 0.5rem 0;
   /* Add margin to the container since they have been removed from children */
   /* Fixes the text width being cut off */
@@ -17894,8 +17890,6 @@ ul .divider::after {
   left: 0;
   bottom: 5rem;
   background-color: var(--cirrus-bg);
-  -moz-transition: 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   width: 100%;
   padding: 1.5rem 0 0 0;

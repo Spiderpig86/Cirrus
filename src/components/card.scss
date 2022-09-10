@@ -52,8 +52,6 @@ $generate-utility: should-generate-classes($CARD);
                 left: 0;
                 bottom: 5rem;
                 background-color: var(--cirrus-bg);
-                -moz-transition: 0.3s ease-in-out;
-                -ms-transition: all 0.3s ease-in-out;
                 transition: 0.3s ease-in-out;
                 width: 100%;
                 padding: 1.5rem 0 0 0;
