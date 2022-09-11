@@ -162,13 +162,7 @@ $default-config: (
         )
     ),
     breakpoints: (
-        widths: (
-            constants.$xs: 640px,
-            constants.$sm: 768px,
-            constants.$md: 1024px,
-            constants.$lg: 1280px,
-            constants.$xl: 1536px,
-        ),
+        widths: defaults.$default-breakpoints,
         // Pairs for generating viewport media queries. Pairs are (current viewport: viewport that is 1 smaller)
         breakpoint-pairs: (
             constants.$sm: constants.$xs,
@@ -688,7 +682,7 @@ $default-config: (
         100p: 100%,
         screen: 100vh,
     ),
-    min-widths: (
+    min-widths: map.merge(defaults.$default-breakpoints, (
         0: 0,
         10p: 10%,
         20p: 20%,
@@ -701,8 +695,8 @@ $default-config: (
         90p: 90%,
         100p: 100%,
         screen: 100vw,
-    ),
-    max-widths: (
+    )),
+    max-widths: map.merge(defaults.$default-breakpoints, (
         'none': none,
         10p: 10%,
         20p: 20%,
@@ -715,7 +709,7 @@ $default-config: (
         90p: 90%,
         100p: 100%,
         screen: 100vw,
-    ),
+    )),
     opacity: (
         0: 0,
         10: 0.1,
