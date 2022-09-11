@@ -17,11 +17,6 @@ import { PAGE_TITLE_PREFIX } from '../../../constants';
 export const MinHeightPage: React.FC<any> = (props) => {
     const DEFAULT_CLASSES = {
         0: '0',
-        xs: '640px',
-        sm: '768px',
-        md: '1024px',
-        lg: '1280px',
-        xl: '1536px',
         '10p': '10%',
         '20p': '20%',
         '30p': '30%',
