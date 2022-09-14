@@ -51,6 +51,7 @@
 */
 /* Breakpoints */
 /* Fonts */
+/* Images */
 /************
  * DEFAULTS *
  ************/
@@ -14787,6 +14788,130 @@ ul .divider::after {
   filter: var(--cirrus-blur);
 }
 
+@media screen and (min-width: 640px) {
+  .u-blur-none-sm {
+    --cirrus-blur: blur(0);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-xs-sm {
+    --cirrus-blur: blur(0.25rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-sm-sm {
+    --cirrus-blur: blur(0.5rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-md-sm {
+    --cirrus-blur: blur(1rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-lg-sm {
+    --cirrus-blur: blur(1.5rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-xl-sm {
+    --cirrus-blur: blur(3rem);
+    filter: var(--cirrus-blur);
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-blur-none-md {
+    --cirrus-blur: blur(0);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-xs-md {
+    --cirrus-blur: blur(0.25rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-sm-md {
+    --cirrus-blur: blur(0.5rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-md-md {
+    --cirrus-blur: blur(1rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-lg-md {
+    --cirrus-blur: blur(1.5rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-xl-md {
+    --cirrus-blur: blur(3rem);
+    filter: var(--cirrus-blur);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-blur-none-lg {
+    --cirrus-blur: blur(0);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-xs-lg {
+    --cirrus-blur: blur(0.25rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-sm-lg {
+    --cirrus-blur: blur(0.5rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-md-lg {
+    --cirrus-blur: blur(1rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-lg-lg {
+    --cirrus-blur: blur(1.5rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-xl-lg {
+    --cirrus-blur: blur(3rem);
+    filter: var(--cirrus-blur);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-blur-none-xl {
+    --cirrus-blur: blur(0);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-xs-xl {
+    --cirrus-blur: blur(0.25rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-sm-xl {
+    --cirrus-blur: blur(0.5rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-md-xl {
+    --cirrus-blur: blur(1rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-lg-xl {
+    --cirrus-blur: blur(1.5rem);
+    filter: var(--cirrus-blur);
+  }
+
+  .u-blur-xl-xl {
+    --cirrus-blur: blur(3rem);
+    filter: var(--cirrus-blur);
+  }
+}
 .u-clear-left {
   clear: left !important;
 }
