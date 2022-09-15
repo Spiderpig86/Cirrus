@@ -1,0 +1,43 @@
+@use '../internal' as *;
+
+/* Accordion */
+/* Use with <detail> and <summary> HTML tags */
+$generate-utility: should-generate-classes($ACCORDION);
+
+@if $generate-utility {
+    details.accordion {
+        border-bottom: 1px solid fill('gray', '300');
+        display: block;
+        padding: 1rem;
+
+        summary.accordion__summary {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+
+            &:after {
+                background-image: url($img-chevron-dark);
+                background-position: right center;
+                background-size: 1rem auto;
+                background-repeat: no-repeat;
+                content: '';
+                display: block;
+                float: right;
+                height: 1rem;
+                transform: rotate(-90deg);
+                transition: all var(--animation-duration);
+                width: 1rem;
+            }
+        }
+
+        &[open] summary.accordion__summary {
+            margin-bottom: 1rem;
+
+            &:after {
+                transform: rotate(0);
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@
 @use "../base"; // Inherit everything from core
 
 // Extended Components
+@use "../components/accordion";
 @use "../components/avatar";
 @use "../components/breadcrumb";
 @use "../components/card";
