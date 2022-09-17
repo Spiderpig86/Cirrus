@@ -63,8 +63,7 @@ export const LetterSpacingPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
 
                         <p>
-                            Below is a demo of all utility classes that apply a border radius of some sort. The syntax
-                            follows the form of <code>u-round-[xs|sm|md|lg|xl|full]</code>.
+                            Below is a demo of all utility classes that apply letter spacing styles.
                         </p>
                         <div className="space"></div>
 
@@ -139,7 +138,7 @@ export const LetterSpacingPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
 
                         <p>
-                            The classes specified above are the default utility classes for setting the border-radius
+                            The classes specified above are the default utility classes for setting the letter-spacing
                             property. You can add, change, or remove classes within the <code>_config.scss</code> file
                             of Cirrus.
                         </p>
