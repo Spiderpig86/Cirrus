@@ -18101,6 +18101,7 @@ details.accordion summary.accordion__summary {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  transition: all 250ms ease-out;
 }
 
 details.accordion summary.accordion__summary:after {

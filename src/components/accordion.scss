@@ -16,6 +16,7 @@ $generate-utility: should-generate-classes($ACCORDION);
             display: flex;
             justify-content: space-between;
             list-style-type: none;
+            transition: all 250ms ease-out;
 
             &:after {
                 background-image: url($img-chevron-dark);
