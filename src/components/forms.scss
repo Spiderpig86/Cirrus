@@ -94,7 +94,6 @@ $generate-utility: should-generate-classes($FORMS);
             background-position: left 0.6rem center;
             background-image: url($img-search); /* NEEDS FIXING */
             padding-left: 2rem !important;
-            -webkit-appearance: none; /* Fix Safari issue */
         }
 
         &[type='color'] {
@@ -167,7 +166,7 @@ $generate-utility: should-generate-classes($FORMS);
                 center/.5rem
                 0.6rem
                 no-repeat;
-            -webkit-appearance: none;
+            appearance: none;
         }
     }
 

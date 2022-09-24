@@ -11,8 +11,6 @@ $generate-utility: should-generate-classes($PROGRESS);
     .progress {
         --progress-color: #{$progress-primary};
 
-        -moz-appearance: none;
-        -webkit-appearance: none;
         background-color: $progress-background;
         border: none;
         border-radius: $progress-border-radius;
