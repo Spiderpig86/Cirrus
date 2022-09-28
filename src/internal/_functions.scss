@@ -85,7 +85,6 @@ $DELIMETER: '-';
             )
         )
     );
-
 */
 @function get-with-extend($all-config, $keys...) {
     $result: ();
@@ -96,6 +95,20 @@ $DELIMETER: '-';
 
     @if map.get($all-config, extend, $keys...) != null {
         $result: map.deep-merge($result, map.get($all-config, extend, $keys...));
+    }
+
+    @return $result;
+}
+
+/*
+    Converts a list of properties to a mapping where the key and value are the property
+    itself.
+*/
+@function to-property-map($properties) {
+    $result: ();
+
+    @each $property in $properties {
+        $result: map.set($result, $property, $property);
     }
 
     @return $result;

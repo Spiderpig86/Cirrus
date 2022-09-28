@@ -189,3 +189,19 @@
         );
     }
 }
+
+/*********************
+ * to-property-map() *
+ *********************/
+@include describe('to-property-map()') {
+    @include it('should return mapping when given a valid list of properties') {
+        @include assert-equal(
+            functions.to-property-map((left, right, both)),
+            (
+                left: left,
+                right: right,
+                both: both,
+            )
+        );
+    }
+}
