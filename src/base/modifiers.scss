@@ -74,8 +74,11 @@
             }
 
             .text-#{$name}-#{$level} {
-                border-color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
                 color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+            }
+
+            .border-#{$name}-#{$level} {
+                border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
             }
         }
     }

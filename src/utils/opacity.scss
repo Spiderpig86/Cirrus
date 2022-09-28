@@ -31,3 +31,14 @@ $generate-utility: should-generate-classes($COLOR-OPACITY);
         $include-important: false
     );
 }
+
+$generate-utility: should-generate-classes($BORDER-OPACITY);
+@if $generate-utility {
+    @include generate-classes-for-viewport-with-map(
+        $opacities,
+        '--border-opacity',
+        'u-border-opacity-',
+        $generate-viewports: #{get-viewport-flag($BORDER-OPACITY)},
+        $include-important: false
+    );
+}

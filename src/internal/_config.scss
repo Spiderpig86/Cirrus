@@ -45,6 +45,7 @@ $default-config: (
             flags.$OPACITY: true,
             flags.$BACKGROUND-OPACITY: false,
             flags.$COLOR-OPACITY: false,
+            flags.$BORDER-OPACITY: false,
             flags.$WIDTHS: true,
             flags.$HEIGHTS: true,
             flags.$ZINDEX: false,
