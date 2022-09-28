@@ -1,4 +1,5 @@
 @use 'config';
+@use 'functions';
 
 /* Media Queries */
 // TODO: For viewport mixins, future option to not fail if key not found and to ignore instead?
@@ -43,27 +44,15 @@
     $generate-viewports: 'true',
     $include-important: 'true'
 ) {
-    // We build in this order since we want larger viewports to have higher precedence
-    // so we can write classes like u-none u-block-md u-none-lg
-    $important: if($include-important == 'true', '!important', '');
+    $mapping: functions.to-property-map($classes);
 
-    @each $class in $classes {
-        .#{$prefix}#{$class} {
-            #{$property}: $class#{$important};
-        }
-    }
-
-    @if $generate-viewports == 'true' {
-        @each $suffix, $limit in config.$breakpoint-pairs {
-            @each $class in $classes {
-                @include screen-above($limit) {
-                    .#{$prefix}#{$class}-#{$suffix} {
-                        #{$property}: $class#{$important};
-                    }
-                }
-            }
-        }
-    }
+    @include generate-classes-for-viewport-with-map(
+        $mapping,
+        $property,
+        $prefix,
+        $generate-viewports,
+        $include-important
+    );
 }
 
 /* Variant of mixin that takes in mapping of class name to value */
