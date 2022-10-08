@@ -9,6 +9,7 @@ import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
 import { DefaultLayout } from '../../../layouts/default';
 import { CodeBlock } from '../../../layouts/components/codeblock';
+import { BreakpointsDemo } from './breakpoints-demo';
 import { toc } from './toc';
 
 import initializeExamples from '../../../static/js/fluid-column-example.js';
@@ -467,43 +468,14 @@ export const ColumnsPage: React.FC<any> = (props) => {
                             resizing your browser window.
                         </p>
 
-                        <div className="row">
-                            <div className="col-xs-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-xs-3</div>
-                            <div className="col-xs-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-xs-3</div>
-                            <div className="col-xs-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-xs-3</div>
-                        </div>
-                        <div className="row">
-                            <div className="col-sm-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-sm-3</div>
-                            <div className="col-sm-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-sm-3</div>
-                            <div className="col-sm-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-sm-3</div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">
-                                col-md-3 / col-3
-                            </div>
-                            <div className="col-md-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">
-                                col-md-3 / col-3
-                            </div>
-                            <div className="col-md-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">
-                                col-md-3 / col-3
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-lg-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-lg-3</div>
-                            <div className="col-lg-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-lg-3</div>
-                            <div className="col-lg-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-lg-3</div>
-                        </div>
-                        <div className="row">
-                            <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-xl-3</div>
-                            <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-xl-3</div>
-                            <div className="col-xl-3 bg-indigo-100 text-indigo-500 u-round-xs m-1 p-4">col-xl-3</div>
-                        </div>
+                        <BreakpointsDemo />
 
                         <div className="space space--lg"></div>
                         <h6>Prevent Stacking</h6>
                         <p>
-                            To prevent the default stacking behavior, we can use the <code>col-xs-*</code> class on
-                            the column, where '*' indicates any number from 1 to 12 (or however many columns you configured your Cirrus build with).
+                            To prevent the default stacking behavior, we can use the <code>col-xs-*</code> class on the
+                            column, where '*' indicates any number from 1 to 12 (or however many columns you configured
+                            your Cirrus build with).
                         </p>
 
                         <p className="title">Before</p>
