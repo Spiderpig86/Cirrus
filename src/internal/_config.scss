@@ -640,7 +640,7 @@ $default-config: (
             grid-columns: 12,
         ),
     ),
-    heights: (
+    heights: map.merge(defaults.$default-sizing-system, (
         0: 0,
         10p: 10%,
         20p: 20%,
@@ -654,8 +654,8 @@ $default-config: (
         100p: 100%,
         auto: auto,
         screen: 100vh,
-    ),
-    min-heights: (
+    )),
+    min-heights: map.merge(defaults.$default-sizing-system, (
         0: 0,
         10p: 10%,
         20p: 20%,
@@ -668,7 +668,7 @@ $default-config: (
         90p: 90%,
         100p: 100%,
         screen: 100vh,
-    ),
+    )),
     max-heights: (
         'none': none,
         10p: 10%,
