@@ -57,6 +57,7 @@ $default-config: (
             flags.$MAX-WIDTH: false,
             flags.$GRID: true,
             flags.$BLUR: false,
+            flags.$TRANSITION-DURATION: false,
         ),
     // Extend all existing styles here
     extend:
@@ -769,6 +770,17 @@ $default-config: (
             --cirrus-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06),
         ),
     ),
+    transitions: (
+        durations: (
+            75: 75ms,
+            100: 100ms,
+            200: 200ms,
+            300: 300ms,
+            500: 500ms,
+            700: 700ms,
+            1000: 1000ms,
+        ),
+    ),
     widths: map.merge((
         0: 0,
         10p: 10%,
@@ -866,6 +878,7 @@ $opacities: functions.get-with-extend($all-config, opacity);
 $round: functions.get-with-extend($all-config, round);
 $shadows: functions.get-with-extend($all-config, shadows);
 $spacing-system: functions.get-with-extend($all-config, sizing-system);
+$transition-durations: functions.get-with-extend($all-config, transitions, durations);
 $z-indexes: functions.get-with-extend($all-config, z-index);
 
 /*

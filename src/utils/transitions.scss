@@ -1,0 +1,15 @@
+// Utility classes for transitions
+@use '../internal' as *;
+
+/* TRANSITION DURATION */
+$generate-classes: should-generate-classes($TRANSITION-DURATION);
+
+@if $generate-classes {
+    @include generate-classes-for-viewport-with-map(
+        $transition-durations,
+        'transition-duration',
+        'u-duration-',
+        $generate-viewports: #{get-viewport-flag($TRANSITION-DURATION)},
+        $include-important: false
+    );
+}
