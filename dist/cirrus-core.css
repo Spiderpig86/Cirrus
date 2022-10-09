@@ -787,6 +787,31 @@ kbd {
   letter-spacing: 0.1em !important;
 }
 
+/* Line height */
+.leading-none {
+  line-height: 0 !important;
+}
+
+.leading-tighter {
+  line-height: 1.25 !important;
+}
+
+.leading-tight {
+  line-height: 1.375 !important;
+}
+
+.leading-normal {
+  line-height: 1.5 !important;
+}
+
+.leading-loose {
+  line-height: 1.625 !important;
+}
+
+.leading-looser {
+  line-height: 2 !important;
+}
+
 /* MOBILE */
 @media screen and (max-width: 639px) {
   h6 {

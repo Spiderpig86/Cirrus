@@ -58,6 +58,7 @@ $default-config: (
             flags.$GRID: true,
             flags.$BLUR: false,
             flags.$TRANSITION-DURATION: false,
+            flags.$LINE-HEIGHT: false,
         ),
     // Extend all existing styles here
     extend:
@@ -481,6 +482,14 @@ $default-config: (
             looser: 0.05em,
             loosest: 0.1em,
         ),
+        line-heights: (
+            none: 0,
+            tighter: 1.25,
+            tight: 1.375,
+            normal: 1.5,
+            loose: 1.625,
+            looser: 2,
+        ),
         transforms: (
             uppercase: uppercase,
             lowercase: lowercase,
@@ -841,6 +850,7 @@ $font-headline-sizes: functions.get-with-extend($all-config, fonts, sizes, headl
 $font-text-sizes: functions.get-with-extend($all-config, fonts, sizes, text);
 $font-families: functions.get-with-extend($all-config, fonts, font-families);
 $font-letter-spacing: functions.get-with-extend($all-config, fonts, letter-spacing);
+$font-line-heights: functions.get-with-extend($all-config, fonts, line-heights);
 $font-transforms: functions.get-with-extend($all-config, fonts, transforms);
 $font-weights: functions.get-with-extend($all-config, fonts, weights);
 
