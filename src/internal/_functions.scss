@@ -113,3 +113,37 @@ $DELIMETER: '-';
 
     @return $result;
 }
+
+/*
+    To generate the negative variant of classes, we want to prepend 'n' to the key and add a negative sign to the value.
+
+    This automatically skips string values and 0 values.
+    This also assumes that the values passed in are positive variants of classes. This will break with negative variants.
+*/
+@function get-negative-value-map($map) {
+    $result: ();
+    @each $key, $value in $map {
+        $to-add: (
+            $key: $value,
+        );
+
+        @if type-of($value) == number and $key != 0 and strip-unit($value) != 0 {
+            $to-add: map.merge($to-add, (n#{$key}: -#{$value}));
+        }
+
+        $result: map.merge($result, $to-add);
+    }
+    @return $result;
+}
+
+// TODO unit test
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+  
+    @return $number;
+  }

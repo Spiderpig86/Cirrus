@@ -205,3 +205,70 @@
         );
     }
 }
+
+/****************************
+ * get-negative-value-map() *
+ ****************************/
+
+@include describe('get-negative-value-map()') {
+    @include it('should return mapping negated classes when given class mapping of numeric values') {
+        @include assert-equal(
+            functions.get-negative-value-map(
+                (
+                    0: 0rem,
+                    1: 0.5px,
+                    2: 1em,
+                    3: 1.5,
+                )
+            ),
+            (
+                0: 0rem,
+                1: 0.5px,
+                n1: -0.5px,
+                2: 1em,
+                n2: -1em,
+                3: 1.5,
+                n3: -1.5,
+            ),
+            // Test fails without this
+            $inspect: true
+        );
+    }
+
+    @include it('should skip creating negative mapping for non-numerical values') {
+        @include assert-equal(
+            functions.get-negative-value-map(
+                (
+                    auto: auto,
+                    inherit: inherit,
+                    unset: unset,
+                    5: 5px,
+                )
+            ),
+            (
+                auto: auto,
+                inherit: inherit,
+                unset: unset,
+                5: 5px,
+                n5: -5px,
+            ),
+            // Test fails without this
+            $inspect: true
+        );
+    }
+
+    @include it('should skip creating negative mapping for classes with 0 value') {
+        @include assert-equal(
+            functions.get-negative-value-map(
+                (
+                    0: 0,
+                    zero: 0px,
+                )
+            ),
+            (
+                0: 0,
+                zero: 0px,
+            )
+        );
+    }
+}

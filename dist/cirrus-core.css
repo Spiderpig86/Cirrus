@@ -33,6 +33,12 @@
     itself.
 */
 /*
+    To generate the negative variant of classes, we want to prepend 'n' to the key and add a negative sign to the value.
+
+    This automatically skips string values and 0 values.
+    This also assumes that the values passed in are positive variants of classes. This will break with negative variants.
+*/
+/*
     Group selectors that share common styling.
 */
 /*
