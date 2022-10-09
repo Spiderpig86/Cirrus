@@ -209,7 +209,6 @@
 /****************************
  * get-negative-value-map() *
  ****************************/
-
 @include describe('get-negative-value-map()') {
     @include it('should return mapping negated classes when given class mapping of numeric values') {
         @include assert-equal(
@@ -270,5 +269,21 @@
                 zero: 0px,
             )
         );
+    }
+}
+
+/****************
+ * strip-unit() *
+ ****************/
+ @include describe('strip-unit()') {
+    @include it('should return number without unit for numerical inputs') {
+        @include assert-equal(functions.strip-unit(42rem), 42);
+        @include assert-equal(functions.strip-unit(42em), 42);
+        @include assert-equal(functions.strip-unit(42px), 42);
+        @include assert-equal(functions.strip-unit(42), 42);
+    }
+
+    @include it('should return same input if not numerical') {
+        @include assert-equal(functions.strip-unit(auto), auto);
     }
 }
