@@ -252,7 +252,7 @@ export const ViewportsPage: React.FC<any> = (props) => {
                                             <code>u-none-lg</code>
                                         </td>
                                         <td>
-                                            Hide content for widths <code>1024px</code> and <code>1279px</code>.
+                                            Hide content for widths <code>1024px</code> and above.
                                         </td>
                                     </tr>
                                     <tr>
