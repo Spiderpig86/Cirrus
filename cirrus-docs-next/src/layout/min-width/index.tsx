@@ -89,7 +89,7 @@ export const MinWidthPage: React.FC<any> = (props) => {
                             <p>
                                 ⚠ Note that the viewport variants are disabled in the default build of Cirrus. To
                                 enable, you must enable it yourself in <code>_configs.scss</code> and create a custom
-                                build.
+                                build or enable it in the config in your Sass project.
                             </p>
 
                             <div className="space"></div>
