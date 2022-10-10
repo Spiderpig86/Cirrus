@@ -45,7 +45,7 @@
     $merged: map-multi-merge($map1, $map2, $map3, ...);
 */
 /*
-    Filters over a given list only for values between $start inclusive and
+    Filters over a given map only for keys between $start inclusive and
     $end exclusive.
 */
 /*
@@ -12372,54 +12372,6 @@ ul .divider::after {
   top: -4rem !important;
 }
 
-.u-top-10 {
-  top: 5rem !important;
-}
-
-.u-top-n10 {
-  top: -5rem !important;
-}
-
-.u-top-12 {
-  top: 6rem !important;
-}
-
-.u-top-n12 {
-  top: -6rem !important;
-}
-
-.u-top-16 {
-  top: 8rem !important;
-}
-
-.u-top-n16 {
-  top: -8rem !important;
-}
-
-.u-top-20 {
-  top: 10rem !important;
-}
-
-.u-top-n20 {
-  top: -10rem !important;
-}
-
-.u-top-24 {
-  top: 12rem !important;
-}
-
-.u-top-n24 {
-  top: -12rem !important;
-}
-
-.u-top-32 {
-  top: 16rem !important;
-}
-
-.u-top-n32 {
-  top: -16rem !important;
-}
-
 .u-left-auto {
   left: auto !important;
 }
@@ -12514,54 +12466,6 @@ ul .divider::after {
 
 .u-left-n8 {
   left: -4rem !important;
-}
-
-.u-left-10 {
-  left: 5rem !important;
-}
-
-.u-left-n10 {
-  left: -5rem !important;
-}
-
-.u-left-12 {
-  left: 6rem !important;
-}
-
-.u-left-n12 {
-  left: -6rem !important;
-}
-
-.u-left-16 {
-  left: 8rem !important;
-}
-
-.u-left-n16 {
-  left: -8rem !important;
-}
-
-.u-left-20 {
-  left: 10rem !important;
-}
-
-.u-left-n20 {
-  left: -10rem !important;
-}
-
-.u-left-24 {
-  left: 12rem !important;
-}
-
-.u-left-n24 {
-  left: -12rem !important;
-}
-
-.u-left-32 {
-  left: 16rem !important;
-}
-
-.u-left-n32 {
-  left: -16rem !important;
 }
 
 .u-right-auto {
@@ -12660,54 +12564,6 @@ ul .divider::after {
   right: -4rem !important;
 }
 
-.u-right-10 {
-  right: 5rem !important;
-}
-
-.u-right-n10 {
-  right: -5rem !important;
-}
-
-.u-right-12 {
-  right: 6rem !important;
-}
-
-.u-right-n12 {
-  right: -6rem !important;
-}
-
-.u-right-16 {
-  right: 8rem !important;
-}
-
-.u-right-n16 {
-  right: -8rem !important;
-}
-
-.u-right-20 {
-  right: 10rem !important;
-}
-
-.u-right-n20 {
-  right: -10rem !important;
-}
-
-.u-right-24 {
-  right: 12rem !important;
-}
-
-.u-right-n24 {
-  right: -12rem !important;
-}
-
-.u-right-32 {
-  right: 16rem !important;
-}
-
-.u-right-n32 {
-  right: -16rem !important;
-}
-
 .u-bottom-auto {
   bottom: auto !important;
 }
@@ -12802,54 +12658,6 @@ ul .divider::after {
 
 .u-bottom-n8 {
   bottom: -4rem !important;
-}
-
-.u-bottom-10 {
-  bottom: 5rem !important;
-}
-
-.u-bottom-n10 {
-  bottom: -5rem !important;
-}
-
-.u-bottom-12 {
-  bottom: 6rem !important;
-}
-
-.u-bottom-n12 {
-  bottom: -6rem !important;
-}
-
-.u-bottom-16 {
-  bottom: 8rem !important;
-}
-
-.u-bottom-n16 {
-  bottom: -8rem !important;
-}
-
-.u-bottom-20 {
-  bottom: 10rem !important;
-}
-
-.u-bottom-n20 {
-  bottom: -10rem !important;
-}
-
-.u-bottom-24 {
-  bottom: 12rem !important;
-}
-
-.u-bottom-n24 {
-  bottom: -12rem !important;
-}
-
-.u-bottom-32 {
-  bottom: 16rem !important;
-}
-
-.u-bottom-n32 {
-  bottom: -16rem !important;
 }
 
 .u-blur-none {

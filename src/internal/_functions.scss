@@ -164,14 +164,16 @@ $DELIMETER: '-';
 }
 
 /*
-    Filters over a given list only for values between $start inclusive and
+    Filters over a given map only for keys between $start inclusive and
     $end exclusive.
 */
-@function list-range($list, $start, $end) {
+@function map-range($map, $start, $end) {
     $result: ();
-    @each $num in $list {
-        @if $num >= $start and $num < $end {
-            $result: list.append($result, $num);
+    @each $key, $value in $map {
+        @if type-of($key) == 'number' {
+            @if $key >= $start and $key < $end {
+                $result: map.merge($result, ($key: $value));
+            }
         }
     }
 

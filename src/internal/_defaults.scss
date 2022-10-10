@@ -19,6 +19,7 @@ $default-sizing-system: (
     24: 12rem,
     32: 16rem,
 );
+$default-absolutes-max: 9; // Include 8
 
 $default-breakpoints: (
     constants.$xs: 640px,
