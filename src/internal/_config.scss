@@ -610,13 +610,14 @@ $default-config: (
             ),
         ),
     // UTILITIES //
-    absolute:
-        map.merge((
-            auto: auto,
-            0: 0,
-        ), (
-            functions.get-negative-value-map(defaults.$default-quartile-percentages)
-        )),
+    absolute: functions.map-multi-merge(
+    (
+        auto: auto,
+        0: 0,
+    ),
+        (functions.get-negative-value-map(defaults.$default-quartile-percentages)),
+        (functions.get-negative-value-map(defaults.$default-sizing-system))
+    ),
     blurs: (
         'none': (
             --cirrus-blur: blur(0),
