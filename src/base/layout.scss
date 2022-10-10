@@ -1,4 +1,4 @@
-@use "sass:math";
+@use 'sass:math';
 @use '../internal' as *;
 
 /* HEADER */
@@ -180,21 +180,32 @@ section {
     /* Column sizes for various viewports */
     @for $i from 1 through $flex-columns {
         @include screen-above($sm) {
+            // Same as col-md-<number>
             .col-#{$i} {
                 width: percentage($number: $flex-width * $i);
             }
         }
     }
 
-    @each $viewport in $breakpoint-keys {
+    @include generate-styles-with-viewports() using ($viewport) {
         @for $i from 1 through $flex-columns {
-            @include screen-above($viewport) {
-                .col-#{$viewport}-#{$i} {
-                    width: percentage($number: $flex-width * $i);
-                }
+            // For sm, viewport is empty
+            $v: if($viewport != '', '-#{$viewport}-', '-xs-');
+            .col#{$v}#{$i} {
+                width: percentage($number: $flex-width * $i);
             }
         }
     }
+
+    // @each $viewport in $breakpoint-keys {
+    //     @for $i from 1 through $flex-columns {
+    //         @include screen-above($viewport) {
+    //             .col-#{$viewport}-#{$i} {
+    //                 width: percentage($number: $flex-width * $i);
+    //             }
+    //         }
+    //     }
+    // }
 
     @for $i from 1 through $flex-columns {
         @include screen-above($xs) {
@@ -244,9 +255,19 @@ section {
 /* Width/Height CSS */
 @include generate-classes-for-viewport-with-map($heights, 'height', 'h-', #{get-viewport-flag($HEIGHTS)});
 @include generate-classes-for-viewport-with-map($widths, 'width', 'w-', #{get-viewport-flag($WIDTHS)});
-@include generate-classes-for-viewport-with-map($min-heights, 'min-height', 'min-h-', #{get-viewport-flag($MIN-HEIGHT)});
+@include generate-classes-for-viewport-with-map(
+    $min-heights,
+    'min-height',
+    'min-h-',
+    #{get-viewport-flag($MIN-HEIGHT)}
+);
 @include generate-classes-for-viewport-with-map($min-widths, 'min-width', 'min-w-', #{get-viewport-flag($MIN-WIDTH)});
-@include generate-classes-for-viewport-with-map($max-heights, 'max-height', 'max-h-', #{get-viewport-flag($MAX-HEIGHT)});
+@include generate-classes-for-viewport-with-map(
+    $max-heights,
+    'max-height',
+    'max-h-',
+    #{get-viewport-flag($MAX-HEIGHT)}
+);
 @include generate-classes-for-viewport-with-map($max-widths, 'max-width', 'max-w-', #{get-viewport-flag($MAX-WIDTH)});
 
 /* Do the actual balancing only on larger screens */
