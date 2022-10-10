@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 @use '../internal' as *;
 
 $generate-utility: should-generate-classes($FLEX);
@@ -8,7 +10,8 @@ $generate-utility: should-generate-classes($FLEX);
     $align-items: stretch, flex-start, center, flex-end, baseline;
     $flex-grow: 0, 1;
     $flex-wrap: wrap, wrap-reverse, nowrap;
-    $flex-basis: auto, max-content, min-content, fit-content, content, revert, revert-layer;
+    $flex-basis: map.merge(to-property-map((auto, max-content, min-content, fit-content, content, revert, revert-layer)),
+        $default-percentages);
 
     @include generate-classes-for-viewport(
                     $flex-directions,
@@ -53,7 +56,7 @@ $generate-utility: should-generate-classes($FLEX);
     );
 
     // Flex basis
-    @include generate-classes-for-viewport(
+    @include generate-classes-for-viewport-with-map(
             $flex-basis,
             'flex-basis',
             'u#{delimitize('basis')}',
