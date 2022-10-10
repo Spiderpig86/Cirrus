@@ -1,6 +1,7 @@
 @use 'sass:string';
 @use 'sass:list';
 @use 'sass:map';
+@use 'sass:math';
 @use 'sass-true/sass/config/throw';
 @use 'sass-true/sass/true' as *;
 
@@ -141,7 +142,7 @@ $DELIMETER: '-';
 /// @return {Number} - Unitless number
 @function strip-unit($number) {
     @if type-of($number) == 'number' and not unitless($number) {
-      @return $number / ($number * 0 + 1);
+      @return math.div($number, ($number * 0 + 1));
     }
   
     @return $number;

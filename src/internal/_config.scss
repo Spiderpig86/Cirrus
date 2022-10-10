@@ -611,14 +611,12 @@ $default-config: (
         ),
     // UTILITIES //
     absolute:
-        (
+        map.merge((
             auto: auto,
             0: 0,
-            50p: 50%,
-            100p: 100%,
-            n50p: -50%,
-            n100p: -100%,
-        ),
+        ), (
+            functions.get-negative-value-map(defaults.$default-quartile-percentages)
+        )),
     blurs: (
         'none': (
             --cirrus-blur: blur(0),

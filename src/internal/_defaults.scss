@@ -27,3 +27,10 @@ $default-breakpoints: (
     constants.$lg: 1280px,
     constants.$xl: 1536px,
 );
+
+$default-quartile-percentages: (
+    25p: 25%,
+    50p: 50%,
+    75p: 75%,
+    100p: 100%,
+);
