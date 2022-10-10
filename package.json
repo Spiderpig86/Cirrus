@@ -39,18 +39,6 @@
             "cirrus.css"
         ]
     },
-    "browserslist": [
-        "last 1 major version",
-        ">= 1%",
-        "Chrome >= 36",
-        "Firefox >= 38",
-        "Edge >= 12",
-        "Explorer >= 10",
-        "iOS >= 9",
-        "Safari >= 9",
-        "Android >= 4.4",
-        "Opera >= 30"
-    ],
     "devDependencies": {
         "gulp": "^4.0.2",
         "gulp-build": "^0.5.3",
