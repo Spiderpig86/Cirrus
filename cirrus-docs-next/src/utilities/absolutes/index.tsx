@@ -56,11 +56,11 @@ export const AbsolutesUtilsPage: React.FC<any> = (props) => {
                         <Tag
                             leftProps={{
                                 classes: `tag--dark`,
-                                text: `New`,
+                                text: `Updated`,
                             }}
                             rightProps={{
                                 classes: `tag--info`,
-                                text: `0.7.0`,
+                                text: `0.7.1`,
                             }}
                         />
                         <p>

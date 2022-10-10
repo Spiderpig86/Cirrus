@@ -20,6 +20,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
     const justifyContentNames = ['flex-start', 'center', 'flex-end', 'space-between', 'space-around', 'space-evenly'];
     const alignItemNames = ['stretch', 'flex-start', 'center', 'flex-end', 'baseline'];
     const flexGrowShrinkNames = ['0', '1'];
+    const flexBasisNames = ['auto', 'max-content', 'min-content', 'fit-content', 'content', 'revert', 'revert-layer'];
 
     const flexDocExamples: DocExample[] = [
         {
@@ -351,6 +352,12 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                 class: `u-flex-shrink-${size}`,
                 style: `flex-shrink: ${size} !important;`,
             };
+        }),
+        flexBasisNames.map((basis) => {
+            return {
+                class: `u-basis-${basis}`,
+                style: `flex-basis: ${basis} !important;`,
+            };
         })
     );
 
@@ -589,7 +596,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                             form of <code>u-flex-shrink-[0|1]</code>.
                         </p>
 
-                        <div className="space space--xl"></div>
+                        <div className="space space--lg"></div>
 
                         <p>
                             Use <code>u-flex-shrink-1</code> to allow a flex item to shrink relative to the parent and
@@ -622,7 +629,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                             language="htmlbars"
                         />
 
-                        <div className="space space--xl"></div>
+                        <div className="space space--lg"></div>
 
                         <p>
                             Use <code>u-flex-shrink-0</code> to prevent a flex item to shrink relative to the parent and
@@ -673,7 +680,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                             follow the form of <code>u-flex-[wrap|nowrap|wrap-reverse]</code>.
                         </p>
 
-                        <div className="space space--xl"></div>
+                        <div className="space"></div>
 
                         <Headline size="6" title="Wrap" link="#flex-wrap" />
                         <p>
@@ -687,15 +694,15 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div classname="u-flex u-flex-wrap u-gap-2 u-round-xs bg-pink-100 p-3 text-white font-bold u-text-center">
-    <div classname="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40p">1</div>
-    <div classname="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40p">2</div>
-    <div classname="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40p">3</div>
+                            code={`<div class="u-flex u-flex-wrap u-gap-2 u-round-xs bg-pink-100 p-3 text-white font-bold u-text-center">
+    <div class="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40p">1</div>
+    <div class="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40p">2</div>
+    <div class="u-round-xs u-shadow-lg bg-pink-500 p-2 w-40p">3</div>
 </div>`}
                             language="html"
                         />
                         <div className="space space--lg"></div>
-                        
+
                         <Headline size="6" title="No Wrap" link="#flex-nowrap" />
                         <p>
                             Use <code>u-flex-nowrap</code> to prevent flex elements from wrapping in the parent.
@@ -708,15 +715,15 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div classname="u-flex u-flex-nowrap u-gap-2 u-round-xs bg-teal-100 p-3 text-white font-bold u-text-center">
-    <div classname="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40p">1</div>
-    <div classname="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40p">2</div>
-    <div classname="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40p">3</div>
+                            code={`<div class="u-flex u-flex-nowrap u-gap-2 u-round-xs bg-teal-100 p-3 text-white font-bold u-text-center">
+    <div class="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40p">1</div>
+    <div class="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40p">2</div>
+    <div class="u-round-xs u-shadow-lg bg-teal-500 p-2 w-40p">3</div>
 </div>`}
                             language="html"
                         />
                         <div className="space space--lg"></div>
-                        
+
                         <Headline size="6" title="Wrap Reverse" link="#flex-wrap-reverse" />
                         <p>
                             Use <code>u-flex-wrap-reverse</code> wrap elements in reverse.
@@ -729,10 +736,83 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div classname="u-flex u-flex-wrap-reverse u-gap-2 u-round-xs bg-indigo-100 p-3 text-white font-bold u-text-center">
-    <div classname="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40p">1</div>
-    <div classname="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40p">2</div>
-    <div classname="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40p">3</div>
+                            code={`<div class="u-flex u-flex-wrap-reverse u-gap-2 u-round-xs bg-indigo-100 p-3 text-white font-bold u-text-center">
+    <div class="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40p">1</div>
+    <div class="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40p">2</div>
+    <div class="u-round-xs u-shadow-lg bg-indigo-500 p-2 w-40p">3</div>
+</div>`}
+                            language="html"
+                        />
+                    </div>
+                </section>
+
+                <section className="padtop" id="flex-basis">
+                    <div className="content">
+                        <Headline title="Flex Basis" link="#flex-basis" size="4" />
+                        <div className="divider"></div>
+                        <span className="tag-container group-tags">
+                            <div className="tag tag--dark">New</div>
+                            <div className="tag tag--info">0.7.1</div>
+                        </span>
+
+                        <p>Utility classes to set the initial size for flexbox based items.</p>
+                        <div className="u-flex h-12 bg-orange-200 u-round-xs p-3 font-bold text-white u-gap-1">
+                            <div className="bg-orange-500 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-basis-auto">
+                                auto
+                            </div>
+                            <div className="bg-orange-500 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-basis-max-content">
+                                max-content
+                            </div>
+                            <div className="bg-orange-500 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-basis-min-content">
+                                min-content
+                            </div>
+                            <div className="bg-orange-500 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-basis-fit-content">
+                                fit-content
+                            </div>
+                            <div className="bg-orange-500 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-basis-content">
+                                content
+                            </div>
+                        </div>
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<div class="u-flex h-12 bg-orange-200 u-round-xs p-3 font-bold text-white u-gap-1">
+    <div class="bg-orange-500 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-basis-auto">auto</div>
+    <div class="bg-orange-500 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-basis-max-content">
+        max-content
+    </div>
+    <div class="bg-orange-500 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-basis-min-content">
+        min-content
+    </div>
+    <div class="bg-orange-500 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-basis-fit-content">
+        fit-content
+    </div>
+    <div class="bg-orange-500 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-basis-content">content</div>
+</div>`}
+                            language="html"
+                        />
+                        <div className="space space--lg"></div>
+
+                        <p>
+                            You can also use <code>flex-basis</code> util classes with percentages.
+                        </p>
+                        <div className="u-flex h-12 bg-red-200 font-bold text-white p-3 u-gap-1">
+                            <div className="bg-red-600 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-justify-center u-basis-20p">
+                                20
+                            </div>
+                            <div className="bg-red-600 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-justify-center u-basis-30p">
+                                30
+                            </div>
+                            <div className="bg-red-600 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-justify-center u-basis-50p">
+                                50
+                            </div>
+                        </div>
+                        <div className="space"></div>
+                        
+                        <CodeBlock
+                            code={`<div class="u-flex h-12 bg-red-200 font-bold text-white p-3 u-gap-1">
+    <div class="bg-red-600 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-justify-center u-basis-20p">20</div>
+    <div class="bg-red-600 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-justify-center u-basis-30p">30</div>
+    <div class="bg-red-600 u-shadow-lg p-2 u-round-xs u-flex u-items-center u-justify-center u-basis-50p">50</div>
 </div>`}
                             language="html"
                         />
