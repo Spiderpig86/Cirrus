@@ -275,7 +275,7 @@
 /****************
  * strip-unit() *
  ****************/
- @include describe('strip-unit()') {
+@include describe('strip-unit()') {
     @include it('should return number without unit for numerical inputs') {
         @include assert-equal(functions.strip-unit(42rem), 42);
         @include assert-equal(functions.strip-unit(42em), 42);
@@ -285,5 +285,37 @@
 
     @include it('should return same input if not numerical') {
         @include assert-equal(functions.strip-unit(auto), auto);
+    }
+}
+
+/*********************
+ * map-multi-merge() *
+ *********************/
+@include describe('map-multi-merge()') {
+    @include it('should return merged map if we pass in multiple maps as inputs') {
+        @include assert-equal(
+            functions.map-multi-merge(
+                (
+                    1: 1,
+                ),
+                (
+                    2: 2,
+                    3: 3,
+                ),
+                (
+                    4: 4,
+                ),
+                (
+                    5: 5,
+                )
+            ),
+            (
+                1: 1,
+                2: 2,
+                3: 3,
+                4: 4,
+                5: 5,
+            )
+        );
     }
 }

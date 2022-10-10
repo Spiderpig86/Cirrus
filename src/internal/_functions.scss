@@ -142,8 +142,23 @@ $DELIMETER: '-';
 /// @return {Number} - Unitless number
 @function strip-unit($number) {
     @if type-of($number) == 'number' and not unitless($number) {
-      @return math.div($number, ($number * 0 + 1));
+        @return math.div($number, ($number * 0 + 1));
     }
-  
+
     @return $number;
-  }
+}
+
+/*
+    Merge multiple maps with each other.
+
+    $merged: map-multi-merge($map1, $map2, $map3, ...);
+*/
+@function map-multi-merge($maps...) {
+    $result: ();
+
+    @each $map in $maps {
+        $result: map.merge($result, $map);
+    }
+
+    @return $result;
+}
