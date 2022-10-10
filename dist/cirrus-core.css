@@ -44,6 +44,10 @@
     $merged: map-multi-merge($map1, $map2, $map3, ...);
 */
 /*
+    Filters over a given list only for values between $start inclusive and
+    $end exclusive.
+*/
+/*
     Group selectors that share common styling.
 */
 /*

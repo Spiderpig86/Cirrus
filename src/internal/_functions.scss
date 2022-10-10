@@ -162,3 +162,18 @@ $DELIMETER: '-';
 
     @return $result;
 }
+
+/*
+    Filters over a given list only for values between $start inclusive and
+    $end exclusive.
+*/
+@function list-range($list, $start, $end) {
+    $result: ();
+    @each $num in $list {
+        @if $num >= $start and $num < $end {
+            $result: list.append($result, $num);
+        }
+    }
+
+    @return $result;
+}
