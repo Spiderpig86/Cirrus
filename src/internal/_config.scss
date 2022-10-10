@@ -834,7 +834,6 @@ $includes: map.get($all-config, includes);
 // BREAKPOINTS
 $breakpoints: functions.get-with-extend($all-config, breakpoints, widths);
 $breakpoint-pairs: functions.get-with-extend($all-config, breakpoints, breakpoint-pairs);
-$breakpoint-keys: map-keys($breakpoints);
 
 // COLORS
 $semantic-colors: functions.get-with-extend($all-config, colors, semantic);

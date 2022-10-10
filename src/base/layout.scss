@@ -197,16 +197,6 @@ section {
         }
     }
 
-    // @each $viewport in $breakpoint-keys {
-    //     @for $i from 1 through $flex-columns {
-    //         @include screen-above($viewport) {
-    //             .col-#{$viewport}-#{$i} {
-    //                 width: percentage($number: $flex-width * $i);
-    //             }
-    //         }
-    //     }
-    // }
-
     @for $i from 1 through $flex-columns {
         @include screen-above($xs) {
             .offset-#{$i} {
