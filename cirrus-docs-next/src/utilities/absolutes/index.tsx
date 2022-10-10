@@ -11,23 +11,31 @@ import { ClassTable } from '../../../layouts/components/class-table';
 import { Tag } from '../../../layouts/components/tag';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
-import { PAGE_TITLE_PREFIX } from '../../../constants';
+import {
+    DEFAULT_MAX_ABSOLUTE_SIZE,
+    DEFAULT_MIN_ABSOLUTE_SIZE,
+    DEFAULT_QUARTILE_PERCENTAGES,
+    DEFAULT_SIZING_SYSTEM,
+    PAGE_TITLE_PREFIX,
+} from '../../../constants';
 import { Blockquote } from '../../../layouts/components/blockquote';
 import { ExternalLink } from '../../../layouts/components/link';
+import { GenerateNegativeClassVariants } from '../../../utils/classes';
 
 export const AbsolutesUtilsPage: React.FC<any> = (props) => {
     const DEFAULT_DIRECTIONS = ['top', 'left', 'bottom', 'right'];
-    const DEFAULT_ABSOLUTES = {
-        '0': '0',
-        '50p': '50%',
-        '100p': '100%',
-        n50p: '-50%',
-        n100p: '-100%',
-        auto: 'auto',
-    };
+    const DEFAULT_ABSOLUTES = [
+        ['0', '0'],
+        ['auto', 'auto'],
+        ...GenerateNegativeClassVariants(DEFAULT_QUARTILE_PERCENTAGES, true),
+        ...GenerateNegativeClassVariants(
+            DEFAULT_SIZING_SYSTEM.filter((x) => x >= DEFAULT_MIN_ABSOLUTE_SIZE && x <= DEFAULT_MAX_ABSOLUTE_SIZE),
+            false
+        ),
+    ];
 
     const classTable = DEFAULT_DIRECTIONS.flatMap((direction) => {
-        return Object.entries(DEFAULT_ABSOLUTES).map((entry) => {
+        return DEFAULT_ABSOLUTES.map((entry) => {
             return {
                 class: `u-${direction}-${entry[0]}`,
                 style: `${direction}: ${entry[1]} !important`,
