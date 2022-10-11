@@ -513,6 +513,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Border Width',
+                url: '/utils/border-width'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Box Shadow',
                 url: '/utils/box-shadow'
             },

@@ -189,7 +189,7 @@ $config: (
 
                 <Pagination
                     prevLink={{ name: 'Absolutes', link: './absolutes' }}
-                    nextLink={{ name: 'Box Shadow', link: './box-shadow' }}
+                    nextLink={{ name: 'Border Width', link: './border-width' }}
                 />
             </div>
 

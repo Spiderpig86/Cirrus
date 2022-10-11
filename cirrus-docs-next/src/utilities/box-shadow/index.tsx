@@ -188,7 +188,7 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Border Radius', link: './border-radius' }}
+                    prevLink={{ name: 'Border Width', link: './border-width' }}
                     nextLink={{ name: 'Clearfix', link: './clearfix' }}
                 />
             </div>
