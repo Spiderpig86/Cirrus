@@ -22,3 +22,14 @@ $generate-utility: should-generate-classes($BORDER-OPACITY);
     );
 }
 
+$generate-utility: should-generate-classes($ROUND);
+@if $generate-utility {
+    @each $class, $value in $round {
+        .u-round-#{$class} {
+            border-radius: #{$value};
+        }
+    }
+}
+
+// TODO: Do we need corner specific variants?
+
