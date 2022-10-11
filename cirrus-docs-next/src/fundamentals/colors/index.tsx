@@ -12,7 +12,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { toc } from './toc';
 import { v1, v2Colors, v2, DEFAULT_SEMANTIC_COLORS, DEFAULT_LEVELS } from './color-config';
-import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { DEFAULT_PERCENTAGES, PAGE_TITLE_PREFIX } from '../../../constants';
 import { Capitalize } from '../../../utils/string';
 import { Blockquote } from '../../../layouts/components/blockquote';
 
@@ -21,6 +21,7 @@ export const ColorsPage: React.FC<any> = (props) => {
         return {
             bgClass: `bg-${color}`,
             textClass: `text-${color}`,
+            borderClass: `border-${color}`,
         };
     });
 
@@ -30,6 +31,7 @@ export const ColorsPage: React.FC<any> = (props) => {
             return {
                 bgClass: `bg-${color}-${level}`,
                 textClass: `text-${color}-${level}`,
+                borderClass: `border-${color}-${level}`,
             };
         });
     });
@@ -115,28 +117,22 @@ export const ColorsPage: React.FC<any> = (props) => {
                         <table className="class-table table fixed-head u-text-left">
                             <thead>
                                 <tr>
-                                    <th
-                                        style={{
-                                            width: '200px',
-                                        }}
-                                    >
-                                        Background
-                                    </th>
-                                    <th>Text</th>
+                                    <th className="w-20">Background</th>
+                                    <th className="w-20">Text</th>
+                                    <th className="w-20">Border</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {v1ClassTable.map((row, index) => (
                                     <tr key={index}>
-                                        <td
-                                            style={{
-                                                width: '200px',
-                                            }}
-                                        >
+                                        <td className="w-20">
                                             <code className="text-teal-600 bg-teal-100">{row.bgClass}</code>
                                         </td>
-                                        <td>
+                                        <td className="w-20">
                                             <code className="text-indigo-600 bg-indigo-100">{row.textClass}</code>
+                                        </td>
+                                        <td className="w-20">
+                                            <code className="text-pink-600 bg-pink-100">{row.borderClass}</code>
                                         </td>
                                     </tr>
                                 ))}
@@ -165,28 +161,22 @@ export const ColorsPage: React.FC<any> = (props) => {
                         <table className="class-table table fixed-head u-text-left">
                             <thead>
                                 <tr>
-                                    <th
-                                        style={{
-                                            width: '200px',
-                                        }}
-                                    >
-                                        Background
-                                    </th>
-                                    <th>Text</th>
+                                    <th className="w-20">Background</th>
+                                    <th className="w-20">Text</th>
+                                    <th className="w-20">Border</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {v2ClassTable.map((row, index) => (
                                     <tr key={index}>
-                                        <td
-                                            style={{
-                                                width: '200px',
-                                            }}
-                                        >
+                                        <td className="w-20">
                                             <code className="text-teal-600 bg-teal-100">{row.bgClass}</code>
                                         </td>
-                                        <td>
+                                        <td className="w-20">
                                             <code className="text-indigo-600 bg-indigo-100">{row.textClass}</code>
+                                        </td>
+                                        <td className="w-20">
+                                            <code className="text-pink-600 bg-pink-100">{row.borderClass}</code>
                                         </td>
                                     </tr>
                                 ))}
@@ -210,80 +200,14 @@ export const ColorsPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Changing Opacity" link="#changing-opacity" size="4" />
                         <div className="divider"></div>
-                        <Tag
-                            leftProps={{
-                                classes: `tag--dark`,
-                                text: `New`,
-                            }}
-                            rightProps={{
-                                classes: `tag--info`,
-                                text: `0.7.0`,
-                            }}
-                        />
 
-                        <p>With the new color opacity modifiers, you can now modify color opacity for background colors and text colors.</p>
-
-                        <div className="space"></div>
-
-                        <h6>Changing Background Opacity</h6>
-                        <p>Use the background opacity utility classes to control an element's background color opacity. You can use any opacity value that is defined in the <Link href="/utils/opacity"><a className="u u-LR">opacity scale</a></Link>.</p>
-
-                        <div className="py-2 u-round-xs bg-gray-000 u-shadow-md u-flex u-items-center u-justify-space-around u-flex-wrap u-flex-nowrap-md">
-                            <button className="btn-warning mb-0 u-bg-opacity-100">100%</button>
-                            <button className="btn-warning mb-0 u-bg-opacity-90">90%</button>
-                            <button className="btn-warning mb-0 u-bg-opacity-80">80%</button>
-                            <button className="btn-warning mb-0 u-bg-opacity-70">70%</button>
-                            <button className="btn-warning mb-0 u-bg-opacity-60">60%</button>
-                            <button className="btn-warning mb-0 u-bg-opacity-50">50%</button>
-                            <button className="btn-warning mb-0 u-bg-opacity-40">40%</button>
-                            <button className="btn-warning mb-0 u-bg-opacity-30">30%</button>
-                            <button className="btn-warning mb-0 u-bg-opacity-20">20%</button>
-                            <button className="btn-warning mb-0 u-bg-opacity-10">10%</button>
-                            <button className="btn-warning mb-0 u-bg-opacity-0">0%</button>
-                        </div>
-                        <div className="space"></div>
-                        <CodeBlock code={`<button class="u-bg-opacity-100 ...">100%</button>
-<button class="u-bg-opacity-90 ...">90%</button>
-<button class="u-bg-opacity-80 ...">80%</button>
-<button class="u-bg-opacity-70 ...">70%</button>
-<button class="u-bg-opacity-60 ...">60%</button>
-<button class="u-bg-opacity-50 ...">50%</button>
-<button class="u-bg-opacity-40 ...">40%</button>
-<button class="u-bg-opacity-30 ...">30%</button>
-<button class="u-bg-opacity-20 ...">20%</button>
-<button class="u-bg-opacity-10 ...">10%</button>
-<button class="u-bg-opacity-0 ...">0%</button>`} language='htmlbars' />
-
-                        <div className="space space--lg"></div>
-
-                        <h6>Changing Color Opacity</h6>
-                        <p>Use the color opacity utility classes to control an element's color opacity (text, border, etc.). You can use any opacity value that is defined in the <Link href="/utils/opacity"><a className="u u-LR">opacity scale</a></Link>.</p>
-                        
-                        <p className="text-teal-600 text-xl u-color-opacity-100">The quick brown fox jumps over the lazy dog.</p>
-                        <p className="text-teal-600 text-xl u-color-opacity-90">The quick brown fox jumps over the lazy dog.</p>
-                        <p className="text-teal-600 text-xl u-color-opacity-80">The quick brown fox jumps over the lazy dog.</p>
-                        <p className="text-teal-600 text-xl u-color-opacity-70">The quick brown fox jumps over the lazy dog.</p>
-                        <p className="text-teal-600 text-xl u-color-opacity-60">The quick brown fox jumps over the lazy dog.</p>
-                        <p className="text-teal-600 text-xl u-color-opacity-50">The quick brown fox jumps over the lazy dog.</p>
-                        <p className="text-teal-600 text-xl u-color-opacity-40">The quick brown fox jumps over the lazy dog.</p>
-                        <p className="text-teal-600 text-xl u-color-opacity-30">The quick brown fox jumps over the lazy dog.</p>
-                        <p className="text-teal-600 text-xl u-color-opacity-20">The quick brown fox jumps over the lazy dog.</p>
-                        <p className="text-teal-600 text-xl u-color-opacity-10">The quick brown fox jumps over the lazy dog.</p>
-                        <p className="text-teal-600 text-xl u-color-opacity-0">The quick brown fox jumps over the lazy dog.</p>
-
-                        <div className="space"></div>
-                        <CodeBlock code={`<p class="u-color-opacity-100 ...">The quick brown fox jumps over the lazy dog.</p>
-<p class="u-color-opacity-90 ...">The quick brown fox jumps over the lazy dog.</p>
-<p class="u-color-opacity-80 ...">The quick brown fox jumps over the lazy dog.</p>
-<p class="u-color-opacity-70 ...">The quick brown fox jumps over the lazy dog.</p>
-<p class="u-color-opacity-60 ...">The quick brown fox jumps over the lazy dog.</p>
-<p class="u-color-opacity-50 ...">The quick brown fox jumps over the lazy dog.</p>
-<p class="u-color-opacity-40 ...">The quick brown fox jumps over the lazy dog.</p>
-<p class="u-color-opacity-30 ...">The quick brown fox jumps over the lazy dog.</p>
-<p class="u-color-opacity-20 ...">The quick brown fox jumps over the lazy dog.</p>
-<p class="u-color-opacity-10 ...">The quick brown fox jumps over the lazy dog.</p>
-<p class="u-color-opacity-0 ...">The quick brown fox jumps over the lazy dog.</p>`} language='htmlbars' />
-
+                        <p>
+                            Docs have been moved to the
+                            <Link href="/utils/opacity#property-specific">
+                                <a className="u u-LR">Opacity</a>
+                            </Link>{' '}
+                            page.
+                        </p>
                     </div>
                 </section>
 
@@ -342,8 +266,12 @@ export const ColorsPage: React.FC<any> = (props) => {
                         />
                         <div className="space space--lg"></div>
 
-                        <p>The <code>extend</code> map can also be used for <b>overriding existing values</b>. For example, the following config will override <code>bg-blue-500</code> and <code>text-blue-500</code> to use <kbd>#fff</kbd>.</p>
-                        
+                        <p>
+                            The <code>extend</code> map can also be used for <b>overriding existing values</b>. For
+                            example, the following config will override <code>bg-blue-500</code> and{' '}
+                            <code>text-blue-500</code> to use <kbd>#fff</kbd>.
+                        </p>
+
                         <CodeBlock
                             code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
@@ -358,7 +286,7 @@ export const ColorsPage: React.FC<any> = (props) => {
 );`}
                             language="scss"
                         />
-                        
+
                         <CodeBlock
                             code={`.bg-blue-500 { background-color: #fff !important; }
 .text-blue-500 { color: #fff !important; }`}
@@ -382,7 +310,11 @@ export const ColorsPage: React.FC<any> = (props) => {
                             }}
                         />
 
-                        <p>If you would like to remove a default color, you can simply set any of the color maps of the extended palette to <code>null</code>. Cirrus will not generate any of these colors in the final build.</p>
+                        <p>
+                            If you would like to remove a default color, you can simply set any of the color maps of the
+                            extended palette to <code>null</code>. Cirrus will not generate any of these colors in the
+                            final build.
+                        </p>
                         <CodeBlock
                             code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
@@ -404,21 +336,25 @@ export const ColorsPage: React.FC<any> = (props) => {
                             language="scss"
                         />
 
-                    <Blockquote accentColor="#fcd9bd">
-                        <h6>⚠ Warning</h6>
-                        <p>Note that disabling certain colors can lead to build errors! These colors are relied on by other parts of the framework.</p>
-                        <div className="space"></div>
-                        <CodeBlock
-                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
+                        <Blockquote accentColor="#fcd9bd">
+                            <h6>⚠ Warning</h6>
+                            <p>
+                                Note that disabling certain colors can lead to build errors! These colors are relied on
+                                by other parts of the framework.
+                            </p>
+                            <div className="space"></div>
+                            <CodeBlock
+                                code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         colors: (
             'gray': null,
         )
     ),
 );`}
-                            language="scss"
-                        />
-                        <CodeBlock code={`Error in plugin "sass"
+                                language="scss"
+                            />
+                            <CodeBlock
+                                code={`Error in plugin "sass"
 Message:
     src\\base\\layout.scss
 Error: $color: "ERROR [fill()]: [fill] Unknown color key \`gray 500\`." is not a color.       
@@ -429,10 +365,14 @@ Error: $color: "ERROR [fill()]: [fill] Unknown color key \`gray 500\`." is not a
   src\base\layout.scss 39:31  @use
   src\core.scss 11:1          @use
   src\ext.scss 4:1            @use
-  src\main.scss 30:1          root stylesheet`} language='sh' />
-                        <p>Be sure to supply your own replacement color under the <code>extend</code> section.</p>
-                        <CodeBlock
-                            code={`@use "cirrus-ui/src/cirrus-ext" as * with (
+  src\main.scss 30:1          root stylesheet`}
+                                language="sh"
+                            />
+                            <p>
+                                Be sure to supply your own replacement color under the <code>extend</code> section.
+                            </p>
+                            <CodeBlock
+                                code={`@use "cirrus-ui/src/cirrus-ext" as * with (
     $config: (
         colors: (
             'gray': null,
@@ -447,9 +387,9 @@ Error: $color: "ERROR [fill()]: [fill] Unknown color key \`gray 500\`." is not a
         )
     ),
 );`}
-                            language="scss"
-                        />
-                    </Blockquote>
+                                language="scss"
+                            />
+                        </Blockquote>
                     </div>
                 </section>
 

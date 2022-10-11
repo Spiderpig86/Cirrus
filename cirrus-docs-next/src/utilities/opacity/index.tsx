@@ -10,16 +10,22 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { Tag } from '../../../layouts/components/tag';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
-import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { DEFAULT_PERCENTAGES, PAGE_TITLE_PREFIX } from '../../../constants';
 import { ClassTable } from '../../../layouts/components/class-table';
 
 export const OpacityUtilsPage: React.FC<any> = (props) => {
-    const DEFAULT_OPACITY_CLASSES = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
-
-    const classTable = DEFAULT_OPACITY_CLASSES.map((opacity) => {
+    const classTable = DEFAULT_PERCENTAGES.map((opacity) => {
         return {
             class: `u-opacity-${opacity}`,
             style: `opacity: ${opacity / 100} !important`,
+        };
+    });
+
+    const opacityClassTable = DEFAULT_PERCENTAGES.flatMap((percent) => {
+        return {
+            bgClass: `u-bg-opacity-${percent}`,
+            textClass: `u-color-opacity-${percent}`,
+            borderClass: `u-border-opacity-${percent}`,
         };
     });
 
@@ -57,7 +63,7 @@ export const OpacityUtilsPage: React.FC<any> = (props) => {
                         <p>Below is a demo of all supported opacity utility classes.</p>
 
                         <div className="py-2 u-center">
-                            {DEFAULT_OPACITY_CLASSES.map((opacity) => (
+                            {DEFAULT_PERCENTAGES.map((opacity) => (
                                 <button className={`btn-info mx-1 u-opacity-${opacity}`}>{`${opacity}%`}</button>
                             ))}
                         </div>
@@ -81,6 +87,215 @@ export const OpacityUtilsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
+                <section className="padtop" id="property-specific">
+                    <div className="content">
+                        <Headline title="Property Specific" link="#property-specific" size="4" />
+                        <div className="divider"></div>
+                        <Tag
+                            leftProps={{
+                                classes: `tag--dark`,
+                                text: `New`,
+                            }}
+                            rightProps={{
+                                classes: `tag--info`,
+                                text: `0.7.0`,
+                            }}
+                        />
+
+                        <p>
+                            With the new color opacity modifiers, you can now modify the opacity for background, border,
+                            and text colors instead of the whole element.
+                        </p>
+
+                        <table className="class-table table fixed-head u-text-left">
+                            <thead>
+                                <tr>
+                                    <th className="w-20">Background</th>
+                                    <th className="w-20">Text</th>
+                                    <th className="w-20">Border</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {opacityClassTable.map((row, index) => (
+                                    <tr key={index}>
+                                        <td className="w-20">
+                                            <code className="text-teal-600 bg-teal-100">{row.bgClass}</code>
+                                        </td>
+                                        <td className="w-20">
+                                            <code className="text-indigo-600 bg-indigo-100">{row.textClass}</code>
+                                        </td>
+                                        <td className="w-20">
+                                            <code className="text-pink-600 bg-pink-100">{row.borderClass}</code>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+
+                        <div className="space"></div>
+
+                        <h6>Changing Background Opacity</h6>
+                        <p>
+                            Use the background opacity utility classes to control an element's background color opacity.
+                            You can use any opacity value that is defined in the{' '}
+                            <Link href="/utils/opacity">
+                                <a className="u u-LR">opacity scale</a>
+                            </Link>
+                            .
+                        </p>
+
+                        <div className="py-2 u-round-xs bg-gray-000 u-shadow-md u-flex u-items-center u-justify-space-around u-flex-wrap u-flex-nowrap-md">
+                            <button className="btn-warning mb-0 u-bg-opacity-100">100%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-90">90%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-80">80%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-70">70%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-60">60%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-50">50%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-40">40%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-30">30%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-20">20%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-10">10%</button>
+                            <button className="btn-warning mb-0 u-bg-opacity-0">0%</button>
+                        </div>
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<button class="u-bg-opacity-100 ...">100%</button>
+<button class="u-bg-opacity-90 ...">90%</button>
+<button class="u-bg-opacity-80 ...">80%</button>
+<button class="u-bg-opacity-70 ...">70%</button>
+<button class="u-bg-opacity-60 ...">60%</button>
+<button class="u-bg-opacity-50 ...">50%</button>
+<button class="u-bg-opacity-40 ...">40%</button>
+<button class="u-bg-opacity-30 ...">30%</button>
+<button class="u-bg-opacity-20 ...">20%</button>
+<button class="u-bg-opacity-10 ...">10%</button>
+<button class="u-bg-opacity-0 ...">0%</button>`}
+                            language="htmlbars"
+                        />
+
+                        <div className="space space--lg"></div>
+
+                        <h6>Changing Color Opacity</h6>
+                        <p>
+                            Use the color opacity utility classes to control an element's text color opacity. You can
+                            use any opacity value that is defined in the{' '}
+                            <Link href="/utils/opacity">
+                                <a className="u u-LR">opacity scale</a>
+                            </Link>
+                            .
+                        </p>
+
+                        <p className="text-teal-600 text-xl u-color-opacity-100">
+                            The quick brown fox jumps over the lazy dog.
+                        </p>
+                        <p className="text-teal-600 text-xl u-color-opacity-90">
+                            The quick brown fox jumps over the lazy dog.
+                        </p>
+                        <p className="text-teal-600 text-xl u-color-opacity-80">
+                            The quick brown fox jumps over the lazy dog.
+                        </p>
+                        <p className="text-teal-600 text-xl u-color-opacity-70">
+                            The quick brown fox jumps over the lazy dog.
+                        </p>
+                        <p className="text-teal-600 text-xl u-color-opacity-60">
+                            The quick brown fox jumps over the lazy dog.
+                        </p>
+                        <p className="text-teal-600 text-xl u-color-opacity-50">
+                            The quick brown fox jumps over the lazy dog.
+                        </p>
+                        <p className="text-teal-600 text-xl u-color-opacity-40">
+                            The quick brown fox jumps over the lazy dog.
+                        </p>
+                        <p className="text-teal-600 text-xl u-color-opacity-30">
+                            The quick brown fox jumps over the lazy dog.
+                        </p>
+                        <p className="text-teal-600 text-xl u-color-opacity-20">
+                            The quick brown fox jumps over the lazy dog.
+                        </p>
+                        <p className="text-teal-600 text-xl u-color-opacity-10">
+                            The quick brown fox jumps over the lazy dog.
+                        </p>
+                        <p className="text-teal-600 text-xl u-color-opacity-0">
+                            The quick brown fox jumps over the lazy dog.
+                        </p>
+
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<p class="u-color-opacity-100 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-90 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-80 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-70 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-60 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-50 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-40 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-30 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-20 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-10 ...">The quick brown fox jumps over the lazy dog.</p>
+<p class="u-color-opacity-0 ...">The quick brown fox jumps over the lazy dog.</p>`}
+                            language="htmlbars"
+                        />
+
+                        <div className="space space--lg"></div>
+
+                        <h6>Changing Border Opacity</h6>
+                        <Tag
+                            leftProps={{
+                                classes: `tag--dark`,
+                                text: `New`,
+                            }}
+                            rightProps={{
+                                classes: `tag--info`,
+                                text: `0.7.1`,
+                            }}
+                        />
+                        <p>
+                            Use the border opacity utility classes to control an element's border color opacity. You can
+                            use any opacity value that is defined in the{' '}
+                            <Link href="/utils/opacity">
+                                <a className="u u-LR">opacity scale</a>
+                            </Link>
+                            .
+                        </p>
+                        <div className="bg-indigo-100 p-2 u-round-sm u-flex u-flex-column u-flex-row-md u-items-center u-gap-1">
+                            <div className="w-8 h-8 u-center u-round-sm bg-transparent text-indigo-600 font-bold border-indigo-600 u-border-4 u-border-opacity-20">
+                                <div>20</div>
+                            </div>
+                            <div className="w-8 h-8 u-center u-round-sm bg-transparent text-indigo-600 font-bold border-indigo-600 u-border-4 u-border-opacity-40">
+                                <div>40</div>
+                            </div>
+                            <div className="w-8 h-8 u-center u-round-sm bg-transparent text-indigo-600 font-bold border-indigo-600 u-border-4 u-border-opacity-60">
+                                <div>60</div>
+                            </div>
+                            <div className="w-8 h-8 u-center u-round-sm bg-transparent text-indigo-600 font-bold border-indigo-600 u-border-4 u-border-opacity-80">
+                                <div>80</div>
+                            </div>
+                            <div className="w-8 h-8 u-center u-round-sm bg-transparent text-indigo-600 font-bold border-indigo-600 u-border-4 u-border-opacity-100">
+                                <div>100</div>
+                            </div>
+                        </div>
+
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<div class="u-border-20 ...">
+    <div>1</div>
+</div>
+<div class="u-border-40 ...">
+    <div>40</div>
+</div>
+<div class="u-border-60 ...">
+    <div>60</div>
+</div>
+<div class="u-border-80 ...">
+    <div>80</div>
+</div>
+<div class="u-border-100 ...">
+    <div>100</div>
+</div>`}
+                            language="htmlbars"
+                        />
+                    </div>
+                </section>
+
                 <section className="padtop" id="responsive">
                     <div className="content">
                         <Headline title="Responsive" link="#responsive" size="4" />
@@ -94,6 +309,15 @@ export const OpacityUtilsPage: React.FC<any> = (props) => {
 
                         <CodeBlock
                             code={`<div class="u-opacity-50-md">
+    <!-- ... -->
+</div>
+<div class="u-bg-opacity-50-md">
+    <!-- ... -->
+</div>
+<div class="u-color-opacity-50-md">
+    <!-- ... -->
+</div>
+<div class="u-border-opacity-50-md">
     <!-- ... -->
 </div>`}
                             language="html"
