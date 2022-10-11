@@ -130,6 +130,7 @@
 *::after {
   /* Prevent setting borders from increasing the size of an element */
   box-sizing: border-box;
+  border: 0 solid currentColor;
   text-rendering: optimizeLegibility;
   -webkit-tap-highlight-color: transparent;
 }

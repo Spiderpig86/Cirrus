@@ -44,6 +44,8 @@ $generate-reset: should-generate-classes($RESET);
     *::after {
         /* Prevent setting borders from increasing the size of an element */
         box-sizing: border-box;
+        // Set defaults for border so they would show up when utils are used
+        border: 0 solid currentColor;
         text-rendering: optimizeLegibility;
         -webkit-tap-highlight-color: transparent;
     }
