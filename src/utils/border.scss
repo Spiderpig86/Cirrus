@@ -1,0 +1,24 @@
+@use '../internal' as *;
+
+// Border Widths
+@if should-generate-classes($BORDER-WIDTH) {
+    @include generate-classes-for-viewport-with-map(
+        $border-widths,
+        'border-width',
+        'u-border-',
+        $generate-viewports: #{get-viewport-flag($BORDER-WIDTH)},
+        $include-important: false
+    );
+}
+
+$generate-utility: should-generate-classes($BORDER-OPACITY);
+@if $generate-utility {
+    @include generate-classes-for-viewport-with-map(
+        $opacities,
+        '--border-opacity',
+        'u-border-opacity-',
+        $generate-viewports: #{get-viewport-flag($BORDER-OPACITY)},
+        $include-important: false
+    );
+}
+

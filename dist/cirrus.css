@@ -6148,26 +6148,6 @@ video.video-fullscreen {
   border-color: rgba(33, 37, 41, var(--border-opacity)) !important;
 }
 
-.border-0 {
-  border-width: 0px;
-}
-
-.border-1 {
-  border-width: 1px;
-}
-
-.border-2 {
-  border-width: 2px;
-}
-
-.border-4 {
-  border-width: 4px;
-}
-
-.border-8 {
-  border-width: 8px;
-}
-
 /* Margin */
 .m-0 {
   margin: 0rem !important;
@@ -12801,6 +12781,70 @@ ul .divider::after {
 .u-blur-xl {
   --cirrus-blur: blur(3rem);
   filter: var(--cirrus-blur);
+}
+
+.u-border-0 {
+  border-width: 0px;
+}
+
+.u-border-1 {
+  border-width: 1px;
+}
+
+.u-border-2 {
+  border-width: 2px;
+}
+
+.u-border-4 {
+  border-width: 4px;
+}
+
+.u-border-8 {
+  border-width: 8px;
+}
+
+.u-border-opacity-0 {
+  --border-opacity: 0;
+}
+
+.u-border-opacity-10 {
+  --border-opacity: 0.1;
+}
+
+.u-border-opacity-20 {
+  --border-opacity: 0.2;
+}
+
+.u-border-opacity-30 {
+  --border-opacity: 0.3;
+}
+
+.u-border-opacity-40 {
+  --border-opacity: 0.4;
+}
+
+.u-border-opacity-50 {
+  --border-opacity: 0.5;
+}
+
+.u-border-opacity-60 {
+  --border-opacity: 0.6;
+}
+
+.u-border-opacity-70 {
+  --border-opacity: 0.7;
+}
+
+.u-border-opacity-80 {
+  --border-opacity: 0.8;
+}
+
+.u-border-opacity-90 {
+  --border-opacity: 0.9;
+}
+
+.u-border-opacity-100 {
+  --border-opacity: 1;
 }
 
 .u-clear-left {
