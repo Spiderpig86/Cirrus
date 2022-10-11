@@ -75,6 +75,8 @@
 
             .text-#{$name}-#{$level} {
                 color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+                // Not important, use this as a fallback in case no border is set
+                border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
             }
 
             .border-#{$name}-#{$level} {
