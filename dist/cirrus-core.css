@@ -6145,6 +6145,26 @@ video.video-fullscreen {
   border-color: rgba(33, 37, 41, var(--border-opacity)) !important;
 }
 
+.border-0 {
+  border-width: 0px;
+}
+
+.border-1 {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-8 {
+  border-width: 8px;
+}
+
 /* Margin */
 .m-0 {
   margin: 0rem !important;
@@ -12778,27 +12798,6 @@ ul .divider::after {
 .u-blur-xl {
   --cirrus-blur: blur(3rem);
   filter: var(--cirrus-blur);
-}
-
-/* Documented as part of Colors, not as util */
-.u-border-0 {
-  border-width: 0px;
-}
-
-.u-border-1 {
-  border-width: 1px;
-}
-
-.u-border-2 {
-  border-width: 2px;
-}
-
-.u-border-4 {
-  border-width: 4px;
-}
-
-.u-border-8 {
-  border-width: 8px;
 }
 
 .u-clear-left {

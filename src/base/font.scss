@@ -202,9 +202,7 @@ kbd {
 }
 
 /* Letter spacing */
-$generate-utility: should-generate-classes($LETTER-SPACING);
-
-@if $generate-utility {
+@if should-generate-classes($LETTER-SPACING) {
     @include generate-classes-for-viewport-with-map(
         $font-letter-spacing,
         'letter-spacing',
@@ -214,9 +212,7 @@ $generate-utility: should-generate-classes($LETTER-SPACING);
 }
 
 /* Line height */
-$generate-utility: should-generate-classes($LINE-HEIGHT);
-
-@if $generate-utility {
+@if should-generate-classes($LINE-HEIGHT) {
     @include generate-classes-for-viewport-with-map(
         $font-line-heights,
         'line-height',
