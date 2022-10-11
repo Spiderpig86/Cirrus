@@ -12780,6 +12780,27 @@ ul .divider::after {
   filter: var(--cirrus-blur);
 }
 
+/* Documented as part of Colors, not as util */
+.u-border-0 {
+  border-width: 0px;
+}
+
+.u-border-1 {
+  border-width: 1px;
+}
+
+.u-border-2 {
+  border-width: 2px;
+}
+
+.u-border-4 {
+  border-width: 4px;
+}
+
+.u-border-8 {
+  border-width: 8px;
+}
+
 .u-clear-left {
   clear: left !important;
 }

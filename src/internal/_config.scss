@@ -59,6 +59,7 @@ $default-config: (
             flags.$BLUR: false,
             flags.$TRANSITION-DURATION: false,
             flags.$LINE-HEIGHT: false,
+            flags.$BORDER-WIDTH: false,
         ),
     // Extend all existing styles here
     extend:
@@ -609,7 +610,7 @@ $default-config: (
                 constants.$xl: constants.$font-size-xl,
             ),
         ),
-    // UTILITIES //
+    // UTILITIES / Non-components //
     absolute: functions.map-multi-merge(
     (
         auto: auto,
@@ -617,6 +618,15 @@ $default-config: (
     ),
         (functions.get-negative-value-map(defaults.$default-quartile-percentages)),
         (functions.get-negative-value-map(functions.map-range(defaults.$default-sizing-system, 0, defaults.$default-absolutes-max)))
+    ),
+    border: (
+        width: (
+            0: 0px,
+            1: 1px,
+            2: 2px,
+            4: 4px,
+            8: 8px,
+        )
     ),
     blurs: (
         'none': (
@@ -806,6 +816,7 @@ $tag-font-sizes: functions.get-with-extend($all-config, tags, font-sizes);
 // UTILS
 $absolute: functions.get-with-extend($all-config, absolute);
 $blurs: functions.get-with-extend($all-config, blurs);
+$border-widths: functions.get-with-extend($all-config, border, width);
 
 $heights: functions.get-with-extend($all-config, heights);
 $widths: functions.get-with-extend($all-config, widths);
