@@ -9,7 +9,6 @@ $generate-classes: should-generate-classes($TRANSITION-DURATION);
         $transition-durations,
         'transition-duration',
         'u-duration-',
-        $generate-viewports: #{get-viewport-flag($TRANSITION-DURATION)},
-        $include-important: false
+        $generate-viewports: #{get-viewport-flag($TRANSITION-DURATION)}
     );
 }
