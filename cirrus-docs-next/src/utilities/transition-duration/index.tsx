@@ -15,30 +15,32 @@ import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { Blockquote } from '../../../layouts/components/blockquote';
 
 export const BorderWidthUtilsPage: React.FC<any> = (props) => {
-    const DEFAULT_BORDER_WIDTH_CLASSES = {
-        0: '0px',
-        1: '1px',
-        2: '2px',
-        4: '4px',
-        8: '8px',
+    const DEFAULT_TRANSITION_DURATION_CLASSES = {
+        75: '75ms',
+        100: '100ms',
+        200: '200ms',
+        300: '300ms',
+        500: '500ms',
+        700: '700ms',
+        1000: '1000ms',
     };
 
-    const classTable = Object.entries(DEFAULT_BORDER_WIDTH_CLASSES).map((entry) => {
+    const classTable = Object.entries(DEFAULT_TRANSITION_DURATION_CLASSES).map((entry) => {
         return {
-            class: `u-border-${entry[0]}`,
-            style: `border-width: ${entry[1]} !important`,
+            class: `u-duration-${entry[0]}`,
+            style: `transition-duration: ${entry[1]} !important`,
         };
     });
 
     return (
         <main className="page-layout">
             <Head>
-                <title>{PAGE_TITLE_PREFIX} Border Width</title>
+                <title>{PAGE_TITLE_PREFIX} Transition Duration</title>
             </Head>
             <div>
-                <section className="padtop" id="border-width">
+                <section className="padtop" id="transition-duration">
                     <div className="content">
-                        <Headline title="Border Width" link="#border-width" />
+                        <Headline title="Transition Duration" link="#transition-duration" />
                         <div className="divider"></div>
                         <Tag
                             leftProps={{
@@ -50,7 +52,7 @@ export const BorderWidthUtilsPage: React.FC<any> = (props) => {
                                 text: `0.7.1`,
                             }}
                         />
-                        <p>These are utility classes that specify the border width of elements.</p>
+                        <p>These are utility classes that specify the duration of transitions.</p>
 
                         <ClassTable classTable={classTable} />
                     </div>
@@ -62,19 +64,22 @@ export const BorderWidthUtilsPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
 
                         <p>
-                            Below is a demo of all utility classes that set a border width. The syntax follows the form
-                            of <code>u-border-[{Object.keys(DEFAULT_BORDER_WIDTH_CLASSES).join('|')}]</code>.
+                            Below is a demo of all utility classes that set a transition duration. The syntax follows
+                            the form of{' '}
+                            <code>u-duration-[{Object.keys(DEFAULT_TRANSITION_DURATION_CLASSES).join('|')}]</code>.
                         </p>
                         <div className="space"></div>
 
-                        <div className="bg-indigo-100 p-2 p-4-md u-round-sm u-flex u-flex-column u-flex-row-md u-items-center u-justify-space-around u-gap-1">
-                            {Object.entries(DEFAULT_BORDER_WIDTH_CLASSES).map((entry) => {
+                        <b>Hover over each button to see the difference in transition durations.</b>
+
+                        <div className="bg-blue-100 p-2 p-4-md u-round-sm row">
+                            {Object.entries(DEFAULT_TRANSITION_DURATION_CLASSES).map((entry, i) => {
                                 return (
-                                    <div>
-                                        <div
-                                            className={`"w-8 h-8 u-center u-round-sm bg-transparent font-bold border-indigo-600 u-shadow-sm u-border-${entry[0]}`}
-                                        ></div>
-                                        <b>u-border-{entry[0]}</b>
+                                    <div className="col-4 u-flex u-flex-column u-text-center mb-2" key={i}>
+                                        <button className={`btn-info hover-grow u-duration-${entry[0]}`}>
+                                            {entry[0]}
+                                        </button>
+                                        <b>u-duration-{entry[0]}</b>
                                     </div>
                                 );
                             })}
@@ -82,11 +87,13 @@ export const BorderWidthUtilsPage: React.FC<any> = (props) => {
 
                         <div className="space space--lg"></div>
                         <CodeBlock
-                            code={`<div class="u-border-0 ..."></div>
-<div class="u-border-1 ..."></div>
-<div class="u-border-2 ..."></div>
-<div class="u-border-4 ..."></div>
-<div class="u-border-8 ..."></div>`}
+                            code={`<div class="u-duration-75..."></div>
+<div class="u-duration-100 ..."></div>
+<div class="u-duration-200 ..."></div>
+<div class="u-duration-300 ..."></div>
+<div class="u-duration-500 ..."></div>
+<div class="u-duration-700 ..."></div>
+<div class="u-duration-1000 ..."></div>`}
                             language="htmlbars"
                         />
                     </div>
@@ -110,7 +117,7 @@ export const BorderWidthUtilsPage: React.FC<any> = (props) => {
                                 code={`//_configs.scss
 $config: (
     viewports: (
-        flags.$BORDER-WIDTH: true,
+        flags.$TRANSITION-DURATION: true,
     )
 ) !default;`}
                                 language="scss"
@@ -119,13 +126,13 @@ $config: (
 
                         <p>
                             To use the viewport variant of a given class, you just need to suffix each class with a
-                            viewport selector. For example, if I only want <code>u-border-2</code> to be applied
-                            to some element for <code>lg</code> and above, then I would use the{' '}
-                            <code>u-border-2-lg</code> class.
+                            viewport selector. For example, if I only want <code>u-duration-100</code> to be applied to some
+                            element for <code>lg</code> and above, then I would use the <code>u-duration-100-lg</code>{' '}
+                            class.
                         </p>
 
                         <CodeBlock
-                            code={`<div class="u-border-2-lg">
+                            code={`<div class="u-duration-100-lg">
     <!-- ... -->
 </div>`}
                             language="html"
@@ -147,8 +154,7 @@ $config: (
                         <div className="divider"></div>
 
                         <p>
-                            The classes specified above are the default utility classes for setting the border-width
-                            property. You can add, change, or remove classes within the <code>_config.scss</code> file
+                            The classes specified above are the default utility classes for setting the transition-duration. You can add, change, or remove classes within the <code>_config.scss</code> file
                             of Cirrus.
                         </p>
 
@@ -158,10 +164,9 @@ $config: (
                             code={`// _config.scss
 $config: (
     extend: (
-        border: (
-            width: (
-                '12': 12px,
-                '16': 16px
+        transitions: (
+            durations: (
+                1500: 1500ms,
             )
         )
     )
@@ -170,11 +175,8 @@ $config: (
                         />
                         <p>This would generate the following classes.</p>
                         <CodeBlock
-                            code={`.u-border-12 {
-    border-width: 12px !important;
-}
-.u-border-16 {
-    border-width: 16px !important;
+                            code={`.u-duration-1500 {
+    transition-duration: 1500ms !important;
 }`}
                             language="css"
                         />
@@ -189,8 +191,8 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Border Radius', link: './border-radius' }}
-                    nextLink={{ name: 'Box Shadow', link: './box-shadow' }}
+                    prevLink={{ name: 'Positions', link: './positions' }}
+                    nextLink={{ name: 'Z-Index', link: './zindex' }}
                 />
             </div>
 

@@ -276,19 +276,19 @@ export const OpacityUtilsPage: React.FC<any> = (props) => {
 
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="u-border-20 ...">
+                            code={`<div class="u-border-opacity-20 ...">
     <div>1</div>
 </div>
-<div class="u-border-40 ...">
+<div class="u-border-opacity-40 ...">
     <div>40</div>
 </div>
-<div class="u-border-60 ...">
+<div class="u-border-opacity-60 ...">
     <div>60</div>
 </div>
-<div class="u-border-80 ...">
+<div class="u-border-opacity-80 ...">
     <div>80</div>
 </div>
-<div class="u-border-100 ...">
+<div class="u-border-opacity-100 ...">
     <div>100</div>
 </div>`}
                             language="htmlbars"

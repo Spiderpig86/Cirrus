@@ -143,7 +143,7 @@ export const sidebarConfig: SidebarConfig[] = [
                 fontWeight: 'semibold',
                 glyph: null,
                 text: 'Animated Styles',
-                url: '/animations'
+                url: '/animations/animated-styles'
             },
         ],
     },
@@ -569,6 +569,12 @@ export const sidebarConfig: SidebarConfig[] = [
                 glyph: null,
                 text: 'Positions',
                 url: '/utils/positions'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Transition Duration',
+                url: '/utils/transition-duration'
             },
             {
                 fontWeight: 'semibold',

@@ -233,7 +233,7 @@ $config: (
                 </section>
                 
                 <Pagination
-                    prevLink={{ name: 'Positions', link: './positions' }}
+                    prevLink={{ name: 'Transition Duration', link: './transition-duration' }}
                 />
             </div>
 

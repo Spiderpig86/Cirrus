@@ -71,9 +71,9 @@ export const BorderRadiusUtilsPage: React.FC<any> = (props) => {
                         <div className="row u-round-xs bg-purple-100 p-3 pt-6">
                             {Object.entries(DEFAULT_ROUND_CLASSES)
                                 .filter((entry) => entry[0] !== 'none')
-                                .map((entry) => {
+                                .map((entry, i) => {
                                     return (
-                                        <div className="col-4 u-text-center">
+                                        <div className="col-4 u-text-center" key={i}>
                                             <div className={`p-4 bg-purple-500 u-shadow-lg u-round-${entry[0]}`}></div>
                                             <p>
                                                 <b>u-round-{entry[0]}</b>

@@ -83,7 +83,11 @@ export const AbsolutesUtilsPage: React.FC<any> = (props) => {
                         <p>
                             Cirrus comes with utility classes that allow you to anchor any element in any of the 4
                             directions with both positive and negative offsets. The utility classes generally follow
-                            this form: <code>u-[top|left|right|bottom]-[0|50p|100p|n50p|n100p|auto]</code>.
+                            this form:{' '}
+                            <code>
+                                u-[{DEFAULT_DIRECTIONS.join('|')}]-[default sizing value]
+                            </code>
+                            .
                         </p>
                         <p>
                             These utilities can be used with both{' '}

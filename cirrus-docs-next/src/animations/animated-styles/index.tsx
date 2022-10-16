@@ -3,15 +3,15 @@ import Head from 'next/head';
 import { withLayout } from '@moxy/next-layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { CodeBlock } from '../../layouts/components/codeblock';
-import { TableOfContents } from '../../layouts/components/toc';
-import { Headline } from '../../layouts/components/headline';
-import { Tag } from '../../layouts/components/tag';
-import { DefaultLayout } from '../../layouts/default';
+import { CodeBlock } from '../../../layouts/components/codeblock';
+import { TableOfContents } from '../../../layouts/components/toc';
+import { Headline } from '../../../layouts/components/headline';
+import { Tag } from '../../../layouts/components/tag';
+import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 
-import initializeAnimations from '../../static/js/animations.js';
-import { PAGE_TITLE_PREFIX } from '../../constants';
+import initializeAnimations from '../../../static/js/animations.js';
+import { PAGE_TITLE_PREFIX } from '../../../constants';
 
 export const AnimationsPage: React.FC<any> = (props) => {
     useEffect(() => {
