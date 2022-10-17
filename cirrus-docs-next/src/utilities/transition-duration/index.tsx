@@ -13,6 +13,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { Blockquote } from '../../../layouts/components/blockquote';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const BorderWidthUtilsPage: React.FC<any> = (props) => {
     const DEFAULT_TRANSITION_DURATION_CLASSES = {
@@ -191,8 +192,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Positions', link: './positions' }}
-                    nextLink={{ name: 'Z-Index', link: './zindex' }}
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Transition Duration`,
+                    }}
                 />
             </div>
 

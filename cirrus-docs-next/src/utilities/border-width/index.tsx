@@ -13,6 +13,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { Blockquote } from '../../../layouts/components/blockquote';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const BorderWidthUtilsPage: React.FC<any> = (props) => {
     const DEFAULT_BORDER_WIDTH_CLASSES = {
@@ -189,8 +190,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Border Radius', link: './border-radius' }}
-                    nextLink={{ name: 'Box Shadow', link: './box-shadow' }}
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Border Width`,
+                    }}
                 />
             </div>
 

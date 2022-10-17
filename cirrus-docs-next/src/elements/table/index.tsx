@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_ELEMENTS } from '../../../config/sidebar';
 
 export const TablePage: React.FC<any> = (props) => {
     return (
@@ -649,8 +650,10 @@ export const TablePage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Progress', link: './progress' }}
-                    nextLink={{ name: 'Tabs', link: './tabs' }}
+                    lookupProps={{
+                        sectionName: TITLE_ELEMENTS,
+                        pageName: `Table`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

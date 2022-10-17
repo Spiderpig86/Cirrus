@@ -10,6 +10,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { Tag } from '../../../layouts/components/tag';
+import { TITLE_ELEMENTS } from '../../../config/sidebar';
 
 export const BreadcrumbPage: React.FC<any> = (props) => {
     return (
@@ -285,8 +286,10 @@ export const BreadcrumbPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Avatar', link: './avatar' }}
-                    nextLink={{ name: 'Cards', link: './cards' }}
+                    lookupProps={{
+                        sectionName: TITLE_ELEMENTS,
+                        pageName: `Breadcrumbs`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

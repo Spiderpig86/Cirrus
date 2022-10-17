@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_BUTTONS } from '../../../config/sidebar';
 
 export const ButtonPage: React.FC<any> = (props) => {
     const btnColors = [
@@ -177,7 +178,12 @@ export const ButtonPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination nextLink={{ name: 'Button Groups', link: './button-groups' }} />
+                <Pagination
+                    lookupProps={{
+                        sectionName: TITLE_BUTTONS,
+                        pageName: `Basics`,
+                    }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>

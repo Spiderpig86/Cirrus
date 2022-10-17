@@ -8,14 +8,14 @@ import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { ClassTable } from '../../../layouts/components/class-table';
-import { Capitalize } from '../../../utils/string';
 import { toc } from './toc';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
-import { DocExample } from '../../../models/doc-example';
 import { Blockquote } from '../../../layouts/components/blockquote';
+import { SIDEBAR_CONFIG_MAP, TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const FilterUtilsPage: React.FC<any> = (props) => {
+    const PAGE_TITLE = `Filters`;
     const DEFAULT_BLUR_CLASSES = {
         none: '--cirrus-blur: blur(0)',
         xs: '--cirrus-blur: blur(.25rem)',
@@ -34,7 +34,9 @@ export const FilterUtilsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
             <Head>
-                <title>{PAGE_TITLE_PREFIX} Filters</title>
+                <title>
+                    {PAGE_TITLE_PREFIX} {PAGE_TITLE}
+                </title>
             </Head>
             <div>
                 <section className="padtop" id="filters">
@@ -64,7 +66,7 @@ export const FilterUtilsPage: React.FC<any> = (props) => {
                         <div className="space"></div>
                         <div className="bg-orange-100 u-round-xs row u-gap-1 p-4 u-justify-center">
                             {Object.entries(DEFAULT_BLUR_CLASSES).map((entry) => (
-                                <div className='col u-text-center'>
+                                <div className="col u-text-center">
                                     <div className={`u-round-sm p-0 mb-3 u-overflow-hidden u-blur-${entry[0]}`}>
                                         <img src="https://images.unsplash.com/photo-1563293756-857fc846d0d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80" />
                                     </div>
@@ -73,16 +75,16 @@ export const FilterUtilsPage: React.FC<any> = (props) => {
                             ))}
                         </div>
                         <div className="space"></div>
-                        
+
                         <CodeBlock
-                                code={`<div class="u-blur-none ..."></div>
+                            code={`<div class="u-blur-none ..."></div>
 <div class="u-blur-xs ..."></div>
 <div class="u-blur-sm ..."></div>
 <div class="u-blur-md ..."></div>
 <div class="u-blur-lg ..."></div>
 <div class="u-blur-xl ..."></div>`}
-                        language="htmlbars"
-                    />
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -181,8 +183,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Display', link: './display' }}
-                    nextLink={{ name: 'Flexbox', link: './flexbox' }}
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Filters`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

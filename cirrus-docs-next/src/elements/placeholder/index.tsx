@@ -10,6 +10,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { TITLE_ELEMENTS } from '../../../config/sidebar';
 
 export const PlaceholderPage: React.FC<any> = (props) => {
     return (
@@ -135,8 +136,10 @@ export const PlaceholderPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Pagination', link: './pagination' }}
-                    nextLink={{ name: 'Progress', link: './progress' }}
+                    lookupProps={{
+                        sectionName: TITLE_ELEMENTS,
+                        pageName: `Placeholder`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

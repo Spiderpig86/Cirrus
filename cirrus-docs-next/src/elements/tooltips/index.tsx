@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_ELEMENTS } from '../../../config/sidebar';
 
 export const TooltipsPage: React.FC<any> = (props) => {
     return (
@@ -184,8 +185,10 @@ export const TooltipsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Toast', link: './toast' }}
-                    nextLink={{ name: 'Trees', link: './trees' }}
+                    lookupProps={{
+                        sectionName: TITLE_ELEMENTS,
+                        pageName: `Tooltips`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

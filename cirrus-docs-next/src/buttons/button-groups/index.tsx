@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_BUTTONS } from '../../../config/sidebar';
 
 export const ButtonGroupsPage: React.FC<any> = (props) => {
     return (
@@ -65,8 +66,10 @@ export const ButtonGroupsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Basics ', link: './basics' }}
-                    nextLink={{ name: 'Glyphs', link: './glyphs' }}
+                    lookupProps={{
+                        sectionName: TITLE_BUTTONS,
+                        pageName: `Button Groups`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

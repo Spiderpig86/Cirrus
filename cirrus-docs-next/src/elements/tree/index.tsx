@@ -12,6 +12,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_ELEMENTS } from '../../../config/sidebar';
 
 export const TreePage: React.FC<any> = (props) => {
     return (
@@ -585,7 +586,12 @@ export const TreePage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Tooltips', link: './tooltips' }} />
+                <Pagination
+                    lookupProps={{
+                        sectionName: TITLE_ELEMENTS,
+                        pageName: `Trees`,
+                    }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>

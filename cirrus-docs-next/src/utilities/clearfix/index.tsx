@@ -11,6 +11,7 @@ import { ClassTable } from '../../../layouts/components/class-table';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { toc } from './toc';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const ClearfixUtilsPage: React.FC<any> = (props) => {
     const classTable = [
@@ -230,10 +231,12 @@ display: table !important;`,
                         </p>
                     </div>
                 </section>
-
+                
                 <Pagination
-                    prevLink={{ name: 'Absolute', link: './absolutes' }}
-                    nextLink={{ name: 'Display', link: './display' }}
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Clearfix`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

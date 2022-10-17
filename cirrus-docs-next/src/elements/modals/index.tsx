@@ -12,6 +12,7 @@ import { ExternalLink } from '../../../layouts/components/link';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_ELEMENTS } from '../../../config/sidebar';
 
 export const ModalsPage: React.FC<any> = (props) => {
     return (
@@ -501,8 +502,10 @@ export const ModalsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Lists', link: './lists' }}
-                    nextLink={{ name: 'Pagination', link: './pagination' }}
+                    lookupProps={{
+                        sectionName: TITLE_ELEMENTS,
+                        pageName: `Modals`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

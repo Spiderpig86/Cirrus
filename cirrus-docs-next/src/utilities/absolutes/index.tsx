@@ -21,6 +21,7 @@ import {
 import { Blockquote } from '../../../layouts/components/blockquote';
 import { ExternalLink } from '../../../layouts/components/link';
 import { GenerateNegativeClassVariants } from '../../../utils/classes';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const AbsolutesUtilsPage: React.FC<any> = (props) => {
     const DEFAULT_DIRECTIONS = ['top', 'left', 'bottom', 'right'];
@@ -353,7 +354,12 @@ $config: (
                     </div>
                 </section>
 
-                <Pagination nextLink={{ name: 'Border Radius', link: './border-radius' }} />
+                <Pagination
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Absolutes`,
+                    }}
+                />
             </div>
 
             <TableOfContents entries={toc} />

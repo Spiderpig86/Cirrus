@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_BUTTONS } from '../../../config/sidebar';
 
 export const VariantsPage: React.FC<any> = (props) => {
     return (
@@ -209,7 +210,12 @@ export const VariantsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Glyphs', link: './glyphs' }} />
+                <Pagination
+                    lookupProps={{
+                        sectionName: TITLE_BUTTONS,
+                        pageName: `Variants`,
+                    }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>

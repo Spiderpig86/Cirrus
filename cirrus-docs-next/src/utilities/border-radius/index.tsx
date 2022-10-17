@@ -12,6 +12,7 @@ import { Tag } from '../../../layouts/components/tag';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const BorderRadiusUtilsPage: React.FC<any> = (props) => {
     const DEFAULT_ROUND_CLASSES = {
@@ -188,8 +189,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Absolutes', link: './absolutes' }}
-                    nextLink={{ name: 'Border Width', link: './border-width' }}
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Border Radius`,
+                    }}
                 />
             </div>
 

@@ -10,6 +10,7 @@ import { ClassTable } from '../../../layouts/components/class-table';
 import { toc } from './toc';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const MiscUtilsPage: React.FC<any> = (props) => {
     const classTable = [
@@ -476,10 +477,9 @@ position: absolute;`,
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Gap', link: './gap' }}
-                    nextLink={{
-                        name: 'Opacity',
-                        link: './opacity',
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Misc`,
                     }}
                 />
             </div>

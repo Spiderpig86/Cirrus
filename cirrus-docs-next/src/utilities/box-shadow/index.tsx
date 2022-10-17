@@ -12,6 +12,7 @@ import { Tag } from '../../../layouts/components/tag';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const BoxShadowUtilsPage: React.FC<any> = (props) => {
     const DEFAULT_BOX_SHADOW_CLASSES = {
@@ -188,8 +189,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Border Width', link: './border-width' }}
-                    nextLink={{ name: 'Clearfix', link: './clearfix' }}
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Box Shadow`,
+                    }}
                 />
             </div>
 

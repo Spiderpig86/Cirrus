@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_ELEMENTS } from '../../../config/sidebar';
 
 export const TilesPage: React.FC<any> = (props) => {
     return (
@@ -499,7 +500,12 @@ export const TilesPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Tags', link: './tags' }} nextLink={{ name: 'Toast', link: './toast' }} />
+                <Pagination
+                    lookupProps={{
+                        sectionName: TITLE_ELEMENTS,
+                        pageName: `Tiles`,
+                    }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>

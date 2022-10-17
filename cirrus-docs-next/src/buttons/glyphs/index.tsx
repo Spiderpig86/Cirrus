@@ -11,6 +11,7 @@ import { ExternalLink } from '../../../layouts/components/link';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_BUTTONS } from '../../../config/sidebar';
 
 export const ButtonGlyphsPage: React.FC<any> = (props) => {
     return (
@@ -107,8 +108,10 @@ export const ButtonGlyphsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Button Groups', link: './button-groups' }}
-                    nextLink={{ name: 'Variants', link: './variants' }}
+                    lookupProps={{
+                        sectionName: TITLE_BUTTONS,
+                        pageName: `Glyphs`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

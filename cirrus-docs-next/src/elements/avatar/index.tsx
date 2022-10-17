@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_ELEMENTS } from '../../../config/sidebar';
 
 export const AvatarPage: React.FC<any> = (props) => {
     return (
@@ -407,7 +408,12 @@ export const AvatarPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination nextLink={{ name: 'Breadcrumbs', link: './breadcrumbs' }} />
+                <Pagination
+                    lookupProps={{
+                        sectionName: TITLE_ELEMENTS,
+                        pageName: `Avatar`,
+                    }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>

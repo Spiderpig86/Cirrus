@@ -12,6 +12,7 @@ import { DefaultLayout } from '../../../layouts/default';
 
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_ELEMENTS } from '../../../config/sidebar';
 
 export const CardsPage: React.FC<any> = (props) => {
     return (
@@ -879,8 +880,10 @@ export const CardsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Breadcrumbs', link: './breadcrumbs' }}
-                    nextLink={{ name: 'Code', link: './code' }}
+                    lookupProps={{
+                        sectionName: TITLE_ELEMENTS,
+                        pageName: `Cards`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

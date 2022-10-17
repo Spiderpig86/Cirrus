@@ -14,6 +14,7 @@ import { Capitalize } from '../../../utils/string';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { DocExample } from '../../../models/doc-example';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const PositionUtilsPage: React.FC<any> = (props) => {
     const positionNames = ['static', 'fixed', 'absolute', 'relative', 'sticky'];
@@ -299,8 +300,10 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Overflow', link: './overflow' }}
-                    nextLink={{ name: 'Z-Index', link: './zindex' }}
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Positions`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

@@ -13,6 +13,7 @@ import { toc } from './toc';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { DocExample } from '../../../models/doc-example';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const DisplayUtilsPage: React.FC<any> = (props) => {
     const displayNames = ['none', 'inline', 'inline-block', 'block', 'table', 'table-row', 'table-cell'];
@@ -213,8 +214,10 @@ export const DisplayUtilsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Display', link: './display' }}
-                    nextLink={{ name: 'Filters', link: './filters' }}
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Display`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

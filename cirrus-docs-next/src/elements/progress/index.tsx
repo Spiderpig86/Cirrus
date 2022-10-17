@@ -12,6 +12,7 @@ import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { Tag } from '../../../layouts/components/tag';
 import { ExternalLink } from '../../../layouts/components/link';
 import Link from 'next/link';
+import { TITLE_ELEMENTS } from '../../../config/sidebar';
 
 export const ProgressPage: React.FC<any> = (props) => {
     return (
@@ -155,8 +156,10 @@ export const ProgressPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Placeholder', link: './placeholder' }}
-                    nextLink={{ name: 'Table', link: './table' }}
+                    lookupProps={{
+                        sectionName: TITLE_ELEMENTS,
+                        pageName: `Progress`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

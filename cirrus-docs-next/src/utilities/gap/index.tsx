@@ -13,6 +13,7 @@ import { toc } from './toc';
 import { DEFAULT_SIZING_SYSTEM, PAGE_TITLE_PREFIX } from '../../../constants';
 import { ClassTable } from '../../../layouts/components/class-table';
 import { Blockquote } from '../../../layouts/components/blockquote';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const GapUtilsPage: React.FC<any> = (props) => {
     const classTable = DEFAULT_SIZING_SYSTEM.map((size) => {
@@ -207,8 +208,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Flexbox', link: './flexbox' }}
-                    nextLink={{ name: 'Misc', link: './misc' }}
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Gap`,
+                    }}
                 />
             </div>
 

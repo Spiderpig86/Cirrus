@@ -12,6 +12,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { DEFAULT_PERCENTAGES, PAGE_TITLE_PREFIX } from '../../../constants';
 import { ClassTable } from '../../../layouts/components/class-table';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const OpacityUtilsPage: React.FC<any> = (props) => {
     const classTable = DEFAULT_PERCENTAGES.map((opacity) => {
@@ -379,8 +380,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Misc', link: './misc' }}
-                    nextLink={{ name: 'Overflow', link: './overflow' }}
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Opacity`,
+                    }}
                 />
             </div>
 

@@ -11,6 +11,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { Tag } from '../../../layouts/components/tag';
+import { TITLE_ELEMENTS } from '../../../config/sidebar';
 
 export const TabsPage: React.FC<any> = (props) => {
     return (
@@ -562,8 +563,10 @@ export const TabsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Placeholder', link: './placeholder' }}
-                    nextLink={{ name: 'Tabs', link: './tabs' }}
+                    lookupProps={{
+                        sectionName: TITLE_ELEMENTS,
+                        pageName: `Tabs`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

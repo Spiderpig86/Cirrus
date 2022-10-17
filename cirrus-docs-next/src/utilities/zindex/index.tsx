@@ -13,6 +13,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { Blockquote } from '../../../layouts/components/blockquote';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const ZIndexUtilsPage: React.FC<any> = (props) => {
     const DEFAULT_Z_INDEX_CLASSES = {
@@ -233,7 +234,10 @@ $config: (
                 </section>
                 
                 <Pagination
-                    prevLink={{ name: 'Transition Duration', link: './transition-duration' }}
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Z-Index`,
+                    }}
                 />
             </div>
 

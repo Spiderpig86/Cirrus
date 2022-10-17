@@ -14,6 +14,7 @@ import { toc } from './toc';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { DocExample } from '../../../models/doc-example';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const FlexboxUtilsPage: React.FC<any> = (props) => {
     const flexDirectionNames = ['row', 'row-reverse', 'column', 'column-reverse'];
@@ -851,8 +852,10 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Filters', link: './filters' }}
-                    nextLink={{ name: 'Gap', link: './gap' }}
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Flexbox`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

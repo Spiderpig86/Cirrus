@@ -12,6 +12,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { DocExample } from '../../../models/doc-example';
 import { Capitalize } from '../../../utils/string';
+import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const OverflowUtilsPage: React.FC<any> = (props) => {
 
@@ -500,10 +501,9 @@ export const OverflowUtilsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Opacity', link: './opacity' }}
-                    nextLink={{
-                        name: 'Positions',
-                        link: './positions',
+                    lookupProps={{
+                        sectionName: TITLE_UTILITIES,
+                        pageName: `Overflow`,
                     }}
                 />
             </div>

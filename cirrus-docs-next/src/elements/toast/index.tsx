@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_ELEMENTS } from '../../../config/sidebar';
 
 export const ToastPage: React.FC<any> = (props) => {
     return (
@@ -160,8 +161,10 @@ export const ToastPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Tiles', link: './tiles' }}
-                    nextLink={{ name: 'Tooltips', link: './tooltips' }}
+                    lookupProps={{
+                        sectionName: TITLE_ELEMENTS,
+                        pageName: `Toast`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />
