@@ -67,6 +67,9 @@ $default-config: (
             avatars: (
                 sizes: ()
             ),
+            border: (
+                widths: ()
+            ),
             breakpoints: (
                 widths: (),
                 breakpoint-pairs: ()
@@ -118,7 +121,9 @@ $default-config: (
             space-sizes: (),
             tab-sizes: (),
             absolute: (),
-            blur: (),
+            filters: (
+                blurs:(),
+            ),
             flex: (
                 properties: (),
             ),
