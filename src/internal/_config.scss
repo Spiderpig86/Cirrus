@@ -628,24 +628,26 @@ $default-config: (
             8: 8px,
         )
     ),
-    blurs: (
-        'none': (
-            --cirrus-blur: blur(0),
-        ),
-        constants.$xs: (
-            --cirrus-blur: blur(0.25rem),
-        ),
-        constants.$sm: (
-            --cirrus-blur: blur(0.5rem),
-        ),
-        constants.$md: (
-            --cirrus-blur: blur(1rem),
-        ),
-        constants.$lg: (
-            --cirrus-blur: blur(1.5rem),
-        ),
-        constants.$xl: (
-            --cirrus-blur: blur(3rem),
+    filters: (
+        blurs: (
+            'none': (
+                --cirrus-blur: blur(0),
+            ),
+            constants.$xs: (
+                --cirrus-blur: blur(0.25rem),
+            ),
+            constants.$sm: (
+                --cirrus-blur: blur(0.5rem),
+            ),
+            constants.$md: (
+                --cirrus-blur: blur(1rem),
+            ),
+            constants.$lg: (
+                --cirrus-blur: blur(1.5rem),
+            ),
+            constants.$xl: (
+                --cirrus-blur: blur(3rem),
+            ),
         ),
     ),
     flex: (
@@ -815,8 +817,9 @@ $tag-font-sizes: functions.get-with-extend($all-config, tags, font-sizes);
 
 // UTILS
 $absolute: functions.get-with-extend($all-config, absolute);
-$blurs: functions.get-with-extend($all-config, blurs);
 $border-widths: functions.get-with-extend($all-config, border, width);
+
+$blurs: functions.get-with-extend($all-config, filters, blurs);
 
 $heights: functions.get-with-extend($all-config, heights);
 $widths: functions.get-with-extend($all-config, widths);

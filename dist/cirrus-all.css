@@ -22087,13 +22087,14 @@ details.accordion[open] summary.accordion__summary:after {
 .tab-container li .tab-item-content {
   display: flex;
   align-items: center;
+  border: 0;
   border-bottom: 1px solid #e9ecef;
   justify-content: center;
   padding: 0.5rem 1rem;
   transition: all 0.3s;
   color: var(--cirrus-fg);
-  border-width: 2px;
-  margin-bottom: -1px; /* Get rid of any remaining border lines */
+  border-bottom-width: 2px;
+  margin-bottom: -2px; /* Get rid of any remaining border lines */
   background-color: var(--cirrus-bg);
 }
 
