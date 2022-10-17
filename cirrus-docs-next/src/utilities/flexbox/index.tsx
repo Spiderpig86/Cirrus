@@ -851,7 +851,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Display', link: './display' }}
+                    prevLink={{ name: 'Filters', link: './filters' }}
                     nextLink={{ name: 'Gap', link: './gap' }}
                 />
             </div>

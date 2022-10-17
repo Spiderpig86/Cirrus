@@ -213,8 +213,8 @@ export const DisplayUtilsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Clearfix', link: './clearfix' }}
-                    nextLink={{ name: 'Flexbox', link: './flexbox' }}
+                    prevLink={{ name: 'Display', link: './display' }}
+                    nextLink={{ name: 'Filters', link: './filters' }}
                 />
             </div>
             <TableOfContents entries={toc} />

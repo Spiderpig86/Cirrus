@@ -537,6 +537,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Filters',
+                url: '/utils/filters'
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Flexbox',
                 url: '/utils/flexbox'
             },

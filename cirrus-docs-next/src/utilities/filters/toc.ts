@@ -2,12 +2,12 @@ import { TableOfContentsEntry } from '../../../layouts/components/toc';
 
 export const toc: TableOfContentsEntry[] = [
     {
-        name: 'Border Width',
-        anchor: '#border-width',
+        name: 'Filters',
+        anchor: '#filters',
         children: [
             {
-                name: 'Examples',
-                anchor: '#examples',
+                name: 'Blur',
+                anchor: '#blur',
                 children: null,
             },
             {

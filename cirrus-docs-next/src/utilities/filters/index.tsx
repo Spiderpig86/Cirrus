@@ -8,94 +8,81 @@ import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { ClassTable } from '../../../layouts/components/class-table';
-import { Tag } from '../../../layouts/components/tag';
-import { DefaultLayout } from '../../../layouts/default';
+import { Capitalize } from '../../../utils/string';
 import { toc } from './toc';
+import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { DocExample } from '../../../models/doc-example';
 import { Blockquote } from '../../../layouts/components/blockquote';
 
-export const BorderWidthUtilsPage: React.FC<any> = (props) => {
-    const DEFAULT_TRANSITION_DURATION_CLASSES = {
-        75: '75ms',
-        100: '100ms',
-        200: '200ms',
-        300: '300ms',
-        500: '500ms',
-        700: '700ms',
-        1000: '1000ms',
+export const FilterUtilsPage: React.FC<any> = (props) => {
+    const DEFAULT_BLUR_CLASSES = {
+        none: '--cirrus-blur: blur(0)',
+        xs: '--cirrus-blur: blur(.25rem)',
+        sm: '--cirrus-blur: blur(.5rem)',
+        md: '--cirrus-blur: blur(1rem)',
+        lg: '--cirrus-blur: blur(1.5rem)',
+        xl: '--cirrus-blur: blur(3rem)',
     };
-
-    const classTable = Object.entries(DEFAULT_TRANSITION_DURATION_CLASSES).map((entry) => {
+    const classTable = Object.entries(DEFAULT_BLUR_CLASSES).map((entry) => {
         return {
-            class: `u-duration-${entry[0]}`,
-            style: `transition-duration: ${entry[1]} !important`,
+            class: `u-blur-${entry[0]}`,
+            style: `${entry[1]}; filter: var(--cirrus-blur);`,
         };
     });
 
     return (
         <main className="page-layout">
             <Head>
-                <title>{PAGE_TITLE_PREFIX} Transition Duration</title>
+                <title>{PAGE_TITLE_PREFIX} Filters</title>
             </Head>
             <div>
-                <section className="padtop" id="transition-duration">
+                <section className="padtop" id="filters">
                     <div className="content">
-                        <Headline title="Transition Duration" link="#transition-duration" />
+                        <Headline title="Filter" link="#filters" />
                         <div className="divider"></div>
-                        <Tag
-                            leftProps={{
-                                classes: `tag--dark`,
-                                text: `New`,
-                            }}
-                            rightProps={{
-                                classes: `tag--info`,
-                                text: `0.7.1`,
-                            }}
-                        />
-                        <p>These are utility classes that specify the duration of transitions.</p>
+                        <span className="tag-container group-tags">
+                            <div className="tag tag--dark">New</div>
+                            <div className="tag tag--info">0.7.1</div>
+                        </span>
+                        <p>These are utility classes that applies filters to elements.</p>
 
                         <ClassTable classTable={classTable} />
                     </div>
                 </section>
 
-                <section className="padtop" id="examples">
+                <section className="padtop" id="blur">
                     <div className="content">
-                        <Headline title="Examples" link="#examples" size="4" />
+                        <Headline title="Blur" link="#blur" size="4" />
                         <div className="divider"></div>
 
                         <p>
-                            Below is a demo of all utility classes that set a transition duration. The syntax follows
-                            the form of{' '}
-                            <code>u-duration-[{Object.keys(DEFAULT_TRANSITION_DURATION_CLASSES).join('|')}]</code>.
+                            Blur elements using the blur utility classes. These classes follow the form:{' '}
+                            <code>u-blur-[{Object.keys(DEFAULT_BLUR_CLASSES).join('|')}]</code>.
                         </p>
+
                         <div className="space"></div>
-
-                        <b>Hover over each button to see the difference in transition durations.</b>
-
-                        <div className="bg-blue-100 p-2 p-4-md u-round-sm row">
-                            {Object.entries(DEFAULT_TRANSITION_DURATION_CLASSES).map((entry, i) => {
-                                return (
-                                    <div className="col-4 u-flex u-flex-column u-text-center mb-2" key={i}>
-                                        <button className={`btn-info hover-grow u-duration-${entry[0]}`}>
-                                            {entry[0]}
-                                        </button>
-                                        <b>u-duration-{entry[0]}</b>
+                        <div className="bg-orange-100 u-round-xs row u-gap-1 p-4 u-justify-center">
+                            {Object.entries(DEFAULT_BLUR_CLASSES).map((entry) => (
+                                <div className='col u-text-center'>
+                                    <div className={`u-round-sm p-0 mb-3 u-overflow-hidden u-blur-${entry[0]}`}>
+                                        <img src="https://images.unsplash.com/photo-1563293756-857fc846d0d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&q=80" />
                                     </div>
-                                );
-                            })}
+                                    <span className="font-bold">{entry[0]}</span>
+                                </div>
+                            ))}
                         </div>
-
-                        <div className="space space--lg"></div>
+                        <div className="space"></div>
+                        
                         <CodeBlock
-                            code={`<div class="u-duration-75..."></div>
-<div class="u-duration-100 ..."></div>
-<div class="u-duration-200 ..."></div>
-<div class="u-duration-300 ..."></div>
-<div class="u-duration-500 ..."></div>
-<div class="u-duration-700 ..."></div>
-<div class="u-duration-1000 ..."></div>`}
-                            language="htmlbars"
-                        />
+                                code={`<div class="u-blur-none ..."></div>
+<div class="u-blur-xs ..."></div>
+<div class="u-blur-sm ..."></div>
+<div class="u-blur-md ..."></div>
+<div class="u-blur-lg ..."></div>
+<div class="u-blur-xl ..."></div>`}
+                        language="htmlbars"
+                    />
                     </div>
                 </section>
 
@@ -117,7 +104,7 @@ export const BorderWidthUtilsPage: React.FC<any> = (props) => {
                                 code={`//_configs.scss
 $config: (
     viewports: (
-        flags.$TRANSITION-DURATION: true,
+        flags.$BLUR: true,
     )
 ) !default;`}
                                 language="scss"
@@ -125,14 +112,13 @@ $config: (
                         </Blockquote>
 
                         <p>
-                            To use the viewport variant of a given class, you just need to suffix each class with a
-                            viewport selector. For example, if I only want <code>u-duration-100</code> to be applied to some
-                            element for <code>lg</code> and above, then I would use the <code>u-duration-100-lg</code>{' '}
-                            class.
+                            All utility classes mentioned here support viewport based application. All you need to do is
+                            add a <code>-&lt;viewport&gt;</code> at the end of the class(es) you are using. For example,
+                            use <code>u-blur-sm-md</code> to apply <code>u-blur-sm</code> on medium screens and above.
                         </p>
 
                         <CodeBlock
-                            code={`<div class="u-duration-100-lg">
+                            code={`<div class="u-blur-sm-md">
     <!-- ... -->
 </div>`}
                             language="html"
@@ -154,8 +140,8 @@ $config: (
                         <div className="divider"></div>
 
                         <p>
-                            The classes specified above are the default utility classes for different filters. You can add, change, or remove classes within the <code>_config.scss</code> file
-                            of Cirrus.
+                            The classes specified above are the default utility classes for setting a filter. You can
+                            add, change, or remove classes within the <code>_config.scss</code> file of Cirrus.
                         </p>
 
                         <div className="space"></div>
@@ -164,9 +150,12 @@ $config: (
                             code={`// _config.scss
 $config: (
     extend: (
-        transitions: (
-            durations: (
-                1500: 1500ms,
+        filters: (
+            blurs: (
+                ...,
+                '2xl': (
+                    --cirrus-blur: blur(4rem),
+                )
             )
         )
     )
@@ -175,8 +164,9 @@ $config: (
                         />
                         <p>This would generate the following classes.</p>
                         <CodeBlock
-                            code={`.u-duration-1500 {
-    transition-duration: 1500ms !important;
+                            code={`.u-blur-2xl {
+    --cirrus-blur: blur(4rem);
+    filter: var(--cirrus-blur);
 }`}
                             language="css"
                         />
@@ -191,14 +181,13 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Positions', link: './positions' }}
-                    nextLink={{ name: 'Z-Index', link: './zindex' }}
+                    prevLink={{ name: 'Display', link: './display' }}
+                    nextLink={{ name: 'Flexbox', link: './flexbox' }}
                 />
             </div>
-
             <TableOfContents entries={toc} />
         </main>
     );
 };
 
-export default withLayout(<DefaultLayout />)(BorderWidthUtilsPage);
+export default withLayout(<DefaultLayout />)(FilterUtilsPage);
