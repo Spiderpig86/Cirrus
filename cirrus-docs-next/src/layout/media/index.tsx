@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const MediaPage: React.FC<any> = (props) => {
     return (
@@ -214,8 +215,10 @@ export const MediaPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Max Width', link: './max-width' }}
-                    nextLink={{ name: 'Min Height', link: './min-height' }}
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Media`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

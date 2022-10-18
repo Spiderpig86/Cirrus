@@ -11,6 +11,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const FramesPage: React.FC<any> = (props) => {
     return (
@@ -595,8 +596,10 @@ export const FramesPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Footer', link: './footer' }}
-                    nextLink={{ name: 'Header', link: './header' }}
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Frames`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

@@ -8,6 +8,7 @@ import { Pagination } from '../../../layouts/components/pagination';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const LevelPage: React.FC<any> = (props) => {
     return (
@@ -193,8 +194,10 @@ export const LevelPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Hero', link: './hero' }}
-                    nextLink={{ name: 'Margin', link: './margin' }}
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Level`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

@@ -10,6 +10,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX, v1Colors } from '../../../constants';
+import { TITLE_FORMS } from '../../../config/sidebar';
 
 export const FormsRadioPage: React.FC<any> = (props) => {
     return (
@@ -240,8 +241,10 @@ export const FormsRadioPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Checkbox', link: './checkbox' }}
-                    nextLink={{ name: 'Toggle', link: './toggle' }}
+                    lookupProps={{
+                        sectionName: TITLE_FORMS,
+                        pageName: `Radio`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

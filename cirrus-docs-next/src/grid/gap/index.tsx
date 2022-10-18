@@ -10,6 +10,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { Blockquote } from '../../../layouts/components/blockquote';
+import { TITLE_GRID } from '../../../config/sidebar';
 
 export const GridGapPage: React.FC<any> = (props) => {
     const classTable = {
@@ -90,7 +91,12 @@ export const GridGapPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Grid Span', link: './span' }} />
+                <Pagination
+                    lookupProps={{
+                        sectionName: TITLE_GRID,
+                        pageName: `Gap`,
+                    }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>

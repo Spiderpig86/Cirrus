@@ -11,6 +11,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { Tag } from '../../../layouts/components/tag';
+import { TITLE_FONTS } from '../../../config/sidebar';
 
 export const HeeadingsPage: React.FC<any> = (props) => {
 
@@ -343,8 +344,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Glyphs', link: './glyphs' }}
-                    nextLink={{ name: 'Letter Spacing', link: './letter-spacing' }}
+                    lookupProps={{
+                        sectionName: TITLE_FONTS,
+                        pageName: `Headings`,
+                    }}
                 />
             </span>
             <TableOfContents entries={toc} />

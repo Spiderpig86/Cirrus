@@ -10,6 +10,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_FORMS } from '../../../config/sidebar';
 
 export const FormsGlyphsPage: React.FC<any> = (props) => {
     return (
@@ -208,8 +209,10 @@ export const FormsGlyphsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Inputs', link: './inputs' }}
-                    nextLink={{ name: 'Checkbox', link: './checkbox' }}
+                    lookupProps={{
+                        sectionName: TITLE_FORMS,
+                        pageName: `Input Glyphs`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

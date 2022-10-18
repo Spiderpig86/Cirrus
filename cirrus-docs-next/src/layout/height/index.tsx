@@ -13,6 +13,7 @@ import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { ClassTable } from '../../../layouts/components/class-table';
 import { VersionTag } from '../../../layouts/components/tag';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const HeightPage: React.FC<any> = (props) => {
     const heightClasses = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'];
@@ -185,8 +186,10 @@ export const HeightPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Header', link: './header' }}
-                    nextLink={{ name: 'Hero', link: './hero' }}
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Height`,
+                    }}
                 />
             </div>
 

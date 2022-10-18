@@ -10,6 +10,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX, v1Colors } from '../../../constants';
+import { TITLE_FORMS } from '../../../config/sidebar';
 
 export const FormsTogglePage: React.FC<any> = (props) => {
     return (
@@ -374,8 +375,10 @@ export const FormsTogglePage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Radio', link: './radio' }}
-                    nextLink={{ name: 'Form Groups', link: './groups' }}
+                    lookupProps={{
+                        sectionName: TITLE_FORMS,
+                        pageName: `Toggle`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

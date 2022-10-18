@@ -13,6 +13,7 @@ import { DEFAULT_SIZING_SYSTEM, PAGE_TITLE_PREFIX } from '../../../constants';
 import Link from 'next/link';
 import { ClassTable } from '../../../layouts/components/class-table';
 import { Tag } from '../../../layouts/components/tag';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const MarginPage: React.FC<any> = (props) => {
     const types = [
@@ -317,8 +318,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Level', link: './level' }}
-                    nextLink={{ name: 'Max', link: './max-height' }}
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Margin`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

@@ -13,6 +13,7 @@ import { DEFAULT_SIZING_SYSTEM, PAGE_TITLE_PREFIX } from '../../../constants';
 import Link from 'next/link';
 import { ClassTable } from '../../../layouts/components/class-table';
 import { Tag } from '../../../layouts/components/tag';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const PaddingPage: React.FC<any> = (props) => {
     const types = [
@@ -296,8 +297,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Min Width', link: './min-width' }}
-                    nextLink={{ name: 'Spacing', link: './spacing' }}
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Padding`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

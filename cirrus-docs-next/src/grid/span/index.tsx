@@ -10,6 +10,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import Link from 'next/link';
+import { TITLE_GRID } from '../../../config/sidebar';
 
 export const GridSpanPage: React.FC<any> = (props) => {
     return (
@@ -347,10 +348,12 @@ export const GridSpanPage: React.FC<any> = (props) => {
 
                     </div>
                 </section>
-
+                
                 <Pagination
-                    prevLink={{ name: 'Grid Templates', link: './templates' }}
-                    nextLink={{ name: 'Grid Gap', link: './gap' }}
+                    lookupProps={{
+                        sectionName: TITLE_GRID,
+                        pageName: `Span`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

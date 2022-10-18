@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const DividerPage: React.FC<any> = (props) => {
     return (
@@ -105,8 +106,10 @@ export const DividerPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Columns', link: './columns' }}
-                    nextLink={{ name: 'Footer', link: './footer' }}
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Divider`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

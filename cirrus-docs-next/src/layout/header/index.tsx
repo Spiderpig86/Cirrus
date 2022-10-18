@@ -10,6 +10,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const HeaderPage: React.FC<any> = (props) => {
     return (
@@ -887,8 +888,10 @@ $('.dropdown-menu li').on('click', function(e) {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Frames', link: './frames' }}
-                    nextLink={{ name: 'Height', link: './height' }}
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Header`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

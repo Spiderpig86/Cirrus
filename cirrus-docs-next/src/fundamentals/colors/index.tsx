@@ -63,7 +63,7 @@ export const ColorsPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>
                             Using a color within Cirrus is as simple as just prefixing the colors with <code>bg-</code>{' '}
-                            to color the background and with <code>text-</code> to color the text.
+                            to color the background, <code>text-</code> to color the text, and <code>border-</code> to color the borders.
                         </p>
                         <div className="space"></div>
 
@@ -101,6 +101,23 @@ export const ColorsPage: React.FC<any> = (props) => {
                             <div className="col-lg-6">
                                 <CodeBlock
                                     code={`<div class="bg-info u-round-xs mx-auto" style="height: 50px; width: 50px;"></div>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                        </div>
+                        
+                        <p>
+                            Circle with a <b>purple-500</b> border.
+                        </p>
+                        <div className="row">
+                            <div className="col-lg-6 mb-1 u-flex u-justify-center">
+                                <div
+                                    className="u-round-full w-8 h-8 border-purple-500 u-border-2"
+                                ></div>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<div class="u-round-full w-8 h-8 border-purple-500 u-border-2"></div>`}
                                     language="htmlbars"
                                 />
                             </div>

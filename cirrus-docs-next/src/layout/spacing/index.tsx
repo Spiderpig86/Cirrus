@@ -10,6 +10,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { VersionTag } from '../../../layouts/components/tag';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const SpacingPage: React.FC<any> = (props) => {
     return (
@@ -85,8 +86,10 @@ export const SpacingPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Padding', link: './padding' }}
-                    nextLink={{ name: 'Width', link: './width' }}
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Spacing`,
+                    }}
                 />
             </div>
             <TableOfContents entries={toc} />

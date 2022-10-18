@@ -12,6 +12,7 @@ import { Tag } from '../../../layouts/components/tag';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_FONTS } from '../../../config/sidebar';
 
 export const LetterSpacingPage: React.FC<any> = (props) => {
     const DEFAULT_LETTER_SPACING_CLASSES = {
@@ -174,8 +175,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Headings', link: './headings' }}
-                    nextLink={{ name: 'Size', link: './size' }}
+                    lookupProps={{
+                        sectionName: TITLE_FONTS,
+                        pageName: `Letter Spacing`,
+                    }}
                 />
             </div>
 

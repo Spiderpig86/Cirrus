@@ -11,6 +11,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { Tag } from '../../../layouts/components/tag';
+import { TITLE_GRID } from '../../../config/sidebar';
 
 export const GridTemplatesPage: React.FC<any> = (props) => {
     return (
@@ -387,7 +388,12 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination nextLink={{ name: 'Grid Span', link: './span' }} />
+                <Pagination
+                    lookupProps={{
+                        sectionName: TITLE_GRID,
+                        pageName: `Templates`,
+                    }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>

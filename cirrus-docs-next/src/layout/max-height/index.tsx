@@ -13,6 +13,7 @@ import { Blockquote } from '../../../layouts/components/blockquote';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const MaxHeightPage: React.FC<any> = (props) => {
     const DEFAULT_CLASSES = {
@@ -164,8 +165,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Margin', link: './margin' }}
-                    nextLink={{ name: 'Max Width', link: './max-width' }}
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Max Height`,
+                    }}
                 />
             </div>
 

@@ -9,6 +9,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_FORMS } from '../../../config/sidebar';
 
 export const FormsInputsPage: React.FC<any> = (props) => {
     return (
@@ -698,7 +699,12 @@ typesetting, remaining essentially unchanged.`}
                         </div>
                     </div>
                 </section>
-                <Pagination nextLink={{ name: 'With Glyphs', link: './glyphs' }} />
+                <Pagination
+                    lookupProps={{
+                        sectionName: TITLE_FORMS,
+                        pageName: `Inputs`,
+                    }}
+                />
             </span>
             <TableOfContents entries={toc} />
         </main>

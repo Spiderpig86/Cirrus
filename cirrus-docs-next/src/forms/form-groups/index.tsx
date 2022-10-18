@@ -10,6 +10,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_FORMS } from '../../../config/sidebar';
 
 export const FormGroupsPage: React.FC<any> = (props) => {
     return (
@@ -375,7 +376,12 @@ export const FormGroupsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Toggle', link: './toggle' }} />
+                <Pagination
+                    lookupProps={{
+                        sectionName: TITLE_FORMS,
+                        pageName: `Input Groups`,
+                    }}
+                />
             </div>
             <TableOfContents entries={toc} />
         </main>

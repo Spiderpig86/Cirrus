@@ -10,6 +10,7 @@ import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_FONTS } from '../../../config/sidebar';
 
 export const FontGlyphsPage: React.FC<any> = (props) => {
     return (
@@ -114,8 +115,10 @@ export const FontGlyphsPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Font Weights', link: './font-weights' }}
-                    nextLink={{ name: 'Size', link: './size' }}
+                    lookupProps={{
+                        sectionName: TITLE_FONTS,
+                        pageName: `Glyphs`,
+                    }}
                 />
             </span>
             <TableOfContents entries={toc} />

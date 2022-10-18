@@ -10,6 +10,7 @@ import { DefaultLayout } from '../../../layouts/default';
 
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_FONTS } from '../../../config/sidebar';
 
 export const TextElementsPage: React.FC<any> = (props) => {
     return (
@@ -357,7 +358,12 @@ export const TextElementsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <Pagination prevLink={{ name: 'Size', link: './size' }} />
+                <Pagination
+                    lookupProps={{
+                        sectionName: TITLE_FONTS,
+                        pageName: `Text Elements`,
+                    }}
+                />
             </span>
             <TableOfContents entries={toc} />
         </main>

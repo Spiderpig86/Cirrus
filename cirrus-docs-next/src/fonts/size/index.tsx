@@ -13,6 +13,7 @@ import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { ClassTable } from '../../../layouts/components/class-table';
 import { Capitalize } from '../../../utils/string';
 import { Tag } from '../../../layouts/components/tag';
+import { TITLE_FONTS } from '../../../config/sidebar';
 
 export const FontSizePage: React.FC<any> = (props) => {
     const DEFAULT_FONT_WEIGHT_CLASSES = {
@@ -138,8 +139,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Letter Spacing', link: './letter-spacing' }}
-                    nextLink={{ name: 'Text Elements', link: './text-elements' }}
+                    lookupProps={{
+                        sectionName: TITLE_FONTS,
+                        pageName: `Size`,
+                    }}
                 />
             </span>
             <TableOfContents entries={toc} />

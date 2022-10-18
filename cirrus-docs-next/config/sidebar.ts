@@ -342,20 +342,26 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Inputs',
-                url: '/forms/inputs',
+                text: 'Checkbox',
+                url: '/forms/checkbox',
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'With Glyphs',
+                text: 'Input Glyphs',
                 url: '/forms/glyphs',
             },
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Checkbox',
-                url: '/forms/checkbox',
+                text: 'Input Groups',
+                url: '/forms/groups',
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
+                text: 'Inputs',
+                url: '/forms/inputs',
             },
             {
                 fontWeight: 'semibold',
@@ -369,12 +375,6 @@ export const sidebarConfig: SidebarConfig[] = [
                 text: 'Toggle',
                 url: '/forms/toggle',
             },
-            {
-                fontWeight: 'semibold',
-                glyph: null,
-                text: 'Form Groups',
-                url: '/forms/groups',
-            },
         ],
     },
     {
@@ -383,8 +383,8 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Templates',
-                url: '/grid/templates',
+                text: 'Gap',
+                url: '/grid/gap',
             },
             {
                 fontWeight: 'semibold',
@@ -395,8 +395,8 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
-                text: 'Gap',
-                url: '/grid/gap',
+                text: 'Templates',
+                url: '/grid/templates',
             },
         ],
     },

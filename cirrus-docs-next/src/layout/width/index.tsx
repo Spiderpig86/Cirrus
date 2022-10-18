@@ -13,6 +13,7 @@ import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { ClassTable } from '../../../layouts/components/class-table';
 import { VersionTag } from '../../../layouts/components/tag';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const WidthPage: React.FC<any> = (props) => {
     const widthClasses = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'];
@@ -176,7 +177,10 @@ export const WidthPage: React.FC<any> = (props) => {
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Spacing', link: './spacing' }}
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Width`,
+                    }}
                 />
             </div>
 

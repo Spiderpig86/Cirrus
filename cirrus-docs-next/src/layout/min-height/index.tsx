@@ -13,6 +13,7 @@ import { Blockquote } from '../../../layouts/components/blockquote';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const MinHeightPage: React.FC<any> = (props) => {
     const DEFAULT_CLASSES = {
@@ -164,8 +165,10 @@ $config: (
                 </section>
 
                 <Pagination
-                    prevLink={{ name: 'Media', link: './media' }}
-                    nextLink={{ name: 'Min Width', link: './min-width' }}
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Min Height`,
+                    }}
                 />
             </div>
 

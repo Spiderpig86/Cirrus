@@ -14,6 +14,7 @@ import { toc } from './toc';
 
 import initializeExamples from '../../../static/js/fluid-column-example.js';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const ColumnsPage: React.FC<any> = (props) => {
     useEffect(() => {
@@ -668,7 +669,12 @@ margin-right: auto;`}
                     </div>
                 </section>
 
-                <Pagination nextLink={{ name: 'Divider', link: './divider' }} />
+                <Pagination
+                    lookupProps={{
+                        sectionName: TITLE_LAYOUT,
+                        pageName: `Columns`,
+                    }}
+                />
             </span>
             <TableOfContents entries={toc} />
         </main>
