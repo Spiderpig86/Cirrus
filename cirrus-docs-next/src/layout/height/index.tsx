@@ -10,21 +10,13 @@ import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
-import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { DEFAULT_PERCENTAGES, DEFAULT_SIZING_SYSTEM, PAGE_TITLE_PREFIX } from '../../../constants';
 import { ClassTable } from '../../../layouts/components/class-table';
 import { VersionTag } from '../../../layouts/components/tag';
 import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const HeightPage: React.FC<any> = (props) => {
-    const heightClasses = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'];
-
-    let classTable = heightClasses.map((value) => {
-        return {
-            class: `h-${value}p`,
-            style: `height: ${value}%;`,
-        };
-    });
-    classTable = classTable.concat([
+    let classTable = [
         {
             class: `h-0`,
             style: `height: 0;`,
@@ -37,7 +29,23 @@ export const HeightPage: React.FC<any> = (props) => {
             class: `h-screen`,
             style: `height: 100vh;`,
         },
-    ]);
+    ];
+    classTable = classTable.concat(
+        DEFAULT_PERCENTAGES.filter((value) => value !== 0).map((value) => {
+            return {
+                class: `h-${value}p`,
+                style: `height: ${value}%;`,
+            };
+        })
+    );
+    classTable = classTable.concat(
+        DEFAULT_SIZING_SYSTEM.filter((value) => value !== 0).map((value) => {
+            return {
+                class: `h-${value}`,
+                style: `height: ${0.5 * value}rem`,
+            };
+        })
+    );
 
     return (
         <main className="page-layout">
@@ -62,7 +70,7 @@ export const HeightPage: React.FC<any> = (props) => {
                         <Headline title="Scaled Heights" link="#scaled" size="4" />
                         <div className="divider"></div>
                         <p>
-                            The <code>{`h-{{value}}`}</code> classes gives an element a percentage based height.
+                            The <code>{`h-{{value}}p`}</code> classes gives an element a percentage based height.
                         </p>
 
                         <div
@@ -92,6 +100,47 @@ export const HeightPage: React.FC<any> = (props) => {
     <div class="h-50p">...</div>
     <div class="h-70p">...</div>
     <div class="h-90p">...</div>
+</div>`}
+                        />
+                    </div>
+                </section>
+
+                <section className="padtop" id="absolute">
+                    <div className="content">
+                        <Headline title="Absolute Heights" link="#absolute" size="4" />
+                        <div className="divider"></div>
+                        <VersionTag version="0.7.1" text="New" />
+                        <p>
+                            The <code>{`h-{{value}}`}</code> classes gives an element an absolute value based height.
+                        </p>
+
+                        <div
+                            className="u-flex u-items-flex-end u-justify-space-evenly p-6 bg-pink-100 mb-2"
+                            style={{
+                                height: '400px',
+                            }}
+                        >
+                            <div className="h-6 bg-pink-500 u-round-xs p-1 u-shadow-lg">
+                                <p className="text-gray-000">h-6</p>
+                            </div>
+                            <div className="h-8 bg-pink-500 u-round-xs p-1 u-shadow-lg">
+                                <p className="text-gray-000">h-8</p>
+                            </div>
+                            <div className="h-16 bg-pink-500 u-round-xs p-1 u-shadow-lg">
+                                <p className="text-gray-000">h-16</p>
+                            </div>
+                            <div className="h-32 bg-pink-500 u-round-xs p-1 u-shadow-lg">
+                                <p className="text-gray-000">h-32</p>
+                            </div>
+                        </div>
+
+                        <CodeBlock
+                            language="htmlbars"
+                            code={`<div>
+    <div class="h-6">...</div>
+    <div class="h-8">...</div>
+    <div class="h-16">...</div>
+    <div class="h-32">...</div>
 </div>`}
                         />
                     </div>

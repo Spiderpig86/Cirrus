@@ -10,21 +10,13 @@ import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
-import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { DEFAULT_PERCENTAGES, DEFAULT_SIZING_SYSTEM, PAGE_TITLE_PREFIX } from '../../../constants';
 import { ClassTable } from '../../../layouts/components/class-table';
 import { VersionTag } from '../../../layouts/components/tag';
 import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const WidthPage: React.FC<any> = (props) => {
-    const widthClasses = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'];
-
-    let classTable = widthClasses.map((value) => {
-        return {
-            class: `w-${value}p`,
-            style: `width: ${value}%;`,
-        };
-    });
-    classTable = classTable.concat([
+    let classTable = [
         {
             class: `w-0`,
             style: `width: 0;`,
@@ -37,7 +29,23 @@ export const WidthPage: React.FC<any> = (props) => {
             class: `w-screen`,
             style: `width: 100vh;`,
         },
-    ]);
+    ];
+    classTable = classTable.concat(
+        DEFAULT_PERCENTAGES.filter((value) => value !== 0).map((value) => {
+            return {
+                class: `w-${value}p`,
+                style: `width: ${value}%;`,
+            };
+        })
+    );
+    classTable = classTable.concat(
+        DEFAULT_SIZING_SYSTEM.filter((value) => value !== 0).map((value) => {
+            return {
+                class: `w-${value}`,
+                style: `width: ${0.5 * value}rem`,
+            };
+        })
+    );
 
     return (
         <main className="page-layout">
@@ -65,9 +73,7 @@ export const WidthPage: React.FC<any> = (props) => {
                             The <code>{`w-{{value}}`}</code> classes gives an element a percentage based width.
                         </p>
 
-                        <div
-                            className="u-flex u-flex-column u-justify-space-evenly p-6 bg-orange-100 mb-2"
-                        >
+                        <div className="u-flex u-flex-column u-justify-space-evenly p-6 bg-orange-100 mb-2">
                             <div className="w-20p bg-orange-500 u-round-xs p-1 mb-2 u-shadow-lg">
                                 <span className="text-gray-000">w-20p</span>
                             </div>
@@ -94,6 +100,42 @@ export const WidthPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
+                <section className="padtop" id="absolute">
+                    <div className="content">
+                        <Headline title="Absolute Widths" link="#absolute" size="4" />
+                        <div className="divider"></div>
+                        <VersionTag version="0.7.1" text="New" />
+                        <p>
+                            The <code>{`w-{{value}}`}</code> classes gives an element an absolute width.
+                        </p>
+
+                        <div className="u-flex u-flex-column u-justify-space-evenly p-6 bg-yellow-100 mb-2">
+                            <div className="w-8 bg-yellow-500 u-round-xs p-1 mb-2 u-shadow-lg">
+                                <span className="text-gray-000">w-8</span>
+                            </div>
+                            <div className="w-16 bg-yellow-500 u-round-xs p-1 mb-2 u-shadow-lg">
+                                <span className="text-gray-000">w-16</span>
+                            </div>
+                            <div className="w-24 bg-yellow-500 u-round-xs p-1 mb-2 u-shadow-lg">
+                                <span className="text-gray-000">w-24</span>
+                            </div>
+                            <div className="w-32 bg-yellow-500 u-round-xs p-1 mb-2 u-shadow-lg">
+                                <span className="text-gray-000">w-32</span>
+                            </div>
+                        </div>
+
+                        <CodeBlock
+                            language="htmlbars"
+                            code={`<div>
+    <div class="w-8">...</div>
+    <div class="w-16">...</div>
+    <div class="w-24">...</div>
+    <div class="w-32">...</div>
+</div>`}
+                        />
+                    </div>
+                </section>
+
                 <section className="padtop" id="screen">
                     <div className="content">
                         <Headline title="Screen Width" link="#screen" size="4" />
@@ -102,11 +144,9 @@ export const WidthPage: React.FC<any> = (props) => {
                             The <code>{`w-screen`}</code> class makes an element span the entire viewport.
                         </p>
 
-                        <div
-                            className="u-relative u-overflow-x-scroll p-6 bg-pink-100 mb-2"
-                        >
+                        <div className="u-relative u-overflow-x-scroll p-6 bg-pink-100 mb-2">
                             <div className="w-screen bg-pink-500 text-gray-000 p-3 w-100p u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
-                                <p>w-screen</p>
+                                <div>w-screen</div>
                             </div>
                         </div>
 
@@ -128,9 +168,7 @@ export const WidthPage: React.FC<any> = (props) => {
                             commonly used to unset a previously set width.
                         </p>
 
-                        <div
-                            className="u-relative p-6 bg-indigo-100 mb-2"
-                        >
+                        <div className="u-relative p-6 bg-indigo-100 mb-2">
                             <div className="w-auto bg-indigo-500 text-gray-000 p-3 w-100p u-flex u-items-center u-justify-center u-round-xs u-shadow-lg">
                                 <p className="mb-0">w-auto</p>
                             </div>

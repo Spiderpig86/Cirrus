@@ -11,6 +11,11 @@ export const toc: TableOfContentsEntry[] = [
                 children: null,
             },
             {
+                name: 'Absolute Heights',
+                anchor: '#absolute',
+                children: null,
+            },
+            {
                 name: 'Screen Height',
                 anchor: '#screen',
                 children: null,
