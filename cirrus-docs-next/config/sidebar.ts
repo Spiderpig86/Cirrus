@@ -325,6 +325,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Line Height',
+                url: '/fonts/line-height',
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Size',
                 url: '/fonts/size',
             },

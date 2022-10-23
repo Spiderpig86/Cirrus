@@ -2,8 +2,8 @@ import { TableOfContentsEntry } from '../../../layouts/components/toc';
 
 export const toc: TableOfContentsEntry[] = [
     {
-        name: 'Letter Spacing',
-        anchor: '#letter-spacing',
+        name: 'Line Height',
+        anchor: '#line-height',
         children: [
             {
                 name: 'Examples',

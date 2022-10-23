@@ -13,6 +13,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { TITLE_FONTS } from '../../../config/sidebar';
+import { Blockquote } from '../../../layouts/components/blockquote';
 
 export const LetterSpacingPage: React.FC<any> = (props) => {
     const DEFAULT_LETTER_SPACING_CLASSES = {
@@ -130,6 +131,54 @@ export const LetterSpacingPage: React.FC<any> = (props) => {
 </div>`}
                             language="htmlbars"
                         />
+                    </div>
+                </section>
+
+                <section className="padtop" id="responsive">
+                    <div className="content">
+                        <Headline title="Responsive" link="#responsive" size="4" />
+                        <div className="divider"></div>
+
+                        <Blockquote accentColor={'#fcd9bd'}>
+                            <p>
+                                ⚠ Note that the viewport variants are disabled in the default build of Cirrus. To
+                                enable, you must enable it yourself in <code>_configs.scss</code> and create a custom
+                                build or enable it in the config in your Sass project.
+                            </p>
+
+                            <div className="space"></div>
+
+                            <CodeBlock
+                                code={`//_configs.scss
+$config: (
+    viewports: (
+        flags.$LETTER-SPACING: true,
+    )
+) !default;`}
+                                language="scss"
+                            />
+                        </Blockquote>
+
+                        <p>
+                            All utility classes mentioned here support viewport based application. All you need to do is
+                            add a <code>-&lt;viewport&gt;</code> at the end of the class(es) you are using. For example,
+                            use <code>u-tracking-sm-md</code> to apply <code>u-tracking-sm</code> on medium screens and above.
+                        </p>
+
+                        <CodeBlock
+                            code={`<div class="u-tracking-sm-md">
+    <!-- ... -->
+</div>`}
+                            language="html"
+                        />
+
+                        <p>
+                            For more information, visit the{' '}
+                            <Link href="/fundamentals/viewports">
+                                <a className="u u-LR">Viewports</a>
+                            </Link>{' '}
+                            documentation.
+                        </p>
                     </div>
                 </section>
 

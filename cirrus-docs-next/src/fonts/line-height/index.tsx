@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 import { withLayout } from '@moxy/next-layout';
 
 import { TableOfContents } from '../../../layouts/components/toc';
@@ -9,53 +8,42 @@ import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { ClassTable } from '../../../layouts/components/class-table';
-import { Blockquote } from '../../../layouts/components/blockquote';
+import { Tag, VersionTag } from '../../../layouts/components/tag';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
-import { TITLE_LAYOUT } from '../../../config/sidebar';
-import { ResizableInternal } from '../../../layouts/components/resizable';
+import { TITLE_FONTS } from '../../../config/sidebar';
+import { Blockquote } from '../../../layouts/components/blockquote';
 
-export const MinWidthPage: React.FC<any> = (props) => {
-    const DEFAULT_CLASSES = {
-        0: '0',
-        xs: '640px',
-        sm: '768px',
-        md: '1024px',
-        lg: '1280px',
-        xl: '1536px',
-        '10p': '10%',
-        '20p': '20%',
-        '30p': '30%',
-        '40p': '40%',
-        '50p': '50%',
-        '60p': '60%',
-        '70p': '70%',
-        '80p': '80%',
-        '90p': '90%',
-        '100p': '100%',
-        screen: '100vw',
+export const LineHeightsPage: React.FC<any> = (props) => {
+    const DEFAULT_LINE_HEIGHT_CLASSES = {
+        none: 0,
+        tighter: 1.25,
+        tight: 1.375,
+        normal: 1.5,
+        loose: 1.625,
+        looser: 2,
     };
 
-    let classTable = Object.entries(DEFAULT_CLASSES).map((entry) => {
+    const classTable = Object.entries(DEFAULT_LINE_HEIGHT_CLASSES).map((entry) => {
         return {
-            class: `min-w-${entry[0]}`,
-            style: `min-width: ${entry[1]};`,
+            class: `leading-${entry[0]}`,
+            style: `line-height: ${entry[1]} !important`,
         };
     });
 
     return (
         <main className="page-layout">
             <Head>
-                <title>{PAGE_TITLE_PREFIX} Min Width</title>
+                <title>{PAGE_TITLE_PREFIX} Line Height</title>
             </Head>
-
             <div>
-                <section className="padtop" id="min-width">
+                <section className="padtop" id="line-height">
                     <div className="content">
-                        <Headline title="Min Width" link="#min-width" />
+                        <Headline title="Line Height" link="#line-height" />
                         <div className="divider"></div>
-                        <p>Classes to set the minimum width of an element.</p>
+                        <VersionTag version="0.7.1" />
+                        <p>These are utility classes that specify the line height of an element's text.</p>
 
                         <ClassTable classTable={classTable} />
                     </div>
@@ -67,25 +55,43 @@ export const MinWidthPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
 
                         <p>
-                            Using these classes it quite simple to control the minimum width an element should have. You
-                            can either use a percentage based class or use a class to span the whole screen using the{' '}
-                            <code>min-w-[size]</code> syntax.
+                            Below is a demo of all utility classes that apply line height styles. Note that{' '}
+                            <code>leading-normal</code> is not the same as the default line height value in Cirrus.
                         </p>
-
-                        <div className="p-4 bg-indigo-100 u-round-xs text-white font-bold u-text-center u-flex">
-                            <div className="min-w-50p p-2 bg-indigo-500 u-round-xs">min-w-50p</div>
-                        </div>
                         <div className="space"></div>
 
+                        <div className="">
+                            {Object.entries(DEFAULT_LINE_HEIGHT_CLASSES).map((entry) => {
+                                return (
+                                    <div className="mb-4">
+                                        <p className="text-gray-600 mb-0">
+                                            <b>leading-{entry[0]}</b>
+                                        </p>
+                                        <p className={`leading-${entry[0]} mt-0 text-lg`}>
+                                            Lorem Ipsum best not make any more threats to your website... It will be met
+                                            with fire and fury like the world has never seen. When other websites give
+                                            you text, they're not sending the best. They're not sending you, they're
+                                            sending words that have lots of problems and they're bringing those problems
+                                            with us.
+                                        </p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+
+                        <div className="space space--lg"></div>
                         <CodeBlock
-                            code={`<div class="p-4 bg-indigo-100 u-round-xs text-white font-bold u-text-center u-flex" style="">
-    <div class="min-w-50p p-2 bg-indigo-500 u-round-xs">min-w-50p</div>
-</div>`}
+                            code={`<p class="leading-none ...">Lorem Ipsum best not make any more threats to your website...</p>
+<p class="leading-tighter ...">Lorem Ipsum best not make any more threats to your website...</p>
+<p class="leading-tight ...">Lorem Ipsum best not make any more threats to your website...</p>
+<p class="leading-normal ...">Lorem Ipsum best not make any more threats to your website...</p>
+<p class="leading-loose ...">Lorem Ipsum best not make any more threats to your website...</p>
+<p class="leading-looser ...">Lorem Ipsum best not make any more threats to your website...</p>`}
                             language="htmlbars"
                         />
                     </div>
                 </section>
-                
+
                 <section className="padtop" id="responsive">
                     <div className="content">
                         <Headline title="Responsive" link="#responsive" size="4" />
@@ -104,7 +110,7 @@ export const MinWidthPage: React.FC<any> = (props) => {
                                 code={`//_configs.scss
 $config: (
     viewports: (
-        flags.$MIN-WIDTH: true,
+        flags.$LINE-HEIGHT: true,
     )
 ) !default;`}
                                 language="scss"
@@ -112,13 +118,13 @@ $config: (
                         </Blockquote>
 
                         <p>
-                            To use the viewport variant of a given class, you just need to suffix each class with a
-                            viewport selector. For example, if I only want <code>min-w-0</code> to be applied to some
-                            element for <code>lg</code> and above, then I would use the <code>min-w-0-lg</code> class.
+                            All utility classes mentioned here support viewport based application. All you need to do is
+                            add a <code>-&lt;viewport&gt;</code> at the end of the class(es) you are using. For example,
+                            use <code>u-leading-sm-md</code> to apply <code>u-leading-sm</code> on medium screens and above.
                         </p>
 
                         <CodeBlock
-                            code={`<div class="min-w-0-lg">
+                            code={`<div class="u-leading-sm-md">
     <!-- ... -->
 </div>`}
                             language="html"
@@ -140,8 +146,9 @@ $config: (
                         <div className="divider"></div>
 
                         <p>
-                            The classes specified above are the default utility classes for setting minimum widths. You
-                            can add, change, or remove classes within the <code>_config.scss</code> file of Cirrus.
+                            The classes specified above are the default utility classes for setting the letter-spacing
+                            property. You can add, change, or remove classes within the <code>_config.scss</code> file
+                            of Cirrus.
                         </p>
 
                         <div className="space"></div>
@@ -150,21 +157,17 @@ $config: (
                             code={`// _config.scss
 $config: (
     extend: (
-        min-widths: (
-            'min': 'min-content',
-            'max': 'max-content',
+        line-heights: (
+            loosest: '2.5'
         )
     )
 ) !default;`}
                             language="scss"
                         />
-                        <p>This would generate the following additonal classes.</p>
+                        <p>This would generate the following classes.</p>
                         <CodeBlock
-                            code={`.min-w-min {
-    min-width: min-content !important;
-}
-.min-w-max {
-    min-width: max-content !important;
+                            code={`.leading-loosest {
+    line-height: 2.5 !important;
 }`}
                             language="css"
                         />
@@ -180,8 +183,8 @@ $config: (
 
                 <Pagination
                     lookupProps={{
-                        sectionName: TITLE_LAYOUT,
-                        pageName: `Min Width`,
+                        sectionName: TITLE_FONTS,
+                        pageName: `Line Heights`,
                     }}
                 />
             </div>
@@ -191,4 +194,4 @@ $config: (
     );
 };
 
-export default withLayout(<DefaultLayout />)(MinWidthPage);
+export default withLayout(<DefaultLayout />)(LineHeightsPage);
