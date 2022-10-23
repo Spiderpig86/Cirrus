@@ -807,7 +807,7 @@ kbd {
 
 /* Line height */
 .leading-none {
-  line-height: 0 !important;
+  line-height: 1 !important;
 }
 
 .leading-tighter {
