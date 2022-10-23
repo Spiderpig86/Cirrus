@@ -671,7 +671,7 @@ $default-config: (
         auto: auto,
         screen: 100vh,
     )),
-    min-heights: functions.map-multi-merge(defaults.$default-sizing-system, defaults.$default-percentages, (
+    min-heights: functions.map-multi-merge(defaults.$default-percentages, (
         0: 0,
         screen: 100vh,
     )),
