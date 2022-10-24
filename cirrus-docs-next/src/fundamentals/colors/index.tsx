@@ -6,7 +6,7 @@ import { withLayout } from '@moxy/next-layout';
 import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
-import { Tag } from '../../../layouts/components/tag';
+import { Tag, VersionTag } from '../../../layouts/components/tag';
 import { Display } from './display';
 import { DefaultLayout } from '../../../layouts/default';
 import { CodeBlock } from '../../../layouts/components/codeblock';
@@ -46,10 +46,7 @@ export const ColorsPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Colors" link="#colors" />
                         <div className="divider"></div>
-                        <span className="tag-container group-tags">
-                            <div className="tag tag--dark">New</div>
-                            <div className="tag tag--info">0.6.0</div>
-                        </span>
+                        <VersionTag text='Update' version='0.7.1' />
                         <p>
                             Cirrus comes with a semantic palette and an expanded palette to help you style your page.
                             The expanded palette is a large, hand-tuned collection of colors for the framework.

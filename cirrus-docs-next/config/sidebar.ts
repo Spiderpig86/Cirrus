@@ -194,6 +194,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Accordion',
+                url: '/elements/accordion',
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Avatar',
                 url: '/elements/avatar',
             },

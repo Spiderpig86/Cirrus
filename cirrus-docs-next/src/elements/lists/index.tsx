@@ -31,9 +31,9 @@ export const ListsPage: React.FC<any> = (props) => {
                     </div>
                 </section>
 
-                <section className="padtop" id="basic">
+                <section className="padtop" id="basics">
                     <div className="content">
-                        <Headline title="Basic" link="#basic" size="4" />
+                        <Headline title="Basics" link="#basics" size="4" />
                         <div className="divider"></div>
 
                         <p>Minimal styles are used to tweak the look of lists.</p>
