@@ -382,25 +382,20 @@ position: absolute;`,
                         <p>
                             Use the <code>u-overlay</code> class to add an overlay over encapsulating class that has{' '}
                             <code>position: relative;</code>. For example, a div with a teal background is added on top
-                            of the gray parent.
+                            of the image.
                         </p>
                         <div
-                            className="bg-gray-100 u-relative"
+                            className="bg-gray-100 u-relative h-32"
                             style={{
-                                height: '200px',
+                                background: `url(https://source.unsplash.com/random/)`,
                             }}
                         >
-                            <div
-                                className="u-overlay bg-teal-300"
-                                style={{
-                                    opacity: 0.5,
-                                }}
-                            ></div>
+                            <div className="u-overlay bg-teal-300 u-opacity-50"></div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="bg-gray-100 u-relative" style="height: 200px;">
-    <div class="u-overlay bg-teal-300" style="opacity: 0.5;"></div>
+                            code={`<div class="bg-gray-100 u-relative h-32">
+    <div class="u-overlay bg-teal-300 u-opacity-50"></div>
 </div>`}
                             language="htmlbars"
                         />
