@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  [![v.0.7.0-patch.1](https://img.shields.io/badge/cirrus-0.7.0-blue.svg)](https://github.com/Spiderpig86/Cirrus)
+  [![v.0.7.1](https://img.shields.io/badge/cirrus-0.7.1-blue.svg)](https://github.com/Spiderpig86/Cirrus)
   [![MIT License](https://img.shields.io/github/license/Spiderpig86/Cirrus.svg)](https://opensource.org/licenses/MIT)
   [![Github Actions](https://github.com/Spiderpig86/Cirrus/actions/workflows/ci.yml/badge.svg)](https://github.com/Spiderpig86/Cirrus/actions)
   [![Known Vulnerabilities](https://snyk.io/test/github/Spiderpig86/Cirrus/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Spiderpig86/Cirrus?targetFile=package.json)
@@ -59,8 +59,17 @@ yarn add cirrus-ui
 
 #### CDN
 
+For CDNs, it is recommended to attach a specific versions to the URLs to avoid unexpected updates to maintain consistency in your project.
+
+##### Unpkg
 ```html
 <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
+```
+
+##### JsDelivr
+
+```html
+<link rel="stylesheet" href="https://www.jsdelivr.com/package/npm/cirrus-ui">
 ```
 
 Check out the [Setup](https://www.cirrus-ui.com/getting-started/setup) guide for more information.
@@ -185,6 +194,7 @@ $ yarn watch
   - Spacing
 - **Builds** - build files for `core` and `ext`.
 - **Components** - framework components.
+  - Accordion
   - Avatar
   - Breadcrumb
   - Button
@@ -209,6 +219,8 @@ $ yarn watch
 - **Internal** - internal APIs, functions, constants, etc.
 - **Utils** - utility classes.
   - Absolute
+  - Blur
+  - Border
   - Clearfix
   - Display
   - Flex
@@ -216,17 +228,16 @@ $ yarn watch
   - Opacity
   - Overflow
   - Position
-  - Round
   - Shadow
+  - Transitions
   - Z-Index
 
 ## :clap: Related Projects
-| Project                                                     | Description                                                                           |
-|-------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| [vue-cirrus](https://github.com/FlorianWoelki/vue-cirrus)   | Cirrus components for Vue.js with straightforward syntax                              |
-| [cirrus-blocks](https://github.com/Cirrus-UI/Cirrus-Blocks) | A collection of beautiful components built with Cirrus ready to be copied and pasted. |
-| [cirrus-reset](https://github.com/Cirrus-UI/Cirrus-Reset)   | A simple CSS reset from Cirrus.                                                       |
-
+| Project                                                   | Description                                                                           |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| [vue-cirrus](https://github.com/FlorianWoelki/vue-cirrus) | Cirrus components for Vue.js with straightforward syntax                              |
+| cirrus-blocks                                             | A collection of beautiful components built with Cirrus ready to be copied and pasted. |
+| [cirrus-reset](https://github.com/Cirrus-UI/Cirrus-Reset) | A simple CSS reset from Cirrus.                                                       |
 
 ## :newspaper: License and Attribution
 Cirrus is licensed under the [MIT license](https://github.com/Spiderpig86/Cirrus/blob/master/LICENSE "MIT License"). If this frame work has helped you in any way, attribution in the footer of your website would be much appreciated.
@@ -240,6 +251,8 @@ Read our [contributing guide](https://github.com/Spiderpig86/Cirrus/blob/master/
 We welcome all contributions. Please read our [CONTRIBUTING.md](https://github.com/Spiderpig86/Cirrus/blob/master/.github/CONTRIBUTING.md) first. You can submit any ideas as [pull requests](https://github.com/Spiderpig86/Cirrus/pulls) or as [GitHub issues](https://github.com/Spiderpig86/Cirrus/issues). If you'd like to improve code, check out the [Development Instructions](https://www.cirrus-ui.com/getting-started/developing) and have a good time! :)
 
 When creating issues, please follow the templates provided for the issue type you selected. The added detail and formatting will help me understand and resolve your issue faster.
+
+[![Let's fund issues in this repository](https://issuehunt.io/static/embed/issuehunt-button-v1.svg)](https://issuehunt.io/r/Spiderpig86/Cirrus)
 
 ## ❤️ Sponsors and Backers
 
