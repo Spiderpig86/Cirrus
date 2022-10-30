@@ -56,12 +56,20 @@ export const SetUpPage: React.FC<any> = (props) => {
 
                         <div className="space"></div>
                         <h6>2. Use a CDN</h6>
-                        <b>Unpkg</b>
+                        <p>
+                            It is recommended to attach a version number to these CDN links to keep your project
+                            consistent with a given version if you want to avoid auto updates.
+                        </p>
+                        <ExternalLink classes="font-bold" url="https://unpkg.com/browse/cirrus-ui/">
+                            Unpkg
+                        </ExternalLink>
                         <div className="my-2">
                             <CodeBlock code={`https://unpkg.com/cirrus-ui`} language="text" />
                         </div>
                         <div className="space"></div>
-                        <b>JsDelivr</b>
+                        <ExternalLink classes="font-bold" url="https://www.jsdelivr.com/package/npm/cirrus-ui">
+                            JsDelivr
+                        </ExternalLink>
                         <div className="my-2">
                             <CodeBlock
                                 code={`https://cdn.jsdelivr.net/npm/cirrus-ui/dist/cirrus.min.css`}

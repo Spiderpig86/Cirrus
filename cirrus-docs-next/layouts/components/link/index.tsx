@@ -4,7 +4,7 @@ import React from 'react';
 export const ExternalLink: React.FC<any> = ({ children, ...rest }: any) => {
     return (
         <a
-            className="u u-LR"
+            className={`u u-LR ${rest.classes ?? ''}`}
             target="_blank"
             href={rest.url}
             rel="noopener noreferrer"

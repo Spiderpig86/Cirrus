@@ -2,7 +2,7 @@ import { TableOfContentsEntry } from '../../layouts/components/toc';
 
 export const toc: TableOfContentsEntry[] = [
     {
-        name: `What's New in 0.7.0?`,
+        name: `What's New in 0.7.x?`,
         anchor: '#whats-new',
         children: [
             {
