@@ -18,7 +18,7 @@ $generate-utility: should-generate-classes($ACCORDION);
             justify-content: space-between;
             list-style-type: none;
             opacity: 0.75;
-            transition: all 250ms ease-out;
+            transition: all 250ms;
 
             &:after {
                 background-image: url($img-chevron-dark);
@@ -30,7 +30,6 @@ $generate-utility: should-generate-classes($ACCORDION);
                 float: right;
                 height: 1rem;
                 transform: rotate(-90deg);
-                transition: all var(--animation-duration);
                 width: 1rem;
             }
         }
