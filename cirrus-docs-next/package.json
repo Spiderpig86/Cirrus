@@ -14,9 +14,11 @@
     "@moxy/next-layout": "^2.2.2",
     "@nivo/bar": "^0.63.0",
     "@svgr/webpack": "^5.4.0",
+    "@types/lodash": "^4.14.186",
     "@types/react-syntax-highlighter": "^13.5.0",
     "axios": "^0.20.0",
     "framer-motion": "^6.2.8",
+    "lodash": "^4.17.21",
     "next": "9.5.5",
     "next-images": "^1.6.0",
     "next-with-workbox": "^2.0.1",
@@ -30,6 +32,7 @@
     "react-split-pane": "^0.1.92",
     "react-syntax-highlighter": "^15.2.1",
     "react-text-loop": "^2.3.0",
+    "ts-treemap": "^1.1.0",
     "workbox-window": "^6.0.2"
   },
   "devDependencies": {
