@@ -38,31 +38,31 @@ export const AvatarPage: React.FC<any> = (props) => {
                         <div className="row mb-2">
                             <div className="avatar">
                                 <img
-                                    src="https://4501-enterprise.demo.design.infor.com/images/11.jpg"
+                                    src="https://raw.githubusercontent.com/Spiderpig86/Cirrus/gh-pages/cirrus-docs-next/static/img/avatars/12.jpg"
                                     alt="avatar"
                                 />
                             </div>
                             <div className="avatar">
                                 <img
-                                    src="https://4501-enterprise.demo.design.infor.com/images/12.jpg"
+                                    src="https://raw.githubusercontent.com/Spiderpig86/Cirrus/gh-pages/cirrus-docs-next/static/img/avatars/13.jpg"
                                     alt="avatar"
                                 />
                             </div>
                             <div className="avatar">
                                 <img
-                                    src="https://4501-enterprise.demo.design.infor.com/images/13.jpg"
+                                    src="https://raw.githubusercontent.com/Spiderpig86/Cirrus/gh-pages/cirrus-docs-next/static/img/avatars/14.jpg"
                                     alt="avatar"
                                 />
                             </div>
                             <div className="avatar">
                                 <img
-                                    src="https://4501-enterprise.demo.design.infor.com/images/14.jpg"
+                                    src="https://raw.githubusercontent.com/Spiderpig86/Cirrus/gh-pages/cirrus-docs-next/static/img/avatars/15.jpg"
                                     alt="avatar"
                                 />
                             </div>
                             <div className="avatar">
                                 <img
-                                    src="https://4501-enterprise.demo.design.infor.com/images/15.jpg"
+                                    src="https://raw.githubusercontent.com/Spiderpig86/Cirrus/gh-pages/cirrus-docs-next/static/img/avatars/11.jpg"
                                     alt="avatar"
                                 />
                             </div>
