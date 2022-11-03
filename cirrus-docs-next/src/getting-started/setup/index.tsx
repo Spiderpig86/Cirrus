@@ -87,6 +87,17 @@ export const SetUpPage: React.FC<any> = (props) => {
                         >
                             <button className="btn-info">Download</button>
                         </a>
+
+                        <div className="space"></div>
+                        <h6>4. Cirrus Start</h6>
+                        <p>
+                            Use a pre-built template that comes with all the bells and whistles to get your project up
+                            and running.
+                        </p>
+                        <ExternalLink url="https://github.com/Cirrus-UI/Cirrus-Start">
+                            <button className="btn-black">Cirrus Start</button>
+                        </ExternalLink>
+                        <img src="https://github.com/Cirrus-UI/Cirrus-Start/raw/main/gifs/combined.gif" />
                     </div>
                 </section>
 
