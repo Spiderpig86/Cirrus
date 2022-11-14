@@ -291,7 +291,7 @@ export const ModalsPage: React.FC<any> = (props) => {
     <div class="modal-header">
         <a href="#anchor-to-background" class="u-pull-right" aria-label="Close">
             <span class="icon">
-                <i class="fa-wrapper fa fa-times></i>
+                <i class="fa-wrapper fa fa-times"></i>
             </span>
         </a>
     </div>
@@ -316,7 +316,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                             <b>Return to Top</b>
                         </p>
                         <CodeBlock
-                            code={`<a href="!#" class="modal-overlay close-btn" aria-label="Close"></a>`}
+                            code={`<a href="#" class="modal-overlay close-btn" aria-label="Close"></a>`}
                             language="htmlbars"
                         />
                         <p>
