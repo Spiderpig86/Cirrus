@@ -20,7 +20,7 @@ $generate-utility: should-generate-classes($LINKS-EXT);
             position: absolute;
             height: 2px;
             width: 0;
-            background: $cirrus-link-dark;
+            background: currentColor;
             bottom: -0.25em;
         }
 
@@ -64,7 +64,7 @@ $generate-utility: should-generate-classes($LINKS-EXT);
             position: absolute;
             height: 2px;
             width: 0;
-            background: $cirrus-link-dark;
+            background: currentColor;
         }
 
         &::before {
@@ -133,7 +133,7 @@ $generate-utility: should-generate-classes($LINKS-EXT);
             width: 2px;
             width: 0.1 rem;
             height: 0;
-            background: $cirrus-link-dark;
+            background: currentColor;
         }
 
         &::before {

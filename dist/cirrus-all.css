@@ -21220,7 +21220,7 @@ details.accordion[open] summary.accordion__summary:after {
   position: absolute;
   height: 2px;
   width: 0;
-  background: #4643e2;
+  background: currentColor;
   bottom: -0.25em;
 }
 
@@ -21265,7 +21265,7 @@ details.accordion[open] summary.accordion__summary:after {
   position: absolute;
   height: 2px;
   width: 0;
-  background: #4643e2;
+  background: currentColor;
 }
 
 .utb::before {
@@ -21326,7 +21326,7 @@ details.accordion[open] summary.accordion__summary:after {
   width: 2px;
   width: 0.1 rem;
   height: 0;
-  background: #4643e2;
+  background: currentColor;
 }
 
 .usquare::before {
