@@ -42,5 +42,9 @@ $generate-utility: should-generate-classes($ACCORDION);
                 transform: rotate(0);
             }
         }
+
+        &:last-child {
+            border-color: transparent;
+        }
     }
 }

@@ -15324,6 +15324,10 @@ details.accordion[open] summary.accordion__summary:after {
   transform: rotate(0);
 }
 
+details.accordion:last-child {
+  border-color: transparent;
+}
+
 /* Avatar */
 .avatar {
   border-radius: 50%;
