@@ -1421,6 +1421,25 @@
   resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.6.148.tgz#8fa825d53ffd1cbcafce1b6a830eefd3dcc09dd5"
   integrity sha512-6QMz0/2h5C3ua51iAnXMPWFbb1QOU1UvSM4bKBw5mzdT+WtLgjbETBBIQZ+Sh9WvEcGwlAt/DEdRpIC3XlDBMA==
 
+"@emmetio/abbreviation@^2.2.3":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@emmetio/abbreviation/-/abbreviation-2.2.3.tgz#2b3c0383c1a4652f677d5b56fb3f1616fe16ef10"
+  integrity sha512-87pltuCPt99aL+y9xS6GPZ+Wmmyhll2WXH73gG/xpGcQ84DRnptBsI2r0BeIQ0EB/SQTOe2ANPqFqj3Rj5FOGA==
+  dependencies:
+    "@emmetio/scanner" "^1.0.0"
+
+"@emmetio/css-abbreviation@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@emmetio/css-abbreviation/-/css-abbreviation-2.1.4.tgz#90362e8a1122ce3b76f6c3157907d30182f53f54"
+  integrity sha512-qk9L60Y+uRtM5CPbB0y+QNl/1XKE09mSO+AhhSauIfr2YOx/ta3NJw2d8RtCFxgzHeRqFRr8jgyzThbu+MZ4Uw==
+  dependencies:
+    "@emmetio/scanner" "^1.0.0"
+
+"@emmetio/scanner@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@emmetio/scanner/-/scanner-1.0.0.tgz#065b2af6233fe7474d44823e3deb89724af42b5f"
+  integrity sha512-8HqW8EVqjnCmWXVpqAOZf+EGESdkR27odcMMMGefgKXtar00SoYNSryGv//TELI4T3QFsECo78p+0lmalk/CFA==
+
 "@emotion/is-prop-valid@^0.8.2":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
@@ -3550,6 +3569,21 @@ elliptic@^6.5.3:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
+
+emmet-monaco-es@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/emmet-monaco-es/-/emmet-monaco-es-5.1.2.tgz#25c58c02349637e4f117932496ebf3ca3a5b0031"
+  integrity sha512-P+GwbRfzCAN9socNCLj7hdlmjV1J535wYZX9uoXERRGbbfkzcmfz4i43ClDecqCVt6IsbP0RK8AgX370ClMcJA==
+  dependencies:
+    emmet "^2.3.6"
+
+emmet@^2.3.6:
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/emmet/-/emmet-2.3.6.tgz#1d93c1ac03164da9ddf74864c1f341ed6ff6c336"
+  integrity sha512-pLS4PBPDdxuUAmw7Me7+TcHbykTsBKN/S9XJbUOMFQrNv9MoshzyMFK/R57JBm94/6HSL4vHnDeEmxlC82NQ4A==
+  dependencies:
+    "@emmetio/abbreviation" "^2.2.3"
+    "@emmetio/css-abbreviation" "^2.1.4"
 
 emojis-list@^2.0.0:
   version "2.1.0"

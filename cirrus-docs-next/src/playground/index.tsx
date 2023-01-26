@@ -6,6 +6,7 @@ import { ControlledEditor } from '@monaco-editor/react';
 import SplitPane from 'react-split-pane';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import _ from 'lodash';
+import { emmetHTML, emmetCSS } from 'emmet-monaco-es';
 
 import { IFrame } from '../../layouts/components/iframe';
 import { BlankLayout } from '../../layouts/blank';
@@ -46,6 +47,9 @@ export const PlaygroundPage: React.FC<any> = () => {
         // monacoEditor.editor.IStandaloneCodeEditor
         editorRef.current = editor;
         editorRef.current.setValue(code);
+
+        emmetHTML(editorRef.current);
+        emmetCSS(editorRef.current);
     }
 
     function handleSplitPaneDragStarted() {
