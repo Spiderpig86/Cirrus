@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
-import { ControlledEditor } from '@monaco-editor/react';
+import Editor, { Monaco } from '@monaco-editor/react';
 import SplitPane from 'react-split-pane';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import _ from 'lodash';
@@ -24,6 +24,7 @@ import PlaygroundCodeSVG from '../../static/svg/playground-code.svg';
 import { PAGE_TITLE_PREFIX } from '../../constants';
 
 export const PlaygroundPage: React.FC<any> = () => {
+    const monacoRef = useRef<any>();
     const editorRef = useRef<any>();
     const [code, setCode] = useState(``);
     const [isDragging, setDragging] = useState(false); // Hacky workaround https://github.com/tomkp/react-split-pane/issues/30
@@ -43,13 +44,14 @@ export const PlaygroundPage: React.FC<any> = () => {
         localStorage.setItem(CIRRUS_PLAYGROUND_KEY, code);
     }, [code]);
 
-    function handleEditorMounted(_: () => string, editor: any) {
+    function handleEditorMounted(editor, monaco: Monaco) {
         // monacoEditor.editor.IStandaloneCodeEditor
-        editorRef.current = editor;
-        editorRef.current.setValue(code);
 
-        emmetHTML(editorRef.current);
-        emmetCSS(editorRef.current);
+        console.log(editor, editor.languages);
+        editorRef.current = editor;
+        monacoRef.current = monaco;
+        emmetHTML(monacoRef.current);
+        // emmetCSS(editorRef.current);
     }
 
     function handleSplitPaneDragStarted() {
@@ -254,13 +256,14 @@ export const PlaygroundPage: React.FC<any> = () => {
                             backgroundColor: '#202124',
                         }}
                     >
-                        <ControlledEditor
+                        <Editor
+                            defaultValue={code}
                             language="html"
-                            theme="dark"
+                            theme={'vs-dark'}
                             height="100%"
                             width="100%"
-                            editorDidMount={handleEditorMounted}
-                            onChange={_.debounce((obj, value) => {
+                            onMount={handleEditorMounted}
+                            onChange={_.debounce((value, event) => {
                                 setCode(value ?? '');
                             }, 500)}
                             options={{
