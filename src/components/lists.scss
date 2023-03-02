@@ -275,7 +275,7 @@ $generate-utility: should-generate-classes($LISTS);
         }
 
         /* Darkened area that will close the navbar when clicked for mobile only */
-        & + .tree-nav-close {
+        .tree-nav-close {
             display: none; /* Not needed in desktop */
         }
 

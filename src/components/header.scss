@@ -160,6 +160,11 @@ $generate-utility: should-generate-classes($HEADER);
         padding: 0 0.3rem;
         cursor: pointer;
 
+        div {
+            /* Cursor should be reset for children */
+            cursor: default;
+        }
+
         a {
             align-items: center;
             display: flex;

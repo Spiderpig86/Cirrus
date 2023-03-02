@@ -12853,6 +12853,11 @@ label:last-child:not(:first-child):not(.form-group-label) {
   /* Add room for the dropdown chevron pseudoelement */
 }
 
+.nav-item div {
+  /* Cursor should be reset for children */
+  cursor: default;
+}
+
 .nav-item a {
   align-items: center;
   display: flex;
@@ -13452,7 +13457,7 @@ ul .divider::after {
   bottom: 1rem;
 }
 
-.tree-nav-body + .tree-nav-close {
+.tree-nav-body .tree-nav-close {
   display: none; /* Not needed in desktop */
 }
 
