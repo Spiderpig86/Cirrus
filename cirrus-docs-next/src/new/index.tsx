@@ -273,7 +273,7 @@ export const NewPage: React.FC<any> = (props) => {
                                 styling right out of the box for the progress HTML element.
                             </li>
                             <li>
-                                <InternalLink url="/animations">New Animations</InternalLink> — new animation classes
+                                <InternalLink url="/animations/animated-styles">New Animations</InternalLink> — new animation classes
                                 include pulse (skeleton loaders) and ping (notification).
                             </li>
                         </ul>
