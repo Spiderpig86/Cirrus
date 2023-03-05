@@ -46,6 +46,7 @@
     @if $color != null {
         .bg-#{$name} {
             --btn-color: #{hex-to-rgb($color)};
+            // Not important, use this as a fallback in case no border is set
             --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
 
             background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
@@ -61,6 +62,7 @@
 
         .border-#{$name} {
             --btn-border-color: #{hex-to-rgb($color)};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)} !important;
             
             border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
         }
@@ -83,6 +85,7 @@
         @if $color != null {
             .bg-#{$name}-#{$level} {
                 --btn-color: #{hex-to-rgb($color)};
+                // Not important, use this as a fallback in case no border is set
                 --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
 
                 background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
@@ -98,6 +101,7 @@
 
             .border-#{$name}-#{$level} {
                 --btn-border-color: #{hex-to-rgb($color)};
+                --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)} !important;
 
                 border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
             }
