@@ -1,9 +1,7 @@
 // Utility classes for shadows
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($BLUR);
-
-@if $generate-utility {
+@if should-generate-classes($BLUR) {
     @include generate-styles-with-viewports($generate-viewports: #{get-viewport-flag($BLUR)}) using ($viewport) {
         $suffix: if($viewport != '', '-#{$viewport}', '');
 

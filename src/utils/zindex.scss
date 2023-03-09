@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($ZINDEX);
-
-@if $generate-utility {
+@if should-generate-classes($ZINDEX) {
     @include generate-classes-for-viewport-with-map(
                     $z-indexes,
                     'z-index',

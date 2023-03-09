@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($TOOLTIPS);
-
-@if $generate-utility {
+@if should-generate-classes($TOOLTIPS) {
     /* TOOLTIPS */
     .tooltip {
         position: relative; /* let's the pseudoelement that we are displaying relative to the button. */

@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($LISTS);
-
-@if $generate-utility {
+@if should-generate-classes($LISTS) {
     /* LISTS */
 
     ul,

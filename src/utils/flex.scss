@@ -2,9 +2,7 @@
 
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($FLEX);
-
-@if $generate-utility {
+@if should-generate-classes($FLEX) {
     $flex-directions: row, row-reverse, column, column-reverse;
     $justify-content: flex-start, center, flex-end, space-between, space-around, space-evenly;
     $align-items: stretch, flex-start, center, flex-end, baseline;
@@ -65,9 +63,7 @@ $generate-utility: should-generate-classes($FLEX);
 }
 
 // TODO: Move to gap.scss
-$generate-utility: should-generate-classes($GAP);
-
-@if $generate-utility {
+@if should-generate-classes($GAP) {
     // Generate flex gap class map
     $gaps-both: ();
     // TODO: Consider if we need to generate for row and col only

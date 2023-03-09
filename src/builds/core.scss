@@ -18,16 +18,4 @@
 @use "../components/table";
 
 // Utilities
-@use "../utils/absolute";
-@use "../utils/blur";
-@use "../utils/border";
-@use "../utils/clearfix";
-@use "../utils/display";
-@use "../utils/flex";
-@use "../utils/misc";
-@use "../utils/opacity";
-@use "../utils/overflow";
-@use "../utils/position";
-@use "../utils/shadows";
-@use "../utils/transitions";
-@use "../utils/zindex";
+@use "../utils";

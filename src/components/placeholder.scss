@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($PLACEHOLDER);
-
-@if $generate-utility {
+@if should-generate-classes($PLACEHOLDER) {
     /* PLACEHOLDER */
     /* Designed to be embedded in any parent container as placeholder when content is absent. */
 

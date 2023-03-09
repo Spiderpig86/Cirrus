@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($TAGS);
-
-@if $generate-utility {
+@if should-generate-classes($TAGS) {
 
 $TAG_PADDING_DIFF: 0.125;
 $TAG_BASE_PADDING_X: 0.5; // .5rem;

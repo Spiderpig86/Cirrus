@@ -11,8 +11,7 @@
     );
 }
 
-$generate-utility: should-generate-classes($BORDER-OPACITY);
-@if $generate-utility {
+@if should-generate-classes($BORDER-OPACITY) {
     @include generate-classes-for-viewport-with-map(
         $opacities,
         '--border-opacity',
@@ -22,8 +21,7 @@ $generate-utility: should-generate-classes($BORDER-OPACITY);
     );
 }
 
-$generate-utility: should-generate-classes($ROUND);
-@if $generate-utility {
+@if should-generate-classes($ROUND) {
     @each $class, $value in $round {
         .u-round-#{$class} {
             border-radius: #{$value};

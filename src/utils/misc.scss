@@ -3,8 +3,7 @@
 /* UTILS */
 /* Utility classes to help solve some very annoying issues */
 
-$generate-utility: should-generate-classes($FLOAT);
-@if $generate-utility {
+@if should-generate-classes($FLOAT) {
     $pull-directions: (left, right);
     @include generate-classes-for-viewport(
                     $pull-directions,
@@ -14,9 +13,7 @@ $generate-utility: should-generate-classes($FLOAT);
     );
 }
 
-
-$generate-utility: should-generate-classes($TEXT);
-@if $generate-utility {
+@if should-generate-classes($TEXT) {
     $text-directions: (justify, left, right, center);
     @include generate-classes-for-viewport(
                     $text-directions,

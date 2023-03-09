@@ -74,10 +74,7 @@
     }
 }
 
-
-$generate-utility: should-generate-classes($FORMS);
-
-@if $generate-utility {
+@if should-generate-classes($FORMS) {
     /* FORMS */
 
     /*

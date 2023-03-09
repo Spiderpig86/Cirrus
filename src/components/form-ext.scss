@@ -1,10 +1,7 @@
 @use '../internal' as *;
 
 /* Mixins */
-
-$generate-utility: should-generate-classes($FORMS-EXT);
-
-@if $generate-utility {
+@if should-generate-classes($FORMS-EXT) {
     /* EXTENDED FORM */
 
 

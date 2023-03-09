@@ -2,9 +2,7 @@
 
 /* Accordion */
 /* Use with <detail> and <summary> HTML tags */
-$generate-utility: should-generate-classes($ACCORDION);
-
-@if $generate-utility {
+@if should-generate-classes($ACCORDION) {
     details.accordion {
         border-bottom: 1px solid fill('gray', '300');
         display: block;

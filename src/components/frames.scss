@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($FRAMES);
-
-@if $generate-utility {
+@if should-generate-classes($FRAMES) {
 /* Separate CSS file, but same part as Layout */
 
 /* The base container that is similar in structure to a card but more flexible */

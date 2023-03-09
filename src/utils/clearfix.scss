@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($CLEARFIX);
-
-@if $generate-utility {
+@if should-generate-classes($CLEARFIX) {
     $clears: left, right, both;
 
     @include generate-classes-for-viewport($clears, 'clear', 'u-clear-', $generate-viewports: #{get-viewport-flag($CLEARFIX)});

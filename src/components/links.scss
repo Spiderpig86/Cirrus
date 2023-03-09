@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($LINKS);
-
-@if $generate-utility {
+@if should-generate-classes($LINKS) {
     /* LINKS */
 
     a {

@@ -2,9 +2,7 @@
 @use '../internal' as *;
 
 /* TRANSITION DURATION */
-$generate-classes: should-generate-classes($TRANSITION-DURATION);
-
-@if $generate-classes {
+@if should-generate-classes($TRANSITION-DURATION) {
     @include generate-classes-for-viewport-with-map(
         $transition-durations,
         'transition-duration',

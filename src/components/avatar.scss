@@ -1,9 +1,7 @@
 @use '../internal' as *;
 
 /* Avatar */
-$generate-utility: should-generate-classes($AVATAR);
-
-@if $generate-utility {
+@if should-generate-classes($AVATAR) {
     .avatar {
         border-radius: 50%;
         position: relative;

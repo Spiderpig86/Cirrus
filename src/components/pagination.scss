@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($PAGINATION);
-
-@if $generate-utility {
+@if should-generate-classes($PAGINATION) {
     /* PAGINATION */
     /* Parent contianer for page navigation */
     .pagination {

@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($MODAL);
-
-@if $generate-utility {
+@if should-generate-classes($MODAL) {
     /* The base of the modal dialog, which is an overlay of the webpage */
     .modal {
         position: fixed; /* Scrolls with the user */

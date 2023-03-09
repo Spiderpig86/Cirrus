@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($CODE);
-
-@if $generate-utility {
+@if should-generate-classes($CODE) {
     /* CODE */
     code {
         --cirrus-code-label-fg: #{fill('gray', '600')};

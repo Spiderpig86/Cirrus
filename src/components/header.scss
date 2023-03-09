@@ -24,9 +24,7 @@
     white-space: nowrap;
 }
 
-$generate-utility: should-generate-classes($HEADER);
-
-@if $generate-utility {
+@if should-generate-classes($HEADER) {
 
     /* HEADER */
     .header {

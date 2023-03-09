@@ -1,9 +1,7 @@
 @use '../internal' as *;
 @use '../base/spacing.scss';
 
-$generate-utility: should-generate-classes($TABS);
-
-@if $generate-utility {
+@if should-generate-classes($TABS) {
     /* TABS AND TAB CONTAINER */
     .tab-container {
         display: flex;

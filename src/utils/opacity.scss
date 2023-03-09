@@ -1,7 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($OPACITY);
-@if $generate-utility {
+@if should-generate-classes($OPACITY) {
     @include generate-classes-for-viewport-with-map(
         $opacities,
         'opacity',
@@ -10,8 +9,7 @@ $generate-utility: should-generate-classes($OPACITY);
     );
 }
 
-$generate-utility: should-generate-classes($BACKGROUND-OPACITY);
-@if $generate-utility {
+@if should-generate-classes($BACKGROUND-OPACITY) {
     @include generate-classes-for-viewport-with-map(
         $opacities,
         '--bg-opacity',
@@ -21,8 +19,7 @@ $generate-utility: should-generate-classes($BACKGROUND-OPACITY);
     );
 }
 
-$generate-utility: should-generate-classes($COLOR-OPACITY);
-@if $generate-utility {
+@if should-generate-classes($COLOR-OPACITY) {
     @include generate-classes-for-viewport-with-map(
         $opacities,
         '--color-opacity',
@@ -32,8 +29,7 @@ $generate-utility: should-generate-classes($COLOR-OPACITY);
     );
 }
 
-$generate-utility: should-generate-classes($BORDER-OPACITY);
-@if $generate-utility {
+@if should-generate-classes($BORDER-OPACITY) {
     @include generate-classes-for-viewport-with-map(
         $opacities,
         '--border-opacity',

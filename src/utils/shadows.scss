@@ -1,9 +1,7 @@
 // Utility classes for shadows
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($SHADOWS);
-
-@if $generate-utility {
+@if should-generate-classes($SHADOWS) {
     @include generate-styles-with-viewports($generate-viewports: #{get-viewport-flag($SHADOWS)}) using ($viewport) {
         $suffix: if($viewport != '', '-#{$viewport}', '');
 

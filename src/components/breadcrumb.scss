@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($BREADCRUMB);
-
-@if $generate-utility {
+@if should-generate-classes($BREADCRUMB) {
     $separators: (
         'arrow': '\02192',
         'bullet': '\02022',

@@ -1,8 +1,6 @@
 @use '../internal' as *;
 
-$generate-utility: should-generate-classes($DISPLAY);
-
-@if $generate-utility {
+@if should-generate-classes($DISPLAY) {
   $display-utils-config: none, inline, inline-block, block, flex, inline-flex, table, table-row, table-column, table-cell;
 
   @include generate-classes-for-viewport($display-utils-config, 'display', $generate-viewports: #{get-viewport-flag($DISPLAY)});

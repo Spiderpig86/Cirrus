@@ -14,9 +14,7 @@
     width: $width;
 }
 
-$generate-utility: should-generate-classes($BUTTON);
-
-@if $generate-utility {
+@if should-generate-classes($BUTTON) {
     /* BUTTONS */
 
     /* Button styling */
