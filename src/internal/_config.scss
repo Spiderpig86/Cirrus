@@ -66,17 +66,17 @@ $default-config: (
     extend:
         (
             avatars: (
-                sizes: ()
+                sizes: (),
             ),
             border: (
-                widths: ()
+                widths: (),
             ),
             breakpoints: (
                 widths: (),
-                breakpoint-pairs: ()
+                breakpoint-pairs: (),
             ),
             buttons: (
-                sizes: ()
+                sizes: (),
             ),
             // Please define all colors using hex
             // Omitting some colors may break Cirrus builds
@@ -123,7 +123,7 @@ $default-config: (
             tab-sizes: (),
             absolute: (),
             filters: (
-                blurs:(),
+                blurs: (),
             ),
             flex: (
                 properties: (),
@@ -147,65 +147,68 @@ $default-config: (
     includes: (),
     // COMPONENTS //
     // Avatar
-    avatars: (
-        sizes: (
-            constants.$xs: (
-                font-size: 0.8rem,
-                width: 1.6rem,
-                height: 1.6rem,
+    avatars:
+        (
+            sizes: (
+                constants.$xs: (
+                    font-size: 0.8rem,
+                    width: 1.6rem,
+                    height: 1.6rem,
+                ),
+                constants.$sm: (
+                    font-size: 1rem,
+                    width: 2.4rem,
+                    height: 2.4rem,
+                ),
+                constants.$lg: (
+                    font-size: 2rem,
+                    width: 4.8rem,
+                    height: 4.8rem,
+                ),
+                constants.$xl: (
+                    font-size: 3rem,
+                    width: 6.4rem,
+                    height: 6.4rem,
+                ),
             ),
-            constants.$sm: (
-                font-size: 1rem,
-                width: 2.4rem,
-                height: 2.4rem,
-            ),
-            constants.$lg: (
-                font-size: 2rem,
-                width: 4.8rem,
-                height: 4.8rem,
-            ),
-            constants.$xl: (
-                font-size: 3rem,
-                width: 6.4rem,
-                height: 6.4rem,
-            ),
-        )
-    ),
+        ),
     breakpoints: (
         widths: defaults.$default-breakpoints,
         // Pairs for generating viewport media queries. Pairs are (current viewport: viewport that is 1 smaller)
-        breakpoint-pairs: (
-            constants.$sm: constants.$xs,
-            constants.$md: constants.$sm,
-            constants.$lg: constants.$md,
-            constants.$xl: constants.$lg,
-        ),
+        breakpoint-pairs:
+            (
+                constants.$sm: constants.$xs,
+                constants.$md: constants.$sm,
+                constants.$lg: constants.$md,
+                constants.$xl: constants.$lg,
+            ),
     ),
     // Button
-    buttons: (
-        sizes: (
-            constants.$xs: (
-                padding: 0 0.5rem,
-                font-size: 50%,
+    buttons:
+        (
+            sizes: (
+                constants.$xs: (
+                    padding: 0 0.5rem,
+                    font-size: 50%,
+                ),
+                constants.$sm: (
+                    padding: 0.25rem 1rem,
+                    font-size: 70%,
+                ),
+                constants.$md: (
+                    padding: 0.5rem 1.5rem,
+                    font-size: 90%,
+                ),
+                constants.$lg: (
+                    padding: 0.75rem 2rem,
+                    font-size: 110%,
+                ),
+                constants.$xl: (
+                    padding: 1rem 2.5rem,
+                    font-size: 130%,
+                ),
             ),
-            constants.$sm: (
-                padding: 0.25rem 1rem,
-                font-size: 70%,
-            ),
-            constants.$md: (
-                padding: 0.5rem 1.5rem,
-                font-size: 90%,
-            ),
-            constants.$lg: (
-                padding: 0.75rem 2rem,
-                font-size: 110%,
-            ),
-            constants.$xl: (
-                padding: 1rem 2.5rem,
-                font-size: 130%,
-            ),
-        )
-    ),
+        ),
     colors: (
         semantic: (
             'primary': theme.$cirrus-primary,
@@ -223,31 +226,31 @@ $default-config: (
         control-themes: (
             'primary': (
                 bg: theme.$cirrus-primary,
-                fg: theme.$cirrus-light
+                fg: theme.$cirrus-light,
             ),
             'dark': (
                 bg: theme.$cirrus-dark,
-                fg: theme.$cirrus-light
+                fg: theme.$cirrus-light,
             ),
             'link': (
                 bg: theme.$cirrus-link,
-                fg: theme.$cirrus-light
+                fg: theme.$cirrus-light,
             ),
             'info': (
                 bg: theme.$cirrus-info,
-                fg: theme.$cirrus-light
+                fg: theme.$cirrus-light,
             ),
             'success': (
                 bg: theme.$cirrus-success,
-                fg: theme.$cirrus-light
+                fg: theme.$cirrus-light,
             ),
             'warning': (
                 bg: theme.$cirrus-warning,
-                fg: theme.$cirrus-dark
+                fg: theme.$cirrus-dark,
             ),
             'danger': (
                 bg: theme.$cirrus-danger,
-                fg: theme.$cirrus-light
+                fg: theme.$cirrus-light,
             ),
         ),
         extended: (
@@ -475,10 +478,32 @@ $default-config: (
             ),
         ),
         font-families: (
-            primary: ('Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial,
-            sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'),
-            secondary: ('Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial,
-            sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'),
+            primary: (
+                'Montserrat',
+                -apple-system,
+                BlinkMacSystemFont,
+                'Segoe UI',
+                'Roboto',
+                'Helvetica Neue',
+                Arial,
+                sans-serif,
+                'Apple Color Emoji',
+                'Segoe UI Emoji',
+                'Segoe UI Symbol',
+            ),
+            secondary: (
+                'Nunito Sans',
+                -apple-system,
+                BlinkMacSystemFont,
+                'Segoe UI',
+                'Roboto',
+                'Helvetica Neue',
+                Arial,
+                sans-serif,
+                'Apple Color Emoji',
+                'Segoe UI Emoji',
+                'Segoe UI Symbol',
+            ),
         ),
         letter-spacing: (
             tightest: -0.075em,
@@ -501,6 +526,7 @@ $default-config: (
             uppercase: uppercase,
             lowercase: lowercase,
             capitalize: capitalize,
+            normal-case: none,
         ),
         weights: (
             'extrathin': 100,
@@ -597,7 +623,8 @@ $default-config: (
             ),
         ),
     // Tabs
-    tabs: (
+    tabs:
+        (
             font-sizes: (
                 constants.$xs: constants.$font-size-xs,
                 constants.$sm: constants.$font-size-s,
@@ -617,14 +644,19 @@ $default-config: (
             ),
         ),
     // UTILITIES / Non-components //
-    absolute: functions.map-multi-merge(
-    (
-        auto: auto,
-        0: 0,
-    ),
-        (functions.get-negative-value-map(defaults.$default-quartile-percentages)),
-        (functions.get-negative-value-map(functions.map-range(defaults.$default-sizing-system, 0, defaults.$default-absolutes-max)))
-    ),
+    absolute:
+        functions.map-multi-merge(
+            (
+                auto: auto,
+                0: 0,
+            ),
+            (functions.get-negative-value-map(defaults.$default-quartile-percentages)),
+            (
+                functions.get-negative-value-map(
+                    functions.map-range(defaults.$default-sizing-system, 0, defaults.$default-absolutes-max)
+                )
+            )
+        ),
     border: (
         width: (
             0: 0px,
@@ -632,7 +664,7 @@ $default-config: (
             2: 2px,
             4: 4px,
             8: 8px,
-        )
+        ),
     ),
     filters: (
         blurs: (
@@ -667,27 +699,50 @@ $default-config: (
             grid-columns: 12,
         ),
     ),
-    heights: functions.map-multi-merge(defaults.$default-sizing-system, defaults.$default-percentages, (
-        0: 0,
-        auto: auto,
-        screen: 100vh,
-    )),
-    min-heights: functions.map-multi-merge(defaults.$default-percentages, (
-        0: 0,
-        screen: 100vh,
-    )),
-    max-heights: functions.map-multi-merge(defaults.$default-percentages, (
-        'none': none,
-        screen: 100vh,
-    )),
-    min-widths: functions.map-multi-merge(defaults.$default-breakpoints, defaults.$default-percentages, (
-        0: 0,
-        screen: 100vw,
-    )),
-    max-widths: functions.map-multi-merge(defaults.$default-breakpoints, defaults.$default-percentages, (
-        'none': none,
-        screen: 100vw,
-    )),
+    heights:
+        functions.map-multi-merge(
+            defaults.$default-sizing-system,
+            defaults.$default-percentages,
+            (
+                0: 0,
+                auto: auto,
+                screen: 100vh,
+            )
+        ),
+    min-heights:
+        functions.map-multi-merge(
+            defaults.$default-percentages,
+            (
+                0: 0,
+                screen: 100vh,
+            )
+        ),
+    max-heights:
+        functions.map-multi-merge(
+            defaults.$default-percentages,
+            (
+                'none': none,
+                screen: 100vh,
+            )
+        ),
+    min-widths:
+        functions.map-multi-merge(
+            defaults.$default-breakpoints,
+            defaults.$default-percentages,
+            (
+                0: 0,
+                screen: 100vw,
+            )
+        ),
+    max-widths:
+        functions.map-multi-merge(
+            defaults.$default-breakpoints,
+            defaults.$default-percentages,
+            (
+                'none': none,
+                screen: 100vw,
+            )
+        ),
     opacity: (
         0: 0,
         10: 0.1,
@@ -757,11 +812,16 @@ $default-config: (
             1000: 1000ms,
         ),
     ),
-    widths: functions.map-multi-merge((
-        0: 0,
-        auto: auto,
-        screen: 100vw,
-    ), defaults.$default-percentages, defaults.$default-sizing-system),
+    widths:
+        functions.map-multi-merge(
+            (
+                0: 0,
+                auto: auto,
+                screen: 100vw,
+            ),
+            defaults.$default-percentages,
+            defaults.$default-sizing-system
+        ),
     z-index: (
         'n1': -1,
         0: 0,

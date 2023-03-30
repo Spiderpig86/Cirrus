@@ -117,8 +117,8 @@ mark,
 }
 
 /* Text Transformations */
-@each $transformation, $_ in $font-transforms {
-    .#{$transformation} {
+@each $name, $transformation in $font-transforms {
+    .#{$name} {
         text-transform: $transformation;
     }
 }

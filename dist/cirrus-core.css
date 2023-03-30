@@ -705,6 +705,10 @@ mark,
   text-transform: capitalize;
 }
 
+.normal-case {
+  text-transform: none;
+}
+
 .rtl {
   direction: rtl;
 }
