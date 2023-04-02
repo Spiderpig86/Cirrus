@@ -4792,7 +4792,7 @@ section {
     display: flex;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .level-right {
     margin-left: 1rem;
   }

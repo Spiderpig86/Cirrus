@@ -269,7 +269,7 @@ section {
     }
 }
 
-@include screen-below($sm) {
+@include screen-above($sm) {
     .level-right {
         margin-left: 1rem;
     }
