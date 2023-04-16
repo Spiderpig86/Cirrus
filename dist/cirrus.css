@@ -13465,6 +13465,7 @@ ul .divider::after {
   pointer-events: none; /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
   overflow: hidden;
   transition: all var(--animation-duration);
+  text-align: left;
 }
 
 @media screen and (max-width: 767px) {
