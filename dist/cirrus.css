@@ -16769,6 +16769,38 @@ ul .divider::after {
   transition-duration: 1000ms !important;
 }
 
+.u-align-baseline {
+  vertical-align: baseline !important;
+}
+
+.u-align-top {
+  vertical-align: top !important;
+}
+
+.u-align-middle {
+  vertical-align: middle !important;
+}
+
+.u-align-bottom {
+  vertical-align: bottom !important;
+}
+
+.u-align-text-top {
+  vertical-align: text-top !important;
+}
+
+.u-align-text-bottom {
+  vertical-align: text-bottom !important;
+}
+
+.u-align-sub {
+  vertical-align: sub !important;
+}
+
+.u-align-super {
+  vertical-align: super !important;
+}
+
 .u-z-n1 {
   z-index: -1 !important;
 }

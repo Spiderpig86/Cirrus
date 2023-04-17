@@ -21793,6 +21793,198 @@ ul .divider::after {
     transition-duration: 1000ms !important;
   }
 }
+.u-align-baseline {
+  vertical-align: baseline !important;
+}
+
+.u-align-top {
+  vertical-align: top !important;
+}
+
+.u-align-middle {
+  vertical-align: middle !important;
+}
+
+.u-align-bottom {
+  vertical-align: bottom !important;
+}
+
+.u-align-text-top {
+  vertical-align: text-top !important;
+}
+
+.u-align-text-bottom {
+  vertical-align: text-bottom !important;
+}
+
+.u-align-sub {
+  vertical-align: sub !important;
+}
+
+.u-align-super {
+  vertical-align: super !important;
+}
+
+@media screen and (min-width: 640px) {
+  .u-align-baseline-sm {
+    vertical-align: baseline !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-align-top-sm {
+    vertical-align: top !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-align-middle-sm {
+    vertical-align: middle !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-align-bottom-sm {
+    vertical-align: bottom !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-align-text-top-sm {
+    vertical-align: text-top !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-align-text-bottom-sm {
+    vertical-align: text-bottom !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-align-sub-sm {
+    vertical-align: sub !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-align-super-sm {
+    vertical-align: super !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-align-baseline-md {
+    vertical-align: baseline !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-align-top-md {
+    vertical-align: top !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-align-middle-md {
+    vertical-align: middle !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-align-bottom-md {
+    vertical-align: bottom !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-align-text-top-md {
+    vertical-align: text-top !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-align-text-bottom-md {
+    vertical-align: text-bottom !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-align-sub-md {
+    vertical-align: sub !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-align-super-md {
+    vertical-align: super !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-align-baseline-lg {
+    vertical-align: baseline !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-align-top-lg {
+    vertical-align: top !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-align-middle-lg {
+    vertical-align: middle !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-align-bottom-lg {
+    vertical-align: bottom !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-align-text-top-lg {
+    vertical-align: text-top !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-align-text-bottom-lg {
+    vertical-align: text-bottom !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-align-sub-lg {
+    vertical-align: sub !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-align-super-lg {
+    vertical-align: super !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-align-baseline-xl {
+    vertical-align: baseline !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-align-top-xl {
+    vertical-align: top !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-align-middle-xl {
+    vertical-align: middle !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-align-bottom-xl {
+    vertical-align: bottom !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-align-text-top-xl {
+    vertical-align: text-top !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-align-text-bottom-xl {
+    vertical-align: text-bottom !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-align-sub-xl {
+    vertical-align: sub !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-align-super-xl {
+    vertical-align: super !important;
+  }
+}
 .u-z-n1 {
   z-index: -1 !important;
 }
