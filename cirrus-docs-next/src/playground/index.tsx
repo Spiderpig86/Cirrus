@@ -103,7 +103,7 @@ export const PlaygroundPage: React.FC<any> = () => {
     // TODO: Refactor code, make template dynamic so we can swap out different versions of the framework
     function constructTemplate(code: string) {
         let template = `<link href="${PLAYGROUND_ENDPOINT_MAP.get(playgroundCdn)}" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,500,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 <body>${code}</body>`;
         return template;
