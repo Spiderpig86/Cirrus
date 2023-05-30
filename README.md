@@ -35,7 +35,8 @@ A component-and-utility-centric SCSS framework designed for rapid prototyping. U
 * :rainbow: **Configuration at its Core** - Add additional components, remove utility classes, disable features, etc. Cirrus takes a generative approach to building your stylesheets. 
 * :zap: **Lightweight** - A large amount of features with a minimal footprint.
 * :iphone: **Responsive** - Fully responsive by design.
-
+* :computer: **Vscode Extension Support** - Install it [here](https://marketplace.visualstudio.com/items?itemName=Spiderpig86.cirrus-intellisense).
+* 🤹‍♂️ **Playground** - Try out whatever experiment you want with Cirrus [here](https://www.cirrus-ui.com/playground).
 
 ## :dart: Supported Browsers
 Cirrus relies on [What CSS to prefix?](http://shouldiprefix.com/) to determine which selectors need prefixes.
