@@ -110,9 +110,9 @@ const Landing: React.FC<any> = () => {
                             </h1>
                             <div className="space"></div>
                             <p className="sub-title lead font-alt font-normal mx-auto w-60p-md u-none u-block-lg">
-                                A <b className="">component-and-utility-centric</b> SCSS framework designed for{' '}
-                                <b className="">rapid prototyping</b>. Use beautiful pre-built components to bootstrap
-                                your next project and utility classes to polish your final design.
+                                Create <b>beautiful</b> designs in <b>less time</b> with Cirrus, the SCSS framework
+                                designed for <b className="">rapid prototyping</b>. Use beautiful pre-built components
+                                to bootstrap your next project and utility classes to polish your final design.
                             </p>
 
                             <p>
@@ -154,7 +154,7 @@ const Landing: React.FC<any> = () => {
                     </h6>
                     <p className="lead mb-3">
                         A fully responsive and comprehensive SCSS framework with beautiful controls and simplistic
-                        structure. Integrate it with any existing design or use it to kick start your next project.
+                        structure. Use Cirrus to improve your existing designs or start a new project.
                     </p>
 
                     <div className="content">
@@ -416,15 +416,7 @@ import 'cirrus-ui';`}
                                                                 <div className="p-2 my-2 bg-white u-round-sm u-shadow-sm">
                                                                     <div className="u-flex u-gap-1 u-flex-wrap">
                                                                         {[
-                                                                            100,
-                                                                            200,
-                                                                            300,
-                                                                            400,
-                                                                            500,
-                                                                            600,
-                                                                            700,
-                                                                            800,
-                                                                            900,
+                                                                            100, 200, 300, 400, 500, 600, 700, 800, 900,
                                                                         ].map((level) => {
                                                                             return (
                                                                                 <div
@@ -847,7 +839,7 @@ import 'cirrus-ui';`}
                             the process.
                         </p>
                     </div>
-                    
+
                     <InternalLink url="/getting-started/managing-build-size">
                         <span className="text-lg">
                             Learn more
