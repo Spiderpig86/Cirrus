@@ -1,0 +1,81 @@
+// _generator.scss unit tests
+@use '../test_base' as *;
+
+@use '../../src/internal/generator';
+
+@include describe('utility()') {
+    @include it('should generate expected utility classes with variant support') {
+        @include assert {
+            @include output {
+                @include generator.utility(
+                    $property: 'color',
+                    $class-value-pairs: (
+                        'blue': blue,
+                    ),
+                    $variants: (
+                        'hover',
+                    ),
+                    $generate-viewports: 'true',
+                    $override: '!important'
+                );
+            }
+            @include expect {
+                .u-blue {
+                    color: blue !important;
+                }
+
+                @media screen and (min-width: 640px) {
+                    .u-blue-sm {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    .u-blue-md {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) {
+                    .u-blue-lg {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) {
+                    .u-blue-xl {
+                        color: blue !important;
+                    }
+                }
+
+                .hover\:u-blue:hover {
+                    color: blue !important;
+                }
+
+                @media screen and (min-width: 640px) {
+                    .hover\:u-blue-sm:hover {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    .hover\:u-blue-md:hover {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) {
+                    .hover\:u-blue-lg:hover {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) {
+                    .hover\:u-blue-xl:hover {
+                        color: blue !important;
+                    }
+                }
+            }
+        }
+    }
+}
