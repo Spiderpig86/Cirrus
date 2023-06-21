@@ -250,16 +250,18 @@ export const ColorsPage: React.FC<any> = (props) => {
     $config: (
         extend: (
             colors: (
-                'magenta': (
-                    '100': #FEF7F4,
-                    '200': #FBE0DD,
-                    '300': #F2AFB3,
-                    '400': #EC798B,
-                    '500': #DC5472,
-                    '600': #BC3263,
-                    '700': #98184D,
-                    '800': #73123F,
-                    '900': #560E39,
+                extended: (
+                    'magenta': (
+                        '100': #FEF7F4,
+                        '200': #FBE0DD,
+                        '300': #F2AFB3,
+                        '400': #EC798B,
+                        '500': #DC5472,
+                        '600': #BC3263,
+                        '700': #98184D,
+                        '800': #73123F,
+                        '900': #560E39,
+                    )
                 )
             )
         )
@@ -291,8 +293,10 @@ export const ColorsPage: React.FC<any> = (props) => {
     $config: (
         extend: (
             colors: (
-                'blue': (
-                    '500': #fff,
+                extended: (
+                    'blue': (
+                        '500': #fff,
+                    )
                 )
             )
         )
