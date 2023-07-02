@@ -2,18 +2,22 @@
 @use '../test_base' as *;
 
 @use '../../src/internal/generator';
+@use '../../src/internal/mixins';
 
 @include describe('utility()') {
     @include it('should generate expected utility classes with variant support') {
         @include assert {
             @include output {
                 @include generator.utility(
-                    $property: 'color',
                     $class-value-pairs: (
-                        'blue': blue,
+                        'blue': (
+                            'color': blue,
+                        ),
                     ),
                     $variants: (
                         'hover',
+                        'dark',
+                        'reduce-motion',
                     ),
                     $generate-viewports: 'true',
                     $override: '!important'
@@ -72,6 +76,65 @@
 
                 @media screen and (min-width: 1280px) {
                     .hover\:u-blue-xl:hover {
+                        color: blue !important;
+                    }
+                }
+                @media (prefers-color-scheme: dark) {
+                    .dark\:u-blue {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 640px) and (prefers-color-scheme: dark) {
+                    .dark\:u-blue-sm {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) and (prefers-color-scheme: dark) {
+                    .dark\:u-blue-md {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) and (prefers-color-scheme: dark) {
+                    .dark\:u-blue-lg {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) and (prefers-color-scheme: dark) {
+                    .dark\:u-blue-xl {
+                        color: blue !important;
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-blue {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 640px) and (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-blue-sm {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) and (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-blue-md {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) and (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-blue-lg {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) and (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-blue-xl {
                         color: blue !important;
                     }
                 }

@@ -1,6 +1,7 @@
 @use 'sass:list';
 @use 'config';
 @use 'size';
+@use 'mixins';
 
 $default-prefix: 'u-';
 $default-override: '';
@@ -11,7 +12,6 @@ $default-variant-delimiter: '\\:';
 @mixin utility(
     $prefix: $default-prefix,
     $delimiter: $default-delimiter,
-    $property,
     $class-value-pairs,
     $variants: (),
     $variant-delimiter: $default-variant-delimiter,
@@ -20,35 +20,70 @@ $default-variant-delimiter: '\\:';
 ) {
     @include utility-with-body(
             $prefix,
-            $property,
             $class-value-pairs,
             $variants,
             $variant-delimiter,
             $generate-viewports,
             $override
         )
-        using ($variant, $variant-delimiter, $prefix, $suffix, $property, $key, $value, $override) {
-        $variant-prefix: '';
-        $variant-suffix: '';
-        @if $variant != '' {
-            $variant-prefix: $variant + $variant-delimiter;
-            $variant-suffix: ':' + $variant;
-        }
+        using ($variant, $variant-delimiter, $prefix, $suffix, $key, $value, $override) {
+        // TODO Handle portrait and landscape
+        @if $variant == 'dark' or $variant == 'light' {
+            $variant-prefix: '';
+            $variant-suffix: '';
+            @if $variant != '' {
+                $variant-prefix: $variant + $variant-delimiter;
+            }
 
-        $suffix-str: '';
-        @if $suffix != '' {
-            $suffix-str: $delimiter + $suffix;
-        }
+            $suffix-str: '';
+            @if $suffix != '' {
+                $suffix-str: $delimiter + $suffix;
+            }
 
-        .#{$variant-prefix}#{$prefix}#{$key}#{$suffix-str}#{$variant-suffix} {
-            #{$property}: $value#{$override};
+            @media (prefers-color-scheme: #{$variant}) {
+                .#{$variant-prefix}#{$prefix}#{$key}#{$suffix-str} {
+                    @include mixins.explode-properties($value, $override);
+                }
+            }
+        } @else if $variant == 'reduce-motion' {
+            $variant-prefix: '';
+            $variant-suffix: '';
+            @if $variant != '' {
+                $variant-prefix: $variant + $variant-delimiter;
+            }
+
+            $suffix-str: '';
+            @if $suffix != '' {
+                $suffix-str: $delimiter + $suffix;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .#{$variant-prefix}#{$prefix}#{$key}#{$suffix-str} {
+                    @include mixins.explode-properties($value, $override);
+                }
+            }
+        } @else {
+            $variant-prefix: '';
+            $variant-suffix: '';
+            @if $variant != '' {
+                $variant-prefix: $variant + $variant-delimiter;
+                $variant-suffix: ':' + $variant;
+            }
+
+            $suffix-str: '';
+            @if $suffix != '' {
+                $suffix-str: $delimiter + $suffix;
+            }
+
+            .#{$variant-prefix}#{$prefix}#{$key}#{$suffix-str}#{$variant-suffix} {
+                @include mixins.explode-properties($value, $override);
+            }
         }
     }
 }
 
 @mixin utility-with-body(
     $prefix: $default-prefix,
-    $property,
     $class-value-pairs,
     $variants: (),
     $variant-delimiter: $default-variant-delimiter,
@@ -59,13 +94,14 @@ $default-variant-delimiter: '\\:';
     $variants: list.join('', $variants);
     @each $key, $value in $class-value-pairs {
         @each $variant in $variants {
-            @content ($variant, $variant-delimiter, $prefix, '', $property, $key, $value, $override);
+            // No viewport
+            @content ($variant, $variant-delimiter, $prefix, '', $key, $value, $override);
 
             // Generate classes with viewport
             @if $generate-viewports == 'true' {
                 @each $suffix, $limit in config.$breakpoint-pairs {
                     @include size.screen-above($limit) {
-                        @content ($variant, $variant-delimiter, $prefix, $suffix, $property, $key, $value, $override);
+                        @content ($variant, $variant-delimiter, $prefix, $suffix, $key, $value, $override);
                     }
                 }
             }

@@ -14,9 +14,9 @@
         opacity: 0.5;
     }
 */
-@mixin explode-properties($property-map) {
+@mixin explode-properties($property-map, $suffix: '') {
     @each $property, $value in $property-map {
-        #{$property}: #{$value};
+        #{$property}: #{$value} #{$suffix};
     }
 }
 
