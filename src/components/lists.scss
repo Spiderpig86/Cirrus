@@ -90,13 +90,13 @@
 
         .menu-item:hover > a {
             background-color: rgba(208, 208, 208, 0.3);
-            color: $cirrus-primary;
+            color: fill('primary');
             transition: all var(--animation-duration);
         }
 
         .menu-item.selected > a {
             color: #fff;
-            background-color: $cirrus-primary;
+            background-color: fill('primary');
         }
 
         .menu-item .menu-addon {

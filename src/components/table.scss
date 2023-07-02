@@ -31,7 +31,7 @@
 
             &.selected {
                 /* Style a selected row */
-                background-color: $cirrus-primary;
+                background-color: fill('primary');
                 color: #fff;
             }
         }

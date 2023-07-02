@@ -235,7 +235,7 @@
             /* Dropdown menu location adjustment located below for sizes above phones */
             /* Dropdown menu indicator */
             &::after {
-                border: 2px solid $cirrus-primary; /* Must be first to create the triangle shape */
+                border: 2px solid fill('primary'); /* Must be first to create the triangle shape */
                 border-right: 0; /* Create the triangle effect */
                 border-top: 0;
                 display: block;

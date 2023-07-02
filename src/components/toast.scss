@@ -25,7 +25,7 @@
         }
 
         a {
-            color: $cirrus-light;
+            color: fill('light');
             transition: all 0.3s;
 
             &:hover {
@@ -48,8 +48,8 @@
         /* TOAST TYPES */
 
         &.toast--primary {
-            background-color: $cirrus-primary;
-            border-color: $cirrus-primary;
+            background-color: fill('primary');
+            border-color: fill('primary');
         }
 
         @each $color, $value in $control-themes {

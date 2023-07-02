@@ -16,13 +16,13 @@
                 p,
                 #{$header-selectors} {
                     transition: all 0.3s;
-                    color: $cirrus-primary;
+                    color: fill('primary');
                 }
             }
 
             &:not(.selected):hover *:not([disabled]):not(.disabled):not(.ellipses) {
                 transition: all 0.3s;
-                color: $cirrus-primary;
+                color: fill('primary');
             }
 
             &.pagination-next {
@@ -73,7 +73,7 @@
 
                 /* Color the selected pagination item with accent color */
                 &.selected {
-                    background-color: $cirrus-primary;
+                    background-color: fill('primary');
                     color: #fff;
                     a {
                         color: #fff;

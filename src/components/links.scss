@@ -4,14 +4,14 @@
     /* LINKS */
 
     a {
-        color: $cirrus-link;
+        color: fill('link');
         font-weight: 600;
         padding: 2px;
         text-decoration: none;
         transition: all 0.3s;
 
         &:hover {
-            color: $cirrus-link-dark;
+            color: fill('link-dark');
             transition: all 0.3s;
         }
 

@@ -51,6 +51,19 @@
 /*
     Group selectors that share common styling.
 */
+/* Breakpoints */
+/* Fonts */
+/* Images */
+/************
+ * DEFAULTS *
+ ************/
+/*
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+*/
+/*
+  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
+*/
+/* VALUE APIS */
 /*
     Global Mixins
 */
@@ -66,18 +79,6 @@
 */
 /*
     Bring to front on focus.
-*/
-/* Breakpoints */
-/* Fonts */
-/* Images */
-/************
- * DEFAULTS *
- ************/
-/*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
-*/
-/*
-  Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
 /* Media Queries */
 /* Variant of mixin that takes in mapping of class name to value */
@@ -98,7 +99,6 @@
  *           }
  *       }
  */
-/* VALUE APIS */
 /* BASE STYLING + RESET FOR CIRRUS */
 :root {
   /* v1 Colors */
