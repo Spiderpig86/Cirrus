@@ -106,11 +106,16 @@ $default-variant-delimiter: '\\:';
         @each $variant in $variants {
             // No viewport
             @content ($variant, $variant-delimiter, $prefix, '', $common-class-name, $key, $value, $override);
+        }
+    }
 
-            // Generate classes with viewport
-            @if $generate-viewports == 'true' {
-                @each $suffix, $limit in config.$breakpoint-pairs {
-                    @include size.screen-above($limit) {
+    // Generate classes with viewport
+    // Generation is separate and in this specific nesting order of for loops to allow gulp-clean-css to efficiently minify
+    @if $generate-viewports == 'true' {
+        @each $suffix, $limit in config.$breakpoint-pairs {
+            @each $key, $value in $class-value-pairs {
+                @include size.screen-above($limit) {
+                    @each $variant in $variants {
                         @content ($variant, $variant-delimiter, $prefix, $suffix, $common-class-name, $key, $value, $override);
                     }
                 }

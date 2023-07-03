@@ -29,83 +29,12 @@
                     color: blue !important;
                 }
 
-                @media screen and (min-width: 640px) {
-                    .u-text-blue-sm {
-                        color: blue !important;
-                    }
-                }
-
-                @media screen and (min-width: 768px) {
-                    .u-text-blue-md {
-                        color: blue !important;
-                    }
-                }
-
-                @media screen and (min-width: 1024px) {
-                    .u-text-blue-lg {
-                        color: blue !important;
-                    }
-                }
-
-                @media screen and (min-width: 1280px) {
-                    .u-text-blue-xl {
-                        color: blue !important;
-                    }
-                }
-
                 .hover\:u-text-blue:hover {
                     color: blue !important;
                 }
 
-                @media screen and (min-width: 640px) {
-                    .hover\:u-text-blue-sm:hover {
-                        color: blue !important;
-                    }
-                }
-
-                @media screen and (min-width: 768px) {
-                    .hover\:u-text-blue-md:hover {
-                        color: blue !important;
-                    }
-                }
-
-                @media screen and (min-width: 1024px) {
-                    .hover\:u-text-blue-lg:hover {
-                        color: blue !important;
-                    }
-                }
-
-                @media screen and (min-width: 1280px) {
-                    .hover\:u-text-blue-xl:hover {
-                        color: blue !important;
-                    }
-                }
                 @media (prefers-color-scheme: dark) {
                     .dark\:u-text-blue {
-                        color: blue !important;
-                    }
-                }
-
-                @media screen and (min-width: 640px) and (prefers-color-scheme: dark) {
-                    .dark\:u-text-blue-sm {
-                        color: blue !important;
-                    }
-                }
-
-                @media screen and (min-width: 768px) and (prefers-color-scheme: dark) {
-                    .dark\:u-text-blue-md {
-                        color: blue !important;
-                    }
-                }
-
-                @media screen and (min-width: 1024px) and (prefers-color-scheme: dark) {
-                    .dark\:u-text-blue-lg {
-                        color: blue !important;
-                    }
-                }
-
-                @media screen and (min-width: 1280px) and (prefers-color-scheme: dark) {
-                    .dark\:u-text-blue-xl {
                         color: blue !important;
                     }
                 }
@@ -116,8 +45,40 @@
                     }
                 }
 
+                @media screen and (min-width: 640px) {
+                    .u-text-blue-sm {
+                        color: blue !important;
+                    }
+
+                    .hover\:u-text-blue-sm:hover {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 640px) and (prefers-color-scheme: dark) {
+                    .dark\:u-text-blue-sm {
+                        color: blue !important;
+                    }
+                }
+
                 @media screen and (min-width: 640px) and (prefers-reduced-motion: reduce) {
                     .reduce-motion\:u-text-blue-sm {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    .u-text-blue-md {
+                        color: blue !important;
+                    }
+
+                    .hover\:u-text-blue-md:hover {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) and (prefers-color-scheme: dark) {
+                    .dark\:u-text-blue-md {
                         color: blue !important;
                     }
                 }
@@ -128,8 +89,40 @@
                     }
                 }
 
+                @media screen and (min-width: 1024px) {
+                    .u-text-blue-lg {
+                        color: blue !important;
+                    }
+
+                    .hover\:u-text-blue-lg:hover {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) and (prefers-color-scheme: dark) {
+                    .dark\:u-text-blue-lg {
+                        color: blue !important;
+                    }
+                }
+
                 @media screen and (min-width: 1024px) and (prefers-reduced-motion: reduce) {
                     .reduce-motion\:u-text-blue-lg {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) {
+                    .u-text-blue-xl {
+                        color: blue !important;
+                    }
+
+                    .hover\:u-text-blue-xl:hover {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) and (prefers-color-scheme: dark) {
+                    .dark\:u-text-blue-xl {
                         color: blue !important;
                     }
                 }
