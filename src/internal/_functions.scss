@@ -172,7 +172,12 @@ $DELIMETER: '-';
     @each $key, $value in $map {
         @if type-of($key) == 'number' {
             @if $key >= $start and $key < $end {
-                $result: map.merge($result, ($key: $value));
+                $result: map.merge(
+                    $result,
+                    (
+                        $key: $value,
+                    )
+                );
             }
         }
     }

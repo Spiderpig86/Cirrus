@@ -813,7 +813,7 @@ $default-config: (
             1000: 1000ms,
         ),
     ),
-    vertical-align: (functions.to-property-map((baseline, top, middle, bottom, text-top, text-bottom, sub, super))),
+    vertical-align: functions.to-property-map((baseline, top, middle, bottom, text-top, text-bottom, sub, super)),
     widths:
         functions.map-multi-merge(
             (

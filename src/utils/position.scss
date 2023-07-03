@@ -1,8 +1,13 @@
 @use '../internal' as *;
 
 @if should-generate-classes($POSITION) {
-  $positions: static, fixed, absolute, relative, sticky;
+    $positions: static, fixed, absolute, relative, sticky;
 
-  // Comment here just for commit.
-  @include generate-classes-for-viewport($positions, 'position', $generate-viewports: #{get-viewport-flag($POSITION)});
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('position', to-property-map($positions)),
+        $common-class-name: '',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($POSITION)},
+        $override: '!important'
+    );
 }

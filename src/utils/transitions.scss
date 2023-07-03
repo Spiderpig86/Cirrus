@@ -3,10 +3,11 @@
 
 /* TRANSITION DURATION */
 @if should-generate-classes($TRANSITION-DURATION) {
-    @include generate-classes-for-viewport-with-map(
-        $transition-durations,
-        'transition-duration',
-        'u-duration-',
-        $generate-viewports: #{get-viewport-flag($TRANSITION-DURATION)}
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('transition-duration', $transition-durations),
+        $common-class-name: 'duration',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($TRANSITION-DURATION)},
+        $override: '!important'
     );
 }

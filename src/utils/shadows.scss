@@ -1,15 +1,31 @@
 // Utility classes for shadows
+@use 'sass:map';
 @use '../internal' as *;
 
-@if should-generate-classes($SHADOWS) {
-    @include generate-styles-with-viewports($generate-viewports: #{get-viewport-flag($SHADOWS)}) using ($viewport) {
-        $suffix: if($viewport != '', '-#{$viewport}', '');
-
-        @each $class, $property-map in $shadows {
-            .u-shadow-#{$class}#{$suffix} {
-                @include explode-properties($property-map);
-                box-shadow: var(--cirrus-shadow);
-            }
-        }
+@function _transformed() {
+    $transformed: ();
+    @each $key, $properties in $shadows {
+        $transformed: map.set(
+            $transformed,
+            $key,
+            map-merge(
+                $properties,
+                (
+                    'box-shadow': var(--cirrus-shadow),
+                )
+            )
+        );
     }
+    @return $transformed;
+}
+
+@if should-generate-classes($SHADOWS) {
+    $transformed: _transformed();
+
+    @include utility(
+        $class-value-pairs: $transformed,
+        $common-class-name: 'shadow',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($SHADOWS)}
+    );
 }

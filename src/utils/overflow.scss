@@ -2,24 +2,27 @@
 
 @if should-generate-classes($OVERFLOW) {
     $overflow: (auto, hidden, visible, scroll);
-    @include generate-classes-for-viewport(
-                    $overflow,
-                    'overflow',
-                    'u#{delimitize('overflow')}',
-            $generate-viewports: #{get-viewport-flag($OVERFLOW)}
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('overflow', to-property-map($overflow)),
+        $common-class-name: 'overflow',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($OVERFLOW)},
+        $override: '!important'
     );
     // NOTE: We have now changed u-hide-overflow to u-overflow-hidden
 
-    @include generate-classes-for-viewport(
-                    $overflow,
-                    'overflow-x',
-                    'u#{delimitize('overflow-x')}',
-            $generate-viewports: #{get-viewport-flag($OVERFLOW)}
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('overflow-x', to-property-map($overflow)),
+        $common-class-name: 'overflow-x',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($OVERFLOW)},
+        $override: '!important'
     );
-    @include generate-classes-for-viewport(
-                    $overflow,
-                    'overflow-y',
-                    'u#{delimitize('overflow-y')}',
-            $generate-viewports: #{get-viewport-flag($OVERFLOW)}
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('overflow-y', to-property-map($overflow)),
+        $common-class-name: 'overflow-y',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($OVERFLOW)},
+        $override: '!important'
     );
 }
