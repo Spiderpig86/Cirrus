@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use 'sass:map';
 @use 'config';
 @use 'size';
 @use 'mixins';
@@ -12,6 +13,7 @@ $default-variant-delimiter: '\\:';
 @mixin utility(
     $prefix: $default-prefix,
     $delimiter: $default-delimiter,
+    $common-class-name,
     $class-value-pairs,
     $variants: (),
     $variant-delimiter: $default-variant-delimiter,
@@ -20,14 +22,21 @@ $default-variant-delimiter: '\\:';
 ) {
     @include utility-with-body(
             $prefix,
+            $common-class-name,
             $class-value-pairs,
             $variants,
             $variant-delimiter,
             $generate-viewports,
             $override
         )
-        using ($variant, $variant-delimiter, $prefix, $suffix, $key, $value, $override) {
+        using ($variant, $variant-delimiter, $prefix, $suffix, $common-class-name, $key, $value, $override) {
         // TODO Handle portrait and landscape
+
+        $common-class: $common-class-name + $delimiter;
+        @if $common-class-name == '' {
+            $common-class: '';
+        }
+
         @if $variant == 'dark' or $variant == 'light' {
             $variant-prefix: '';
             $variant-suffix: '';
@@ -41,7 +50,7 @@ $default-variant-delimiter: '\\:';
             }
 
             @media (prefers-color-scheme: #{$variant}) {
-                .#{$variant-prefix}#{$prefix}#{$key}#{$suffix-str} {
+                .#{$variant-prefix}#{$prefix}#{$common-class}#{$key}#{$suffix-str} {
                     @include mixins.explode-properties($value, $override);
                 }
             }
@@ -58,7 +67,7 @@ $default-variant-delimiter: '\\:';
             }
 
             @media (prefers-reduced-motion: reduce) {
-                .#{$variant-prefix}#{$prefix}#{$key}#{$suffix-str} {
+                .#{$variant-prefix}#{$prefix}#{$common-class}#{$key}#{$suffix-str} {
                     @include mixins.explode-properties($value, $override);
                 }
             }
@@ -75,7 +84,7 @@ $default-variant-delimiter: '\\:';
                 $suffix-str: $delimiter + $suffix;
             }
 
-            .#{$variant-prefix}#{$prefix}#{$key}#{$suffix-str}#{$variant-suffix} {
+            .#{$variant-prefix}#{$prefix}#{$common-class}#{$key}#{$suffix-str}#{$variant-suffix} {
                 @include mixins.explode-properties($value, $override);
             }
         }
@@ -84,6 +93,7 @@ $default-variant-delimiter: '\\:';
 
 @mixin utility-with-body(
     $prefix: $default-prefix,
+    $common-class-name,
     $class-value-pairs,
     $variants: (),
     $variant-delimiter: $default-variant-delimiter,
@@ -95,16 +105,32 @@ $default-variant-delimiter: '\\:';
     @each $key, $value in $class-value-pairs {
         @each $variant in $variants {
             // No viewport
-            @content ($variant, $variant-delimiter, $prefix, '', $key, $value, $override);
+            @content ($variant, $variant-delimiter, $prefix, '', $common-class-name, $key, $value, $override);
 
             // Generate classes with viewport
             @if $generate-viewports == 'true' {
                 @each $suffix, $limit in config.$breakpoint-pairs {
                     @include size.screen-above($limit) {
-                        @content ($variant, $variant-delimiter, $prefix, $suffix, $key, $value, $override);
+                        @content ($variant, $variant-delimiter, $prefix, $suffix, $common-class-name, $key, $value, $override);
                     }
                 }
             }
         }
     }
+}
+
+@function class-value-map-with-single-property($property, $property-values) {
+    $result: ();
+
+    @each $key, $value in $property-values {
+        $result: map.set(
+            $result,
+            $key,
+            (
+                $property: $value,
+            )
+        );
+    }
+
+    @return $result;
 }

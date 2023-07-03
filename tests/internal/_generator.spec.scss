@@ -9,6 +9,7 @@
         @include assert {
             @include output {
                 @include generator.utility(
+                    $common-class-name: 'text',
                     $class-value-pairs: (
                         'blue': (
                             'color': blue,
@@ -24,117 +25,117 @@
                 );
             }
             @include expect {
-                .u-blue {
+                .u-text-blue {
                     color: blue !important;
                 }
 
                 @media screen and (min-width: 640px) {
-                    .u-blue-sm {
+                    .u-text-blue-sm {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 768px) {
-                    .u-blue-md {
+                    .u-text-blue-md {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 1024px) {
-                    .u-blue-lg {
+                    .u-text-blue-lg {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 1280px) {
-                    .u-blue-xl {
+                    .u-text-blue-xl {
                         color: blue !important;
                     }
                 }
 
-                .hover\:u-blue:hover {
+                .hover\:u-text-blue:hover {
                     color: blue !important;
                 }
 
                 @media screen and (min-width: 640px) {
-                    .hover\:u-blue-sm:hover {
+                    .hover\:u-text-blue-sm:hover {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 768px) {
-                    .hover\:u-blue-md:hover {
+                    .hover\:u-text-blue-md:hover {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 1024px) {
-                    .hover\:u-blue-lg:hover {
+                    .hover\:u-text-blue-lg:hover {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 1280px) {
-                    .hover\:u-blue-xl:hover {
+                    .hover\:u-text-blue-xl:hover {
                         color: blue !important;
                     }
                 }
                 @media (prefers-color-scheme: dark) {
-                    .dark\:u-blue {
+                    .dark\:u-text-blue {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 640px) and (prefers-color-scheme: dark) {
-                    .dark\:u-blue-sm {
+                    .dark\:u-text-blue-sm {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 768px) and (prefers-color-scheme: dark) {
-                    .dark\:u-blue-md {
+                    .dark\:u-text-blue-md {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 1024px) and (prefers-color-scheme: dark) {
-                    .dark\:u-blue-lg {
+                    .dark\:u-text-blue-lg {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 1280px) and (prefers-color-scheme: dark) {
-                    .dark\:u-blue-xl {
+                    .dark\:u-text-blue-xl {
                         color: blue !important;
                     }
                 }
 
                 @media (prefers-reduced-motion: reduce) {
-                    .reduce-motion\:u-blue {
+                    .reduce-motion\:u-text-blue {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 640px) and (prefers-reduced-motion: reduce) {
-                    .reduce-motion\:u-blue-sm {
+                    .reduce-motion\:u-text-blue-sm {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 768px) and (prefers-reduced-motion: reduce) {
-                    .reduce-motion\:u-blue-md {
+                    .reduce-motion\:u-text-blue-md {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 1024px) and (prefers-reduced-motion: reduce) {
-                    .reduce-motion\:u-blue-lg {
+                    .reduce-motion\:u-text-blue-lg {
                         color: blue !important;
                     }
                 }
 
                 @media screen and (min-width: 1280px) and (prefers-reduced-motion: reduce) {
-                    .reduce-motion\:u-blue-xl {
+                    .reduce-motion\:u-text-blue-xl {
                         color: blue !important;
                     }
                 }
