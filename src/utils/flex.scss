@@ -8,57 +8,66 @@
     $align-items: stretch, flex-start, center, flex-end, baseline;
     $flex-grow: 0, 1;
     $flex-wrap: wrap, wrap-reverse, nowrap;
-    $flex-basis: map.merge(to-property-map((auto, max-content, min-content, fit-content, content, revert, revert-layer)),
-        $default-percentages);
+    $flex-basis: map.merge(
+        to-property-map((auto, max-content, min-content, fit-content, content, revert, revert-layer)),
+        $default-percentages
+    );
 
-    @include generate-classes-for-viewport(
-                    $flex-directions,
-                    'flex-direction',
-                    'u#{delimitize('flex')}',
-            $generate-viewports: #{get-viewport-flag($FLEX)}
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('flex-direction', to-property-map($flex-directions)),
+        $common-class-name: 'flex',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
     );
-    @include generate-classes-for-viewport(
-                    $justify-content,
-                    'justify-content',
-                    'u#{delimitize('justify')}',
-            $generate-viewports: #{get-viewport-flag($FLEX)}
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('justify-content', to-property-map($justify-content)),
+        $common-class-name: 'justify',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
     );
-    @include generate-classes-for-viewport(
-                    $align-items,
-                    'align-items',
-                    'u#{delimitize('items')}',
-            $generate-viewports: #{get-viewport-flag($FLEX)}
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('align-items', to-property-map($align-items)),
+        $common-class-name: 'items',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
     );
 
     // Flex grow/shrink utils
-    @include generate-classes-for-viewport(
-                    $flex-grow,
-                    'flex-grow',
-                    'u#{delimitize('flex-grow')}',
-            $generate-viewports: #{get-viewport-flag($FLEX)}
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('flex-grow', to-property-map($flex-grow)),
+        $common-class-name: 'flex-grow',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
     );
 
-    @include generate-classes-for-viewport(
-                    $flex-grow,
-                    'flex-shrink',
-                    'u#{delimitize('flex-shrink')}',
-            $generate-viewports: #{get-viewport-flag($FLEX)}
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('flex-shrink', to-property-map($flex-grow)),
+        $common-class-name: 'flex-shrink',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
     );
 
     // Flex wrap
-    @include generate-classes-for-viewport(
-                    $flex-wrap,
-                    'flex-wrap',
-                    'u#{delimitize('flex')}',
-            $generate-viewports: #{get-viewport-flag($FLEX)}
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('flex-wrap', to-property-map($flex-wrap)),
+        $common-class-name: 'flex-wrap',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
     );
 
     // Flex basis
-    @include generate-classes-for-viewport-with-map(
-            $flex-basis,
-            'flex-basis',
-            'u#{delimitize('basis')}',
-        $generate-viewports: #{get-viewport-flag($FLEX)}
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('flex-basis', $flex-basis),
+        $common-class-name: 'flex-basis',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
     );
 }
 
@@ -69,12 +78,18 @@
     // TODO: Consider if we need to generate for row and col only
     @each $class, $size in $spacing-system {
         $gaps-both: map-merge(
-                        $gaps-both,
-                        (
-                                'gap-#{$class}': $size,
-                        )
+            $gaps-both,
+            (
+                'gap-#{$class}': $size,
+            )
         );
     }
 
-    @include generate-classes-for-viewport-with-map($gaps-both, 'gap', $generate-viewports: #{get-viewport-flag($GAP)});
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('gap', $gaps-both),
+        $common-class-name: 'gap',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
+    );
 }
