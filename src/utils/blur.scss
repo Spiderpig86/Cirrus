@@ -1,5 +1,24 @@
 // Utility classes for shadows
+@use 'sass:map';
+
 @use '../internal' as *;
+
+@function _transformed() {
+    $transformed: ();
+    @each $key, $properties in $blurs {
+        $transformed: map.set(
+            $transformed,
+            $key,
+            map-merge(
+                $properties,
+                (
+                    'filter': var(--cirrus-blur)
+                )
+            )
+        );
+    }
+    @return $transformed;
+}
 
 @if should-generate-classes($BLUR) {
     @include generate-styles-with-viewports($generate-viewports: #{get-viewport-flag($BLUR)}) using ($viewport) {
@@ -12,4 +31,12 @@
             }
         }
     }
+
+    $transformed: _transformed();
+    @include utility(
+        $class-value-pairs: $transformed,
+        $common-class-name: 'blur',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($BLUR)}
+    );
 }

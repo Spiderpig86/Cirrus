@@ -14285,96 +14285,102 @@ ul .divider::after {
   filter: var(--cirrus-blur);
 }
 
+.u-blur-none {
+  --cirrus-blur: blur(0);
+  filter: var(--cirrus-blur);
+}
+
+.u-blur-xs {
+  --cirrus-blur: blur(0.25rem);
+  filter: var(--cirrus-blur);
+}
+
+.u-blur-sm {
+  --cirrus-blur: blur(0.5rem);
+  filter: var(--cirrus-blur);
+}
+
+.u-blur-md {
+  --cirrus-blur: blur(1rem);
+  filter: var(--cirrus-blur);
+}
+
+.u-blur-lg {
+  --cirrus-blur: blur(1.5rem);
+  filter: var(--cirrus-blur);
+}
+
+.u-blur-xl {
+  --cirrus-blur: blur(3rem);
+  filter: var(--cirrus-blur);
+}
+
 .u-border-0 {
-  border-width: 0px;
+  border-width: 0px !important;
 }
 
 .u-border-1 {
-  border-width: 1px;
+  border-width: 1px !important;
 }
 
 .u-border-2 {
-  border-width: 2px;
+  border-width: 2px !important;
 }
 
 .u-border-4 {
-  border-width: 4px;
+  border-width: 4px !important;
 }
 
 .u-border-8 {
-  border-width: 8px;
+  border-width: 8px !important;
 }
 
 .u-border-opacity-0 {
-  --border-opacity: 0;
+  --border-opacity: 0px !important;
 }
 
-.u-border-opacity-10 {
-  --border-opacity: 0.1;
+.u-border-opacity-1 {
+  --border-opacity: 1px !important;
 }
 
-.u-border-opacity-20 {
-  --border-opacity: 0.2;
+.u-border-opacity-2 {
+  --border-opacity: 2px !important;
 }
 
-.u-border-opacity-30 {
-  --border-opacity: 0.3;
+.u-border-opacity-4 {
+  --border-opacity: 4px !important;
 }
 
-.u-border-opacity-40 {
-  --border-opacity: 0.4;
-}
-
-.u-border-opacity-50 {
-  --border-opacity: 0.5;
-}
-
-.u-border-opacity-60 {
-  --border-opacity: 0.6;
-}
-
-.u-border-opacity-70 {
-  --border-opacity: 0.7;
-}
-
-.u-border-opacity-80 {
-  --border-opacity: 0.8;
-}
-
-.u-border-opacity-90 {
-  --border-opacity: 0.9;
-}
-
-.u-border-opacity-100 {
-  --border-opacity: 1;
+.u-border-opacity-8 {
+  --border-opacity: 8px !important;
 }
 
 .u-round-none {
-  border-radius: 0px;
+  border-radius: 0px !important;
 }
 
 .u-round-xs {
-  border-radius: 0.25rem;
+  border-radius: 0.25rem !important;
 }
 
 .u-round-sm {
-  border-radius: 0.5rem;
+  border-radius: 0.5rem !important;
 }
 
 .u-round-md {
-  border-radius: 0.75rem;
+  border-radius: 0.75rem !important;
 }
 
 .u-round-lg {
-  border-radius: 1rem;
+  border-radius: 1rem !important;
 }
 
 .u-round-xl {
-  border-radius: 1.25rem;
+  border-radius: 1.25rem !important;
 }
 
 .u-round-full {
-  border-radius: 9001px;
+  border-radius: 9001px !important;
 }
 
 .u-clear-left {
