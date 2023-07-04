@@ -55,7 +55,7 @@
     // Flex wrap
     @include utility(
         $class-value-pairs: class-value-map-with-single-property('flex-wrap', to-property-map($flex-wrap)),
-        $common-class-name: 'flex-wrap',
+        $common-class-name: 'flex',
         $variants: (),
         $generate-viewports: #{get-viewport-flag($FLEX)},
         $override: '!important'
@@ -64,7 +64,7 @@
     // Flex basis
     @include utility(
         $class-value-pairs: class-value-map-with-single-property('flex-basis', $flex-basis),
-        $common-class-name: 'flex-basis',
+        $common-class-name: 'basis',
         $variants: (),
         $generate-viewports: #{get-viewport-flag($FLEX)},
         $override: '!important'
@@ -80,7 +80,7 @@
         $gaps-both: map-merge(
             $gaps-both,
             (
-                'gap-#{$class}': $size,
+                $class: $size,
             )
         );
     }
