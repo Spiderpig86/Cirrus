@@ -32,6 +32,8 @@ section {
     bottom: 0;
     left: 0;
     min-height: 100vh;
+	/* mobile viewport bug fix */
+	min-height: -webkit-fill-available;
 }
 
 /* This works well with spans and maybe even hr */
