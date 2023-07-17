@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { withLayout } from '@moxy/next-layout';
 import { DefaultLayout } from '../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../constants';
+import { ExternalLink } from '../../layouts/components/link';
 
 export const AboutPage: React.FC<any> = (props) => {
     return (
@@ -25,11 +26,15 @@ export const AboutPage: React.FC<any> = (props) => {
 
                     <div className="content">
                         <p className="lead text-gray-600">
-                            Accelerate your development ten-fold with <b>Cirrus Blocks</b>, a collection of over 50 beautifully designed components and layouts that can be copied and pasted right into your project. Developed by the same developers of Cirrus, you can be sure that each example is designed with the latest features available and is built to scale.
-                            Each example is available in HTML, React, and Vue.
+                            Accelerate your development ten-fold with <b>Cirrus Blocks</b>, a collection of over 50
+                            beautifully designed components and layouts that can be copied and pasted right into your
+                            project. Developed by the same developers of Cirrus, you can be sure that each example is
+                            designed with the latest features available and is built to scale. Each example is available
+                            in HTML, React, and Vue.
                         </p>
-                        <h6>Coming soon.</h6>
-                        
+                        <ExternalLink url="https://cirrus-blocks.com">
+                            Sign Up Now
+                        </ExternalLink>
                     </div>
                 </div>
             </section>
