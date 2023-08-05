@@ -14284,36 +14284,6 @@ ul .divider::after {
   filter: var(--cirrus-blur);
 }
 
-.u-blur-none {
-  --cirrus-blur: blur(0);
-  filter: var(--cirrus-blur);
-}
-
-.u-blur-xs {
-  --cirrus-blur: blur(0.25rem);
-  filter: var(--cirrus-blur);
-}
-
-.u-blur-sm {
-  --cirrus-blur: blur(0.5rem);
-  filter: var(--cirrus-blur);
-}
-
-.u-blur-md {
-  --cirrus-blur: blur(1rem);
-  filter: var(--cirrus-blur);
-}
-
-.u-blur-lg {
-  --cirrus-blur: blur(1.5rem);
-  filter: var(--cirrus-blur);
-}
-
-.u-blur-xl {
-  --cirrus-blur: blur(3rem);
-  filter: var(--cirrus-blur);
-}
-
 .u-border-0 {
   border-width: 0px !important;
 }

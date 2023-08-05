@@ -21,17 +21,6 @@
 }
 
 @if should-generate-classes($BLUR) {
-    @include generate-styles-with-viewports($generate-viewports: #{get-viewport-flag($BLUR)}) using ($viewport) {
-        $suffix: if($viewport != '', '-#{$viewport}', '');
-
-        @each $class, $property-map in $blurs {
-            .u-blur-#{$class}#{$suffix} {
-                @include explode-properties($property-map);
-                filter: var(--cirrus-blur);
-            }
-        }
-    }
-
     $transformed: _transformed();
     @include utility(
         $class-value-pairs: $transformed,
