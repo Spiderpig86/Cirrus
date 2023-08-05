@@ -10,17 +10,22 @@ $default-delimiter: '-';
 $default-variant-delimiter: '\\:';
 
 // ALL WIP
-@mixin utility(
+
+@mixin utility-with-body(
     $prefix: $default-prefix,
     $delimiter: $default-delimiter,
-    $common-class-name,
-    $class-value-pairs,
+    $common-class-name: 'placeholder',
+    $class-value-pairs: (
+        'placeholder': (
+            color: white,
+        ),
+    ),
     $variants: (),
     $variant-delimiter: $default-variant-delimiter,
     $generate-viewports: false,
     $override: $default-override
 ) {
-    @include utility-with-body(
+    @include generate-tree(
             $prefix,
             $common-class-name,
             $class-value-pairs,
@@ -32,66 +37,65 @@ $default-variant-delimiter: '\\:';
         using ($variant, $variant-delimiter, $prefix, $suffix, $common-class-name, $key, $value, $override) {
         // TODO Handle portrait and landscape
 
-        $common-class: $common-class-name + $delimiter;
-        @if $common-class-name == '' {
-            $common-class: '';
+        @include generate-variants(
+                $variant,
+                $delimiter,
+                $variant-delimiter,
+                $prefix,
+                $suffix,
+                $common-class-name,
+                $key,
+                $value,
+                $override
+            )
+            using ($variant-prefix, $prefix, $common-class, $key, $suffix-str, $variant-suffix) {
+            @content ($variant-prefix, $prefix, $common-class, $key, $suffix-str, $variant-suffix);
         }
+    }
+}
 
-        @if $variant == 'dark' or $variant == 'light' {
-            $variant-prefix: '';
-            $variant-suffix: '';
-            @if $variant != '' {
-                $variant-prefix: $variant + $variant-delimiter;
-            }
+@mixin utility(
+    $prefix: $default-prefix,
+    $delimiter: $default-delimiter,
+    $common-class-name,
+    $class-value-pairs,
+    $variants: (),
+    $variant-delimiter: $default-variant-delimiter,
+    $generate-viewports: false,
+    $override: $default-override
+) {
+    @include generate-tree(
+            $prefix,
+            $common-class-name,
+            $class-value-pairs,
+            $variants,
+            $variant-delimiter,
+            $generate-viewports,
+            $override
+        )
+        using ($variant, $variant-delimiter, $prefix, $suffix, $common-class-name, $key, $value, $override) {
+        // TODO Handle portrait and landscape
 
-            $suffix-str: '';
-            @if $suffix != '' {
-                $suffix-str: $delimiter + $suffix;
-            }
-
-            @media (prefers-color-scheme: #{$variant}) {
-                .#{$variant-prefix}#{$prefix}#{$common-class}#{$key}#{$suffix-str} {
-                    @include mixins.explode-properties($value, $override);
-                }
-            }
-        } @else if $variant == 'reduce-motion' {
-            $variant-prefix: '';
-            $variant-suffix: '';
-            @if $variant != '' {
-                $variant-prefix: $variant + $variant-delimiter;
-            }
-
-            $suffix-str: '';
-            @if $suffix != '' {
-                $suffix-str: $delimiter + $suffix;
-            }
-
-            @media (prefers-reduced-motion: reduce) {
-                .#{$variant-prefix}#{$prefix}#{$common-class}#{$key}#{$suffix-str} {
-                    @include mixins.explode-properties($value, $override);
-                }
-            }
-        } @else {
-            $variant-prefix: '';
-            $variant-suffix: '';
-            @if $variant != '' {
-                $variant-prefix: $variant + $variant-delimiter;
-                $variant-suffix: ':' + $variant;
-            }
-
-            $suffix-str: '';
-            @if $suffix != '' {
-                $suffix-str: $delimiter + $suffix;
-            }
-
-            .#{$variant-prefix}#{$prefix}#{$common-class}#{$key}#{$suffix-str}#{$variant-suffix} {
+        @include generate-variants(
+                $variant,
+                $delimiter,
+                $variant-delimiter,
+                $prefix,
+                $suffix,
+                $common-class-name,
+                $key,
+                $value,
+                $override
+            )
+            using ($variant-prefix, $prefix, $common-class, $key, $suffix-str, $variant-suffix) {
+            .#{$variant-prefix}#{$prefix}#{$common-class}#{$key}#{$suffix-str} {
                 @include mixins.explode-properties($value, $override);
             }
         }
     }
 }
 
-@mixin utility-with-body(
+@mixin generate-tree(
     $prefix: $default-prefix,
     $common-class-name,
     $class-value-pairs,
@@ -121,6 +125,69 @@ $default-variant-delimiter: '\\:';
                 }
             }
         }
+    }
+}
+
+@mixin generate-variants(
+    $variant,
+    $delimiter,
+    $variant-delimiter,
+    $prefix,
+    $suffix,
+    $common-class-name,
+    $key,
+    $value,
+    $override
+) {
+    $common-class: $common-class-name + $delimiter;
+    @if $common-class-name == '' {
+        $common-class: '';
+    }
+
+    @if $variant == 'dark' or $variant == 'light' {
+        $variant-prefix: '';
+        $variant-suffix: '';
+        @if $variant != '' {
+            $variant-prefix: $variant + $variant-delimiter;
+        }
+
+        $suffix-str: '';
+        @if $suffix != '' {
+            $suffix-str: $delimiter + $suffix;
+        }
+
+        @media (prefers-color-scheme: #{$variant}) {
+            @content ($variant-prefix, $prefix, $common-class, $key, $suffix-str, $variant-suffix);
+        }
+    } @else if $variant == 'reduce-motion' {
+        $variant-prefix: '';
+        $variant-suffix: '';
+        @if $variant != '' {
+            $variant-prefix: $variant + $variant-delimiter;
+        }
+
+        $suffix-str: '';
+        @if $suffix != '' {
+            $suffix-str: $delimiter + $suffix;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            @content ($variant-prefix, $prefix, $common-class, $key, $suffix-str, $variant-suffix);
+        }
+    } @else {
+        $variant-prefix: '';
+        $variant-suffix: '';
+        @if $variant != '' {
+            $variant-prefix: $variant + $variant-delimiter;
+            $variant-suffix: ':' + $variant;
+        }
+
+        $suffix-str: '';
+        @if $suffix != '' {
+            $suffix-str: $delimiter + $suffix;
+        }
+
+        @content ($variant-prefix, $prefix, $common-class, $key, $suffix-str, $variant-suffix);
     }
 }
 
