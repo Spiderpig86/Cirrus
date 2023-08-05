@@ -698,6 +698,7 @@ $default-config: (
         properties: (
             default-grid-gap: 2,
             grid-columns: 12,
+            grid-rows: 6,
         ),
     ),
     heights:
@@ -902,6 +903,7 @@ $flex-width: math.div(1, $flex-columns);
 
 $grid-properties: functions.get-with-extend($all-config, grid, properties);
 $grid-columns: map.get($grid-properties, grid-columns);
+$grid-rows: map.get($grid-properties, grid-rows);
 $default-grid-gap: map.get($grid-properties, default-grid-gap);
 
 $opacities: functions.get-with-extend($all-config, opacity);
