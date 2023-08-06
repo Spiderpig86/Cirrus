@@ -1,144 +1,72 @@
 @use '../internal' as *;
 
-@each $class, $size in $spacing-system {
-    /* Margin */
-    .m-#{$class} {
-        margin: $size !important;
-    }
-
-    .mt-#{$class},
-    .my-#{$class} {
-        margin-top: $size !important;
-    }
-    .mb-#{$class},
-    .my-#{$class} {
-        margin-bottom: $size !important;
-    }
-
-    .ml-#{$class},
-    .mx-#{$class} {
-        margin-left: $size !important;
-    }
-    .mr-#{$class},
-    .mx-#{$class} {
-        margin-right: $size !important;
-    }
-
-    /* Spacing */
-    .p-#{$class} {
-        padding: $size !important;
-    }
-
-    .pt-#{$class},
-    .py-#{$class} {
-        padding-top: $size !important;
-    }
-    .pb-#{$class},
-    .py-#{$class} {
-        padding-bottom: $size !important;
-    }
-
-    .pl-#{$class},
-    .px-#{$class} {
-        padding-left: $size !important;
-    }
-    .pr-#{$class},
-    .px-#{$class} {
-        padding-right: $size !important;
-    }
-}
-
-.ml-auto,
-.mx-auto {
-    margin-left: auto !important;
-}
-
-.mr-auto,
-.mx-auto {
-    margin-right: auto !important;
-}
-
-.mt-auto,
-.my-auto {
-    margin-top: auto !important;
-}
-
-.mb-auto,
-.my-auto {
-    margin-bottom: auto !important;
-}
-
-@if get-viewport-flag($MARGIN-PADDING) == true {
-    // TODO: Maybe in future versions of Sass, we can pass mixins as a parameter to another mixin. For now, we just have to write what we want it to generate
-    @each $suffix, $limit in $breakpoint-pairs {
-        @each $class, $size in $spacing-system {
-            @include screen-above($limit) {
-                /* Margin */
-                .m-#{$class}-#{$suffix} {
-                    margin: $size !important;
-                }
-
-                .mt-#{$class}-#{$suffix},
-                .my-#{$class}-#{$suffix} {
-                    margin-top: $size !important;
-                }
-                .mb-#{$class}-#{$suffix},
-                .my-#{$class}-#{$suffix} {
-                    margin-bottom: $size !important;
-                }
-
-                .ml-#{$class}-#{$suffix},
-                .mx-#{$class}-#{$suffix} {
-                    margin-left: $size !important;
-                }
-                .mr-#{$class}-#{$suffix},
-                .mx-#{$class}-#{$suffix} {
-                    margin-right: $size !important;
-                }
-
-                /* Spacing */
-                .p-#{$class}-#{$suffix} {
-                    padding: $size !important;
-                }
-
-                .pt-#{$class}-#{$suffix},
-                .py-#{$class}-#{$suffix} {
-                    padding-top: $size !important;
-                }
-                .pb-#{$class}-#{$suffix},
-                .py-#{$class}-#{$suffix} {
-                    padding-bottom: $size !important;
-                }
-
-                .pl-#{$class}-#{$suffix},
-                .px-#{$class}-#{$suffix} {
-                    padding-left: $size !important;
-                }
-                .pr-#{$class}-#{$suffix},
-                .px-#{$class}-#{$suffix} {
-                    padding-right: $size !important;
-                }
-
-                .ml-auto-#{$suffix},
-                .mx-auto-#{$suffix} {
-                    margin-left: auto !important;
-                }
+@include utility-with-body($prefix: '', $generate-viewports: 'true', $override: '!important') using
+    ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix) {
+    @each $class, $size in $spacing-system {
+        /* Margin */
+        .#{$variant-prefix}#{$prefix}m#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
+            margin: $size #{$override};
+        }
+        .#{$variant-prefix}#{$prefix}mt#{$delimiter}#{$class}#{$suffix-str},
+        .#{$variant-prefix}#{$prefix}my#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
+            margin-top: $size #{$override};
+        }
+        .#{$variant-prefix}#{$prefix}mb#{$delimiter}#{$class}#{$suffix-str},
+        .#{$variant-prefix}#{$prefix}my#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
+            margin-bottom: $size #{$override};
+        }
     
-                .mr-auto-#{$suffix},
-                .mx-auto-#{$suffix} {
-                    margin-right: auto !important;
-                }
+        .#{$variant-prefix}#{$prefix}ml#{$delimiter}#{$class}#{$suffix-str},
+        .#{$variant-prefix}#{$prefix}mx#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
+            margin-left: $size #{$override};
+        }
+        .#{$variant-prefix}#{$prefix}mr#{$delimiter}#{$class}#{$suffix-str},
+        .#{$variant-prefix}#{$prefix}mx#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
+            margin-right: $size #{$override};
+        }
     
-                .mt-auto-#{$suffix},
-                .my-auto-#{$suffix} {
-                    margin-top: auto !important;
-                }
+        /* Spacing */
+        .#{$variant-prefix}#{$prefix}p#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
+            padding: $size #{$override};
+        }
     
-                .mb-auto-#{$suffix},
-                .my-auto-#{$suffix} {
-                    margin-bottom: auto !important;
-                }
-            }
+        .#{$variant-prefix}#{$prefix}pt#{$delimiter}#{$class}#{$suffix-str},
+        .#{$variant-prefix}#{$prefix}py#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
+            padding-top: $size #{$override};
+        }
+        .#{$variant-prefix}#{$prefix}pb#{$delimiter}#{$class}#{$suffix-str},
+        .#{$variant-prefix}#{$prefix}py#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
+            padding-bottom: $size #{$override};
+        }
+    
+        .#{$variant-prefix}#{$prefix}pl#{$delimiter}#{$class}#{$suffix-str},
+        .#{$variant-prefix}#{$prefix}px#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
+            padding-left: $size #{$override};
+        }
+        .#{$variant-prefix}#{$prefix}pr#{$delimiter}#{$class}#{$suffix-str},
+        .#{$variant-prefix}#{$prefix}px#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
+            padding-right: $size #{$override};
         }
     }
+
+    .#{$variant-prefix}#{$prefix}ml-auto#{$suffix-str},
+    .#{$variant-prefix}#{$prefix}mx-auto#{$suffix-str} #{$variant-suffix}{
+        margin-left: auto #{$override};
+    }
+    
+    .#{$variant-prefix}#{$prefix}mr-auto#{$suffix-str},
+    .#{$variant-prefix}#{$prefix}mx-auto#{$suffix-str} #{$variant-suffix}{
+        margin-right: auto #{$override};
+    }
+    
+    .#{$variant-prefix}#{$prefix}mt-auto#{$suffix-str},
+    .#{$variant-prefix}#{$prefix}my-auto#{$suffix-str} #{$variant-suffix}{
+        margin-top: auto #{$override};
+    }
+    
+    .#{$variant-prefix}#{$prefix}mb-auto#{$suffix-str},
+    .#{$variant-prefix}#{$prefix}my-auto#{$suffix-str} #{$variant-suffix}{
+        margin-bottom: auto #{$override};
+    }
 }
+
