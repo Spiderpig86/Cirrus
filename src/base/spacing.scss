@@ -1,7 +1,7 @@
 @use '../internal' as *;
 
 @include utility-with-body($prefix: '', $generate-viewports: 'true', $override: '!important') using
-    ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix) {
+    ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override) {
     @each $class, $size in $spacing-system {
         /* Margin */
         .#{$variant-prefix}#{$prefix}m#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{

@@ -150,11 +150,11 @@
                         $generate-viewports: 'true',
                         $override: '!important'
                     )
-                    using ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix) {
+                    using ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override) {
                     $colors: red, white;
                     @each $color in $colors {
                         .#{$variant-prefix}#{$prefix}#{$color}#{$suffix-str}#{$variant-suffix} {
-                            color: #{$color} !important;
+                            color: #{$color} #{$override};
                         }
                     }
                 }

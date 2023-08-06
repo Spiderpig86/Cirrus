@@ -48,8 +48,8 @@ $default-variant-delimiter: '\\:';
                 $value,
                 $override
             )
-            using ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix) {
-            @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix);
+            using ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override) {
+            @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override);
         }
     }
 }
@@ -88,7 +88,7 @@ $default-variant-delimiter: '\\:';
                 $value,
                 $override
             )
-            using ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix) {
+            using ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override) {
             .#{$variant-prefix}#{$prefix}#{$common-class}#{$key}#{$suffix-str}#{$variant-suffix} {
                 @include mixins.explode-properties($value, $override);
             }
@@ -159,7 +159,7 @@ $default-variant-delimiter: '\\:';
         }
 
         @media (prefers-color-scheme: #{$variant}) {
-            @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix);
+            @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override);
         }
     } @else if $variant == 'reduce-motion' {
         $variant-prefix: '';
@@ -174,7 +174,7 @@ $default-variant-delimiter: '\\:';
         }
 
         @media (prefers-reduced-motion: reduce) {
-            @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix);
+            @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override);
         }
     } @else {
         $variant-prefix: '';
@@ -189,7 +189,7 @@ $default-variant-delimiter: '\\:';
             $suffix-str: $delimiter + $suffix;
         }
 
-        @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix);
+        @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override);
     }
 }
 
