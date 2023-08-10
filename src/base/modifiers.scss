@@ -42,29 +42,32 @@
 /* GLOBAL THEME SELECTORS */
 /* v1 */
 
-@each $name, $color in $semantic-colors {
-    @if $color != null {
-        .bg-#{$name} {
-            --btn-color: #{hex-to-rgb($color)};
-            // Not important, use this as a fallback in case no border is set
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
+@include utility-with-body($generate-viewports: 'false', $override: '!important', $prefix: '') using
+    ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override) {
+    @each $name, $color in $semantic-colors {
+        @if $color != null {
+            .#{$variant-prefix}#{$prefix}bg-#{$name}#{$suffix-str}#{$variant-suffix} {
+                --btn-color: #{hex-to-rgb($color)};
+                // Not important, use this as a fallback in case no border is set
+                --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
 
-            background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
-        }
+                background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
+            }
 
-        .text-#{$name} {
-            --btn-fg: #{hex-to-rgb($color)};
+            .#{$variant-prefix}#{$prefix}text-#{$name}#{$suffix-str}#{$variant-suffix} {
+                --btn-fg: #{hex-to-rgb($color)};
 
-            color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
-            // Not important, use this as a fallback in case no border is set
-            border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
-        }
+                color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+                // Not important, use this as a fallback in case no border is set
+                border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
+            }
 
-        .border-#{$name} {
-            --btn-border-color: #{hex-to-rgb($color)};
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)} !important;
-            
-            border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
+            .#{$variant-prefix}#{$prefix}border-#{$name}#{$suffix-str}#{$variant-suffix} {
+                --btn-border-color: #{hex-to-rgb($color)};
+                --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)} !important;
+
+                border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
+            }
         }
     }
 }
@@ -80,30 +83,33 @@
 
 /* v2 */
 
-@each $name, $palette in $v2Colors {
-    @each $level, $color in $palette {
-        @if $color != null {
-            .bg-#{$name}-#{$level} {
-                --btn-color: #{hex-to-rgb($color)};
-                // Not important, use this as a fallback in case no border is set
-                --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
+@include utility-with-body($generate-viewports: 'false', $override: '!important', $prefix: '') using
+    ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override) {
+    @each $name, $palette in $v2Colors {
+        @each $level, $color in $palette {
+            @if $color != null {
+                .#{$variant-prefix}#{$prefix}bg-#{$name}-#{$level}#{$suffix-str}#{$variant-suffix} {
+                    --btn-color: #{hex-to-rgb($color)};
+                    // Not important, use this as a fallback in case no border is set
+                    --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
 
-                background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
-            }
+                    background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
+                }
 
-            .text-#{$name}-#{$level} {
-                --btn-fg: #{hex-to-rgb($color)};
+                .#{$variant-prefix}#{$prefix}text-#{$name}-#{$level}#{$suffix-str}#{$variant-suffix} {
+                    --btn-fg: #{hex-to-rgb($color)};
 
-                color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
-                // Not important, use this as a fallback in case no border is set
-                border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
-            }
+                    color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+                    // Not important, use this as a fallback in case no border is set
+                    border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
+                }
 
-            .border-#{$name}-#{$level} {
-                --btn-border-color: #{hex-to-rgb($color)};
-                --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)} !important;
+                .#{$variant-prefix}#{$prefix}border-#{$name}-#{$level}#{$suffix-str}#{$variant-suffix} {
+                    --btn-border-color: #{hex-to-rgb($color)};
+                    --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)} !important;
 
-                border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
+                    border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
+                }
             }
         }
     }
