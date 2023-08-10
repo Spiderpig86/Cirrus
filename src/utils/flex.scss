@@ -89,7 +89,24 @@
         $class-value-pairs: class-value-map-with-single-property('gap', $gaps-both),
         $common-class-name: 'gap',
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $generate-viewports: #{get-viewport-flag($GAP)},
+        $override: '!important'
+    );
+
+    
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('row-gap', $gaps-both),
+        $common-class-name: 'row-gap',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($GAP)},
+        $override: '!important'
+    );
+    
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('col-gap', $gaps-both),
+        $common-class-name: 'col-gap',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($GAP)},
         $override: '!important'
     );
 }
