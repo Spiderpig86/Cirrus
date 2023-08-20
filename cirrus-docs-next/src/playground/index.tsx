@@ -47,7 +47,6 @@ export const PlaygroundPage: React.FC<any> = () => {
     function handleEditorMounted(editor, monaco: Monaco) {
         // monacoEditor.editor.IStandaloneCodeEditor
 
-        console.log(editor, editor.languages);
         editorRef.current = editor;
         monacoRef.current = monaco;
         emmetHTML(monacoRef.current);
@@ -67,6 +66,20 @@ export const PlaygroundPage: React.FC<any> = () => {
         if (editorRef) {
             editorRef.current.layout();
         }
+    }
+
+    function resetEditor() {
+        editorRef.current.getModel().pushEditOperations(
+            [],
+            [
+              {
+                range: editorRef.current.getModel().getFullModelRange(),
+                text: CIRRUS_DEFAULT_PLAYGROUND_CODE,
+              },
+            ]
+          );
+          
+        console.log(editorRef.current);
     }
 
     function toggleEditorOrientation() {
@@ -151,12 +164,9 @@ export const PlaygroundPage: React.FC<any> = () => {
                 <div className="header-nav" id="header-menu">
                     <div className="nav-right">
                         <div className="nav-item" onClick={() => setEditorSize(`100%`)}>
-                            <div
-                                className="px-2 py-1 tooltip tooltip--bottom"
+                            <span
+                                className="px-2 py-1 tooltip tooltip--bottom leading-normal"
                                 data-tooltip="Code Only"
-                                style={{
-                                    lineHeight: '1rem',
-                                }}
                             >
                                 <PlaygroundCodeSVG
                                     style={{
@@ -164,11 +174,11 @@ export const PlaygroundPage: React.FC<any> = () => {
                                         fill: splitPaneSize === '100%' ? BUTTON_ACCENT_COLOR : '#fff',
                                     }}
                                 />
-                            </div>
+                            </span>
                         </div>
                         <div className="nav-item" onClick={() => setEditorSize(`50%`)}>
-                            <div
-                                className="px-2 py-1 tooltip tooltip--bottom"
+                            <span
+                                className="px-2 py-1 tooltip tooltip--bottom leading-normal"
                                 data-tooltip="Half"
                                 style={{
                                     lineHeight: '1rem',
@@ -186,11 +196,11 @@ export const PlaygroundPage: React.FC<any> = () => {
                                                 : '#fff',
                                     }}
                                 />
-                            </div>
+                            </span>
                         </div>
                         <div className="nav-item" onClick={() => setEditorSize(`0%`)}>
-                            <div
-                                className="px-2 py-1 tooltip tooltip--bottom"
+                            <span
+                                className="px-2 py-1 tooltip tooltip--bottom leading-normal"
                                 data-tooltip="Fullscreen"
                                 style={{
                                     lineHeight: '1rem',
@@ -201,17 +211,22 @@ export const PlaygroundPage: React.FC<any> = () => {
                                         stroke: splitPaneSize === '0%' ? BUTTON_ACCENT_COLOR : '#fff',
                                     }}
                                 />
-                            </div>
+                            </span>
+                        </div>
+                        <div className="nav-item" onClick={resetEditor}>
+                            <span className="px-2 py-1 tooltip tooltip--bottom leading-normal" data-tooltip="Reset">
+                                <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'bolt']} />
+                            </span>
                         </div>
                         <div className="nav-item" onClick={toggleEditorOrientation}>
-                            <div className="px-2 py-1 tooltip tooltip--bottom" data-tooltip="Rotate">
+                            <span className="px-2 py-1 tooltip tooltip--bottom leading-normal" data-tooltip="Rotate">
                                 <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'sync']} />
-                            </div>
+                            </span>
                         </div>
                         <div className="nav-item" onClick={handleSaveCode}>
-                            <div className="px-2 py-1 tooltip tooltip--bottom" data-tooltip="Save">
+                            <span className="px-2 py-1 tooltip tooltip--bottom leading-normal" data-tooltip="Save">
                                 <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'save']} />
-                            </div>
+                            </span>
                         </div>
                         <div className="nav-item has-sub toggle-hover" id="dropdown">
                             <a className="nav-dropdown-link">Version / {playgroundCdn}</a>
