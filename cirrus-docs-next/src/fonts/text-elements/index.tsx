@@ -214,10 +214,6 @@ export const TextElementsPage: React.FC<any> = (props) => {
                                 />
                             </div>
                             <div className="col-lg-6">
-                                <p className="title mb-0">Italics</p>
-                                <p className="italics">The quick brown fox jumps over the lazy dog.</p>
-                            </div>
-                            <div className="col-lg-6">
                                 <CodeBlock
                                     code={`<p class="italics">The quick brown fox jumps over the lazy dog.</p>`}
                                     language="htmlbars"
