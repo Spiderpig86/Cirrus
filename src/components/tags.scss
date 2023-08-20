@@ -103,7 +103,6 @@ $TAG_BASE_PADDING_Y: 0.5; // .5rem;
         &.tag--#{$color} {
             background-color: map-get($value, bg);
             color: #fff;
-            cursor: pointer;
 
             &.tag__close-btn:hover {
                 background-color: darken($color: map-get($value, bg), $amount: 5);
@@ -117,6 +116,7 @@ $TAG_BASE_PADDING_Y: 0.5; // .5rem;
 
     /* Tag close button */
     &.tag__close-btn {
+        cursor: pointer;
         position: relative;
         width: 2em;
 

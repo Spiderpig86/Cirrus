@@ -17055,7 +17055,6 @@ details.accordion:last-child {
 .tag.tag--primary {
   background-color: #f03d4d;
   color: #fff;
-  cursor: pointer;
 }
 
 .tag.tag--primary.tag__close-btn:hover {
@@ -17069,7 +17068,6 @@ details.accordion:last-child {
 .tag.tag--dark {
   background-color: #363636;
   color: #fff;
-  cursor: pointer;
 }
 
 .tag.tag--dark.tag__close-btn:hover {
@@ -17083,7 +17081,6 @@ details.accordion:last-child {
 .tag.tag--link {
   background-color: #5e5cc7;
   color: #fff;
-  cursor: pointer;
 }
 
 .tag.tag--link.tag__close-btn:hover {
@@ -17097,7 +17094,6 @@ details.accordion:last-child {
 .tag.tag--info {
   background-color: #2972fa;
   color: #fff;
-  cursor: pointer;
 }
 
 .tag.tag--info.tag__close-btn:hover {
@@ -17111,7 +17107,6 @@ details.accordion:last-child {
 .tag.tag--success {
   background-color: #0dd157;
   color: #fff;
-  cursor: pointer;
 }
 
 .tag.tag--success.tag__close-btn:hover {
@@ -17125,7 +17120,6 @@ details.accordion:last-child {
 .tag.tag--warning {
   background-color: #fab633;
   color: #fff;
-  cursor: pointer;
 }
 
 .tag.tag--warning.tag__close-btn:hover {
@@ -17139,7 +17133,6 @@ details.accordion:last-child {
 .tag.tag--danger {
   background-color: #fb4143;
   color: #fff;
-  cursor: pointer;
 }
 
 .tag.tag--danger.tag__close-btn:hover {
@@ -17151,6 +17144,7 @@ details.accordion:last-child {
 }
 
 .tag.tag__close-btn {
+  cursor: pointer;
   position: relative;
   width: 2em;
 }
