@@ -11405,6 +11405,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   box-shadow: 0 0.2rem 1.25rem 0 rgba(27, 30, 36, 0.07);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   /* For the frame header and footer, use flex display */
   /* The frame navbar can be used with level or header classes to create a navigation menu */
 }
