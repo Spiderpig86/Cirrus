@@ -10,7 +10,7 @@
     font-family: map-get($map: $font-families, $key: secondary);
     font-size: var(--font-size-m);
     letter-spacing: 0.02rem;
-    transition: all 0.3s;
+    transition: box-shadow 0.3s;
     outline: none;
     padding: 0.85rem 1.1rem;
 

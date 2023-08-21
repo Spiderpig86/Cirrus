@@ -10799,7 +10799,7 @@ select {
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: var(--font-size-m);
   letter-spacing: 0.02rem;
-  transition: all 0.3s;
+  transition: box-shadow 0.3s;
   outline: none;
   padding: 0.85rem 1.1rem;
   /* Input Field Sizes */
@@ -10951,7 +10951,7 @@ textarea[type=text] {
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: var(--font-size-m);
   letter-spacing: 0.02rem;
-  transition: all 0.3s;
+  transition: box-shadow 0.3s;
   outline: none;
   padding: 0.85rem 1.1rem;
   /* Input Field Sizes */
@@ -11109,7 +11109,7 @@ select {
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: var(--font-size-m);
   letter-spacing: 0.02rem;
-  transition: all 0.3s;
+  transition: box-shadow 0.3s;
   outline: none;
   padding: 0.85rem 1.1rem;
   /* Input Field Sizes */
