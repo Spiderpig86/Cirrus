@@ -578,10 +578,10 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space space--lg"></div>
                         <CodeBlock
-                            code={`<div class="u-flex u-gap-2 u-round-xs bg-blue-100 p-3 text-white font-bold u-text-center">
-    <div class="u-round-xs u-shadow-lg bg-blue-300 p-2">0</div>
-    <div class="u-round-xs u-shadow-lg bg-blue-500 p-2 u-flex-shrink-1 w-100p">1</div>
-    <div class="u-round-xs u-shadow-lg bg-blue-300 p-2">0</div>
+                            code={`<div class="u-flex u-gap-2 u-round-xs bg-pink-100 p-3 text-white font-bold u-text-center">
+    <div class="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-grow-1">1</div>
+    <div class="u-round-xs u-shadow-lg bg-pink-500 p-2 u-flex-grow-0">0</div>
+    <div class="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-grow-1">1</div>
 </div>`}
                             language="htmlbars"
                         />
@@ -622,10 +622,12 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space space--lg"></div>
                         <CodeBlock
-                            code={`<div class="u-flex u-gap-2 u-round-xs bg-orange-100 p-3 text-white font-bold u-text-center">
-    <div class="u-round-xs u-shadow-lg bg-orange-300 p-2 u-flex-grow-1 u-flex-shrink-1">1</div>
-    <div class="u-round-xs u-shadow-lg bg-orange-500 p-2 u-flex-shrink-0" style="width: 8rem;">0</div>
-    <div class="u-round-xs u-shadow-lg bg-orange-300 p-2 u-flex-grow-1 u-flex-shrink-1">1</div>
+                            code={`<div class="u-flex u-gap-2 u-round-xs bg-blue-100 p-3 text-white font-bold u-text-center">
+    <div class="u-round-xs u-shadow-lg bg-blue-300 p-2">0</div>
+    <div class="u-round-xs u-shadow-lg bg-blue-500 p-2 u-flex-shrink-1 w-100p">
+        1
+    </div>
+    <div class="u-round-xs u-shadow-lg bg-blue-300 p-2">0</div>
 </div>`}
                             language="htmlbars"
                         />
@@ -649,7 +651,7 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                                         1
                                     </div>
                                     <div
-                                        className="u-round-xs u-shadow-lg bg-orange-500 p-2 u-flex-shrink-0"
+                                        className="u-round-xs u-shadow-lg bg-orange-500 p-2 u-flex-shrink-0 w-16"
                                         style={{ width: '8rem' }}
                                     >
                                         0
@@ -662,10 +664,18 @@ export const FlexboxUtilsPage: React.FC<any> = (props) => {
                         </div>
                         <div className="space space--lg"></div>
                         <CodeBlock
-                            code={`<div class="u-flex u-gap-2 u-round-xs bg-pink-100 p-3 text-white font-bold u-text-center">
-    <div class="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-shrink-0">0</div>
-    <div class="u-round-xs u-shadow-lg bg-pink-500 p-2 u-flex-shrink-1">1</div>
-    <div class="u-round-xs u-shadow-lg bg-pink-300 p-2 u-flex-shrink-0">0</div>
+                            code={`<div class="u-flex u-gap-2 u-round-xs bg-orange-100 p-3 text-white font-bold u-text-center">
+    <div class="u-round-xs u-shadow-lg bg-orange-300 p-2 u-flex-grow-1 u-flex-shrink-1">
+        1
+    </div>
+    <div
+        class="u-round-xs u-shadow-lg bg-orange-500 p-2 u-flex-shrink-0 w-16"
+    >
+        0
+    </div>
+    <div class="u-round-xs u-shadow-lg bg-orange-300 p-2 u-flex-grow-1 u-flex-shrink-1">
+        1
+    </div>
 </div>`}
                             language="htmlbars"
                         />
