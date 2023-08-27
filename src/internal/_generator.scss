@@ -141,6 +141,12 @@ $default-variant-delimiter: '\\:';
     $value,
     $override
 ) {
+
+    // If class value is not a map, throw exception
+    @if type-of($value) != 'map' {
+        @error 'The given value for class "#{$common-class-name}" is not a map.';
+    }
+
     $common-class: $common-class-name + $delimiter;
     @if $common-class-name == '' {
         $common-class: '';
