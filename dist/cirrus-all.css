@@ -13423,23 +13423,29 @@ ul .menu-title:not(:last-child) {
   margin-top: 1rem;
 }
 
-ul .menu-item a {
+ul .menu-item {
   color: #495057;
   display: block;
   padding: 0.5em 0.75em;
   border-radius: 3px;
   font-size: var(--font-size-s);
-  cursor: pointer;
   transition: all var(--animation-duration);
 }
 
-ul .menu-item:hover > a {
+ul .menu-item a {
+  box-shadow: none;
+  color: inherit;
+  display: block;
+  outline: none;
+}
+
+ul .menu-item:hover {
   background-color: rgba(208, 208, 208, 0.3);
   color: #f03d4d;
   transition: all var(--animation-duration);
 }
 
-ul .menu-item.selected > a {
+ul .menu-item.selected {
   color: #fff;
   background-color: #f03d4d;
 }

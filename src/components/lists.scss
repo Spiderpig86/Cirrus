@@ -78,23 +78,30 @@
         }
 
         /* Style menu items */
-        .menu-item a {
+        .menu-item {
             color: fill('gray', '700');
             display: block;
             padding: 0.5em 0.75em;
             border-radius: 3px;
             font-size: var(--font-size-s);
-            cursor: pointer;
             transition: all var(--animation-duration);
         }
 
-        .menu-item:hover > a {
+        
+        .menu-item a {
+            box-shadow: none;
+            color: inherit;
+            display: block;
+            outline: none;
+        }
+
+        .menu-item:hover {
             background-color: rgba(208, 208, 208, 0.3);
             color: fill('primary');
             transition: all var(--animation-duration);
         }
 
-        .menu-item.selected > a {
+        .menu-item.selected {
             color: #fff;
             background-color: fill('primary');
         }
