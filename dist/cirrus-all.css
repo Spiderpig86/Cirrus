@@ -12114,15 +12114,6 @@ code {
   /* Dark theme for code */
 }
 
-code:before {
-  color: var(--cirrus-code-label-fg);
-  content: attr(data-lang);
-  font-size: 0.9rem;
-  position: absolute;
-  right: 1rem;
-  top: 0.7rem;
-}
-
 code.dark {
   --cirrus-code-bg: #343a40;
   --cirrus-code-fg: #f8f9fa;
@@ -12155,6 +12146,15 @@ pre > code {
 
 pre > code[data-lang]:not([data-lang=""]) {
   padding: 2rem 1.5rem 1rem;
+}
+
+pre > code::before {
+  color: var(--cirrus-code-label-fg);
+  content: attr(data-lang);
+  font-size: 0.9rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.7rem;
 }
 
 /* FOOTER */
