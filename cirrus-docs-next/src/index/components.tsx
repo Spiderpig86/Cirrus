@@ -316,13 +316,13 @@ export const PersonCard: React.FC<any> = (props) => {
             <div className="divider my-2 text-sm" data-content="Stats"></div>
 
             <div className="grid grid-cols-3 u-items-center u-text-left">
-                <div className="text-gray-600 text-sm">Memeing</div>
+                <div className="text-gray-600 text-sm u-text-ellipsis">Memeing</div>
                 <progress className="progress progress--info grid-c-2" value=".95"></progress>
-                <div className="text-gray-600 text-sm">Snacking</div>
+                <div className="text-gray-600 text-sm u-text-ellipsis">Snacking</div>
                 <progress className="progress progress--link grid-c-2" value=".85"></progress>
-                <div className="text-gray-600 text-sm">Redditing</div>
+                <div className="text-gray-600 text-sm u-text-ellipsis">Redditing</div>
                 <progress className="progress progress--warning grid-c-2" value="1"></progress>
-                <div className="text-gray-600 text-sm">Sleeping</div>
+                <div className="text-gray-600 text-sm u-text-ellipsis">Sleeping</div>
                 <progress className="progress progress--danger grid-c-2" value=".75"></progress>
             </div>
         </div>
