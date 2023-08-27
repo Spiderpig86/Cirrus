@@ -506,6 +506,10 @@ $default-config: (
                 'Segoe UI Symbol',
             ),
         ),
+        font-styles: (
+            normal: normal,
+            italics: italics
+        ),
         letter-spacing: (
             tightest: -0.075em,
             tighter: -0.05em,
@@ -868,6 +872,7 @@ $font-heading-sizes: functions.get-with-extend($all-config, fonts, sizes, headin
 $font-headline-sizes: functions.get-with-extend($all-config, fonts, sizes, headline);
 $font-text-sizes: functions.get-with-extend($all-config, fonts, sizes, text);
 $font-families: functions.get-with-extend($all-config, fonts, font-families);
+$font-styles: functions.get-with-extend($all-config, fonts, font-styles);
 $font-letter-spacing: functions.get-with-extend($all-config, fonts, letter-spacing);
 $font-line-heights: functions.get-with-extend($all-config, fonts, line-heights);
 $font-transforms: functions.get-with-extend($all-config, fonts, transforms);
