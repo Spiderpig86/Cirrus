@@ -318,7 +318,7 @@
 
             /* Open the menu from the side */
             /* Use a link and add the id of this element as the url */
-            &.tree-nav--shown,
+            &.tree-nav--visible,
             &:target {
                 transform: translateX(0);
                 transition: transform var(--animation-duration) ease;
