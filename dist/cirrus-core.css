@@ -12226,7 +12226,7 @@ ul .divider::after {
 
 @media screen and (max-width: 767px) {
   /* Hide the menu to the side by default */
-  .tree-nav {
+  .tree-nav-body .tree-nav {
     height: 100%;
     left: 0;
     overflow-y: auto;
@@ -12241,12 +12241,12 @@ ul .divider::after {
     /* Create the area to click to close the menu */
     /* Reset max-width in mobile */
   }
-  .tree-nav.tree-nav--visible, .tree-nav:target {
+  .tree-nav-body .tree-nav.tree-nav--visible, .tree-nav-body .tree-nav:target {
     transform: translateX(0);
     transition: transform var(--animation-duration) ease;
     /* Show the darkened area when the tree nav menu is clicked */
   }
-  .tree-nav.tree-nav--visible + .tree-nav-close, .tree-nav:target + .tree-nav-close {
+  .tree-nav-body .tree-nav.tree-nav--visible + .tree-nav-close, .tree-nav-body .tree-nav:target + .tree-nav-close {
     display: block;
     background-color: rgba(0, 0, 0, 0.15);
     height: 100%;
@@ -12257,7 +12257,7 @@ ul .divider::after {
     width: 100%;
     z-index: 300;
   }
-  .tree-nav .tree-nav-close {
+  .tree-nav-body .tree-nav .tree-nav-close {
     background-color: rgba(0, 0, 0, 0.15);
     display: none;
     height: 100%;
@@ -12268,7 +12268,7 @@ ul .divider::after {
     width: 100%;
     z-index: 300;
   }
-  .tree-nav + .tree-nav-body {
+  .tree-nav-body .tree-nav + .tree-nav-body {
     max-width: inherit;
   }
   /* Header bar for mobile websites with the tree-nav */

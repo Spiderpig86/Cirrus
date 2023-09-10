@@ -87,7 +87,6 @@
             transition: all var(--animation-duration);
         }
 
-        
         .menu-item a {
             box-shadow: none;
             color: inherit;
@@ -305,7 +304,7 @@
 
     @include screen-below($sm) {
         /* Hide the menu to the side by default */
-        .tree-nav {
+        .tree-nav-body .tree-nav {
             height: 100%;
             left: 0;
             overflow-y: auto;
