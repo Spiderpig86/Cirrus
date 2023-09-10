@@ -13662,12 +13662,12 @@ ul .divider::after {
     /* Create the area to click to close the menu */
     /* Reset max-width in mobile */
   }
-  .tree-nav:target {
+  .tree-nav.tree-nav--shown, .tree-nav:target {
     transform: translateX(0);
     transition: transform var(--animation-duration) ease;
     /* Show the darkened area when the tree nav menu is clicked */
   }
-  .tree-nav:target + .tree-nav-close {
+  .tree-nav.tree-nav--shown + .tree-nav-close, .tree-nav:target + .tree-nav-close {
     display: block;
     background-color: rgba(0, 0, 0, 0.15);
     height: 100%;
