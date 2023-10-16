@@ -103,6 +103,11 @@
             background-color: #fff;
             padding: 0.55rem 0.8rem !important;
         }
+        
+        &[type='range'] {
+            outline: 0;
+            padding: 0;
+        }
 
         &.input-success {
             @include input-success();
@@ -132,6 +137,11 @@
         border-color: $cirrus-input-border;
         box-shadow: 0 0 0 0.2rem transparentize($cirrus-input-border, $focus-opacity),
             inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+
+        &[type='range'] {
+            box-shadow: none;
+            outline: 0;
+        }
 
         &.input-success {
             @include input-success();

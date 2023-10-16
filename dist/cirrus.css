@@ -10930,6 +10930,12 @@ select[type=color] {
   padding: 0.55rem 0.8rem !important;
 }
 
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset])[type=range],
+select[type=range] {
+  outline: 0;
+  padding: 0;
+}
+
 input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-success,
 select.input-success {
   border-color: #0dd157;
@@ -11071,6 +11077,16 @@ input[type=text].input-focused,
 .input-focused {
   border-color: rgb(61, 171, 240);
   box-shadow: 0 0 0 0.2rem rgba(61, 171, 240, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus[type=range],
+select:focus[type=range],
+textarea:focus[type=range],
+textarea[type=text]:focus[type=range],
+input[type=text].input-focused[type=range],
+.input-focused[type=range] {
+  box-shadow: none;
+  outline: 0;
 }
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus.input-success,
