@@ -205,7 +205,7 @@ export const FormsTogglePage: React.FC<any> = (props) => {
                         <div className="space space--lg"></div>
 
                         <p>
-                            The existing variants for checkboxes consists of all the{' '}
+                            The existing variants for toggles consist of all the{' '}
                             <Link href="/fundamentals/colors#v1">
                                 <a className="u u-LR">v1 colors</a>
                             </Link>

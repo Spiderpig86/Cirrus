@@ -177,7 +177,7 @@ export const FormsRadioPage: React.FC<any> = (props) => {
                         <div className="space space--lg"></div>
 
                         <p>
-                            The existing variants for checkboxes consists of all the{' '}
+                            The existing variants for radio buttons consist of all the{' '}
                             <Link href="/fundamentals/colors#v1">
                                 <a className="u u-LR">
                                 v1 colors
@@ -206,31 +206,31 @@ export const FormsRadioPage: React.FC<any> = (props) => {
                             <div className="col-lg-9">
                                 <CodeBlock
                                     code={`<div class="form-ext-control form-ext-radio">
-    <input id="check-dark" class="form-ext-input form-ext-input--dark" type="checkbox" checked />
+    <input type="checkbox" id="check-dark" class="form-ext-input form-ext-input--dark" checked="">
     <label class="form-ext-label" for="check-dark">dark</label>
 </div>
 <div class="form-ext-control form-ext-radio">
-    <input id="check-primary" class="form-ext-input form-ext-input--primary" type="checkbox" checked />
+    <input type="checkbox" id="check-primary" class="form-ext-input form-ext-input--primary" checked="">
     <label class="form-ext-label" for="check-primary">primary</label>
 </div>
 <div class="form-ext-control form-ext-radio">
-    <input id="check-link" class="form-ext-input form-ext-input--link" type="checkbox" checked />
+    <input type="checkbox" id="check-link" class="form-ext-input form-ext-input--link" checked="">
     <label class="form-ext-label" for="check-link">link</label>
 </div>
 <div class="form-ext-control form-ext-radio">
-    <input id="check-info" class="form-ext-input form-ext-input--info" type="checkbox" checked />
+    <input type="checkbox" id="check-info" class="form-ext-input form-ext-input--info" checked="">
     <label class="form-ext-label" for="check-info">info</label>
 </div>
 <div class="form-ext-control form-ext-radio">
-    <input id="check-success" class="form-ext-input form-ext-input--success" type="checkbox" checked />
+    <input type="checkbox" id="check-success" class="form-ext-input form-ext-input--success" checked="">
     <label class="form-ext-label" for="check-success">success</label>
 </div>
 <div class="form-ext-control form-ext-radio">
-    <input id="check-warning" class="form-ext-input form-ext-input--warning" type="checkbox" checked />
+    <input type="checkbox" id="check-warning" class="form-ext-input form-ext-input--warning" checked="">
     <label class="form-ext-label" for="check-warning">warning</label>
 </div>
 <div class="form-ext-control form-ext-radio">
-    <input id="check-danger" class="form-ext-input form-ext-input--danger" type="checkbox" checked />
+    <input type="checkbox" id="check-danger" class="form-ext-input form-ext-input--danger" checked="">
     <label class="form-ext-label" for="check-danger">danger</label>
 </div>`}
                                     language="htmlbars"
