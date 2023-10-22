@@ -38,6 +38,7 @@
     flex-direction: column;
     background-color: rgb(0 0 0/0.2);
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 
     .DocSearch-Modal {
         margin: 0 auto;

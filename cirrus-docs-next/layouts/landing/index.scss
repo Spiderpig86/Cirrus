@@ -1,9 +1,8 @@
 .header {
     &.header-landing {
         backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
         padding: 1.5rem;
-        // --header-link-color: #fff;
-        // --header-link-color-hover: #ddd;
 
         &.translucent {
             background: rgba(255, 255, 255, 0.87) !important;
@@ -13,6 +12,7 @@
     &.header-light {
         background-color: rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
     }
     button,
     a {
