@@ -170,79 +170,48 @@ export const FormsInputsPage: React.FC<any> = (props) => {
                                         </select>
                                     </div>
                                 </div>
+                                <div className="row level">
+                                    <div className="col-xs-3 level-item">
+                                        <p className="m-0">Range:</p>
+                                    </div>
+                                    <div className="col-xs-9 level-item input-control">
+                                        <input type="range" id="volume" name="volume" min="0" max="11" />
+                                        <label htmlFor="volume">Volume</label>
+                                    </div>
+                                </div>
                             </div>
                             <div className="col-lg-6">
                                 <CodeBlock
                                     code={`<!-- Name -->
-<div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">Name:</p>
-    </div>
-    <div class="col-xs-9 level-item"><input type="name" value="John Doe"></div>
-</div>
+<input type="name" value="John Doe" />
+
 <!-- Email -->
-<div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">Email:</p>
-    </div>
-    <div class="col-xs-9 level-item"><input type="email" value="john.doe@cirrus.io"></div>
-</div>
+<input type="email" value="john.doe@cirrus.io" />
+
 <!-- Url -->
-<div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">URL:</p>
-    </div>
-    <div class="col-xs-9 level-item"><input type="url" value="https://spiderpig86.github.io/Cirrus"></div>
-</div>
+<input type="url" value="https://spiderpig86.github.io/Cirrus" />
+
 <!-- Search -->
-<div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">Search:</p>
-    </div>
-    <div class="col-xs-9 level-item"><input type="search" placeholder="Search"></div>
-</div>
+<input type="search" placeholder="Search" />
+
 <!-- Tel -->
-<div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">Telephone:</p>
-    </div>
-    <div class="col-xs-9 level-item"><input type="tel" value="1-(800)-777-7777"></div>
-</div>
+<input type="tel" value="1-(800)-777-7777" />
+
 <!-- Password -->
-<div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">Password:</p>
-    </div>
-    <div class="col-xs-9 level-item"><input type="password" value="password"></div>
-</div>
+<input type="password" value="password" />
+
 <!-- Number -->
-<div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">Number:</p>
-    </div>
-    <div class="col-xs-9 level-item"><input type="number" value="420"></div>
-</div>
+<input type="number" value="420" />
+
 <!-- Date -->
-<div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">Date:</p>
-    </div>
-    <div class="col-xs-9 level-item"><input type="date" value="2017-3-21"></div>
-</div>
+<input type="date" value="2017-3-21" />
+
 <!-- Time -->
-<div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">Time:</p>
-    </div>
-    <div class="col-xs-9 level-item"><input type="time"></div>
-</div>
+<input type="time" />
+
 <!-- Color -->
-<div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">Color:</p>
-    </div>
-    <div class="col-xs-9 level-item"><input type="color" value="#f03d4d"></div>
-</div>
+<input type="color" value="#f03d4d" />
+
 <!-- File -->
 <div class="row level">
     <div class="col-xs-3 level-item">
@@ -250,39 +219,31 @@ export const FormsInputsPage: React.FC<any> = (props) => {
     </div>
     <div class="col-xs-9 level-item"><input type="file"></div>
 </div>
+
 <!-- Select -->
-<div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">Select:</p>
-    </div>
-    <div class="col-xs-9 level-item input-control">
-        <select class="select" placeholder="Choose one">
-            <option>Shibe</option>
-            <option>Doggo</option>
-            <option>Pupper</option>
-        </select>
-    </div>
-</div>
+<select class="select" placeholder="Choose one">
+    <option>Shibe</option>
+    <option>Doggo</option>
+    <option>Pupper</option>
+</select>
+
 <!-- Select (Multiple) -->
-<div class="row level">
-    <div class="col-xs-3 level-item">
-        <p class="m-0">Select (Multiple):</p>
-    </div>
-    <div class="col-xs-9 level-item input-control">
-        <select class="select" multiple>
-            <option>Shibe</option>
-            <option>Doggo</option>
-            <option>Pupper</option>
-        </select>
-    </div>
-</div>`}
+<select class="select" multiple>
+    <option>Shibe</option>
+    <option>Doggo</option>
+    <option>Pupper</option>
+</select>
+
+<!-- Range -->
+<input type="range" id="volume" name="volume" min="0" max="11" />
+<label htmlFor="volume">Volume</label>`}
                                     language="htmlbars"
                                 />
                             </div>
                         </div>
                     </div>
                 </section>
-                
+
                 <section className="padtop" id="sizes">
                     <div className="content">
                         <Headline title="Sizes" link="#sizes" size="4" />
