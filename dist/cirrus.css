@@ -15624,6 +15624,11 @@ details.accordion summary.accordion__summary {
   list-style-type: none;
   opacity: 0.75;
   transition: all 250ms;
+  /* Required for Safari, see https://github.com/Spiderpig86/Cirrus/issues/216 */
+}
+
+details.accordion summary.accordion__summary::-webkit-details-marker {
+  display: none;
 }
 
 details.accordion summary.accordion__summary:after {
@@ -16739,10 +16744,10 @@ details.accordion:last-child {
 
 .pagination .pagination-item a {
   color: #495057;
+  cursor: pointer;
 }
 
 .pagination .pagination-item a[disabled], .pagination .pagination-item a.disabled {
-  cursor: pointer;
   opacity: 0.5;
   pointer-events: none;
   user-select: none;

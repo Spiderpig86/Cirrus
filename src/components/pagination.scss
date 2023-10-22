@@ -35,10 +35,10 @@
 
             a {
                 color: fill('gray', '700');
+                cursor: pointer;
 
                 &[disabled],
                 &.disabled {
-                    cursor: pointer;
                     opacity: 0.5;
                     pointer-events: none;
                     user-select: none;
