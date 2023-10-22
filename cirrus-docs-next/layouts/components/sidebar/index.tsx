@@ -22,11 +22,9 @@ export const Sidebar: React.FC<any> = (props) => {
 
                     const listItems = config.sidebarItems.map((listItemConfig: SidebarItemConfig) => {
                         const glyph = listItemConfig.glyph ? (
-                            <div className="menu-addon" key={listItemConfig.url + listItemConfig.text}>
-                                <span className="icon">
+                                <span className="icon text-black mr-1" key={listItemConfig.url + listItemConfig.text}>
                                     <FontAwesomeIcon className="fa-wrapper small" icon={listItemConfig.glyph} />
                                 </span>
-                            </div>
                         ) : (
                             <></>
                         );
@@ -36,9 +34,9 @@ export const Sidebar: React.FC<any> = (props) => {
                                 className={`menu-item` + (isActiveLink(listItemConfig.url) ? ` selected` : ``)}
                                 key={listItemConfig.url + listItemConfig.text}
                             >
-                                {glyph}
                                 <Link href={listItemConfig.url}>
-                                    <a className={`font-${listItemConfig.fontWeight}`}>{listItemConfig.text}</a>
+                                    <a className={`font-${listItemConfig.fontWeight}`}>
+                                {glyph}{listItemConfig.text}</a>
                                 </Link>
                             </li>
                         );

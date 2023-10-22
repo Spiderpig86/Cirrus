@@ -15,9 +15,9 @@ import { TITLE_ELEMENTS } from '../../../config/sidebar';
 export const ListsPage: React.FC<any> = (props) => {
     return (
         <main className="page-layout">
-        <Head>
-            <title>{PAGE_TITLE_PREFIX} Lists</title>
-        </Head>
+            <Head>
+                <title>{PAGE_TITLE_PREFIX} Lists</title>
+            </Head>
             <div>
                 <section className="padtop" id="lists">
                     <div className="content">
@@ -290,8 +290,9 @@ export const ListsPage: React.FC<any> = (props) => {
                             Drop down menus are easy to configure in Cirrus using lists. Simply wrap the button and the
                             menu in a <code>list-dropdown</code> container and Cirrus will automatically style all the
                             components for the dropdown menu. To display the menu on the right side, just add the{' '}
-                            <code>dropdown-right</code> class to the <code>list-dropdown</code> container. These dropdown
-                            menus can work straight out of the box and also support JavaScript events when needed.
+                            <code>dropdown-right</code> class to the <code>list-dropdown</code> container. These
+                            dropdown menus can work straight out of the box and also support JavaScript events when
+                            needed.
                         </p>
 
                         <p className="font-bold">Dropdown with Separate Button</p>
@@ -448,15 +449,15 @@ export const ListsPage: React.FC<any> = (props) => {
                                         <ul className="menu">
                                             <li className="divider"></li>
                                             <li className="menu-item selected">
-                                                <div className="menu-addon right">
-                                                    <span className="icon">
-                                                        <i
-                                                            className="fa fa-wrapper fa-ellipsis-h small"
-                                                            aria-hidden="true"
-                                                        ></i>
+                                                <a href="!#">
+                                                    News Feed
+                                                    <span className="menu-addon u-pull-right icon">
+                                                        <FontAwesomeIcon
+                                                            className="fa-wrapper small"
+                                                            icon="ellipsis-h"
+                                                        />
                                                     </span>
-                                                </div>
-                                                <a href="!#">News Feed</a>
+                                                </a>
                                             </li>
                                             <li className="menu-item">
                                                 <a href="!#">Messenger</a>
@@ -487,10 +488,10 @@ export const ListsPage: React.FC<any> = (props) => {
         <ul class="menu">
             <li class="divider"></li>
             <li class="menu-item selected">
-                <div class="menu-addon right"><span class="icon"><i class="fa fa-wrapper fa-ellipsis-h small" aria-hidden="true"></i></span></div><a href="!#">News Feed</a></li>
-            <li class="menu-item"><a href="!#">Messenger</a></li>
+                <div class="menu-addon right"></div><a href="#">News Feed</a></li>
+            <li class="menu-item"><a href="#">Messenger <span class="menu-addon u-pull-right icon"><i class="fa fa-wrapper fa-ellipsis-h small" aria-hidden="true"></i></span></a></li>
             <p class="menu-title uppercase">Shortcuts</p>
-            <li class="menu-item"><a href="!#">Some App</a></li>
+            <li class="menu-item"><a href="#">Some App</a></li>
         </ul>
     </div>
 </div>`}
@@ -559,8 +560,8 @@ export const ListsPage: React.FC<any> = (props) => {
     <div class="content">
         <p>Did you like the photo?</p>
         <ul class="menu">
-            <li class="menu-item"><a href="!#"><span class="icon"><i class="fa fa-wrapper fa-check small" aria-hidden="true"></i></span>Yes</a></li>
-            <li class="menu-item"><a href="!#"><span class="icon"><i class="fa fa-wrapper fa-times small" aria-hidden="true"></i></span>No</a></li>
+            <li class="menu-item"><a href="#"><span class="icon"><i class="fa fa-wrapper fa-check small" aria-hidden="true"></i></span>Yes</a></li>
+            <li class="menu-item"><a href="#"><span class="icon"><i class="fa fa-wrapper fa-times small" aria-hidden="true"></i></span>No</a></li>
         </ul>
     </div>
 </div>`}
@@ -586,15 +587,15 @@ export const ListsPage: React.FC<any> = (props) => {
                                                 <a href="!#">Github</a>
                                             </li>
                                             <li className="menu-item selected">
-                                                <div className="menu-addon">
-                                                    <span className="icon">
+                                                <a href="!#">
+                                                    Tech News
+                                                    <span className="menu-addon u-pull-right icon">
                                                         <FontAwesomeIcon
                                                             className="fa-wrapper small"
                                                             icon={['fas', 'folder']}
                                                         />
                                                     </span>
-                                                </div>
-                                                <a href="!#">Tech News</a>
+                                                </a>
                                                 <ul className="menu">
                                                     <li className="menu-item">
                                                         <a href="!#">Hacker News</a>
@@ -632,18 +633,18 @@ export const ListsPage: React.FC<any> = (props) => {
             <li class="divider" data-label="TECH"></li>
             <li class="menu-item"><a href="!#">Github</a></li>
             <li class="menu-item selected">
-                <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-folder small" aria-hidden="true"></i></span></div><a href="!#">Tech News</a>
+                <a href="#">Tech News<span class="menu-addon u-pull-right icon"><i class="fa fa-wrapper fa-folder small" aria-hidden="true"></i></span></a>
                 <ul class="menu">
-                    <li class="menu-item"><a href="!#">Hacker News</a></li>
-                    <li class="menu-item"><a href="!#">Lobste.rs</a></li>
+                    <li class="menu-item"><a href="#">Hacker News</a></li>
+                    <li class="menu-item"><a href="#">Lobste.rs</a></li>
                 </ul>
             </li>
         </ul>
         <ul class="menu">
             <li class="divider" data-label="PROCRASTINATION"></li>
-            <li class="menu-item"><a href="!#">Facebook</a></li>
-            <li class="menu-item"><a href="!#">Twitter</a></li>
-            <li class="menu-item"><a href="!#">Instagram</a></li>
+            <li class="menu-item"><a href="#">Facebook</a></li>
+            <li class="menu-item"><a href="#">Twitter</a></li>
+            <li class="menu-item"><a href="#">Instagram</a></li>
         </ul>
     </div>
     <div class="frame-footer"></div>
@@ -656,25 +657,20 @@ export const ListsPage: React.FC<any> = (props) => {
                             <div className="col-lg-5">
                                 <ul className="menu">
                                     <li className="menu-item">
-                                        <div className="menu-addon">
-                                            <span className="icon">
-                                                <span className="icon">
-                                                    <FontAwesomeIcon
-                                                        className="fa-wrapper small"
-                                                        icon={['fas', 'clock']}
-                                                    />
-                                                </span>
-                                            </span>
-                                        </div>
-                                        <a href="!#">Real-Time</a>
+                                        <a href="!#">
+                                            <span className="menu-addon icon">
+                                                <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'clock']} />
+                                            </span>{' '}
+                                            Real-Time{' '}
+                                        </a>
                                     </li>
                                     <li className="menu-item selected">
-                                        <div className="menu-addon">
-                                            <span className="icon">
+                                        <a href="!#">
+                                            <span className="menu-addon icon">
                                                 <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'user']} />
-                                            </span>
-                                        </div>
-                                        <a href="!#">Audience</a>
+                                            </span>{' '}
+                                            Audience
+                                        </a>
                                         <ul className="menu">
                                             <li className="menu-item">
                                                 <a href="!#">Overview</a>
@@ -695,17 +691,12 @@ export const ListsPage: React.FC<any> = (props) => {
                                         </ul>
                                     </li>
                                     <li className="menu-item">
-                                        <div className="menu-addon">
+                                        <a href="!#">
                                             <span className="icon">
-                                                <span className="icon">
-                                                    <FontAwesomeIcon
-                                                        className="fa-wrapper small"
-                                                        icon={['fas', 'share']}
-                                                    />
-                                                </span>
+                                                <FontAwesomeIcon className="fa-wrapper small" icon={['fas', 'share']} />
                                             </span>
-                                        </div>
-                                        <a href="!#">Acquisition</a>
+                                            Acquisition
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -713,18 +704,18 @@ export const ListsPage: React.FC<any> = (props) => {
                                 <CodeBlock
                                     code={`<ul class="menu">
     <li class="menu-item">
-        <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-clock-o" aria-hidden="true"></i></span></div><a href="!#">Real-Time</a></li>
+        <a href="#"><span class="menu-addon icon"><i class="fa fa-wrapper fa-clock-o" aria-hidden="true"></i></span>Real-Time</a></li>
     <li class="menu-item selected">
-        <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-user" aria-hidden="true"></i></span></div><a href="!#">Audience</a>
+        <a href="#"><span class="menu-addon icon"><i class="fa fa-wrapper fa-user" aria-hidden="true"></i></span>Audience</a>
         <ul class="menu">
-            <li class="menu-item"><a href="!#">Overview</a></li>
-            <li class="menu-item"><a href="!#">Active Users</a></li>
-            <li class="menu-item"><a href="!#">Lifetime Value <sup>BETA</sup></a></li>
-            <li class="menu-item"><a href="!#">Cohort Analytics <sup>BETA</sup></a></li>
+            <li class="menu-item"><a href="#">Overview</a></li>
+            <li class="menu-item"><a href="#">Active Users</a></li>
+            <li class="menu-item"><a href="#">Lifetime Value <sup>BETA</sup></a></li>
+            <li class="menu-item"><a href="#">Cohort Analytics <sup>BETA</sup></a></li>
         </ul>
     </li>
     <li class="menu-item">
-        <div class="menu-addon"><span class="icon"><i class="fa fa-wrapper fa-share-alt" aria-hidden="true"></i></span></div><a href="!#">Acquisition</a></li>
+        <a href="#"><span class="menu-addon icon"><i class="fa fa-wrapper fa-share-alt" aria-hidden="true"></i></span>Acquisition</a></li>
 </ul>`}
                                     language="htmlbars"
                                 />
