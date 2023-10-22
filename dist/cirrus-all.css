@@ -13439,7 +13439,9 @@ ul .menu-title:not(:last-child) {
   margin-top: 1rem;
 }
 
-ul .menu-item {
+ul .menu-item > a:first-child,
+ul .menu-item > div:first-child,
+ul .menu-item > span:first-child {
   color: #495057;
   display: block;
   padding: 0.5em 0.75em;
@@ -13448,32 +13450,26 @@ ul .menu-item {
   transition: all var(--animation-duration);
 }
 
-ul .menu-item a {
-  box-shadow: none;
-  color: inherit;
-  display: block;
-  outline: none;
-}
-
-ul .menu-item:hover {
+ul .menu-item:hover > a:first-child,
+ul .menu-item:hover > div:first-child,
+ul .menu-item:hover > span:first-child {
   background-color: rgba(208, 208, 208, 0.3);
   color: #f03d4d;
   transition: all var(--animation-duration);
 }
 
-ul .menu-item.selected {
+ul .menu-item.selected > a:first-child,
+ul .menu-item.selected > div:first-child,
+ul .menu-item.selected > span:first-child {
   color: #fff;
   background-color: #f03d4d;
 }
 
 ul .menu-item .menu-addon {
-  padding: 0.3rem;
   z-index: 1;
   position: relative;
   color: var(--cirrus-fg);
   cursor: pointer;
-  float: left;
-  margin-right: 0.1rem;
   transition: all var(--animation-duration);
 }
 
@@ -13484,12 +13480,6 @@ ul .menu-item .menu-addon .icon {
 
 ul .menu-item .menu-addon:hover {
   transition: all var(--animation-duration);
-}
-
-ul .menu-item .menu-addon.right {
-  float: right;
-  margin-right: 0;
-  margin-left: 0.1rem;
 }
 
 ul .menu-item.selected .menu-addon {

@@ -78,7 +78,11 @@
         }
 
         /* Style menu items */
-        .menu-item {
+        $menu-item-allowed-children: 'a:first-child', 'div:first-child', 'span:first-child';
+        
+        .menu-item > a:first-child,
+        .menu-item > div:first-child,
+        .menu-item > span:first-child {
             color: fill('gray', '700');
             display: block;
             padding: 0.5em 0.75em;
@@ -87,32 +91,26 @@
             transition: all var(--animation-duration);
         }
 
-        .menu-item a {
-            box-shadow: none;
-            color: inherit;
-            display: block;
-            outline: none;
-        }
-
-        .menu-item:hover {
+        .menu-item:hover > a:first-child,
+        .menu-item:hover > div:first-child,
+        .menu-item:hover > span:first-child {
             background-color: rgba(208, 208, 208, 0.3);
             color: fill('primary');
             transition: all var(--animation-duration);
         }
 
-        .menu-item.selected {
+        .menu-item.selected > a:first-child,
+        .menu-item.selected > div:first-child,
+        .menu-item.selected > span:first-child {
             color: #fff;
             background-color: fill('primary');
         }
 
         .menu-item .menu-addon {
-            padding: 0.3rem;
             z-index: 1;
             position: relative;
             color: var(--cirrus-fg);
             cursor: pointer;
-            float: left;
-            margin-right: 0.1rem;
             transition: all var(--animation-duration);
         }
 
@@ -123,12 +121,6 @@
 
         .menu-item .menu-addon:hover {
             transition: all var(--animation-duration);
-        }
-
-        .menu-item .menu-addon.right {
-            float: right;
-            margin-right: 0;
-            margin-left: 0.1rem;
         }
 
         .menu-item.selected .menu-addon {
