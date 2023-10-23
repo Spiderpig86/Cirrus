@@ -485,7 +485,9 @@ function toggleModal() {
                         <div className="divider"></div>
                         <p>
                             Modals come in 3 sizes: <code>modal-small</code>, normal, and <code>modal-large</code>.
-                            Append these classes to <code>modal</code> to set the size.
+                            Append these classes to <code>modal</code> to set the size. Note that these width
+                            constraints apply to <code>.modal-content</code> and not <code>.modal</code> as{' '}
+                            <code>.modal-content</code> is the dialog itself.
                         </p>
 
                         <div className="w-100p mt-3 u-flex u-gap-1 u-justify-center">
@@ -499,6 +501,25 @@ function toggleModal() {
                                 <button className="px-3">Large</button>
                             </a>
                         </div>
+
+                        <CodeBlock language='htmlbars' code={`<!-- Small modal -->
+    <div class="modal modal-small">
+        <div class="modal-content">
+            <!-- Stuff -->
+        </div>
+    </div>
+<!-- Normal modal -->
+<div class="modal">
+    <div class="modal-content">
+        <!-- Stuff -->
+    </div>
+</div>
+<!-- Small modal -->
+<div class="modal modal-large">
+    <div class="modal-content">
+        <!-- Stuff -->
+    </div>
+</div>`} />
                     </div>
                 </section>
 
@@ -523,6 +544,24 @@ function toggleModal() {
                                 <button className="px-3">Zoom Out</button>
                             </a>
                         </div>
+                        <CodeBlock language='htmlbars' code={`<!-- Drop down modal -->
+    <div class="modal modal-animated--dropdown">
+        <div class="modal-content">
+            <!-- Stuff -->
+        </div>
+    </div>
+<!-- Zoom in modal -->
+<div class="modal modal-animated--zoom-in">
+    <div class="modal-content">
+        <!-- Stuff -->
+    </div>
+</div>
+<!-- Zoom out modal -->
+<div class="modal modal-animated--zoom-out">
+    <div class="modal-content">
+        <!-- Stuff -->
+    </div>
+</div>`} />
                     </div>
                 </section>
 
