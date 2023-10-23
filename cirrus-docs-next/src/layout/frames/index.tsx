@@ -433,7 +433,7 @@ export const FramesPage: React.FC<any> = (props) => {
     </div>
     <div class="frame__footer">
         <div class="form-group input-control">
-            <input type="text" class="form-group-input input--sm input-contains-icon" placeholder="Send a message"><span class="icon"><a href="#"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14 fa-wrapper small" role="img" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></a></span>
+            <input type="text" class="form-group-input input--sm input-contains-icon" placeholder="Send a message"><span class="icon"><a href="#"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="u-inline-block fa-plus fa-w-14 fa-wrapper small" role="img" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></a></span>
             <button class="btn-primary form-group-btn btn--sm">Send</button>
         </div>
     </div>

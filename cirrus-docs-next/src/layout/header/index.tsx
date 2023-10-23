@@ -136,7 +136,7 @@ export const HeaderPage: React.FC<any> = (props) => {
                     </span>
                 </a>
             </div>
-            <div class="nav-item has-sub toggle-hover" id="dropdown">
+            <div class="nav-item has-sub toggle-hover" id="left-dropdown">
                 <a class="nav-dropdown-link">Animated</a>
                 <ul class="dropdown-menu dropdown-animated" role="menu">
                     <li role="menu-item"><a href="#">First Item</a></li>
@@ -153,7 +153,7 @@ export const HeaderPage: React.FC<any> = (props) => {
             <div class="nav-item">
                 <a href="#">Link 1</a>
             </div>
-            <div class="nav-item has-sub" id="dropdown">
+            <div class="nav-item has-sub" id="right-dropdown">
                 <a class="nav-dropdown-link">Click Me</a>
                 <ul class="dropdown-menu" role="menu">
                     <li role="menu-item"><a href="#">First Item</a></li>
@@ -623,7 +623,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         <h6>2) The Menu Itself</h6>
                         <p>
                             The menu itself will be <b>adjacent</b> to the <code>nav-dropdown-link</code> and is a{' '}
-                            <code>ul</code> with the <code>dropdown-menu</code> class. Addition modifers include:
+                            <code>ul</code> with the <code>dropdown-menu</code> class. Additional modifers include:
                         </p>
                         <ul>
                             <li>
