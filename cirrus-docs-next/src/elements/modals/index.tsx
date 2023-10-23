@@ -34,13 +34,13 @@ export const ModalsPage: React.FC<any> = (props) => {
                     </div>
                 </Modal>
                 <Modal id="basic-modal" animation="modal-animated--zoom-in">
-                    <div className="modal-header">
-                        <a href="#components" className="u-pull-right" aria-label="Close">
+                    <div className="modal-header u-flex u-justify-space-between">
+                        <div className="modal-title">Invite</div>
+                        <a href="#components" aria-label="Close">
                             <span className="icon">
                                 <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'times']} />
                             </span>
                         </a>
-                        <div className="modal-title">Invite</div>
                     </div>
                     <div className="modal-body">
                         <div className="r">
@@ -184,7 +184,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                     </div>
                     <div className="modal-footer">
                         <div className="form-section u-text-right">
-                            <a href="#components">
+                            <a className="mr-1" href="#components">
                                 <button className="btn btn--sm u-inline-block">Cancel</button>
                             </a>
                             <a href="#components">
@@ -225,7 +225,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                         <ul>
                             <li>
                                 <code>modal</code> - the darkened translucent background around{' '}
-                                <code>modal-content</code>
+                                <code>modal-content</code>. Think of this as the modal container.
                                 <ul>
                                     <li>
                                         <code>modal-content</code> - the main dialog itself.
@@ -260,7 +260,59 @@ export const ModalsPage: React.FC<any> = (props) => {
                             <code>modal-body</code> has whatever content you want, and the <code>modal-footer</code>{' '}
                             consists of buttons to act on a prompt.
                         </p>
+                        <p>There are 2 ways to interact with the modal: JavaScript or plain CSS.</p>
+                    </div>
+                </section>
 
+                <section className="pt-4" id="interact-js">
+                    <div className="content">
+                        <Headline title="JS Powered Modal" link="#interact-js" size="6" />
+                        <p>
+                            This is the most straight forward approach for interacting with the <code>modal</code>. We
+                            can define a simple function to toggle the <code>.modal--visible</code> class on the{' '}
+                            <code>modal</code> to hide and show it.
+                        </p>
+
+                        <CodeBlock
+                            language="html"
+                            code={`<script>
+function toggleModal() {
+  // Toggle modal visibility
+  const modal = document.querySelector('#example-modal');
+  modal.classList.toggle("modal--visible");
+}
+</script>
+
+<!-- Button to open/close modal -->
+<button onclick="toggleModal()">Open Modal</button>
+
+<div class="modal modal--visible" id="example-modal"><a onclick="toggleModal" class="modal-overlay close-btn" aria-label="Close"></a>
+  <div class="modal-content" role="document">
+    <div class="modal-header u-flex u-justify-space-between">
+      <div class="modal-title">Modal Dialog</div>
+      <div onclick="toggleModal()"
+        aria-label="Close"><span class="icon" style="cursor: pointer;"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times w-2 h-4 fa-wrapper" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></span></div>
+    </div>
+    <div class="modal-body">
+        <!-- Some code here -->
+    </div>
+    <div class="modal-footer u-text-right"><a onclick="toggleModal()"
+        class="u-inline-block mr-1"><button class="btn--sm">Cancel</button></a><a onclick="toggleModal()"
+        class="u-inline-block"><button class="btn-primary btn--sm">Share</button></a></div>
+  </div>
+</div>`}
+                        />
+                    </div>
+                </section>
+
+                <section className="pt-4" id="interact-css">
+                    <div className="content">
+                        <Headline title="CSS Powered Modal" link="#interact-css" size="6" />
+                        <p>
+                            This section covers interacting with the modal via CSS and navigation events. This approach
+                            relies more on implicit behaviors that exist within the browser rather than specifying how
+                            the logic works yourself like with the JavaScript approach
+                        </p>
                         <p>
                             <b>Opening a Modal</b>
                         </p>
@@ -288,8 +340,8 @@ export const ModalsPage: React.FC<any> = (props) => {
                         </p>
                         <CodeBlock
                             code={`<div class="modal" id="test-modal">
-    <div class="modal-header">
-        <a href="#anchor-to-background" class="u-pull-right" aria-label="Close">
+    <div class="modal-header u-flex u-justify-space-between">
+        <a href="#anchor-to-background" aria-label="Close">
             <span class="icon">
                 <i class="fa-wrapper fa fa-times"></i>
             </span>
@@ -323,7 +375,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                             <b>Keep Scroll Position</b>
                         </p>
                         <CodeBlock
-                            code={`<a href="#NON-EXISTANT-DIV" class="modal-overlay close-btn" aria-label="Close"></a>`}
+                            code={`<a href="#NON-EXISTENT-DIV" class="modal-overlay close-btn" aria-label="Close"></a>`}
                             language="htmlbars"
                         />
 
@@ -337,7 +389,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                             code={`<div class="modal modal-animated--zoom-in" id="basic-modal">
     <a href="#searchModalDialog" class="modal-overlay close-btn" aria-label="Close"></a>
     <div class="modal-content" role="document">
-        <div class="modal-header"><a href="#components" class="u-pull-right" aria-label="Close"><span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11 fa-wrapper" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></span></a>
+        <div class="modal-header u-flex u-justify-space-between"><a href="#components" aria-label="Close"><span class="icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11 fa-wrapper" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg></span></a>
             <div class="modal-title">Invite</div>
         </div>
         <div class="modal-body">
@@ -412,7 +464,7 @@ export const ModalsPage: React.FC<any> = (props) => {
         </div>
         <div class="modal-footer">
             <div class="form-section u-text-right">
-                <a href="#components">
+                <a className="mr-1" href="#components">
                     <button class="btn btn--sm u-inline-block">Cancel</button>
                 </a>
                 <a href="#components">
@@ -436,7 +488,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                             Append these classes to <code>modal</code> to set the size.
                         </p>
 
-                        <div className="u-text-center mt-3">
+                        <div className="w-100p mt-3 u-flex u-gap-1 u-justify-center">
                             <a href="#small-modal">
                                 <button className="px-3">Small</button>
                             </a>
@@ -460,7 +512,7 @@ export const ModalsPage: React.FC<any> = (props) => {
                             these classes to <code>modal</code> to set the animation mode.
                         </p>
 
-                        <div className="u-text-center mt-3">
+                        <div className="mt-3 u-flex u-gap-1 u-justify-center">
                             <a href="#dropdown-modal">
                                 <button className="px-3">Dropdown</button>
                             </a>

@@ -17,13 +17,13 @@ export const Modal: React.FC<ModalProps> = (props) => {
                     props.children
                 ) : (
                     <>
-                        <div className="modal-header">
-                            <a href="#components" className="u-pull-right" aria-label="Close">
+                        <div className="modal-header u-flex u-justify-space-between">
+                            <div className="modal-title">Modal Dialog</div>
+                            <a href="#components" aria-label="Close">
                                 <span className="icon">
                                     <FontAwesomeIcon className="fa-wrapper" icon={['fas', 'times']} />
                                 </span>
                             </a>
-                            <div className="modal-title">Modal Dialog</div>
                         </div>
                         <div className="modal-body">
                             <h4>How to use.</h4>
@@ -52,7 +52,7 @@ export const Modal: React.FC<ModalProps> = (props) => {
                             </p>
                         </div>
                         <div className="modal-footer u-text-right">
-                            <a href="#components" className="u-inline-block">
+                            <a href="#components" className="u-inline-block mr-1">
                                 <button className="btn--sm">Cancel</button>
                             </a>
                             <a href="#components" className="u-inline-block">

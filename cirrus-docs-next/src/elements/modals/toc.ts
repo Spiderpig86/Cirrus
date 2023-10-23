@@ -13,7 +13,18 @@ export const toc: TableOfContentsEntry[] = [
             {
                 name: 'Basic',
                 anchor: '#basic',
-                children: null,
+                children: [
+                    {
+                        name: 'JS Modal',
+                        anchor: '#interact-js',
+                        children: null
+                    },
+                    {
+                        name: 'CSS Modal',
+                        anchor: '#interact-css',
+                        children: null
+                    }
+                ],
             },
             {
                 name: 'Sizes',

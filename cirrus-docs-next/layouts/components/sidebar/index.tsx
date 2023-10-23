@@ -22,7 +22,7 @@ export const Sidebar: React.FC<any> = (props) => {
 
                     const listItems = config.sidebarItems.map((listItemConfig: SidebarItemConfig) => {
                         const glyph = listItemConfig.glyph ? (
-                                <span className="icon text-black mr-1" key={listItemConfig.url + listItemConfig.text}>
+                                <span className="icon mr-1" key={listItemConfig.url + listItemConfig.text}>
                                     <FontAwesomeIcon className="fa-wrapper small" icon={listItemConfig.glyph} />
                                 </span>
                         ) : (
