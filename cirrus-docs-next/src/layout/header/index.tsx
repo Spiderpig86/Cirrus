@@ -113,7 +113,7 @@ export const HeaderPage: React.FC<any> = (props) => {
             <span></span>
         </div>
     </div>
-    <div class="header-nav" id="header-menu">
+    <div class="header-nav" id="header-menu" role="button">
         <div class="nav-left">
             <div class="nav-item text-center">
                 <a href="#">
@@ -139,9 +139,9 @@ export const HeaderPage: React.FC<any> = (props) => {
             <div class="nav-item has-sub toggle-hover" id="left-dropdown">
                 <a class="nav-dropdown-link">Animated</a>
                 <ul class="dropdown-menu dropdown-animated" role="menu">
-                    <li role="menu-item"><a href="#">First Item</a></li>
-                    <li role="menu-item"><a href="#">Second Item</a></li>
-                    <li role="menu-item"><a href="#">Third Item</a></li>
+                    <li role="menuitem"><a href="#">First Item</a></li>
+                    <li role="menuitem"><a href="#">Second Item</a></li>
+                    <li role="menuitem"><a href="#">Third Item</a></li>
                 </ul>
             </div>
         </div>
@@ -156,11 +156,11 @@ export const HeaderPage: React.FC<any> = (props) => {
             <div class="nav-item has-sub" id="right-dropdown">
                 <a class="nav-dropdown-link">Click Me</a>
                 <ul class="dropdown-menu" role="menu">
-                    <li role="menu-item"><a href="#">First Item</a></li>
-                    <li role="menu-item"><a href="#">Second Item</a></li>
-                    <li role="menu-item"><a href="#">Third Item</a></li>
+                    <li role="menuitem"><a href="#">First Item</a></li>
+                    <li role="menuitem"><a href="#">Second Item</a></li>
+                    <li role="menuitem"><a href="#">Third Item</a></li>
                     <li class="dropdown-menu-divider"></li>
-                    <li role="menu-item"><a href="#">Fourth Item</a></li>
+                    <li role="menuitem"><a href="#">Fourth Item</a></li>
                 </ul>
             </div>
         </div>
@@ -310,7 +310,7 @@ export const HeaderPage: React.FC<any> = (props) => {
             <span></span>
         </div>
     </div>
-    <div class="header-nav" style="background-color: #ffdadd;" id="header-menu">
+    <div class="header-nav" style="background-color: #ffdadd;" id="header-menu" role="button">
         <!-- Other nav categories, controls, nav-items, etc. This is hidden on touch enabled devices -->
     </div>
 </div>`}
@@ -659,9 +659,9 @@ $('.dropdown-menu li').on('click', function(e) {
         Me
     </a>
     <ul class="dropdown-menu dropdown-animated" role="menu">
-        <li role="menu-item"><a>About</a></li>
-        <li role="menu-item"><a>Achievements</a></li>
-        <li role="menu-item"><a>Likes</a></li>
+        <li role="menuitem"><a>About</a></li>
+        <li role="menuitem"><a>Achievements</a></li>
+        <li role="menuitem"><a>Likes</a></li>
     </ul>
 </div>`}
                             language="htmlbars"
@@ -707,9 +707,9 @@ $('.dropdown-menu li').on('click', function(e) {
         Menu
     </a>
     <ul class="dropdown-menu dropdown-animated" role="menu">
-        <li role="menu-item"><a>Profile</a></li>
-        <li role="menu-item"><a>Messages</a></li>
-        <li role="menu-item"><a>Log Out</a></li>
+        <li role="menuitem"><a>Profile</a></li>
+        <li role="menuitem"><a>Messages</a></li>
+        <li role="menuitem"><a>Log Out</a></li>
     </ul>
 </div>`}
                             language="htmlbars"

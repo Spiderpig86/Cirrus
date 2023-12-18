@@ -15,7 +15,7 @@ export const TutorialComplete: string = wrapContent(`<div class="bg-gray-000 min
 					<span></span>
 				</div>
 			</div>
-			<div class="header-nav" id="header-menu">
+			<div class="header-nav" id="header-menu" role="button">
 				<div class="nav-right text-sm">
 					<div class="nav-item">
 						<a href="#">Dribbble</a>
@@ -194,7 +194,7 @@ export const TutorialComponents: string = wrapContent(`<div class="bg-gray-000 m
           <span></span>
         </div>
       </div>
-      <div class="header-nav" id="header-menu">
+      <div class="header-nav" id="header-menu" role="button">
         <div class="nav-right text-sm">
           <div class="nav-item">
             <a href="#">Dribbble</a>

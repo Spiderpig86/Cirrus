@@ -60,7 +60,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                             <span></span>
                         </div>
                     </div>
-                    <div className="header-nav" id="header-menu">
+                    <div className="header-nav" id="header-menu" role="button">
                         <div className="nav-left">
                             <div className="nav-item">
                                 <a

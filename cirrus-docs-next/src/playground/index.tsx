@@ -161,7 +161,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                         <span />
                     </div>
                 </div>
-                <div className="header-nav" id="header-menu">
+                <div className="header-nav" id="header-menu" role="button">
                     <div className="nav-right">
                         <div className="nav-item" onClick={() => setEditorSize(`100%`)}>
                             <span
@@ -234,7 +234,7 @@ export const PlaygroundPage: React.FC<any> = () => {
                                 {Array.from(PLAYGROUND_ENDPOINT_MAP.keys()).map((version) => {
                                     return (
                                         <li
-                                            role="menu-item"
+                                            role="menuitem"
                                             onClick={() => {
                                                 setPlaygroundCdn(version);
                                                 reloadIFrame();

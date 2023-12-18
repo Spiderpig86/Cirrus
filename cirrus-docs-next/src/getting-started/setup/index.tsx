@@ -424,7 +424,7 @@ export default app;`}
             </div>
             <div class="nav-item nav-btn" id="header-btn"> <span></span> <span></span> <span></span> </div>
          </div>
-         <div class="header-nav" id="header-menu">
+         <div class="header-nav" id="header-menu" role="button">
             <div class="nav-left">
                <div class="nav-item text-center"> <a href="#"> <span class="icon"> <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i> </span> </a> </div>
             </div>
@@ -432,9 +432,9 @@ export default app;`}
                <div class="nav-item has-sub toggle-hover" id="dropdown">
                   <a class="nav-dropdown-link">Menu</a> 
                   <ul class="dropdown-menu dropdown-animated" role="menu">
-                     <li role="menu-item"><a href="#">First Item</a></li>
-                     <li role="menu-item"><a href="#">Second Item</a></li>
-                     <li role="menu-item"><a href="#">Third Item</a></li>
+                     <li role="menuitem"><a href="#">First Item</a></li>
+                     <li role="menuitem"><a href="#">Second Item</a></li>
+                     <li role="menuitem"><a href="#">Third Item</a></li>
                   </ul>
                </div>
             </div>

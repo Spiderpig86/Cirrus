@@ -232,7 +232,7 @@ export const StartGuidePage: React.FC<any> = (props) => {
         <span></span>
       </div>
     </div>
-    <div class="header-nav" id="header-menu">
+    <div class="header-nav" id="header-menu" role="button">
       <div class="nav-right text-sm">
         <div class="nav-item">
           <a href="#">Dribbble</a>

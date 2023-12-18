@@ -915,7 +915,7 @@ export const Preview: React.FC<any> = (props) => {
                             <span />
                         </div>
                     </div>
-                    <div className="header-nav" id="header-menu">
+                    <div className="header-nav" id="header-menu" role="button">
                         <div className="nav-left">
                             <div className="nav-item">
                                 <a href="#">Home</a>
@@ -955,7 +955,7 @@ export const Preview: React.FC<any> = (props) => {
                             <span />
                         </div>
                     </div>
-                    <div className="header-nav" id="header-menu">
+                    <div className="header-nav" id="header-menu" role="button">
                         <div className="nav-left">
                             <div className="nav-item u-text-center">
                                 <a href="#">
@@ -977,13 +977,13 @@ export const Preview: React.FC<any> = (props) => {
                             <div className="nav-item has-sub toggle-hover" id="dropdown">
                                 <a className="nav-dropdown-link">Services</a>
                                 <ul className="dropdown-menu dropdown-animated" role="menu">
-                                    <li role="menu-item">
+                                    <li role="menuitem">
                                         <a href="#">First Item</a>
                                     </li>
-                                    <li role="menu-item">
+                                    <li role="menuitem">
                                         <a href="#">Second Item</a>
                                     </li>
-                                    <li role="menu-item">
+                                    <li role="menuitem">
                                         <a href="#">Third Item</a>
                                     </li>
                                 </ul>
@@ -1020,7 +1020,7 @@ export const Preview: React.FC<any> = (props) => {
                                 <span />
                             </div>
                         </div>
-                        <div className="header-nav" id="header-menu">
+                        <div className="header-nav" id="header-menu" role="button">
                             <div className="nav-left" />
                             <div className="nav-center">
                                 <div className="nav-item">
@@ -1041,14 +1041,14 @@ export const Preview: React.FC<any> = (props) => {
                                     <figure className="avatar avatar--sm text-white" data-text="JD" />
                                     <a className="nav-dropdown-link">John Doe</a>
                                     <ul className="dropdown-menu dropdown-animated" role="menu">
-                                        <li role="menu-item">
+                                        <li role="menuitem">
                                             <a href="#">Profile</a>
                                         </li>
-                                        <li role="menu-item">
+                                        <li role="menuitem">
                                             <a href="#">Settings</a>
                                         </li>
                                         <li className="dropdown-menu-divider" />
-                                        <li role="menu-item">
+                                        <li role="menuitem">
                                             <a href="#">Logout</a>
                                         </li>
                                     </ul>

@@ -168,7 +168,7 @@ export const HeroPage: React.FC<any> = (props) => {
                                     <span />
                                 </div>
                             </div>
-                            <div className="header-nav" id="header-menu">
+                            <div className="header-nav" id="header-menu" role="button">
                                 <div className="nav-left">
                                     <div className="nav-item text-center">
                                         <a href="!#">
@@ -194,13 +194,13 @@ export const HeroPage: React.FC<any> = (props) => {
                                     <div className="nav-item has-sub toggle-hover" id="dropdown">
                                         <a className="nav-dropdown-link text-white">Animated</a>
                                         <ul className="dropdown-menu dropdown-animated" role="menu">
-                                            <li role="menu-item">
+                                            <li role="menuitem">
                                                 <a href="!#">First Item</a>
                                             </li>
-                                            <li role="menu-item">
+                                            <li role="menuitem">
                                                 <a href="!#">Second Item</a>
                                             </li>
-                                            <li role="menu-item">
+                                            <li role="menuitem">
                                                 <a href="!#">Third Item</a>
                                             </li>
                                         </ul>
@@ -220,17 +220,17 @@ export const HeroPage: React.FC<any> = (props) => {
                                     <div className="nav-item has-sub" id="dropdown">
                                         <a className="nav-dropdown-link text-white">Click Me</a>
                                         <ul className="dropdown-menu" role="menu">
-                                            <li role="menu-item">
+                                            <li role="menuitem">
                                                 <a href="!#">First Item</a>
                                             </li>
-                                            <li role="menu-item">
+                                            <li role="menuitem">
                                                 <a href="!#">Second Item</a>
                                             </li>
-                                            <li role="menu-item">
+                                            <li role="menuitem">
                                                 <a href="!#">Third Item</a>
                                             </li>
                                             <li className="dropdown-menu-divider" />
-                                            <li role="menu-item">
+                                            <li role="menuitem">
                                                 <a href="!#">Fourth Item</a>
                                             </li>
                                         </ul>
