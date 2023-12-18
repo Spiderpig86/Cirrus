@@ -61,6 +61,7 @@ $default-config: (
             flags.$LETTER-SPACING: false,
             flags.$LINE-HEIGHT: false,
             flags.$BORDER-WIDTH: false,
+            flags.$VERTICAL-ALIGN: false,
         ),
     // Extend all existing styles here
     extend:
@@ -505,6 +506,10 @@ $default-config: (
                 'Segoe UI Symbol',
             ),
         ),
+        font-styles: (
+            normal: normal,
+            italics: italics
+        ),
         letter-spacing: (
             tightest: -0.075em,
             tighter: -0.05em,
@@ -697,6 +702,7 @@ $default-config: (
         properties: (
             default-grid-gap: 2,
             grid-columns: 12,
+            grid-rows: 6,
         ),
     ),
     heights:
@@ -812,6 +818,7 @@ $default-config: (
             1000: 1000ms,
         ),
     ),
+    vertical-align: functions.to-property-map((baseline, top, middle, bottom, text-top, text-bottom, sub, super)),
     widths:
         functions.map-multi-merge(
             (
@@ -865,6 +872,7 @@ $font-heading-sizes: functions.get-with-extend($all-config, fonts, sizes, headin
 $font-headline-sizes: functions.get-with-extend($all-config, fonts, sizes, headline);
 $font-text-sizes: functions.get-with-extend($all-config, fonts, sizes, text);
 $font-families: functions.get-with-extend($all-config, fonts, font-families);
+$font-styles: functions.get-with-extend($all-config, fonts, font-styles);
 $font-letter-spacing: functions.get-with-extend($all-config, fonts, letter-spacing);
 $font-line-heights: functions.get-with-extend($all-config, fonts, line-heights);
 $font-transforms: functions.get-with-extend($all-config, fonts, transforms);
@@ -900,6 +908,7 @@ $flex-width: math.div(1, $flex-columns);
 
 $grid-properties: functions.get-with-extend($all-config, grid, properties);
 $grid-columns: map.get($grid-properties, grid-columns);
+$grid-rows: map.get($grid-properties, grid-rows);
 $default-grid-gap: map.get($grid-properties, default-grid-gap);
 
 $opacities: functions.get-with-extend($all-config, opacity);
@@ -907,6 +916,7 @@ $round: functions.get-with-extend($all-config, round);
 $shadows: functions.get-with-extend($all-config, shadows);
 $spacing-system: functions.get-with-extend($all-config, sizing-system);
 $transition-durations: functions.get-with-extend($all-config, transitions, durations);
+$vertical-alignments: functions.get-with-extend($all-config, vertical-align);
 $z-indexes: functions.get-with-extend($all-config, z-index);
 
 /*

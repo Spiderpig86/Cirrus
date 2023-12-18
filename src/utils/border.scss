@@ -2,32 +2,33 @@
 
 // Border Widths
 @if should-generate-classes($BORDER-WIDTH) {
-    @include generate-classes-for-viewport-with-map(
-        $border-widths,
-        'border-width',
-        'u-border-',
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('border-width', $border-widths),
+        $common-class-name: 'border',
+        $variants: (),
         $generate-viewports: #{get-viewport-flag($BORDER-WIDTH)},
-        $include-important: false
+        $override: '!important'
     );
 }
 
 @if should-generate-classes($BORDER-OPACITY) {
-    @include generate-classes-for-viewport-with-map(
-        $opacities,
-        '--border-opacity',
-        'u-border-opacity-',
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('--border-opacity', $border-widths),
+        $common-class-name: 'border-opacity',
+        $variants: (),
         $generate-viewports: #{get-viewport-flag($BORDER-OPACITY)},
-        $include-important: false
+        $override: '!important'
     );
 }
 
 @if should-generate-classes($ROUND) {
-    @each $class, $value in $round {
-        .u-round-#{$class} {
-            border-radius: #{$value};
-        }
-    }
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('border-radius', $round),
+        $common-class-name: 'round',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($ROUND)},
+        $override: '!important'
+    );
 }
 
 // TODO: Do we need corner specific variants?
-

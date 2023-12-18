@@ -1,0 +1,353 @@
+// _generator.scss unit tests
+@use '../test_base' as *;
+
+@use '../../src/internal/generator';
+@use '../../src/internal/mixins';
+
+@include describe('utility()') {
+    @include it('should generate expected utility classes with variant support') {
+        @include assert {
+            @include output {
+                @include generator.utility(
+                    $common-class-name: 'text',
+                    $class-value-pairs: (
+                        'blue': (
+                            'color': blue,
+                        ),
+                    ),
+                    $variants: (
+                        'hover',
+                        'dark',
+                        'reduce-motion',
+                    ),
+                    $generate-viewports: 'true',
+                    $override: '!important'
+                );
+            }
+            @include expect {
+                .u-text-blue {
+                    color: blue !important;
+                }
+
+                .hover\:u-text-blue:hover {
+                    color: blue !important;
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    .dark\:u-text-blue {
+                        color: blue !important;
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-text-blue {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 640px) {
+                    .u-text-blue-sm {
+                        color: blue !important;
+                    }
+
+                    .hover\:u-text-blue-sm:hover {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 640px) and (prefers-color-scheme: dark) {
+                    .dark\:u-text-blue-sm {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 640px) and (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-text-blue-sm {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    .u-text-blue-md {
+                        color: blue !important;
+                    }
+
+                    .hover\:u-text-blue-md:hover {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) and (prefers-color-scheme: dark) {
+                    .dark\:u-text-blue-md {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) and (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-text-blue-md {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) {
+                    .u-text-blue-lg {
+                        color: blue !important;
+                    }
+
+                    .hover\:u-text-blue-lg:hover {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) and (prefers-color-scheme: dark) {
+                    .dark\:u-text-blue-lg {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) and (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-text-blue-lg {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) {
+                    .u-text-blue-xl {
+                        color: blue !important;
+                    }
+
+                    .hover\:u-text-blue-xl:hover {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) and (prefers-color-scheme: dark) {
+                    .dark\:u-text-blue-xl {
+                        color: blue !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) and (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-text-blue-xl {
+                        color: blue !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include describe('utility-with-body()') {
+    @include it('should generate expected utility classes with variant support') {
+        @include assert {
+            @include output {
+                @include generator.utility-with-body(
+                        $variants: (
+                            'hover',
+                            'dark',
+                            'reduce-motion',
+                        ),
+                        $generate-viewports: 'true',
+                        $override: '!important'
+                    )
+                    using ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override) {
+                    $colors: red, white;
+                    @each $color in $colors {
+                        .#{$variant-prefix}#{$prefix}#{$color}#{$suffix-str}#{$variant-suffix} {
+                            color: #{$color} #{$override};
+                        }
+                    }
+                }
+            }
+            @include expect {
+                .u-red {
+                    color: red !important;
+                }
+
+                .u-white {
+                    color: white !important;
+                }
+
+                .hover\:u-red:hover {
+                    color: red !important;
+                }
+
+                .hover\:u-white:hover {
+                    color: white !important;
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    .dark\:u-red {
+                        color: red !important;
+                    }
+
+                    .dark\:u-white {
+                        color: white !important;
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-red {
+                        color: red !important;
+                    }
+
+                    .reduce-motion\:u-white {
+                        color: white !important;
+                    }
+                }
+
+                @media screen and (min-width: 640px) {
+                    .u-red-sm {
+                        color: red !important;
+                    }
+
+                    .u-white-sm {
+                        color: white !important;
+                    }
+
+                    .hover\:u-red-sm:hover {
+                        color: red !important;
+                    }
+
+                    .hover\:u-white-sm:hover {
+                        color: white !important;
+                    }
+                }
+
+                @media screen and (min-width: 640px) and (prefers-color-scheme: dark) {
+                    .dark\:u-red-sm {
+                        color: red !important;
+                    }
+
+                    .dark\:u-white-sm {
+                        color: white !important;
+                    }
+                }
+
+                @media screen and (min-width: 640px) and (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-red-sm {
+                        color: red !important;
+                    }
+
+                    .reduce-motion\:u-white-sm {
+                        color: white !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    .u-red-md {
+                        color: red !important;
+                    }
+
+                    .u-white-md {
+                        color: white !important;
+                    }
+
+                    .hover\:u-red-md:hover {
+                        color: red !important;
+                    }
+
+                    .hover\:u-white-md:hover {
+                        color: white !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) and (prefers-color-scheme: dark) {
+                    .dark\:u-red-md {
+                        color: red !important;
+                    }
+
+                    .dark\:u-white-md {
+                        color: white !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) and (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-red-md {
+                        color: red !important;
+                    }
+
+                    .reduce-motion\:u-white-md {
+                        color: white !important;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) {
+                    .u-red-lg {
+                        color: red !important;
+                    }
+
+                    .u-white-lg {
+                        color: white !important;
+                    }
+
+                    .hover\:u-red-lg:hover {
+                        color: red !important;
+                    }
+
+                    .hover\:u-white-lg:hover {
+                        color: white !important;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) and (prefers-color-scheme: dark) {
+                    .dark\:u-red-lg {
+                        color: red !important;
+                    }
+
+                    .dark\:u-white-lg {
+                        color: white !important;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) and (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-red-lg {
+                        color: red !important;
+                    }
+
+                    .reduce-motion\:u-white-lg {
+                        color: white !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) {
+                    .u-red-xl {
+                        color: red !important;
+                    }
+
+                    .u-white-xl {
+                        color: white !important;
+                    }
+
+                    .hover\:u-red-xl:hover {
+                        color: red !important;
+                    }
+
+                    .hover\:u-white-xl:hover {
+                        color: white !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) and (prefers-color-scheme: dark) {
+                    .dark\:u-red-xl {
+                        color: red !important;
+                    }
+
+                    .dark\:u-white-xl {
+                        color: white !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) and (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-red-xl {
+                        color: red !important;
+                    }
+
+                    .reduce-motion\:u-white-xl {
+                        color: white !important;
+                    }
+                }
+            }
+        }
+    }
+}

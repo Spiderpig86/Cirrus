@@ -78,35 +78,39 @@
         }
 
         /* Style menu items */
-        .menu-item a {
+        $menu-item-allowed-children: 'a:first-child', 'div:first-child', 'span:first-child';
+        
+        .menu-item > a:first-child,
+        .menu-item > div:first-child,
+        .menu-item > span:first-child {
             color: fill('gray', '700');
             display: block;
             padding: 0.5em 0.75em;
             border-radius: 3px;
             font-size: var(--font-size-s);
-            cursor: pointer;
             transition: all var(--animation-duration);
         }
 
-        .menu-item:hover > a {
+        .menu-item:hover > a:first-child,
+        .menu-item:hover > div:first-child,
+        .menu-item:hover > span:first-child {
             background-color: rgba(208, 208, 208, 0.3);
-            color: $cirrus-primary;
+            color: fill('primary');
             transition: all var(--animation-duration);
         }
 
-        .menu-item.selected > a {
+        .menu-item.selected > a:first-child,
+        .menu-item.selected > div:first-child,
+        .menu-item.selected > span:first-child {
             color: #fff;
-            background-color: $cirrus-primary;
+            background-color: fill('primary');
         }
 
         .menu-item .menu-addon {
-            padding: 0.3rem;
             z-index: 1;
             position: relative;
             color: var(--cirrus-fg);
             cursor: pointer;
-            float: left;
-            margin-right: 0.1rem;
             transition: all var(--animation-duration);
         }
 
@@ -117,12 +121,6 @@
 
         .menu-item .menu-addon:hover {
             transition: all var(--animation-duration);
-        }
-
-        .menu-item .menu-addon.right {
-            float: right;
-            margin-right: 0;
-            margin-left: 0.1rem;
         }
 
         .menu-item.selected .menu-addon {
@@ -178,6 +176,7 @@
             pointer-events: none; /* Remove pointer events to prevent mouse hover to show menu even though it is not visible */
             overflow: hidden;
             transition: all var(--animation-duration);
+            text-align: left;
 
             @include screen-below($sm) {
                 height: 0;
@@ -297,7 +296,7 @@
 
     @include screen-below($sm) {
         /* Hide the menu to the side by default */
-        .tree-nav {
+        .tree-nav-body .tree-nav {
             height: 100%;
             left: 0;
             overflow-y: auto;
@@ -310,6 +309,7 @@
 
             /* Open the menu from the side */
             /* Use a link and add the id of this element as the url */
+            &.tree-nav--visible,
             &:target {
                 transform: translateX(0);
                 transition: transform var(--animation-duration) ease;

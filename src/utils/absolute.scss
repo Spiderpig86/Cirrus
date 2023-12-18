@@ -4,11 +4,12 @@
     $directions: top, left, right, bottom;
 
     @each $direction in $directions {
-        @include generate-classes-for-viewport-with-map(
-                        $absolute,
-                        $direction,
-                        'u-#{$direction}-',
-                $generate-viewports: #{get-viewport-flag($ABSOLUTES)}
+        @include utility(
+            $class-value-pairs: class-value-map-with-single-property($direction, $absolute),
+            $common-class-name: $direction,
+            $variants: (),
+            $generate-viewports: #{get-viewport-flag($ABSOLUTES)},
+            $override: '!important'
         );
     }
 }

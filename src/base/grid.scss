@@ -6,6 +6,7 @@
 
 :root {
     --grid-template-column: repeat(#{$grid-columns}, minmax(0, 1fr));
+    --grid-template-rows: repeat(#{$grid-rows}, minmax(0, 1fr));
     --grid-column-start: auto;
     --grid-column-end: auto;
     --grid-row-start: auto;
@@ -32,17 +33,24 @@
             grid-column: span #{$i} / span #{$i};
         }
 
-        /* Row expansion */
-        .grid-r-#{$i}#{$suffix} {
-            grid-row: span #{$i} / span #{$i};
-        }
-
         /* Cell Column Start/End */
         .grid-cs-#{$i}#{$suffix} {
             grid-column-start: #{$i};
         }
         .grid-ce-#{$i}#{$suffix} {
             grid-column-end: #{$i + 1};
+        }
+    }
+
+    @for $i from 1 through $grid-rows {
+        /* Templates */
+        .grid-rows-#{$i}#{$suffix} {
+            --grid-template-column: repeat(#{$i}, minmax(0, 1fr));
+        }
+
+        /* Row expansion */
+        .grid-r-#{$i}#{$suffix} {
+            grid-row: span #{$i} / span #{$i};
         }
 
         /* Cell Row Start/End */

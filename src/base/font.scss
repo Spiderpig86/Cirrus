@@ -74,7 +74,8 @@ mark,
     font-family: map-get($map: $font-families, $key: primary);
 }
 
-.font-alt, .font-secondary {
+.font-alt,
+.font-secondary {
     font-family: map-get($map: $font-families, $key: secondary);
 }
 
@@ -123,18 +124,17 @@ mark,
     }
 }
 
+@include utility(
+    $prefix: '',
+    $class-value-pairs: class-value-map-with-single-property('font-style', $font-styles),
+    $common-class-name: 'font-style',
+    $variants: (),
+    $generate-viewports: false
+);
+
 .rtl {
     direction: rtl;
 }
-
-// .white { Deprecated 0.6.5, use text-white instead
-//     color: #fff !important;
-// }
-
-// Deprecated 0.6.5, use u-opacity-x
-// .faded {
-//     opacity: 0.75;
-// }
 
 /* Font Awesome */
 .icon {

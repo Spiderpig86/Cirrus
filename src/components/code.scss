@@ -11,15 +11,6 @@
         color: var(--cirrus-code-fg);
         border-radius: 3px;
 
-        &:before {
-            color: var(--cirrus-code-label-fg);
-            content: attr(data-lang);
-            font-size: 0.9rem;
-            position: absolute;
-            right: 1rem;
-            top: 0.7rem;
-        }
-
         /* Dark theme for code */
         &.dark {
             --cirrus-code-bg: #{fill('gray', '800')};
@@ -53,6 +44,15 @@
 
         &[data-lang]:not([data-lang='']) {
             padding: 2rem 1.5rem 1rem;
+        }
+
+        &::before {
+            color: var(--cirrus-code-label-fg);
+            content: attr(data-lang);
+            font-size: 0.9rem;
+            position: absolute;
+            right: 1rem;
+            top: 0.7rem;
         }
     }
 }

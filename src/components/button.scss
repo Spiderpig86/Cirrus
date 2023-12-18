@@ -137,7 +137,7 @@
         /* Regular */
         &.btn-transparent {
             --btn-color: transparent;
-            --btn-fg: #{hex-to-rgb($cirrus-dark)};
+            --btn-fg: #{hex-to-rgb(fill('dark'))};
             --btn-border-color: transparent;
             --btn-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
 
@@ -146,26 +146,26 @@
                 --btn-color: 0, 0, 0;
             }
             &.outline {
-                --btn-fg: #{hex-to-rgb($cirrus-dark)};
+                --btn-fg: #{hex-to-rgb(fill('dark'))};
             }
         }
 
         &.btn-light {
-            --btn-color: #{hex-to-rgb($cirrus-light)};
-            --btn-fg: #{hex-to-rgb($cirrus-dark)};
-            --btn-border-color: #{hex-to-rgb($cirrus-light)};
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-light, 0.5)};
+            --btn-color: #{hex-to-rgb(fill('light'))};
+            --btn-fg: #{hex-to-rgb(fill('dark'))};
+            --btn-border-color: #{hex-to-rgb(fill('light'))};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize(fill('light'), 0.5)};
 
             &:hover {
-                --btn-color: #{hex-to-rgb(darken($cirrus-light, 10%))};
+                --btn-color: #{hex-to-rgb(darken(fill('light'), 10%))};
             }
         }
 
         &.btn-black {
             --btn-color: 0, 0, 0;
-            --btn-fg: #{hex-to-rgb($cirrus-light)};
+            --btn-fg: #{hex-to-rgb(fill('light'))};
             --btn-border-color: 0, 0, 0;
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($cirrus-dark, 0.5)};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize(fill('dark'), 0.5)};
 
             &:hover {
                 --btn-color: 0, 0, 0;

@@ -1,0 +1,11 @@
+@use '../internal' as *;
+
+@if should-generate-classes($VERTICAL-ALIGN) {
+    @include utility(
+        $common-class-name: 'align',
+        $class-value-pairs: class-value-map-with-single-property('vertical-align', $vertical-alignments),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($VERTICAL-ALIGN)},
+        $override: '!important'
+    );
+}

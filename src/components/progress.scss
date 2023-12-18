@@ -2,7 +2,7 @@
 @use '../internal' as *;
 
 @if should-generate-classes($PROGRESS) {
-    $progress-primary: $cirrus-primary;
+    $progress-primary: fill('primary');
     $progress-background: fill('gray', '200');
     $progress-border-radius: 0.25rem;
 

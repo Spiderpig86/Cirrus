@@ -3,7 +3,13 @@
 @if should-generate-classes($CLEARFIX) {
     $clears: left, right, both;
 
-    @include generate-classes-for-viewport($clears, 'clear', 'u-clear-', $generate-viewports: #{get-viewport-flag($CLEARFIX)});
+    @include utility(
+        $class-value-pairs: class-value-map-with-single-property('clear', to-property-map($clears)),
+        $common-class-name: 'clear',
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($CLEARFIX)},
+        $override: '!important'
+    );
 
     /*
        When using floats, clearfix allows the container to automatically resize so that

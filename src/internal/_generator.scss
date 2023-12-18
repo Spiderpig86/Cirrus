@@ -1,0 +1,216 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'config';
+@use 'size';
+@use 'mixins';
+
+$default-prefix: 'u-';
+$default-override: '';
+$default-delimiter: '-';
+$default-variant-delimiter: '\\:';
+
+// ALL WIP
+
+@mixin utility-with-body(
+    $prefix: $default-prefix,
+    $delimiter: $default-delimiter,
+    $variants: (),
+    $variant-delimiter: $default-variant-delimiter,
+    $generate-viewports: false,
+    $override: $default-override
+) {
+    @include generate-tree(
+            $variants,
+            $variant-delimiter,
+            $prefix,
+            '',
+            $delimiter,
+            // Hack to get class generation. Not great but involves more of a refactor in the future which can be quite expensive
+            (
+                'placeholder': (
+                    color: white,
+                ),
+            ),
+            $generate-viewports,
+            $override
+        )
+        using ($variant, $variant-delimiter, $prefix, $suffix, $common-class-name, $delimiter, $key, $value, $override) {
+        // TODO Handle portrait and landscape
+
+        @include generate-variants(
+                $variant,
+                $variant-delimiter,
+                $prefix,
+                $suffix,
+                $common-class-name,
+                $delimiter,
+                $key,
+                $value,
+                $override
+            )
+            using ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override) {
+            @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override);
+        }
+    }
+}
+
+@mixin utility(
+    $prefix: $default-prefix,
+    $delimiter: $default-delimiter,
+    $common-class-name,
+    $class-value-pairs,
+    $variants: (),
+    $variant-delimiter: $default-variant-delimiter,
+    $generate-viewports: false,
+    $override: $default-override
+) {
+    @include generate-tree(
+            $variants,
+            $variant-delimiter,
+            $prefix,
+            $common-class-name,
+            $delimiter,
+            $class-value-pairs,
+            $generate-viewports,
+            $override
+        )
+        using ($variant, $variant-delimiter, $prefix, $suffix, $common-class-name, $delimiter, $key, $value, $override) {
+        // TODO Handle portrait and landscape
+
+        @include generate-variants(
+                $variant,
+                $variant-delimiter,
+                $prefix,
+                $suffix,
+                $common-class-name,
+                $delimiter,
+                $key,
+                $value,
+                $override
+            )
+            using ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override) {
+            .#{$variant-prefix}#{$prefix}#{$common-class}#{$key}#{$suffix-str}#{$variant-suffix} {
+                @include mixins.explode-properties($value, $override);
+            }
+        }
+    }
+}
+
+@mixin generate-tree(
+    $variants: (),
+    $variant-delimiter: $default-variant-delimiter,
+    $prefix: $default-prefix,
+    $common-class-name,
+    $delimiter,
+    $class-value-pairs,
+    $generate-viewports: false,
+    $override: $default-override
+) {
+    // Iterate over variants, including no variants
+    $variants: list.join('', $variants);
+    @each $key, $value in $class-value-pairs {
+        @each $variant in $variants {
+            // No viewport
+            @content ($variant, $variant-delimiter, $prefix, '', $common-class-name, $delimiter, $key, $value, $override);
+        }
+    }
+
+    // Generate classes with viewport
+    // Generation is separate and in this specific nesting order of for loops to allow gulp-clean-css to efficiently minify
+    @if $generate-viewports == 'true' {
+        @each $suffix, $limit in config.$breakpoint-pairs {
+            @each $key, $value in $class-value-pairs {
+                @include size.screen-above($limit) {
+                    @each $variant in $variants {
+                        @content ($variant, $variant-delimiter, $prefix, $suffix, $common-class-name, $delimiter, $key, $value, $override);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin generate-variants(
+    $variant,
+    $variant-delimiter,
+    $prefix,
+    $suffix,
+    $common-class-name,
+    $delimiter,
+    $key,
+    $value,
+    $override
+) {
+
+    // If class value is not a map, throw exception
+    @if type-of($value) != 'map' {
+        @error 'The given value for class "#{$common-class-name}" is not a map.';
+    }
+
+    $common-class: $common-class-name + $delimiter;
+    @if $common-class-name == '' {
+        $common-class: '';
+    }
+
+    @if $variant == 'dark' or $variant == 'light' {
+        $variant-prefix: '';
+        $variant-suffix: '';
+        @if $variant != '' {
+            $variant-prefix: $variant + $variant-delimiter;
+        }
+
+        $suffix-str: '';
+        @if $suffix != '' {
+            $suffix-str: $delimiter + $suffix;
+        }
+
+        @media (prefers-color-scheme: #{$variant}) {
+            @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override);
+        }
+    } @else if $variant == 'reduce-motion' {
+        $variant-prefix: '';
+        $variant-suffix: '';
+        @if $variant != '' {
+            $variant-prefix: $variant + $variant-delimiter;
+        }
+
+        $suffix-str: '';
+        @if $suffix != '' {
+            $suffix-str: $delimiter + $suffix;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override);
+        }
+    } @else {
+        $variant-prefix: '';
+        $variant-suffix: '';
+        @if $variant != '' {
+            $variant-prefix: $variant + $variant-delimiter;
+            $variant-suffix: ':' + $variant;
+        }
+
+        $suffix-str: '';
+        @if $suffix != '' {
+            $suffix-str: $delimiter + $suffix;
+        }
+
+        @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override);
+    }
+}
+
+@function class-value-map-with-single-property($property, $property-values) {
+    $result: ();
+
+    @each $key, $value in $property-values {
+        $result: map.set(
+            $result,
+            $key,
+            (
+                $property: $value,
+            )
+        );
+    }
+
+    @return $result;
+}

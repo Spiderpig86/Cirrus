@@ -52,7 +52,7 @@
 
                     &.selected a,
                     &.selected .tab-item-content {
-                        color: $cirrus-primary;
+                        color: fill('primary');
                         border-color: fill('gray', '300');
                         border-bottom-color: transparent !important;
                     }
@@ -115,8 +115,8 @@
 
             &.selected a,
             &.selected .tab-item-content {
-                border-bottom-color: $cirrus-primary;
-                color: $cirrus-primary;
+                border-bottom-color: fill('primary');
+                color: fill('primary');
                 border-width: 2px;
                 transition: all 0.3s;
             }
