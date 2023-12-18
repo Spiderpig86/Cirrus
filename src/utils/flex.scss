@@ -103,7 +103,7 @@
     );
     
     @include utility(
-        $class-value-pairs: class-value-map-with-single-property('col-gap', $gaps-both),
+        $class-value-pairs: class-value-map-with-single-property('column-gap', $gaps-both),
         $common-class-name: 'col-gap',
         $variants: (),
         $generate-viewports: #{get-viewport-flag($GAP)},
