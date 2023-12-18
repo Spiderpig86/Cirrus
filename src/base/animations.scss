@@ -9,6 +9,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(359deg);
     }
@@ -23,6 +24,7 @@
 
 /* Bounce animations */
 @keyframes bounce {
+
     from,
     20%,
     53%,
@@ -31,21 +33,25 @@
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
         transform: translate3d(0, 0, 0);
     }
+
     40%,
     43% {
         animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
         transform: translate3d(0, -30px, 0);
     }
+
     70% {
         animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
         transform: translate3d(0, -15px, 0);
     }
+
     90% {
         transform: translate3d(0, -4px, 0);
     }
 }
 
 @keyframes bounceIn {
+
     from,
     20%,
     40%,
@@ -54,23 +60,29 @@
     to {
         animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     }
+
     0% {
         opacity: 0;
         transform: scale3d(0.3, 0.3, 0.3);
     }
+
     20% {
         transform: scale3d(1.1, 1.1, 1.1);
     }
+
     40% {
         transform: scale3d(0.9, 0.9, 0.9);
     }
+
     60% {
         opacity: 1;
         transform: scale3d(1.03, 1.03, 1.03);
     }
+
     80% {
         transform: scale3d(0.97, 0.97, 0.97);
     }
+
     to {
         opacity: 1;
         transform: scale3d(1, 1, 1);
@@ -81,6 +93,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -93,6 +106,7 @@
 }
 
 @keyframes ping {
+
     75%,
     100% {
         transform: scale(2);
@@ -131,8 +145,8 @@
             display: block;
             height: 1rem;
             width: 1rem;
-            left: calc(50% - (1rem / 1.75));
-            top: calc(50% - (1em / 1.35));
+            left: calc(50% - (1rem / 1.25));
+            top: calc(50% - (1rem / 2));
             position: absolute;
             animation: loading 500ms infinite linear;
         }
