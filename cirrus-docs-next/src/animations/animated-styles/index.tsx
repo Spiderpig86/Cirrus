@@ -12,6 +12,7 @@ import { toc } from './toc';
 
 import initializeAnimations from '../../../static/js/animations.js';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
+import { Blockquote } from '../../../layouts/components/blockquote';
 
 export const AnimationsPage: React.FC<any> = (props) => {
     useEffect(() => {
@@ -545,9 +546,14 @@ export const AnimationsPage: React.FC<any> = (props) => {
                         <section className="pt-4" id="ping">
                             <Headline title="Ping" link="#ping" size="6" />
                             <p>
-                                Add the <code>pulse</code> animation to simulate pulsing in an out by oscillating the
+                                Add the <code>ping</code> animation to simulate pulsing in an out by oscillating the
                                 element's opacity. This is a great animation for skeleton loaders as seen below.
                             </p>
+                            <Blockquote accentColor={'#fcd9bd'}>
+                                <p>
+                                    ⚠ The styling used for the blue dot is not part of Cirrus, only the animation.
+                                </p>
+                            </Blockquote>
                             <div className="u-relative u-inline-flex">
                                 <div className="u-round-xs u-shadow-lg p-3 bg-blue-100">
                                     <div className="u-flex u-items-center u-gap-2">
