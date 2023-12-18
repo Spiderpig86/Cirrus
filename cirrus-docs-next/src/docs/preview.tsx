@@ -45,9 +45,7 @@ export const Preview: React.FC<any> = (props) => {
 
                     <div className="u-text-center mt-2">
                         <Link href="/fundamentals/colors">
-                            <button className="btn-link outline">
-                                View All Colors
-                            </button>
+                            <button className="btn-link outline">View All Colors</button>
                         </Link>
                     </div>
                     <div className="space space--xl" />
@@ -148,38 +146,32 @@ export const Preview: React.FC<any> = (props) => {
                     <h3 className="font-alt font-normal u-text-center">Headings</h3>
                     <h6 className="uppercase">Standard headings:</h6>
                     <h1>
-                        H1 Heading{' '}
-                        <span className="tag tag--success text-light">H1</span>
+                        H1 Heading <span className="tag tag--success text-light">H1</span>
                         <span className="desc uppercase">3rem (48px)</span>
                     </h1>
                     <div className="divider" />
                     <h2>
-                        H2 Heading{' '}
-                        <span className="tag tag--success text-light">H2</span>
+                        H2 Heading <span className="tag tag--success text-light">H2</span>
                         <span className="desc uppercase">2.5rem (40px)</span>
                     </h2>
                     <div className="divider" />
                     <h3>
-                        H3 Heading{' '}
-                        <span className="tag tag--success text-light">H3</span>
+                        H3 Heading <span className="tag tag--success text-light">H3</span>
                         <span className="desc uppercase">2rem (32px)</span>
                     </h3>
                     <div className="divider" />
                     <h4>
-                        H4 Heading{' '}
-                        <span className="tag tag--success text-light">H4</span>
+                        H4 Heading <span className="tag tag--success text-light">H4</span>
                         <span className="desc uppercase">1.75rem (28px)</span>
                     </h4>
                     <div className="divider" />
                     <h5>
-                        H5 Heading{' '}
-                        <span className="tag tag--success text-light">H5</span>
+                        H5 Heading <span className="tag tag--success text-light">H5</span>
                         <span className="desc uppercase">1.5rem (24px)</span>
                     </h5>
                     <div className="divider" />
                     <h6>
-                        H6 Heading{' '}
-                        <span className="tag tag--success text-light">H6</span>
+                        H6 Heading <span className="tag tag--success text-light">H6</span>
                         <span className="desc uppercase">1.25rem (20px)</span>
                     </h6>
                     <div className="divider" />
@@ -1530,15 +1522,12 @@ export const Preview: React.FC<any> = (props) => {
                                     <ul className="menu">
                                         <li className="divider" />
                                         <li className="menu-item selected">
-                                            <div className="menu-addon right" id="menu-list-addon">
-                                                <span className="icon">
-                                                    <i
-                                                        className="fa-wrapper fas fa-ellipsis-h small"
-                                                        aria-hidden="true"
-                                                    />
+                                            <a href="!#">
+                                                News Feed
+                                                <span className="menu-addon u-pull-right icon">
+                                                    <FontAwesomeIcon className="fa-wrapper small" icon="ellipsis-h" />
                                                 </span>
-                                            </div>
-                                            <a href="#">News Feed</a>
+                                            </a>
                                         </li>
                                         <li className="menu-item">
                                             <a href="#">Messenger</a>

@@ -28,12 +28,12 @@ export const MenuList: React.FC<any> = (props) => {
                 <ul className="menu">
                     <li className="divider" />
                     <li className="menu-item selected">
-                        <div className="menu-addon right" id="menu-list-addon">
-                            <span className="icon">
-                                <FontAwesomeIcon icon={['fas', 'ellipsis-h']} />
+                        <a href="!#">
+                            News Feed
+                            <span className="menu-addon u-pull-right icon">
+                                <FontAwesomeIcon className="fa-wrapper small" icon="ellipsis-h" />
                             </span>
-                        </div>
-                        <a href="#">News Feed</a>
+                        </a>
                     </li>
                     <li className="menu-item">
                         <a href="#">Messenger</a>
