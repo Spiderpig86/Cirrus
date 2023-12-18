@@ -12101,6 +12101,7 @@ ul .divider::after {
   top: 75%;
   left: 0;
   animation: slide-down var(--animation-duration) ease 1;
+  animation-play-state: paused;
   background-color: var(--cirrus-bg);
   border-radius: 0.2rem;
   box-shadow: 0 1rem 3rem rgba(149, 157, 165, 0.3);
@@ -12131,13 +12132,13 @@ ul .divider::after {
 .list-dropdown.shown .menu,
 .list-dropdown .btn-dropdown:focus + .menu,
 .list-dropdown .menu:hover {
+  animation-play-state: running; /* Resume animation on focus */
   display: block;
   opacity: 1;
   top: 100%;
   z-index: 100;
   pointer-events: auto; /* Restore pointer events */
   height: auto;
-  transition: all var(--animation-duration);
 }
 
 .list-dropdown .btn-group .btn-dropdown:nth-last-child(2) {
