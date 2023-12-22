@@ -150,7 +150,7 @@ $default-variant-delimiter: '\\:';
 
     $common-class: $common-class-name + $delimiter;
     @if $common-class-name == '' {
-        /* Clear common class if no class name was provided */
+        // Clear common class if no class name was provided
         $common-class: '';
     }
 
