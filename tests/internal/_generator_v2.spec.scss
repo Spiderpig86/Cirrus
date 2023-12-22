@@ -152,18 +152,18 @@
                     )
                     using
                     (
+                        $viewport-str,
                         $variant-prefix,
                         $prefix,
                         $common-class,
                         $delimiter,
                         $key,
-                        $viewport-str,
                         $variant-suffix,
                         $override
                     ) {
                     $colors: red, white;
                     @each $color in $colors {
-                        .#{$viewport-str}#{$variant-prefix}#{$variant-prefix}#{$prefix}#{$color}#{$variant-suffix} {
+                        .#{$viewport-str}#{$variant-prefix}#{$prefix}#{$color}#{$variant-suffix} {
                             color: #{$color} #{$override};
                         }
                     }
@@ -178,30 +178,30 @@
                     color: white !important;
                 }
 
-                .hover\:hover\:u-red:hover {
+                .hover\:u-red:hover {
                     color: red !important;
                 }
 
-                .hover\:hover\:u-white:hover {
+                .hover\:u-white:hover {
                     color: white !important;
                 }
 
                 @media (prefers-color-scheme: dark) {
-                    .dark\:dark\:u-red {
+                    .dark\:u-red {
                         color: red !important;
                     }
 
-                    .dark\:dark\:u-white {
+                    .dark\:u-white {
                         color: white !important;
                     }
                 }
 
                 @media (prefers-reduced-motion: reduce) {
-                    .reduce-motion\:reduce-motion\:u-red {
+                    .reduce-motion\:u-red {
                         color: red !important;
                     }
 
-                    .reduce-motion\:reduce-motion\:u-white {
+                    .reduce-motion\:u-white {
                         color: white !important;
                     }
                 }
@@ -215,31 +215,31 @@
                         color: white !important;
                     }
 
-                    .sm\:hover\:hover\:u-red:hover {
+                    .sm\:hover\:u-red:hover {
                         color: red !important;
                     }
 
-                    .sm\:hover\:hover\:u-white:hover {
+                    .sm\:hover\:u-white:hover {
                         color: white !important;
                     }
                 }
 
                 @media screen and (min-width: 640px) and (prefers-color-scheme: dark) {
-                    .sm\:dark\:dark\:u-red {
+                    .sm\:dark\:u-red {
                         color: red !important;
                     }
 
-                    .sm\:dark\:dark\:u-white {
+                    .sm\:dark\:u-white {
                         color: white !important;
                     }
                 }
 
                 @media screen and (min-width: 640px) and (prefers-reduced-motion: reduce) {
-                    .sm\:reduce-motion\:reduce-motion\:u-red {
+                    .sm\:reduce-motion\:u-red {
                         color: red !important;
                     }
 
-                    .sm\:reduce-motion\:reduce-motion\:u-white {
+                    .sm\:reduce-motion\:u-white {
                         color: white !important;
                     }
                 }
@@ -253,31 +253,31 @@
                         color: white !important;
                     }
 
-                    .md\:hover\:hover\:u-red:hover {
+                    .md\:hover\:u-red:hover {
                         color: red !important;
                     }
 
-                    .md\:hover\:hover\:u-white:hover {
+                    .md\:hover\:u-white:hover {
                         color: white !important;
                     }
                 }
 
                 @media screen and (min-width: 768px) and (prefers-color-scheme: dark) {
-                    .md\:dark\:dark\:u-red {
+                    .md\:dark\:u-red {
                         color: red !important;
                     }
 
-                    .md\:dark\:dark\:u-white {
+                    .md\:dark\:u-white {
                         color: white !important;
                     }
                 }
 
                 @media screen and (min-width: 768px) and (prefers-reduced-motion: reduce) {
-                    .md\:reduce-motion\:reduce-motion\:u-red {
+                    .md\:reduce-motion\:u-red {
                         color: red !important;
                     }
 
-                    .md\:reduce-motion\:reduce-motion\:u-white {
+                    .md\:reduce-motion\:u-white {
                         color: white !important;
                     }
                 }
@@ -291,31 +291,31 @@
                         color: white !important;
                     }
 
-                    .lg\:hover\:hover\:u-red:hover {
+                    .lg\:hover\:u-red:hover {
                         color: red !important;
                     }
 
-                    .lg\:hover\:hover\:u-white:hover {
+                    .lg\:hover\:u-white:hover {
                         color: white !important;
                     }
                 }
 
                 @media screen and (min-width: 1024px) and (prefers-color-scheme: dark) {
-                    .lg\:dark\:dark\:u-red {
+                    .lg\:dark\:u-red {
                         color: red !important;
                     }
 
-                    .lg\:dark\:dark\:u-white {
+                    .lg\:dark\:u-white {
                         color: white !important;
                     }
                 }
 
                 @media screen and (min-width: 1024px) and (prefers-reduced-motion: reduce) {
-                    .lg\:reduce-motion\:reduce-motion\:u-red {
+                    .lg\:reduce-motion\:u-red {
                         color: red !important;
                     }
 
-                    .lg\:reduce-motion\:reduce-motion\:u-white {
+                    .lg\:reduce-motion\:u-white {
                         color: white !important;
                     }
                 }
@@ -329,31 +329,31 @@
                         color: white !important;
                     }
 
-                    .xl\:hover\:hover\:u-red:hover {
+                    .xl\:hover\:u-red:hover {
                         color: red !important;
                     }
 
-                    .xl\:hover\:hover\:u-white:hover {
+                    .xl\:hover\:u-white:hover {
                         color: white !important;
                     }
                 }
 
                 @media screen and (min-width: 1280px) and (prefers-color-scheme: dark) {
-                    .xl\:dark\:dark\:u-red {
+                    .xl\:dark\:u-red {
                         color: red !important;
                     }
 
-                    .xl\:dark\:dark\:u-white {
+                    .xl\:dark\:u-white {
                         color: white !important;
                     }
                 }
 
                 @media screen and (min-width: 1280px) and (prefers-reduced-motion: reduce) {
-                    .xl\:reduce-motion\:reduce-motion\:u-red {
+                    .xl\:reduce-motion\:u-red {
                         color: red !important;
                     }
 
-                    .xl\:reduce-motion\:reduce-motion\:u-white {
+                    .xl\:reduce-motion\:u-white {
                         color: white !important;
                     }
                 }

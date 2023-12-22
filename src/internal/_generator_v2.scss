@@ -23,33 +23,34 @@ $default-variant-delimiter: '\\:';
             $variants,
             $variant-delimiter,
             $prefix,
-            '',
+            '', /* common-class-name */
             $delimiter,
             // Hack to get class generation. Not great but involves more of a refactor in the future which can be quite expensive
             (
-                'placeholder': (
-                    color: white,
+                    'placeholder': (
+                        color: white,
+                    )
                 ),
-            ),
             $generate-viewports,
             $override
         )
-        using ($variant, $variant-delimiter, $prefix, $viewport, $common-class-name, $delimiter, $key, $value, $override) {
+        using
+        ($viewport, $variant, $variant-delimiter, $prefix, $common-class-name, $delimiter, $key, $value, $override) {
         // TODO Handle portrait and landscape
 
         @include generate-variants(
+                $viewport,
                 $variant,
                 $variant-delimiter,
                 $prefix,
-                $viewport,
                 $common-class-name,
                 $delimiter,
                 $key,
                 $value,
                 $override
             )
-            using ($variant-prefix, $prefix, $common-class, $delimiter, $key, $viewport-str, $variant-suffix, $override) {
-            @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $viewport-str, $variant-suffix, $override);
+            using ($viewport-str, $variant-prefix, $prefix, $common-class, $delimiter, $key, $variant-suffix, $override) {
+            @content ($viewport-str, $variant-prefix, $prefix, $common-class, $delimiter, $key, $variant-suffix, $override);
         }
     }
 }
@@ -74,21 +75,22 @@ $default-variant-delimiter: '\\:';
             $generate-viewports,
             $override
         )
-        using ($variant, $variant-delimiter, $prefix, $viewport, $common-class-name, $delimiter, $key, $value, $override) {
+        using
+        ($viewport, $variant, $variant-delimiter, $prefix, $common-class-name, $delimiter, $key, $value, $override) {
         // TODO Handle portrait and landscape
 
         @include generate-variants(
+                $viewport,
                 $variant,
                 $variant-delimiter,
                 $prefix,
-                $viewport,
                 $common-class-name,
                 $delimiter,
                 $key,
                 $value,
                 $override
             )
-            using ($variant-prefix, $prefix, $common-class, $delimiter, $key, $viewport-str, $variant-suffix, $override) {
+            using ($viewport-str, $variant-prefix, $prefix, $common-class, $delimiter, $key, $variant-suffix, $override) {
             .#{$viewport-str}#{$variant-prefix}#{$prefix}#{$common-class}#{$key}#{$variant-suffix} {
                 @include mixins.explode-properties($value, $override);
             }
@@ -111,7 +113,7 @@ $default-variant-delimiter: '\\:';
     @each $key, $value in $class-value-pairs {
         @each $variant in $variants {
             // No viewport
-            @content ($variant, $variant-delimiter, $prefix, '', $common-class-name, $delimiter, $key, $value, $override);
+            @content (/* viewport */ '', $variant, $variant-delimiter, $prefix, $common-class-name, $delimiter, $key, $value, $override);
         }
     }
 
@@ -122,7 +124,7 @@ $default-variant-delimiter: '\\:';
             @each $key, $value in $class-value-pairs {
                 @include size.screen-above($limit) {
                     @each $variant in $variants {
-                        @content ($variant, $variant-delimiter, $prefix, $viewport, $common-class-name, $delimiter, $key, $value, $override);
+                        @content ($viewport, $variant, $variant-delimiter, $prefix, $common-class-name, $delimiter, $key, $value, $override);
                     }
                 }
             }
@@ -131,17 +133,16 @@ $default-variant-delimiter: '\\:';
 }
 
 @mixin generate-variants(
+    $viewport,
     $variant,
     $variant-delimiter,
     $prefix,
-    $viewport,
     $common-class-name,
     $delimiter,
     $key,
     $value,
     $override
 ) {
-
     // If class value is not a map, throw exception
     @if type-of($value) != 'map' {
         @error 'The given value for class "#{$common-class-name}" is not a map.';
@@ -149,6 +150,7 @@ $default-variant-delimiter: '\\:';
 
     $common-class: $common-class-name + $delimiter;
     @if $common-class-name == '' {
+        /* Clear common class if no class name was provided */
         $common-class: '';
     }
 
@@ -165,7 +167,7 @@ $default-variant-delimiter: '\\:';
         }
 
         @media (prefers-color-scheme: #{$variant}) {
-            @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $viewport-str, $variant-suffix, $override);
+            @content ($viewport-str, $variant-prefix, $prefix, $common-class, $delimiter, $key, $variant-suffix, $override);
         }
     } @else if $variant == 'reduce-motion' {
         @if $variant != '' {
@@ -173,7 +175,7 @@ $default-variant-delimiter: '\\:';
         }
 
         @media (prefers-reduced-motion: reduce) {
-            @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $viewport-str, $variant-suffix, $override);
+            @content ($viewport-str, $variant-prefix, $prefix, $common-class, $delimiter, $key, $variant-suffix, $override);
         }
     } @else {
         @if $variant != '' {
@@ -181,7 +183,7 @@ $default-variant-delimiter: '\\:';
             $variant-suffix: ':' + $variant;
         }
 
-        @content ($variant-prefix, $prefix, $common-class, $delimiter, $key, $viewport-str, $variant-suffix, $override);
+        @content ($viewport-str, $variant-prefix, $prefix, $common-class, $delimiter, $key, $variant-suffix, $override);
     }
 }
 
