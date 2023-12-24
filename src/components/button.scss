@@ -44,11 +44,12 @@
         --btn-color: #{hex-to-rgb(fill('gray', '000'))};
         --btn-fg: #{hex-to-rgb(fill('gray', '700'))};
         --btn-border-color: #{hex-to-rgb(fill('gray', '200'))};
+        --btn-hover-color: #{hex-to-rgb(fill('gray', '100'))};
 
         /* Base States */
         &:hover {
+            background-color: rgba(var(--btn-hover-color), var(--bg-opacity));
             transition: all var(--animation-duration);
-            --btn-color: #{hex-to-rgb(fill('gray', '100'))};
             color: rgba(var(--btn-fg), var(--color-opacity));
         }
 
@@ -140,10 +141,10 @@
             --btn-fg: #{hex-to-rgb(fill('dark'))};
             --btn-border-color: transparent;
             --btn-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
+            --btn-hover-color: 0, 0, 0;
 
             &:hover {
                 --bg-opacity: 0.1;
-                --btn-color: 0, 0, 0;
             }
             &.outline {
                 --btn-fg: #{hex-to-rgb(fill('dark'))};
@@ -155,10 +156,7 @@
             --btn-fg: #{hex-to-rgb(fill('dark'))};
             --btn-border-color: #{hex-to-rgb(fill('light'))};
             --btn-shadow: 0 0 0 0.2rem #{transparentize(fill('light'), 0.5)};
-
-            &:hover {
-                --btn-color: #{hex-to-rgb(darken(fill('light'), 10%))};
-            }
+            --btn-hover-color: #{hex-to-rgb(darken(fill('light'), 10%))};
         }
 
         &.btn-black {
@@ -166,10 +164,7 @@
             --btn-fg: #{hex-to-rgb(fill('light'))};
             --btn-border-color: 0, 0, 0;
             --btn-shadow: 0 0 0 0.2rem #{transparentize(fill('dark'), 0.5)};
-
-            &:hover {
-                --btn-color: 0, 0, 0;
-            }
+            --btn-hover-color: 0, 0, 0;
         }
         
         @each $color, $value in $control-themes {
@@ -178,13 +173,7 @@
                 --btn-fg: #{hex-to-rgb(map-get($value, fg))};
                 --btn-border-color: #{hex-to-rgb(map-get($value, bg))};
                 --btn-shadow: 0 0 0 0.2rem #{transparentize(map-get($value, bg), 0.5)};
-
-                &:hover {
-                    --btn-color: #{hex-to-rgb(darken(map-get($value, bg), 10%))};
-                }
-                &.outline:hover {
-                    --btn-color: #{hex-to-rgb(map-get($value, bg))};
-                }
+                --btn-hover-color: #{hex-to-rgb(darken(map-get($value, bg), 10%))};
             }
         }
 
@@ -231,7 +220,7 @@
         transition: all var(--animation-duration);
 
         &:hover {
-            background-color: rgba(var(--btn-color), var(--bg-opacity));
+            background-color: rgba(var(--btn-hover-color), var(--bg-opacity));
             border-color: rgba(var(--btn-border-color), var(--color-opacity));
             transition: all var(--animation-duration);
         }
@@ -242,7 +231,7 @@
             color: rgba(var(--btn-color), var(--color-opacity));
 
             &:hover {
-                background-color: rgba(var(--btn-color), var(--bg-opacity));
+                background-color: rgba(var(--btn-hover-color), var(--bg-opacity));
                 color: rgba(var(--btn-fg), var(--color-opacity));
                 transition: all var(--animation-duration);
             }
