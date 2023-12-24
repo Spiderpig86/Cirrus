@@ -64,10 +64,13 @@ export const ButtonPage: React.FC<any> = (props) => {
                             <div className="btn">Button</div>
                         </div>
                         <div className="btn-container">
-                            <input type="submit" value="Submit" />
+                            <div className="btn bg-blue-200 text-blue-800">Button</div>
                         </div>
                         <div className="btn-container">
-                            <a className="btn">Button</a>
+                            <input type="submit" className="btn bg-blue-200 text-blue-800" value="Submit" />
+                        </div>
+                        <div className="btn-container">
+                            <a className="btn bg-blue-200 text-blue-800">Button</a>
                         </div>
 
                         <CodeBlock
