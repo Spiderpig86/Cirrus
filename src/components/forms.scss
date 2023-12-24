@@ -14,6 +14,28 @@
     outline: none;
     padding: 0.85rem 1.1rem;
 
+    &:focus,
+    .input-focused {
+        border-color: $cirrus-input-border;
+        box-shadow: 0 0 0 0.2rem transparentize($cirrus-input-border, $focus-opacity),
+            inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+        outline: 0;
+
+        &[type='range'] {
+            box-shadow: none;
+        }
+
+        &.input-success {
+            @include input-success();
+            background-color: rgba(0, 224, 0, 0.05) !important;
+        }
+
+        &.input-error {
+            @include input-error();
+            background-color: rgba(244, 67, 54, 0.05) !important;
+        }
+    }
+
     /* Input Field Sizes */
     @each $size, $property-map in $input-sizes {
         &.input--#{$size} {
@@ -128,37 +150,10 @@
         resize: vertical;
     }
 
-    input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']):focus,
-    select:focus,
-    textarea:focus,
-    textarea[type='text']:focus,
-    input[type='text'].input-focused,
-    .input-focused {
-        border-color: $cirrus-input-border;
-        box-shadow: 0 0 0 0.2rem transparentize($cirrus-input-border, $focus-opacity),
-            inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-
-        &[type='range'] {
-            box-shadow: none;
-            outline: 0;
-        }
-
-        &.input-success {
-            @include input-success();
-            background-color: rgba(0, 224, 0, 0.05) !important;
-        }
-
-        &.input-error {
-            @include input-error();
-            background-color: rgba(244, 67, 54, 0.05) !important;
-        }
-    }
-
     select {
         @include cirrus-input();
 
         background-color: #fff;
-        border: 1px solid #ddd;
 
         &[multiple] option {
             padding: 0.2rem 0.4rem;
