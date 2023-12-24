@@ -3,7 +3,7 @@
 
 <div align="center">
 
-  [![v.0.7.1](https://img.shields.io/badge/cirrus-0.7.1-blue.svg)](https://github.com/Spiderpig86/Cirrus)
+  [![v.0.7.2](https://img.shields.io/badge/cirrus-0.7.2-blue.svg)](https://github.com/Spiderpig86/Cirrus)
   [![MIT License](https://img.shields.io/github/license/Spiderpig86/Cirrus.svg)](https://opensource.org/licenses/MIT)
   [![Github Actions](https://github.com/Spiderpig86/Cirrus/actions/workflows/ci.yml/badge.svg)](https://github.com/Spiderpig86/Cirrus/actions)
   [![Known Vulnerabilities](https://snyk.io/test/github/Spiderpig86/Cirrus/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Spiderpig86/Cirrus?targetFile=package.json)
