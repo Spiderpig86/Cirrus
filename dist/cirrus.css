@@ -15703,7 +15703,7 @@ details.accordion[open] summary.accordion__summary:after {
   transform: rotate(0);
 }
 
-details.accordion:last-child {
+details.accordion:last-of-type {
   border-color: transparent;
 }
 
