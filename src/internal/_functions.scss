@@ -19,6 +19,37 @@ $DELIMETER: '-';
     @return red($hex), green($hex), blue($hex);
 }
 
+@function to-hover-color($color, $amount) {
+    $brightness: calculate-brightness($color);
+
+    // Adjust color based on brightness
+    $adjusted-color: $color;
+    @if ($brightness < 128) {
+      // Lighten the color
+      $adjusted-color: lighten($color, $amount);
+    } @else {
+      // Darken the color
+      $adjusted-color: darken($color, $amount);
+    }
+  
+    // Output the adjusted color
+    @return $adjusted-color;
+}
+
+/*
+    Calculate brightness based on relative luminance formula
+    https://www.w3.org/WAI/GL/wiki/Relative_luminance#:~:text=Definition%20as%20Stated%20in%20WCAG%202.,-x&text=Note%201%3A%20For%20the%20sRGB,%2B0.055)%2F1.055)%20%5E%202.4
+*/
+@function calculate-brightness($color) {
+    // Extract RGB components
+    $red: red($color);
+    $green: green($color);
+    $blue: blue($color);
+
+    // Calculate brightness using the relative luminance formula
+    @return 0.2126 * $red + 0.7152 * $green + 0.0722 * $blue;
+}
+
 /*
     Generates delimited class name prefix.
 */
