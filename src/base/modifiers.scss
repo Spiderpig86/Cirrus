@@ -51,22 +51,23 @@
                 // Not important, use this as a fallback in case no border is set
                 --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
 
-                background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
+                // background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
             }
 
             .#{$variant-prefix}#{$prefix}text-#{$name}#{$suffix-str}#{$variant-suffix} {
                 --btn-fg: #{hex-to-rgb($color)};
+                --btn-border-color: #{hex-to-rgb($color)};
 
-                color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
-                // Not important, use this as a fallback in case no border is set
-                border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
+                // color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+                // // Not important, use this as a fallback in case no border is set
+                // border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
             }
 
             .#{$variant-prefix}#{$prefix}border-#{$name}#{$suffix-str}#{$variant-suffix} {
                 --btn-border-color: #{hex-to-rgb($color)};
                 --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)} !important;
 
-                border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
+                // border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
             }
         }
     }
@@ -93,22 +94,23 @@
                     // Not important, use this as a fallback in case no border is set
                     --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
 
-                    background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
+                    // background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
                 }
 
                 .#{$variant-prefix}#{$prefix}text-#{$name}-#{$level}#{$suffix-str}#{$variant-suffix} {
                     --btn-fg: #{hex-to-rgb($color)};
+                    --btn-border-color: #{hex-to-rgb($color)};
 
-                    color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
-                    // Not important, use this as a fallback in case no border is set
-                    border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
+                    // color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+                    // // Not important, use this as a fallback in case no border is set
+                    // border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
                 }
 
                 .#{$variant-prefix}#{$prefix}border-#{$name}-#{$level}#{$suffix-str}#{$variant-suffix} {
                     --btn-border-color: #{hex-to-rgb($color)};
                     --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)} !important;
 
-                    border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
+                    // border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
                 }
             }
         }
