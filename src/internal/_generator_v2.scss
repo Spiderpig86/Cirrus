@@ -1,5 +1,8 @@
 @use 'sass:list';
 @use 'sass:map';
+@use 'sass:meta';
+@use 'sass:selector';
+@use 'sass:string';
 @use 'config';
 @use 'size';
 @use 'mixins';
@@ -10,121 +13,70 @@ $default-delimiter: '-';
 $default-variant-delimiter: '\\:';
 
 // ALL WIP
-
-@mixin utility-with-body(
-    $prefix: $default-prefix,
-    $delimiter: $default-delimiter,
-    $variants: (),
-    $variant-delimiter: $default-variant-delimiter,
-    $generate-viewports: false,
-    $override: $default-override
-) {
-    @include generate-tree(
-            $variants,
-            $variant-delimiter,
-            $prefix,
-            '', /* common-class-name */
-            $delimiter,
-            // Hack to get class generation. Not great but involves more of a refactor in the future which can be quite expensive
-            (
-                    'placeholder': (
-                        color: white,
-                    )
-                ),
-            $generate-viewports,
-            $override
-        )
-        using
-        ($viewport, $variant, $variant-delimiter, $prefix, $common-class-name, $delimiter, $key, $value, $override) {
-        // TODO Handle portrait and landscape
-
-        @include generate-variants(
-                $viewport,
-                $variant,
-                $variant-delimiter,
-                $prefix,
-                $common-class-name,
-                $delimiter,
-                $key,
-                $value,
-                $override
-            )
-            using ($viewport-str, $variant-prefix, $prefix, $common-class, $delimiter, $key, $variant-suffix, $override) {
-            @content ($viewport-str, $variant-prefix, $prefix, $common-class, $delimiter, $key, $variant-suffix, $override);
-        }
-    }
-}
-
 @mixin utility(
-    $prefix: $default-prefix,
+    $class-prefix: $default-prefix,
     $delimiter: $default-delimiter,
-    $common-class-name,
+    $base-class-name,
     $class-value-pairs,
     $variants: (),
     $variant-delimiter: $default-variant-delimiter,
     $generate-viewports: false,
     $override: $default-override
 ) {
-    @include generate-tree(
-            $variants,
-            $variant-delimiter,
-            $prefix,
-            $common-class-name,
-            $delimiter,
-            $class-value-pairs,
-            $generate-viewports,
-            $override
-        )
-        using
-        ($viewport, $variant, $variant-delimiter, $prefix, $common-class-name, $delimiter, $key, $value, $override) {
-        // TODO Handle portrait and landscape
-
-        @include generate-variants(
-                $viewport,
-                $variant,
-                $variant-delimiter,
-                $prefix,
-                $common-class-name,
-                $delimiter,
-                $key,
-                $value,
-                $override
-            )
-            using ($viewport-str, $variant-prefix, $prefix, $common-class, $delimiter, $key, $variant-suffix, $override) {
-            .#{$viewport-str}#{$variant-prefix}#{$prefix}#{$common-class}#{$key}#{$variant-suffix} {
+    @include generate-rules-pseudos-selectors($variants: $variants) using ($props...) {
+        @each $key, $value in $class-value-pairs {
+            $base: '#{$base-class-name}#{$delimiter}#{$key}';
+            @include generate-class($base, $props...) {
                 @include mixins.explode-properties($value, $override);
             }
         }
     }
 }
 
-@mixin generate-tree(
-    $variants: (),
-    $variant-delimiter: $default-variant-delimiter,
-    $prefix: $default-prefix,
-    $common-class-name,
-    $delimiter,
-    $class-value-pairs,
-    $generate-viewports: false,
-    $override: $default-override
-) {
-    // Iterate over variants, including no variants
-    $variants: list.join('', $variants);
-    @each $key, $value in $class-value-pairs {
-        @each $variant in $variants {
-            // No viewport
-            @content (/* viewport */ '', $variant, $variant-delimiter, $prefix, $common-class-name, $delimiter, $key, $value, $override);
-        }
+@mixin generate-rules-pseudos-selectors($generate-viewports: false, $variants: (), $context: ()) {
+    $rules: (); // Media queries, after responsive classes
+    $pseudos: (); // Selectors like :focus
+
+    @if $generate-viewports {
+        $rules: map.set($rules, 'responsive', get-responsive());
     }
 
-    // Generate classes with viewport
-    // Generation is separate and in this specific nesting order of for loops to allow gulp-clean-css to efficiently minify
-    @if $generate-viewports == 'true' {
-        @each $viewport, $limit in config.$breakpoint-pairs {
-            @each $key, $value in $class-value-pairs {
-                @include size.screen-above($limit) {
-                    @each $variant in $variants {
-                        @content ($viewport, $variant, $variant-delimiter, $prefix, $common-class-name, $delimiter, $key, $value, $override);
+    // Iterate over all variants and split between rules and pseudos
+    @each $variant in $variants {
+        // Check for get-rules
+        @if meta.function-exists('get-#{$variant}') {
+            $func: meta.get-function('get-#{$variant}');
+            $rule-map: meta.call($func);
+            $rules: map.set($rules, $variant, $rule-map); // ( 'dark': '@media (prefers-color-scheme: dark)',)
+        } @else {
+            $pseudos: list.append($pseudos, $variant);
+        }
+    }
+    @debug $rules;
+    @debug $pseudos;
+
+    // Generate classes without rules
+    @include generate-variants($pseudos) using ($props...) {
+        @content ($props...);
+    }
+
+    // Generate with rules
+    // Rules for responsiveness and light/dark mode are roots of separate classes, they never appear together
+    @each $rule in map.values($rules) {
+        @each $key, $value in $rule {
+            $current-context: map.merge(
+                $context,
+                (
+                    rule: $key,
+                )
+            );
+
+            @if string.index($value, '@media') {
+                $value: string.slice($value, 7);
+
+                @media #{$value} {
+                    @include generate-variants($pseudos, $current-context) using ($props...) {
+                        @content ($props...);
                     }
                 }
             }
@@ -132,59 +84,120 @@ $default-variant-delimiter: '\\:';
     }
 }
 
-@mixin generate-variants(
-    $viewport,
-    $variant,
-    $variant-delimiter,
-    $prefix,
-    $common-class-name,
-    $delimiter,
-    $key,
-    $value,
-    $override
-) {
-    // If class value is not a map, throw exception
-    @if type-of($value) != 'map' {
-        @error 'The given value for class "#{$common-class-name}" is not a map.';
+@mixin generate-variants($variants: (), $context: ()) {
+    // Get classes without pseudos, only rules
+    // @if & {
+    @debug has parent;
+    @include get-base-class($context...) {
+        @content;
     }
 
-    $common-class: $common-class-name + $delimiter;
-    @if $common-class-name == '' {
-        // Clear common class if no class name was provided
-        $common-class: '';
+    @each $variant in $variants {
+        $current-context: map.merge(
+            $context,
+            (
+                variant: $variant,
+                pseudo: $variant,
+            )
+        );
+
+        @if string.index($variant, 'group-') {
+            $current-context: map.merge(
+                $current-context,
+                (
+                    pseudo: string.slice($variant, 7),
+                    scope: '.\\group\\#{$variant-delimiter}',
+                )
+            );
+        }
+
+        @include get-base-class($current-context...) {
+            @content;
+        }
+    }
+    // } @else {
+    //     @content ($variants, $context);
+    // }
+}
+
+@mixin get-base-class($context...) {
+    $base: ();
+
+    @each $selector in & {
+        $selector: list.nth($selector, 1);
+
+        @if meta.type-of($selector) == 'string' {
+            $selector: string.slice($selector, 1);
+        }
+
+        @if $selector {
+            $base: list.append($base, $selector, comma);
+        }
     }
 
-    $viewport-str: '';
-    @if $viewport != '' {
-        $viewport-str: $viewport + $variant-delimiter;
+    @at-root {
+        // @include generate-class($base, $context...) {
+        //     @content;
+        // }
+        @content ($context...);
+    }
+}
+
+@mixin generate-class($base, $rule: null, $variant: null, $pseudo: null, $scope: null) {
+    @debug here;
+    @debug $rule;
+    @debug $variant;
+    @debug $pseudo;
+    @debug $scope;
+    @if $rule {
+        $base: selector.append($base, '#{$rule}#{$default-variant-delimiter}');
+    }
+    @if $variant {
+        $base: selector.append($base, '#{$variant}#{$default-variant-delimiter}');
     }
 
-    $variant-prefix: '';
-    $variant-suffix: '';
-    @if $variant == 'dark' or $variant == 'light' {
-        @if $variant != '' {
-            $variant-prefix: $variant + $variant-delimiter;
-        }
-
-        @media (prefers-color-scheme: #{$variant}) {
-            @content ($viewport-str, $variant-prefix, $prefix, $common-class, $delimiter, $key, $variant-suffix, $override);
-        }
-    } @else if $variant == 'reduce-motion' {
-        @if $variant != '' {
-            $variant-prefix: $variant + $variant-delimiter;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            @content ($viewport-str, $variant-prefix, $prefix, $common-class, $delimiter, $key, $variant-suffix, $override);
-        }
+    @if $scope and $pseudo {
+        // For group related variants (e.g. .group:hover)
+        $parent-selector: selector.append($scope, ':#{pseudo}');
+        $base: selector.nest($scope, string-to-class($base)); // Nest class below the parent selector
+    } @else if $scope {
+        // Contains parent selector
+        $base: selector.nest($scope, string-to-class($base));
+    } @else if $pseudo {
+        // Contains pseudo
+        $base: selector.append(string-to-class($base), ':#{$pseudo}');
     } @else {
-        @if $variant != '' {
-            $variant-prefix: $variant + $variant-delimiter;
-            $variant-suffix: ':' + $variant;
-        }
-
-        @content ($viewport-str, $variant-prefix, $prefix, $common-class, $delimiter, $key, $variant-suffix, $override);
+        // Contains nothing
+        $base: string-to-class($base);
     }
+
+    // Generate the class
+    #{$base} {
+        @content;
+    }
+    // @content();
+}
+
+@function get-responsive() {
+    $result: ();
+
+    @each $key, $value in config.$breakpoint-pairs {
+        $result: map.set($result, $key, '@media (min-width: #{map-get(config.$breakpoints, $value)})');
+    }
+
+    @return $result;
+}
+
+@function get-dark() {
+    @return ('dark': '@media (prefers-color-scheme: dark)');
+}
+
+@function get-light() {
+    @return ('light': '@media (prefers-color-scheme: light)');
+}
+
+@function get-reduce-motion() {
+    @return ('reduce-motion': '@media (prefers-reduced-motion: reduce)');
 }
 
 @function class-value-map-with-single-property($property, $property-values) {
@@ -199,6 +212,25 @@ $default-variant-delimiter: '\\:';
             )
         );
     }
+
+    @return $result;
+}
+
+/**
+    * Convert a string to a proper class selector.
+    * @param: {String}  $selector
+    * @return: {Selector}  Returns the class selector.
+    */
+@function string-to-class($selector) {
+    $separator: list.separator($selector);
+    $result: ();
+
+    @each $s in $selector {
+        @if $s != '' {
+            $result: list.append($result, '.#{$s}', $separator);
+        }
+    }
+    @debug $result;
 
     @return $result;
 }

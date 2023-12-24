@@ -1,0 +1,394 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:selector';
+@use 'sass:string';
+
+// create an explicitly separate version with
+// ID to avoid CSS conflicts or when more than
+// one CSS library or framework is being used.
+// Default is empty. (e.g. new-) with a `dash`.
+$id: '';
+
+// by default using `(` and `)` symbol character
+// to separate in between the {prefix} (variant)
+// and the {class_name}.
+$prefix-open: '('; // do not empty!
+$prefix-close: ')'; // do not empty!
+
+// override existing css with this option,
+// default is empty, to enable add `!important`.
+$override: '';
+
+$screens: (
+    xs: 320px,
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+    1k: 1280px,
+    2k: 1920px,
+    3k: 2560px,
+    4k: 3840px // 5k: 5120px,
+    // 6k: 5760px,
+    // 7k: 7000px,
+    // 8k: 7680px,
+);
+
+@mixin utility2(
+    $id: $id,
+    $classname: null,
+    $property,
+    $modifier,
+    $variant: (),
+    $negative: null,
+    $replace: null,
+    $override: $override
+) {
+    @include variant($variant) using ($props...) {
+        @if $negative == true {
+            // negative value
+            -#{$id}#{$classname} {
+                @include pseudo($modifier, $props..., $replace: $replace) using ($value) {
+                    #{$property}: -$value #{$override};
+                }
+            }
+        } @else {
+            // (default)
+            #{$id}#{$classname} {
+                @include pseudo($modifier, $props..., $replace: $replace) using ($value) {
+                    #{$property}: $value #{$override};
+                }
+            }
+        }
+    }
+}
+
+/**
+ * @file: modules/_core.scss
+ */
+
+/**
+  * Set rule.
+  * @param: {String}  $base
+  * @param: {String}  $rule    [null]
+  * @param: {String}  $variant [null]
+  * @param: {String}  $pseudo  [null]
+  * @param: {String}  $scope   [null]
+  */
+@mixin get-rule($base, $rule: null, $variant: null, $pseudo: null, $scope: null) {
+    // variant-prefix-open
+    @if $variant {
+        $base: selector.append('\\#{$prefix-open}#{$variant}\\#{$prefix-close}', $base);
+    }
+
+    // rule-prefix-before
+    @if $rule {
+        $base: selector.append('\\#{$prefix-open}#{$rule}\\#{$prefix-close}', $base);
+    }
+
+    // pseudo-prefix-after
+    @if $scope and $pseudo {
+        $scope: selector.append($scope, ':#{$pseudo}');
+        $base: selector.nest($scope, string-to-class($base));
+    } @else if $scope {
+        $base: selector.nest($scope, string-to-class($base));
+    } @else if $pseudo {
+        $base: selector.append(string-to-class($base), ':#{$pseudo}');
+    } @else {
+        $base: string-to-class($base);
+    }
+
+    #{$base} {
+        // render
+        @content;
+    }
+}
+
+/**
+    * Render variant inline.
+    * @param: {String}  $rule    [null]
+    * @param: {String}  $variant [null]
+    * @param: {String}  $pseudo  [null]
+    * @param: {String}  $scope   [null]
+    */
+@mixin get-inline($context...) {
+    $base: ();
+
+    @each $selector in & {
+        $selector: list.nth($selector, 1);
+
+        @if meta.type-of($selector) == 'string' {
+            $selector: string.slice($selector, 1);
+        }
+
+        @if $selector {
+            $base: list.append($base, $selector, comma);
+        }
+    }
+
+    @at-root {
+        @include get-rule($base, $context...) {
+            @content;
+        }
+    }
+}
+
+/**
+    * Passes input to the appropriate renderer.
+    * @param: {List}  $variant [()]
+    * @param: {Map}   $context [()]
+    */
+@mixin get-variant($variant: (), $context: ()) {
+    @if & {
+        @include get-inline($context...) {
+            @content;
+        }
+
+        @each $variant in $variant {
+            $current-context: map.merge(
+                $context,
+                (
+                    variant: $variant,
+                    pseudo: $variant,
+                )
+            );
+
+            @if string.index($variant, 'group-') {
+                $current-context: map.merge(
+                    $current-context,
+                    (
+                        pseudo: string.slice($variant, 7),
+                        scope: '.\\#{$prefix-open}group\\#{$prefix-close}',
+                    )
+                );
+            }
+
+            @include get-inline($current-context...) {
+                @content;
+            }
+        }
+    } @else {
+        @content ($variant, $context);
+    }
+}
+
+/**
+    * Generate classes for the given variant and context.
+    * @param: {List}  $variant [()]
+    * @param: {Map}   $context [()]
+    */
+@mixin variant($variant: (), $context: ()) {
+    $pseudo: ();
+    $rules: ();
+
+    @each $variant in $variant {
+        // Check for get-rules
+        @if meta.function-exists('get-#{$variant}') {
+            $func: meta.get-function('get-#{$variant}');
+            $rule: meta.call($func);
+            $rules: map.set($rules, $variant, $rule); // ( 'dark': '@media (prefers-color-scheme: dark)',)
+        } @else {
+            $pseudo: list.append($pseudo, $variant);
+        }
+    }
+
+    @include get-variant($pseudo, $context) using ($props...) {
+        @content ($props...);
+    }
+
+    @each $rule in map.values($rules) {
+        @each $key, $value in $rule {
+            $current-context: map.merge(
+                $context,
+                (
+                    rule: $key,
+                )
+            );
+
+            @if string.index($value, '@media') {
+                $value: string.slice($value, 7);
+
+                @media #{$value} {
+                    @include get-variant($pseudo, $current-context) using ($props...) {
+                        @content ($props...);
+                    }
+                }
+            } @else if string.index($value, '@supports') {
+                $value: string.slice($value, 9);
+
+                @supports #{$value} {
+                    @include get-variant($pseudo, $current-context) using ($props...) {
+                        @content ($props...);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+    * Responsive alias.
+    * @param: {List}  $variant [()]
+    */
+@mixin responsive($variant: ()) {
+    @if not list.index($variant, 'responsive') {
+        $variant: list.append($variant, 'responsive', space);
+    }
+
+    @include variant($variant) using ($props...) {
+        @content ($props...);
+    }
+}
+
+/**
+    * Helper for creating option based modifiers or classes.
+    * @param: {Map}   $pseudo
+    * @param: {List}  $variant [()]
+    * @param: {List}  $context [null]
+    * @param: {Bool}  $modifier [null]
+    * @param: {String}  $replace [null]
+    */
+@mixin pseudo($pseudo: (), $variant: (), $context: (), $modifier: null, $replace: null) {
+    // Render pseudo as a class modifier
+    @debug $pseudo;
+    @debug $modifier;
+    @if & {
+        @debug has parent\n;
+        // class without the modifier
+        @if $modifier == false {
+            @each $key, $value in $pseudo {
+                &#{$key}#{$replace} {
+                    @include rotate($value, $variant, $context) using ($props...) {
+                        @content ($props...);
+                    }
+                }
+            }
+        }
+
+        // class has modifier (default)
+        @else {
+            @each $key, $value in $pseudo {
+                &-#{$key}#{$replace} {
+                    @include rotate($value, $variant, $context) using ($props...) {
+                        @content ($props...);
+                    }
+                }
+            }
+        }
+    }
+
+    // Render pseudo as root classes
+    @else {
+        @debug no parent\n;
+        @include variant($variant, $context) using ($props...) {
+            @each $key, $value in $pseudo {
+                .#{$key}#{$replace} {
+                    @include rotate($value, $props...) using ($props...) {
+                        @content ($props...);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+    * Render value recursively if necessary.
+    * @param: {Mixed}  $value
+    * @param: {List}   $variant [()]
+    * @param: {List}   $breakpoint [null]
+    */
+@mixin rotate($value, $variant: (), $context: ()) {
+    @if meta.type-of($value) == 'map' {
+        @include pseudo($value, $variant, $context) using ($props...) {
+            @content ($props...);
+        }
+    } @else {
+        @include variant($variant, $context) {
+            @content ($value);
+        }
+    }
+}
+
+/**
+ * @file: modules/_helpers.scss
+ */
+
+/**
+  * Get the mobile-first media queries for all defined screens.
+  * @return: {List}  Returns reponsive media queries.
+  */
+@function get-responsive() {
+    $result: ();
+
+    @each $key, $value in $screens {
+        $result: map.set($result, $key, '@media (min-width: #{$value})');
+    }
+
+    @return $result;
+}
+
+/**
+    * Get the media query for `prefers-color-scheme: dark`.
+    * @return: {List}  Returns the dark media query.
+    */
+@function get-dark-mode() {
+    @return ('dark': '@media (prefers-color-scheme: dark)');
+}
+
+/**
+    * Get the media query for `prefers-color-scheme: light`.
+    * @return: {List} Returns the light media query.
+    */
+@function get-light-mode() {
+    @return ('light': '@media (prefers-color-scheme: light)');
+}
+
+/**
+    * Get the media query for `prefers-reduced-motion`.
+    * @return: {List}  Returns the reduced-motion media query.
+    */
+@function get-reduce-motion() {
+    @return ('reduce-motion': '@media (prefers-reduced-motion: reduce)');
+}
+
+/**
+   * Get the media query for `orientation: portrait`.
+   * @return: {List}  Returns the orientation media query.
+   */
+@function get-portrait() {
+    @return ('portrait': '@media (orientation: portrait)');
+}
+
+/**
+   * Get the media query for `orientation: landscape`.
+   * @return: {List}  Returns the orientation media query.
+   */
+@function get-landscape() {
+    @return ('landscape': '@media (orientation: landscape)');
+}
+
+/**
+    * Convert a string to a proper class selector.
+    * @param: {String}  $selector
+    * @return: {Selector}  Returns the class selector.
+    */
+@function string-to-class($selector) {
+    $separator: list.separator($selector);
+    $result: ();
+
+    @each $s in $selector {
+        @if $s != '' {
+            $result: list.append($result, '.#{$s}', $separator);
+        }
+    }
+    @return $result;
+}
+
+/**
+    * Remove string value from unit `px`
+    * @param: {String} $value
+    */
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}

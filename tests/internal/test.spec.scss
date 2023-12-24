@@ -1,0 +1,32 @@
+// @use '../test_base' as *;
+// @use '../../src/internal/test';
+
+// $animation-loop: (
+//     2: 2,
+//     3: 3,
+//     4: 4,
+//     5: 5,
+//     infinite: infinite,
+// );
+
+// @include describe('utility()') {
+//     @include it('should generate expected utility classes with variant support') {
+//         @include assert {
+//             @include output($selector: false) {
+//                 @include test.utility2(
+//                     $classname: 'loop',
+//                     $property: animation-iteration-count,
+//                     $modifier: $animation-loop,
+//                     $variant: (
+//                         'responsive',
+//                         'dark-mode',
+//                         'hover',
+//                         'group-hover',
+//                     )
+//                 );
+//             }
+//             @include expect {
+//             }
+//         }
+//     }
+// }
