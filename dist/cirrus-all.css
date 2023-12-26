@@ -12631,7 +12631,7 @@ pre > code::before {
 input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]),
 select {
   width: 100%;
-  border: 1px solid #dee2e6;
+  border: 1px solid rgba(222, 226, 230, var(--border-opacity, 1));
   border-radius: 3px;
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: var(--font-size-m);
@@ -12835,7 +12835,7 @@ select.input-error:focus {
 textarea,
 textarea[type=text] {
   width: 100%;
-  border: 1px solid #dee2e6;
+  border: 1px solid rgba(222, 226, 230, var(--border-opacity, 1));
   border-radius: 3px;
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: var(--font-size-m);
@@ -12991,7 +12991,7 @@ textarea[type=text].input-contains-icon-right.input--xl ~ .icon.icon-right {
 
 select {
   width: 100%;
-  border: 1px solid #dee2e6;
+  border: 1px solid rgba(222, 226, 230, var(--border-opacity, 1));
   border-radius: 3px;
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: var(--font-size-m);
