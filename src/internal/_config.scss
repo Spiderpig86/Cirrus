@@ -658,7 +658,7 @@ $default-config: (
             (functions.get-negative-value-map(defaults.$default-quartile-percentages)),
             (
                 functions.get-negative-value-map(
-                    functions.map-range(defaults.$default-sizing-system, 0, defaults.$default-absolutes-max)
+                    functions.map-range(defaults.$default-sizing-system, 0, defaults.$default-absolutes-max, true)
                 )
             )
         ),

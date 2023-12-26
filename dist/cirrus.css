@@ -13035,6 +13035,14 @@ ul .divider::after {
   top: -100% !important;
 }
 
+.u-top-px {
+  top: 1px !important;
+}
+
+.u-top-npx {
+  top: -1px !important;
+}
+
 .u-top-1 {
   top: 0.5rem !important;
 }
@@ -13129,6 +13137,14 @@ ul .divider::after {
 
 .u-left-n100p {
   left: -100% !important;
+}
+
+.u-left-px {
+  left: 1px !important;
+}
+
+.u-left-npx {
+  left: -1px !important;
 }
 
 .u-left-1 {
@@ -13227,6 +13243,14 @@ ul .divider::after {
   right: -100% !important;
 }
 
+.u-right-px {
+  right: 1px !important;
+}
+
+.u-right-npx {
+  right: -1px !important;
+}
+
 .u-right-1 {
   right: 0.5rem !important;
 }
@@ -13321,6 +13345,14 @@ ul .divider::after {
 
 .u-bottom-n100p {
   bottom: -100% !important;
+}
+
+.u-bottom-px {
+  bottom: 1px !important;
+}
+
+.u-bottom-npx {
+  bottom: -1px !important;
 }
 
 .u-bottom-1 {

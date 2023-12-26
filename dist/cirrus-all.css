@@ -14455,6 +14455,14 @@ ul .divider::after {
   top: -100% !important;
 }
 
+.u-top-px {
+  top: 1px !important;
+}
+
+.u-top-npx {
+  top: -1px !important;
+}
+
 .u-top-1 {
   top: 0.5rem !important;
 }
@@ -14559,6 +14567,16 @@ ul .divider::after {
 @media screen and (min-width: 640px) {
   .u-top-n100p-sm {
     top: -100% !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-top-px-sm {
+    top: 1px !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-top-npx-sm {
+    top: -1px !important;
   }
 }
 @media screen and (min-width: 640px) {
@@ -14682,6 +14700,16 @@ ul .divider::after {
   }
 }
 @media screen and (min-width: 768px) {
+  .u-top-px-md {
+    top: 1px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-top-npx-md {
+    top: -1px !important;
+  }
+}
+@media screen and (min-width: 768px) {
   .u-top-1-md {
     top: 0.5rem !important;
   }
@@ -14799,6 +14827,16 @@ ul .divider::after {
 @media screen and (min-width: 1024px) {
   .u-top-n100p-lg {
     top: -100% !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-top-px-lg {
+    top: 1px !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-top-npx-lg {
+    top: -1px !important;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -14922,6 +14960,16 @@ ul .divider::after {
   }
 }
 @media screen and (min-width: 1280px) {
+  .u-top-px-xl {
+    top: 1px !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-top-npx-xl {
+    top: -1px !important;
+  }
+}
+@media screen and (min-width: 1280px) {
   .u-top-1-xl {
     top: 0.5rem !important;
   }
@@ -15031,6 +15079,14 @@ ul .divider::after {
   left: -100% !important;
 }
 
+.u-left-px {
+  left: 1px !important;
+}
+
+.u-left-npx {
+  left: -1px !important;
+}
+
 .u-left-1 {
   left: 0.5rem !important;
 }
@@ -15135,6 +15191,16 @@ ul .divider::after {
 @media screen and (min-width: 640px) {
   .u-left-n100p-sm {
     left: -100% !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-left-px-sm {
+    left: 1px !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-left-npx-sm {
+    left: -1px !important;
   }
 }
 @media screen and (min-width: 640px) {
@@ -15258,6 +15324,16 @@ ul .divider::after {
   }
 }
 @media screen and (min-width: 768px) {
+  .u-left-px-md {
+    left: 1px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-left-npx-md {
+    left: -1px !important;
+  }
+}
+@media screen and (min-width: 768px) {
   .u-left-1-md {
     left: 0.5rem !important;
   }
@@ -15375,6 +15451,16 @@ ul .divider::after {
 @media screen and (min-width: 1024px) {
   .u-left-n100p-lg {
     left: -100% !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-left-px-lg {
+    left: 1px !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-left-npx-lg {
+    left: -1px !important;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -15498,6 +15584,16 @@ ul .divider::after {
   }
 }
 @media screen and (min-width: 1280px) {
+  .u-left-px-xl {
+    left: 1px !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-left-npx-xl {
+    left: -1px !important;
+  }
+}
+@media screen and (min-width: 1280px) {
   .u-left-1-xl {
     left: 0.5rem !important;
   }
@@ -15607,6 +15703,14 @@ ul .divider::after {
   right: -100% !important;
 }
 
+.u-right-px {
+  right: 1px !important;
+}
+
+.u-right-npx {
+  right: -1px !important;
+}
+
 .u-right-1 {
   right: 0.5rem !important;
 }
@@ -15711,6 +15815,16 @@ ul .divider::after {
 @media screen and (min-width: 640px) {
   .u-right-n100p-sm {
     right: -100% !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-right-px-sm {
+    right: 1px !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-right-npx-sm {
+    right: -1px !important;
   }
 }
 @media screen and (min-width: 640px) {
@@ -15834,6 +15948,16 @@ ul .divider::after {
   }
 }
 @media screen and (min-width: 768px) {
+  .u-right-px-md {
+    right: 1px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-right-npx-md {
+    right: -1px !important;
+  }
+}
+@media screen and (min-width: 768px) {
   .u-right-1-md {
     right: 0.5rem !important;
   }
@@ -15951,6 +16075,16 @@ ul .divider::after {
 @media screen and (min-width: 1024px) {
   .u-right-n100p-lg {
     right: -100% !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-right-px-lg {
+    right: 1px !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-right-npx-lg {
+    right: -1px !important;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -16074,6 +16208,16 @@ ul .divider::after {
   }
 }
 @media screen and (min-width: 1280px) {
+  .u-right-px-xl {
+    right: 1px !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-right-npx-xl {
+    right: -1px !important;
+  }
+}
+@media screen and (min-width: 1280px) {
   .u-right-1-xl {
     right: 0.5rem !important;
   }
@@ -16183,6 +16327,14 @@ ul .divider::after {
   bottom: -100% !important;
 }
 
+.u-bottom-px {
+  bottom: 1px !important;
+}
+
+.u-bottom-npx {
+  bottom: -1px !important;
+}
+
 .u-bottom-1 {
   bottom: 0.5rem !important;
 }
@@ -16287,6 +16439,16 @@ ul .divider::after {
 @media screen and (min-width: 640px) {
   .u-bottom-n100p-sm {
     bottom: -100% !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-bottom-px-sm {
+    bottom: 1px !important;
+  }
+}
+@media screen and (min-width: 640px) {
+  .u-bottom-npx-sm {
+    bottom: -1px !important;
   }
 }
 @media screen and (min-width: 640px) {
@@ -16410,6 +16572,16 @@ ul .divider::after {
   }
 }
 @media screen and (min-width: 768px) {
+  .u-bottom-px-md {
+    bottom: 1px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .u-bottom-npx-md {
+    bottom: -1px !important;
+  }
+}
+@media screen and (min-width: 768px) {
   .u-bottom-1-md {
     bottom: 0.5rem !important;
   }
@@ -16530,6 +16702,16 @@ ul .divider::after {
   }
 }
 @media screen and (min-width: 1024px) {
+  .u-bottom-px-lg {
+    bottom: 1px !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .u-bottom-npx-lg {
+    bottom: -1px !important;
+  }
+}
+@media screen and (min-width: 1024px) {
   .u-bottom-1-lg {
     bottom: 0.5rem !important;
   }
@@ -16647,6 +16829,16 @@ ul .divider::after {
 @media screen and (min-width: 1280px) {
   .u-bottom-n100p-xl {
     bottom: -100% !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-bottom-px-xl {
+    bottom: 1px !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .u-bottom-npx-xl {
+    bottom: -1px !important;
   }
 }
 @media screen and (min-width: 1280px) {
