@@ -40,6 +40,16 @@ export const TextElementsPage: React.FC<any> = (props) => {
                                 You know, I think Cirrus is a pretty good CSS framework. - <em>Marc Andreessen</em>
                             </p>
                         </blockquote>
+                        <div className="space"></div>
+
+                        <CodeBlock
+                            code={`<blockquote>
+    <p>
+        You know, I think Cirrus is a pretty good CSS framework. - <em>Marc Andreessen</em>
+    </p>
+</blockquote>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -88,6 +98,12 @@ export const TextElementsPage: React.FC<any> = (props) => {
                         <p className="lead">
                             This is a lead. A <code>lead</code> is slightly larger than your average paragraph.
                         </p>
+                        <CodeBlock
+                            code={`<p class="lead">
+    This is a lead. A <code>lead</code> is slightly larger than your average paragraph.
+</p>`}
+                            language="htmlbars"
+                        />
                         <div className="space"></div>
 
                         <h6>Title and Subtitle</h6>
@@ -100,6 +116,12 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             <h6 className="title">I am the title.</h6>
                             <p className="subtitle">I am the subtitle.</p>
                         </div>
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<h6 className="title">I am the title.</h6>
+<p className="subtitle">I am the subtitle.</p>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -200,6 +222,16 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             <div className="col-lg-6">
                                 <CodeBlock
                                     code={`<p class="capitalize">The quick brown fox jumps over the lazy dog.</p>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                            <div className="col-lg-6">
+                                <p className="title mb-0">Normal Case</p>
+                                <p className="normal-case">The quick brown fox jumps over the lazy dog.</p>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<p class="normal-case">The quick brown fox jumps over the lazy do.</p>`}
                                     language="htmlbars"
                                 />
                             </div>
