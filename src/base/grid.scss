@@ -22,6 +22,14 @@
         grid-template-columns: var(--grid-template-column);
     }
 
+    .grid-flow-row#{$suffix} {
+        grid-auto-flow: row;
+    }
+
+    .grid-flow-col#{$suffix} {
+        grid-auto-flow: column;
+    }
+
     @for $i from 1 through $grid-columns {
         /* Templates */
         .grid-cols-#{$i}#{$suffix} {
