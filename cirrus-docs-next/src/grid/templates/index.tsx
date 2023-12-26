@@ -10,7 +10,7 @@ import { toc } from './toc';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { DefaultLayout } from '../../../layouts/default';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
-import { Tag } from '../../../layouts/components/tag';
+import { Tag, VersionTag } from '../../../layouts/components/tag';
 import { TITLE_GRID } from '../../../config/sidebar';
 
 export const GridTemplatesPage: React.FC<any> = (props) => {
@@ -24,10 +24,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Grid Templates" link="#templates" />
                         <div className="divider"></div>
-                        <span className="tag-container group-tags">
-                            <div className="tag tag--dark">New</div>
-                            <div className="tag tag--info">0.5.5</div>
-                        </span>
+                        <VersionTag version={`0.5.5`} />
 
                         <p>
                             A series of utility classes that provide an easy abstraction over <b>CSS grid</b>.
@@ -40,100 +37,46 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                         <Headline title="Basics" link="#basics" size="4" />
                         <div className="divider"></div>
                         <p>The basic idea of CSS grid is to use it as a way to lay out elements on a page, like so.</p>
-                        <div className="grid u-gap-2 u-text-center">
-                            <div
-                                className="grid-c-12"
-                                style={{
-                                    background: 'linear-gradient(to right, #8e2de2, #4a00e0)',
-                                    color: '#fff',
-                                    borderRadius: '.25rem',
-                                }}
-                            >
-                                <p>
-                                    <b>Header</b>
-                                </p>
+                        <div className="grid u-gap-2 u-text-center font-bold">
+                            <div className="grid-c-12 bg-indigo-200 text-indigo-700 u-round-xs">
+                                <p>Header</p>
                             </div>
-                            <div
-                                className="grid-c-4 grid-r-6"
-                                style={{
-                                    background: 'linear-gradient(to right, #8e2de2, #4a00e0)',
-                                    color: '#fff',
-                                    borderRadius: '.25rem',
-                                }}
-                            >
-                                <p>
-                                    <b>Sidebar</b>
-                                </p>
+                            <div className="grid-c-4 grid-r-6 bg-indigo-200 text-indigo-700 u-round-xs">
+                                <p>Sidebar</p>
                             </div>
-                            <div
-                                className="grid-c-8 grid-r-3"
-                                style={{
-                                    background: 'linear-gradient(to right, #8e2de2, #4a00e0)',
-                                    color: '#fff',
-                                    borderRadius: '.25rem',
-                                }}
-                            >
-                                <p>
-                                    <b>Main Content</b>
-                                </p>
+                            <div className="grid-c-8 grid-r-3 bg-indigo-200 text-indigo-700 u-round-xs">
+                                <p>Main Content</p>
                             </div>
-                            <div
-                                className="grid-c-4 grid-r-3"
-                                style={{
-                                    background: 'linear-gradient(to right, #8e2de2, #4a00e0)',
-                                    color: '#fff',
-                                    borderRadius: '.25rem',
-                                }}
-                            >
-                                <p>
-                                    <b>Sub Content</b>
-                                </p>
+                            <div className="grid-c-4 grid-r-3 bg-indigo-200 text-indigo-700 u-round-xs">
+                                <p>Sub Content</p>
                             </div>
-                            <div
-                                className="grid-c-4 grid-r-3"
-                                style={{
-                                    background: 'linear-gradient(to right, #8e2de2, #4a00e0)',
-                                    color: '#fff',
-                                    borderRadius: '.25rem',
-                                }}
-                            >
-                                <p>
-                                    <b>Sub Content</b>
-                                </p>
+                            <div className="grid-c-4 grid-r-3 bg-indigo-200 text-indigo-700 u-round-xs">
+                                <p>Sub Content</p>
                             </div>
-                            <div
-                                className="grid-c-12"
-                                style={{
-                                    background: 'linear-gradient(to right, #8e2de2, #4a00e0)',
-                                    color: '#fff',
-                                    borderRadius: '.25rem',
-                                }}
-                            >
-                                <p>
-                                    <b>Footer</b>
-                                </p>
+                            <div className="grid-c-12 bg-indigo-200 text-indigo-700 u-round-xs">
+                                <p>Footer</p>
                             </div>
                         </div>
                         <div className="space"></div>
                         <CodeBlock
-                            code={`<div class="grid u-gap-2 u-text-center">
-    <div class="grid-c-12" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
-        <p><b>Header</b></p>
+                            code={`<div class="grid u-gap-2 u-text-center font-bold">
+    <div class="grid-c-12 bg-indigo-200 text-indigo-700 u-round-xs" style="">
+        <p>Header</p>
     </div>
-    <div class="grid-c-4 grid-r-6" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
-        <p><b>Sidebar</b></p>
+    <div class="grid-c-4 grid-r-6 bg-indigo-200 text-indigo-700 u-round-xs" style="">
+        <p>Sidebar</p>
     </div>
-    <div class="grid-c-8 grid-r-3" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
-        <p><b>Main Content</b></p>
+    <div class="grid-c-8 grid-r-3 bg-indigo-200 text-indigo-700 u-round-xs" style="">
+        <p>Main Content</p>
     </div>
-    <div class="grid-c-4 grid-r-3" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
-        <p><b>Sub Content</b></p>
+    <div class="grid-c-4 grid-r-3 bg-indigo-200 text-indigo-700 u-round-xs" style="">
+        <p>Sub Content</p>
     </div>
-    <div class="grid-c-4 grid-r-3" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
-        <p><b>Sub Content</b></p>
+    <div class="grid-c-4 grid-r-3 bg-indigo-200 text-indigo-700 u-round-xs" style="">
+        <p>Sub Content</p>
     </div>
-    <div class="grid-c-12" style="background: linear-gradient(to right, #8e2de2, #4a00e0); color: #fff; border-radius: .25rem;">
-        <p><b>Footer</b></p>
+    <div class="grid-c-12 bg-indigo-200 text-indigo-700 u-round-xs" style="">
+        <p>Footer</p>
     </div>
 </div>`}
                             language="htmlbars"
@@ -175,9 +118,8 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                         <Headline title="Template Sizes" link="#sizes" size="4" />
                         <div className="divider"></div>
                         <p>
-                            By default, the default <code>grid</code> class is 12 rows by 12 columns. To change this,
-                            you can use any of the <code>grid-cols-*</code> classes where the '*' represents any number
-                            from 1 through 12 inclusive.
+                            By default, the default <code>grid</code> class supports up to <code>12</code> columns. To
+                            change this, you can use any of the <code>grid-cols-[1..12]</code> classes.
                         </p>
 
                         <div className="grid u-gap-2 grid-cols-1">
@@ -221,10 +163,6 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                                 <p>grid-cols-4</p>
                             </div>
                         </div>
-
-                        <div className="divider"></div>
-                        <p className="lead u-text-center">I think you get the idea.</p>
-                        <div className="divider"></div>
 
                         <p>
                             As another example, let's use a grid of 3 columns with the <code>grid-cols-3</code> class.
@@ -297,6 +235,31 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                                 />
                             </div>
                         </div>
+                        <div className="space"></div>
+                        <p>
+                            If you want to specify the number of rows a <code>grid</code> has, then you must use the{' '}
+                            <code>grid-cols-[1..12]</code> class. By default, a <code>grid</code> has{' '}
+                            <code>grid-template-rows</code> set to <code>auto</code>.
+                        </p>
+
+                        <div className="grid grid-rows-3 grid-cols-2 grid-flow-col u-gap-2 font-bold">
+                            <div className="u-text-center p-2 u-round-xs bg-orange-200 text-orange-700">1</div>
+                            <div className="u-text-center p-2 u-round-xs bg-orange-200 text-orange-700">2</div>
+                            <div className="u-text-center p-2 u-round-xs bg-orange-200 text-orange-700">3</div>
+                            <div className="u-text-center p-2 u-round-xs bg-orange-200 text-orange-700">4</div>
+                            <div className="u-text-center p-2 u-round-xs bg-orange-200 text-orange-700">5</div>
+                        </div>
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<div class="grid grid-rows-3 grid-cols-2 grid-flow-col u-gap-2 font-bold">
+  <div class="u-text-center p-2 u-round-xs bg-orange-200 text-orange-700">1</div>
+  <div class="u-text-center p-2 u-round-xs bg-orange-200 text-orange-700">2</div>
+  <div class="u-text-center p-2 u-round-xs bg-orange-200 text-orange-700">3</div>
+  <div class="u-text-center p-2 u-round-xs bg-orange-200 text-orange-700">4</div>
+  <div class="u-text-center p-2 u-round-xs bg-orange-200 text-orange-700">5</div>
+</div>`}
+                            language={`htmlbars`}
+                        />
                     </div>
                 </section>
 
@@ -304,10 +267,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Responsive" link="#responsive" size="4" />
                         <div className="divider"></div>
-                        <Tag
-                            leftProps={{ classes: 'tag tag--dark', text: 'New' }}
-                            rightProps={{ classes: 'tag tag--info', text: '0.7.0' }}
-                        />
+                        <VersionTag version={`0.7.0`} />
                         <p>
                             To use the viewport variant of a given class, you just need to suffix each class with a
                             viewport selector. For example, if I only want <code>grid</code> to be applied to some
@@ -385,6 +345,7 @@ export const GridTemplatesPage: React.FC<any> = (props) => {
                                 <code>grid-re</code>
                             </li>
                         </ul>
+                        <p>The same idea also applies to the <code>grid-rows</code> class. Instead, you will have to update the <code>grid-rows</code> property in the configuration.</p>
                     </div>
                 </section>
 
