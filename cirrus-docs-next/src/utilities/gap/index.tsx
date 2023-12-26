@@ -19,7 +19,7 @@ export const GapUtilsPage: React.FC<any> = (props) => {
     let classTable = [
         {
             class: `u-gap-px`,
-            style: `gap: 1px;`,
+            style: `gap: 1px !important`,
         },
     ];
     classTable = classTable.concat(
