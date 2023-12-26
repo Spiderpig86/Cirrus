@@ -348,4 +348,22 @@
             )
         );
     }
+    @include it('should return map with numbers only in range and non-numeric values') {
+        @include assert-equal(
+            functions.map-range(
+                (
+                    1: 42,
+                    3: 60,
+                    'px': 1,
+                ),
+                2,
+                6,
+                true
+            ),
+            (
+                3: 60,
+                'px': 1
+            )
+        );
+    }
 }

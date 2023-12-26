@@ -198,7 +198,7 @@ $DELIMETER: '-';
     Filters over a given map only for keys between $start inclusive and
     $end exclusive.
 */
-@function map-range($map, $start, $end) {
+@function map-range($map, $start, $end, $include-non-numeric: false) {
     $result: ();
     @each $key, $value in $map {
         @if type-of($key) == 'number' {
@@ -210,6 +210,13 @@ $DELIMETER: '-';
                     )
                 );
             }
+        } @else if $include-non-numeric {
+            $result: map.merge(
+                $result,
+                (
+                    $key: $value,
+                )
+            );
         }
     }
 
