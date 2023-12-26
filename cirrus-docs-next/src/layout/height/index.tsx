@@ -22,6 +22,10 @@ export const HeightPage: React.FC<any> = (props) => {
             style: `height: 0;`,
         },
         {
+            class: `h-px`,
+            style: `height: 1px;`,
+        },
+        {
             class: `h-auto`,
             style: `height: auto;`,
         },

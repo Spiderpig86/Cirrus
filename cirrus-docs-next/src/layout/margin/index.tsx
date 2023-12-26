@@ -50,12 +50,21 @@ export const MarginPage: React.FC<any> = (props) => {
 
     useEffect(() => {
         const rows = types.map((type) => {
-            return DEFAULT_SIZING_SYSTEM.map((size) => {
-                return {
-                    class: FormatString(type.class, size.toString()),
-                    style: FormatString(type.style, `${0.5 * size}rem`),
-                };
-            });
+            let table = [
+                {
+                    class: FormatString(type.class, `px`),
+                    style: FormatString(type.style, `1px`),
+                },
+            ];
+            table = table.concat(
+                ...DEFAULT_SIZING_SYSTEM.map((size) => {
+                    return {
+                        class: FormatString(type.class, size.toString()),
+                        style: FormatString(type.style, `${0.5 * size}rem`),
+                    };
+                })
+            );
+            return table;
         });
         setClassTable(([] as any).concat(...rows));
     }, []);
@@ -80,7 +89,12 @@ export const MarginPage: React.FC<any> = (props) => {
                         <div className="divider"></div>
                         <p>
                             These are the different sizes supported for margins. Note that all calculations are based
-                            around <code>0.5rem</code> or <code>8px</code>. You can also modify it to use a different base size other than <code>0.5rem</code> within <code>_config.scss</code> -- see <Link href="#variants"><a className="u u-LR">Variants</a></Link> below.
+                            around <code>0.5rem</code> or <code>8px</code>. You can also modify it to use a different
+                            base size other than <code>0.5rem</code> within <code>_config.scss</code> -- see{' '}
+                            <Link href="#variants">
+                                <a className="u u-LR">Variants</a>
+                            </Link>{' '}
+                            below.
                         </p>
 
                         <ClassTable classTable={classTable} />
@@ -122,12 +136,16 @@ export const MarginPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-100 u-inline-flex u-round-xs">
-                                    <span className="bg-indigo-500 p-1 mx-4 text-white u-round-xs u-shadow-lg">mx-4</span>
+                                    <span className="bg-indigo-500 p-1 mx-4 text-white u-round-xs u-shadow-lg">
+                                        mx-4
+                                    </span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-100 u-inline-flex u-round-xs">
-                                    <span className="bg-indigo-500 p-1 my-4 text-white u-round-xs u-shadow-lg">my-4</span>
+                                    <span className="bg-indigo-500 p-1 my-4 text-white u-round-xs u-shadow-lg">
+                                        my-4
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -160,22 +178,30 @@ export const MarginPage: React.FC<any> = (props) => {
                         <div className="row">
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-100 u-inline-flex u-round-xs">
-                                    <span className="bg-indigo-500 p-1 ml-4 text-white u-round-xs u-shadow-lg">ml-4</span>
+                                    <span className="bg-indigo-500 p-1 ml-4 text-white u-round-xs u-shadow-lg">
+                                        ml-4
+                                    </span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-100 u-inline-flex u-round-xs">
-                                    <span className="bg-indigo-500 p-1 mr-4 text-white u-round-xs u-shadow-lg">mr-4</span>
+                                    <span className="bg-indigo-500 p-1 mr-4 text-white u-round-xs u-shadow-lg">
+                                        mr-4
+                                    </span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-100 u-inline-flex u-round-xs">
-                                    <span className="bg-indigo-500 p-1 mt-4 text-white u-round-xs u-shadow-lg">mt-4</span>
+                                    <span className="bg-indigo-500 p-1 mt-4 text-white u-round-xs u-shadow-lg">
+                                        mt-4
+                                    </span>
                                 </div>
                             </div>
                             <div className="col u-flex u-justify-center">
                                 <div className="bg-indigo-100 u-inline-flex u-round-xs">
-                                    <span className="bg-indigo-500 p-1 mb-4 text-white u-round-xs u-shadow-lg">mb-4</span>
+                                    <span className="bg-indigo-500 p-1 mb-4 text-white u-round-xs u-shadow-lg">
+                                        mb-4
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -231,8 +257,12 @@ export const MarginPage: React.FC<any> = (props) => {
 
                         <div className="mb-1 text-white">
                             <div className="bg-orange-100 p-2 u-round-xs u-flex u-justify-center u-items-center">
-                                <p className="bg-orange-400 p-3 u-round-xs my-1 mr-1 mr-5-sm mr-10-md u-shadow-lg">Shrink</p>
-                                <p className="bg-orange-400 p-3 u-round-xs my-1 ml-1 ml-5-sm ml-10-md u-shadow-lg">Window</p>
+                                <p className="bg-orange-400 p-3 u-round-xs my-1 mr-1 mr-5-sm mr-10-md u-shadow-lg">
+                                    Shrink
+                                </p>
+                                <p className="bg-orange-400 p-3 u-round-xs my-1 ml-1 ml-5-sm ml-10-md u-shadow-lg">
+                                    Window
+                                </p>
                             </div>
                         </div>
 
@@ -253,12 +283,12 @@ export const MarginPage: React.FC<any> = (props) => {
                         </p>
                     </div>
                 </section>
-                
+
                 <section className="padtop" id="variants">
                     <div className="content">
                         <Headline title="Variants" link="#variants" size="4" />
                         <div className="divider"></div>
-                        
+
                         <Tag
                             leftProps={{
                                 classes: `tag--dark`,
@@ -272,11 +302,17 @@ export const MarginPage: React.FC<any> = (props) => {
 
                         <p>
                             The classes specified above are the default utility classes for setting margins. You can
-                            add, change, or remove classes within the <code>_config.scss</code> file of Cirrus.
-                            The generated values are dependent on the values set for the <code>base-size</code> and <code>steps</code> fields in the config.
+                            add, change, or remove classes within the <code>_config.scss</code> file of Cirrus. The
+                            generated values are dependent on the values set for the <code>base-size</code> and{' '}
+                            <code>steps</code> fields in the config.
                         </p>
-                        <p>Below is an example of what gets generated when the <code>base-size</code> is set to <code>1rem</code> and we add <code>64</code> to the list of <code>steps</code>.</p>
-                        <p>Recall that these configs are merged with the <code>$default-config</code> map.</p>
+                        <p>
+                            Below is an example of what gets generated when the <code>base-size</code> is set to{' '}
+                            <code>1rem</code> and we add <code>64</code> to the list of <code>steps</code>.
+                        </p>
+                        <p>
+                            Recall that these configs are merged with the <code>$default-config</code> map.
+                        </p>
 
                         <div className="space"></div>
 

@@ -12,7 +12,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { DEFAULT_SIZING_SYSTEM, PAGE_TITLE_PREFIX } from '../../../constants';
 import Link from 'next/link';
 import { ClassTable } from '../../../layouts/components/class-table';
-import { Tag } from '../../../layouts/components/tag';
+import { VersionTag } from '../../../layouts/components/tag';
 import { TITLE_LAYOUT } from '../../../config/sidebar';
 
 export const PaddingPage: React.FC<any> = (props) => {
@@ -52,12 +52,21 @@ padding-bottom: (0) !important;`,
 
     useEffect(() => {
         const rows = types.map((type) => {
-            return DEFAULT_SIZING_SYSTEM.map((size) => {
-                return {
-                    class: FormatString(type.class, size.toString()),
-                    style: FormatString(type.style, `${0.5 * size}rem`),
-                };
-            });
+            let table = [
+                {
+                    class: FormatString(type.class, `px`),
+                    style: FormatString(type.style, `1px`),
+                },
+            ];
+            table = table.concat(
+                ...DEFAULT_SIZING_SYSTEM.map((size) => {
+                    return {
+                        class: FormatString(type.class, size.toString()),
+                        style: FormatString(type.style, `${0.5 * size}rem`),
+                    };
+                })
+            );
+            return table;
         });
         setClassTable(([] as any).concat(...rows));
     }, []);
@@ -72,6 +81,7 @@ padding-bottom: (0) !important;`,
                     <div className="content">
                         <Headline title="Padding" link="#padding" />
                         <div className="divider"></div>
+                        <VersionTag version="0.7.2" text="Updated" />
                         <p>These are utility classes used to add padding for any element.</p>
                     </div>
                 </section>
@@ -82,7 +92,12 @@ padding-bottom: (0) !important;`,
                         <div className="divider"></div>
                         <p>
                             These are the different sizes supported for padding. Note that all calculations are based
-                            around <code>0.5rem</code> or <code>8px</code>. You can also modify it to use a different base size other than <code>0.5rem</code> within <code>_config.scss</code> -- see <Link href="#variants"><a className="u u-LR">Variants</a></Link> below.
+                            around <code>0.5rem</code> or <code>8px</code>. You can also modify it to use a different
+                            base size other than <code>0.5rem</code> within <code>_config.scss</code> -- see{' '}
+                            <Link href="#variants">
+                                <a className="u u-LR">Variants</a>
+                            </Link>{' '}
+                            below.
                         </p>
 
                         <ClassTable classTable={classTable} />
@@ -188,10 +203,7 @@ padding-bottom: (0) !important;`,
                     <div className="content">
                         <Headline title="Responsive" link="#responsive" size="4" />
                         <div className="divider"></div>
-                        <span className="tag-container group-tags">
-                            <div className="tag tag--dark">New</div>
-                            <div className="tag tag--info">0.6.3</div>
-                        </span>
+                        <VersionTag version="0.6.3." text="New" />
                         <p>
                             The margin classes mentioned here support viewport based application. All you need to do is
                             add a <code>-&lt;viewport&gt;</code> at the end of the class(es) you are using. For example,
@@ -232,30 +244,26 @@ padding-bottom: (0) !important;`,
                     </div>
                 </section>
 
-                
                 <section className="padtop" id="variants">
                     <div className="content">
                         <Headline title="Variants" link="#variants" size="4" />
                         <div className="divider"></div>
-                        
-                        <Tag
-                            leftProps={{
-                                classes: `tag--dark`,
-                                text: `New`,
-                            }}
-                            rightProps={{
-                                classes: `tag--info`,
-                                text: `0.7.0`,
-                            }}
-                        />
+
+                        <VersionTag version="0.7.0" text="New" />
 
                         <p>
                             The classes specified above are the default utility classes for setting paddings. You can
-                            add, change, or remove classes within the <code>_config.scss</code> file of Cirrus.
-                            The generated values are dependent on the values set for the <code>base-size</code> and <code>steps</code> fields in the config.
+                            add, change, or remove classes within the <code>_config.scss</code> file of Cirrus. The
+                            generated values are dependent on the values set for the <code>base-size</code> and{' '}
+                            <code>steps</code> fields in the config.
                         </p>
-                        <p>Below is an example of what gets generated when the <code>base-size</code> is set to <code>1rem</code> and we add <code>64</code> to the list of <code>steps</code>.</p>
-                        <p>Recall that these configs are merged with the <code>$default-config</code> map.</p>
+                        <p>
+                            Below is an example of what gets generated when the <code>base-size</code> is set to{' '}
+                            <code>1rem</code> and we add <code>64</code> to the list of <code>steps</code>.
+                        </p>
+                        <p>
+                            Recall that these configs are merged with the <code>$default-config</code> map.
+                        </p>
 
                         <div className="space"></div>
 

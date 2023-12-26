@@ -7,7 +7,7 @@ import { TableOfContents } from '../../../layouts/components/toc';
 import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
-import { Tag } from '../../../layouts/components/tag';
+import { Tag, VersionTag } from '../../../layouts/components/tag';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { DEFAULT_SIZING_SYSTEM, PAGE_TITLE_PREFIX } from '../../../constants';
@@ -16,12 +16,20 @@ import { Blockquote } from '../../../layouts/components/blockquote';
 import { TITLE_UTILITIES } from '../../../config/sidebar';
 
 export const GapUtilsPage: React.FC<any> = (props) => {
-    const classTable = DEFAULT_SIZING_SYSTEM.map((size) => {
-        return {
-            class: `u-gap-${size}`,
-            style: `gap: calc([space-size] * ${size}) !important`,
-        };
-    });
+    let classTable = [
+        {
+            class: `u-gap-px`,
+            style: `gap: 1px;`,
+        },
+    ];
+    classTable = classTable.concat(
+        ...DEFAULT_SIZING_SYSTEM.map((size) => {
+            return {
+                class: `u-gap-${size}`,
+                style: `gap: calc([space-size] * ${size}) !important`,
+            };
+        })
+    );
 
     return (
         <main className="page-layout">
@@ -33,16 +41,7 @@ export const GapUtilsPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Gap" link="#gap" />
                         <div className="divider"></div>
-                        <Tag
-                            leftProps={{
-                                classes: `tag--dark`,
-                                text: `New`,
-                            }}
-                            rightProps={{
-                                classes: `tag--info`,
-                                text: `0.7.0`,
-                            }}
-                        />
+                        <VersionTag version="0.7.2" text="Updated" />
                         <p>
                             Define gutters between{' '}
                             <Link href="/utils/flexbox">
@@ -68,7 +67,10 @@ export const GapUtilsPage: React.FC<any> = (props) => {
                             Use <code>u-gap-[size]</code> to change the gap between rows and columns in both flexbox and
                             grid layouts.
                         </p>
-                        <p>Learn more about Cirrus's sizing system to see what values can be used for <code>u-gap-[size]</code>.</p>
+                        <p>
+                            Learn more about Cirrus's sizing system to see what values can be used for{' '}
+                            <code>u-gap-[size]</code>.
+                        </p>
 
                         <div className="p-2 u-round-sm bg-indigo-100 u-flex u-gap-4 text-white font-bold u-text-center">
                             <div className="p-4 u-round-sm w-100p bg-indigo-500">1</div>
@@ -89,9 +91,9 @@ export const GapUtilsPage: React.FC<any> = (props) => {
                         />
 
                         <div className="space space--lg"></div>
-    
+
                         <p>Another example using a grid layout.</p>
-    
+
                         <div className="p-2 u-round-sm bg-pink-100 grid grid-cols-3 u-gap-3 text-white font-bold u-text-center">
                             <div className="p-4 u-round-sm w-100p bg-pink-500">1</div>
                             <div className="p-4 u-round-sm w-100p bg-pink-500">2</div>
@@ -127,7 +129,7 @@ export const GapUtilsPage: React.FC<any> = (props) => {
                             </p>
 
                             <div className="space"></div>
-                            
+
                             <CodeBlock
                                 code={`//_configs.scss
 $config: (
@@ -168,7 +170,9 @@ $config: (
                         <div className="divider"></div>
 
                         <p>
-                            The classes specified above are the default utility classes for defining gaps and it is dependent on the sizing used within the framework. You can add, change, or remove sizes in <code>_config.scss</code> in your own build.
+                            The classes specified above are the default utility classes for defining gaps and it is
+                            dependent on the sizing used within the framework. You can add, change, or remove sizes in{' '}
+                            <code>_config.scss</code> in your own build.
                         </p>
 
                         <div className="space"></div>
@@ -185,7 +189,9 @@ $config: (
 ) !default;`}
                             language="scss"
                         />
-                        <p>This would generate the following <b>gap</b> classes.</p>
+                        <p>
+                            This would generate the following <b>gap</b> classes.
+                        </p>
                         <CodeBlock
                             code={`.u-gap-0 {
     gap: calc(0.25rem * 0) !important

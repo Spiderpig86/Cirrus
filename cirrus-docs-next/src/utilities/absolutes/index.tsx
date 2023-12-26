@@ -8,7 +8,7 @@ import { Headline } from '../../../layouts/components/headline';
 import { Pagination } from '../../../layouts/components/pagination';
 import { CodeBlock } from '../../../layouts/components/codeblock';
 import { ClassTable } from '../../../layouts/components/class-table';
-import { Tag } from '../../../layouts/components/tag';
+import { Tag, VersionTag } from '../../../layouts/components/tag';
 import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import {
@@ -27,6 +27,7 @@ export const AbsolutesUtilsPage: React.FC<any> = (props) => {
     const DEFAULT_DIRECTIONS = ['top', 'left', 'bottom', 'right'];
     const DEFAULT_ABSOLUTES = [
         ['0', '0'],
+        ['px', '1px'],
         ['auto', 'auto'],
         ...GenerateNegativeClassVariants(DEFAULT_QUARTILE_PERCENTAGES, true),
         ...GenerateNegativeClassVariants(
@@ -54,16 +55,7 @@ export const AbsolutesUtilsPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Absolutes" link="#absolutes" />
                         <div className="divider"></div>
-                        <Tag
-                            leftProps={{
-                                classes: `tag--dark`,
-                                text: `Updated`,
-                            }}
-                            rightProps={{
-                                classes: `tag--info`,
-                                text: `0.7.1`,
-                            }}
-                        />
+                        <VersionTag version="0.7.2" text="Updated" />
                         <p>
                             Utility classes used to place{' '}
                             <ExternalLink url="https://developer.mozilla.org/en-US/docs/Web/CSS/position#values">

@@ -22,6 +22,10 @@ export const WidthPage: React.FC<any> = (props) => {
             style: `width: 0;`,
         },
         {
+            class: `w-px`,
+            style: `width: 1px;`,
+        },
+        {
             class: `w-auto`,
             style: `width: auto;`,
         },
@@ -68,7 +72,7 @@ export const WidthPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Scaled Widths" link="#scaled" size="4" />
                         <div className="divider"></div>
-                        <VersionTag version="0.7.0" text="Updated" />
+                        <VersionTag version="0.7.2" text="Updated" />
                         <p>
                             The <code>{`w-{{value}}`}</code> classes gives an element a percentage based width.
                         </p>
