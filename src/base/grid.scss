@@ -53,7 +53,8 @@
     @for $i from 1 through $grid-rows {
         /* Templates */
         .grid-rows-#{$i}#{$suffix} {
-            --grid-template-column: repeat(#{$i}, minmax(0, 1fr));
+            --grid-template-row: repeat(#{$i}, minmax(0, 1fr));
+            grid-template-rows: var(--grid-template-row);
         }
 
         /* Row expansion */
