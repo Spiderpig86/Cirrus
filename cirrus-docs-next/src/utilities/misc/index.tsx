@@ -455,19 +455,6 @@ position: absolute;`,
 <div class="p-3 u-no-outline" style="outline-color: gray; outline-style: dotted;">No outline.</div>`}
                             language="htmlbars"
                         />
-                        <h6>Shadow</h6>
-                        <p>
-                            Add a subtle shadow for any element using <code>u-shadow</code>.
-                        </p>
-                        <div className="p-3 u-flex u-justify-space-around">
-                            <div className="u-shadow p-1">Shadow</div>
-                            <button className="u-shadow m-0">Button</button>
-                        </div>
-                        <CodeBlock
-                            code={`<div class="u-shadow p-1">Shadow</div>
-<button class="u-shadow m-0">Button</button>`}
-                            language="htmlbars"
-                        />
                     </div>
                 </section>
 
