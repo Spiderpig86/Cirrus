@@ -132,6 +132,16 @@ export const TextElementsPage: React.FC<any> = (props) => {
 
                         <div className="row">
                             <div className="col-lg-6">
+                                <p className="title mb-0">Normal</p>
+                                <p className="font-style-normal">The quick brown fox jumps over the lazy dog.</p>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<p class="font-style-normal">The quick brown fox jumps over the lazy dog.</p>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                            <div className="col-lg-6">
                                 <p className="title mb-0">Anchor</p>
                                 <p>
                                     <a href="!#" className="subtitle">
@@ -156,6 +166,16 @@ export const TextElementsPage: React.FC<any> = (props) => {
                             <div className="col-lg-6">
                                 <CodeBlock
                                     code={`<p><em>The quick brown fox jumps over the lazy dog.</em></p>`}
+                                    language="htmlbars"
+                                />
+                            </div>
+                            <div className="col-lg-6">
+                                <p className="title mb-0">Italics</p>
+                                <p className="font-style-italics">The quick brown fox jumps over the lazy dog.</p>
+                            </div>
+                            <div className="col-lg-6">
+                                <CodeBlock
+                                    code={`<p class="font-style-italics">The quick brown fox jumps over the lazy dog.</p>`}
                                     language="htmlbars"
                                 />
                             </div>
