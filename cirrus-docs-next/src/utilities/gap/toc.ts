@@ -11,6 +11,11 @@ export const toc: TableOfContentsEntry[] = [
                 children: null,
             },
             {
+                name: 'Row/Column Specific',
+                anchor: '#specific',
+                children: null,
+            },
+            {
                 name: 'Responsive',
                 anchor: '#responsive',
                 children: null,

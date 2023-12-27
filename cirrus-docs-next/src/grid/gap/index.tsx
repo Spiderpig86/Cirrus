@@ -11,6 +11,7 @@ import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { Blockquote } from '../../../layouts/components/blockquote';
 import { TITLE_GRID } from '../../../config/sidebar';
+import { VersionTag } from '../../../layouts/components/tag';
 
 export const GridGapPage: React.FC<any> = (props) => {
     const classTable = {
@@ -39,10 +40,7 @@ export const GridGapPage: React.FC<any> = (props) => {
                     <div className="content">
                         <Headline title="Grid Gap" link="#gap" />
                         <div className="divider"></div>
-                        <span className="tag-container group-tags">
-                            <div className="tag tag--dark">Updated</div>
-                            <div className="tag tag--info">0.7.0</div>
-                        </span>
+                        <VersionTag text={`Deprecated`} version={`0.7.0`} />
 
                         <Blockquote accentColor="#fcd9bd">
                             Note that this has been deprecated in favor of the new{' '}

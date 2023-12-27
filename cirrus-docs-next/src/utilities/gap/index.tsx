@@ -21,12 +21,36 @@ export const GapUtilsPage: React.FC<any> = (props) => {
             class: `u-gap-px`,
             style: `gap: 1px !important`,
         },
+        {
+            class: `u-col-gap-px`,
+            style: `column-gap: 1px !important`,
+        },
+        {
+            class: `u-row-gap-px`,
+            style: `row-gap: 1px !important`,
+        },
     ];
     classTable = classTable.concat(
-        ...DEFAULT_SIZING_SYSTEM.map((size) => {
+        DEFAULT_SIZING_SYSTEM.map((size) => {
             return {
                 class: `u-gap-${size}`,
                 style: `gap: calc([space-size] * ${size}) !important`,
+            };
+        })
+    );
+    classTable = classTable.concat(
+        DEFAULT_SIZING_SYSTEM.map((size) => {
+            return {
+                class: `u-col-gap-${size}`,
+                style: `column-gap: calc([space-size] * ${size}) !important`,
+            };
+        })
+    );
+    classTable = classTable.concat(
+        DEFAULT_SIZING_SYSTEM.map((size) => {
+            return {
+                class: `u-row-gap-${size}`,
+                style: `row-gap: calc([space-size] * ${size}) !important`,
             };
         })
     );
@@ -110,6 +134,37 @@ export const GapUtilsPage: React.FC<any> = (props) => {
     <div class="p-4 u-round-sm w-100p bg-pink-500">4</div>
     <div class="p-4 u-round-sm w-100p bg-pink-500">5</div>
     <div class="p-4 u-round-sm w-100p bg-pink-500">6</div>
+</div>`}
+                            language="htmlbars"
+                        />
+                    </div>
+                </section>
+
+                <section className="padtop" id="specific">
+                    <div className="content">
+                        <Headline title="Row/Column Specific" link="#specific" size="4" />
+                        <div className="divider"></div>
+
+                        <p>
+                            You can specify row and column specific gaps by using the <code>u-row-gap-[size]</code> and{' '}
+                            <code>u-col-gap-[size]</code> classes respectively.
+                        </p>
+                        <div className="p-2 u-round-sm bg-red-100 grid grid-cols-3 u-row-gap-1 u-col-gap-5 text-white font-bold u-text-center">
+                            <div className="p-4 u-round-sm w-100p bg-red-500">1</div>
+                            <div className="p-4 u-round-sm w-100p bg-red-500">2</div>
+                            <div className="p-4 u-round-sm w-100p bg-red-500">3</div>
+                            <div className="p-4 u-round-sm w-100p bg-red-500">4</div>
+                            <div className="p-4 u-round-sm w-100p bg-red-500">5</div>
+                            <div className="p-4 u-round-sm w-100p bg-red-500">6</div>
+                        </div>
+                        <CodeBlock
+                            code={`<div class="p-2 u-round-sm bg-red-100 grid grid-cols-3 u-row-gap-1 u-col-gap-5 text-white font-bold u-text-center">
+    <div class="p-4 u-round-sm w-100p bg-red-500">1</div>
+    <div class="p-4 u-round-sm w-100p bg-red-500">2</div>
+    <div class="p-4 u-round-sm w-100p bg-red-500">3</div>
+    <div class="p-4 u-round-sm w-100p bg-red-500">4</div>
+    <div class="p-4 u-round-sm w-100p bg-red-500">5</div>
+    <div class="p-4 u-round-sm w-100p bg-red-500">6</div>
 </div>`}
                             language="htmlbars"
                         />
