@@ -573,17 +573,18 @@ export const TreePage: React.FC<any> = (props) => {
                         </ul>
                         <p>
                             For mobile devices <code>(&lt;= 768px)</code>, the <code>tree-nav-header</code> will be
-                            visble to show a toggle switch to show the <code>tree-nav</code>.
+                            visible to show a toggle switch to show the <code>tree-nav</code>.
                         </p>
                         <div className="space"></div>
 
                         <LazyLoad height={200} once>
-                            <iframe
-                                src="/static/html/tree-nav.html"
-                                width="100%"
-                                height="600"
-                            ></iframe>
+                            <iframe src="/static/html/tree-nav.html" width="100%" height="600"></iframe>
                         </LazyLoad>
+                        <div className="space"></div>
+                        <p>
+                            To force the <code>tree-nav</code> to be visible on mobile displays, add the{' '}
+                            <code>tree-nav--visible</code> class to it.
+                        </p>
                     </div>
                 </section>
 
