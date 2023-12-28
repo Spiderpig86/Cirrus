@@ -10,6 +10,8 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { TITLE_BUTTONS } from '../../../config/sidebar';
+import { VersionTag } from '../../../layouts/components/tag';
+import Link from 'next/link';
 
 export const ButtonPage: React.FC<any> = (props) => {
     const btnColors = [
@@ -64,13 +66,10 @@ export const ButtonPage: React.FC<any> = (props) => {
                             <div className="btn">Button</div>
                         </div>
                         <div className="btn-container">
-                            <div className="btn bg-blue-200 text-blue-800">Button</div>
+                            <input type="submit" className="btn" value="Submit" />
                         </div>
                         <div className="btn-container">
-                            <input type="submit" className="btn bg-blue-200 text-blue-800" value="Submit" />
-                        </div>
-                        <div className="btn-container">
-                            <a className="btn bg-blue-200 text-blue-800">Button</a>
+                            <a className="btn">Button</a>
                         </div>
 
                         <CodeBlock
@@ -146,6 +145,57 @@ export const ButtonPage: React.FC<any> = (props) => {
 <button class="outline btn-danger">danger</button>`}
                             language="htmlbars"
                         />
+                        <div className="space"></div>
+
+                        <h6>More Colors</h6>
+                        <VersionTag version={`0.7.2`} />
+                        <p>
+                            Use color utility classes defined{' '}
+                            <Link href={`/fundamentals/colors`}>
+                                <a className="u u-LR">here</a>
+                            </Link>{' '}
+                            for more customization. Cirrus automatically uses a hover color depending on your selected
+                            color's luminosity. Lighter backgrounds get darker on hover while the opposite occurs for
+                            darker backgrounds.
+                        </p>
+                        <div className="row my-3">
+                            {['100', '300'].map((level, i) => {
+                                return (
+                                    <div className="mx-1" key={i}>
+                                        <button className={`bg-indigo-${level} border-indigo-${level} text-indigo-700`}>
+                                            Indigo
+                                        </button>
+                                    </div>
+                                );
+                            })}
+                            {['500', '700', '900'].map((level, i) => {
+                                return (
+                                    <div className="mx-1" key={i}>
+                                        <button className={`bg-indigo-${level} border-indigo-${level} text-indigo-100`}>
+                                            Indigo
+                                        </button>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                        <CodeBlock
+                            code={`<div class="mx-1">
+    <button class="bg-indigo-100 border-indigo-100 text-indigo-700">Indigo</button>
+</div>
+<div class="mx-1">
+    <button class="bg-indigo-300 border-indigo-300 text-indigo-700">Indigo</button>
+</div>
+<div class="mx-1">
+    <button class="bg-indigo-500 border-indigo-500 text-indigo-100">Indigo</button>
+</div>
+<div class="mx-1">
+    <button class="bg-indigo-700 border-indigo-700 text-indigo-100">Indigo</button>
+</div>
+<div class="mx-1">
+    <button class="bg-indigo-900 border-indigo-900 text-indigo-100">Indigo</button>
+</div>`}
+                            language="htmlbars"
+                        />
                     </div>
                 </section>
 
@@ -154,8 +204,8 @@ export const ButtonPage: React.FC<any> = (props) => {
                         <Headline title="Sizes" link="#sizes" size="4" />
                         <div className="divider"></div>
                         <p>
-                            Buttons can have alternative sizes of <code>xs</code>, <code>sm</code>,{' '}
-                            <code>lg</code>, and <code>xl</code>.
+                            Buttons can have alternative sizes of <code>xs</code>, <code>sm</code>, <code>lg</code>, and{' '}
+                            <code>xl</code>.
                         </p>
 
                         <div className="btn-container">
