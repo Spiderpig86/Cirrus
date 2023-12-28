@@ -248,20 +248,24 @@ export const ListsPage: React.FC<any> = (props) => {
                         <p>
                             This can be created by adding the <code>menu</code> class to your <code>ol</code> or{' '}
                             <code>ul</code> and adding the <code>menu-item</code> class to each <code>li</code>. To
-                            select a list item, add the <code>selected</code> class to the <code>menu-item</code>.
+                            select a list item, add the <code>selected</code> class to the <code>menu-item</code>.{' '}
+                            <i>
+                                Note that for the style to apply, you must add a child <code>a</code>, <code>div</code>,
+                                or <code>span</code> tag.
+                            </i>
                         </p>
 
                         <div className="row">
                             <div className="col-lg-5">
                                 <ul className="menu">
                                     <li className="menu-item selected">
-                                        <a href="!#">One</a>
+                                        <a>One</a>
                                     </li>
                                     <li className="menu-item">
-                                        <a href="!#">Two</a>
+                                        <a>Two</a>
                                     </li>
                                     <li className="menu-item">
-                                        <a href="!#">Three</a>
+                                        <a>Three</a>
                                     </li>
                                 </ul>
                             </div>
@@ -273,12 +277,33 @@ export const ListsPage: React.FC<any> = (props) => {
                                         <ul>
                                             <li>
                                                 <code>menu-item</code>
+                                                <ul>
+                                                    <li>
+                                                        <code>a</code>,<code>div</code>, or
+                                                        <code>span</code>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+                        <div className="space"></div>
+                        <CodeBlock
+                            code={`<ul class="menu">
+  <li class="menu-item selected">
+    <a>One</a>
+  </li>
+  <li class="menu-item">
+    <a>Two</a>
+  </li>
+  <li class="menu-item">
+    <a>Three</a>
+  </li>
+</ul>`}
+                            language={`htmlbars`}
+                        />
                     </div>
                 </section>
 
@@ -326,9 +351,9 @@ export const ListsPage: React.FC<any> = (props) => {
         <button class="btn-primary btn--sm btn-dropdown"><i class="fa fa-wrapper fa-caret-down" aria-hidden="true"></i>
         </button>
         <ul class="menu">
-            <li class="menu-item"><a href="!#">Google Chrome</a></li>
-            <li class="menu-item"><a href="!#">Firefox</a></li>
-            <li class="menu-item"><a href="!#">Polarity</a></li>
+            <li class="menu-item"><a href="#">Google Chrome</a></li>
+            <li class="menu-item"><a href="#">Firefox</a></li>
+            <li class="menu-item"><a href="#">Polarity</a></li>
         </ul>
     </div>
 </div>`}
@@ -365,9 +390,9 @@ export const ListsPage: React.FC<any> = (props) => {
         <i class="fa fa-wrapper fa-caret-down" aria-hidden="true"></i>
     </button>
     <ul class="menu">
-        <li class="menu-item"><a href="!#">Google Chrome</a></li>
-        <li class="menu-item"><a href="!#">Firefox</a></li>
-        <li class="menu-item"><a href="!#">Polarity</a></li>
+        <li class="menu-item"><a href="#">Google Chrome</a></li>
+        <li class="menu-item"><a href="#">Firefox</a></li>
+        <li class="menu-item"><a href="#">Polarity</a></li>
     </ul>
 </div>`}
                                     language="htmlbars"
@@ -403,13 +428,13 @@ export const ListsPage: React.FC<any> = (props) => {
         Dropdown <i class="fa fa-wrapper fa-caret-down" aria-hidden="true"></i></button>
     <ul class="menu">
         <li class="menu-item">
-            <a href="!#">Google Chrome</a>
+            <a href="#">Google Chrome</a>
         </li>
         <li class="menu-item">
-            <a href="!#">Firefox</a>
+            <a href="#">Firefox</a>
         </li>
         <li class="menu-item">
-            <a href="!#">Polarity</a>
+            <a href="#">Polarity</a>
         </li>
     </ul>
 </div>`}
@@ -631,7 +656,7 @@ export const ListsPage: React.FC<any> = (props) => {
     <div class="frame__body">
         <ul class="menu">
             <li class="divider" data-label="TECH"></li>
-            <li class="menu-item"><a href="!#">Github</a></li>
+            <li class="menu-item"><a href="#">Github</a></li>
             <li class="menu-item selected">
                 <a href="#">Tech News<span class="menu-addon u-pull-right icon"><i class="fa fa-wrapper fa-folder small" aria-hidden="true"></i></span></a>
                 <ul class="menu">
