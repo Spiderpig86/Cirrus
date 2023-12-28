@@ -13,6 +13,7 @@ import { DefaultLayout } from '../../../layouts/default';
 import { toc } from './toc';
 import { PAGE_TITLE_PREFIX } from '../../../constants';
 import { TITLE_ELEMENTS } from '../../../config/sidebar';
+import { IFrame } from '../../../layouts/components/iframe';
 
 export const TreePage: React.FC<any> = (props) => {
     return (
@@ -578,7 +579,7 @@ export const TreePage: React.FC<any> = (props) => {
 
                         <LazyLoad height={200} once>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/lists/tree-nav.html"
+                                src="/static/html/tree-nav.html"
                                 width="100%"
                                 height="600"
                             ></iframe>

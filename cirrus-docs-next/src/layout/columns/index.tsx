@@ -474,15 +474,14 @@ export const ColumnsPage: React.FC<any> = (props) => {
                         <div className="space space--lg"></div>
                         <h6>Prevent Stacking</h6>
                         <p>
-                            To prevent the default stacking behavior, we can use the <code>col-xs-*</code> class on the
-                            column, where '*' indicates any number from 1 to 12 (or however many columns you configured
-                            your Cirrus build with).
+                            To prevent the default stacking behavior, we can use the <code>col-xs-[1..12]</code> class on the
+                            column.
                         </p>
 
                         <p className="title">Before</p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/layout/width-ignore-before.html"
+                                src="/static/html/width-ignore-before.html"
                                 style={{ height: '250px', width: '100%', maxWidth: '700px' }}
                                 className="w-100p p-1"
                             />
@@ -491,7 +490,7 @@ export const ColumnsPage: React.FC<any> = (props) => {
                         <p className="title">After</p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/layout/width-ignore-after.html"
+                                src="/static/html/width-ignore-after.html"
                                 style={{ height: '250px', width: '100%', maxWidth: '700px' }}
                                 className="w-100p p-1"
                             />

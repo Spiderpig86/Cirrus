@@ -97,7 +97,7 @@ export const HeaderPage: React.FC<any> = (props) => {
                             <iframe
                                 className="w-100p"
                                 title="Header Demo"
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head.html"
+                                src="/static/html/demo-head.html"
                             />
                         </LazyLoad>
                         <div className="space"></div>
@@ -201,7 +201,7 @@ export const HeaderPage: React.FC<any> = (props) => {
 
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-header-brand.html"
+                                src="/static/html/demo-header-brand.html"
                                 width="100%"
                                 title="Header Brand"
                                 style={{ height: '200px' }}
@@ -235,7 +235,7 @@ export const HeaderPage: React.FC<any> = (props) => {
 
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-header-btn.html"
+                                src="/static/html/demo-header-btn.html"
                                 width="100%"
                                 title="Header Button"
                                 style={{ height: '200px' }}
@@ -253,13 +253,13 @@ export const HeaderPage: React.FC<any> = (props) => {
                             language="htmlbars"
                         />
                         <p>
-                            To set the <code>header-btn</code> to the close state (when the dropdown menu is present,
+                            To set the <code>header-btn</code> to the close state (when the dropdown menu is present),
                             simply add the <code>active</code> class to the button.
                         </p>
 
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-header-btn-close.html"
+                                src="/static/html/demo-header-btn-close.html"
                                 width="100%"
                                 title="Header Button Close"
                                 style={{ height: '200px' }}
@@ -285,7 +285,7 @@ export const HeaderPage: React.FC<any> = (props) => {
                         </p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-header-nav.html"
+                                src="/static/html/demo-header-nav.html"
                                 width="100%"
                                 title="Header Nav"
                                 style={{ height: '200px' }}
@@ -388,7 +388,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-dist-1.html"
+                                src="/static/html/demo-head-dist-1.html"
                                 width="100%"
                                 title="Header Demo Nav 1"
                                 style={{ height: '200px' }}
@@ -401,7 +401,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-dist-2.html"
+                                src="/static/html/demo-head-dist-2.html"
                                 width="100%"
                                 title="Header Demo Nav 2"
                                 style={{ height: '200px' }}
@@ -415,7 +415,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-dist-3.html"
+                                src="/static/html/demo-head-dist-3.html"
                                 width="100%"
                                 title="Header Demo Nav 3"
                                 style={{ height: '200px' }}
@@ -430,7 +430,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-left.html"
+                                src="/static/html/demo-head-left.html"
                                 width="100%"
                                 title="Header Demo Left"
                                 style={{ height: '200px' }}
@@ -450,7 +450,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-center.html"
+                                src="/static/html/demo-head-center.html"
                                 width="100%"
                                 title="Header Demo Center"
                                 style={{ height: '200px' }}
@@ -465,7 +465,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-right.html"
+                                src="/static/html/demo-head-right.html"
                                 width="100%"
                                 title="Header Demo Right"
                                 style={{ height: '200px' }}
@@ -559,7 +559,7 @@ $('.dropdown-menu li').on('click', function(e) {
 
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown-content.html"
+                                src="/static/html/demo-dropdown-content.html"
                                 title="Header Dropdown Content"
                                 width="100%"
                             />
@@ -578,7 +578,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-navitem-states.html"
+                                src="/static/html/demo-navitem-states.html"
                                 width="100%"
                                 title="Header Nav Item States"
                                 style={{ height: '200px' }}
@@ -647,7 +647,7 @@ $('.dropdown-menu li').on('click', function(e) {
 
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown.html"
+                                src="/static/html/demo-dropdown.html"
                                 title="Header Dropdown"
                                 width="100%"
                             />
@@ -695,7 +695,7 @@ $('.dropdown-menu li').on('click', function(e) {
 
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown-hover.html"
+                                src="/static/html/demo-dropdown-hover.html"
                                 width="100%"
                                 title="Header Dropdown Hover"
                                 style={{ height: '200px' }}
@@ -726,7 +726,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown-align.html"
+                                src="/static/html/demo-dropdown-align.html"
                                 title="Header Dropdown Align"
                                 width="100%"
                             />
@@ -751,7 +751,7 @@ $('.dropdown-menu li').on('click', function(e) {
 
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-dropdown-divider.html"
+                                src="/static/html/demo-dropdown-divider.html"
                                 title="Header Dropdown Divider"
                                 width="100%"
                             />
@@ -773,7 +773,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-nofix.html"
+                                src="/static/html/demo-head-nofix.html"
                                 title="Header Demo Not Fixed"
                                 width="100%"
                             />
@@ -785,7 +785,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </p>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-fix.html"
+                                src="/static/html/demo-head-fix.html"
                                 title="Header Demo Fixed"
                                 width="100%"
                             />
@@ -822,7 +822,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </ul>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head.html"
+                                src="/static/html/demo-head.html"
                                 title="Header Demo Light"
                                 width="100%"
                             />
@@ -852,7 +852,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </ul>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-dark.html"
+                                src="/static/html/demo-head-dark.html"
                                 title="Header Demo Dark"
                                 width="100%"
                             />
@@ -878,7 +878,7 @@ $('.dropdown-menu li').on('click', function(e) {
                         </ul>
                         <LazyLoad height={200}>
                             <iframe
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-clear.html"
+                                src="/static/html/demo-head-clear.html"
                                 title="Header Demo Clear"
                                 width="100%"
                             />

@@ -66,7 +66,7 @@ export const FootersPage: React.FC<any> = (props) => {
                             <iframe
                                 className="w-100p"
                                 title="Footer Demo"
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer.html"
+                                src="/static/html/demo-footer.html"
                             />
                         </LazyLoad>
                         <div className="space"></div>
@@ -144,7 +144,7 @@ export const FootersPage: React.FC<any> = (props) => {
                             <iframe
                                 className="w-100p"
                                 title="Static Footer"
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-static.html"
+                                src="/static/html/demo-footer-static.html"
                             />
                         </LazyLoad>
                         <div className="space"></div>
@@ -183,7 +183,7 @@ export const FootersPage: React.FC<any> = (props) => {
                             <iframe
                                 className="w-100p"
                                 title="Flexible Footer"
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-flexible.html"
+                                src="/static/html/demo-footer-flexible.html"
                             />
                         </LazyLoad>
                         <p className="info">The footer style used above.</p>
@@ -206,7 +206,7 @@ export const FootersPage: React.FC<any> = (props) => {
                             <iframe
                                 className="w-100p"
                                 title="Minimal Footer"
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-minimal.html"
+                                src="/static/html/demo-footer-minimal.html"
                             />
                         </LazyLoad>
                         <div className="space space--lg"></div>
@@ -220,7 +220,7 @@ export const FootersPage: React.FC<any> = (props) => {
                             <iframe
                                 className="w-100p"
                                 title="Footer Map"
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-map.html"
+                                src="/static/html/demo-footer-map.html"
                             />
                         </LazyLoad>
                         <div className="space space--lg"></div>
@@ -234,7 +234,7 @@ export const FootersPage: React.FC<any> = (props) => {
                             <iframe
                                 className="w-100p"
                                 title="Footer Newsletter"
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-newsletter.html"
+                                src="/static/html/demo-footer-newsletter.html"
                             />
                         </LazyLoad>
                         <div className="space space--lg"></div>
@@ -248,7 +248,7 @@ export const FootersPage: React.FC<any> = (props) => {
                             <iframe
                                 className="w-100p"
                                 title="Social Footer"
-                                src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/footer/demo-footer-social.html"
+                                src="/static/html/demo-footer-social.html"
                             />
                         </LazyLoad>
                         <div className="space space--lg"></div>

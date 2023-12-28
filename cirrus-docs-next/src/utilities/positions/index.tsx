@@ -54,7 +54,7 @@ export const PositionUtilsPage: React.FC<any> = (props) => {
             example: (
                 <LazyLoad height={200}>
                     <iframe
-                        src="https://spiderpig86.github.io/Cirrus/0.6.0/docs/header/demo-head-fix.html"
+                        src="/static/html/demo-head-fix.html"
                         width="100%"
                         style={{ height: '400px' }}
                     />
