@@ -609,6 +609,12 @@ export const sidebarConfig: SidebarConfig[] = [
             {
                 fontWeight: 'semibold',
                 glyph: null,
+                text: 'Vertical Align',
+                url: '/utils/vertical-align',
+            },
+            {
+                fontWeight: 'semibold',
+                glyph: null,
                 text: 'Z-Index',
                 url: '/utils/zindex',
             },
