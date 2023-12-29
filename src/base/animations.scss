@@ -145,8 +145,8 @@
             display: block;
             height: 1rem;
             width: 1rem;
-            left: calc(50% - (1rem / 1.25));
-            top: calc(50% - (1rem / 2));
+            left: calc(50% - .5rem);
+            top: calc(50% - .5rem);
             position: absolute;
             animation: loading 500ms infinite linear;
         }

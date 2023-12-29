@@ -387,7 +387,7 @@ fieldset legend {
   display: block;
   height: 1rem;
   width: 1rem;
-  left: calc(50% - 0.8rem);
+  left: calc(50% - 0.5rem);
   top: calc(50% - 0.5rem);
   position: absolute;
   animation: loading 500ms infinite linear;
