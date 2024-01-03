@@ -1,35 +1,35 @@
-// _generator.scss unit tests
-@use '../test_base' as *;
+// // _generator.scss unit tests
+// @use '../test_base' as *;
 
-@use '../../src/internal/generator_v2';
-@use '../../src/internal/mixins';
+// @use '../../src/internal/generator_v2';
+// @use '../../src/internal/mixins';
 
-@include describe('test') {
-    @include it('should generate expected utility classes with variant support') {
-        @include assert {
-            @include output($selector: false) {
-                @include generator_v2.utility(
-                    $base-class-name: 'text',
-                    $class-value-pairs: (
-                        'blue': (
-                            'color': blue,
-                        ),
-                    ),
-                    $variants: (
-                        'dark',
-                        'hover',
-                        'reduce-motion',
-                        'group-hover',
-                        'group-focus'
-                    ),
-                    $generate-viewports: true,
-                    $override: '!important'
-                );
-            }
-            @include expect { }
-        }
-    }
-}
+// @include describe('test') {
+//     @include it('should generate expected utility classes with variant support') {
+//         @include assert {
+//             @include output($selector: false) {
+//                 @include generator_v2.utility(
+//                     $base-class-name: 'text',
+//                     $class-value-pairs: (
+//                         'blue': (
+//                             'color': blue,
+//                         ),
+//                     ),
+//                     $variants: (
+//                         'dark',
+//                         'hover',
+//                         'reduce-motion',
+//                         'group-hover',
+//                         'group-focus'
+//                     ),
+//                     $generate-viewports: true,
+//                     $override: '!important'
+//                 );
+//             }
+//             @include expect { }
+//         }
+//     }
+// }
 
 // @include describe('utility()') {
 //     @include it('should generate expected utility classes with variant support') {

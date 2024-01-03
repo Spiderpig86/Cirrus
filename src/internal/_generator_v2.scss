@@ -190,7 +190,6 @@ $default-variant-delimiter: '\\:';
     #{$base} {
         @content;
     }
-    // @content();
 }
 
 @mixin kv-class-generator($class-value-pairs: (), $variants: (), $context: ()) {
