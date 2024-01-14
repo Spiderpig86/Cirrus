@@ -23,7 +23,7 @@ $default-variant-delimiter: '\\:';
     $generate-viewports: false,
     $override: $default-override
 ) {
-    @include generate-rules-pseudos-selectors($variants: $variants) using ($props...) {
+    @include generate-rules-pseudos-selectors($variants: $variants, $generate-viewports: false) using ($props...) {
         @debug props $props;
         // @each $key, $value in $class-value-pairs {
         //     // $base: '#{$base-class-name}#{$delimiter}#{$key}';
@@ -173,8 +173,8 @@ $default-variant-delimiter: '\\:';
 
     @if $scope and $pseudo {
         // For group related variants (e.g. .group:hover)
-        $parent-selector: selector.append($scope, ':#{pseudo}');
-        $base: selector.nest($scope, string-to-class($base)); // Nest class below the parent selector
+        $parent-selector: selector.append($scope, ':#{$pseudo}');
+        $base: selector.nest($parent-selector, string-to-class($base)); // Nest class below the parent selector
     } @else if $scope {
         // Contains parent selector
         $base: selector.nest($scope, string-to-class($base));
