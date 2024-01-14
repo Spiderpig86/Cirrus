@@ -1,35 +1,189 @@
-// // _generator.scss unit tests
-// @use '../test_base' as *;
+// _generator.scss unit tests
+@use '../test_base' as *;
 
-// @use '../../src/internal/generator_v2';
-// @use '../../src/internal/mixins';
+@use '../../src/internal/generator_v2';
+@use '../../src/internal/mixins';
 
-// @include describe('test') {
-//     @include it('should generate expected utility classes with variant support') {
-//         @include assert {
-//             @include output($selector: false) {
-//                 @include generator_v2.utility(
-//                     $base-class-name: 'text',
-//                     $class-value-pairs: (
-//                         'blue': (
-//                             'color': blue,
-//                         ),
-//                     ),
-//                     $variants: (
-//                         'dark',
-//                         'hover',
-//                         'reduce-motion',
-//                         'group-hover',
-//                         'group-focus'
-//                     ),
-//                     $generate-viewports: true,
-//                     $override: '!important'
-//                 );
-//             }
-//             @include expect { }
-//         }
-//     }
-// }
+@include describe('utility()') {
+    @include it('simple variant support') {
+        @include assert {
+            @include output($selector: false) {
+                @include generator_v2.utility(
+                    $base-class-name: 'text',
+                    $class-value-pairs: (
+                        'blue': (
+                            'color': blue,
+                        ),
+                    ),
+                    $variants: (
+                        'dark',
+                    ),
+                    $generate-viewports: false,
+                    $override: '!important'
+                );
+            }
+            @include expect($selector: false) {
+                .text-blue {
+                    color: blue !important;
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    .dark\:text-blue {
+                        color: blue !important;
+                    }
+                }
+            }
+        }
+    }
+    @include it('test for rules, viewports, and other variants') {
+        @include assert {
+            @include output($selector: false) {
+                @include generator_v2.utility(
+                    $base-class-name: 'text',
+                    $class-value-pairs: (
+                        'blue': (
+                            'color': blue,
+                        ),
+                    ),
+                    $variants: (
+                        'dark',
+                        'hover',
+                        'reduce-motion',
+                        'group-hover',
+                        'group-focus',
+                    ),
+                    $generate-viewports: true,
+                    $override: '!important'
+                );
+            }
+            @include expect($selector: false) {
+                .text-blue {
+                    color: blue !important;
+                }
+
+                .hover\:text-blue:hover {
+                    color: blue !important;
+                }
+
+                .group:hover .group-hover\:text-blue {
+                    color: blue !important;
+                }
+
+                .group:focus .group-focus\:text-blue {
+                    color: blue !important;
+                }
+
+                @media (min-width: 640px) {
+                    .sm\:text-blue {
+                        color: blue !important;
+                    }
+
+                    .sm\:hover\:text-blue:hover {
+                        color: blue !important;
+                    }
+
+                    .group:hover .sm\:group-hover\:text-blue {
+                        color: blue !important;
+                    }
+
+                    .group:focus .sm\:group-focus\:text-blue {
+                        color: blue !important;
+                    }
+                }
+
+                @media (min-width: 768px) {
+                    .md\:text-blue {
+                        color: blue !important;
+                    }
+
+                    .md\:hover\:text-blue:hover {
+                        color: blue !important;
+                    }
+
+                    .group:hover .md\:group-hover\:text-blue {
+                        color: blue !important;
+                    }
+
+                    .group:focus .md\:group-focus\:text-blue {
+                        color: blue !important;
+                    }
+                }
+
+                @media (min-width: 1024px) {
+                    .lg\:text-blue {
+                        color: blue !important;
+                    }
+
+                    .lg\:hover\:text-blue:hover {
+                        color: blue !important;
+                    }
+
+                    .group:hover .lg\:group-hover\:text-blue {
+                        color: blue !important;
+                    }
+
+                    .group:focus .lg\:group-focus\:text-blue {
+                        color: blue !important;
+                    }
+                }
+
+                @media (min-width: 1280px) {
+                    .xl\:text-blue {
+                        color: blue !important;
+                    }
+
+                    .xl\:hover\:text-blue:hover {
+                        color: blue !important;
+                    }
+
+                    .group:hover .xl\:group-hover\:text-blue {
+                        color: blue !important;
+                    }
+
+                    .group:focus .xl\:group-focus\:text-blue {
+                        color: blue !important;
+                    }
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    .dark\:text-blue {
+                        color: blue !important;
+                    }
+
+                    .dark\:hover\:text-blue:hover {
+                        color: blue !important;
+                    }
+
+                    .group:hover .dark\:group-hover\:text-blue {
+                        color: blue !important;
+                    }
+
+                    .group:focus .dark\:group-focus\:text-blue {
+                        color: blue !important;
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:text-blue {
+                        color: blue !important;
+                    }
+
+                    .reduce-motion\:hover\:text-blue:hover {
+                        color: blue !important;
+                    }
+
+                    .group:hover .reduce-motion\:group-hover\:text-blue {
+                        color: blue !important;
+                    }
+
+                    .group:focus .reduce-motion\:group-focus\:text-blue {
+                        color: blue !important;
+                    }
+                }
+            }
+        }
+    }
+}
 
 // @include describe('utility()') {
 //     @include it('should generate expected utility classes with variant support') {

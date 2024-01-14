@@ -23,19 +23,7 @@ $default-variant-delimiter: '\\:';
     $generate-viewports: false,
     $override: $default-override
 ) {
-    @include generate-rules-pseudos-selectors($variants: $variants, $generate-viewports: false) using ($props...) {
-        @debug props $props;
-        // @each $key, $value in $class-value-pairs {
-        //     // $base: '#{$base-class-name}#{$delimiter}#{$key}';
-        //     // @debug base $base;
-        //     #{$base-class-name}#{$delimiter}#{$key} {
-        //         @include generate-rules-pseudos-selectors($props...) {
-        //             // @include mixins.explode-properties($value, $override);
-        //             color: #fff;
-        //         }
-        //     }
-        // }
-
+    @include generate-rules-pseudos-selectors($variants: $variants, $generate-viewports: $generate-viewports) using ($props...) {
         #{$base-class-name} {
             @include kv-class-generator($class-value-pairs, $props...) using ($value) {
                 @include mixins.explode-properties($value, $override);
@@ -63,11 +51,9 @@ $default-variant-delimiter: '\\:';
             $pseudos: list.append($pseudos, $variant);
         }
     }
-    @debug rules $rules;
-    @debug pseudos $pseudos;
 
     // Generate classes without rules
-    @include generate-variants($pseudos) using ($props...) {
+    @include generate-variants($pseudos, $context) using ($props...) {
         @content ($props...);
     }
 
@@ -98,7 +84,6 @@ $default-variant-delimiter: '\\:';
 @mixin generate-variants($variants: (), $context: ()) {
     // Get classes without pseudos, only rules
     @if & {
-        @debug has parent;
         @include get-base-class($context...) {
             @content;
         }
@@ -111,7 +96,6 @@ $default-variant-delimiter: '\\:';
                     pseudo: $variant,
                 )
             );
-
             @if string.index($variant, 'group-') {
                 $current-context: map.merge(
                     $current-context,
@@ -122,13 +106,11 @@ $default-variant-delimiter: '\\:';
                 );
             }
 
-            @debug current context $current-context;
             @include get-base-class($current-context...) {
                 @content;
             }
         }
     } @else {
-        @debug no current selector $variants;
         @content ($variants, $context);
     }
 }
@@ -149,26 +131,18 @@ $default-variant-delimiter: '\\:';
     }
 
     @at-root {
-        @debug base $base;
-        @debug context $context;
         @include generate-class($base, $context...) {
             @content;
         }
-        // @content ($context...);
     }
 }
 
 @mixin generate-class($base, $rule: null, $variant: null, $pseudo: null, $scope: null) {
-    @debug here;
-    @debug $rule;
-    @debug $variant;
-    @debug $pseudo;
-    @debug $scope;
-    @if $rule {
-        $base: selector.append('#{$rule}#{$default-variant-delimiter}', $base);
-    }
     @if $variant {
         $base: selector.append('#{$variant}#{$default-variant-delimiter}', $base);
+    }
+    @if $rule {
+        $base: selector.append('#{$rule}#{$default-variant-delimiter}', $base);
     }
 
     @if $scope and $pseudo {
@@ -197,7 +171,6 @@ $default-variant-delimiter: '\\:';
         @each $key, $value in $class-value-pairs {
             &#{$default-delimiter}#{$key} {
                 @include generate-rules-pseudos-selectors($variants, $context) {
-                    // @include mixins.explode-properties($value, $override);
                     @content ($value);
                 }
             }
@@ -207,7 +180,6 @@ $default-variant-delimiter: '\\:';
             @each $key, $value in $class-value-pairs {
                 .#{$key} {
                     @include generate-rules-pseudos-selectors($variants, $context) {
-                        // @include mixins.explode-properties($value, $override);
                         @content ($value);
                     }
                 }
@@ -268,7 +240,5 @@ $default-variant-delimiter: '\\:';
             $result: list.append($result, '.#{$s}', $separator);
         }
     }
-    @debug $result;
-
     @return $result;
 }
