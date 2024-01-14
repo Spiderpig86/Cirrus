@@ -13,6 +13,19 @@ $default-delimiter: '-';
 $default-variant-delimiter: '\\:';
 
 // ALL WIP
+/*
+    Main utility for generating utility classes with different viewports, delimiters, base class names, etc.
+    Example: .sm\:hover\:u-text-blue:hover { ... }
+
+    @class-prefix {string} [$default-prefix] - prefix used for generated classes. This is the first section of the class name
+    @delimiter {string} [$default-delimiter] - delimiter used in class name body but not for separating psuedos
+    @base-class-name {string} - the root of the class name. For the utility class above, 'blue' is the base class name
+    @class-value-pairs {map<string, any>[]} - list of mappings that maps the variant name (e.g. 'blue') to a map of CSS properties to values
+    @variants {string[]} [()] - list of strings specifying which variants to generate styles for
+    @variant-delimiter {string} [$default-variant-delimiter] - delimiter used to separate the variant portion of the class
+    @generate-viewports {boolean} [false] - flag to indicate if we should generate classes with different viewports
+    @override {string} [$default-override] - override for CSS properties, like '!important'
+*/
 @mixin utility(
     $class-prefix: $default-prefix,
     $delimiter: $default-delimiter,
@@ -23,7 +36,12 @@ $default-variant-delimiter: '\\:';
     $generate-viewports: false,
     $override: $default-override
 ) {
-    @include generate-rules-pseudos-selectors($variants: $variants, $generate-viewports: $generate-viewports) using ($props...) {
+    $context: (
+        'delimiter': $delimiter,
+        'variant-delimiter': $variant-delimiter
+    );
+    @include generate-rules-pseudos-selectors($variants: $variants, $context: $context, $generate-viewports: $generate-viewports) using
+        ($props...) {
         #{$base-class-name} {
             @include kv-class-generator($class-value-pairs, $props...) using ($value) {
                 @include mixins.explode-properties($value, $override);
@@ -137,12 +155,12 @@ $default-variant-delimiter: '\\:';
     }
 }
 
-@mixin generate-class($base, $rule: null, $variant: null, $pseudo: null, $scope: null) {
+@mixin generate-class($base, $delimiter, $variant-delimiter, $rule: null, $variant: null, $pseudo: null, $scope: null) {
     @if $variant {
-        $base: selector.append('#{$variant}#{$default-variant-delimiter}', $base);
+        $base: selector.append('#{$variant}#{$variant-delimiter}', $base);
     }
     @if $rule {
-        $base: selector.append('#{$rule}#{$default-variant-delimiter}', $base);
+        $base: selector.append('#{$rule}#{$variant-delimiter}', $base);
     }
 
     @if $scope and $pseudo {
@@ -169,7 +187,7 @@ $default-variant-delimiter: '\\:';
 @mixin kv-class-generator($class-value-pairs: (), $variants: (), $context: ()) {
     @if & {
         @each $key, $value in $class-value-pairs {
-            &#{$default-delimiter}#{$key} {
+            &#{map.get($context, 'delimiter')}#{$key} {
                 @include generate-rules-pseudos-selectors($variants, $context) {
                     @content ($value);
                 }
