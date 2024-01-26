@@ -1,10 +1,16 @@
-const prop = require('./package.json');
-const minify = require('gulp-clean-css');
-const sass = require('gulp-sass')(require('sass')); // Use Dart Sass;
-const gulp = require('gulp');
-const $ = require('gulp-load-plugins')();
-const sizereport = require('gulp-sizereport');
-const gzip = require('gulp-gzip');
+import prop from './package.json' assert { type: 'json' };
+import minify from 'gulp-clean-css';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+const sass = gulpSass(dartSass);
+import gulp from 'gulp';
+// import gulpLoadPlugins from 'gulp-load-plugins';
+// const $ = gulpLoadPlugins();
+import concat from 'gulp-concat';
+import header from 'gulp-header';
+import sizereport from 'gulp-sizereport';
+import gzip from 'gulp-gzip';
+import size from 'gulp-size';
 const head =
     '/*\r\n* Cirrus ' +
     prop.version +
@@ -40,9 +46,9 @@ function generateGulpBuild(taskName, sassFilePath, outputName) {
                     }
                 })
             )
-            .pipe($.concat(`${outputName}.css`))
-            .pipe($.header(head))
-            .pipe($.size())
+            .pipe(concat(`${outputName}.css`))
+            .pipe(header(head))
+            .pipe(size())
             .pipe(gulp.dest('./dist/'))
             .on('error', (err) => {
                 console.error(err);
@@ -86,9 +92,9 @@ function generateGulpBuild(taskName, sassFilePath, outputName) {
                             }
                         )
                     )
-                    .pipe($.header(head))
-                    .pipe($.size())
-                    .pipe($.concat(`${outputName}.min.css`))
+                    .pipe(header(head))
+                    .pipe(size())
+                    .pipe(concat(`${outputName}.min.css`))
                     .pipe(gulp.dest('./dist/'))
                     .on('error', (err) => {
                         console.error(`Error encountered for task ${taskName}. Failing.`);

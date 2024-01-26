@@ -43,11 +43,9 @@
         "gulp": "^4.0.2",
         "gulp-build": "^0.5.3",
         "gulp-clean-css": "^4.2.0",
-        "gulp-cli": "^2.0.1",
         "gulp-concat": "^2.6.1",
         "gulp-gzip": "^1.4.2",
         "gulp-header": "^2.0.5",
-        "gulp-load-plugins": "^2.0.1",
         "gulp-size": "^5.0.0",
         "jest-environment-node-single-context": "^29.2.0"
     },
@@ -61,5 +59,6 @@
         "sass": "^1.51.0",
         "sass-true": "^7.0.1"
     },
-    "snyk": true
+    "snyk": true,
+    "type": "module"
 }
