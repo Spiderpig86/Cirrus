@@ -38,10 +38,14 @@ $default-variant-delimiter: '\\:';
 ) {
     $context: (
         'delimiter': $delimiter,
-        'variant-delimiter': $variant-delimiter
+        'variant-delimiter': $variant-delimiter,
     );
-    @include generate-rules-pseudos-selectors($variants: $variants, $context: $context, $generate-viewports: $generate-viewports) using
-        ($props...) {
+    @include generate-rules-pseudos-selectors(
+            $variants: $variants,
+            $context: $context,
+            $generate-viewports: $generate-viewports
+        )
+        using ($props...) {
         #{$base-class-name} {
             @include kv-class-generator($class-value-pairs, $props...) using ($value) {
                 @include mixins.explode-properties($value, $override);
@@ -102,6 +106,9 @@ $default-variant-delimiter: '\\:';
 @mixin generate-variants($variants: (), $context: ()) {
     // Get classes without pseudos, only rules
     @if & {
+        // There is a parent selector. This is true if we are generating classes for the following scenarios:
+        //  - Classes with .group as parent
+        //  - Classes that have the main class name constructed. This is a recursive call to add in all the rules and variants to the class naming (e.g. text-blue and we want to add 'md:' and ':hover')
         @include get-base-class($context...) {
             @content;
         }
@@ -137,13 +144,12 @@ $default-variant-delimiter: '\\:';
     $base: ();
 
     @each $selector in & {
+        // If there are multiple parent selectors, iterate over each one and append it to our list of bases
+        // & is a list of lists, must get the first element to convert it to a string
         $selector: list.nth($selector, 1);
 
-        @if meta.type-of($selector) == 'string' {
-            $selector: string.slice($selector, 1);
-        }
-
         @if $selector {
+            // Required to be comma separated since it will be used in generate-class() and treated like a selector
             $base: list.append($base, $selector, comma);
         }
     }

@@ -185,139 +185,76 @@
     }
 }
 
-// @include describe('utility()') {
-//     @include it('should generate expected utility classes with variant support') {
-//         @include assert {
-//             @include output {
-//                 @include generator_v2.utility(
-//                     $common-class-name: 'text',
-//                     $class-value-pairs: (
-//                         'blue': (
-//                             'color': blue,
-//                         ),
-//                     ),
-//                     $variants: (
-//                         'dark',
-//                         'hover',
-//                         'reduce-motion',
-//                         'group-hover',
-//                         'group-focus'
-//                     ),
-//                     $generate-viewports: 'true',
-//                     $override: '!important'
-//                 );
-//             }
-//             @include expect {
-//                 .u-text-blue {
-//                     color: blue !important;
-//                 }
+@include describe('get-base-class()') {
+    @include it('works with list of string selectors') {
+        @include assert {
+            @include output($selector: false) {
+                $selectors: 'foo.bar', 'baz';
+                #{$selectors} {
+                    @include generator_v2.get-base-class(
+                        $delimiter: '-',
+                        $variant-delimiter: '\\:',
+                        $variant: 'hover',
+                        $pseudo: 'hover'
+                    ) {
+                        color: blue;
+                    }
+                }
+            }
+            @include expect($selector: false) {
+                .hover\:foo.bar:hover,
+                .hover\:baz:hover {
+                    color: blue;
+                }
+            }
+        }
+    }
+    @include it('works with list of selectors') {
+        @include assert {
+            @include output($selector: false) {
+                $selectors: foo, bar;
+                #{$selectors} {
+                    @include generator_v2.get-base-class(
+                        $delimiter: '-',
+                        $variant-delimiter: '\\:',
+                        $variant: 'hover',
+                        $pseudo: 'hover'
+                    ) {
+                        color: blue;
+                    }
+                }
+            }
+            @include expect($selector: false) {
+                .hover\:foo:hover,
+                .hover\:bar:hover {
+                    color: blue;
+                }
+            }
+        }
+    }
+    @include it('works with string selectors') {
+        @include assert {
+            @include output($selector: false) {
+                #{'test'} {
+                    @include generator_v2.get-base-class(
+                        $delimiter: '-',
+                        $variant-delimiter: '\\:',
+                        $variant: 'hover',
+                        $pseudo: 'hover'
+                    ) {
+                        color: blue;
+                    }
+                }
+            }
+            @include expect($selector: false) {
+                .hover\:test:hover {
+                    color: blue;
+                }
+            }
+        }
+    }
+}
 
-//                 .hover\:u-text-blue:hover {
-//                     color: blue !important;
-//                 }
-
-//                 @media (prefers-color-scheme: dark) {
-//                     .dark\:u-text-blue {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media (prefers-reduced-motion: reduce) {
-//                     .reduce-motion\:u-text-blue {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 640px) {
-//                     .sm\:u-text-blue {
-//                         color: blue !important;
-//                     }
-
-//                     .sm\:hover\:u-text-blue:hover {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 640px) and (prefers-color-scheme: dark) {
-//                     .sm\:dark\:u-text-blue {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 640px) and (prefers-reduced-motion: reduce) {
-//                     .sm\:reduce-motion\:u-text-blue {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 768px) {
-//                     .md\:u-text-blue {
-//                         color: blue !important;
-//                     }
-
-//                     .md\:hover\:u-text-blue:hover {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 768px) and (prefers-color-scheme: dark) {
-//                     .md\:dark\:u-text-blue {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 768px) and (prefers-reduced-motion: reduce) {
-//                     .md\:reduce-motion\:u-text-blue {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1024px) {
-//                     .lg\:u-text-blue {
-//                         color: blue !important;
-//                     }
-
-//                     .lg\:hover\:u-text-blue:hover {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1024px) and (prefers-color-scheme: dark) {
-//                     .lg\:dark\:u-text-blue {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1024px) and (prefers-reduced-motion: reduce) {
-//                     .lg\:reduce-motion\:u-text-blue {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1280px) {
-//                     .xl\:u-text-blue {
-//                         color: blue !important;
-//                     }
-
-//                     .xl\:hover\:u-text-blue:hover {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1280px) and (prefers-color-scheme: dark) {
-//                     .xl\:dark\:u-text-blue {
-//                         color: blue !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1280px) and (prefers-reduced-motion: reduce) {
-//                     .xl\:reduce-motion\:u-text-blue {
-//                         color: blue !important;
-//                     }
-//                 }
-//             }
-//         }
-//     }
 //     @include it('should generate expected utility classes with variant support for viewports') {
 //         @include assert {
 //             @include output {
