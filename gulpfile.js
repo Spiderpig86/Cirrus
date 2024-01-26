@@ -4,8 +4,6 @@ import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
 import gulp from 'gulp';
-// import gulpLoadPlugins from 'gulp-load-plugins';
-// const $ = gulpLoadPlugins();
 import concat from 'gulp-concat';
 import header from 'gulp-header';
 import sizereport from 'gulp-sizereport';

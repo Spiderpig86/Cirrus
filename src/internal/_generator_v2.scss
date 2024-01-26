@@ -216,7 +216,7 @@ $default-variant-delimiter: '\\:';
     $result: ();
 
     @each $key, $value in config.$breakpoint-pairs {
-        $result: map.set($result, $key, '@media (min-width: #{map-get(config.$breakpoints, $value)})');
+        $result: map.set($result, $key, '@media screen and (min-width: #{map-get(config.$breakpoints, $value)})');
     }
 
     @return $result;

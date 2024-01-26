@@ -73,7 +73,7 @@
                     color: blue !important;
                 }
 
-                @media (min-width: 640px) {
+                @media screen and (min-width: 640px) {
                     .sm\:text-blue {
                         color: blue !important;
                     }
@@ -91,7 +91,7 @@
                     }
                 }
 
-                @media (min-width: 768px) {
+                @media screen and (min-width: 768px) {
                     .md\:text-blue {
                         color: blue !important;
                     }
@@ -109,7 +109,7 @@
                     }
                 }
 
-                @media (min-width: 1024px) {
+                @media screen and (min-width: 1024px) {
                     .lg\:text-blue {
                         color: blue !important;
                     }
@@ -127,7 +127,7 @@
                     }
                 }
 
-                @media (min-width: 1280px) {
+                @media screen and (min-width: 1280px) {
                     .xl\:text-blue {
                         color: blue !important;
                     }
@@ -253,180 +253,147 @@
             }
         }
     }
+
+    @include it('should generate expected utility classes with variant support for viewports') {
+        @include assert {
+            @include output($selector: false) {
+                @include generator_v2.utility(
+                    $base-class-name: 'col',
+                    $class-value-pairs: (
+                        '0': (
+                            'width': 0%,
+                        ),
+                        '1': (
+                            'width': 25%,
+                        ),
+                        '2': (
+                            'width': 50%,
+                        ),
+                        '3': (
+                            'width': 75%,
+                        ),
+                        '4': (
+                            'width': 100%,
+                        ),
+                    ),
+                    $variants: (),
+                    $class-prefix: '',
+                    $generate-viewports: true,
+                    $override: '!important'
+                );
+            }
+            @include expect($selector: false) {
+                .col-0 {
+                    width: 0% !important;
+                }
+
+                .col-1 {
+                    width: 25% !important;
+                }
+
+                .col-2 {
+                    width: 50% !important;
+                }
+
+                .col-3 {
+                    width: 75% !important;
+                }
+
+                .col-4 {
+                    width: 100% !important;
+                }
+
+                @media screen and (min-width: 640px) {
+                    .sm\:col-0 {
+                        width: 0% !important;
+                    }
+
+                    .sm\:col-1 {
+                        width: 25% !important;
+                    }
+
+                    .sm\:col-2 {
+                        width: 50% !important;
+                    }
+
+                    .sm\:col-3 {
+                        width: 75% !important;
+                    }
+
+                    .sm\:col-4 {
+                        width: 100% !important;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    .md\:col-0 {
+                        width: 0% !important;
+                    }
+
+                    .md\:col-1 {
+                        width: 25% !important;
+                    }
+
+                    .md\:col-2 {
+                        width: 50% !important;
+                    }
+
+                    .md\:col-3 {
+                        width: 75% !important;
+                    }
+
+                    .md\:col-4 {
+                        width: 100% !important;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) {
+                    .lg\:col-0 {
+                        width: 0% !important;
+                    }
+
+                    .lg\:col-1 {
+                        width: 25% !important;
+                    }
+
+                    .lg\:col-2 {
+                        width: 50% !important;
+                    }
+
+                    .lg\:col-3 {
+                        width: 75% !important;
+                    }
+
+                    .lg\:col-4 {
+                        width: 100% !important;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) {
+                    .xl\:col-0 {
+                        width: 0% !important;
+                    }
+
+                    .xl\:col-1 {
+                        width: 25% !important;
+                    }
+
+                    .xl\:col-2 {
+                        width: 50% !important;
+                    }
+
+                    .xl\:col-3 {
+                        width: 75% !important;
+                    }
+
+                    .xl\:col-4 {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
 }
-
-//     @include it('should generate expected utility classes with variant support for viewports') {
-//         @include assert {
-//             @include output {
-//                 @include generator_v2.utility(
-//                     $common-class-name: 'col',
-//                     $class-value-pairs: (
-//                         '0': (
-//                             'width': 0%,
-//                         ),
-//                         '1': (
-//                             'width': 25%,
-//                         ),
-//                         '2': (
-//                             'width': 50%,
-//                         ),
-//                         '3': (
-//                             'width': 75%,
-//                         ),
-//                         '4': (
-//                             'width': 100%,
-//                         ),
-//                     ),
-//                     $variants: (),
-//                     $prefix: '',
-//                     $generate-viewports: 'true',
-//                     $override: '!important'
-//                 );
-//             }
-//             @include expect {
-//                 .col-0 {
-//                     width: 0% !important;
-//                 }
-
-//                 .col-1 {
-//                     width: 25% !important;
-//                 }
-
-//                 .col-2 {
-//                     width: 50% !important;
-//                 }
-
-//                 .col-3 {
-//                     width: 75% !important;
-//                 }
-
-//                 .col-4 {
-//                     width: 100% !important;
-//                 }
-
-//                 @media screen and (min-width: 640px) {
-//                     .sm\:col-0 {
-//                         width: 0% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 640px) {
-//                     .sm\:col-1 {
-//                         width: 25% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 640px) {
-//                     .sm\:col-2 {
-//                         width: 50% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 640px) {
-//                     .sm\:col-3 {
-//                         width: 75% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 640px) {
-//                     .sm\:col-4 {
-//                         width: 100% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 768px) {
-//                     .md\:col-0 {
-//                         width: 0% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 768px) {
-//                     .md\:col-1 {
-//                         width: 25% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 768px) {
-//                     .md\:col-2 {
-//                         width: 50% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 768px) {
-//                     .md\:col-3 {
-//                         width: 75% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 768px) {
-//                     .md\:col-4 {
-//                         width: 100% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1024px) {
-//                     .lg\:col-0 {
-//                         width: 0% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1024px) {
-//                     .lg\:col-1 {
-//                         width: 25% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1024px) {
-//                     .lg\:col-2 {
-//                         width: 50% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1024px) {
-//                     .lg\:col-3 {
-//                         width: 75% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1024px) {
-//                     .lg\:col-4 {
-//                         width: 100% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1280px) {
-//                     .xl\:col-0 {
-//                         width: 0% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1280px) {
-//                     .xl\:col-1 {
-//                         width: 25% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1280px) {
-//                     .xl\:col-2 {
-//                         width: 50% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1280px) {
-//                     .xl\:col-3 {
-//                         width: 75% !important;
-//                     }
-//                 }
-
-//                 @media screen and (min-width: 1280px) {
-//                     .xl\:col-4 {
-//                         width: 100% !important;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
 
 // @include describe('utility-with-body()') {
 //     @include it('should generate expected utility classes with variant support') {
