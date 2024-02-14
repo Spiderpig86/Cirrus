@@ -1,5 +1,5 @@
 export const PAGE_TITLE_PREFIX = 'Cirrus -';
-export const VERSION = '0.7.2 Patch 1;
+export const VERSION = '0.7.2 Patch 1';
 export const VERSION_NAME = 'Gamma VIII';
 
 export const v1Colors = ['dark', 'primary', 'link', 'info', 'success', 'warning', 'danger'];
