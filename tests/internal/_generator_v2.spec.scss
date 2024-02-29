@@ -183,72 +183,69 @@
             }
         }
     }
-}
+    @include it('works with single nested parent') {
+        @include assert {
+            @include output($selector: false) {
+                .fizz {
+                    @include generator_v2.utility(
+                        $base-class-name: 'text',
+                        $class-value-pairs: (
+                            'blue': (
+                                'color': blue,
+                            ),
+                        ),
+                        $variants: (
+                            'dark',
+                        ),
+                        $generate-viewports: false,
+                        $override: '!important'
+                    );
+                }
+            }
+            @include expect($selector: false) {
+                .fizz .text-blue {
+                    color: blue !important;
+                }
 
-@include describe('get-base-class()') {
-    @include it('works with list of string selectors') {
-        @include assert {
-            @include output($selector: false) {
-                $selectors: 'foo.bar', 'baz';
-                #{$selectors} {
-                    @include generator_v2.get-base-class(
-                        $delimiter: '-',
-                        $variant-delimiter: '\\:',
-                        $variant: 'hover',
-                        $pseudo: 'hover'
-                    ) {
-                        color: blue;
+                @media (prefers-color-scheme: dark) {
+                    .fizz .dark\:text-blue {
+                        color: blue !important;
                     }
-                }
-            }
-            @include expect($selector: false) {
-                .hover\:foo.bar:hover,
-                .hover\:baz:hover {
-                    color: blue;
                 }
             }
         }
     }
-    @include it('works with list of selectors') {
+
+    @include it('works with multiple nested parents and attached classes') {
         @include assert {
             @include output($selector: false) {
-                $selectors: foo, bar;
-                #{$selectors} {
-                    @include generator_v2.get-base-class(
-                        $delimiter: '-',
-                        $variant-delimiter: '\\:',
-                        $variant: 'hover',
-                        $pseudo: 'hover'
-                    ) {
-                        color: blue;
+                .fizz.zzif {
+                    .buzz {
+                        @include generator_v2.utility(
+                            $base-class-name: 'text',
+                            $class-value-pairs: (
+                                'blue': (
+                                    'color': blue,
+                                ),
+                            ),
+                            $variants: (
+                                'dark',
+                            ),
+                            $generate-viewports: false,
+                            $override: '!important'
+                        );
                     }
                 }
             }
             @include expect($selector: false) {
-                .hover\:foo:hover,
-                .hover\:bar:hover {
-                    color: blue;
+                .fizz.zzif .buzz .text-blue {
+                    color: blue !important;
                 }
-            }
-        }
-    }
-    @include it('works with string selectors') {
-        @include assert {
-            @include output($selector: false) {
-                #{'test'} {
-                    @include generator_v2.get-base-class(
-                        $delimiter: '-',
-                        $variant-delimiter: '\\:',
-                        $variant: 'hover',
-                        $pseudo: 'hover'
-                    ) {
-                        color: blue;
+
+                @media (prefers-color-scheme: dark) {
+                    .fizz.zzif .buzz .dark\:text-blue {
+                        color: blue !important;
                     }
-                }
-            }
-            @include expect($selector: false) {
-                .hover\:test:hover {
-                    color: blue;
                 }
             }
         }
@@ -389,6 +386,34 @@
                     .xl\:col-4 {
                         width: 100% !important;
                     }
+                }
+            }
+        }
+    }
+}
+
+@include describe('get-base-class()') {
+    @include it('basic test') {
+        @include assert {
+            @include output($selector: false) {
+                @include generator_v2.get-base-class(
+                        $config: (
+                            'delimiter': '-',
+                            'variant-delimiter': '\\:',
+                        ),
+                        $context: (
+                            base-class-name: 'text-blue',
+                            variant: 'hover',
+                            pseudo: 'hover',
+                        )
+                    )
+                    using ($props...) {
+                    color: blue;
+                }
+            }
+            @include expect($selector: false) {
+                .hover\:text-blue:hover {
+                    color: blue;
                 }
             }
         }

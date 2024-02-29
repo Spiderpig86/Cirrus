@@ -36,25 +36,25 @@ $default-variant-delimiter: '\\:';
     $generate-viewports: false,
     $override: $default-override
 ) {
-    $context: (
-        'delimiter': $delimiter,
-        'variant-delimiter': $variant-delimiter,
+    $config: (
+        delimiter: $delimiter,
+        variant-delimiter: $variant-delimiter,
     );
     @include generate-rules-pseudos-selectors(
+            $config: $config,
             $variants: $variants,
-            $context: $context,
+            $context: (),
             $generate-viewports: $generate-viewports
         )
         using ($props...) {
-        #{$base-class-name} {
-            @include kv-class-generator($class-value-pairs, $props...) using ($value) {
-                @include mixins.explode-properties($value, $override);
-            }
+        @include kv-class-generator($base-class-name, $class-value-pairs, $props...) using ($key, $value, $props...) {
+            // Set $props... so we don't crash in the event of extra params (can happen due to very recursive nature of this generator)
+            @include mixins.explode-properties($value, $override);
         }
     }
 }
 
-@mixin generate-rules-pseudos-selectors($variants: (), $context: (), $generate-viewports: false) {
+@mixin generate-rules-pseudos-selectors($config, $variants: (), $context: (), $generate-viewports: false) {
     $rules: (); // Media queries, after responsive classes
     $pseudos: (); // Selectors like :focus
 
@@ -75,7 +75,7 @@ $default-variant-delimiter: '\\:';
     }
 
     // Generate classes without rules
-    @include generate-variants($pseudos, $context) using ($props...) {
+    @include generate-variants($config, $pseudos, $context) using ($props...) {
         @content ($props...);
     }
 
@@ -94,7 +94,7 @@ $default-variant-delimiter: '\\:';
                 $value: string.slice($value, 7);
 
                 @media #{$value} {
-                    @include generate-variants($pseudos, $current-context) using ($props...) {
+                    @include generate-variants($config, $pseudos, $current-context) using ($props...) {
                         @content ($props...);
                     }
                 }
@@ -103,14 +103,15 @@ $default-variant-delimiter: '\\:';
     }
 }
 
-@mixin generate-variants($variants: (), $context: ()) {
+@mixin generate-variants($config, $variants: (), $context: ()) {
     // Get classes without pseudos, only rules
-    @if & {
+    $base-class-name: map-get($context, base-class-name);
+    @if $base-class-name != null {
         // There is a parent selector. This is true if we are generating classes for the following scenarios:
         //  - Classes with .group as parent
         //  - Classes that have the main class name constructed. This is a recursive call to add in all the rules and variants to the class naming (e.g. text-blue and we want to add 'md:' and ':hover')
-        @include get-base-class($context...) {
-            @content;
+        @include get-base-class($config, $context) using ($props...) {
+            @content ($props...);
         }
 
         @each $variant in $variants {
@@ -131,37 +132,37 @@ $default-variant-delimiter: '\\:';
                 );
             }
 
-            @include get-base-class($current-context...) {
-                @content;
+            @include get-base-class($config, $current-context) using ($props...) {
+                @content ($props...);
             }
         }
     } @else {
-        @content ($variants, $context);
+        @content ($config, $variants, $context);
     }
 }
 
-@mixin get-base-class($context...) {
+@mixin get-base-class($config, $context) {
     $base: ();
-
-    @each $selector in & {
-        // If there are multiple parent selectors, iterate over each one and append it to our list of bases
-        // & is a list of lists, must get the first element to convert it to a string
-        $selector: list.nth($selector, 1);
-
-        @if $selector {
-            // Required to be comma separated since it will be used in generate-class() and treated like a selector
-            $base: list.append($base, $selector, comma);
-        }
+    $base-class-name: map-get($context, base-class-name);
+    @if $base-class-name != null {
+        // Required to be comma separated since it will be used in generate-class() and treated like a selector
+        $base: list.append($base, $base-class-name, comma);
     }
 
-    @at-root {
-        @include generate-class($base, $context...) {
-            @content;
-        }
+    @include generate-class($config, $base, $context...) using ($props...) {
+        @content ($props...);
     }
 }
 
-@mixin generate-class($base, $delimiter, $variant-delimiter, $rule: null, $variant: null, $pseudo: null, $scope: null) {
+@mixin generate-class($config, $base, $rule: null, $variant: null, $pseudo: null, $scope: null, $base-class-name: '') {
+    $delimiter: map.get(
+        $map: $config,
+        $key: delimiter,
+    );
+    $variant-delimiter: map.get(
+        $map: $config,
+        $key: variant-delimiter,
+    );
     @if $variant {
         $base: selector.append('#{$variant}#{$variant-delimiter}', $base);
     }
@@ -186,25 +187,29 @@ $default-variant-delimiter: '\\:';
 
     // Generate the class
     #{$base} {
-        @content;
+        @content ($config);
     }
 }
 
-@mixin kv-class-generator($class-value-pairs: (), $variants: (), $context: ()) {
-    @if & {
+@mixin kv-class-generator($base-class-name, $class-value-pairs, $config: (), $variants: (), $context: ()) {
+    @if $base-class-name != null {
         @each $key, $value in $class-value-pairs {
-            &#{map.get($context, 'delimiter')}#{$key} {
-                @include generate-rules-pseudos-selectors($variants, $context) {
-                    @content ($value);
-                }
+            $context: map-merge(
+                $context,
+                (
+                    base-class-name: $base-class-name + map.get($config, delimiter) + $key,
+                )
+            );
+            @include generate-rules-pseudos-selectors($config, $variants, $context) using ($props...) {
+                @content ($key, $value, $props...);
             }
         }
     } @else {
-        @include generate-rules-pseudos-selectors($variants, $context) using ($props...) {
+        @include generate-rules-pseudos-selectors($config, $variants, $context) using ($props...) {
             @each $key, $value in $class-value-pairs {
                 .#{$key} {
-                    @include generate-rules-pseudos-selectors($variants, $context) {
-                        @content ($value);
+                    @include generate-rules-pseudos-selectors($config, $variants, $context) using ($props...) {
+                        @content ($key, $value, $props...);
                     }
                 }
             }
@@ -260,8 +265,9 @@ $default-variant-delimiter: '\\:';
     $result: ();
 
     @each $s in $selector {
-        @if $s != '' {
-            $result: list.append($result, '.#{$s}', $separator);
+        $selector-str: '#{$s}';
+        @if $selector-str != '' {
+            $result: list.append($result, '.#{$selector-str}', $separator);
         }
     }
     @return $result;
