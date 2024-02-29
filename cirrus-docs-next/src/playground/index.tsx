@@ -29,7 +29,7 @@ export const PlaygroundPage: React.FC<any> = () => {
     const [code, setCode] = useState(``);
     const [isDragging, setDragging] = useState(false); // Hacky workaround https://github.com/tomkp/react-split-pane/issues/30
     const [isEditorHorizontal, setEditorHorizontal] = useState(false);
-    const [playgroundCdn, setPlaygroundCdn] = useState(PLAYGROUND_ENDPOINT_MAP.get(`0.7.2`));
+    const [playgroundCdn, setPlaygroundCdn] = useState(`0.7.2`);
     const [iframeKey, setIFrameKey] = useState(`original`);
     const [splitPaneSize, setSplitPaneSize] = useState<string | number>(`50%`);
 
