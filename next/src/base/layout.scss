@@ -22,6 +22,25 @@
     @return $result;
 }
 
+@function get-offset-map($num-columns, $width) {
+    $result: ();
+
+    @for $i from 1 through $num-columns {
+        $result: map.set(
+            $result,
+            $i,
+            (
+                margin-left:
+                    percentage(
+                        $number: $width * $i,
+                    ),
+            )
+        );
+    }
+
+    @return $result;
+}
+
 /* This works well with panel */
 section {
     display: block;
@@ -196,46 +215,27 @@ section {
         padding: 0 0.5rem;
     }
 
-    $col-map: get-column-map($flex-columns, $flex-width);
-    @debug $col-map;
     @include generator_v2.utility(
         $base-class-name: 'col',
-        $class-value-pairs: $col-map,
+        $class-value-pairs: get-column-map($flex-columns, $flex-width),
         $variants: (),
         $class-prefix: '',
         $generate-viewports: true,
         $override: '!important'
     );
 
-    /* Column sizes for various viewports */
-    // @for $i from 1 through $flex-columns {
-    //     @include screen-above($sm) {
-    //         // Same as col-md-<number>
-    //         .col-#{$i} {
-    //             width: percentage($number: $flex-width * $i);
-    //         }
-    //     }
-    // }
-
-    // @include generate-styles-with-viewports() using ($viewport) {
-    //     @for $i from 1 through $flex-columns {
-    //         // For sm, viewport is empty
-    //         $v: if($viewport != '', '-#{$viewport}-', '-xs-');
-    //         .col#{$v}#{$i} {
-    //             width: percentage($number: $flex-width * $i);
-    //         }
-    //     }
-    // }
-
-    // @for $i from 1 through $flex-columns {
-    //     @include screen-above($xs) {
-    //         .offset-#{$i} {
-    //             margin-left: percentage($number: $flex-width * $i);
-    //         }
-    //     }
-    // }
+    // TODO: Deprecate 0.8.0?
+    @include generator_v2.utility(
+        $base-class-name: 'offset',
+        $class-value-pairs: get-offset-map($flex-columns, $flex-width),
+        $variants: (),
+        $class-prefix: '',
+        $generate-viewports: true,
+        $override: '!important'
+    );
 
     /* Columns without the spacing */
+    // TODO: Deprecate 0.8.0, use p-0 instead
     &.no-space [class^='col-'],
     &.no-space [class*=' col-'] {
         padding: 0;
@@ -267,22 +267,54 @@ section {
 }
 
 /* Width/Height CSS */
-@include generate-classes-for-viewport-with-map($heights, 'height', 'h-', #{get-viewport-flag($HEIGHTS)});
-@include generate-classes-for-viewport-with-map($widths, 'width', 'w-', #{get-viewport-flag($WIDTHS)});
-@include generate-classes-for-viewport-with-map(
-    $min-heights,
-    'min-height',
-    'min-h-',
-    #{get-viewport-flag($MIN-HEIGHT)}
+@include generator_v2.utility(
+    $base-class-name: 'h',
+    $class-value-pairs: generator_v2.class-value-to-property-map($heights, height),
+    $variants: (),
+    $class-prefix: '',
+    $generate-viewports: get-viewport-flag($HEIGHTS),
+    $override: '!important'
 );
-@include generate-classes-for-viewport-with-map($min-widths, 'min-width', 'min-w-', #{get-viewport-flag($MIN-WIDTH)});
-@include generate-classes-for-viewport-with-map(
-    $max-heights,
-    'max-height',
-    'max-h-',
-    #{get-viewport-flag($MAX-HEIGHT)}
+@include generator_v2.utility(
+    $base-class-name: 'w',
+    $class-value-pairs: generator_v2.class-value-to-property-map($widths, width),
+    $variants: (),
+    $class-prefix: '',
+    $generate-viewports: get-viewport-flag($WIDTHS),
+    $override: '!important'
 );
-@include generate-classes-for-viewport-with-map($max-widths, 'max-width', 'max-w-', #{get-viewport-flag($MAX-WIDTH)});
+@include generator_v2.utility(
+    $base-class-name: 'min-h',
+    $class-value-pairs: generator_v2.class-value-to-property-map($min-heights, min-height),
+    $variants: (),
+    $class-prefix: '',
+    $generate-viewports: get-viewport-flag($MIN-HEIGHT),
+    $override: '!important'
+);
+@include generator_v2.utility(
+    $base-class-name: 'min-w',
+    $class-value-pairs: generator_v2.class-value-to-property-map($min-heights, min-width),
+    $variants: (),
+    $class-prefix: '',
+    $generate-viewports: get-viewport-flag($MIN-WIDTH),
+    $override: '!important'
+);
+@include generator_v2.utility(
+    $base-class-name: 'max-h',
+    $class-value-pairs: generator_v2.class-value-to-property-map($min-heights, max-height),
+    $variants: (),
+    $class-prefix: '',
+    $generate-viewports: get-viewport-flag($MAX-HEIGHT),
+    $override: '!important'
+);
+@include generator_v2.utility(
+    $base-class-name: 'max-w',
+    $class-value-pairs: generator_v2.class-value-to-property-map($min-heights, max-width),
+    $variants: (),
+    $class-prefix: '',
+    $generate-viewports: get-viewport-flag($MAX-WIDTH),
+    $override: '!important'
+);
 
 /* Do the actual balancing only on larger screens */
 .level,

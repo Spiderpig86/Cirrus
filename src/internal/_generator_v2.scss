@@ -272,3 +272,13 @@ $default-variant-delimiter: '\\:';
     }
     @return $result;
 }
+
+@function class-value-to-property-map($class-value-map, $property) {
+    $result: ();
+    @each $class, $value in $class-value-map {
+        $result: map.set($result, $class, (
+            $property: $value,
+        ));
+    }
+    @return $result;
+}
