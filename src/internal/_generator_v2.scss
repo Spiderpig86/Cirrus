@@ -7,7 +7,7 @@
 @use 'size';
 @use 'mixins';
 
-$default-prefix: 'u-';
+$default-prefix: 'u';
 $default-override: '';
 $default-delimiter: '-';
 $default-variant-delimiter: '\\:';
@@ -21,7 +21,22 @@ $default-variant-delimiter: '\\:';
     @delimiter {string} [$default-delimiter] - delimiter used in class name body but not for separating psuedos
     @base-class-name {string} - the root of the class name. For the utility class above, 'blue' is the base class name
     @class-value-pairs {map<string, any>[]} - list of mappings that maps the variant name (e.g. 'blue') to a map of CSS properties to values
-    @variants {string[]} [()] - list of strings specifying which variants to generate styles for
+    @variants {string[]} [()] - list of strings specifying which variants to generate styles for. Possible values:
+        - 'responsive',
+        - 'dark-mode', 'light-mode',
+        - 'reduce-motion',
+        - 'selection-hover',
+        - 'expand',
+        - 'first-of-type',
+        - 'last-of-type',
+        - 'portrait', 'landscape',
+        - 'hover', 'group-hover',
+        - 'focus', 'group-focus', 'focus-visible', 'focus-within',
+        - 'active',
+        - 'visited',
+        - 'checked',
+        - 'disabled'
+
     @variant-delimiter {string} [$default-variant-delimiter] - delimiter used to separate the variant portion of the class
     @generate-viewports {boolean} [false] - flag to indicate if we should generate classes with different viewports
     @override {string} [$default-override] - override for CSS properties, like '!important'
@@ -37,6 +52,7 @@ $default-variant-delimiter: '\\:';
     $override: $default-override
 ) {
     $config: (
+        class-prefix: $class-prefix,
         delimiter: $delimiter,
         variant-delimiter: $variant-delimiter,
     );
@@ -143,10 +159,24 @@ $default-variant-delimiter: '\\:';
 
 @mixin get-base-class($config, $context) {
     $base: ();
+    $delimiter: map.get(
+        $map: $config,
+        $key: delimiter,
+    );
+    $class-prefix: map-get($config, class-prefix);
     $base-class-name: map-get($context, base-class-name);
+
     @if $base-class-name != null {
         // Required to be comma separated since it will be used in generate-class() and treated like a selector
-        $base: list.append($base, $base-class-name, comma);
+
+        $new-base: '';
+        @if $class-prefix != null and string.length($class-prefix) > 0 {
+            // If there is a prefix defined, use it in the class name
+            $new-base: $class-prefix + $delimiter;
+        }
+        
+        $new-base: $new-base + $base-class-name;
+        $base: list.append($base, $new-base, comma);
     }
 
     @include generate-class($config, $base, $context...) using ($props...) {
@@ -155,10 +185,6 @@ $default-variant-delimiter: '\\:';
 }
 
 @mixin generate-class($config, $base, $rule: null, $variant: null, $pseudo: null, $scope: null, $base-class-name: '') {
-    $delimiter: map.get(
-        $map: $config,
-        $key: delimiter,
-    );
     $variant-delimiter: map.get(
         $map: $config,
         $key: variant-delimiter,
@@ -276,9 +302,13 @@ $default-variant-delimiter: '\\:';
 @function class-value-to-property-map($class-value-map, $property) {
     $result: ();
     @each $class, $value in $class-value-map {
-        $result: map.set($result, $class, (
-            $property: $value,
-        ));
+        $result: map.set(
+            $result,
+            $class,
+            (
+                $property: $value,
+            )
+        );
     }
     @return $result;
 }
