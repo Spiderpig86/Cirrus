@@ -1,0 +1,23 @@
+@use '../../../src/internal/generator_v2';
+@use '../../../src/internal' as *;
+
+@if should-generate-classes($CLEARFIX) {
+    $clears: left, right, both;
+    @include generator_v2.utility(
+        $base-class-name: 'clear',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($clears), clear),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($CLEARFIX)},
+        $override: '!important'
+    );
+
+    /*
+       When using floats, clearfix allows the container to automatically resize so that
+       other elements are not blocked by children.
+    */
+    .u-clearfix:after {
+        clear: both !important;
+        content: ' ';
+        display: table !important;
+    }
+}

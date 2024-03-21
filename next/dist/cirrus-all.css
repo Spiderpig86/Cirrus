@@ -4748,3 +4748,68 @@ section {
     border-radius: 9001px !important;
   }
 }
+.u-clear-left {
+  clear: left !important;
+}
+
+.u-clear-right {
+  clear: right !important;
+}
+
+.u-clear-both {
+  clear: both !important;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:u-clear-left {
+    clear: left !important;
+  }
+  .sm\:u-clear-right {
+    clear: right !important;
+  }
+  .sm\:u-clear-both {
+    clear: both !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:u-clear-left {
+    clear: left !important;
+  }
+  .md\:u-clear-right {
+    clear: right !important;
+  }
+  .md\:u-clear-both {
+    clear: both !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:u-clear-left {
+    clear: left !important;
+  }
+  .lg\:u-clear-right {
+    clear: right !important;
+  }
+  .lg\:u-clear-both {
+    clear: both !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:u-clear-left {
+    clear: left !important;
+  }
+  .xl\:u-clear-right {
+    clear: right !important;
+  }
+  .xl\:u-clear-both {
+    clear: both !important;
+  }
+}
+/*
+   When using floats, clearfix allows the container to automatically resize so that
+   other elements are not blocked by children.
+*/
+.u-clearfix:after {
+  clear: both !important;
+  content: " ";
+  display: table !important;
+}
