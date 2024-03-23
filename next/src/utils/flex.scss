@@ -1,0 +1,111 @@
+@use 'sass:map';
+
+@use '../../../src/internal/generator_v2';
+@use '../../../src/internal' as *;
+
+@if should-generate-classes($FLEX) {
+    $flex-directions: row, row-reverse, column, column-reverse;
+    $justify-content: flex-start, center, flex-end, space-between, space-around, space-evenly;
+    $align-items: stretch, flex-start, center, flex-end, baseline;
+    $flex-grow: 0, 1;
+    $flex-wrap: wrap, wrap-reverse, nowrap;
+    $flex-basis: map.merge(
+        to-property-map((auto, max-content, min-content, fit-content, content, revert, revert-layer)),
+        $default-percentages
+    );
+
+    @include generator_v2.utility(
+        $base-class-name: 'flex',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($flex-directions), flex-direction),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
+    );
+
+    @include generator_v2.utility(
+        $base-class-name: 'justify',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($justify-content), justify-content),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
+    );
+
+    @include generator_v2.utility(
+        $base-class-name: 'items',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($align-items), align-items),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
+    );
+
+    // Flex grow/shrink utils
+    @include generator_v2.utility(
+        $base-class-name: 'flex-grow',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($flex-grow), flex-grow),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
+    );
+    @include generator_v2.utility(
+        $base-class-name: 'flex-shrink',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($flex-grow), flex-shrink),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
+    );
+
+    // Flex wrap
+    @include generator_v2.utility(
+        $base-class-name: 'flex',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($flex-wrap), flex-wrap),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
+    );
+
+    // Flex basis
+    @include generator_v2.utility(
+        $base-class-name: 'basis',
+        $class-value-pairs: generator_v2.class-value-to-property-map($flex-basis, flex-basis),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $override: '!important'
+    );
+}
+
+// TODO: Move to gap.scss
+@if should-generate-classes($GAP) {
+    // Generate flex gap class map
+    $gaps-both: ();
+    // TODO: Consider if we need to generate for row and col only
+    @each $class, $size in $spacing-system {
+        $gaps-both: map-merge(
+            $gaps-both,
+            (
+                $class: $size,
+            )
+        );
+    }
+
+    @include generator_v2.utility(
+        $base-class-name: 'gap',
+        $class-value-pairs: generator_v2.class-value-to-property-map($gaps-both, gap),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($GAP)},
+        $override: '!important'
+    );
+    @include generator_v2.utility(
+        $base-class-name: 'row-gap',
+        $class-value-pairs: generator_v2.class-value-to-property-map($gaps-both, row-gap),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($GAP)},
+        $override: '!important'
+    );
+    @include generator_v2.utility(
+        $base-class-name: 'col-gap',
+        $class-value-pairs: generator_v2.class-value-to-property-map($gaps-both, column-gap),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($GAP)},
+        $override: '!important'
+    );
+}
