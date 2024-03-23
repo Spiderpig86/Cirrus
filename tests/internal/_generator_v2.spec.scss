@@ -390,6 +390,29 @@
             }
         }
     }
+
+    
+    @include it('works with  empty base class name') {
+        @include assert {
+            @include output($selector: false) {
+                        @include generator_v2.utility(
+                            $base-class-name: '',
+                            $class-value-pairs: (
+                                'blue': (
+                                    'color': blue,
+                                ),
+                            ),
+                            $generate-viewports: false,
+                            $override: '!important'
+                        );
+            }
+            @include expect($selector: false) {
+                .u-blue {
+                    color: blue !important;
+                }
+            }
+        }
+    }
 }
 
 @include describe('get-base-class()') {

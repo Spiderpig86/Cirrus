@@ -219,11 +219,17 @@ $default-variant-delimiter: '\\:';
 
 @mixin kv-class-generator($base-class-name, $class-value-pairs, $config: (), $variants: (), $context: ()) {
     @if $base-class-name != null {
+        $new-base-class-name: '';
+        @if string.length($base-class-name) > 0 {
+            $new-base-class-name: $base-class-name + map.get($config, delimiter);
+        }
+
         @each $key, $value in $class-value-pairs {
+
             $context: map-merge(
                 $context,
                 (
-                    base-class-name: $base-class-name + map.get($config, delimiter) + $key,
+                    base-class-name: $new-base-class-name + $key,
                 )
             );
             @include generate-rules-pseudos-selectors($config, $variants, $context) using ($props...) {
