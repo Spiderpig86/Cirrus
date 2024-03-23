@@ -1,0 +1,15 @@
+@use '../../../src/internal/generator_v2';
+@use '../../../src/internal' as *;
+
+@if should-generate-classes($DISPLAY) {
+    $display-utils-config: none, inline, inline-block, block, flex, inline-flex, table, table-row, table-column,
+        table-cell;
+
+    @include generator_v2.utility(
+        $base-class-name: '',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($display-utils-config), display),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($DISPLAY)},
+        $override: '!important'
+    );
+}
