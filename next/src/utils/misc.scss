@@ -1,0 +1,81 @@
+@use '../../../src/internal/generator_v2';
+@use '../../../src/internal' as *;
+
+/* UTILS */
+/* Utility classes to help solve some very annoying issues */
+
+@if should-generate-classes($FLOAT) {
+    $pull-directions: (left, right);
+    
+    @include generator_v2.utility(
+        $base-class-name: 'pull',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($pull-directions), float),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLOAT)},
+        $override: '!important'
+    );
+}
+
+@if should-generate-classes($TEXT) {
+    $text-directions: (justify, left, right, center);
+    
+    @include generator_v2.utility(
+        $base-class-name: 'text',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($text-directions), text-align),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($FLOAT)},
+        $override: '!important'
+    );
+}
+
+.u-text-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.u-text-break {
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+/* Center element - best used for hero bodies or text */
+.u-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.u-center-alt,
+.u-center-alt:hover,
+.u-center-alt:active {
+    /* If flexbox method fails, this works for elements with unknown dimensions */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.u-overlay {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+}
+
+.u-disabled {
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+.u-unselectable {
+    user-select: none !important;
+}
+
+.u-no-outline {
+    outline: 0px !important;
+}
