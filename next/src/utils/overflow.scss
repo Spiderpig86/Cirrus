@@ -1,0 +1,30 @@
+@use '../../../src/internal/generator_v2';
+@use '../../../src/internal' as *;
+
+@if should-generate-classes($OVERFLOW) {
+    $overflow: (auto, hidden, visible, scroll);
+
+    @include generator_v2.utility(
+        $base-class-name: 'overflow',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($overflow), overflow),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($OVERFLOW)},
+        $override: '!important'
+    );
+    // NOTE: We have now changed u-hide-overflow to u-overflow-hidden
+
+    @include generator_v2.utility(
+        $base-class-name: 'overflow-x',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($overflow), overflow-x),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($OVERFLOW)},
+        $override: '!important'
+    );
+    @include generator_v2.utility(
+        $base-class-name: 'overflow-y',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($overflow), overflow-y),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($OVERFLOW)},
+        $override: '!important'
+    );
+}

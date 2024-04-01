@@ -7220,3 +7220,219 @@ section {
     --color-opacity: 1;
   }
 }
+.u-overflow-auto {
+  overflow: auto !important;
+}
+
+.u-overflow-hidden {
+  overflow: hidden !important;
+}
+
+.u-overflow-visible {
+  overflow: visible !important;
+}
+
+.u-overflow-scroll {
+  overflow: scroll !important;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:u-overflow-auto {
+    overflow: auto !important;
+  }
+  .sm\:u-overflow-hidden {
+    overflow: hidden !important;
+  }
+  .sm\:u-overflow-visible {
+    overflow: visible !important;
+  }
+  .sm\:u-overflow-scroll {
+    overflow: scroll !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:u-overflow-auto {
+    overflow: auto !important;
+  }
+  .md\:u-overflow-hidden {
+    overflow: hidden !important;
+  }
+  .md\:u-overflow-visible {
+    overflow: visible !important;
+  }
+  .md\:u-overflow-scroll {
+    overflow: scroll !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:u-overflow-auto {
+    overflow: auto !important;
+  }
+  .lg\:u-overflow-hidden {
+    overflow: hidden !important;
+  }
+  .lg\:u-overflow-visible {
+    overflow: visible !important;
+  }
+  .lg\:u-overflow-scroll {
+    overflow: scroll !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:u-overflow-auto {
+    overflow: auto !important;
+  }
+  .xl\:u-overflow-hidden {
+    overflow: hidden !important;
+  }
+  .xl\:u-overflow-visible {
+    overflow: visible !important;
+  }
+  .xl\:u-overflow-scroll {
+    overflow: scroll !important;
+  }
+}
+.u-overflow-x-auto {
+  overflow-x: auto !important;
+}
+
+.u-overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.u-overflow-x-visible {
+  overflow-x: visible !important;
+}
+
+.u-overflow-x-scroll {
+  overflow-x: scroll !important;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:u-overflow-x-auto {
+    overflow-x: auto !important;
+  }
+  .sm\:u-overflow-x-hidden {
+    overflow-x: hidden !important;
+  }
+  .sm\:u-overflow-x-visible {
+    overflow-x: visible !important;
+  }
+  .sm\:u-overflow-x-scroll {
+    overflow-x: scroll !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:u-overflow-x-auto {
+    overflow-x: auto !important;
+  }
+  .md\:u-overflow-x-hidden {
+    overflow-x: hidden !important;
+  }
+  .md\:u-overflow-x-visible {
+    overflow-x: visible !important;
+  }
+  .md\:u-overflow-x-scroll {
+    overflow-x: scroll !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:u-overflow-x-auto {
+    overflow-x: auto !important;
+  }
+  .lg\:u-overflow-x-hidden {
+    overflow-x: hidden !important;
+  }
+  .lg\:u-overflow-x-visible {
+    overflow-x: visible !important;
+  }
+  .lg\:u-overflow-x-scroll {
+    overflow-x: scroll !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:u-overflow-x-auto {
+    overflow-x: auto !important;
+  }
+  .xl\:u-overflow-x-hidden {
+    overflow-x: hidden !important;
+  }
+  .xl\:u-overflow-x-visible {
+    overflow-x: visible !important;
+  }
+  .xl\:u-overflow-x-scroll {
+    overflow-x: scroll !important;
+  }
+}
+.u-overflow-y-auto {
+  overflow-y: auto !important;
+}
+
+.u-overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+
+.u-overflow-y-visible {
+  overflow-y: visible !important;
+}
+
+.u-overflow-y-scroll {
+  overflow-y: scroll !important;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:u-overflow-y-auto {
+    overflow-y: auto !important;
+  }
+  .sm\:u-overflow-y-hidden {
+    overflow-y: hidden !important;
+  }
+  .sm\:u-overflow-y-visible {
+    overflow-y: visible !important;
+  }
+  .sm\:u-overflow-y-scroll {
+    overflow-y: scroll !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:u-overflow-y-auto {
+    overflow-y: auto !important;
+  }
+  .md\:u-overflow-y-hidden {
+    overflow-y: hidden !important;
+  }
+  .md\:u-overflow-y-visible {
+    overflow-y: visible !important;
+  }
+  .md\:u-overflow-y-scroll {
+    overflow-y: scroll !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:u-overflow-y-auto {
+    overflow-y: auto !important;
+  }
+  .lg\:u-overflow-y-hidden {
+    overflow-y: hidden !important;
+  }
+  .lg\:u-overflow-y-visible {
+    overflow-y: visible !important;
+  }
+  .lg\:u-overflow-y-scroll {
+    overflow-y: scroll !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:u-overflow-y-auto {
+    overflow-y: auto !important;
+  }
+  .xl\:u-overflow-y-hidden {
+    overflow-y: hidden !important;
+  }
+  .xl\:u-overflow-y-visible {
+    overflow-y: visible !important;
+  }
+  .xl\:u-overflow-y-scroll {
+    overflow-y: scroll !important;
+  }
+}
