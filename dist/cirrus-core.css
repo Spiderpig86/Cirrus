@@ -1,7 +1,7 @@
 /*
 * Cirrus 0.7.2-patch.1
 * Stanley Lim, Copyright 2024
-* https://spiderpig86.github.io/Cirrus
+* https://cirrus-ui.com
 */
 /* v1 Color scheme for Cirrus */
 /*
@@ -13523,23 +13523,47 @@ ul .divider::after {
 }
 
 .u-border-opacity-0 {
-  --border-opacity: 0px !important;
+  --border-opacity: 0 !important;
 }
 
-.u-border-opacity-1 {
-  --border-opacity: 1px !important;
+.u-border-opacity-10 {
+  --border-opacity: 0.1 !important;
 }
 
-.u-border-opacity-2 {
-  --border-opacity: 2px !important;
+.u-border-opacity-20 {
+  --border-opacity: 0.2 !important;
 }
 
-.u-border-opacity-4 {
-  --border-opacity: 4px !important;
+.u-border-opacity-30 {
+  --border-opacity: 0.3 !important;
 }
 
-.u-border-opacity-8 {
-  --border-opacity: 8px !important;
+.u-border-opacity-40 {
+  --border-opacity: 0.4 !important;
+}
+
+.u-border-opacity-50 {
+  --border-opacity: 0.5 !important;
+}
+
+.u-border-opacity-60 {
+  --border-opacity: 0.6 !important;
+}
+
+.u-border-opacity-70 {
+  --border-opacity: 0.7 !important;
+}
+
+.u-border-opacity-80 {
+  --border-opacity: 0.8 !important;
+}
+
+.u-border-opacity-90 {
+  --border-opacity: 0.9 !important;
+}
+
+.u-border-opacity-100 {
+  --border-opacity: 1 !important;
 }
 
 .u-round-none {
@@ -15580,50 +15604,6 @@ ul .divider::after {
 
 .u-color-opacity-100 {
   --color-opacity: 1;
-}
-
-.u-border-opacity-0 {
-  --border-opacity: 0;
-}
-
-.u-border-opacity-10 {
-  --border-opacity: 0.1;
-}
-
-.u-border-opacity-20 {
-  --border-opacity: 0.2;
-}
-
-.u-border-opacity-30 {
-  --border-opacity: 0.3;
-}
-
-.u-border-opacity-40 {
-  --border-opacity: 0.4;
-}
-
-.u-border-opacity-50 {
-  --border-opacity: 0.5;
-}
-
-.u-border-opacity-60 {
-  --border-opacity: 0.6;
-}
-
-.u-border-opacity-70 {
-  --border-opacity: 0.7;
-}
-
-.u-border-opacity-80 {
-  --border-opacity: 0.8;
-}
-
-.u-border-opacity-90 {
-  --border-opacity: 0.9;
-}
-
-.u-border-opacity-100 {
-  --border-opacity: 1;
 }
 
 .u-overflow-auto {

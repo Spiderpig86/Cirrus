@@ -27,12 +27,3 @@
         $generate-viewports: #{get-viewport-flag($COLOR-OPACITY)},
     );
 }
-
-@if should-generate-classes($BORDER-OPACITY) {
-    @include utility(
-        $class-value-pairs: class-value-map-with-single-property('--border-opacity', $opacities),
-        $common-class-name: 'border-opacity',
-        $variants: (),
-        $generate-viewports: #{get-viewport-flag($BORDER-OPACITY)},
-    );
-}
