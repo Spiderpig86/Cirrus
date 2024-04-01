@@ -137,6 +137,10 @@ $DELIMETER: '-';
     itself.
 */
 @function to-property-map($properties) {
+    @if type-of($properties) == map {
+        @error "Input is already a map."
+    }
+
     $result: ();
 
     @each $property in $properties {

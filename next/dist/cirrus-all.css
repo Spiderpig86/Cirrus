@@ -6667,3 +6667,556 @@ section {
 .u-no-outline {
   outline: 0px !important;
 }
+
+.u-opacity-0 {
+  opacity: 0 !important;
+}
+
+.u-opacity-10 {
+  opacity: 0.1 !important;
+}
+
+.u-opacity-20 {
+  opacity: 0.2 !important;
+}
+
+.u-opacity-30 {
+  opacity: 0.3 !important;
+}
+
+.u-opacity-40 {
+  opacity: 0.4 !important;
+}
+
+.u-opacity-50 {
+  opacity: 0.5 !important;
+}
+
+.u-opacity-60 {
+  opacity: 0.6 !important;
+}
+
+.u-opacity-70 {
+  opacity: 0.7 !important;
+}
+
+.u-opacity-80 {
+  opacity: 0.8 !important;
+}
+
+.u-opacity-90 {
+  opacity: 0.9 !important;
+}
+
+.u-opacity-100 {
+  opacity: 1 !important;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:u-opacity-0 {
+    opacity: 0 !important;
+  }
+  .sm\:u-opacity-10 {
+    opacity: 0.1 !important;
+  }
+  .sm\:u-opacity-20 {
+    opacity: 0.2 !important;
+  }
+  .sm\:u-opacity-30 {
+    opacity: 0.3 !important;
+  }
+  .sm\:u-opacity-40 {
+    opacity: 0.4 !important;
+  }
+  .sm\:u-opacity-50 {
+    opacity: 0.5 !important;
+  }
+  .sm\:u-opacity-60 {
+    opacity: 0.6 !important;
+  }
+  .sm\:u-opacity-70 {
+    opacity: 0.7 !important;
+  }
+  .sm\:u-opacity-80 {
+    opacity: 0.8 !important;
+  }
+  .sm\:u-opacity-90 {
+    opacity: 0.9 !important;
+  }
+  .sm\:u-opacity-100 {
+    opacity: 1 !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:u-opacity-0 {
+    opacity: 0 !important;
+  }
+  .md\:u-opacity-10 {
+    opacity: 0.1 !important;
+  }
+  .md\:u-opacity-20 {
+    opacity: 0.2 !important;
+  }
+  .md\:u-opacity-30 {
+    opacity: 0.3 !important;
+  }
+  .md\:u-opacity-40 {
+    opacity: 0.4 !important;
+  }
+  .md\:u-opacity-50 {
+    opacity: 0.5 !important;
+  }
+  .md\:u-opacity-60 {
+    opacity: 0.6 !important;
+  }
+  .md\:u-opacity-70 {
+    opacity: 0.7 !important;
+  }
+  .md\:u-opacity-80 {
+    opacity: 0.8 !important;
+  }
+  .md\:u-opacity-90 {
+    opacity: 0.9 !important;
+  }
+  .md\:u-opacity-100 {
+    opacity: 1 !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:u-opacity-0 {
+    opacity: 0 !important;
+  }
+  .lg\:u-opacity-10 {
+    opacity: 0.1 !important;
+  }
+  .lg\:u-opacity-20 {
+    opacity: 0.2 !important;
+  }
+  .lg\:u-opacity-30 {
+    opacity: 0.3 !important;
+  }
+  .lg\:u-opacity-40 {
+    opacity: 0.4 !important;
+  }
+  .lg\:u-opacity-50 {
+    opacity: 0.5 !important;
+  }
+  .lg\:u-opacity-60 {
+    opacity: 0.6 !important;
+  }
+  .lg\:u-opacity-70 {
+    opacity: 0.7 !important;
+  }
+  .lg\:u-opacity-80 {
+    opacity: 0.8 !important;
+  }
+  .lg\:u-opacity-90 {
+    opacity: 0.9 !important;
+  }
+  .lg\:u-opacity-100 {
+    opacity: 1 !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:u-opacity-0 {
+    opacity: 0 !important;
+  }
+  .xl\:u-opacity-10 {
+    opacity: 0.1 !important;
+  }
+  .xl\:u-opacity-20 {
+    opacity: 0.2 !important;
+  }
+  .xl\:u-opacity-30 {
+    opacity: 0.3 !important;
+  }
+  .xl\:u-opacity-40 {
+    opacity: 0.4 !important;
+  }
+  .xl\:u-opacity-50 {
+    opacity: 0.5 !important;
+  }
+  .xl\:u-opacity-60 {
+    opacity: 0.6 !important;
+  }
+  .xl\:u-opacity-70 {
+    opacity: 0.7 !important;
+  }
+  .xl\:u-opacity-80 {
+    opacity: 0.8 !important;
+  }
+  .xl\:u-opacity-90 {
+    opacity: 0.9 !important;
+  }
+  .xl\:u-opacity-100 {
+    opacity: 1 !important;
+  }
+}
+.u-bg-opacity-0 {
+  --bg-opacity: 0;
+}
+
+.u-bg-opacity-10 {
+  --bg-opacity: 0.1;
+}
+
+.u-bg-opacity-20 {
+  --bg-opacity: 0.2;
+}
+
+.u-bg-opacity-30 {
+  --bg-opacity: 0.3;
+}
+
+.u-bg-opacity-40 {
+  --bg-opacity: 0.4;
+}
+
+.u-bg-opacity-50 {
+  --bg-opacity: 0.5;
+}
+
+.u-bg-opacity-60 {
+  --bg-opacity: 0.6;
+}
+
+.u-bg-opacity-70 {
+  --bg-opacity: 0.7;
+}
+
+.u-bg-opacity-80 {
+  --bg-opacity: 0.8;
+}
+
+.u-bg-opacity-90 {
+  --bg-opacity: 0.9;
+}
+
+.u-bg-opacity-100 {
+  --bg-opacity: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:u-bg-opacity-0 {
+    --bg-opacity: 0;
+  }
+  .sm\:u-bg-opacity-10 {
+    --bg-opacity: 0.1;
+  }
+  .sm\:u-bg-opacity-20 {
+    --bg-opacity: 0.2;
+  }
+  .sm\:u-bg-opacity-30 {
+    --bg-opacity: 0.3;
+  }
+  .sm\:u-bg-opacity-40 {
+    --bg-opacity: 0.4;
+  }
+  .sm\:u-bg-opacity-50 {
+    --bg-opacity: 0.5;
+  }
+  .sm\:u-bg-opacity-60 {
+    --bg-opacity: 0.6;
+  }
+  .sm\:u-bg-opacity-70 {
+    --bg-opacity: 0.7;
+  }
+  .sm\:u-bg-opacity-80 {
+    --bg-opacity: 0.8;
+  }
+  .sm\:u-bg-opacity-90 {
+    --bg-opacity: 0.9;
+  }
+  .sm\:u-bg-opacity-100 {
+    --bg-opacity: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:u-bg-opacity-0 {
+    --bg-opacity: 0;
+  }
+  .md\:u-bg-opacity-10 {
+    --bg-opacity: 0.1;
+  }
+  .md\:u-bg-opacity-20 {
+    --bg-opacity: 0.2;
+  }
+  .md\:u-bg-opacity-30 {
+    --bg-opacity: 0.3;
+  }
+  .md\:u-bg-opacity-40 {
+    --bg-opacity: 0.4;
+  }
+  .md\:u-bg-opacity-50 {
+    --bg-opacity: 0.5;
+  }
+  .md\:u-bg-opacity-60 {
+    --bg-opacity: 0.6;
+  }
+  .md\:u-bg-opacity-70 {
+    --bg-opacity: 0.7;
+  }
+  .md\:u-bg-opacity-80 {
+    --bg-opacity: 0.8;
+  }
+  .md\:u-bg-opacity-90 {
+    --bg-opacity: 0.9;
+  }
+  .md\:u-bg-opacity-100 {
+    --bg-opacity: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:u-bg-opacity-0 {
+    --bg-opacity: 0;
+  }
+  .lg\:u-bg-opacity-10 {
+    --bg-opacity: 0.1;
+  }
+  .lg\:u-bg-opacity-20 {
+    --bg-opacity: 0.2;
+  }
+  .lg\:u-bg-opacity-30 {
+    --bg-opacity: 0.3;
+  }
+  .lg\:u-bg-opacity-40 {
+    --bg-opacity: 0.4;
+  }
+  .lg\:u-bg-opacity-50 {
+    --bg-opacity: 0.5;
+  }
+  .lg\:u-bg-opacity-60 {
+    --bg-opacity: 0.6;
+  }
+  .lg\:u-bg-opacity-70 {
+    --bg-opacity: 0.7;
+  }
+  .lg\:u-bg-opacity-80 {
+    --bg-opacity: 0.8;
+  }
+  .lg\:u-bg-opacity-90 {
+    --bg-opacity: 0.9;
+  }
+  .lg\:u-bg-opacity-100 {
+    --bg-opacity: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:u-bg-opacity-0 {
+    --bg-opacity: 0;
+  }
+  .xl\:u-bg-opacity-10 {
+    --bg-opacity: 0.1;
+  }
+  .xl\:u-bg-opacity-20 {
+    --bg-opacity: 0.2;
+  }
+  .xl\:u-bg-opacity-30 {
+    --bg-opacity: 0.3;
+  }
+  .xl\:u-bg-opacity-40 {
+    --bg-opacity: 0.4;
+  }
+  .xl\:u-bg-opacity-50 {
+    --bg-opacity: 0.5;
+  }
+  .xl\:u-bg-opacity-60 {
+    --bg-opacity: 0.6;
+  }
+  .xl\:u-bg-opacity-70 {
+    --bg-opacity: 0.7;
+  }
+  .xl\:u-bg-opacity-80 {
+    --bg-opacity: 0.8;
+  }
+  .xl\:u-bg-opacity-90 {
+    --bg-opacity: 0.9;
+  }
+  .xl\:u-bg-opacity-100 {
+    --bg-opacity: 1;
+  }
+}
+.u-color-opacity-0 {
+  --color-opacity: 0;
+}
+
+.u-color-opacity-10 {
+  --color-opacity: 0.1;
+}
+
+.u-color-opacity-20 {
+  --color-opacity: 0.2;
+}
+
+.u-color-opacity-30 {
+  --color-opacity: 0.3;
+}
+
+.u-color-opacity-40 {
+  --color-opacity: 0.4;
+}
+
+.u-color-opacity-50 {
+  --color-opacity: 0.5;
+}
+
+.u-color-opacity-60 {
+  --color-opacity: 0.6;
+}
+
+.u-color-opacity-70 {
+  --color-opacity: 0.7;
+}
+
+.u-color-opacity-80 {
+  --color-opacity: 0.8;
+}
+
+.u-color-opacity-90 {
+  --color-opacity: 0.9;
+}
+
+.u-color-opacity-100 {
+  --color-opacity: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:u-color-opacity-0 {
+    --color-opacity: 0;
+  }
+  .sm\:u-color-opacity-10 {
+    --color-opacity: 0.1;
+  }
+  .sm\:u-color-opacity-20 {
+    --color-opacity: 0.2;
+  }
+  .sm\:u-color-opacity-30 {
+    --color-opacity: 0.3;
+  }
+  .sm\:u-color-opacity-40 {
+    --color-opacity: 0.4;
+  }
+  .sm\:u-color-opacity-50 {
+    --color-opacity: 0.5;
+  }
+  .sm\:u-color-opacity-60 {
+    --color-opacity: 0.6;
+  }
+  .sm\:u-color-opacity-70 {
+    --color-opacity: 0.7;
+  }
+  .sm\:u-color-opacity-80 {
+    --color-opacity: 0.8;
+  }
+  .sm\:u-color-opacity-90 {
+    --color-opacity: 0.9;
+  }
+  .sm\:u-color-opacity-100 {
+    --color-opacity: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:u-color-opacity-0 {
+    --color-opacity: 0;
+  }
+  .md\:u-color-opacity-10 {
+    --color-opacity: 0.1;
+  }
+  .md\:u-color-opacity-20 {
+    --color-opacity: 0.2;
+  }
+  .md\:u-color-opacity-30 {
+    --color-opacity: 0.3;
+  }
+  .md\:u-color-opacity-40 {
+    --color-opacity: 0.4;
+  }
+  .md\:u-color-opacity-50 {
+    --color-opacity: 0.5;
+  }
+  .md\:u-color-opacity-60 {
+    --color-opacity: 0.6;
+  }
+  .md\:u-color-opacity-70 {
+    --color-opacity: 0.7;
+  }
+  .md\:u-color-opacity-80 {
+    --color-opacity: 0.8;
+  }
+  .md\:u-color-opacity-90 {
+    --color-opacity: 0.9;
+  }
+  .md\:u-color-opacity-100 {
+    --color-opacity: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:u-color-opacity-0 {
+    --color-opacity: 0;
+  }
+  .lg\:u-color-opacity-10 {
+    --color-opacity: 0.1;
+  }
+  .lg\:u-color-opacity-20 {
+    --color-opacity: 0.2;
+  }
+  .lg\:u-color-opacity-30 {
+    --color-opacity: 0.3;
+  }
+  .lg\:u-color-opacity-40 {
+    --color-opacity: 0.4;
+  }
+  .lg\:u-color-opacity-50 {
+    --color-opacity: 0.5;
+  }
+  .lg\:u-color-opacity-60 {
+    --color-opacity: 0.6;
+  }
+  .lg\:u-color-opacity-70 {
+    --color-opacity: 0.7;
+  }
+  .lg\:u-color-opacity-80 {
+    --color-opacity: 0.8;
+  }
+  .lg\:u-color-opacity-90 {
+    --color-opacity: 0.9;
+  }
+  .lg\:u-color-opacity-100 {
+    --color-opacity: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:u-color-opacity-0 {
+    --color-opacity: 0;
+  }
+  .xl\:u-color-opacity-10 {
+    --color-opacity: 0.1;
+  }
+  .xl\:u-color-opacity-20 {
+    --color-opacity: 0.2;
+  }
+  .xl\:u-color-opacity-30 {
+    --color-opacity: 0.3;
+  }
+  .xl\:u-color-opacity-40 {
+    --color-opacity: 0.4;
+  }
+  .xl\:u-color-opacity-50 {
+    --color-opacity: 0.5;
+  }
+  .xl\:u-color-opacity-60 {
+    --color-opacity: 0.6;
+  }
+  .xl\:u-color-opacity-70 {
+    --color-opacity: 0.7;
+  }
+  .xl\:u-color-opacity-80 {
+    --color-opacity: 0.8;
+  }
+  .xl\:u-color-opacity-90 {
+    --color-opacity: 0.9;
+  }
+  .xl\:u-color-opacity-100 {
+    --color-opacity: 1;
+  }
+}
