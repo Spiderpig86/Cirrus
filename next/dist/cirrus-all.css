@@ -7436,3 +7436,91 @@ section {
     overflow-y: scroll !important;
   }
 }
+.u-static {
+  position: static !important;
+}
+
+.u-fixed {
+  position: fixed !important;
+}
+
+.u-absolute {
+  position: absolute !important;
+}
+
+.u-relative {
+  position: relative !important;
+}
+
+.u-sticky {
+  position: sticky !important;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:u-static {
+    position: static !important;
+  }
+  .sm\:u-fixed {
+    position: fixed !important;
+  }
+  .sm\:u-absolute {
+    position: absolute !important;
+  }
+  .sm\:u-relative {
+    position: relative !important;
+  }
+  .sm\:u-sticky {
+    position: sticky !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:u-static {
+    position: static !important;
+  }
+  .md\:u-fixed {
+    position: fixed !important;
+  }
+  .md\:u-absolute {
+    position: absolute !important;
+  }
+  .md\:u-relative {
+    position: relative !important;
+  }
+  .md\:u-sticky {
+    position: sticky !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:u-static {
+    position: static !important;
+  }
+  .lg\:u-fixed {
+    position: fixed !important;
+  }
+  .lg\:u-absolute {
+    position: absolute !important;
+  }
+  .lg\:u-relative {
+    position: relative !important;
+  }
+  .lg\:u-sticky {
+    position: sticky !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:u-static {
+    position: static !important;
+  }
+  .xl\:u-fixed {
+    position: fixed !important;
+  }
+  .xl\:u-absolute {
+    position: absolute !important;
+  }
+  .xl\:u-relative {
+    position: relative !important;
+  }
+  .xl\:u-sticky {
+    position: sticky !important;
+  }
+}

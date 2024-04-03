@@ -1,0 +1,14 @@
+@use '../../../src/internal/generator_v2';
+@use '../../../src/internal' as *;
+
+@if should-generate-classes($POSITION) {
+    $positions: static, fixed, absolute, relative, sticky;
+
+    @include generator_v2.utility(
+        $base-class-name: '',
+        $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($positions), position),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($POSITION)},
+        $override: '!important'
+    );
+}
