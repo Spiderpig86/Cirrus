@@ -1,0 +1,32 @@
+// Utility classes for shadows
+@use 'sass:map';
+@use '../../../src/internal/generator_v2';
+@use '../../../src/internal' as *;
+
+@function _transformed() {
+    $transformed: ();
+    @each $key, $properties in $shadows {
+        $transformed: map.set(
+            $transformed,
+            $key,
+            map-merge(
+                $properties,
+                (
+                    'box-shadow': var(--cirrus-shadow),
+                )
+            )
+        );
+    }
+    @return $transformed;
+}
+
+@if should-generate-classes($SHADOWS) {
+    $transformed: _transformed();
+    
+    @include generator_v2.utility(
+        $base-class-name: 'shadow',
+        $class-value-pairs: $transformed,
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($SHADOWS)}
+    );
+}
