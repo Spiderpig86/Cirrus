@@ -7679,3 +7679,124 @@ section {
     box-shadow: var(--cirrus-shadow);
   }
 }
+/* TRANSITION DURATION */
+.u-transition-duration-75 {
+  transition-duration: 75ms !important;
+}
+
+.u-transition-duration-100 {
+  transition-duration: 100ms !important;
+}
+
+.u-transition-duration-200 {
+  transition-duration: 200ms !important;
+}
+
+.u-transition-duration-300 {
+  transition-duration: 300ms !important;
+}
+
+.u-transition-duration-500 {
+  transition-duration: 500ms !important;
+}
+
+.u-transition-duration-700 {
+  transition-duration: 700ms !important;
+}
+
+.u-transition-duration-1000 {
+  transition-duration: 1000ms !important;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:u-transition-duration-75 {
+    transition-duration: 75ms !important;
+  }
+  .sm\:u-transition-duration-100 {
+    transition-duration: 100ms !important;
+  }
+  .sm\:u-transition-duration-200 {
+    transition-duration: 200ms !important;
+  }
+  .sm\:u-transition-duration-300 {
+    transition-duration: 300ms !important;
+  }
+  .sm\:u-transition-duration-500 {
+    transition-duration: 500ms !important;
+  }
+  .sm\:u-transition-duration-700 {
+    transition-duration: 700ms !important;
+  }
+  .sm\:u-transition-duration-1000 {
+    transition-duration: 1000ms !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:u-transition-duration-75 {
+    transition-duration: 75ms !important;
+  }
+  .md\:u-transition-duration-100 {
+    transition-duration: 100ms !important;
+  }
+  .md\:u-transition-duration-200 {
+    transition-duration: 200ms !important;
+  }
+  .md\:u-transition-duration-300 {
+    transition-duration: 300ms !important;
+  }
+  .md\:u-transition-duration-500 {
+    transition-duration: 500ms !important;
+  }
+  .md\:u-transition-duration-700 {
+    transition-duration: 700ms !important;
+  }
+  .md\:u-transition-duration-1000 {
+    transition-duration: 1000ms !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:u-transition-duration-75 {
+    transition-duration: 75ms !important;
+  }
+  .lg\:u-transition-duration-100 {
+    transition-duration: 100ms !important;
+  }
+  .lg\:u-transition-duration-200 {
+    transition-duration: 200ms !important;
+  }
+  .lg\:u-transition-duration-300 {
+    transition-duration: 300ms !important;
+  }
+  .lg\:u-transition-duration-500 {
+    transition-duration: 500ms !important;
+  }
+  .lg\:u-transition-duration-700 {
+    transition-duration: 700ms !important;
+  }
+  .lg\:u-transition-duration-1000 {
+    transition-duration: 1000ms !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:u-transition-duration-75 {
+    transition-duration: 75ms !important;
+  }
+  .xl\:u-transition-duration-100 {
+    transition-duration: 100ms !important;
+  }
+  .xl\:u-transition-duration-200 {
+    transition-duration: 200ms !important;
+  }
+  .xl\:u-transition-duration-300 {
+    transition-duration: 300ms !important;
+  }
+  .xl\:u-transition-duration-500 {
+    transition-duration: 500ms !important;
+  }
+  .xl\:u-transition-duration-700 {
+    transition-duration: 700ms !important;
+  }
+  .xl\:u-transition-duration-1000 {
+    transition-duration: 1000ms !important;
+  }
+}
