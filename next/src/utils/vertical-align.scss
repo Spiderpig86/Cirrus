@@ -1,0 +1,12 @@
+@use '../../../src/internal/generator_v2';
+@use '../../../src/internal' as *;
+
+@if should-generate-classes($VERTICAL-ALIGN) {
+    @include generator_v2.utility(
+        $base-class-name: 'align',
+        $class-value-pairs: generator_v2.class-value-to-property-map($vertical-alignments, vertical-align),
+        $variants: (),
+        $generate-viewports: #{get-viewport-flag($VERTICAL-ALIGN)},
+        $override: '!important'
+    );
+}

@@ -7800,3 +7800,139 @@ section {
     transition-duration: 1000ms !important;
   }
 }
+.u-align-baseline {
+  vertical-align: baseline !important;
+}
+
+.u-align-top {
+  vertical-align: top !important;
+}
+
+.u-align-middle {
+  vertical-align: middle !important;
+}
+
+.u-align-bottom {
+  vertical-align: bottom !important;
+}
+
+.u-align-text-top {
+  vertical-align: text-top !important;
+}
+
+.u-align-text-bottom {
+  vertical-align: text-bottom !important;
+}
+
+.u-align-sub {
+  vertical-align: sub !important;
+}
+
+.u-align-super {
+  vertical-align: super !important;
+}
+
+@media screen and (min-width: 640px) {
+  .sm\:u-align-baseline {
+    vertical-align: baseline !important;
+  }
+  .sm\:u-align-top {
+    vertical-align: top !important;
+  }
+  .sm\:u-align-middle {
+    vertical-align: middle !important;
+  }
+  .sm\:u-align-bottom {
+    vertical-align: bottom !important;
+  }
+  .sm\:u-align-text-top {
+    vertical-align: text-top !important;
+  }
+  .sm\:u-align-text-bottom {
+    vertical-align: text-bottom !important;
+  }
+  .sm\:u-align-sub {
+    vertical-align: sub !important;
+  }
+  .sm\:u-align-super {
+    vertical-align: super !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md\:u-align-baseline {
+    vertical-align: baseline !important;
+  }
+  .md\:u-align-top {
+    vertical-align: top !important;
+  }
+  .md\:u-align-middle {
+    vertical-align: middle !important;
+  }
+  .md\:u-align-bottom {
+    vertical-align: bottom !important;
+  }
+  .md\:u-align-text-top {
+    vertical-align: text-top !important;
+  }
+  .md\:u-align-text-bottom {
+    vertical-align: text-bottom !important;
+  }
+  .md\:u-align-sub {
+    vertical-align: sub !important;
+  }
+  .md\:u-align-super {
+    vertical-align: super !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lg\:u-align-baseline {
+    vertical-align: baseline !important;
+  }
+  .lg\:u-align-top {
+    vertical-align: top !important;
+  }
+  .lg\:u-align-middle {
+    vertical-align: middle !important;
+  }
+  .lg\:u-align-bottom {
+    vertical-align: bottom !important;
+  }
+  .lg\:u-align-text-top {
+    vertical-align: text-top !important;
+  }
+  .lg\:u-align-text-bottom {
+    vertical-align: text-bottom !important;
+  }
+  .lg\:u-align-sub {
+    vertical-align: sub !important;
+  }
+  .lg\:u-align-super {
+    vertical-align: super !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .xl\:u-align-baseline {
+    vertical-align: baseline !important;
+  }
+  .xl\:u-align-top {
+    vertical-align: top !important;
+  }
+  .xl\:u-align-middle {
+    vertical-align: middle !important;
+  }
+  .xl\:u-align-bottom {
+    vertical-align: bottom !important;
+  }
+  .xl\:u-align-text-top {
+    vertical-align: text-top !important;
+  }
+  .xl\:u-align-text-bottom {
+    vertical-align: text-bottom !important;
+  }
+  .xl\:u-align-sub {
+    vertical-align: sub !important;
+  }
+  .xl\:u-align-super {
+    vertical-align: super !important;
+  }
+}
