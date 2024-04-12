@@ -1,0 +1,87 @@
+/* MEDIA CSS */
+/* Handles images, videos, figures, etc */
+
+video.video-fullscreen {
+  position: absolute;
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+  z-index: -1;
+}
+
+.hero.fullscreen video {
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+/* Add to parent container to make media child fill container */
+.media-stretch {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+
+    /* Add pseudoclass to allow media to have height (default height is 0) */
+    &::before {
+        content: "";
+        display: block;
+        padding-bottom: 56.25%; /* 9 / 16  for 16:9 ratio */
+    }
+
+    /* Force media embed to fill parent container */
+    iframe,
+    embed,
+    object {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%; /* Make sure media does exceed or go under boundary limit */
+        height: 100%;
+    }
+
+    /* Alternate media ratios */
+    &.rat-4-3::before {
+        padding-bottom: 75%;
+    }
+    
+    &.rat-1-1::before {
+        padding-bottom: 100%;
+    }
+
+    /* For HTML5 video objects */
+    video {
+        height: auto;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+/* FIGURES */
+/* For flexible media display */
+.fig {
+    margin: 0 0 0.5rem 0; /* Small margin at the bottom */
+
+    .fig-caption {
+        margin-top: 1rem;
+    }
+}
+
+/* IMAGES */
+.img-stretch {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+.img-contain {
+    object-fit: contain;
+}
