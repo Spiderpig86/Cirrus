@@ -174,7 +174,7 @@ $default-variant-delimiter: '\\:';
             // If there is a prefix defined, use it in the class name
             $new-base: $class-prefix + $delimiter;
         }
-        
+
         $new-base: $new-base + $base-class-name;
         $base: list.append($base, $new-base, comma);
     }
@@ -225,7 +225,6 @@ $default-variant-delimiter: '\\:';
         }
 
         @each $key, $value in $class-value-pairs {
-
             $context: map-merge(
                 $context,
                 (
@@ -246,6 +245,22 @@ $default-variant-delimiter: '\\:';
                 }
             }
         }
+    }
+}
+
+@mixin inline-class-generator($base-class-name, $config: (), $variants: (), $context: ()) {
+    @if $base-class-name == null {
+        @error 'Base class name must be provided'
+    }
+    
+    $context: map-merge(
+        $context,
+        (
+            base-class-name: $base-class-name,
+        )
+    );
+    @include generate-rules-pseudos-selectors($config, $variants, $context) using ($props...) {
+        @content ($props...);
     }
 }
 
@@ -317,4 +332,26 @@ $default-variant-delimiter: '\\:';
         );
     }
     @return $result;
+}
+
+@mixin utility-with-body(
+    $delimiter: $default-delimiter,
+    $variants: (),
+    $variant-delimiter: $default-variant-delimiter,
+    $generate-viewports: false,
+    $override: $default-override
+) {
+    $config: (
+        delimiter: $delimiter,
+        variant-delimiter: $variant-delimiter,
+    );
+    @include generate-rules-pseudos-selectors(
+            $config: $config,
+            $variants: $variants,
+            $context: (),
+            $generate-viewports: $generate-viewports
+        )
+        using ($props...) {
+        @content ($props...);
+    }
 }

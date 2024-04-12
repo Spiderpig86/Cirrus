@@ -391,20 +391,19 @@
         }
     }
 
-    
     @include it('works with  empty base class name') {
         @include assert {
             @include output($selector: false) {
-                        @include generator_v2.utility(
-                            $base-class-name: '',
-                            $class-value-pairs: (
-                                'blue': (
-                                    'color': blue,
-                                ),
-                            ),
-                            $generate-viewports: false,
-                            $override: '!important'
-                        );
+                @include generator_v2.utility(
+                    $base-class-name: '',
+                    $class-value-pairs: (
+                        'blue': (
+                            'color': blue,
+                        ),
+                    ),
+                    $generate-viewports: false,
+                    $override: '!important'
+                );
             }
             @include expect($selector: false) {
                 .u-blue {
@@ -438,6 +437,156 @@
             @include expect($selector: false) {
                 .hover\:text-blue:hover {
                     color: blue;
+                }
+            }
+        }
+    }
+}
+
+@include describe('utility-with-body()') {
+    @include it('basic test') {
+        @include assert {
+            @include output($selector: false) {
+                @include generator_v2.utility-with-body(
+                        $variants: (
+                            'dark',
+                            'hover',
+                            'reduce-motion',
+                            'group-hover',
+                            'group-focus',
+                        ),
+                        $generate-viewports: true,
+                        $override: '!important'
+                    )
+                    using ($props...) {
+                    @include generator_v2.inline-class-generator('foo', $props...) using ($props...) {
+                        color: #fff;
+                    }
+                }
+            }
+            @include expect($selector: false) {
+                .foo {
+                    color: #fff;
+                }
+
+                .hover\:foo:hover {
+                    color: #fff;
+                }
+
+                .group:hover .group-hover\:foo {
+                    color: #fff;
+                }
+
+                .group:focus .group-focus\:foo {
+                    color: #fff;
+                }
+
+                @media screen and (min-width: 640px) {
+                    .sm\:foo {
+                        color: #fff;
+                    }
+
+                    .sm\:hover\:foo:hover {
+                        color: #fff;
+                    }
+
+                    .group:hover .sm\:group-hover\:foo {
+                        color: #fff;
+                    }
+
+                    .group:focus .sm\:group-focus\:foo {
+                        color: #fff;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    .md\:foo {
+                        color: #fff;
+                    }
+
+                    .md\:hover\:foo:hover {
+                        color: #fff;
+                    }
+
+                    .group:hover .md\:group-hover\:foo {
+                        color: #fff;
+                    }
+
+                    .group:focus .md\:group-focus\:foo {
+                        color: #fff;
+                    }
+                }
+
+                @media screen and (min-width: 1024px) {
+                    .lg\:foo {
+                        color: #fff;
+                    }
+
+                    .lg\:hover\:foo:hover {
+                        color: #fff;
+                    }
+
+                    .group:hover .lg\:group-hover\:foo {
+                        color: #fff;
+                    }
+
+                    .group:focus .lg\:group-focus\:foo {
+                        color: #fff;
+                    }
+                }
+
+                @media screen and (min-width: 1280px) {
+                    .xl\:foo {
+                        color: #fff;
+                    }
+
+                    .xl\:hover\:foo:hover {
+                        color: #fff;
+                    }
+
+                    .group:hover .xl\:group-hover\:foo {
+                        color: #fff;
+                    }
+
+                    .group:focus .xl\:group-focus\:foo {
+                        color: #fff;
+                    }
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    .dark\:foo {
+                        color: #fff;
+                    }
+
+                    .dark\:hover\:foo:hover {
+                        color: #fff;
+                    }
+
+                    .group:hover .dark\:group-hover\:foo {
+                        color: #fff;
+                    }
+
+                    .group:focus .dark\:group-focus\:foo {
+                        color: #fff;
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:foo {
+                        color: #fff;
+                    }
+
+                    .reduce-motion\:hover\:foo:hover {
+                        color: #fff;
+                    }
+
+                    .group:hover .reduce-motion\:group-hover\:foo {
+                        color: #fff;
+                    }
+
+                    .group:focus .reduce-motion\:group-focus\:foo {
+                        color: #fff;
+                    }
                 }
             }
         }
