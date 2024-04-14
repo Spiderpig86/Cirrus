@@ -1,72 +1,71 @@
+@use '../../../src/internal/generator_v2';
 @use '../../../src/internal' as *;
 
-@include utility-with-body($prefix: '', $generate-viewports: 'true', $override: '!important') using
-    ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override) {
+@include generator_v2.utility-with-body($variants: (), $generate-viewports: get-viewport-flag($GRID)) using ($props...) {
     @each $class, $size in $spacing-system {
         /* Margin */
-        .#{$variant-prefix}#{$prefix}m#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
-            margin: $size #{$override};
+        @include generator_v2.inline-class-generator('m-#{$class}', $props...) using ($config) {
+            margin: $size #{map-get($config, override)};
         }
-        .#{$variant-prefix}#{$prefix}mt#{$delimiter}#{$class}#{$suffix-str},
-        .#{$variant-prefix}#{$prefix}my#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
-            margin-top: $size #{$override};
+        @include generator_v2.inline-class-generator('mx-#{$class}', $props...) using ($config) {
+            margin-left: $size #{map-get($config, override)};
+            margin-right: $size #{map-get($config, override)};
         }
-        .#{$variant-prefix}#{$prefix}mb#{$delimiter}#{$class}#{$suffix-str},
-        .#{$variant-prefix}#{$prefix}my#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
-            margin-bottom: $size #{$override};
+        @include generator_v2.inline-class-generator('my-#{$class}', $props...) using ($config) {
+            margin-top: $size #{map-get($config, override)};
+            margin-bottom: $size #{map-get($config, override)};
         }
-    
-        .#{$variant-prefix}#{$prefix}ml#{$delimiter}#{$class}#{$suffix-str},
-        .#{$variant-prefix}#{$prefix}mx#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
-            margin-left: $size #{$override};
+        @include generator_v2.inline-class-generator('mt-#{$class}', $props...) using ($config) {
+            margin-top: $size #{map-get($config, override)};
         }
-        .#{$variant-prefix}#{$prefix}mr#{$delimiter}#{$class}#{$suffix-str},
-        .#{$variant-prefix}#{$prefix}mx#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
-            margin-right: $size #{$override};
+        @include generator_v2.inline-class-generator('mb-#{$class}', $props...) using ($config) {
+            margin-bottom: $size #{map-get($config, override)};
         }
-    
-        /* Spacing */
-        .#{$variant-prefix}#{$prefix}p#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
-            padding: $size #{$override};
+
+        /* Padding */
+        @include generator_v2.inline-class-generator('p-#{$class}', $props...) using ($config) {
+            padding: $size #{map-get($config, override)};
         }
-    
-        .#{$variant-prefix}#{$prefix}pt#{$delimiter}#{$class}#{$suffix-str},
-        .#{$variant-prefix}#{$prefix}py#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
-            padding-top: $size #{$override};
+        @include generator_v2.inline-class-generator('px-#{$class}', $props...) using ($config) {
+            padding-left: $size #{map-get($config, override)};
+            padding-right: $size #{map-get($config, override)};
         }
-        .#{$variant-prefix}#{$prefix}pb#{$delimiter}#{$class}#{$suffix-str},
-        .#{$variant-prefix}#{$prefix}py#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
-            padding-bottom: $size #{$override};
+        @include generator_v2.inline-class-generator('py-#{$class}', $props...) using ($config) {
+            padding-top: $size #{map-get($config, override)};
+            padding-bottom: $size #{map-get($config, override)};
         }
-    
-        .#{$variant-prefix}#{$prefix}pl#{$delimiter}#{$class}#{$suffix-str},
-        .#{$variant-prefix}#{$prefix}px#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
-            padding-left: $size #{$override};
+        @include generator_v2.inline-class-generator('pt-#{$class}', $props...) using ($config) {
+            padding-top: $size #{map-get($config, override)};
         }
-        .#{$variant-prefix}#{$prefix}pr#{$delimiter}#{$class}#{$suffix-str},
-        .#{$variant-prefix}#{$prefix}px#{$delimiter}#{$class}#{$suffix-str} #{$variant-suffix}{
-            padding-right: $size #{$override};
+        @include generator_v2.inline-class-generator('pb-#{$class}', $props...) using ($config) {
+            padding-bottom: $size #{map-get($config, override)};
+        }
+        @include generator_v2.inline-class-generator('pl-#{$class}', $props...) using ($config) {
+            padding-left: $size #{map-get($config, override)};
+        }
+        @include generator_v2.inline-class-generator('pr-#{$class}', $props...) using ($config) {
+            padding-right: $size #{map-get($config, override)};
         }
     }
 
-    .#{$variant-prefix}#{$prefix}ml-auto#{$suffix-str},
-    .#{$variant-prefix}#{$prefix}mx-auto#{$suffix-str} #{$variant-suffix}{
-        margin-left: auto #{$override};
+    @include generator_v2.inline-class-generator('mx-auto', $props...) using ($config) {
+        margin-left: auto #{map-get($config, override)};
+        margin-right: auto #{map-get($config, override)};
     }
-    
-    .#{$variant-prefix}#{$prefix}mr-auto#{$suffix-str},
-    .#{$variant-prefix}#{$prefix}mx-auto#{$suffix-str} #{$variant-suffix}{
-        margin-right: auto #{$override};
+    @include generator_v2.inline-class-generator('my-auto', $props...) using ($config) {
+        margin-left: auto #{map-get($config, override)};
+        margin-right: auto #{map-get($config, override)};
     }
-    
-    .#{$variant-prefix}#{$prefix}mt-auto#{$suffix-str},
-    .#{$variant-prefix}#{$prefix}my-auto#{$suffix-str} #{$variant-suffix}{
-        margin-top: auto #{$override};
+    @include generator_v2.inline-class-generator('mt-auto', $props...) using ($config) {
+        margin-top: auto #{map-get($config, override)};
     }
-    
-    .#{$variant-prefix}#{$prefix}mb-auto#{$suffix-str},
-    .#{$variant-prefix}#{$prefix}my-auto#{$suffix-str} #{$variant-suffix}{
-        margin-bottom: auto #{$override};
+    @include generator_v2.inline-class-generator('mb-auto', $props...) using ($config) {
+        margin-bottom: auto #{map-get($config, override)};
+    }
+    @include generator_v2.inline-class-generator('ml-auto', $props...) using ($config) {
+        margin-left: auto #{map-get($config, override)};
+    }
+    @include generator_v2.inline-class-generator('mr-auto', $props...) using ($config) {
+        margin-right: auto #{map-get($config, override)};
     }
 }
-

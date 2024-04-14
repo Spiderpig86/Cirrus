@@ -23,7 +23,7 @@ $default-variant-delimiter: '\\:';
     @class-value-pairs {map<string, any>[]} - list of mappings that maps the variant name (e.g. 'blue') to a map of CSS properties to values
     @variants {string[]} [()] - list of strings specifying which variants to generate styles for. Possible values:
         - 'responsive',
-        - 'dark-mode', 'light-mode',
+        - 'dark', 'light',
         - 'reduce-motion',
         - 'selection-hover',
         - 'expand',
