@@ -3,6 +3,7 @@
 * Stanley Lim, Copyright 2024
 * https://cirrus-ui.com
 */
+@charset "UTF-8";
 /* v1 Color scheme for Cirrus */
 /*
   Functions
@@ -18357,4 +18358,1866 @@ video.video-fullscreen {
   .xl\:u-z-auto {
     z-index: auto !important;
   }
+}
+/* Accordion */
+/* Use with <detail> and <summary> HTML tags */
+details.accordion {
+  border-bottom: 1px solid #dee2e6;
+  display: block;
+  padding: 1rem;
+}
+
+details.accordion summary.accordion__summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  list-style-type: none;
+  opacity: 0.75;
+  transition: all 250ms;
+  /* Required for Safari, see https://github.com/Spiderpig86/Cirrus/issues/216 */
+}
+
+details.accordion summary.accordion__summary::-webkit-details-marker {
+  display: none;
+}
+
+details.accordion summary.accordion__summary:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(65, 84, 98)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-position: right center;
+  background-size: 1rem auto;
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  float: right;
+  height: 1rem;
+  transform: rotate(-90deg);
+  width: 1rem;
+}
+
+details.accordion[open] summary.accordion__summary {
+  margin-bottom: 1rem;
+  opacity: 1;
+}
+
+details.accordion[open] summary.accordion__summary:after {
+  transform: rotate(0);
+}
+
+details.accordion:last-of-type {
+  border-color: transparent;
+}
+
+/* Avatar */
+.avatar {
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #f03d4d;
+  overflow: hidden;
+  /* Draw text on image just like in Gmail */
+}
+
+.avatar::before {
+  content: attr(data-text);
+  color: currentColor;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.avatar.avatar--xs {
+  font-size: 0.8rem;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.avatar.avatar--sm {
+  font-size: 1rem;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.avatar.avatar--lg {
+  font-size: 2rem;
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.avatar.avatar--xl {
+  font-size: 3rem;
+  width: 6.4rem;
+  height: 6.4rem;
+}
+
+.avatar img.padded {
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.breadcrumb {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.breadcrumb.breadcrumb--center {
+  justify-content: center;
+}
+
+.breadcrumb.breadcrumb--right {
+  justify-content: flex-end;
+}
+
+.breadcrumb.breadcrumb--arrow .breadcrumb__item:not(:first-child)::before {
+  content: "→";
+}
+
+.breadcrumb.breadcrumb--bullet .breadcrumb__item:not(:first-child)::before {
+  content: "•";
+}
+
+.breadcrumb.breadcrumb--dot .breadcrumb__item:not(:first-child)::before {
+  content: "·";
+}
+
+.breadcrumb.breadcrumb--gt .breadcrumb__item:not(:first-child)::before {
+  content: "≻";
+}
+
+.breadcrumb .breadcrumb__item {
+  margin: 0;
+}
+
+.breadcrumb .breadcrumb__item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.breadcrumb .breadcrumb__item:not(:first-child)::before {
+  content: "/";
+  padding-right: 0.5rem;
+}
+
+.breadcrumb .breadcrumb__item.breadcrumb__item--active {
+  cursor: default;
+  pointer-events: none;
+}
+
+.breadcrumb .breadcrumb__item.breadcrumb__item--active a {
+  color: #0f172a;
+}
+
+/* CARDS */
+.card {
+  background-color: #fff;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 5px 12px 0 rgba(42, 51, 83, 0.12), 0px 0px 5px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s;
+  /* Allow for the cards to have the same height when u-flex is used on the card */
+  /*
+      NOTE: To have cards with the same height, place the card class with col-x classes and have the parent have fluid-container.
+  */
+  /* Card Title Bar */
+}
+
+.card:hover {
+  transition: all 0.3s;
+  box-shadow: 0px 8px 20px 0 rgba(42, 51, 83, 0.12), 0 5px 5px rgba(0, 0, 0, 0.06);
+}
+
+.card:hover .card-image::after {
+  opacity: 0;
+}
+
+.card.slide-up, .card.card--slide-up {
+  display: flex;
+  flex-direction: column;
+  max-height: 550px;
+  /* More card components in second example */
+}
+
+.card.slide-up:hover .card-body,
+.card.slide-up:hover .card__body, .card.card--slide-up:hover .card-body,
+.card.card--slide-up:hover .card__body {
+  opacity: 1;
+}
+
+.card.slide-up:hover .card-image,
+.card.slide-up:hover .card__image, .card.card--slide-up:hover .card-image,
+.card.card--slide-up:hover .card__image {
+  transform: translateY(-40px);
+}
+
+.card.slide-up:hover .mobile-title,
+.card.slide-up:hover .card__mobile-title, .card.card--slide-up:hover .mobile-title,
+.card.card--slide-up:hover .card__mobile-title {
+  bottom: 35%;
+  transition: all 0.3s ease-in-out;
+}
+
+.card.slide-up .mobile-title,
+.card.slide-up .card__mobile-title, .card.card--slide-up .mobile-title,
+.card.card--slide-up .card__mobile-title {
+  position: absolute;
+  left: 0;
+  bottom: 5rem;
+  background-color: var(--cirrus-bg);
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  padding: 1.5rem 0 0 0;
+  backface-visibility: hidden;
+}
+
+.card.slide-up .card-body,
+.card.slide-up .card__body, .card.card--slide-up .card-body,
+.card.card--slide-up .card__body {
+  opacity: 0;
+  overflow: auto;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.card.u-flex .content {
+  flex-grow: 1;
+}
+
+.card p {
+  margin: 1rem 0;
+}
+
+.card .card-image,
+.card .card__image {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 5px 5px 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease-in-out;
+}
+
+.card .card-image::after,
+.card .card__image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 500ms;
+  bottom: 0;
+}
+
+.card .card-container,
+.card .card__container {
+  display: block;
+  position: relative;
+  height: 40%;
+  min-height: 21rem; /* So it appears in html5 standards mode */
+}
+
+.card .title-container,
+.card .card__title-container {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.card .title-container .title,
+.card .title-container .subtitle,
+.card .card__title-container .title,
+.card .card__title-container .subtitle {
+  color: #fff;
+  margin: 1rem auto;
+}
+
+.card .title-container .title,
+.card .card__title-container .title {
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card .action-bar,
+.card .card__action-bar {
+  user-select: none;
+  padding: 0.5rem;
+  margin: 0;
+  border-top: 1px solid #e9ecef;
+  box-sizing: border-box;
+  transition: left 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* Add some padding to the buttons */
+}
+
+.card .action-bar .btn, .card .action-bar button, .card .action-bar [type=submit], .card .action-bar [type=reset], .card .action-bar [type=button],
+.card .card__action-bar .btn,
+.card .card__action-bar button,
+.card .card__action-bar [type=submit],
+.card .card__action-bar [type=reset],
+.card .card__action-bar [type=button] {
+  margin: 0 0.5rem;
+}
+
+.card .action-bar + .card-footer, .card .action-bar + .card__footer,
+.card .card__action-bar + .card-footer,
+.card .card__action-bar + .card__footer {
+  padding: 1rem 0;
+  border-top: 1px solid #e9ecef;
+}
+
+.card .card-footer,
+.card .card__footer {
+  position: relative;
+  font-size: 0.875rem;
+  color: #868e96;
+}
+
+.card .card-head,
+.card .card__header {
+  align-items: stretch;
+  display: flex;
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* Mixins */
+/* EXTENDED FORM */
+/* Base class layout for extended form */
+.form-ext-control {
+  padding-left: 1.5rem;
+  position: relative;
+  /* Checkbox */
+  /* Radio Button */
+  /* Hides the original input */
+  /* Toggle Switches */
+}
+
+.form-ext-control.form-ext-checkbox .form-ext-input:checked ~ .form-ext-label:after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+}
+
+.form-ext-control.form-ext-checkbox .form-ext-label:before {
+  border-radius: 0.25rem;
+}
+
+.form-ext-control.form-ext-radio .form-ext-input:checked ~ .form-ext-label:after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.form-ext-control.form-ext-radio .form-ext-label:before {
+  border-radius: 50%;
+}
+
+.form-ext-control .form-ext-input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  /* Checked state */
+}
+
+.form-ext-control .form-ext-input:disabled ~ .form-ext-label {
+  opacity: 0.4;
+}
+
+.form-ext-control .form-ext-input:checked ~ .form-ext-label:before {
+  background-color: #f03d4d;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--primary:checked ~ .form-ext-label {
+  color: #f03d4d;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--primary:checked ~ .form-ext-label:before {
+  background-color: #f03d4d;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--primary:focus ~ .form-ext-label:before {
+  border-color: inherit;
+  box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--dark:checked ~ .form-ext-label {
+  color: #363636;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--dark:checked ~ .form-ext-label:before {
+  background-color: #363636;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--dark:focus ~ .form-ext-label:before {
+  border-color: inherit;
+  box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--link:checked ~ .form-ext-label {
+  color: #5e5cc7;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--link:checked ~ .form-ext-label:before {
+  background-color: #5e5cc7;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--link:focus ~ .form-ext-label:before {
+  border-color: inherit;
+  box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--info:checked ~ .form-ext-label {
+  color: #2972fa;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--info:checked ~ .form-ext-label:before {
+  background-color: #2972fa;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--info:focus ~ .form-ext-label:before {
+  border-color: inherit;
+  box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label {
+  color: #0dd157;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--success:checked ~ .form-ext-label:before {
+  background-color: #0dd157;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--success:focus ~ .form-ext-label:before {
+  border-color: inherit;
+  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--warning:checked ~ .form-ext-label {
+  color: #fab633;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--warning:checked ~ .form-ext-label:before {
+  background-color: #fab633;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--warning:focus ~ .form-ext-label:before {
+  border-color: inherit;
+  box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-input.form-ext-input--danger:checked ~ .form-ext-label {
+  color: #fb4143;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--danger:checked ~ .form-ext-label:before {
+  background-color: #fb4143;
+}
+
+.form-ext-control .form-ext-input.form-ext-input--danger:focus ~ .form-ext-label:before {
+  border-color: inherit;
+  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-input:disabled ~ .form-ext-toggle__toggler {
+  opacity: 0.5;
+}
+
+.form-ext-control .form-ext-toggle__label {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-ext-control .form-ext-toggle {
+  cursor: pointer;
+  position: relative;
+  /* Toggle themes */
+  /**
+  * Accessibility
+  */
+  /**
+  * Accessibility
+  */
+  /**
+  * Accessibility
+  */
+  /**
+  * Accessibility
+  */
+  /**
+  * Accessibility
+  */
+  /**
+  * Accessibility
+  */
+  /**
+  * Accessibility
+  */
+}
+
+.form-ext-control .form-ext-toggle input[type=checkbox],
+.form-ext-control .form-ext-toggle input[type=radio] {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle__toggler {
+  border: 1px solid #d5d7dc;
+  border-radius: 6.25rem;
+  color: #d5d7dc;
+  display: block;
+  font-size: 9px;
+  height: 1.5rem;
+  position: relative;
+  width: 3rem;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle__toggler i {
+  display: inline-block;
+}
+
+.form-ext-control .form-ext-toggle input[type=checkbox]:checked + .form-ext-toggle__toggler,
+.form-ext-control .form-ext-toggle input[type=checkbox]:checked + * .form-ext-toggle__toggler,
+.form-ext-control .form-ext-toggle input[type=radio]:checked + .form-ext-toggle__toggler,
+.form-ext-control .form-ext-toggle input[type=radio]:checked + * .form-ext-toggle__toggler {
+  background-color: #f03d4d;
+  border-color: #f03d4d;
+  color: #fff;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.form-ext-control .form-ext-toggle input[type=checkbox]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-control .form-ext-toggle input[type=checkbox]:checked + * .form-ext-toggle__toggler i::after,
+.form-ext-control .form-ext-toggle input[type=radio]:checked + .form-ext-toggle__toggler i::after,
+.form-ext-control .form-ext-toggle input[type=radio]:checked + * .form-ext-toggle__toggler i::after {
+  background-color: #fff;
+  left: calc(100% - 20px);
+}
+
+.form-ext-control .form-ext-toggle input[type=checkbox]:checked + .form-ext-toggle__toggler i::before,
+.form-ext-control .form-ext-toggle input[type=checkbox]:checked + * .form-ext-toggle__toggler i::before,
+.form-ext-control .form-ext-toggle input[type=radio]:checked + .form-ext-toggle__toggler i::before,
+.form-ext-control .form-ext-toggle input[type=radio]:checked + * .form-ext-toggle__toggler i::before {
+  color: #fff;
+  content: attr(data-check-icon);
+  text-align: left;
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--primary input[type=checkbox]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--primary input[type=checkbox]:checked + * .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--primary input[type=radio]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--primary input[type=radio]:checked + * .form-ext-toggle__toggler {
+  background-color: #f03d4d;
+  border-color: #f03d4d;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--primary .form-ext-toggle__toggler {
+  border-color: #f03d4d;
+  color: #f03d4d;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--primary .form-ext-toggle__toggler i::after {
+  background-color: #f03d4d;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+.form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+  box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--primary .form-ext-input:focus + .form-ext-toggle__toggler {
+  box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--dark input[type=checkbox]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--dark input[type=checkbox]:checked + * .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--dark input[type=radio]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--dark input[type=radio]:checked + * .form-ext-toggle__toggler {
+  background-color: #363636;
+  border-color: #363636;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--dark .form-ext-toggle__toggler {
+  border-color: #363636;
+  color: #363636;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--dark .form-ext-toggle__toggler i::after {
+  background-color: #363636;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+.form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+  box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--dark .form-ext-input:focus + .form-ext-toggle__toggler {
+  box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--link input[type=checkbox]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--link input[type=checkbox]:checked + * .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--link input[type=radio]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--link input[type=radio]:checked + * .form-ext-toggle__toggler {
+  background-color: #5e5cc7;
+  border-color: #5e5cc7;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--link .form-ext-toggle__toggler {
+  border-color: #5e5cc7;
+  color: #5e5cc7;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--link .form-ext-toggle__toggler i::after {
+  background-color: #5e5cc7;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+.form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+  box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--link .form-ext-input:focus + .form-ext-toggle__toggler {
+  box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--info input[type=checkbox]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--info input[type=checkbox]:checked + * .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--info input[type=radio]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--info input[type=radio]:checked + * .form-ext-toggle__toggler {
+  background-color: #2972fa;
+  border-color: #2972fa;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--info .form-ext-toggle__toggler {
+  border-color: #2972fa;
+  color: #2972fa;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--info .form-ext-toggle__toggler i::after {
+  background-color: #2972fa;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+.form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+  box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--info .form-ext-input:focus + .form-ext-toggle__toggler {
+  box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--success input[type=checkbox]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--success input[type=checkbox]:checked + * .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--success input[type=radio]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--success input[type=radio]:checked + * .form-ext-toggle__toggler {
+  background-color: #0dd157;
+  border-color: #0dd157;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--success .form-ext-toggle__toggler {
+  border-color: #0dd157;
+  color: #0dd157;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--success .form-ext-toggle__toggler i::after {
+  background-color: #0dd157;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+.form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--success .form-ext-input:focus + .form-ext-toggle__toggler {
+  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--warning input[type=checkbox]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--warning input[type=checkbox]:checked + * .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--warning input[type=radio]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--warning input[type=radio]:checked + * .form-ext-toggle__toggler {
+  background-color: #fab633;
+  border-color: #fab633;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--warning .form-ext-toggle__toggler {
+  border-color: #fab633;
+  color: #fab633;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--warning .form-ext-toggle__toggler i::after {
+  background-color: #fab633;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+.form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+  box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--warning .form-ext-input:focus + .form-ext-toggle__toggler {
+  box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--danger input[type=checkbox]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--danger input[type=checkbox]:checked + * .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--danger input[type=radio]:checked + .form-ext-toggle__toggler, .form-ext-control .form-ext-toggle.form-ext-toggle--danger input[type=radio]:checked + * .form-ext-toggle__toggler {
+  background-color: #fb4143;
+  border-color: #fb4143;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--danger .form-ext-toggle__toggler {
+  border-color: #fb4143;
+  color: #fb4143;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle--danger .form-ext-toggle__toggler i::after {
+  background-color: #fb4143;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-input:focus + .form-ext-toggle__toggler,
+.form-ext-control .form-ext-toggle .form-ext-input:focus ~ .form-ext-label:before {
+  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle.form-ext-toggle--danger .form-ext-input:focus + .form-ext-toggle__toggler {
+  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle__toggler i::before,
+.form-ext-control .form-ext-toggle .form-ext-toggle__toggler i::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle__toggler i::before {
+  content: attr(data-uncheck-icon);
+  padding: 2px 7px;
+  line-height: 18px;
+  text-align: right;
+  top: 0;
+  width: 55%;
+  font-size: 12px;
+}
+
+.form-ext-control .form-ext-toggle .form-ext-toggle__toggler i::after {
+  background-color: #d5d7dc;
+  border-radius: 50%;
+  height: 16px;
+  left: 4px;
+  width: 16px;
+  transform: translateY(-50%);
+  transition: left var(--animation-duration) ease;
+  text-align: left;
+  top: 50%;
+}
+
+.form-ext-control .form-ext-label {
+  margin-bottom: 0;
+  position: relative;
+  /* Base of custom form inputs */
+}
+
+.form-ext-control .form-ext-label:before, .form-ext-control .form-ext-label:after {
+  content: "";
+  display: block;
+  height: 1rem;
+  left: -1.5rem;
+  position: absolute;
+  top: 0.3rem;
+  transition: all var(--animation-duration);
+  width: 1rem;
+}
+
+.form-ext-control .form-ext-label:before {
+  background-color: #f6f9fc;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  pointer-events: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.form-ext-control .form-ext-label:after {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+}
+
+.form-ext-control .form-ext-input:checked ~ .form-ext-label:before {
+  border: none;
+}
+
+/* EXTENDED LINKS */
+/* Animated links */
+.u,
+.utb {
+  display: inline;
+  position: relative; /* So the psuedo-elements are positioned correctly */
+}
+
+/* Underline */
+.u::after {
+  content: "";
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background: currentColor;
+  bottom: -0.25em;
+}
+
+.u:hover::after {
+  width: 100%;
+}
+
+.u.u-LR::after {
+  /* Left to Right */
+  left: 0;
+}
+
+.u.u-LR::after {
+  /* Left to Right */
+  left: 0;
+}
+
+.u.u-RL::after {
+  /* Right to Left */
+  right: 0;
+}
+
+.u.u-RL:hover::after {
+  width: 100%;
+}
+
+.u.u-C::after {
+  /* Center Outwards */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Underline top and bottom */
+.utb {
+  /* Opposite start */
+}
+
+.utb::before, .utb::after {
+  content: "";
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background: currentColor;
+}
+
+.utb::before {
+  top: -0.25em;
+}
+
+.utb::after {
+  bottom: -0.25em;
+}
+
+.utb:hover::before, .utb:hover::after {
+  width: 100%;
+}
+
+.utb.utb-LR::before, .utb.utb-LR::after {
+  left: 0;
+}
+
+.utb.utb-RL::before, .utb.utb-RL::after {
+  right: 0;
+}
+
+.utb.utb-C::before, .utb.utb-C::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.utb.utb-OLR::before {
+  /* Suffix denotes border transition direction for the top border (left to right). Bottom border will be the opposite direction */
+  left: 0;
+}
+
+.utb.utb-OLR::after {
+  right: 0;
+}
+
+.utb.utb-ORL::before {
+  right: 0;
+}
+
+.utb.utb-ORL::after {
+  left: 0;
+}
+
+/* The base of the modal dialog, which is an overlay of the webpage */
+.modal {
+  position: fixed; /* Scrolls with the user */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0; /* Initially hidden */
+  padding: 1rem;
+  display: none; /* Doesn't block the elements underneath */
+  align-items: center;
+  justify-content: center; /* Vertical centering */
+  pointer-events: none; /* Prevent any pointer events made to modal while hidden */
+  /* When the modal dialog is visible */
+  /* Different size modals */
+  /* The modal dialog body with the text itself */
+  /* MODAL ANIMATIONS */
+  /* Visible state */
+}
+
+.modal:target, .modal.modal--visible {
+  display: flex;
+  opacity: 1;
+  z-index: 999;
+  pointer-events: auto; /* Re-enable pointer events */
+  /* The div in the modal dialpog used to create the translucent background */
+}
+
+.modal:target .modal-overlay, .modal.modal--visible .modal-overlay {
+  position: absolute; /* Absolute inside of the modal container */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background-color: rgba(54, 54, 54, 0.5);
+}
+
+.modal:target .modal-container,
+.modal:target .modal-container, .modal.modal--visible .modal-container,
+.modal.modal--visible .modal-container {
+  animation: slide-down var(--animation-duration) ease 1;
+  z-index: 1;
+}
+
+.modal:target.modal-animated--zoom-in, .modal:target.modal-animated--zoom-out, .modal.modal--visible.modal-animated--zoom-in, .modal.modal--visible.modal-animated--zoom-out {
+  opacity: 1;
+  transition: 300ms all ease;
+}
+
+.modal:target.modal-animated--zoom-in .modal-content, .modal:target.modal-animated--zoom-out .modal-content, .modal.modal--visible.modal-animated--zoom-in .modal-content, .modal.modal--visible.modal-animated--zoom-out .modal-content {
+  transform: scale(1);
+  transition: 300ms all ease;
+}
+
+.modal.modal-small .modal-content {
+  max-width: 20rem; /* 320px */
+}
+
+.modal.modal-large .modal-content {
+  max-width: 60rem; /* 960px */
+}
+
+.modal .modal-content {
+  background-color: var(--cirrus-bg);
+  padding: 0;
+  display: block;
+  border-radius: 3px;
+  box-shadow: 0 0.4rem 1rem rgba(54, 54, 54, 0.3);
+  z-index: 1;
+  color: var(--cirrus-fg);
+  max-width: 40rem; /* 640px */
+  /* Restrict width  */
+}
+
+.modal .modal-content.small {
+  max-width: 32rem;
+}
+
+.modal .modal-content h1, .modal .modal-content h2, .modal .modal-content h3, .modal .modal-content h4, .modal .modal-content h5, .modal .modal-content h6 {
+  color: var(--cirrus-fg);
+}
+
+.modal .modal-content .modal-header {
+  padding: 1rem 2.5rem;
+}
+
+.modal .modal-content .modal-header .modal-title {
+  font-weight: bolder;
+  font-size: 1.4rem;
+}
+
+.modal .modal-content .modal-body {
+  padding: 1rem 2.5rem;
+  overflow-y: auto;
+  max-height: 50vh; /* Max height is 50% of viewport height which prevents dialog from extetnding past screen */
+  position: relative;
+}
+
+.modal .modal-content .modal-footer {
+  padding: 1rem 2.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .modal .modal-content {
+    max-width: 90%;
+  }
+}
+.modal.modal-animated--dropdown {
+  animation: slide-down var(--animation-duration) ease 1;
+}
+
+.modal.modal-animated--zoom-in, .modal.modal-animated--zoom-out {
+  display: flex;
+  opacity: 0;
+  transition: 300ms all ease;
+}
+
+.modal.modal-animated--zoom-in .modal-content {
+  transform: scale(0.8);
+  transition: 300ms all ease;
+}
+
+.modal.modal-animated--zoom-out .modal-content {
+  transform: scale(1.2);
+  transition: 300ms all ease;
+}
+
+/* Keyframes for slide down animation */
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal-content {
+    max-width: 90%;
+  }
+}
+/* PAGINATION */
+/* Parent contianer for page navigation */
+.pagination {
+  display: flex;
+  /* Use for the major pagination meant to display about 2 items */
+  /* Bordered pagination */
+}
+
+.pagination .pagination-item {
+  flex: 1 0 50%; /* Flex to fill */
+  margin: 1rem 0.1rem;
+  transition: all 0.3s;
+  /* Pagination Item */
+  /* Used to display many pagination items */
+}
+
+.pagination .pagination-item:hover p,
+.pagination .pagination-item:hover h1, .pagination .pagination-item:hover h2, .pagination .pagination-item:hover h3, .pagination .pagination-item:hover h4, .pagination .pagination-item:hover h5, .pagination .pagination-item:hover h6 {
+  transition: all 0.3s;
+  color: #f03d4d;
+}
+
+.pagination .pagination-item:not(.selected):hover *:not([disabled]):not(.disabled):not(.ellipses) {
+  transition: all 0.3s;
+  color: #f03d4d;
+}
+
+.pagination .pagination-item.pagination-next {
+  text-align: right;
+}
+
+.pagination .pagination-item.pagination-prev {
+  text-align: left;
+}
+
+.pagination .pagination-item a {
+  color: #495057;
+  cursor: pointer;
+}
+
+.pagination .pagination-item a[disabled], .pagination .pagination-item a.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+}
+
+.pagination .pagination-item .pagination-item-subtitle {
+  opacity: 0.7;
+  margin: 0; /* Needed to override style after formatting paragraph update */
+}
+
+.pagination .pagination-item.short {
+  border-radius: 0.1rem;
+  margin: 0.2rem 0;
+  flex: 0; /* Flex to fill */
+  /* Color the selected pagination item with accent color */
+}
+
+.pagination .pagination-item.short:first-child a {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.pagination .pagination-item.short:last-child a {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.pagination .pagination-item.short:not([disabled]):not(.disabled):not(.selected):hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.pagination .pagination-item.short.selected {
+  background-color: #f03d4d;
+  color: #fff;
+}
+
+.pagination .pagination-item.short.selected a {
+  color: #fff;
+}
+
+.pagination .pagination-item.short.ellipses {
+  color: #adb5bd;
+  pointer-events: none;
+}
+
+.pagination .pagination-item.short a {
+  display: inline-block;
+  line-height: 1.25;
+  padding: 0.5rem 0.75rem;
+}
+
+.pagination.pagination-bordered .pagination-item.short a {
+  border: 1px solid #dee2e6;
+  border-radius: 0;
+  margin-left: -1px;
+}
+
+/* PLACEHOLDER */
+/* Designed to be embedded in any parent container as placeholder when content is absent. */
+.placeholder {
+  background-color: rgba(222, 226, 230, 0.5);
+  border-radius: 3px;
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #495057; /* Lighter than original text color */
+  display: block;
+  /* Place buttons here for the placeholder */
+}
+
+.placeholder .placeholder-icon {
+  text-align: center;
+}
+
+.placeholder .placeholder-title,
+.placeholder .placeholder-subtitle {
+  margin: 1rem auto;
+}
+
+.placeholder .placeholder-subtitle {
+  opacity: 0.7;
+  margin: 0;
+}
+
+.placeholder .placeholder-commands {
+  margin-top: 1rem;
+}
+
+/* TABS AND TAB CONTAINER */
+.tab-container {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  overflow-x: auto; /* Allow scrollbar to be visible if the width of the tabs exceeds container */
+  user-select: none;
+  white-space: nowrap;
+  align-items: stretch;
+  font-size: 1rem;
+  /* Shift tabs to the left */
+  /* Shift tabs to the center */
+  /* Shift tabs to the right */
+  /* Depth tab styles */
+  /* Classic tab styles */
+  /* Tabs that fill the width */
+  /* Different tab sizes */
+  /* Tabs are embedded inside an unordered list */
+  /* Font Awesome Integration */
+  /* Left icon */
+  /* Right icon */
+}
+
+.tab-container.tabs--left ul {
+  justify-content: flex-start;
+}
+
+.tab-container.tabs--center ul {
+  justify-content: center;
+}
+
+.tab-container.tabs--right ul {
+  justify-content: flex-end;
+}
+
+.tab-container.tabs-depth ul {
+  box-shadow: 0 2px 3px rgba(134, 142, 150, 0.15);
+  border-bottom: 0;
+}
+
+.tab-container.tabs-classic ul {
+  border-bottom-color: #dee2e6;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-radius: 3px 3px 0 0; /* Only round the top left and right corners */
+  transition: all 0.3s;
+}
+
+.tab-container.tabs-classic ul li:not(.selected) a:hover, .tab-container.tabs-classic ul li:not(.selected) .tab-item-content:hover {
+  background-color: #f1f3f5;
+  transition: all 0.3s;
+}
+
+.tab-container.tabs-classic ul li.selected a, .tab-container.tabs-classic ul li.selected .tab-item-content {
+  color: #f03d4d;
+  border-color: #dee2e6;
+  border-bottom-color: transparent !important;
+}
+
+.tab-container.tabs-classic ul li a,
+.tab-container.tabs-classic ul li .tab-item-content {
+  border: 1px solid transparent;
+  border-bottom-color: #dee2e6;
+  border-radius: 3px 3px 0 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab-container.tabs-fill {
+  /* Override the -webkit-box display that sizes tab items based on text */
+}
+
+.tab-container.tabs-fill ul {
+  display: flex; /* Equal size tabs */
+}
+
+.tab-container.tabs-fill li {
+  flex-grow: 1;
+  flex-shrink: 0; /* Disable shrinking to original width */
+  flex-basis: 0;
+}
+
+.tab-container.tabs--xs {
+  font-size: 0.75rem;
+}
+
+.tab-container.tabs--sm {
+  font-size: 0.875rem;
+}
+
+.tab-container.tabs--lg {
+  font-size: 1.25rem;
+}
+
+.tab-container.tabs--xl {
+  font-size: 1.5rem;
+}
+
+.tab-container ul {
+  display: flex;
+  justify-content: flex-start; /* Move tab items to left side */
+  margin: 0.5rem; /* Override the behavior for standard ul and add equal padding */
+  border-bottom: 1px solid #e9ecef; /* Bottom border of tabs */
+  flex-grow: 1;
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.tab-container li {
+  display: block; /* Keep the tabs from extending too far */
+  cursor: pointer;
+  margin: 0;
+  text-align: center;
+}
+
+.tab-container li:hover a, .tab-container li:hover .tab-item-content {
+  border-bottom-color: rgba(240, 61, 77, 0.6);
+  transition: all 0.3s;
+}
+
+.tab-container li.selected a, .tab-container li.selected .tab-item-content {
+  border-bottom-color: #f03d4d;
+  color: #f03d4d;
+  border-width: 2px;
+  transition: all 0.3s;
+}
+
+.tab-container li a,
+.tab-container li .tab-item-content {
+  display: flex;
+  align-items: center;
+  border: 0;
+  border-bottom: 1px solid #e9ecef;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+  color: var(--cirrus-fg);
+  border-bottom-width: 2px;
+  margin-bottom: -2px; /* Get rid of any remaining border lines */
+  background-color: var(--cirrus-bg);
+}
+
+.tab-container .icon:first-child {
+  margin-right: 0.75rem;
+}
+
+.tab-container .icon:last-child {
+  margin-left: 0.75rem;
+}
+
+/* TAGS */
+.tag {
+  align-items: center;
+  background-color: #f6f9fc;
+  border-radius: 0.25rem;
+  color: currentColor;
+  display: inline-flex;
+  height: 2em;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  padding: 0.625rem 0.625rem;
+  white-space: nowrap;
+  /* Delete button for tag */
+  /* Draw the delete button */
+  /* TAG THEMES */
+  /* Tag close button */
+}
+
+.tag.tag--xs {
+  font-size: 0.75rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.tag.tag--sm {
+  font-size: 0.875rem;
+  padding: 0.625rem 0.625rem;
+}
+
+.tag.tag--md {
+  font-size: 1rem;
+  padding: 0.75rem 0.75rem;
+}
+
+.tag.tag--lg {
+  font-size: 1.25rem;
+  padding: 0.875rem 0.875rem;
+}
+
+.tag.tag--xl {
+  font-size: 1.5rem;
+  padding: 1rem 1rem;
+}
+
+.tag.tag--rounded {
+  border-radius: 290486px;
+}
+
+.tag.tag__delete {
+  aspect-ratio: 1/1;
+  background-color: rgba(10, 10, 10, 0.2);
+  border-radius: 290486px;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  height: auto;
+  position: relative;
+  width: auto;
+}
+
+.tag.tag__delete:hover {
+  background-color: rgba(10, 10, 10, 0.3);
+}
+
+.tag.tag__delete::before, .tag.tag__delete::after {
+  background-color: #f6f9fc;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform-origin: center center;
+}
+
+.tag.tag__delete::before {
+  height: 1px;
+  width: 50%;
+}
+
+.tag.tag__delete::after {
+  height: 50%;
+  width: 1px;
+}
+
+.tag.tag__delete {
+  margin-left: 0.25rem;
+  margin-right: -0.125rem;
+}
+
+.tag.tag--white {
+  background-color: #fff;
+  color: #363636;
+}
+
+.tag.tag--black {
+  background-color: #000;
+  color: #fff;
+}
+
+.tag.tag--primary {
+  background-color: #f03d4d;
+  color: #fff;
+}
+
+.tag.tag--primary {
+  background-color: #f03d4d;
+  color: #fff;
+}
+
+.tag.tag--primary.tag__close-btn:hover {
+  background-color: #ee2537;
+}
+
+.tag.tag--primary.tag__close-btn:active {
+  background-color: #e81225;
+}
+
+.tag.tag--dark {
+  background-color: #363636;
+  color: #fff;
+}
+
+.tag.tag--dark.tag__close-btn:hover {
+  background-color: #292929;
+}
+
+.tag.tag--dark.tag__close-btn:active {
+  background-color: #1d1d1d;
+}
+
+.tag.tag--link {
+  background-color: #5e5cc7;
+  color: #fff;
+}
+
+.tag.tag--link.tag__close-btn:hover {
+  background-color: #4b49c0;
+}
+
+.tag.tag--link.tag__close-btn:active {
+  background-color: #403db3;
+}
+
+.tag.tag--info {
+  background-color: #2972fa;
+  color: #fff;
+}
+
+.tag.tag--info.tag__close-btn:hover {
+  background-color: #1062f9;
+}
+
+.tag.tag--info.tag__close-btn:active {
+  background-color: #0555eb;
+}
+
+.tag.tag--success {
+  background-color: #0dd157;
+  color: #fff;
+}
+
+.tag.tag--success.tag__close-btn:hover {
+  background-color: #0cb94d;
+}
+
+.tag.tag--success.tag__close-btn:active {
+  background-color: #0aa143;
+}
+
+.tag.tag--warning {
+  background-color: #fab633;
+  color: #fff;
+}
+
+.tag.tag--warning.tag__close-btn:hover {
+  background-color: #f9ad1a;
+}
+
+.tag.tag--warning.tag__close-btn:active {
+  background-color: #f4a306;
+}
+
+.tag.tag--danger {
+  background-color: #fb4143;
+  color: #fff;
+}
+
+.tag.tag--danger.tag__close-btn:hover {
+  background-color: #fa282a;
+}
+
+.tag.tag--danger.tag__close-btn:active {
+  background-color: #fa0f12;
+}
+
+.tag.tag__close-btn {
+  cursor: pointer;
+  position: relative;
+  width: 2em;
+}
+
+.tag.tag__close-btn::before, .tag.tag__close-btn::after {
+  background-color: currentColor;
+  content: "";
+  display: block;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform-origin: center center;
+}
+
+.tag.tag__close-btn::before {
+  height: 1px;
+  width: 50%;
+}
+
+.tag.tag__close-btn::after {
+  height: 50%;
+  width: 1px;
+}
+
+/* TAG CONTAINER */
+.tag-container {
+  /* Add margin in between tag containers */
+  /* Used for grouping tags together */
+  /* Tag positioning */
+}
+
+.tag-container:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.tag-container.group-tags {
+  --tag-first-border-radius: 0.25rem 0 0 0.25rem;
+  --tag-last-border-radius: 0 0.25rem 0.25rem 0;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag-container.group-tags .tag {
+  margin-right: 0 !important;
+}
+
+.tag-container.group-tags .tag:first-child {
+  border-radius: var(--tag-first-border-radius);
+}
+
+.tag-container.group-tags .tag:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.tag-container.group-tags .tag:last-child {
+  border-radius: var(--tag-last-border-radius);
+}
+
+.tag-container.group-tags.group-tags--rounded {
+  --tag-first-border-radius: 290486px 0 0 290486px;
+  --tag-last-border-radius: 0 290486px 290486px 0;
+}
+
+.tag-container.tag-container--centered {
+  justify-content: center;
+}
+
+.tag-container.tag-container--centered .tag {
+  margin: 0 0.25rem;
+}
+
+.tag-container.tag-container--right {
+  justify-content: flex-end;
+}
+
+.tag-container.tag-container--right .tag:not(:first-child) {
+  margin-left: 0.5rem;
+}
+
+.tag-container.tag-container--right .tag:not(:last-child) {
+  margin-right: 0;
+}
+
+.tag-container .tag {
+  margin-bottom: 0.5rem;
+}
+
+.tag-container .tag:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+/* MISC */
+a.tag:hover {
+  text-decoration: underline;
+}
+
+/* TILES */
+.tile {
+  display: flex;
+  align-content: space-between; /* Ensure space between child elements of card tile */
+  overflow: inherit; /* Prevent overflowing when unnecessary */
+  /* Override the default behavior where buttons display as blocks */
+  /* Add spacing between the elements in between */
+}
+
+.tile p {
+  font-size: 0.95rem; /* Base font size is 1rem */
+}
+
+.tile .tile__icon,
+.tile .tile__buttons {
+  flex: 0 0 auto;
+}
+
+.tile .tile__buttons button,
+.tile .tile__buttons .btn,
+.tile .tile__buttons [type=submit] {
+  display: inline-block;
+  margin: 0.1rem; /* Reduce space used by buttons, default .5rem */
+}
+
+.tile .tile__container {
+  flex: 1 1 auto;
+}
+
+.tile .tile__container:not(:first-child) {
+  padding-left: 1rem;
+}
+
+.tile .tile__container:not(:last-child) {
+  padding-right: 1rem;
+}
+
+.tile .tile__title {
+  line-height: 1.5rem;
+  font-weight: bolder;
+  margin: 0.1rem auto;
+}
+
+.tile .tile__subtitle {
+  line-height: 1.25rem;
+  opacity: 0.7;
+  margin: 0.1rem auto;
+}
+
+.toast {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--toast-primary-bg);
+  border: 1px solid var(--toast-primary-bg);
+  border-radius: 2px;
+  color: #fff;
+  position: relative;
+  margin: 0.5rem;
+  /* TOAST TYPES */
+}
+
+.toast.toast--translucent {
+  opacity: 0.5;
+}
+
+.toast.toast--translucent:hover {
+  opacity: 1;
+}
+
+.toast p {
+  margin: 0;
+}
+
+.toast a {
+  color: #f6f9fc;
+  transition: all 0.3s;
+}
+
+.toast a:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+
+.toast .toast__title {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.toast .btn-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.toast.toast--primary {
+  background-color: #f03d4d;
+  border-color: #f03d4d;
+}
+
+.toast.toast--primary {
+  background-color: #f03d4d;
+  border-color: #f03d4d;
+}
+
+.toast.toast--dark {
+  background-color: #363636;
+  border-color: #363636;
+}
+
+.toast.toast--link {
+  background-color: #5e5cc7;
+  border-color: #5e5cc7;
+}
+
+.toast.toast--info {
+  background-color: #2972fa;
+  border-color: #2972fa;
+}
+
+.toast.toast--success {
+  background-color: #0dd157;
+  border-color: #0dd157;
+}
+
+.toast.toast--warning {
+  background-color: #fab633;
+  border-color: #fab633;
+}
+
+.toast.toast--danger {
+  background-color: #fb4143;
+  border-color: #fb4143;
+}
+
+/* TOOLTIPS */
+.tooltip {
+  position: relative; /* let's the pseudoelement that we are displaying relative to the button. */
+  overflow: visible; /* Allows the pseudoelement to be shown */
+  white-space: nowrap; /* Keeps the button text from wrapping and getting too large */
+  /* This is the psuedoelement that creates the tooltip */
+  /* Handles the on hover event of the button and then modifies the associated tooltip accordingly. */
+  /* Tooltip top left */
+  /* Tooltip top right */
+  /* Tooltip bottom */
+  /* Tooltip bottom left */
+  /* Tooltip bottom right */
+  /* Tooltip right */
+  /* Tooltip Left */
+}
+
+.tooltip::after {
+  position: absolute;
+  color: #fff;
+  font-size: 0.6rem;
+  background-color: rgba(69, 77, 93, 0.9);
+  content: attr(data-tooltip); /* Retrieves the data specified in this element property and displays it as text */
+  display: block;
+  line-height: 1rem;
+  text-transform: none;
+  overflow: hidden;
+  padding: 0.4rem 0.8rem;
+  opacity: 0; /* Hide the element */
+  text-overflow: ellipsis;
+  max-width: 15rem;
+  transform: translate(-50%, 0);
+  transition: all var(--animation-duration) ease;
+  z-index: 200;
+  pointer-events: none;
+  bottom: 100%; /* Pushes the tooltip above the button */
+  left: 50%; /* Horizontally center it */
+  border-radius: 0.2rem;
+}
+
+.tooltip:focus::after, .tooltip:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -0.5rem);
+  transition: all var(--animation-duration) ease;
+}
+
+.tooltip.tooltip--top-left::after {
+  transform: translate(-50%, 0);
+}
+
+.tooltip.tooltip--top-left:hover::after, .tooltip.tooltip--top-left:focus::after {
+  left: 0;
+  transform: translate(-100%, -0.5rem);
+}
+
+.tooltip.tooltip--top-right::after {
+  left: auto;
+  transform: translate(15%, 0);
+}
+
+.tooltip.tooltip--top-right:hover::after, .tooltip.tooltip--top-right:focus::after {
+  right: 0;
+  transform: translate(100%, -0.5rem);
+}
+
+.tooltip.tooltip--bottom::after {
+  top: 100%;
+  transform: translate(-50%, -1rem); /* Moves tooltip to the center horizontally and shifts tooltip down */
+  bottom: auto;
+}
+
+.tooltip.tooltip--bottom:hover::after, .tooltip.tooltip--bottom:focus::after {
+  transform: translate(-50%, 0.5rem);
+  bottom: auto;
+}
+
+.tooltip.tooltip--bottom-left::after {
+  top: 100%;
+  transform: translate(-65%, -1rem);
+  bottom: auto;
+}
+
+.tooltip.tooltip--bottom-left:hover::after, .tooltip.tooltip--bottom-left:focus::after {
+  left: 0;
+  transform: translate(-100%, 0.5rem);
+}
+
+.tooltip.tooltip--bottom-right::after {
+  left: auto;
+  top: 100%;
+  transform: translate(0%, -1rem);
+  bottom: auto;
+}
+
+.tooltip.tooltip--bottom-right:hover::after, .tooltip.tooltip--bottom-right:focus::after {
+  right: 0;
+  transform: translate(100%, 0.5rem);
+}
+
+.tooltip.tooltip--right::after {
+  left: 100%;
+  bottom: 50%;
+  transform: translate(-1rem, 50%);
+}
+
+.tooltip.tooltip--right:hover::after, .tooltip.tooltip--right:focus::after {
+  transform: translate(0.5rem, 50%);
+}
+
+.tooltip.tooltip--left::after {
+  right: 100%;
+  bottom: 50%;
+  left: auto; /* Needed to work */
+  transform: translate(1rem, 50%);
+}
+
+.tooltip.tooltip--left:hover::after, .tooltip.tooltip--left:focus::after {
+  transform: translate(-0.5rem, 50%);
 }
