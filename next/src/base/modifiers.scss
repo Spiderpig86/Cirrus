@@ -1,3 +1,4 @@
+@use '../../../src/internal/generator_v2';
 @use '../../../src/internal' as *;
 
 /* A collection of modifiers that extend control styling */
@@ -38,84 +39,87 @@
 }
 
 /* Theme modifiers */
-
-/* GLOBAL THEME SELECTORS */
-/* v1 */
-
-@include utility-with-body($generate-viewports: 'false', $override: '!important', $prefix: '') using
-    ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override) {
+@include generator_v2.utility-with-body(
+        $variants: (
+            'dark',
+        ),
+        $generate-viewports: false,
+        $override: '!important'
+    )
+    using ($props...) {
+    /* v1 Colors */
     @each $name, $color in $semantic-colors {
-        @if $color != null {
-            .#{$variant-prefix}#{$prefix}bg-#{$name}#{$suffix-str}#{$variant-suffix} {
-                --btn-color: #{hex-to-rgb($color)};
-                // Not important, use this as a fallback in case no border is set
-                --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
+        // Semantic color bg classes
+        @include generator_v2.inline-class-generator('bg-#{$name}', $props...) using ($config) {
+            --btn-color: #{hex-to-rgb($color)};
+            // Not important, use this as a fallback in case no border is set
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
 
-                background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
-            }
+            background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) #{map-get($config, override)};
+        }
 
-            .#{$variant-prefix}#{$prefix}text-#{$name}#{$suffix-str}#{$variant-suffix} {
-                --btn-fg: #{hex-to-rgb($color)};
-                --btn-border-color: #{hex-to-rgb($color)};
+        // Semantic color text classes
+        @include generator_v2.inline-class-generator('text-#{$name}', $props...) using ($config) {
+            --btn-fg: #{hex-to-rgb($color)};
+            --btn-border-color: #{hex-to-rgb($color)};
 
-                color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
-                // Not important, use this as a fallback in case no border is set
-                border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
-            }
+            color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) #{map-get($config, override)};
+            // Not important, use this as a fallback in case no border is set
+            border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
+        }
 
-            .#{$variant-prefix}#{$prefix}border-#{$name}#{$suffix-str}#{$variant-suffix} {
-                --btn-border-color: #{hex-to-rgb($color)};
-                --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)} !important;
+        // Semantic color border classes
+        @include generator_v2.inline-class-generator('border-#{$name}', $props...) using ($config) {
+            --btn-border-color: #{hex-to-rgb($color)};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)} #{map-get($config, override)};
 
-                border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
-            }
+            border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) #{map-get($config, override)};
         }
     }
-}
 
-.bg-transparent {
-    background-color: transparent !important;
-}
+    @include generator_v2.inline-class-generator('bg-transparent', $props...) using ($config) {
+        background-color: transparent #{map-get($config, override)};
+    }
 
-.text-transparent {
-    border-color: transparent !important;
-    color: transparent !important;
-}
+    @include generator_v2.inline-class-generator('text-transparent', $props...) using ($config) {
+        border-color: transparent #{map-get($config, override)};
+        color: transparent #{map-get($config, override)};
+    }
 
-/* v2 */
-
-@include utility-with-body($generate-viewports: 'false', $override: '!important', $prefix: '') using
-    ($variant-prefix, $prefix, $common-class, $delimiter, $key, $suffix-str, $variant-suffix, $override) {
+    /* v2 Colors */
     @each $name, $palette in $v2Colors {
         @each $level, $color in $palette {
             @if $color != null {
-                .#{$variant-prefix}#{$prefix}bg-#{$name}-#{$level}#{$suffix-str}#{$variant-suffix} {
+                // Bg color
+                @include generator_v2.inline-class-generator('bg-#{$name}-#{$level}', $props...) using ($config) {
                     &:is(#{$button-selectors}) {
                         --btn-color: #{hex-to-rgb($color)};
-                        --btn-hover-color: #{hex-to-rgb(to-hover-color($color, 5%))} !important;
+                        --btn-hover-color: #{hex-to-rgb(to-hover-color($color, 5%))} #{map-get($config, override)};
                         // Not important, use this as a fallback in case no border is set
                         --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
                     }
 
                     &:not(#{$button-selectors}) {
-                        background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) !important;
+                        background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) #{map-get($config, override)};
                     }
                 }
 
-                .#{$variant-prefix}#{$prefix}text-#{$name}-#{$level}#{$suffix-str}#{$variant-suffix} {
+                // Text color
+                @include generator_v2.inline-class-generator('text-#{$name}-#{$level}', $props...) using ($config) {
                     --btn-fg: #{hex-to-rgb($color)};
                     --btn-border-color: #{hex-to-rgb($color)};
 
-                    color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) !important;
+                    color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) #{map-get($config, override)};
                     // Not important, use this as a fallback in case no border is set
                     border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
                 }
 
-                .#{$variant-prefix}#{$prefix}border-#{$name}-#{$level}#{$suffix-str}#{$variant-suffix} {
-                    --btn-border-color: #{hex-to-rgb($color)} !important;
+                // Border color
+                @include generator_v2.inline-class-generator('border-#{$name}-#{$level}', $props...) using ($config) {
+                    --btn-border-color: #{hex-to-rgb($color)} #{map-get($config, override)};
                     --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
 
-                    border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) !important;
+                    border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) #{map-get($config, override)};
                 }
             }
         }
