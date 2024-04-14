@@ -55,6 +55,7 @@ $default-variant-delimiter: '\\:';
         class-prefix: $class-prefix,
         delimiter: $delimiter,
         variant-delimiter: $variant-delimiter,
+        override: $override,
     );
     @include generate-rules-pseudos-selectors(
             $config: $config,
@@ -344,6 +345,7 @@ $default-variant-delimiter: '\\:';
     $config: (
         delimiter: $delimiter,
         variant-delimiter: $variant-delimiter,
+        override: $override,
     );
     @include generate-rules-pseudos-selectors(
             $config: $config,

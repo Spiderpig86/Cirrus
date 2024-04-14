@@ -459,133 +459,133 @@
                         $override: '!important'
                     )
                     using ($props...) {
-                    @include generator_v2.inline-class-generator('foo', $props...) using ($props...) {
-                        color: #fff;
+                    @include generator_v2.inline-class-generator('foo', $props...) using ($config) {
+                        color: #fff #{map-get($config, override)};
                     }
                 }
             }
             @include expect($selector: false) {
                 .foo {
-                    color: #fff;
+                    color: #fff !important;
                 }
 
                 .hover\:foo:hover {
-                    color: #fff;
+                    color: #fff !important;
                 }
 
                 .group:hover .group-hover\:foo {
-                    color: #fff;
+                    color: #fff !important;
                 }
 
                 .group:focus .group-focus\:foo {
-                    color: #fff;
+                    color: #fff !important;
                 }
 
                 @media screen and (min-width: 640px) {
                     .sm\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .sm\:hover\:foo:hover {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .group:hover .sm\:group-hover\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .group:focus .sm\:group-focus\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
                 }
 
                 @media screen and (min-width: 768px) {
                     .md\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .md\:hover\:foo:hover {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .group:hover .md\:group-hover\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .group:focus .md\:group-focus\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
                 }
 
                 @media screen and (min-width: 1024px) {
                     .lg\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .lg\:hover\:foo:hover {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .group:hover .lg\:group-hover\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .group:focus .lg\:group-focus\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
                 }
 
                 @media screen and (min-width: 1280px) {
                     .xl\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .xl\:hover\:foo:hover {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .group:hover .xl\:group-hover\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .group:focus .xl\:group-focus\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
                 }
 
                 @media (prefers-color-scheme: dark) {
                     .dark\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .dark\:hover\:foo:hover {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .group:hover .dark\:group-hover\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .group:focus .dark\:group-focus\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
                 }
 
                 @media (prefers-reduced-motion: reduce) {
                     .reduce-motion\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .reduce-motion\:hover\:foo:hover {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .group:hover .reduce-motion\:group-hover\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
 
                     .group:focus .reduce-motion\:group-focus\:foo {
-                        color: #fff;
+                        color: #fff !important;
                     }
                 }
             }
