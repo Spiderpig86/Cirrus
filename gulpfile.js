@@ -24,8 +24,8 @@ generateGulpBuild(`all`, `src/cirrus-all.scss`, `cirrus-all`, `./dist/`);
 
 // 0.8.0 beta builds
 generateGulpBuild(`next-ext`, `next/src/cirrus-ext.scss`, `cirrus`, `./next/dist/`);
-generateGulpBuild(`next-core`, `src/cirrus-core.scss`, `cirrus-core`, `./next/dist/`);
-generateGulpBuild(`next-all`, `src/cirrus-all.scss`, `cirrus-all`, `./next/dist/`);
+generateGulpBuild(`next-core`, `next/src/cirrus-core.scss`, `cirrus-core`, `./next/dist/`);
+generateGulpBuild(`next-all`, `next/src/cirrus-all.scss`, `cirrus-all`, `./next/dist/`);
 
 // source file name
 // file name
