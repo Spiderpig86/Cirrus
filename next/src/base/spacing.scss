@@ -1,7 +1,7 @@
 @use '../../../src/internal/generator_v2';
 @use '../../../src/internal' as *;
 
-@include generator_v2.utility-with-body($variants: (), $generate-viewports: get-viewport-flag($GRID)) using ($props...) {
+@include generator_v2.utility-with-body($variants: (), $generate-viewports: true) using ($props...) {
     @each $class, $size in $spacing-system {
         /* Margin */
         @include generator_v2.inline-class-generator('m-#{$class}', $props...) using ($config) {
@@ -20,6 +20,12 @@
         }
         @include generator_v2.inline-class-generator('mb-#{$class}', $props...) using ($config) {
             margin-bottom: $size #{map-get($config, override)};
+        }
+        @include generator_v2.inline-class-generator('ml-#{$class}', $props...) using ($config) {
+            margin-left: $size #{map-get($config, override)};
+        }
+        @include generator_v2.inline-class-generator('mr-#{$class}', $props...) using ($config) {
+            margin-right: $size #{map-get($config, override)};
         }
 
         /* Padding */
