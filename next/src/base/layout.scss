@@ -293,7 +293,7 @@ section {
 );
 @include generator_v2.utility(
     $base-class-name: 'min-w',
-    $class-value-pairs: generator_v2.class-value-to-property-map($min-heights, min-width),
+    $class-value-pairs: generator_v2.class-value-to-property-map($min-widths, min-width),
     $variants: (),
     $class-prefix: '',
     $generate-viewports: get-viewport-flag($MIN-WIDTH),
@@ -301,7 +301,7 @@ section {
 );
 @include generator_v2.utility(
     $base-class-name: 'max-h',
-    $class-value-pairs: generator_v2.class-value-to-property-map($min-heights, max-height),
+    $class-value-pairs: generator_v2.class-value-to-property-map($max-heights, max-height),
     $variants: (),
     $class-prefix: '',
     $generate-viewports: get-viewport-flag($MAX-HEIGHT),
@@ -309,7 +309,7 @@ section {
 );
 @include generator_v2.utility(
     $base-class-name: 'max-w',
-    $class-value-pairs: generator_v2.class-value-to-property-map($min-heights, max-width),
+    $class-value-pairs: generator_v2.class-value-to-property-map($max-widths, max-width),
     $variants: (),
     $class-prefix: '',
     $generate-viewports: get-viewport-flag($MAX-WIDTH),
