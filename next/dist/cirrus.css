@@ -20041,123 +20041,123 @@ ul .divider::after {
   }
 }
 /* TRANSITION DURATION */
-.u-transition-duration-75 {
+.u-duration-75 {
   transition-duration: 75ms !important;
 }
 
-.u-transition-duration-100 {
+.u-duration-100 {
   transition-duration: 100ms !important;
 }
 
-.u-transition-duration-200 {
+.u-duration-200 {
   transition-duration: 200ms !important;
 }
 
-.u-transition-duration-300 {
+.u-duration-300 {
   transition-duration: 300ms !important;
 }
 
-.u-transition-duration-500 {
+.u-duration-500 {
   transition-duration: 500ms !important;
 }
 
-.u-transition-duration-700 {
+.u-duration-700 {
   transition-duration: 700ms !important;
 }
 
-.u-transition-duration-1000 {
+.u-duration-1000 {
   transition-duration: 1000ms !important;
 }
 
 @media screen and (min-width: 640px) {
-  .sm\:u-transition-duration-75 {
+  .sm\:u-duration-75 {
     transition-duration: 75ms !important;
   }
-  .sm\:u-transition-duration-100 {
+  .sm\:u-duration-100 {
     transition-duration: 100ms !important;
   }
-  .sm\:u-transition-duration-200 {
+  .sm\:u-duration-200 {
     transition-duration: 200ms !important;
   }
-  .sm\:u-transition-duration-300 {
+  .sm\:u-duration-300 {
     transition-duration: 300ms !important;
   }
-  .sm\:u-transition-duration-500 {
+  .sm\:u-duration-500 {
     transition-duration: 500ms !important;
   }
-  .sm\:u-transition-duration-700 {
+  .sm\:u-duration-700 {
     transition-duration: 700ms !important;
   }
-  .sm\:u-transition-duration-1000 {
+  .sm\:u-duration-1000 {
     transition-duration: 1000ms !important;
   }
 }
 @media screen and (min-width: 768px) {
-  .md\:u-transition-duration-75 {
+  .md\:u-duration-75 {
     transition-duration: 75ms !important;
   }
-  .md\:u-transition-duration-100 {
+  .md\:u-duration-100 {
     transition-duration: 100ms !important;
   }
-  .md\:u-transition-duration-200 {
+  .md\:u-duration-200 {
     transition-duration: 200ms !important;
   }
-  .md\:u-transition-duration-300 {
+  .md\:u-duration-300 {
     transition-duration: 300ms !important;
   }
-  .md\:u-transition-duration-500 {
+  .md\:u-duration-500 {
     transition-duration: 500ms !important;
   }
-  .md\:u-transition-duration-700 {
+  .md\:u-duration-700 {
     transition-duration: 700ms !important;
   }
-  .md\:u-transition-duration-1000 {
+  .md\:u-duration-1000 {
     transition-duration: 1000ms !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  .lg\:u-transition-duration-75 {
+  .lg\:u-duration-75 {
     transition-duration: 75ms !important;
   }
-  .lg\:u-transition-duration-100 {
+  .lg\:u-duration-100 {
     transition-duration: 100ms !important;
   }
-  .lg\:u-transition-duration-200 {
+  .lg\:u-duration-200 {
     transition-duration: 200ms !important;
   }
-  .lg\:u-transition-duration-300 {
+  .lg\:u-duration-300 {
     transition-duration: 300ms !important;
   }
-  .lg\:u-transition-duration-500 {
+  .lg\:u-duration-500 {
     transition-duration: 500ms !important;
   }
-  .lg\:u-transition-duration-700 {
+  .lg\:u-duration-700 {
     transition-duration: 700ms !important;
   }
-  .lg\:u-transition-duration-1000 {
+  .lg\:u-duration-1000 {
     transition-duration: 1000ms !important;
   }
 }
 @media screen and (min-width: 1280px) {
-  .xl\:u-transition-duration-75 {
+  .xl\:u-duration-75 {
     transition-duration: 75ms !important;
   }
-  .xl\:u-transition-duration-100 {
+  .xl\:u-duration-100 {
     transition-duration: 100ms !important;
   }
-  .xl\:u-transition-duration-200 {
+  .xl\:u-duration-200 {
     transition-duration: 200ms !important;
   }
-  .xl\:u-transition-duration-300 {
+  .xl\:u-duration-300 {
     transition-duration: 300ms !important;
   }
-  .xl\:u-transition-duration-500 {
+  .xl\:u-duration-500 {
     transition-duration: 500ms !important;
   }
-  .xl\:u-transition-duration-700 {
+  .xl\:u-duration-700 {
     transition-duration: 700ms !important;
   }
-  .xl\:u-transition-duration-1000 {
+  .xl\:u-duration-1000 {
     transition-duration: 1000ms !important;
   }
 }

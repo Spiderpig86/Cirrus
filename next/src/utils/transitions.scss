@@ -5,7 +5,7 @@
 /* TRANSITION DURATION */
 @if should-generate-classes($TRANSITION-DURATION) {
     @include generator_v2.utility(
-        $base-class-name: 'transition-duration',
+        $base-class-name: 'duration',
         $class-value-pairs: generator_v2.class-value-to-property-map($transition-durations, transition-duration),
         $variants: (),
         $generate-viewports: #{get-viewport-flag($TRANSITION-DURATION)},
