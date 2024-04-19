@@ -209,35 +209,37 @@ section {
 
     /* Base sizing where everything is 100% width */
     [class^='col-'],
-    [class*=' col-'] {
+    [class*='\:col-'] {
         width: 100%;
         margin-left: 0;
         padding: 0 0.5rem;
     }
 
-    @include generator_v2.utility(
-        $base-class-name: 'col',
-        $class-value-pairs: get-column-map($flex-columns, $flex-width),
-        $variants: (),
-        $class-prefix: '',
-        $generate-viewports: true,
-        $override: '!important'
-    );
+    @include screen-above($sm) {
+        @include generator_v2.utility(
+            $base-class-name: 'col',
+            $class-value-pairs: get-column-map($flex-columns, $flex-width),
+            $variants: (),
+            $class-prefix: '',
+            $generate-viewports: true,
+            $override: '!important'
+        );
 
-    // TODO: Deprecate 0.8.0?
-    @include generator_v2.utility(
-        $base-class-name: 'offset',
-        $class-value-pairs: get-offset-map($flex-columns, $flex-width),
-        $variants: (),
-        $class-prefix: '',
-        $generate-viewports: true,
-        $override: '!important'
-    );
+        // TODO: Deprecate 0.8.0?
+        @include generator_v2.utility(
+            $base-class-name: 'offset',
+            $class-value-pairs: get-offset-map($flex-columns, $flex-width),
+            $variants: (),
+            $class-prefix: '',
+            $generate-viewports: true,
+            $override: '!important'
+        );
+    }
 
     /* Columns without the spacing */
     // TODO: Deprecate 0.8.0, use p-0 instead
     &.no-space [class^='col-'],
-    &.no-space [class*=' col-'] {
+    &.no-space [class*='\:col-'] {
         padding: 0;
     }
 }
@@ -349,7 +351,7 @@ section {
 
     /* Dividers for mobile layout */
     .divided > .row [class^='col-'],
-    .divided > .row [class*=' col-'] {
+    .divided > .row [class*='\:col-'] {
         box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
     }
 
