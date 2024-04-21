@@ -2171,45 +2171,55 @@ section {
   padding: 0 0.5rem;
 }
 
-@media screen and (min-width: 768px) {
-  .row .col-1 {
-    width: 8.3333333333% !important;
-  }
-  .row .col-2 {
-    width: 16.6666666667% !important;
-  }
-  .row .col-3 {
-    width: 25% !important;
-  }
-  .row .col-4 {
-    width: 33.3333333333% !important;
-  }
-  .row .col-5 {
-    width: 41.6666666667% !important;
-  }
-  .row .col-6 {
-    width: 50% !important;
-  }
-  .row .col-7 {
-    width: 58.3333333333% !important;
-  }
-  .row .col-8 {
-    width: 66.6666666667% !important;
-  }
-  .row .col-9 {
-    width: 75% !important;
-  }
-  .row .col-10 {
-    width: 83.3333333333% !important;
-  }
-  .row .col-11 {
-    width: 91.6666666667% !important;
-  }
-  .row .col-12 {
-    width: 100% !important;
-  }
+.row .col-1 {
+  width: 8.3333333333% !important;
 }
-@media screen and (min-width: 768px) and (min-width: 640px) {
+
+.row .col-2 {
+  width: 16.6666666667% !important;
+}
+
+.row .col-3 {
+  width: 25% !important;
+}
+
+.row .col-4 {
+  width: 33.3333333333% !important;
+}
+
+.row .col-5 {
+  width: 41.6666666667% !important;
+}
+
+.row .col-6 {
+  width: 50% !important;
+}
+
+.row .col-7 {
+  width: 58.3333333333% !important;
+}
+
+.row .col-8 {
+  width: 66.6666666667% !important;
+}
+
+.row .col-9 {
+  width: 75% !important;
+}
+
+.row .col-10 {
+  width: 83.3333333333% !important;
+}
+
+.row .col-11 {
+  width: 91.6666666667% !important;
+}
+
+.row .col-12 {
+  width: 100% !important;
+}
+
+@media screen and (min-width: 640px) {
   .row .sm\:col-1 {
     width: 8.3333333333% !important;
   }
@@ -2247,7 +2257,7 @@ section {
     width: 100% !important;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .row .md\:col-1 {
     width: 8.3333333333% !important;
   }
@@ -2285,7 +2295,7 @@ section {
     width: 100% !important;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .row .lg\:col-1 {
     width: 8.3333333333% !important;
   }
@@ -2323,7 +2333,7 @@ section {
     width: 100% !important;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .row .xl\:col-1 {
     width: 8.3333333333% !important;
   }
@@ -2361,67 +2371,55 @@ section {
     width: 100% !important;
   }
 }
-@media screen and (min-width: 768px) {
-  .row .offset-1 {
-    margin-left: 8.3333333333% !important;
-  }
+.row .offset-1 {
+  margin-left: 8.3333333333% !important;
 }
-@media screen and (min-width: 768px) {
-  .row .offset-2 {
-    margin-left: 16.6666666667% !important;
-  }
+
+.row .offset-2 {
+  margin-left: 16.6666666667% !important;
 }
-@media screen and (min-width: 768px) {
-  .row .offset-3 {
-    margin-left: 25% !important;
-  }
+
+.row .offset-3 {
+  margin-left: 25% !important;
 }
-@media screen and (min-width: 768px) {
-  .row .offset-4 {
-    margin-left: 33.3333333333% !important;
-  }
+
+.row .offset-4 {
+  margin-left: 33.3333333333% !important;
 }
-@media screen and (min-width: 768px) {
-  .row .offset-5 {
-    margin-left: 41.6666666667% !important;
-  }
+
+.row .offset-5 {
+  margin-left: 41.6666666667% !important;
 }
-@media screen and (min-width: 768px) {
-  .row .offset-6 {
-    margin-left: 50% !important;
-  }
+
+.row .offset-6 {
+  margin-left: 50% !important;
 }
-@media screen and (min-width: 768px) {
-  .row .offset-7 {
-    margin-left: 58.3333333333% !important;
-  }
+
+.row .offset-7 {
+  margin-left: 58.3333333333% !important;
 }
-@media screen and (min-width: 768px) {
-  .row .offset-8 {
-    margin-left: 66.6666666667% !important;
-  }
+
+.row .offset-8 {
+  margin-left: 66.6666666667% !important;
 }
-@media screen and (min-width: 768px) {
-  .row .offset-9 {
-    margin-left: 75% !important;
-  }
+
+.row .offset-9 {
+  margin-left: 75% !important;
 }
-@media screen and (min-width: 768px) {
-  .row .offset-10 {
-    margin-left: 83.3333333333% !important;
-  }
+
+.row .offset-10 {
+  margin-left: 83.3333333333% !important;
 }
-@media screen and (min-width: 768px) {
-  .row .offset-11 {
-    margin-left: 91.6666666667% !important;
-  }
+
+.row .offset-11 {
+  margin-left: 91.6666666667% !important;
 }
-@media screen and (min-width: 768px) {
-  .row .offset-12 {
-    margin-left: 100% !important;
-  }
+
+.row .offset-12 {
+  margin-left: 100% !important;
 }
-@media screen and (min-width: 768px) and (min-width: 640px) {
+
+@media screen and (min-width: 640px) {
   .row .sm\:offset-1 {
     margin-left: 8.3333333333% !important;
   }
@@ -2459,7 +2457,7 @@ section {
     margin-left: 100% !important;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .row .md\:offset-1 {
     margin-left: 8.3333333333% !important;
   }
@@ -2497,7 +2495,7 @@ section {
     margin-left: 100% !important;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .row .lg\:offset-1 {
     margin-left: 8.3333333333% !important;
   }
@@ -2535,7 +2533,7 @@ section {
     margin-left: 100% !important;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .row .xl\:offset-1 {
     margin-left: 8.3333333333% !important;
   }

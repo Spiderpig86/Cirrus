@@ -216,26 +216,24 @@ section {
         padding: 0 0.5rem;
     }
 
-    @include screen-above($sm) {
-        @include generator_v2.utility(
-            $base-class-name: 'col',
-            $class-value-pairs: get-column-map($flex-columns, $flex-width),
-            $variants: (),
-            $class-prefix: '',
-            $generate-viewports: true,
-            $override: '!important'
-        );
+    @include generator_v2.utility(
+        $base-class-name: 'col',
+        $class-value-pairs: get-column-map($flex-columns, $flex-width),
+        $variants: (),
+        $class-prefix: '',
+        $generate-viewports: true,
+        $override: '!important'
+    );
 
-        // TODO: Deprecate 0.8.0?
-        @include generator_v2.utility(
-            $base-class-name: 'offset',
-            $class-value-pairs: get-offset-map($flex-columns, $flex-width),
-            $variants: (),
-            $class-prefix: '',
-            $generate-viewports: true,
-            $override: '!important'
-        );
-    }
+    // TODO: Deprecate 0.8.0?
+    @include generator_v2.utility(
+        $base-class-name: 'offset',
+        $class-value-pairs: get-offset-map($flex-columns, $flex-width),
+        $variants: (),
+        $class-prefix: '',
+        $generate-viewports: true,
+        $override: '!important'
+    );
 
     /* Columns without the spacing */
     // TODO: Deprecate 0.8.0, use p-0 instead
