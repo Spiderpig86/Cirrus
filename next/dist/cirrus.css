@@ -2164,6 +2164,7 @@ section {
 }
 
 .row [class^=col-],
+.row [class*=" col-"],
 .row [class*=":col-"] {
   width: 100%;
   margin-left: 0;
@@ -2572,7 +2573,7 @@ section {
     margin-left: 100% !important;
   }
 }
-.row.no-space [class^=col-], .row.no-space [class*=":col-"] {
+.row.no-space [class^=col-], .row.no-space [class*=" col-"], .row.no-space [class*=":col-"] {
   padding: 0;
 }
 
@@ -3805,6 +3806,7 @@ section {
   }
   /* Dividers for mobile layout */
   .divided > .row [class^=col-],
+.divided > .row [class*=" col-"],
 .divided > .row [class*=":col-"] {
     box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
   }
