@@ -811,56 +811,54 @@ kbd {
 
 /* Letter spacing */
 .tracking-tightest {
-  letter-spacing: -0.075em;
+  letter-spacing: -0.075em !important;
 }
 
 .tracking-tighter {
-  letter-spacing: -0.05em;
+  letter-spacing: -0.05em !important;
 }
 
 .tracking-tight {
-  letter-spacing: -0.025em;
+  letter-spacing: -0.025em !important;
 }
 
 .tracking-normal {
-  letter-spacing: 0;
+  letter-spacing: 0 !important;
 }
 
 .tracking-loose {
-  letter-spacing: 0.025em;
+  letter-spacing: 0.025em !important;
 }
 
 .tracking-looser {
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05em !important;
 }
 
 .tracking-loosest {
-  letter-spacing: 0.1em;
-}
-
-/* Line height */
+  letter-spacing: 0.1em !important;
+} /* Line height */
 .leading-none {
-  line-height: 1;
+  line-height: 1 !important;
 }
 
 .leading-tighter {
-  line-height: 1.25;
+  line-height: 1.25 !important;
 }
 
 .leading-tight {
-  line-height: 1.375;
+  line-height: 1.375 !important;
 }
 
 .leading-normal {
-  line-height: 1.5;
+  line-height: 1.5 !important;
 }
 
 .leading-loose {
-  line-height: 1.625;
+  line-height: 1.625 !important;
 }
 
 .leading-looser {
-  line-height: 2;
+  line-height: 2 !important;
 }
 
 /* MOBILE */
@@ -895,11 +893,6 @@ kbd {
   }
   .headline-1 {
     font-size: 3.75rem;
-  }
-  p,
-article,
-blockquote {
-    margin: 1rem 0;
   }
 }
 /* GRID */
@@ -20794,7 +20787,7 @@ details.accordion:last-of-type {
 /* EXTENDED FORM */
 /* Base class layout for extended form */
 .form-ext-control {
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   position: relative;
   /* Checkbox */
   /* Radio Button */
