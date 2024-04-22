@@ -42,6 +42,7 @@
 @include generator_v2.utility-with-body(
         $variants: (
             'dark',
+            'hover'
         ),
         $generate-viewports: false,
         $override: '!important'
