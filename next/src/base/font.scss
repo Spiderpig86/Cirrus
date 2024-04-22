@@ -211,6 +211,7 @@ kbd {
         $variants: (),
         $class-prefix: '',
         $generate-viewports: get-viewport-flag($LETTER-SPACING),
+        $override: '!important'
     );
 }
 
@@ -222,6 +223,7 @@ kbd {
         $variants: (),
         $class-prefix: '',
         $generate-viewports: get-viewport-flag($LINE-HEIGHT),
+        $override: '!important'
     );
 }
 
@@ -241,9 +243,10 @@ kbd {
         }
     }
 
-    p,
-    article,
-    blockquote {
-        margin: 1rem 0;
-    }
+    // Deprecated 0.8.0, leads to unexpected behavior to users
+    // p,
+    // article,
+    // blockquote {
+    //     margin: 1rem 0;
+    // }
 }
