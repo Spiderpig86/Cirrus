@@ -63,6 +63,13 @@ $default-config: (
             flags.$BORDER-WIDTH: false,
             flags.$VERTICAL-ALIGN: false,
         ),
+    class-name-properties: (
+        utility-prefix: 'u',
+        override: '',
+        delimiter: '-',
+        variant-delimiter: '\\:',
+    ),
+
     // Extend all existing styles here
     extend:
         (
@@ -509,7 +516,7 @@ $default-config: (
         ),
         font-styles: (
             normal: normal,
-            italics: italics
+            italics: italics,
         ),
         letter-spacing: (
             tightest: -0.075em,
@@ -854,6 +861,12 @@ $all-config: map.deep-merge($default-config, $config);
 
 // FLAGS
 $viewport-flags: map.get($all-config, viewports);
+
+$utility-prefix: map.get($all-config, class-name-properties, utility-prefix);
+$override: map.get($all-config, class-name-properties, override);
+$delimiter: map.get($all-config, class-name-properties, delimiter);
+$variant-delimiter: map.get($all-config, class-name-properties, variant-delimiter);
+
 $excludes: map.get($all-config, excludes);
 $includes: map.get($all-config, includes);
 
