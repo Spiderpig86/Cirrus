@@ -42,7 +42,7 @@
 @include generator_v2.utility-with-body(
         $variants: (
             'dark',
-            'hover'
+            'hover',
         ),
         $generate-viewports: false,
         $override: '!important'
@@ -52,11 +52,22 @@
     @each $name, $color in $semantic-colors {
         // Semantic color bg classes
         @include generator_v2.inline-class-generator('bg-#{$name}', $props...) using ($config) {
-            --btn-color: #{hex-to-rgb($color)};
-            // Not important, use this as a fallback in case no border is set
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
+            // --btn-color: #{hex-to-rgb($color)};
+            // // Not important, use this as a fallback in case no border is set
+            // --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
 
-            background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) #{map-get($config, override)};
+            // background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) #{map-get($config, override)};
+
+            &:is(#{$button-selectors}) {
+                --btn-color: #{hex-to-rgb($color)};
+                --btn-hover-color: #{hex-to-rgb(to-hover-color($color, 5%))} #{map-get($config, override)};
+                // Not important, use this as a fallback in case no border is set
+                --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
+            }
+
+            &:not(#{$button-selectors}) {
+                background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) #{map-get($config, override)};
+            }
         }
 
         // Semantic color text classes
