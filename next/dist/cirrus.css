@@ -19206,11 +19206,6 @@ ul .divider::after {
   border-bottom: 2px solid rgba(222, 226, 230, 0.5);
 }
 
-.table thead th,
-.table tfoot th {
-  padding: 1rem;
-}
-
 .table tfoot th {
   border-top: 2px solid rgba(222, 226, 230, 0.5);
   border-bottom: none;

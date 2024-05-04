@@ -55,11 +55,6 @@
             border-bottom: 2px solid transparentize(fill('gray', '300'), 0.5);
         }
 
-        thead th,
-        tfoot th {
-            padding: 1rem;
-        }
-
         tfoot th {
             border-top: 2px solid transparentize(fill('gray', '300'), 0.5);
             border-bottom: none;
