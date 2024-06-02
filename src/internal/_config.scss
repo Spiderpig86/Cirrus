@@ -955,7 +955,7 @@ $z-indexes: functions.get-with-extend($all-config, z-index);
         @return throw.error(
             $message: '[get-viewport-flag] Unknown constant `#{$name}`.',
             $source: 'get-viewport-flag()',
-            $catch: true
+            $catch: false
         );
     }
 
