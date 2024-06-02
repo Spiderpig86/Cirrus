@@ -7,7 +7,7 @@
         $base-class-name: 'border',
         $class-value-pairs: generator_v2.class-value-to-property-map($border-widths, border-width),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($BORDER-WIDTH)},
+        $generate-viewports: get-viewport-flag($BORDER-WIDTH),
         $override: '!important'
     );
 }
@@ -17,7 +17,7 @@
         $base-class-name: 'border-opacity',
         $class-value-pairs: generator_v2.class-value-to-property-map($opacities, '--border-opacity'),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($BORDER-OPACITY)},
+        $generate-viewports: get-viewport-flag($BORDER-OPACITY),
         $override: '!important'
     );
 }
@@ -27,7 +27,7 @@
         $base-class-name: 'round',
         $class-value-pairs: generator_v2.class-value-to-property-map($round, border-radius),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($ROUND)},
+        $generate-viewports: get-viewport-flag($ROUND),
         $override: '!important'
     );
 }

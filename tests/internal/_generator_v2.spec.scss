@@ -391,7 +391,7 @@
         }
     }
 
-    @include it('works with  empty base class name') {
+    @include it('works with empty base class name') {
         @include assert {
             @include output($selector: false) {
                 @include generator_v2.utility(

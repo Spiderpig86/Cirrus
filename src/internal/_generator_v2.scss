@@ -75,7 +75,7 @@ $default-variant-delimiter: '\\:';
     $rules: (); // Media queries, after responsive classes
     $pseudos: (); // Selectors like :focus
 
-    @if $generate-viewports {
+    @if $generate-viewports == true {
         $rules: map.set($rules, 'responsive', get-responsive());
     }
 

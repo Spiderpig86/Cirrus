@@ -11,7 +11,7 @@
         $base-class-name: 'pull',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($pull-directions), float),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($FLOAT)},
+        $generate-viewports: get-viewport-flag($FLOAT),
         $override: '!important'
     );
 }
@@ -23,7 +23,7 @@
         $base-class-name: 'text',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($text-directions), text-align),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($FLOAT)},
+        $generate-viewports: get-viewport-flag($FLOAT),
         $override: '!important'
     );
 }

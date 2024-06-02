@@ -2,13 +2,14 @@
 @use '../../../src/internal' as *;
 
 @if should-generate-classes($CURSOR) {
-    $cursor-utils-config: auto, pointer, wait, text, move, help, not-allowed, none, cell, crosshair, grab, grabbing, all-scroll, col-resize, row-resize, zoom-in, zoom-out;
+    $cursor-utils-config: auto, pointer, wait, text, move, help, not-allowed, none, cell, crosshair, grab, grabbing,
+        all-scroll, col-resize, row-resize, zoom-in, zoom-out;
 
     @include generator_v2.utility(
         $base-class-name: 'cursor',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($cursor-utils-config), cursor),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($CURSOR)},
+        $generate-viewports: get-viewport-flag($CURSOR),
         $override: ''
     );
 }

@@ -8,7 +8,7 @@
         $base-class-name: 'duration',
         $class-value-pairs: generator_v2.class-value-to-property-map($transition-durations, transition-duration),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($TRANSITION-DURATION)},
+        $generate-viewports: get-viewport-flag($TRANSITION-DURATION),
         $override: '!important'
     );
 }

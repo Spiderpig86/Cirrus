@@ -7,7 +7,7 @@
         $base-class-name: 'clear',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($clears), clear),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($CLEARFIX)},
+        $generate-viewports: get-viewport-flag($CLEARFIX),
         $override: '!important'
     );
 

@@ -8,7 +8,7 @@
         $base-class-name: '',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($positions), position),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($POSITION)},
+        $generate-viewports: get-viewport-flag($POSITION),
         $override: '!important'
     );
 }

@@ -18,7 +18,7 @@
         $base-class-name: 'flex',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($flex-directions), flex-direction),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $generate-viewports: get-viewport-flag($FLEX),
         $override: '!important'
     );
 
@@ -26,7 +26,7 @@
         $base-class-name: 'justify',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($justify-content), justify-content),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $generate-viewports: get-viewport-flag($FLEX),
         $override: '!important'
     );
 
@@ -34,7 +34,7 @@
         $base-class-name: 'items',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($align-items), align-items),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $generate-viewports: get-viewport-flag($FLEX),
         $override: '!important'
     );
 
@@ -43,14 +43,14 @@
         $base-class-name: 'flex-grow',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($flex-grow), flex-grow),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $generate-viewports: get-viewport-flag($FLEX),
         $override: '!important'
     );
     @include generator_v2.utility(
         $base-class-name: 'flex-shrink',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($flex-grow), flex-shrink),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $generate-viewports: get-viewport-flag($FLEX),
         $override: '!important'
     );
 
@@ -59,7 +59,7 @@
         $base-class-name: 'flex',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($flex-wrap), flex-wrap),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $generate-viewports: get-viewport-flag($FLEX),
         $override: '!important'
     );
 
@@ -68,7 +68,7 @@
         $base-class-name: 'basis',
         $class-value-pairs: generator_v2.class-value-to-property-map($flex-basis, flex-basis),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($FLEX)},
+        $generate-viewports: get-viewport-flag($FLEX),
         $override: '!important'
     );
 }
@@ -91,21 +91,21 @@
         $base-class-name: 'gap',
         $class-value-pairs: generator_v2.class-value-to-property-map($gaps-both, gap),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($GAP)},
+        $generate-viewports: get-viewport-flag($GAP),
         $override: '!important'
     );
     @include generator_v2.utility(
         $base-class-name: 'row-gap',
         $class-value-pairs: generator_v2.class-value-to-property-map($gaps-both, row-gap),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($GAP)},
+        $generate-viewports: get-viewport-flag($GAP),
         $override: '!important'
     );
     @include generator_v2.utility(
         $base-class-name: 'col-gap',
         $class-value-pairs: generator_v2.class-value-to-property-map($gaps-both, column-gap),
         $variants: (),
-        $generate-viewports: #{get-viewport-flag($GAP)},
+        $generate-viewports: get-viewport-flag($GAP),
         $override: '!important'
     );
 }
