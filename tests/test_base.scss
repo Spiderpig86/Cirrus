@@ -1,4 +1,6 @@
-@forward 'true';
+// Set $catch-errors to avoid failing compilation
+// https://www.oddbird.net/true/docs/api-settings.html#variable--catch-errors
+@forward 'true' with ($catch-errors: 'warn');
 @forward '../src/internal/theme';
 @forward '../src/internal/functions';
 @forward '../src/internal/config';
