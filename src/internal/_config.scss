@@ -51,6 +51,8 @@ $default-config: (
             flags.$ZINDEX: false,
             flags.$ABSOLUTES: false,
             flags.$GAP: false,
+            flags.$ROUND: false,
+            flags.$SHADOWS: false,
             flags.$MIN-HEIGHT: false,
             flags.$MAX-HEIGHT: false,
             flags.$MIN-WIDTH: false,
