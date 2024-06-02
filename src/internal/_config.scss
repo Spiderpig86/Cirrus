@@ -62,6 +62,7 @@ $default-config: (
             flags.$LINE-HEIGHT: false,
             flags.$BORDER-WIDTH: false,
             flags.$VERTICAL-ALIGN: false,
+            flags.$CURSOR: false,
         ),
     class-name-properties: (
         utility-prefix: 'u',
