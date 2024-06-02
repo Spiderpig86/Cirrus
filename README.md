@@ -62,6 +62,8 @@ yarn add cirrus-ui
 
 For CDNs, it is recommended to attach a specific versions to the URLs to avoid unexpected updates to maintain consistency in your project.
 
+**Please do not reference the `dist` folder artifacts directly as these are subject to change at any time.**
+
 ##### Unpkg
 ```html
 <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
