@@ -60,6 +60,30 @@
         }
     }
 
+    @for $i from 1 through $grid-rows {
+        /* Templates */
+        // .grid-rows-<i>
+        @include generator_v2.inline-class-generator('grid-rows-' + $i, $props...) using ($props...) {
+            --grid-template-row: repeat(#{$i}, minmax(0, 1fr));
+        }
+
+        /* Column expansion */
+        // .grid-r-<i>
+        @include generator_v2.inline-class-generator('grid-r-' + $i, $props...) using ($props...) {
+            grid-row: span #{$i} / span #{$i};
+        }
+        
+        /* Cell Column Start/End */
+        // .grid-rs-<i>
+        @include generator_v2.inline-class-generator('grid-rs-' + $i, $props...) using ($props...) {
+            grid-row-start: #{$i};
+        }
+        // .grid-re-<i>
+        @include generator_v2.inline-class-generator('grid-re-' + $i, $props...) using ($props...) {
+            grid-row-end: #{$i + 1};
+        }
+    }
+
     // .grid-ce-end {}
     @include generator_v2.inline-class-generator('grid-ce-end', $props...) using ($props...) {
         grid-column-end: -1;

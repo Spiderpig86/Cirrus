@@ -1145,6 +1145,120 @@ kbd {
   grid-column-end: 13;
 }
 
+/* Templates */
+.grid-rows-1 {
+  --grid-template-row: repeat(1, minmax(0, 1fr));
+}
+
+/* Column expansion */
+.grid-r-1 {
+  grid-row: span 1/span 1;
+}
+
+/* Cell Column Start/End */
+.grid-rs-1 {
+  grid-row-start: 1;
+}
+
+.grid-re-1 {
+  grid-row-end: 2;
+}
+
+/* Templates */
+.grid-rows-2 {
+  --grid-template-row: repeat(2, minmax(0, 1fr));
+}
+
+/* Column expansion */
+.grid-r-2 {
+  grid-row: span 2/span 2;
+}
+
+/* Cell Column Start/End */
+.grid-rs-2 {
+  grid-row-start: 2;
+}
+
+.grid-re-2 {
+  grid-row-end: 3;
+}
+
+/* Templates */
+.grid-rows-3 {
+  --grid-template-row: repeat(3, minmax(0, 1fr));
+}
+
+/* Column expansion */
+.grid-r-3 {
+  grid-row: span 3/span 3;
+}
+
+/* Cell Column Start/End */
+.grid-rs-3 {
+  grid-row-start: 3;
+}
+
+.grid-re-3 {
+  grid-row-end: 4;
+}
+
+/* Templates */
+.grid-rows-4 {
+  --grid-template-row: repeat(4, minmax(0, 1fr));
+}
+
+/* Column expansion */
+.grid-r-4 {
+  grid-row: span 4/span 4;
+}
+
+/* Cell Column Start/End */
+.grid-rs-4 {
+  grid-row-start: 4;
+}
+
+.grid-re-4 {
+  grid-row-end: 5;
+}
+
+/* Templates */
+.grid-rows-5 {
+  --grid-template-row: repeat(5, minmax(0, 1fr));
+}
+
+/* Column expansion */
+.grid-r-5 {
+  grid-row: span 5/span 5;
+}
+
+/* Cell Column Start/End */
+.grid-rs-5 {
+  grid-row-start: 5;
+}
+
+.grid-re-5 {
+  grid-row-end: 6;
+}
+
+/* Templates */
+.grid-rows-6 {
+  --grid-template-row: repeat(6, minmax(0, 1fr));
+}
+
+/* Column expansion */
+.grid-r-6 {
+  grid-row: span 6/span 6;
+}
+
+/* Cell Column Start/End */
+.grid-rs-6 {
+  grid-row-start: 6;
+}
+
+.grid-re-6 {
+  grid-row-end: 7;
+}
+
 .grid-ce-end {
   grid-column-end: -1;
 }
@@ -1353,6 +1467,96 @@ kbd {
   .sm\:grid-ce-12 {
     grid-column-end: 13;
   }
+  /* Templates */
+  .sm\:grid-rows-1 {
+    --grid-template-row: repeat(1, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .sm\:grid-r-1 {
+    grid-row: span 1/span 1;
+  }
+  /* Cell Column Start/End */
+  .sm\:grid-rs-1 {
+    grid-row-start: 1;
+  }
+  .sm\:grid-re-1 {
+    grid-row-end: 2;
+  }
+  /* Templates */
+  .sm\:grid-rows-2 {
+    --grid-template-row: repeat(2, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .sm\:grid-r-2 {
+    grid-row: span 2/span 2;
+  }
+  /* Cell Column Start/End */
+  .sm\:grid-rs-2 {
+    grid-row-start: 2;
+  }
+  .sm\:grid-re-2 {
+    grid-row-end: 3;
+  }
+  /* Templates */
+  .sm\:grid-rows-3 {
+    --grid-template-row: repeat(3, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .sm\:grid-r-3 {
+    grid-row: span 3/span 3;
+  }
+  /* Cell Column Start/End */
+  .sm\:grid-rs-3 {
+    grid-row-start: 3;
+  }
+  .sm\:grid-re-3 {
+    grid-row-end: 4;
+  }
+  /* Templates */
+  .sm\:grid-rows-4 {
+    --grid-template-row: repeat(4, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .sm\:grid-r-4 {
+    grid-row: span 4/span 4;
+  }
+  /* Cell Column Start/End */
+  .sm\:grid-rs-4 {
+    grid-row-start: 4;
+  }
+  .sm\:grid-re-4 {
+    grid-row-end: 5;
+  }
+  /* Templates */
+  .sm\:grid-rows-5 {
+    --grid-template-row: repeat(5, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .sm\:grid-r-5 {
+    grid-row: span 5/span 5;
+  }
+  /* Cell Column Start/End */
+  .sm\:grid-rs-5 {
+    grid-row-start: 5;
+  }
+  .sm\:grid-re-5 {
+    grid-row-end: 6;
+  }
+  /* Templates */
+  .sm\:grid-rows-6 {
+    --grid-template-row: repeat(6, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .sm\:grid-r-6 {
+    grid-row: span 6/span 6;
+  }
+  /* Cell Column Start/End */
+  .sm\:grid-rs-6 {
+    grid-row-start: 6;
+  }
+  .sm\:grid-re-6 {
+    grid-row-end: 7;
+  }
   .sm\:grid-ce-end {
     grid-column-end: -1;
   }
@@ -1557,6 +1761,96 @@ kbd {
   }
   .md\:grid-ce-12 {
     grid-column-end: 13;
+  }
+  /* Templates */
+  .md\:grid-rows-1 {
+    --grid-template-row: repeat(1, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .md\:grid-r-1 {
+    grid-row: span 1/span 1;
+  }
+  /* Cell Column Start/End */
+  .md\:grid-rs-1 {
+    grid-row-start: 1;
+  }
+  .md\:grid-re-1 {
+    grid-row-end: 2;
+  }
+  /* Templates */
+  .md\:grid-rows-2 {
+    --grid-template-row: repeat(2, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .md\:grid-r-2 {
+    grid-row: span 2/span 2;
+  }
+  /* Cell Column Start/End */
+  .md\:grid-rs-2 {
+    grid-row-start: 2;
+  }
+  .md\:grid-re-2 {
+    grid-row-end: 3;
+  }
+  /* Templates */
+  .md\:grid-rows-3 {
+    --grid-template-row: repeat(3, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .md\:grid-r-3 {
+    grid-row: span 3/span 3;
+  }
+  /* Cell Column Start/End */
+  .md\:grid-rs-3 {
+    grid-row-start: 3;
+  }
+  .md\:grid-re-3 {
+    grid-row-end: 4;
+  }
+  /* Templates */
+  .md\:grid-rows-4 {
+    --grid-template-row: repeat(4, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .md\:grid-r-4 {
+    grid-row: span 4/span 4;
+  }
+  /* Cell Column Start/End */
+  .md\:grid-rs-4 {
+    grid-row-start: 4;
+  }
+  .md\:grid-re-4 {
+    grid-row-end: 5;
+  }
+  /* Templates */
+  .md\:grid-rows-5 {
+    --grid-template-row: repeat(5, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .md\:grid-r-5 {
+    grid-row: span 5/span 5;
+  }
+  /* Cell Column Start/End */
+  .md\:grid-rs-5 {
+    grid-row-start: 5;
+  }
+  .md\:grid-re-5 {
+    grid-row-end: 6;
+  }
+  /* Templates */
+  .md\:grid-rows-6 {
+    --grid-template-row: repeat(6, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .md\:grid-r-6 {
+    grid-row: span 6/span 6;
+  }
+  /* Cell Column Start/End */
+  .md\:grid-rs-6 {
+    grid-row-start: 6;
+  }
+  .md\:grid-re-6 {
+    grid-row-end: 7;
   }
   .md\:grid-ce-end {
     grid-column-end: -1;
@@ -1763,6 +2057,96 @@ kbd {
   .lg\:grid-ce-12 {
     grid-column-end: 13;
   }
+  /* Templates */
+  .lg\:grid-rows-1 {
+    --grid-template-row: repeat(1, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .lg\:grid-r-1 {
+    grid-row: span 1/span 1;
+  }
+  /* Cell Column Start/End */
+  .lg\:grid-rs-1 {
+    grid-row-start: 1;
+  }
+  .lg\:grid-re-1 {
+    grid-row-end: 2;
+  }
+  /* Templates */
+  .lg\:grid-rows-2 {
+    --grid-template-row: repeat(2, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .lg\:grid-r-2 {
+    grid-row: span 2/span 2;
+  }
+  /* Cell Column Start/End */
+  .lg\:grid-rs-2 {
+    grid-row-start: 2;
+  }
+  .lg\:grid-re-2 {
+    grid-row-end: 3;
+  }
+  /* Templates */
+  .lg\:grid-rows-3 {
+    --grid-template-row: repeat(3, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .lg\:grid-r-3 {
+    grid-row: span 3/span 3;
+  }
+  /* Cell Column Start/End */
+  .lg\:grid-rs-3 {
+    grid-row-start: 3;
+  }
+  .lg\:grid-re-3 {
+    grid-row-end: 4;
+  }
+  /* Templates */
+  .lg\:grid-rows-4 {
+    --grid-template-row: repeat(4, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .lg\:grid-r-4 {
+    grid-row: span 4/span 4;
+  }
+  /* Cell Column Start/End */
+  .lg\:grid-rs-4 {
+    grid-row-start: 4;
+  }
+  .lg\:grid-re-4 {
+    grid-row-end: 5;
+  }
+  /* Templates */
+  .lg\:grid-rows-5 {
+    --grid-template-row: repeat(5, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .lg\:grid-r-5 {
+    grid-row: span 5/span 5;
+  }
+  /* Cell Column Start/End */
+  .lg\:grid-rs-5 {
+    grid-row-start: 5;
+  }
+  .lg\:grid-re-5 {
+    grid-row-end: 6;
+  }
+  /* Templates */
+  .lg\:grid-rows-6 {
+    --grid-template-row: repeat(6, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .lg\:grid-r-6 {
+    grid-row: span 6/span 6;
+  }
+  /* Cell Column Start/End */
+  .lg\:grid-rs-6 {
+    grid-row-start: 6;
+  }
+  .lg\:grid-re-6 {
+    grid-row-end: 7;
+  }
   .lg\:grid-ce-end {
     grid-column-end: -1;
   }
@@ -1967,6 +2351,96 @@ kbd {
   }
   .xl\:grid-ce-12 {
     grid-column-end: 13;
+  }
+  /* Templates */
+  .xl\:grid-rows-1 {
+    --grid-template-row: repeat(1, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .xl\:grid-r-1 {
+    grid-row: span 1/span 1;
+  }
+  /* Cell Column Start/End */
+  .xl\:grid-rs-1 {
+    grid-row-start: 1;
+  }
+  .xl\:grid-re-1 {
+    grid-row-end: 2;
+  }
+  /* Templates */
+  .xl\:grid-rows-2 {
+    --grid-template-row: repeat(2, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .xl\:grid-r-2 {
+    grid-row: span 2/span 2;
+  }
+  /* Cell Column Start/End */
+  .xl\:grid-rs-2 {
+    grid-row-start: 2;
+  }
+  .xl\:grid-re-2 {
+    grid-row-end: 3;
+  }
+  /* Templates */
+  .xl\:grid-rows-3 {
+    --grid-template-row: repeat(3, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .xl\:grid-r-3 {
+    grid-row: span 3/span 3;
+  }
+  /* Cell Column Start/End */
+  .xl\:grid-rs-3 {
+    grid-row-start: 3;
+  }
+  .xl\:grid-re-3 {
+    grid-row-end: 4;
+  }
+  /* Templates */
+  .xl\:grid-rows-4 {
+    --grid-template-row: repeat(4, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .xl\:grid-r-4 {
+    grid-row: span 4/span 4;
+  }
+  /* Cell Column Start/End */
+  .xl\:grid-rs-4 {
+    grid-row-start: 4;
+  }
+  .xl\:grid-re-4 {
+    grid-row-end: 5;
+  }
+  /* Templates */
+  .xl\:grid-rows-5 {
+    --grid-template-row: repeat(5, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .xl\:grid-r-5 {
+    grid-row: span 5/span 5;
+  }
+  /* Cell Column Start/End */
+  .xl\:grid-rs-5 {
+    grid-row-start: 5;
+  }
+  .xl\:grid-re-5 {
+    grid-row-end: 6;
+  }
+  /* Templates */
+  .xl\:grid-rows-6 {
+    --grid-template-row: repeat(6, minmax(0, 1fr));
+  }
+  /* Column expansion */
+  .xl\:grid-r-6 {
+    grid-row: span 6/span 6;
+  }
+  /* Cell Column Start/End */
+  .xl\:grid-rs-6 {
+    grid-row-start: 6;
+  }
+  .xl\:grid-re-6 {
+    grid-row-end: 7;
   }
   .xl\:grid-ce-end {
     grid-column-end: -1;
