@@ -237,11 +237,11 @@ section {
 
     /* Columns without the spacing */
     // TODO: Deprecate 0.8.0, use p-0 instead
-    &.no-space [class^='col-'],
-    &.no-space [class*=' col-'],
-    &.no-space [class*='\:col-'] {
-        padding: 0;
-    }
+    // &.no-space [class^='col-'],
+    // &.no-space [class*=' col-'],
+    // &.no-space [class*='\:col-'] {
+    //     padding: 0;
+    // }
 }
 
 .level {

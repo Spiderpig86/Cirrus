@@ -3037,10 +3037,6 @@ section {
     margin-left: 100% !important;
   }
 }
-.row.no-space [class^=col-], .row.no-space [class*=" col-"], .row.no-space [class*=":col-"] {
-  padding: 0;
-}
-
 .level {
   align-items: center;
   justify-content: space-between;
