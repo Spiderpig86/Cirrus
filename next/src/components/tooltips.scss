@@ -35,7 +35,8 @@
 
         /* Handles the on hover event of the button and then modifies the associated tooltip accordingly. */
         &:focus::after,
-        &:hover::after {
+        &:hover::after,
+        &.tooltip--visible::after {
             opacity: 1;
             transform: translate(-50%, -0.5rem);
             transition: all var(--animation-duration) ease;
@@ -46,10 +47,13 @@
             transform: translate(-50%, 0);
         }
 
-        &.tooltip--top-left:hover::after,
-        &.tooltip--top-left:focus::after {
-            left: 0;
-            transform: translate(-100%, -0.5rem);
+        &.tooltip--top-left {
+            &:hover::after,
+            &:focus::after,
+            &.tooltip--visible::after {
+                left: 0;
+                transform: translate(-100%, -0.5rem);
+            }
         }
 
         /* Tooltip top right */
@@ -58,10 +62,13 @@
             transform: translate(15%, 0);
         }
 
-        &.tooltip--top-right:hover::after,
-        &.tooltip--top-right:focus::after {
-            right: 0;
-            transform: translate(100%, -0.5rem);
+        &.tooltip--top-right {
+            &:hover::after,
+            &:focus::after,
+            &.tooltip--visible::after {
+                right: 0;
+                transform: translate(100%, -0.5rem);
+            }
         }
 
         /* Tooltip bottom */
@@ -71,10 +78,13 @@
             bottom: auto;
         }
 
-        &.tooltip--bottom:hover::after,
-        &.tooltip--bottom:focus::after {
-            transform: translate(-50%, 0.5rem);
-            bottom: auto;
+        &.tooltip--bottom {
+            &:hover::after,
+            &:focus::after,
+            &.tooltip--visible::after {
+                transform: translate(-50%, 0.5rem);
+                bottom: auto;
+            }
         }
 
         /* Tooltip bottom left */
@@ -84,10 +94,13 @@
             bottom: auto;
         }
 
-        &.tooltip--bottom-left:hover::after,
-        &.tooltip--bottom-left:focus::after {
-            left: 0;
-            transform: translate(-100%, 0.5rem);
+        &.tooltip--bottom-left {
+            &:hover::after,
+            &:focus::after,
+            &.tooltip--visible::after {
+                left: 0;
+                transform: translate(-100%, 0.5rem);
+            }
         }
 
         /* Tooltip bottom right */
@@ -98,10 +111,13 @@
             bottom: auto;
         }
 
-        &.tooltip--bottom-right:hover::after,
-        &.tooltip--bottom-right:focus::after {
-            right: 0;
-            transform: translate(100%, 0.5rem);
+        &.tooltip--bottom-right {
+            &:hover::after,
+            &:focus::after,
+            &.tooltip--visible::after {
+                right: 0;
+                transform: translate(100%, 0.5rem);
+            }
         }
 
         /* Tooltip right */
@@ -111,9 +127,12 @@
             transform: translate(-1rem, 50%);
         }
 
-        &.tooltip--right:hover::after,
-        &.tooltip--right:focus::after {
-            transform: translate(0.5rem, 50%);
+        &.tooltip--right {
+            &:hover::after,
+            &:focus::after,
+            &.tooltip--visible::after {
+                transform: translate(0.5rem, 50%);
+            }
         }
 
         /* Tooltip Left */
@@ -124,9 +143,12 @@
             transform: translate(1rem, 50%);
         }
 
-        &.tooltip--left:hover::after,
-        &.tooltip--left:focus::after {
-            transform: translate(-0.5rem, 50%);
+        &.tooltip--left {
+            &:hover::after,
+            &:focus::after,
+            &.tooltip--visible::after {
+                transform: translate(-0.5rem, 50%);
+            }
         }
     }
 }

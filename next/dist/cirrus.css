@@ -24104,7 +24104,7 @@ a.tag:hover {
   border-radius: 0.2rem;
 }
 
-.tooltip:focus::after, .tooltip:hover::after {
+.tooltip:focus::after, .tooltip:hover::after, .tooltip.tooltip--visible::after {
   opacity: 1;
   transform: translate(-50%, -0.5rem);
   transition: all var(--animation-duration) ease;
@@ -24114,7 +24114,7 @@ a.tag:hover {
   transform: translate(-50%, 0);
 }
 
-.tooltip.tooltip--top-left:hover::after, .tooltip.tooltip--top-left:focus::after {
+.tooltip.tooltip--top-left:hover::after, .tooltip.tooltip--top-left:focus::after, .tooltip.tooltip--top-left.tooltip--visible::after {
   left: 0;
   transform: translate(-100%, -0.5rem);
 }
@@ -24124,7 +24124,7 @@ a.tag:hover {
   transform: translate(15%, 0);
 }
 
-.tooltip.tooltip--top-right:hover::after, .tooltip.tooltip--top-right:focus::after {
+.tooltip.tooltip--top-right:hover::after, .tooltip.tooltip--top-right:focus::after, .tooltip.tooltip--top-right.tooltip--visible::after {
   right: 0;
   transform: translate(100%, -0.5rem);
 }
@@ -24135,7 +24135,7 @@ a.tag:hover {
   bottom: auto;
 }
 
-.tooltip.tooltip--bottom:hover::after, .tooltip.tooltip--bottom:focus::after {
+.tooltip.tooltip--bottom:hover::after, .tooltip.tooltip--bottom:focus::after, .tooltip.tooltip--bottom.tooltip--visible::after {
   transform: translate(-50%, 0.5rem);
   bottom: auto;
 }
@@ -24146,7 +24146,7 @@ a.tag:hover {
   bottom: auto;
 }
 
-.tooltip.tooltip--bottom-left:hover::after, .tooltip.tooltip--bottom-left:focus::after {
+.tooltip.tooltip--bottom-left:hover::after, .tooltip.tooltip--bottom-left:focus::after, .tooltip.tooltip--bottom-left.tooltip--visible::after {
   left: 0;
   transform: translate(-100%, 0.5rem);
 }
@@ -24158,7 +24158,7 @@ a.tag:hover {
   bottom: auto;
 }
 
-.tooltip.tooltip--bottom-right:hover::after, .tooltip.tooltip--bottom-right:focus::after {
+.tooltip.tooltip--bottom-right:hover::after, .tooltip.tooltip--bottom-right:focus::after, .tooltip.tooltip--bottom-right.tooltip--visible::after {
   right: 0;
   transform: translate(100%, 0.5rem);
 }
@@ -24169,7 +24169,7 @@ a.tag:hover {
   transform: translate(-1rem, 50%);
 }
 
-.tooltip.tooltip--right:hover::after, .tooltip.tooltip--right:focus::after {
+.tooltip.tooltip--right:hover::after, .tooltip.tooltip--right:focus::after, .tooltip.tooltip--right.tooltip--visible::after {
   transform: translate(0.5rem, 50%);
 }
 
@@ -24180,6 +24180,6 @@ a.tag:hover {
   transform: translate(1rem, 50%);
 }
 
-.tooltip.tooltip--left:hover::after, .tooltip.tooltip--left:focus::after {
+.tooltip.tooltip--left:hover::after, .tooltip.tooltip--left:focus::after, .tooltip.tooltip--left.tooltip--visible::after {
   transform: translate(-0.5rem, 50%);
 }
