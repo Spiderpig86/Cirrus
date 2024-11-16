@@ -264,8 +264,8 @@ fieldset legend {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -834,7 +834,9 @@ kbd {
 
 .tracking-loosest {
   letter-spacing: 0.1em !important;
-} /* Line height */
+}
+
+/* Line height */
 .leading-none {
   line-height: 1 !important;
 }
@@ -4270,8 +4272,8 @@ section {
 /* Do the actual balancing only on larger screens */
 @media screen and (min-width: 768px) {
   .level,
-.level-left,
-.level-right {
+  .level-left,
+  .level-right {
     display: flex;
   }
 }
@@ -4295,8 +4297,8 @@ section {
   }
   /* Dividers for mobile layout */
   .divided > .row [class^=col-],
-.divided > .row [class*=" col-"],
-.divided > .row [class*=":col-"] {
+  .divided > .row [class*=" col-"],
+  .divided > .row [class*=":col-"] {
     box-shadow: 0 -1px 0 0 rgba(34, 36, 38, 0.15);
   }
   .level.fill-height {
@@ -7031,7 +7033,7 @@ video.video-fullscreen {
 
 .bg-teal-100:is(.btn, button, [type=submit], [type=reset], [type=button]) {
   --btn-color: 213, 245, 246;
-  --btn-hover-color: 192, 240, 242 !important;
+  --btn-hover-color: 192, 240, 241 !important;
   --btn-shadow: 0 0 0 0.2rem rgba(213, 245, 246, 0.5);
 }
 
@@ -7041,7 +7043,7 @@ video.video-fullscreen {
 
 .hover\:bg-teal-100:hover:is(.btn, button, [type=submit], [type=reset], [type=button]) {
   --btn-color: 213, 245, 246;
-  --btn-hover-color: 192, 240, 242 !important;
+  --btn-hover-color: 192, 240, 241 !important;
   --btn-shadow: 0 0 0 0.2rem rgba(213, 245, 246, 0.5);
 }
 
@@ -7859,7 +7861,7 @@ video.video-fullscreen {
 
 .bg-indigo-100:is(.btn, button, [type=submit], [type=reset], [type=button]) {
   --btn-color: 229, 237, 255;
-  --btn-hover-color: 204, 219, 255 !important;
+  --btn-hover-color: 203, 219, 255 !important;
   --btn-shadow: 0 0 0 0.2rem rgba(229, 237, 255, 0.5);
 }
 
@@ -7869,7 +7871,7 @@ video.video-fullscreen {
 
 .hover\:bg-indigo-100:hover:is(.btn, button, [type=submit], [type=reset], [type=button]) {
   --btn-color: 229, 237, 255;
-  --btn-hover-color: 204, 219, 255 !important;
+  --btn-hover-color: 203, 219, 255 !important;
   --btn-shadow: 0 0 0 0.2rem rgba(229, 237, 255, 0.5);
 }
 
@@ -11292,7 +11294,7 @@ video.video-fullscreen {
   }
   .dark\:bg-teal-100:is(.btn, button, [type=submit], [type=reset], [type=button]) {
     --btn-color: 213, 245, 246;
-    --btn-hover-color: 192, 240, 242 !important;
+    --btn-hover-color: 192, 240, 241 !important;
     --btn-shadow: 0 0 0 0.2rem rgba(213, 245, 246, 0.5);
   }
   .dark\:bg-teal-100:not(.btn, button, [type=submit], [type=reset], [type=button]) {
@@ -11300,7 +11302,7 @@ video.video-fullscreen {
   }
   .dark\:hover\:bg-teal-100:hover:is(.btn, button, [type=submit], [type=reset], [type=button]) {
     --btn-color: 213, 245, 246;
-    --btn-hover-color: 192, 240, 242 !important;
+    --btn-hover-color: 192, 240, 241 !important;
     --btn-shadow: 0 0 0 0.2rem rgba(213, 245, 246, 0.5);
   }
   .dark\:hover\:bg-teal-100:hover:not(.btn, button, [type=submit], [type=reset], [type=button]) {
@@ -11976,7 +11978,7 @@ video.video-fullscreen {
   }
   .dark\:bg-indigo-100:is(.btn, button, [type=submit], [type=reset], [type=button]) {
     --btn-color: 229, 237, 255;
-    --btn-hover-color: 204, 219, 255 !important;
+    --btn-hover-color: 203, 219, 255 !important;
     --btn-shadow: 0 0 0 0.2rem rgba(229, 237, 255, 0.5);
   }
   .dark\:bg-indigo-100:not(.btn, button, [type=submit], [type=reset], [type=button]) {
@@ -11984,7 +11986,7 @@ video.video-fullscreen {
   }
   .dark\:hover\:bg-indigo-100:hover:is(.btn, button, [type=submit], [type=reset], [type=button]) {
     --btn-color: 229, 237, 255;
-    --btn-hover-color: 204, 219, 255 !important;
+    --btn-hover-color: 203, 219, 255 !important;
     --btn-shadow: 0 0 0 0.2rem rgba(229, 237, 255, 0.5);
   }
   .dark\:hover\:bg-indigo-100:hover:not(.btn, button, [type=submit], [type=reset], [type=button]) {
@@ -17632,7 +17634,7 @@ video.video-fullscreen {
   --btn-fg: 54, 54, 54;
   --btn-border-color: 246, 249, 252;
   --btn-shadow: 0 0 0 0.2rem rgba(246, 249, 252, 0.5);
-  --btn-hover-color: 208, 224, 239;
+  --btn-hover-color: 208, 223, 239;
 }
 
 .btn.btn-black, button.btn-black, [type=submit].btn-black, [type=reset].btn-black, [type=button].btn-black {
@@ -17656,7 +17658,7 @@ video.video-fullscreen {
   --btn-fg: 246, 249, 252;
   --btn-border-color: 54, 54, 54;
   --btn-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.5);
-  --btn-hover-color: 29, 29, 29;
+  --btn-hover-color: 28, 28, 28;
 }
 
 .btn.btn-link, button.btn-link, [type=submit].btn-link, [type=reset].btn-link, [type=button].btn-link {
@@ -18715,7 +18717,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
   transition: all 0.3s;
   display: flex;
   --header-link-color: #495057;
-  --header-link-color-hover: #606a73;
+  --header-link-color-hover: rgb(96.26875, 105.5, 114.73125);
   /* Remove any padding set for headers in default.scss */
   /* Header dark theme */
   /* Add transition to nav menu when it drops down */
@@ -19026,7 +19028,7 @@ label:last-child:not(:first-child):not(.form-group-label) {
     transform: translateY(-5px);
   }
   .header .nav-item .dropdown-menu.dropdown-shown, .header .nav-item.toggle-hover:hover .dropdown-menu,
-.header .nav-item .dropdown-menu.dropdown-animated.dropdown-shown {
+  .header .nav-item .dropdown-menu.dropdown-animated.dropdown-shown {
     opacity: 1;
     transform: none;
     pointer-events: auto;
@@ -19124,8 +19126,8 @@ label:last-child:not(:first-child):not(.form-group-label) {
   }
   /* Hide drop down menu items */
   .nav-left,
-.nav-center,
-.nav-right {
+  .nav-center,
+  .nav-right {
     overflow: hidden;
   }
   /* No need for JS to show dropdown menu on mobile devices now */
