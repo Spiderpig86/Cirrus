@@ -39,7 +39,7 @@
         transition: all 0.3s;
         display: flex;
         --header-link-color: #{fill('gray', '700')};
-        --header-link-color-hover: #{lighten(fill('gray', '700'), 10)};
+        --header-link-color-hover: #{lighten(fill('gray', '700'), 10%)};
 
         /* Remove any padding set for headers in default.scss */
         @for $i from 1 through 6 {

@@ -21,9 +21,11 @@
 }
 
 @function lighten($color, $amount) {
-    @return color.adjust($color, $lightness: calc($amount * 100%));
+    $percentage: $amount * 100%;
+    @return color.adjust($color, $lightness: $amount);
 }
 
 @function darken($color, $amount) {
-    @return color.adjust($color, $lightness: calc($amount * -100%));
+    $percentage: $amount * -100%;
+    @return color.adjust($color, $lightness: $amount);
 }
