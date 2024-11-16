@@ -1,0 +1,21 @@
+/*
+    Syntactic sugar for old functions.
+*/
+
+@use "sass:color";
+
+@function red($color) {
+    @return color.channel($color, "red", $space: rgb);
+}
+
+@function green($color) {
+    @return color.channel($color, "green", $space: rgb);
+}
+
+@function blue($color) {
+    @return color.channel($color, "blue", $space: rgb);
+}
+
+@function transparentize($color, $alpha) {
+    @return color.adjust($color, $alpha * -1);
+}
