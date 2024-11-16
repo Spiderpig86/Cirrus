@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../../../src/internal' as *;
 
 @if should-generate-classes($TAGS) {
@@ -101,15 +102,15 @@ $TAG_BASE_PADDING_Y: 0.5; // .5rem;
 
     @each $color, $value in $control-themes {
         &.tag--#{$color} {
-            background-color: map-get($value, bg);
+            background-color: map.get($value, bg);
             color: #fff;
 
             &.tag__close-btn:hover {
-                background-color: darken($color: map-get($value, bg), $amount: 5);
+                background-color: darken($color: map.get($value, bg), $amount: 5);
             }
 
             &.tag__close-btn:active {
-                background-color: darken($color: map-get($value, bg), $amount: 10);
+                background-color: darken($color: map.get($value, bg), $amount: 10);
             }
         }
     }

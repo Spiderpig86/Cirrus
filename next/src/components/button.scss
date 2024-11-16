@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../../../src/internal' as *;
 
 /* Render the x in the close button */
@@ -36,7 +37,7 @@
         font-weight: inherit; // Reset button if used in <a> tag
         letter-spacing: 0.03rem;
         text-transform: uppercase;
-        font-family: map-get($map: $font-families, $key: primary);
+        font-family: map.get($map: $font-families, $key: primary);
         min-width: 2rem;
         user-select: none;
         margin-bottom: 1rem;
@@ -169,11 +170,11 @@
         
         @each $color, $value in $control-themes {
             &.btn-#{$color} {
-                --btn-color: #{hex-to-rgb(map-get($value, bg))};
-                --btn-fg: #{hex-to-rgb(map-get($value, fg))};
-                --btn-border-color: #{hex-to-rgb(map-get($value, bg))};
-                --btn-shadow: 0 0 0 0.2rem #{transparentize(map-get($value, bg), 0.5)};
-                --btn-hover-color: #{hex-to-rgb(darken(map-get($value, bg), 10%))};
+                --btn-color: #{hex-to-rgb(map.get($value, bg))};
+                --btn-fg: #{hex-to-rgb(map.get($value, fg))};
+                --btn-border-color: #{hex-to-rgb(map.get($value, bg))};
+                --btn-shadow: 0 0 0 0.2rem #{transparentize(map.get($value, bg), 0.5)};
+                --btn-hover-color: #{hex-to-rgb(darken(map.get($value, bg), 10%))};
             }
         }
 

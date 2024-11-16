@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../../../src/internal' as *;
 
 /*
@@ -7,7 +8,7 @@
     width: 100%;
     border: 1px solid rgba(hex-to-rgb(fill('gray', '300')), var(--border-opacity, 1));
     border-radius: 3px;
-    font-family: map-get($map: $font-families, $key: secondary);
+    font-family: map.get($map: $font-families, $key: secondary);
     font-size: var(--font-size-m);
     letter-spacing: 0.02rem;
     transition: box-shadow 0.3s;

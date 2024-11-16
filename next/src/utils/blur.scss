@@ -10,7 +10,7 @@
         $transformed: map.set(
             $transformed,
             $key,
-            map-merge(
+            map.merge(
                 $properties,
                 (
                     'filter': var(--cirrus-blur)

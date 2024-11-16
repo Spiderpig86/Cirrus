@@ -1,4 +1,5 @@
 // _generator.scss unit tests
+@use 'sass:map';
 @use '../test_base' as *;
 
 @use '../../src/internal/generator_v2';
@@ -460,7 +461,7 @@
                     )
                     using ($props...) {
                     @include generator_v2.inline-class-generator('foo', $props...) using ($config) {
-                        color: #fff #{map-get($config, override)};
+                        color: #fff #{map.get($config, override)};
                     }
                 }
             }

@@ -16,6 +16,14 @@
     @return color.channel($color, "blue", $space: rgb);
 }
 
-@function transparentize($color, $alpha) {
-    @return color.adjust($color, $alpha * -1);
+@function transparentize($color, $amount) {
+    @return color.adjust($color, $alpha: $amount * -1);
+}
+
+@function lighten($color, $amount) {
+    @return color.adjust($color, $lightness: calc($amount * 100%));
+}
+
+@function darken($color, $amount) {
+    @return color.adjust($color, $lightness: calc($amount * -100%));
 }

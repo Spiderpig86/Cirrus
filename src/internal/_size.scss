@@ -1,38 +1,39 @@
+@use 'sass:map';
 @use 'config';
 @use 'functions';
 
 /* Media Queries */
 // TODO: For viewport mixins, future option to not fail if key not found and to ignore instead?
 @mixin screen-above($breakpoint) {
-    @if not map-has-key($map: config.$breakpoints, $key: $breakpoint) {
+    @if not map.has-key($map: config.$breakpoints, $key: $breakpoint) {
         @error 'The given breakpoint #{$breakpoint} for @screen-above does not exist.';
     }
 
-    @media screen and (min-width: map-get(config.$breakpoints, $breakpoint)) {
+    @media screen and (min-width: map.get(config.$breakpoints, $breakpoint)) {
         @content;
     }
 }
 
 @mixin screen-between($lower, $higher) {
-    @if not map-has-key($map: config.$breakpoints, $key: $lower) {
+    @if not map.has-key($map: config.$breakpoints, $key: $lower) {
         @error 'The given breakpoint #{$lower} ($lower) for @screen-between does not exist.';
     }
 
-    @if not map-has-key($map: config.$breakpoints, $key: $higher) {
+    @if not map.has-key($map: config.$breakpoints, $key: $higher) {
         @error 'The given breakpoint #{$higher} ($higher) for @screen-between does not exist.';
     }
 
-    @media screen and (min-width: map-get(config.$breakpoints, $lower)) and (max-width: map-get(config.$breakpoints, $higher) - 1) {
+    @media screen and (min-width: map.get(config.$breakpoints, $lower)) and (max-width: map.get(config.$breakpoints, $higher) - 1) {
         @content;
     }
 }
 
 @mixin screen-below($breakpoint) {
-    @if not map-has-key($map: config.$breakpoints, $key: $breakpoint) {
+    @if not map.has-key($map: config.$breakpoints, $key: $breakpoint) {
         @error 'The given breakpoint #{$breakpoint} for @screen-below does not exist.';
     }
 
-    @media screen and (max-width: map-get(config.$breakpoints, $breakpoint) - 1) {
+    @media screen and (max-width: map.get(config.$breakpoints, $breakpoint) - 1) {
         @content;
     }
 }

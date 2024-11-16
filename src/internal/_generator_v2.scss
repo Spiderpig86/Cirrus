@@ -122,7 +122,7 @@ $default-variant-delimiter: '\\:';
 
 @mixin generate-variants($config, $variants: (), $context: ()) {
     // Get classes without pseudos, only rules
-    $base-class-name: map-get($context, base-class-name);
+    $base-class-name: map.get($context, base-class-name);
     @if $base-class-name != null {
         // There is a parent selector. This is true if we are generating classes for the following scenarios:
         //  - Classes with .group as parent
@@ -164,8 +164,8 @@ $default-variant-delimiter: '\\:';
         $map: $config,
         $key: delimiter,
     );
-    $class-prefix: map-get($config, class-prefix);
-    $base-class-name: map-get($context, base-class-name);
+    $class-prefix: map.get($config, class-prefix);
+    $base-class-name: map.get($context, base-class-name);
 
     @if $base-class-name != null {
         // Required to be comma separated since it will be used in generate-class() and treated like a selector
@@ -226,7 +226,7 @@ $default-variant-delimiter: '\\:';
         }
 
         @each $key, $value in $class-value-pairs {
-            $context: map-merge(
+            $context: map.merge(
                 $context,
                 (
                     base-class-name: $new-base-class-name + $key,
@@ -254,7 +254,7 @@ $default-variant-delimiter: '\\:';
         @error 'Base class name must be provided'
     }
     
-    $context: map-merge(
+    $context: map.merge(
         $context,
         (
             base-class-name: $base-class-name,
@@ -269,7 +269,7 @@ $default-variant-delimiter: '\\:';
     $result: ();
 
     @each $key, $value in config.$breakpoint-pairs {
-        $result: map.set($result, $key, '@media screen and (min-width: #{map-get(config.$breakpoints, $value)})');
+        $result: map.set($result, $key, '@media screen and (min-width: #{map.get(config.$breakpoints, $value)})');
     }
 
     @return $result;

@@ -3,6 +3,7 @@
 @use 'sass:map';
 @use 'sass:math';
 @use 'sass:meta';
+@use 'legacy';
 @use 'sass-true/sass/config/throw';
 @use 'sass-true/sass/true' as *;
 
@@ -17,7 +18,7 @@ $DELIMETER: '-';
     Converts a given hex value to RGB.
 */
 @function hex-to-rgb($hex) {
-    @return red($hex), green($hex), blue($hex);
+    @return legacy.red($hex), legacy.green($hex), legacy.blue($hex);
 }
 
 @function to-hover-color($color, $amount) {
@@ -27,10 +28,10 @@ $DELIMETER: '-';
     $adjusted-color: $color;
     @if ($brightness < 128) {
       // Lighten the color
-      $adjusted-color: lighten($color, $amount);
+      $adjusted-color: legacy.lighten($color, $amount);
     } @else {
       // Darken the color
-      $adjusted-color: darken($color, $amount);
+      $adjusted-color: legacy.darken($color, $amount);
     }
   
     // Output the adjusted color
@@ -43,9 +44,9 @@ $DELIMETER: '-';
 */
 @function calculate-brightness($color) {
     // Extract RGB components
-    $red: red($color);
-    $green: green($color);
-    $blue: blue($color);
+    $red: legacy.red($color);
+    $green: legacy.green($color);
+    $blue: legacy.blue($color);
 
     // Calculate brightness using the relative luminance formula
     @return 0.2126 * $red + 0.7152 * $green + 0.0722 * $blue;
@@ -94,8 +95,8 @@ $DELIMETER: '-';
 }
 
 @function map-get-strict($map, $key) {
-    @if map-has-key($map, $key) {
-        @return map-get($map, $key);
+    @if map.has-key($map, $key) {
+        @return map.get($map, $key);
     } @else {
         @return throw.error(
             $message: 'ERROR: Specified key "#{$key}" does not exist in the mapping',

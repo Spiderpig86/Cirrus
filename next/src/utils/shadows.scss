@@ -9,7 +9,7 @@
         $transformed: map.set(
             $transformed,
             $key,
-            map-merge(
+            map.merge(
                 $properties,
                 (
                     'box-shadow': var(--cirrus-shadow),

@@ -951,7 +951,7 @@ $z-indexes: functions.get-with-extend($all-config, z-index);
     @return get-viewport-flag-internal($viewport-flags, $name);
 }
 @function get-viewport-flag-internal($flag-map, $name) {
-    @if not map-has-key($flag-map, $name) {
+    @if not map.has-key($flag-map, $name) {
         @return throw.error(
             $message: '[get-viewport-flag] Unknown constant `#{$name}`.',
             $source: 'get-viewport-flag()',

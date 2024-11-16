@@ -11,7 +11,7 @@
 @each $class, $property-map in $font-heading-sizes {
     #{$class} {
         @include explode-properties(map.get($property-map, 'sm-above'));
-        font-family: map-get($map: $font-families, $key: primary);
+        font-family: map.get($map: $font-families, $key: primary);
         font-weight: 700;
         line-height: 1.2;
         margin-bottom: 1rem;
@@ -72,12 +72,12 @@ mark,
 }
 
 .font-primary {
-    font-family: map-get($map: $font-families, $key: primary);
+    font-family: map.get($map: $font-families, $key: primary);
 }
 
 .font-alt,
 .font-secondary {
-    font-family: map-get($map: $font-families, $key: secondary);
+    font-family: map.get($map: $font-families, $key: secondary);
 }
 
 .content {

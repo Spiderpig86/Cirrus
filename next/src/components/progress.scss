@@ -42,7 +42,7 @@
         // Themes
         @each $class, $color in $control-themes {
             &.progress--#{$class} {
-                --progress-color: #{map-get($color, bg)};
+                --progress-color: #{map.get($color, bg)};
             }
         }
 

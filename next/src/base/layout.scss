@@ -12,7 +12,7 @@
             $i,
             (
                 width:
-                    percentage(
+                    math.percentage(
                         $number: $width * $i,
                     ),
             )
@@ -31,7 +31,7 @@
             $i,
             (
                 margin-left:
-                    percentage(
+                    math.percentage(
                         $number: $width * $i,
                     ),
             )

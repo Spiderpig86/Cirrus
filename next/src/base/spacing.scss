@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../../../src/internal/generator_v2';
 @use '../../../src/internal' as *;
 
@@ -5,73 +6,73 @@
     @each $class, $size in $spacing-system {
         /* Margin */
         @include generator_v2.inline-class-generator('m-#{$class}', $props...) using ($config) {
-            margin: $size #{map-get($config, override)};
+            margin: $size #{map.get($config, override)};
         }
         @include generator_v2.inline-class-generator('mx-#{$class}', $props...) using ($config) {
-            margin-left: $size #{map-get($config, override)};
-            margin-right: $size #{map-get($config, override)};
+            margin-left: $size #{map.get($config, override)};
+            margin-right: $size #{map.get($config, override)};
         }
         @include generator_v2.inline-class-generator('my-#{$class}', $props...) using ($config) {
-            margin-top: $size #{map-get($config, override)};
-            margin-bottom: $size #{map-get($config, override)};
+            margin-top: $size #{map.get($config, override)};
+            margin-bottom: $size #{map.get($config, override)};
         }
         @include generator_v2.inline-class-generator('mt-#{$class}', $props...) using ($config) {
-            margin-top: $size #{map-get($config, override)};
+            margin-top: $size #{map.get($config, override)};
         }
         @include generator_v2.inline-class-generator('mb-#{$class}', $props...) using ($config) {
-            margin-bottom: $size #{map-get($config, override)};
+            margin-bottom: $size #{map.get($config, override)};
         }
         @include generator_v2.inline-class-generator('ml-#{$class}', $props...) using ($config) {
-            margin-left: $size #{map-get($config, override)};
+            margin-left: $size #{map.get($config, override)};
         }
         @include generator_v2.inline-class-generator('mr-#{$class}', $props...) using ($config) {
-            margin-right: $size #{map-get($config, override)};
+            margin-right: $size #{map.get($config, override)};
         }
 
         /* Padding */
         @include generator_v2.inline-class-generator('p-#{$class}', $props...) using ($config) {
-            padding: $size #{map-get($config, override)};
+            padding: $size #{map.get($config, override)};
         }
         @include generator_v2.inline-class-generator('px-#{$class}', $props...) using ($config) {
-            padding-left: $size #{map-get($config, override)};
-            padding-right: $size #{map-get($config, override)};
+            padding-left: $size #{map.get($config, override)};
+            padding-right: $size #{map.get($config, override)};
         }
         @include generator_v2.inline-class-generator('py-#{$class}', $props...) using ($config) {
-            padding-top: $size #{map-get($config, override)};
-            padding-bottom: $size #{map-get($config, override)};
+            padding-top: $size #{map.get($config, override)};
+            padding-bottom: $size #{map.get($config, override)};
         }
         @include generator_v2.inline-class-generator('pt-#{$class}', $props...) using ($config) {
-            padding-top: $size #{map-get($config, override)};
+            padding-top: $size #{map.get($config, override)};
         }
         @include generator_v2.inline-class-generator('pb-#{$class}', $props...) using ($config) {
-            padding-bottom: $size #{map-get($config, override)};
+            padding-bottom: $size #{map.get($config, override)};
         }
         @include generator_v2.inline-class-generator('pl-#{$class}', $props...) using ($config) {
-            padding-left: $size #{map-get($config, override)};
+            padding-left: $size #{map.get($config, override)};
         }
         @include generator_v2.inline-class-generator('pr-#{$class}', $props...) using ($config) {
-            padding-right: $size #{map-get($config, override)};
+            padding-right: $size #{map.get($config, override)};
         }
     }
 
     @include generator_v2.inline-class-generator('mx-auto', $props...) using ($config) {
-        margin-left: auto #{map-get($config, override)};
-        margin-right: auto #{map-get($config, override)};
+        margin-left: auto #{map.get($config, override)};
+        margin-right: auto #{map.get($config, override)};
     }
     @include generator_v2.inline-class-generator('my-auto', $props...) using ($config) {
-        margin-left: auto #{map-get($config, override)};
-        margin-right: auto #{map-get($config, override)};
+        margin-left: auto #{map.get($config, override)};
+        margin-right: auto #{map.get($config, override)};
     }
     @include generator_v2.inline-class-generator('mt-auto', $props...) using ($config) {
-        margin-top: auto #{map-get($config, override)};
+        margin-top: auto #{map.get($config, override)};
     }
     @include generator_v2.inline-class-generator('mb-auto', $props...) using ($config) {
-        margin-bottom: auto #{map-get($config, override)};
+        margin-bottom: auto #{map.get($config, override)};
     }
     @include generator_v2.inline-class-generator('ml-auto', $props...) using ($config) {
-        margin-left: auto #{map-get($config, override)};
+        margin-left: auto #{map.get($config, override)};
     }
     @include generator_v2.inline-class-generator('mr-auto', $props...) using ($config) {
-        margin-right: auto #{map-get($config, override)};
+        margin-right: auto #{map.get($config, override)};
     }
 }

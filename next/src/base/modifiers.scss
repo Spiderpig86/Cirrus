@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../../../src/internal/generator_v2';
 @use '../../../src/internal' as *;
 
@@ -56,17 +57,17 @@
             // // Not important, use this as a fallback in case no border is set
             // --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
 
-            // background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) #{map-get($config, override)};
+            // background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) #{map.get($config, override)};
 
             &:is(#{$button-selectors}) {
                 --btn-color: #{hex-to-rgb($color)};
-                --btn-hover-color: #{hex-to-rgb(to-hover-color($color, 5%))} #{map-get($config, override)};
+                --btn-hover-color: #{hex-to-rgb(to-hover-color($color, 5%))} #{map.get($config, override)};
                 // Not important, use this as a fallback in case no border is set
                 --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
             }
 
             &:not(#{$button-selectors}) {
-                background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) #{map-get($config, override)};
+                background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) #{map.get($config, override)};
             }
         }
 
@@ -75,7 +76,7 @@
             --btn-fg: #{hex-to-rgb($color)};
             --btn-border-color: #{hex-to-rgb($color)};
 
-            color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) #{map-get($config, override)};
+            color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) #{map.get($config, override)};
             // Not important, use this as a fallback in case no border is set
             border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
         }
@@ -83,19 +84,19 @@
         // Semantic color border classes
         @include generator_v2.inline-class-generator('border-#{$name}', $props...) using ($config) {
             --btn-border-color: #{hex-to-rgb($color)};
-            --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)} #{map-get($config, override)};
+            --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)} #{map.get($config, override)};
 
-            border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) #{map-get($config, override)};
+            border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) #{map.get($config, override)};
         }
     }
 
     @include generator_v2.inline-class-generator('bg-transparent', $props...) using ($config) {
-        background-color: transparent #{map-get($config, override)};
+        background-color: transparent #{map.get($config, override)};
     }
 
     @include generator_v2.inline-class-generator('text-transparent', $props...) using ($config) {
-        border-color: transparent #{map-get($config, override)};
-        color: transparent #{map-get($config, override)};
+        border-color: transparent #{map.get($config, override)};
+        color: transparent #{map.get($config, override)};
     }
 
     /* v2 Colors */
@@ -106,13 +107,13 @@
                 @include generator_v2.inline-class-generator('bg-#{$name}-#{$level}', $props...) using ($config) {
                     &:is(#{$button-selectors}) {
                         --btn-color: #{hex-to-rgb($color)};
-                        --btn-hover-color: #{hex-to-rgb(to-hover-color($color, 5%))} #{map-get($config, override)};
+                        --btn-hover-color: #{hex-to-rgb(to-hover-color($color, 5%))} #{map.get($config, override)};
                         // Not important, use this as a fallback in case no border is set
                         --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
                     }
 
                     &:not(#{$button-selectors}) {
-                        background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) #{map-get($config, override)};
+                        background-color: rgba(#{hex-to-rgb($color)}, var(--bg-opacity)) #{map.get($config, override)};
                     }
                 }
 
@@ -121,17 +122,17 @@
                     --btn-fg: #{hex-to-rgb($color)};
                     --btn-border-color: #{hex-to-rgb($color)};
 
-                    color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) #{map-get($config, override)};
+                    color: rgba(#{hex-to-rgb($color)}, var(--color-opacity)) #{map.get($config, override)};
                     // Not important, use this as a fallback in case no border is set
                     border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity));
                 }
 
                 // Border color
                 @include generator_v2.inline-class-generator('border-#{$name}-#{$level}', $props...) using ($config) {
-                    --btn-border-color: #{hex-to-rgb($color)} #{map-get($config, override)};
+                    --btn-border-color: #{hex-to-rgb($color)} #{map.get($config, override)};
                     --btn-shadow: 0 0 0 0.2rem #{transparentize($color, 0.5)};
 
-                    border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) #{map-get($config, override)};
+                    border-color: rgba(#{hex-to-rgb($color)}, var(--border-opacity)) #{map.get($config, override)};
                 }
             }
         }
