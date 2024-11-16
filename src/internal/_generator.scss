@@ -1,5 +1,6 @@
 @use 'sass:list';
 @use 'sass:map';
+@use 'sass:meta';
 @use 'config';
 @use 'size';
 @use 'mixins';
@@ -143,7 +144,7 @@ $default-variant-delimiter: '\\:';
 ) {
 
     // If class value is not a map, throw exception
-    @if type-of($value) != 'map' {
+    @if meta.type-of($value) != 'map' {
         @error 'The given value for class "#{$common-class-name}" is not a map.';
     }
 

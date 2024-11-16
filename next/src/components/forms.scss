@@ -144,16 +144,16 @@
 
     textarea,
     textarea[type='text'] {
-        @include cirrus-input();
         min-height: 8rem;
         line-height: 1.5rem;
         resize: vertical;
+        @include cirrus-input();
     }
 
     select {
-        @include cirrus-input();
-
         background-color: #fff;
+        
+        @include cirrus-input();
 
         &[multiple] option {
             padding: 0.2rem 0.4rem;

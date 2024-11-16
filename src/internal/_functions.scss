@@ -2,6 +2,7 @@
 @use 'sass:list';
 @use 'sass:map';
 @use 'sass:math';
+@use 'sass:meta';
 @use 'sass-true/sass/config/throw';
 @use 'sass-true/sass/true' as *;
 
@@ -137,7 +138,7 @@ $DELIMETER: '-';
     itself.
 */
 @function to-property-map($properties) {
-    @if type-of($properties) == map {
+    @if meta.type-of($properties) == map {
         @error "Input is already a map."
     }
 
@@ -163,7 +164,7 @@ $DELIMETER: '-';
             $key: $value,
         );
 
-        @if type-of($value) == number and $key != 0 and strip-unit($value) != 0 {
+        @if meta.type-of($value) == number and $key != 0 and strip-unit($value) != 0 {
             $to-add: map.merge($to-add, (n#{$key}: -#{$value}));
         }
 
@@ -176,7 +177,7 @@ $DELIMETER: '-';
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
 @function strip-unit($number) {
-    @if type-of($number) == 'number' and not unitless($number) {
+    @if meta.type-of($number) == 'number' and not math.is-unitless($number) {
         @return math.div($number, ($number * 0 + 1));
     }
 
@@ -205,7 +206,7 @@ $DELIMETER: '-';
 @function map-range($map, $start, $end, $include-non-numeric: false) {
     $result: ();
     @each $key, $value in $map {
-        @if type-of($key) == 'number' {
+        @if meta.type-of($key) == 'number' {
             @if $key >= $start and $key < $end {
                 $result: map.merge(
                     $result,
