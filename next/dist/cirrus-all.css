@@ -1323,6 +1323,7 @@ kbd {
 /* Templates */
 .grid-rows-1 {
   --grid-template-row: repeat(1, minmax(0, 1fr));
+  grid-template-rows: var(--grid-template-row);
 }
 
 /* Column expansion */
@@ -1342,6 +1343,7 @@ kbd {
 /* Templates */
 .grid-rows-2 {
   --grid-template-row: repeat(2, minmax(0, 1fr));
+  grid-template-rows: var(--grid-template-row);
 }
 
 /* Column expansion */
@@ -1361,6 +1363,7 @@ kbd {
 /* Templates */
 .grid-rows-3 {
   --grid-template-row: repeat(3, minmax(0, 1fr));
+  grid-template-rows: var(--grid-template-row);
 }
 
 /* Column expansion */
@@ -1380,6 +1383,7 @@ kbd {
 /* Templates */
 .grid-rows-4 {
   --grid-template-row: repeat(4, minmax(0, 1fr));
+  grid-template-rows: var(--grid-template-row);
 }
 
 /* Column expansion */
@@ -1399,6 +1403,7 @@ kbd {
 /* Templates */
 .grid-rows-5 {
   --grid-template-row: repeat(5, minmax(0, 1fr));
+  grid-template-rows: var(--grid-template-row);
 }
 
 /* Column expansion */
@@ -1418,6 +1423,7 @@ kbd {
 /* Templates */
 .grid-rows-6 {
   --grid-template-row: repeat(6, minmax(0, 1fr));
+  grid-template-rows: var(--grid-template-row);
 }
 
 /* Column expansion */
@@ -1645,6 +1651,7 @@ kbd {
   /* Templates */
   .sm\:grid-rows-1 {
     --grid-template-row: repeat(1, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .sm\:grid-r-1 {
@@ -1660,6 +1667,7 @@ kbd {
   /* Templates */
   .sm\:grid-rows-2 {
     --grid-template-row: repeat(2, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .sm\:grid-r-2 {
@@ -1675,6 +1683,7 @@ kbd {
   /* Templates */
   .sm\:grid-rows-3 {
     --grid-template-row: repeat(3, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .sm\:grid-r-3 {
@@ -1690,6 +1699,7 @@ kbd {
   /* Templates */
   .sm\:grid-rows-4 {
     --grid-template-row: repeat(4, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .sm\:grid-r-4 {
@@ -1705,6 +1715,7 @@ kbd {
   /* Templates */
   .sm\:grid-rows-5 {
     --grid-template-row: repeat(5, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .sm\:grid-r-5 {
@@ -1720,6 +1731,7 @@ kbd {
   /* Templates */
   .sm\:grid-rows-6 {
     --grid-template-row: repeat(6, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .sm\:grid-r-6 {
@@ -1940,6 +1952,7 @@ kbd {
   /* Templates */
   .md\:grid-rows-1 {
     --grid-template-row: repeat(1, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .md\:grid-r-1 {
@@ -1955,6 +1968,7 @@ kbd {
   /* Templates */
   .md\:grid-rows-2 {
     --grid-template-row: repeat(2, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .md\:grid-r-2 {
@@ -1970,6 +1984,7 @@ kbd {
   /* Templates */
   .md\:grid-rows-3 {
     --grid-template-row: repeat(3, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .md\:grid-r-3 {
@@ -1985,6 +2000,7 @@ kbd {
   /* Templates */
   .md\:grid-rows-4 {
     --grid-template-row: repeat(4, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .md\:grid-r-4 {
@@ -2000,6 +2016,7 @@ kbd {
   /* Templates */
   .md\:grid-rows-5 {
     --grid-template-row: repeat(5, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .md\:grid-r-5 {
@@ -2015,6 +2032,7 @@ kbd {
   /* Templates */
   .md\:grid-rows-6 {
     --grid-template-row: repeat(6, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .md\:grid-r-6 {
@@ -2235,6 +2253,7 @@ kbd {
   /* Templates */
   .lg\:grid-rows-1 {
     --grid-template-row: repeat(1, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .lg\:grid-r-1 {
@@ -2250,6 +2269,7 @@ kbd {
   /* Templates */
   .lg\:grid-rows-2 {
     --grid-template-row: repeat(2, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .lg\:grid-r-2 {
@@ -2265,6 +2285,7 @@ kbd {
   /* Templates */
   .lg\:grid-rows-3 {
     --grid-template-row: repeat(3, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .lg\:grid-r-3 {
@@ -2280,6 +2301,7 @@ kbd {
   /* Templates */
   .lg\:grid-rows-4 {
     --grid-template-row: repeat(4, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .lg\:grid-r-4 {
@@ -2295,6 +2317,7 @@ kbd {
   /* Templates */
   .lg\:grid-rows-5 {
     --grid-template-row: repeat(5, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .lg\:grid-r-5 {
@@ -2310,6 +2333,7 @@ kbd {
   /* Templates */
   .lg\:grid-rows-6 {
     --grid-template-row: repeat(6, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .lg\:grid-r-6 {
@@ -2530,6 +2554,7 @@ kbd {
   /* Templates */
   .xl\:grid-rows-1 {
     --grid-template-row: repeat(1, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .xl\:grid-r-1 {
@@ -2545,6 +2570,7 @@ kbd {
   /* Templates */
   .xl\:grid-rows-2 {
     --grid-template-row: repeat(2, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .xl\:grid-r-2 {
@@ -2560,6 +2586,7 @@ kbd {
   /* Templates */
   .xl\:grid-rows-3 {
     --grid-template-row: repeat(3, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .xl\:grid-r-3 {
@@ -2575,6 +2602,7 @@ kbd {
   /* Templates */
   .xl\:grid-rows-4 {
     --grid-template-row: repeat(4, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .xl\:grid-r-4 {
@@ -2590,6 +2618,7 @@ kbd {
   /* Templates */
   .xl\:grid-rows-5 {
     --grid-template-row: repeat(5, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .xl\:grid-r-5 {
@@ -2605,6 +2634,7 @@ kbd {
   /* Templates */
   .xl\:grid-rows-6 {
     --grid-template-row: repeat(6, minmax(0, 1fr));
+    grid-template-rows: var(--grid-template-row);
   }
   /* Column expansion */
   .xl\:grid-r-6 {

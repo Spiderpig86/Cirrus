@@ -65,6 +65,7 @@
         // .grid-rows-<i>
         @include generator_v2.inline-class-generator('grid-rows-' + $i, $props...) using ($props...) {
             --grid-template-row: repeat(#{$i}, minmax(0, 1fr));
+            grid-template-rows: var(--grid-template-row);
         }
 
         /* Column expansion */
