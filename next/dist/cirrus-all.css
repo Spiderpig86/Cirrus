@@ -27413,36 +27413,6 @@ details.accordion:last-of-type {
   margin-left: -1px;
 }
 
-/* PLACEHOLDER */
-/* Designed to be embedded in any parent container as placeholder when content is absent. */
-.placeholder {
-  background-color: rgba(222, 226, 230, 0.5);
-  border-radius: 3px;
-  text-align: center;
-  padding: 3rem 2rem;
-  color: #495057; /* Lighter than original text color */
-  display: block;
-  /* Place buttons here for the placeholder */
-}
-
-.placeholder .placeholder-icon {
-  text-align: center;
-}
-
-.placeholder .placeholder-title,
-.placeholder .placeholder-subtitle {
-  margin: 1rem auto;
-}
-
-.placeholder .placeholder-subtitle {
-  opacity: 0.7;
-  margin: 0;
-}
-
-.placeholder .placeholder-commands {
-  margin-top: 1rem;
-}
-
 /* TABS AND TAB CONTAINER */
 .tab-container {
   display: flex;
