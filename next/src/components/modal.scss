@@ -1,8 +1,7 @@
 @use '../../../src/internal' as *;
 
 @if should-generate-classes($MODAL) {
-    /* The base of the modal dialog, which is an overlay of the webpage */
-    .modal {
+    .modal-container {
         position: fixed; /* Scrolls with the user */
         top: 0;
         left: 0;
@@ -17,13 +16,13 @@
 
         /* When the modal dialog is visible */
         &:target,
-        &.modal--visible {
+        &.modal-container--visible {
             display: flex;
             opacity: 1;
             z-index: 999;
             pointer-events: auto; /* Re-enable pointer events */
 
-            /* The div in the modal dialpog used to create the translucent background */
+            /* The div in the modal dialog used to create the translucent background */
             .modal-overlay {
                 position: absolute; /* Absolute inside of the modal container */
                 top: 0;
@@ -34,37 +33,43 @@
                 background-color: transparentize($color: fill('dark'), $amount: 0.5);
             }
 
-            .modal-container,
-            .modal-container {
-                animation: slide-down var(--animation-duration) ease 1;
-                z-index: 1;
-            }
-
             // Animation modifiers
             &.modal-animated--zoom-in,
             &.modal-animated--zoom-out {
                 opacity: 1;
                 transition: 300ms all ease;
-            }
 
-            &.modal-animated--zoom-in .modal-content,
-            &.modal-animated--zoom-out .modal-content {
-                transform: scale(1);
-                transition: 300ms all ease;
+                .modal {
+                    transform: scale(1);
+                }
             }
         }
 
-        /* Different size modals */
-        &.modal-small .modal-content {
-            max-width: 20rem; /* 320px */
+        /* MODAL ANIMATIONS */
+        &.modal-animated--dropdown {
+            animation: slide-down var(--animation-duration) ease 1;
         }
 
-        &.modal-large .modal-content {
-            max-width: 60rem; /* 960px */
+        /* Visible state */
+        &.modal-animated--zoom-in,
+        &.modal-animated--zoom-out {
+            display: flex;
+            opacity: 0;
+            transition: 300ms all ease;
+        }
+
+        &.modal-animated--zoom-in .modal {
+            transform: scale(0.8);
+            transition: 300ms all ease;
+        }
+
+        &.modal-animated--zoom-out .modal {
+            transform: scale(1.2);
+            transition: 300ms all ease;
         }
 
         /* The modal dialog body with the text itself */
-        .modal-content {
+        .modal {
             background-color: var(--cirrus-bg);
             padding: 0;
             display: block;
@@ -75,8 +80,18 @@
             max-width: 40rem; /* 640px */
 
             /* Restrict width  */
-            &.small {
-                max-width: 32rem;
+            /* Deprecated 0.8.0, seems unneeded */
+            // &.small {
+            //     max-width: 32rem;
+            // }
+
+            /* Different size modals */
+            &.modal--sm {
+                max-width: 20rem; /* 320px */
+            }
+
+            &.modal--lg {
+                max-width: 60rem; /* 960px */
             }
 
             #{$header-selectors} {
@@ -106,29 +121,6 @@
             @include screen-below($sm) {
                 max-width: 90%;
             }
-        }
-
-        /* MODAL ANIMATIONS */
-        &.modal-animated--dropdown {
-            animation: slide-down var(--animation-duration) ease 1;
-        }
-
-        /* Visible state */
-        &.modal-animated--zoom-in,
-        &.modal-animated--zoom-out {
-            display: flex;
-            opacity: 0;
-            transition: 300ms all ease;
-        }
-
-        &.modal-animated--zoom-in .modal-content {
-            transform: scale(0.8);
-            transition: 300ms all ease;
-        }
-
-        &.modal-animated--zoom-out .modal-content {
-            transform: scale(1.2);
-            transition: 300ms all ease;
         }
     }
 
