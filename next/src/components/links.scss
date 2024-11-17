@@ -4,10 +4,13 @@
     /* LINKS */
 
     a {
-        color: fill('link');
-        font-weight: 600;
         text-decoration: none;
         transition: all 0.3s;
+
+        &:not(:has(#{$button-selectors})) {
+            color: fill('link');
+            font-weight: 600;
+        }
 
         &:hover {
             color: fill('link-dark');

@@ -19148,10 +19148,13 @@ label:last-child:not(:first-child):not(.form-group-label) {
 }
 /* LINKS */
 a {
-  color: #5e5cc7;
-  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s;
+}
+
+a:not(:has(.btn, button, [type=submit], [type=reset], [type=button])) {
+  color: #5e5cc7;
+  font-weight: 600;
 }
 
 a:hover {

@@ -20049,10 +20049,13 @@ label:last-child:not(:first-child):not(.form-group-label) {
 }
 /* LINKS */
 a {
-  color: #5e5cc7;
-  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s;
+}
+
+a:not(:has(.btn, button, [type=submit], [type=reset], [type=button])) {
+  color: #5e5cc7;
+  font-weight: 600;
 }
 
 a:hover {
@@ -27180,8 +27183,7 @@ details.accordion:last-of-type {
   left: 0;
 }
 
-/* The base of the modal dialog, which is an overlay of the webpage */
-.modal {
+.modal-container {
   position: fixed; /* Scrolls with the user */
   top: 0;
   left: 0;
@@ -27194,21 +27196,20 @@ details.accordion:last-of-type {
   justify-content: center; /* Vertical centering */
   pointer-events: none; /* Prevent any pointer events made to modal while hidden */
   /* When the modal dialog is visible */
-  /* Different size modals */
-  /* The modal dialog body with the text itself */
   /* MODAL ANIMATIONS */
   /* Visible state */
+  /* The modal dialog body with the text itself */
 }
 
-.modal:target, .modal.modal--visible {
+.modal-container:target, .modal-container.modal-container--visible {
   display: flex;
   opacity: 1;
   z-index: 999;
   pointer-events: auto; /* Re-enable pointer events */
-  /* The div in the modal dialpog used to create the translucent background */
+  /* The div in the modal dialog used to create the translucent background */
 }
 
-.modal:target .modal-overlay, .modal.modal--visible .modal-overlay {
+.modal-container:target .modal-overlay, .modal-container.modal-container--visible .modal-overlay {
   position: absolute; /* Absolute inside of the modal container */
   top: 0;
   left: 0;
@@ -27218,32 +27219,36 @@ details.accordion:last-of-type {
   background-color: rgba(54, 54, 54, 0.5);
 }
 
-.modal:target .modal-container,
-.modal:target .modal-container, .modal.modal--visible .modal-container,
-.modal.modal--visible .modal-container {
-  animation: slide-down var(--animation-duration) ease 1;
-  z-index: 1;
-}
-
-.modal:target.modal-animated--zoom-in, .modal:target.modal-animated--zoom-out, .modal.modal--visible.modal-animated--zoom-in, .modal.modal--visible.modal-animated--zoom-out {
+.modal-container:target.modal-animated--zoom-in, .modal-container:target.modal-animated--zoom-out, .modal-container.modal-container--visible.modal-animated--zoom-in, .modal-container.modal-container--visible.modal-animated--zoom-out {
   opacity: 1;
   transition: 300ms all ease;
 }
 
-.modal:target.modal-animated--zoom-in .modal-content, .modal:target.modal-animated--zoom-out .modal-content, .modal.modal--visible.modal-animated--zoom-in .modal-content, .modal.modal--visible.modal-animated--zoom-out .modal-content {
+.modal-container:target.modal-animated--zoom-in .modal, .modal-container:target.modal-animated--zoom-out .modal, .modal-container.modal-container--visible.modal-animated--zoom-in .modal, .modal-container.modal-container--visible.modal-animated--zoom-out .modal {
   transform: scale(1);
+}
+
+.modal-container.modal-animated--dropdown {
+  animation: slide-down var(--animation-duration) ease 1;
+}
+
+.modal-container.modal-animated--zoom-in, .modal-container.modal-animated--zoom-out {
+  display: flex;
+  opacity: 0;
   transition: 300ms all ease;
 }
 
-.modal.modal-small .modal-content {
-  max-width: 20rem; /* 320px */
+.modal-container.modal-animated--zoom-in .modal {
+  transform: scale(0.8);
+  transition: 300ms all ease;
 }
 
-.modal.modal-large .modal-content {
-  max-width: 60rem; /* 960px */
+.modal-container.modal-animated--zoom-out .modal {
+  transform: scale(1.2);
+  transition: 300ms all ease;
 }
 
-.modal .modal-content {
+.modal-container .modal {
   background-color: var(--cirrus-bg);
   padding: 0;
   display: block;
@@ -27253,61 +27258,47 @@ details.accordion:last-of-type {
   color: var(--cirrus-fg);
   max-width: 40rem; /* 640px */
   /* Restrict width  */
+  /* Deprecated 0.8.0, seems unneeded */
+  /* Different size modals */
 }
 
-.modal .modal-content.small {
-  max-width: 32rem;
+.modal-container .modal.modal--sm {
+  max-width: 20rem; /* 320px */
 }
 
-.modal .modal-content h1, .modal .modal-content h2, .modal .modal-content h3, .modal .modal-content h4, .modal .modal-content h5, .modal .modal-content h6 {
+.modal-container .modal.modal--lg {
+  max-width: 60rem; /* 960px */
+}
+
+.modal-container .modal h1, .modal-container .modal h2, .modal-container .modal h3, .modal-container .modal h4, .modal-container .modal h5, .modal-container .modal h6 {
   color: var(--cirrus-fg);
 }
 
-.modal .modal-content .modal-header {
+.modal-container .modal .modal-header {
   padding: 1rem 2.5rem;
 }
 
-.modal .modal-content .modal-header .modal-title {
+.modal-container .modal .modal-header .modal-title {
   font-weight: bolder;
   font-size: 1.4rem;
 }
 
-.modal .modal-content .modal-body {
+.modal-container .modal .modal-body {
   padding: 1rem 2.5rem;
   overflow-y: auto;
   max-height: 50vh; /* Max height is 50% of viewport height which prevents dialog from extetnding past screen */
   position: relative;
 }
 
-.modal .modal-content .modal-footer {
+.modal-container .modal .modal-footer {
   padding: 1rem 2.5rem;
 }
 
 @media screen and (max-width: 767px) {
-  .modal .modal-content {
+  .modal-container .modal {
     max-width: 90%;
   }
 }
-.modal.modal-animated--dropdown {
-  animation: slide-down var(--animation-duration) ease 1;
-}
-
-.modal.modal-animated--zoom-in, .modal.modal-animated--zoom-out {
-  display: flex;
-  opacity: 0;
-  transition: 300ms all ease;
-}
-
-.modal.modal-animated--zoom-in .modal-content {
-  transform: scale(0.8);
-  transition: 300ms all ease;
-}
-
-.modal.modal-animated--zoom-out .modal-content {
-  transform: scale(1.2);
-  transition: 300ms all ease;
-}
-
 /* Keyframes for slide down animation */
 @keyframes slide-down {
   0% {
