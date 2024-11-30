@@ -12,7 +12,6 @@ $default-override: '';
 $default-delimiter: '-';
 $default-variant-delimiter: '\\:';
 
-// ALL WIP
 /*
     Main utility for generating utility classes with different viewports, delimiters, base class names, etc.
     Example: .sm\:hover\:u-text-blue:hover { ... }

@@ -945,7 +945,7 @@ $vertical-alignments: functions.get-with-extend($all-config, vertical-align);
 $z-indexes: functions.get-with-extend($all-config, z-index);
 
 /*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., sm:u-flex, md:u-flex, etc.).
 */
 @function get-viewport-flag($name) {
     @return get-viewport-flag-internal($viewport-flags, $name);

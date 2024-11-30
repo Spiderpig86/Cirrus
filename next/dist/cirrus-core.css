@@ -64,7 +64,7 @@
  * DEFAULTS *
  ************/
 /*
-    Fetch feature flag for different utility class types for generating viewport classes (e.g., u-flex-sm, u-flex-md, etc.).
+    Fetch feature flag for different utility class types for generating viewport classes (e.g., sm:u-flex, md:u-flex, etc.).
 */
 /*
   Helper function to determine if a set of classes should be generated based on given include/exclude configuration.

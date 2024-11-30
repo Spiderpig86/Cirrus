@@ -24,6 +24,10 @@
             transform: translate(-50%, -50%);
         }
 
+        &:has(img) {
+            background-color: transparent;
+        }
+
         @each $size, $property-map in $avatar-sizes {
             &.avatar--#{$size} {
                 @include explode-properties($property-map);
