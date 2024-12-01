@@ -18381,7 +18381,8 @@ video.video-fullscreen {
 /* BUTTONS */
 /* Button styling */
 /* Un-themed */
-.btn, button, [type=submit], [type=reset], [type=button] {
+.btn, button, [type=submit], [type=reset], [type=button],
+a.btn {
   line-height: 2rem;
   overflow: hidden;
   padding: 0.5rem 1rem;
@@ -18417,58 +18418,72 @@ video.video-fullscreen {
   /* Alternatives to pad-left and pad-right */
 }
 
-.btn:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
+.btn:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover,
+a.btn:hover {
   background-color: rgba(var(--btn-hover-color), var(--bg-opacity));
   transition: all var(--animation-duration);
   color: rgba(var(--btn-fg), var(--color-opacity));
 }
 
-.btn:active, button:active, [type=submit]:active, [type=reset]:active, [type=button]:active {
+.btn:active, button:active, [type=submit]:active, [type=reset]:active, [type=button]:active,
+a.btn:active {
   transition: var(--animation-duration) ease;
 }
 
-.btn:focus, button:focus, [type=submit]:focus, [type=reset]:focus, [type=button]:focus {
+.btn:focus, button:focus, [type=submit]:focus, [type=reset]:focus, [type=button]:focus,
+a.btn:focus {
   outline: none;
 }
 
-.btn:focus:not([disabled]), button:focus:not([disabled]), [type=submit]:focus:not([disabled]), [type=reset]:focus:not([disabled]), [type=button]:focus:not([disabled]) {
+.btn:focus:not([disabled]), button:focus:not([disabled]), [type=submit]:focus:not([disabled]), [type=reset]:focus:not([disabled]), [type=button]:focus:not([disabled]),
+a.btn:focus:not([disabled]) {
   box-shadow: var(--btn-shadow);
 }
 
-.btn:disabled, .btn.btn--disabled, button:disabled, button.btn--disabled, [type=submit]:disabled, [type=submit].btn--disabled, [type=reset]:disabled, [type=reset].btn--disabled, [type=button]:disabled, [type=button].btn--disabled {
+.btn:disabled, .btn.btn--disabled, button:disabled, button.btn--disabled, [type=submit]:disabled, [type=submit].btn--disabled, [type=reset]:disabled, [type=reset].btn--disabled, [type=button]:disabled, [type=button].btn--disabled,
+a.btn:disabled,
+a.btn.btn--disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.btn:disabled:active, .btn.btn--disabled:active, button:disabled:active, button.btn--disabled:active, [type=submit]:disabled:active, [type=submit].btn--disabled:active, [type=reset]:disabled:active, [type=reset].btn--disabled:active, [type=button]:disabled:active, [type=button].btn--disabled:active {
+.btn:disabled:active, .btn.btn--disabled:active, button:disabled:active, button.btn--disabled:active, [type=submit]:disabled:active, [type=submit].btn--disabled:active, [type=reset]:disabled:active, [type=reset].btn--disabled:active, [type=button]:disabled:active, [type=button].btn--disabled:active,
+a.btn:disabled:active,
+a.btn.btn--disabled:active {
   pointer-events: none;
 }
 
-.btn.outline, button.outline, [type=submit].outline, [type=reset].outline, [type=button].outline {
+.btn.outline, button.outline, [type=submit].outline, [type=reset].outline, [type=button].outline,
+a.btn.outline {
   --btn-color: transparent;
 }
 
-.btn.outline:hover, button.outline:hover, [type=submit].outline:hover, [type=reset].outline:hover, [type=button].outline:hover {
+.btn.outline:hover, button.outline:hover, [type=submit].outline:hover, [type=reset].outline:hover, [type=button].outline:hover,
+a.btn.outline:hover {
   --btn-color: 233, 236, 239;
 }
 
-.btn.loading:active::after, button.loading:active::after, [type=submit].loading:active::after, [type=reset].loading:active::after, [type=button].loading:active::after {
+.btn.loading:active::after, button.loading:active::after, [type=submit].loading:active::after, [type=reset].loading:active::after, [type=button].loading:active::after,
+a.btn.loading:active::after {
   border-radius: 50%;
   border-right-color: transparent;
   border-top-color: transparent;
   transition: var(--animation-duration) ease;
 }
 
-.btn.btn-animated, button.btn-animated, [type=submit].btn-animated, [type=reset].btn-animated, [type=button].btn-animated {
+.btn.btn-animated, button.btn-animated, [type=submit].btn-animated, [type=reset].btn-animated, [type=button].btn-animated,
+a.btn.btn-animated {
   transition: calc(var(--animation-duration) / 2) ease;
 }
 
-.btn.btn-animated:active, button.btn-animated:active, [type=submit].btn-animated:active, [type=reset].btn-animated:active, [type=button].btn-animated:active {
+.btn.btn-animated:active, button.btn-animated:active, [type=submit].btn-animated:active, [type=reset].btn-animated:active, [type=button].btn-animated:active,
+a.btn.btn-animated:active {
   transform: scale(0.95);
   transition: calc(var(--animation-duration) / 2) ease;
 }
 
-.btn.btn-close, button.btn-close, [type=submit].btn-close, [type=reset].btn-close, [type=button].btn-close {
+.btn.btn-close, button.btn-close, [type=submit].btn-close, [type=reset].btn-close, [type=button].btn-close,
+a.btn.btn-close {
   background-color: rgba(10, 10, 10, 0.2);
   border: none;
   border-radius: 290486px;
@@ -18487,11 +18502,13 @@ video.video-fullscreen {
   min-width: 20px;
 }
 
-.btn.btn-close:hover, button.btn-close:hover, [type=submit].btn-close:hover, [type=reset].btn-close:hover, [type=button].btn-close:hover {
+.btn.btn-close:hover, button.btn-close:hover, [type=submit].btn-close:hover, [type=reset].btn-close:hover, [type=button].btn-close:hover,
+a.btn.btn-close:hover {
   background-color: rgba(10, 10, 10, 0.3);
 }
 
-.btn.btn-close::before, button.btn-close::before, [type=submit].btn-close::before, [type=reset].btn-close::before, [type=button].btn-close::before {
+.btn.btn-close::before, button.btn-close::before, [type=submit].btn-close::before, [type=reset].btn-close::before, [type=button].btn-close::before,
+a.btn.btn-close::before {
   background-color: var(--cirrus-bg);
   content: "";
   display: block;
@@ -18504,7 +18521,8 @@ video.video-fullscreen {
   width: 50%;
 }
 
-.btn.btn-close::after, button.btn-close::after, [type=submit].btn-close::after, [type=reset].btn-close::after, [type=button].btn-close::after {
+.btn.btn-close::after, button.btn-close::after, [type=submit].btn-close::after, [type=reset].btn-close::after, [type=button].btn-close::after,
+a.btn.btn-close::after {
   background-color: var(--cirrus-bg);
   content: "";
   display: block;
@@ -18517,7 +18535,8 @@ video.video-fullscreen {
   width: 2px;
 }
 
-.btn.btn-transparent, button.btn-transparent, [type=submit].btn-transparent, [type=reset].btn-transparent, [type=button].btn-transparent {
+.btn.btn-transparent, button.btn-transparent, [type=submit].btn-transparent, [type=reset].btn-transparent, [type=button].btn-transparent,
+a.btn.btn-transparent {
   --btn-color: transparent;
   --btn-fg: 54, 54, 54;
   --btn-border-color: transparent;
@@ -18525,15 +18544,18 @@ video.video-fullscreen {
   --btn-hover-color: 0, 0, 0;
 }
 
-.btn.btn-transparent:hover, button.btn-transparent:hover, [type=submit].btn-transparent:hover, [type=reset].btn-transparent:hover, [type=button].btn-transparent:hover {
+.btn.btn-transparent:hover, button.btn-transparent:hover, [type=submit].btn-transparent:hover, [type=reset].btn-transparent:hover, [type=button].btn-transparent:hover,
+a.btn.btn-transparent:hover {
   --bg-opacity: 0.1;
 }
 
-.btn.btn-transparent.outline, button.btn-transparent.outline, [type=submit].btn-transparent.outline, [type=reset].btn-transparent.outline, [type=button].btn-transparent.outline {
+.btn.btn-transparent.outline, button.btn-transparent.outline, [type=submit].btn-transparent.outline, [type=reset].btn-transparent.outline, [type=button].btn-transparent.outline,
+a.btn.btn-transparent.outline {
   --btn-fg: 54, 54, 54;
 }
 
-.btn.btn-light, button.btn-light, [type=submit].btn-light, [type=reset].btn-light, [type=button].btn-light {
+.btn.btn-light, button.btn-light, [type=submit].btn-light, [type=reset].btn-light, [type=button].btn-light,
+a.btn.btn-light {
   --btn-color: 246, 249, 252;
   --btn-fg: 54, 54, 54;
   --btn-border-color: 246, 249, 252;
@@ -18541,7 +18563,8 @@ video.video-fullscreen {
   --btn-hover-color: 207.75, 223.5, 239.25;
 }
 
-.btn.btn-black, button.btn-black, [type=submit].btn-black, [type=reset].btn-black, [type=button].btn-black {
+.btn.btn-black, button.btn-black, [type=submit].btn-black, [type=reset].btn-black, [type=button].btn-black,
+a.btn.btn-black {
   --btn-color: 0, 0, 0;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 0, 0, 0;
@@ -18549,7 +18572,8 @@ video.video-fullscreen {
   --btn-hover-color: 0, 0, 0;
 }
 
-.btn.btn-primary, button.btn-primary, [type=submit].btn-primary, [type=reset].btn-primary, [type=button].btn-primary {
+.btn.btn-primary, button.btn-primary, [type=submit].btn-primary, [type=reset].btn-primary, [type=button].btn-primary,
+a.btn.btn-primary {
   --btn-color: 240, 61, 77;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 240, 61, 77;
@@ -18557,7 +18581,8 @@ video.video-fullscreen {
   --btn-hover-color: 232.0574162679, 17.9425837321, 37.0813397129;
 }
 
-.btn.btn-dark, button.btn-dark, [type=submit].btn-dark, [type=reset].btn-dark, [type=button].btn-dark {
+.btn.btn-dark, button.btn-dark, [type=submit].btn-dark, [type=reset].btn-dark, [type=button].btn-dark,
+a.btn.btn-dark {
   --btn-color: 54, 54, 54;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 54, 54, 54;
@@ -18565,7 +18590,8 @@ video.video-fullscreen {
   --btn-hover-color: 28.5, 28.5, 28.5;
 }
 
-.btn.btn-link, button.btn-link, [type=submit].btn-link, [type=reset].btn-link, [type=button].btn-link {
+.btn.btn-link, button.btn-link, [type=submit].btn-link, [type=reset].btn-link, [type=button].btn-link,
+a.btn.btn-link {
   --btn-color: 94, 92, 199;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 94, 92, 199;
@@ -18573,7 +18599,8 @@ video.video-fullscreen {
   --btn-hover-color: 63.5616438356, 61.3698630137, 178.6301369863;
 }
 
-.btn.btn-info, button.btn-info, [type=submit].btn-info, [type=reset].btn-info, [type=button].btn-info {
+.btn.btn-info, button.btn-info, [type=submit].btn-info, [type=reset].btn-info, [type=button].btn-info,
+a.btn.btn-info {
   --btn-color: 41, 114, 250;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 41, 114, 250;
@@ -18581,7 +18608,8 @@ video.video-fullscreen {
   --btn-hover-color: 5.4794520548, 85.4794520548, 234.5205479452;
 }
 
-.btn.btn-success, button.btn-success, [type=submit].btn-success, [type=reset].btn-success, [type=button].btn-success {
+.btn.btn-success, button.btn-success, [type=submit].btn-success, [type=reset].btn-success, [type=button].btn-success,
+a.btn.btn-success {
   --btn-color: 13, 209, 87;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 13, 209, 87;
@@ -18589,7 +18617,8 @@ video.video-fullscreen {
   --btn-hover-color: 10.0135135135, 160.9864864865, 67.0135135135;
 }
 
-.btn.btn-warning, button.btn-warning, [type=submit].btn-warning, [type=reset].btn-warning, [type=button].btn-warning {
+.btn.btn-warning, button.btn-warning, [type=submit].btn-warning, [type=reset].btn-warning, [type=button].btn-warning,
+a.btn.btn-warning {
   --btn-color: 250, 182, 51;
   --btn-fg: 54, 54, 54;
   --btn-border-color: 250, 182, 51;
@@ -18597,7 +18626,8 @@ video.video-fullscreen {
   --btn-hover-color: 244.019138756, 162.6794258373, 5.980861244;
 }
 
-.btn.btn-danger, button.btn-danger, [type=submit].btn-danger, [type=reset].btn-danger, [type=button].btn-danger {
+.btn.btn-danger, button.btn-danger, [type=submit].btn-danger, [type=reset].btn-danger, [type=button].btn-danger,
+a.btn.btn-danger {
   --btn-color: 251, 65, 67;
   --btn-fg: 246, 249, 252;
   --btn-border-color: 251, 65, 67;
@@ -18605,44 +18635,53 @@ video.video-fullscreen {
   --btn-hover-color: 249.9484536082, 15.0515463918, 17.5773195876;
 }
 
-.btn.btn--xs, button.btn--xs, [type=submit].btn--xs, [type=reset].btn--xs, [type=button].btn--xs {
+.btn.btn--xs, button.btn--xs, [type=submit].btn--xs, [type=reset].btn--xs, [type=button].btn--xs,
+a.btn.btn--xs {
   padding: 0 0.5rem;
   font-size: 50%;
 }
 
-.btn.btn--sm, button.btn--sm, [type=submit].btn--sm, [type=reset].btn--sm, [type=button].btn--sm {
+.btn.btn--sm, button.btn--sm, [type=submit].btn--sm, [type=reset].btn--sm, [type=button].btn--sm,
+a.btn.btn--sm {
   padding: 0.25rem 1rem;
   font-size: 70%;
 }
 
-.btn.btn--md, button.btn--md, [type=submit].btn--md, [type=reset].btn--md, [type=button].btn--md {
+.btn.btn--md, button.btn--md, [type=submit].btn--md, [type=reset].btn--md, [type=button].btn--md,
+a.btn.btn--md {
   padding: 0.5rem 1.5rem;
   font-size: 90%;
 }
 
-.btn.btn--lg, button.btn--lg, [type=submit].btn--lg, [type=reset].btn--lg, [type=button].btn--lg {
+.btn.btn--lg, button.btn--lg, [type=submit].btn--lg, [type=reset].btn--lg, [type=button].btn--lg,
+a.btn.btn--lg {
   padding: 0.75rem 2rem;
   font-size: 110%;
 }
 
-.btn.btn--xl, button.btn--xl, [type=submit].btn--xl, [type=reset].btn--xl, [type=button].btn--xl {
+.btn.btn--xl, button.btn--xl, [type=submit].btn--xl, [type=reset].btn--xl, [type=button].btn--xl,
+a.btn.btn--xl {
   padding: 1rem 2.5rem;
   font-size: 130%;
 }
 
-.btn .fa-wrapper.pad-right, button .fa-wrapper.pad-right, [type=submit] .fa-wrapper.pad-right, [type=reset] .fa-wrapper.pad-right, [type=button] .fa-wrapper.pad-right {
+.btn .fa-wrapper.pad-right, button .fa-wrapper.pad-right, [type=submit] .fa-wrapper.pad-right, [type=reset] .fa-wrapper.pad-right, [type=button] .fa-wrapper.pad-right,
+a.btn .fa-wrapper.pad-right {
   margin-right: 0.4rem;
 }
 
-.btn .fa-wrapper.pad-left, button .fa-wrapper.pad-left, [type=submit] .fa-wrapper.pad-left, [type=reset] .fa-wrapper.pad-left, [type=button] .fa-wrapper.pad-left {
+.btn .fa-wrapper.pad-left, button .fa-wrapper.pad-left, [type=submit] .fa-wrapper.pad-left, [type=reset] .fa-wrapper.pad-left, [type=button] .fa-wrapper.pad-left,
+a.btn .fa-wrapper.pad-left {
   margin-left: 0.4rem;
 }
 
-.btn span:first-child, button span:first-child, [type=submit] span:first-child, [type=reset] span:first-child, [type=button] span:first-child {
+.btn span:first-child, button span:first-child, [type=submit] span:first-child, [type=reset] span:first-child, [type=button] span:first-child,
+a.btn span:first-child {
   margin-right: 0.2rem;
 }
 
-.btn span:last-child, button span:last-child, [type=submit] span:last-child, [type=reset] span:last-child, [type=button] span:last-child {
+.btn span:last-child, button span:last-child, [type=submit] span:last-child, [type=reset] span:last-child, [type=button] span:last-child,
+a.btn span:last-child {
   margin-left: 0.2rem;
 }
 
@@ -20051,16 +20090,12 @@ label:last-child:not(:first-child):not(.form-group-label) {
 a {
   text-decoration: none;
   transition: all 0.3s;
-}
-
-a:not(:has(.btn, button, [type=submit], [type=reset], [type=button])) {
   color: #5e5cc7;
   font-weight: 600;
 }
 
-a:hover {
-  color: #4643e2;
-  transition: all 0.3s;
+a:has(.btn, button, [type=submit], [type=reset], [type=button]) {
+  color: inherit;
 }
 
 a.underline {

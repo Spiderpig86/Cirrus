@@ -21,7 +21,8 @@
     /* Button styling */
     /* Un-themed */
 
-    #{$button-selectors} {
+    #{$button-selectors},
+    a.btn {
         line-height: 2rem;
         overflow: hidden;
         padding: 0.5rem 1rem;

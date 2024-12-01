@@ -6,15 +6,11 @@
     a {
         text-decoration: none;
         transition: all 0.3s;
+        color: fill('link');
+        font-weight: 600;
 
-        &:not(:has(#{$button-selectors})) {
-            color: fill('link');
-            font-weight: 600;
-        }
-
-        &:hover {
-            color: fill('link-dark');
-            transition: all 0.3s;
+        &:has(#{$button-selectors}) {
+            color: inherit;
         }
 
         &.underline {
