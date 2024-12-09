@@ -18435,8 +18435,8 @@ a.btn:focus {
   outline: none;
 }
 
-.btn:focus:not([disabled]), button:focus:not([disabled]), [type=submit]:focus:not([disabled]), [type=reset]:focus:not([disabled]), [type=button]:focus:not([disabled]),
-a.btn:focus:not([disabled]) {
+.btn:focus:not([disabled]):not(.btn--disabled), button:focus:not([disabled]):not(.btn--disabled), [type=submit]:focus:not([disabled]):not(.btn--disabled), [type=reset]:focus:not([disabled]):not(.btn--disabled), [type=button]:focus:not([disabled]):not(.btn--disabled),
+a.btn:focus:not([disabled]):not(.btn--disabled) {
   box-shadow: var(--btn-shadow);
 }
 
