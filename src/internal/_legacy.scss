@@ -17,7 +17,7 @@
 }
 
 @function transparentize($color, $amount) {
-    @return color.adjust($color, $alpha: $amount * -1);
+    @return color.adjust($color, $alpha: (1 - $amount) * -1);
 }
 
 @function lighten($color, $amount) {
