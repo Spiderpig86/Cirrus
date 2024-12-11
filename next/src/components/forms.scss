@@ -16,7 +16,7 @@
     padding: 0.85rem 1.1rem;
 
     &:focus,
-    .input-focused {
+    &.input-focused {
         border-color: $cirrus-input-border;
         box-shadow: 0 0 0 0.2rem transparentize($cirrus-input-border, $focus-opacity),
             inset 0px 1px 8px rgba(0, 0, 0, 0.07);

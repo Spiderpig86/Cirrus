@@ -18031,49 +18031,43 @@ select {
   /* Search field */
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]) .input-focused,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus, input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-focused,
 select:focus,
-select .input-focused {
+select.input-focused {
   border-color: rgb(61, 171, 240);
   box-shadow: 0 0 0 0.2rem rgba(61, 171, 240, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
   outline: 0;
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus[type=range],
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]) .input-focused[type=range],
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus[type=range], input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-focused[type=range],
 select:focus[type=range],
-select .input-focused[type=range] {
+select.input-focused[type=range] {
   box-shadow: none;
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus.input-success,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]) .input-focused.input-success,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus.input-success, input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-focused.input-success,
 select:focus.input-success,
-select .input-focused.input-success {
+select.input-focused.input-success {
   background-color: rgba(0, 224, 0, 0.05) !important;
   border-color: #0dd157;
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus.input-success:focus,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]) .input-focused.input-success:focus,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus.input-success:focus, input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-focused.input-success:focus,
 select:focus.input-success:focus,
-select .input-focused.input-success:focus {
+select.input-focused.input-success:focus {
   box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus.input-error,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]) .input-focused.input-error,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus.input-error, input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-focused.input-error,
 select:focus.input-error,
-select .input-focused.input-error {
+select.input-focused.input-error {
   background-color: rgba(244, 67, 54, 0.05) !important;
   border-color: #fb4143;
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus.input-error:focus,
-input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]) .input-focused.input-error:focus,
+input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus.input-error:focus, input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-focused.input-error:focus,
 select:focus.input-error:focus,
-select .input-focused.input-error:focus {
+select.input-focused.input-error:focus {
   box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
@@ -18237,49 +18231,43 @@ textarea[type=text] {
   /* More sizes coming soon */
 }
 
-textarea:focus,
-textarea .input-focused,
+textarea:focus, textarea.input-focused,
 textarea[type=text]:focus,
-textarea[type=text] .input-focused {
+textarea[type=text].input-focused {
   border-color: rgb(61, 171, 240);
   box-shadow: 0 0 0 0.2rem rgba(61, 171, 240, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
   outline: 0;
 }
 
-textarea:focus[type=range],
-textarea .input-focused[type=range],
+textarea:focus[type=range], textarea.input-focused[type=range],
 textarea[type=text]:focus[type=range],
-textarea[type=text] .input-focused[type=range] {
+textarea[type=text].input-focused[type=range] {
   box-shadow: none;
 }
 
-textarea:focus.input-success,
-textarea .input-focused.input-success,
+textarea:focus.input-success, textarea.input-focused.input-success,
 textarea[type=text]:focus.input-success,
-textarea[type=text] .input-focused.input-success {
+textarea[type=text].input-focused.input-success {
   background-color: rgba(0, 224, 0, 0.05) !important;
   border-color: #0dd157;
 }
 
-textarea:focus.input-success:focus,
-textarea .input-focused.input-success:focus,
+textarea:focus.input-success:focus, textarea.input-focused.input-success:focus,
 textarea[type=text]:focus.input-success:focus,
-textarea[type=text] .input-focused.input-success:focus {
+textarea[type=text].input-focused.input-success:focus {
   box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
-textarea:focus.input-error,
-textarea .input-focused.input-error,
+textarea:focus.input-error, textarea.input-focused.input-error,
 textarea[type=text]:focus.input-error,
-textarea[type=text] .input-focused.input-error {
+textarea[type=text].input-focused.input-error {
   background-color: rgba(244, 67, 54, 0.05) !important;
   border-color: #fb4143;
 }
 
-textarea:focus.input-error:focus,
-textarea .input-focused.input-error:focus,
+textarea:focus.input-error:focus, textarea.input-focused.input-error:focus,
 textarea[type=text]:focus.input-error:focus,
-textarea[type=text] .input-focused.input-error:focus {
+textarea[type=text].input-focused.input-error:focus {
   box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
@@ -18392,37 +18380,31 @@ select {
   /* Fixes for Safari and other browsers for consistent UI */
 }
 
-select:focus,
-select .input-focused {
+select:focus, select.input-focused {
   border-color: rgb(61, 171, 240);
   box-shadow: 0 0 0 0.2rem rgba(61, 171, 240, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
   outline: 0;
 }
 
-select:focus[type=range],
-select .input-focused[type=range] {
+select:focus[type=range], select.input-focused[type=range] {
   box-shadow: none;
 }
 
-select:focus.input-success,
-select .input-focused.input-success {
+select:focus.input-success, select.input-focused.input-success {
   background-color: rgba(0, 224, 0, 0.05) !important;
   border-color: #0dd157;
 }
 
-select:focus.input-success:focus,
-select .input-focused.input-success:focus {
+select:focus.input-success:focus, select.input-focused.input-success:focus {
   box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
-select:focus.input-error,
-select .input-focused.input-error {
+select:focus.input-error, select.input-focused.input-error {
   background-color: rgba(244, 67, 54, 0.05) !important;
   border-color: #fb4143;
 }
 
-select:focus.input-error:focus,
-select .input-focused.input-error:focus {
+select:focus.input-error:focus, select.input-focused.input-error:focus {
   box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
