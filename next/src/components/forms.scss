@@ -27,12 +27,12 @@
         }
 
         &.input-success {
-            background-color: rgba(0, 224, 0, 0.05) !important;
+            background-color: transparentize(fill('success'), 0.05) !important;
             @include input-success();
         }
 
         &.input-error {
-            background-color: rgba(244, 67, 54, 0.05) !important;
+            background-color: transparentize(fill('danger'), 0.05) !important;
             @include input-error();
         }
     }

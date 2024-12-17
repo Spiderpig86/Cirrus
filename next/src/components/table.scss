@@ -70,7 +70,7 @@
 
             td,
             th {
-                border: 1px solid rgba(219, 219, 219, 0.5);
+                border: 1px solid transparentize(fill('gray', '300'), 0.5);
             }
 
             thead td,
@@ -81,7 +81,7 @@
 
         /* Striped table */
         &.striped tbody tr:nth-child(even) {
-            background-color: rgba(0, 0, 0, 0.05);
+            background-color: transparentize(fill('black'), 0.05);
         }
 
         /* Decrease padding */
