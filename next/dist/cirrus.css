@@ -19722,7 +19722,7 @@ ul .divider::after {
 }
 
 .table tr:not(.selected):hover, .table.striped tbody tr:not(.selected):nth-child(even):hover {
-  background-color: rgba(222, 226, 230, 0.85);
+  background-color: rgba(222, 226, 230, 0.15);
 }
 
 .table thead th,

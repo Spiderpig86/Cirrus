@@ -46,7 +46,7 @@
 
         tr:not(.selected):hover,
         &.striped tbody tr:not(.selected):nth-child(even):hover {
-            background-color: transparentize(fill('gray', '300'), 0.85);
+            background-color: transparentize(fill('gray', '300'), 0.15);
         }
 
         /* Thicker border for table header */
