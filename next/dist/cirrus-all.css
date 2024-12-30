@@ -18956,7 +18956,7 @@ select.input-focused.input-success {
 input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus.input-success:focus, input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-focused.input-success:focus,
 select:focus.input-success:focus,
 select.input-focused.input-success:focus {
-  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus.input-error, input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-focused.input-error,
@@ -18969,7 +18969,7 @@ select.input-focused.input-error {
 input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]):focus.input-error:focus, input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-focused.input-error:focus,
 select:focus.input-error:focus,
 select.input-focused.input-error:focus {
-  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input--xs,
@@ -19099,7 +19099,7 @@ select.input-success {
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-success:focus,
 select.input-success:focus {
-  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-error,
@@ -19110,7 +19110,7 @@ select.input-error {
 
 input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]):not([type=reset]).input-error:focus,
 select.input-error:focus {
-  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 textarea,
@@ -19156,7 +19156,7 @@ textarea[type=text].input-focused.input-success {
 textarea:focus.input-success:focus, textarea.input-focused.input-success:focus,
 textarea[type=text]:focus.input-success:focus,
 textarea[type=text].input-focused.input-success:focus {
-  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 textarea:focus.input-error, textarea.input-focused.input-error,
@@ -19169,7 +19169,7 @@ textarea[type=text].input-focused.input-error {
 textarea:focus.input-error:focus, textarea.input-focused.input-error:focus,
 textarea[type=text]:focus.input-error:focus,
 textarea[type=text].input-focused.input-error:focus {
-  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 textarea.input--xs,
@@ -19297,7 +19297,7 @@ select:focus.input-success, select.input-focused.input-success {
 }
 
 select:focus.input-success:focus, select.input-focused.input-success:focus {
-  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 select:focus.input-error, select.input-focused.input-error {
@@ -19306,7 +19306,7 @@ select:focus.input-error, select.input-focused.input-error {
 }
 
 select:focus.input-error:focus, select.input-focused.input-error:focus {
-  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 select.input--xs {
