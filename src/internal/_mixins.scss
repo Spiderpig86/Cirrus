@@ -25,7 +25,7 @@
     border-color: api.fill('success');
 
     &:focus {
-        box-shadow: 0 0 0 0.2rem legacy.transparentize(api.fill('success'), 1 - theme.$focus-opacity),
+        box-shadow: 0 0 0 0.2rem legacy.transparentize(api.fill('success'), theme.$focus-opacity),
             inset 0px 1px 8px rgba(0, 0, 0, 0.07);
     }
 }
@@ -34,7 +34,7 @@
     border-color: api.fill('danger');
 
     &:focus {
-        box-shadow: 0 0 0 0.2rem legacy.transparentize(api.fill('danger'), 1 - theme.$focus-opacity),
+        box-shadow: 0 0 0 0.2rem legacy.transparentize(api.fill('danger'), theme.$focus-opacity),
             inset 0px 1px 8px rgba(0, 0, 0, 0.07);
     }
 }
