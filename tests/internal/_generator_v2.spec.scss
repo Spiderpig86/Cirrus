@@ -413,6 +413,315 @@
             }
         }
     }
+
+    @include it('works for all non-group pseudos') {
+        @include assert {
+            @include output($selector: false) {
+                @include generator_v2.utility(
+                    $base-class-name: 'text',
+                    $class-value-pairs: (
+                        'blue': (
+                            'color': blue,
+                        ),
+                    ),
+                    $variants: (
+                        'dark',
+                        'light',
+                        'reduce-motion',
+                        'expand',
+                        'first-of-type',
+                        'last-of-type',
+                        'portrait',
+                        'landscape',
+                        'hover',
+                        'focus',
+                        'focus-visible',
+                        'focus-within',
+                        'active',
+                        'checked',
+                        'disabled',
+                    ),
+                    $generate-viewports: false,
+                    $override: '!important'
+                );
+            }
+            @include expect($selector: false) {
+                .u-text-blue {
+                    color: blue !important;
+                }
+
+                .expand\:u-text-blue:expand {
+                    color: blue !important;
+                }
+
+                .first-of-type\:u-text-blue:first-of-type {
+                    color: blue !important;
+                }
+
+                .last-of-type\:u-text-blue:last-of-type {
+                    color: blue !important;
+                }
+
+                .hover\:u-text-blue:hover {
+                    color: blue !important;
+                }
+
+                .focus\:u-text-blue:focus {
+                    color: blue !important;
+                }
+
+                .focus-visible\:u-text-blue:focus-visible {
+                    color: blue !important;
+                }
+
+                .focus-within\:u-text-blue:focus-within {
+                    color: blue !important;
+                }
+
+                .active\:u-text-blue:active {
+                    color: blue !important;
+                }
+
+                .checked\:u-text-blue:checked {
+                    color: blue !important;
+                }
+
+                .disabled\:u-text-blue:disabled {
+                    color: blue !important;
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    .dark\:u-text-blue {
+                        color: blue !important;
+                    }
+
+                    .dark\:expand\:u-text-blue:expand {
+                        color: blue !important;
+                    }
+
+                    .dark\:first-of-type\:u-text-blue:first-of-type {
+                        color: blue !important;
+                    }
+
+                    .dark\:last-of-type\:u-text-blue:last-of-type {
+                        color: blue !important;
+                    }
+
+                    .dark\:hover\:u-text-blue:hover {
+                        color: blue !important;
+                    }
+
+                    .dark\:focus\:u-text-blue:focus {
+                        color: blue !important;
+                    }
+
+                    .dark\:focus-visible\:u-text-blue:focus-visible {
+                        color: blue !important;
+                    }
+
+                    .dark\:focus-within\:u-text-blue:focus-within {
+                        color: blue !important;
+                    }
+
+                    .dark\:active\:u-text-blue:active {
+                        color: blue !important;
+                    }
+
+                    .dark\:checked\:u-text-blue:checked {
+                        color: blue !important;
+                    }
+
+                    .dark\:disabled\:u-text-blue:disabled {
+                        color: blue !important;
+                    }
+                }
+
+                @media (prefers-color-scheme: light) {
+                    .light\:u-text-blue {
+                        color: blue !important;
+                    }
+
+                    .light\:expand\:u-text-blue:expand {
+                        color: blue !important;
+                    }
+
+                    .light\:first-of-type\:u-text-blue:first-of-type {
+                        color: blue !important;
+                    }
+
+                    .light\:last-of-type\:u-text-blue:last-of-type {
+                        color: blue !important;
+                    }
+
+                    .light\:hover\:u-text-blue:hover {
+                        color: blue !important;
+                    }
+
+                    .light\:focus\:u-text-blue:focus {
+                        color: blue !important;
+                    }
+
+                    .light\:focus-visible\:u-text-blue:focus-visible {
+                        color: blue !important;
+                    }
+
+                    .light\:focus-within\:u-text-blue:focus-within {
+                        color: blue !important;
+                    }
+
+                    .light\:active\:u-text-blue:active {
+                        color: blue !important;
+                    }
+
+                    .light\:checked\:u-text-blue:checked {
+                        color: blue !important;
+                    }
+
+                    .light\:disabled\:u-text-blue:disabled {
+                        color: blue !important;
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    .reduce-motion\:u-text-blue {
+                        color: blue !important;
+                    }
+
+                    .reduce-motion\:expand\:u-text-blue:expand {
+                        color: blue !important;
+                    }
+
+                    .reduce-motion\:first-of-type\:u-text-blue:first-of-type {
+                        color: blue !important;
+                    }
+
+                    .reduce-motion\:last-of-type\:u-text-blue:last-of-type {
+                        color: blue !important;
+                    }
+
+                    .reduce-motion\:hover\:u-text-blue:hover {
+                        color: blue !important;
+                    }
+
+                    .reduce-motion\:focus\:u-text-blue:focus {
+                        color: blue !important;
+                    }
+
+                    .reduce-motion\:focus-visible\:u-text-blue:focus-visible {
+                        color: blue !important;
+                    }
+
+                    .reduce-motion\:focus-within\:u-text-blue:focus-within {
+                        color: blue !important;
+                    }
+
+                    .reduce-motion\:active\:u-text-blue:active {
+                        color: blue !important;
+                    }
+
+                    .reduce-motion\:checked\:u-text-blue:checked {
+                        color: blue !important;
+                    }
+
+                    .reduce-motion\:disabled\:u-text-blue:disabled {
+                        color: blue !important;
+                    }
+                }
+
+                @media (orientation: portrait) {
+                    .portrait\:u-text-blue {
+                        color: blue !important;
+                    }
+
+                    .portrait\:expand\:u-text-blue:expand {
+                        color: blue !important;
+                    }
+
+                    .portrait\:first-of-type\:u-text-blue:first-of-type {
+                        color: blue !important;
+                    }
+
+                    .portrait\:last-of-type\:u-text-blue:last-of-type {
+                        color: blue !important;
+                    }
+
+                    .portrait\:hover\:u-text-blue:hover {
+                        color: blue !important;
+                    }
+
+                    .portrait\:focus\:u-text-blue:focus {
+                        color: blue !important;
+                    }
+
+                    .portrait\:focus-visible\:u-text-blue:focus-visible {
+                        color: blue !important;
+                    }
+
+                    .portrait\:focus-within\:u-text-blue:focus-within {
+                        color: blue !important;
+                    }
+
+                    .portrait\:active\:u-text-blue:active {
+                        color: blue !important;
+                    }
+
+                    .portrait\:checked\:u-text-blue:checked {
+                        color: blue !important;
+                    }
+
+                    .portrait\:disabled\:u-text-blue:disabled {
+                        color: blue !important;
+                    }
+                }
+
+                @media (orientation: landscape) {
+                    .landscape\:u-text-blue {
+                        color: blue !important;
+                    }
+
+                    .landscape\:expand\:u-text-blue:expand {
+                        color: blue !important;
+                    }
+
+                    .landscape\:first-of-type\:u-text-blue:first-of-type {
+                        color: blue !important;
+                    }
+
+                    .landscape\:last-of-type\:u-text-blue:last-of-type {
+                        color: blue !important;
+                    }
+
+                    .landscape\:hover\:u-text-blue:hover {
+                        color: blue !important;
+                    }
+
+                    .landscape\:focus\:u-text-blue:focus {
+                        color: blue !important;
+                    }
+
+                    .landscape\:focus-visible\:u-text-blue:focus-visible {
+                        color: blue !important;
+                    }
+
+                    .landscape\:focus-within\:u-text-blue:focus-within {
+                        color: blue !important;
+                    }
+
+                    .landscape\:active\:u-text-blue:active {
+                        color: blue !important;
+                    }
+
+                    .landscape\:checked\:u-text-blue:checked {
+                        color: blue !important;
+                    }
+
+                    .landscape\:disabled\:u-text-blue:disabled {
+                        color: blue !important;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @include describe('get-base-class()') {

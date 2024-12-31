@@ -24,7 +24,6 @@ $default-variant-delimiter: '\\:';
         - 'responsive',
         - 'dark', 'light',
         - 'reduce-motion',
-        - 'selection-hover',
         - 'expand',
         - 'first-of-type',
         - 'last-of-type',
@@ -250,9 +249,9 @@ $default-variant-delimiter: '\\:';
 
 @mixin inline-class-generator($base-class-name, $config: (), $variants: (), $context: ()) {
     @if $base-class-name == null {
-        @error 'Base class name must be provided'
+        @error 'Base class name must be provided';
     }
-    
+
     $context: map.merge(
         $context,
         (
@@ -284,6 +283,14 @@ $default-variant-delimiter: '\\:';
 
 @function get-reduce-motion() {
     @return ('reduce-motion': '@media (prefers-reduced-motion: reduce)');
+}
+
+@function get-portrait() {
+    @return ('portrait': '@media (orientation: portrait)');
+}
+
+@function get-landscape() {
+    @return ('landscape': '@media (orientation: landscape)');
 }
 
 @function class-value-map-with-single-property($property, $property-values) {
