@@ -27,6 +27,5 @@
         $base-class-name: 'shadow',
         $class-value-pairs: $transformed,
         $variants: get-pseudo-variants($SHADOWS),
-        $generate-viewports: get-viewport-flag($SHADOWS)
     );
 }

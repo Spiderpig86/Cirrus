@@ -9,7 +9,6 @@
         $base-class-name: '',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($display-utils-config), display),
         $variants: get-pseudo-variants($DISPLAY),
-        $generate-viewports: get-viewport-flag($DISPLAY),
         $override: '!important'
     );
 }

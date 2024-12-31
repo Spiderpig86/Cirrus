@@ -19,7 +19,6 @@
                     $variants: (
                         'dark',
                     ),
-                    $generate-viewports: false,
                     $override: '!important'
                 );
             }
@@ -47,13 +46,13 @@
                         ),
                     ),
                     $variants: (
+                        'responsive',
                         'dark',
                         'hover',
                         'reduce-motion',
                         'group-hover',
                         'group-focus',
                     ),
-                    $generate-viewports: true,
                     $override: '!important'
                 );
             }
@@ -198,7 +197,6 @@
                         $variants: (
                             'dark',
                         ),
-                        $generate-viewports: false,
                         $override: '!important'
                     );
                 }
@@ -232,7 +230,6 @@
                             $variants: (
                                 'dark',
                             ),
-                            $generate-viewports: false,
                             $override: '!important'
                         );
                     }
@@ -274,9 +271,8 @@
                             'width': 100%,
                         ),
                     ),
-                    $variants: (),
+                    $variants: ('responsive'),
                     $class-prefix: '',
-                    $generate-viewports: true,
                     $override: '!important'
                 );
             }
@@ -402,7 +398,6 @@
                             'color': blue,
                         ),
                     ),
-                    $generate-viewports: false,
                     $override: '!important'
                 );
             }
@@ -441,7 +436,6 @@
                         'checked',
                         'disabled',
                     ),
-                    $generate-viewports: false,
                     $override: '!important'
                 );
             }
@@ -759,13 +753,13 @@
             @include output($selector: false) {
                 @include generator_v2.utility-with-body(
                         $variants: (
+                            'responsive',
                             'dark',
                             'hover',
                             'reduce-motion',
                             'group-hover',
                             'group-focus',
                         ),
-                        $generate-viewports: true,
                         $override: '!important'
                     )
                     using ($props...) {

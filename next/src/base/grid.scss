@@ -15,8 +15,7 @@
 }
 
 @include generator_v2.utility-with-body(
-        $variants: (),
-        $generate-viewports: get-viewport-flag($GRID),
+        $variants: get-pseudo-variants($GRID),
     )
     using ($props...) {
     // .grid {}

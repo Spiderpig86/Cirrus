@@ -69,6 +69,9 @@
 /*
   Helper function to determine if a set of classes should be generated based on given include/exclude configuration.
 */
+/*
+    Fetch pseudo-variants to generate for each class type.
+*/
 /* VALUE APIS */
 /*
     Global Mixins
@@ -474,7 +477,6 @@ fieldset legend {
         - 'responsive',
         - 'dark', 'light',
         - 'reduce-motion',
-        - 'selection-hover',
         - 'expand',
         - 'first-of-type',
         - 'last-of-type',
@@ -487,7 +489,6 @@ fieldset legend {
         - 'disabled'
 
     @variant-delimiter {string} [config.$variant-delimiter] - delimiter used to separate the variant portion of the class
-    @generate-viewports {boolean} [false] - flag to indicate if we should generate classes with different viewports
     @override {string} [config.$override] - override for CSS properties, like '!important'
 */
 /**

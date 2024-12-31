@@ -27,6 +27,5 @@
         $class-value-pairs: $transformed,
         $base-class-name: 'blur',
         $variants: get-pseudo-variants($BLUR),
-        $generate-viewports: get-viewport-flag($BLUR)
     );
 }

@@ -9,7 +9,6 @@
         $base-class-name: 'cursor',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($cursor-utils-config), cursor),
         $variants: get-pseudo-variants($CURSOR),
-        $generate-viewports: get-viewport-flag($CURSOR),
         $override: ''
     );
 }

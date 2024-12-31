@@ -45,7 +45,6 @@
             'dark',
             'hover',
         ),
-        $generate-viewports: false,
         $override: '!important'
     )
     using ($props...) {

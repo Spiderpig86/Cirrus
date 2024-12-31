@@ -32,7 +32,7 @@ $config: (
 // ==================================================
 $default-config: (
     // Turn on/off generating viewport classes to save on size.
-    // TODO extend to include "!important" option
+    // DEPRECATED AS OF 0.8.0. Use 'responsive' pseudo-variant in the `pseudo-variants` config instead
     viewports:
         (
             flags.$CLEARFIX: true,
@@ -77,20 +77,20 @@ $default-config: (
     // List of supported pseudo-variants by class type (responsiveness handled by viewports config above)
     // See _pseudo-variants.scss for valid values
     pseudo-variants: (
-        flags.$CLEARFIX: (),
-        flags.$DISPLAY: (),
-        flags.$FLEX: (),
-        flags.$FLOAT: (),
-        flags.$OVERFLOW: (),
-        flags.$POSITION: (),
-        flags.$TEXT: (),
-        flags.$MARGIN-PADDING: (),
-        flags.$OPACITY: (),
+        flags.$CLEARFIX: (pseudos.$RESPONSIVE),
+        flags.$DISPLAY: (pseudos.$RESPONSIVE),
+        flags.$FLEX: (pseudos.$RESPONSIVE),
+        flags.$FLOAT: (pseudos.$RESPONSIVE),
+        flags.$OVERFLOW: (pseudos.$RESPONSIVE),
+        flags.$POSITION: (pseudos.$RESPONSIVE),
+        flags.$TEXT: (pseudos.$RESPONSIVE),
+        flags.$MARGIN-PADDING: (pseudos.$RESPONSIVE),
+        flags.$OPACITY: (pseudos.$RESPONSIVE),
         flags.$BACKGROUND-OPACITY: (),
         flags.$COLOR-OPACITY: (),
         flags.$BORDER-OPACITY: (),
-        flags.$WIDTHS: (),
-        flags.$HEIGHTS: (),
+        flags.$WIDTHS: (pseudos.$RESPONSIVE),
+        flags.$HEIGHTS: (pseudos.$RESPONSIVE),
         flags.$ZINDEX: (),
         flags.$ABSOLUTES: (),
         flags.$GAP: (),
@@ -100,7 +100,7 @@ $default-config: (
         flags.$MAX-HEIGHT: (),
         flags.$MIN-WIDTH: (),
         flags.$MAX-WIDTH: (),
-        flags.$GRID: (),
+        flags.$GRID: (pseudos.$RESPONSIVE),
         flags.$BLUR: (),
         flags.$TRANSITION-DURATION: (),
         flags.$LETTER-SPACING: (),
@@ -1026,7 +1026,7 @@ $z-indexes: functions.get-with-extend($all-config, z-index);
     Fetch pseudo-variants to generate for each class type.
 */
 @function get-pseudo-variants($name) {
-    @return get-pseudo-variants-internal($viewport-flags, $name);
+    @return get-pseudo-variants-internal($pseudo-variants, $name);
 }
 @function get-pseudo-variants-internal($flag-map, $name) {
     @if not map.has-key($flag-map, $name) {

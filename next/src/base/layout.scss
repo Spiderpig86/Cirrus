@@ -219,9 +219,8 @@ section {
     @include generator_v2.utility(
         $base-class-name: 'col',
         $class-value-pairs: get-column-map($flex-columns, $flex-width),
-        $variants: (),
+        $variants: ($RESPONSIVE),
         $class-prefix: '',
-        $generate-viewports: true,
         $override: '!important'
     );
 
@@ -229,9 +228,8 @@ section {
     @include generator_v2.utility(
         $base-class-name: 'offset',
         $class-value-pairs: get-offset-map($flex-columns, $flex-width),
-        $variants: (),
+        $variants: ($RESPONSIVE),
         $class-prefix: '',
-        $generate-viewports: true,
         $override: '!important'
     );
 
@@ -272,49 +270,43 @@ section {
 @include generator_v2.utility(
     $base-class-name: 'h',
     $class-value-pairs: generator_v2.class-value-to-property-map($heights, height),
-    $variants: (),
+    $variants: get-pseudo-variants($HEIGHTS),
     $class-prefix: '',
-    $generate-viewports: get-viewport-flag($HEIGHTS),
     $override: '!important'
 );
 @include generator_v2.utility(
     $base-class-name: 'w',
     $class-value-pairs: generator_v2.class-value-to-property-map($widths, width),
-    $variants: (),
+    $variants: get-pseudo-variants($WIDTHS),
     $class-prefix: '',
-    $generate-viewports: get-viewport-flag($WIDTHS),
     $override: '!important'
 );
 @include generator_v2.utility(
     $base-class-name: 'min-h',
     $class-value-pairs: generator_v2.class-value-to-property-map($min-heights, min-height),
-    $variants: (),
+    $variants: get-pseudo-variants($MIN-HEIGHT),
     $class-prefix: '',
-    $generate-viewports: get-viewport-flag($MIN-HEIGHT),
     $override: '!important'
 );
 @include generator_v2.utility(
     $base-class-name: 'min-w',
     $class-value-pairs: generator_v2.class-value-to-property-map($min-widths, min-width),
-    $variants: (),
+    $variants: get-pseudo-variants($MIN-WIDTH),
     $class-prefix: '',
-    $generate-viewports: get-viewport-flag($MIN-WIDTH),
     $override: '!important'
 );
 @include generator_v2.utility(
     $base-class-name: 'max-h',
     $class-value-pairs: generator_v2.class-value-to-property-map($max-heights, max-height),
-    $variants: (),
+    $variants: get-pseudo-variants($MAX-HEIGHT),
     $class-prefix: '',
-    $generate-viewports: get-viewport-flag($MAX-HEIGHT),
     $override: '!important'
 );
 @include generator_v2.utility(
     $base-class-name: 'max-w',
     $class-value-pairs: generator_v2.class-value-to-property-map($max-widths, max-width),
-    $variants: (),
+    $variants: get-pseudo-variants($MAX-WIDTH),
     $class-prefix: '',
-    $generate-viewports: get-viewport-flag($MAX-WIDTH),
     $override: '!important'
 );
 

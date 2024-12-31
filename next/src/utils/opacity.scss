@@ -6,7 +6,6 @@
         $base-class-name: 'opacity',
         $class-value-pairs: generator_v2.class-value-to-property-map($opacities, opacity),
         $variants: get-pseudo-variants($OPACITY),
-        $generate-viewports: get-viewport-flag($OPACITY),
         $override: '!important'
     );
 }
@@ -16,7 +15,6 @@
         $base-class-name: 'bg-opacity',
         $class-value-pairs: generator_v2.class-value-to-property-map($opacities, '--bg-opacity'),
         $variants: get-pseudo-variants($BACKGROUND-OPACITY),
-        $generate-viewports: get-viewport-flag($BACKGROUND-OPACITY)
     );
 }
 
@@ -25,6 +23,5 @@
         $base-class-name: 'color-opacity',
         $class-value-pairs: generator_v2.class-value-to-property-map($opacities, '--color-opacity'),
         $variants: get-pseudo-variants($COLOR-OPACITY),
-        $generate-viewports: get-viewport-flag($COLOR-OPACITY)
     );
 }
