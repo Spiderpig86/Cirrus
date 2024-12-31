@@ -6,7 +6,7 @@
     @include generator_v2.utility(
         $base-class-name: 'border',
         $class-value-pairs: generator_v2.class-value-to-property-map($border-widths, border-width),
-        $variants: (),
+        $variants: get-pseudo-variants($BORDER-WIDTH),
         $generate-viewports: get-viewport-flag($BORDER-WIDTH),
         $override: '!important'
     );
@@ -16,7 +16,7 @@
     @include generator_v2.utility(
         $base-class-name: 'border-opacity',
         $class-value-pairs: generator_v2.class-value-to-property-map($opacities, '--border-opacity'),
-        $variants: (),
+        $variants: get-pseudo-variants($BORDER-OPACITY),
         $generate-viewports: get-viewport-flag($BORDER-OPACITY),
         $override: '!important'
     );
@@ -26,7 +26,7 @@
     @include generator_v2.utility(
         $base-class-name: 'round',
         $class-value-pairs: generator_v2.class-value-to-property-map($round, border-radius),
-        $variants: (),
+        $variants: get-pseudo-variants($ROUND),
         $generate-viewports: get-viewport-flag($ROUND),
         $override: '!important'
     );

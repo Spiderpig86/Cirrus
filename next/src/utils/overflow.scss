@@ -7,7 +7,7 @@
     @include generator_v2.utility(
         $base-class-name: 'overflow',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($overflow), overflow),
-        $variants: (),
+        $variants: get-pseudo-variants($OVERFLOW),
         $generate-viewports: get-viewport-flag($OVERFLOW),
         $override: '!important'
     );
@@ -16,14 +16,14 @@
     @include generator_v2.utility(
         $base-class-name: 'overflow-x',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($overflow), overflow-x),
-        $variants: (),
+        $variants: get-pseudo-variants($OVERFLOW),
         $generate-viewports: get-viewport-flag($OVERFLOW),
         $override: '!important'
     );
     @include generator_v2.utility(
         $base-class-name: 'overflow-y',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($overflow), overflow-y),
-        $variants: (),
+        $variants: get-pseudo-variants($OVERFLOW),
         $generate-viewports: get-viewport-flag($OVERFLOW),
         $override: '!important'
     );

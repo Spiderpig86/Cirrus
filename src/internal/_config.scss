@@ -5,6 +5,7 @@
 
 @use 'defaults';
 @use 'flags';
+@use 'pseudos';
 @use 'theme';
 @use 'functions';
 @use 'constants';
@@ -66,11 +67,47 @@ $default-config: (
             flags.$VERTICAL-ALIGN: false,
             flags.$CURSOR: false,
         ),
+    // Class generation properties
     class-name-properties: (
         utility-prefix: 'u',
         override: '',
         delimiter: '-',
         variant-delimiter: '\\:',
+    ),
+    // List of supported pseudo-variants by class type (responsiveness handled by viewports config above)
+    // See _pseudo-variants.scss for valid values
+    pseudo-variants: (
+        flags.$CLEARFIX: (),
+        flags.$DISPLAY: (),
+        flags.$FLEX: (),
+        flags.$FLOAT: (),
+        flags.$OVERFLOW: (),
+        flags.$POSITION: (),
+        flags.$TEXT: (),
+        flags.$MARGIN-PADDING: (),
+        flags.$OPACITY: (),
+        flags.$BACKGROUND-OPACITY: (),
+        flags.$COLOR-OPACITY: (),
+        flags.$BORDER-OPACITY: (),
+        flags.$WIDTHS: (),
+        flags.$HEIGHTS: (),
+        flags.$ZINDEX: (),
+        flags.$ABSOLUTES: (),
+        flags.$GAP: (),
+        flags.$ROUND: (),
+        flags.$SHADOWS: (),
+        flags.$MIN-HEIGHT: (),
+        flags.$MAX-HEIGHT: (),
+        flags.$MIN-WIDTH: (),
+        flags.$MAX-WIDTH: (),
+        flags.$GRID: (),
+        flags.$BLUR: (),
+        flags.$TRANSITION-DURATION: (),
+        flags.$LETTER-SPACING: (),
+        flags.$LINE-HEIGHT: (),
+        flags.$BORDER-WIDTH: (),
+        flags.$VERTICAL-ALIGN: (),
+        flags.$CURSOR: (),
     ),
 
     // Extend all existing styles here
@@ -872,6 +909,7 @@ $all-config: map.deep-merge($default-config, $config);
 
 // FLAGS
 $viewport-flags: map.get($all-config, viewports);
+$pseudo-variants: map.get($all-config, pseudo-variants);
 
 $utility-prefix: map.get($all-config, class-name-properties, utility-prefix);
 $override: map.get($all-config, class-name-properties, override);
@@ -982,4 +1020,21 @@ $z-indexes: functions.get-with-extend($all-config, z-index);
     }
 
     @return $generate-classes;
+}
+
+/*
+    Fetch pseudo-variants to generate for each class type.
+*/
+@function get-pseudo-variants($name) {
+    @return get-pseudo-variants-internal($viewport-flags, $name);
+}
+@function get-pseudo-variants-internal($flag-map, $name) {
+    @if not map.has-key($flag-map, $name) {
+        @return throw.error(
+            $message: '[get-pseudo-variants] Unknown constant `#{$name}`.',
+            $source: 'get-pseudo-variants()',
+        );
+    }
+
+    @return map.get($flag-map, $name);
 }

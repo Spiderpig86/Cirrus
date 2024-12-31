@@ -5,7 +5,7 @@
     @include generator_v2.utility(
         $base-class-name: 'opacity',
         $class-value-pairs: generator_v2.class-value-to-property-map($opacities, opacity),
-        $variants: (),
+        $variants: get-pseudo-variants($OPACITY),
         $generate-viewports: get-viewport-flag($OPACITY),
         $override: '!important'
     );
@@ -15,7 +15,7 @@
     @include generator_v2.utility(
         $base-class-name: 'bg-opacity',
         $class-value-pairs: generator_v2.class-value-to-property-map($opacities, '--bg-opacity'),
-        $variants: (),
+        $variants: get-pseudo-variants($BACKGROUND-OPACITY),
         $generate-viewports: get-viewport-flag($BACKGROUND-OPACITY)
     );
 }
@@ -24,7 +24,7 @@
     @include generator_v2.utility(
         $base-class-name: 'color-opacity',
         $class-value-pairs: generator_v2.class-value-to-property-map($opacities, '--color-opacity'),
-        $variants: (),
+        $variants: get-pseudo-variants($COLOR-OPACITY),
         $generate-viewports: get-viewport-flag($COLOR-OPACITY)
     );
 }

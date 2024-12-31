@@ -208,7 +208,7 @@ kbd {
     @include generator_v2.utility(
         $base-class-name: 'tracking',
         $class-value-pairs: generator_v2.class-value-to-property-map($font-letter-spacing, letter-spacing),
-        $variants: (),
+        $variants: get-pseudo-variants($LETTER-SPACING),
         $class-prefix: '',
         $generate-viewports: get-viewport-flag($LETTER-SPACING),
         $override: '!important'
@@ -220,7 +220,7 @@ kbd {
     @include generator_v2.utility(
         $base-class-name: 'leading',
         $class-value-pairs: generator_v2.class-value-to-property-map($font-line-heights, line-height),
-        $variants: (),
+        $variants:  get-pseudo-variants($LINE-HEIGHT),
         $class-prefix: '',
         $generate-viewports: get-viewport-flag($LINE-HEIGHT),
         $override: '!important'

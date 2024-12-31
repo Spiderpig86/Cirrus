@@ -6,7 +6,7 @@
     @include generator_v2.utility(
         $base-class-name: 'clear',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($clears), clear),
-        $variants: (),
+        $variants: get-pseudo-variants($CLEARFIX),
         $generate-viewports: get-viewport-flag($CLEARFIX),
         $override: '!important'
     );

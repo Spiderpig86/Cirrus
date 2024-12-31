@@ -5,7 +5,7 @@
     @include generator_v2.utility(
         $base-class-name: 'align',
         $class-value-pairs: generator_v2.class-value-to-property-map($vertical-alignments, vertical-align),
-        $variants: (),
+        $variants: get-pseudo-variants($VERTICAL-ALIGN),
         $generate-viewports: get-viewport-flag($VERTICAL-ALIGN),
         $override: '!important'
     );

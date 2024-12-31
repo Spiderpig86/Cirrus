@@ -8,7 +8,7 @@
         @include generator_v2.utility(
             $base-class-name: $direction,
             $class-value-pairs: generator_v2.class-value-to-property-map($absolute, $direction),
-            $variants: (),
+            $variants: get-pseudo-variants($ABSOLUTES),
             $generate-viewports: get-viewport-flag($ABSOLUTES),
             $override: '!important'
         );
