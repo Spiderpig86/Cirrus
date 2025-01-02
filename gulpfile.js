@@ -25,7 +25,7 @@ generateGulpBuild(`all`, `src/cirrus-all.scss`, `cirrus-all`, `./dist/`);
 // 0.8.0 beta builds
 generateGulpBuild(`next-ext`, `next/src/cirrus-ext.scss`, `cirrus`, `./next/dist/`);
 generateGulpBuild(`next-core`, `next/src/cirrus-core.scss`, `cirrus-core`, `./next/dist/`);
-generateGulpBuild(`next-all`, `next/src/cirrus-all.scss`, `cirrus-all`, `./next/dist/`);
+// generateGulpBuild(`next-all`, `next/src/cirrus-all.scss`, `cirrus-all`, `./next/dist/`);
 
 // source file name
 // file name
@@ -130,6 +130,6 @@ function generateGulpBuild(taskName, sassFilePath, outputName, distDir) {
 gulp.task('watch', () => gulp.watch('./src/**/*.scss', gulp.parallel('minify-ext', 'minify-core', 'minify-all')));
 
 gulp.task('default', gulp.parallel('minify-ext', 'minify-core', 'minify-all'));
-gulp.task('next', gulp.parallel('minify-next-core', 'minify-next-ext', 'minify-next-all'));
+gulp.task('next', gulp.parallel('minify-next-core', 'minify-next-ext'));
 
 gulp.task('gzip', gulp.parallel('gzip-ext', 'gzip-core', 'gzip-all'));

@@ -1,6 +1,6 @@
 /*
 * Cirrus 0.7.2-patch.1
-* Stanley Lim, Copyright 2024
+* Stanley Lim, Copyright 2025
 * https://cirrus-ui.com
 */
 @charset "UTF-8";
@@ -23251,7 +23251,23 @@ ul .divider::after {
   display: none !important;
 }
 
+.group:hover .group-hover\:u-none {
+  display: none !important;
+}
+
+.hover\:u-none:hover {
+  display: none !important;
+}
+
 .u-inline {
+  display: inline !important;
+}
+
+.group:hover .group-hover\:u-inline {
+  display: inline !important;
+}
+
+.hover\:u-inline:hover {
   display: inline !important;
 }
 
@@ -23259,7 +23275,23 @@ ul .divider::after {
   display: inline-block !important;
 }
 
+.group:hover .group-hover\:u-inline-block {
+  display: inline-block !important;
+}
+
+.hover\:u-inline-block:hover {
+  display: inline-block !important;
+}
+
 .u-block {
+  display: block !important;
+}
+
+.group:hover .group-hover\:u-block {
+  display: block !important;
+}
+
+.hover\:u-block:hover {
   display: block !important;
 }
 
@@ -23267,7 +23299,23 @@ ul .divider::after {
   display: flex !important;
 }
 
+.group:hover .group-hover\:u-flex {
+  display: flex !important;
+}
+
+.hover\:u-flex:hover {
+  display: flex !important;
+}
+
 .u-inline-flex {
+  display: inline-flex !important;
+}
+
+.group:hover .group-hover\:u-inline-flex {
+  display: inline-flex !important;
+}
+
+.hover\:u-inline-flex:hover {
   display: inline-flex !important;
 }
 
@@ -23275,7 +23323,23 @@ ul .divider::after {
   display: table !important;
 }
 
+.group:hover .group-hover\:u-table {
+  display: table !important;
+}
+
+.hover\:u-table:hover {
+  display: table !important;
+}
+
 .u-table-row {
+  display: table-row !important;
+}
+
+.group:hover .group-hover\:u-table-row {
+  display: table-row !important;
+}
+
+.hover\:u-table-row:hover {
   display: table-row !important;
 }
 
@@ -23283,7 +23347,23 @@ ul .divider::after {
   display: table-column !important;
 }
 
+.group:hover .group-hover\:u-table-column {
+  display: table-column !important;
+}
+
+.hover\:u-table-column:hover {
+  display: table-column !important;
+}
+
 .u-table-cell {
+  display: table-cell !important;
+}
+
+.group:hover .group-hover\:u-table-cell {
+  display: table-cell !important;
+}
+
+.hover\:u-table-cell:hover {
   display: table-cell !important;
 }
 
@@ -23291,31 +23371,91 @@ ul .divider::after {
   .sm\:u-none {
     display: none !important;
   }
+  .group:hover .sm\:group-hover\:u-none {
+    display: none !important;
+  }
+  .sm\:hover\:u-none:hover {
+    display: none !important;
+  }
   .sm\:u-inline {
+    display: inline !important;
+  }
+  .group:hover .sm\:group-hover\:u-inline {
+    display: inline !important;
+  }
+  .sm\:hover\:u-inline:hover {
     display: inline !important;
   }
   .sm\:u-inline-block {
     display: inline-block !important;
   }
+  .group:hover .sm\:group-hover\:u-inline-block {
+    display: inline-block !important;
+  }
+  .sm\:hover\:u-inline-block:hover {
+    display: inline-block !important;
+  }
   .sm\:u-block {
+    display: block !important;
+  }
+  .group:hover .sm\:group-hover\:u-block {
+    display: block !important;
+  }
+  .sm\:hover\:u-block:hover {
     display: block !important;
   }
   .sm\:u-flex {
     display: flex !important;
   }
+  .group:hover .sm\:group-hover\:u-flex {
+    display: flex !important;
+  }
+  .sm\:hover\:u-flex:hover {
+    display: flex !important;
+  }
   .sm\:u-inline-flex {
+    display: inline-flex !important;
+  }
+  .group:hover .sm\:group-hover\:u-inline-flex {
+    display: inline-flex !important;
+  }
+  .sm\:hover\:u-inline-flex:hover {
     display: inline-flex !important;
   }
   .sm\:u-table {
     display: table !important;
   }
+  .group:hover .sm\:group-hover\:u-table {
+    display: table !important;
+  }
+  .sm\:hover\:u-table:hover {
+    display: table !important;
+  }
   .sm\:u-table-row {
+    display: table-row !important;
+  }
+  .group:hover .sm\:group-hover\:u-table-row {
+    display: table-row !important;
+  }
+  .sm\:hover\:u-table-row:hover {
     display: table-row !important;
   }
   .sm\:u-table-column {
     display: table-column !important;
   }
+  .group:hover .sm\:group-hover\:u-table-column {
+    display: table-column !important;
+  }
+  .sm\:hover\:u-table-column:hover {
+    display: table-column !important;
+  }
   .sm\:u-table-cell {
+    display: table-cell !important;
+  }
+  .group:hover .sm\:group-hover\:u-table-cell {
+    display: table-cell !important;
+  }
+  .sm\:hover\:u-table-cell:hover {
     display: table-cell !important;
   }
 }
@@ -23323,31 +23463,91 @@ ul .divider::after {
   .md\:u-none {
     display: none !important;
   }
+  .group:hover .md\:group-hover\:u-none {
+    display: none !important;
+  }
+  .md\:hover\:u-none:hover {
+    display: none !important;
+  }
   .md\:u-inline {
+    display: inline !important;
+  }
+  .group:hover .md\:group-hover\:u-inline {
+    display: inline !important;
+  }
+  .md\:hover\:u-inline:hover {
     display: inline !important;
   }
   .md\:u-inline-block {
     display: inline-block !important;
   }
+  .group:hover .md\:group-hover\:u-inline-block {
+    display: inline-block !important;
+  }
+  .md\:hover\:u-inline-block:hover {
+    display: inline-block !important;
+  }
   .md\:u-block {
+    display: block !important;
+  }
+  .group:hover .md\:group-hover\:u-block {
+    display: block !important;
+  }
+  .md\:hover\:u-block:hover {
     display: block !important;
   }
   .md\:u-flex {
     display: flex !important;
   }
+  .group:hover .md\:group-hover\:u-flex {
+    display: flex !important;
+  }
+  .md\:hover\:u-flex:hover {
+    display: flex !important;
+  }
   .md\:u-inline-flex {
+    display: inline-flex !important;
+  }
+  .group:hover .md\:group-hover\:u-inline-flex {
+    display: inline-flex !important;
+  }
+  .md\:hover\:u-inline-flex:hover {
     display: inline-flex !important;
   }
   .md\:u-table {
     display: table !important;
   }
+  .group:hover .md\:group-hover\:u-table {
+    display: table !important;
+  }
+  .md\:hover\:u-table:hover {
+    display: table !important;
+  }
   .md\:u-table-row {
+    display: table-row !important;
+  }
+  .group:hover .md\:group-hover\:u-table-row {
+    display: table-row !important;
+  }
+  .md\:hover\:u-table-row:hover {
     display: table-row !important;
   }
   .md\:u-table-column {
     display: table-column !important;
   }
+  .group:hover .md\:group-hover\:u-table-column {
+    display: table-column !important;
+  }
+  .md\:hover\:u-table-column:hover {
+    display: table-column !important;
+  }
   .md\:u-table-cell {
+    display: table-cell !important;
+  }
+  .group:hover .md\:group-hover\:u-table-cell {
+    display: table-cell !important;
+  }
+  .md\:hover\:u-table-cell:hover {
     display: table-cell !important;
   }
 }
@@ -23355,31 +23555,91 @@ ul .divider::after {
   .lg\:u-none {
     display: none !important;
   }
+  .group:hover .lg\:group-hover\:u-none {
+    display: none !important;
+  }
+  .lg\:hover\:u-none:hover {
+    display: none !important;
+  }
   .lg\:u-inline {
+    display: inline !important;
+  }
+  .group:hover .lg\:group-hover\:u-inline {
+    display: inline !important;
+  }
+  .lg\:hover\:u-inline:hover {
     display: inline !important;
   }
   .lg\:u-inline-block {
     display: inline-block !important;
   }
+  .group:hover .lg\:group-hover\:u-inline-block {
+    display: inline-block !important;
+  }
+  .lg\:hover\:u-inline-block:hover {
+    display: inline-block !important;
+  }
   .lg\:u-block {
+    display: block !important;
+  }
+  .group:hover .lg\:group-hover\:u-block {
+    display: block !important;
+  }
+  .lg\:hover\:u-block:hover {
     display: block !important;
   }
   .lg\:u-flex {
     display: flex !important;
   }
+  .group:hover .lg\:group-hover\:u-flex {
+    display: flex !important;
+  }
+  .lg\:hover\:u-flex:hover {
+    display: flex !important;
+  }
   .lg\:u-inline-flex {
+    display: inline-flex !important;
+  }
+  .group:hover .lg\:group-hover\:u-inline-flex {
+    display: inline-flex !important;
+  }
+  .lg\:hover\:u-inline-flex:hover {
     display: inline-flex !important;
   }
   .lg\:u-table {
     display: table !important;
   }
+  .group:hover .lg\:group-hover\:u-table {
+    display: table !important;
+  }
+  .lg\:hover\:u-table:hover {
+    display: table !important;
+  }
   .lg\:u-table-row {
+    display: table-row !important;
+  }
+  .group:hover .lg\:group-hover\:u-table-row {
+    display: table-row !important;
+  }
+  .lg\:hover\:u-table-row:hover {
     display: table-row !important;
   }
   .lg\:u-table-column {
     display: table-column !important;
   }
+  .group:hover .lg\:group-hover\:u-table-column {
+    display: table-column !important;
+  }
+  .lg\:hover\:u-table-column:hover {
+    display: table-column !important;
+  }
   .lg\:u-table-cell {
+    display: table-cell !important;
+  }
+  .group:hover .lg\:group-hover\:u-table-cell {
+    display: table-cell !important;
+  }
+  .lg\:hover\:u-table-cell:hover {
     display: table-cell !important;
   }
 }
@@ -23387,31 +23647,91 @@ ul .divider::after {
   .xl\:u-none {
     display: none !important;
   }
+  .group:hover .xl\:group-hover\:u-none {
+    display: none !important;
+  }
+  .xl\:hover\:u-none:hover {
+    display: none !important;
+  }
   .xl\:u-inline {
+    display: inline !important;
+  }
+  .group:hover .xl\:group-hover\:u-inline {
+    display: inline !important;
+  }
+  .xl\:hover\:u-inline:hover {
     display: inline !important;
   }
   .xl\:u-inline-block {
     display: inline-block !important;
   }
+  .group:hover .xl\:group-hover\:u-inline-block {
+    display: inline-block !important;
+  }
+  .xl\:hover\:u-inline-block:hover {
+    display: inline-block !important;
+  }
   .xl\:u-block {
+    display: block !important;
+  }
+  .group:hover .xl\:group-hover\:u-block {
+    display: block !important;
+  }
+  .xl\:hover\:u-block:hover {
     display: block !important;
   }
   .xl\:u-flex {
     display: flex !important;
   }
+  .group:hover .xl\:group-hover\:u-flex {
+    display: flex !important;
+  }
+  .xl\:hover\:u-flex:hover {
+    display: flex !important;
+  }
   .xl\:u-inline-flex {
+    display: inline-flex !important;
+  }
+  .group:hover .xl\:group-hover\:u-inline-flex {
+    display: inline-flex !important;
+  }
+  .xl\:hover\:u-inline-flex:hover {
     display: inline-flex !important;
   }
   .xl\:u-table {
     display: table !important;
   }
+  .group:hover .xl\:group-hover\:u-table {
+    display: table !important;
+  }
+  .xl\:hover\:u-table:hover {
+    display: table !important;
+  }
   .xl\:u-table-row {
+    display: table-row !important;
+  }
+  .group:hover .xl\:group-hover\:u-table-row {
+    display: table-row !important;
+  }
+  .xl\:hover\:u-table-row:hover {
     display: table-row !important;
   }
   .xl\:u-table-column {
     display: table-column !important;
   }
+  .group:hover .xl\:group-hover\:u-table-column {
+    display: table-column !important;
+  }
+  .xl\:hover\:u-table-column:hover {
+    display: table-column !important;
+  }
   .xl\:u-table-cell {
+    display: table-cell !important;
+  }
+  .group:hover .xl\:group-hover\:u-table-cell {
+    display: table-cell !important;
+  }
+  .xl\:hover\:u-table-cell:hover {
     display: table-cell !important;
   }
 }
@@ -24945,38 +25265,6 @@ ul .divider::after {
   float: right !important;
 }
 
-@media screen and (min-width: 640px) {
-  .sm\:u-pull-left {
-    float: left !important;
-  }
-  .sm\:u-pull-right {
-    float: right !important;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:u-pull-left {
-    float: left !important;
-  }
-  .md\:u-pull-right {
-    float: right !important;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:u-pull-left {
-    float: left !important;
-  }
-  .lg\:u-pull-right {
-    float: right !important;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:u-pull-left {
-    float: left !important;
-  }
-  .xl\:u-pull-right {
-    float: right !important;
-  }
-}
 .u-text-justify {
   text-align: justify !important;
 }
@@ -24993,62 +25281,6 @@ ul .divider::after {
   text-align: center !important;
 }
 
-@media screen and (min-width: 640px) {
-  .sm\:u-text-justify {
-    text-align: justify !important;
-  }
-  .sm\:u-text-left {
-    text-align: left !important;
-  }
-  .sm\:u-text-right {
-    text-align: right !important;
-  }
-  .sm\:u-text-center {
-    text-align: center !important;
-  }
-}
-@media screen and (min-width: 768px) {
-  .md\:u-text-justify {
-    text-align: justify !important;
-  }
-  .md\:u-text-left {
-    text-align: left !important;
-  }
-  .md\:u-text-right {
-    text-align: right !important;
-  }
-  .md\:u-text-center {
-    text-align: center !important;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lg\:u-text-justify {
-    text-align: justify !important;
-  }
-  .lg\:u-text-left {
-    text-align: left !important;
-  }
-  .lg\:u-text-right {
-    text-align: right !important;
-  }
-  .lg\:u-text-center {
-    text-align: center !important;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .xl\:u-text-justify {
-    text-align: justify !important;
-  }
-  .xl\:u-text-left {
-    text-align: left !important;
-  }
-  .xl\:u-text-right {
-    text-align: right !important;
-  }
-  .xl\:u-text-center {
-    text-align: center !important;
-  }
-}
 .u-text-ellipsis {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -25657,7 +25889,15 @@ ul .divider::after {
   overflow: auto !important;
 }
 
+.hover\:u-overflow-auto:hover {
+  overflow: auto !important;
+}
+
 .u-overflow-hidden {
+  overflow: hidden !important;
+}
+
+.hover\:u-overflow-hidden:hover {
   overflow: hidden !important;
 }
 
@@ -25665,7 +25905,15 @@ ul .divider::after {
   overflow: visible !important;
 }
 
+.hover\:u-overflow-visible:hover {
+  overflow: visible !important;
+}
+
 .u-overflow-scroll {
+  overflow: scroll !important;
+}
+
+.hover\:u-overflow-scroll:hover {
   overflow: scroll !important;
 }
 
@@ -25673,13 +25921,25 @@ ul .divider::after {
   .sm\:u-overflow-auto {
     overflow: auto !important;
   }
+  .sm\:hover\:u-overflow-auto:hover {
+    overflow: auto !important;
+  }
   .sm\:u-overflow-hidden {
+    overflow: hidden !important;
+  }
+  .sm\:hover\:u-overflow-hidden:hover {
     overflow: hidden !important;
   }
   .sm\:u-overflow-visible {
     overflow: visible !important;
   }
+  .sm\:hover\:u-overflow-visible:hover {
+    overflow: visible !important;
+  }
   .sm\:u-overflow-scroll {
+    overflow: scroll !important;
+  }
+  .sm\:hover\:u-overflow-scroll:hover {
     overflow: scroll !important;
   }
 }
@@ -25687,13 +25947,25 @@ ul .divider::after {
   .md\:u-overflow-auto {
     overflow: auto !important;
   }
+  .md\:hover\:u-overflow-auto:hover {
+    overflow: auto !important;
+  }
   .md\:u-overflow-hidden {
+    overflow: hidden !important;
+  }
+  .md\:hover\:u-overflow-hidden:hover {
     overflow: hidden !important;
   }
   .md\:u-overflow-visible {
     overflow: visible !important;
   }
+  .md\:hover\:u-overflow-visible:hover {
+    overflow: visible !important;
+  }
   .md\:u-overflow-scroll {
+    overflow: scroll !important;
+  }
+  .md\:hover\:u-overflow-scroll:hover {
     overflow: scroll !important;
   }
 }
@@ -25701,13 +25973,25 @@ ul .divider::after {
   .lg\:u-overflow-auto {
     overflow: auto !important;
   }
+  .lg\:hover\:u-overflow-auto:hover {
+    overflow: auto !important;
+  }
   .lg\:u-overflow-hidden {
+    overflow: hidden !important;
+  }
+  .lg\:hover\:u-overflow-hidden:hover {
     overflow: hidden !important;
   }
   .lg\:u-overflow-visible {
     overflow: visible !important;
   }
+  .lg\:hover\:u-overflow-visible:hover {
+    overflow: visible !important;
+  }
   .lg\:u-overflow-scroll {
+    overflow: scroll !important;
+  }
+  .lg\:hover\:u-overflow-scroll:hover {
     overflow: scroll !important;
   }
 }
@@ -25715,13 +25999,25 @@ ul .divider::after {
   .xl\:u-overflow-auto {
     overflow: auto !important;
   }
+  .xl\:hover\:u-overflow-auto:hover {
+    overflow: auto !important;
+  }
   .xl\:u-overflow-hidden {
+    overflow: hidden !important;
+  }
+  .xl\:hover\:u-overflow-hidden:hover {
     overflow: hidden !important;
   }
   .xl\:u-overflow-visible {
     overflow: visible !important;
   }
+  .xl\:hover\:u-overflow-visible:hover {
+    overflow: visible !important;
+  }
   .xl\:u-overflow-scroll {
+    overflow: scroll !important;
+  }
+  .xl\:hover\:u-overflow-scroll:hover {
     overflow: scroll !important;
   }
 }
@@ -25729,7 +26025,15 @@ ul .divider::after {
   overflow-x: auto !important;
 }
 
+.hover\:u-overflow-x-auto:hover {
+  overflow-x: auto !important;
+}
+
 .u-overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.hover\:u-overflow-x-hidden:hover {
   overflow-x: hidden !important;
 }
 
@@ -25737,7 +26041,15 @@ ul .divider::after {
   overflow-x: visible !important;
 }
 
+.hover\:u-overflow-x-visible:hover {
+  overflow-x: visible !important;
+}
+
 .u-overflow-x-scroll {
+  overflow-x: scroll !important;
+}
+
+.hover\:u-overflow-x-scroll:hover {
   overflow-x: scroll !important;
 }
 
@@ -25745,13 +26057,25 @@ ul .divider::after {
   .sm\:u-overflow-x-auto {
     overflow-x: auto !important;
   }
+  .sm\:hover\:u-overflow-x-auto:hover {
+    overflow-x: auto !important;
+  }
   .sm\:u-overflow-x-hidden {
+    overflow-x: hidden !important;
+  }
+  .sm\:hover\:u-overflow-x-hidden:hover {
     overflow-x: hidden !important;
   }
   .sm\:u-overflow-x-visible {
     overflow-x: visible !important;
   }
+  .sm\:hover\:u-overflow-x-visible:hover {
+    overflow-x: visible !important;
+  }
   .sm\:u-overflow-x-scroll {
+    overflow-x: scroll !important;
+  }
+  .sm\:hover\:u-overflow-x-scroll:hover {
     overflow-x: scroll !important;
   }
 }
@@ -25759,13 +26083,25 @@ ul .divider::after {
   .md\:u-overflow-x-auto {
     overflow-x: auto !important;
   }
+  .md\:hover\:u-overflow-x-auto:hover {
+    overflow-x: auto !important;
+  }
   .md\:u-overflow-x-hidden {
+    overflow-x: hidden !important;
+  }
+  .md\:hover\:u-overflow-x-hidden:hover {
     overflow-x: hidden !important;
   }
   .md\:u-overflow-x-visible {
     overflow-x: visible !important;
   }
+  .md\:hover\:u-overflow-x-visible:hover {
+    overflow-x: visible !important;
+  }
   .md\:u-overflow-x-scroll {
+    overflow-x: scroll !important;
+  }
+  .md\:hover\:u-overflow-x-scroll:hover {
     overflow-x: scroll !important;
   }
 }
@@ -25773,13 +26109,25 @@ ul .divider::after {
   .lg\:u-overflow-x-auto {
     overflow-x: auto !important;
   }
+  .lg\:hover\:u-overflow-x-auto:hover {
+    overflow-x: auto !important;
+  }
   .lg\:u-overflow-x-hidden {
+    overflow-x: hidden !important;
+  }
+  .lg\:hover\:u-overflow-x-hidden:hover {
     overflow-x: hidden !important;
   }
   .lg\:u-overflow-x-visible {
     overflow-x: visible !important;
   }
+  .lg\:hover\:u-overflow-x-visible:hover {
+    overflow-x: visible !important;
+  }
   .lg\:u-overflow-x-scroll {
+    overflow-x: scroll !important;
+  }
+  .lg\:hover\:u-overflow-x-scroll:hover {
     overflow-x: scroll !important;
   }
 }
@@ -25787,13 +26135,25 @@ ul .divider::after {
   .xl\:u-overflow-x-auto {
     overflow-x: auto !important;
   }
+  .xl\:hover\:u-overflow-x-auto:hover {
+    overflow-x: auto !important;
+  }
   .xl\:u-overflow-x-hidden {
+    overflow-x: hidden !important;
+  }
+  .xl\:hover\:u-overflow-x-hidden:hover {
     overflow-x: hidden !important;
   }
   .xl\:u-overflow-x-visible {
     overflow-x: visible !important;
   }
+  .xl\:hover\:u-overflow-x-visible:hover {
+    overflow-x: visible !important;
+  }
   .xl\:u-overflow-x-scroll {
+    overflow-x: scroll !important;
+  }
+  .xl\:hover\:u-overflow-x-scroll:hover {
     overflow-x: scroll !important;
   }
 }
@@ -25801,7 +26161,15 @@ ul .divider::after {
   overflow-y: auto !important;
 }
 
+.hover\:u-overflow-y-auto:hover {
+  overflow-y: auto !important;
+}
+
 .u-overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+
+.hover\:u-overflow-y-hidden:hover {
   overflow-y: hidden !important;
 }
 
@@ -25809,7 +26177,15 @@ ul .divider::after {
   overflow-y: visible !important;
 }
 
+.hover\:u-overflow-y-visible:hover {
+  overflow-y: visible !important;
+}
+
 .u-overflow-y-scroll {
+  overflow-y: scroll !important;
+}
+
+.hover\:u-overflow-y-scroll:hover {
   overflow-y: scroll !important;
 }
 
@@ -25817,13 +26193,25 @@ ul .divider::after {
   .sm\:u-overflow-y-auto {
     overflow-y: auto !important;
   }
+  .sm\:hover\:u-overflow-y-auto:hover {
+    overflow-y: auto !important;
+  }
   .sm\:u-overflow-y-hidden {
+    overflow-y: hidden !important;
+  }
+  .sm\:hover\:u-overflow-y-hidden:hover {
     overflow-y: hidden !important;
   }
   .sm\:u-overflow-y-visible {
     overflow-y: visible !important;
   }
+  .sm\:hover\:u-overflow-y-visible:hover {
+    overflow-y: visible !important;
+  }
   .sm\:u-overflow-y-scroll {
+    overflow-y: scroll !important;
+  }
+  .sm\:hover\:u-overflow-y-scroll:hover {
     overflow-y: scroll !important;
   }
 }
@@ -25831,13 +26219,25 @@ ul .divider::after {
   .md\:u-overflow-y-auto {
     overflow-y: auto !important;
   }
+  .md\:hover\:u-overflow-y-auto:hover {
+    overflow-y: auto !important;
+  }
   .md\:u-overflow-y-hidden {
+    overflow-y: hidden !important;
+  }
+  .md\:hover\:u-overflow-y-hidden:hover {
     overflow-y: hidden !important;
   }
   .md\:u-overflow-y-visible {
     overflow-y: visible !important;
   }
+  .md\:hover\:u-overflow-y-visible:hover {
+    overflow-y: visible !important;
+  }
   .md\:u-overflow-y-scroll {
+    overflow-y: scroll !important;
+  }
+  .md\:hover\:u-overflow-y-scroll:hover {
     overflow-y: scroll !important;
   }
 }
@@ -25845,13 +26245,25 @@ ul .divider::after {
   .lg\:u-overflow-y-auto {
     overflow-y: auto !important;
   }
+  .lg\:hover\:u-overflow-y-auto:hover {
+    overflow-y: auto !important;
+  }
   .lg\:u-overflow-y-hidden {
+    overflow-y: hidden !important;
+  }
+  .lg\:hover\:u-overflow-y-hidden:hover {
     overflow-y: hidden !important;
   }
   .lg\:u-overflow-y-visible {
     overflow-y: visible !important;
   }
+  .lg\:hover\:u-overflow-y-visible:hover {
+    overflow-y: visible !important;
+  }
   .lg\:u-overflow-y-scroll {
+    overflow-y: scroll !important;
+  }
+  .lg\:hover\:u-overflow-y-scroll:hover {
     overflow-y: scroll !important;
   }
 }
@@ -25859,13 +26271,25 @@ ul .divider::after {
   .xl\:u-overflow-y-auto {
     overflow-y: auto !important;
   }
+  .xl\:hover\:u-overflow-y-auto:hover {
+    overflow-y: auto !important;
+  }
   .xl\:u-overflow-y-hidden {
+    overflow-y: hidden !important;
+  }
+  .xl\:hover\:u-overflow-y-hidden:hover {
     overflow-y: hidden !important;
   }
   .xl\:u-overflow-y-visible {
     overflow-y: visible !important;
   }
+  .xl\:hover\:u-overflow-y-visible:hover {
+    overflow-y: visible !important;
+  }
   .xl\:u-overflow-y-scroll {
+    overflow-y: scroll !important;
+  }
+  .xl\:hover\:u-overflow-y-scroll:hover {
     overflow-y: scroll !important;
   }
 }
