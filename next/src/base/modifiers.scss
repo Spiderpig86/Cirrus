@@ -42,8 +42,7 @@
 /* Theme modifiers */
 @include generator_v2.utility-with-body(
         $variants: (
-            'dark',
-            'hover',
+            get-pseudo-variants($THEME-MODIFIERS)
         ),
         $override: '!important'
     )

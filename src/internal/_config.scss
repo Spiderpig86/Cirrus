@@ -108,6 +108,7 @@ $default-config: (
         flags.$BORDER-WIDTH: (pseudos.$FOCUS, pseudos.$HOVER),
         flags.$VERTICAL-ALIGN: (pseudos.$RESPONSIVE),
         flags.$CURSOR: (),
+        flags.$THEME-MODIFIERS: (pseudos.$DARK, pseudos.$GROUP_HOVER, pseudos.$HOVER),
     ),
 
     // Extend all existing styles here
