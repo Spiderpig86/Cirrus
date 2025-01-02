@@ -21,7 +21,7 @@
     @include generator_v2.utility(
         $base-class-name: 'text',
         $class-value-pairs: generator_v2.class-value-to-property-map(to-property-map($text-directions), text-align),
-        $variants: get-pseudo-variants($FLOAT),
+        $variants: get-pseudo-variants($TEXT),
         $override: '!important'
     );
 }
