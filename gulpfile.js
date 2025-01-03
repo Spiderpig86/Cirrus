@@ -129,6 +129,6 @@ function generateGulpBuild(taskName, sassFilePath, outputName, distDir) {
 gulp.task('watch', () => gulp.watch('./src/**/*.scss', gulp.parallel('minify-ext', 'minify-core', 'minify-all')));
 
 gulp.task('default', gulp.parallel('minify-ext', 'minify-core', 'minify-all'));
-// gulp.task('next', gulp.parallel('minify-next-core', 'minify-next-ext'));
+gulp.task('next', gulp.parallel('minify-next-core', 'minify-next-ext'));
 
 gulp.task('gzip', gulp.parallel('gzip-ext', 'gzip-core', 'gzip-all'));

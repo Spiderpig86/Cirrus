@@ -4,6 +4,7 @@
     /* CODE */
     code {
         --cirrus-code-label-fg: #{fill('gray', '600')};
+        --cirrus-code-fg: #{fill('red', '900')};
         padding: 0.3rem;
         margin: 0.5em 0;
         overflow: auto;

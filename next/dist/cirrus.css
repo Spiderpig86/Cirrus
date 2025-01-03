@@ -478,7 +478,6 @@ fieldset legend {
         - 'responsive',
         - 'dark', 'light',
         - 'reduce-motion',
-        - 'expand',
         - 'first-of-type',
         - 'last-of-type',
         - 'portrait', 'landscape',
@@ -23021,6 +23020,7 @@ a.btn {
 /* CODE */
 code {
   --cirrus-code-label-fg: #868e96;
+  --cirrus-code-fg: #771d1d;
   padding: 0.3rem;
   margin: 0.5em 0;
   overflow: auto;
