@@ -866,6 +866,7 @@ $default-config: (
     ),
     transitions: (
         durations: (
+            0: 0ms,
             75: 75ms,
             100: 100ms,
             200: 200ms,

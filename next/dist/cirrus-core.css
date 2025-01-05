@@ -31460,6 +31460,10 @@ ul .divider::after {
 }
 
 /* TRANSITION DURATION */
+.u-duration-0 {
+  transition-duration: 0ms !important;
+}
+
 .u-duration-75 {
   transition-duration: 75ms !important;
 }
