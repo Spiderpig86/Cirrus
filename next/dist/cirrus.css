@@ -113,8 +113,8 @@
     Main utility for generating utility classes with different viewports, delimiters, base class names, etc.
     Example: .sm\:hover\:u-text-blue:hover { ... }
 
-    @class-prefix {string} [cofig.$utility-prefix] - prefix used for generated classes. This is the first section of the class name
-    @delimiter {string} [config.$delimiter] - delimiter used in class name body but not for separating psuedos
+    @class-prefix {string} [config.$utility-prefix] - prefix used for generated classes. This is the first section of the class name. Can be empty.
+    @delimiter {string} [config.$delimiter] - delimiter used in class name body but not for separating psuedos. Can be empty.
     @base-class-name {string} - the root of the class name. For the utility class above, 'blue' is the base class name
     @class-value-pairs {map<string, any>[]} - list of mappings that maps the variant name (e.g. 'blue') to a map of CSS properties to values
     @variants {string[]} [()] - list of strings specifying which variants to generate styles for. Possible values:
@@ -131,7 +131,7 @@
         - 'checked',
         - 'disabled'
 
-    @variant-delimiter {string} [config.$variant-delimiter] - delimiter used to separate the variant portion of the class
+    @variant-delimiter {string} [config.$variant-delimiter] - delimiter used to separate the variant portion of the class. Can be empty but not advisable.
     @override {string} [config.$override] - override for CSS properties, like '!important'
 */
 /**
@@ -139,6 +139,27 @@
     * @param: {String}  $selector
     * @return: {Selector}  Returns the class selector.
     */
+/*
+    Utility to use when generating classes with your own series of SCSS rules. This is typically used with the inline-class-generator mixin.
+
+    @delimiter {string} [config.$delimiter] - delimiter used in class name body but not for separating psuedos. Can be empty.
+    @variants {string[]} [()] - list of strings specifying which variants to generate styles for. Possible values:
+        - 'responsive',
+        - 'dark', 'light',
+        - 'reduce-motion',
+        - 'first-of-type',
+        - 'last-of-type',
+        - 'portrait', 'landscape',
+        - 'hover', 'group-hover',
+        - 'focus', 'group-focus', 'focus-visible', 'focus-within',
+        - 'active',
+        - 'visited',
+        - 'checked',
+        - 'disabled'
+
+    @variant-delimiter {string} [config.$variant-delimiter] - delimiter used to separate the variant portion of the class. Can be empty but not advisable.
+    @override {string} [config.$override] - override for CSS properties, like '!important'
+*/
 /* BASE STYLING + RESET FOR CIRRUS */
 :root {
   /* v1 Colors */
@@ -32971,8 +32992,13 @@ details.accordion:last-of-type {
 }
 
 .tab-container.tabs-depth ul {
-  box-shadow: 0 2px 3px rgba(134, 142, 150, 0.85);
+  box-shadow: 0 2px 3px rgba(134, 142, 150, 0.15);
   border-bottom: 0;
+}
+
+.tab-container.tabs-depth ul li a,
+.tab-container.tabs-depth ul li .tab-item-content {
+  margin-bottom: -1px;
 }
 
 .tab-container.tabs-classic ul {
@@ -33001,6 +33027,7 @@ details.accordion:last-of-type {
   border-radius: 3px 3px 0 0;
   cursor: pointer;
   transition: all 0.3s;
+  margin-bottom: -1px;
 }
 
 .tab-container.tabs-fill {
@@ -33037,7 +33064,7 @@ details.accordion:last-of-type {
   display: flex;
   justify-content: flex-start; /* Move tab items to left side */
   margin: 0.5rem; /* Override the behavior for standard ul and add equal padding */
-  border-bottom: 1px solid #e9ecef; /* Bottom border of tabs */
+  border-bottom: 2px solid #e9ecef; /* Bottom border of tabs */
   flex-grow: 1;
   list-style: none;
   padding-inline-start: 0;
