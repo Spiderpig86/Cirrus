@@ -21,6 +21,29 @@
     ),
 );
 
+// Custom plugin example
+@include utility(
+    $base-class-name: 'bg',
+    $class-value-pairs: (
+        papayawhip: (
+            background-color: papayawhip,
+        ),
+        peachpuff: (
+            background-color: peachpuff,
+        ),
+        salmon: (
+            background-color: salmon,
+        ),
+        tomato: (
+            background-color: tomato,
+        ),
+    ),
+    $variants: (
+        'hover',
+    ),
+    $override: '!important'
+);
+
 // 2. (Optional) Add a new build to the Gulp file.
 // If you want to generate class files using Gulp, you can specify a new task like this with `main.scss` as a source.
 
