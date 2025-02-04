@@ -1,7 +1,7 @@
 @use 'sass:map';
 
-@use '../../../src/internal/generator_v2';
-@use '../../../src/internal' as *;
+@use '../src/internal/generator_v2';
+@use '../src/internal' as *;
 
 @if should-generate-classes($FLEX) {
     $flex-directions: row, row-reverse, column, column-reverse;

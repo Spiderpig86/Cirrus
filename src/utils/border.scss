@@ -1,5 +1,5 @@
-@use '../../../src/internal/generator_v2';
-@use '../../../src/internal' as *;
+@use '../src/internal/generator_v2';
+@use '../src/internal' as *;
 
 // Border Widths
 @if should-generate-classes($BORDER-WIDTH) {

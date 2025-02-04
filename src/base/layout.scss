@@ -1,7 +1,7 @@
 @use 'sass:math';
 @use 'sass:map';
-@use '../../../src/internal/generator_v2';
-@use '../../../src/internal' as *;
+@use '../src/internal/generator_v2';
+@use '../src/internal' as *;
 
 @function get-column-map($num-columns, $width) {
     $result: ();

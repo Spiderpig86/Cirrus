@@ -1,6 +1,6 @@
 // Utility classes for transitions
-@use '../../../src/internal/generator_v2';
-@use '../../../src/internal' as *;
+@use '../src/internal/generator_v2';
+@use '../src/internal' as *;
 
 /* TRANSITION DURATION */
 @if should-generate-classes($TRANSITION-DURATION) {

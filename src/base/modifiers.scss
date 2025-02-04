@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use '../../../src/internal/generator_v2';
-@use '../../../src/internal' as *;
+@use '../src/internal/generator_v2';
+@use '../src/internal' as *;
 
 /* A collection of modifiers that extend control styling */
 #{$button-selectors} {

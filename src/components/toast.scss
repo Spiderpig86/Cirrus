@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../../../src/internal' as *;
+@use '../src/internal' as *;
 
 @if should-generate-classes($TOAST) {
     .toast {

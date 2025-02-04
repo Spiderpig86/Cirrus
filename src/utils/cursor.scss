@@ -1,5 +1,5 @@
-@use '../../../src/internal/generator_v2';
-@use '../../../src/internal' as *;
+@use '../src/internal/generator_v2';
+@use '../src/internal' as *;
 
 @if should-generate-classes($CURSOR) {
     $cursor-utils-config: auto, pointer, wait, text, move, help, not-allowed, none, cell, crosshair, grab, grabbing,

@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use '../../../src/internal/generator_v2';
-@use '../../../src/internal' as *;
+@use '../src/internal/generator_v2';
+@use '../src/internal' as *;
 
 @include generator_v2.utility-with-body($variants: ($RESPONSIVE), $override: '!important') using ($props...) {
     @each $class, $size in $spacing-system {

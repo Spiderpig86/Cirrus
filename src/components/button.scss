@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../../../src/internal' as *;
+@use '../src/internal' as *;
 
 /* Render the x in the close button */
 @mixin btn-close-x($height, $width) {

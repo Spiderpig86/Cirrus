@@ -1,4 +1,4 @@
-@use '../../../src/internal' as *;
+@use '../src/internal' as *;
 
 @if should-generate-classes($FRAMES) {
 /* Separate CSS file, but same part as Layout */

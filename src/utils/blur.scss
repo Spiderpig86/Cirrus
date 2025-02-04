@@ -1,8 +1,8 @@
 // Utility classes for shadows
 @use 'sass:map';
 
-@use '../../../src/internal/generator_v2';
-@use '../../../src/internal' as *;
+@use '../src/internal/generator_v2';
+@use '../src/internal' as *;
 
 @function _transformed() {
     $transformed: ();
