@@ -98,6 +98,8 @@
             border: 1px solid fill('gray', '300');
             border-radius: 0;
             margin-left: -1px;
+            display: flex;
+            align-items: center;
         }
     }
 }

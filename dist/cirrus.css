@@ -32957,6 +32957,8 @@ details.accordion:last-of-type {
   border: 1px solid #dee2e6;
   border-radius: 0;
   margin-left: -1px;
+  display: flex;
+  align-items: center;
 }
 
 /* TABS AND TAB CONTAINER */
@@ -33437,6 +33439,7 @@ a.tag:hover {
 
 .tile .tile__container {
   flex: 1 1 auto;
+  overflow: hidden;
 }
 
 .tile .tile__container:not(:first-child) {
