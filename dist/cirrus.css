@@ -29177,6 +29177,10 @@ ul .divider::after {
   word-wrap: break-word;
 }
 
+.u-text-no-wrap {
+  white-space: nowrap;
+}
+
 /* Center element - best used for hero bodies or text */
 .u-center {
   display: flex;
