@@ -179,8 +179,8 @@ Or clone locally:
 ```bash
 $ git clone git@github.com:Spiderpig86/Cirrus.git
 $ cd cirrus
-$ yarn install
-$ yarn watch
+$ npm install
+$ npm run watch
 ```
 
 ## :crystal_ball: What's Included
