@@ -5,7 +5,7 @@ This document complements the human-focused README by giving coding agents preci
 ## Project summary (for agents)
 
 - Type: SCSS-first UI framework (components require no JS for core interaction)
-- Package manager: `yarn`
+- Package manager: `npm` (the repo commits `package-lock.json`; CI installs with `npm install`)
 - Build system: `gulp`
 - Tests: `jest` (including Sass testing via `sass-true`)
 - Outputs: `dist/cirrus.css` and `dist/cirrus.min.css`
@@ -25,39 +25,39 @@ This document complements the human-focused README by giving coding agents preci
 
 ## Setup
 
-Requirements: Node and `yarn` installed.
+Requirements: Node and `npm` installed.
 
 ```sh
 git clone git@github.com:Spiderpig86/Cirrus.git
 cd Cirrus
-yarn install
+npm install
 ```
 
 ## Scripts and commands (from package.json)
 
 - Build artifacts
-  - Command: `yarn build`
+  - Command: `npm run build`
   - Underlying: `gulp minify`
   - Output: `dist/cirrus.css`, `dist/cirrus.min.css`
 - Watch (rebuild on changes)
-  - Command: `yarn watch`
+  - Command: `npm run watch`
   - Underlying: `gulp watch`
 - Test suite
-  - Command: `yarn test`
+  - Command: `npm test`
   - Underlying: `jest`
-  - Filter by name/pattern: `yarn test -- -t "<name or pattern>"`
+  - Filter by name/pattern: `npm test -- -t "<name or pattern>"`
 - Security policy (Snyk)
-  - Command: `yarn snyk-protect`
+  - Command: `npm run snyk-protect`
   - Underlying: `snyk-protect` (applies Snyk patches/policies if configured)
 - Lifecycle hook
-  - Command: `yarn run prepare` (rarely needed manually)
+  - Command: `npm run prepare` (rarely needed manually)
   - Underlying: `npm run snyk-protect`
   - Note: `prepare` runs automatically in npm/yarn lifecycles; invoke manually only to re-apply patches if needed.
 
 ## Development guidance
 
 - Edit SCSS only in source dirs (`base/`, `components/`, `internal/`, `utils/`). Never edit `dist/` directly.
-- For tight feedback, run `yarn watch` while making SCSS changes.
+- For tight feedback, run `npm run watch` while making SCSS changes.
 - Keep specificity low and rely on utilities to avoid cascade conflicts.
 - Centralize tokens, mixins, and functions in `internal/` rather than duplicating logic.
 - Component styles should not assume JavaScript for basic behavior; Cirrus is Sass-first.
@@ -67,11 +67,11 @@ yarn install
 
 - Run all tests locally before committing:
   ```sh
-  yarn test
+  npm test
   ```
 - Target a specific test by name/pattern:
   ```sh
-  yarn test -- -t "<pattern>"
+  npm test -- -t "<pattern>"
   ```
 - Add/update tests for:
   - Sass functions/mixins in `internal/`
@@ -83,7 +83,7 @@ yarn install
 
 - Validate builds locally:
   ```sh
-  yarn build
+  npm run build
   ```
 - Artifacts are written to `dist/`:
   - `dist/cirrus.css`
@@ -107,8 +107,8 @@ yarn install
 
 - Title format: `[Cirrus] <Short, descriptive title>`
 - Before opening:
-  - `yarn test` passes locally
-  - `yarn build` completes without errors
+  - `npm test` passes locally
+  - `npm run build` completes without errors
   - No hand edits to `dist/`
   - Tests added/updated for behavior changes
 - Include notes in the PR description for user-facing changes and link relevant docs pages if applicable.
@@ -135,31 +135,31 @@ If a change modifies usage (classes, utilities, or components), include example 
 
 ```sh
 # Install deps
-yarn install
+npm install
 
 # Watch
-yarn watch
+npm run watch
 
 # Build
-yarn build
+npm run build
 
 # Test
-yarn test
+npm test
 
 # Single test
-yarn test -- -t "<pattern>"
+npm test -- -t "<pattern>"
 
 # Apply Snyk patches
-yarn snyk-protect
+npm run snyk-protect
 
 # (Lifecycle) Re-run prepare
-yarn run prepare
+npm run prepare
 ```
 
 ## Pointers
 
 - `README.md`: installation and usage examples
-- `.github/CONTRIBUTING.md` and `.github/CONTRIBUTING.yml`: contributor guidelines
+- `.github/CONTRIBUTING.md`: contributor guidelines
 - CI logs: GitHub Actions tab if builds/tests fail
 
 This AGENTS.md is intended to be a stable, predictable reference for coding agents and automation. It complements README.md without duplicating human-focused content.
